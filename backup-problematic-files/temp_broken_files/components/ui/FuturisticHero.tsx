@@ -14,7 +14,7 @@ export default function FuturisticHero() {
           <Link href="/services"><a className="px-5 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-900">Explore Services</a></Link>        </div>
         <div className=&quot;mt-10 mx-auto max-w-3xl p-6 rounded-2xl bg-white/70 dark:bg-black/40 backdrop-blur border border-gray-200 dark:border-gray-800 shadow&quot;>
           <p className=&quot;text-sm text-gray-700 dark:text-gray-300&quot;>
-            Talent marketplace • Project accelerators • Secure contracts • Integrated AI toolchain
+            Talent marketplace  Project accelerators  Secure contracts  Integrated AI toolchain
           </p>
         </div>
       </div>

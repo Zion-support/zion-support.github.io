@@ -107,7 +107,7 @@ const Homepage2026: React.FC = () => {_return (
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className=&quot;text-center&quot;              >
-                <div className=&quot;text-4xl mb-4&quot;>🚀</div>
+                <div className=&quot;text-4xl mb-4&quot;></div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Micro SAAS Solutions</h3>
                 <p className=&quot;text-gray-300 text-sm&quot;>
                   Starting at $69/month for specialized business solutions
@@ -119,7 +119,7 @@ const Homepage2026: React.FC = () => {_return (
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className=&quot;text-center&quot;              >
-                <div className=&quot;text-4xl mb-4&quot;>🏗️</div>
+                <div className=&quot;text-4xl mb-4&quot;></div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>IT Infrastructure</h3>
                 <p className=&quot;text-gray-300 text-sm&quot;>
                   Starting at $499/month for robust infrastructure solutions
@@ -131,7 +131,7 @@ const Homepage2026: React.FC = () => {_return (
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className=&quot;text-center&quot;              >
-                <div className=&quot;text-4xl mb-4&quot;>🤖</div>
+                <div className=&quot;text-4xl mb-4&quot;></div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>AI Automation</h3>
                 <p className=&quot;text-gray-300 text-sm&quot;>
                   Starting at $199/month for intelligent automation
@@ -143,7 +143,7 @@ const Homepage2026: React.FC = () => {_return (
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className=&quot;text-center&quot;              >
-                <div className=&quot;text-4xl mb-4&quot;>🧠</div>
+                <div className=&quot;text-4xl mb-4&quot;></div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Cutting-Edge AI</h3>
                 <p className=&quot;text-gray-300 text-sm&quot;>
                   Starting at $179/month for next-generation AI
@@ -174,7 +174,7 @@ const Homepage2026: React.FC = () => {_return (
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className=&quot;bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300&quot;              >
-                <div className=&quot;text-5xl mb-6&quot;>🤖</div>
+                <div className=&quot;text-5xl mb-6&quot;></div>
                 <h3 className=&quot;text-2xl font-semibold text-white mb-4&quot;>AI Automation Services</h3>
                 <p className=&quot;text-gray-300 mb-6&quot;>
                   Intelligent automation solutions that streamline operations and boost productivity. 
@@ -207,7 +207,7 @@ const Homepage2026: React.FC = () => {_return (
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className=&quot;bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300&quot;              >
-                <div className=&quot;text-5xl mb-6&quot;>🏗️</div>
+                <div className=&quot;text-5xl mb-6&quot;></div>
                 <h3 className=&quot;text-2xl font-semibold text-white mb-4&quot;>IT Infrastructure Services</h3>
                 <p className=&quot;text-gray-300 mb-6&quot;>
                   Robust infrastructure solutions for modern digital businesses. 
@@ -240,7 +240,7 @@ const Homepage2026: React.FC = () => {_return (
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className=&quot;bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300&quot;              >
-                <div className=&quot;text-5xl mb-6&quot;>🚀</div>
+                <div className=&quot;text-5xl mb-6&quot;></div>
                 <h3 className=&quot;text-2xl font-semibold text-white mb-4&quot;>Micro SAAS Solutions</h3>
                 <p className=&quot;text-gray-300 mb-6&quot;>
                   Specialized software solutions for specific business needs. 
@@ -273,7 +273,7 @@ const Homepage2026: React.FC = () => {_return (
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className=&quot;bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300&quot;              >
-                <div className=&quot;text-5xl mb-6&quot;>🧠</div>
+                <div className=&quot;text-5xl mb-6&quot;></div>
                 <h3 className=&quot;text-2xl font-semibold text-white mb-4&quot;>Cutting-Edge AI Services</h3>
                 <p className=&quot;text-gray-300 mb-6&quot;>
                   Next-generation AI solutions for competitive advantage. 

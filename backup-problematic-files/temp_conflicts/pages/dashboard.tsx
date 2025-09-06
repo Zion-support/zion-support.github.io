@@ -27,7 +27,7 @@ export default function Dashboard() {;
       <header className="px-6 py-4 bg-white border-b flex items-center gap-3">;
         {branding?.logoUrl && <img src={branding.logoUrl} alt="logo" className="h-8 w-8 rounded" />}
         <h1 className="text-lg font-semibold" style={{ color:accent }}>{branding?.name || 'Zion Hire AI'}</h1>;
-        <span className="ml-auto text-xs text-gray-400">Tenant:{tenantId ? tenantId.slice(0,8) :'—'}</span>;
+        <span className="ml-auto text-xs text-gray-400">Tenant:{tenantId ? tenantId.slice(0,8) :''}</span>;
       </header>;
       <main className="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6">;
         <section className="col-span-1 md:col-span-2 bg-white border rounded p-4">;

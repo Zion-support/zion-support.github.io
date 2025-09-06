@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { GradientHeading } from "@/components/GradientHeading";
 import { Clock, Map, DollarSign } from 'lucide-react'
@@ -54,12 +49,6 @@ export function PageHero() {
 }
           <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>
-=======
-
-import { GradientHeading } from "@/components/GradientHeading";
-import { Clock, Map, DollarSign } from 'lucide-react'
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export function PageHero() {
   return (
     <div className="text-center mb-12">
@@ -91,11 +80,8 @@ export function PageHero() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { GradientHeading } from '@/components/GradientHeading';
 import { Clock, Map, DollarSign } from 'lucide-react';
 export function PageHero() {;
@@ -186,12 +172,8 @@ export function PageHero() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { GradientHeading } from '@/components / GradientHeading';
 import { Clock, Map, DollarSign } from 'lucide-react';
 export /**
@@ -279,4 +261,3 @@ function PageHero() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -59,46 +54,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
-=======
-import { log_info } from '@/utils / production_logger';
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
-// Mock category data;
-const categories_info: Record < string, ForumCategoryInfo> = {
-  "getting - hired": {
-    id: "getting - hired",
-    name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.";
-    admin_only: false,
-    icon: "Briefcase";
-  }
-  "project - help": {
-    id: "project - help",
-    name: "Project Help",
-    description: "Get help with your ongoing projects and collaboration.",
-    admin_only: false,
-    icon: "MessageSquare";
-  }
-  "ai - tools": {
-    id: "ai - tools",
-    name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices.";
-    admin_only: false,
-    icon: "Code";
-  }
-  "feedback": {
-    id: "feedback",
-    name: "Feedback & Feature Requests",
-    description: "Share your feedback and suggest new features.",
-    admin_only: false,
-    icon: "FileText";
-  }
-  "announcements": {
-    id: "announcements",
-    name: "Announcements",
-    description: "Official announcements from the Zion team.",
-    admin_only: true,
-    icon: "Megaphone";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
 const icon_map = {
@@ -108,7 +63,6 @@ const icon_map = {
   "FileText": FileText;
   "Megaphone": Megaphone;
 }
-<<<<<<< HEAD
 function CategoryContent({
   categoryId
   category
@@ -144,8 +98,6 @@ function CategoryContent({
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' })
       return
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
@@ -237,42 +189,19 @@ function CategoryContent(): any ({;
     if (!user) {;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
       return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     if (isFollowed(categoryId)) {;
       unfollow(categoryId);
     } else {;
       follow(categoryId);
     }
-<<<<<<< HEAD
   }
   logInfo('CategoryContent - categoryId:', { data: categoryId })
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts })
   logInfo('CategoryContent - filteredPosts:', { data: filteredPosts })
   const category = categoryId ? categoriesInfo[categoryId] : null
   const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null
-=======
-  };
-
-  logInfo('CategoryContent - categoryId:', { data: categoryId }),;
-  logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
-  logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),;
-  const category = categoryId ? categoriesInfo[categoryId] : null;
-  const IconComponent = category ? iconMap[category && category.icon as keyof typeof iconMap] : null;
-
 }
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-}
-<<<<<<< HEAD
-=======
-
-  )
-}
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 /**
  * CategoryContent - Function description
  */
@@ -320,5 +249,3 @@ if ( {) {
 }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

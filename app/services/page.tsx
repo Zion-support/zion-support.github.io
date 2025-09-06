@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 import Link from "next/link";
-<<<<<<< HEAD
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:
     "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-=======
-export const metadata = {;
-  title: "Services | Zion Tech Group",;
-  description:;
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 };
 export default function ServicesOverviewPage() {;
   return (
@@ -37,7 +29,6 @@ export default function ServicesOverviewPage() {;
             "Foundational architecture"
             "Billing + subscriptions"
             "Growth analytics"
-=======
 import Link from './next / link';
 export const metadata = {
   title: "Services | Zion Tech Group",
@@ -72,31 +63,28 @@ function ServicesOverviewPage() {
             "Foundational architecture",
             "Billing + subscriptions",
             "Growth analytics",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           ]}
-          icon="🚀";
+          icon="";
         />{" "}
         <ServiceCard;
           href="/services / ai - services";
           title="AI Services";
           description="LLM applications, RAG systems, and MLOps pipelines";
           bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
-          icon="🤖";
+          icon="";
         />{" "}
         <ServiceCard;
           href="/services / it - services";
           title="IT Services";
           description="Cloud migration, DevOps, and security solutions";
           bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-          icon="⚙️";
+          icon="";
         />{" "}
       </div>{" "}
       <CTA />{" "}
-<<<<<<< HEAD
     </div>;
   );
 }
-<<<<<<< HEAD
 function ServiceCard({
   href
   title
@@ -104,33 +92,21 @@ function ServiceCard({
   bullets
   icon
 }: {
-=======
-function ServiceCard(): any ({;
-  href,;
-  title,;
-  description,;
-  bullets,;
-  icon,;
-}: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   href: string;
   title: string;
   description: string;
   bullets: string[];
   icon: string;
 }) {;
-=======
     </div>);
 }
 /**
  * ServiceCard - Function description
  */
 function ServiceCard() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <Link;
       href={href}
-<<<<<<< HEAD
       className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">;
       {" "}
       <div className="text-4xl mb-4">{icon}</div>{" "}
@@ -143,7 +119,7 @@ function ServiceCard() {
         {bullets && bullets.map((bullet) => (;
           <li key={bullet} className="flex items-center">;
             {" "}
-            <span className="text-blue-500 mr-2">•</span> {bullet}{" "}
+            <span className="text-blue-500 mr-2"></span> {bullet}{" "}
           </li>;
         ))}{" "}
       </ul>{" "}
@@ -159,11 +135,7 @@ function CTA() {;
       </h3>{" "}
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">;
         {" "}
-<<<<<<< HEAD
         Talk to our experts about your project. We&apos;ll help you choose the right
-=======
-        Talk to our experts about your project. We'll help you choose the right;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         service and create a custom solution for your business needs.{" "}
       </p>{" "}
       <div className="flex flex-col sm:flex-row gap-4 justify-center">;
@@ -177,7 +149,6 @@ function CTA() {;
         <a
           href="mailto:kleber@ziontechgroup && ziontechgroup.com"
           className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">;
-=======
       className="group border border - gray - 200 rounded - xl p - 8 block hover:border - blue - 300 hover:shadow - lg transition - all duration - 200 bg - white";
     >;
       {" "}
@@ -191,7 +162,7 @@ function CTA() {;
         {bullets.map ((bullet) => (
           <li key={bullet} className="flex items - center">;
             {" "}
-            <span className="text - blue - 500 mr - 2">•</span> {bullet}{" "}
+            <span className="text - blue - 500 mr - 2"></span> {bullet}{" "}
           </li>))}{" "}
       </ul>{" "}
     </Link>);
@@ -224,15 +195,10 @@ function CTA() {
           href="mailto:kleber@ziontechgroup.com";
           className="border - 2 border - blue - 600 text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 600 hover:text - white transition - colors";
         >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {" "}
           Email Us{" "}
         </a>{" "}
       </div>{" "}
-<<<<<<< HEAD
     </div>;
   );
-=======
-    </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

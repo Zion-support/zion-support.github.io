@@ -22,42 +22,25 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import EnhancedLayout from '../layout/EnhancedLayout';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-=======
 import EnhancedLayout from '../layout / EnhancedLayout';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type ProposalType =;
   | 'Workforce Dev';
   | 'AI Ethics';
   | 'Digital ID';
   | 'Education';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export type ProposalForm = {
-=======
-
-export type ProposalForm = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   targetInstitution: string;
-=======
 ;
 export type ProposalForm = {
   target_institution: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   type: ProposalType;
   regional_scope: string;
   budgetOrGoals: string;
   supporting_multiverses: string;
   language?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
   customPrompt?: string;};export type ProposalForm = {
   targetInstitution: string
   type: ProposalType
@@ -67,24 +50,14 @@ export type ProposalForm = {
   language?: string;
   customPrompt?: string
 }
-=======
-export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
-export type ProposalForm = {
-  targetInstitution: string,
-=======
-  custom_prompt?: string;}export type ProposalForm = {
-  target_institution: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   type: ProposalType,
   regional_scope: string,
   budgetOrGoals: string,
   supporting_multiverses: string,
   language?: string;
-<<<<<<< HEAD
   customPrompt?: string
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function ProposalGenerator() {
   const [form, setForm] = useState<ProposalForm>({
     targetInstitution: 'UNDP'
@@ -94,30 +67,7 @@ export default function ProposalGenerator() {
     supportingMultiverses: ''
     language: 'English'
     customPrompt:
-<<<<<<< HEAD
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
-=======
-  customPrompt?: string;};export type ProposalForm = {;
-  targetInstitution: string,;
-  type: ProposalType,;
-  regionalScope: string,;
-  budgetOrGoals: string,;
-  supportingMultiverses: string,;
-  language?: string;
-  customPrompt?: string;
-};
-
-export default function ProposalGenerator() {;
-  const [form, setForm] = useState<ProposalForm>({;
-    targetInstitution: 'UNDP',;
-    type: 'Workforce Dev',;
-    regionalScope: 'Global',;
-    budgetOrGoals: '',;
-    supportingMultiverses: '',;
-    language: 'English',;
-    customPrompt:;
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
@@ -128,33 +78,15 @@ export default function ProposalGenerator() {;
     mdUrl?: string;
   } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
-<<<<<<< HEAD
   function handleChange<K extends keyof ProposalForm>(
     key: K
     value: ProposalForm[K]
   ) {
-=======
-
-  function handleChange<K extends keyof ProposalForm>(;
-    key: K,;
-    value: ProposalForm[K];
-  ) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
-<<<<<<< HEAD
-=======
-=======
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'});
-  const [isGenerating, setIsGenerating] = useState(false);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
     setForm((prev) => ({ ...prev, [key]: value }))
   }
@@ -163,7 +95,6 @@ export default function ProposalGenerator() {;
     setStatusMessage('Generating draft...');
     try {
       const res = await fetch('/api/proposals/generate', {
-<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify(form)
@@ -171,8 +102,6 @@ export default function ProposalGenerator() {;
       const data = await res.json();
       setDraftMarkdown(data.markdown |'');
       setDraftJson(data.json |null);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {;
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -190,24 +119,14 @@ export default function ProposalGenerator() {;
       const data = await res && res.json();
       setDraftMarkdown(data && data.markdown || '');
       setDraftJson(data && data.json || null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setStatusMessage('Draft ready. You can edit and export.');
     } catch (e: any) {;
       console && console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.');
-<<<<<<< HEAD
     } finally {
       setIsGenerating(false);    }      const data = await res.json();
       setDraftMarkdown(data.markdown |'');
       setDraftJson(data.json |null);
-=======
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form)}),
-      const data = await res.json();
-      setDraftMarkdown(data.markdown || '');
-      setDraftJson(data.json || null);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       setStatusMessage('Draft ready. You can edit and export.')
     } catch (e: any) {
       console.error(e);
@@ -223,7 +142,6 @@ export default function ProposalGenerator() {;
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-<<<<<<< HEAD
           markdown: draftMarkdown
           json: draftJson
           meta: form
@@ -240,13 +158,6 @@ export default function ProposalGenerator() {;
       console.error(e);
       setStatusMessage('Export failed');    }      const data = await res.json();
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl })
-=======
-          markdown: draftMarkdown,
-          json: draftJson,
-          meta: form})}),
-      const data = await res.json();
-      setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl }),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       setStatusMessage('Exported. Files saved.')
     } catch (e) {
       console.error(e);
@@ -257,7 +168,6 @@ export default function ProposalGenerator() {;
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
       const res = await fetch('/api/proposals/submit', {
-<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
@@ -269,30 +179,6 @@ export default function ProposalGenerator() {;
       const data = await res.json();
       setStatusMessage(
         `Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`
-=======
-    } finally {;
-      setIsGenerating(false);    }      const data = await res && res.json();
-      setDraftMarkdown(data && data.markdown || '');
-      setDraftJson(data && data.json || null);
-      setStatusMessage('Draft ready. You can edit and export.');
-    } catch (e: any) {;
-      console && console.error(e);
-      setStatusMessage('Failed to generate. You can edit manually and export.');
-    } finally {;
-      setIsGenerating(false);
-<<<<<<< HEAD
-=======
-=======
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ markdown: draftMarkdown, json: draftJson, meta: form })}),
-      const data = await res.json();
-      setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`)
-    } catch (e) {
-      console.error(e);
-      setStatusMessage('Submission failed')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
 
@@ -341,15 +227,12 @@ export default function ProposalGenerator() {;
       const data = await res && res.json();
       setStatusMessage(;
         `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
     } catch (e) {;
       console && console.error(e);
       setStatusMessage('Submission failed');    }
   }
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div className='space-y-4'>      const data = await res.json();
@@ -358,18 +241,6 @@ export default function ProposalGenerator() {;
       console.error(e);
 
       setStatusMessage('Submission failed')
-=======
-    <div className='space-y-6'>;
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-        <div className='space-y-4'>      const data = await res && res.json();
-      setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`);
-    } catch (e) {;
-      console && console.error(e);
-      setStatusMessage('Submission failed');
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   return (
@@ -473,39 +344,6 @@ export default function ProposalGenerator() {;
           <div className='flex gap-2'>;
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
-<<<<<<< HEAD
-=======
-=======
-    <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Target institution">Target institution</label>
-            <input
-              className="w-full border rounded px-3 py-2"
-              value={form.targetInstitution}
-              onChange={(e) => handleChange('targetInstitution', e.target.value)}
-              placeholder="UNDP / World Bank / ILO"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Type">Type</label>
-            <select
-              className="w-full border rounded px-3 py-2"
-              value={form.type}
-              onChange={(e) => handleChange('type', e.target.value as ProposalType)}
-            >
-              <option>Workforce Dev</option>
-              <option>AI Ethics</option>
-              <option>Digital ID</option>
-              <option>Education</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Regional scope">Regional scope</label>
-            <input
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="w-full border rounded px-3 py-2"
               value={form && form.regionalScope}
               onChange={(e) => handleChange('regionalScope', e && e.target.value)}
@@ -557,24 +395,13 @@ export default function ProposalGenerator() {;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>;
             <button
-<<<<<<< HEAD
               className='px-4 py-2 bg-emerald-600 text-white rounded'              onClick={handleExport}              className="px-4 py-2 bg-emerald-600 text-white rounded"
-=======
-<<<<<<< HEAD
               className='px-4 py-2 bg-emerald-600 text-white rounded'              onClick={handleExport}              className="px-4 py-2 bg-emerald-600 text-white rounded"
-=======
-              className="px-4 py-2 bg-emerald-600 text-white rounded"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               onClick={handleExport}
               disabled={!draftMarkdown}>;
               Export (PDF/JSON/MD);
             </button>;
             <button
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='px-4 py-2 bg-purple-600 text-white rounded'              onClick={handleSubmitBridge}              className="px-4 py-2 bg-purple-600 text-white rounded"
               onClick={handleSubmitBridge}
               disabled={!draftMarkdown}>;
@@ -628,42 +455,12 @@ export default function ProposalGenerator() {;
                     JSON;
                   </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>;
                 </div>;
-<<<<<<< HEAD
               )}
             </div>;
           )}
-=======
-=======
-              className="px-4 py-2 bg-purple-600 text-white rounded"
-              onClick={handleSubmitBridge}
-              disabled={!draftMarkdown}
-            >
-              Submit Bridge
-            </button>
-          </div>
-          {statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
-          {exportLinks && (
-            <div className="text-sm space-y-1">
-              {exportLinks.pdfUrl && (
-                <div>
-                  <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
-                </div>
-              )}
-              {exportLinks.mdUrl && (
-                <div>
-                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
-                </div>
-              )}
-              {exportLinks.jsonUrl && (
-                <div>
-                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
-                </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               )}
             </div>;
           )}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         </div>;
         <div className='space-y-2'>;
           <label className='block text-sm font-medium'>Draft (Markdown)</label>;
@@ -671,29 +468,17 @@ export default function ProposalGenerator() {;
             className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
             value={draftMarkdown}
             onChange={e => setDraftMarkdown(e && e.target.value)}          />          <textarea
-<<<<<<< HEAD
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
-=======
-=======
-        </div>
-        <div className="space-y-2">
-          <label className="block text-sm font-medium" htmlFor="input-Draft (Markdown)">Draft (Markdown)</label>
-          <textarea
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
-<<<<<<< HEAD
             onChange={(e) => setDraftMarkdown(e.target.value)}
           />
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 );
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             onChange={(e) => setDraftMarkdown(e && e.target.value)}
           />;
         </div>;
@@ -701,12 +486,8 @@ export default function ProposalGenerator() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   custom_prompt?: string;
 }
 ;
@@ -1069,4 +850,3 @@ function handleSubmitBridge() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

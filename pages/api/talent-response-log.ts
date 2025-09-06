@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     res.setHeader('AllowPOST')
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     res.setHeader('AllowPOST');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   const { talentId, action } = req.body |{}
@@ -23,14 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const payload = { talentId, action, at: new Date().toISOString() }
 
   return res.status(200).json({ ok: true, data: payload })
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default /**
@@ -55,5 +41,3 @@ if ( {) {
   return res.status (200).json ({ ok: true, data: payload });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

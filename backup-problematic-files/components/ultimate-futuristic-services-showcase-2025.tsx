@@ -415,7 +415,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
           {/* No Results */}
           {sortedServices.length === 0 && (
             <div className="text-center py-16">
-              <div className="text-6xl mb-4">🔍</div>
+              <div className="text-6xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-gray-400 mb-6">Try adjusting your search criteria or category filter</p>
               <button

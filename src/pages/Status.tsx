@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { SEO } from "@/components/SEO",
 import { useState, useEffect } from "react",
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
@@ -18,52 +15,13 @@ interface ServiceStatus {
         return <CheckCircle className="h-5 w-5 text-green-500" />
         return <Clock className="h-5 w-5 text-blue-500" />
       default:
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import { logWarn } from '@/utils/productionLogger';
-interface ServiceStatus {;
-  name: string,;
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance',;
-  description: string,;
-  lastChecked: string;
-}
-
-        return <CheckCircle className="h-5 w-5 text-green-500" />;
-        return <Clock className="h-5 w-5 text-blue-500" />;
-      default:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return <AlertCircle className="h-5 w-5 text-gray-500" />}
 import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
 }
 
   )
 }
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { log_warn } from '@/utils / production_logger';
 interface ServiceStatus {
   name: string,
@@ -82,7 +40,3 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
 }
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

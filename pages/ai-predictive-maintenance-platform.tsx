@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPredictiveMaintenancePlatform() {
@@ -10,7 +9,7 @@ export default function AIPredictiveMaintenancePlatform() {
 			subtitle="Reliability at lower cost"
 			pricePerMonthUSD={499}
 			implementationWeeks="2-4 weeks"
-			roiNote="Cut unplanned downtime by 30–50% and maintenance costs by 10–20%"
+			roiNote="Cut unplanned downtime by 3050% and maintenance costs by 1020%"
 			features={[
 				"Sensor ingestion and anomaly detection"
 				"Remaining useful life (RUL) predictions"
@@ -26,14 +25,7 @@ export default function AIPredictiveMaintenancePlatform() {
 			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform"
 		/>
 	)
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -47,7 +39,7 @@ return (
   subtitle="Reliability at lower cost";
   pricePerMonthUSD={499}
     implementation_weeks="2 - 4 weeks";
-  roi_note="Cut unplanned downtime by 30–50% and maintenance costs by 10–20%";
+  roi_note="Cut unplanned downtime by 3050% and maintenance costs by 1020%";
   features={[;
     "Sensor ingestion and anomaly detection",
     "Remaining useful life (RUL) predictions",
@@ -62,5 +54,3 @@ return (
     canonical="https: //ziontechgroup.com / ai - predictive - maintenance - platform";
   />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

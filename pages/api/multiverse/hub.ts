@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -19,14 +15,7 @@ lastSyncedAt: state.lastSyncedAt})
 
   }
   return res.status(405).json({ error: "Method not allowed" })
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state  } from '../../../utils / sync / storage';,
 export default async /**
@@ -50,5 +39,3 @@ lastSyncedAt: state.lastSyncedAt});
   return res.status (405).json ({ error: "Method not allowed" });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

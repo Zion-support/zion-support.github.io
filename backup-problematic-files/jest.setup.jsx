@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/jest.setup.jsx
 }}},};
 export default function Jest.setup({ }: Jest.setupProps) {;
   return (,
@@ -9,6 +8,3 @@ export default function Jest.setup({ }: Jest.setupProps) {;
 };
 };
 };
-=======
-}}};
->>>>>>> main:jest.config.jsx

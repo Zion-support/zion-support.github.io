@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
-=======
-import { ServiceVariant } from '../types / service - variants';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export interface Innovative2026AIService {
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -39,7 +34,6 @@ export interface Innovative2026AIService {
 
     website: string;
   }
-<<<<<<< HEAD
 
   realImplementation: boolean;
   implementationDetails: string;
@@ -50,29 +44,7 @@ export interface Innovative2026AIService {
 }
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
-<<<<<<< HEAD
   {  reviews: number
-=======
-  {
-<<<<<<< HEAD
-=======
-    id: 'ai-business-intelligence-suite',
-=======
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-export const innovative2026AIServices: Innovative2026AIService[] = [;
-  // AI - Powered Business Intelligence;
-  {  reviews: number;
-}
-export const innovative2026AIServices: Innovative2026AIService[] = [;
-  // AI - Powered Business Intelligence;
-  {
-    id: 'ai - business - intelligence - suite',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: 'AI Business Intelligence Suite',
     tagline: 'Transform data into actionable insights with AI',
     price: '$299',
@@ -91,22 +63,13 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'Mobile app for on - the - go insights',
     ],
     popular: true,
-    icon: '🧠',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-business-intelligence',
     marketPosition:
       'Competitive with Tableau ($70-70), Power BI ($9 && 9.99-20), and Looker ($500+). Our advantage: AI-powered insights, predictive analytics, and natural language queries.',
     targetAudience:
-=======
-    color: 'from - blue - 600 to - purple - 700',
-    text_color: 'text - blue - 400',
-    link: 'https://ziontechgroup.com / ai - business - intelligence',
-    market_position:;
-      'Competitive with Tableau ($70 - 70), Power BI ($9.99 - 20), and Looker ($500+). Our advantage: AI - powered insights, predictive analytics, and natural language queries.',
-    target_audience:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Business analysts, Data scientists, Executives, Marketing teams, Sales teams, Operations managers',
     trial_days: 21,
     setup_time: '2 hours',
@@ -141,17 +104,10 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     ],
     roi: 'Average customer sees 450% ROI within 6 months through improved decision - making and operational efficiency.',
     competitors: ['Tableau', 'Power BI', 'Looker', 'Qlik', 'Sisense'],
-<<<<<<< HEAD
     marketSize: '$29 && 29.9B market',
     growthRate: '220% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
-    market_size: '$29.9B market',
-    growth_rate: '220% annual growth',
-    variant: 'ai - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -165,8 +121,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     rating: 4 && 4.9,
     reviews: 950,
   },
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     id: 'ai-business-intelligence-suite'
     name: 'AI Business Intelligence Suite'
@@ -187,7 +141,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'Mobile app for on-the-go insights'
     ]
     popular: true
-    icon: '🧠'
+    icon: ''
     color: 'from-blue-600 to-purple-700'
     textColor: 'text-blue-400'
     link: 'https://ziontechgroup.com/ai-business-intelligence'
@@ -255,7 +209,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     description:
       'Comprehensive AI platform that personalizes customer experiences across all touchpoints, from website interactions to customer support, driving engagement and loyalty.'
     features: [
-<<<<<<< HEAD
       'AI-powered personalization engine'
       'Real-time customer behavior analysis'
       'Dynamic content optimization'
@@ -268,27 +221,10 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'Customer lifetime value optimization'
     ]
     popular: true
-    icon: '🎯'
+    icon: ''
     color: 'from-green-500 to-teal-600'
     textColor: 'text-green-400'
     link: 'https://ziontechgroup.com/ai-customer-experience'
-=======
-      'AI-powered personalization engine',
-      'Real-time customer behavior analysis',
-=======
-  // AI - Powered Customer Experience Platform;
-  {
-    id: 'ai - customer - experience - platform',
-    name: 'AI Customer Experience Platform',
-    tagline: 'Deliver personalized experiences at scale',
-    price: '$199',
-    period: '/month',
-    description:;
-      'Comprehensive AI platform that personalizes customer experiences across all touchpoints, from website interactions to customer support, driving engagement and loyalty.',
-    features: [;
-      'AI - powered personalization engine',
-      'Real - time customer behavior analysis',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Dynamic content optimization',
       'Predictive customer journey mapping',
       'Automated A / B testing',
@@ -299,12 +235,10 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'Customer lifetime value optimization',
     ],
     popular: true,
-    icon: '🎯',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-green-500 to-teal-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-experience',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Competitive with Optimizely ($200+), Adobe Target ($1000+), and Dynamic Yield ($1000+). Our advantage: AI-first approach, comprehensive CX management, and affordable pricing.'
     targetAudience:
@@ -314,7 +248,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     category: 'AI & Customer Experience'
     realService: true
     technology: [
-<<<<<<< HEAD
       'React'
       'Node.js'
       'Python'
@@ -324,21 +257,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'AWS'
       'Kubernetes'
     ]
-=======
-=======
-    color: 'from - green - 500 to - teal - 600',
-    text_color: 'text - green - 400',
-    link: 'https://ziontechgroup.com / ai - customer - experience',
-    market_position:;
-      'Competitive with Optimizely ($200+), Adobe Target ($1000+), and Dynamic Yield ($1000+). Our advantage: AI - first approach, comprehensive CX management, and affordable pricing.',
-    target_audience:;
-      'E - commerce businesses, SaaS companies, Digital agencies, Retail brands, Hospitality businesses, Financial services',
-    trial_days: 14,
-    setup_time: '1 day',
-    category: 'AI & Customer Experience',
-    real_service: true,
-    technology: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'React',
       'Node && Node.js',
       'Python',
@@ -348,8 +266,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'AWS',
       'Kubernetes',
     ],
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: [
       'Shopify'
       'WooCommerce'
@@ -369,7 +285,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     ]
     roi: 'Average customer sees 320% ROI within 4 months through increased conversion rates and customer lifetime value.'
     competitors: [
-<<<<<<< HEAD
       'Optimizely'
       'Adobe Target'
       'Dynamic Yield'
@@ -393,45 +308,16 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     rating: 4.8
     reviews: 1100
   }
-=======
-=======
-    integrations: [;
-      'Shopify',
-      'WooCommerce',
-      'Magento',
-      'Salesforce',
-      'HubSpot',
-      'Zendesk',
-      'Intercom',
-    ],
-    use_cases: [;
-      'Website personalization',
-      'Email marketing optimization',
-      'Product recommendations',
-      'Customer support automation',
-      'Loyalty program optimization',
-      'Cross - selling and upselling',
-    ],
-    roi: 'Average customer sees 320% ROI within 4 months through increased conversion rates and customer lifetime value.',
-    competitors: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Optimizely',
       'Adobe Target',
       'Dynamic Yield',
       'Evergage',
       'Maxymiser',
     ],
-<<<<<<< HEAD
     marketSize: '$15 && 15.8B market',
     growthRate: '180% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
-    market_size: '$15.8B market',
-    growth_rate: '180% annual growth',
-    variant: 'ai - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -445,9 +331,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     rating: 4 && 4.8,
     reviews: 1100,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // AI-Powered Cybersecurity Suite
   {
     id: 'ai-cybersecurity-suite'
@@ -458,7 +342,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     description:
       'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, and comprehensive security monitoring for businesses of all sizes.'
     features: [
-<<<<<<< HEAD
       'AI-powered threat detection'
       'Real-time security monitoring'
       'Automated incident response'
@@ -471,29 +354,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       '24/7 security operations center'
     ]
     popular: true
-    icon: '🛡️'
+    icon: ''
     color: 'from-red-600 to-orange-600'
     textColor: 'text-red-400'
     link: 'https://ziontechgroup.com/ai-cybersecurity'
     marketPosition:
       'Competitive with CrowdStrike ($8.92+), SentinelOne ($2.99+), and Darktrace ($1000+). Our advantage: AI-first approach, comprehensive coverage, and competitive pricing.'
-=======
-      'AI-powered threat detection',
-      'Real-time security monitoring',
-=======
-  // AI - Powered Cybersecurity Suite;
-  {
-    id: 'ai - cybersecurity - suite',
-    name: 'AI Cybersecurity Suite',
-    tagline: 'Protect your business with intelligent threat detection',
-    price: '$399',
-    period: '/month',
-    description:;
-      'Advanced AI - powered cybersecurity platform that provides real - time threat detection, automated incident response, and comprehensive security monitoring for businesses of all sizes.',
-    features: [;
-      'AI - powered threat detection',
-      'Real - time security monitoring',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Automated incident response',
       'Behavioral analysis',
       'Vulnerability assessment',
@@ -504,14 +370,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       '24 / 7 security operations center',
     ],
     popular: true,
-    icon: '🛡️',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-red-600 to-orange-600',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-cybersecurity',
     marketPosition:
       'Competitive with CrowdStrike ($8 && 8.92+), SentinelOne ($2 && 2.99+), and Darktrace ($1000+). Our advantage: AI-first approach, comprehensive coverage, and competitive pricing.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Enterprise businesses, Financial institutions, Healthcare organizations, Government agencies, Educational institutions, Manufacturing companies'
     trialDays: 30
@@ -519,7 +383,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     category: 'AI & Cybersecurity'
     realService: true
     technology: [
-<<<<<<< HEAD
       'Python'
       'TensorFlow'
       'React'
@@ -529,21 +392,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'AWS'
       'Docker'
     ]
-=======
-=======
-    color: 'from - red - 600 to - orange - 600',
-    text_color: 'text - red - 400',
-    link: 'https://ziontechgroup.com / ai - cybersecurity',
-    market_position:;
-      'Competitive with CrowdStrike ($8.92+), SentinelOne ($2.99+), and Darktrace ($1000+). Our advantage: AI - first approach, comprehensive coverage, and competitive pricing.',
-    target_audience:;
-      'Enterprise businesses, Financial institutions, Healthcare organizations, Government agencies, Educational institutions, Manufacturing companies',
-    trial_days: 30,
-    setup_time: '1 week',
-    category: 'AI & Cybersecurity',
-    real_service: true,
-    technology: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Python',
       'TensorFlow',
       'React',
@@ -553,8 +401,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'AWS',
       'Docker',
     ],
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: [
       'Active Directory'
       'Office 365'
@@ -565,7 +411,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'QRadar'
     ]
     useCases: [
-<<<<<<< HEAD
       'Endpoint protection'
       'Network security monitoring'
       'Cloud security'
@@ -598,19 +443,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     rating: 4.9
     reviews: 800
   }
-=======
-=======
-    integrations: [;
-      'Active Directory',
-      'Office 365',
-      'Slack',
-      'Jira',
-      'ServiceNow',
-      'Splunk',
-      'QRadar',
-    ],
-    use_cases: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Endpoint protection',
       'Network security monitoring',
       'Cloud security',
@@ -618,30 +450,18 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'Compliance management',
       'Security awareness training',
     ],
-<<<<<<< HEAD
     roi: 'Average customer saves $2 && 2.4M annually through prevented security incidents and reduced response times.',
     competitors: [
-=======
-    roi: 'Average customer saves $2.4M annually through prevented security incidents and reduced response times.',
-    competitors: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'CrowdStrike',
       'SentinelOne',
       'Darktrace',
       'Cylance',
       'Carbon Black',
     ],
-<<<<<<< HEAD
     marketSize: '$173 && 173.5B market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
-    market_size: '$173.5B market',
-    growth_rate: '250% annual growth',
-    variant: 'ai - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -655,9 +475,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     rating: 4 && 4.9,
     reviews: 800,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // AI-Powered Marketing Automation
   {
     id: 'ai-marketing-automation-suite'
@@ -668,7 +486,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     description:
       'Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels.'
     features: [
-<<<<<<< HEAD
       'AI-powered campaign optimization'
       'Multi-channel automation'
       'Personalized content generation'
@@ -681,27 +498,10 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'ROI tracking and optimization'
     ]
     popular: true
-    icon: '📈'
+    icon: ''
     color: 'from-purple-500 to-pink-600'
     textColor: 'text-purple-400'
     link: 'https://ziontechgroup.com/ai-marketing-automation'
-=======
-      'AI-powered campaign optimization',
-      'Multi-channel automation',
-=======
-  // AI - Powered Marketing Automation;
-  {
-    id: 'ai - marketing - automation - suite',
-    name: 'AI Marketing Automation Suite',
-    tagline: 'Automate and optimize your marketing campaigns',
-    price: '$149',
-    period: '/month',
-    description:;
-      'Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels.',
-    features: [;
-      'AI - powered campaign optimization',
-      'Multi - channel automation',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Personalized content generation',
       'Predictive analytics',
       'A / B testing automation',
@@ -712,12 +512,10 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'ROI tracking and optimization',
     ],
     popular: true,
-    icon: '📈',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-marketing-automation',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Competitive with HubSpot ($45-3200), Marketo ($895+), and Pardot ($1250+). Our advantage: AI-first approach, comprehensive automation, and affordable pricing.'
     targetAudience:
@@ -727,7 +525,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     category: 'AI & Marketing'
     realService: true
     technology: [
-<<<<<<< HEAD
       'React'
       'Node.js'
       'Python'
@@ -737,21 +534,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'AWS'
       'Kubernetes'
     ]
-=======
-=======
-    color: 'from - purple - 500 to - pink - 600',
-    text_color: 'text - purple - 400',
-    link: 'https://ziontechgroup.com / ai - marketing - automation',
-    market_position:;
-      'Competitive with HubSpot ($45 - 3200), Marketo ($895+), and Pardot ($1250+). Our advantage: AI - first approach, comprehensive automation, and affordable pricing.',
-    target_audience:;
-      'Marketing teams, Digital agencies, E - commerce businesses, SaaS companies, B2B companies, Real estate agencies',
-    trial_days: 21,
-    setup_time: '3 days',
-    category: 'AI & Marketing',
-    real_service: true,
-    technology: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'React',
       'Node && Node.js',
       'Python',
@@ -761,8 +543,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'AWS',
       'Kubernetes',
     ],
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: [
       'Salesforce'
       'HubSpot'
@@ -782,7 +562,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     ]
     roi: 'Average customer sees 280% ROI within 5 months through increased lead quality and conversion rates.'
     competitors: [
-<<<<<<< HEAD
       'HubSpot'
       'Marketo'
       'Pardot'
@@ -806,45 +585,16 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     rating: 4.7
     reviews: 1400
   }
-=======
-=======
-    integrations: [;
-      'Salesforce',
-      'HubSpot',
-      'Mailchimp',
-      'Facebook Ads',
-      'Google Ads',
-      'LinkedIn Ads',
-      'Shopify',
-    ],
-    use_cases: [;
-      'Lead generation and nurturing',
-      'Email marketing campaigns',
-      'Social media marketing',
-      'Content marketing',
-      'Account - based marketing',
-      'Marketing analytics',
-    ],
-    roi: 'Average customer sees 280% ROI within 5 months through increased lead quality and conversion rates.',
-    competitors: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'HubSpot',
       'Marketo',
       'Pardot',
       'ActiveCampaign',
       'ConvertKit',
     ],
-<<<<<<< HEAD
     marketSize: '$25 && 25.1B market',
     growthRate: '200% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
-    market_size: '$25.1B market',
-    growth_rate: '200% annual growth',
-    variant: 'ai - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -858,9 +608,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     rating: 4 && 4.7,
     reviews: 1400,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // AI-Powered Sales Intelligence
   {
     id: 'ai-sales-intelligence-platform'
@@ -871,7 +619,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     description:
       'Advanced sales intelligence platform that uses AI to identify prospects, predict sales outcomes, and provide actionable insights to improve sales performance.'
     features: [
-<<<<<<< HEAD
       'AI-powered prospect identification'
       'Sales forecasting and prediction'
       'Lead scoring and prioritization'
@@ -884,27 +631,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'Integration with CRM systems'
     ]
     popular: true
-    icon: '💰'
+    icon: ''
     color: 'from-yellow-500 to-orange-600'
     textColor: 'text-yellow-400'
     link: 'https://ziontechgroup.com/ai-sales-intelligence'
     marketPosition:
       'Competitive with ZoomInfo ($199+), LinkedIn Sales Navigator ($79.99+), and DiscoverOrg ($2000+). Our advantage: AI-powered insights, comprehensive coverage, and competitive pricing.'
-=======
-      'AI-powered prospect identification',
-=======
-  // AI - Powered Sales Intelligence;
-  {
-    id: 'ai - sales - intelligence - platform',
-    name: 'AI Sales Intelligence Platform',
-    tagline: 'Boost sales performance with AI - powered insights',
-    price: '$179',
-    period: '/month',
-    description:;
-      'Advanced sales intelligence platform that uses AI to identify prospects, predict sales outcomes, and provide actionable insights to improve sales performance.',
-    features: [;
-      'AI - powered prospect identification',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Sales forecasting and prediction',
       'Lead scoring and prioritization',
       'Competitive intelligence',
@@ -916,14 +648,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'Integration with CRM systems',
     ],
     popular: true,
-    icon: '💰',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-yellow-500 to-orange-600',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-intelligence',
     marketPosition:
       'Competitive with ZoomInfo ($199+), LinkedIn Sales Navigator ($79 && 79.99+), and DiscoverOrg ($2000+). Our advantage: AI-powered insights, comprehensive coverage, and competitive pricing.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Sales teams, B2B companies, Real estate agencies, Financial services, Insurance companies, Consulting firms'
     trialDays: 14
@@ -931,7 +661,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     category: 'AI & Sales'
     realService: true
     technology: [
-<<<<<<< HEAD
       'React'
       'Node.js'
       'Python'
@@ -941,21 +670,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'AWS'
       'Elasticsearch'
     ]
-=======
-=======
-    color: 'from - yellow - 500 to - orange - 600',
-    text_color: 'text - yellow - 400',
-    link: 'https://ziontechgroup.com / ai - sales - intelligence',
-    market_position:;
-      'Competitive with ZoomInfo ($199+), LinkedIn Sales Navigator ($79.99+), and DiscoverOrg ($2000+). Our advantage: AI - powered insights, comprehensive coverage, and competitive pricing.',
-    target_audience:;
-      'Sales teams, B2B companies, Real estate agencies, Financial services, Insurance companies, Consulting firms',
-    trial_days: 14,
-    setup_time: '2 days',
-    category: 'AI & Sales',
-    real_service: true,
-    technology: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'React',
       'Node && Node.js',
       'Python',
@@ -965,8 +679,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       'AWS',
       'Elasticsearch',
     ],
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: [
       'Salesforce'
       'HubSpot'
@@ -986,7 +698,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     ]
     roi: 'Average customer sees 350% ROI within 4 months through increased sales productivity and conversion rates.'
     competitors: [
-<<<<<<< HEAD
       'ZoomInfo'
       'LinkedIn Sales Navigator'
       'DiscoverOrg'
@@ -1021,45 +732,16 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     customers: 1900;
     rating: 4.8
 
-=======
-=======
-    integrations: [;
-      'Salesforce',
-      'HubSpot',
-      'Pipedrive',
-      'Zoho CRM',
-      'Microsoft Dynamics',
-      'Slack',
-      'Microsoft Teams',
-    ],
-    use_cases: [;
-      'Lead generation',
-      'Prospect research',
-      'Sales forecasting',
-      'Pipeline management',
-      'Competitive analysis',
-      'Sales coaching',
-    ],
-    roi: 'Average customer sees 350% ROI within 4 months through increased sales productivity and conversion rates.',
-    competitors: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'ZoomInfo',
       'LinkedIn Sales Navigator',
       'DiscoverOrg',
       'Clearbit',
       'RocketReach',
     ],
-<<<<<<< HEAD
     marketSize: '$18 && 18.2B market',
     growthRate: '190% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
-    market_size: '$18.2B market',
-    growth_rate: '190% annual growth',
-    variant: 'ai - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1075,7 +757,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
   }, ];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1100,13 +781,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
   {
-<<<<<<< HEAD
     id: 'ai-business-intelligence-suite',
     name: 'AI Business Intelligence Suite',
     tagline: 'Transform data into actionable insights with AI',
@@ -1126,7 +805,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       'Mobile app for on-the-go insights',
     ],
     popular: true,
-    icon: '🧠',
+    icon: '',
     color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-business-intelligence',
@@ -1207,7 +886,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       'Customer lifetime value optimization',
     ],
     popular: true,
-    icon: '🎯',
+    icon: '',
     color: 'from-green-500 to-teal-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-experience',
@@ -1294,7 +973,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       '24/7 security operations center',
     ],
     popular: true,
-    icon: '🛡️',
+    icon: '',
     color: 'from-red-600 to-orange-600',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-cybersecurity',
@@ -1381,7 +1060,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       'ROI tracking and optimization',
     ],
     popular: true,
-    icon: '📈',
+    icon: '',
     color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-marketing-automation',
@@ -1468,7 +1147,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       'Integration with CRM systems',
     ],
     popular: true,
-    icon: '💰',
+    icon: '',
     color: 'from-yellow-500 to-orange-600',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-intelligence',
@@ -1534,33 +1213,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
   },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-=======
-    id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
-    tagline: 'Transform data into actionable insights with AI', price: '$299',
-    period: '/month',
-    description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',
-    features: [
-      'AI-powered data analysis and visualizationPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time dashboard updatesCustom KPI tracking and alertsData integration from 100+ sourcesAdvanced machine learning models';
-      'Collaborative workspace for teamsMobile app for on-the-go insights'
-    ];
-    popular: true, icon: '🧠',
-    color: 'from-blue-600 to-purple-700', textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-business-intelligence',
-    marketPosition: 'Competitive with Tableau ($70-70), Power BI ($9.99-20), and Looker ($500+). Our advantage: AI-powered insights, predictive analytics, and natural language queries.',
-    targetAudience: 'Business analysts, Data scientists, Executives, Marketing teams, Sales teams, Operations managers',
-    trialDays: 21, setupTime: '2 hours',
-    category: 'AI & Business Intelligence', realService: true,
-    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker'], integrations: ['SalesforceHubSpotGoogle AnalyticsShopifyQuickBooksSlackMicrosoft Teams'],
-    useCases: ['Sales performance analysisCustomer behavior insightsMarket trend predictionOperational efficiency optimizationFinancial forecastingRisk assessment'], roi: 'Average customer sees 450% ROI within 6 months through improved decision-making and operational efficiency.',
-    competitors: ['TableauPower BILookerQlikSisense'], marketSize: '$29.9B market',
-    growthRate: '220% annual growth', variant: 'ai-futuristic',
-    contactInfo: {
-      
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
@@ -1568,9 +1221,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     launchDate: '2025-06-20';
     customers: 1900;
     rating: 4 && 4.8,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 950
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -1579,14 +1230,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     customers: 1900;
     rating: 4.8,
     reviews: 950;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-<<<<<<< HEAD
 ];
-<<<<<<< HEAD
-=======
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -27,18 +27,18 @@ export default function VendorsPage({ vendors }: Props) {
                     {v.name}
                     {v.verified && <span className=&quot;text-xs px-2 py-0.5 rounded bg-green-100 text-green-700&quot;>Verified</span>}
                   </div>
-                  <div className="text-xs text-gray-500">Services: {v.servicesOffered?.join() || '—'}</div>                  <div className="font-medium flex items-center gap-2">
+                  <div className="text-xs text-gray-500">Services: {v.servicesOffered?.join() || ''}</div>                  <div className="font-medium flex items-center gap-2">
                     {_v.name}
                     {_v.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}
                   </div>
-                  <div className="text-xs text-gray-500">Services: {_v.servicesOffered?.join(', _') || '—'}</div>
+                  <div className="text-xs text-gray-500">Services: {_v.servicesOffered?.join(', _') || ''}</div>
                 </div>
               </div>
             </a>
           </a>
         ))}
       </div>
-      <div className=&quot;text-center text-xs text-gray-500&quot;>Powered by Zion • Co-brand available</div>
+      <div className=&quot;text-center text-xs text-gray-500&quot;>Powered by Zion  Co-brand available</div>
     </div>
   )
 }

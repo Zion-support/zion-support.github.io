@@ -476,7 +476,7 @@ export default function AdvancedServicesShowcase() {;
                 </h2>;
                 <p className="text-gray-600 dark:text-gray-400">;
                   {selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
-                  {searchTerm && ` • Search: "${searchTerm}"`}
+                  {searchTerm && `  Search: "${searchTerm}"`}
                 </p>;
               </div>;
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">;
@@ -496,7 +496,7 @@ export default function AdvancedServicesShowcase() {;
         <div className="space-y-6">;
           {filteredServices.length === 0 ? (;
             <div className="text-center py-12">;
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>;
+              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4"></div>;
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">;
                 No services found;
               </h3>;

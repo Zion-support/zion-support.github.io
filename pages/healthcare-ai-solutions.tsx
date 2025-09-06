@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function HealthcareAISolutions() {
@@ -10,8 +9,8 @@ export default function HealthcareAISolutions() {
 			description="Deploy AI for diagnostics assistance, care management, operational optimization, and compliance workflows. Improve outcomes while protecting patient privacy."
 			subtitle="Clinically aware AI that augments providers and reduces administrative burden."
 			pricePerMonthUSD={2999}
-			implementationWeeks="Implementation: 6–12 weeks"
-			roiNote="Reduce admin time 20–40% and improve throughput"
+			implementationWeeks="Implementation: 612 weeks"
+			roiNote="Reduce admin time 2040% and improve throughput"
 			features={[
 				"Clinical note summarization and coding (CPT/ICD)"
 				"Diagnostic support with literature grounding"
@@ -25,14 +24,7 @@ export default function HealthcareAISolutions() {
 			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
 		/>
 	)
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -46,8 +38,8 @@ return (
   description="Deploy AI for diagnostics assistance, care management, operational optimization, and compliance workflows. Improve outcomes while protecting patient privacy.";
   subtitle="Clinically aware AI that augments providers and reduces administrative burden.";
   pricePerMonthUSD={2999}
-    implementation_weeks="Implementation: 6–12 weeks";
-  roi_note="Reduce admin time 20–40% and improve throughput";
+    implementation_weeks="Implementation: 612 weeks";
+  roi_note="Reduce admin time 2040% and improve throughput";
   features={[;
     "Clinical note summarization and coding (CPT / ICD)",
     "Diagnostic support with literature grounding",
@@ -60,5 +52,3 @@ return (
     canonical="https: //ziontechgroup.com / healthcare - ai - solutions";
   />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

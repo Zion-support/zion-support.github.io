@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 import { Job } from '@/types/jobs';
 
-=======
-<<<<<<< HEAD
 import { Job } from "@/types/jobs";
 export const JOB_POSTS: Job[] = [
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   {
 
     id: 'job-1'
@@ -34,7 +30,6 @@ id: 'job-2'
     created_at: '2024-05-05'
     updated_at: '2024-05-05'
   }
-=======
 import { Job } from '@/types / jobs';
   {
     id: 'job - 1',
@@ -63,25 +58,12 @@ id: 'job - 2',
     created_at: '2024 - 05 - 05',
     updated_at: '2024 - 05 - 05',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ];
-<<<<<<< HEAD
 status: "new";
-<<<<<<< HEAD
 created at: "2024-05-05";
-<<<<<<< HEAD
 updated at: "2024-05-05" 
 }];
-=======
-updated at: "2024-05-05"
-}];
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 created at: "2024 - 05 - 05";
 updated at: "2024 - 05 - 05";
 }];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

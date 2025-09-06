@@ -1,34 +1,3 @@
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
@@ -129,10 +98,7 @@ const industries = [;
 ];
 export default function DigitalTransformation() {;
 import React from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
@@ -231,23 +197,16 @@ const industries = [;
   { name: 'Education', icon: BookOpen, description: 'Digital learning platforms and student management' },;
   { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
 ];
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
 export default function DigitalTransformation() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 export default function DigitalTransformationPage() {
-=======
 export default function DigitalTransformation() {;
 import Layout from "../../components/Layout";";
 import {motion} from 'framer-motion';
 import {Rocket,, RefreshCw,, Target,, TrendingUp,, CheckCircle,, ArrowRight} from 'lucide-react';
 export default function DigitalTransformationPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
   const transformationServices = [;
     {}
       title: "Process Automation",";
@@ -273,39 +232,15 @@ export default function DigitalTransformationPage() {;
       icon: TrendingUp,;
       features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]";
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ;  ];
   return (
     <Layout)
       title="Digital Transformation - Zion Tech Group""
       description="Complete digital transformation solutions to modernize your business and drive innovation."">;
       <div className="min-h-screen bg-gray-50">";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   ];
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
   
     >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 :pages/solutions/digital-transformation.tsx
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -316,15 +251,7 @@ export default function DigitalTransformationPage() {;
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       <div className="min-h-screen bg-gray-50">
-=======
   return (
     <MainLayout
       title="Digital Transformation Solutions - Zion Tech Group"
@@ -341,23 +268,13 @@ export default function DigitalTransformationPage() {;
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
       <div className="min-h-screen bg-gray-50">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white py-20">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -366,7 +283,6 @@ export default function DigitalTransformationPage() {;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
                 Transform your business for the digital age with our comprehensive transformation solutions. 
                 Modernize processes, enhance efficiency, and drive innovation.,
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-center"">;
               <h1 className="text-4xl md: text-6xl font-bold mb-6">", Digital Transformation,;
@@ -374,19 +290,10 @@ export default function DigitalTransformationPage() {;
               <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;
                 Transform your business for the digital age with our comprehensive transformation solutions. ;
                 Modernize processes, enhance efficiency, and drive innovation.,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
               </p>;
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -409,16 +316,7 @@ export default function DigitalTransformationPage() {;
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 :pages/solutions/digital-transformation.tsx
-=======
               className="text-center";
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -442,7 +340,6 @@ export default function DigitalTransformationPage() {;
           </div>;
         </section>;
 :pages/solutions/digital-transformation && transformation.tsx;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
         {/* Transformation Process */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -450,7 +347,6 @@ export default function DigitalTransformationPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -464,34 +360,11 @@ export default function DigitalTransformationPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {transformationSteps.map((step, index) => {
                 const IconComponent = step.icon;
-<<<<<<< HEAD
-=======
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                Our Transformation Process;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-                We follow a proven methodology to ensure successful digital transformation that delivers measurable results.;
-              </p>;
-            </motion && motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {transformationSteps && transformationSteps.map((step, index) => {;
-                const IconComponent = step && step.icon;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
                 return (
                   <motion&& motion.div
                     key={index}
                     className="bg-gray-50 rounded-lg p-6 text-center"
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Services Section */}
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-=======
-                
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         <section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
@@ -499,7 +372,6 @@ export default function DigitalTransformationPage() {;
                 const IconComponent = service.icon;
                 return (;
                   <motion.div);
-=======
         <section className="py-20">";
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
@@ -507,22 +379,12 @@ export default function DigitalTransformationPage() {;
                 const IconComponent = service && service.icon;
                 return (
                   <motion&& motion.div)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 :pages/solutions/digital-transformation.tsx
                   >
                     <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
@@ -540,15 +402,7 @@ export default function DigitalTransformationPage() {;
                       {step.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   >,
-=======
 :pages/solutions/digital-transformation && transformation.tsx>;
                     <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">;
                       {step && step.step}
@@ -566,7 +420,6 @@ export default function DigitalTransformationPage() {;
                         <li key={idx} className="flex items-center">;
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
                   >,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
                     <div className="text-purple-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
                     </div>;
@@ -587,127 +440,11 @@ export default function DigitalTransformationPage() {;
                   </motion && motion.div>;
                 );
               })}
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
+            </div>
+          </div>
+        </section>
             </div>,
-          </div>;
-        </section>;
-            </div>
-          </div>
-        </section>
-:pages/solutions/digital-transformation.tsx
-        {/* Benefits Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Transformation Benefits
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                See the measurable impact of digital transformation on your business performance.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => {
-                const IconComponent = benefit.icon;
-                
-                  >
-                    <div className="text-blue-600 mb-4">
-                      <IconComponent className="w-12 h-12 mx-auto" />
-                    </div>
-                    <div className="text-3xl font-bold text-blue-600 mb-2">{benefit.metric}</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                    <p className="text-gray-600">{benefit.description}</p>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-        {/* Industries Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Industry Solutions
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We have experience transforming businesses across various industries with tailored solutions.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => {
-                const IconComponent = industry.icon;
-                
-                  >
-                    <div className="text-blue-600 mb-4">
-                      <IconComponent className="w-8 h-8" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{industry.name}</h3>
-                    <p className="text-gray-600">{industry.description}</p>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Let our experts help you navigate your digital transformation journey with proven strategies and cutting-edge technology.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Free Consultation
-                </Link>
-                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  View All Solutions
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </MainLayout>
-            </div>
-          </div>
-        </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-            </div>
-          </div>
-        </section>
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-            </div>,
-=======
             </div>,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
           </div>;
         </section>;
             </div>;
@@ -788,7 +525,6 @@ export default function DigitalTransformationPage() {;
                   </motion && motion.div>;
                 );
               })}
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
             </div>
           </div>
         </section>
@@ -820,11 +556,6 @@ export default function DigitalTransformationPage() {;
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
             </div>;
           </div>;
         </section>;
@@ -972,32 +703,20 @@ export default function DigitalTransformationPage() {;
         </section>;
       </div>;
     </MainLayout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
             <h2 className="text-3xl md:text-4xl font-bold mb-6">";
               Start Your Digital Journey;
-=======
-            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Start Your Digital Journey,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
             </h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Ready to transform your business? Let our experts guide you through your digital transformation journey.;
             </p>;
-<<<<<<< HEAD:pages_backup/solutions/digital-transformation.tsx
             <motion.a;
               href="/contact"";
               className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
               whileHover={{ scale: 1.05 }}
             >,
-=======
-            <motion&& motion.a
-              href="/contact""
-              className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
-              whileHover={{ scale: 1 && 1.05 }}>,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/digital-transformation.tsx
               Begin Transformation;
               <ArrowRight className="w-5 h-5 ml-2" />";
             </motion && motion.a>;

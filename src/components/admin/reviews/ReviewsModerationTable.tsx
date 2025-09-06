@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react';
@@ -6,9 +5,6 @@ import { format } from 'date-fns';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { Review, ReviewStatus } from '@/types/reviews';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react'
 import { useMutation } from '@tanstack/react-query'
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
@@ -17,9 +13,7 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client";
 import { Review, ReviewStatus } from "@/types/reviews";
 import {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
   Table
   TableBody
   TableCell
@@ -116,112 +110,6 @@ export function ReviewsModerationTable({
       .map(n => n[0])
       .join('')
       .toUpperCase()
-=======
-import { useState } from 'react';
-import { use_mutation } from '@tanstack / react - query';
-import { Check, X, User, Star, MoreHorizontal } from 'lucide-react';
-import { format } from 'date - fns';
-import { toast } from '@/hooks / use - toast';
-import { supabase } from '@/integrations / supabase / client';
-import { Review, ReviewStatus } from '@/types / reviews';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components / ui / table';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar'; import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from '@/components / ui / dialog';
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components / ui / dropdown - menu';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-interface ReviewsModerationTableProps {
-  reviews: Review[];
-is_loading: boolean;
-on_refresh: () => void;
-}export /**
- * ReviewsModerationTable - Function description
- */
-function ReviewsModerationTable() {
-  const [selected_review, setSelectedReview] = useState < Review | null> (null);
-const [viewDetailsOpen,  setViewDetailsOpen] = useState (false);
-const {
-  mutate: updateReviewStatus, is_pending;
-}= use_mutation ({
-  mutation_fn: async ({
-  review_id;
-status;
-}: {
-  review_id: string;
-status: ReviewStatus;
-}) => {
-  const {
-  error;
-}= await supabase .from ("reviews") .update ({
-  status;
-}) // Check condition
-if (throw error) {
-  $2
-}
-return {
-  review_id, status;
-export /**
- * ReviewsModerationTable - Function description
- */
-function ReviewsModerationTable() {
-  const [selected_review, setSelectedReview] = useState < Review | null>(null);
-  const [viewDetailsOpen, setViewDetailsOpen] = useState (false);
-  const { mutate: updateReviewStatus, is_pending } = use_mutation ({
-    mutation_fn: async ({
-      review_id,
-      status,
-    }: {
-      review_id: string;
-      status: ReviewStatus;
-    }) => {      const { error } = await supabase;
-        .from ('reviews');
-        .update ({ status });
-        .eq ('id', review_id);
-      // Check condition
-if (throw error) {
-  $2
-}
-      return { review_id, status }
-    },
-    on_success: data => {      toast ({
-        title: 'Review updated',
-        description: `Review has been ${data.status}.`,
-      });
-      on_refresh ();
-      setViewDetailsOpen (false);
-    },
-    on_error: (error: Error, ) => {
-      toast ({
-        title: 'Error',
-        description: `Failed to update review: ${error.message}`,
-        variant: 'destructive',
-      });
-    },
-  });
-  const get_initials = (name: string, ) =>: any {
-    return name;
-      .split (' ');
-      .map (number => n[0]);
-      .join ('');
-      .toUpperCase ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   // Check condition
 if ( {) {
@@ -235,14 +123,7 @@ if ( {) {
         <div className='h - 16 w - full bg - muted rounded animate - pulse' />;
       </div>);
   }
-<<<<<<< HEAD
   if (reviews.length === 0) {
-=======
-  // Check condition
-if ( {) {
-  $2
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <div className='py - 10 text - center'>;
         <h3 className='text - lg font - medium mb - 2'>No reviews to moderate</h3>;
@@ -251,13 +132,8 @@ if ( {) {
         </p>;
       </div>);
   }
-<<<<<<< HEAD
   const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: 'approved' })
-=======
-  const handle_approve = (review_id: string) =>: any {
-    updateReviewStatus ({ review_id, status: 'approved' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   const handle_reject = (review_id: string) =>: any {
     updateReviewStatus ({ review_id, status: 'rejected' });
@@ -266,144 +142,7 @@ if ( {) {
     setSelectedReview (review);
     setViewDetailsOpen (true);
   }
-<<<<<<< HEAD
   const renderStars = (rating: number,) => {
-=======
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';import {;
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogFooter,;
-  DialogHeader,;
-  DialogTitle,;
-} from '@/components/ui/dialog';
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,;
-} from '@/components/ui/dropdown-menu';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-interface ReviewsModerationTableProps {;
-  reviews: Review[];
-isLoading: boolean;
-onRefresh: () => void ;
-}export function ReviewsModerationTable(): any ({;
-  reviews;
-isLoading;
-onRefresh ;
-}: ReviewsModerationTableProps) {;
-  const [selectedReview, setSelectedReview] = useState<Review | null> (null);
-const [viewDetailsOpen,  setViewDetailsOpen] = useState (false);
-const {;
-  mutate: updateReviewStatus, isPending ;
-}= useMutation ({;
-  mutationFn: async ({;
-  reviewId;
-status ;
-}: {;
-  reviewId: string;
-status: ReviewStatus ;
-}) => {;
-  const {;
-  error ;
-}= await supabase .from ("reviews") .update ({;
-  status ;
-}) if (error) throw error;
-return {;
-  reviewId, status ;
-
-export function ReviewsModerationTable(): any ({;
-  reviews,;
-  isLoading,;
-  onRefresh,;
-}: ReviewsModerationTableProps) {;
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
-
-  const { mutate: updateReviewStatus, isPending } = useMutation({;
-    mutationFn: async ({;
-      reviewId,;
-      status,;
-    }: {;
-      reviewId: string;
-      status: ReviewStatus;
-    }) => {      const { error } = await supabase;
-        .from('reviews');
-        .update({ status });
-        .eq('id', reviewId);
-
-      if (error) throw error;
-      return { reviewId, status };
-    },;
-    onSuccess: data => {      toast({;
-        title: 'Review updated',;
-        description: `Review has been ${data && data.status}.`,;
-      });
-      onRefresh();
-      setViewDetailsOpen(false);
-    },;
-    onError: (error: Error,) => {;
-      toast({;
-        title: 'Error',;
-        description: `Failed to update review: ${error && error.message}`,;
-        variant: 'destructive',;
-      });
-    },;
-  });
-
-  const getInitials = (name: string,) => {;
-    return name;
-      .split(' ');
-      .map(n => n[0]);
-      .join('');
-      .toUpperCase();
-  };
-  if (isLoading) {;
-    return (
-      <div className='space-y-4'>;
-        <div className='h-12 w-full bg-muted rounded animate-pulse' />;
-        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
-        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
-        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
-      </div>;
-    );
-  }
-
-  if (reviews && reviews.length === 0) {;
-    return (
-      <div className='py-10 text-center'>;
-        <h3 className='text-lg font-medium mb-2'>No reviews to moderate</h3>;
-        <p className='text-muted-foreground'>;
-          All reviews have been processed. Check back later for new submissions.;
-        </p>;
-      </div>;
-    );
-  }
-
-  const handleApprove = (reviewId: string) => {;
-    updateReviewStatus({ reviewId, status: 'approved' });
-  };
-
-  const handleReject = (reviewId: string) => {;
-    updateReviewStatus({ reviewId, status: 'rejected' });
-  };
-
-  const handleViewDetails = (review: Review) => {;
-    setSelectedReview(review);
-    setViewDetailsOpen(true);
-  };
-  const renderStars = (rating: number,) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className='flex'>;
         {[1, 2, 3, 4, 5].map(star => (;
@@ -411,32 +150,18 @@ export function ReviewsModerationTable(): any ({;
             key={star}
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}          />;
         ))}
-<<<<<<< HEAD
       </div>
     )
-=======
-  const render_stars = (rating: number, ) =>: any {
-    return (
-      <div className='flex'>;
-        {[1, 2, 3, 4, 5].map (star => (
-          <Star;
-            key={star}
-            className={`h - 4 w - 4 ${star <= rating ? 'fill - yellow - 400 text - yellow - 400' : 'text - gray - 300'}`}          />))}
-      </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-=======
       </div>;
     );
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
       <Table>;
         <TableHeader>;
           <TableRow>;
-<<<<<<< HEAD
             <TableHead>Reviewer</TableHead>;
             <TableHead>Rating</TableHead>;
             <TableHead>Date</TableHead>;
@@ -452,7 +177,6 @@ export function ReviewsModerationTable(): any ({;
                   <Avatar className='h-8 w-8'>;
                     {review && review.reviewer_profile?.avatar_url ? (;
                       <AvatarImage
-<<<<<<< HEAD
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |''}                      />
                     ) : (
@@ -461,20 +185,9 @@ export function ReviewsModerationTable(): any ({;
                           getInitials(review.reviewer_profile.display_name)
                         ) : (
                           <User className='h-4 w-4' />
-=======
-                        src={review && review.reviewer_profile.avatar_url}
-                        alt={review && review.reviewer_profile.display_name || ''}                      />;
-                    ) : (;
-                      <AvatarFallback>;
-                        {review && review.reviewer_profile?.display_name ? (;
-                          getInitials(review && review.reviewer_profile.display_name);
-                        ) : (;
-                          <User className='h-4 w-4' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         )}
                       </AvatarFallback>;
                     )}
-<<<<<<< HEAD
                   </Avatar>
                   <div>
                     {review.is_anonymous ? (
@@ -483,16 +196,6 @@ export function ReviewsModerationTable(): any ({;
                       <span className='text-sm font-medium'>
                         {review.reviewer_profile?.display_name |'User'}
                       </span>
-=======
-                  </Avatar>;
-                  <div>;
-                    {review && review.is_anonymous ? (;
-                      <span className='text-sm font-medium'>Anonymous</span>;
-                    ) : (;
-                      <span className='text-sm font-medium'>;
-                        {review && review.reviewer_profile?.display_name || 'User'}
-                      </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
                   </div>;
                 </div>;
@@ -550,19 +253,11 @@ export function ReviewsModerationTable(): any ({;
                       </DropdownMenuItem>;
                       {review && review.status === 'approved' && (;
                         <DropdownMenuItem
-<<<<<<< HEAD
                           onClick={() =>
                             updateReviewStatus({
                               reviewId: review.id
                               status: 'rejected'
                             })
-=======
-                          onClick={() =>;
-                            updateReviewStatus({;
-                              reviewId: review && review.id,;
-                              status: 'rejected',;
-                            });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           }
                         >;
                           Mark as rejected;
@@ -570,24 +265,15 @@ export function ReviewsModerationTable(): any ({;
                       )}
                       {review && review.status === 'rejected' && (;
                         <DropdownMenuItem
-<<<<<<< HEAD
                           onClick={() =>
                             updateReviewStatus({
                               reviewId: review.id
                               status: 'approved'
                             })
-=======
-                          onClick={() =>;
-                            updateReviewStatus({;
-                              reviewId: review && review.id,;
-                              status: 'approved',;
-                            });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           }
                         >                          Mark as approved;
                         </DropdownMenuItem>;
                       )}
-=======
             <TableHead > Reviewer</TableHead>;
             <TableHead > Rating</TableHead>;
             <TableHead > Date</TableHead>;
@@ -689,15 +375,12 @@ export function ReviewsModerationTable(): any ({;
                           }
                         >                          Mark as approved;
                         </DropdownMenuItem>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
-<<<<<<< HEAD
             </TableRow>;
           ))}
-<<<<<<< HEAD
         </TableBody>
       </Table>
       {selectedReview && (
@@ -726,42 +409,9 @@ export function ReviewsModerationTable(): any ({;
                           )
                         ) : (
                           <User className='h-4 w-4' />
-=======
-        </TableBody>;
-      </Table>;
-
-      {selectedReview && (;
-        <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
-          <DialogContent className='max-w-lg'>;
-            <DialogHeader>;
-              <DialogTitle>Review Details</DialogTitle>;
-              <DialogDescription>;
-                Review submitted on{' '}
-                {format(new Date(selectedReview && selectedReview.created_at), 'MMMM d, yyyy')}
-              </DialogDescription>;
-            </DialogHeader>;
-
-            <div className='space-y-4'>;
-              <div className='flex items-center justify-between'>;
-                <div className='flex items-center gap-2'>;
-                  <Avatar>;
-                    {selectedReview && selectedReview.reviewer_profile?.avatar_url ? (;
-                      <AvatarImage
-                        src={selectedReview && selectedReview.reviewer_profile.avatar_url}
-                        alt={selectedReview && selectedReview.reviewer_profile.display_name || ''}                      />;
-                    ) : (;
-                      <AvatarFallback>;
-                        {selectedReview && selectedReview.reviewer_profile?.display_name ? (;
-                          getInitials(;
-                            selectedReview && selectedReview.reviewer_profile.display_name;
-                          );
-                        ) : (;
-                          <User className='h-4 w-4' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         )}
                       </AvatarFallback>;
                     )}
-<<<<<<< HEAD
                   </Avatar>
                   <div>
                     <div className='font-medium'>
@@ -787,35 +437,6 @@ export function ReviewsModerationTable(): any ({;
                     <Badge variant='outline'>
                       Communication: {selectedReview.communication_rating}/5
                     </Badge>
-=======
-                  </Avatar>;
-                  <div>;
-                    <div className='font-medium'>;
-                      {selectedReview && selectedReview.is_anonymous;
-                        ? 'Anonymous';
-                        : selectedReview && selectedReview.reviewer_profile?.display_name ||;
-                          'User'}
-                    </div>;
-                    <Badge variant='outline'>{selectedReview && selectedReview.status}</Badge>;
-                  </div>;
-                </div>;
-                <div>{renderStars(selectedReview && selectedReview.rating)}</div>;
-              </div>;
-
-              <div className='border rounded-md p-3 bg-muted/20'>;
-                <p className='whitespace-pre-wrap'>;
-                  {selectedReview && selectedReview.review_text}
-                </p>;
-              </div>;
-
-              <div className='space-y-2'>;
-                <h4 className='text-sm font-medium'>Additional Ratings</h4>;
-                <div className='flex flex-wrap gap-2'>;
-                  {selectedReview && selectedReview.communication_rating && (;
-                    <Badge variant='outline'>;
-                      Communication: {selectedReview && selectedReview.communication_rating}/5;
-                    </Badge>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   )}
                   {selectedReview && selectedReview.quality_rating && (;
                     <Badge variant='outline'>;
@@ -839,7 +460,6 @@ export function ReviewsModerationTable(): any ({;
                         : 'Would not work again'}
                     </Badge>;
                   )}
-<<<<<<< HEAD
                 </div>
               </div>
               {selectedReview.report_count > 0 && (
@@ -857,27 +477,6 @@ export function ReviewsModerationTable(): any ({;
             <DialogFooter>
               {selectedReview.status === 'pending' && (
                 <>
-=======
-                </div>;
-              </div>;
-
-              {selectedReview && selectedReview.report_count > 0 && (;
-                <div className='bg-red-50 border border-red-200 rounded-md p-3'>;
-                  <h4 className='text-sm font-medium text-red-800'>;
-                    Reports: {selectedReview && selectedReview.report_count}
-                  </h4>;
-                  <p className='text-sm text-red-700'>;
-                    This review has been reported by users and may need;
-                    investigation.;
-                  </p>;
-                </div>;
-              )}
-            </div>;
-
-            <DialogFooter>;
-              {selectedReview && selectedReview.status === 'pending' && (;
-                <>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     variant='destructive'
                     onClick={() => handleReject(selectedReview && selectedReview.id)}
@@ -895,19 +494,11 @@ export function ReviewsModerationTable(): any ({;
               {selectedReview && selectedReview.status === 'approved' && (;
                 <Button
                   variant='destructive'
-<<<<<<< HEAD
                   onClick={() =>
                     updateReviewStatus({
                       reviewId: selectedReview.id
                       status: 'rejected'
                     })
-=======
-                  onClick={() =>;
-                    updateReviewStatus({;
-                      reviewId: selectedReview && selectedReview.id,;
-                      status: 'rejected',;
-                    });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   }
                   disabled={isPending}                >;
                   Mark as Rejected;
@@ -915,19 +506,11 @@ export function ReviewsModerationTable(): any ({;
               )}
               {selectedReview && selectedReview.status === 'rejected' && (;
                 <Button
-<<<<<<< HEAD
                   onClick={() =>
                     updateReviewStatus({
                       reviewId: selectedReview.id
                       status: 'approved'
                     })
-=======
-                  onClick={() =>;
-                    updateReviewStatus({;
-                      reviewId: selectedReview && selectedReview.id,;
-                      status: 'approved',;
-                    });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   }
                   disabled={isPending}                >;
                   Mark as Approved;
@@ -937,7 +520,6 @@ export function ReviewsModerationTable(): any ({;
           </DialogContent>;
         </Dialog>;
       )}
-<<<<<<< HEAD
     </>
   )
 }
@@ -952,155 +534,10 @@ export function ReviewsModerationTable(): any ({;
 }</div>)
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-=======
-            </TableRow>))}
-        </TableBody>;
-      </Table>;
-      {selected_review && (
-        <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
-          <DialogContent className='max - w-lg'>;
-            <DialogHeader>;
-              <DialogTitle > Review Details</DialogTitle>;
-              <DialogDescription>;
-                Review submitted on{' '}
-                {format (new Date (selected_review.created_at), 'MMMM d, yyyy')}
-              </DialogDescription>;
-            </DialogHeader>;
-            <div className='space - y-4'>;
-              <div className='flex items - center justify - between'>;
-                <div className='flex items - center gap - 2'>;
-                  <Avatar>;
-                    {selected_review.reviewer_profile?.avatar_url ? (
-                      <AvatarImage;
-                        src={selected_review.reviewer_profile.avatar_url}
-                        alt={selected_review.reviewer_profile.display_name || ''}                      />) : (
-                      <AvatarFallback>;
-                        {selected_review.reviewer_profile?.display_name ? (
-                          get_initials (
-                            selected_review.reviewer_profile.display_name)) : (
-                          <User className='h - 4 w - 4' />)}
-                      </AvatarFallback>)}
-                  </Avatar>;
-                  <div>;
-                    <div className='font - medium'>;
-                      {selected_review.is_anonymous;
-                        ? 'Anonymous';
-                        : selected_review.reviewer_profile?.display_name ||;
-                          'User'}
-                    </div>;
-                    <Badge variant='outline'>{selected_review.status}</Badge>;
-                  </div>;
-                </div>;
-                <div>{render_stars (selected_review.rating)}</div>;
-              </div>;
-              <div className='border rounded - md p - 3 bg - muted / 20'>;
-                <p className='whitespace - pre - wrap'>;
-                  {selected_review.review_text}
-                </p>;
-              </div>;
-              <div className='space - y-2'>;
-                <h4 className='text - sm font - medium'>Additional Ratings</h4>;
-                <div className='flex flex - wrap gap - 2'>;
-                  {selected_review.communication_rating && (
-                    <Badge variant='outline'>;
-                      Communication: {selected_review.communication_rating}/5;
-                    </Badge>)}
-                  {selected_review.quality_rating && (
-                    <Badge variant='outline'>;
-                      Quality: {selected_review.quality_rating}/5;
-                    </Badge>)}
-                  {selected_review.timeliness_rating && (
-                    <Badge variant='outline'>;
-                      Timeliness: {selected_review.timeliness_rating}/5;
-                    </Badge>)}
-                  {selected_review.would_work_again !== undefined && (
-                    <Badge;
-                      variant={
-                        selected_review.would_work_again;
-                          ? 'default';
-                          : 'secondary';
-                      }                    >;
-                      {selected_review.would_work_again;
-                        ? 'Would work again';
-                        : 'Would not work again'}
-                    </Badge>)}
-                </div>;
-              </div>;
-              {selected_review.report_count > 0 && (
-                <div className='bg - red - 50 border border - red - 200 rounded - md p - 3'>;
-                  <h4 className='text - sm font - medium text - red - 800'>;
-                    Reports: {selected_review.report_count}
-                  </h4>;
-                  <p className='text - sm text - red - 700'>;
-                    This review has been reported by users and may need;
-                    investigation.;
-                  </p>;
-                </div>)}
-            </div>;
-            <DialogFooter>;
-              {selected_review.status === 'pending' && (
-                <>;
-                  <Button;
-                    variant='destructive';
-                    on_click={() => handle_reject (selected_review.id)}
-                    disabled={is_pending}                  >;
-                    Reject;
-                  </Button>;
-                  <Button;
-                    on_click = {() => handle_approve (selected_review.id), }
-                    disabled = {is_pending, }
-                  >;
-                    Approve;
-                  </Button>;
-                </>)}
-              {selected_review.status === 'approved' && (
-                <Button;
-                  variant='destructive';
-                  on_click={() =>;
-                    updateReviewStatus ({
-                      review_id: selected_review.id,
-                      status: 'rejected',
-                    });
-                  }
-                  disabled={is_pending}                >;
-                  Mark as Rejected;
-                </Button>)}
-              {selected_review.status === 'rejected' && (
-                <Button;
-                  on_click={() =>;
-                    updateReviewStatus ({
-                      review_id: selected_review.id,
-                      status: 'approved',
-                    });
-                  }
-                  disabled={is_pending}                >;
-                  Mark as Approved;
-                </Button>)}
-            </DialogFooter>;
-          </DialogContent>;
-        </Dialog>)}
-    </>);
-}
-});
-  return (<div className="space - y-4"> <div className="h - 12 w - full bg - muted rounded animate - pulse" /> <div className="h - 16 w - full bg - muted rounded animate - pulse" /> <div className="h - 16 w - full bg - muted rounded animate - pulse" /> <div className="h - 16 w - full bg - muted rounded animate - pulse" /> </div> // Check condition
-if ( {") {
-  $2
-}
-  return (<div className="py - 10 text - center"> <h3 className="text - lg font - medium mb - 2">No reviews to moderate</h3> <p className="text - muted - foreground" > All reviews have been processed. Check back later for new submissions. </p> </div>;
-}
-  return (<div className="flex"> {
-  [1, 2, 3,  4, 5].map ( (star) => (<Star key= {
-  star;
-}/>) );
-}</div>);
-}";
-return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <TableHead > Rating</TableHead> <TableHead > Date</TableHead> <TableHead > Status</TableHead> <TableHead > Reports</TableHead> <TableHead className="text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   reviews.map ( (review) => (<TableRow key= {
   review.id ";
 }> <TableCell> <div className="flex items - center gap - 2"> <Avatar className="h - 8 w - 8"> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
-<<<<<<< HEAD
   review.reviewer profile.avatar url
 }alt= {"
   review.reviewer profile.display name |""
@@ -1110,21 +547,9 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</Avatar> <div>) : (<span className=" text-sm font-medium"> {"
   review.reviewer profile?.display name |" User"
 }</span>)
-=======
-  review.reviewer profile.avatar url;
-}alt= {";
-  review.reviewer profile.display name || "";
-}/>) : (<AvatarFallback> {";
-  review.reviewer profile?.display name ? get_initials (review.reviewer profile.display name) : <User className=" h - 4 w - 4"/>;
-}</AvatarFallback>) ";
-}</Avatar> <div>) : (<span className=" text - sm font - medium"> {";
-  review.reviewer profile?.display name || " User";
-}</span>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }</div> </div> </TableCell> <TableCell> {
   render_stars (review.rating) ";
 }</TableCell> <TableCell> </TableCell> <TableCell> <Badge variant=" outline"> {
-<<<<<<< HEAD
   review.status.charAt (0) .toUpperCase () + review.status.slice (1) "
 }</Badge> </TableCell> <TableCell>) : (" None") "
 }</TableCell> <Button size=" sm"variant=" outline"className=" h-8 w-8 p-0"onClick={
@@ -1171,92 +596,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</DialogFooter> </DialogContent> </Dialog>)
 }</>)
 }"}
-=======
-    </>;
-  );
 
-};
-
-});
-  return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> </div> if (reviews && reviews.length === 0) {";
-  return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div> ;
-};
-  return (<div className="flex"> {;
-  [1, 2, 3,  4, 5].map ( (star) => (<Starkey= {
-  star 
-}/>) ) ;
-}</div>) ;
-};";
-return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
-  reviews && reviews.map ( (review) => (<TableRowkey= {
-  review && review.id "
-}> <TableCell> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {;
-  review && review.reviewer profile?.avatar url ? (<AvatarImagesrc= {
-  review && review.reviewer profile && profile.avatar url 
-}alt= {"
-  review && review.reviewer profile && profile.display name || "" 
-}/>) : (<AvatarFallback> {";
-  review && review.reviewer profile?.display name ? getInitials (review && review.reviewer profile && profile.display name) : <User className=" h-4 w-4"/> ;
-}</AvatarFallback>) ";
-}</Avatar> <div>) : (<span className=" text-sm font-medium"> {";
-  review && review.reviewer profile?.display name || " User" ;
-}</span>) ;
-}</div> </div> </TableCell> <TableCell> {;
-  renderStars (review && review.rating) ";
-}</TableCell> <TableCell> </TableCell> <TableCell> <Badge variant=" outline"> {;
-  review && review.status.charAt (0) .toUpperCase () + review && review.status.slice (1) ";
-}</Badge> </TableCell> <TableCell>) : (" None") ";
-}</TableCell> <Buttonsize=" sm"variant=" outline"className=" h-8 w-8 p-0"onClick={
-  () => handleApprove (review && review.id) ;
-}disabled= {;
-  isPending ";
-}> <Check className=" h-4 w-4 text-green-500"/> </Button> <Button > <X className=" h-4 w-4 text-red-500"/> </Button> </>) ";
-}<DropdownMenu> <DropdownMenuTrigger asChild> <Button variant=" ghost"size=" sm"className=" h-8 w-8 p-0"> <MoreHorizontal className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> Mark as approved </DropdownMenuItem>) ;
-}</DropdownMenuContent> </DropdownMenu> </div> </TableCell> </TableRow>) ) ";
-}</TableBody> </Table> </DialogDescription> </DialogHeader> <div className=" space-y-4"> <div className=" flex items-center justify-between"> <div className=" flex items-center gap-2"> <Avatar> {;
-  selectedReview && selectedReview.reviewer profile?.avatar url ? (<AvatarImagesrc= {
-  selectedReview && selectedReview.reviewer profile && profile.avatar url 
-}alt= {"
-  selectedReview && selectedReview.reviewer profile && profile.display name || "" 
-}/>) : (<AvatarFallback> {";
-  selectedReview && selectedReview.reviewer profile?.display name ? getInitials (selectedReview && selectedReview.reviewer profile && profile.display name) : <User className="h-4 w-4"/> ;
-}</AvatarFallback>) ;
-}</Avatar> <div> </Badge> </div> </div> <div> {;
-  renderStars (selectedReview && selectedReview.rating) ";
-}</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {;
-  selectedReview && selectedReview.review text ";
-}</p> </div> <div className="space-y-2"> <h4 className="text-sm font-medium">Additional Ratings</h4> Timeliness: {;
-  selectedReview && selectedReview.timeliness rating ;
-}/5 </Badge>) ;
-}{;
-  selectedReview && selectedReview.would work again !== undefined && (<Badgevariant= {"
-  selectedReview && selectedReview.would work again ? " default": " secondary" 
-}> </Badge>) ;
-}</div> </div> {";
-  selectedReview && selectedReview.report count > 0 && (<div className="bg-red-50 border border-red-200 rounded-md p-3"> <h4 className="text-sm font-medium text-red-800">Reports: {;
-  selectedReview && selectedReview.report count ";
-}</h4> <p className="text-sm text-red-700"> This review has been reported by users and may need investigation. </p> </div>) ";
-}</div> <DialogFooter> <Buttonvariant=" destructive" onClick={
-  () => handleReject (selectedReview && selectedReview.id) ;
-}disabled= {;
-  isPending ;
-}> Reject </Button> <ButtononClick={
-  () => handleApprove (selectedReview && selectedReview.id) ;
-}disabled= {;
-  isPending ;
-}> Approve </Button> </>) ;
-}> Mark as Rejected </Button>) ;
-}> Mark as Approved </Button>) ;
-}</DialogFooter> </DialogContent> </Dialog>) ;
-}</>) ;
-}"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   review.status.char_at (0) .toUpperCase () + review.status.slice (1) ";
 }</Badge> </TableCell> <TableCell>) : (" None") ";
 }</TableCell> <Button size=" sm"variant=" outline"className=" h - 8 w - 8 p - 0"on_click={
@@ -1303,5 +643,3 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</DialogFooter> </DialogContent> </Dialog>);
 }</>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

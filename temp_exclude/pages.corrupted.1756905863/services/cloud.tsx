@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -36,6 +35,3 @@ export default function Cloud(): any ({ }: CloudProps) {;
   );
 }
 }
-=======
-}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

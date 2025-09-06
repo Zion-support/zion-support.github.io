@@ -49,7 +49,7 @@ export default function TalentDashboard() {;
           {STEPS.map((s) => (;
             <li key={s.key} className="flex items-center justify-between">;
               <div className="flex items-center gap-2">;
-                <span className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s.key] ? 'bg-emerald-500 text-white border-emerald-500' :'border-gray-300 dark:border-gray-700'}`}>{completed[s.key] ? '✓' :''}</span>;
+                <span className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s.key] ? 'bg-emerald-500 text-white border-emerald-500' :'border-gray-300 dark:border-gray-700'}`}>{completed[s.key] ? '' :''}</span>;
                 <span className="text-sm">{s.label}</span>;
               </div>;
               {completed[s.key] ? (;

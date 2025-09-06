@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function Placeholder() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function Placeholder() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export default function Placeholder() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <main className='min-h-screen p-8'>;
       <Head>;
@@ -44,12 +34,7 @@ export default function Placeholder() {
       </div>;
     </main>;
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 export default /**
@@ -88,4 +73,3 @@ function Placeholder() {
       </div>;
     </main>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

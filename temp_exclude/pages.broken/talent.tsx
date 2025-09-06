@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
-<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
 const jobOpenings = [{;
     "id": 1,;
@@ -252,46 +251,10 @@ const benefits = [{;
     "description": "Learning opportunities and career development support";
     "icon": ArrowRight;
   }
-=======
-      "Strong problem-solving and communication skills"
-    ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
-  },
-  {
-      "Knowledge of cloud deployment and DevOps"
-    ],
-    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
-  },
-  {
-      "Strong understanding of security best practices"
-    ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
-  },
-  {
-      "Knowledge of compliance standards (SOC 2, ISO 27001)"
-    ],
-    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
-  },
-  {
-      "Knowledge of monitoring and logging tools"
-    ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
-  },
-  {
-      "Strong portfolio demonstrating design skills"
-    ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
-  }
-];
-
-
-  "Client success focus"
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 ];
 
 export default function TalentPage() {
   return (
-<<<<<<< HEAD
     <MainLayout,
     title="Careers - Zion Tech Group"
     <div className="min-h-screen bg-gray-50">;
@@ -326,14 +289,11 @@ export default function TalentPage() {
                   key={job && job.id}
     <Layout 
       title="Careers - Zion Tech Group"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div,
@@ -387,44 +347,6 @@ export default function TalentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {benefits && benefits.map((benefit, index) => {;
                 const IconComponent = benefit && benefit.icon;
-=======
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Join Our Team
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Be part of a team that's shaping the future of technology and helping businesses transform digitally
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="#openings" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  View Open Positions
-                </Link>
-                <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  Get In Touch
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Work With Us?
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We're building a culture of innovation, collaboration, and growth where talented individuals can thrive
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => {
-                const IconComponent = benefit.icon;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 return (
                   <motion.div,
     key={index}
@@ -451,7 +373,6 @@ export default function TalentPage() {
         </section>
 
         {/* Values Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div,
@@ -476,21 +397,6 @@ export default function TalentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
               {values && values.map((value, index) => (;
                 <motion&& motion.div,
-=======
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Values
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                The principles that guide our work and shape our company culture
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {values.map((value, index) => (
-                <motion.div,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     key={index}
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
@@ -503,7 +409,7 @@ export default function TalentPage() {
                     {job.title}
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    {job.department} • {job.location} • {job.type}
+                    {job.department}  {job.location}  {job.type}
                   </p>
                   <p className="text-gray-700 mb-4">
                     {job.description}
@@ -552,7 +458,6 @@ export default function TalentPage() {
         </section>
 
         {/* Job Openings Section */}
-<<<<<<< HEAD
         <section id="openings" className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div,
@@ -578,22 +483,6 @@ export default function TalentPage() {
               {jobOpenings && jobOpenings.map((job, index) => (;
                 <motion&& motion.div,
     key={job && job.id}
-=======
-        <section id="openings" className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Open Positions
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Explore current job openings and find the perfect role for your skills and career goals
-              </p>
-            </motion.div>
-            <div className="space-y-8">
-              {jobOpenings.map((job, index) => (
-                <motion.div,
-    key={job.id}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -694,7 +583,6 @@ export default function TalentPage() {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div,
@@ -722,24 +610,4 @@ export default function TalentPage() {
       </div>;
     </MainLayout>;
   ),;
-=======
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Don't See the Right Role?
-              </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute.
-              </p>
-              <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Send Your Resume
-              </Link>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </MainLayout>
-  );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }

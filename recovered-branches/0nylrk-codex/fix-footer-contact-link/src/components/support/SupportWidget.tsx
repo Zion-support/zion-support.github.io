@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { ChatBotPanel } from "./ChatBotPanel",
@@ -10,18 +8,6 @@ import { useTheme } from "@/hooks/useTheme";
 export function SupportWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
-=======
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {ChatBotPanel} from "./ChatBotPanel";
-import {MessageSquare, Info, X} from "lucide-react";
-import {cn} from "@/lib/utils";
-import {useTheme} from "@/hooks/useTheme";
-export function SupportWidget() {;
-  const [isOpen, setIsOpen] = useState(false);
-  const { theme } = useTheme();
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       {/* Fixed button in the bottom right */}
@@ -36,7 +22,6 @@ export function SupportWidget() {;
           <MessageSquare className="h-6 w-6" />;
         </Button>;
       )}
-<<<<<<< HEAD
       {/* Support panel */}
       {isOpen && (
         <div
@@ -45,16 +30,6 @@ export function SupportWidget() {;
             theme === "dark"
               ? "bg-zion-blue-dark border border-zion-blue-light"
 
-=======
-
-      {/* Support panel */}
-      {isOpen && (;
-        <div
-          className={cn(
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col"
-            theme === "dark" 
-              ? "bg-zion-blue-dark border border-zion-blue-light" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}>;
@@ -80,7 +55,6 @@ export function SupportWidget() {;
                 size="icon"
                 className="h-8 w-8 rounded-full"
                 onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
                 aria-label="Close support"
               >
                 <X className="h-5 w-5" />
@@ -93,22 +67,6 @@ export function SupportWidget() {;
     </>
   )
 }
-=======
-                aria-label="Close support";
-              >;
-                <X className="h-5 w-5" />;
-              </Button>;
-            </div>;
-          </div>;
-
-          <ChatBotPanel />;
-        </div>;
-      )}
-    </>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { ChatBotPanel } from './ChatBotPanel';
@@ -176,4 +134,3 @@ function SupportWidget() {
         </div>)}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,21 +1,10 @@
-<<<<<<< HEAD
 import Link from "next/link";
 export const metadata = {title: "AI Automation Services - Zion Tech Group";
   description: "Transform your business with intelligent AI automation solutions. Streamline operations, reduce costs, and enhance productivity with our cutting-edge automation technology.";
   keywords: "AI automation, business process automation, intelligent automation, workflow automation, Zion Tech Group"}
 export default function AIAutomationServicesPage() {return (;
-=======
-import Link from "next/link",;
-export const metadata = {;
-  title: "AI Automation Services - Zion Tech Group",;
-  description: "Transform your business with intelligent AI automation solutions. Streamline operations, reduce costs, and enhance productivity with our cutting-edge automation technology.";
-  keywords: "AI automation, business process automation, intelligent automation, workflow automation, Zion Tech Group"};
-export default function AIAutomationServicesPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
-=======
 import Link from './next / link';,
 export const metadata = {
   title: "AI Automation Services - Zion Tech Group",
@@ -28,7 +17,6 @@ function AIAutomationServicesPage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Hero Section */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
@@ -107,7 +95,7 @@ function AIAutomationServicesPage() {
                 Automate repetitive business processes with intelligent workflows that adapt to changing conditions.;
               </p>;
               <Link href="/ai - autonomous - business - process - automation" className="text - blue - 400 hover:text - blue - 300 transition - colors text - sm">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Document Processing */}
@@ -122,7 +110,7 @@ function AIAutomationServicesPage() {
                 Extract, classify, and process documents automatically with advanced OCR and NLP capabilities.;
               </p>;
               <Link href="/ai - content - generation" className="text - green - 400 hover:text - green - 300 transition - colors text - sm">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Customer Service Automation */}
@@ -137,7 +125,7 @@ function AIAutomationServicesPage() {
                 Provide instant, intelligent customer support with AI - powered chatbots and automated response systems.;
               </p>;
               <Link href="/ai - assistant" className="text - purple - 400 hover:text - purple - 300 transition - colors text - sm">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Data Analytics Automation */}
@@ -152,7 +140,7 @@ function AIAutomationServicesPage() {
                 Automate data collection, processing, and analysis to generate actionable insights in real - time.;
               </p>;
               <Link href="/ai - business - intelligence" className="text - yellow - 400 hover:text - yellow - 300 transition - colors text - sm">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Supply Chain Automation */}
@@ -167,7 +155,7 @@ function AIAutomationServicesPage() {
                 Optimize inventory management, demand forecasting, and logistics with intelligent automation.;
               </p>;
               <Link href="/ai - autonomous - logistics" className="text - red - 400 hover:text - red - 300 transition - colors text - sm">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Compliance Automation */}
@@ -182,7 +170,7 @@ function AIAutomationServicesPage() {
                 Ensure regulatory compliance with automated monitoring, reporting, and audit trail systems.;
               </p>;
               <Link href="/ai - compliance - automation" className="text - indigo - 400 hover:text - indigo - 300 transition - colors text - sm">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
           </div>;

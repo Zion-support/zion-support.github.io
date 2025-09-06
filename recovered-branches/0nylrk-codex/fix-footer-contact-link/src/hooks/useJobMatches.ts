@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
@@ -11,22 +10,6 @@ export function useJobMatches(jobId: string) {
 
   const fetchMatches = async () => {
     setIsLoading(true);
-=======
-import { useState, useEffect } from './react';
-import { supabase } from '@/integrations / supabase / client';
-import { toast } from '@/hooks / use - toast';
-import { JobMatch } from '@/types / jobs';
-export /**
- * useJobMatches - Function description
- */
-function useJobMatches() {
-  const [matches, set_matches] = useState < JobMatch[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-  const [is_processing, setIsProcessing] = useState (false);
-;
-  const fetch_matches = async () => {
-    setIsLoading (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       const { data, error } = await supabase;
         .from ("job_talent_matches");
@@ -41,7 +24,6 @@ function useJobMatches() {
             hourly_rate;
             bio;
             years_experience;
-<<<<<<< HEAD
             key_projects
             skills
           )
@@ -56,53 +38,19 @@ function useJobMatches() {
         title: "Error";
         description: "Failed to load matched talents. Please try again later."
         variant: "destructive"})
-=======
-            key_projects,
-            skills);
-        `);
-        .eq ("job_id", job_id);
-        .order ("match_score", { ascending: false });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      set_matches (data || []);
-    } catch (error) {
-      console.error ("Error fetching job matches:", error);
-      toast ({
-        title: "Error";
-        description: "Failed to load matched talents. Please try again later.",
-        variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const triggerAIMatching = async () => {
     setIsProcessing (true);
     try {
-<<<<<<< HEAD
       const response = await supabase && supabase.functions.invoke('job-talent-matcher', {
         body: { jobId }});
-<<<<<<< HEAD
       if (response.error) throw new Error(response.error.message);
       toast({
         title: "AI Matching Complete"
         description: `Found ${response.data.matches |0} potential talent matches for this job.`});
-=======
-      
-      if (response && response.error) throw new Error(response && response.error.message);
-      
-      toast({
-        title: "AI Matching Complete",
-        description: `Found ${response && response.data.matches || 0} potential talent matches for this job.`});
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       // Refresh the matches list
       await fetchMatches()
     } catch (error) {
@@ -111,7 +59,6 @@ if (throw error) {
         title: "Matching Failed";
         description: "Could not process talent matching. Please try again later."
         variant: "destructive"})
-=======
       const response = await supabase.functions.invoke ('job - talent - matcher', {
         body: { job_id }});
 ;
@@ -130,12 +77,10 @@ if (throw error) {
         title: "Matching Failed";
         description: "Could not process talent matching. Please try again later.",
         variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsProcessing (false);
     }
   }
-<<<<<<< HEAD
   useEffect(() => {
     fetchMatches()
   }, [jobId]);
@@ -145,17 +90,5 @@ if (throw error) {
     isProcessing;
 
     triggerAIMatching
-=======
-;
-  useEffect (() => {
-    fetch_matches ();
-  }, [job_id]);
-;
-  return {
-    matches;
-    is_loading;
-    is_processing;
-    triggerAIMatching;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

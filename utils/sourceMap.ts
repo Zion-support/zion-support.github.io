@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 // Mock source map utility
 export function getSourceMapWithExistence() {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -17,13 +12,6 @@ export interface SourceNode {
   path: string;
   exists: boolean;
   children?: SourceNode[];
-=======
-// Mock source map utility;
-export /**
- * getSourceMapWithExistence - Function description
- */
-function getSourceMapWithExistence() {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return {
     nodes: [],
     edges: [];
@@ -41,26 +29,15 @@ function getGitStatus() {
 export function getSourceMapWithExistence (): SourceNode[] {
   const nodes = buildZionSourceMap ();
   return nodes.map (markExistenceRecursive);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface DeployTemplateResult {
-<<<<<<< HEAD
   createdPaths: string[];
   skippedPaths: string[];
 }
 
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
-<<<<<<< HEAD
   return nodes.map(markExistenceRecursive);
-=======
-// Mock source map utility
-export function getSourceMapWithExistence() {
-  return {
-    nodes: []
-    edges: []
-  }
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }
 export function getGitStatus() {
   return {
@@ -68,10 +45,6 @@ export function getGitStatus() {
     branch: 'main'
   }
 }
-<<<<<<< HEAD
-=======
-  return nodes && nodes.map(markExistenceRecursive);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 function buildZionSourceMap(): SourceNode[] {
   return [
@@ -117,7 +90,6 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
   };
 }
 
-=======
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
@@ -125,16 +97,12 @@ export function getSourceMapWithExistence(): SourceNode[] {
 export interface DeployTemplateResult {
   createdPaths: string[];
   skippedPaths: string[];
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
   }
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function deployBasicTemplateForPath(
   repoRelativePath: string
 ): DeployTemplateResult {
@@ -142,48 +110,23 @@ export function deployBasicTemplateForPath(
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
   ensureDirectory(absoluteDir);
-<<<<<<< HEAD
   const keepFile = path.join(absoluteDir, '.keep');
   if (!fs.existsSync(keepFile)) {
     fs.writeFileSync(keepFile, '');
     createdPaths.push(keepFile);
-=======
-
-  const keepFile = path && path.join(absoluteDir, '.keep');
-  if (!fs && fs.existsSync(keepFile)) {
-    fs && fs.writeFileSync(keepFile, '');
-    createdPaths && createdPaths.push(keepFile);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } else {
     skippedPaths && skippedPaths.push(keepFile);
   }
-<<<<<<< HEAD
   const readmeFile = path.join(absoluteDir, 'README.md');
   if (!fs.existsSync(readmeFile)) {
     const readme = `# ${path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
     fs.writeFileSync(readmeFile, readme);
     createdPaths.push(readmeFile);
-=======
-
-  const readmeFile = path && path.join(absoluteDir, 'README && README.md');
-  if (!fs && fs.existsSync(readmeFile)) {
-    const readme = `# ${path && path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
-    fs && fs.writeFileSync(readmeFile, readme);
-    createdPaths && createdPaths.push(readmeFile);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } else {
     skippedPaths && skippedPaths.push(readmeFile);
   }
-<<<<<<< HEAD
 
   return { createdPaths, skippedPaths };
-<<<<<<< HEAD
-=======
-}
-=======
-  return { createdPaths, skippedPaths }
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
 // Source map utilities
 export interface SourceMapInfo {
   version: number;
@@ -278,8 +221,6 @@ export function generateSourceMap(
     file
   };
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   created_paths: string[];
   skipped_paths: string[];
 ;
@@ -318,5 +259,3 @@ export function deployBasicTemplateForPath (
   }
   return { created_paths, skipped_paths }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

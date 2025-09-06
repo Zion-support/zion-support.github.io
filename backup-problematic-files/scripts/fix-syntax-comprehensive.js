@@ -74,19 +74,19 @@ function fixFile(filePath) {
     
     if (hasChanges) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`✅ Fixed syntax in ${filePath}`);
+      console.log(` Fixed syntax in ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    console.error(` Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
 async function main() {
-  console.log('🔧 Starting comprehensive syntax fixes...');
+  console.log(' Starting comprehensive syntax fixes...');
   
   const patterns = [
     'src/**/*.tsx',

@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 
 import { Link } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
 import { useToast } from "@/hooks/use-toast",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 
 import {
   DropdownMenu
@@ -17,59 +15,14 @@ import {
 export function UserMenu() {
   const { user, logout } = useAuth();
   const { toast } = useToast();
-=======
-import { Link  } from './react-router-dom';
-import { use_auth  } from '@/hooks / use_auth';
-import { use_toast  } from '@/hooks / use - toast';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
-import { Button  } from '@/components / ui / button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components / ui / dropdown - menu';
-;
-export /**
- * UserMenu - Function description
- */
-function UserMenu() {
-  const { user, logout } = use_auth ();
-  const { toast } = use_toast ();
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const handleSignOut = async () => {
     try {
       await logout ();
     } catch (error) {
-<<<<<<< HEAD
       toast({
         title: "Error signing out"
         description: "There was an error signing you out. Please try again."
         variant: "destructive"
-=======
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuSeparator,;
-  DropdownMenuTrigger,;
-} from "@/components/ui/dropdown-menu";
-
-export function UserMenu() {;
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-
-  const handleSignOut = async () => {;
-    try {;
-      await logout();
-    } catch (error) {;
-      toast({;
-        title: "Error signing out",;
-        description: "There was an error signing you out. Please try again.",;
-        variant: "destructive",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
   }
@@ -94,7 +47,6 @@ export function UserMenu() {;
         <Button variant="ghost" className="h-8 w-8 rounded-full">;
           <Avatar className="h-8 w-8">;
             <AvatarImage
-<<<<<<< HEAD
               src={user.avatarUrl |""}
               alt={user.displayName |"User Avatar"}
             />
@@ -131,46 +83,7 @@ export function UserMenu() {;
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-=======
-              src={user && user.avatarUrl || ""}
-              alt={user && user.displayName || "User Avatar"}
-            />;
-            <AvatarFallback>;
-              {user && user.displayName?.charAt(0).toUpperCase() || "U"}
-            </AvatarFallback>;
-          </Avatar>;
-          <span className="sr-only">Open user menu</span>;
-        </Button>;
-      </DropdownMenuTrigger>;
-      <DropdownMenuContent align="end">;
-        <div className="grid gap-2 px-2 py-2">;
-          <div className="text-sm font-medium leading-none">;
-            {user && user.displayName || "User"}
-          </div>;
-          <div className="text-muted-foreground text-xs leading-none">;
-            {user && user.email}
-          </div>;
-        </div>;
-        <DropdownMenuSeparator />;
-        <DropdownMenuItem asChild>;
-          <Link to="/dashboard">Dashboard</Link>;
-        </DropdownMenuItem>;
-        <DropdownMenuItem asChild>;
-          <Link to="/profile">Profile</Link>;
-        </DropdownMenuItem>;
-        <DropdownMenuItem asChild>;
-          <Link to="/saved-talents">Saved Talents</Link>;
-        </DropdownMenuItem>;
-        <DropdownMenuItem asChild>;
-          <Link to="/wallet">Wallet</Link>;
-        </DropdownMenuItem>;
-        <DropdownMenuSeparator />;
-        <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>;
-      </DropdownMenuContent>;
-    </DropdownMenu>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
       toast ({
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
@@ -238,5 +151,4 @@ if ( {) {
         <DropdownMenuItem on_click={handleSignOut}>Sign Out</DropdownMenuItem>;
       </DropdownMenuContent>;
     </DropdownMenu>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

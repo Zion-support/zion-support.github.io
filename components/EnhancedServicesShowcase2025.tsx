@@ -23,13 +23,8 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {
-<<<<<<< HEAD
   FaRocket
   FaBrain
   FaCloud
@@ -56,8 +51,6 @@ import {
   SiAws
   SiGooglecloud
   SiMicrosoftazure;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   FaRocket,;
   FaBrain,;
@@ -85,11 +78,9 @@ import {;
   SiAws,;
   SiGooglecloud,;
   SiMicrosoftazure,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'react-icons/si';
 
 interface Service {;
-=======
   FaRocket,
   FaBrain,
   FaCloud,
@@ -119,7 +110,6 @@ import {
 } from 'react - icons / si';
 ;
 interface Service {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   title: string;
   description: string;
@@ -134,50 +124,12 @@ interface Service {
   }
   technologies: string[];
   benefits: string[];
-<<<<<<< HEAD
 
 interface ServiceCategory {;
-=======
-;
-interface ServiceCategory {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   name: string;
   description: string;
-<<<<<<< HEAD
   icon: React.ReactNode;
-<<<<<<< HEAD
-=======
-import { 
-  FaRocket;
-  FaBrain, 
-  FaCloud, 
-  FaShieldAlt, 
-  FaChartLine, 
-  FaCogs;
-  FaLightbulb;
-  FaGlobe;
-  FaMobile;
-  FaDatabase;
-  FaNetworkWired;
-  FaRobot;
-  FaSearch
-} from 'react-icons/fa';
-import { 
-  SiNextdotjs;
-  SiReact, 
-  SiTypescript, 
-  SiTailwindcss;
-  SiPrisma;
-  SiSupabase;
-  SiVercel;
-  SiDocker;
-  SiKubernetes;
-  SiAws;
-  SiGooglecloud;
-  SiMicrosoftazure
-} from 'react-icons/si';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   color: string;  id: string
   name: string
@@ -186,7 +138,6 @@ import {
 
   color: string
 }
-<<<<<<< HEAD
 const serviceCategories: ServiceCategory[] = [
   {
 
@@ -272,22 +223,9 @@ const serviceCategories: ServiceCategory[] = [
     icon: <FaRobot className='w-8 h-8' />
     color: 'from-yellow-500 to-orange-500'
   },    icon: <FaRobot className="w-8 h-8" />
-=======
-
-const serviceCategories: ServiceCategory[] = [
-=======
-  color: string;  id: string,
-  name: string,
-  description: string,
-  icon: React.ReactNode,
-  color: string;
-}
-const service_categories: ServiceCategory[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'ai - ml',
     name: 'AI & Machine Learning',
-<<<<<<< HEAD
     description: 'Cutting-edge artificial intelligence and machine learning solutions',
     icon: <FaBrain className="w-8 h-8" />,
     color: 'from-purple-500 to-pink-500'
@@ -299,112 +237,37 @@ const service_categories: ServiceCategory[] = [;
     icon: <FaCloud className="w-8 h-8" />,
     color: 'from-blue-500 to-cyan-500'
   };
-=======
-    description:;
-      'Cutting - edge artificial intelligence and machine learning solutions',
-    icon: <FaBrain className='w - 8 h - 8' />,
-    color: 'from - purple - 500 to - pink - 500',
-  },  {
-    id: 'cloud',
-    name: 'Cloud & DevOps',
-    description: 'Scalable cloud infrastructure and development operations',
-    icon: <FaCloud className='w - 8 h - 8' />,
-    color: 'from - blue - 500 to - cyan - 500',
-  },  {
-    id: 'security',
-    name: 'Cybersecurity',
-    description: 'Advanced security solutions for modern threats',
-    icon: <FaShieldAlt className='w - 8 h - 8' />,
-    color: 'from - red - 500 to - orange - 500',
-  },  {
-    id: 'data',
-    name: 'Data & Analytics',
-    description: 'Comprehensive data management and analytics platforms',
-    icon: <FaDatabase className='w - 8 h - 8' />,
-    color: 'from - green - 500 to - emerald - 500',
-  },  {
-    id: 'iot',
-    name: 'IoT & Edge Computing',
-    description: 'Internet of Things and edge computing solutions',
-    icon: <FaNetworkWired className='w - 8 h - 8' />,
-    color: 'from - indigo - 500 to - purple - 500',
-  },  {
-    id: 'automation',
-    name: 'Process Automation',
-    description: 'Intelligent automation for business processes',
-    icon: <FaRobot className='w - 8 h - 8' />,
-    color: 'from - yellow - 500 to - orange - 500',
-  }, ];    description: 'Cutting - edge artificial intelligence and machine learning solutions',
-    icon: <FaBrain className="w - 8 h - 8" />,
-    color: 'from - purple - 500 to - pink - 500';
-  }
-    id: 'cloud',
-    name: 'Cloud & DevOps',
-    description: 'Scalable cloud infrastructure and development operations',
-    icon: <FaCloud className='w - 8 h - 8' />,
-    color: 'from - blue - 500 to - cyan - 500',
-  },    icon: <FaCloud className="w - 8 h - 8" />,
-    color: 'from - blue - 500 to - cyan - 500';
-  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'security',
     name: 'Cybersecurity',
     description: 'Advanced security solutions for modern threats',
-<<<<<<< HEAD
     icon: <FaShieldAlt className="w-8 h-8" />,
     color: 'from-red-500 to-orange-500'
   };
-=======
-    icon: <FaShieldAlt className='w - 8 h - 8' />,
-    color: 'from - red - 500 to - orange - 500',
-  },    icon: <FaShieldAlt className="w - 8 h - 8" />,
-    color: 'from - red - 500 to - orange - 500';
-  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'data',
     name: 'Data & Analytics',
     description: 'Comprehensive data management and analytics platforms',
-<<<<<<< HEAD
     icon: <FaDatabase className="w-8 h-8" />,
     color: 'from-green-500 to-emerald-500'
   };
-=======
-    icon: <FaDatabase className='w - 8 h - 8' />,
-    color: 'from - green - 500 to - emerald - 500',
-  },    icon: <FaDatabase className="w - 8 h - 8" />,
-    color: 'from - green - 500 to - emerald - 500';
-  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'iot',
     name: 'IoT & Edge Computing',
     description: 'Internet of Things and edge computing solutions',
-<<<<<<< HEAD
     icon: <FaNetworkWired className="w-8 h-8" />,
     color: 'from-indigo-500 to-purple-500'
   };
-=======
-    icon: <FaNetworkWired className='w - 8 h - 8' />,
-    color: 'from - indigo - 500 to - purple - 500',
-  },    icon: <FaNetworkWired className="w - 8 h - 8" />,
-    color: 'from - indigo - 500 to - purple - 500';
-  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'automation',
     name: 'Process Automation',
     description: 'Intelligent automation for business processes',
-<<<<<<< HEAD
     icon: <FaRobot className="w-8 h-8" />,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     color: 'from-yellow-500 to-orange-500'
   }
 ];
 const services: Service[] = [
   {
-<<<<<<< HEAD
     id: 'ai-automation-suite'
     title: 'AI-Powered Automation Suite'
     description:
@@ -605,133 +468,6 @@ const services: Service[] = [
   }
 ];
 const EnhancedServicesShowcase2025: React.FC = () => {
-=======
-  icon: React && React.ReactNode;
-  color: string;  id: string,;
-  name: string,;
-  description: string,;
-  icon: React && React.ReactNode,;
-  color: string;
-}
-const serviceCategories: ServiceCategory[] = [;
-  {;
-    id: 'ai-ml',;
-    name: 'AI & Machine Learning',;
-    description:;
-      'Cutting-edge artificial intelligence and machine learning solutions',;
-    icon: <FaBrain className='w-8 h-8' />,;
-    color: 'from-purple-500 to-pink-500',;
-  },  {;
-    id: 'cloud',;
-    name: 'Cloud & DevOps',;
-    description: 'Scalable cloud infrastructure and development operations',;
-    icon: <FaCloud className='w-8 h-8' />,;
-    color: 'from-blue-500 to-cyan-500',;
-  },  {;
-    id: 'security',;
-    name: 'Cybersecurity',;
-    description: 'Advanced security solutions for modern threats',;
-    icon: <FaShieldAlt className='w-8 h-8' />,;
-    color: 'from-red-500 to-orange-500',;
-  },  {;
-    id: 'data',;
-    name: 'Data & Analytics',;
-    description: 'Comprehensive data management and analytics platforms',;
-    icon: <FaDatabase className='w-8 h-8' />,;
-    color: 'from-green-500 to-emerald-500',;
-  },  {;
-    id: 'iot',;
-    name: 'IoT & Edge Computing',;
-    description: 'Internet of Things and edge computing solutions',;
-    icon: <FaNetworkWired className='w-8 h-8' />,;
-    color: 'from-indigo-500 to-purple-500',;
-  },  {;
-    id: 'automation',;
-    name: 'Process Automation',;
-    description: 'Intelligent automation for business processes',;
-    icon: <FaRobot className='w-8 h-8' />,;
-    color: 'from-yellow-500 to-orange-500',;
-  },];    description: 'Cutting-edge artificial intelligence and machine learning solutions',;
-    icon: <FaBrain className="w-8 h-8" />,;
-    color: 'from-purple-500 to-pink-500';
-  };
-    id: 'cloud',;
-    name: 'Cloud & DevOps',;
-    description: 'Scalable cloud infrastructure and development operations',;
-    icon: <FaCloud className='w-8 h-8' />,;
-    color: 'from-blue-500 to-cyan-500',;
-  },    icon: <FaCloud className="w-8 h-8" />,;
-    color: 'from-blue-500 to-cyan-500';
-  };
-  {;
-    id: 'security',;
-    name: 'Cybersecurity',;
-    description: 'Advanced security solutions for modern threats',;
-    icon: <FaShieldAlt className='w-8 h-8' />,;
-    color: 'from-red-500 to-orange-500',;
-  },    icon: <FaShieldAlt className="w-8 h-8" />,;
-    color: 'from-red-500 to-orange-500';
-  };
-  {;
-    id: 'data',;
-    name: 'Data & Analytics',;
-    description: 'Comprehensive data management and analytics platforms',;
-    icon: <FaDatabase className='w-8 h-8' />,;
-    color: 'from-green-500 to-emerald-500',;
-  },    icon: <FaDatabase className="w-8 h-8" />,;
-    color: 'from-green-500 to-emerald-500';
-  };
-  {;
-    id: 'iot',;
-    name: 'IoT & Edge Computing',;
-    description: 'Internet of Things and edge computing solutions',;
-    icon: <FaNetworkWired className='w-8 h-8' />,;
-    color: 'from-indigo-500 to-purple-500',;
-  },    icon: <FaNetworkWired className="w-8 h-8" />,;
-    color: 'from-indigo-500 to-purple-500';
-  };
-  {;
-    id: 'automation',;
-    name: 'Process Automation',;
-    description: 'Intelligent automation for business processes',;
-    icon: <FaRobot className='w-8 h-8' />,;
-    color: 'from-yellow-500 to-orange-500',;
-  },    icon: <FaRobot className="w-8 h-8" />,;
-    color: 'from-yellow-500 to-orange-500';
-  }
-=======
-    id: 'ai-automation-suite',
-    title: 'AI-Powered Automation Suite',
-    description: 'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
-    icon: <FaRobot className="w-6 h-6" />,
-    category: 'automation',
-    features: [
-      'Intelligent workflow automationNatural language processingPredictive analyticsReal-time decision makingCustom AI model trainingMulti-platform integration'
-    ];
-=======
-    icon: <FaRobot className='w - 8 h - 8' />,
-    color: 'from - yellow - 500 to - orange - 500',
-  },    icon: <FaRobot className="w - 8 h - 8" />,
-    color: 'from - yellow - 500 to - orange - 500';
-  }
-];
-;
-const services: Service[] = [;
-  {
-    id: 'ai - automation - suite',
-    title: 'AI - Powered Automation Suite',
-    description:;
-      'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
-    icon: <FaRobot className='w - 6 h - 6' />,
-    features: [;
-      'Intelligent workflow automation',
-      'Natural language processing',
-      'Predictive analytics',
-      'Real - time decision making',
-      'Custom AI model training',
-      'Multi - platform integration',
-    ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     pricing: {
       
       starter: 299,
@@ -739,53 +475,20 @@ const services: Service[] = [;
       enterprise: 1999
     
     },
-<<<<<<< HEAD
     technologies: ['TensorFlowPyTorchOpenAILangChainReactNode.js'],
     benefits: [
       'Reduce manual tasks by 80%Improve accuracy by 95%24/7 automated operationsScalable AI infrastructure'
     ]
   };
-=======
-    technologies: [;
-      'TensorFlow',
-      'PyTorch',
-      'OpenAI',
-      'LangChain',
-      'React',
-      'Node.js',
-    ],
-    benefits: [;
-      'Reduce manual tasks by 80%',
-      'Improve accuracy by 95%',
-      '24 / 7 automated operations',
-      'Scalable AI infrastructure',
-    ],
-  },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'quantum - computing - platform',
     title: 'Quantum Computing Platform',
-<<<<<<< HEAD
     description: 'Next-generation quantum computing solutions for complex problem solving',
     icon: <FaBrain className="w-6 h-6" />,
     category: 'ai-ml',
     features: [
       'Quantum algorithm optimizationHybrid classical-quantum computingQuantum machine learningCryptographic solutionsQuantum simulation toolsAPI access to quantum hardware'
     ];
-=======
-    description:;
-      'Next - generation quantum computing solutions for complex problem solving',
-    icon: <FaBrain className='w - 6 h - 6' />,
-    category: 'ai - ml',
-    features: [;
-      'Quantum algorithm optimization',
-      'Hybrid classical - quantum computing',
-      'Quantum machine learning',
-      'Cryptographic solutions',
-      'Quantum simulation tools',
-      'API access to quantum hardware',
-    ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     pricing: {
       
       starter: 999,
@@ -793,46 +496,20 @@ const services: Service[] = [;
       enterprise: 4999
     
     },
-<<<<<<< HEAD
     technologies: ['QiskitCirqPennyLanePythonC++CUDA'],
     benefits: [
       'Solve previously impossible problemsExponential speed improvementsFuture-proof technologyResearch and development support'
     ]
   };
-=======
-    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
-    benefits: [;
-      'Solve previously impossible problems',
-      'Exponential speed improvements',
-      'Future - proof technology',
-      'Research and development support',
-    ],
-  },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'edge - ai - platform',
     title: 'Edge AI Computing Platform',
-<<<<<<< HEAD
     description: 'Distributed artificial intelligence at the edge for real-time processing',
     icon: <FaNetworkWired className="w-6 h-6" />,
     category: 'iot',
     features: [
       'Edge device optimizationReal-time AI inferenceDistributed learningLow-latency processingOffline AI capabilitiesEdge-to-cloud synchronization'
     ];
-=======
-    description:;
-      'Distributed artificial intelligence at the edge for real - time processing',
-    icon: <FaNetworkWired className='w - 6 h - 6' />,
-    category: 'iot',
-    features: [;
-      'Edge device optimization',
-      'Real - time AI inference',
-      'Distributed learning',
-      'Low - latency processing',
-      'Offline AI capabilities',
-      'Edge - to - cloud synchronization',
-    ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     pricing: {
       
       starter: 199,
@@ -840,52 +517,20 @@ const services: Service[] = [;
       enterprise: 1499
     
     },
-<<<<<<< HEAD
     technologies: ['TensorFlow LiteONNX RuntimeEdge TPURaspberry PiArduino'],
     benefits: [
       'Reduced latency by 90%Lower bandwidth costsEnhanced privacyScalable edge deployment'
     ]
   };
-=======
-    technologies: [;
-      'TensorFlow Lite',
-      'ONNX Runtime',
-      'Edge TPU',
-      'Raspberry Pi',
-      'Arduino',
-    ],
-    benefits: [;
-      'Reduced latency by 90%',
-      'Lower bandwidth costs',
-      'Enhanced privacy',
-      'Scalable edge deployment',
-    ],
-  },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'quantum - cybersecurity',
     title: 'Quantum Cybersecurity Suite',
-<<<<<<< HEAD
     description: 'Advanced security solutions leveraging quantum-resistant cryptography',
     icon: <FaShieldAlt className="w-6 h-6" />,
     category: 'security',
     features: [
       'Post-quantum cryptographyQuantum key distributionAdvanced threat detectionZero-trust architectureCompliance frameworksReal-time monitoring'
     ];
-=======
-    description:;
-      'Advanced security solutions leveraging quantum - resistant cryptography',
-    icon: <FaShieldAlt className='w - 6 h - 6' />,
-    category: 'security',
-    features: [;
-      'Post - quantum cryptography',
-      'Quantum key distribution',
-      'Advanced threat detection',
-      'Zero - trust architecture',
-      'Compliance frameworks',
-      'Real - time monitoring',
-    ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     pricing: {
       
       starter: 399,
@@ -893,46 +538,20 @@ const services: Service[] = [;
       enterprise: 2499
     
     },
-<<<<<<< HEAD
     technologies: ['NIST PQCQKD protocolsZero TrustSIEMSOAR'],
     benefits: [
       'Future-proof securityQuantum-resistant encryptionComprehensive complianceAdvanced threat protection'
     ]
   };
-=======
-    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
-    benefits: [;
-      'Future - proof security',
-      'Quantum - resistant encryption',
-      'Comprehensive compliance',
-      'Advanced threat protection',
-    ],
-  },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'data - fabric - platform',
     title: 'Intelligent Data Fabric Platform',
-<<<<<<< HEAD
     description: 'Unified data management and analytics across all sources and formats',
     icon: <FaDatabase className="w-6 h-6" />,
     category: 'data',
     features: [
       'Unified data accessReal-time analyticsData governanceAI-powered insightsMulti-cloud supportData lineage tracking'
     ];
-=======
-    description:;
-      'Unified data management and analytics across all sources and formats',
-    icon: <FaDatabase className='w - 6 h - 6' />,
-    category: 'data',
-    features: [;
-      'Unified data access',
-      'Real - time analytics',
-      'Data governance',
-      'AI - powered insights',
-      'Multi - cloud support',
-      'Data lineage tracking',
-    ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     pricing: {
       
       starter: 299,
@@ -940,7 +559,6 @@ const services: Service[] = [;
       enterprise: 1999
     
     },
-<<<<<<< HEAD
     technologies: ['Apache KafkaApache SparkSnowflakeDatabricksAirflow'],
     benefits: [
       'Unified data viewReal-time insightsImproved data qualityReduced integration costs'
@@ -955,41 +573,6 @@ const services: Service[] = [;
     features: [
       'Kubernetes orchestrationMicroservices architectureCI/CD pipelinesAuto-scalingMulti-cloud deploymentDevOps automation'
     ];
-=======
-    technologies: [;
-      'Apache Kafka',
-      'Apache Spark',
-      'Snowflake',
-      'Databricks',
-      'Airflow',
-    ],
-    benefits: [;
-      'Unified data view',
-      'Real - time insights',
-      'Improved data quality',
-      'Reduced integration costs',
-    ],
-  },  {
-    id: 'cloud - native - platform',
-    title: 'Cloud - Native Development Platform',
-    description: 'Modern cloud - native development and deployment platform',
-    icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs';
-    ];
-  }
-  {
-    id: 'cloud - native - platform',
-    title: 'Cloud - Native Development Platform',
-    description: 'Modern cloud - native development and deployment platform',
-    icon: <FaCloud className='w - 6 h - 6' />,
-    features: [;
-      'Kubernetes orchestration',
-      'Microservices architecture',
-      'CI / CD pipelines',
-      'Auto - scaling',
-      'Multi - cloud deployment',
-      'DevOps automation',
-    ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     pricing: {
       
       starter: 199,
@@ -997,31 +580,11 @@ const services: Service[] = [;
       enterprise: 1499
     
     },
-<<<<<<< HEAD
     technologies: ['KubernetesDockerHelmArgoCDPrometheusGrafana'],
     benefits: [
       'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
     ]
-=======
-    technologies: [;
-      'Kubernetes',
-      'Docker',
-      'Helm',
-      'ArgoCD',
-      'Prometheus',
-      'Grafana',
-    ],
-    benefits: [;
-      'Faster deployment',
-      'Improved scalability',
-      'Better resource utilization',
-      'Enhanced reliability',
-    ],
-  }, ];      'Faster deployment_improved scalability_better resource utilization_enhanced reliability';
-    ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
 
 const services: Service[] = [;
@@ -1225,18 +788,14 @@ const services: Service[] = [;
     ];
   }
 ];
-<<<<<<< HEAD
 
 const EnhancedServicesShowcase2025: React.FC = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
-<<<<<<< HEAD
   const filteredServices = useMemo(() => {
     let filtered = services;
-<<<<<<< HEAD
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(
         service => service.category === selectedCategory
@@ -1252,38 +811,13 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
           service.technologies.some(tech =>
             tech.toLowerCase().includes(searchTerm.toLowerCase())
           )
-=======
-
-  const filteredServices = useMemo(() => {;
-    let filtered = services;
-
-    if (selectedCategory !== 'all') {;
-      filtered = filtered && filtered.filter(;
-        service => service && service.category === selectedCategory;
-      );
-    }
-
-    if (searchTerm) {;
-      filtered = filtered && filtered.filter(;
-        service =>;
-          service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-          service && service.description;
-            .toLowerCase();
-            .includes(searchTerm && searchTerm.toLowerCase()) ||;
-          service && service.technologies.some(tech =>;
-            tech && tech.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-          );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
     }    if (selectedCategory !== 'all') {;
       filtered = filtered && filtered.filter(service => service && service.category === selectedCategory);
-=======
     
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
-<<<<<<< HEAD
     if (searchTerm) {
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) |
@@ -1291,17 +825,12 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
         service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
       )
     }
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
           return a.pricing.starter - b.pricing.starter;
         case 'category':
           return a.category.localeCompare(b.category);
-<<<<<<< HEAD
         default:
           return a.title.localeCompare(b.title);
       }
@@ -1311,34 +840,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
     setSelectedService(service);
   }
   const closeModal = () => {
-=======
-
-    if (searchTerm) {;
-      filtered = filtered && filtered.filter(service => ;
-        service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-        service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-        service && service.technologies.some(tech => tech && tech.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
-      );
-    }
-
-    return filtered && filtered.sort((a, b) => {;
-      switch (sortBy) {;
-        case 'price':;
-          return a && a.pricing.starter - b && b.pricing.starter;
-        case 'category':;
-          return a && a.category.localeCompare(b && b.category);
-        default:;
-          return a && a.title.localeCompare(b && b.title);
-      }
-    });
-  }, [selectedCategory, searchTerm, sortBy]);
-
-  const handleServiceSelect = (service: Service) => {;
-    setSelectedService(service);
-  };
-
-  const closeModal = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setSelectedService(null);
   }
   return (
@@ -1350,7 +851,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
           transition={{ duration: 0 && 0.8 }}
           className='text-center mb-16'      }
     })
-<<<<<<< HEAD
   }, [selectedCategory, searchTerm, sortBy]);
   const handleServiceSelect = (service: Service) => {
     setSelectedService(service)
@@ -1358,18 +858,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
   const closeModal = () => {
     setSelectedService(null)
   }
-=======
-  }, [selectedCategory, searchTerm, sortBy])
-
-  const handleServiceSelect = (service: Service) => {;
-    setSelectedService(service);
-  };
-
-  const closeModal = () => {;
-    setSelectedService(null);
-  };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">;
       {/* Header */}
@@ -1377,7 +865,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
           transition={{ duration: 0.8 }}
           className='text-center mb-16'
         >
@@ -1388,105 +875,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
             Discover our cutting-edge technology solutions designed for the
             future. From AI-powered automation to quantum computing, we're
             building tomorrow's innovations today.          </p>        >
-=======
-        default: return a.title.localeCompare(b.title)
-      }
-    })
-  }, [selectedCategory, searchTerm, sortBy]);
-
-  const handleServiceSelect = (service: Service) => {
-    setSelectedService(service)
-  };
-
-  const closeModal = () => {
-    setSelectedService(null)
-  };
-
-=======
-;
-const EnhancedServicesShowcase2025: React.FC = () => {
-  const [selected_category, setSelectedCategory] = useState < string>('all');
-  const [selected_service, setSelectedService] = useState < Service | null>(null);
-  const [search_term, setSearchTerm] = useState ('');
-  const [sort_by, setSortBy] = useState<'name' | 'price' | 'category'>('name');
-;
-  const filtered_services = useMemo (() => {
-    let filtered = services;
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      filtered = filtered.filter (
-        service => service.category === selected_category);
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      filtered = filtered.filter (
-        service =>;
-          service.title.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-          service.description;
-            .toLowerCase ();
-            .includes (search_term.toLowerCase ()) ||;
-          service.technologies.some (tech =>;
-            tech.toLowerCase ().includes (search_term.toLowerCase ())));
-    }    // Check condition
-if ( {) {
-  $2
-}
-      filtered = filtered.filter (service => service.category === selected_category);
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      filtered = filtered.filter (service =>;
-        service.title.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-        service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-        service.technologies.some (tech => tech.toLowerCase ().includes (search_term.toLowerCase ())));
-    }
-    return filtered.sort ((a, b) => {
-      switch (sort_by) {
-        case 'price':;
-          return a.pricing.starter - b.pricing.starter;
-        case 'category':;
-          return a.category.locale_compare (b.category);
-        default:;
-          return a.title.locale_compare (b.title);
-      }
-    });
-  }, [selected_category, search_term, sort_by]);
-;
-  const handleServiceSelect = (service: Service) =>: any {
-    setSelectedService (service);
-  }
-;
-  const close_modal = () =>: any {
-    setSelectedService (null);
-  }
-;
-  return (
-    <div className='min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900 text - white'>;
-      {/* Header */}
-      <div className='container mx - auto px - 4 py - 16'>        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          animate={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='text - center mb - 16'      }
-    });
-  }, [selected_category, search_term, sort_by]);
-;
-  const handleServiceSelect = (service: Service) =>: any {
-    setSelectedService (service);
-  }
-;
-  const close_modal = () =>: any {
-    setSelectedService (null);
-  }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900 text - white">;
       {/* Header */}
@@ -1495,10 +883,8 @@ if ( {) {
           initial={{ opacity: 0, coordinate_y: 20 }}
           animate={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.8 }}
-<<<<<<< HEAD
           className="text-center mb-16"
         >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             2025 Services Showcase
           </h1>
@@ -1507,7 +893,6 @@ if ( {) {
             From AI-powered automation to quantum computing, we're building tomorrow's innovations today.
           </p>
         </motion.div>
-=======
           transition={{ duration: 0 && 0.8 }}
           className='text-center mb-16'>;
           <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -1526,15 +911,10 @@ if ( {) {
           </p>;
         </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
           className='mb-12'>;
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>;
@@ -1543,27 +923,17 @@ if ( {) {
                 type='text'
                 placeholder='Search services, technologies, or features...'
                 value={searchTerm}
-<<<<<<< HEAD
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
               />
               <FaSearch className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400' />
             </div>
-=======
-                onChange={e => setSearchTerm(e && e.target.value)}
-                className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent';
-              />;
-              <FaSearch className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400' />;
-            </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <select
               value={sortBy}
               onChange={e =>;
                 setSortBy(e && e.target.value as 'name' | 'price' | 'category');
               }
               className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500';
-=======
           className='text - center mb - 16';
         >;
           <h1 className='text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
@@ -1605,29 +975,16 @@ if ( {) {
                 setSortBy (e.target.value as 'name' | 'price' | 'category');
               }
               className='px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - blue - 500';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             >;
               <option value='name'>Sort by Name</option>;
               <option value='price'>Sort by Price</option>;
               <option value='category'>Sort by Category</option>            </select>        >;
-<<<<<<< HEAD
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">;
             <div className="relative flex-1 max-w-md">;
-<<<<<<< HEAD
-=======
-=======
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-12"
-        >
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
-            <div className="relative flex-1 max-w-md">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="text"
                 placeholder="Search services, technologies, or features..."
                 value={searchTerm}
-<<<<<<< HEAD
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
@@ -1635,7 +992,6 @@ if ( {) {
             </div>
             <select
               value={sortBy}
-<<<<<<< HEAD
               onChange={(e) => setSortBy(e && e.target.value as 'name' | 'price' | 'category')}
               className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500";
             >;
@@ -1645,29 +1001,11 @@ if ( {) {
             </select>;
           </div>;
         </motion && motion.div>;
-=======
-              onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
-              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="name">Sort by Name</option>
-              <option value="price">Sort by Price</option>
-              <option value="category">Sort by Category</option>
-            </select>
-          </div>
-        </motion.div>
-=======
-                onChange={(e) => setSearchTerm(e && e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-              />;
-              <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />;
-            </div>;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e && e.target.value as 'name' | 'price' | 'category')}
               className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500";
-=======
           <div className="flex flex - col md:flex - row gap - 4 items - center justify - center">;
             <div className="relative flex - 1 max - w-md">;
               <input;
@@ -1683,38 +1021,22 @@ if ( {) {
               value={sort_by}
               on_change={(e) => setSortBy (e.target.value as 'name' | 'price' | 'category')}
               className="px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - blue - 500";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             >;
               <option value="name">Sort by Name</option>;
               <option value="price">Sort by Price</option>;
               <option value="category">Sort by Category</option>;
             </select>;
           </div>;
-<<<<<<< HEAD
         </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Category Tabs */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           className='mb-12'>;
           <div className='flex flex-wrap justify-center gap-4'>            <buttonclassName="mb-12">;
           <div className="flex flex-wrap justify-center gap-4">;
-<<<<<<< HEAD
-=======
-=======
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-12"
-        >
-          <div className="flex flex-wrap justify-center gap-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <button
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
@@ -1722,23 +1044,10 @@ if ( {) {
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg';
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
               }`}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             >;
               All Services;
             </button>;
             {serviceCategories && serviceCategories.map(category => (              <button            {serviceCategories && serviceCategories.map((category) => (;
-<<<<<<< HEAD
-=======
-=======
-            >
-              All Services
-            </button>
-            {serviceCategories.map((category) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <button
                 key={category && category.id}
                 onClick={() => setSelectedCategory(category && category.id)}
@@ -1752,22 +1061,12 @@ if ( {) {
                 {category && category.name}
               </button>;
             ))}
-<<<<<<< HEAD
           </div>
         </motion.div>
-=======
-          </div>;
-        </motion && motion.div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Services Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
         >;
@@ -1794,7 +1093,6 @@ if ( {) {
                       serviceCategories && serviceCategories.find(c => c && c.id === service && service.category);
                         ?.name;
                     }
-<<<<<<< HEAD
                   </p>
                 </div>
               </div>
@@ -1806,68 +1104,13 @@ if ( {) {
                   <span
                     key={tech}
                     className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'                  >              onClick={() => handleServiceSelect(service)}
-=======
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {filteredServices.map((service, index) => (
-            <motion.div
-=======
-        </motion.div>;
-        {/* Category Tabs */}
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          animate={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className='mb - 12';
-        >;
-          <div className='flex flex - wrap justify - center gap - 4'>            <button          className="mb - 12";
-        >;
-          <div className="flex flex - wrap justify - center gap - 4">;
-            <button;
-              on_click={() => setSelectedCategory ('all')}
-              className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 300 ${
-                selected_category === 'all';
-                  ? 'bg - gradient - to - r from - blue - 500 to - purple - 500 text - white shadow - lg';
-                  : 'bg - white / 10 backdrop - blur - sm border border - white / 20 text - gray - 300 hover:bg - white / 20';
-              }`}
-            >;
-              All Services;
-            </button>;
-            {service_categories.map (category => (              <button            {service_categories.map ((category) => (
-              <button;
-                key={category.id}
-                on_click={() => setSelectedCategory (category.id)}
-                className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
-                  selected_category === category.id;
-                    ? `bg - gradient - to - r ${category.color} text - white shadow - lg`;
-                    : 'bg - white / 10 backdrop - blur - sm border border - white / 20 text - gray - 300 hover:bg - white / 20';
-                }`}
-              >;
-                {category.icon}
-                {category.name}
-              </button>))}
-          </div>;
-        </motion.div>;
-        {/* Services Grid */}
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          animate={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'        >          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
-        >;
-          {filtered_services.map ((service, index) => (
-            <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               key={service.id}
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
               whileHover={{ y: -5, scale: 1.02 }}
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300"
               onClick={() => handleServiceSelect(service)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
@@ -1881,7 +1124,6 @@ if ( {) {
               <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {service.technologies.slice(0, 3).map((tech) => (
-=======
                   </p>;
                 </div>;
               </div>;
@@ -1894,7 +1136,6 @@ if ( {) {
                 {service && service.technologies.slice(0, 3).map(tech => (;
                   <span
                     key={tech}
-<<<<<<< HEAD
                     className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'>              onClick={() => handleServiceSelect(service)}
             >;
               <div className="flex items-center gap-3 mb-4">;
@@ -1911,41 +1152,26 @@ if ( {) {
 
               <div className="flex flex-wrap gap-2 mb-4">;
                 {service && service.technologies.slice(0, 3).map((tech) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <span
                     key={tech}
                     className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">;
-<<<<<<< HEAD
                     {tech}
                   </span>;
                 ))}
-=======
-=======
-                    className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300"
-                  >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     {tech}
                   </span>;
                 ))}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 {service && service.technologies.length > 3 && (;
                   <span className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'>                    +{service && service.technologies.length - 3} more;
                   </span>;
                 )}
-<<<<<<< HEAD
               </div>
               <div className='flex items-center justify-between'>
                 <div className='text-2xl font-bold text-blue-400'>                  <span className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
-=======
-                {service.technologies.length > 3 && (
-                  <span className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     +{service.technologies.length - 3} more
                   </span>
                 )}
               </div>
-<<<<<<< HEAD
               <div className='flex items-center justify-between'>
                 <div className='text-2xl font-bold text-blue-400'>
                   ${service.pricing.starter}
@@ -1954,12 +1180,6 @@ if ( {) {
                   </span>
                 </div>
                 <button className='px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'>                  Learn More                  ${service.pricing.starter}
-=======
-              
-              <div className="flex items-center justify-between">
-                <div className="text-2xl font-bold text-blue-400">
-                  ${service.pricing.starter}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <span className="text-sm text-gray-400 font-normal">/month</span>
                 </div>
                 <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
@@ -1969,7 +1189,6 @@ if ( {) {
             </motion.div>
           ))}
         </motion.div>
-=======
               </div>;
 
               <div className='flex items-center justify-between'>;
@@ -1997,18 +1216,13 @@ if ( {) {
           ))}
         </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='text-center py-16'>;
-            <div className='text-6xl mb-4'>🔍</div>;
+            <div className='text-6xl mb-4'></div>;
             <h3 className='text-2xl font-bold text-gray-300 mb-2'>;
               No services found;
             </h3>;
@@ -2016,27 +1230,11 @@ if ( {) {
               Try adjusting your search terms or category filters;
             </p>          </motion && motion.div>            className="text-center py-16";
           >;
-            <div className="text-6xl mb-4">🔍</div>;
+            <div className="text-6xl mb-4"></div>;
             <h3 className="text-2xl font-bold text-gray-300 mb-2">No services found</h3>;
             <p className="text-gray-400">Try adjusting your search terms or category filters</p>;
-<<<<<<< HEAD
-=======
-=======
-            className="text-center py-16"
-          >
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-gray-300 mb-2">No services found</h3>
-            <p className="text-gray-400">Try adjusting your search terms or category filters</p>
-          </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
-<<<<<<< HEAD
       </div>
-=======
-      </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Service Detail Modal */}
       <AnimatePresence>;
         {selectedService && (;
@@ -2044,10 +1242,6 @@ if ( {) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}>;
             <motion&& motion.div
@@ -2089,28 +1283,15 @@ if ( {) {
                 </div>;
                 <button
                   onClick={closeModal}
-<<<<<<< HEAD
                   className='p-2 hover:bg-white/10 rounded-lg transition-colors'
                 >
-                  <span className='text-2xl'>×</span>
+                  <span className='text-2xl'></span>
                 </button>
               </div>
               <p className='text-gray-300 text-lg mb-8'>
                 {selectedService.description}
               </p>
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-=======
-                  className='p-2 hover:bg-white/10 rounded-lg transition-colors'>;
-                  <span className='text-2xl'>×</span>;
-                </button>;
-              </div>;
-
-              <p className='text-gray-300 text-lg mb-8'>;
-                {selectedService && selectedService.description}
-              </p>;
-
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Features */}
                 <div>;
                   <h3 className='text-xl font-bold text-white mb-4'>;
@@ -2120,93 +1301,36 @@ if ( {) {
                     {selectedService && selectedService.features.map((feature, index) => (;
                       <li
                         key={index}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                         className='flex items-center gap-2 text-gray-300'
                       >
                         <div className='w-2 h-2 bg-blue-500 rounded-full'></div>                        {feature}                >
-=======
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={closeModal}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center gap-4">
-                  <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">
-                    {selectedService.icon}
-                  </div>
-                  <div>
-                    <h2 className="text-3xl font-bold text-white mb-2">{selectedService.title}</h2>
-                    <p className="text-gray-400">{serviceCategories.find(c => c.id === selectedService.category)?.name}</p>
-                  </div>
-                </div>
-                <button
-                  onClick={closeModal}
-                  className="p-2 hover:bg-white/10 rounded-lg transition-colors"
-                >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-                  <span className="text-2xl">×</span>
+                  <span className="text-2xl"></span>
                 </button>
               </div>
               <p className="text-gray-300 text-lg mb-8">{selectedService.description}</p>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         className='flex items-center gap-2 text-gray-300'>;
                         <div className='w-2 h-2 bg-blue-500 rounded-full'></div>                        {feature}                >;
-                  <span className="text-2xl">×</span>;
+                  <span className="text-2xl"></span>;
                 </button>;
               </div>;
 
               <p className="text-gray-300 text-lg mb-8">{selectedService && selectedService.description}</p>;
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Features */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <div>;
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>;
                   <ul className="space-y-2">;
                     {selectedService && selectedService.features.map((feature, index) => (;
                       <li key={index} className="flex items-center gap-2 text-gray-300">;
                         <div className="w-2 h-2 bg-blue-500 rounded-full"></div>;
-<<<<<<< HEAD
-=======
-=======
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
-                  <ul className="space-y-2">
-                    {selectedService.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-2 text-gray-300">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         {feature}
                       </li>;
                     ))}
-<<<<<<< HEAD
                   </ul>
                 </div>
-=======
-                  </ul>;
-                </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Benefits */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <div>;
                   <h3 className='text-xl font-bold text-white mb-4'>;
                     Key Benefits;
@@ -2222,35 +1346,11 @@ if ( {) {
                       <li key={index} className="flex items-center gap-2 text-gray-300">;
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>;
                       </li>;
-<<<<<<< HEAD
-=======
-=======
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Key Benefits</h3>
-                  <ul className="space-y-2">
-                    {selectedService.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-center gap-2 text-gray-300">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        {benefit}
-                      </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
-<<<<<<< HEAD
                   </ul>
                 </div>
               </div>
-=======
-                  </ul>;
-                </div>;
-              </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Technologies */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <div className='mt-8'>;
                 <h3 className='text-xl font-bold text-white mb-4'>;
                   Technologies;
@@ -2266,35 +1366,12 @@ if ( {) {
                     <span
                       key={tech}
                       className="px-3 py-2 bg-white/10 rounded-lg text-gray-300"
-<<<<<<< HEAD
-=======
-=======
-              <div className="mt-8">
-                <h3 className="text-xl font-bold text-white mb-4">Technologies</h3>
-                <div className="flex flex-wrap gap-3">
-                  {selectedService.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-2 bg-white/10 rounded-lg text-gray-300"
-                    >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       {tech}
                     </span>;
                   ))}
-<<<<<<< HEAD
                 </div>
               </div>
-=======
-                </div>;
-              </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Pricing */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <div className='mt-8'>;
                 <h3 className='text-xl font-bold text-white mb-4'>;
                   Pricing Plans;
@@ -2327,7 +1404,6 @@ if ( {) {
               </div>;
             </motion && motion.div>;
           </motion && motion.div>;
-<<<<<<< HEAD
         )}
       </AnimatePresence>;
     </div>;
@@ -2335,60 +1411,21 @@ if ( {) {
 };
 
 export default EnhancedServicesShowcase2025;  );
-=======
-=======
-              <div className="mt-8">
-                <h3 className="text-xl font-bold text-white mb-4">Pricing Plans</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {Object.entries(selectedService.pricing).map(([plan, price]) => (
-                    <div
-                      key={plan}
-                      className="p-4 bg-white/5 border border-white/20 rounded-lg text-center"
-                    >
-                      <h4 className="text-lg font-bold text-white capitalize mb-2">{plan}</h4>
-                      <div className="text-3xl font-bold text-blue-400 mb-2">
-                        ${price}
-                        <span className="text-sm text-gray-400 font-normal">/month</span>
-                      </div>
-                      <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover: from-blue-600 hover:to-purple-600 transition-all duration-300">
-                        Get Started
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         )}
-<<<<<<< HEAD
       </AnimatePresence>
     </div>
-<<<<<<< HEAD
 );
 }
 export default EnhancedServicesShowcase2025;  )
 }
-=======
-      </AnimatePresence>;
-    </div>;
-  );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export default EnhancedServicesShowcase2025;  );
-=======
   )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedServicesShowcase2025;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               while_hover={{ coordinate_y: -5, scale: 1.02 }}
               className='bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - xl p - 6 cursor - pointer hover:bg - white / 20 transition - all duration - 300';
               on_click={() => handleServiceSelect (service)}
@@ -2468,7 +1505,7 @@ export default EnhancedServicesShowcase2025;
             animate={{ opacity: 1 }}
             className='text - center py - 16';
           >;
-            <div className='text - 6xl mb - 4'>🔍</div>;
+            <div className='text - 6xl mb - 4'></div>;
             <h3 className='text - 2xl font - bold text - gray - 300 mb - 2'>;
               No services found;
             </h3>;
@@ -2476,7 +1513,7 @@ export default EnhancedServicesShowcase2025;
               Try adjusting your search terms or category filters;
             </p>          </motion.div>            className="text - center py - 16";
           >;
-            <div className="text - 6xl mb - 4">🔍</div>;
+            <div className="text - 6xl mb - 4"></div>;
             <h3 className="text - 2xl font - bold text - gray - 300 mb - 2">No services found</h3>;
             <p className="text - gray - 400">Try adjusting your search terms or category filters</p>)}
       </div>;
@@ -2530,7 +1567,7 @@ export default EnhancedServicesShowcase2025;
                   on_click={close_modal}
                   className='p - 2 hover:bg - white / 10 rounded - lg transition - colors';
                 >;
-                  <span className='text - 2xl'>×</span>;
+                  <span className='text - 2xl'></span>;
                 </button>;
               </div>;
               <p className='text - gray - 300 text - lg mb - 8'>;
@@ -2549,7 +1586,7 @@ export default EnhancedServicesShowcase2025;
                         className='flex items - center gap - 2 text - gray - 300';
                       >;
                         <div className='w - 2 h - 2 bg - blue - 500 rounded - full'></div>                        {feature}                >;
-                  <span className="text - 2xl">×</span>;
+                  <span className="text - 2xl"></span>;
                 </button>;
               </div>;
               <p className="text - gray - 300 text - lg mb - 8">{selected_service.description}</p>;
@@ -2645,4 +1682,3 @@ export default EnhancedServicesShowcase2025);
 ;
 export default EnhancedServicesShowcase2025;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/security/osv-report.json';
@@ -13,17 +9,17 @@ export default function OsvWatchPage() {
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">OSV Vulnerability Watch</h1>
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |'—'}</p>
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |''}</p>
         {results.length === 0 ? (
           <p className="mt-6 text-sm">No known vulnerabilities found.</p>
         ) : (
           <ul className="mt-6 space-y-4">
             {results.map((r, idx) => (
               <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
-                <div className="font-medium">{r.name} — {r.versionRange}</div>
+                <div className="font-medium">{r.name}  {r.versionRange}</div>
                 <ul className="list-disc ml-5 mt-2">
                   {r.vulns.slice(0, 5).map((v, i) => (
-                    <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a> — {v.summary |''}</li>
+                    <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a>  {v.summary |''}</li>
                   ))}
                 </ul>
               </li>
@@ -33,14 +29,7 @@ export default function OsvWatchPage() {
       </div>
     </EnhancedLayout>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
 import data from '../../data / security / osv - report.json',
@@ -53,21 +42,19 @@ function OsvWatchPage() {
     <EnhancedLayout>;
       <div className="max - w-5xl mx - auto py - 10">;
         <h1 className="text - 3xl font - bold">OSV Vulnerability Watch</h1>;
-        <p className="mt - 2 text - sm text - gray - 600 dark:text - gray - 300">Updated at {data?.generated_at || '—'}</p>;
+        <p className="mt - 2 text - sm text - gray - 600 dark:text - gray - 300">Updated at {data?.generated_at || ''}</p>;
         {results.length === 0 ? (
           <p className="mt - 6 text - sm">No known vulnerabilities found.</p>) : (
           <ul className="mt - 6 space - y-4">;
             {results.map ((r, idx) => (
               <li key={idx} className="p - 4 border border - gray - 200 dark:border - gray - 800 rounded - lg">;
-                <div className="font - medium">{r.name} — {r.version_range}</div>;
+                <div className="font - medium">{r.name}  {r.version_range}</div>;
                 <ul className="list - disc ml - 5 mt - 2">;
                   {r.vulns.slice (0, 5).map ((v, i) => (
-                    <li key={i} className="text - sm"><a className="underline" href={`https://osv.dev / vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a> — {v.summary || ''}</li>))}
+                    <li key={i} className="text - sm"><a className="underline" href={`https://osv.dev / vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a>  {v.summary || ''}</li>))}
                 </ul>;
               </li>))}
           </ul>)}
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

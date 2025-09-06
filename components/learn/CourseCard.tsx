@@ -1,51 +1,25 @@
-<<<<<<< HEAD
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export type Course = {;
-=======
 import Link from 'next / link';
 export type Course = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   title: string;
   duration_minutes: number;
   level: string;
   is_free: boolean;
   category: string;
-<<<<<<< HEAD
   certificationBadge: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   description?: string;}
-=======
-export type Course = {
-  id: string,
-=======
-  certification_badge: string;
-  description?: string;}
-;
-export default /**
- * CourseCard - Function description
- */
-function CourseCard() {
-  return (  id: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   title: string,
   duration_minutes: number,
   level: string,
   is_free: boolean,
   category: string,
-<<<<<<< HEAD
   certificationBadge: string,
   description?: string
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function CourseCard({ course }: { course: Course }) {
   return (  id: string
   title: string
@@ -55,8 +29,6 @@ export default function CourseCard({ course }: { course: Course }) {
   category: string
   certificationBadge: string
   description?: string
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   description?: string;};
 
 export default function CourseCard(): any ({ course }: { course: Course }) {;
@@ -68,14 +40,9 @@ export default function CourseCard(): any ({ course }: { course: Course }) {;
   category: string,;
   certificationBadge: string,;
   description?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 export default function CourseCard(): any ({ course }: { course: Course }) {;
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className='border rounded-lg p-4 hover:shadow-md transition'>;
       <div className='flex items-center justify-between'>;
         <h3 className='font-semibold text-lg'>{course && course.title}</h3>;
@@ -84,11 +51,11 @@ export default function CourseCard(): any ({ course }: { course: Course }) {;
         </span>;
       </div>;
       <div className='text-xs text-gray-500 mt-1'>;
-        {course && course.category} • {course && course.level} •{' '}
+        {course && course.category}  {course && course.level} {' '}
         {Math && Math.round(course && course.durationMinutes / 60)}h          {course && course.isFree ? 'Free' : 'Paid'}
         </span>;
       </div>;
-      <div className="text-xs text-gray-500 mt-1">{course && course.category} • {course && course.level} • {Math && Math.round(course && course.durationMinutes / 60)}h</div>;
+      <div className="text-xs text-gray-500 mt-1">{course && course.category}  {course && course.level}  {Math && Math.round(course && course.durationMinutes / 60)}h</div>;
       <div className="text-sm mt-2 line-clamp-2">{course && course.description}</div>;
       <div className="mt-3 flex items-center justify-between">;
         <span className="text-xs bg-indigo-50 text-indigo-700 px-2 py-0 && 0.5 rounded">Badge: {course && course.certificationBadge}</span>;
@@ -109,32 +76,8 @@ export default function CourseCard(): any ({ course }: { course: Course }) {;
         </Link>;
       </div>;
     </div>;
-<<<<<<< HEAD
-=======
   );
 }
-=======
-    <div className="border rounded-lg p-4 hover:shadow-md transition">
-      <div className="flex items-center justify-between">
-        <h3 className="font-semibold text-lg">{course.title}</h3>
-        <span className="text-xs border px-2 py-0.5 rounded bg-green-50 text-green-700">
-          {course.isFree ? 'Free' : 'Paid'}
-        </span>
-      </div>
-      <div className="text-xs text-gray-500 mt-1">{course.category} • {course.level} • {Math.round(course.durationMinutes / 60)}h</div>
-      <div className="text-sm mt-2 line-clamp-2">{course.description}</div>
-      <div className="mt-3 flex items-center justify-between">
-        <span className="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded">Badge: {course.certificationBadge}</span>
-        <Link href={`/learn/${course.id}`}>
-          <a className="text-blue-600 hover: underline text-sm">View course</a>
-        </Link>
-      </div>
-    </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   certification_badge: string,
   description?: string;
 export default /**
@@ -150,11 +93,11 @@ function CourseCard() {
         </span>;
       </div>;
       <div className='text - xs text - gray - 500 mt - 1'>;
-        {course.category} • {course.level} •{' '}
+        {course.category}  {course.level} {' '}
         {Math.round (course.duration_minutes / 60)}h          {course.is_free ? 'Free' : 'Paid'}
         </span>;
       </div>;
-      <div className="text - xs text - gray - 500 mt - 1">{course.category} • {course.level} • {Math.round (course.duration_minutes / 60)}h</div>;
+      <div className="text - xs text - gray - 500 mt - 1">{course.category}  {course.level}  {Math.round (course.duration_minutes / 60)}h</div>;
       <div className="text - sm mt - 2 line - clamp - 2">{course.description}</div>;
       <div className="mt - 3 flex items - center justify - between">;
         <span className="text - xs bg - indigo - 50 text - indigo - 700 px - 2 py - 0.5 rounded">Badge: {course.certification_badge}</span>;
@@ -175,4 +118,3 @@ function CourseCard() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

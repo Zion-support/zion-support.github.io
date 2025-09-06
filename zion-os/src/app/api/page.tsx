@@ -1,16 +1,6 @@
-<<<<<<< HEAD
 export default function APIPage() {return (;
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-6xl mx-auto">;
-=======
-export default /**
- * APIPage - Function description
- */
-function APIPage() {
-  return (
-    <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
-      <div className="max - w-6xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Header */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 5xl font - bold mb - 6">;
@@ -47,7 +37,7 @@ function APIPage() {
           <div className="space - y-6">;
             {/* Authentication */}
             <div className="card">;
-              <h3 className="text - xl font - semibold mb - 4 text - green - 400">🔐 Authentication</h3>;
+              <h3 className="text - xl font - semibold mb - 4 text - green - 400"> Authentication</h3>;
               <div className="space - y-4">;
                 <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - sm">;
                   <div>;
@@ -67,7 +57,7 @@ function APIPage() {
             </div>;
             {/* Economies */}
             <div className="card">;
-              <h3 className="text - xl font - semibold mb - 4 text - blue - 400">🌍 Digital Economies</h3>;
+              <h3 className="text - xl font - semibold mb - 4 text - blue - 400"> Digital Economies</h3>;
               <div className="space - y-4">;
                 <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - sm">;
                   <div>;
@@ -101,7 +91,7 @@ function APIPage() {
             </div>;
             {/* Governance */}
             <div className="card">;
-              <h3 className="text - xl font - semibold mb - 4 text - purple - 400">🏛️ AI Governance</h3>;
+              <h3 className="text - xl font - semibold mb - 4 text - purple - 400"> AI Governance</h3>;
               <div className="space - y-4">;
                 <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - sm">;
                   <div>;
@@ -121,7 +111,7 @@ function APIPage() {
             </div>;
             {/* Marketplace */}
             <div className="card">;
-              <h3 className="text - xl font - semibold mb - 4 text - yellow - 400">🛒 Marketplace</h3>;
+              <h3 className="text - xl font - semibold mb - 4 text - yellow - 400"> Marketplace</h3>;
               <div className="space - y-4">;
                 <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - sm">;
                   <div>;
@@ -141,7 +131,7 @@ function APIPage() {
             </div>;
             {/* Identity & KYC */}
             <div className="card">;
-              <h3 className="text - xl font - semibold mb - 4 text - red - 400">🆔 Identity & KYC</h3>;
+              <h3 className="text - xl font - semibold mb - 4 text - red - 400"> Identity & KYC</h3>;
               <div className="space - y-4">;
                 <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - sm">;
                   <div>;
@@ -175,7 +165,7 @@ function APIPage() {
               <p className="text - gray - 400 mb - 4">Official Node.js client library for Zion OS API</p>;
               <div className="space - y-2">;
                 <code className="text - sm text - blue - 400 block">npm install @zion - os / sdk</code>;
-                <a href="#" className="text - blue - 400 hover:text - blue - 300 text - sm">View Documentation →</a>;
+                <a href="#" className="text - blue - 400 hover:text - blue - 300 text - sm">View Documentation </a>;
               </div>;
             </div>;
             <div className="card">;
@@ -188,7 +178,7 @@ function APIPage() {
               <p className="text - gray - 400 mb - 4">Python client library with async support</p>;
               <div className="space - y-2">;
                 <code className="text - sm text - blue - 400 block">pip install zion - os - sdk</code>;
-                <a href="#" className="text - blue - 400 hover:text - blue - 300 text - sm">View Documentation →</a>;
+                <a href="#" className="text - blue - 400 hover:text - blue - 300 text - sm">View Documentation </a>;
               </div>;
             </div>;
             <div className="card">;
@@ -201,7 +191,7 @@ function APIPage() {
               <p className="text - gray - 400 mb - 4">PHP client library for web applications</p>;
               <div className="space - y-2">;
                 <code className="text - sm text - blue - 400 block">composer require zion - os / sdk</code>;
-                <a href="#" className="text - blue - 400 hover:text - blue - 300 text - sm">View Documentation →</a>;
+                <a href="#" className="text - blue - 400 hover:text - blue - 300 text - sm">View Documentation </a>;
               </div>;
             </div>;
           </div>;
@@ -211,7 +201,6 @@ function APIPage() {
           <h2 className="text - 3xl font - bold mb - 8 text - center">Code Examples</h2>;
           <div className="space - y-6">;
             <div className="card">;
-<<<<<<< HEAD
               <h3 className="text-xl font-semibold mb-4">Create a Digital Economy</h3>;
               <div className="bg-gray-900/50 rounded-lg p-4">;
                 <div className="text-sm text-gray-400 mb-2">Node.js</div>;
@@ -221,18 +210,6 @@ const client = new ZionOS('YOUR_API_KEY');
 const economy = await client.economies.create({name: 'My Digital Economy';
   description: 'A sovereign digital economy';
   features: ['marketplacegovernancetokens'];
-=======
-              <h3 className="text - xl font - semibold mb - 4">Create a Digital Economy</h3>;
-              <div className="bg - gray - 900 / 50 rounded - lg p - 4">;
-                <div className="text - sm text - gray - 400 mb - 2">Node.js</div>;
-                <pre className="text - sm text - gray - 300 overflow - x-auto">;
-{`const { ZionOS } = require ('@zion - os / sdk'),
-const client = new ZionOS ('YOUR_API_KEY'),
-const economy = await client.economies.create ({
-  name: 'My Digital Economy',
-  description: 'A sovereign digital economy',
-  features: ['marketplacegovernancetokens'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   blockchain: 'ethereum';
 });
 // // // console.log ('Economy created:', economy.id), `}

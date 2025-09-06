@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -33,19 +28,19 @@ const signupSchema = null;
             <div className="text-xs text-gray-600 space-y-1">
               <div className="grid grid-cols-2 gap-1">
                 <span className={watchedFields.password?.length >= 8 ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ 8+ characters
+                   8+ characters
                 </span>
                 <span className={/[A-Z]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Uppercase letter
+                   Uppercase letter
                 </span>
                 <span className={/[a-z]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Lowercase letter
+                   Lowercase letter
                 </span>
                 <span className={/[0-9]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Number
+                   Number
                 </span>
                 <span className={/[^A-Za-z0-9]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Special character
+                   Special character
                 </span>
               </div>
             </div>
@@ -87,8 +82,6 @@ type SignupFormData = z.infer<typeof signupSchema>
       const errorMessage = 'An unexpected error occurred during signup. Please try again.'
       setError('root', { message: errorMessage })
               <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   path: ["confirmPassword"]}),;
 
 type SignupFormData = z && z.infer<typeof signupSchema>;
@@ -125,14 +118,8 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
 
       setError('root', { message: errorMessage }),;
               <span className={cn('font-medium', passwordStrength && passwordStrength.strength >= 4 ? 'text-green-600' :}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-=======
   path: ["confirm_password"]}),
 type SignupFormData = z.infer < typeof signup_schema>;
         setFieldStates (prev => ({
@@ -160,5 +147,3 @@ type SignupFormData = z.infer < typeof signup_schema>;
       set_error ('root', { message: error_message }),
               <span className={cn ('font - medium', password_strength.strength >= 4 ? 'text - green - 600' :}
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) )
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
-=======
 import React from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
@@ -56,7 +48,7 @@ export default function QuantumAICognitivePage() {
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
+                  <div className="text-slate-400">{service.trialDays}-day free trial  Setup: {service.setupTime}</div>
                 </div>
                 <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>
               </div>
@@ -91,9 +83,7 @@ export default function QuantumAICognitivePage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-=======
 
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -167,7 +157,7 @@ export default function QuantumAICognitivePage() {;
               <div className="flex items-end justify-between mb-3">;
                 <div>;
                   <div className="text-3xl font-bold text-white">{service && service.price}<span className="text-slate-400 text-base">{service && service.period}</span></div>;
-                  <div className="text-slate-400">{service && service.trialDays}-day free trial • Setup: {service && service.setupTime}</div>;
+                  <div className="text-slate-400">{service && service.trialDays}-day free trial  Setup: {service && service.setupTime}</div>;
                 </div>;
                 <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service && service.rating.toFixed(1)}</div>;
               </div>;
@@ -203,12 +193,6 @@ export default function QuantumAICognitivePage() {;
     </UltraAdvancedFuturisticBackground>;
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) );
 }</ul> </div> <div className="bg - black / 30 rounded - 2xl border border - purple - 500 / 30 p - 6 h - fit" > <div className="flex items - end justify - between mb - 3" > <div> Start Free Trial <ArrowRight className="w - 5 h - 5 ml - 2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 import Head from 'next / head';
@@ -261,7 +245,7 @@ if ( {) {
               <div className="flex items - end justify - between mb - 3">;
                 <div>;
                   <div className="text - 3xl font - bold text - white">{service.price}<span className="text - slate - 400 text - base">{service.period}</span></div>;
-                  <div className="text - slate - 400">{service.trial_days}-day free trial • Setup: {service.setup_time}</div>;
+                  <div className="text - slate - 400">{service.trial_days}-day free trial  Setup: {service.setup_time}</div>;
                 </div>;
                 <div className="flex items - center text - yellow - 400"><Star className="w - 4 h - 4 mr - 1" />{service.rating.to_fixed (1)}</div>;
               </div>;
@@ -296,5 +280,3 @@ if ( {) {
     </UltraAdvancedFuturisticBackground>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

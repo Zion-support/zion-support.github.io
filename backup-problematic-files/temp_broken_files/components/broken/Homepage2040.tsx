@@ -66,7 +66,7 @@ const containerVariants = {hidden: { opacity: 0},
       hoverColor: &quot;group-hover:text-cyan-300&quot
     },
     {
-      number: &quot;∞&quot;,
+      number: &quot;&quot;,
       label: &quot;Future Possibilities&quot;,
       description: &quot;Unlimited potential&quot;,
       icon: InfinityIcon,
@@ -377,7 +377,7 @@ key={service.id}
                       <span className=&quot;text-lg text-gray-400&quot;>/month</span>
                     </div>
                     <div className=&quot;text-sm text-gray-400&quot;>
-                      {service.rating} ⭐ ({service.reviews})
+                      {service.rating}  ({service.reviews})
                     </div>
                   </div>
                   

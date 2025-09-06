@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       const redirectTo = options?.redirectTo |'/login'
       const returnUrl = options?.returnUrl |router.asPath
@@ -14,8 +9,6 @@
     isAuthenticated
     user
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       const redirectTo = options?.redirectTo || '/login';
       const returnUrl = options?.returnUrl || router && router.asPath;
           if (!requireAuth({ showToast: false })) return false,;
@@ -27,15 +20,8 @@
     checkPermission;
     isAuthenticated;
     user;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     isLoading}
 }
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       const redirect_to = options?.redirect_to || '/login';
       const return_url = options?.return_url || router.as_path;
           if () return false, ) {
@@ -49,5 +35,3 @@
     user;
     is_loading}
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

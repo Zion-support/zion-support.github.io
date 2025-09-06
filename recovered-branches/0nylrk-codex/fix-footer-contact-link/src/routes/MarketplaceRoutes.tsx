@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -20,16 +19,11 @@ import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",
 import SearchPage from "@/pages/SearchPage",
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
-<<<<<<< HEAD
 
 const MarketplaceRoutes = () => {
-=======
-const MarketplaceRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Marketplace Routes */}
-<<<<<<< HEAD
       <Route path="/marketplace" element={<Marketplace />} />
       <Route path="/categories" element={<Categories />} />
       <Route path="/category/:slug" element={<CategoryDetail />} />
@@ -39,24 +33,10 @@ const MarketplaceRoutes = () => {;
       {/* Equipment Routes */}
       <Route path="/equipment" element={<EquipmentPage />} />
       <Route path="/equipment/:id" element={<EquipmentDetail />} />
-=======
-      <Route path="/marketplace" element={<Marketplace />} />;
-      <Route path="/categories" element={<Categories />} />;
-      <Route path="/category/:slug" element={<CategoryDetail />} />;
-      <Route path="/featured" element={<Featured />} />;
-      <Route path="/marketplace/listing/:id" element={<ListingDetail />} />;
-      <Route path="/listing/:id" element={<ListingDetail />} />;
-
-      {/* Equipment Routes */}
-      <Route path="/equipment" element={<EquipmentPage />} />;
-      <Route path="/equipment/:id" element={<EquipmentDetail />} />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Job Routes */}
       <Route
         path="/post-job"
         element={
-<<<<<<< HEAD
           <ProtectedRoute>
             <PostJob />
           </ProtectedRoute>
@@ -103,64 +83,8 @@ const MarketplaceRoutes = () => {;
     </Routes>
   )
 }
-=======
-          <ProtectedRoute>;
-            <PostJob />;
-          </ProtectedRoute>;
-        } ;
-      />;
-      <Route path="/jobs/:id" element={<JobDetails />} />;
-
-      {/* AI Matcher Routes */}
-      <Route path="/ai-matcher" element={<AIMatcher />} />;
-      <Route path="/match" element={<AIMatcher />} />;
-
-      {/* Creator Routes */}
-      <Route
-        path="/publish" 
-        element={
-          <ProtectedRoute>;
-            <PublishProduct />;
-          </ProtectedRoute>;
-        } ;
-      />;
-
-      {/* Service Routes */}
-      <Route path="/services" element={<ServicesPage />} />;
-      <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />;
-      <Route path="/request-quote" element={<RequestQuote />} />;
-      <Route path="/service-description-generator" element={<ServiceDescriptionGenerator />} />;
-
-      {/* Search Route */}
-      <Route path="/search" element={<SearchPage />} />;
-
-      {/* Project Room Routes */}
-      <Route
-        path="/project/:projectId" 
-        element={
-          <ProtectedRoute>;
-            <ProjectRoom />;
-          </ProtectedRoute>;
-        } ;
-      />;
-
-      {/* Video Call Routes */}
-      <Route
-        path="/call/:roomId" 
-        element={
-          <ProtectedRoute>;
-            <VideoCall />;
-          </ProtectedRoute>;
-        } ;
-      />;
-    </Routes>;
-  );
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default MarketplaceRoutes;
 
-=======
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import Marketplace from "@/pages / Marketplace";
@@ -246,4 +170,3 @@ const MarketplaceRoutes = () =>: any {
 ;
 export default MarketplaceRoutes;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

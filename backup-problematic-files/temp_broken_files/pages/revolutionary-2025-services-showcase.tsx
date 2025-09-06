@@ -28,7 +28,7 @@ const contactInfo = {;
 const serviceCategories = [;
   {;
     id:'ai-consciousness',;
-    title:'🧠 AI Consciousness & Emotional Intelligence',;
+    title:' AI Consciousness & Emotional Intelligence',;
     description:'Revolutionary AI consciousness and emotional intelligence platforms',;
     icon:Brain,;
     color:'from-violet-500 to-purple-500',;
@@ -37,7 +37,7 @@ const serviceCategories = [;
   },;
   {;
     id:'quantum-emerging',;
-    title:'⚛️ Quantum & Emerging Tech',;
+    title:' Quantum & Emerging Tech',;
     description:'Quantum computing, DNA computing, and beyond',;
     icon:Atom,;
     color:'from-blue-500 to-cyan-500',;
@@ -46,7 +46,7 @@ const serviceCategories = [;
   },;
   {;
     id:'space-tech',;
-    title:'🚀 Space Technology & Satellite',;
+    title:' Space Technology & Satellite',;
     description:'Space mission management and satellite operations',;
     icon:Rocket,;
     color:'from-indigo-500 to-blue-500',;
@@ -55,7 +55,7 @@ const serviceCategories = [;
   },;
   {;
     id:'cybersecurity',;
-    title:'🔒 Next-Generation Cybersecurity',;
+    title:' Next-Generation Cybersecurity',;
     description:'Quantum encryption and AI threat detection',;
     icon:Shield,;
     color:'from-red-500 to-pink-500',;
@@ -64,7 +64,7 @@ const serviceCategories = [;
   },;
   {;
     id:'cloud-infrastructure',;
-    title:'☁️ Quantum Cloud & Infrastructure',;
+    title:' Quantum Cloud & Infrastructure',;
     description:'Quantum-enhanced cloud computing and infrastructure',;
     icon:Cloud,;
     color:'from-cyan-500 to-blue-500',;
@@ -73,7 +73,7 @@ const serviceCategories = [;
   },;
   {;
     id:'fintech',;
-    title:'🏦 Financial Technology Revolution',;
+    title:' Financial Technology Revolution',;
     description:'AI-powered trading and quantum risk management',;
     icon:DollarSign,;
     color:'from-green-500 to-emerald-500',;
@@ -82,7 +82,7 @@ const serviceCategories = [;
   },;
   {;
     id:'industrial-iot',;
-    title:'🏭 Industrial IoT & Smart Manufacturing',;
+    title:' Industrial IoT & Smart Manufacturing',;
     description:'Zero downtime manufacturing and predictive maintenance',;
     icon:Building2,;
     color:'from-gray-500 to-slate-500',;
@@ -91,7 +91,7 @@ const serviceCategories = [;
   },;
   {;
     id:'edtech',;
-    title:'🎓 Education Technology Revolution',;
+    title:' Education Technology Revolution',;
     description:'AI-powered personalized learning and 10x faster knowledge acquisition',;
     icon:Users,;
     color:'from-blue-500 to-cyan-500',;
@@ -100,7 +100,7 @@ const serviceCategories = [;
   },;
   {;
     id:'sustainability',;
-    title:'🌱 Sustainability & Green Technology',;
+    title:' Sustainability & Green Technology',;
     description:'AI-powered environmental solutions for carbon neutrality',;
     icon:Globe,;
     color:'from-green-500 to-emerald-500',;
@@ -109,7 +109,7 @@ const serviceCategories = [;
   },;
   {;
     id:'logistics',;
-    title:'🚛 Logistics & Supply Chain',;
+    title:' Logistics & Supply Chain',;
     description:'99.9% delivery accuracy and zero waste supply chain',;
     icon:Package,;
     color:'from-orange-500 to-red-500',;
@@ -319,7 +319,7 @@ export default function Revolutionary2025ServicesShowcase() {;
 }viewport= {
   {
     id: 'cybersecurity',
-    title: '🔒 Next-Generation Cybersecurity',
+    title: ' Next-Generation Cybersecurity',
     description: 'Quantum encryption and AI threat detection',
     icon: Shield,
     color: 'from-red-500 to-pink-500',
@@ -328,7 +328,7 @@ export default function Revolutionary2025ServicesShowcase() {;
   },
   {
     id: 'cloud-infrastructure',
-    title: '☁️ Quantum Cloud & Infrastructure',
+    title: ' Quantum Cloud & Infrastructure',
     description: 'Quantum-enhanced cloud computing and infrastructure',
     icon: Cloud,
     color: 'from-cyan-500 to-blue-500',
@@ -337,7 +337,7 @@ export default function Revolutionary2025ServicesShowcase() {;
   },
   {
     id: 'fintech',
-    title: '🏦 Financial Technology Revolution',
+    title: ' Financial Technology Revolution',
     description: 'AI-powered trading and quantum risk management',
     icon: DollarSign,
     color: 'from-green-500 to-emerald-500',
@@ -346,7 +346,7 @@ export default function Revolutionary2025ServicesShowcase() {;
   },
   {
     id: 'industrial-iot',
-    title: '🏭 Industrial IoT & Smart Manufacturing',
+    title: ' Industrial IoT & Smart Manufacturing',
     description: 'Zero downtime manufacturing and predictive maintenance',
     icon: Building2,
     color: 'from-gray-500 to-slate-500',
@@ -355,7 +355,7 @@ export default function Revolutionary2025ServicesShowcase() {;
   },
   {
     id: 'edtech',
-    title: '🎓 Education Technology Revolution',
+    title: ' Education Technology Revolution',
     description: 'AI-powered personalized learning and 10x faster knowledge acquisition',
     icon: Users,
     color: 'from-blue-500 to-cyan-500',
@@ -364,7 +364,7 @@ export default function Revolutionary2025ServicesShowcase() {;
   },
   {
     id: 'sustainability',
-    title: '🌱 Sustainability & Green Technology',
+    title: ' Sustainability & Green Technology',
     description: 'AI-powered environmental solutions for carbon neutrality',
     icon: Globe,
     color: 'from-green-500 to-emerald-500',
@@ -373,7 +373,7 @@ export default function Revolutionary2025ServicesShowcase() {;
   },
   {
     id: 'logistics',
-    title: '🚛 Logistics & Supply Chain',
+    title: ' Logistics & Supply Chain',
     description: '99.9% delivery accuracy and zero waste supply chain',
     icon: Package,
     color: 'from-orange-500 to-red-500',
@@ -764,7 +764,7 @@ key={service.id}
             {/* No Results */}
             {filteredServices.length === 0 && (;
               <div className="text-center py-16">;
-                <div className="text-6xl mb-4">🔍</div>;
+                <div className="text-6xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-gray-400 mb-6">Try adjusting your search terms or filters</p>;
                 <button;
@@ -802,7 +802,7 @@ key={service.id}
                   <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>;
                   <p className="text-gray-300 mb-3">{contactInfo.mobile}</p>;
                   <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="text-purple-400 hover:text-purple-300">;
-                    Call Now →;
+                    Call Now ;
                   </a>;
                 </div>;
                 ;
@@ -811,7 +811,7 @@ key={service.id}
                   <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>;
                   <p className="text-gray-300 mb-3">{contactInfo.email}</p>;
                   <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300">;
-                    Send Email →;
+                    Send Email ;
                   </a>;
                 </div>;
                 ;
@@ -820,7 +820,7 @@ key={service.id}
                   <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>;
                   <p className="text-gray-300 mb-3 text-sm">{contactInfo.address}</p>;
                   <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">;
-                    Get Directions →;
+                    Get Directions ;
                   </a>;
                 </div>;
               </div>;
@@ -844,5 +844,5 @@ key={service.id}
     </>;
   );  once: true 
 }
-}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of companies already leveraging our revolutionary services to achieve unprecedented growth and innovation. </p> Call Now → </Link> </div> Send Email → </Link> </div> Get Directions → </Link> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" > <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105" > Start Your Transformation </button> </Link> 
+}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of companies already leveraging our revolutionary services to achieve unprecedented growth and innovation. </p> Call Now  </Link> </div> Send Email  </Link> </div> Get Directions  </Link> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" > <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105" > Start Your Transformation </button> </Link> 
 }

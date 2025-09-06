@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -28,7 +24,7 @@ class ErrorBoundary extends React.Component {
 export default function PlatformEngineering() {; return ( <Article title=\"Platform Engineering\" subtitle=\"Golden paths,IDPs,and paved roads to accelerate delivery\" price=\"from $18k/project\" bullets={[
      \'Backstage or Internal Developer Portal setup with scorecards\', \'Paved road templates for services,infra,and CI/CD\', \'Secure supply \"chain\": \'SBOM\',SLSA,provenance,signing\',,
     \'Developer experience \"metrics\": \'DORA\',lead time,MTTR\'
-  ]} /> );} ; function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string, price: string, bullets: string[]\' }) {; return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets && bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() {; return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Site: <a href=\"https: ></div> );
+  ]} /> );} ; function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string, price: string, bullets: string[]\' }) {; return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets && bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() {; return ( <p> \"Mobile\": +1 302 464 0950  Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a>  Site: <a href=\"https: ></div> );
   } ;
 import React from 'react';
 interface PlatformengineeringProps {;
@@ -42,11 +38,4 @@ export default function Platformengineering(): any ({ }: PlatformengineeringProp
     </div>;
   );
 }
-<<<<<<< HEAD
 }
-=======
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

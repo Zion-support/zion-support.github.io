@@ -525,10 +525,10 @@ export default function AIBusinessIntelligenceSuite() {;
               Create interactive dashboards and visualizations that make data easy to understand.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Interactive dashboards</li>
-              <li>• Custom charts</li>
-              <li>• Real-time updates</li>
-              <li>• Mobile responsive</li>
+              <li> Interactive dashboards</li>
+              <li> Custom charts</li>
+              <li> Real-time updates</li>
+              <li> Mobile responsive</li>
             </ul>
           </div>
 
@@ -538,10 +538,10 @@ export default function AIBusinessIntelligenceSuite() {;
               Get AI-powered recommendations and insights to drive business growth.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Automated insights</li>
-              <li>• Recommendation engine</li>
-              <li>• Anomaly detection</li>
-              <li>• Growth opportunities</li>
+              <li> Automated insights</li>
+              <li> Recommendation engine</li>
+              <li> Anomaly detection</li>
+              <li> Growth opportunities</li>
             </ul>
           </div>
         </div>

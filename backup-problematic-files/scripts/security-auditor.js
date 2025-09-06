@@ -8,7 +8,7 @@ class SecurityAuditor {
     this.fixes = [];
   }
   async runAudit() {
-    console.log('🔒 Running security audit...');
+    console.log(' Running security audit...');
     try {
       const result = execSync('npm audit --json', { encoding: 'utf8' });
       const audit = JSON.parse(result);
@@ -29,13 +29,13 @@ class SecurityAuditor {
   }
   async fixIssues() {
     if (this.issues.length > 0) {
-      console.log('🔧 Attempting to fix security issues...');
+      console.log(' Attempting to fix security issues...');
       try {
         execSync('npm audit fix', { stdio: 'inherit' });
         this.fixes.push('Applied automatic security fixes');
-        console.log('✅ Security fixes applied');
+        console.log(' Security fixes applied');
       } catch (error) {
-        console.log('❌ Could not apply automatic fixes');
+        console.log(' Could not apply automatic fixes');
       }
     }
   }

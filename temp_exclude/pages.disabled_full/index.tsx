@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,8 +21,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function Home() { return ( <main style={{ \"minHeight\": \'100vh\',\"display\": \'flex\',\"alignItems\": \'center\',\"justifyContent\": \'center\',\"fontFamily\": \'system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial\'}}> <div> <h1>Zion Tech Group</h1> <p>Site under maintenance. Core build is healthy.</p> </div> </main> )}
 module.exports = default function Home() { return ( <main style={{ minHeight: "100vh",display: "flex",alignItems: "center",justifyContent: "center",fontFamily: "system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial"}}> <div> <h1>Zion Tech Group</h1> <p>Site under maintenance. Core build is healthy.</p> </div> </main> )}'"'"
 import React from 'react';
@@ -37,8 +34,4 @@ export default function Index({ }: IndexProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

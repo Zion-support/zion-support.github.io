@@ -44,7 +44,7 @@ const Homepage2037: React.FC = () => {
                   Pioneering the Future of Technology
                 </div>
                 <div className=&quot;text-xl md:text-2xl text-cyan-400 font-medium&quot;>
-                  Revolutionary AI • Quantum Computing • Enterprise Solutions
+                  Revolutionary AI  Quantum Computing  Enterprise Solutions
                 </div>
               </div>
               
@@ -133,7 +133,7 @@ const Homepage2037: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
                 className=&quot;text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300&quot;              >
-                <div className=&quot;text-5xl font-bold text-green-400 mb-3&quot;>∞</div>
+                <div className=&quot;text-5xl font-bold text-green-400 mb-3&quot;></div>
                 <div className=&quot;text-gray-300 text-lg&quot;>Future Possibilities</div>
                 <div className=&quot;text-green-400 text-sm mt-2&quot;>Limitless Innovation</div>
               </motion.div>

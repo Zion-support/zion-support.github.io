@@ -1,38 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* eslint-env node */
 module && module.exports = {
-=======
-/* eslint - env node */;
-module.exports = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   env: {
     node: true,
     es2021: true
   },
-<<<<<<< HEAD
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 /* eslint-env node */
 module.exports = {
-<<<<<<< HEAD
   extends: [
     'next/core-web-vitals',
     '@typescript-eslint/recommended'
   ],
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default {
   extends: ['next/core-web-vitals', 'next/typescript'],
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -49,15 +31,10 @@ export default {
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
     'no-undef': 'off',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-explicit-any': 'warn'
   },
   env: {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   "extends": [
     "next/core-web-vitals",
     "next/typescript"
@@ -133,34 +110,10 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     node: true,
     browser: true,
     es2021: true
   },
-<<<<<<< HEAD
-=======
-  env: {
-    node: true,
-    es2021: true
-  },
-  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  rules: {
-    '@typescript-eslint/no-unused-vars': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    'react-hooks/exhaustive-deps': 'warn',
-    'react/react-in-jsx-scope': 'off',
-    'no-undef': 'off',
-    'react/no-unescaped-entities': 'off',
-    '@next/next/no-html-link-for-pages': 'off',
-    '@next/next/no-img-element': 'off'
-  },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -317,16 +270,6 @@ module.exports = {
     'clean-conflicts.js',
     'commit-and-push.js'
   ]
-<<<<<<< HEAD
-=======
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    }
-  extends: ['next/core-web-vitals'],
->>>>>>> origin/automation-improvements-final
   rules: {
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
@@ -336,7 +279,6 @@ module.exports = {
     "react/no-unescaped-entities": "off",
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
-=======
   extends: ["next / core - web - vitals", "plugin:@typescript - eslint / recommended"],
   parser: "@typescript - eslint / parser",
   plugins: ["@typescript - eslint"],
@@ -349,7 +291,6 @@ module.exports = {
     "react / no - unescaped - entities": "off",
     "@next / next / no - html - link - for - pages": "off",
     "@next / next / no - img - element": "off",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   },
   ignore_patterns: [;
     "node_modules/",
@@ -358,17 +299,10 @@ module.exports = {
     "dist/",
     "build/",
     "coverage/",
-<<<<<<< HEAD
     "*.config && config.js",
     "*.config && config.cjs",
     "*.config && config.mjs",
     "fix-critical-files && files.js",
-=======
-    "*.config.js",
-    "*.config.cjs",
-    "*.config.mjs",
-    "fix - critical - files.js",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     "fix-*.js",
     "fix-*.cjs",
     "*-fix*.cjs",
@@ -388,7 +322,6 @@ module.exports = {
     "api - backup/",
     "temp_backup/",
     "corrupted_files_backup_2/",
-<<<<<<< HEAD
     "ai-optimization-backups/",
     "optimization-reports/",
     "test-generation-reports/",
@@ -398,17 +331,6 @@ module.exports = {
     "pages && pages.__backup/",
     "pages-disabled/",
     "pages && pages.disabled_auto/",
-=======
-    "ai - optimization - backups/",
-    "optimization - reports/",
-    "test - generation - reports/",
-    "test - reports/",
-    "test - results/",
-    "security - reports/",
-    "pages.__backup/",
-    "pages - disabled/",
-    "pages.disabled_auto/",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     "zion_academy/",
     "pm2 - automation/",
     "scripts/",
@@ -416,7 +338,6 @@ module.exports = {
     "temp_*/",
     "temp_exclude/",
     "test_build/",
-<<<<<<< HEAD
     "tests && tests.disabled/",
     "pages && pages.disabled/",
     "src && src.disabled/",
@@ -426,22 +347,10 @@ module.exports = {
     "contracts && contracts.disabled/",
     "solutions && solutions.disabled/",
     "zion-os && os.disabled/",
-=======
-    "tests.disabled/",
-    "pages.disabled/",
-    "src.disabled/",
-    "components.disabled/",
-    "hooks.disabled/",
-    "types.disabled/",
-    "contracts.disabled/",
-    "solutions.disabled/",
-    "zion - os.disabled/",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     "src_backup_temp/",
     "temp - backup/",
     "tests/",
     "supabase/",
-<<<<<<< HEAD
     "*.test && test.js",
     "*.test && test.ts",
     "*.test && test.tsx",
@@ -476,66 +385,20 @@ module.exports = {
     "setupTests && setupTests.ts",
     "simple-test && test.js",
     "src/components/layout/",
-=======
-    "*.test.js",
-    "*.test.ts",
-    "*.test.tsx",
-    "*.spec.js",
-    "*.spec.ts",
-    "*.spec.tsx",
-    "temp_footer_start.tsx",
-    "test - simple.js",
-    "test - utils.js",
-    "ultimate - automation - runner.js",
-    "vite.config - backup.ts",
-    "vite.config.ts",
-    "types / empty.ts",
-    "types / index.ts",
-    "pages_backup_conflicts/",
-    "pages_disabled/",
-    "src.broken/",
-    "src.corrupted/",
-    "src.pages.disabled/",
-    "performance - monitor.js",
-    "performance - optimization.js",
-    "playwright.config.ts",
-    "postcss.config - backup.js",
-    "public/",
-    "resolve - conflicts.js",
-    "resolve - merge - conflicts.js",
-    "run - automation - safely.js",
-    "run - automation.js",
-    "run - complete - automation.js",
-    "security - config.js",
-    "server/",
-    "setup_tests.ts",
-    "simple - test.js",
-    "src / components / layout/",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     "types/",
     "utils/",
     "pages_backup/",
     "pages_backup_before_cleanup/",
     "services/",
-<<<<<<< HEAD
     "components && components.disabled_full/",
     "comprehensive-automation-runner && runner.js",
     "comprehensive-automation && automation.js",
     "comprehensive-merge-resolver && resolver.js",
     "corrupted-files-backup/",
     "cypress && cypress.config.ts",
-=======
-    "components.disabled_full/",
-    "comprehensive - automation - runner.js",
-    "comprehensive - automation.js",
-    "comprehensive - merge - resolver.js",
-    "corrupted - files - backup/",
-    "cypress.config.ts",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     "cypress_backup/",
     "data && data.disabled/",
     "database/",
-<<<<<<< HEAD
     "ecosystem && ecosystem.simple.js",
     "ecosystem && ecosystem.working.js",
     "execute-automation && automation.js",
@@ -581,33 +444,16 @@ module.exports = {
     "automation-runner && runner.js",
     "basic-test && test.js",
     "broken_files_backup/",
-<<<<<<< HEAD
     "build-verification.js",
     "check-syntax.js",
     "clean-conflicts.js",
-<<<<<<< HEAD
     "commit-and-push.js",
     "temp_exclude/",
-=======
-    "build-verification && verification.js",
-    "check-syntax && syntax.js",
-    "clean-conflicts && conflicts.js",
-    "commit-and-push && push.js",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ],
 };
-<<<<<<< HEAD
-=======
-=======
-};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
     "commit-and-push.js"
   ]
 };
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     "ecosystem.simple.js",
     "ecosystem.working.js",
     "execute - automation.js",
@@ -660,4 +506,3 @@ module.exports = {
   ],
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

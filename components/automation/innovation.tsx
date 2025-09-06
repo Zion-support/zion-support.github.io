@@ -1,52 +1,23 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 }
 </header> {
   items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>)
 }</li>) )
 }</ul> </div>)
-=======
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Item = { source: string, title: string, url: string, date?: string, summary?: string };
-
-type Props = { items: Item[] },
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationinnovation-digest.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { items: data.items || [] }, revalidate: 1800 }
-  } catch {
-    return { props: { items: [] }, revalidate: 1800 }
-  }
-};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export default function InnovationDigest({ items }: Props) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 </header> {;
   items && items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) ;
 }</li>) ) ;
 }</ul> </div>) ;
 export default function InnovationDigest(): any ({ items }: Props) {;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className="space-y-6">;
       <header className="space-y-2">;
         <h1 className="text-3xl font-bold">Innovation Digest</h1>;
-        <p className="text-gray-600 dark:text-gray-300">Latest AI research and tools—auto-curated.</p>;
+        <p className="text-gray-600 dark:text-gray-300">Latest AI research and toolsauto-curated.</p>;
       </header>;
       {items && items.length === 0 && (;
         <div className="text-gray-600 dark:text-gray-400">No entries yet. The automation will populate this feed shortly.</div>;
@@ -62,21 +33,10 @@ export default function InnovationDigest(): any ({ items }: Props) {;
             {it && it.summary && <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{it && it.summary}</p>}
           </li>;
         ))}
-<<<<<<< HEAD
       </ul>
     </div>
 );
 }
-=======
-      </ul>;
-    </div>;
-  );
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
 </header> {
   items.length === 0 && (<div className="text - gray - 600 dark:text - gray - 400" >No entries yet. The automation will populate this feed shortly.</div>);
@@ -90,7 +50,7 @@ function InnovationDigest() {
     <div className="space - y-6">;
       <header className="space - y-2">;
         <h1 className="text - 3xl font - bold">Innovation Digest</h1>;
-        <p className="text - gray - 600 dark:text - gray - 300">Latest AI research and tools—auto - curated.</p>;
+        <p className="text - gray - 600 dark:text - gray - 300">Latest AI research and toolsauto - curated.</p>;
       </header>;
       {items.length === 0 && (
         <div className="text - gray - 600 dark:text - gray - 400">No entries yet. The automation will populate this feed shortly.</div>)}
@@ -107,4 +67,3 @@ function InnovationDigest() {
       </ul>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

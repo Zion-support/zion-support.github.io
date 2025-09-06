@@ -43,7 +43,7 @@ export default function KnowledgeGraph({ report }: Props) {
         <h2 className=&quot;font-semibold mb-2&quot;>Sample Edges</h2>
         <ul className=&quot;text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800&quot;>
           {report.edges.slice(0, 200).map((e, i) => (
-            <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{e.source} ⇄ {e.target}</span><span className=&quot;text-gray-500 truncate&quot;>{e.terms.join(', ')}</span></li>          ))}
+            <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{e.source}  {e.target}</span><span className=&quot;text-gray-500 truncate&quot;>{e.terms.join(', ')}</span></li>          ))}
         </ul>
       </section>
     </div>

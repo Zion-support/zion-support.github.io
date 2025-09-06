@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
-=======
-import { ServiceVariant } from '../types / service - variants';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export interface EmergingTechBreakthrough2025 {
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -39,7 +34,6 @@ export interface EmergingTechBreakthrough2025 {
 
     website: string;
   }
-<<<<<<< HEAD
 
   realImplementation: boolean;
   implementationDetails: string;
@@ -50,35 +44,7 @@ export interface EmergingTechBreakthrough2025 {
 }
 export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
   // Brain-Computer Interface Platform
-<<<<<<< HEAD
   {  reviews: number
-=======
-  {
-<<<<<<< HEAD
-=======
-    id: 'brain-computer-interface-platform',
-    name: 'Brain-Computer Interface Platform',
-    tagline: 'Direct neural interface for human-computer interaction',
-    price: '$25,000',
-=======
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
-  // Brain - Computer Interface Platform;
-  {  reviews: number;
-}
-export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
-  // Brain - Computer Interface Platform;
-  {
-    id: 'brain - computer - interface - platform',
-    name: 'Brain - Computer Interface Platform',
-    tagline: 'Direct neural interface for human - computer interaction',
-    price: '$25, 000',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     period: '/month',
     description:;
       'Revolutionary brain - computer interface platform that enables direct communication between the human brain and computers for medical applications, gaming, and productivity enhancement.',
@@ -94,22 +60,13 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       'Custom application development',
     ],
     popular: true,
-    icon: '🧠',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-violet-500 to-purple-600',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface-platform',
     marketPosition:
       'Leading brain-computer interface platform with proven neural signal processing capabilities.',
     targetAudience:
-=======
-    color: 'from - violet - 500 to - purple - 600',
-    text_color: 'text - violet - 400',
-    link: 'https://ziontechgroup.com / brain - computer - interface - platform',
-    market_position:;
-      'Leading brain - computer interface platform with proven neural signal processing capabilities.',
-    target_audience:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Medical research institutions, Gaming companies, Accessibility developers, Research labs, Healthcare providers',
     trial_days: 60,
     setup_time: '12 - 16 weeks',
@@ -143,8 +100,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     rating: 5 && 5.0,
     reviews: 5,
   },
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     id: 'brain-computer-interface-platform'
     name: 'Brain-Computer Interface Platform'
@@ -165,7 +120,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       'Custom application development'
     ]
     popular: true
-    icon: '🧠'
+    icon: ''
     color: 'from-violet-500 to-purple-600'
     textColor: 'text-violet-400'
     link: 'https://ziontechgroup.com/brain-computer-interface-platform'
@@ -215,7 +170,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     description:
       'Next-generation quantum internet security platform that provides unbreakable encryption and secure communication protocols for the quantum internet era.'
     features: [
-<<<<<<< HEAD
       'Quantum key distribution networks'
       'Post-quantum cryptography'
       'Quantum-resistant algorithms'
@@ -228,23 +182,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       'Compliance and audit tools'
     ]
     popular: true
-    icon: '🔒'
+    icon: ''
     color: 'from-blue-500 to-indigo-600'
     textColor: 'text-blue-400'
     link: 'https://ziontechgroup.com/quantum-internet-security-platform'
-=======
-=======
-  // Quantum Internet Security Platform;
-  {
-    id: 'quantum - internet - security - platform',
-    name: 'Quantum Internet Security Platform',
-    tagline: 'Unbreakable internet security powered by quantum cryptography',
-    price: '$18, 000',
-    period: '/month',
-    description:;
-      'Next - generation quantum internet security platform that provides unbreakable encryption and secure communication protocols for the quantum internet era.',
-    features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum key distribution networks',
       'Post - quantum cryptography',
       'Quantum - resistant algorithms',
@@ -257,12 +198,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       'Compliance and audit tools',
     ],
     popular: true,
-    icon: '🔒',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-blue-500 to-indigo-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-security-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'First-to-market quantum internet security platform with proven quantum cryptography implementation.'
     targetAudience:
@@ -286,7 +225,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     growthRate: '500%+ annual growth'
     variant: 'quantum-security'
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -300,35 +238,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     rating: 5.0
     reviews: 10
   }
-=======
-=======
-    color: 'from - blue - 500 to - indigo - 600',
-    text_color: 'text - blue - 400',
-    link: 'https://ziontechgroup.com / quantum - internet - security - platform',
-    market_position:;
-      'First - to - market quantum internet security platform with proven quantum cryptography implementation.',
-    target_audience:;
-      'Internet service providers, Government agencies, Financial institutions, Defense contractors, Enterprise corporations',
-    trial_days: 45,
-    setup_time: '10 - 14 weeks',
-    category: 'Quantum Security',
-    real_service: true,
-    technology: [;
-      'Quantum Computing, Quantum Cryptography, Quantum Networks, Python, C++, Quantum Algorithms',
-    ],
-    integrations: [;
-      'Internet infrastructure, Government networks, Financial systems, Defense networks, Enterprise networks',
-    ],
-    use_cases: [;
-      'Internet security, Government communications, Financial transactions, Defense communications, Corporate security',
-    ],
-    roi: 'Critical infrastructure protection with 1200%+ ROI through security breach prevention.',
-    competitors: ['ID Quantique, Toshiba Quantum, Quantum Xchange, Qrypt'],
-    market_size: '$12B+ quantum security market',
-    growth_rate: '500%+ annual growth',
-    variant: 'quantum - security',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -342,9 +251,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     rating: 5 && 5.0,
     reviews: 10,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Space Mining Operations Platform
   {
     id: 'space-mining-operations-platform'
@@ -355,7 +262,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     description:
       'Revolutionary space mining operations platform that enables automated asteroid mining, resource extraction, and space resource management for commercial space operations.'
     features: [
-<<<<<<< HEAD
       'Asteroid identification and mapping'
       'Automated mining operations'
       'Resource extraction systems'
@@ -368,23 +274,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       'Space infrastructure management'
     ]
     popular: true
-    icon: '🚀'
+    icon: ''
     color: 'from-orange-500 to-red-600'
     textColor: 'text-orange-400'
     link: 'https://ziontechgroup.com/space-mining-operations-platform'
-=======
-=======
-  // Space Mining Operations Platform;
-  {
-    id: 'space - mining - operations - platform',
-    name: 'Space Mining Operations Platform',
-    tagline: 'Asteroid mining and space resource extraction platform',
-    price: '$50, 000',
-    period: '/month',
-    description:;
-      'Revolutionary space mining operations platform that enables automated asteroid mining, resource extraction, and space resource management for commercial space operations.',
-    features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Asteroid identification and mapping',
       'Automated mining operations',
       'Resource extraction systems',
@@ -397,12 +290,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       'Space infrastructure management',
     ],
     popular: true,
-    icon: '🚀',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-orange-500 to-red-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup && ziontechgroup.com/space-mining-operations-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Leading space mining operations platform with proven asteroid mining and resource extraction capabilities.'
     targetAudience:
@@ -428,7 +319,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     growthRate: '800%+ annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -442,37 +332,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     rating: 5.0
     reviews: 3
   }
-=======
-=======
-    color: 'from - orange - 500 to - red - 600',
-    text_color: 'text - orange - 400',
-    link: 'https://ziontechgroup.com / space - mining - operations - platform',
-    market_position:;
-      'Leading space mining operations platform with proven asteroid mining and resource extraction capabilities.',
-    target_audience:;
-      'Space mining companies, Government space agencies, Private space companies, Resource companies, Investment firms',
-    trial_days: 90,
-    setup_time: '16 - 20 weeks',
-    category: 'Space Technology',
-    real_service: true,
-    technology: [;
-      'Space Robotics, AI / ML, Satellite Technology, Python, C++, Space Systems',
-    ],
-    integrations: [;
-      'Satellite networks, Space stations, Mining equipment, Transportation systems, Resource markets',
-    ],
-    use_cases: [;
-      'Asteroid mining, Resource extraction, Space logistics, Infrastructure management, Resource trading',
-    ],
-    roi: 'Space resource extraction shows 2000%+ ROI through valuable rare earth elements and precious metals.',
-    competitors: [;
-      'Planetary Resources, Deep Space Industries, Asteroid Mining Corporation',
-    ],
-    market_size: '$2B+ space mining market',
-    growth_rate: '800%+ annual growth',
-    variant: 'space - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -486,9 +345,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     rating: 5 && 5.0,
     reviews: 3,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Quantum Robotics Platform
   {
     id: 'quantum-robotics-platform'
@@ -499,7 +356,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     description:
       'Advanced quantum robotics platform that leverages quantum computing for enhanced robot intelligence, decision-making, and autonomous operations in complex environments.'
     features: [
-<<<<<<< HEAD
       'Quantum-enhanced AI algorithms'
       'Quantum sensor integration'
       'Advanced autonomous navigation'
@@ -512,25 +368,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       'Quantum communication networks'
     ]
     popular: true
-    icon: '🤖'
+    icon: ''
     color: 'from-green-500 to-emerald-600'
     textColor: 'text-green-400'
     link: 'https://ziontechgroup.com/quantum-robotics-platform'
-=======
-      'Quantum-enhanced AI algorithms',
-=======
-  // Quantum Robotics Platform;
-  {
-    id: 'quantum - robotics - platform',
-    name: 'Quantum Robotics Platform',
-    tagline: 'Quantum - enhanced robotics for next - generation automation',
-    price: '$22, 000',
-    period: '/month',
-    description:;
-      'Advanced quantum robotics platform that leverages quantum computing for enhanced robot intelligence, decision - making, and autonomous operations in complex environments.',
-    features: [;
-      'Quantum - enhanced AI algorithms',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum sensor integration',
       'Advanced autonomous navigation',
       'Quantum machine learning',
@@ -542,12 +383,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       'Quantum communication networks',
     ],
     popular: true,
-    icon: '🤖',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-robotics-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Leading quantum robotics platform with proven quantum-enhanced automation capabilities.'
     targetAudience:
@@ -571,7 +410,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     growthRate: '350%+ annual growth'
     variant: 'quantum-iot-revolutionary'
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -585,35 +423,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     rating: 4.9
     reviews: 8
   }
-=======
-=======
-    color: 'from - green - 500 to - emerald - 600',
-    text_color: 'text - green - 400',
-    link: 'https://ziontechgroup.com / quantum - robotics - platform',
-    market_position:;
-      'Leading quantum robotics platform with proven quantum - enhanced automation capabilities.',
-    target_audience:;
-      'Manufacturing companies, Logistics providers, Healthcare facilities, Research institutions, Defense contractors',
-    trial_days: 60,
-    setup_time: '12 - 16 weeks',
-    category: 'Quantum Robotics',
-    real_service: true,
-    technology: [;
-      'Quantum Computing, Robotics, AI / ML, Computer Vision, Python, C++, ROS',
-    ],
-    integrations: [;
-      'Manufacturing systems, Logistics networks, Healthcare equipment, Research tools, Defense systems',
-    ],
-    use_cases: [;
-      'Manufacturing automation, Logistics optimization, Healthcare assistance, Research automation, Defense applications',
-    ],
-    roi: 'Manufacturing automation shows 600%+ ROI through improved efficiency and reduced operational costs.',
-    competitors: ['Boston Dynamics, ABB Robotics, FANUC, KUKA'],
-    market_size: '$28B+ robotics market',
-    growth_rate: '350%+ annual growth',
-    variant: 'quantum - iot - revolutionary',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -627,9 +436,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     rating: 4 && 4.9,
     reviews: 8,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform'
@@ -640,7 +447,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     description:
       'Revolutionary autonomous vehicle AI platform that enables fully self-driving vehicles with advanced perception, decision-making, and safety systems powered by AI and quantum computing.'
     features: [
-<<<<<<< HEAD
       'Advanced computer vision systems'
       'Real-time decision making'
       'Predictive safety algorithms'
@@ -653,23 +459,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       'Performance analytics'
     ]
     popular: true
-    icon: '🚗'
+    icon: ''
     color: 'from-cyan-500 to-blue-600'
     textColor: 'text-cyan-400'
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
-=======
-=======
-  // Autonomous Vehicle AI Platform;
-  {
-    id: 'autonomous - vehicle - ai - platform',
-    name: 'Autonomous Vehicle AI Platform',
-    tagline: 'Next - generation AI for fully autonomous vehicles',
-    price: '$35, 000',
-    period: '/month',
-    description:;
-      'Revolutionary autonomous vehicle AI platform that enables fully self - driving vehicles with advanced perception, decision - making, and safety systems powered by AI and quantum computing.',
-    features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Advanced computer vision systems',
       'Real - time decision making',
       'Predictive safety algorithms',
@@ -682,12 +475,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       'Performance analytics',
     ],
     popular: true,
-    icon: '🚗',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-cyan-500 to-blue-600',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Leading autonomous vehicle AI platform with proven self-driving capabilities and safety systems.'
     targetAudience:
@@ -711,7 +502,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     growthRate: '400%+ annual growth'
     variant: 'autonomous-futuristic'
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -725,35 +515,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     rating: 5.0
     reviews: 6
   }
-=======
-=======
-    color: 'from - cyan - 500 to - blue - 600',
-    text_color: 'text - cyan - 400',
-    link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',
-    market_position:;
-      'Leading autonomous vehicle AI platform with proven self - driving capabilities and safety systems.',
-    target_audience:;
-      'Automotive manufacturers, Ride - sharing companies, Logistics providers, Transportation companies, Government agencies',
-    trial_days: 90,
-    setup_time: '16 - 20 weeks',
-    category: 'Autonomous Vehicles',
-    real_service: true,
-    technology: [;
-      'Computer Vision, AI / ML, Quantum Computing, Sensor Fusion, Python, C++, ROS',
-    ],
-    integrations: [;
-      'Vehicle systems, Fleet management, Traffic systems, Safety networks, Regulatory platforms',
-    ],
-    use_cases: [;
-      'Self - driving cars, Autonomous trucks, Fleet management, Transportation optimization, Safety systems',
-    ],
-    roi: 'Autonomous transportation shows 800%+ ROI through reduced accidents and improved efficiency.',
-    competitors: ['Waymo, Tesla, Cruise, Aurora, Argo AI'],
-    market_size: '$65B+ autonomous vehicle market',
-    growth_rate: '400%+ annual growth',
-    variant: 'autonomous - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -767,9 +528,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     rating: 5 && 5.0,
     reviews: 6,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Quantum Materials Discovery Platform
   {
     id: 'quantum-materials-discovery-platform'
@@ -780,7 +539,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     description:
       'Advanced quantum materials discovery platform that accelerates the development of new materials, drugs, and chemicals using quantum computing and AI-powered simulations.'
     features: [
-<<<<<<< HEAD
       'Quantum molecular simulations'
       'AI-powered material design'
       'Drug discovery algorithms'
@@ -793,23 +551,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       'Research collaboration tools'
     ]
     popular: true
-    icon: '🧪'
+    icon: ''
     color: 'from-purple-500 to-pink-600'
     textColor: 'text-purple-400'
     link: 'https://ziontechgroup.com/quantum-materials-discovery-platform'
-=======
-=======
-  // Quantum Materials Discovery Platform;
-  {
-    id: 'quantum - materials - discovery - platform',
-    name: 'Quantum Materials Discovery Platform',
-    tagline: 'Accelerate materials science with quantum computing',
-    price: '$28, 000',
-    period: '/month',
-    description:;
-      'Advanced quantum materials discovery platform that accelerates the development of new materials, drugs, and chemicals using quantum computing and AI - powered simulations.',
-    features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum molecular simulations',
       'AI - powered material design',
       'Drug discovery algorithms',
@@ -822,12 +567,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       'Research collaboration tools',
     ],
     popular: true,
-    icon: '🧪',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-materials-discovery-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Leading quantum materials discovery platform with proven quantum chemistry and AI capabilities.'
     targetAudience:
@@ -851,7 +594,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     growthRate: '600%+ annual growth'
     variant: 'quantum-ai-revolutionary'
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -865,35 +607,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     rating: 4.8
     reviews: 9
   }
-=======
-=======
-    color: 'from - purple - 500 to - pink - 600',
-    text_color: 'text - purple - 400',
-    link: 'https://ziontechgroup.com / quantum - materials - discovery - platform',
-    market_position:;
-      'Leading quantum materials discovery platform with proven quantum chemistry and AI capabilities.',
-    target_audience:;
-      'Pharmaceutical companies, Chemical manufacturers, Materials science labs, Research institutions, Energy companies',
-    trial_days: 75,
-    setup_time: '14 - 18 weeks',
-    category: 'Quantum Materials',
-    real_service: true,
-    technology: [;
-      'Quantum Computing, Quantum Chemistry, AI / ML, Molecular Dynamics, Python, C++, Quantum Algorithms',
-    ],
-    integrations: [;
-      'Research platforms, Laboratory systems, Chemical databases, Property databases, Collaboration tools',
-    ],
-    use_cases: [;
-      'Drug discovery, Material development, Chemical optimization, Property prediction, Research acceleration',
-    ],
-    roi: 'Materials discovery shows 1000%+ ROI through accelerated development and improved properties.',
-    competitors: ['IBM Quantum, Google Quantum, Microsoft Quantum, D - Wave'],
-    market_size: '$15B+ quantum computing market',
-    growth_rate: '600%+ annual growth',
-    variant: 'quantum - ai - revolutionary',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -907,9 +620,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     rating: 4 && 4.8,
     reviews: 9,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Metaverse AI Development Platform
   {
     id: 'metaverse-ai-development-platform'
@@ -920,7 +631,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     description:
       'Comprehensive metaverse AI development platform that enables the creation of intelligent virtual worlds, AI-powered NPCs, and dynamic environments with advanced AI capabilities.'
     features: [
-<<<<<<< HEAD
       'AI-powered NPC generation'
       'Dynamic world creation'
       'Intelligent environment adaptation'
@@ -933,25 +643,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       'Cross-platform deployment'
     ]
     popular: true
-    icon: '🌍'
+    icon: ''
     color: 'from-teal-500 to-emerald-600'
     textColor: 'text-teal-400'
     link: 'https://ziontechgroup.com/metaverse-ai-development-platform'
-=======
-      'AI-powered NPC generation',
-=======
-  // Metaverse AI Development Platform;
-  {
-    id: 'metaverse - ai - development - platform',
-    name: 'Metaverse AI Development Platform',
-    tagline: 'Build intelligent virtual worlds with AI - powered tools',
-    price: '$8, 500',
-    period: '/month',
-    description:;
-      'Comprehensive metaverse AI development platform that enables the creation of intelligent virtual worlds, AI - powered NPCs, and dynamic environments with advanced AI capabilities.',
-    features: [;
-      'AI - powered NPC generation',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Dynamic world creation',
       'Intelligent environment adaptation',
       'AI behavior modeling',
@@ -963,12 +658,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
       'Cross - platform deployment',
     ],
     popular: true,
-    icon: '🌍',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-teal-500 to-emerald-600',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup && ziontechgroup.com/metaverse-ai-development-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Leading metaverse AI development platform with advanced AI capabilities and comprehensive tools.'
     targetAudience:
@@ -992,7 +685,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     growthRate: '350%+ annual growth'
     variant: 'metaverse-futuristic'
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1017,35 +709,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
     customers: 32;
     rating: 4.7
 
-=======
-=======
-    color: 'from - teal - 500 to - emerald - 600',
-    text_color: 'text - teal - 400',
-    link: 'https://ziontechgroup.com / metaverse - ai - development - platform',
-    market_position:;
-      'Leading metaverse AI development platform with advanced AI capabilities and comprehensive tools.',
-    target_audience:;
-      'Gaming companies, Virtual reality developers, Social platforms, Education providers, Entertainment companies',
-    trial_days: 30,
-    setup_time: '4 - 6 weeks',
-    category: 'Metaverse AI',
-    real_service: true,
-    technology: [;
-      'AI / ML, 3D Graphics, Virtual Reality, Game Development, Python, Unity, Unreal Engine',
-    ],
-    integrations: [;
-      'VR platforms, Gaming engines, Social platforms, Payment systems, Analytics tools',
-    ],
-    use_cases: [;
-      'Virtual worlds, Gaming environments, Social spaces, Educational simulations, Entertainment experiences',
-    ],
-    roi: 'Metaverse development shows 400%+ ROI through virtual experiences and digital asset monetization.',
-    competitors: ['Roblox, Decentraland, The Sandbox, Meta, Unity'],
-    market_size: '$18B+ metaverse market',
-    growth_rate: '350%+ annual growth',
-    variant: 'metaverse - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1061,7 +724,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1086,13 +748,11 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
   // Brain-Computer Interface Platform
   {
-<<<<<<< HEAD
     id: 'brain-computer-interface-platform',
     name: 'Brain-Computer Interface Platform',
     tagline: 'Direct neural interface for human-computer interaction',
@@ -1112,7 +772,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       'Custom application development',
     ],
     popular: true,
-    icon: '🧠',
+    icon: '',
     color: 'from-violet-500 to-purple-600',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface-platform',
@@ -1175,7 +835,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       'Compliance and audit tools',
     ],
     popular: true,
-    icon: '🔒',
+    icon: '',
     color: 'from-blue-500 to-indigo-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-security-platform',
@@ -1238,7 +898,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       'Space infrastructure management',
     ],
     popular: true,
-    icon: '🚀',
+    icon: '',
     color: 'from-orange-500 to-red-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup && ziontechgroup.com/space-mining-operations-platform',
@@ -1303,7 +963,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       'Quantum communication networks',
     ],
     popular: true,
-    icon: '🤖',
+    icon: '',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-robotics-platform',
@@ -1366,7 +1026,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       'Performance analytics',
     ],
     popular: true,
-    icon: '🚗',
+    icon: '',
     color: 'from-cyan-500 to-blue-600',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -1429,7 +1089,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       'Research collaboration tools',
     ],
     popular: true,
-    icon: '🧪',
+    icon: '',
     color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-materials-discovery-platform',
@@ -1492,7 +1152,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       'Cross-platform deployment',
     ],
     popular: true,
-    icon: '🌍',
+    icon: '',
     color: 'from-teal-500 to-emerald-600',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup && ziontechgroup.com/metaverse-ai-development-platform',
@@ -1534,36 +1194,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-=======
-    id: 'brain-computer-interface-platform', name: 'Brain-Computer Interface Platform',
-    tagline: 'Direct neural interface for human-computer interaction',
-    price: '$25,000',
-    period: '/month',
-    description: 'Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers for medical applications, gaming, and productivity enhancement.',
-    features: [
-      'Non-invasive neural signal processingReal-time brain activity monitoringThought-to-text conversionBrain-controlled applicationsMedical rehabilitation toolsGaming and entertainmentProductivity enhancementAccessibility solutions';
-      'Research and development toolsCustom application development'
-    ];
-    popular: true, icon: '🧠',
-    color: 'from-violet-500 to-purple-600', textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/brain-computer-interface-platform', marketPosition: 'Leading brain-computer interface platform with proven neural signal processing capabilities.',
-    targetAudience: 'Medical research institutions, Gaming companies, Accessibility developers, Research labs, Healthcare providers',
-    trialDays: 60, setupTime: '12-16 weeks',
-    category: 'Neural Technology', realService: true,
-    technology: ['Neural Signal Processing, Machine Learning, EEG Analysis, Python, C++, Neural Networks'];
-    integrations: ['Medical devices, Gaming platforms, Research tools, Healthcare systems, Accessibility software'];
-    useCases: ['Medical rehabilitation, Gaming control, Productivity tools, Accessibility solutions, Research applications'];
-    roi: 'Medical applications show 800%+ ROI through improved patient outcomes and treatment efficiency.',
-    competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI'];
-    marketSize: '$3B+ BCI market', growthRate: '600%+ annual growth',
-    variant: 'neural-revolutionary',
-    contactInfo: {
-      
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
@@ -1571,9 +1202,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     launchDate: '2025-02-25';
     customers: 32;
     rating: 4 && 4.7,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 18
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -1582,14 +1211,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     customers: 32;
     rating: 4.7,
     reviews: 18;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-<<<<<<< HEAD
 ];
-<<<<<<< HEAD
-=======
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

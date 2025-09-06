@@ -416,7 +416,7 @@ export default function EnhancedNavigation2025() {;
               </div>
               <div>
                 <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
-                <p className="text-xs text-gray-400">Innovation • Intelligence • Impact</p>
+                <p className="text-xs text-gray-400">Innovation  Intelligence  Impact</p>
               </div>
             </a>
 

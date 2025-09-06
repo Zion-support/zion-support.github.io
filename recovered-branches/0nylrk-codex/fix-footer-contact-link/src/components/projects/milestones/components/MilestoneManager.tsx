@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { MilestonesList  } from '../MilestonesList';
 import { PaymentSummary  } from '../PaymentSummary';
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
@@ -22,10 +21,6 @@ interface MilestoneManagerProps {
   refetch: () => Promise<void>
 }
 export function MilestoneManager({
-=======
-import {MilestonesList} from '../MilestonesList';
-import {PaymentSummary} from '../PaymentSummary';
-<<<<<<< HEAD
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {toast} from "sonner";
 interface MilestoneManagerProps {;
@@ -45,7 +40,6 @@ interface MilestoneManagerProps {;
 }
 
 export function MilestoneManager(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   projectId;
   milestones;
   activities;
@@ -58,18 +52,11 @@ export function MilestoneManager(): any ({;
   onUpdateStatus;
   onDeleteMilestone;
   onUploadDeliverable;
-<<<<<<< HEAD
   refetch
 }: MilestoneManagerProps) {
 
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
-=======
-  refetch;
-}: MilestoneManagerProps) {;
-  const handleMilestoneApproved = async (milestoneId: string) => {;
-    try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus);
       toast && toast.success("Milestone approved");
       await refetch();
@@ -77,16 +64,9 @@ export function MilestoneManager(): any ({;
       console && console.error("Error approving milestone:", error);
       toast && toast.error("Failed to approve milestone");
     }
-<<<<<<< HEAD
   }
   const handleMilestoneRejected = async (milestoneId: string) => {
     try {
-=======
-  };
-
-  const handleMilestoneRejected = async (milestoneId: string) => {;
-    try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus);
       toast && toast.success("Milestone rejected");
       await refetch();
@@ -97,15 +77,9 @@ export function MilestoneManager(): any ({;
   }
 
   return (
-<<<<<<< HEAD
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2">
-=======
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
-      <div className="lg:col-span-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <MilestonesList
-=======
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
 import { toast } from './sonner';
 interface MilestoneManagerProps {
@@ -153,7 +127,6 @@ function MilestoneManager() {
     <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
       <div className="lg:col - span - 2">;
         <MilestonesList;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           milestones={milestones}
           activities={activities}
           is_loading={is_loading}
@@ -162,11 +135,9 @@ function MilestoneManager() {
           onUpdateStatus={onUpdateStatus}
           onDeleteMilestone={onDeleteMilestone}
           onUploadDeliverable={onUploadDeliverable}
-<<<<<<< HEAD
           isSubmitting={isSubmitting}
           onApprove={isClient ? handleMilestoneApproved : undefined}
           onReject={isClient ? handleMilestoneRejected : undefined}
-<<<<<<< HEAD
         />
       </div>
       <div>
@@ -178,20 +149,6 @@ function MilestoneManager() {
     </div>
   )
 }
-=======
-        />;
-      </div>;
-      <div>;
-        <PaymentSummary
-          milestones={milestones} 
-          paymentTerms={paymentTerms}
-        />;
-      </div>;
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           is_submitting={is_submitting}
           on_approve={is_client ? handleMilestoneApproved : undefined}
           on_reject={is_client ? handleMilestoneRejected : undefined}
@@ -205,4 +162,3 @@ function MilestoneManager() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -7,7 +7,7 @@ export default function SecurityDocRedirect() {;
         <meta httpEquiv="refresh" content="0, url=/SECURITY.md" />;
       </Head>;
       <main style={{ padding:24 }}>;
-        <p>Redirecting to Security documentation…</p>;
+        <p>Redirecting to Security documentation</p>;
       </main>;
     </>;
   ),;}
@@ -16,5 +16,5 @@ export default function SecurityDocRedirect() {;
   {
   padding: 24 
 }
-}> <p>Redirecting to Security documentation…</p> </main> </>) 
+}> <p>Redirecting to Security documentation</p> </main> </>) 
 }

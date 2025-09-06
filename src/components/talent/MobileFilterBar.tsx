@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button";
@@ -19,8 +14,6 @@ export function MobileFilterBar({
   setIsMobileFilterOpen
 
 }: MobileFilterBarProps) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Search, Sliders } from 'lucide-react';
@@ -34,12 +27,10 @@ export function MobileFilterBar(): any ({;
   setSearchTerm,;
   setIsMobileFilterOpen,;
 }: MobileFilterBarProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4'>;
       <Button
         onClick={() => setIsMobileFilterOpen(true)}
-<<<<<<< HEAD
         variant='outline'
         className='w-full flex items-center justify-center gap-2 border-zion-blue-light text-zion-slate-light'      >
         <Sliders className='h-4 w-4' />
@@ -50,24 +41,10 @@ export function MobileFilterBar(): any ({;
           Search talents
         </label>
         <Search className='absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate' />
-=======
-        variant='outline';
-        className='w-full flex items-center justify-center gap-2 border-zion-blue-light text-zion-slate-light'      >;
-        <Sliders className='h-4 w-4' />;
-        Filter Talents;
-      </Button>;
-
-      <div className='relative mt-4'>;
-        <label htmlFor='mobile-talent-search' className='sr-only'>;
-          Search talents;
-        </label>;
-        <Search className='absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Input
           id='mobile-talent-search'
           placeholder='Search talents...'
           value={searchTerm}
-<<<<<<< HEAD
           onChange={e => setSearchTerm(e.target.value)}
           aria-describedby='mobile-talent-search-help'
           className='pl-8 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate'        />
@@ -78,23 +55,6 @@ export function MobileFilterBar(): any ({;
     </div>
   )
 }
-=======
-          onChange={e => setSearchTerm(e && e.target.value)}
-          aria-describedby='mobile-talent-search-help';
-          className='pl-8 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate'        />;
-        <p id='mobile-talent-search-help' className='sr-only'>;
-          Search by name or skill;
-        </p>;
-      </div>;
-    </div>;
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Search, Sliders } from 'lucide-react';
@@ -134,5 +94,3 @@ function MobileFilterBar() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

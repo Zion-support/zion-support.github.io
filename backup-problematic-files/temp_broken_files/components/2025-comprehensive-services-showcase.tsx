@@ -206,7 +206,7 @@ key={service.id}
                         </span>
                       </div>
                       <div className="text-xs text-gray-500">
-                        {_(service as any).trialDays ? `${(service as any).trialDays} days free trial` : ''} • {_(service as any).setupTime ? `${(service as any).setupTime} setup` : 'Custom setup'}
+                        {_(service as any).trialDays ? `${(service as any).trialDays} days free trial` : ''}  {_(service as any).setupTime ? `${(service as any).setupTime} setup` : 'Custom setup'}
                       </div>
                     </div>
                   </div>

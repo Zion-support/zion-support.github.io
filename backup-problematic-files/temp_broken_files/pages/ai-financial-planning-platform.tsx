@@ -9,7 +9,7 @@ export default function AiFinancialPlanningPlatform() {;
 			subtitle="Smarter, faster financial decisions";
 			pricePerMonthUSD={349}
 			implementationWeeks="1-2 weeks";
-			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy";
+			roiNote="Finance teams report 36x ROI via faster cycles and improved accuracy";
 			features={[;
 				"Driver-based planning and what-if scenarios",;
 				"Automated variance analysis and anomaly detection",;
@@ -50,10 +50,10 @@ const AIFinancialPlanningPlatform: React.FC = () => {
               Analyze investment opportunities with AI-powered market analysis and risk assessment.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Market analysis</li>
-              <li>• Risk assessment</li>
-              <li>• Portfolio optimization</li>
-              <li>• Performance tracking</li>
+              <li> Market analysis</li>
+              <li> Risk assessment</li>
+              <li> Portfolio optimization</li>
+              <li> Performance tracking</li>
             </ul>
           </div>
 
@@ -63,10 +63,10 @@ const AIFinancialPlanningPlatform: React.FC = () => {
               Create personalized financial plans based on your goals and risk tolerance.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Goal setting</li>
-              <li>• Budget planning</li>
-              <li>• Retirement planning</li>
-              <li>• Tax optimization</li>
+              <li> Goal setting</li>
+              <li> Budget planning</li>
+              <li> Retirement planning</li>
+              <li> Tax optimization</li>
             </ul>
           </div>
 
@@ -76,10 +76,10 @@ const AIFinancialPlanningPlatform: React.FC = () => {
               Manage financial risks with AI-powered monitoring and alert systems.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Risk monitoring</li>
-              <li>• Alert systems</li>
-              <li>• Diversification</li>
-              <li>• Hedging strategies</li>
+              <li> Risk monitoring</li>
+              <li> Alert systems</li>
+              <li> Diversification</li>
+              <li> Hedging strategies</li>
             </ul>
           </div>
         </div>

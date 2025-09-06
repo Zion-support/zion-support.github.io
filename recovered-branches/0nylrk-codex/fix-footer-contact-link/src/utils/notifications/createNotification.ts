@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { supabase } from "@/integrations/supabase/client";
 import { CreateNotificationParams, CreateNotificationResult } from './types';
@@ -37,13 +36,8 @@ export async function createNotification({
     }
     return { success: true, notificationId: data }
   } catch (error) {
-<<<<<<< HEAD
     console.error('Error creating notification:', error);
 
-=======
-    console && console.error('Error creating notification:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { supabase } from '@/integrations / supabase / client';
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**;
@@ -88,7 +82,6 @@ if ( {) {
     return { success: true, notification_id: data }
   } catch (error) {
     console.error ('Error creating notification:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { success: false, error }
   }
 }

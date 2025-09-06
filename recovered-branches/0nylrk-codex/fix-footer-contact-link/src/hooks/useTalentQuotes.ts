@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
 import { quoteRequestService  } from '@/services/quoteRequestService';
@@ -17,11 +16,7 @@ export const useTalentQuotes = () => {
   // Fetch quotes for this talent
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotestalent', talentId];
-<<<<<<< HEAD
     queryFn: () => quoteRequestService.getByTalentId(talentId)
-=======
-    queryFn: () => quoteRequestService && quoteRequestService.getByTalentId(talentId),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     enabled: !!talentId});
   // Count unread quotes
   const unreadCount = allQuotes && allQuotes.filter(
@@ -44,13 +39,8 @@ export const useTalentQuotes = () => {
   });
   // Mark as viewed/responded mutation
   const updateStatusMutation = useMutation({
-<<<<<<< HEAD
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
       quoteRequestService.updateStatus(id, status);
-=======
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
-      quoteRequestService && quoteRequestService.updateStatus(id, status);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     onSuccess: (_, variables) => {
       let message = "Status updated";
       if (variables && variables.status === 'in_review') {
@@ -62,28 +52,18 @@ export const useTalentQuotes = () => {
         title: message
         description: "The quote request status has been updated"
       });
-<<<<<<< HEAD
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     }
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to update status: " + error.message
-=======
-      queryClient && queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
-    };
-    onError: (error: Error) => {
-      toast({
-        title: "Error";
-        description: "Failed to update status: " + error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"
       })
     }
   });
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
-<<<<<<< HEAD
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
       quoteRequestService.toggleArchive(id, isArchived);
     onSuccess: (_, variables) => {
@@ -99,28 +79,10 @@ export const useTalentQuotes = () => {
       toast({
         title: "Error";
         description: "Failed to update quote: " + error.message
-=======
-    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
-      quoteRequestService && quoteRequestService.toggleArchive(id, isArchived);
-    onSuccess: (_, variables) => {
-      toast({
-        title: variables && variables.isArchived ? "Quote archived" : "Quote unarchived",
-        description: variables && variables.isArchived 
-          ? "The quote request has been archived" 
-          : "The quote request has been moved back to active quotes"
-      });
-      queryClient && queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
-    };
-    onError: (error: Error) => {
-      toast({
-        title: "Error";
-        description: "Failed to update quote: " + error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"
       })
     }
   });
-=======
 import {useState} from 'react';
 import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';
 import {quoteRequestService} from '@/services / quoteRequestService';
@@ -226,7 +188,6 @@ if ( {) {
     }
   });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     quotes: filtered_quotes;
     unread_count;
@@ -234,9 +195,7 @@ if ( {) {
     error;
     status_filter;
     setStatusFilter;
-<<<<<<< HEAD
     archiveFilter;
-<<<<<<< HEAD
     setArchiveFilter
     markAsViewed: (id: string) =>
       updateStatusMutation.mutate({ id, status: 'in_review' });
@@ -246,17 +205,6 @@ if ( {) {
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 
-=======
-    setArchiveFilter,
-    markAsViewed: (id: string) => 
-      updateStatusMutation && updateStatusMutation.mutate({ id, status: 'in_review' });
-    markAsResponded: (id: string) => 
-      updateStatusMutation && updateStatusMutation.mutate({ id, status: 'responded' });
-    toggleArchive: (id: string, isArchived: boolean) => 
-      toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived })}
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     archive_filter;
     setArchiveFilter,
     markAsViewed: (id: string) =>;
@@ -267,4 +215,3 @@ if ( {) {
       toggleArchiveMutation.mutate ({ id, is_archived })}
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

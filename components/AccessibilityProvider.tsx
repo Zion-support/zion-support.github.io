@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,29 +22,20 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { createContext, useContext, useState, ReactNode } from "react";
-<<<<<<< HEAD
 interface AccessibilityContextType {
-=======
-
-interface AccessibilityContextType {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
-=======
 import React, { create_context, useContext, useState, ReactNode } from './react';
 ;
 interface AccessibilityContextType {
   high_contrast: boolean;
   large_text: boolean;
   reduced_motion: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   toggleHighContrast: () => void;
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
 >(undefined);
@@ -64,37 +54,12 @@ interface AccessibilityProviderProps {
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   children
 }) => {
-=======
-
-const AccessibilityContext = createContext<;
-  AccessibilityContextType | undefined;
->(undefined);
-
-export const useAccessibility = () => {;
-  const context = useContext(AccessibilityContext);
-  if (context === undefined) {;
-    throw new Error(;
-      "useAccessibility must be used within an AccessibilityProvider",;
-    );
-  }
-  return context;
-};
-
-interface AccessibilityProviderProps {;
-  children: React && React.ReactNode;
-}
-
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
-  children,;
-}) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const toggleHighContrast = () => setHighContrast(!highContrast);
   const toggleLargeText = () => setLargeText(!largeText);
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-<<<<<<< HEAD
   const value = {
     highContrast
     largeText
@@ -103,18 +68,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
     toggleLargeText
     toggleReducedMotion
   }
-=======
-
-  const value = {;
-    highContrast,;
-    largeText,;
-    reducedMotion,;
-    toggleHighContrast,;
-    toggleLargeText,;
-    toggleReducedMotion,;
-  };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <AccessibilityContext && AccessibilityContext.Provider value={value}>;
       <div
@@ -125,7 +78,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
   );
 }
 export default AccessibilityProvider;
-=======
 const AccessibilityContext = create_context<;
   AccessibilityContextType | undefined;
 >(undefined);
@@ -178,4 +130,3 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
 ;
 export default AccessibilityProvider;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

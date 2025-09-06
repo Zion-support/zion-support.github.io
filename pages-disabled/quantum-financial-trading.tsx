@@ -1,36 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 export default function AISustainabilityPlatformPage() {
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-import SEO from "../components/SEO";
-export default function AISustainabilityPlatformPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="min-h-[60vh] px-6 py-24">;
       <SEO
@@ -42,7 +12,6 @@ export default function AISustainabilityPlatformPage() {;
           AI Sustainability Platform;
         </h1>;
         <p className="text-gray-300">;
-=======
 import React from './react';
 import SEO from "../components / SEO";
 export default /**
@@ -60,15 +29,10 @@ function AISustainabilityPlatformPage() {
           AI Sustainability Platform;
         </h1>;
         <p className="text - gray - 300">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Measure and optimize sustainability metrics with AI. Details coming;
           soon.;
         </p>;
       </div>;
-<<<<<<< HEAD
     </div>;
   );
-=======
-    </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

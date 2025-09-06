@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, {
-<<<<<<< HEAD
   createContext
   useContext
   useState
@@ -18,8 +13,6 @@ import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
 import * as Sentry from '@sentry/nextjs';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorContextType {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, {;
   createContext,;
   useContext,;
@@ -34,14 +27,12 @@ import * as Sentry from '@sentry/nextjs';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface ErrorContextType {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   reportError: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void
 
-<<<<<<< HEAD
 }, [])
 export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
   const [retryCount, setRetryCount] = useState<Record<string, number>>({})
@@ -54,55 +45,11 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     if (process.env.NODE_ENV === 'production') {
       Sentry.withScope(scope => {        if (context) {
           scope.setContext('errorContext', context)
-=======
-  create_context,
-  useContext,
-  useState,
-  useCallback,
-  ReactNode,
-} from 'react';
-import { toast } from '@/hooks / use - toast';
-import { Button } from '@/components / ui / button';
-import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
-import * as Sentry from '@sentry / nextjs';
-import { logErrorToProduction } from '@/utils / production_logger';
-interface ErrorContextType {
-  report_error: (error: Error, context?: any) => void;
-  showRetryableError: (error: Error, retry_action?: () => void) => void;
-  showNetworkError: (retry_action?: () => void) => void;
-  showAuthError: (login_action?: () => void) => void;
-  clearAllErrors: () => void;
-}, []);
-export /**
- * GlobalErrorHandler - Function description
- */
-function GlobalErrorHandler() {
-  const [retry_count, setRetryCount] = useState < Record < string, number>>({});
-  const report_error = useCallback ((error: Error, context?: any, ) => {
-    // Log to console for development;
-    // Check condition
-if ( {) {
-  $2
-}
-      logErrorToProduction ('Global Error Handler:', error, context);
-    }
-    // Report to Sentry for production;
-    // Check condition
-if ( {) {
-  $2
-}
-      Sentry.with_scope (scope => {        // Check condition
-if ( {) {
-  $2
-}
-          scope.set_context ('error_context', context);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
         scope.set_level ('error');
         Sentry.capture_exception (error);
       });
     }
-<<<<<<< HEAD
   }, [])
   const showRetryableError = useCallback(
     (error: Error, retryAction?: () => void) => {
@@ -168,74 +115,7 @@ if ( {) {
     showNetworkError
     showAuthError
     clearAllErrors
-=======
-  }, []);
-  const showRetryableError = useCallback (
-    (error: Error, retry_action?: () => void) => {
-      const error_key = error.message;
-      const currentRetryCount = retry_count[error_key] || 0;
-      report_error (error, { retry_count: currentRetryCount });
-      // Show user - friendly error message with retry option;
-      toast ({
-        title: 'Something went wrong',
-        description: getErrorMessage (error),
-        variant: 'destructive',
-        action: retry_action;
-          ? {
-              label: 'Try Again',
-              on_click: () => {
-                setRetryCount (prev => ({
-                  ...prev,
-                  [error_key]: currentRetryCount + 1,
-                }));
-                retry_action ();
-              },
-            }
-          : undefined,
-      });
-    },
-    [retry_count, report_error]);
-  const showNetworkError = useCallback ((retry_action?: () => void) => {
-    const is_online = typeof navigator !== 'undefined' ? navigator.on_line : true;
-    toast ({
-      title: is_online ? 'Connection Issue' : 'No Internet Connection',
-      description: is_online;
-        ? 'Unable to connect to our servers. Please check your connection and try again.';
-        : 'You appear to be offline. Please check your internet connection.',
-      variant: 'destructive',
-      action: retry_action;
-        ? {
-            label: 'Retry',
-            on_click: retry_action,
-          }
-        : undefined,
-    });
-  }, []);
-  const showAuthError = useCallback ((login_action?: (, ) => void) => {
-    toast ({
-      title: 'Authentication Required',
-      description: 'Please log in to continue with this action.',
-      variant: 'destructive',
-      action: login_action;
-        ? {
-            label: 'Log In',
-            on_click: login_action,
-          }
-        : undefined,
-    });
-  }, []);
-  const clearAllErrors = useCallback (() => {
-    setRetryCount ({});    // Clear any active toasts would go here if the toast system supports it;
-  }, []);
-  const context_value: ErrorContextType = {
-    report_error,
-    showRetryableError,
-    showNetworkError,
-    showAuthError,
-    clearAllErrors,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-=======
 export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps) {;
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
 
@@ -327,12 +207,9 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
     clearAllErrors,;
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
     <ErrorContext && ErrorContext.Provider value={contextValue}>;
       {children}
-<<<<<<< HEAD
     </ErrorContext.Provider>
   )
 export function useGlobalErrorHandler(): ErrorContextType {
@@ -395,93 +272,6 @@ export function useErrorHandler() {
   const handleAsyncOperation = useCallback(
     async <T,>(
       operation: () => Promise<T>
-=======
-    <ErrorContext.Provider value={context_value}>;
-      {children}
-    </ErrorContext.Provider>);
-export function useGlobalErrorHandler (): ErrorContextType {
-  const context = useContext (ErrorContext);
-  // Check condition
-if ( {) {
-  $2
-}
-    throw new Error (
-      'useGlobalErrorHandler must be used within a GlobalErrorHandler');
-  }
-  return context;
-// Helper function to convert technical errors to user - friendly messages;
-function getErrorMessage (error: Error): string {
-  const message = error.message.toLowerCase (),
-  // Check condition
-if (||) {
-  $2
-}
-    message.includes ('network') ||;
-    message.includes ('connection')) {
-    return 'Unable to connect to our servers. Please check your internet connection.';
-  }
-  // Check condition
-if (||) {
-  $2
-}
-    message.includes ('unauthorized') ||;
-    message.includes ('401')) {
-    return 'Your session has expired. Please log in again.';
-  }
-  if (|| message.includes ('403')) {) {
-  $2
-}
-    return "You don't have permission to perform this action.";
-  }
-  if (|| message.includes ('404')) {) {
-  $2
-}
-    return 'The requested information could not be found.';
-  }
-  if () {) {
-  $2
-}
-    return 'Request timed out. Please try again.';
-  }
-  if (|| message.includes ('invalid')) {) {
-  $2
-}
-    return 'Please check your input and try again.';
-  }
-  if (|| message.includes ('500')) {) {
-  $2
-}
-    return 'Our servers are experiencing issues. Please try again in a moment.';
-  }
-  // Fallback for unknown errors;
-  return 'An unexpected error occurred. Please try again.';
-// Utility hook for common error scenarios;
-export /**
- * useErrorHandler - Function description
- */
-function useErrorHandler() {
-  const { report_error, showRetryableError, showNetworkError, showAuthError } =;
-    useGlobalErrorHandler ();
-  const handleApiError = useCallback (
-    (error: any, retry_action?: () => void) => {
-      // Check condition
-if ( {) {
-  $2
-}
-        showAuthError ();
-      } else // Check condition
-if ( {) {
-  $2
-}
-        showNetworkError (retry_action) } else {
-        showRetryableError (error, retry_action);
-      }
-    },
-    [showRetryableError, showNetworkError, showAuthError]);
-  const handleAsyncOperation = useCallback (
-    async <T, >(
-      operation: () => Promise < T>,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       options?: {
         on_error?: (error: Error) => void;
         retry_action?: () => void;
@@ -489,7 +279,6 @@ if ( {) {
       }
     ): Promise < T | null> => {
       try {
-<<<<<<< HEAD
         const result = await operation()
         if (options?.successMessage) {
           toast({
@@ -498,19 +287,6 @@ if ( {) {
           })
         }
         return result
-=======
-        const result = await operation ();
-        // Check condition
-if ( {) {
-  $2
-}
-          toast ({
-            title: 'Success',
-            description: options.success_message,
-          });
-        }
-        return result;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch (error: any) {
         report_error (error);
         // Check condition
@@ -519,113 +295,10 @@ if ( {) {
 }
           options.on_error (error);
         } else {
-<<<<<<< HEAD
           handleApiError(error, options?.retryAction)
-=======
-    </ErrorContext && ErrorContext.Provider>;
-  );
-
-export function useGlobalErrorHandler(): any (): ErrorContextType {;
-  const context = useContext(ErrorContext);
-  if (!context) {;
-    throw new Error(;
-      'useGlobalErrorHandler must be used within a GlobalErrorHandler';
-    );
-  }
-  return context;
-
-// Helper function to convert technical errors to user-friendly messages;
-function getErrorMessage(): any (error: Error): string {;
-  const message = error && error.message.toLowerCase(),;
-
-  if (;
-    message && message.includes('fetch') ||;
-    message && message.includes('network') ||;
-    message && message.includes('connection');
-  ) {;
-    return 'Unable to connect to our servers. Please check your internet connection.';
-  }
-
-  if (;
-    message && message.includes('auth') ||;
-    message && message.includes('unauthorized') ||;
-    message && message.includes('401');
-  ) {;
-    return 'Your session has expired. Please log in again.';
-  }
-
-  if (message && message.includes('forbidden') || message && message.includes('403')) {;
-    return "You don't have permission to perform this action.";
-  }
-
-  if (message && message.includes('not found') || message && message.includes('404')) {;
-    return 'The requested information could not be found.';
-  }
-
-  if (message && message.includes('timeout')) {;
-    return 'Request timed out. Please try again.';
-  }
-
-  if (message && message.includes('validation') || message && message.includes('invalid')) {;
-    return 'Please check your input and try again.';
-  }
-
-  if (message && message.includes('server') || message && message.includes('500')) {;
-    return 'Our servers are experiencing issues. Please try again in a moment.';
-  }
-
-  // Fallback for unknown errors;
-  return 'An unexpected error occurred. Please try again.';
-
-// Utility hook for common error scenarios;
-export function useErrorHandler() {;
-  const { reportError, showRetryableError, showNetworkError, showAuthError } =;
-    useGlobalErrorHandler();
-
-  const handleApiError = useCallback(;
-    (error: any, retryAction?: () => void) => {;
-      if (error && error.response?.status === 401 || error && error.response?.status === 403) {;
-        showAuthError();
-      } else if (error && error.code === 'NETWORK_ERROR' || !navigator && navigator.onLine) {;
-        showNetworkError(retryAction);      } else {;
-        showRetryableError(error, retryAction);
-      }
-    },;
-    [showRetryableError, showNetworkError, showAuthError];
-  );
-
-  const handleAsyncOperation = useCallback(;
-    async <T,>(;
-      operation: () => Promise<T>,;
-      options?: {;
-        onError?: (error: Error) => void;
-        retryAction?: () => void;
-        successMessage?: string;
-      }
-    ): Promise<T | null> => {;
-      try {;
-        const result = await operation();
-
-        if (options?.successMessage) {;
-          toast({;
-            title: 'Success',;
-            description: options && options.successMessage,;
-          });
-        }
-
-        return result;
-      } catch (error: any) {;
-        reportError(error);
-
-        if (options?.onError) {;
-          options && options.onError(error);
-        } else {;
-          handleApiError(error, options?.retryAction);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }
         return null
       }
-<<<<<<< HEAD
     }
     [reportError, handleApiError]
   )
@@ -638,26 +311,7 @@ export function useErrorHandler() {;
 
     handleAsyncOperation}
 }
-=======
-    },;
-    [reportError, handleApiError];
-  );
 
-  return {;
-    reportError,;
-    handleApiError,;
-    handleAsyncOperation,;
-  };    reportError;
-    handleApiError;
-    handleAsyncOperation}
-} ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           handleApiError (error, options?.retry_action);
         }
         return null;
@@ -672,5 +326,3 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

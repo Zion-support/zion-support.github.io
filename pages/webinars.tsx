@@ -1,21 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',;
 import SEO from '../components/SEO',;
-=======
-import React from 'react';
-import SEO from '../components/SEO';
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function WebinarsPage() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import SEO from '../components/SEO';
 export default function WebinarsPage() {
->>>>>>> origin/automation-improvements-final
 	return (
 		<>
 			<SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" />
@@ -25,21 +13,8 @@ export default function WebinarsPage() {
 			</div>
 		</>
 	)
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> origin/automation-improvements-final
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -55,5 +30,3 @@ return (
   </div>;
   </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

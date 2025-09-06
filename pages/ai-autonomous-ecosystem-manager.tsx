@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIAutonomousEcosystemManager() {
@@ -13,8 +9,8 @@ export default function AIAutonomousEcosystemManager() {
 			description="Coordinate fleets of specialized AI agents to manage complex multi-team workflows. Enforce policies, allocate resources, and ensure safety across the ecosystem."
 			subtitle="Govern multi-agent systems with policy, observability, and guardrails."
 			pricePerMonthUSD={2999}
-			implementationWeeks="Implementation: 4–8 weeks"
-			roiNote="Average ROI 4–9x within 6 months"
+			implementationWeeks="Implementation: 48 weeks"
+			roiNote="Average ROI 49x within 6 months"
 			features={[
 				"Agent registry, roles, and capabilities graph"
 				"Policy engine with human-in-the-loop controls"
@@ -28,14 +24,7 @@ export default function AIAutonomousEcosystemManager() {
 			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
 		/>
 	)
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -49,8 +38,8 @@ return (
   description="Coordinate fleets of specialized AI agents to manage complex multi - team workflows. Enforce policies, allocate resources, and ensure safety across the ecosystem.";
   subtitle="Govern multi - agent systems with policy, observability, and guardrails.";
   pricePerMonthUSD={2999}
-    implementation_weeks="Implementation: 4–8 weeks";
-  roi_note="Average ROI 4–9x within 6 months";
+    implementation_weeks="Implementation: 48 weeks";
+  roi_note="Average ROI 49x within 6 months";
   features={[;
     "Agent registry, roles, and capabilities graph",
     "Policy engine with human - in - the - loop controls",
@@ -63,5 +52,3 @@ return (
     canonical="https: //ziontechgroup.com / ai - autonomous - ecosystem - manager";
   />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
@@ -26,12 +25,7 @@ export function useResumeList() {
         .order('is_active', { ascending: false })
         .order('created_at', { ascending: false });
       if (resumeError) throw resumeError;
-<<<<<<< HEAD
       if (!resumeData |resumeData.length === 0) {
-=======
-      
-      if (!resumeData || resumeData && resumeData.length === 0) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setResumes([]);
         return []
       }
@@ -39,7 +33,6 @@ export function useResumeList() {
       const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({
         id: resume && resume.id;
         user_id: resume && resume.user_id;
-=======
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Resume} from '@/types / resume';
@@ -88,12 +81,9 @@ if ( {) {
       const transformed_resumes: Resume[] = resume_data.map (resume => ({
         id: resume.id;
         user_id: resume.user_id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         basic_info: {
-<<<<<<< HEAD
           id: resume.id;
           title: resume.title;
-<<<<<<< HEAD
           headline: resume.headline
           summary: resume.summary
         }
@@ -102,24 +92,11 @@ if ( {) {
         skills: [];
         certifications: []
         is_active: resume.is_active
-=======
-          id: resume && resume.id;
-          title: resume && resume.title;
-          headline: resume && resume.headline,
-          summary: resume && resume.summary
-        };
-=======
-          headline: resume.headline,
-          summary: resume.summary;
-        }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         work_experience: [];
         education: [];
         skills: [];
         certifications: [],
-<<<<<<< HEAD
         is_active: resume && resume.is_active
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }));
       setResumes(transformedResumes);
       return transformedResumes
@@ -127,7 +104,6 @@ if ( {) {
       console && console.error('Error fetching resumes:', e);
       setError(e && e.message);
       return []
-=======
         is_active: resume.is_active;
       }));
 ;
@@ -137,40 +113,21 @@ if ( {) {
       console.error ('Error fetching resumes:', e);
       set_error (e.message);
       return [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
   // Fetch resumes when the component mounts
   useEffect(() => {
     if (user) {
       fetchResumes()
     }
   }, [user]);
-=======
-;
-  // Fetch resumes when the component mounts;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      fetch_resumes ();
-    }
-  }, [user]);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     is_loading;
     error;
     resumes;
-<<<<<<< HEAD
 
     fetchResumes
-=======
-    fetch_resumes;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

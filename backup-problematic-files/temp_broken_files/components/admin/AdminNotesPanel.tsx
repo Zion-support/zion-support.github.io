@@ -87,20 +87,20 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 
       <div className=&quot;space-y-2&quot;>
         <textarea className=&quot;w-full border rounded-md px-3 py-2&quot; rows={3} placeholder=&quot;Write a private note (abuse, spam, special support)&quot; value={text} onChange={(e) => setText(e.target.value)} />
-        <button disabled={!text.trim() || adding} onClick={addNote} className=&quot;px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50&quot;>{adding ? 'Adding…' : 'Add Note'}</button>
+        <button disabled={!text.trim() || adding} onClick={addNote} className=&quot;px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50&quot;>{adding ? 'Adding' : 'Add Note'}</button>
       </div>
 
       <div className=&quot;border-t pt-3&quot;>
         <div className=&quot;text-sm opacity-70 mb-2&quot;>Notes are private, time-stamped, and include author ID.</div>
         {loading ? (
-          <div className=&quot;text-sm&quot;>Loading…</div>
+          <div className=&quot;text-sm&quot;>Loading</div>
         ) : notes.length === 0 ? (
           <div className=&quot;text-sm opacity-70&quot;>No notes yet.</div>
         ) : (
           <ul className=&quot;space-y-2&quot;>
             {notes.map((n) => (
               <li key={n.id} className=&quot;rounded border p-2 text-sm&quot;>
-                <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+                <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()}  {n.authorId}</div>
                 <div>{n.text}</div>              </li>
             ))}
           </ul>;

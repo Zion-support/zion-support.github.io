@@ -6,11 +6,11 @@ export default function AIAutonomousResearchAssistant() {;
 		<ServiceLanding;
 			title="AI Autonomous Research Assistant";
 			slug="ai-autonomous-research-assistant";
-			description="An AI agent that continuously tracks competitors, markets, regulations, and technologies. It synthesizes findings, drafts briefs, and recommends actions—so your team stays ahead.";
+			description="An AI agent that continuously tracks competitors, markets, regulations, and technologies. It synthesizes findings, drafts briefs, and recommends actionsso your team stays ahead.";
 			subtitle="Always-on competitive and market intelligence at analyst-level quality.";
 			pricePerMonthUSD={1299}
-			implementationWeeks="Implementation:1–2 weeks";
-			roiNote="Average ROI 3–6x within 60 days";
+			implementationWeeks="Implementation:12 weeks";
+			roiNote="Average ROI 36x within 60 days";
 			features={[;
 				"Automated web and document monitoring with source citations",;
 				"Daily/weekly executive briefs and dashboards",;
@@ -49,10 +49,10 @@ const AIAutonomousResearchAssistant: React.FC = () => {
               Automatically gather data from multiple sources and formats for comprehensive analysis.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Web scraping</li>
-              <li>• API integration</li>
-              <li>• Document processing</li>
-              <li>• Database queries</li>
+              <li> Web scraping</li>
+              <li> API integration</li>
+              <li> Document processing</li>
+              <li> Database queries</li>
             </ul>
           </div>
 
@@ -62,10 +62,10 @@ const AIAutonomousResearchAssistant: React.FC = () => {
               AI analyzes data to identify patterns, trends, and provide actionable insights.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Statistical analysis</li>
-              <li>• Pattern recognition</li>
-              <li>• Trend identification</li>
-              <li>• Predictive modeling</li>
+              <li> Statistical analysis</li>
+              <li> Pattern recognition</li>
+              <li> Trend identification</li>
+              <li> Predictive modeling</li>
             </ul>
           </div>
 
@@ -75,10 +75,10 @@ const AIAutonomousResearchAssistant: React.FC = () => {
               Generate comprehensive reports with findings, recommendations, and visualizations.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Automated reporting</li>
-              <li>• Data visualization</li>
-              <li>• Executive summaries</li>
-              <li>• Custom formatting</li>
+              <li> Automated reporting</li>
+              <li> Data visualization</li>
+              <li> Executive summaries</li>
+              <li> Custom formatting</li>
             </ul>
           </div>
         </div>

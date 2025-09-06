@@ -23,9 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
-<<<<<<< HEAD
 interface FormData {
-<<<<<<< HEAD
   name: string, email: string
   company: string, phone: string
   service: string
@@ -39,27 +37,11 @@ const ContactForm: React.FC = () => {
     phone: ''
     service: ''
     message: ''
-=======
-  name: string, email: string,
-  company: string, phone: string,
-  service: string,
-  message: string,
-}
-const ContactForm: React.FC = () => {
-  const [form_data, setFormData] = useState < FormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
   const [is_submitting, setIsSubmitting] = useState (false);
   const [submit_status, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const handleInputChange = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>: any {
     const { name, value } = e.target;
-<<<<<<< HEAD
     setFormData(prev => ({
       ...prev
       [name]: value
@@ -81,50 +63,6 @@ const ContactForm: React.FC = () => {
         service: ''
         message: ''
       });
-=======
-interface FormData {;
-  name: string, email: string,;
-  company: string, phone: string,;
-  service: string,;
-  message: string,;
-};
-const ContactForm: React.FC = () => {;
-  const [formData, setFormData] = useState<FormData>({;
-    name: '',;
-    email: '',;
-    company: '',;
-    phone: '',;
-    service: '',;
-    message: '',;
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
-    const { name, value } = e && e.target;
-    setFormData(prev => ({;
-      ...prev,;
-      [name]: value,;
-    }));
-  };
-
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-    try {,;
-      // Simulate form submission,;
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({;
-        name: '',;
-        email: '',;
-        company: '',;
-        phone: '',;
-        service: '',;
-        message: '',;
-      });
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setSubmitStatus('success');
     } catch {;
       setSubmitStatus('error');
@@ -133,7 +71,6 @@ const ContactForm: React.FC = () => {;
     }
   }
   return (
-<<<<<<< HEAD
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
         Get In Touch
@@ -154,31 +91,6 @@ const ContactForm: React.FC = () => {;
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
               Name *
             </label>
-=======
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">;
-      <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">;
-        Get In Touch;
-      </h2>;
-
-      {submitStatus === 'success' && (;
-        <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">;
-          Thank you for your message! We&apos;ll get back to you soon.;
-        </div>;
-      )}
-
-      {submitStatus === 'error' && (;
-        <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded">;
-          Something went wrong. Please try again.;
-        </div>;
-      )}
-
-      <form onSubmit={handleSubmit} className="space-y-6">;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-          <div>;
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">;
-              Name *;
-            </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <input
               type="text"
               id="name"
@@ -187,22 +99,12 @@ const ContactForm: React.FC = () => {;
               onChange={handleInputChange}
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-<<<<<<< HEAD
             />
           </div>
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
               Email *
             </label>
-=======
-            />;
-          </div>;
-
-          <div>;
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">;
-              Email *;
-            </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <input
               type="email"
               id="email"
@@ -211,7 +113,6 @@ const ContactForm: React.FC = () => {;
               onChange={handleInputChange}
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-<<<<<<< HEAD
             />
           </div>
         </div>
@@ -220,17 +121,6 @@ const ContactForm: React.FC = () => {;
             <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
               Company
             </label>
-=======
-            />;
-          </div>;
-        </div>;
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-          <div>;
-            <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">;
-              Company;
-            </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <input
               type="text"
               id="company"
@@ -238,22 +128,12 @@ const ContactForm: React.FC = () => {;
               value={formData && formData.company}
               onChange={handleInputChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-<<<<<<< HEAD
             />
           </div>
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
               Phone
             </label>
-=======
-            />;
-          </div>;
-
-          <div>;
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">;
-              Phone;
-            </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <input
               type="tel"
               id="phone"
@@ -261,7 +141,6 @@ const ContactForm: React.FC = () => {;
               value={formData && formData.phone}
               onChange={handleInputChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-<<<<<<< HEAD
             />
           </div>
         </div>
@@ -269,22 +148,11 @@ const ContactForm: React.FC = () => {;
           <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
             Service Interest
           </label>
-=======
-            />;
-          </div>;
-        </div>;
-
-        <div>;
-          <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
-            Service Interest;
-          </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <select
             id="service"
             name="service"
             value={formData && formData.service}
             onChange={handleInputChange}
-<<<<<<< HEAD
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
             <option value="">Select a service</option>
@@ -300,145 +168,15 @@ const ContactForm: React.FC = () => {;
           <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
             Message *
           </label>
-=======
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">;
-            <option value="">Select a service</option>;
-            <option value="web-development">Web Development</option>;
-            <option value="mobile-development">Mobile Development</option>;
-            <option value="ai-services">AI Services</option>;
-            <option value="cloud-solutions">Cloud Solutions</option>;
-=======
-    setFormData (prev => ({
-      ...prev,
-      [name]: value,
-    }));
-  }
-;
-  const handle_submit = async (e: React.FormEvent) => {
-    e.prevent_default ();
-    setIsSubmitting (true);
-    setSubmitStatus ('idle');
-    try {,
-      // Simulate form submission,
-      await new Promise (resolve => set_timeout (resolve, 2000));
-      setSubmitStatus ('success');
-      setFormData ({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
-      });
-;
-      setSubmitStatus ('success');
-    } catch {
-      setSubmitStatus ('error');
-    } finally {
-      setIsSubmitting (false);
-    }
-  }
-;
-  return (
-    <div className="max - w-2xl mx - auto p - 6 bg - white rounded - lg shadow - lg">;
-      <h2 className="text - 3xl font - bold text - gray - 900 mb - 6 text - center">;
-        Get In Touch;
-      </h2>;
-      {submit_status === 'success' && (
-        <div className="mb - 6 p - 4 bg - green - 100 border border - green - 400 text - green - 700 rounded">;
-          Thank you for your message! We & apos;ll get back to you soon.;
-        </div>)}
-      {submit_status === 'error' && (
-        <div className="mb - 6 p - 4 bg - red - 100 border border - red - 400 text - red - 700 rounded">;
-          Something went wrong. Please try again.;
-        </div>)}
-      <form on_submit={handle_submit} className="space - y-6">;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-          <div>;
-            <label html_for="name" className="block text - sm font - medium text - gray - 700 mb - 2">;
-              Name *;
-            </label>;
-            <input;
-              type="text";
-              id="name";
-              name="name";
-              value={form_data.name}
-              on_change={handleInputChange}
-              required;
-              className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-            />;
-          </div>;
-          <div>;
-            <label html_for="email" className="block text - sm font - medium text - gray - 700 mb - 2">;
-              Email *;
-            </label>;
-            <input;
-              type="email";
-              id="email";
-              name="email";
-              value={form_data.email}
-              on_change={handleInputChange}
-              required;
-              className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-            />;
-          </div>;
-        </div>;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-          <div>;
-            <label html_for="company" className="block text - sm font - medium text - gray - 700 mb - 2">;
-              Company;
-            </label>;
-            <input;
-              type="text";
-              id="company";
-              name="company";
-              value={form_data.company}
-              on_change={handleInputChange}
-              className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-            />;
-          </div>;
-          <div>;
-            <label html_for="phone" className="block text - sm font - medium text - gray - 700 mb - 2">;
-              Phone;
-            </label>;
-            <input;
-              type="tel";
-              id="phone";
-              name="phone";
-              value={form_data.phone}
-              on_change={handleInputChange}
-              className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-            />;
-          </div>;
-        </div>;
-        <div>;
-          <label html_for="service" className="block text - sm font - medium text - gray - 700 mb - 2">;
-            Service Interest;
-          </label>;
-          <select;
-            id="service";
-            name="service";
-            value={form_data.service}
-            on_change={handleInputChange}
-            className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-          >;
-            <option value="">Select a service</option>;
-            <option value="web - development">Web Development</option>;
-            <option value="mobile - development">Mobile Development</option>;
-            <option value="ai - services">AI Services</option>;
-            <option value="cloud - solutions">Cloud Solutions</option>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <option value="consulting">Consulting</option>;
             <option value="other">Other</option>;
           </select>;
         </div>;
-<<<<<<< HEAD
 
         <div>;
           <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
             Message *;
           </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <textarea
             id="message"
             name="message"
@@ -448,14 +186,8 @@ const ContactForm: React.FC = () => {;
             rows={5}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Tell us about your project..."
-<<<<<<< HEAD
           />
         </div>
-=======
-          />;
-        </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <button
           type="submit"
           disabled={isSubmitting}
@@ -473,7 +205,6 @@ const ContactForm: React.FC = () => {;
     </div>;
   );
 }
-=======
         <div>;
           <label html_for="message" className="block text - sm font - medium text - gray - 700 mb - 2">;
             Message *;
@@ -505,5 +236,4 @@ const ContactForm: React.FC = () => {;
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export default ContactForm;

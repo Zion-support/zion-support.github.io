@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const MarketSignals: NextPage = () => {
   return (
     <div>
@@ -27,13 +20,7 @@ const MarketSignals: NextPage = () => {
   )
 }
 export default MarketSignals;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -54,5 +41,3 @@ const MarketSignals: NextPage = () => {
     </div>);
 },
 export default MarketSignals,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

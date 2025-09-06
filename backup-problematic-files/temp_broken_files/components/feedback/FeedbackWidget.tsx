@@ -15,7 +15,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]),
   const _submit = async () => {
     if (!rating) {
-      setError('Please choose 👍 or 👎'),
+      setError('Please choose  or '),
       return
     }
     setError(null),
@@ -52,7 +52,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
               className={_`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={_rating === 'up'}
             >
-              <span>👍</span>
+              <span></span>
               <span>Yes</span>
             </button>
             <button
@@ -60,12 +60,12 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
               onClick={() => setRating(rating === 'down' ? null : 'down')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}
               aria-pressed={rating === 'down'}            >
-              <span>👎</span>
+              <span></span>
               <span>No</span>
             </button>
           </div>
           <textarea
-            placeholder=&quot;Optional feedback (what worked, what didn’t)&quot;
+            placeholder=&quot;Optional feedback (what worked, what didnt)&quot;
             value={comment}
             onChange={(e) => setComment(e.target.value.slice(0, 2000))}
             className=&quot;w-full rounded-md border px-3 py-2 text-sm&quot;
@@ -74,7 +74,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
           {error && <div className=&quot;text-xs text-red-600&quot;>{error}</div>}
           <div>
             <button onClick={submit} disabled={submitting} className=&quot;rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm&quot;>
-              {submitting ? 'Submitting…' : 'Submit feedback'}            </button>
+              {submitting ? 'Submitting' : 'Submit feedback'}            </button>
           </div>
         </div>
       )}

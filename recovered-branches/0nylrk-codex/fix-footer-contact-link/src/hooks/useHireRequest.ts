@@ -1,20 +1,12 @@
-<<<<<<< HEAD
 
 import { useState  } from 'react';
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
 import { TalentProfile } from "@/types/talent";
-=======
-import {useState} from 'react';
-import { supabase } from '@/integrations / supabase / client';
-import { toast } from '@/hooks / use - toast';
-import { TalentProfile } from '@/types / talent';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface HireRequestData {
   talent: {
     id: string;
     full_name: string;
-<<<<<<< HEAD
 
     professional_title: string
 
@@ -26,20 +18,10 @@ export interface HireRequestData {
     email: string
 
     id?: string
-=======
-    professional_title: string,
-    email?: string;
-  }
-  requester: {
-    name: string;
-    email: string,
-    id?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   project: {
     overview: string;
     timeline: string;
-<<<<<<< HEAD
 
     budgetMin: number
 
@@ -61,7 +43,6 @@ export function useHireRequest() {
       if (error) throw error;
       // Show success message
       toast({
-<<<<<<< HEAD
         title: "Request Submitted"
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
       return { success: true, requestId: response?.request_id }
@@ -69,17 +50,6 @@ export function useHireRequest() {
       console.error("Error submitting hire request:", error);
       const errorMessage = error instanceof Error
         ? error.message
-=======
-        title: "Request Submitted",
-        description: `Your request to hire ${requestData && requestData.talent.full_name} has been sent successfully.`});
-      
-      return { success: true, requestId: response?.request_id }
-    } catch (error) {
-      console && console.error("Error submitting hire request:", error);
-      
-      const errorMessage = error instanceof Error 
-        ? error && error.message 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         : "There was a problem submitting your request. Please try again.";
       setError(errorMessage);
       toast({
@@ -87,7 +57,6 @@ export function useHireRequest() {
         description: errorMessage
         variant: "destructive"});
       return { success: false, error: errorMessage }
-=======
     budget_min: number,
     budget_max: number;
   }
@@ -133,23 +102,14 @@ if (throw error) {
         variant: "destructive"});
 ;
       return { success: false, error: error_message }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsSubmitting (false);
     }
   }
-<<<<<<< HEAD
   return {
     submitHireRequest;
     isSubmitting;
 
     error
-=======
-;
-  return {
-    submitHireRequest;
-    is_submitting;
-    error;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

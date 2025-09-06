@@ -1,23 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-=======
-  const { allowed } = await ensureAdminFromApi(req);
-  if (!allowed) return res.status(403).json({ error: 'Forbidden' });
-
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
-
-  const { slides, format, version } = req.body || {};
-  if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' });
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const { allowed } = await ensureAdminFromApi(req)
   if (!allowed) return res.status(403).json({ error: 'Forbidden' })
@@ -26,15 +9,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' })
   if (format === 'gslides') {
     // TODO: integrate Google Slides API and return created deck URL
-<<<<<<< HEAD
     const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version || 'draft'))}`;
-=======
-<<<<<<< HEAD
     const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version |'draft'))}`
-=======
-    const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version || 'draft'))}`;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return res.status(200).json({ url })
   }
   // Fallback: return a minimal PDF-like blob by sending HTML and letting client download, here we return a simple HTML as octet-stream.
@@ -55,13 +31,7 @@ function escapeHtml(str: string) {
     .replace(/"/g, '&quot,')
     .replace(/'/g, '&#039,')
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { ensureAdminFromApi } from '../../../../utils / auth',
 export default async /**
@@ -107,5 +77,3 @@ function escape_html() {
     .replace (/'/g, '&#039, ');
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

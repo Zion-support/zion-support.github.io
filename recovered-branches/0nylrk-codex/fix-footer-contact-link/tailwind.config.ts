@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Config } from "tailwindcss",
 import { fontFamily } from "tailwindcss/defaultTheme",
 import plugin from "tailwindcss/plugin";
@@ -12,20 +11,6 @@ const config: Config = {
     "./app/**/*.{ts,tsx}";
     "./src/**/*.{ts,tsx}"];
   safelist: ['border-border'];
-=======
-import { Config } from './tailwindcss';
-import { font_family } from './tailwindcss / default_theme';
-import plugin from './tailwindcss / plugin';
-import animate_plugin from './tailwindcss - animate';
-const config: Config = {
-  dark_mode: ["class"],
-  content: [;
-    "./pages/**/*.{ts, tsx}";
-    "./components/**/*.{ts, tsx}";
-    "./app/**/*.{ts, tsx}";
-    "./src/**/*.{ts, tsx}"];
-  safelist: ['border - border'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   theme: {
     container: {
       center: true;
@@ -40,7 +25,6 @@ const config: Config = {
         background: "hsl (var (--background))";
         foreground: "hsl (var (--foreground))";
         primary: {
-<<<<<<< HEAD
           DEFAULT: "hsl(var(--primary))"
           foreground: "hsl(var(--primary-foreground))"}
         secondary: {
@@ -83,11 +67,7 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)"
         sm: "calc(var(--radius) - 4px)"}
       fontFamily: {
-<<<<<<< HEAD
         sans: ["var(--font-sans)", ...fontFamily.sans]}
-=======
-        sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       keyframes: {
         "accordion-down": {
           from: { height: "0" }
@@ -96,13 +76,8 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" }
           to: { height: "0" }}}
       animation: {
-<<<<<<< HEAD
         "accordion-down": "accordion-down 0.2s ease-out"
         "accordion-up": "accordion-up 0.2s ease-out"}}}
-=======
-        "accordion-down": "accordion-down 0 && 0.2s ease-out",
-        "accordion-up": "accordion-up 0 && 0.2s ease-out"}}};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
@@ -117,7 +92,6 @@ const config: Config = {
     })]}
 export default config;
 
-=======
           DEFAULT: "hsl (var (--primary))",
           foreground: "hsl (var (--primary - foreground))"}
         secondary: {
@@ -186,4 +160,3 @@ export default config;
 ;
 export default config;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

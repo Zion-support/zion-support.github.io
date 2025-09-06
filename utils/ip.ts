@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest } from 'next';
-<<<<<<< HEAD
 export function extractClientIp(req: NextApiRequest): string | null {
-<<<<<<< HEAD
   const xff = (req.headers['x-forwarded-for'] as string) |'';
   const ip =
     xff.split(',')[0]?.trim() |
@@ -15,122 +9,24 @@ export function extractClientIp(req: NextApiRequest): string | null {
   if (ip.startsWith('::ffff:')) return ip.substring(7);
   return ip;
 }
-<<<<<<< HEAD
 
 export function getClientIp(req: any): string {
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
-=======
-  const xff = (req && req.headers['x-forwarded-for'] as string) || '';
-  const ip =
-    xff && xff.split(',')[0]?.trim() ||
-    (req && req.headers['x-real-ip'] as string) ||
-    (req && req.socket?.remoteAddress ?? null);
-  if (!ip) return null;
-  if (ip && ip.startsWith('::ffff:')) return ip && ip.substring(7);
-  return ip;export function getClientIp(req: any): string {
-  const forwarded = req && req.headers['x-forwarded-for'];
-  const remoteAddress = req && req.socket?.remoteAddress,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   
   if (forwarded) {
     return Array && Array.isArray(forwarded) ? forwarded[0] : forwarded && forwarded.split(',')[0].trim();
-<<<<<<< HEAD
-=======
-=======
-// IP address utilities
-export interface IpInfo {
-  ip: string;
-  country?: string;
-  countryCode?: string;
-  region?: string;
-  city?: string;
-  timezone?: string;
-  isp?: string;
-  organization?: string;
-  as?: string;
-  query?: string;
-  status?: string;
-  message?: string;
-}
-
-export interface IpReputation {
-  ip: string;
-  reputation: 'good' | 'neutral' | 'poor' | 'malicious';
-  score: number; // 0-100
-  sources: string[];
-  lastUpdated: string;
-  details: {
-    isProxy?: boolean;
-    isVpn?: boolean;
-    isTor?: boolean;
-    isBot?: boolean;
-    isSpam?: boolean;
-    isMalicious?: boolean;
-    isBlacklisted?: boolean;
-  };
-}
-
-export interface GeolocationResult {
-  ip: string;
-  latitude?: number;
-  longitude?: number;
-  country: string;
-  countryCode: string;
-  region: string;
-  regionName: string;
-  city: string;
-  zip: string;
-  timezone: string;
-  isp: string;
-  org: string;
-  as: string;
-  query: string;
-}
-
-class IpManager {
-  private cache: Map<string, { data: any; timestamp: number }> = new Map();
-  private cacheTimeout = 24 * 60 * 60 * 1000; // 24 hours
-
-  // Extract client IP from request
-  extractClientIp(req: any): string {
-    // Check various headers for the real IP
-    const forwardedFor = req.headers['x-forwarded-for'];
-    const realIp = req.headers['x-real-ip'];
-    const cfConnectingIp = req.headers['cf-connecting-ip'];
-    const xClientIp = req.headers['x-client-ip'];
-    
-    if (forwardedFor) {
-      // X-Forwarded-For can contain multiple IPs, take the first one
-      const ips = forwardedFor.split(',').map((ip: string) => ip.trim());
-      return ips[0];
-    }
-    
-    if (realIp) return realIp;
-    if (cfConnectingIp) return cfConnectingIp;
-    if (xClientIp) return xClientIp;
-    
-    // Fallback to connection remote address
-    return req.connection?.remoteAddress || 
-           req.socket?.remoteAddress || 
-           req.ip || 
-           'unknown';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   
   return remoteAddress || 'unknown';
-=======
 export function getClientIp(req: any): string {
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
   if (forwarded) {
     return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
   }
-<<<<<<< HEAD
   return remoteAddress |'unknown';
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }
-=======
 
   // Check IP reputation
   async getIpReputation(ip: string): Promise<IpReputation | null> {
@@ -303,66 +199,8 @@ export function getClientIp(req: any): string {
       size: this.cache.size,
       entries: Array.from(this.cache.keys())
     };
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
-<<<<<<< HEAD
-=======
-
-// Singleton instance
-export const ipManager = new IpManager();
-
-// Main function for external use
-export function extractClientIp(req: any): string {
-  return ipManager.extractClientIp(req);
-}
-
-// Utility functions
-export function isValidIp(ip: string): boolean {
-  return ipManager.isValidIp(ip);
-}
-
-export function isPrivateIp(ip: string): boolean {
-  return ipManager.isPrivateIp(ip);
-}
-
-export async function getIpInfo(ip: string): Promise<IpInfo | null> {
-  return ipManager.getIpInfo(ip);
-}
-
-export async function getIpReputation(ip: string): Promise<IpReputation | null> {
-  return ipManager.getIpReputation(ip);
-}
-
-export async function isProxyOrVpn(ip: string): Promise<boolean> {
-  return ipManager.isProxyOrVpn(ip);
-}
-
-export async function getGeolocation(ip: string): Promise<GeolocationResult | null> {
-  return ipManager.getGeolocation(ip);
-}
-
-// Common IP patterns
-export const COMMON_PROXY_HEADERS = [
-  'x-forwarded-for',
-  'x-real-ip',
-  'cf-connecting-ip',
-  'x-client-ip',
-  'x-forwarded',
-  'x-cluster-client-ip',
-  'forwarded-for',
-  'forwarded'
-];
-
-export const PRIVATE_IP_RANGES = [
-  '10.0.0.0/8',
-  '172.16.0.0/12',
-  '192.168.0.0/16',
-  '127.0.0.0/8',
-  '169.254.0.0/16'
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export function extractClientIp (req: NextApiRequest): string | null {
   const xff = (req.headers['x - forwarded - for'] as string) || '';
@@ -391,5 +229,3 @@ if ( {) {
   }
   return remote_address || 'unknown';
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

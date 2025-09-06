@@ -1,24 +1,11 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 
-=======
-import Head from 'next / head',
-import React, { useMemo, useState } from 'react',
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 type RoadmapInputs = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   milestones: string
   keywords: string
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   milestones: string,
   keywords: string,
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   priorities: string
 }
 type Stage = {
@@ -33,21 +20,14 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
   const keywordList = keywords
     .split(/,|\n/)
     .map((s) => s.trim())
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     .filter(Boolean)
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     .filter(Boolean);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const priorityList = priorities
     .split(/,|\n/)
     .map((s) => s.trim())
     .filter(Boolean)
   const baseThemes = [
-<<<<<<< HEAD
     'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces'
     'Governance & OwnershipGlobal Scale']
   return baseThemes.map((theme, index) => {
@@ -66,36 +46,11 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
       index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations'
       index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem'
       index === 8 && 'Progressive decentralization, contributor ownership, councils'
-=======
-    'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces',
-    'Governance & OwnershipGlobal Scale'
-  ];
-
-  return baseThemes.map((theme, index) => {
-    const id = index + 1;
-    const name = `Zion v${id}`;
-
-    const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join() || 'core principles'}, focus: ${
-      priorityList.join() || 'execution and learning'
-    }.`;
-
-    const highlights: string[] = [
-      index === 0 && 'Design system, domain model, and initial data architecture';
-      index === 1 && 'Verifiable credentials, attestations, and dispute primitives';
-      index === 2 && 'AI-assisted scoping, matching, and brief generation';
-      index === 3 && 'Reputation graph, portable profiles, contribution proofs';
-      index === 4 && 'Programmable escrow, milestone releases, stable on/off-ramps';
-      index === 5 && 'Liquidity flywheel: supply activation, demand orchestration';
-      index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations';
-      index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem';
-      index === 8 && 'Progressive decentralization, contributor ownership, councils';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       index === 9 && 'Regionalization, localization, reliability, and performance']
       .filter(Boolean)
       .map((s) => String(s))
     const metrics: string[] = [
       'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS']
-=======
   priorities: string;
 },
 type Stage = {
@@ -139,18 +94,10 @@ function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): 
       .map ((s) => String (s)),
     const metrics: string[] = [;
       'Weekly active contributors_verified engagements (intros, briefs, scopes)On - chain / escrow settlement volume_time - to - hire and time - to - pay_retention and NPS'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { id, name, theme, objective, highlights, metrics }
   });
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function defaultOperatorPrompt(): string {
   return `You are Zion's Product Operator.
 Inputs you will receive:
@@ -158,14 +105,13 @@ Inputs you will receive:
 - keywords (string list)
 - priorities (string list)
 Goals:
-1) Produce a 10-stage roadmap labeled Zion v1 → v10
+1) Produce a 10-stage roadmap labeled Zion v1  v10
 2) For each stage: theme, objective, 3-5 highlights, 3-5 measurable metrics
 3) Ensure alignment with AI-native, trustless, talent-first, and sovereign tools ethos
 4) Include explicit risks and validation signals per stage
 5) Output concise, skimmable, exec-ready text
 Format:
-<<<<<<< HEAD
-Zion v{n} — {theme}
+Zion v{n}  {theme}
 Objective: ...
 Highlights:
 - ...
@@ -176,23 +122,7 @@ Risks:
 Validation:
 - ...
 `
-=======
-=======
-function defaultOperatorPrompt (): string {
-  return `You are Zion's Product Operator.;
-Inputs you will receive:;
-- milestones (string list);
-- keywords (string list);
-- priorities (string list);
-Goals:;
-1) Produce a 10 - stage roadmap labeled Zion v1 → v10;
-2) For each stage: theme, objective, 3 - 5 highlights, 3 - 5 measurable metrics;
-3) Ensure alignment with AI - native, trustless, talent - first, and sovereign tools ethos;
-4) Include explicit risks and validation signals per stage;
-5) Output concise, skimmable, exec - ready text;
-Format:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-Zion v{n} — {theme}
+Zion v{n}  {theme}
 Objective: ...;
 Highlights:;
 - ...;
@@ -203,40 +133,22 @@ Risks:;
 Validation:;
 - ...;
 `;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-<<<<<<< HEAD
 export default function RoadmapPage(): JSX.Element {
   const [milestones, setMilestones] = useState('MVP live, First 50 users, First 10 paid engagements')
   const [keywords, setKeywords] = useState('AI-native, trustless, talent-first, sovereign tools')
   const [priorities, setPriorities] = useState('governance, scale, regional expansion')
   const [copied, setCopied] = useState(false)
   const stages = useMemo(
-<<<<<<< HEAD
     () => generateStages({ milestones, keywords, priorities })
-=======
-    () => generateStages({ milestones, keywords, priorities });
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     [milestones, keywords, priorities]
   )
   const operatorPrompt = useMemo(() => defaultOperatorPrompt(), [])
   const copyPrompt = async () => {
     try {
-<<<<<<< HEAD
       await navigator.clipboard.writeText(operatorPrompt)
       setCopied(true)
-=======
-      await navigator.clipboard.writeText(operatorPrompt);
-      setCopied(true);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       setTimeout(() => setCopied(false), 1500)
-=======
 export default function RoadmapPage (): JSX.Element {
   const [milestones, set_milestones] = useState ('MVP live, First 50 users, First 10 paid engagements'),
   const [keywords, set_keywords] = useState ('AI - native, trustless, talent - first, sovereign tools'),
@@ -251,15 +163,9 @@ export default function RoadmapPage (): JSX.Element {
       await navigator.clipboard.write_text (operator_prompt),
       set_copied (true),
       set_timeout (() => set_copied (false), 1500);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch {
-<<<<<<< HEAD
       setCopied(false)
-=======
-      set_copied (false);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
-<<<<<<< HEAD
   }
 
   return (
@@ -272,7 +178,7 @@ export default function RoadmapPage (): JSX.Element {
         <div className="mx-auto w-full max-w-6xl px-6 py-12">
           <header className="mb-8">
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Zion Roadmap</h1>
-            <p className="mt-3 text-gray-700">Public-facing product evolution from v1 → v10 with a generator for operators.</p>
+            <p className="mt-3 text-gray-700">Public-facing product evolution from v1  v10 with a generator for operators.</p>
           </header>
           <section className="mb-10 grid gap-6 rounded-lg border border-gray-200 bg-gray-50 p-6 md:grid-cols-3">
             <div className="md:col-span-1">
@@ -283,30 +189,6 @@ export default function RoadmapPage (): JSX.Element {
               <div>
                 <label className="block text-sm font-medium text-gray-700">Milestones achieved so far</label>
                 <textarea
-=======
-  },
-  return (
-    <>;
-      <Head>;
-        <title > Zion Roadmap</title>;
-        <meta name="description" content="Zion 10 - stage product evolution and roadmap generator." />;
-      </Head>;
-      <main className="min - h-screen bg - white text - gray - 900">;
-        <div className="mx - auto w - full max - w-6xl px - 6 py - 12">;
-          <header className="mb - 8">;
-            <h1 className="text - 4xl font - extrabold tracking - tight sm:text - 5xl">Zion Roadmap</h1>;
-            <p className="mt - 3 text - gray - 700">Public - facing product evolution from v1 → v10 with a generator for operators.</p>;
-          </header>;
-          <section className="mb - 10 grid gap - 6 rounded - lg border border - gray - 200 bg - gray - 50 p - 6 md:grid - cols - 3">;
-            <div className="md:col - span - 1">;
-              <h2 className="text - xl font - semibold">Generator Inputs</h2>;
-              <p className="mt - 1 text - sm text - gray - 600">Tune the roadmap with current context and focus.</p>;
-            </div>;
-            <div className="md:col - span - 2 grid gap - 4">;
-              <div>;
-                <label className="block text - sm font - medium text - gray - 700">Milestones achieved so far</label>;
-                <textarea;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   value={milestones}
                   on_change={(e) => set_milestones (e.target.value)}
                   rows={3}
@@ -327,7 +209,6 @@ export default function RoadmapPage (): JSX.Element {
                 <label className="block text - sm font - medium text - gray - 700">Upcoming priorities</label>;
                 <input;
                   value={priorities}
-<<<<<<< HEAD
                   onChange={(e) => setPriorities(e.target.value)}
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
@@ -335,14 +216,7 @@ export default function RoadmapPage (): JSX.Element {
               </div>
             </div>
           </section>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <section className="mb-12">
             <div className="mb-3 flex items-center justify-between gap-3">
               <h2 className="text-xl font-semibold">Operator Prompt</h2>
@@ -356,11 +230,11 @@ export default function RoadmapPage (): JSX.Element {
             <pre className="whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800">{operatorPrompt}</pre>
           </section>
           <section>
-            <h2 className="mb-4 text-xl font-semibold">Zion v1 → v10</h2>
+            <h2 className="mb-4 text-xl font-semibold">Zion v1  v10</h2>
             <div className="grid gap-6 md:grid-cols-2">
               {stages.map((stage) => (
                 <article key={stage.id} className="rounded-lg border border-gray-200 p-5 shadow-sm">
-                  <h3 className="text-lg font-bold">{stage.name} — {stage.theme}</h3>
+                  <h3 className="text-lg font-bold">{stage.name}  {stage.theme}</h3>
                   <p className="mt-2 text-gray-700"><span className="font-semibold">Objective:</span> {stage.objective}</p>
                   <div className="mt-3">
                     <p className="font-semibold">Highlights</p>
@@ -402,14 +276,7 @@ export default function RoadmapPage (): JSX.Element {
       </main>
     </>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   on_change={(e) => set_priorities (e.target.value)}
                   className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
                   placeholder="e.g., governance, scale, regional expansion";
@@ -430,11 +297,11 @@ export default function RoadmapPage (): JSX.Element {
             <pre className="whitespace - pre - wrap rounded - lg border border - gray - 200 bg - gray - 50 p - 4 text - sm text - gray - 800">{operator_prompt}</pre>;
           </section>;
           <section>;
-            <h2 className="mb - 4 text - xl font - semibold">Zion v1 → v10</h2>;
+            <h2 className="mb - 4 text - xl font - semibold">Zion v1  v10</h2>;
             <div className="grid gap - 6 md:grid - cols - 2">;
               {stages.map ((stage) => (
                 <article key={stage.id} className="rounded - lg border border - gray - 200 p - 5 shadow - sm">;
-                  <h3 className="text - lg font - bold">{stage.name} — {stage.theme}</h3>;
+                  <h3 className="text - lg font - bold">{stage.name}  {stage.theme}</h3>;
                   <p className="mt - 2 text - gray - 700"><span className="font - semibold">Objective:</span> {stage.objective}</p>;
                   <div className="mt - 3">;
                     <p className="font - semibold">Highlights</p>;
@@ -473,5 +340,3 @@ export default function RoadmapPage (): JSX.Element {
       </main>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

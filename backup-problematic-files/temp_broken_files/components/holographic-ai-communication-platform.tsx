@@ -38,7 +38,7 @@ export default function HolographicAICommunicationPage() {
             </div>
             <div className=&quot;bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6 h-fit&quot;>
               <div className=&quot;text-3xl font-bold text-white&quot;>$1,899<span className=&quot;text-slate-400 text-base&quot;>/month</span></div>
-              <div className=&quot;text-slate-400&quot;>30-day free trial • Setup: 1 week</div>
+              <div className=&quot;text-slate-400&quot;>30-day free trial  Setup: 1 week</div>
               <Button href=&quot;/contact&quot; variant=&quot;quantum&quot; size=&quot;lg&quot; className=&quot;w-full mt-4&quot;>Start Free Trial<ArrowRight className=&quot;w-5 h-5 ml-2&quot; /></Button>
               <div className=&quot;mt-6 space-y-3 text-sm text-slate-300&quot;>
                 <div className=&quot;flex items-center space-x-2&quot;><Phone className=&quot;w-4 h-4 text-cyan-400&quot; /><span>{contactInfo.mobile}</span></div>

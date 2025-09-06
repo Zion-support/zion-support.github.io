@@ -53,7 +53,7 @@
       "name": "Build Process",
       "status": "failed",
       "duration": 689,
-      "error": "Build failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Unexpected token '...']\n"
+      "error": "Build failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n  Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Unexpected token '...']\n"
     }
   ],
   "summary": {

@@ -24,7 +24,7 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
 ;
   const drafted = [] as { title:string, content:string }[],;
   for (const ch of chapters) {;
-    const prompt = `Book:${meta.title} — ${meta.subtitle || ''}\nAuthor:${meta.author}\nChapter:${ch.title}\n\nWrite 600-900 words. Include 1 short quote block if appropriate.`,;
+    const prompt = `Book:${meta.title}  ${meta.subtitle || ''}\nAuthor:${meta.author}\nChapter:${ch.title}\n\nWrite 600-900 words. Include 1 short quote block if appropriate.`,;
     const completion = await client.chat.completions.create({;
       model:'gpt-4o-mini',;
       messages:[;
@@ -58,7 +58,7 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
 
   const drafted = [] as { title: string, content: string }[],
   for (const ch of chapters) {
-    const prompt = `Book: ${meta.title} — ${meta.subtitle || ''}\nAuthor: ${meta.author}\nChapter: ${ch.title}\n\nWrite 600-900 words. Include 1 short quote block if appropriate.`,
+    const prompt = `Book: ${meta.title}  ${meta.subtitle || ''}\nAuthor: ${meta.author}\nChapter: ${ch.title}\n\nWrite 600-900 words. Include 1 short quote block if appropriate.`,
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/github-pulse.json';
@@ -14,7 +10,7 @@ export default function GithubPulsePage() {
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">GitHub Pulse</h1>
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |'—'}</p>
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |''}</p>
         <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
           <Metric label="Stars" value={repo.stargazers_count} />
           <Metric label="Forks" value={repo.forks} />
@@ -31,17 +27,10 @@ function Metric({ label, value }: { label: string, value: any }) {
   return (
     <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
       <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
-      <div className="text-lg font-semibold">{value ?? '—'}</div>
+      <div className="text-lg font-semibold">{value ?? ''}</div>
     </div>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
 import data from '../../data / github - pulse.json',
@@ -55,7 +44,7 @@ function GithubPulsePage() {
     <EnhancedLayout>;
       <div className="max - w-5xl mx - auto py - 10">;
         <h1 className="text - 3xl font - bold">GitHub Pulse</h1>;
-        <p className="mt - 2 text - sm text - gray - 600 dark:text - gray - 300">Updated at {data?.generated_at || '—'}</p>;
+        <p className="mt - 2 text - sm text - gray - 600 dark:text - gray - 300">Updated at {data?.generated_at || ''}</p>;
         <div className="mt - 6 grid md:grid - cols - 3 gap - 4 text - sm">;
           <Metric label="Stars" value={repo.stargazers_count} />;
           <Metric label="Forks" value={repo.forks} />;
@@ -74,8 +63,6 @@ function Metric() {
   return (
     <div className="p - 4 border border - gray - 200 dark:border - gray - 800 rounded - lg">;
       <div className="text - xs text - gray - 500 dark:text - gray - 400">{label}</div>;
-      <div className="text - lg font - semibold">{value ?? '—'}</div>;
+      <div className="text - lg font - semibold">{value ?? ''}</div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

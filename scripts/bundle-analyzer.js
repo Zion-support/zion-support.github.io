@@ -1,14 +1,4 @@
-<<<<<<< HEAD:scripts/bundle-analyzer.js
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"; const withBundleAnalyzer = (nextConfig = {}) => { return { .nextConfig,webpack: (config,{ dev,isServer }) => { if (process.env.ANALYZE === "true") { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: "false",reportFilename: isServer ? "server-bundle.html" : "client-bundle.html"}) )} if (nextConfig.webpack) { return nextConfig.webpack(config,{ dev,isServer })} return config}} } module.exports = withBundleAnalyzer;'"'"
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -33,15 +23,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 const { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"; const withBundleAnalyzer = (nextConfig = {}) => { return { .nextConfig,webpack: (config,{ dev,isServer }) => { if (process && process.env.ANALYZE === "true") { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: "false",reportFilename: isServer ? "server-bundle && bundle.html" : "client-bundle && bundle.html"}) )} if (nextConfig && nextConfig.webpack) { return nextConfig && nextConfig.webpack(config,{ dev,isServer })} return config}} } module && module.exports = withBundleAnalyzer;'"'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/bundle-analyzer.js
 import React from 'react';
 interface BundleanalyzerProps {
   // Add props here as needed
-<<<<<<< HEAD
 }
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function Bundleanalyzer({ }: BundleanalyzerProps) {
   return (
     <div>
@@ -49,13 +34,5 @@ export default function Bundleanalyzer({ }: BundleanalyzerProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

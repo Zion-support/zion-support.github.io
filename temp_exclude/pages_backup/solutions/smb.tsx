@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -65,11 +64,6 @@ export default function SMBSolutionsPage() {;
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."">;
       <div className="min-h-screen bg-gray-50">";
   ];
-=======
-import React from 'react';
-import Layout from "../../components/Layout";";
-import { motion } from 'framer-motion';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -106,7 +100,6 @@ const smbServices = [
   }
 ];
 
-<<<<<<< HEAD
 export default function SMBSolutionsPage() {;
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function SMBSolutionsPage() {;
@@ -142,9 +135,6 @@ export default function SMBSolutionsPage() {;
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."">;
       <div className="min-h-screen bg-gray-50">";
   ];
-=======
-export default function SMBSolutionsPage() {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
@@ -157,7 +147,6 @@ export default function SMBSolutionsPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}
               className="text-center"">;
               <h1 className="text-4xl md: text-6xl font-bold mb-6">", SMB Solutions,;
@@ -221,21 +210,6 @@ export default function SMBSolutionsPage() {
             </div>;
           </div>;
         </section>;
-=======
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                SMB Solutions
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Technology solutions designed specifically for small and medium businesses.
-                Get enterprise-level capabilities at SMB-friendly prices.
-              </p>
-            </motion.div>
-          </div>
-        </section>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
         {/* Services Section */}
         <section className="py-16 px-4">
@@ -271,7 +245,6 @@ export default function SMBSolutionsPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-20">";
           <div className="container mx-auto px-4">";
@@ -312,8 +285,6 @@ export default function SMBSolutionsPage() {
             </div>;
           </div>;
         </section>;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

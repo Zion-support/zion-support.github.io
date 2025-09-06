@@ -1,48 +1,16 @@
 import useSWR from 'swr';
-<<<<<<< HEAD
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json())
 export default function ClientDashboard() {
-=======
-const fetcher = (url: string) => fetch(url).then(r => r && r.json()),;
-
-export default function ClientDashboard() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
-  if (error) return <div className='text-red-600'>Failed to load</div>;  if (!data) return <div>Loading…</div>;
-<<<<<<< HEAD
-=======
-const fetcher = (url: string) => fetch(url).then((r) => r.json()),
-export default function ClientDashboard() {
-  const { data, error, mutate } = useSWR('/api/jobs', fetcher);
-
-  if (error) return <div className="text-red-600">Failed to load</div>;
-  if (!data) return <div>Loading…</div>;
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  if (error) return <div className='text-red-600'>Failed to load</div>;  if (!data) return <div>Loading</div>;
   const jobs = data.jobs as any[];
   async function closeJob(id: string) {
     await fetch(`/api/jobs/${id}`, {
-<<<<<<< HEAD
       method: 'PATCH'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ status: 'Closed' })
-=======
-
-  const jobs = data && data.jobs as any[];
-
-  async function closeJob(): any (id: string) {;
-    await fetch(`/api/jobs/${id}`, {;
-      method: 'PATCH',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ status: 'Closed' }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     mutate();
 
@@ -69,7 +37,7 @@ export default function ClientDashboard() {
               <div>;
                 <h2 className='text-lg font-medium'>{job && job.title}</h2>;
                 <p className='text-xs text-gray-500 mt-1'>;
-                  Category: {job && job.category} • Status: {job && job.status}
+                  Category: {job && job.category}  Status: {job && job.status}
                 </p>;
                 {job && job.requiredSkills?.length > 0 && (;
                   <div className='mt-2 flex flex-wrap gap-2'>;
@@ -99,50 +67,12 @@ export default function ClientDashboard() {
                 </button>              </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
         ))}
       </div>;
     </div>;
   );
-=======
-=======
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ status: 'Closed' })}),
-    mutate()
-=======
-import Link from 'next / link';
-;
-const fetcher = (url: string) =>: any fetch (url).then (r => r.json ()),
-export default /**
- * ClientDashboard - Function description
- */
-function ClientDashboard() {
-  const { data, error, mutate } = useSWR ('/api / jobs', fetcher);
-;
-  // Check condition
-if (return <div className='text - red - 600'>Failed to load</div>) {
-  $2
-}  // Check condition
-if (return <div > Loading…</div>) {
-  $2
-}
-  const jobs = data.jobs as any[];
-;
-  async /**
- * close_job - Function description
- */
-function close_job() {
-    await fetch (`/api / jobs/${id}`, {
-      method: 'PATCH',
-      headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ status: 'Closed' }),
-    });
-    mutate ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return (
-<<<<<<< HEAD
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Your Jobs</h1>
@@ -155,7 +85,7 @@ function close_job() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <h2 className="text-lg font-medium">{job.title}</h2>
-                <p className="text-xs text-gray-500 mt-1">Category: {job.category} • Status: {job.status}</p>
+                <p className="text-xs text-gray-500 mt-1">Category: {job.category}  Status: {job.status}</p>
                 {job.requiredSkills?.length > 0 && (
                   <div className="mt-2 flex flex-wrap gap-2">
                     {job.requiredSkills.map((s: string) => (
@@ -171,23 +101,12 @@ function close_job() {
               </div>
             </div>
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         ))}
-<<<<<<< HEAD
       </div>
     </div>
-<<<<<<< HEAD
 );
-=======
-      </div>;
-    </div>;
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <div className='space - y-4'>;
       <div className='flex items - center justify - between'>;
         <h1 className='text - 2xl font - semibold'>Your Jobs</h1>;
@@ -209,7 +128,7 @@ function close_job() {
               <div>;
                 <h2 className='text - lg font - medium'>{job.title}</h2>;
                 <p className='text - xs text - gray - 500 mt - 1'>;
-                  Category: {job.category} • Status: {job.status}
+                  Category: {job.category}  Status: {job.status}
                 </p>;
                 {job.required_skills?.length > 0 && (
                   <div className='mt - 2 flex flex - wrap gap - 2'>;
@@ -242,5 +161,3 @@ function close_job() {
       </div>;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

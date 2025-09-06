@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -10,36 +8,14 @@ interface ContractPreviewProps {
   contractContent?: string;
   generatedContract?: string, // Added to support both naming conventions
   status?: 'draft' | 'ready' | 'pending',
-=======
-import React from "react";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {TalentProfile} from "@/types/talent";
-import {SmartContractInfo} from "@/types/smart-contracts";
-interface ContractPreviewProps {;
-  contractContent?: string;
-  generatedContract?: string, // Added to support both naming conventions;
-=======
-import React from './react';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { TalentProfile } from '@/types / talent';
-import { SmartContractInfo } from '@/types / smart - contracts';
-interface ContractPreviewProps {
-  contract_content?: string;
-  generated_contract?: string, // Added to support both naming conventions;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   status?: 'draft' | 'ready' | 'pending';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   talent?: TalentProfile;
-<<<<<<< HEAD
   onDeploy?: () => void;
   onSign?: () => void;
   onClose?: () => void;
   deployStatus?: string;
   deploymentInfo?: SmartContractInfo | null;
 }
-<<<<<<< HEAD
 export function ContractPreview({
   contractContent;
 
@@ -54,49 +30,11 @@ export function ContractPreview({
   // Use either contractContent or generatedContract, whichever is provided
   const displayContent = contractContent |generatedContract |"";
 
-=======
-  on_deploy?: () => void;
-  on_sign?: () => void;
-  on_close?: () => void;
-  deploy_status?: string;
-  deployment_info?: SmartContractInfo | null;
-}
-export /**
- * ContractPreview - Function description
- */
-function ContractPreview() {
-  // Use either contract_content or generated_contract, whichever is provided;
-  const display_content = contract_content || generated_contract || "";
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className="space - y-4">;
       <div className="flex justify - between items - center mb - 4">;
         <h2 className="text - 2xl font - bold">Contract Preview</h2>;
         {status === 'ready' ? (
-<<<<<<< HEAD
-=======
-
-export function ContractPreview(): any ({ ;
-  contractContent;
-  generatedContract, ;
-  status = 'ready', ;
-  onDeploy, ;
-  onSign;
-  onClose;
-  deployStatus;
-  deploymentInfo;
-}: ContractPreviewProps) {;
-
-  // Use either contractContent or generatedContract, whichever is provided;
-  const displayContent = contractContent || generatedContract || "";
-
-  return (
-    <div className="space-y-4">;
-      <div className="flex justify-between items-center mb-4">;
-        <h2 className="text-2xl font-bold">Contract Preview</h2>;
-        {status === 'ready' ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Badge
             variant="secondary"
             className="text-sm bg-green-100 text-green-800">;
@@ -111,18 +49,12 @@ export function ContractPreview(): any ({ ;
         ) : (;
           <Badge variant="outline">Draft</Badge>;
         )}
-<<<<<<< HEAD
       </div>
-=======
-      </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Contract content */}
       <div className="border rounded-lg p-6 bg-muted/50">;
         {/* Render the contract content as markdown or formatted text */}
         <div className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-muted-foreground">;
           {displayContent}
-<<<<<<< HEAD
         </div>
       </div>
       {/* Deployment info if available */}
@@ -134,21 +66,6 @@ export function ContractPreview(): any ({ ;
           <p className="text-sm">Status: {deploymentInfo.status}</p>
         </div>
       )}
-=======
-        </div>;
-      </div>;
-
-      {/* Deployment info if available */}
-      {deploymentInfo && (;
-        <div className="mt-4 p-4 bg-primary/10 rounded-lg">;
-          <h3 className="font-medium mb-2">Contract Deployment Info</h3>;
-          <p className="text-sm">Contract Address: {deploymentInfo && deploymentInfo.deployedAddress || "Pending..."}</p>;
-          <p className="text-sm">Network: {deploymentInfo && deploymentInfo.networkName || "Unknown"}</p>;
-          <p className="text-sm">Status: {deploymentInfo && deploymentInfo.status}</p>;
-        </div>;
-      )}
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Actions */}
       <div className="flex justify-end space-x-3 mt-4">;
         {onClose && (;
@@ -156,7 +73,6 @@ export function ContractPreview(): any ({ ;
             Close;
           </Button>;
         )}
-<<<<<<< HEAD
         {status === 'ready' && onSign && (
           <Button onClick={onSign}>
             Sign Contract
@@ -171,25 +87,6 @@ export function ContractPreview(): any ({ ;
     </div>
   )
 }
-=======
-
-        {status === 'ready' && onSign && (;
-          <Button onClick={onSign}>;
-            Sign Contract;
-          </Button>;
-        )}
-
-        {status === 'ready' && onDeploy && (;
-          <Button variant="outline" onClick={onDeploy}>;
-            Deploy on Blockchain;
-          </Button>;
-        )}
-      </div>;
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           <Badge;
             variant="secondary";
             className="text - sm bg - green - 100 text - green - 800";
@@ -236,4 +133,3 @@ export function ContractPreview(): any ({ ;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

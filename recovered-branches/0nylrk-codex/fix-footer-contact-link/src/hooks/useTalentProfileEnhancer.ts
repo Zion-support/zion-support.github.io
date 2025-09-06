@@ -1,30 +1,19 @@
-<<<<<<< HEAD
 
 import { useState  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-=======
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface TalentProfileData {
   name: string;
   title: string;
   bio: string;
-<<<<<<< HEAD
 
   skills: string[]
 
   location?: string
-=======
-  skills: string[],
-  location?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface CategorizedSkills {
   programming: string[];
   devops: string[];
   platforms: string[];
-<<<<<<< HEAD
 
   softSkills: string[]
 
@@ -53,11 +42,7 @@ export function useTalentProfileEnhancer() {
       }
       return data as EnhancedProfile
     } catch (err: any) {
-<<<<<<< HEAD
       setError(err.message |'Failed to enhance profile')
-=======
-      setError(err && err.message || 'Failed to enhance profile'),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return null
     } finally {
       setIsGenerating(false)
@@ -68,7 +53,6 @@ export function useTalentProfileEnhancer() {
     isGenerating;
 
     error
-=======
   soft_skills: string[],
   other: string[];
 }
@@ -111,6 +95,5 @@ if ( {) {
     enhance_profile;
     is_generating;
     error;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

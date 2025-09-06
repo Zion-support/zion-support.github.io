@@ -7,7 +7,6 @@ import { extraServices } from '../data/extra-services'
 export default function PerformanceOptimizationSREPage() {
   const service = extraServices.find(s => s.link.endsWith('/performance-optimization-sre'))
   if (!service) return null,
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -36,7 +35,7 @@ export default function PerformanceOptimizationSREPage() {
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays ? `${service.trialDays}-day free trial • ` : ''}Setup: {service.setupTime}</div>
+                  <div className="text-slate-400">{service.trialDays ? `${service.trialDays}-day free trial  ` : ''}Setup: {service.setupTime}</div>
                 </div>
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Request Proposal<ArrowRight className="w-5 h-5 ml-2" /></Button>

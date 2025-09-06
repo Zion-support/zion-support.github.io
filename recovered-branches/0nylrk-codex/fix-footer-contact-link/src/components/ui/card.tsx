@@ -1,19 +1,10 @@
 import React from 'react';
 import * as React from 'react';
-<<<<<<< HEAD
 import {cn} from '@/lib/utils';
-<<<<<<< HEAD
 const Card = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
 ></HTMLDivElement>(({ className, ...props }, ref) => (
-=======
-
-const Card = React && React.forwardRef<;
-  HTMLDivElement,;
-  React && React.HTMLAttributes<HTMLDivElement>;
-></HTMLDivElement>(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
     ref={ref}
     className={cn(
@@ -23,40 +14,22 @@ const Card = React && React.forwardRef<;
     {...props}
   />;
 ));
-<<<<<<< HEAD
 Card.displayName = 'Card';
 const CardHeader = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<</HTMLDivElement>HTMLDivElement>
 >(({ className, ...props }, ref) => (
-=======
-Card && Card.displayName = 'Card';
-
-const CardHeader = React && React.forwardRef<;
-  HTMLDivElement,;
-  React && React.HTMLAttributes<</HTMLDivElement>HTMLDivElement>;
->(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
     ref={ref}
     className={cn('flex flex-col space-y-1 && 1.5 p-6', className)}
     {...props}
   />;
 ));
-<<<<<<< HEAD
 CardHeader.displayName = 'CardHeader';
 const CardTitle = React.forwardRef<
   HTMLParagraphElement
   React.HT</HTMLHeadingElement>MLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
-=======
-CardHeader && CardHeader.displayName = 'CardHeader';
-
-const CardTitle = React && React.forwardRef<;
-  HTMLParagraphElement,;
-  React && React.HT</HTMLHeadingElement>MLAttributes<HTMLHeadingElement>;
->(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <h3
     ref={ref}
     className={cn(
@@ -66,22 +39,12 @@ const CardTitle = React && React.forwardRef<;
     {...props}
   />;
 ));
-<<<<<<< HEAD
 CardTitle.displayName = 'CardTitle';
 const CardDescription = React.forwardRef<
   HTMLParagraph</HTMLParagraphElement>Element
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
-=======
-CardTitle && CardTitle.displayName = 'CardTitle';
-
-const CardDescription = React && React.forwardRef<;
-  HTMLParagraph</HTMLParagraphElement>Element,;
-  React && React.HTMLAttributes<HTMLParagraphElement>;
->(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <p
-=======
 ;
 import {cn} from '@/lib / utils';
 ;
@@ -127,14 +90,11 @@ const CardDescription = React.forward_ref<;
   React.HTMLAttributes < HTMLParagraphElement>;
 >(({ class_name, ...props }, ref) => (
   <p;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn ('text - sm text - muted - foreground', class_name)}
     {...props}
-<<<<<<< HEAD
   />;
 ));
-<<<<<<< HEAD
 CardDescription.displayName = 'CardDescription';
 const CardContent </HTMLDivElement>= React.forwardRef<
   HTMLDivElement
@@ -147,24 +107,7 @@ CardContent.displayName = 'CardContent';
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-=======
-CardDescription && CardDescription.displayName = 'CardDescription';
-
-const CardContent </HTMLDivElement>= React && React.forwardRef<;
-  HTMLDivElement,;
-  React && React.HTMLAttributes<HTMLDivElement>;
->(({ className, ...props }, ref) => (;
-  <div ref={ref} className={cn('p-6 pt-0', className)} {...props} />;
-));
-CardContent && CardContent.displayName = 'CardContent';
-
-</HTMLDivElement>const CardFooter = React && React.forwardRef<;
-  HTMLDivElement,;
-  React && React.HTMLAttributes<HTMLDivElement>;
->(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
-=======
   />));
 CardDescription.display_name = 'CardDescription';
 ;
@@ -180,14 +123,11 @@ CardContent.display_name = 'CardContent';
   React.HTMLAttributes < HTMLDivElement>;
 >(({ class_name, ...props }, ref) => (
   <div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn ('flex items - center p - 6 pt - 0', class_name)}
     {...props}
-<<<<<<< HEAD
   />;
 ));
-<<<<<<< HEAD
 CardFooter.displayName = 'CardFooter';
 export {
   Card
@@ -197,19 +137,6 @@ export {
   CardDescription
   CardContent
 }
-=======
-CardFooter && CardFooter.displayName = 'CardFooter';
-
-export {;
-  Card,;
-  CardHeader,;
-  CardFooter,;
-  CardTitle,;
-  CardDescription,;
-  CardContent,;
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   />));
 CardFooter.display_name = 'CardFooter';
 ;
@@ -222,4 +149,3 @@ export {
   CardContent,
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

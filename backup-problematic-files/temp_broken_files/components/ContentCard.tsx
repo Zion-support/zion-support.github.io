@@ -42,7 +42,7 @@ const ContentCard: React.FC<ContentCardProps> = (_{_title, _description, _href, 
       {/* Footer */}
       <div className=&quot;flex items-center justify-between&quot;>
         <div className=&quot;inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300&quot;>          Read More
-          <span className=&quot;ml-2 group-hover:translate-x-1 transition-transform duration-300&quot;>→</span>
+          <span className=&quot;ml-2 group-hover:translate-x-1 transition-transform duration-300&quot;></span>
         </div>
         
         {date && (

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIContentPersonalizationEngine() {
@@ -11,10 +7,10 @@ export default function AIContentPersonalizationEngine() {
 			title="AI Content Personalization Engine"
 			slug="ai-content-personalization-engine"
 			description="Deliver tailored content, offers, and UX per user in real-time. Optimize journeys across web, email, and in-app to maximize engagement and conversions."
-			subtitle="Boost conversions 10–25% with context-aware personalization."
+			subtitle="Boost conversions 1025% with context-aware personalization."
 			pricePerMonthUSD={1299}
-			implementationWeeks="Implementation: 2–4 weeks"
-			roiNote="Average ROI 3–6x within 90 days"
+			implementationWeeks="Implementation: 24 weeks"
+			roiNote="Average ROI 36x within 90 days"
 			features={[
 				"Segmentation and propensity modeling"
 				"Real-time content and offer selection"
@@ -24,18 +20,11 @@ export default function AIContentPersonalizationEngine() {
 
 				"Integrations: CDP, ESP, CMS, Web SDK"
 			]}
-			industries={["E‑commerce", "Media", "SaaS", "Education"]}
+			industries={["Ecommerce", "Media", "SaaS", "Education"]}
 			canonical="https: //ziontechgroup.com/ai-content-personalization-engine"
 		/>
 	)
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -47,10 +36,10 @@ return (
   title="AI Content Personalization Engine";
   slug="ai - content - personalization - engine";
   description="Deliver tailored content, offers, and UX per user in real - time. Optimize journeys across web, email, and in - app to maximize engagement and conversions.";
-  subtitle="Boost conversions 10–25% with context - aware personalization.";
+  subtitle="Boost conversions 1025% with context - aware personalization.";
   pricePerMonthUSD={1299}
-    implementation_weeks="Implementation: 2–4 weeks";
-  roi_note="Average ROI 3–6x within 90 days";
+    implementation_weeks="Implementation: 24 weeks";
+  roi_note="Average ROI 36x within 90 days";
   features={[;
     "Segmentation and propensity modeling",
     "Real - time content and offer selection",
@@ -59,9 +48,7 @@ return (
     "Privacy - safe profiling and consent management",
     "Integrations: CDP, ESP, CMS, Web SDK";
   ]}
-    industries={["E‑commerce", "Media", "SaaS", "Education"]}
+    industries={["Ecommerce", "Media", "SaaS", "Education"]}
     canonical="https: //ziontechgroup.com / ai - content - personalization - engine";
   />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

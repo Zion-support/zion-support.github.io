@@ -264,7 +264,7 @@ initial={{ opacity: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className=&quot;border-t border-gray-800 pt-8&quot;        >
           <div className="flex flex-col md: flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">              © 2026 Zion Tech Group. All rights reserved. | 
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">               2026 Zion Tech Group. All rights reserved. | 
               <Link href=&quot;/privacy&quot; className=&quot;hover:text-cyan-400 transition-colors duration-300 ml-2&quot;>
                 Privacy Policy
               </a>

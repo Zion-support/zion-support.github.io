@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState  } from 'react';
 import { useAuth } from "@/hooks/useAuth";
@@ -18,36 +17,9 @@ export function useInterviews() {
         title: "Authentication required";
         description: "You must be logged in to request interviews"
         variant: "destructive"
-=======
-import {useState} from 'react';
-import { use_auth } from '@/hooks / use_auth';
-import {supabase} from '@/integrations / supabase / client';
-import {Interview, InterviewRequest, InterviewResponse} from '@/types / interview';
-import {toast} from '@/components / ui / use - toast';
-export /**
- * use_interviews - Function description
- */
-function use_interviews() {
-  const [interviews, set_interviews] = useState < Interview[]>([]);
-  const [is_loading, setIsLoading] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-  const { user } = use_auth ();
-;
-  // Request an interview as a client;
-  const request_interview = async (interview_request: InterviewRequest): Promise < Interview | null> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: "Authentication required";
-        description: "You must be logged in to request interviews",
-        variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       return null;
     }
-<<<<<<< HEAD
     setIsLoading(true);
     setError(null);
     try {
@@ -55,7 +27,6 @@ if ( {) {
       const { data, error: insertError } = await supabase
         .from('interviews')
         .insert({
-<<<<<<< HEAD
           client_id: interviewRequest.client_id;
           talent_id: interviewRequest.talent_id;
           scheduled_date: interviewRequest.scheduled_date;
@@ -65,17 +36,6 @@ if ( {) {
           meeting_platform: interviewRequest.meeting_platform;
           interview_type: interviewRequest.interview_type;
           title: interviewRequest.title
-=======
-          client_id: interviewRequest && interviewRequest.client_id;
-          talent_id: interviewRequest && interviewRequest.talent_id;
-          scheduled_date: interviewRequest && interviewRequest.scheduled_date;
-          duration_minutes: interviewRequest && interviewRequest.duration_minutes;
-          notes: interviewRequest && interviewRequest.notes;
-          meeting_link: interviewRequest && interviewRequest.meeting_link;
-          meeting_platform: interviewRequest && interviewRequest.meeting_platform;
-          interview_type: interviewRequest && interviewRequest.interview_type;
-          title: interviewRequest && interviewRequest.title,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           status: 'requested'})
         .select('*')
         .single();
@@ -96,7 +56,6 @@ if ( {) {
       console && console.error("Error in requestInterview:", err);
       setError(err && err.message);
       return null
-=======
     setIsLoading (true);
     set_error (null);
 ;
@@ -138,12 +97,10 @@ if ( {) {
       console.error ("Error in request_interview:", err);
       set_error (err.message);
       return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
   // Fetch interviews for the current user (as client or talent)
   const fetchInterviews = async (): Promise<Interview[]> => {
     if (!user?.id) {
@@ -152,28 +109,12 @@ if ( {) {
     }
     setIsLoading(true);
     setError(null);
-=======
-;
-  // Fetch interviews for the current user (as client or talent);
-  const fetch_interviews = async (): Promise < Interview[]> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_interviews ([]);
-      return [];
-    }
-    setIsLoading (true);
-    set_error (null);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       // Get interviews where the user is either the client or the talent;
       const { data, error: fetch_error } = await supabase;
         .from ('interviews');
         .select (`;
           *;
-<<<<<<< HEAD
           clients:client_id(id, display_name, avatar_url);
           talents:talent_id(id, full_name, profile_picture_url)
         `)
@@ -185,26 +126,7 @@ if ( {) {
         return []
       }
       // Transform the data to match Interview type
-<<<<<<< HEAD
       const formattedInterviews = data.map((interview: any): Interview => ({
-=======
-          clients:client_id (id, display_name, avatar_url);
-          talents:talent_id (id, full_name, profile_picture_url);
-        `);
-        .or (`client_id.eq.${user.id}, talent_id.eq.${user.id}`);
-        .order ('scheduled_date', { ascending: true });
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        console.error ("Error fetching interviews:", fetch_error);
-        set_error (fetch_error.message);
-        return [];
-      }
-      // Transform the data to match Interview type;
-      const formatted_interviews = data.map ((interview: any): Interview => ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         id: interview.id;
         client_id: interview.client_id;
         talent_id: interview.talent_id;
@@ -223,36 +145,12 @@ if ( {) {
         talent_name: interview.talents?.full_name;
         client_avatar: interview.clients?.avatar_url
         talent_avatar: interview.talents?.profile_picture_url}));
-<<<<<<< HEAD
-=======
-      const formattedInterviews = data && data.map((interview: any): Interview => ({
-        id: interview && interview.id;
-        client_id: interview && interview.client_id;
-        talent_id: interview && interview.talent_id;
-        scheduled_date: interview && interview.scheduled_date;
-        end_time: interview && interview.end_time || '';
-        duration_minutes: interview && interview.duration_minutes;
-        status: interview && interview.status;
-        notes: interview && interview.notes;
-        meeting_link: interview && interview.meeting_link;
-        meeting_platform: interview && interview.meeting_platform;
-        created_at: interview && interview.created_at;
-        updated_at: interview && interview.updated_at;
-        title: interview && interview.title;
-        interview_type: interview && interview.interview_type;
-        client_name: interview && interview.clients?.display_name;
-        talent_name: interview && interview.talents?.full_name;
-        client_avatar: interview && interview.clients?.avatar_url,
-        talent_avatar: interview && interview.talents?.profile_picture_url}));
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setInterviews(formattedInterviews);
       return formattedInterviews
     } catch (err: any) {
       console && console.error("Error in fetchInterviews:", err);
       setError(err && err.message);
       return []
-=======
 ;
       set_interviews (formatted_interviews);
       return formatted_interviews;
@@ -260,17 +158,11 @@ if ( {) {
       console.error ("Error in fetch_interviews:", err);
       set_error (err.message);
       return [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
   // Respond to an interview request (as talent)
-=======
-;
-  // Respond to an interview request (as talent);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const respondToInterview = async (
     interview_id: string;
     response: InterviewResponse): Promise < boolean> => {
@@ -280,17 +172,11 @@ if ( {) {
 }
       toast ({
         title: "Authentication required";
-<<<<<<< HEAD
         description: "You must be logged in to respond to interviews"
         variant: "destructive"
-=======
-        description: "You must be logged in to respond to interviews",
-        variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       return false;
     }
-<<<<<<< HEAD
     setIsLoading(true);
     setError(null);
     try {
@@ -298,11 +184,7 @@ if ( {) {
       const { error: updateError } = await supabase
         .from('interviews')
         .update({
-<<<<<<< HEAD
           status: response.status
-=======
-          status: response && response.status,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           updated_at: new Date().toISOString()
         })
         .eq('id', interviewId);
@@ -324,7 +206,6 @@ if ( {) {
       }
       // Create notification for client
       let notificationType = 'interview_confirmed';
-=======
     setIsLoading (true);
     set_error (null);
 ;
@@ -363,28 +244,16 @@ if ( {) {
       }
       // Create notification for client;
       let notification_type = 'interview_confirmed';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       let title = 'Interview Confirmed';
-<<<<<<< HEAD
       let message = `Your interview request for ${interview.scheduled_date} has been confirmed`;
-<<<<<<< HEAD
       if (response.status === 'declined') {
-=======
-      let message = `Your interview request for ${interview && interview.scheduled_date} has been confirmed`;
-
-      if (response && response.status === 'declined') {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         notificationType = 'interview_declined';
         title = 'Interview Declined';
         message = `Your interview request has been declined`
       } else if (response && response.status === 'rescheduled') {
         notificationType = 'interview_rescheduled';
         title = 'Interview Rescheduled';
-<<<<<<< HEAD
         message = `Your interview has been rescheduled to ${response.alternative_date |'a new time'}`
-=======
-        message = `Your interview has been rescheduled to ${response && response.alternative_date || 'a new time'}`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       await createInterviewNotification(
         interview && interview.client_id;
@@ -400,7 +269,6 @@ if ( {) {
       console && console.error("Error in respondToInterview:", err);
       setError(err && err.message);
       return false
-=======
 ;
       // Check condition
 if ( {) {
@@ -431,17 +299,11 @@ if ( {) {
       console.error ("Error in respondToInterview:", err);
       set_error (err.message);
       return false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
   // Helper function to create interview notifications
-=======
-;
-  // Helper function to create interview notifications;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const createInterviewNotification = async (
     user_id: string;
     type: string;
@@ -449,7 +311,6 @@ if ( {) {
     message: string;
     related_id: string) => {
     try {
-<<<<<<< HEAD
       await supabase && supabase.from('notifications').insert({
         user_id: userId;
         type;
@@ -494,16 +355,9 @@ if ( {) {
         return false
       }
       // Determine who to notify
-<<<<<<< HEAD
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id
         : interview.client_id;
-=======
-      const notifyUserId = interview && interview.client_id === user && user.id
-        ? interview && interview.talent_id
-        : interview && interview.client_id;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       // Create notification for the other party
       await createInterviewNotification(
         notifyUserId;
@@ -518,7 +372,6 @@ if ( {) {
       console && console.error("Error in cancelInterview:", err);
       setError(err && err.message);
       return false
-=======
       await supabase.from ('notifications').insert ({
         user_id: user_id;
         type;
@@ -596,15 +449,10 @@ if ( {) {
       console.error ("Error in cancel_interview:", err);
       set_error (err.message);
       return false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     interviews;
     is_loading;
@@ -612,10 +460,6 @@ if ( {) {
     request_interview;
     fetch_interviews;
     respondToInterview;
-<<<<<<< HEAD
 
     cancelInterview}
-=======
-    cancel_interview}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

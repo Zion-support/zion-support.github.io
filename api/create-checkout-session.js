@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Stripe from 'stripe';
 import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
 
@@ -31,10 +27,6 @@ async function handler(req, res) {
       payment_method_types: ['card'],
       line_items: [
         {
-=======
-export default function handler(req, res) {
-  res.status(200).json({ message: "Checkout session created" })}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
           price: priceId,
           quantity: quantity,
         },
@@ -56,9 +48,6 @@ export default function handler(req, res) {
   }
 
 export default withErrorLogging(handler);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
@@ -67,13 +56,7 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
-<<<<<<< HEAD
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-=======
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
       url: session.url
     })
   } catch (err) {,
@@ -84,4 +67,3 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 };
 export default withErrorLogging(handler),
 ,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

@@ -3,7 +3,6 @@ export default /**
  */
 function RequestQuote() {
   return (
-<<<<<<< HEAD
     <main style={{ padding: '3rem', maxWidth: 800, margin: '0 auto' }}>
       <h1>Request a Quote</h1>
       <p>Tell us about your team size, hiring needs, and timelines. Our team will reach out within 1 business day.</p>
@@ -16,14 +15,7 @@ function RequestQuote() {
       </form>
     </main>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <main style={{ padding: '3rem', max_width: 800, margin: '0 auto' }}>;
       <h1 > Request a Quote</h1>;
       <p > Tell us about your team size, hiring needs, and timelines. Our team will reach out within 1 business day.</p>;
@@ -36,5 +28,3 @@ function RequestQuote() {
       </form>;
     </main>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

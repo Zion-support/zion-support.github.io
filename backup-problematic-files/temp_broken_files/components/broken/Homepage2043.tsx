@@ -106,7 +106,7 @@ const featuredServices = allRevolutionaryServices.slice(0, 6),
       company: &quot;QuantumTech Industries&quot;,
       content: &quot;Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.&quot;,
       rating: 5,
-      avatar: &quot;👩‍🔬&quot
+      avatar: &quot;&quot
     },
     {
       name: &quot;Marcus Rodriguez&quot;,
@@ -114,7 +114,7 @@ const featuredServices = allRevolutionaryServices.slice(0, 6),
       company: &quot;SpaceMining Corp&quot;,
       content: &quot;The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks.&quot;,
       rating: 5,
-      avatar: &quot;👨‍🚀&quot
+      avatar: &quot;&quot
     },
     {
       name: &quot;Dr. Emily Watson&quot;,
@@ -122,7 +122,7 @@ const featuredServices = allRevolutionaryServices.slice(0, 6),
       company: &quot;Consciousness Research Institute&quot;,
       content: &quot;Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.&quot;,
       rating: 5,
-      avatar: &quot;👩‍💻&quot
+      avatar: &quot;&quot
     }
   ],
 
@@ -432,7 +432,7 @@ key={currentTestimonialIndex}
                   transition={{ duration: 0.5 }}
                   className=&quot;text-center max-w-4xl mx-auto&quot;
                 >
-                  <div className=&quot;text-8xl mb-6&quot;>💬</div>
+                  <div className=&quot;text-8xl mb-6&quot;></div>
                   <blockquote className=&quot;text-2xl text-white mb-8 leading-relaxed italic&quot;>
                     &quot;{testimonials[currentTestimonialIndex].content}&quot;
                   </blockquote>

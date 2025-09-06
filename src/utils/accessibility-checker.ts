@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Accessibility checker utilities
 export const checkAccessibility = () => {
   console.log('Checking accessibility...');
@@ -6,14 +5,3 @@ export const checkAccessibility = () => {
 export const validateAriaLabels = () => {
   console.log('Validating ARIA labels...');
 }
-=======
-// Accessibility checker utilities;
-export const check_accessibility = () =>: any {
-  console.log ('Checking accessibility...');
-}
-;
-export const validateAriaLabels = () =>: any {
-  console.log ('Validating ARIA labels...');
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

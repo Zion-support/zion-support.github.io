@@ -110,7 +110,7 @@ export default function BusinessToolsPage() {_const _businessTools = [
           name: 'Stripe',
           description: 'Payment processing platform for internet businesses.',
           features: ['Global paymentsSubscription billingFraud preventionDeveloper APIsAnalytics'],
-          pricing: '2.9% + 30¢ per transaction',
+          pricing: '2.9% + 30 per transaction',
           website: 'https://stripe.com',
           icon: <CreditCard className=&quot;w-6 h-6&quot; />,
           color: 'bg-gradient-to-br from-purple-500 to-blue-600'
@@ -191,25 +191,25 @@ export default function BusinessToolsPage() {_const _businessTools = [
     {;
       title:'Remote Work Tools',;
       description:'Essential tools for distributed teams and hybrid work environments.',;
-      trend:'📈 Growing Demand',;
+      trend:' Growing Demand',;
       color:'text-green-400';
     },;
     {;
       title:'AI-Powered Solutions',;
       description:'Business tools leveraging AI for automation and intelligent insights.',;
-      trend:'🚀 High Growth',;
+      trend:' High Growth',;
       color:'text-blue-400';
     },;
     {;
       title:'Cloud-Native Platforms',;
       description:'Business applications built for scalability and global accessibility.',;
-      trend:'☁️ Mainstream',;
+      trend:' Mainstream',;
       color:'text-cyan-400';
     },;
     {;
       title:'Security & Compliance',;
       description:'Tools ensuring data protection and regulatory compliance.',;
-      trend:'🔒 Critical',;
+      trend:' Critical',;
       color:'text-orange-400';
     }
   ],

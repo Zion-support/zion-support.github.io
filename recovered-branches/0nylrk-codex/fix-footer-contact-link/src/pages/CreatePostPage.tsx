@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -45,70 +43,15 @@ export default function CreatePostPage() {
         description: "There was a problem creating your post"
         variant: "destructive"
       })
-=======
-import {useState, useEffect} from "react";
-import {Link, useNavigate, useSearchParams} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-import {Button} from "@/components/ui/button";
-import PostForm from "@/components/community/PostForm";
-import {useToast} from "@/hooks/use-toast";
-import {ForumCategory} from "@/types/community";
-interface PostFormValues {;
-  title: string,;
-  content: string,;
-  categoryId: ForumCategory,;
-  tags: string;
-}
-
-export default function CreatePostPage() {;
-  const navigate = useNavigate();
-  const { toast } = useToast();
-  const [searchParams] = useSearchParams();
-
-  // Get category from URL query params if available;
-  const initialCategory = searchParams && searchParams.get("category") as ForumCategory | null;
-
-  const initialValues: Partial<PostFormValues> = {;
-    categoryId: initialCategory || "project-help";
-  };
-
-  const handleSubmit = async (values: PostFormValues) => {;
-    try {;
-      // Here we would normally save to the database;
-      // For now, we'll just simulate a successful post creation;
-
-      // Parse tags into an array;
-      const tagsArray = values && values.tags.split(",").map(tag => tag && tag.trim());
-
-      toast({;
-        title: "Post created",;
-        description: "Your post has been published successfully";
-      });
-
-      // Redirect to the forum category;
-      navigate(`/community/category/${values && values.categoryId}`);
-    } catch (error) {;
-      toast({;
-        title: "Error",;
-        description: "There was a problem creating your post",;
-        variant: "destructive";
-      });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
   return (
-<<<<<<< HEAD
     <AppLayout>
-=======
-    <AppLayout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <SEO
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
-<<<<<<< HEAD
       />
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
@@ -124,27 +67,6 @@ export default function CreatePostPage() {;
     </AppLayout>
   )
 }
-=======
-      />;
-
-      <div className="container py-8">;
-        <div className="flex items-center gap-3 mb-6">;
-          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
-            Forum;
-          </Link>;
-          <span className="text-muted-foreground">/</span>;
-          <span className="text-sm font-medium">Create Post</span>;
-        </div>;
-
-        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
-
-        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
-      </div>;
-    </AppLayout>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { useState, useEffect } from './react';
 import { Link, use_navigate, useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -217,4 +139,3 @@ function CreatePostPage() {
       </div>;
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

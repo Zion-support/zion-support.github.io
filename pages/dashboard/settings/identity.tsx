@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useEffect, useState } from 'react';
 
@@ -12,21 +11,14 @@ export default function IdentitySettingsPage() {
   const [error, setError] = useState('')
   async function load() {
     try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`)
       const data = await res.json()
       if (data.ok) setProfile(data.profile)
       else setError(data.error |'Not found')
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
       const data = await res.json();
       if (data.ok) setProfile(data.profile);
       else setError(data.error || 'Not found')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next / head',
 import type { KycProfile } from '../../../utils / kyc',
@@ -49,16 +41,10 @@ function load() {
   $2
 }
       else set_error (data.error || 'Not found');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (e) {
-<<<<<<< HEAD
       setError('Failed to fetch')
-=======
-      set_error ('Failed to fetch');
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
-<<<<<<< HEAD
   useEffect(() => {
     load()
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -76,21 +62,14 @@ function load() {
           <ProfileBadges profile={profile |undefined} />
         </div>
         <div className="mb-4 text-sm text-gray-600">
-          Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'}
+          Status: {profile ? profile.status : 'not_started'}  AML: {profile ? profile.amlStatus : 'unknown'}
         </div>
         <a href="/verify" className="inline-block rounded bg-blue-600 text-white px-4 py-2">Go to verification</a>
         {error && <div className="mt-3 text-sm text-red-600">{error}</div>}
       </main>
     </>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   useEffect (() => {
     load (),
     // eslint - disable - next - line react - hooks / exhaustive - deps;
@@ -107,12 +86,10 @@ function load() {
           <ProfileBadges profile={profile || undefined} />;
         </div>;
         <div className="mb - 4 text - sm text - gray - 600">;
-          Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.aml_status : 'unknown'}
+          Status: {profile ? profile.status : 'not_started'}  AML: {profile ? profile.aml_status : 'unknown'}
         </div>;
         <a href="/verify" className="inline - block rounded bg - blue - 600 text - white px - 4 py - 2">Go to verification</a>;
         {error && <div className="mt - 3 text - sm text - red - 600">{error}</div>}
       </main>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

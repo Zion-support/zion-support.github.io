@@ -173,7 +173,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 mt-8 pt-8>
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className=text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} Zion Tech Group. All rights reserved.
+               {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm>
               <Link href="/privacy" className=text-gray-400 hover:text-white transition-colors">

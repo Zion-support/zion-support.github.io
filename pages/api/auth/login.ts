@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth';
 import { UserRole } from '../../../utils/messaging/types';
@@ -17,8 +13,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ user })
 }
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth';
 import { UserRole } from '../../../utils/messaging/types';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -31,10 +25,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   setUserCookie(res, user);
   res.status(200).json({ user })
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { NextApiRequest, NextApiResponse } from 'next',
 import { ensureDemoUsers, generate_user, setUserCookie, upsert_user } from '../../../utils / auth',
 import { UserRole } from '../../../utils / messaging / types',
@@ -56,5 +46,3 @@ function handler() {
   res.status (200).json ({ user });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

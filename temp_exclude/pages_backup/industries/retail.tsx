@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -32,15 +31,12 @@ import { motion } from 'framer-motion';
 import { ShoppingCart, ;
   Brain, ;
   BarChart3, ;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -69,21 +65,6 @@ const services = [;
   {}
     title: 'E-commerce Platforms,',;
     description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',;
-=======
-import {
-  ShoppingCart,
-  Brain,
-  BarChart3,
-  CheckCircle,
-  ArrowRight,
-  Package,
-  Users,
-  CreditCard,
-  Smartphone,
-  Globe,
-  Database;
-} from 'lucide-react';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -152,7 +133,6 @@ const services = [
       'Social commerce integration'';
     ];
   }
-<<<<<<< HEAD
 ;];
 const benefits = [;
   {}
@@ -160,8 +140,6 @@ const benefits = [;
     description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',;
     icon: ShoppingCart;
     icon: ShoppingCart,;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 ];
 const benefits = [
   {
@@ -184,7 +162,6 @@ const benefits = [
     description: 'Advanced analytics provide actionable insights for business growth.,',
     icon: Database,
   }
-<<<<<<< HEAD
 ;];
 export default function RetailPage() {;
   return (
@@ -227,8 +204,6 @@ export default function RetailPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 ];
 export default function RetailPage() {
   return (
@@ -282,7 +257,6 @@ export default function RetailPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Retail Technology Services,;
@@ -332,44 +306,12 @@ export default function RetailPage() {
                     {service && service.features.map((feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />;
-=======
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Retail Technology Services
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive retail technology solutions designed for modern businesses,
-                from small boutiques to large retail chains.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  <ul className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         {feature}
                       </li>,
                     ))}
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
             </div>,;
           </div>;
         </section>;
@@ -382,18 +324,12 @@ export default function RetailPage() {
             </div>;
           </div>;
         </section>;
-=======
-            </div>
-          </div>
-        </section>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Retail Solutions?,;
@@ -419,23 +355,6 @@ export default function RetailPage() {
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}
-=======
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Why Choose Our Retail Solutions?
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our retail technology solutions deliver measurable improvements in sales,
-                customer experience, and operational efficiency.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={benefit.title}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -448,7 +367,6 @@ export default function RetailPage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
             </div>,;
           </div>;
         </section>;
@@ -461,18 +379,12 @@ export default function RetailPage() {
             </div>;
           </div>;
         </section>;
-=======
-            </div>
-          </div>
-        </section>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-violet-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}>,;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Retail?,;
               </h2>;
@@ -513,29 +425,4 @@ export default function RetailPage() {
       </div>;
     </Layout>;
   ),;
-=======
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Transform Retail?
-              </h2>
-              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-                Let our retail technology experts help you implement solutions that drive sales
-                and enhance customer experience.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Start Your Retail Project
-                </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
-                  Learn About Our Expertise
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }

@@ -114,7 +114,7 @@ export default function UNBridge() {;
             <textarea name="promptAssist" rows={5} value={form.promptAssist} onChange={onChange} className="w-full border rounded p-2" />;
           </label>;
           <div className="flex gap-3">;
-            <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' :'Generate Proposal'}</button>;
+            <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working' :'Generate Proposal'}</button>;
           </div>;
         </div>;
         <div className="space-y-3">;
@@ -148,7 +148,7 @@ export default function UNBridge() {;
                 <div>IPFS CID:{result.meta.artifacts.ipfsCid}</div>;
               )}
               {result.meta.artifacts?.signature && (;
-                <div>Signature:{result.meta.artifacts.signature.slice(0, 30)}…</div>;              )}
+                <div>Signature:{result.meta.artifacts.signature.slice(0, 30)}</div>;              )}
             </div>;
           )}
         </div>;
@@ -162,7 +162,7 @@ export default function UNBridge() {;
 }{
   result.meta.artifacts?.signature && (<div>Signature: {
   result.meta.artifacts.signature.slice (0, 30) 
-}…</div>) 
+}</div>) 
 }</div>) 
 }</div> </div> </div>) 
 }

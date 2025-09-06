@@ -1,9 +1,5 @@
-<<<<<<< HEAD
   const isAdmin = user?.userType === 'admin';
   const paginatedTalents = filteredTalents;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { useRouter } from 'next/router', // Changed from useNavigate
 import Link from 'next/link';
@@ -40,9 +36,7 @@ export default function TalentDirectory() {
               )}
             </ErrorBoundary>
           </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
           {/* Mobile filter sidebar */}
           {isMobileFilterOpen && (
             <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
@@ -89,24 +83,10 @@ export default function TalentDirectory() {
 }
   )
 }
-=======
-  const pageKey = `talent-directory-${routeKey}-${router && router.asPath}`;
-  );
-}
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   const is_admin = user?.user_type === 'admin';
   const paginated_talents = filtered_talents;
   const page_key = `talent - directory-${route_key}-${router.as_path}`);
 }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

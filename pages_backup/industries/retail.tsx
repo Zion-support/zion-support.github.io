@@ -1,34 +1,3 @@
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -36,23 +5,15 @@ import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
 import { ShoppingCart, 
   Brain, 
-=======
-import { ShoppingCart, ;
-  Brain, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
   BarChart3, ;
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -60,14 +21,9 @@ import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
 import { ShoppingCart, 
   Brain, 
   BarChart3, 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import {
   ShoppingCart,
   Brain,
@@ -78,7 +34,6 @@ import {
   Users,
   CreditCard,
   Smartphone,
-=======
 import { ShoppingCart, ;
   Brain, ;
   BarChart3, ;
@@ -92,31 +47,14 @@ import {;
   Users,;
   CreditCard,;
   Smartphone,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
   Globe,;
   Database;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import Layout from '../../components/Layout';';
 const services = [;
   {}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
     title: 'E-commerce Platforms,',
     description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -127,7 +65,6 @@ const services = [
       'Custom storefront development,',
       'Payment gateway integration',',
       'Inventory management',',
-=======
     title: 'E-commerce Platforms,',;
     description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',;
 import Layout from '../../components/Layout';
@@ -140,12 +77,10 @@ const services = [;
       'Custom storefront development,',;
       'Payment gateway integration',',;
       'Inventory management',',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
       'Order processing systems'';
     ];
   },;
   {}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
     title: 'Inventory Management AI,',
     description: 'AI-powered inventory optimization and demand forecasting systems.,',
     icon: Brain,
@@ -153,20 +88,10 @@ const services = [;
       'Demand forecasting,',
       'Stock optimization',',
       'Automated reordering',',
-=======
-    title: 'Inventory Management AI,',;
-    description: 'AI-powered inventory optimization and demand forecasting systems.,',;
-    icon: Brain,;
-    features: [,;
-      'Demand forecasting,',;
-      'Stock optimization',',;
-      'Automated reordering',',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
       'Waste reduction'';
     ];
   },;
   {}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
     title: 'Customer Analytics,',
     description: 'Advanced analytics to understand customer behavior and preferences.,',
     icon: BarChart3,
@@ -174,20 +99,10 @@ const services = [;
       'Customer segmentation,',
       'Purchase pattern analysis',',
       'Personalization engines',',
-=======
-    title: 'Customer Analytics,',;
-    description: 'Advanced analytics to understand customer behavior and preferences.,',;
-    icon: BarChart3,;
-    features: [,;
-      'Customer segmentation,',;
-      'Purchase pattern analysis',',;
-      'Personalization engines',',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
       'Lifetime value prediction'';
     ];
   },;
   {}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
     title: 'Personalized Recommendations,',
     description: 'AI-driven product recommendation systems for enhanced customer experience.,',
     icon: Users,
@@ -195,20 +110,10 @@ const services = [;
       'Machine learning algorithms,',
       'Real-time recommendations',',
       'Cross-selling optimization',',
-=======
-    title: 'Personalized Recommendations,',;
-    description: 'AI-driven product recommendation systems for enhanced customer experience.,',;
-    icon: Users,;
-    features: [,;
-      'Machine learning algorithms,',;
-      'Real-time recommendations',',;
-      'Cross-selling optimization',',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
       'A/B testing frameworks'';
     ];
   },;
   {}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
     title: 'Supply Chain Optimization,',
     description: 'End-to-end supply chain management with AI optimization.,',
     icon: Package,
@@ -216,20 +121,10 @@ const services = [;
       'Supplier management,',
       'Logistics optimization',',
       'Demand planning',',
-=======
-    title: 'Supply Chain Optimization,',;
-    description: 'End-to-end supply chain management with AI optimization.,',;
-    icon: Package,;
-    features: [,;
-      'Supplier management,',;
-      'Logistics optimization',',;
-      'Demand planning',',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
       'Cost reduction'';
     ];
   },;
   {}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
     title: 'Omnichannel Solutions,',
     description: 'Seamless integration across all sales channels and touchpoints.,',
     icon: Smartphone,
@@ -237,43 +132,16 @@ const services = [;
       'Unified customer experience,',
       'Cross-channel inventory',',
       'Mobile commerce',',
-=======
-    title: 'Omnichannel Solutions,',;
-    description: 'Seamless integration across all sales channels and touchpoints.,',;
-    icon: Smartphone,;
-    features: [,;
-      'Unified customer experience,',;
-      'Cross-channel inventory',',;
-      'Mobile commerce',',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
       'Social commerce integration'';
     ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ;];
 const benefits = [;
   {}
     title: 'Increased Sales,',;
     description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',;
     icon: ShoppingCart;
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
     icon: ShoppingCart,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
 ];
 const benefits = [;
   {;
@@ -282,7 +150,6 @@ const benefits = [;
     icon: ShoppingCart;
   },;
   {}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
     title: 'Better Customer Experience,',
     description: 'Seamless omnichannel experiences keep customers engaged and satisfied.,',
     icon: Users;
@@ -296,30 +163,7 @@ const benefits = [;
     title: 'Data-Driven Insights,',
     description: 'Advanced analytics provide actionable insights for business growth.,',
     icon: Database;
-=======
-    title: 'Better Customer Experience,',;
-    description: 'Seamless omnichannel experiences keep customers engaged and satisfied.,',;
-    icon: Users,;
-  },;
-  {}
-    title: 'Reduced Costs,',;
-    description: 'Optimized inventory and supply chain reduce operational costs significantly.,',;
-    icon: BarChart3,;
-  },;
-  {}
-    title: 'Data-Driven Insights,',;
-    description: 'Advanced analytics provide actionable insights for business growth.,',;
-    icon: Database,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ;];
 export default function RetailPage() {;
   return (
@@ -343,12 +187,8 @@ export default function RetailPage() {;
               className="text-center max-w-4xl mx-auto"">;
               <div className="flex items-center justify-center mb-6">";
                 <ShoppingCart className="w-12 h-12 text-purple-400 mr-4" />";
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
                 <h1 className="text-5xl md:text-6xl font-bold">";
                   Retail;
-=======
-                <h1 className="text-5xl md: text-6xl font-bold">", Retail,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
                   <span className="block bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -358,46 +198,22 @@ export default function RetailPage() {;
                 Revolutionize retail with cutting-edge e-commerce platforms, AI-powered analytics, ;
                 and omnichannel solutions that drive sales and customer satisfaction.;
               </p>;
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
                   Get Retail Consultation;
                 </Link>;
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">";
                   View Retail Case Studies;
-=======
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
-                  Get Retail Consultation;
-                </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-purple-600 transition-all duration-300 font-semibold">", View Retail Case Studies,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
                 </Link>;
               </div>;
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ];
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
 export default function RetailPage() {
   
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
-export default function RetailPage() {;
-  return (
-    <Layout
-      title="Retail Technology Solutions - Zion Tech Group"
-      description="Transform retail with e-commerce platforms, inventory management AI, customer analytics, and omnichannel solutions."
-      keywords="retail technology, e-commerce, inventory management, customer analytics, omnichannel retail, retail AI">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-purple-900 via-violet-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -441,42 +257,23 @@ export default function RetailPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Retail Technology Services;
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Retail Technology Services,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive retail technology solutions designed for modern businesses, ;
                 from small boutiques to large retail chains.;
               </p>;
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -494,14 +291,6 @@ export default function RetailPage() {;
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">";
@@ -509,7 +298,6 @@ export default function RetailPage() {;
                   </div>;
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
-=======
             </motion && motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
               {services && services.map((service, index) => (,;
@@ -536,19 +324,10 @@ export default function RetailPage() {;
                   </div>,;
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service && service.title}</h3>";
                   <p className="text-gray-600 mb-6 leading-relaxed">{service && service.description}</p>";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
                   <ul className="space-y-3">";
                     {service && service.features.map((feature, featureIndex) => (,;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">
@@ -560,7 +339,6 @@ export default function RetailPage() {;
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-=======
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100";
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">;
@@ -572,36 +350,21 @@ export default function RetailPage() {;
                     {service && service.features.map((feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
                         {feature}
                       </li>,;
                     ))}
                   </ul>,;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-=======
-<<<<<<< HEAD
-=======
             </div>,
           </div>;
         </section>;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-            </div>,
-          </div>;
-        </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
-=======
             </div>,;
           </div>;
         </section>;
@@ -614,49 +377,29 @@ export default function RetailPage() {;
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Why Choose Our Retail Solutions?;
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Retail Solutions?,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our retail technology solutions deliver measurable improvements in sales, ;
                 customer experience, and operational efficiency.,;
               </p>;
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -671,7 +414,6 @@ export default function RetailPage() {;
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
-=======
             </motion && motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
               {benefits && benefits.map((benefit, index) => (,;
@@ -689,7 +431,6 @@ export default function RetailPage() {;
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -701,29 +442,15 @@ export default function RetailPage() {;
                   <p className="text-gray-600 leading-relaxed">{benefit && benefit.description}</p>";
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-=======
-<<<<<<< HEAD
-=======
             </div>,
           </div>;
         </section>;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-            </div>,
-          </div>;
-        </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
-=======
             </div>,;
           </div>;
         </section>;
@@ -736,48 +463,29 @@ export default function RetailPage() {;
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-violet-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Retail?;
-=======
               transition={{ duration: 0 && 0.8 }}>,;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Retail?,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
               </h2>;
               <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">";
                 Let our retail technology experts help you implement solutions that drive sales;
                 and enhance customer experience.;
               </p>;
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
                   Start Your Retail Project;
                 </Link>;
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">";
                   Learn About Our Expertise;
-=======
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
-                  Start Your Retail Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-purple-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx
                 </Link>;
               </div>;
             </motion && motion.div>;
@@ -785,14 +493,6 @@ export default function RetailPage() {;
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD:pages_backup/industries/retail.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Retail?
@@ -815,7 +515,6 @@ export default function RetailPage() {;
       </div>
     </Layout>
   );
-=======
             >;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">;
                 Ready to Transform Retail?;
@@ -839,4 +538,3 @@ export default function RetailPage() {;
     </Layout>;
   ),;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/retail.tsx

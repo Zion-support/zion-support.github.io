@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link';
 import { Heart } from 'lucide-react'
 import { useWishlist  } from '@/hooks/useWishlist';
@@ -43,8 +38,6 @@ interface ProductCardProps {
   const isMobile = useMediaQuery('(max-width: 768px)')
   const isTablet = useMediaQuery('(max-width: 1200px)')
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const stockStatus =;
     product && product.stock === undefined;
       : 'In stock';
@@ -60,23 +53,12 @@ interface ProductCardProps {
   const isTablet = useMediaQuery('(max-width: 1200px)'),;
 
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   );
 }
-<<<<<<< HEAD
   )
 }
-=======
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   const stock_status =;
     product.stock === undefined;
       : 'In stock';
@@ -91,5 +73,3 @@ interface ProductCardProps {
 }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

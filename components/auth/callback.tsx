@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,16 +22,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function AuthCallbackPage() {
-=======
-
-export default function AuthCallbackPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export default function AuthCallbackPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Auth Callback</h1>;
@@ -50,12 +38,7 @@ export default function AuthCallbackPage() {
       <p className="mt-2 text-gray-600 dark: text-gray-300">Processing sign-in...</p>;
     </div>;
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 ;
 export default /**
@@ -78,4 +61,3 @@ function AuthCallbackPage() {
       <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Processing sign - in...</p>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -32,7 +32,7 @@ export default function GrantDetailPage() {
       <div className=&quot;flex items-center justify-between mb-4&quot;>
         <div>
           <h1 className=&quot;text-2xl font-semibold&quot;>{item.projectName}</h1>
-          <div className=&quot;text-sm text-gray-600 dark:text-gray-400&quot;>{item.sector || 'General'} • {item.region || 'Global'} • {item.program === 'incubator' ? 'Incubator' : 'Grant'}</div>
+          <div className=&quot;text-sm text-gray-600 dark:text-gray-400&quot;>{item.sector || 'General'}  {item.region || 'Global'}  {item.program === 'incubator' ? 'Incubator' : 'Grant'}</div>
         </div>
         <div className=&quot;flex gap-2 items-center&quot;>
           {item.program === 'incubator' && <span className=&quot;px-2 py-1 text-xs rounded bg-purple-100 text-purple-700&quot;>Incubated by Zion</span>}

@@ -286,7 +286,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                   <div className=&quot;text-xs text-white/60 mb-2&quot;>ROI & Market Position</div>
                   <div className=&quot;text-xs text-white/80 leading-relaxed&quot;>{service.roi}</div>
                   <div className=&quot;mt-2 text-xs text-white/60&quot;>
-                    Market: {service.marketSize} • Growth: {service.growthRate}
+                    Market: {service.marketSize}  Growth: {service.growthRate}
                   </div>
                 </div>
 

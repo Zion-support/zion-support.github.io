@@ -7,10 +7,10 @@ export default function AIContentPersonalizationEngine() {;
 			title="AI Content Personalization Engine";
 			slug="ai-content-personalization-engine";
 			description="Deliver tailored content, offers, and UX per user in real-time. Optimize journeys across web, email, and in-app to maximize engagement and conversions.";
-			subtitle="Boost conversions 10–25% with context-aware personalization.";
+			subtitle="Boost conversions 1025% with context-aware personalization.";
 			pricePerMonthUSD={1299}
-			implementationWeeks="Implementation:2–4 weeks";
-			roiNote="Average ROI 3–6x within 90 days";
+			implementationWeeks="Implementation:24 weeks";
+			roiNote="Average ROI 36x within 90 days";
 			features={[;
 				"Segmentation and propensity modeling",;
 				"Real-time content and offer selection",;
@@ -19,7 +19,7 @@ export default function AIContentPersonalizationEngine() {;
 				"Privacy-safe profiling and consent management",;
 				"Integrations:CDP, ESP, CMS, Web SDK";
 			]}
-			industries={["E‑commerce", "Media", "SaaS", "Education"]}
+			industries={["Ecommerce", "Media", "SaaS", "Education"]}
 			canonical="https://ziontechgroup.com/ai-content-personalization-engine";
 		/>;
 	);}
@@ -49,10 +49,10 @@ const AIContentPersonalizationEngine: React.FC = () => {
               Build detailed user profiles based on behavior, preferences, and interactions.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Behavior analysis</li>
-              <li>• Preference learning</li>
-              <li>• Demographic insights</li>
-              <li>• Engagement patterns</li>
+              <li> Behavior analysis</li>
+              <li> Preference learning</li>
+              <li> Demographic insights</li>
+              <li> Engagement patterns</li>
             </ul>
           </div>
 
@@ -62,10 +62,10 @@ const AIContentPersonalizationEngine: React.FC = () => {
               Automatically adapt content to match user preferences and context.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Dynamic content generation</li>
-              <li>• A/B testing</li>
-              <li>• Real-time adaptation</li>
-              <li>• Multi-variant content</li>
+              <li> Dynamic content generation</li>
+              <li> A/B testing</li>
+              <li> Real-time adaptation</li>
+              <li> Multi-variant content</li>
             </ul>
           </div>
 
@@ -75,10 +75,10 @@ const AIContentPersonalizationEngine: React.FC = () => {
               Continuously optimize personalization based on user engagement and feedback.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Engagement tracking</li>
-              <li>• Conversion optimization</li>
-              <li>• Machine learning</li>
-              <li>• Performance analytics</li>
+              <li> Engagement tracking</li>
+              <li> Conversion optimization</li>
+              <li> Machine learning</li>
+              <li> Performance analytics</li>
             </ul>
           </div>
         </div>

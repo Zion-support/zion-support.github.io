@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -68,19 +67,13 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDi
   fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8');
   return meta;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs();
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export function updateProposalMeta(
   id: string,
   updater: (meta: ProposalMeta) => ProposalMeta
 ): ProposalMeta {
   ensureDirs();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const metaPath = path.join(dataDir, id, 'meta.json');
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
   const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
@@ -88,14 +81,9 @@ export function updateProposalMeta(
   fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8');
   return next;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export function listProposals(): ProposalMeta[] {ensureDirs();
   const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json')));
   const metas: ProposalMeta[] = entries.map((id) => {;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export function listProposals(): ProposalMeta[] {
   ensureDirs();
@@ -103,53 +91,35 @@ export function listProposals(): ProposalMeta[] {
     .readdirSync(dataDir)
     .filter(f => fs.existsSync(path.join(dataDir, f, 'meta.json')));
   const metas: ProposalMeta[] = entries.map(id => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const metaPath = path.join(dataDir, id, 'meta.json');
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   });
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export function getProposal(id: string): ProposalMeta | null {try {;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export function getProposal(id: string): ProposalMeta | null {
   try {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const metaPath = path.join(dataDir, id, 'meta.json');
     if (!fs.existsSync(metaPath)) return null;
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   } catch {return null;
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export function savePdf(id: string, pdfBytes: Uint8Array): string {
   ensureDirs();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({;
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export function updateArtifacts(
   id: string,
@@ -160,10 +130,6 @@ export function updateArtifacts(
     artifacts: { ...meta.artifacts, ...artifacts },
   }));
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import fs from 'fs',
 import path from 'path',
 import { v4 as uuidv4 } from 'uuid',
@@ -289,5 +255,3 @@ export function update_artifacts (id: string, artifacts: Partial < ProposalMeta[
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

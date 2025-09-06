@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AiFinancialPlanningPlatform() {
@@ -13,7 +9,7 @@ export default function AiFinancialPlanningPlatform() {
 			subtitle="Smarter, faster financial decisions"
 			pricePerMonthUSD={349}
 			implementationWeeks="1-2 weeks"
-			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
+			roiNote="Finance teams report 36x ROI via faster cycles and improved accuracy"
 			features={[
 				"Driver-based planning and what-if scenarios"
 				"Automated variance analysis and anomaly detection"
@@ -29,14 +25,7 @@ export default function AiFinancialPlanningPlatform() {
 			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
 		/>
 	)
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -50,7 +39,7 @@ return (
   subtitle="Smarter, faster financial decisions";
   pricePerMonthUSD={349}
     implementation_weeks="1 - 2 weeks";
-  roi_note="Finance teams report 3–6x ROI via faster cycles and improved accuracy";
+  roi_note="Finance teams report 36x ROI via faster cycles and improved accuracy";
   features={[;
     "Driver - based planning and what - if scenarios",
     "Automated variance analysis and anomaly detection",
@@ -65,5 +54,3 @@ return (
     canonical="https: //ziontechgroup.com / ai - financial - planning - platform";
   />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

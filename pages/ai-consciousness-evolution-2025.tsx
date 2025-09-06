@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIConsciousnessEvolution2025() {
@@ -13,7 +9,7 @@ export default function AIConsciousnessEvolution2025() {
 			description="Applied research and productization of affective computing, theory-of-mind modeling, and reflective agents. Build empathetic systems that understand context and intent."
 			subtitle="From narrow tasks to contextual understanding with emotional intelligence."
 			pricePerMonthUSD={4999}
-			implementationWeeks="Implementation: 6–12 weeks"
+			implementationWeeks="Implementation: 612 weeks"
 			roiNote="Strategic R&D with demonstrable prototypes and IP"
 			features={[
 				"Affective signals and sentiment grounding"
@@ -28,14 +24,7 @@ export default function AIConsciousnessEvolution2025() {
 			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
 		/>
 	)
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -49,7 +38,7 @@ return (
   description="Applied research and productization of affective computing, theory - of - mind modeling, and reflective agents. Build empathetic systems that understand context and intent.";
   subtitle="From narrow tasks to contextual understanding with emotional intelligence.";
   pricePerMonthUSD={4999}
-    implementation_weeks="Implementation: 6–12 weeks";
+    implementation_weeks="Implementation: 612 weeks";
   roi_note="Strategic R & D with demonstrable prototypes and IP";
   features={[;
     "Affective signals and sentiment grounding",
@@ -63,5 +52,3 @@ return (
     canonical="https: //ziontechgroup.com / ai - consciousness - evolution - 2025";
   />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

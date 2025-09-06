@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIAutonomousResearchAssistant() {
@@ -10,11 +6,11 @@ export default function AIAutonomousResearchAssistant() {
 
 			title="AI Autonomous Research Assistant"
 			slug="ai-autonomous-research-assistant"
-			description="An AI agent that continuously tracks competitors, markets, regulations, and technologies. It synthesizes findings, drafts briefs, and recommends actions—so your team stays ahead."
+			description="An AI agent that continuously tracks competitors, markets, regulations, and technologies. It synthesizes findings, drafts briefs, and recommends actionsso your team stays ahead."
 			subtitle="Always-on competitive and market intelligence at analyst-level quality."
 			pricePerMonthUSD={1299}
-			implementationWeeks="Implementation: 1–2 weeks"
-			roiNote="Average ROI 3–6x within 60 days"
+			implementationWeeks="Implementation: 12 weeks"
+			roiNote="Average ROI 36x within 60 days"
 			features={[
 				"Automated web and document monitoring with source citations"
 				"Daily/weekly executive briefs and dashboards"
@@ -28,14 +24,7 @@ export default function AIAutonomousResearchAssistant() {
 			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"
 		/>
 	)
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -46,11 +35,11 @@ return (
   <ServiceLanding;
   title="AI Autonomous Research Assistant";
   slug="ai - autonomous - research - assistant";
-  description="An AI agent that continuously tracks competitors, markets, regulations, and technologies. It synthesizes findings, drafts briefs, and recommends actions—so your team stays ahead.";
+  description="An AI agent that continuously tracks competitors, markets, regulations, and technologies. It synthesizes findings, drafts briefs, and recommends actionsso your team stays ahead.";
   subtitle="Always - on competitive and market intelligence at analyst - level quality.";
   pricePerMonthUSD={1299}
-    implementation_weeks="Implementation: 1–2 weeks";
-  roi_note="Average ROI 3–6x within 60 days";
+    implementation_weeks="Implementation: 12 weeks";
+  roi_note="Average ROI 36x within 60 days";
   features={[;
     "Automated web and document monitoring with source citations",
     "Daily / weekly executive briefs and dashboards",
@@ -63,5 +52,3 @@ return (
     canonical="https: //ziontechgroup.com / ai - autonomous - research - assistant";
   />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

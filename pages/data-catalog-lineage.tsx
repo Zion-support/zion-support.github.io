@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next/head';
@@ -6,13 +5,8 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Compass, Star } from 'lucide-re
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function DataCatalogLineagePage() {
-<<<<<<< HEAD
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/data-catalog-lineage'))
   if (!service) return null
-=======
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/data-catalog-lineage'));
-  if (!service) return null;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <Layout>
@@ -41,7 +35,7 @@ export default function DataCatalogLineagePage() {
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
+                  <div className="text-slate-400">{service.trialDays}-day free trial  Setup: {service.setupTime}</div>
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
@@ -57,15 +51,7 @@ export default function DataCatalogLineagePage() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
 }
-=======
-}
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import Head from 'next / head',
 import { Phone, Mail, MapPin, Check, ArrowRight, Compass, Star } from 'lucide-react',
@@ -106,7 +92,7 @@ if (return null, ) {
               <div className="flex items - end justify - between mb - 3">;
                 <div>;
                   <div className="text - 3xl font - bold text - white text - slate - 400 text - base">{service.price}<span >{service.period}</span></div>;
-                  <div className="text - slate - 400">{service.trial_days}-day free trial • Setup: {service.setup_time}</div>;
+                  <div className="text - slate - 400">{service.trial_days}-day free trial  Setup: {service.setup_time}</div>;
                 </div>;
                 <div className="flex items - center text - yellow - 400 w - 4 h - 4 mr - 1"><Star />{service.rating.to_fixed (1)}</div>;
               </div>;
@@ -123,5 +109,3 @@ if (return null, ) {
     </Layout>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

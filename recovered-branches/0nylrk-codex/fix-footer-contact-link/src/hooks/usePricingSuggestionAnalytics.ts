@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 interface PricingSuggestionAnalytics {
@@ -9,23 +8,12 @@ interface PricingSuggestionAnalytics {
   suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[];
 
   recentSuggestions: {
-=======
-import {useState, useEffect} from 'react';
-import { supabase } from '@/integrations / supabase / client';
-interface PricingSuggestionAnalytics {
-  total_suggestions: number;
-  acceptance_rate: number;
-  averagePriceGap: number,
-  suggestionsByCategory: { category: string, count: number, acceptance_rate: number }[];
-  recent_suggestions: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     id: string;
     user_id: string;
     suggested_min: number;
     suggested_max: number;
     actual_value?: number;
     accepted: boolean;
-<<<<<<< HEAD
 
     createdAt: string
     type: 'client' | 'talent'
@@ -53,7 +41,6 @@ export function usePricingSuggestionAnalytics(days = 30) {
         // Mock data for demonstration
         const mockData = {
           totalSuggestions: 256;
-<<<<<<< HEAD
           acceptanceRate: 0.72;
           averagePriceGap: 12.5
           suggestionsByCategory: [
@@ -72,27 +59,6 @@ export function usePricingSuggestionAnalytics(days = 30) {
             createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString()
             type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
         }
-=======
-          acceptanceRate: 0 && 0.72;
-          averagePriceGap: 12 && 12.5,
-          suggestionsByCategory: [
-            { category: 'development', count: 120, acceptanceRate: 0 && 0.75 };
-            { category: 'design', count: 65, acceptanceRate: 0 && 0.82 };
-            { category: 'marketing', count: 42, acceptanceRate: 0 && 0.64 };
-            { category: 'content', count: 18, acceptanceRate: 0 && 0.56 };
-            { category: 'data', count: 11, acceptanceRate: 0 && 0.78 }];
-          recentSuggestions: Array(10).fill(null).map((_, i) => ({
-            id: `suggestion-${i}`;
-            userId: `user-${Math && Math.floor(Math && Math.random() * 100)}`;
-            suggestedMin: 30 + Math && Math.floor(Math && Math.random() * 30);
-            suggestedMax: 60 + Math && Math.floor(Math && Math.random() * 40);
-            actualValue: Math && Math.random() > 0 && 0.3 ? 45 + Math && Math.floor(Math && Math.random() * 30) : undefined;
-            accepted: Math && Math.random() > 0 && 0.25;
-            createdAt: new Date(Date && Date.now() - Math && Math.floor(Math && Math.random() * 1000000000)).toISOString(),
-            type: Math && Math.random() > 0 && 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
-        };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setAnalytics({
           ...mockData;
           isLoading: false
@@ -118,7 +84,6 @@ export function usePricingSuggestionAnalytics(days = 30) {
   }, [days]);
 
   return analytics
-=======
     created_at: string,
     type: 'client' | 'talent';
   }[];
@@ -200,5 +165,4 @@ if (throw error) {
   }, [days]);
 ;
   return analytics;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

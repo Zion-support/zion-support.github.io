@@ -52,7 +52,7 @@ const BlogHome:NextPage<Props> = ({ posts, authors, topics, tags }) => {;
             <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg">;
               <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>;
               <p className="text-gray-400 mb-4">{p.excerpt}</p>;
-              <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>;
+              <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read </Link>;
             </div>;
           ))}
         </div>;

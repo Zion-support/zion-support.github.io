@@ -62,7 +62,7 @@ export function FeatureCard({ ;
           className="text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded";
           onClick={(e) => e.stopPropagation()}
         >;
-          Learn more →;
+          Learn more ;
         </Link>;
       </div>;
     </div>;
@@ -99,5 +99,5 @@ export function FeatureCard({ ;
   href 
 }className="text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded" onClick= {
   (e) => e.stopPropagation () 
-}> Learn more → </Link> </div> </div>) 
+}> Learn more  </Link> </div> </div>) 
 }

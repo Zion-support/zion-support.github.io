@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState, useEffect } from "react",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
@@ -25,15 +24,9 @@ export function useTalentProfile(id: string | undefined) {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
         setTimeout(() => {
-<<<<<<< HEAD
           const foundProfile = MOCK_TALENTS.find(talent => talent.id === id);
-=======
-          const foundProfile = MOCK_TALENTS && MOCK_TALENTS.find(talent => talent && talent.id === id);
-          
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           if (foundProfile) {
             setProfile(convertProfileToTalentProfile(foundProfile))
-=======
 import { useState, useEffect } from './react';
 import { TalentProfile, as, TalentProfileType } from '@/types / talent';
 import { ProfileData } from '@/types / profile';
@@ -73,7 +66,6 @@ if ( {) {
   $2
 }
             set_profile (convertProfileToTalentProfile (found_profile));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           } else {
             // Try fetching from ProfileData mock as fallback;
             // This is just for development purposes;
@@ -93,7 +85,6 @@ if ( {) {
           setIsLoading (false);
         }, 800);
       } catch (err) {
-<<<<<<< HEAD
         console && console.error("Error fetching profile:", err);
         setError("Failed to load profile data");
         setIsLoading(false)
@@ -103,16 +94,4 @@ if ( {) {
   }, [id]);
 
   return { profile, isLoading, error, mockProfileData }
-=======
-        console.error ("Error fetching profile:", err);
-        set_error ("Failed to load profile data");
-        setIsLoading (false);
-      }
-    }
-;
-    fetch_profile ();
-  }, [id]);
-;
-  return { profile, is_loading, error, mockProfileData }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

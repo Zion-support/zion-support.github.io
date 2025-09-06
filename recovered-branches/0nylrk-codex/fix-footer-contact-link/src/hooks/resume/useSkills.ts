@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
@@ -22,17 +21,10 @@ export function useSkills() {
         .from('resume_skills')
         .insert({
           resume_id: resumeId;
-<<<<<<< HEAD
           name: skill.name;
           proficiency: skill.proficiency;
           category: skill.category
           years_experience: skill.years_experience
-=======
-          name: skill && skill.name;
-          proficiency: skill && skill.proficiency;
-          category: skill && skill.category,
-          years_experience: skill && skill.years_experience
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         });
       if (error) throw error;
       return showSuccessToast("Skill added", "Your skill has been added to your resume")
@@ -68,7 +60,6 @@ export function useSkills() {
     addSkill;
 
     deleteSkill
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Skill} from '@/types / resume';
@@ -150,6 +141,5 @@ if (throw error) {
     error;
     add_skill;
     delete_skill;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

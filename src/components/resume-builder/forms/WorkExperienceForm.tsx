@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -87,93 +82,6 @@ export function WorkExperienceForm({
         is_current: data.is_current
         description: data.description
         location: data.location
-=======
-import { useState } from 'react';
-import { use_form } from 'react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { z } from 'zod';
-import { Button } from '@/components / ui / button';
-import { Textarea } from '@/components / ui / textarea';
-import { Input } from '@/components / ui / input';
-import { Checkbox } from '@/components / ui / checkbox';
-import { format } from 'date - fns';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components / ui / form'; import { WorkExperience } from '@/types / resume';
-import { Loader2, Edit, Trash2 } from 'lucide-react';
-import { use_resume } from '@/hooks / use_resume';
-import { Alert, AlertDescription } from '@/components / ui / alert';
-import { Card, CardContent } from '@/components / ui / card';
-import { AIEnhancementButton } from '@/components / resume - builder / forms / AIEnhancementButton';
-// Define schema for form validation;
-const workExperienceSchema = z.object ({
-  company_name: z.string ().min (1, 'Company name is required'),
-  role_title: z.string ().min (1, 'Job title is required'),
-  start_date: z.string ().min (1, 'Start date is required'),
-  end_date: z.string ().optional (),
-  is_current: z.boolean ().default (false),
-  description: z.string ().optional (),
-  location: z.string ().optional (),
-});
-type WorkExperienceFormValues = z.infer < typeof workExperienceSchema>;
-interface WorkExperienceFormProps {
-  resume_id: string;
-  work_experiences: WorkExperience[];
-  on_complete: () => void;
-  on_back: () => void;
-export /**
- * WorkExperienceForm - Function description
- */
-function WorkExperienceForm() {
-  const {
-    addWorkExperience,
-    updateWorkExperience,
-    deleteWorkExperience,
-    is_loading,
-  } = use_resume ();
-  const [editing_id, setEditingId] = useState < string | null>(null);
-  const [error, set_error] = useState < string | null>(null);
-  // Helper function to format dates to string;
-  const formatDateValue = (date_value: string | Date | undefined): string => {
-    // Check condition
-if (return '') {
-  $2
-}
-    // Check condition
-if (return date_value) {
-  $2
-}
-    return format (date_value, 'yyyy - MM - dd');
-  }
-  const form = use_form < WorkExperienceFormValues>({
-    resolver: zod_resolver (workExperienceSchema),
-    default_values: {
-      company_name: '',
-      role_title: '',
-      start_date: format (new Date (), 'yyyy - MM - dd'),
-      is_current: false,
-      description: '',
-      location: '',
-    },
-  });
-  const handleAddOrUpdate = async (data: WorkExperienceFormValues, ) => {
-    try {
-      set_error (null);
-      let success;
-      const experience_data: WorkExperience = {
-        company_name: data.company_name, // Required field;
-        role_title: data.role_title, // Required field;
-        start_date: data.start_date, // Required field;
-        end_date: data.is_current ? undefined : data.end_date || undefined,
-        is_current: data.is_current,
-        description: data.description,
-        location: data.location,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       // Check condition
 if ( {) {
@@ -183,7 +91,6 @@ if ( {) {
       } else {
         success = await addWorkExperience (resume_id, experience_data);
       }
-<<<<<<< HEAD
       if (success) {
         form.reset({
           company_name: ''
@@ -211,38 +118,6 @@ if ( {) {
           ? formatDateValue(work.end_date)
           : undefined
     })
-=======
-      // Check condition
-if ( {) {
-  $2
-}
-        form.reset ({
-          company_name: '',
-          role_title: '',
-          start_date: format (new Date (), 'yyyy - MM - dd'),
-          is_current: false,
-          description: '',
-          location: '',
-        });
-        setEditingId (null);
-      }
-    } catch (err: any) {
-      set_error (err.message || 'An error occurred');
-    }
-  }
-  const handle_edit = (work: WorkExperience) =>: any {
-    setEditingId (work.id!);    form.reset ({
-      ...work,
-  const handle_edit = (work: WorkExperience) =>: any {
-    setEditingId (work.id!);
-    form.reset ({
-      start_date: formatDateValue (work.start_date),
-      end_date:;
-        work.end_date && !work.is_current;
-          ? formatDateValue (work.end_date);
-          : undefined,
-    });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   const handle_delete = async (id: string, ) => {
     if () {) {
@@ -255,7 +130,6 @@ if ( {) {
     form.set_value ('description', enhanced_content);
   }
   return (
-<<<<<<< HEAD
     <div className='space-y-6'>
       <div>
         <h2 className='text-xl font-semibold mb-2'>Work Experience</h2>
@@ -278,8 +152,6 @@ if ( {) {
                       {typeof work.start_date === 'string'
                         ? work.start_date
                         : format(work.start_date, 'MMM yyyy')}{' '}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -439,7 +311,6 @@ export function WorkExperienceForm(): any ({;
                       {typeof work && work.start_date === 'string';
                         ? work && work.start_date;
                         : format(work && work.start_date, 'MMM yyyy')}{' '}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       -{' '}
                       {work && work.is_current;
                         ? 'Present';
@@ -482,21 +353,11 @@ export function WorkExperienceForm(): any ({;
           ))}
         </div>;
       )}
-<<<<<<< HEAD
       <div className='bg-muted/40 p-6 rounded-lg'>
         <h3 className='text-md font-medium mb-4'>
           {editingId ? 'Update Experience' : 'Add Experience'}
         </h3>
         <Form {...form}>
-=======
-
-      <div className='bg-muted/40 p-6 rounded-lg'>;
-        <h3 className='text-md font-medium mb-4'>;
-          {editingId ? 'Update Experience' : 'Add Experience'}
-        </h3>;
-
-        <Form {...form}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <form
             onSubmit={form && form.handleSubmit(handleAddOrUpdate)}
             className='space-y-4'>;
@@ -506,7 +367,6 @@ export function WorkExperienceForm(): any ({;
                 name='company_name'
                 render={({ field }: { field: any }) => (                  <FormItem>;
                     <FormLabel>Company Name</FormLabel>;
-=======
     <div className='space - y-6'>;
       <div>;
         <h2 className='text - xl font - semibold mb - 2'>Work Experience</h2>;
@@ -582,20 +442,13 @@ export function WorkExperienceForm(): any ({;
                 name='company_name';
                 render={({ field }: { field: any }) => (                  <FormItem>;
                     <FormLabel > Company Name</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <FormControl>;
                       <Input placeholder='Google, Microsoft, etc.' {...field} />;
                     </FormControl>;
                     <FormMessage />;
-<<<<<<< HEAD
                   </FormItem>;
                 )}
-<<<<<<< HEAD
               />
-=======
-              />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <FormField
                 control={form && form.control}
                 name='role_title'
@@ -604,7 +457,6 @@ export function WorkExperienceForm(): any ({;
                     <FormControl>;
                       <Input
                         placeholder='Software Engineer, Product Manager, etc.'
-=======
                   </FormItem>)}
               />;
               <FormField;
@@ -615,28 +467,18 @@ export function WorkExperienceForm(): any ({;
                     <FormControl>;
                       <Input;
                         placeholder='Software Engineer, Product Manager, etc.';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {...field}
                       />;
                     </FormControl>;
                     <FormMessage />;
-<<<<<<< HEAD
                   </FormItem>;
                 )}
-<<<<<<< HEAD
               />
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-=======
-              />;
-            </div>;
-
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <FormField
                 control={form && form.control}
                 name='start_date'
-<<<<<<< HEAD
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
@@ -647,19 +489,6 @@ export function WorkExperienceForm(): any ({;
                 )}
               />
               <div className='space-y-4'>
-=======
-                render={({ field }: { field: any }) => (;
-                  <FormItem>;
-                    <FormLabel>Start Date</FormLabel>;
-                    <FormControl>;
-                      <Input type='date' {...field} value={field && field.value || ''} />                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
-                )}
-              />;
-
-              <div className='space-y-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <FormField
                   control={form && form.control}
                   name='is_current'
@@ -675,14 +504,8 @@ export function WorkExperienceForm(): any ({;
                       </div>;
                     </FormItem>;
                   )}
-<<<<<<< HEAD
                 />
                 {!form.watch('is_current') && (
-=======
-                />;
-
-                {!form && form.watch('is_current') && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <FormField
                     control={form && form.control}
                     name='end_date'
@@ -693,28 +516,15 @@ export function WorkExperienceForm(): any ({;
                           <Input
                             type='date'
                             {...field}
-<<<<<<< HEAD
                             value={field.value |''}                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
-=======
-                            value={field && field.value || ''}                          />;
-                        </FormControl>;
-                        <FormMessage />;
-                      </FormItem>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
                   />;
                 )}
-<<<<<<< HEAD
               </div>
             </div>
-=======
-              </div>;
-            </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name='location'
@@ -723,7 +533,6 @@ export function WorkExperienceForm(): any ({;
                   <FormLabel>Location (Optional)</FormLabel>;
                   <FormControl>;
                     <Input
-=======
                   </FormItem>)}
               />;
             </div>;
@@ -781,20 +590,13 @@ export function WorkExperienceForm(): any ({;
                   <FormLabel > Location (Optional)</FormLabel>;
                   <FormControl>;
                     <Input;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       placeholder='San Francisco, CA (Remote)'                      {...field}
                     />;
                   </FormControl>;
                   <FormMessage />;
-<<<<<<< HEAD
                 </FormItem>;
               )}
-<<<<<<< HEAD
             />
-=======
-            />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name='description'
@@ -803,11 +605,7 @@ export function WorkExperienceForm(): any ({;
                   <FormLabel className='flex justify-between'>;
                     <span>Job Description</span>;
                     <AIEnhancementButton
-<<<<<<< HEAD
                       currentContent={field.value |''}
-=======
-                      currentContent={field && field.value || ''}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       enhancementType='work-description'
                       context={`Role: ${form && form.getValues('role_title')} at ${form && form.getValues('company_name')}`}
                       onEnhanced={handleEnhanceDescription}
@@ -817,7 +615,6 @@ export function WorkExperienceForm(): any ({;
                     <Textarea
                       placeholder='Describe your responsibilities and accomplishments...'
                       className='min-h-[100px]'
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -838,15 +635,12 @@ export function WorkExperienceForm(): any ({;
                     <Textarea;
                       placeholder='Describe your responsibilities and accomplishments...';
                       className='min - h-[100px]';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
                   <FormMessage />;
-<<<<<<< HEAD
                 </FormItem>;
               )}
-<<<<<<< HEAD
             />
             {error && (
               <Alert variant='destructive'>
@@ -871,38 +665,10 @@ export function WorkExperienceForm(): any ({;
 
                   } else {
                     onBack()
-=======
-            />;
-
-            {error && (;
-              <Alert variant='destructive'>;
-                <AlertDescription>{error}</AlertDescription>;
-              </Alert>;
-            )}
-
-            <div className='flex justify-between pt-2'>;
-              <Button
-                type='button'
-                variant='outline'
-                onClick={() => {;
-                  if (editingId) {;
-                    setEditingId(null);
-                    form && form.reset({;
-                      company_name: '',;
-                      role_title: '',;
-                      start_date: format(new Date(), 'yyyy-MM-dd'),;
-                      is_current: false,;
-                      description: '',;
-                      location: '',;
-                    });
-                  } else {;
-                    onBack();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   }
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
-<<<<<<< HEAD
               </Button>
               <div className='flex gap-2'>
                 <Button type='submit' disabled={isLoading}>
@@ -929,71 +695,11 @@ export function WorkExperienceForm(): any ({;
 }</div> </div> </form> </Form> </div> </div>)
 }'"  )
 }
-=======
-              </Button>;
-
-              <div className='flex gap-2'>;
-                <Button type='submit' disabled={isLoading}>;
-                  {isLoading && (;
-                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-                  )}
-                  {editingId ? 'Update' : 'Add'} Experience;
-                </Button>;
-
-                {!editingId && workExperiences && workExperiences.length > 0 && (;
-                  <Button type='button' onClick={onComplete}>;
-                    Next;
-                  </Button>;
-                )}
-=======
-                </FormItem>)}
-            />;
-            {error && (
-              <Alert variant='destructive'>;
-                <AlertDescription>{error}</AlertDescription>;
-              </Alert>)}
-            <div className='flex justify - between pt - 2'>;
-              <Button;
-                type='button';
-                variant='outline';
-                on_click={() => {
-                  // Check condition
-if ( {) {
-  $2
-}
-                    setEditingId (null);
-                    form.reset ({
-                      company_name: '',
-                      role_title: '',
-                      start_date: format (new Date (), 'yyyy - MM - dd'),
-                      is_current: false,
-                      description: '',
-                      location: '',
-                    });
-                  } else {
-                    on_back ();
-                  }
-                }}
-              >;
-                {editing_id ? 'Cancel' : 'Back'}
-              </Button>;
-              <div className='flex gap - 2'>;
-                <Button type='submit' disabled={is_loading}>;
-                  {is_loading && (
-                    <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}
-                  {editing_id ? 'Update' : 'Add'} Experience;
-                </Button>;
-                {!editing_id && work_experiences.length > 0 && (
-                  <Button type='button' on_click={on_complete}>;
-                    Next;
-                  </Button>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </form>;
         </Form>;
       </div>;
-<<<<<<< HEAD
     </div>;
   );
 
@@ -1003,10 +709,6 @@ if ( {) {
 }</div> </div> </form> </Form> </div> </div>) ;
 }'"  );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
       ...work;
       start_date: formatDateValue(work.start_date),
@@ -1015,8 +717,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 }> {';
   editing_id ? 'Cancel': 'Back';
@@ -1024,5 +724,3 @@ if ( {) {
 }</div> </div> </form> </Form> </div> </div>);
 }'"  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

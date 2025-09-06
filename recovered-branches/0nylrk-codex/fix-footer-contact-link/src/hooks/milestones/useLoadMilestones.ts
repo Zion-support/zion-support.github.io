@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
-<<<<<<< HEAD
 export const useLoadMilestones = (projectId?: string) => {
   const { user } = useAuth();
   const [milestones, setMilestones] = useState<Milestone[]>([]);
@@ -41,26 +37,14 @@ export const useLoadMilestones = (projectId?: string) => {
           .eq('milestone_id', milestone && milestone.id)
           .order('created_at', { ascending: false });
         if (activitiesError) throw activitiesError;
-<<<<<<< HEAD
         activitiesMap[milestone.id] = activitiesData |[]
-=======
-        
-        activitiesMap[milestone && milestone.id] = activitiesData || []
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
       setActivities(activitiesMap);
       setError(null)
     } catch (err: any) {
-<<<<<<< HEAD
       console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err.message)
       toast.error("Failed to fetch milestones")
-=======
-      console && console.error("Error fetching milestones:", err);
-      setError("Failed to fetch milestones: " + err && err.message),
-      toast && toast.error("Failed to fetch milestones")
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export const useLoadMilestones = (project_id?: string) =>: any {
   const { user } = use_auth ();
   const [milestones, set_milestones] = useState < Milestone[]>([]);
@@ -116,31 +100,16 @@ if (throw activities_error) {
       console.error ("Error fetching milestones:", err);
       set_error ("Failed to fetch milestones: " + err.message),
       toast.error ("Failed to fetch milestones");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
   // Fetch milestones when component mounts or projectId changes
   useEffect(() => {
     if (projectId) {
       fetchMilestones()
     }
   }, [projectId]);
-=======
-;
-  // Fetch milestones when component mounts or project_id changes;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      fetch_milestones ();
-    }
-  }, [project_id]);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     milestones;
     activities;
@@ -149,8 +118,4 @@ if ( {) {
     refetch: fetch_milestones;
   }
 }
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

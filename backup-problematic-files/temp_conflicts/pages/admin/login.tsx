@@ -40,7 +40,7 @@ export default function AdminLoginPage() {;
         </div>;
         {error && <p className="text-red-600 text-sm">{error}</p>}
         <button type="submit" disabled={loading} className="w-full bg-indigo-600 text-white rounded px-3 py-2 hover:bg-indigo-700 disabled:opacity-50">;
-          {loading ? 'Signing in…' :'Sign in'}
+          {loading ? 'Signing in' :'Sign in'}
         </button>;
       </form>;
     </div>;

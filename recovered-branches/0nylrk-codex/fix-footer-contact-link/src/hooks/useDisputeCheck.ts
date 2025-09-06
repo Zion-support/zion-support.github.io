@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -25,12 +24,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
           query = query && query.eq("milestone_id", milestoneId)
         }
         // Order by status priority: open, under_review, resolved, closed
-<<<<<<< HEAD
         query = query.order("status", { ascending: true });
-=======
-        query = query && query.order("status", { ascending: true });
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         const { data, error } = await query;
         if (error) throw error;
         if (data && data.length > 0) {
@@ -38,7 +32,6 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
           setIsUnderDispute(true);
           setDisputeStatus(data[0].status as any);
           setDisputeId(data[0].id)
-=======
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 export /**
@@ -91,29 +84,20 @@ if ( {) {
           setIsUnderDispute (true);
           setDisputeStatus (data[0].status as any);
           setDisputeId (data[0].id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
           setIsUnderDispute (false);
           setDisputeStatus (null);
           setDisputeId (null);
         }
       } catch (err) {
-<<<<<<< HEAD
         console && console.error("Error checking dispute status:", err);
         setIsUnderDispute(false);
         setDisputeStatus(null);
         setDisputeId(null)
-=======
-        console.error ("Error checking dispute status:", err);
-        setIsUnderDispute (false);
-        setDisputeStatus (null);
-        setDisputeId (null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         setIsLoading (false);
       }
     }
-<<<<<<< HEAD
     checkDispute()
   }, [projectId, milestoneId]);
   return {
@@ -122,16 +106,5 @@ if ( {) {
     disputeId;
     isLoading
 
-=======
-;
-    check_dispute ();
-  }, [project_id, milestone_id]);
-;
-  return {
-    isUnderDispute,
-    dispute_status,
-    dispute_id;
-    is_loading;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

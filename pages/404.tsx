@@ -1,12 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 export default function Custom404() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>404 - Page Not Found</title>
       </Head>
       <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
@@ -18,14 +16,11 @@ export default function Custom404() {
           </p>
           <Link href="/" className="btn-primary">
             Go Back Home
-=======
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
           </Link>
         </main>
       </div>
     </>
   );
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -40,5 +35,4 @@ function Custom404() {
         </div>;
       </div>;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

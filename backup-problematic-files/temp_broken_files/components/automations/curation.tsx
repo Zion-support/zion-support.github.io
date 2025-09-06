@@ -48,7 +48,7 @@ export default function CurationPage(_{_updatedAt, _items}: Props) {_return (
             {(exp.effort || exp.impact) && (
               <div className=&quot;mt-2 text-xs text-gray-500&quot;>
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
-                {exp.effort && exp.impact ? &quot; · &quot; : null}
+                {exp.effort && exp.impact ? &quot;  &quot; : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}              </div>
             )}
           </div>;

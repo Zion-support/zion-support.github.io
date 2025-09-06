@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react'
 import { useForm, type ControllerRenderProps } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -70,8 +65,6 @@ export function TemplateSaveForm({
       onComplete()
     } finally {
       setSaving(false)
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useState } from 'react';
 import { useForm, type ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -146,8 +139,6 @@ export function TemplateSaveForm(): any ({;
       onComplete();
     } finally {;
       setSaving(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { useState } from 'react';
 import { use_form, type ControllerRenderProps } from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -221,28 +212,18 @@ if ( {) {
       on_complete ();
     } finally {
       set_saving (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
   return (
     <Form {...form}>;
-<<<<<<< HEAD
       <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-4'>;
         <FormField
           control={form && form.control}
           name='title'
-=======
-      <form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
-        <FormField;
-          control={form.control}
-          name='title';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           render={({
             field
           }: {
-<<<<<<< HEAD
-<<<<<<< HEAD
             field: ControllerRenderProps<FormValues, 'title'>
           }) => (            <FormItem>
               <FormLabel>Template Name</FormLabel>
@@ -253,40 +234,25 @@ if ( {) {
             </FormItem>
           )}
         />
-=======
-            field: ControllerRenderProps<FormValues, 'title'>;
-          }) => (            <FormItem>;
-              <FormLabel>Template Name</FormLabel>;
-=======
-            field: ControllerRenderProps < FormValues, 'title'>;
-          }) => (            <FormItem>;
-              <FormLabel > Template Name</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <FormControl>;
                 <Input {...field} placeholder='Enter template name' />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
             </FormItem>;
           )}
         />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
           control={form && form.control}
           name='isDefault'
-=======
             </FormItem>)}
         />;
         <FormField;
           control={form.control}
           name='is_default';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           render={({
             field
           }: {
-<<<<<<< HEAD
-<<<<<<< HEAD
             field: ControllerRenderProps<FormValues, 'isDefault'>
           }) => (
             <FormItem className='flex items-center justify-between'>
@@ -294,15 +260,6 @@ if ( {) {
                 Set as default template
               </FormLabel>
               <FormControl>
-=======
-            field: ControllerRenderProps<FormValues, 'isDefault'>;
-          }) => (;
-            <FormItem className='flex items-center justify-between'>;
-              <FormLabel className='cursor-pointer'>;
-                Set as default template;
-              </FormLabel>;
-              <FormControl>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Switch
                   aria-label='Default template'
                   checked={field && field.value}
@@ -311,35 +268,12 @@ if ( {) {
               <FormMessage />;
             </FormItem>;
           )}
-<<<<<<< HEAD
         />
         <div className='flex gap-2 justify-end'>
           <Button type='button' variant='outline' onClick={onCancel}>
             Cancel
           </Button>
           <Button type='submit' disabled={saving}>
-=======
-            field: ControllerRenderProps < FormValues, 'is_default'>;
-          }) => (
-            <FormItem className='flex items - center justify - between'>;
-              <FormLabel className='cursor - pointer'>;
-                Set as default template;
-              </FormLabel>;
-              <FormControl>;
-                <Switch;
-                  aria - label='Default template';
-                  checked={field.value}
-                  onCheckedChange={field.on_change}                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <div className='flex gap - 2 justify - end'>;
-          <Button type='button' variant='outline' on_click={on_cancel}>;
-            Cancel;
-          </Button>;
-          <Button type='submit' disabled={saving}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {saving ? (
               <>;
                 <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
@@ -352,7 +286,6 @@ if ( {) {
     </Form>);
 set_saving (true);
 try {
-<<<<<<< HEAD
   if (editTemplate) {
   await updateTemplate.mutateAsync ({
   <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {
@@ -364,48 +297,7 @@ try {
 }Template`)
 }</Button> </div> </form> </Form>)
 }"}
-=======
-        />;
 
-        <div className='flex gap-2 justify-end'>;
-          <Button type='button' variant='outline' onClick={onCancel}>;
-            Cancel;
-          </Button>;
-          <Button type='submit' disabled={saving}>;
-            {saving ? (;
-              <>;
-                <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-                Saving...;
-              </>;
-            ) : (;
-              `${editTemplate ? 'Update' : 'Save'} Template`;
-            )}
-          </Button>;
-        </div>;
-      </form>;
-    </Form>;
-  );
-
-setSaving (true);
-try {;
-  if (editTemplate) {;
-  await updateTemplate && updateTemplate.mutateAsync ({;
-  <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input{
-  ...field "
-}placeholder="Enter template name" /> ;
-}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
-}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {";
-  editTemplate ? "Update" : "Save" ;
-}Template`) ;
-}</Button> </div> </form> </Form>) ;
-}"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Check condition
 if ( {) {
   $2
@@ -420,5 +312,3 @@ if ( {) {
 }Template`);
 }</Button> </div> </form> </Form>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

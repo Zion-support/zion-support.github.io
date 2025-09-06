@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react'
-=======
-
-import React from "react";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
 import { cn } from '@/lib/utils'
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated'
@@ -17,7 +8,6 @@ interface ProfileBadgeProps {
   className?: string;  type: BadgeType
   className?: string
 }
-<<<<<<< HEAD
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
     verified: {
@@ -59,8 +49,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
 }</span>
 }'"  )
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -115,11 +103,6 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
   text ;
 }</span> ;
 }'"  );
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
@@ -154,10 +137,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       <span>{text}</span>
     </div>
   )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -209,4 +189,3 @@ function ProfileBadge() {
 }</span>;
 }'"  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

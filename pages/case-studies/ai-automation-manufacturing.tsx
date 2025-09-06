@@ -1,38 +1,19 @@
-<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 export default function CaseStudyPage() {
   const caseStudy = {
-<<<<<<< HEAD
     id: 'ai-automation-manufacturing'
     title: 'AI-Powered Manufacturing Automation'
     company: 'Global Manufacturing Corp'
     industry: 'Manufacturing'
     challenge: 'Inefficient production processes, high downtime, and quality control issues'
     solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization'
-=======
-    id: 'ai-automation-manufacturing',
-    title: 'AI-Powered Manufacturing Automation',
-=======
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-export default /**
- * CaseStudyPage - Function description
- */
-function CaseStudyPage() {
-  const case_study = {
-    id: 'ai - automation - manufacturing',
-    title: 'AI - Powered Manufacturing Automation',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     company: 'Global Manufacturing Corp',
     industry: 'Manufacturing',
     challenge: 'Inefficient production processes, high downtime, and quality control issues',
     solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     results: [
       '40% increase in production efficiency60% reduction in unplanned downtime35% improvement in product quality25% reduction in operational costs'
     ]
@@ -40,14 +21,8 @@ function CaseStudyPage() {
     duration: '6 months'
     teamSize: '8 engineers'
     featured: true
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <>
@@ -62,7 +37,7 @@ function CaseStudyPage() {
             {/* Breadcrumb */}
             <nav className="mb-8">
               <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Case Studies
+                 Back to Case Studies
               </Link>
             </nav>
             {/* Header */}
@@ -112,7 +87,7 @@ function CaseStudyPage() {
                   <div key={index} className="bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
-                        <span className="text-yellow-900 font-bold text-sm">✓</span>
+                        <span className="text-yellow-900 font-bold text-sm"></span>
                       </div>
                       <span className="text-white/90 font-semibold">{result}</span>
                     </div>
@@ -149,14 +124,7 @@ function CaseStudyPage() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     results: [;
       '40% increase in production efficiency60% reduction in unplanned downtime35% improvement in product quality25% reduction in operational costs';
     ],
@@ -178,7 +146,7 @@ function CaseStudyPage() {
             {/* Breadcrumb */}
             <nav className="mb - 8">;
               <Link href="/case - studies" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
-                ← Back to Case Studies;
+                 Back to Case Studies;
               </Link>;
             </nav>;
             {/* Header */}
@@ -227,7 +195,7 @@ function CaseStudyPage() {
                   <div key={index} className="bg - yellow - 500 / 10 rounded - lg p - 6 border border - yellow - 500 / 20">;
                     <div className="flex items - center gap - 3">;
                       <div className="w - 8 h - 8 bg - yellow - 400 rounded - full flex items - center justify - center">;
-                        <span className="text - yellow - 900 font - bold text - sm">✓</span>;
+                        <span className="text - yellow - 900 font - bold text - sm"></span>;
                       </div>;
                       <span className="text - white / 90 font - semibold">{result}</span>;
                     </div>;
@@ -263,5 +231,3 @@ function CaseStudyPage() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

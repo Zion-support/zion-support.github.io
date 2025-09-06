@@ -38,7 +38,7 @@ export default function OptimizerPage({ latest, top } any) {;
                 <tr className="text-left border-b border-gray-200 dark:border-gray-800">;
                   <th className="py-2 pr-3">Burn%</th>;
                   <th className="py-2 pr-3">Schedule</th>;
-                  <th className="py-2 pr-3">Monthly Δ%</th>;
+                  <th className="py-2 pr-3">Monthly %</th>;
                   <th className="py-2 pr-3">Score</th>;
                   <th className="py-2 pr-3">Avg Infl%</th>;
                   <th className="py-2 pr-3">End Treasury</th>;

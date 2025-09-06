@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import Link from "next/link";
-<<<<<<< HEAD
 export default function CommunityPage() {return (;
-=======
-export default function CommunityPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
-=======
 import Link from './next / link';
 export default /**
  * CommunityPage - Function description
@@ -17,7 +10,6 @@ function CommunityPage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Header */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 5xl font - bold mb - 6">;
@@ -121,7 +113,7 @@ function CommunityPage() {
               </div>;
               <h3 className="text - xl font - semibold mb - 2">Zion OS Workshop</h3>;
               <p className="text - gray - 400 mb - 3">Learn how to deploy your first digital economy in this hands - on workshop.</p>;
-              <div className="text - sm text - gray - 500 mb - 4">March 15, 2024 • Virtual</div>;
+              <div className="text - sm text - gray - 500 mb - 4">March 15, 2024  Virtual</div>;
               <button className="btn - outline w - full">Register Now</button>;
             </div>;
             <div className="card">;
@@ -132,7 +124,7 @@ function CommunityPage() {
               </div>;
               <h3 className="text - xl font - semibold mb - 2">AI Governance Summit</h3>;
               <p className="text - gray - 400 mb - 3">Explore the future of AI - powered governance and decision - making systems.</p>;
-              <div className="text - sm text - gray - 500 mb - 4">April 22, 2024 • New York</div>;
+              <div className="text - sm text - gray - 500 mb - 4">April 22, 2024  New York</div>;
               <button className="btn - outline w - full">Register Now</button>;
             </div>;
             <div className="card">;
@@ -143,7 +135,7 @@ function CommunityPage() {
               </div>;
               <h3 className="text - xl font - semibold mb - 2">Hackathon 2024</h3>;
               <p className="text - gray - 400 mb - 3">Build innovative solutions using Zion OS and win amazing prizes.</p>;
-              <div className="text - sm text - gray - 500 mb - 4">May 10 - 12, 2024 • Virtual</div>;
+              <div className="text - sm text - gray - 500 mb - 4">May 10 - 12, 2024  Virtual</div>;
               <button className="btn - outline w - full">Register Now</button>;
             </div>;
           </div>;
@@ -156,23 +148,23 @@ function CommunityPage() {
           </div>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
             <div className="card">;
-              <h3 className="text - xl font - semibold mb - 4 text - green - 400">✅ What We Encourage</h3>;
+              <h3 className="text - xl font - semibold mb - 4 text - green - 400"> What We Encourage</h3>;
               <ul className="space - y-2 text - gray - 300">;
-                <li>• Respectful and constructive discussions</li>;
-                <li>• Sharing knowledge and helping others</li>;
-                <li>• Constructive feedback and suggestions</li>;
-                <li>• Collaboration and networking</li>;
-                <li>• Innovation and creative thinking</li>;
+                <li> Respectful and constructive discussions</li>;
+                <li> Sharing knowledge and helping others</li>;
+                <li> Constructive feedback and suggestions</li>;
+                <li> Collaboration and networking</li>;
+                <li> Innovation and creative thinking</li>;
               </ul>;
             </div>;
             <div className="card">;
-              <h3 className="text - xl font - semibold mb - 4 text - red - 400">❌ What We Don't Allow</h3>;
+              <h3 className="text - xl font - semibold mb - 4 text - red - 400"> What We Don't Allow</h3>;
               <ul className="space - y-2 text - gray - 300">;
-                <li>• Harassment or discrimination</li>;
-                <li>• Spam or self - promotion</li>;
-                <li>• Sharing of sensitive information</li>;
-                <li>• Offensive or inappropriate content</li>;
-                <li>• Violation of platform terms</li>;
+                <li> Harassment or discrimination</li>;
+                <li> Spam or self - promotion</li>;
+                <li> Sharing of sensitive information</li>;
+                <li> Offensive or inappropriate content</li>;
+                <li> Violation of platform terms</li>;
               </ul>;
             </div>;
           </div>;

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { QuoteRequestSteps } from '../QuoteRequestForm'
 import { CheckIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -34,8 +29,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     if (stepOrder === currentStepOrder) return "current"
     return "upcoming"
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { QuoteRequestSteps } from '../QuoteRequestForm';
 import { CheckIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -71,14 +64,12 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
     return "upcoming";
   },;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='relative'>;
       <div className='absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light'>;
         <div
           className='absolute h-full bg-zion-purple transition-all duration-500'
           style={{
-<<<<<<< HEAD
             width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`
           }}
         />
@@ -86,16 +77,6 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
       <div className='flex justify-between relative'>
         {steps.map(step => {
           const status = getStepStatus(step.id)
-=======
-            width: `${(steps && steps.findIndex(s => s && s.id === currentStep) / (steps && steps.length - 1)) * 100}%`,;
-          }}
-        />;
-      </div>;
-
-      <div className='flex justify-between relative'>;
-        {steps && steps.map(step => {;
-          const status = getStepStatus(step && step.id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           return (
             <div key={step && step.id} className='flex flex-col items-center relative'>;
               <div
@@ -123,7 +104,6 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
                     : status === 'current'
                       ? 'text-white'
                       : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
-<<<<<<< HEAD
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
                   "text-zion-slate-light"
@@ -131,44 +111,13 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
               <span 
                 className = {cn(
                   "text-xs mt-2 font-medium",
-=======
-<<<<<<< HEAD
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
-=======
-
-import { QuoteRequestSteps } from "../QuoteRequestForm";
-import { CheckIcon } from 'lucide-react'
-import { cn } from "@/lib/utils";
-interface StepProgressProps {
-  currentStep: QuoteRequestSteps
-}
-
-export function StepProgress({ currentStep }: StepProgressProps) {
-  const steps: { id: QuoteRequestSteps, label: string }[] = [
-=======
-import { QuoteRequestSteps } from '../QuoteRequestForm';
-import { CheckIcon } from 'lucide-react';
-import { cn } from '@/lib / utils';
-interface StepProgressProps {
-  current_step: QuoteRequestSteps;
-export /**
- * StepProgress - Function description
- */
-function StepProgress() {
-  const steps: { id: QuoteRequestSteps; label: string }[] = [;
-    { id: 'service', label: 'Service' },
-    { id: 'details', label: 'Details' },
-    { id: 'timeline', label: 'Timeline' },
-    { id: 'budget', label: 'Budget' },
-    { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
     { id: "summary", label: "Summary" }
-<<<<<<< HEAD
   ];
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
@@ -179,24 +128,10 @@ function StepProgress() {
     if (stepOrder === currentStepOrder) return "current";
     return "upcoming"
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   "text-zion-slate-light"
-<<<<<<< HEAD
-=======
-                )}
-              <span
-                className = {cn(
-                  "text-xs mt-2 font-medium"
-                  status === "complete" ? "text-zion-cyan" :
-                  status === "current" ? "text-white" :
-                  "text-zion-slate-light"
-<<<<<<< HEAD
                 ),}
               >
                 {step.label}
@@ -225,9 +160,6 @@ function StepProgress() {
     </div>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ),}>;
                 {step && step.label}
               </span>;
@@ -256,10 +188,6 @@ function StepProgress() {
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   const getStepStatus = (step_id: QuoteRequestSteps) =>: any {
     const step_order = steps.find_index (string => s.id === step_id);
     const currentStepOrder = steps.find_index (string => s.id === current_step);
@@ -355,4 +283,3 @@ if (return "current", ) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

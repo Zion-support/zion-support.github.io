@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,8 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import Image from 'next/image';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Loader2 } from 'lucide-react'
 import { useState } from 'react';
 interface YoutubeEmbedProps {
@@ -47,30 +41,6 @@ export default function YoutubeEmbed({
 }: YoutubeEmbedProps) {
   const [loaded, setLoaded] = useState(false)
   const src = `https://www.youtube.com/embed/${videoId}?mute=1&controls=1`
-=======
-import { Loader2 } from 'lucide-react';
-import { useState } from 'react';import { useState } from 'react';
-interface YoutubeEmbedProps {;
-  videoId: string,;
-  title: string,;
-  poster: string;
-});
-
-export default Component;
-
-interface YoutubeEmbedProps {;
-  videoId: string;
-  title: string;
-  poster: string;
-
-const Component = React && React.memo(function YoutubeEmbed(): any ({;
-  videoId,;
-  title,;
-  poster,;
-}: YoutubeEmbedProps) {;
-  const [loaded, setLoaded] = useState(false);
-  const src = `https://www && www.youtube.com/embed/${videoId}?mute=1&controls=1`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className='relative aspect-video max-w-3xl mx-auto'>;
@@ -88,22 +58,11 @@ const Component = React && React.memo(function YoutubeEmbed(): any ({;
             <Loader2 className="h-8 w-8 animate-spin text-white" />;
           </div>;
         </>;
-<<<<<<< HEAD
-=======
-=======
-import { Loader2 } from 'lucide-react'
-import { useState } from 'react';
-=======
-import Image from 'next / image';
-import { Loader2 } from 'lucide-react';
-import { useState } from 'react'; import { useState } from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface YoutubeEmbedProps {
   video_id: string,
   title: string,
   poster: string;
 }
-<<<<<<< HEAD
 
 export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedProps) {
 
@@ -119,61 +78,31 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
             <Loader2 className="h-8 w-8 animate-spin text-white" />
           </div>
         </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       )}
       <iframe
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
         src={src}
         title={title}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         loading='lazy'
         onLoad={() => setLoaded(true)}
-<<<<<<< HEAD
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'        allowFullScreen
       />
     </div>
   )
 }        loading="lazy"
-=======
-        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'        allowFullScreen;
-      />;
-    </div>;
-  );
-}        loading="lazy";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         onLoad = {() => setLoaded(true),}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         loading="lazy";
-=======
         loading="lazy"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         onLoad={() => setLoaded(true)}
-<<<<<<< HEAD
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
         allowFullScreen
       />
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
-        allowFullScreen;
-      />;
-    </div>;
-  );
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 interface YoutubeEmbedProps {
   video_id: string;
   title: string;
@@ -219,4 +148,3 @@ function YoutubeEmbed() {
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

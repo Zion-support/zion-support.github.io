@@ -14,7 +14,7 @@ export default function InvestorsPage() {_return (
 			</Head>
 			<div className=&quot;max-w-5xl mx-auto space-y-6&quot;>
 				<h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>Investors</h1>
-				<p className=&quot;text-slate-300&quot;>We pursue durable growth via product‑led innovation and customer outcomes.</p>
+				<p className=&quot;text-slate-300&quot;>We pursue durable growth via productled innovation and customer outcomes.</p>
 				<div className=&quot;grid sm:grid-cols-3 gap-4&quot;>
 					<div className=&quot;p-4 rounded-xl bg-black/40 border border-cyan-500/20&quot;><div className=&quot;text-2xl font-bold text-white&quot;>500+</div><div className=&quot;text-slate-400 text-sm&quot;>Services shipped</div></div>
 					<div className=&quot;p-4 rounded-xl bg-black/40 border border-cyan-500/20&quot;><div className=&quot;text-2xl font-bold text-white&quot;>200+</div><div className=&quot;text-slate-400 text-sm&quot;>Happy clients</div></div>

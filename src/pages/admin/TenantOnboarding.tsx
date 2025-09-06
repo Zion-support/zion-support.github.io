@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -250,8 +245,6 @@ export default function TenantOnboarding() {
     </>
   )
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -312,12 +305,6 @@ export default function TenantOnboarding() {;
       }
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { SEO } from '@/components / SEO';
@@ -356,5 +343,3 @@ function TenantOnboarding() {
       }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

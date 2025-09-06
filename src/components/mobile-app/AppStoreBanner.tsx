@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
 import React, { useState, useEffect } from './react';
@@ -27,7 +23,6 @@ export const AppStoreBanner: React.FC = () => {
     setIsVisible (false);
     safe_storage.set_item ("appBannerDismissed", "true");
   }
-<<<<<<< HEAD
   // Only render on mobile devices
   if (!isMobile |!isVisible) return null
   return (
@@ -60,8 +55,6 @@ export const AppStoreBanner: React.FC = () => {
 '"}
 }
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 import React, { useState, useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage";
@@ -119,13 +112,7 @@ export const AppStoreBanner: React.FC = () => {;
 '"},;
 
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Only render on mobile devices;
   // Check condition
 if (return null) {
@@ -159,5 +146,3 @@ if (return null) {
 }
 '"},
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

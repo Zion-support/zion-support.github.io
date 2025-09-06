@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,15 +23,8 @@ class ErrorBoundary extends React.Component {
 }
 export default function CloudFinOps() {; return ( <Article title=\"Cloud FinOps\" subtitle=\"Cost visibility,unit economics,and automated savings for AWS/Azure/GCP\" price=\"from $4k/mo\" bullets={[
      \'Tagging strategy and cost allocation by team and customer\', \'Automated rightsizing and commitment planning (SP/RI/CCA)\', \'Unit economics dashboard by feature and environment\',,
-<<<<<<< HEAD
-=======
-=======
-export default function CloudFinOps() {; return (; <Article; title=\"Cloud FinOps\"; subtitle=\"Cost visibility,unit economics,and automated savings for AWS/Azure/GCP\"; price=\"from $4k/mo\"; bullets={[
-    ; \'Tagging strategy and cost allocation by team and customer\',; \'Automated rightsizing and commitment planning (SP/RI/CCA)\',; \'Unit economics dashboard by feature and environment\',,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     \'FinOps runbooks and CFO-ready monthly reporting\'
-  ]} /> );} ; function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string, price: string, bullets: string[]\' }) {; return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets && bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() {; return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Site: <a href=\"https: ></div> );
+  ]} /> );} ; function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string, price: string, bullets: string[]\' }) {; return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets && bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() {; return ( <p> \"Mobile\": +1 302 464 0950  Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a>  Site: <a href=\"https: ></div> );
   } ;
 module && module.exports = default function CloudFinOps() {; return ( <Article title="Cloud FinOps" subtitle="Cost visibility,unit economics,and automated savings for AWS/Azure/GCP" price="from $4k/mo" bullets={[
      "Tagging strategy and cost allocation by team and customer", "Automated rightsizing and commitment planning (SP/RI/CCA)", "Unit economics dashboard by feature and environment",,
@@ -54,12 +43,5 @@ export default function Cloudfinops(): any ({ }: CloudfinopsProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

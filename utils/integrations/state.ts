@@ -4,7 +4,6 @@ interface IntegrationState {
   overrides: any[];
 }
 let state: IntegrationState = {
-<<<<<<< HEAD
   connections: []
   logs: []
   overrides: []
@@ -23,24 +22,3 @@ export function resetState(): void {
     overrides: []
   }
 }
-=======
-  connections: [],
-  logs: [],
-  overrides: [];
-}
-;
-export function get_state (): IntegrationState {
-  return { ...state }
-}
-export function write_state (updater: (state: IntegrationState) => void): IntegrationState {
-  updater (state);
-  return { ...state }
-}
-export function reset_state (): void {
-  state = {
-    connections: [],
-    logs: [],
-    overrides: [];
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

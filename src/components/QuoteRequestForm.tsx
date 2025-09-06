@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
@@ -56,8 +51,6 @@ export function QuoteRequestForm() {
   const updateFormData = (data: Partial<QuoteFormData>,) => {
     setFormData(prev => ({
       ...prev
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {useState} from "react";
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger';
 import {useToast} from "@/hooks/use-toast";
@@ -114,16 +107,7 @@ export function QuoteRequestForm() {;
 
 }
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-=======
-
-  )
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { useState } from './react';
 import {log_debug, logErrorToProduction} from '@/utils / production_logger';
 import { use_toast } from '@/hooks / use - toast';
@@ -181,5 +165,3 @@ function QuoteRequestForm() {
 }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -24,7 +24,7 @@ const NotFound = () => {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }} className="space-y-6 mb-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Link to="/" className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4">🏠</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                   Go Home
                 </h3>
@@ -34,7 +34,7 @@ const NotFound = () => {
               </Link>
 
               <Link to="/services" className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4">🚀</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                   Our Services
                 </h3>
@@ -44,7 +44,7 @@ const NotFound = () => {
               </Link>
 
               <Link to="/contact" className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4">📞</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                   Contact Us
                 </h3>

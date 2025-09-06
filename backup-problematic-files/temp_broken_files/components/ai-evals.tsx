@@ -18,7 +18,7 @@ export default function AIEvalsPage() {
 	return (_<QuantumHolographicMatrixBackground>
 			<Head>
 				<title>AI Evals & Observability | Zion Tech Group</title>
-				<meta name=&quot;description&quot; content=&quot;Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.&quot; />
+				<meta name=&quot;description&quot; content=&quot;Ship reliable AI with continuous evaluation, redteaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.&quot; />
 				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/ai-evals&quot; />
 			</Head>
 
@@ -42,8 +42,8 @@ export default function AIEvalsPage() {
 						<Card className=&quot;bg-black/30 border border-cyan-500/30&quot;>
 							<div className=&quot;p-6&quot;>
 								<div className=&quot;text-3xl font-bold text-white&quot;>Starting at $99<span className=&quot;text-base text-gray-400&quot;>/month</span></div>
-								<div className=&quot;text-sm text-gray-400 mt-1&quot;>14-day trial • Setup: 45 minutes</div>
-								<div className=&quot;flex items-center gap-2 text-yellow-400 mt-3&quot;><TrendingUp className=&quot;w-4 h-4&quot; /> Reduce regressions 30–60%</div>
+								<div className=&quot;text-sm text-gray-400 mt-1&quot;>14-day trial  Setup: 45 minutes</div>
+								<div className=&quot;flex items-center gap-2 text-yellow-400 mt-3&quot;><TrendingUp className=&quot;w-4 h-4&quot; /> Reduce regressions 3060%</div>
 								<div className=&quot;mt-4&quot;>
 									<Button href=&quot;/contact&quot; className=&quot;w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white&quot;>Request Demo</Button>
 								</div>

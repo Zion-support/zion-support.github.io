@@ -50,7 +50,7 @@ const Homepage2041: React.FC = () => {
       company: &quot;FutureTech Inc.&quot;,
       content: &quot;Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.&quot;,
       rating: 5,
-      avatar: &quot;👩‍💼&quot
+      avatar: &quot;&quot
     },
     {
       name: &quot;Marcus Rodriguez&quot;,
@@ -58,7 +58,7 @@ const Homepage2041: React.FC = () => {
       company: &quot;QuantumCorp&quot;,
       content: &quot;Their quantum bio-computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.&quot;,
       rating: 5,
-      avatar: &quot;👨‍💻&quot
+      avatar: &quot;&quot
     },
     {
       name: &quot;Dr. Emily Watson&quot;,
@@ -66,7 +66,7 @@ const Homepage2041: React.FC = () => {
       company: &quot;SpaceLabs&quot;,
       content: &quot;The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.&quot;,
       rating: 5,
-      avatar: &quot;👩‍🔬&quot
+      avatar: &quot;&quot
     }
   ],
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useAuth  } from './useAuth';
 import { getAccessibleRoutes  } from '@/config/sitemap';
@@ -14,35 +13,19 @@ export function useSitemap() {
   const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType);
   // Helper function to find a route by path
   const findRouteByPath = (path: string): SitemapItem | undefined => {
-<<<<<<< HEAD
     return accessibleRoutes.find(route => route.path === path)
   }
-=======
-    return accessibleRoutes && accessibleRoutes.find(route => route && route.path === path)
-  };
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Helper function to check if a user can access a specific path
   const canAccessRoute = (path: string): boolean => {
     const route = findRouteByPath(path);
     if (!route) return false;
     // If route requires authentication and user is not authenticated
-<<<<<<< HEAD
     if (route.requiredAuth && !isAuthenticated) return false;
     // If route requires specific roles and user doesn't have one
     if (route.requiredRoles && route.requiredRoles.length > 0) {
       if (!user |!user.userType) return false;
       const userTypeEnum = isValidUserType(user.userType) ? user.userType as UserType : undefined
       return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) : false
-=======
-    if (route && route.requiredAuth && !isAuthenticated) return false;
-    
-    // If route requires specific roles and user doesn't have one
-    if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {
-      if (!user || !user && user.userType) return false;
-      const userTypeEnum = isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined,
-      return userTypeEnum ? route && route.requiredRoles.includes(userTypeEnum) : false
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     return true
   }
@@ -55,7 +38,6 @@ export function useSitemap() {
     findRouteByPath;
 
     canAccessRoute
-=======
 import {use_auth} from './use_auth';
 import {getAccessibleRoutes} from '@/config / sitemap';
 import type { SitemapItem } from '@/config / sitemap';
@@ -114,6 +96,5 @@ if (return false) {
     accessible_routes;
     findRouteByPath;
     canAccessRoute;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

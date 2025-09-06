@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
@@ -217,7 +210,6 @@ export default function ServicesIndexPage() {
                 {categories.map((category) => {
                   const categoryServices = servicesByCategory[category]
                   if (!categoryServices |categoryServices.length === 0) return null
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import UltraAdvancedFuturisticBackground from '../../components / ui / UltraAdvancedFuturisticBackground',
@@ -413,32 +405,30 @@ function ServicesIndexPage() {
 if (return null, ) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   return (
                     <div key={category} className="border border - gray - 800 rounded - 2xl p - 8 bg - black / 50 backdrop - blur - sm">;
                       <h3 className="text - 2xl font - bold mb - 6 text - white flex items - center gap - 3">;
                         <span className="text - 3xl">;
-                          {category === 'AI & Data' && '🧠'}
-                          {category === 'Developer Tools' && '⚙️'}
-                          {category === 'Cloud & FinOps' && '☁️'}
-                          {category === 'Observability' && '📊'}
-                          {category === 'Quality & Monitoring' && '🔍'}
-                          {category === 'Quantum Computing' && '⚛️'}
-                          {category === 'Space Technology' && '🚀'}
-                          {category === 'Metaverse' && '🌐'}
-                          {category === 'Cybersecurity' && '🛡️'}
-                          {category === 'Supply Chain' && '📦'}
-                          {category === 'Financial Services' && '💰'}
-                          {category === 'Healthcare' && '🏥'}
-                          {category === 'Manufacturing' && '🏭'}
-                          {category === 'Retail' && '🛍️'}
-                          {category === 'Education' && '📚'}
-                          {category === 'Government' && '🏛️'}
-                          {category === 'Energy' && '⚡'}
-                          {category === 'Transportation' && '🚗'}
+                          {category === 'AI & Data' && ''}
+                          {category === 'Developer Tools' && ''}
+                          {category === 'Cloud & FinOps' && ''}
+                          {category === 'Observability' && ''}
+                          {category === 'Quality & Monitoring' && ''}
+                          {category === 'Quantum Computing' && ''}
+                          {category === 'Space Technology' && ''}
+                          {category === 'Metaverse' && ''}
+                          {category === 'Cybersecurity' && ''}
+                          {category === 'Supply Chain' && ''}
+                          {category === 'Financial Services' && ''}
+                          {category === 'Healthcare' && ''}
+                          {category === 'Manufacturing' && ''}
+                          {category === 'Retail' && ''}
+                          {category === 'Education' && ''}
+                          {category === 'Government' && ''}
+                          {category === 'Energy' && ''}
+                          {category === 'Transportation' && ''}
                         </span>;
                         {category}
-<<<<<<< HEAD
                         <span className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full text-sm text-gray-300">
                           {categoryServices.length} services
                         </span>
@@ -447,16 +437,6 @@ if (return null, ) {
                         {categoryServices.slice(0, 6).map((service: Service, index: number) => (
                           <UltraFuturisticServiceCard2026
                             key={`${service.id |service.name}-${index}`}
-=======
-                        <span className="px - 3 py - 1 bg - gradient - to - r from - gray - 700 to - gray - 800 rounded - full text - sm text - gray - 300">;
-                          {category_services.length} services;
-                        </span>;
-                      </h3>;
-                      <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-                        {category_services.slice (0, 6).map ((service: Service, index: number) => (
-                          <UltraFuturisticServiceCard2026;
-                            key={`${service.id || service.name}-${index}`}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             service={service}
                             variant="default";
                           />))}
@@ -475,7 +455,6 @@ if (return null, ) {
                         </div>)}
                     </div>);
                 })}
-<<<<<<< HEAD
               </div>
             </section>
             {/* CTA Section */}
@@ -573,127 +552,30 @@ if (return null, ) {
                 const categoryServices = servicesByCategory[category]
                 if (!categoryServices |categoryServices.length === 0) return null
 
-=======
-              </div>;
-            </section>;
-            {/* CTA Section */}
-            <section className="text - center">;
-              <div className="bg - gradient - to - r from - gray - 900 to - black border border - gray - 800 rounded - 2xl p - 12">;
-                <h2 className="text - 3xl md:text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
-                  Need a Custom Solution?;
-                </h2>;
-                <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
-                  Our team of experts can help you build custom solutions tailored to your specific needs.;
-                  Let's discuss how we can transform your business with cutting - edge technology.;
-                </p>;
-                <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                  <Link;
-                    href="/contact";
-                    className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 600 hover:from - cyan - 700 hover:to - blue - 700 text - white font - medium rounded - lg transition - all duration - 300 hover:scale - 105";
-                  >;
-                    Get Started;
-                  </Link>;
-                  <Link;
-                    href="/contact";
-                    className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - medium rounded - lg transition - all duration - 300 hover:scale - 105";
-                  >;
-                    Schedule Demo;
-                  </Link>;
-                </div>;
-              </div>;
-            </section>;
-          </div>;
-        </div>;
-      </UltraFuturisticBackground>;
-        {categories.map ((cat) => (
-          <section key={cat} id={anchor_map[cat] || to_slug (cat)}>;
-            <h2 className="text - 2xl md:text - 3xl font - semibold text - white mb - 4">{cat}</h2>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-              {by_category[cat].slice (0, (shown_counts[cat] ?? 12)).map ((s) => {
-                const service = s as { id?: string, name?: string, link?: string, category?: string, tagline?: string, description?: string, price?: string, period?: string },
-                const slug = service.link ? (() => { try { const u = new URL (service.link), const p = u.pathname.replace (/^\/+|\/+$/g, ''), return p.starts_with ('services/') ? p.substring ('services/'.length) : to_slug (service.id || service.name || '') } catch { return to_slug (service.id || service.name || '') } })() : to_slug (service.id || service.name || ''),
-                return (
-                  <Card key={service.id || service.name} className="p - 6 bg - black / 50 border border - gray - 700 / 60 hover:border - cyan - 500 / 50 transition - colors shadow - lg / 10">;
-                    <div className="text - sm text - gray - 400 mb - 1">{service.category || 'Service'}</div>;
-                    <h3 className="text - white text - xl font - semibold mb - 2">{service.name}</h3>;
-                    <p className="text - gray - 300 / 90 line - clamp - 3 mb - 3">{service.tagline || service.description}</p>;
-                    <div className="text - gray - 100 font - bold mb - 4">{service.price}<span className="text - sm text - gray - 400 font - medium">{service.period}</span></div>;
-                    <div className="flex gap - 3">;
-                      <Link href={service.link || `/${slug}`} className="px - 4 py - 2 rounded - lg bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium shadow - glow hover:shadow - glow - lg">View</Link>;
-                      <Link href={service.link || `/${slug}`} className="px - 4 py - 2 rounded - lg border border - gray - 600 text - gray - 200 hover: border - cyan - 500 / 70">Learn</Link>;
-                    </div>;
-                  </Card>);
-              })}
-            </div>;
-          </div>;
-          {/* Featured Services */}
-          {featured_services.length > 0 && (
-            <section className="mb - 20">;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 12 text - center bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
-                Featured Services;
-              </h2>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                {featured_services.map ((service: Service, index: number) => (
-                  <UltraFuturisticServiceCard2026;
-                    key={`${service.id || service.name}-${index}`}
-                    service={service}
-                    variant="quantum";
-                  />))}
-              </div>;
-            </section>)}
-          {/* Latest Services */}
-          {latest_services.length > 0 && (
-            <section className="mb - 20">;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 12 text - center bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;
-                Latest Services (2026);
-              </h2>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                {latest_services.map ((service: Service, index: number) => (
-                  <UltraFuturisticServiceCard2026;
-                    key={`${service.id || service.name}-${index}`}
-                    service={service}
-                    variant="ai";
-                  />))}
-              </div>;
-            </section>)}
-          {/* Services by Category */}
-          <section className="mb - 20">;
-            <h2 className="text - 3xl md: text - 4xl font - bold mb - 12 text - center bg - gradient - to - r from - green - 400 to - emerald - 500 bg - clip - text text - transparent">;
-              Services by Category;
-            </h2>;
-            <div className="space - y-12">;
-              {categories.map ((category) => {
-                const category_services = servicesByCategory[category],
-                // Check condition
-if (return null, ) {
-  $2
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 return (
                   <div key={category} className="border border - gray - 800 rounded - 2xl p - 8 bg - black / 50 backdrop - blur - sm">;
                     <h3 className="text - 2xl font - bold mb - 6 text - white flex items - center gap - 3">;
                       <span className="text - 3xl">;
-                        {category === 'AI & Data' && '🧠'}
-                        {category === 'Developer Tools' && '⚙️'}
-                        {category === 'Cloud & FinOps' && '☁️'}
-                        {category === 'Observability' && '📊'}
-                        {category === 'Quality & Monitoring' && '🔍'}
-                        {category === 'Quantum Computing' && '⚛️'}
-                        {category === 'Space Technology' && '🚀'}
-                        {category === 'Metaverse' && '🌐'}
-                        {category === 'Cybersecurity' && '🛡️'}
-                        {category === 'Supply Chain' && '📦'}
-                        {category === 'Financial Services' && '💰'}
-                        {category === 'Healthcare' && '🏥'}
-                        {category === 'Manufacturing' && '🏭'}
-                        {category === 'Retail' && '🛍️'}
-                        {category === 'Education' && '🎓'}
-                        {category === 'Government' && '🏛️'}
-                        {category === 'Energy' && '⚡'}
-                        {category === 'Transportation' && '🚗'}
+                        {category === 'AI & Data' && ''}
+                        {category === 'Developer Tools' && ''}
+                        {category === 'Cloud & FinOps' && ''}
+                        {category === 'Observability' && ''}
+                        {category === 'Quality & Monitoring' && ''}
+                        {category === 'Quantum Computing' && ''}
+                        {category === 'Space Technology' && ''}
+                        {category === 'Metaverse' && ''}
+                        {category === 'Cybersecurity' && ''}
+                        {category === 'Supply Chain' && ''}
+                        {category === 'Financial Services' && ''}
+                        {category === 'Healthcare' && ''}
+                        {category === 'Manufacturing' && ''}
+                        {category === 'Retail' && ''}
+                        {category === 'Education' && ''}
+                        {category === 'Government' && ''}
+                        {category === 'Energy' && ''}
+                        {category === 'Transportation' && ''}
                       </span>;
                       {category}
-<<<<<<< HEAD
                       <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
                         {categoryServices.length} services
                       </span>
@@ -744,61 +626,11 @@ if (return null, ) {
                     </div>
                     <div className="flex items-center justify-between">
                       <div className="text-2xl font-bold text-white">
-=======
-                      <span className="text - sm text - gray - 400 bg - gray - 800 px - 3 py - 1 rounded - full">;
-                        {category_services.length} services;
-                      </span>;
-                    </h3>;
-                    <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-                      {category_services.slice (0, 6).map ((service: Service, index: number) => (
-                        <UltraFuturisticServiceCard2026;
-                          key={`${service.id || service.name}-${index}`}
-                          service={service}
-                          variant="default";
-                        />))}
-                    </div>;
-                    {category_services.length > 6 && (
-                      <div className="text - center mt - 6">;
-                        <Link;
-                          href={`/services / category/${to_slug (category)}`}
-                          className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 border border - cyan - 500 / 30 rounded - lg text - cyan - 300 hover:from - cyan - 500 / 30 hover:to - blue - 500 / 30 transition - all";
-                        >;
-                          View All {category} Services ({category_services.length});
-                        </Link>;
-                      </div>)}
-                    <div className="flex items - center justify - between mb - 6">;
-                      <div className="text - cyan - 400 group - hover:text - blue - 400 transition - colors duration - 300">;
-                        <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center">;
-                          <span className="text - 2xl font - bold">{service.name.char_at (0)}</span>;
-                        </div>;
-                      </div>;
-                      <ArrowRight className="w - 5 h - 5 text - gray - 500 group - hover:text - cyan - 400 transition - colors duration - 300" />;
-                    </div>;
-                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300">;
-                      {service.name}
-                    </h3>;
-                    <p className="text - cyan - 400 text - sm mb - 4">;
-                      {service.tagline}
-                    </p>;
-                    <p className="text - gray - 300 mb - 6 leading - relaxed">;
-                      {service.description}
-                    </p>;
-                    <div className="space - y-2 mb - 6">;
-                      {service.features.slice (0, 3).map ((feature, feature_index) => (
-                        <div key={feature_index} className="flex items - center text - sm text - gray - 400">;
-                          <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
-                          {feature}
-                        </div>))}
-                    </div>;
-                    <div className="flex items - center justify - between">;
-                      <div className="text - 2xl font - bold text - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {service.price}
                       </div>;
                       {service.link && (
                         <a;
                           href={service.link}
-<<<<<<< HEAD
                           className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
                         >
                           Learn More
@@ -816,22 +648,6 @@ if (return null, ) {
             )}
           </div>
         </section>
-=======
-                          className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300";
-                        >;
-                          Learn More;
-                        </a>)}
-                    </div>;
-                  </div>;
-                </motion.div>))}
-            </div>;
-            {filtered_services.length === 0 && (
-              <div className="text - center py - 12">;
-                <p className="text - gray - 400 text - lg">No services found matching your criteria.</p>;
-              </div>)}
-          </div>;
-        </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Call to Action */}
         <section className="py - 20 px - 4">;
           <div className="container mx - auto max - w-4xl text - center">;
@@ -864,7 +680,6 @@ if (return null, ) {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
-<<<<<<< HEAD
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -873,14 +688,7 @@ if (return null, ) {
       />
     </div>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       <QuoteRequestModal;
         open={modal_open}
         on_close={() => setModalOpen (false)}
@@ -889,5 +697,3 @@ if (return null, ) {
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1554,7 +1554,7 @@
         "issues": [
           {
             "type": "yaml_syntax_error",
-            "message": "while parsing a block mapping\n  in \"<unicode string>\", line 1, column 1:\n    name: 🚀 Exponential Agent Factor ... \n    ^\nexpected <block end>, but found '<block mapping start>'\n  in \"<unicode string>\", line 6, column 4:\n       with:\n       ^",
+            "message": "while parsing a block mapping\n  in \"<unicode string>\", line 1, column 1:\n    name:  Exponential Agent Factor ... \n    ^\nexpected <block end>, but found '<block mapping start>'\n  in \"<unicode string>\", line 6, column 4:\n       with:\n       ^",
             "severity": "critical"
           },
           {
@@ -1646,7 +1646,7 @@
         "issues": [
           {
             "type": "yaml_syntax_error",
-            "message": "while parsing a block mapping\n  in \"<unicode string>\", line 1, column 1:\n    name: 🚀 Agent Factory Proliferat ... \n    ^\nexpected <block end>, but found '<block mapping start>'\n  in \"<unicode string>\", line 7, column 3:\n      workflow_dispatch:\n      ^",
+            "message": "while parsing a block mapping\n  in \"<unicode string>\", line 1, column 1:\n    name:  Agent Factory Proliferat ... \n    ^\nexpected <block end>, but found '<block mapping start>'\n  in \"<unicode string>\", line 7, column 3:\n      workflow_dispatch:\n      ^",
             "severity": "critical"
           },
           {
@@ -2372,7 +2372,7 @@
         "issues": [
           {
             "type": "yaml_syntax_error",
-            "message": "while parsing a block mapping\n  in \"<unicode string>\", line 1, column 1:\n    name: 🏭 Self-Replicating Factory ... \n    ^\nexpected <block end>, but found '<block mapping start>'\n  in \"<unicode string>\", line 6, column 4:\n       with:\n       ^",
+            "message": "while parsing a block mapping\n  in \"<unicode string>\", line 1, column 1:\n    name:  Self-Replicating Factory ... \n    ^\nexpected <block end>, but found '<block mapping start>'\n  in \"<unicode string>\", line 6, column 4:\n       with:\n       ^",
             "severity": "critical"
           },
           {
@@ -3397,7 +3397,7 @@
         "issues": [
           {
             "type": "yaml_syntax_error",
-            "message": "while parsing a block mapping\n  in \"<unicode string>\", line 1, column 1:\n    name: 🤖 Autonomous Agent Orchest ... \n    ^\nexpected <block end>, but found '<block mapping start>'\n  in \"<unicode string>\", line 6, column 4:\n       with:\n       ^",
+            "message": "while parsing a block mapping\n  in \"<unicode string>\", line 1, column 1:\n    name:  Autonomous Agent Orchest ... \n    ^\nexpected <block end>, but found '<block mapping start>'\n  in \"<unicode string>\", line 6, column 4:\n       with:\n       ^",
             "severity": "critical"
           },
           {

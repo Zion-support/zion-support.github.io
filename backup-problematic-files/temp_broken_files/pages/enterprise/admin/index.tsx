@@ -165,7 +165,7 @@ function ActivityTab({ events } { events:any[] }) {;
       <ul>;
         {events.map((e) => (;
           <li key={e.id}>;
-            <span style={{ color:'#6b7280' }}>{new Date(e.timestampIso).toLocaleString()} — </span>;            <strong>{e.actorEmail}</strong> {e.action}
+            <span style={{ color:'#6b7280' }}>{new Date(e.timestampIso).toLocaleString()}  </span>;            <strong>{e.actorEmail}</strong> {e.action}
           </li>;
         ))}
       </ul>;
@@ -191,7 +191,7 @@ function BillingTab({ invoices } { invoices:Invoice[] }) {;
           {invoices.map(inv => (;
             <tr key={inv.id}>;
               <td style={{ padding:8, borderBottom:'1px solid #f3f4f6' }}>{inv.number}</td>;
-              <td style={{ padding:8, borderBottom:'1px solid #f3f4f6' }}>{inv.periodStartIso} → {inv.periodEndIso}</td>;
+              <td style={{ padding:8, borderBottom:'1px solid #f3f4f6' }}>{inv.periodStartIso}  {inv.periodEndIso}</td>;
               <td style={{ padding:8, borderBottom:'1px solid #f3f4f6', textAlign:'right' }}>${inv.amountUsd.toFixed(2)}</td>;
               <td style={{ padding:8, borderBottom:'1px solid #f3f4f6', textAlign:'center' }}>{inv.status}</td>;
               <td style={{ padding:8, borderBottom:'1px solid #f3f4f6', textAlign:'right' }}>;
@@ -298,7 +298,7 @@ function BillingTab({ invoices } { invoices:Invoice[] }) {;
 }
 }> {
   new Date (e.timestampIso) .toLocaleString () 
-}— </span> <strong> {
+} </span> <strong> {
   e.actorEmail 
 }</strong> {
   e.action 

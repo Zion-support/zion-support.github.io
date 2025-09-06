@@ -64,14 +64,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12),
 
   const navigationSections = [
-    { id: 'hero', label: 'Home', icon: '🏠' },
-    { id: 'services', label: 'Micro SAAS', icon: '🚀' },
-    { id: 'ai', label: 'AI Services', icon: '🧠' },
-    { id: 'automation', label: 'AI Automation', icon: '⚡' },
-    { id: 'quantum', label: 'Quantum Security', icon: '🔐' },
-    { id: 'it', label: 'IT Solutions', icon: '💻' },
-    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
-    { id: 'contact', label: 'Contact', icon: '📞' }
+    { id: 'hero', label: 'Home', icon: '' },
+    { id: 'services', label: 'Micro SAAS', icon: '' },
+    { id: 'ai', label: 'AI Services', icon: '' },
+    { id: 'automation', label: 'AI Automation', icon: '' },
+    { id: 'quantum', label: 'Quantum Security', icon: '' },
+    { id: 'it', label: 'IT Solutions', icon: '' },
+    { id: 'emerging', label: 'Emerging Tech', icon: '' },
+    { id: 'contact', label: 'Contact', icon: '' }
   ],
 
   const features = [
@@ -195,14 +195,14 @@ initial={{ opacity: 0, height: 0 }}
 href=&quot;tel:+13024640950&quot;
                           className=&quot;flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300&quot;
                         >
-                          <span>📱</span>
+                          <span></span>
                           <span>+1 302 464 0950</span>
                         </a>
                         <a,
 href=&quot;mailto:kleber@ziontechgroup.com&quot;
                           className=&quot;flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300&quot;
                         >
-                          <span>✉️</span>
+                          <span></span>
                           <span>kleber@ziontechgroup.com</span>
                         </a>
                       </div>
@@ -470,7 +470,7 @@ href=&quot;tel:+13024640950&quot;
       {/* Footer */}
       <footer className=&quot;py-12 px-4 border-t border-white/10&quot;>
         <div className=&quot;max-w-6xl mx-auto text-center&quot;>
-          <div className=&quot;text-gray-400 mb-4&quot;>            <p>© 2025-2026 ZionTech Group. All rights reserved.</p>
+          <div className=&quot;text-gray-400 mb-4&quot;>            <p> 2025-2026 ZionTech Group. All rights reserved.</p>
             <p className=&quot;mt-2&quot;>
               Address: 364 E Main St STE 1008 Middletown DE 19709 | 
               Phone: +1 302 464 0950 | 

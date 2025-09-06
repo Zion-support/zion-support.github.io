@@ -70,7 +70,7 @@ const Homepage2040: React.FC = () => {;
       hoverColor: "group-hover:text-cyan-300"
     },
     {
-      number: "∞",
+      number: "",
       label: "Future Possibilities",
       description: "Unlimited potential",
       icon: InfinityIcon,
@@ -402,7 +402,7 @@ const Homepage2040: React.FC = () => {;
                       <span className="text-lg text-gray-400">/month</span>
                     </div>
                     <div className="text-sm text-gray-400">
-                      {service.rating} ⭐ ({service.reviews})
+                      {service.rating}  ({service.reviews})
                     </div>
                   </div>
                   

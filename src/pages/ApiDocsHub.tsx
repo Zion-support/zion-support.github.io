@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
 import Link from 'next/link'
 import {
@@ -66,8 +61,6 @@ export function ApiDocsHub() {
         </p>
         <div className='grid gap-6 md:grid-cols-2'>
           {sections.map(section => (
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -147,7 +140,6 @@ export function ApiDocsHub() {;
           Zion AI Marketplace API;
         </h1>;
         <p className='text-zinc-400 text-lg mb-12'>;
-=======
 import React from 'react';
 import Link from 'next / link';
 import {
@@ -207,16 +199,13 @@ function ApiDocsHub() {
           Zion AI Marketplace API;
         </h1>;
         <p className='text - zinc - 400 text - lg mb - 12'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Welcome to the Zion AI Marketplace API documentation. Here you'll find;
           comprehensive guides and documentation to help you start working with;
           our API as quickly as possible.;
         </p>;
-<<<<<<< HEAD
 
         <div className='grid gap-6 md:grid-cols-2'>;
           {sections && sections.map(section => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Link
               key={section && section.path}
               href={section && section.path}
@@ -235,7 +224,6 @@ function ApiDocsHub() {
               </div>;
             </Link>;
           ))}
-<<<<<<< HEAD
         </div>
         <div className='mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800'>
           <h2 className='text-xl font-semibold text-white mb-4'>
@@ -257,35 +245,8 @@ function ApiDocsHub() {
     </ApiDocsLayout>
   )
 export default ApiDocsHub
-=======
-        </div>;
 
-        <div className='mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800'>;
-          <h2 className='text-xl font-semibold text-white mb-4'>;
-            Ready to get started?;
-          </h2>;
-          <p className='text-zinc-400 mb-6'>;
-            To use the Zion AI Marketplace API, you'll need an API key. Visit;
-            your developer portal to create one.;
-          </p>;
-          <Link
-            href='/developers/portal'
-            className='inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors'>;
-            Go to Developer Portal;
-            <ArrowRight className='ml-2 h-4 w-4' />;
-          </Link>;
-        </div>;
-      </div>;
-    </ApiDocsLayout>;
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-<<<<<<< HEAD
 export default ApiDocsHub;
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <div className='grid gap - 6 md:grid - cols - 2'>;
           {sections.map (section => (
             <Link;
@@ -326,5 +287,3 @@ export default ApiDocsHub;
       </div>;
     </ApiDocsLayout>);
 export default ApiDocsHub;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

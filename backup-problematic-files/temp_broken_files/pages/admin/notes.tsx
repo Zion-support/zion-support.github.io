@@ -40,15 +40,15 @@ export default function AdminNotesConsole() {;
       </div>;
 ;
       {loading ? (;
-        <div>Loading…</div>;
+        <div>Loading</div>;
       ) :notes.length === 0 ? (;
         <div className="opacity-70">No notes found.</div>;
       ) :(;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">;
           {notes.map((n) => (;
             <div key={n.id} className="rounded border p-3 text-sm">;
-              <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>;
-              <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>;
+              <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()}  {n.authorId}</div>;
+              <div className="font-medium mb-1">{n.targetType}  {n.targetId}</div>;
               <div>{n.text}</div>;
             </div>;
 interface Note {
@@ -90,15 +90,15 @@ export default function AdminNotesConsole() {
       </div>
 
       {loading ? (
-        <div>Loading…</div>
+        <div>Loading</div>
       ) : notes.length === 0 ? (
         <div className=&quot;opacity-70&quot;>No notes found.</div>
       ) : (
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
           {notes.map((n) => (
             <div key={n.id} className=&quot;rounded border p-3 text-sm&quot;>
-              <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
-              <div className=&quot;font-medium mb-1&quot;>{n.targetType} • {n.targetId}</div>
+              <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()}  {n.authorId}</div>
+              <div className=&quot;font-medium mb-1&quot;>{n.targetType}  {n.targetId}</div>
               <div>{n.text}</div>            </div>
           ))}
         </div>;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -17,14 +16,7 @@ function escapeHtml(str: string) {
     .replace(/&/g, '&amp,')
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async /**
@@ -54,5 +46,3 @@ function escape_html() {
     .replace (/>/g, '&gt, ');
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

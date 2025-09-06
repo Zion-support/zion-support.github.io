@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface FraudRecord {
   id: string;
   type: string;
@@ -22,7 +18,6 @@ export interface MonthlyReport {
   topFraudTypes: Array<{ type: string; count: number }>;
 }
 class FraudStore {
-<<<<<<< HEAD
   private records: Map<string, FraudRecord> = new Map();
   createRecord(record: Omit<FraudRecord, 'id' | 'timestamp'>): FraudRecord {
     const id = Date.now().toString();
@@ -65,8 +60,6 @@ class FraudStore {
 }
 export const fraudStore = new FraudStore();
 export const getFraudStore = () => fraudStore;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 // Mock fraud store utility
 export function getFraudStore() {
   return {
@@ -78,10 +71,6 @@ export function getFraudStore() {
     ipAddress: partial && partial.ipAddress ?? null,
     createdAt: partial && partial.createdAt ?? new Date().toISOString(),
   };
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 // Fraud detection store utilities
 export interface FraudEvent {
   id: string;
@@ -359,8 +348,6 @@ export function generateFraudEventId(): string {
 export function generateAdminActionId(): string {
   return `action_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   private records: Map < string, FraudRecord> = new Map ();
 ;
   create_record (record: Omit < FraudRecord, 'id' | 'timestamp'>): FraudRecord {
@@ -408,5 +395,3 @@ if (return undefined) {
 }
 export const fraud_store = new FraudStore ();
 export const getFraudStore = () =>: any fraud_store;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

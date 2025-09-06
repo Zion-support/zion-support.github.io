@@ -11,24 +11,24 @@ import SmartFooter from '../components/SmartFooter',;
 ;
 export default function SitemapPage() {;
   const mainPages = [;
-    { href:'/', label:'🏠 Home', description:'Main landing page with company overview and featured services' },;
-    { href:'/about', label:'👥 About Us', description:'Company story, mission, values, and team information' },;
-    { href:'/services', label:'🚀 Services', description:'Complete catalog of AI and technology services' },;
-    { href:'/explore', label:'🔍 Explore', description:'Browse services by category and technology area' },;
-    { href:'/contact', label:'📧 Contact', description:'Get in touch and start your project' }
+    { href:'/', label:' Home', description:'Main landing page with company overview and featured services' },;
+    { href:'/about', label:' About Us', description:'Company story, mission, values, and team information' },;
+    { href:'/services', label:' Services', description:'Complete catalog of AI and technology services' },;
+    { href:'/explore', label:' Explore', description:'Browse services by category and technology area' },;
+    { href:'/contact', label:' Contact', description:'Get in touch and start your project' }
   ],;
 ;
   const serviceCategories = [;
-    { href:'/category/ai', label:'🧠 AI & Machine Learning', description:'Artificial intelligence and machine learning solutions' },;
-    { href:'/category/quantum', label:'⚛️ Quantum Computing', description:'Quantum computing and quantum AI applications' },;
-    { href:'/category/cybersecurity', label:'🛡️ Cybersecurity', description:'Quantum-resistant security and threat detection' },;
-    { href:'/category/cloud', label:'☁️ Cloud & DevOps', description:'Cloud infrastructure and DevOps automation' },;
-    { href:'/category/edge', label:'🌐 Edge Computing', description:'Edge computing orchestration and IoT management' },;
-    { href:'/category/space', label:'🚀 Space Technology', description:'Space exploration and resource optimization' },;
-    { href:'/category/biotech', label:'🧬 Biotechnology', description:'Neural interfaces and biomedical innovations' },;
-    { href:'/category/blockchain', label:'⛓️ Blockchain', description:'AI-powered blockchain governance and DeFi' },;
-    { href:'/category/automation', label:'⚡ Automation', description:'Business process automation and AI agents' },;
-    { href:'/category/fintech', label:'💰 Financial Technology', description:'Quantum financial trading and AI analytics' }
+    { href:'/category/ai', label:' AI & Machine Learning', description:'Artificial intelligence and machine learning solutions' },;
+    { href:'/category/quantum', label:' Quantum Computing', description:'Quantum computing and quantum AI applications' },;
+    { href:'/category/cybersecurity', label:' Cybersecurity', description:'Quantum-resistant security and threat detection' },;
+    { href:'/category/cloud', label:' Cloud & DevOps', description:'Cloud infrastructure and DevOps automation' },;
+    { href:'/category/edge', label:' Edge Computing', description:'Edge computing orchestration and IoT management' },;
+    { href:'/category/space', label:' Space Technology', description:'Space exploration and resource optimization' },;
+    { href:'/category/biotech', label:' Biotechnology', description:'Neural interfaces and biomedical innovations' },;
+    { href:'/category/blockchain', label:' Blockchain', description:'AI-powered blockchain governance and DeFi' },;
+    { href:'/category/automation', label:' Automation', description:'Business process automation and AI agents' },;
+    { href:'/category/fintech', label:' Financial Technology', description:'Quantum financial trading and AI analytics' }
   ],;
 ;
   const featuredServices = [;
@@ -43,10 +43,10 @@ export default function SitemapPage() {;
   ],;
 ;
   const resources = [;
-    { href:'/reports', label:'📊 Reports', description:'Latest technology reports and insights' },;
-    { href:'/newsroom', label:'📰 Newsroom', description:'Company updates and industry news' },;
-    { href:'/automation', label:'⚡ Automations', description:'Automation tools and solutions' },;
-    { href:'/search', label:'🔎 Search', description:'Search across all services and content' }
+    { href:'/reports', label:' Reports', description:'Latest technology reports and insights' },;
+    { href:'/newsroom', label:' Newsroom', description:'Company updates and industry news' },;
+    { href:'/automation', label:' Automations', description:'Automation tools and solutions' },;
+    { href:'/search', label:' Search', description:'Search across all services and content' }
   ],;
 ;
   const externalLinks = [;

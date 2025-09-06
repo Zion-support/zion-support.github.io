@@ -1,18 +1,12 @@
-<<<<<<< HEAD
 import { Button } from './ui/button';
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
 import { toast } from './ui/use-toast';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from './ui/button'
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
 import { toast } from "./ui/use-toast";
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useTranslation } from 'react-i18next';
 export function SocialShareSection() {;
   const { t } = useTranslation();
-<<<<<<< HEAD
   // Current URL is not available during SSR, guard with typeof check
 
   const shareUrl =
@@ -56,59 +50,9 @@ export function SocialShareSection() {;
           variant: 'destructive'
         })
       })
-=======
-import { Button } from './ui / button';
-import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
-import { toast } from './ui / use - toast';
-import { use_translation } from 'react - i18next';
-export /**
- * SocialShareSection - Function description
- */
-function SocialShareSection() {
-  const { t } = use_translation ();
-  // Current URL is not available during SSR, guard with typeof check;
-  const share_url =;
-    typeof window !== 'undefined';
-      ? encodeURIComponent (window.location.href);
-      : '';
-  const share_text = encodeURIComponent (
-    'Check out Zion - The Future of AI & Tech Marketplace');
-  // Social sharing functions;
-  const shareToTwitter = () =>: any {
-    window.open (
-      `https://twitter.com / intent / tweet?url=${share_url}&text=${share_text}`,
-      '_blank');
-  }
-  const shareToFacebook = () =>: any {
-    window.open (
-      `https://www.facebook.com / sharer / sharer.php?u=${share_url}`,
-      '_blank');
-  }
-  const shareToLinkedIn = () =>: any {
-    window.open (
-      `https://www.linkedin.com / sharing / share - offsite/?url=${share_url}`,
-      '_blank');
-  }
-  const copyLinkToClipboard = () =>: any {
-    navigator.clipboard;
-      .write_text (window.location.href);
-      .then (() => {        toast ({
-          title: 'Link Copied!',
-          description: 'The link has been copied to your clipboard',
-        });
-      });
-      .catch ((, ) => {
-        toast ({
-          title: t ('errors.failed_to_copy'),
-          description: 'Please try again or copy the URL manually',
-          variant: 'destructive',
-        });
-      });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   const share_links = [;
     {
-<<<<<<< HEAD
       name: 'Twitter'
       icon: <Twitter className='h-5 w-5' aria-hidden='true' />
       color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80'
@@ -133,83 +77,6 @@ function SocialShareSection() {
       onClick: copyLinkToClipboard
     }
   ]
-=======
-
-  // Current URL is not available during SSR, guard with typeof check;
-  const shareUrl =;
-    typeof window !== 'undefined';
-      ? encodeURIComponent(window && window.location.href);
-      : '';
-  const shareText = encodeURIComponent(;
-    'Check out Zion - The Future of AI & Tech Marketplace';
-  );
-
-  // Social sharing functions;
-  const shareToTwitter = () => {;
-    window && window.open(;
-      `https://twitter && twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`,;
-      '_blank';
-    );
-  };
-
-  const shareToFacebook = () => {;
-    window && window.open(;
-      `https://www && www.facebook.com/sharer/sharer && sharer.php?u=${shareUrl}`,;
-      '_blank';
-    );
-  };
-
-  const shareToLinkedIn = () => {;
-    window && window.open(;
-      `https://www && www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,;
-      '_blank';
-    );
-  };
-
-  const copyLinkToClipboard = () => {;
-    navigator && navigator.clipboard;
-      .writeText(window && window.location.href);
-      .then(() => {        toast({;
-          title: 'Link Copied!',;
-          description: 'The link has been copied to your clipboard',;
-        });
-      });
-      .catch((,) => {;
-        toast({;
-          title: t('errors && errors.failed_to_copy'),;
-          description: 'Please try again or copy the URL manually',;
-          variant: 'destructive',;
-        });
-      });
-  };
-
-  const shareLinks = [;
-    {;
-      name: 'Twitter',;
-      icon: <Twitter className='h-5 w-5' aria-hidden='true' />,;
-      color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80',;
-      onClick: shareToTwitter,;
-    },;
-    {;
-      name: 'Facebook',;
-      icon: <Facebook className='h-5 w-5' aria-hidden='true' />,;
-      color: 'bg-[#4267B2] hover:bg-[#4267B2]/80',;
-      onClick: shareToFacebook,;
-    },;
-    {;
-      name: 'LinkedIn',;
-      icon: <Linkedin className='h-5 w-5' aria-hidden='true' />,;
-      color: 'bg-[#0077B5] hover:bg-[#0077B5]/80',;
-      onClick: shareToLinkedIn,;
-    },;
-    {;
-      name: 'Copy Link',;
-      icon: <Link className='h-5 w-5' aria-hidden='true' />,;
-      color: 'bg-zion-blue-dark hover:bg-zion-blue-dark/80',;
-      onClick: copyLinkToClipboard,;
-    },;
-  ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <section className='py-12 bg-zion-blue'>;
@@ -236,7 +103,6 @@ function SocialShareSection() {
                 <span aria-hidden='true'>{link && link.name}</span>;
               </Button>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -248,35 +114,7 @@ function SocialShareSection() {
   toast ({
   title: t ('errors.failed to copy')
 })
-=======
-          </div>;
-        </div>;
-      </div>;
-    </section>;
-  );
-
-  navigator && navigator.clipboard.writeText (window && window.location.href) .then ( () => {;
-  toast ({;
-
-}) .catch ( () => {;
-  toast ({;
-  title: t ('errors && errors.failed to copy');
-});
-};
-}</div> </div> </div> </section>) ;
-}'";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-=======
-}</div> </div> </div> </section>)
-}'"
-}
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       name: 'Twitter',
       icon: <Twitter className='h - 5 w - 5' aria - hidden='true' />,
       color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80',
@@ -339,5 +177,3 @@ function SocialShareSection() {
 }</div> </div> </div> </section>);
 }'";
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

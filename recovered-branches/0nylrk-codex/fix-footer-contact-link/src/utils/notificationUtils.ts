@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import {supabase} from "@/integrations/supabase/client";
@@ -100,22 +99,13 @@ export async function createHireRequestNotifications({
       actionText: 'Review Request'
     });
     return {
-<<<<<<< HEAD
       success: talentNotification.success && adminNotification.success;
       talentNotification
-=======
-      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
-      talentNotification,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       adminNotification
     }
   }
   return {
-<<<<<<< HEAD
     success: talentNotification.success
-=======
-    success: talentNotification && talentNotification.success,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     talentNotification
   }
 }
@@ -138,7 +128,6 @@ export async function createOnboardingNotification({
   if (userRole === 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
-=======
 import { supabase } from '@/integrations / supabase / client';
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 ;
@@ -253,7 +242,6 @@ if ( {) {
 }
     switch (missing_milestone) {
       case 'profile_completed':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         title = 'Complete your profile';
         message = 'Complete your profile to get discovered by clients';
         action_url = '/profile';
@@ -294,7 +282,6 @@ if ( {) {
         break;
     }
   }
-<<<<<<< HEAD
   return createNotification({
     userId;
     title;
@@ -335,63 +322,16 @@ export async function createSystemNotification({
 }
 /**
  * Demo function to create test notifications for the current user
-=======
-  return create_notification ({
-    user_id;
-    title;
-    message;
-    type: 'onboarding';
-    send_email: false;
-    action_url,
-    action_text;
-  });
-}
-/**;
-* Creates a system notification for a user;
-*/;
-export async /**
- * createSystemNotification - Function description
- */
-function createSystemNotification() {
-  return create_notification ({
-    user_id;
-    title;
-    message;
-    type: 'system';
-    send_email;
-    action_url,
-    action_text;
-  });
-}
-/**;
-* Demo function to create test notifications for the current user;
-*/;
-export async /**
- * createTestNotification - Function description
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
  */
 function createTestNotification() {
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
-<<<<<<< HEAD
-<<<<<<< HEAD
   const randomType = types[Math.floor(Math.random() * types.length)]
-=======
-  const randomType = types[Math && Math.floor(Math && Math.random() * types && types.length)],
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
   }
   const messages = {
-<<<<<<< HEAD
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!'
   }
-=======
-    'message': 'You have received a new message from a potential client && client.quote_request': 'A client has submitted a quote request for your services && services.booking_confirmation': 'Your booking has been confirmed and scheduled && scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details && details.onboarding': 'Complete your profile to get more visibility and job matches && matches.system': 'Our platform has been updated with new features. Check them out!'
-  };
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   const random_type = types[Math.floor (Math.random () * types.length)],
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update';
@@ -401,7 +341,6 @@ function createTestNotification() {
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!';
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const actions = {
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
@@ -410,7 +349,6 @@ function createTestNotification() {
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
   }
-<<<<<<< HEAD
   return createNotification({
     userId;
     title: titles[randomType];
@@ -421,16 +359,4 @@ function createTestNotification() {
 
     actionText: actions[randomType].text
   })
-=======
-;
-  return create_notification ({
-    user_id;
-    title: titles[random_type];
-    message: messages[random_type];
-    type: random_type;
-    send_email: true;
-    action_url: actions[random_type].url,
-    action_text: actions[random_type].text;
-  });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

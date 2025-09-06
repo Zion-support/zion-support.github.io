@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Activity } from 'lucide-react';
 
@@ -27,7 +25,7 @@ export const PerformanceMonitor: React.FC = () => {
             onClick={() => setIsVisible(false)}
             className="text-gray-400 hover:text-white transition-colors"
           >
-            ×
+            
           </button>
         </div>
       </div>
@@ -40,10 +38,5 @@ export const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
-=======
 import React from 'react';
->>>>>>> 2fc87795dcf7cb742c24a257dd9040071acce941
-=======
-import React from 'react';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+

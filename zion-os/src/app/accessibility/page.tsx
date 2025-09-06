@@ -1,18 +1,11 @@
-<<<<<<< HEAD
 export default function AccessibilityPage() {return (;
-=======
-export default function AccessibilityPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen bg-white">;
-=======
 export default /**
  * AccessibilityPage - Function description
  */
 function AccessibilityPage() {
   return (
     <div className="min - h-screen bg - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - green - 600 to - teal - 600 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;

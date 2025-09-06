@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 
@@ -16,8 +15,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const events = scoped.filter((e) => (e.timestamp || 0) > since);
 
   return res.status(200).json({
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -31,25 +28,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const scoped = filterEventsByScope(state.events, state.config.scope)
   const events = scoped.filter((e) => (e.timestamp |0) > since)
   return res.status(200).json({
-<<<<<<< HEAD
     instanceId: state.config.instanceId
     lastSyncedAt: state.lastSyncedAt
     events
 
     scope: requestedScope})
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     instanceId: state.config.instanceId,
     lastSyncedAt: state.lastSyncedAt,
     events,
     scope: requestedScope
   });
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';,
 ;
@@ -73,5 +63,3 @@ function handler() {
     events,
     scope: requested_scope});
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

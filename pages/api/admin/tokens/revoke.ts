@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { revokeTokens } from "../../../../utils/token/service";
 
@@ -16,12 +12,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (err: any) {
     return res.status(400).json({ error: err.message });
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { revoke_tokens  } from '../../../../utils / token / service';,
 export default /**
@@ -42,8 +33,3 @@ function handler() {
     return res.status (400).json ({ error: err.message });
   }
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

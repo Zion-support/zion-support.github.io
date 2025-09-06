@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -17,51 +15,9 @@ export default function TalentDirectory() {
   const navigate = useNavigate();
   // Use our custom hook to manage state
   const {
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React, { useState } from "react";
-import {useNavigate} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-import {TalentGrid} from "@/components/talent/TalentGrid";
-import {FilterSidebar} from "@/components/talent/FilterSidebar";
-import {TalentResults} from "@/components/talent/TalentResults";
-import {useTalentDirectory} from "@/hooks/useTalentDirectory";
-import {SORT_OPTIONS} from "@/data/sortOptions";
-import {X} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {TalentProfile} from "@/types/talent";
-export default function TalentDirectory() {;
-  const navigate = useNavigate();
-
-  // Use our custom hook to manage state;
-  const {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     filteredTalents;
     isLoading;
     searchTerm;
-=======
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -84,7 +40,6 @@ function TalentDirectory() {
     filtered_talents;
     is_loading;
     search_term;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     setSearchTerm;
     selected_skills;
     selected_availability;
@@ -101,7 +56,6 @@ function TalentDirectory() {
     setIsHireModalOpen;
     selected_talent;
     setSelectedTalent;
-<<<<<<< HEAD
     expandedSections;
     isAuthenticated;
     savedTalents;
@@ -111,7 +65,6 @@ function TalentDirectory() {
     clearFilters;
     toggleSection;
     handleToggleSave} = useTalentDirectory();
-<<<<<<< HEAD
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent)
     setIsHireModalOpen(true)
@@ -130,37 +83,12 @@ function TalentDirectory() {
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
             </p>
           </div>
-=======
-
-  const handleRequestHire = (talent: TalentProfile) => {;
-    setSelectedTalent(talent),;
-    setIsHireModalOpen(true);
-  };
-
-  const viewProfile = (id: string) => {;
-    // Navigate to the talent profile page;
-    navigate(`/talent/${id}`);
-  };
-
-  return (
-    <AppLayout>;
-      <div className="container mx-auto px-4 py-8">;
-        <div className="flex flex-col space-y-8">;
-          <div>;
-            <h1 className="text-3xl font-bold text-white mb-2">AI & Tech Talent Directory</h1>;
-            <p className="text-zion-slate-light">;
-              Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.;
-            </p>;
-          </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">;
             {/* Sidebar - Desktop */}
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
               <FilterSidebar
                 searchTerm={searchTerm}
-=======
     expanded_sections;
     is_authenticated;
     saved_talents;
@@ -197,7 +125,6 @@ function TalentDirectory() {
             <div className="w - full lg:w - 64 shrink - 0 hidden lg:block">;
               <FilterSidebar;
                 search_term={search_term}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 setSearchTerm={setSearchTerm}
                 selected_skills={selected_skills}
                 toggle_skill={toggle_skill}
@@ -213,50 +140,24 @@ function TalentDirectory() {
                 toggle_section={toggle_section}
                 sort_option={sort_option}
                 setSortOption={setSortOption}
-<<<<<<< HEAD
                 clearFilters={clearFilters}
-<<<<<<< HEAD
               />
             </div>
-=======
-              />;
-            </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">;
               <Button
                 onClick={() => setIsMobileFilterOpen(true)}
-<<<<<<< HEAD
                 variant="outline"
                 className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
               >
                 Filter & Sort
               </Button>
             </div>
-=======
-                variant="outline";
-                className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light";
-=======
-                clear_filters={clear_filters}
-              />;
-            </div>;
-            {/* Mobile filter button */}
-            <div className="lg:hidden mb - 4">;
-              <Button;
-                on_click={() => setIsMobileFilterOpen (true)}
-                variant="outline";
-                className="w - full border - zion - blue - light text - zion - purple hover:bg - zion - blue - light";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               >;
                 Filter & Sort;
               </Button>;
             </div>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* Results */}
             <TalentResults;
               filtered_talents={filtered_talents}
@@ -267,8 +168,6 @@ function TalentDirectory() {
               handleToggleSave={handleToggleSave}
               is_authenticated={is_authenticated}
               activeFiltersProps={{
-<<<<<<< HEAD
-<<<<<<< HEAD
                 selectedSkills;
                 toggleSkill;
                 selectedAvailability;
@@ -276,37 +175,12 @@ function TalentDirectory() {
                 selectedRegions;
                 toggleRegion;
                 priceRange;
-=======
-                selected_skills;
-                toggle_skill;
-                selected_availability;
-                toggle_availability;
-                selected_regions;
-                toggle_region;
-                price_range;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 setPriceRange;
                 experience_range;
                 setExperienceRange;
-<<<<<<< HEAD
 
                 clearFilters}}
             />
-=======
-                selectedSkills
-                toggleSkill
-                selectedAvailability
-                toggleAvailability
-                selectedRegions
-                toggleRegion
-                priceRange
-                setPriceRange
-                experienceRange
-                setExperienceRange
-                clearFilters}}
-            />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (;
               <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;
@@ -325,7 +199,6 @@ function TalentDirectory() {
                   </div>;
                   <FilterSidebar
                     searchTerm={searchTerm}
-=======
                 clear_filters}}
             />;
             {/* Mobile filter sidebar */}
@@ -346,7 +219,6 @@ function TalentDirectory() {
                   </div>;
                   <FilterSidebar;
                     search_term={search_term}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     setSearchTerm={setSearchTerm}
                     selected_skills={selected_skills}
                     toggle_skill={toggle_skill}
@@ -366,29 +238,17 @@ function TalentDirectory() {
                     isMobileFilterOpen={isMobileFilterOpen}
                   />;
                 </div>;
-<<<<<<< HEAD
               </div>;
             )}
-<<<<<<< HEAD
           </div>
         </div>
       </div>
     </AppLayout>
   )
 }
-=======
-          </div>;
-        </div>;
-      </div>;
-    </AppLayout>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
               </div>)}
           </div>;
         </div>;
       </div>;
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

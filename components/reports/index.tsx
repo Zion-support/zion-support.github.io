@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import ContentCategorizer from '../../components/ContentCategorizer';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function ReportsIndex() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function ReportsIndex() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export default function ReportsIndex() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <main className='container mx-auto px-4 py-12 max-w-7xl'>;
@@ -29,9 +19,6 @@ export default function ReportsIndex() {
     <div className="min-h-screen bg-slate-950 text-white">;
       <main className="container mx-auto px-4 py-12 max-w-7xl">;
         {/* Header */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <div className="mb-8">
           <h1 className="text-4xl font-extrabold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
             Autonomous Content Hub
@@ -42,8 +29,6 @@ export default function ReportsIndex() {
         </div>
         {/* Content Categorizer Component */}
         <ContentCategorizer />
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <div className="mb-8">;
           <h1 className="text-4xl font-extrabold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
             Autonomous Content Hub;
@@ -56,18 +41,12 @@ export default function ReportsIndex() {
         {/* Content Categorizer Component */}
         <ContentCategorizer />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Back to Home */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <div className='mt-12 text-center'>;
           <Link
             href='/'
-            className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200'>            ← Back to home        <div className="mt-12 text-center">;
+            className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200'>             Back to home        <div className="mt-12 text-center">;
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">;
-=======
 import Link from 'next / link';
 import ContentCategorizer from '../../components / ContentCategorizer';
 export default /**
@@ -107,32 +86,14 @@ function ReportsIndex() {
           <Link;
             href='/';
             className='inline - flex items - center gap - 2 text - cyan - 300 hover:text - cyan - 200 transition - colors duration - 200';
-          >            ← Back to home        <div className="mt - 12 text - center">;
+          >             Back to home        <div className="mt - 12 text - center">;
           <Link href="/" className="inline - flex items - center gap - 2 text - cyan - 300 hover: text - cyan - 200 transition - colors duration - 200">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-            ← Back to home;
+             Back to home;
           </Link>;
         </div>;
       </main>;
-<<<<<<< HEAD
     </div>;
-<<<<<<< HEAD
-=======
   );
 }
-=======
-        <div className="mt-12 text-center">
-          <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
-            ← Back to home
-          </Link>
-        </div>
-      </main>
-    </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

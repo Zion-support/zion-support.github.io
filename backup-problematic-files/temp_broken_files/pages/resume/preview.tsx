@@ -91,7 +91,7 @@ export const getServerSideProps:GetServerSideProps = async (ctx) => {;
           'Built multi-agent automation systems improving throughput by 40%.Designed AI-driven dashboards and PDF export workflows.']}],;
     education:[;
       { institution:'University of Example', degree:'B.Sc. Computer Science', start:'2016', end:'2020' }],;
-    certifications:['AWS Certified Solutions Architect – AssociateTensorFlow Developer Certificate'],;
+    certifications:['AWS Certified Solutions Architect  AssociateTensorFlow Developer Certificate'],;
     portfolio:[;
       { title:'Agentic Resume Builder', description:'Automated resume generation using LLMs and vector search.', link:'https://example.com' },;
       { title:'AI Marketplace', description:'Talent dashboard with export features.' }]},;

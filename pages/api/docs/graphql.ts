@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import v1 from "../../../data/api-docs/v1";
 
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 function toSDL() {
-<<<<<<< HEAD
 
   const typedefs = [
     `schema { query: Query, mutation: Mutation }`
@@ -16,45 +11,19 @@ function toSDL() {
     "type Mutation { _placeholder: String }"
   ];
   // Simple mapping: create types per section for illustration
-<<<<<<< HEAD
   v1.sections.forEach((section) => {
     const typeName = section.title.replace(/[^a-zA-Z0-9]/g, "") + "Type";
     typedefs.push(
       `type ${typeName} { id: ID, title: String, description: String }`
-=======
-  v1 && v1.sections.forEach((section) => {
-    const typeName = section && section.title.replace(/[^a-zA-Z0-9]/g, "") + "Type";
-    typedefs && typedefs.push(
-      `type ${typeName} { id: ID, title: String, description: String }`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
   });
   return typedefs && typedefs.join("\n");
-<<<<<<< HEAD
-=======
-}
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res && res.setHeader("Content-Type", "text/plain");
-  res && res.status(200).send(toSDL());
-}
-
-=======
-  const typedefs = [`schema { query: Query, mutation: Mutation }`, 'type Query { _placeholder: String }type Mutation { _placeholder: String }'];
-  // Simple mapping: create types per section for illustration
-  v1.sections.forEach((section) => {
-    const typeName = section.title.replace(/[^a-zA-Z0-9]/g, '') + 'Type';
-    typedefs.push(`type ${typeName} { id: ID, title: String, description: String }`)
-  });
-  return typedefs.join('\n')
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Typetext/plain');
   res.status(200).send(toSDL())
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -82,4 +51,3 @@ function handler() {
   res.set_header ("Content - Type", "text / plain");
   res.status (200).send (toSDL ());
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

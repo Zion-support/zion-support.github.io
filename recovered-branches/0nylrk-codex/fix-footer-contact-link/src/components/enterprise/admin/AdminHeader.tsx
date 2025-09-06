@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader && AdminHeader.tsx;
 
 import React from "react";
@@ -6,16 +5,11 @@ import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Download, Settings} from "lucide-react";
 import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
-<<<<<<< HEAD
 
 export function AdminHeader() {
-=======
-export function AdminHeader() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
   return (
-<<<<<<< HEAD
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
@@ -42,7 +36,7 @@ export function AdminHeader() {;
         </div>
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Team Members</div>
-          <div className="text-xl font-medium">{company?.teamSize |"Loading..."} / {company?.teamLimit |"∞"}</div>
+          <div className="text-xl font-medium">{company?.teamSize |"Loading..."} / {company?.teamLimit |""}</div>
         </div>
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Billing Cycle</div>
@@ -69,58 +63,10 @@ export function AdminHeader() {;
       </div>
     </div>
   )
-=======
-    <div className="space-y-4">;
-      <div className="flex items-center justify-between">;
-        <div>;
-          <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>;
-          <p className="text-muted-foreground mt-1">;
-            Manage your company's account, team members, and subscription;
-          </p>;
-        </div>;
-        <div className="flex items-center gap-2">;
-          <Button variant="outline" size="sm" className="gap-2">;
-            <Settings className="h-4 w-4" />;
-            Settings;
-          </Button>;
-          <Button variant="outline" size="sm" className="gap-2">;
-            <Download className="h-4 w-4" />;
-=======
-:recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / admin / AdminHeader.tsx;
-import React from './react';
-import { use_auth } from '@/hooks / use_auth';
-import { Button } from '@/components / ui / button';
-import { Download, Settings } from './lucide-react';
-import { useCompanyWorkspace } from '@/hooks / useCompanyWorkspace';
-export /**
- * AdminHeader - Function description
- */
-function AdminHeader() {
-  const { user } = use_auth ();
-  const { company } = useCompanyWorkspace ();
-;
-  return (
-    <div className="space - y-4">;
-      <div className="flex items - center justify - between">;
-        <div>;
-          <h1 className="text - 3xl font - bold tracking - tight">Enterprise Admin Dashboard</h1>;
-          <p className="text - muted - foreground mt - 1">;
-            Manage your company's account, team members, and subscription;
-          </p>;
-        </div>;
-        <div className="flex items - center gap - 2">;
-          <Button variant="outline" size="sm" className="gap - 2">;
-            <Settings className="h - 4 w - 4" />;
-            Settings;
-          </Button>;
-          <Button variant="outline" size="sm" className="gap - 2">;
-            <Download className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Export Data;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
         <div className="bg-card rounded-lg p-4 border border-border">;
@@ -129,7 +75,7 @@ function AdminHeader() {
         </div>;
         <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Team Members</div>;
-          <div className="text-xl font-medium">{company?.teamSize || "Loading..."} / {company?.teamLimit || "∞"}</div>;
+          <div className="text-xl font-medium">{company?.teamSize || "Loading..."} / {company?.teamLimit || ""}</div>;
         </div>;
         <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Billing Cycle</div>;
@@ -157,8 +103,6 @@ function AdminHeader() {
       </div>;
     </div>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
         <div className="bg - card rounded - lg p - 4 border border - border">;
           <div className="text - sm text - muted - foreground">Subscription Plan</div>;
@@ -166,7 +110,7 @@ function AdminHeader() {
         </div>;
         <div className="bg - card rounded - lg p - 4 border border - border">;
           <div className="text - sm text - muted - foreground">Team Members</div>;
-          <div className="text - xl font - medium">{company?.team_size || "Loading..."} / {company?.team_limit || "∞"}</div>;
+          <div className="text - xl font - medium">{company?.team_size || "Loading..."} / {company?.team_limit || ""}</div>;
         </div>;
         <div className="bg - card rounded - lg p - 4 border border - border">;
           <div className="text - sm text - muted - foreground">Billing Cycle</div>;
@@ -192,5 +136,4 @@ function AdminHeader() {
         <Button > Customize Workspace</Button>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

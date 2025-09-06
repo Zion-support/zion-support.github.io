@@ -29,12 +29,12 @@ export default function Innovative2026ServicesShowcase() {;
   const emergingTechCount = allServices.filter(service => service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes('Synthetic')).length,;
 ;
   const categories = [;
-    { id:'all', name:'All Services', icon:'🚀', count:allServices.length },;
-    { id:'ai', name:'AI Services', icon:'🧠', count:aiCount },;
-    { id:'quantum', name:'Quantum Tech', icon:'⚛️', count:quantumCount },;
-    { id:'enterprise', name:'Enterprise IT', icon:'🏢', count:enterpriseCount },;
-    { id:'micro-saas', name:'Micro SaaS', icon:'💻', count:microSaasCount },;
-    { id:'emerging', name:'Emerging Tech', icon:'🔬', count:emergingTechCount }
+    { id:'all', name:'All Services', icon:'', count:allServices.length },;
+    { id:'ai', name:'AI Services', icon:'', count:aiCount },;
+    { id:'quantum', name:'Quantum Tech', icon:'', count:quantumCount },;
+    { id:'enterprise', name:'Enterprise IT', icon:'', count:enterpriseCount },;
+    { id:'micro-saas', name:'Micro SaaS', icon:'', count:microSaasCount },;
+    { id:'emerging', name:'Emerging Tech', icon:'', count:emergingTechCount }
   ],;
 ;
   const priceRanges = [;

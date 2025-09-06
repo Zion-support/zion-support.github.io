@@ -32,13 +32,13 @@ export default function EnhancedServicesShowcase2025() {;
   const cybersecurityCount = allServices.filter(service => service.category.includes('Security') || service.category.includes('Cybersecurity')).length,;
 ;
   const categories = [;
-    { id:'all', name:'All Services', icon:'🚀', count:allServices.length },;
-    { id:'ai', name:'AI & Machine Learning', icon:'🧠', count:aiCount },;
-    { id:'quantum', name:'Quantum Computing', icon:'⚛️', count:quantumCount },;
-    { id:'blockchain', name:'Blockchain & Web3', icon:'⛓️', count:blockchainCount },;
-    { id:'iot', name:'IoT & Edge Computing', icon:'🌐', count:iotCount },;
-    { id:'space', name:'Space Technology', icon:'🚀', count:spaceCount },;
-    { id:'security', name:'Cybersecurity', icon:'🔒', count:cybersecurityCount }
+    { id:'all', name:'All Services', icon:'', count:allServices.length },;
+    { id:'ai', name:'AI & Machine Learning', icon:'', count:aiCount },;
+    { id:'quantum', name:'Quantum Computing', icon:'', count:quantumCount },;
+    { id:'blockchain', name:'Blockchain & Web3', icon:'', count:blockchainCount },;
+    { id:'iot', name:'IoT & Edge Computing', icon:'', count:iotCount },;
+    { id:'space', name:'Space Technology', icon:'', count:spaceCount },;
+    { id:'security', name:'Cybersecurity', icon:'', count:cybersecurityCount }
   ],;
 ;
   const priceRanges = [;
@@ -341,9 +341,9 @@ export default function EnhancedServicesShowcase2025() {;
                     <div className="mt-4 pt-4 border-t border-gray-700">;
                       <div className="text-xs text-gray-400 mb-2">Contact Information:</div>;
                       <div className="text-xs text-gray-300 space-y-1">;
-                        <div>📱 {service.contactInfo.mobile}</div>;
-                        <div>✉️ {service.contactInfo.email}</div>;
-                        <div>🌐 {service.contactInfo.website}</div>;
+                        <div> {service.contactInfo.mobile}</div>;
+                        <div> {service.contactInfo.email}</div>;
+                        <div> {service.contactInfo.website}</div>;
                       </div>;
                     </div>;
                   </motion.div>;
@@ -356,7 +356,7 @@ export default function EnhancedServicesShowcase2025() {;
               <motion.div;
                 initial={{ opacity:0 }}
                 animate={{ opacity:1 }} className="text-center py-16">;
-                <div className="text-6xl mb-4">🔍</div>;
+                <div className="text-6xl mb-4"></div>;
                 <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>;
                 <p className="text-gray-400">Try adjusting your search criteria or filters</p>;
               </motion.div>;            )}

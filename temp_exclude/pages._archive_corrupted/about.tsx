@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -58,37 +57,6 @@ const "About": NextPage = () => {;
       \"title\": \'Results-Driven\',;
       \"description\": \'We focus on delivering measurable outcomes that drive business growth.\',;
       \"icon\": Target;
-=======
-  const values = [{
-      title: \'Innovation\',
-      \"description\": \'We constantly push the boundaries of technology to deliver cutting-edge solutions.\',
-      \"icon\": Zap
-    },
-    {
-      \"title\": \'Excellence\',
-      \"description\": \'We maintain the highest standards of quality in everything we do.\',
-      \"icon\": Award
-    },
-    {
-      \"title\": \'Integrity\',
-      \"description\": \'We build trust through honest communication and ethical business practices.\',
-      \"icon\": Shield
-    },
-    {
-      \"title\": \'Collaboration\',
-      \"description\": \'We work closely with our clients to ensure their success is our success.\',
-      \"icon\": Users
-    },
-    {
-      \"title\": \'Global Perspective\',
-      \"description\": \'We bring international expertise and diverse perspectives to every project.\',
-      \"icon\": Globe
-    },
-    {
-      \"title\": \'Results-Driven\',
-      \"description\": \'We focus on delivering measurable outcomes that drive business growth.\',
-      \"icon\": Target
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   ];
   const team = [{
@@ -116,7 +84,6 @@ const "About": NextPage = () => {;
       \"image\": \'/team/david.jpg\'
     }
   ];
-<<<<<<< HEAD
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },;
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },;
     { \"number\": \'5+\', \"label\": \'Years Experience\' },;
@@ -162,8 +129,6 @@ export default function AboutPage() {;
               <div key={v && v.title} className="bg-white rounded-lg p-8 shadow text-center">;
                 <h3 className="text-xl font-semibold mb-3">{v && v.title}</h3>;
                 <p className="text-gray-600">{v && v.desc}</p>;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <MainLayout
       title=\"About Us - Zion Tech Group\"
       description=\"Learn about Zion Tech Group\'s mission, values, and the team behind our innovative technology solutions.\"
@@ -212,7 +177,6 @@ export default function AboutPage() {;
         </div>
       </section>
       {/* Stats Section */}
-<<<<<<< HEAD
       <section className=\"py-20 bg-gray-50\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">;
@@ -232,7 +196,7 @@ export default function AboutPage() {;
         <div className="container mx-auto px-4 text-center">;
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>;
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
-            Let’s discuss how we can help transform your business.;
+            Lets discuss how we can help transform your business.;
           </p>;
           <div className="flex flex-col "sm": flex-row justify-center gap-4">;
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">;
@@ -272,44 +236,11 @@ export default function AboutPage() {;
                   {value && value.description}
                 </p>;
               </div>;
-=======
-      <section className=\"py-20 bg-gray-50\">
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-          <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">
-            {stats.map((stat) => (
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Values Section */}
-      <section className=\"py-20\">
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-          <div className=\"text-center mb-16\">
-            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Our Values</h2>
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-              The principles that guide everything we do and shape our company culture
-            </p>
-          </div>
-            {values.map((value) => (
-              <div key={value.title} className=\"text-center\">
-                <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
-                  <value.icon className=\"h-8 w-8\" />
-                </div>
-                <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
-                  {value.title}
-                </h3>
-                <p className=\"text-gray-600\">
-                  {value.description}
-                </p>
-              </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
       </section>
       {/* Team Section */}
-<<<<<<< HEAD
       <section className=\"py-20 bg-gray-50\" id=\"team\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -340,32 +271,6 @@ export default function AboutPage() {;
                   </p>;
                 </div>;
               </div>;
-=======
-      <section className=\"py-20 bg-gray-50\" id=\"team\">
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-          <div className=\"text-center mb-16\">
-            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Our Team</h2>
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-              Meet the passionate professionals who make Zion Tech Group a leader in 
-              technology solutions
-            </p>
-          </div>
-            {team.map((member) => (
-              <div key={member.name} className=\"bg-white rounded-lg shadow-lg overflow-hidden\">
-                <div className=\"h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center\">
-                  <Users className=\"h-16 w-16 text-blue-600\" />
-                </div>
-                <div className=\"p-6\">
-                  <h3 className=\"text-xl font-semibold text-gray-900 mb-1\">
-                    {member.name}
-                  </h3>
-                  <p className=\"text-blue-600 font-medium mb-3\">{member.role}</p>
-                  <p className=\"text-gray-600 text-sm\">
-                    {member.bio}
-                  </p>
-                </div>
-              </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
@@ -398,25 +303,25 @@ export default function AboutPage() {;
               <ul className=\"space-y-3\">
                 <li className=\"flex items-start\">
                   <div className=\"bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5\">
-                    <span className=\"text-sm\">✓</span>
+                    <span className=\"text-sm\"></span>
                   </div>
                   <span className=\"text-gray-700\">Proven track record of successful projects</span>
                 </li>
                 <li className=\"flex items-start\">
                   <div className=\"bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5\">
-                    <span className=\"text-sm\">✓</span>
+                    <span className=\"text-sm\"></span>
                   </div>
                   <span className=\"text-gray-700\">Expert team with deep technical knowledge</span>
                 </li>
                 <li className=\"flex items-start\">
                   <div className=\"bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5\">
-                    <span className=\"text-sm\">✓</span>
+                    <span className=\"text-sm\"></span>
                   </div>
                   <span className=\"text-gray-700\">Personalized approach to every project</span>
                 </li>
                 <li className=\"flex items-start\">
                   <div className=\"bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5\">
-                    <span className=\"text-sm\">✓</span>
+                    <span className=\"text-sm\"></span>
                   </div>
                   <span className=\"text-gray-700\">Ongoing support and maintenance</span>
                 </li>
@@ -428,7 +333,6 @@ export default function AboutPage() {;
     </MainLayout>
   );
 }
-<<<<<<< HEAD
     <>;
       <Helmet>;
         <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>;
@@ -442,15 +346,6 @@ export default function AboutPage() {;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-=======
-    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>
-        <meta name=\"description\" content=\"Learn about Zion Tech Group, a leading provider of AI, cybersecurity, cloud infrastructure, and emerging technology solutions. Discover our mission, values, and team.\" />
-        <meta name=\"keywords\" content=\"about zion tech group, technology company, AI solutions, cybersecurity, cloud services\" />
-        <link rel=\"canonical\" href=\""https\": //ziontechgroup.com/about\" />
-      </Helmet>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
@@ -584,9 +479,6 @@ export default function AboutPage() {;
   );
 }
 }
-<<<<<<< HEAD
 }
 }
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

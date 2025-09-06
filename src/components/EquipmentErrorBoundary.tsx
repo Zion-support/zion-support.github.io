@@ -1,24 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { AlertTriangle, RefreshCw } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { logErrorToProduction } from '@/utils/productionLogger'
-=======
-import { AlertTriangle, RefreshCw } from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent } from '@/components / ui / card';
-import { logErrorToProduction } from '@/utils / production_logger';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface Props {
   children: React.ReactNode;
 interface State {
-<<<<<<< HEAD
   hasError: boolean
   error?: Error
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
@@ -30,23 +18,10 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
 }
 import {logErrorToProduction} from '@/utils/productionLogger'
 
-=======
-  has_error: boolean;
-  error?: Error;
-export class EquipmentErrorBoundary extends React.Component < Props, State> {
-  constructor (props: Props) {
-    super (props);
-    this.state = { has_error: false }
-  has_error: boolean,
-  error?: Error;
-}
-import {logErrorToProduction} from '@/utils / production_logger';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface Props {
   children: React.ReactNode;
 }
 interface State {
-<<<<<<< HEAD
 
   hasError: boolean
 
@@ -62,25 +37,9 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     logErrorToProduction('Equipment page error:', error, {
       componentStack: errorInfo.componentStack
-=======
-  has_error: boolean,
-  error?: Error;
-}
-export class EquipmentErrorBoundary extends React.Component < Props, State> {
-  constructor (props: Props) {
-    super (props);
-    this.state = { has_error: false }
-  static getDerivedStateFromError (error: Error): State {
-    return { has_error: true, error }
-  }
-  componentDidCatch (error: Error, error_info: React.ErrorInfo) {
-    logErrorToProduction ('Equipment page error:', error, {
-      component_stack: error_info.component_stack,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }) }
     logErrorToProduction ('Equipment page error:', error, { component_stack: error_info.component_stack });
   }
-<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
   }
@@ -89,8 +48,6 @@ export class EquipmentErrorBoundary extends React.Component < Props, State> {
   }
   render() {
     if (this.state.hasError) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -108,12 +65,6 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
   hasError: boolean,;
   error?: Error;
 }
-<<<<<<< HEAD
-=======
-=======
-import { AlertTriangle, RefreshCw } from 'lucide-react'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -129,10 +80,6 @@ interface State {;
 export class EquipmentErrorBoundary extends React && React.Component<Props, State> {;
   constructor(props: Props) {;
     super(props);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     this && this.state = { hasError: false };
 
   static getDerivedStateFromError(error: Error): State {;
@@ -144,40 +91,21 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
       componentStack: errorInfo && errorInfo.componentStack,;
     });  }
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo && errorInfo.componentStack });
-<<<<<<< HEAD
-=======
-=======
-    this.state = { hasError: false }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
   static getDerivedStateFromError(error: Error): State {;
     return { hasError: true, error }
   }
 
-<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: React && React.ErrorInfo) {;
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo && errorInfo.componentStack });
-=======
-<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: React && React.ErrorInfo) {;
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo && errorInfo.componentStack });
-=======
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
   render() {;
     if (this && this.state.hasError) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <div className='container py-8'>;
           <Card className='border-red-200 bg-red-50'>;
             <CardContent className='p-8 text-center'>;
@@ -199,20 +127,10 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
                   Try Again;
                 </Button>;
                 <Button
-<<<<<<< HEAD
                   onClick={() => window.location.reload()}
                   variant='default'
                 >                  Refresh Page
                 <Button onClick={() => window.location.reload()} variant="default">
-=======
-        <div className="container py-8">
-          <Card className="border-red-200 bg-red-50">
-            <CardContent className="p-8 text-center">
-              <AlertTriangle className="mx-auto mb-4 h-12 w-12 text-red-600" />
-              <h2 className="text-2xl font-bold text-red-900 mb-2">Something went wrong</h2>
-              <p className="text-red-700 mb-4">
-                We're having trouble loading the equipment listings. This might be a temporary issue.
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </p>
               <div className="flex gap-2 justify-center">
                 <Button
@@ -230,7 +148,6 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
           </Card>
         </div>
       )
-<<<<<<< HEAD
     }
     return this.props.children
   }      )
@@ -238,51 +155,13 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
     return this.props.children
   }
 }
-=======
-                  onClick={() => window && window.location.reload()}
-                  variant='default';
-                >                  Refresh Page;
-                <Button onClick={() => window && window.location.reload()} variant="default">;
-              </p>;
-              <div className="flex gap-2 justify-center">;
-                <Button
-                  onClick={() => this && this.setState({ hasError: false, error: undefined })} ;
-                  variant="outline";
-                >;
-                  <RefreshCw className="h-4 w-4 mr-2" />;
-                  Try Again;
-                </Button>;
-                <Button onClick={() => window && window.location.reload()} variant="default">;
-                  Refresh Page;
-                </Button>;
-              </div>;
-            </CardContent>;
-          </Card>;
-        </div>;
-      );
-    }
-
-    return this && this.props.children;
-  }      );
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
     return this && this.props.children;
   };
-<<<<<<< HEAD
 } ;
-=======
-<<<<<<< HEAD
 } ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 } 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   static getDerivedStateFromError (error: Error): State {
     return { has_error: true, error }
   }
@@ -343,5 +222,3 @@ if ( {) {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

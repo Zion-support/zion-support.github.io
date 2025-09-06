@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from "react",
 import { BillingHeader } from "./BillingHeader",
@@ -11,7 +10,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function BillingDashboard() {;
   return (
-<<<<<<< HEAD
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">
       <BillingHeader />
       <Tabs defaultValue="subscription" className="mt-8">
@@ -35,37 +33,11 @@ export function BillingDashboard() {;
         </TabsContent>
       </Tabs>
     </div>
-=======
-    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
-      <BillingHeader />;
-
-      <Tabs defaultValue="subscription" className="mt-8">;
-        <TabsList className="grid w-full grid-cols-4 mb-8">;
-=======
-import React from './react';
-import { BillingHeader  } from './BillingHeader';
-import { CurrentSubscription  } from './CurrentSubscription';
-import { PaymentMethods  } from './PaymentMethods';
-import { InvoiceHistory  } from './InvoiceHistory';
-import { UsageOverview  } from './UsageOverview';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
-;
-export /**
- * BillingDashboard - Function description
- */
-function BillingDashboard() {
-  return (
-    <div className="container mx - auto max - w-7xl py - 8 px - 4 md: px - 6">;
-      <BillingHeader />;
-      <Tabs default_value="subscription" className="mt - 8">;
-        <TabsList className="grid w - full grid - cols - 4 mb - 8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           <TabsTrigger value="subscription">Subscription</TabsTrigger>;
           <TabsTrigger value="payment">Payment Methods</TabsTrigger>;
           <TabsTrigger value="invoices">Invoice History</TabsTrigger>;
           <TabsTrigger value="usage">Usage Overview</TabsTrigger>;
         </TabsList>;
-<<<<<<< HEAD
 
         <TabsContent value="subscription" className="space-y-8">;
           <CurrentSubscription />;
@@ -84,9 +56,7 @@ function BillingDashboard() {
         </TabsContent>;
       </Tabs>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
         <TabsContent value="subscription" className="space - y-8">;
           <CurrentSubscription />;
         </TabsContent>;
@@ -101,5 +71,4 @@ function BillingDashboard() {
         </TabsContent>;
       </Tabs>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -22,12 +22,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Check
   Star
@@ -97,8 +92,6 @@ import {
   Microscope as MicroscopeIcon
   GraduationCap as GraduationCapIcon
   ShieldCheck as ShieldCheckIcon;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Check,;
   Star,;
@@ -168,49 +161,25 @@ import {;
   Microscope as MicroscopeIcon,;
   GraduationCap as GraduationCapIcon,;
   ShieldCheck as ShieldCheckIcon,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-<<<<<<< HEAD
 import {
   revolutionaryMicroSaasServices
   revolutionaryServiceCategories
   getRevolutionaryServicesByCategory
   getPopularRevolutionaryServices
   getRevolutionaryServicesByPriceRange;
-=======
-import {;
-  revolutionaryMicroSaasServices,;
-  revolutionaryServiceCategories,;
-  getRevolutionaryServicesByCategory,;
-  getPopularRevolutionaryServices,;
-  getRevolutionaryServicesByPriceRange,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
-<<<<<<< HEAD
-=======
-=======
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
-import Button from '../components/ui/Button';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, Star, Calendar } from 'lucide-react';
-<<<<<<< HEAD
 export default function RevolutionaryServicesPage() {;
-=======
-<<<<<<< HEAD
 export default function RevolutionaryServicesPage() {;
-=======
-export default function RevolutionaryServicesPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -218,12 +187,7 @@ export default function RevolutionaryServicesPage() {
   const [sortBy, setSortBy] = useState('name');
   const [showFilters, setShowFilters] = useState(false);
 
-<<<<<<< HEAD
-=======
-  const [selectedService, setSelectedService] = useState<any>(null);
-<<<<<<< HEAD
   const priceRanges = [
-<<<<<<< HEAD
     { value: 'All', label: 'All Prices' }
     { value: '0-1000', label: '$0 - $1,000' }
     { value: '1001-2500', label: '$1,001 - $2,500' }
@@ -238,141 +202,14 @@ export default function RevolutionaryServicesPage() {
     { value: 'popularity', label: 'Most Popular' }
     { value: 'category', label: 'Category' }
     { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
-=======
-    { value: 'All', label: 'All Prices' },
-    { value: '0-1000', label: '$0 - $1,000' };
-    { value: '1001-2500', label: '$1,001 - $2,500' };
-    { value: '2501-5000', label: '$2,501 - $5,000' };
-    { value: '5001+', label: '$5,001+' }
-  ];
-
-  const sortOptions = [
-    { value: 'name', label: 'Name A-Z' },
-    { value: 'price', label: 'Price Low-High' },
-=======
-import Head from 'next / head';
-import {
-  Check,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  ArrowRight,
-  ExternalLink,
-  TrendingUp,
-  Clock,
-  Target,
-  Building,
-  Rocket,
-  Award,
-  DollarSign,
-  ChartBar,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  Search,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Zap as ZapIcon,
-  Code,
-  BookOpen,
-  Activity,
-  Database as DatabaseIcon,
-  Play,
-  Mail,
-  Phone,
-  MapPin,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  Sparkles,
-  FlaskConical,
-  Dna,
-  Car,
-  Leaf,
-  Factory,
-  Truck,
-  Microscope,
-  GraduationCap,
-  ShieldCheck,
-  Brain,
-  Atom,
-  Globe2,
-  Bot,
-  Eye,
-  Trophy,
-  FlaskConical as FlaskIcon,
-  Dna as DnaIcon,
-  Car as CarIcon,
-  Leaf as LeafIcon,
-  Factory as FactoryIcon,
-  Truck as TruckIcon,
-  Microscope as MicroscopeIcon,
-  GraduationCap as GraduationCapIcon,
-  ShieldCheck as ShieldCheckIcon,
-} from 'lucide-react';
-import Button from '../components / ui / Button';
-import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
-import UltraFuturisticCard from '../components / ui / UltraFuturisticCard';
-import {
-  revolutionaryMicroSaasServices,
-  revolutionaryServiceCategories,
-  getRevolutionaryServicesByCategory,
-  getPopularRevolutionaryServices,
-  getRevolutionaryServicesByPriceRange,
-} from '../data / revolutionary - micro - saas - services';
-import { motion, AnimatePresence } from 'framer-motion';import Button from '../components / ui / Button';
-import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
-import UltraFuturisticCard from '../components / ui / UltraFuturisticCard';
-import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data / revolutionary - micro - saas - services';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, Star, Calendar } from 'lucide-react';
-export default /**
- * RevolutionaryServicesPage - Function description
- */
-function RevolutionaryServicesPage() {
-  const [selected_category, setSelectedCategory] = useState ('All');
-  const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [price_range, setPriceRange] = useState ('All');
-  const [search_query, setSearchQuery] = useState ('');
-  const [sort_by, setSortBy] = useState ('name');
-  const [show_filters, setShowFilters] = useState (false);
-  const [selected_service, setSelectedService] = useState < any>(null);
-;
-  const price_ranges = [;
-    { value: 'All', label: 'All Prices' },
-    { value: '0 - 1000', label: '$0 - $1, 000' },
-    { value: '1001 - 2500', label: '$1, 001 - $2, 500' },
-    { value: '2501 - 5000', label: '$2, 501 - $5, 000' },
-    { value: '5001+', label: '$5, 001+' },  ];    { value: '0 - 1000', label: '$0 - $1, 000' }
-    { value: '1001 - 2500', label: '$1, 001 - $2, 500' }
-    { value: '2501 - 5000', label: '$2, 501 - $5, 000' }
-    { value: '5001+', label: '$5, 001+' }
-  const sort_options = [;
-    { value: 'name', label: 'Name A - Z' },
-    { value: 'price', label: 'Price Low - High' },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     { value: 'popularity', label: 'Most Popular' },
     { value: 'category', label: 'Category' },
     { value: 'roi', label: 'Highest ROI' }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ];
-<<<<<<< HEAD
   // Filter and sort services
   let filteredServices = revolutionaryMicroSaasServices;
   // Category filter
   if (selectedCategory !== 'All') {
-<<<<<<< HEAD
     filteredServices = getRevolutionaryServicesByCategory(selectedCategory);  }
   // Price range filter
   if (priceRange !== 'All') {
@@ -387,9 +224,6 @@ function RevolutionaryServicesPage() {
   if (priceRange !== 'All') {
     const [min, max] = priceRange
       .split('-')
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const priceRanges = [;
     { value: 'All', label: 'All Prices' },;
     { value: '0-1000', label: '$0 - $1,000' },;
@@ -424,7 +258,6 @@ function RevolutionaryServicesPage() {
 
   // Search filter;
   if (searchQuery) {    filteredServices = getRevolutionaryServicesByCategory(selectedCategory);
-=======
     filteredServices = getRevolutionaryServicesByCategory(selectedCategory)
   }
 
@@ -432,22 +265,18 @@ function RevolutionaryServicesPage() {
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 
   // Price range filter;
   if (priceRange !== 'All') {;
     const [min, max] = priceRange;
       .split('-');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(p => (p === '+' ? Infinity : parseInt(p)));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);
   }
-<<<<<<< HEAD
   // Search filter
   if (searchQuery) {
-<<<<<<< HEAD
     filteredServices = filteredServices.filter(
       service =>
         service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
@@ -460,155 +289,32 @@ function RevolutionaryServicesPage() {
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
     )
-=======
-    filteredServices = filteredServices.filter(service =>
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  }
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
-<<<<<<< HEAD
         return (
           parseFloat(a.price.replace('$', '').replace(',', '')) -
           parseFloat(b.price.replace('$', '').replace(',', ''))
         );      case 'popularity':        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
-=======
-        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
         return a.category.localeCompare(b.category);
       case 'roi':
-<<<<<<< HEAD
         const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] |'0');
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] |'0');
-=======
-
-  // Search filter;
-  if (searchQuery) {;
-    filteredServices = filteredServices && filteredServices.filter(;
-      service =>;
-        service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-    );  }    filteredServices = filteredServices && filteredServices.filter(service =>;
-      service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-    );
-
-  // Sort services;
-  filteredServices && filteredServices.sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price':;
-        return (
-          parseFloat(a && a.price.replace('$', '').replace(',', '')) -;
-          parseFloat(b && b.price.replace('$', '').replace(',', ''));
-        );      case 'popularity':        return parseFloat(a && a.price.replace('$', '').replace(, '')) - parseFloat(b && b.price.replace('$', '').replace(, ''));
-      case 'popularity':;
-        return (b && b.popular ? 1 : 0) - (a && a.popular ? 1 : 0);
-      case 'category':;
-        return a && a.category.localeCompare(b && b.category);
-      case 'roi':;
-        const aRoi = parseFloat(a && a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseFloat(b && b.roi.match(/\d+/)?.[0] || '0');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return bRoi - aRoi;
       default:;
         return a && a.name.localeCompare(b && b.name);    }      default: return a && a.name.localeCompare(b && b.name);
     }
   });
-<<<<<<< HEAD
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-=======
-        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
-        return bRoi - aRoi;
-      default: return a.name.localeCompare(b.name)
-=======
-;
-  // Filter and sort services;
-  let filtered_services = revolutionaryMicroSaasServices;
-;
-  // Category filter;
-  // Check condition
-if ( {) {
-  $2
-}
-    filtered_services = getRevolutionaryServicesByCategory (selected_category);  }
-  // Price range filter;
-  // Check condition
-if ( {) {
-  $2
-}
-    const [min, max] = price_range;
-      .split ('-');
-      .map (p => (p === '+' ? Infinity : parse_int (p)));
-    filtered_services = getRevolutionaryServicesByPriceRange (min, max);  }
-  // Search filter;
-  if ( {    filtered_services = getRevolutionaryServicesByCategory (selected_category)) {
-  $2
-}
-  }
-  // Price range filter;
-  // Check condition
-if ( {) {
-  $2
-}
-    const [min, max] = price_range;
-      .split ('-');
-      .map (p => (p === '+' ? Infinity : parse_int (p)));
-    filtered_services = getRevolutionaryServicesByPriceRange (min, max);    const [min, max] = price_range.split ('-').map (p => p === '+' ? Infinity : parse_int (p));
-    filtered_services = getRevolutionaryServicesByPriceRange (min, max);
-  }
-  // Search filter;
-  // Check condition
-if ( {) {
-  $2
-}
-    filtered_services = filtered_services.filter (
-      service =>;
-        service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        service.category.toLowerCase ().includes (search_query.toLowerCase ()));  }    filtered_services = filtered_services.filter (service =>;
-      service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      service.category.toLowerCase ().includes (search_query.toLowerCase ()));
-  // Sort services;
-  filtered_services.sort ((a, b) => {
-    switch (sort_by) {
-      case 'price':;
-        return (
-          parse_float (a.price.replace ('$', '').replace (', ', '')) -;
-          parse_float (b.price.replace ('$', '').replace (', ', '')));      case 'popularity':        return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, ''));
-      case 'popularity':;
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-      case 'category':;
-        return a.category.locale_compare (b.category);
-      case 'roi':;
-        const a_roi = parse_float (a.roi.match (/\d+/)?.[0] || '0');
-        const b_roi = parse_float (b.roi.match (/\d+/)?.[0] || '0');
-        return b_roi - a_roi;
-      default:;
-        return a.name.locale_compare (b.name);    }      default: return a.name.locale_compare (b.name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   });
 ;
@@ -616,16 +322,13 @@ if ( {) {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com'
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const popularServices = getPopularRevolutionaryServices();
   // Enhanced service categories with better descriptions
   const enhancedCategories = [
     {
-<<<<<<< HEAD
       name: 'Quantum AI & Cognitive Computing'
       description:
         'Revolutionary quantum AI solutions with human-level reasoning capabilities'
@@ -726,82 +429,8 @@ if ( {) {
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length
       color: 'from-yellow-500 to-orange-600'
     }
-=======
-      name: 'Quantum AI & Cognitive Computing',
-      description: 'Revolutionary quantum AI solutions with human-level reasoning capabilities',
-      icon: <Brain className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum AI & Cognitive Computing').length,
-      color: 'from-purple-500 to-indigo-600'
-    };
-    {
-      name: 'Autonomous Manufacturing & Industry 4.0',
-      description: 'Next-generation autonomous manufacturing with zero human intervention',
-      icon: <Factory className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Manufacturing & Industry 4.0').length,
-      color: 'from-orange-500 to-red-600'
-    };
-    {
-      name: 'Quantum Blockchain & DeFi',
-      description: 'Quantum-secured blockchain platforms with infinite scalability',
-      icon: <Globe className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Blockchain & DeFi').length,
-      color: 'from-green-500 to-emerald-600'
-    };
-    {
-      name: 'AI Biomedical Research & Drug Discovery',
-      description: 'AI-powered platforms for accelerated drug discovery and medical research',
-      icon: <FlaskIcon className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Biomedical Research & Drug Discovery').length,
-      color: 'from-blue-500 to-indigo-600'
-    };
-    {
-      name: 'Quantum Cybersecurity & Threat Detection',
-      description: 'Quantum-resistant cybersecurity with AI-powered threat detection',
-      icon: <ShieldCheck className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Cybersecurity & Threat Detection').length,
-      color: 'from-red-500 to-pink-600'
-    };
-    {
-      name: 'Space Technology & Satellite Optimization',
-      description: 'Revolutionary platforms for space exploration and satellite optimization',
-      icon: <Rocket className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Space Technology & Satellite Optimization').length,
-      color: 'from-indigo-500 to-purple-600'
-    };
-    {
-      name: 'AI Content Creation & Marketing',
-      description: 'Quantum-powered content creation at infinite scale',
-      icon: <FileText className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Content Creation & Marketing').length,
-      color: 'from-teal-500 to-cyan-600'
-    };
-    {
-      name: 'Quantum Computing as a Service',
-      description: 'Enterprise quantum computing with real quantum processors',
-      icon: <Cpu className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Computing as a Service').length,
-      color: 'from-violet-500 to-purple-600'
-    };
-    {
-      name: 'Autonomous Vehicles & Smart Transportation',
-      description: 'AI platforms for autonomous vehicles and smart transportation',
-      icon: <CarIcon className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles & Smart Transportation').length,
-      color: 'from-emerald-500 to-green-600'
-    };
-    {
-      name: 'Smart Energy & Renewable Energy',
-      description: 'AI platforms for smart energy grids and renewable energy optimization',
-      icon: <LeafIcon className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length,
-      color: 'from-yellow-500 to-orange-600'
-    }
-  ];
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const containerVariants = {
     hidden: { opacity: 0 }
-=======
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
   }
 ;
@@ -902,22 +531,15 @@ if ( {) {
     }
   const container_variants = {
     hidden: { opacity: 0 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
         staggerChildren: 0.1
       }
     },  };        staggerChildren: 0.1
       }
     }
-<<<<<<< HEAD
   }
-=======
-  };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
@@ -925,7 +547,6 @@ if ( {) {
       opacity: 1
       transition: {
         duration: 0.5
-<<<<<<< HEAD
       }
     }
   return (
@@ -936,134 +557,6 @@ if ( {) {
             Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI
             Autonomous Systems, Space Technology
           </title>
-=======
-
-  const contactInfo = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
-  };
-
-  const popularServices = getPopularRevolutionaryServices();
-
-  // Enhanced service categories with better descriptions;
-  const enhancedCategories = [;
-    {;
-      name: 'Quantum AI & Cognitive Computing',;
-      description:;
-        'Revolutionary quantum AI solutions with human-level reasoning capabilities',;
-      icon: <Brain className='w-6 h-6' />,;
-      count: revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.filter(;
-        s => s && s.category === 'Quantum AI & Cognitive Computing';
-      ).length,;
-      color: 'from-purple-500 to-indigo-600',;
-    },;
-      name: 'Autonomous Manufacturing & Industry 4 && 4.0',;
-      description:;
-        'Next-generation autonomous manufacturing with zero human intervention',;
-      icon: <Factory className='w-6 h-6' />,;
-      count: revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.filter(;
-        s => s && s.category === 'Autonomous Manufacturing & Industry 4 && 4.0';
-      ).length,;
-      color: 'from-orange-500 to-red-600',;
-    },;
-    {;
-      name: 'Quantum Blockchain & DeFi',;
-      description:;
-        'Quantum-secured blockchain platforms with infinite scalability',;
-      icon: <Globe className='w-6 h-6' />,;
-      count: revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.filter(;
-        s => s && s.category === 'Quantum Blockchain & DeFi';
-      ).length,;
-      color: 'from-green-500 to-emerald-600',;
-    },;
-    {;
-      name: 'AI Biomedical Research & Drug Discovery',;
-      description:;
-        'AI-powered platforms for accelerated drug discovery and medical research',;
-      icon: <FlaskIcon className='w-6 h-6' />,;
-      count: revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.filter(;
-        s => s && s.category === 'AI Biomedical Research & Drug Discovery';
-      ).length,;
-      color: 'from-blue-500 to-indigo-600',;
-    },;
-    {;
-      name: 'Quantum Cybersecurity & Threat Detection',;
-      description:;
-        'Quantum-resistant cybersecurity with AI-powered threat detection',;
-      icon: <ShieldCheck className='w-6 h-6' />,;
-      count: revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.filter(;
-        s => s && s.category === 'Quantum Cybersecurity & Threat Detection';
-      ).length,;
-      color: 'from-red-500 to-pink-600',;
-    },;
-    {;
-      name: 'Space Technology & Satellite Optimization',;
-      description:;
-        'Revolutionary platforms for space exploration and satellite optimization',;
-      icon: <Rocket className='w-6 h-6' />,;
-      count: revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.filter(;
-        s => s && s.category === 'Space Technology & Satellite Optimization';
-      ).length,;
-      color: 'from-indigo-500 to-purple-600',;
-    },;
-    {;
-      name: 'AI Content Creation & Marketing',;
-      description: 'Quantum-powered content creation at infinite scale',;
-      icon: <FileText className='w-6 h-6' />,;
-      count: revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.filter(;
-        s => s && s.category === 'AI Content Creation & Marketing';
-      ).length,;
-      color: 'from-teal-500 to-cyan-600',;
-    },;
-    {;
-      name: 'Quantum Computing as a Service',;
-      description: 'Enterprise quantum computing with real quantum processors',;
-      icon: <Cpu className='w-6 h-6' />,;
-      count: revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.filter(;
-        s => s && s.category === 'Quantum Computing as a Service';
-      ).length,;
-      color: 'from-violet-500 to-purple-600',;
-    },;
-    {;
-      name: 'Autonomous Vehicles & Smart Transportation',;
-      description:;
-        'AI platforms for autonomous vehicles and smart transportation',;
-      icon: <CarIcon className='w-6 h-6' />,;
-      count: revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.filter(;
-        s => s && s.category === 'Autonomous Vehicles & Smart Transportation';
-      ).length,;
-      color: 'from-emerald-500 to-green-600',;
-    },;
-    {;
-      name: 'Smart Energy & Renewable Energy',;
-      description:;
-        'AI platforms for smart energy grids and renewable energy optimization',;
-      icon: <LeafIcon className='w-6 h-6' />,;
-      count: revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.filter(;
-        s => s && s.category === 'Smart Energy & Renewable Energy';
-      ).length,;
-      color: 'from-yellow-500 to-orange-600',;
-    },  ];      description: 'AI platforms for smart energy grids and renewable energy optimization',;
-      icon: <LeafIcon className="w-6 h-6" />,;
-      count: revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.filter(s => s && s.category === 'Smart Energy & Renewable Energy').length,;
-      color: 'from-yellow-500 to-orange-600';
-    }
-
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-      },;
-    },  };        staggerChildren: 0 && 0.1;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   };
@@ -1086,7 +579,6 @@ if ( {) {
             Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI,;
             Autonomous Systems, Space Technology;
           </title>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <meta
             name='description'
             content='Discover revolutionary micro SaaS services from Zion Tech Group. Quantum AI, autonomous manufacturing, space technology, biomedical research, and cutting-edge solutions. Start your free trial today.'
@@ -1111,47 +603,22 @@ if ( {) {
           <meta property='og:type' content='website' />;
           <link
             rel='canonical'
-<<<<<<< HEAD
             href='https://ziontechgroup.com/revolutionary-services'
           />
         </Head>
-=======
-            href='https://ziontechgroup && ziontechgroup.com/revolutionary-services'
-          />;
-        </Head>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className='relative py-20 overflow-hidden'>;
           <div className='container mx-auto px-4 text-center'>;
             <div className='max-w-5xl mx-auto'>;
               <motion&& motion.h1
                 className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow'                initial={{ opacity: 0, y: 30 }}
-=======
-        <section className="relative py-20 overflow-hidden">
-          <div className="container mx-auto px-4 text-center">
-            <div className="max-w-5xl mx-auto">
-              <motion.h1 
-                className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
-                initial={{ opacity: 0, y: 30 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.8 }}
               >
-<<<<<<< HEAD
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>        <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-5xl mx-auto">
               <motion.h1
-=======
-                transition={{ duration: 0 && 0.8 }}>;
-                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>        <section className="relative py-20 overflow-hidden">;
-          <div className="container mx-auto px-4 text-center">;
-            <div className="max-w-5xl mx-auto">;
-              <motion&& motion.h1 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8 }}>;
@@ -1164,16 +631,11 @@ if ( {) {
               <motion&& motion.p
                 className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Experience the future of technology with our revolutionary micro
                 SaaS platform. Quantum AI, autonomous systems, space technology
                 and cutting-edge solutions that redefine what's possible.                  Revolutionary
-=======
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Revolutionary
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </span>
                 <br />
                 <span className="text-white">Micro SaaS Services</span>
@@ -1184,56 +646,23 @@ if ( {) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-<<<<<<< HEAD
                 Experience the future of technology with our revolutionary micro
                 SaaS platform. Quantum AI, autonomous systems, space technology
                 and cutting-edge solutions that redefine what's possible.
               </motion.p>
-=======
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
-                Experience the future of technology with our revolutionary micro;
-                SaaS platform. Quantum AI, autonomous systems, space technology,;
-                and cutting-edge solutions that redefine what's possible.                  Revolutionary;
-                </span>;
-                <br />;
-                <span className="text-white">Micro SaaS Services</span>;
-              </motion && motion.h1>;
-              <motion&& motion.p 
-                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
-                Experience the future of technology with our revolutionary micro;
-                SaaS platform. Quantum AI, autonomous systems, space technology,;
-                and cutting-edge solutions that redefine what's possible.;
-              </motion && motion.p>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Service Count Stats */}
               <motion&& motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.4 }}
               >              </motion.p>
               {/* Service Count Stats */}
               <motion.div
-=======
-                Experience the future of technology with our revolutionary micro SaaS platform. 
-                Quantum AI, autonomous systems, space technology, and cutting-edge solutions that redefine what's possible.
-              </motion.p>
-              
-              {/* Service Count Stats */}
-              <motion.div 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-<<<<<<< HEAD
                 <div className='text-center'>
                   <div className='text-3xl font-bold text-cyan-400 mb-2'>
                     {revolutionaryMicroSaasServices.length}+
@@ -1258,8 +687,6 @@ if ( {) {
                   </div>
                   <div className='text-gray-400'>Average ROI</div>                </div>
               </motion.div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>              </motion && motion.p>;
 
               {/* Service Count Stats */}
@@ -1293,20 +720,12 @@ if ( {) {
                   <div className='text-gray-400'>Average ROI</div>                </div>;
               </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.6 }}
               >                </div>
-=======
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{revolutionaryMicroSaasServices.length}+</div>
-                  <div className="text-gray-400">Revolutionary Services</div>
-                </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">99.99%</div>
                   <div className="text-gray-400">Accuracy Rate</div>
@@ -1323,7 +742,6 @@ if ( {) {
               {/* CTA Buttons */}
               <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'              <motion.div
-=======
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>                </div>;
                 <div className="text-center">;
                   <div className="text-3xl font-bold text-purple-400 mb-2">99 && 99.99%</div>;
@@ -1340,10 +758,8 @@ if ( {) {
               </motion && motion.div>;
 
               {/* CTA Buttons */}
-<<<<<<< HEAD
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'              <motion && motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1365,40 +781,15 @@ if ( {) {
                   onClick={() =>;
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
                   }
-<<<<<<< HEAD
                 >
                   Get Started
                   <Rocket className='ml-2 w-5 h-5' />                </Button>                  <Rocket className="ml-2 w-5 h-5" />
-=======
-              <motion.div 
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-                <Button 
-                  variant="primary" 
-                  size="lg"
-                  onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Explore Services
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button 
-                  variant="futuristic" 
-                  size="lg"
-                  onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
-                >
-                  Get Started
-                  <Rocket className="ml-2 w-5 h-5" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </Button>
               </motion.div>
             </div>
           </div>
         </section>
         {/* Contact Information Banner */}
-<<<<<<< HEAD
         <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>
           <div className='container mx-auto px-4'>
             <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
@@ -1413,30 +804,13 @@ if ( {) {
                 <span className='text-white'>{contactInfo.address}</span>
                 <Globe className='w-5 h-5 text-blue-400' />
                 <span className='text-white'>{contactInfo.website}</span>              </div>              <div className="flex items-center gap-4">
-=======
-        <section className="py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="flex items-center gap-4">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span className="text-white">{contactInfo.mobile}</span>
-                <Mail className="w-5 h-5 text-purple-400" />
-                <span className="text-white">{contactInfo.email}</span>
-              </div>
-              <div className="flex items-center gap-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <MapPin className="w-5 h-5 text-green-400" />
                 <span className="text-white">{contactInfo.address}</span>
                 <Globe className="w-5 h-5 text-blue-400" />
                 <span className="text-white">{contactInfo.website}</span>
-<<<<<<< HEAD
-=======
-              </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
           </div>
         </section>
-=======
                 >;
                   Get Started;
                   <Rocket className='ml-2 w-5 h-5' />                </Button>                  <Rocket className="ml-2 w-5 h-5" />;
@@ -1469,54 +843,30 @@ if ( {) {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Category Navigation */}
-<<<<<<< HEAD
         <section className='py-12'>;
           <div className='container mx-auto px-4'>;
             <motion&& motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6'
               variants={containerVariants}
               initial='hidden'
-<<<<<<< HEAD
               whileInView='visible'              viewport={{ once: true }}        <section className="py-12">
-=======
-        <section className="py-12">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="container mx-auto px-4">
             <motion.div
-=======
               whileInView='visible'              viewport={{ once: true }}        <section className="py-12">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
               variants={containerVariants}
               initial="hidden"
-<<<<<<< HEAD
               whileInView="visible">;
               {enhancedCategories && enhancedCategories.map((category, index) => (;
                 <motion&& motion.div
                   key={category && category.name}
-<<<<<<< HEAD
-=======
-=======
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              {enhancedCategories.map((category, index) => (
-                <motion.div
-                  key={category.name}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   variants={itemVariants}
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}>;
                   <UltraFuturisticCard
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     variant='quantum-advanced'
                     size='small'
                     className='text-center cursor-pointer h-full'
@@ -1545,51 +895,22 @@ if ( {) {
                     <div className="text-2xl font-bold text-cyan-400">{category && category.count}</div>;
                     <div className="text-xs text-gray-500">Services</div>;
                 </motion && motion.div>;
-<<<<<<< HEAD
-=======
-=======
-                    variant="quantum-advanced"
-                    size="small"
-                    className="text-center cursor-pointer h-full"
-                    onClick={() => setSelectedCategory(category.name === selectedCategory ? 'All' : category.name)}
-                  >
-                    <div className={`w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br ${category.color} flex items-center justify-center text-white`}>
-                      {category.icon}
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
-                    <p className="text-sm text-gray-400 mb-3">{category.description}</p>
-                    <div className="text-2xl font-bold text-cyan-400">{category.count}</div>
-                    <div className="text-xs text-gray-500">Services</div>
-                  </UltraFuturisticCard>
-                </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
-<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
         {/* Popular Services Showcase */}
-<<<<<<< HEAD
         <section className='py-16'>
           <div className='container mx-auto px-4'>
             <motion.div
               className='text-center mb-12'              initial={{ opacity: 0, y: 20 }}        <section className="py-16">
-=======
-        <section className="py-16">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
-<<<<<<< HEAD
-=======
-              initial={{ opacity: 0, y: 20 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-<<<<<<< HEAD
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
                   Most Popular
@@ -1603,49 +924,10 @@ if ( {) {
               </p>
             </motion.div>
             <motion.div
-=======
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-        {/* Popular Services Showcase */}
-        <section className='py-16'>;
-          <div className='container mx-auto px-4'>;
-            <motion&& motion.div
-              className='text-center mb-12'              initial={{ opacity: 0, y: 20 }}        <section className="py-16">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div 
-              className="text-center mb-12"
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0 && 0.6 }}>;
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>;
-                <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>;
-                  Most Popular;
-                </span>;
-                <br />;
-                <span className='text-white'>Revolutionary Services</span>;
-              </h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Discover our most sought-after revolutionary micro SaaS services;
-                that are transforming industries worldwide.;
-              </p>;
-            </motion && motion.div>;
-
-            <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Most Popular
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Most Popular
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </span>
                 <br />
                 <span className="text-white">Revolutionary Services</span>
@@ -1655,8 +937,6 @@ if ( {) {
               </p>
             </motion.div>
             <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 </span>;
                 <br />;
                 <span className="text-white">Revolutionary Services</span>;
@@ -1667,365 +947,33 @@ if ( {) {
             </motion && motion.div>;
 
             <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               viewport={{ once: true }}>;
               {popularServices && popularServices.slice(0, 6).map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
-<<<<<<< HEAD
                   variants={itemVariants}
                   whileHover={{ y: -10 }}>;
                   <UltraFuturisticCard
-=======
-=======
-=======
-        stagger_children: 0.1,
-      },
-    },  }        stagger_children: 0.1;
-      }
-    }
-  }
-;
-  const item_variants = {
-    hidden: { coordinate_y: 20, opacity: 0 },
-    visible: {
-      coordinate_y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  return (
-    <UltraFuturisticBackground variant='quantum' intensity='high'>;
-      <div className='min - h-screen'>;
-        <Head>;
-          <title>;
-            Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI,
-            Autonomous Systems, Space Technology;
-          </title>;
-          <meta;
-            name='description';
-            content='Discover revolutionary micro SaaS services from Zion Tech Group. Quantum AI, autonomous manufacturing, space technology, biomedical research, and cutting - edge solutions. Start your free trial today.';
-          />;
-          <meta;
-            name='keywords';
-            content='revolutionary micro SaaS, quantum AI, autonomous manufacturing, space technology, biomedical research, quantum cybersecurity, blockchain, autonomous vehicles, smart energy';
-          />;
-          <meta name='author' content='Zion Tech Group' />;
-          <meta;
-            property='og:title';
-            content='Revolutionary Micro SaaS Services | Zion Tech Group';
-          />;
-          <meta;
-            property='og:description';
-            content='Cutting - edge micro SaaS platform with quantum AI, autonomous systems, and revolutionary technology solutions.';
-          />;
-          <meta;
-            property='og:url';
-            content='https://ziontechgroup.com / revolutionary - services';
-          />;
-          <meta property='og:type' content='website' />;
-          <link;
-            rel='canonical';
-            href='https://ziontechgroup.com / revolutionary - services';
-          />;
-        </Head>;
-        {/* Hero Section */}
-        <section className='relative py - 20 overflow - hidden'>;
-          <div className='container mx - auto px - 4 text - center'>;
-            <div className='max - w-5xl mx - auto'>;
-              <motion.h1;
-                className='text - 6xl md:text - 8xl font - bold mb - 8 futuristic - glow'                initial={{ opacity: 0, coordinate_y: 30 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8 }}
-              >;
-                <span className='bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>        <section className="relative py - 20 overflow - hidden">;
-          <div className="container mx - auto px - 4 text - center">;
-            <div className="max - w-5xl mx - auto">;
-              <motion.h1;
-                className="text - 6xl md:text - 8xl font - bold mb - 8 futuristic - glow";
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8 }}
-              >;
-                <span className='bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
-                  Revolutionary;
-                </span>;
-                <br />;
-                <span className='text - white'>Micro SaaS Services</span>;
-              </motion.h1>;
-              <motion.p;
-                className='text - xl md:text - 2xl text - gray - 300 mb - 12 leading - relaxed'                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >;
-                Experience the future of technology with our revolutionary micro;
-                SaaS platform. Quantum AI, autonomous systems, space technology,
-                and cutting - edge solutions that redefine what's possible.                  Revolutionary;
-                </span>;
-                <br />;
-                <span className="text - white">Micro SaaS Services</span>;
-              </motion.h1>;
-              <motion.p;
-                className="text - xl md:text - 2xl text - gray - 300 mb - 12 leading - relaxed";
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >;
-                Experience the future of technology with our revolutionary micro;
-                SaaS platform. Quantum AI, autonomous systems, space technology,
-                and cutting - edge solutions that redefine what's possible.;
-              </motion.p>;
-              {/* Service Count Stats */}
-              <motion.div;
-                className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 16'                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >              </motion.p>;
-              {/* Service Count Stats */}
-              <motion.div;
-                className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 16";
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >;
-                <div className='text - center'>;
-                  <div className='text - 3xl font - bold text - cyan - 400 mb - 2'>;
-                    {revolutionaryMicroSaasServices.length}+;
-                  </div>;
-                  <div className='text - gray - 400'>Revolutionary Services</div>;
-                </div>;
-                <div className='text - center'>;
-                  <div className='text - 3xl font - bold text - purple - 400 mb - 2'>;
-                    99.99%;
-                  </div>;
-                  <div className='text - gray - 400'>Accuracy Rate</div>;
-                </div>;
-                <div className='text - center'>;
-                  <div className='text - 3xl font - bold text - green - 400 mb - 2'>;
-                    21;
-                  </div>;
-                  <div className='text - gray - 400'>Day Free Trial</div>;
-                </div>;
-                <div className='text - center'>;
-                  <div className='text - 3xl font - bold text - pink - 400 mb - 2'>;
-                    2000%+;
-                  </div>;
-                  <div className='text - gray - 400'>Average ROI</div>                </div>;
-              </motion.div>;
-              {/* CTA Buttons */}
-              <motion.div;
-                className='flex flex - col sm:flex - row gap - 4 justify - center items - center'                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >                </div>;
-                <div className="text - center">;
-                  <div className="text - 3xl font - bold text - purple - 400 mb - 2">99.99%</div>;
-                  <div className="text - gray - 400">Accuracy Rate</div>;
-                </div>;
-                <div className="text - center">;
-                  <div className="text - 3xl font - bold text - green - 400 mb - 2">21</div>;
-                  <div className="text - gray - 400">Day Free Trial</div>;
-                </div>;
-                <div className="text - center">;
-                  <div className="text - 3xl font - bold text - pink - 400 mb - 2">2000%+</div>;
-                  <div className="text - gray - 400">Average ROI</div>;
-                </div>;
-              </motion.div>;
-              {/* CTA Buttons */}
-              <motion.div;
-                className='flex flex - col sm:flex - row gap - 4 justify - center items - center'              <motion.div;
-                className="flex flex - col sm:flex - row gap - 4 justify - center items - center";
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >;
-                <Button;
-                  variant='primary';
-                  size='lg';
-                  on_click={() =>;
-                    document;
-                      .getElementById ('services - grid');
-                      ?.scrollIntoView ({ behavior: 'smooth' });
-                  }
-                  Explore Services;
-                  <ArrowRight className='ml - 2 w - 5 h - 5' />;
-                </Button>;
-                <Button;
-                  variant='futuristic';
-                  size='lg';
-                  on_click={() =>;
-                    window.open ('https://ziontechgroup.com / contact', '_blank');
-                  }
-                >;
-                  Get Started;
-                  <Rocket className='ml - 2 w - 5 h - 5' />                </Button>                  <Rocket className="ml - 2 w - 5 h - 5" />;
-                </Button>;
-              </motion.div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Contact Information Banner */}
-        <section className='py - 8 bg - gradient - to - r from - slate - 900 / 80 to - slate - 800 / 80 backdrop - blur - sm border - t border - b border - cyan - 400 / 20'>;
-          <div className='container mx - auto px - 4'>;
-            <div className='flex flex - col md:flex - row justify - between items - center gap - 4'>;
-              <div className='flex items - center gap - 4'>;
-                <Phone className='w - 5 h - 5 text - cyan - 400' />;
-                <span className='text - white'>{contact_info.mobile}</span>;
-                <Mail className='w - 5 h - 5 text - purple - 400' />;
-                <span className='text - white'>{contact_info.email}</span>;
-              </div>;
-              <div className='flex items - center gap - 4'>;
-                <MapPin className='w - 5 h - 5 text - green - 400' />;
-                <span className='text - white'>{contact_info.address}</span>;
-                <Globe className='w - 5 h - 5 text - blue - 400' />;
-                <span className='text - white'>{contact_info.website}</span>              </div>              <div className="flex items - center gap - 4">;
-                <MapPin className="w - 5 h - 5 text - green - 400" />;
-                <span className="text - white">{contact_info.address}</span>;
-                <Globe className="w - 5 h - 5 text - blue - 400" />;
-                <span className="text - white">{contact_info.website}</span>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Category Navigation */}
-        <section className='py - 12'>;
-          <div className='container mx - auto px - 4'>;
-            <motion.div;
-              className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 5 gap - 6';
-              variants={container_variants}
-              initial='hidden';
-              whileInView='visible'              viewport={{ once: true }}        <section className="py - 12">;
-          <div className="container mx - auto px - 4">;
-            <motion.div;
-              className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 5 gap - 6";
-              variants={container_variants}
-              initial="hidden";
-              whileInView="visible";
-            >;
-              {enhanced_categories.map ((category, index) => (
-                <motion.div;
-                  key={category.name}
-                  variants={item_variants}
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                >;
-                  <UltraFuturisticCard;
-                    variant='quantum - advanced';
-                    size='small';
-                    className='text - center cursor - pointer h - full';
-                    on_click={() =>;
-                      setSelectedCategory (
-                        category.name === selected_category;
-                          ? 'All';
-                          : category.name);
-                    }
-                    <div;
-                      className={`w - 12 h - 12 mx - auto mb - 4 rounded - full bg - gradient - to - br ${category.color} flex items - center justify - center text - white`}
-                    >;
-                      {category.icon}
-                    </div>;
-                    <h3 className='text - lg font - semibold text - white mb - 2'>;
-                      {category.name}
-                    </h3>;
-                    <p className='text - sm text - gray - 400 mb - 3'>;
-                      {category.description}
-                    </p>;
-                    <div className='text - 2xl font - bold text - cyan - 400'>;
-                      {category.count}
-                    </div>;
-                    <div className='text - xs text - gray - 500'>Services</div>                  </UltraFuturisticCard>                    <h3 className="text - lg font - semibold text - white mb - 2">{category.name}</h3>;
-                    <p className="text - sm text - gray - 400 mb - 3">{category.description}</p>;
-                    <div className="text - 2xl font - bold text - cyan - 400">{category.count}</div>;
-                    <div className="text - xs text - gray - 500">Services</div>;
-                </motion.div>))}
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Popular Services Showcase */}
-        <section className='py - 16'>;
-          <div className='container mx - auto px - 4'>;
-            <motion.div;
-              className='text - center mb - 12'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py - 16">;
-          <div className="container mx - auto px - 4">;
-            <motion.div;
-              className="text - center mb - 12";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >;
-              <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 4'>;
-                <span className='bg - gradient - to - r from - cyan - 400 to - purple - 400 bg - clip - text text - transparent'>;
-                  Most Popular;
-                </span>;
-                <br />;
-                <span className='text - white'>Revolutionary Services</span>;
-              </h2>;
-              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-                Discover our most sought - after revolutionary micro SaaS services;
-                that are transforming industries worldwide.;
-              </p>;
-            </motion.div>;
-            <motion.div;
-              className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8';
-              variants={container_variants}
-              initial='hidden';
-              whileInView='visible'              viewport={{ once: true }}                  Most Popular;
-                </span>;
-                <br />;
-                <span className="text - white">Revolutionary Services</span>;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Discover our most sought - after revolutionary micro SaaS services that are transforming industries worldwide.;
-              </p>;
-            </motion.div>;
-            <motion.div;
-              className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
-              variants={container_variants}
-              initial="hidden";
-              whileInView="visible";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               viewport={{ once: true }}
             >;
               {popular_services.slice (0, 6).map ((service, index) => (
                 <motion.div;
                   key={service.id}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   variants={itemVariants}
                   whileHover={{ y: -10 }}>;
                   <UltraFuturisticCard
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     variant={service && service.variant as any}
                     size='large'
                     className='h-full cursor-pointer'
                     onClick={() => setSelectedService(service)}
-<<<<<<< HEAD
                   >
                     <div className='text-center mb-6'>
                       <div className='text-4xl mb-4'>{service.icon}</div>
                       <h3 className='text-2xl font-bold text-white mb-2'>
-=======
-                  variants={item_variants}
-                  while_hover={{ coordinate_y: -10 }}
-                >;
-                  <UltraFuturisticCard;
-                    variant={service.variant as any}
-                    size='large';
-                    className='h - full cursor - pointer';
-                    on_click={() => setSelectedService (service)}
-                  >;
-                    <div className='text - center mb - 6'>;
-                      <div className='text - 4xl mb - 4'>{service.icon}</div>;
-                      <h3 className='text - 2xl font - bold text - white mb - 2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {service.name}
                       </h3>;
                       <p className='text - gray - 300 mb - 4'>{service.tagline}</p>;
@@ -2034,7 +982,6 @@ if ( {) {
                       </div>;
                       <div className='text - sm text - gray - 400'>;
                         {service.period}
-<<<<<<< HEAD
                       </div>
                     </div>
                     <div className='space-y-3 mb-6'>
@@ -2042,41 +989,9 @@ if ( {) {
                         <div key={idx} className='flex items-center gap-2'>
                           <Check className='w-4 h-4 text-green-400 flex-shrink-0' />
                           <span className='text-sm text-gray-300'>
-=======
-                  >;
-                    <div className='text-center mb-6'>;
-                      <div className='text-4xl mb-4'>{service && service.icon}</div>;
-                      <h3 className='text-2xl font-bold text-white mb-2'>;
-                        {service && service.name}
-                      </h3>;
-                      <p className='text-gray-300 mb-4'>{service && service.tagline}</p>;
-                      <div className='text-3xl font-bold text-cyan-400 mb-2'>;
-                        {service && service.price}
-                      </div>;
-                      <div className='text-sm text-gray-400'>;
-                        {service && service.period}
-                      </div>;
-                    </div>;
-
-                    <div className='space-y-3 mb-6'>;
-                      {service && service.features.slice(0, 4).map((feature, idx) => (;
-                        <div key={idx} className='flex items-center gap-2'>;
-                          <Check className='w-4 h-4 text-green-400 flex-shrink-0' />;
-                          <span className='text-sm text-gray-300'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             {feature}
                           </span>                        </div>;
-<<<<<<< HEAD
-=======
-                      ))}
-                    </div>;
-=======
-                    variant={service.variant as any}
-                    size="large"
-                    className="h-full cursor-pointer"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     onClick={() => setSelectedService(service)}
-<<<<<<< HEAD
                   >
                     <div className="text-center mb-6">
                       <div className="text-4xl mb-4">{service.icon}</div>
@@ -2091,10 +1006,8 @@ if ( {) {
                           <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
                     </div>
-<<<<<<< HEAD
                     <div className='text-center'>
                       <Button
                         variant='primary'
@@ -2107,45 +1020,8 @@ if ( {) {
                       </Button>                    </div>                    <div className="text-center">
                                                  <Button
                              variant="primary"
-=======
-                  >;
-                    <div className="text-center mb-6">;
-                      <div className="text-4xl mb-4">{service && service.icon}</div>;
-                      <h3 className="text-2xl font-bold text-white mb-2">{service && service.name}</h3>;
-                      <p className="text-gray-300 mb-4">{service && service.tagline}</p>;
-                      <div className="text-3xl font-bold text-cyan-400 mb-2">{service && service.price}</div>;
-                      <div className="text-sm text-gray-400">{service && service.period}</div>;
-                    </div>;
-
-                    <div className="space-y-3 mb-6">;
-                      {service && service.features.slice(0, 4).map((feature, idx) => (;
-                        <div key={idx} className="flex items-center gap-2">;
-                          <Check className="w-4 h-4 text-green-400 flex-shrink-0" />;
-                          <span className="text-sm text-gray-300">{feature}</span>;
-                        </div>;
-                      ))}
-                    </div>;
-
-                    <div className='text-center'>;
-                      <Button
-                        variant='primary'
-                        size='md'
-                        onClick={() => window && window.open(service && service.link, '_blank')}
-                        className='w-full';
-                      >;
-                        Learn More;
-                        <ExternalLink className='ml-2 w-4 h-4' />;
-                      </Button>                    </div>                    <div className="text-center">;
-                                                 <Button
-=======
-
-                    <div className="text-center">
-                                                 <Button 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                              variant="primary" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                              size="md"
-<<<<<<< HEAD
                              onClick={() => window && window.open(service && service.link, '_blank')}
                              className="w-full";
                            >;
@@ -2154,56 +1030,24 @@ if ( {) {
                            </Button>;
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
-<<<<<<< HEAD
-=======
-=======
-                             onClick={() => window.open(service.link, '_blank')}
-                             className="w-full"
-                           >
-                             Learn More
-                             <ExternalLink className="ml-2 w-4 h-4" />
-                           </Button>
-                    </div>
-                  </UltraFuturisticCard>
-                </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
-<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Services Grid */}
         <section id='services-grid' className='py-16'>;
           <div className='container mx-auto px-4'>;
-=======
 
         {/* Services Grid */}
         <section id="services-grid" className="py-16">
           <div className="container mx-auto px-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {/* Filters and Controls */}
             <motion&& motion.div
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-grid" className="py-16">;
           <div className="container mx-auto px-4">;
             {/* Filters and Controls */}
-<<<<<<< HEAD
             <motion.div
-=======
-            <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className="mb-8"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -2231,12 +1075,7 @@ if ( {) {
                         {range && range.label}
                       </option>;
                     ))}
-<<<<<<< HEAD
                   </select>
-=======
-                  </select>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <select
                     value={sortBy}
                     onChange={e => setSortBy(e && e.target.value)}
@@ -2247,25 +1086,15 @@ if ( {) {
                         {option && option.label}
                       </option>;
                     ))}
-<<<<<<< HEAD
                   </select>
                 </div>
                 <div className='flex items-center gap-4'>
                   <div className='relative'>
                     <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
-=======
-                  </select>;
-                </div>;
-
-                <div className='flex items-center gap-4'>;
-                  <div className='relative'>;
-                    <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <input
                       type='text'
                       placeholder='Search services...'
                       value={searchQuery}
-<<<<<<< HEAD
                       onChange={e => setSearchQuery(e.target.value)}
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64'
                     />
@@ -2276,19 +1105,6 @@ if ( {) {
                     >
                       <Grid className='w-4 h-4' />                    </button>
                   <div className="flex border border-gray-600 rounded-lg overflow-hidden">
-=======
-                      onChange={e => setSearchQuery(e && e.target.value)}
-                      className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64';
-                    />;
-                  </div>;
-
-                  <div className='flex border border-gray-600 rounded-lg overflow-hidden'>                    <button
-                      onClick={() => setViewMode('grid')}
-                      className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    >;
-                      <Grid className='w-4 h-4' />                    </button>                  ;
-                  <div className="flex border border-gray-600 rounded-lg overflow-hidden">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
@@ -2298,87 +1114,17 @@ if ( {) {
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-<<<<<<< HEAD
                     >;
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
-=======
-<<<<<<< HEAD
                     >
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
-=======
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-                <div className="flex flex-wrap gap-4">
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400"
-                  >
-                    <option value="All">All Categories</option>
-                    {revolutionaryServiceCategories.map(category => (
-                      <option key={category} value={category}>{category}</option>
-                    ))}
-                  </select>
-                  
-                  <select
-                    value={priceRange}
-                    onChange={(e) => setPriceRange(e.target.value)}
-                    className="px-4 py-2 bg-slate-800 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:border-purple-400"
-                  >
-                    {priceRanges.map(range => (
-                      <option key={range.value} value={range.value}>{range.label}</option>
-                    ))}
-                  </select>
-                  
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400"
-                  >
-                    {sortOptions.map(option => (
-                      <option key={option.value} value={option.value}>{option.label}</option>
-                    ))}
-                  </select>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                    <input
-                      type="text"
-                      placeholder="Search services..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64"
-                    />
-                  </div>
-                  
-                  <div className="flex border border-gray-600 rounded-lg overflow-hidden">
-                    <button
-                      onClick={() => setViewMode('grid')}
-                      className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    >
-                      <Grid className="w-4 h-4" />
-                    </button>
-                    <button
-                      onClick={() => setViewMode('list')}
-                      className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    >
-                      <List className="w-4 h-4" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     </button>
                   </div>
                 </div>
               </div>
             </motion.div>
-=======
                     >;
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
-=======
                       </div>;
                     </div>;
                     <div className='space - y-3 mb - 6'>;
@@ -2505,13 +1251,10 @@ if ( {) {
                       className={`px - 3 py - 2 ${view_mode === 'list' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
                     >;
                       <List className='w - 4 h - 4' />                    </button>                      <List className="w - 4 h - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     </button>;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
             </motion && motion.div>;
 
             {/* Services Display */}
@@ -2524,62 +1267,29 @@ if ( {) {
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}            <motion && motion.div 
-=======
-<<<<<<< HEAD
             </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Services Display */}
-<<<<<<< HEAD
             <motion&& motion.div
-=======
-            </motion.div>;
-            {/* Services Display */}
-            <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               className={
                 view_mode === 'grid';
                   ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8';
                   : 'space - y-6';
               }
-<<<<<<< HEAD
               variants={containerVariants}
               initial='hidden'
-<<<<<<< HEAD
               whileInView='visible'              viewport={{ once: true }}            <motion.div
               className={viewMode === 'grid'
-=======
-              whileInView='visible'              viewport={{ once: true }}            <motion && motion.div 
-=======
-            <motion.div 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className={viewMode === 'grid' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
               variants={containerVariants}
               initial="hidden"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               whileInView="visible">;
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
-<<<<<<< HEAD
-=======
-=======
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
@@ -2587,46 +1297,12 @@ if ( {) {
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                     onClick={() => setSelectedService(service)}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   >
                     {viewMode === 'grid' ? (
                       // Grid View
-<<<<<<< HEAD
                       <div className='text-center'>
                         <div className='text-4xl mb-4'>{service.icon}</div>
                         <h3 className='text-xl font-bold text-white mb-2'>
-=======
-              variants={container_variants}
-              initial='hidden';
-              whileInView='visible'              viewport={{ once: true }}            <motion.div;
-              className={view_mode === 'grid';
-                ? "grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 8";
-                : "space - y-6",
-              }
-              variants={container_variants}
-              initial="hidden";
-              whileInView="visible";
-            >;
-              {filtered_services.map ((service, index) => (
-                <motion.div;
-                  key={service.id}
-                  variants={item_variants}
-                  while_hover={{ coordinate_y: -5 }}
-                >;
-                  <UltraFuturisticCard;
-                    variant={service.variant as any}
-                    size={view_mode === 'grid' ? 'large' : 'medium'}
-                    className={`h - full cursor - pointer ${view_mode === 'list' ? 'flex flex - col md:flex - row' : ''}`}
-                    on_click={() => setSelectedService (service)}
-                  >;
-                    {view_mode === 'grid' ? (
-                      // Grid View;
-                      <div className='text - center'>;
-                        <div className='text - 4xl mb - 4'>{service.icon}</div>;
-                        <h3 className='text - xl font - bold text - white mb - 2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           {service.name}
                         </h3>;
                         <p className='text - gray - 300 mb - 4 text - sm'>;
@@ -2637,12 +1313,9 @@ if ( {) {
                         </div>;
                         <div className='text - sm text - gray - 400 mb - 4'>;
                           {service.period}
-<<<<<<< HEAD
                         </div>
                         <div className='space-y-2 mb-6'>
                           {service.features.slice(0, 3).map((feature, idx) => (
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   >;
                     {viewMode === 'grid' ? (;
                       // Grid View;
@@ -2663,19 +1336,12 @@ if ( {) {
 
                         <div className='space-y-2 mb-6'>;
                           {service && service.features.slice(0, 3).map((feature, idx) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             <div
                               key={idx}
                               className='flex items-center gap-2 text-sm'>;
                               <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
                               <span className='text-gray-300'>{feature}</span>                            </div>;
-<<<<<<< HEAD
-=======
-                          ))}
-<<<<<<< HEAD
                         </div>
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       <div className="text-center">
                         <div className="text-4xl mb-4">{service.icon}</div>
                         <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
@@ -2687,8 +1353,6 @@ if ( {) {
                             <div key={idx} className="flex items-center gap-2 text-sm">
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                               <span className="text-gray-300">{feature}</span>
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           ))}
                         </div>
                         <div className='text-center'>
@@ -2699,7 +1363,6 @@ if ( {) {
                           >
                             Learn More
                             <ExternalLink className='ml-2 w-4 h-4' />                          </Button>                            <ExternalLink className="ml-2 w-4 h-4" />
-=======
                             </div>
                           ))}
                         </div>
@@ -2713,53 +1376,13 @@ if ( {) {
                           >
                             Learn More
                             <ExternalLink className="ml-2 w-4 h-4" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                           </Button>
                         </div>
                       </div>
                     ) : (
                       // List View
-<<<<<<< HEAD
                       <div className='flex flex-col md:flex-row gap-6 w-full'>
                         <div className='text-4xl md:text-5xl flex-shrink-0'>
-=======
-                        </div>;
-                        <div className='space - y-2 mb - 6'>;
-                          {service.features.slice (0, 3).map ((feature, idx) => (
-                            <div;
-                              key={idx}
-                              className='flex items - center gap - 2 text - sm';
-                            >;
-                              <Check className='w - 3 h - 3 text - green - 400 flex - shrink - 0' />;
-                              <span className='text - gray - 300'>{feature}</span>                            </div>))}
-                        </div>;
-                      <div className="text - center">;
-                        <div className="text - 4xl mb - 4">{service.icon}</div>;
-                        <h3 className="text - xl font - bold text - white mb - 2">{service.name}</h3>;
-                        <p className="text - gray - 300 mb - 4 text - sm">{service.tagline}</p>;
-                        <div className="text - 2xl font - bold text - cyan - 400 mb - 2">{service.price}</div>;
-                        <div className="text - sm text - gray - 400 mb - 4">{service.period}</div>;
-                        <div className="space - y-2 mb - 6">;
-                          {service.features.slice (0, 3).map ((feature, idx) => (
-                            <div key={idx} className="flex items - center gap - 2 text - sm">;
-                              <Check className="w - 3 h - 3 text - green - 400 flex - shrink - 0" />;
-                              <span className="text - gray - 300">{feature}</span>))}
-                        </div>;
-                        <div className='text - center'>;
-                          <Button;
-                            variant='primary';
-                            size='sm';
-                            className='w - full';
-                          >;
-                            Learn More;
-                            <ExternalLink className='ml - 2 w - 4 h - 4' />                          </Button>                            <ExternalLink className="ml - 2 w - 4 h - 4" />;
-                          </Button>;
-                        </div>;
-                      </div>) : (
-                      // List View;
-                      <div className='flex flex - col md:flex - row gap - 6 w - full'>;
-                        <div className='text - 4xl md:text - 5xl flex - shrink - 0'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           {service.icon}
                         </div>;
                         <div className='flex - 1'>;
@@ -2777,7 +1400,6 @@ if ( {) {
                               </div>;
                               <div className='text - sm text - gray - 400'>;
                                 {service.period}
-<<<<<<< HEAD
                               </div>
                             </div>
                           </div>
@@ -2790,68 +1412,6 @@ if ( {) {
                                 {service.features
                                   .slice(0, 4)
                                   .map((feature, idx) => (
-=======
-                        </div>;
-                      <div className="text-center">;
-                        <div className="text-4xl mb-4">{service && service.icon}</div>;
-                        <h3 className="text-xl font-bold text-white mb-2">{service && service.name}</h3>;
-                        <p className="text-gray-300 mb-4 text-sm">{service && service.tagline}</p>;
-                        <div className="text-2xl font-bold text-cyan-400 mb-2">{service && service.price}</div>;
-                        <div className="text-sm text-gray-400 mb-4">{service && service.period}</div>;
-
-                        <div className="space-y-2 mb-6">;
-                          {service && service.features.slice(0, 3).map((feature, idx) => (;
-                            <div key={idx} className="flex items-center gap-2 text-sm">;
-                              <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
-                              <span className="text-gray-300">{feature}</span>;
-                          ))}
-                        </div>;
-
-                        <div className='text-center'>;
-                          <Button
-                            variant='primary'
-                            size='sm'
-                            className='w-full'>;
-                            Learn More;
-                            <ExternalLink className='ml-2 w-4 h-4' />                          </Button>                            <ExternalLink className="ml-2 w-4 h-4" />;
-                          </Button>;
-                        </div>;
-                      </div>;
-                    ) : (;
-                      // List View;
-                      <div className='flex flex-col md:flex-row gap-6 w-full'>;
-                        <div className='text-4xl md:text-5xl flex-shrink-0'>;
-                          {service && service.icon}
-                        </div>;
-                        <div className='flex-1'>;
-                          <div className='flex flex-col md:flex-row md:items-center md:justify-between mb-4'>;
-                              <h3 className='text-xl font-bold text-white mb-2'>;
-                                {service && service.name}
-                              </h3>;
-                              <p className='text-gray-300 text-sm'>;
-                                {service && service.tagline}
-                              </p>;
-                            </div>;
-                            <div className='text-right mt-2 md:mt-0'>;
-                              <div className='text-2xl font-bold text-cyan-400'>;
-                                {service && service.price}
-                              </div>;
-                              <div className='text-sm text-gray-400'>;
-                                {service && service.period}
-                              </div>;
-                            </div>;
-                          </div>;
-
-                          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>;
-                            <div>;
-                              <h4 className='text-sm font-semibold text-cyan-400 mb-2'>;
-                                Key Features;
-                              </h4>;
-                              <div className='space-y-1'>;
-                                {service && service.features;
-                                  .slice(0, 4);
-                                  .map((feature, idx) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                                     <div
                                       key={idx}
                                       className='flex items-center gap-2 text-sm'>;
@@ -2878,64 +1438,18 @@ if ( {) {
                                 </div>;
                                 <div>;
                                   <span className='text-gray-400'>Growth:</span>{' '}
-<<<<<<< HEAD
                                   {service.growthRate}
                                 </div>
                               </div>
                             </div>
                           </div>
                           <div className='flex gap-2'>
-=======
-                                  {service && service.growthRate}
-=======
-                              </div>;
-                            </div>;
-                          </div>;
-                          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4 mb - 4'>;
-                            <div>;
-                              <h4 className='text - sm font - semibold text - cyan - 400 mb - 2'>;
-                                Key Features;
-                              </h4>;
-                              <div className='space - y-1'>;
-                                {service.features;
-                                  .slice (0, 4);
-                                  .map ((feature, idx) => (
-                                    <div;
-                                      key={idx}
-                                      className='flex items - center gap - 2 text - sm';
-                                    >;
-                                      <Check className='w - 3 h - 3 text - green - 400 flex - shrink - 0' />;
-                                      <span className='text - gray - 300'>;
-                                        {feature}
-                                      </span>;
-                                    </div>))}
-                              </div>;
-                            </div>;
-                            <div>;
-                              <h4 className='text - sm font - semibold text - purple - 400 mb - 2'>;
-                                Market Info;
-                              </h4>;
-                              <div className='space - y-1 text - sm text - gray - 300'>;
-                                <div>;
-                                  <span className='text - gray - 400'>ROI:</span>{' '}
-                                  {service.roi}
-                                </div>;
-                                <div>;
-                                  <span className='text - gray - 400'>Market:</span>{' '}
-                                  {service.market_size}
-                                </div>;
-                                <div>;
-                                  <span className='text - gray - 400'>Growth:</span>{' '}
-                                  {service.growth_rate}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 </div>;
                               </div>;
                             </div>;
                           </div>;
-<<<<<<< HEAD
 
                           <div className='flex gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             <Button
                               variant='primary'
                               size='sm'
@@ -2950,51 +1464,10 @@ if ( {) {
                               variant='futuristic'
                               size='sm'
                               onClick={() => setSelectedService(service)}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                             >
                               View Details
                               <Eye className='ml-2 w-4 h-4' />
                             </Button>                          </div>
-=======
-                      <div className="flex flex-col md:flex-row gap-6 w-full">
-                        <div className="text-4xl md:text-5xl flex-shrink-0">{service.icon}</div>
-                        <div className="flex-1">
-                          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                            <div>
-                              <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                              <p className="text-gray-300 text-sm">{service.tagline}</p>
-                            </div>
-                            <div className="text-right mt-2 md:mt-0">
-                              <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                              <div className="text-sm text-gray-400">{service.period}</div>
-                            </div>
-                          </div>
-                          
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                            <div>
-                              <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features</h4>
-                              <div className="space-y-1">
-                                {service.features.slice(0, 4).map((feature, idx) => (
-                                  <div key={idx} className="flex items-center gap-2 text-sm">
-                                    <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
-                                    <span className="text-gray-300">{feature}</span>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                            <div>
-                              <h4 className="text-sm font-semibold text-purple-400 mb-2">Market Info</h4>
-                              <div className="space-y-1 text-sm text-gray-300">
-                                <div><span className="text-gray-400">ROI:</span> {service.roi}</div>
-                                <div><span className="text-gray-400">Market:</span> {service.marketSize}</div>
-                                <div><span className="text-gray-400">Growth:</span> {service.growthRate}</div>
-                              </div>
-                            </div>
-                          </div>
-                          
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                           <div className="flex gap-2">
                                                          <Button
                                variant="primary"
@@ -3006,8 +1479,6 @@ if ( {) {
                              </Button>
                              <Button
                                variant="futuristic"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             >;
                               View Details;
                               <Eye className='ml-2 w-4 h-4' />;
@@ -3023,37 +1494,18 @@ if ( {) {
                              </Button>;
                              <Button
                                variant="futuristic" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                                size="sm"
                                onClick={() => setSelectedService(service)}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                              >;
                                View Details;
                                <Eye className="ml-2 w-4 h-4" />;
                              </Button>;
                         </div>;
                       </div>;
-<<<<<<< HEAD
-=======
-=======
-                             >
-                               View Details
-                               <Eye className="ml-2 w-4 h-4" />
-                             </Button>
-                          </div>
-                        </div>
-                      </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     )}
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </motion.div>
             {filteredServices.length === 0 && (
               <motion.div
@@ -3061,20 +1513,11 @@ if ( {) {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >              <motion.div
-=======
-            </motion && motion.div>;
-
-            {filteredServices && filteredServices.length === 0 && (;
-              <motion&& motion.div
-                className='text-center py-16'                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="text-center py-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0 && 0.6 }}>;
-                <div className='text-6xl mb-4'>🔍</div>;
+                <div className='text-6xl mb-4'></div>;
                 <h3 className='text-2xl font-bold text-white mb-2'>;
                   No Services Found;
                 </h3>;
@@ -3088,99 +1531,42 @@ if ( {) {
                     setSelectedCategory('All');
                     setPriceRange('All');
                   }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 >
                   Clear Filters
-                </Button>              </motion.div>                <div className="text-6xl mb-4">🔍</div>
-=======
-            </motion.div>
-
-            {filteredServices.length === 0 && (
-              <motion.div 
-                className="text-center py-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >
-                <div className="text-6xl mb-4">🔍</div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                </Button>              </motion.div>                <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 >;
                   Clear Filters;
-                </Button>              </motion && motion.div>                <div className="text-6xl mb-4">🔍</div>;
+                </Button>              </motion && motion.div>                <div className="text-6xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                                          <Button
                            variant="primary"
                            onClick={() => {;
                              setSearchQuery('');
                              setSelectedCategory('All');
-<<<<<<< HEAD
 
                              setPriceRange('All')
-=======
-                             setPriceRange('All');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                            }}
-<<<<<<< HEAD
                          >;
                            Clear Filters;
                          </Button>;
-=======
-<<<<<<< HEAD
                          >;
                            Clear Filters;
                          </Button>;
-=======
-                         >
-                           Clear Filters
-                         </Button>
-              </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
-<<<<<<< HEAD
           </div>
         </section>
-<<<<<<< HEAD
-=======
-          </div>;
-        </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Service Details Modal */}
         <AnimatePresence>;
           {selectedService && (;
             <motion&& motion.div
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-<<<<<<< HEAD
-=======
-=======
-
-        {/* Service Details Modal */}
-        <AnimatePresence>
-          {selectedService && (
-            <motion.div
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedService(null)}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             >;
               <motion&& motion.div
                 className='bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
@@ -3219,35 +1605,11 @@ if ( {) {
                     </div>;
                     <button
                       onClick={() => setSelectedService(null)}
-<<<<<<< HEAD
                       className='text-gray-400 hover:text-white text-2xl'                      className="text-gray-400 hover:text-white text-2xl"
-=======
-            >
-              <motion.div
-                className="bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <div className="p-8">
-                  <div className="flex justify-between items-start mb-6">
-                    <div className="flex items-center gap-4">
-                      <div className="text-5xl">{selectedService.icon}</div>
-                      <div>
-                        <h2 className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>
-                        <p className="text-xl text-gray-300">{selectedService.tagline}</p>
-                      </div>
-                    </div>
-                    <button
-                      onClick={() => setSelectedService(null)}
-                      className="text-gray-400 hover:text-white text-2xl"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     >
-                      ×
+                      
                     </button>
                   </div>
-<<<<<<< HEAD
                   <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                       <h3 className='text-xl font-semibold text-cyan-400 mb-4'>
                         Service Details
@@ -3274,146 +1636,10 @@ if ( {) {
                           </h4>
                           <div className='text-sm text-gray-300 space-y-1'>
                             <div>
-=======
-                      className='text-gray-400 hover:text-white text-2xl'                      className="text-gray-400 hover:text-white text-2xl";
-=======
-                          <div className='flex gap - 2'>;
-                            <Button;
-                              variant='primary';
-                              size='sm';
-                              on_click={() =>;
-                                window.open (service.link, '_blank');
-                              }
-                            >;
-                              Learn More;
-                              <ExternalLink className='ml - 2 w - 4 h - 4' />;
-                            </Button>;
-                            <Button;
-                              variant='futuristic';
-                              size='sm';
-                              on_click={() => setSelectedService (service)}
-                            >;
-                              View Details;
-                              <Eye className='ml - 2 w - 4 h - 4' />;
-                            </Button>                          </div>;
-                          <div className="flex gap - 2">;
-                                                        <Button;
-                              variant="primary";
-                              size="sm";
-                              on_click={() => window.open (service.link, '_blank')}
-                              >;
-                              Learn More;
-                              <ExternalLink className="ml - 2 w - 4 h - 4" />;
-                            </Button>;
-                            <Button;
-                              variant="futuristic";
-                              size="sm";
-                              on_click={() => setSelectedService (service)}
-                              >;
-                              View Details;
-                              <Eye className="ml - 2 w - 4 h - 4" />;
-                            </Button>;
-                        </div>;
-                      </div>)}
-                  </UltraFuturisticCard>;
-                </motion.div>))}
-            </motion.div>;
-            {filtered_services.length === 0 && (
-              <motion.div;
-                className='text - center py - 16'                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >              <motion.div;
-                className="text - center py - 16";
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >;
-                <div className='text - 6xl mb - 4'>🔍</div>;
-                <h3 className='text - 2xl font - bold text - white mb - 2'>;
-                  No Services Found;
-                </h3>;
-                <p className='text - gray - 400 mb - 6'>;
-                  Try adjusting your search criteria or filters.;
-                </p>;
-                <Button;
-                  variant='primary';
-                  on_click={() => {
-                    setSearchQuery ('');
-                    setSelectedCategory ('All');
-                    setPriceRange ('All');
-                  }}
-                >;
-                  Clear Filters;
-                </Button>              </motion.div>                <div className="text - 6xl mb - 4">🔍</div>;
-                <h3 className="text - 2xl font - bold text - white mb - 2">No Services Found</h3>;
-                <p className="text - gray - 400 mb - 6">Try adjusting your search criteria or filters.</p>;
-                                        <Button;
-                          variant="primary";
-                          on_click={() => {
-                            setSearchQuery ('');
-                            setSelectedCategory ('All');
-                            setPriceRange ('All');
-                          }}
-                          >;
-                          Clear Filters;
-                        </Button>)}
-          </div>;
-        </section>;
-        {/* Service Details Modal */}
-        <AnimatePresence>;
-          {selected_service && (
-            <motion.div;
-              className='fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4'              initial={{ opacity: 0 }}              className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4";
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              on_click={() => setSelectedService (null)}
-            >;
-              <motion.div;
-                className='bg - slate - 900 rounded - 2xl border border - cyan - 400 / 30 max - w-4xl w - full max - h-[90vh] overflow - y-auto';
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                on_click={e => e.stop_propagation ()}
-              >;
-                <div className='p - 8'>;
-                  <div className='flex justify - between items - start mb - 6'>;
-                    <div className='flex items - center gap - 4'>;
-                      <div className='text - 5xl'>{selected_service.icon}</div>;
-                      <div>;
-                        <h2 className='text - 3xl font - bold text - white mb - 2'>;
-                          {selected_service.name}
-                        </h2>;
-                        <p className='text - xl text - gray - 300'>;
-                          {selected_service.tagline}
-                        </p>                      </div>;
-                    </div>;
-                    <button;
-                      on_click={() => setSelectedService (null)}
-                      className='text - gray - 400 hover:text - white text - 2xl'                    >                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                on_click={(e) => e.stop_propagation ()}
-              >;
-                <div className="p - 8">;
-                  <div className="flex justify - between items - start mb - 6">;
-                    <div className="flex items - center gap - 4">;
-                      <div className="text - 5xl">{selected_service.icon}</div>;
-                      <div>;
-                        <h2 className="text - 3xl font - bold text - white mb - 2">{selected_service.name}</h2>;
-                        <p className="text - xl text - gray - 300">{selected_service.tagline}</p>;
-                      </div>;
-                    </div>;
-                    <button;
-                      on_click={() => setSelectedService (null)}
-                      className='text - gray - 400 hover:text - white text - 2xl'                      className="text - gray - 400 hover:text - white text - 2xl";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     >;
-                      ×;
+                      ;
                     </button>;
                   </div>;
-<<<<<<< HEAD
 
                   <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
                       <h3 className='text-xl font-semibold text-cyan-400 mb-4'>;
@@ -3443,7 +1669,6 @@ if ( {) {
                           </h4>;
                           <div className='text-sm text-gray-300 space-y-1'>;
                             <div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                               <span className='text-gray-400'>ROI:</span>{' '}
                               {selectedService && selectedService.roi}
                             </div>;
@@ -3457,39 +1682,16 @@ if ( {) {
                               <span className='text-gray-400'>;
                                 Growth Rate:;
                               </span>{' '}
-<<<<<<< HEAD
                               {selectedService.growthRate}
                             </div>                          </div>                          <h4 className="text-sm font-semibold text-green-400 mb-2">ROI & Market</h4>
-=======
-
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-xl font-semibold text-cyan-400 mb-4">Service Details</h3>
-                      <p className="text-gray-300 mb-6">{selectedService.description}</p>
-                      
-                      <div className="space-y-4">
-                        <div>
-                          <h4 className="text-sm font-semibold text-purple-400 mb-2">Pricing</h4>
-                          <div className="text-2xl font-bold text-white">{selectedService.price}{selectedService.period}</div>
-                          <div className="text-sm text-gray-400">{selectedService.marketPrice}</div>
-                        </div>
-                        
-                        <div>
-                          <h4 className="text-sm font-semibold text-green-400 mb-2">ROI & Market</h4>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                           <div className="text-sm text-gray-300 space-y-1">
                             <div><span className="text-gray-400">ROI:</span> {selectedService.roi}</div>
                             <div><span className="text-gray-400">Market Size:</span> {selectedService.marketSize}</div>
                             <div><span className="text-gray-400">Growth Rate:</span> {selectedService.growthRate}</div>
-<<<<<<< HEAD
-=======
-                          </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         </div>
                       </div>
                     </div>
                     <div>
-<<<<<<< HEAD
                       <h3 className='text-xl font-semibold text-cyan-400 mb-4'>
                         Features & Capabilities
                       </h3>
@@ -3500,36 +1702,11 @@ if ( {) {
                           </h4>
                           <div className='space-y-2'>
                             {selectedService.features.map((feature, idx) => (
-=======
-                              {selectedService && selectedService.growthRate}
-                            </div>                          </div>                          <h4 className="text-sm font-semibold text-green-400 mb-2">ROI & Market</h4>;
-                          <div className="text-sm text-gray-300 space-y-1">;
-                            <div><span className="text-gray-400">ROI:</span> {selectedService && selectedService.roi}</div>;
-                            <div><span className="text-gray-400">Market Size:</span> {selectedService && selectedService.marketSize}</div>;
-                            <div><span className="text-gray-400">Growth Rate:</span> {selectedService && selectedService.growthRate}</div>;
-                        </div>;
-                      </div>;
-                    </div>;
-
-                    <div>;
-                      <h3 className='text-xl font-semibold text-cyan-400 mb-4'>;
-                        Features & Capabilities;
-                      </h3>;
-
-                      <div className='space-y-4'>;
-                        <div>;
-                          <h4 className='text-sm font-semibold text-purple-400 mb-2'>;
-                            Key Features;
-                          </h4>;
-                          <div className='space-y-2'>;
-                            {selectedService && selectedService.features.map((feature, idx) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                               <div
                                 key={idx}
                                 className='flex items-center gap-2 text-sm'>;
                                 <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
                                 <span className='text-gray-300'>{feature}</span>                              </div>;
-=======
                       <h3 className="text-xl font-semibold text-cyan-400 mb-4">Features & Capabilities</h3>
                       
                       <div className="space-y-4">
@@ -3541,7 +1718,6 @@ if ( {) {
                                 <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                                 <span className="text-gray-300">{feature}</span>
                               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                             ))}
                           </div>;
                         </div>;
@@ -3554,33 +1730,19 @@ if ( {) {
                                 <span className="text-gray-300">{feature}</span>;
                               </div>;
                             ))}
-<<<<<<< HEAD
                           </div>
                         </div>
-<<<<<<< HEAD
                         <div>
                           <h4 className='text-sm font-semibold text-green-400 mb-2'>
                             Benefits
                           </h4>
                           <div className='space-y-2'>
                             {selectedService.benefits.map((benefit, idx) => (
-=======
-                          </div>;
-                        </div>;
-
-                        <div>;
-                          <h4 className='text-sm font-semibold text-green-400 mb-2'>;
-                            Benefits;
-                          </h4>;
-                          <div className='space-y-2'>;
-                            {selectedService && selectedService.benefits.map((benefit, idx) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                               <div
                                 key={idx}
                                 className='flex items-center gap-2 text-sm'>;
                                 <Star className='w-3 h-3 text-yellow-400 flex-shrink-0' />;
                                 <span className='text-gray-300'>{benefit}</span>                              </div>;
-=======
                         
                         <div>
                           <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>
@@ -3590,7 +1752,6 @@ if ( {) {
                                 <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
                                 <span className="text-gray-300">{benefit}</span>
                               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                             ))}
                           </div>;
                         </div>                        <div>;
@@ -3602,10 +1763,8 @@ if ( {) {
                                 <span className="text-gray-300">{benefit}</span>;
                               </div>;
                             ))}
-<<<<<<< HEAD
                           </div>
                         </div>
-<<<<<<< HEAD
                         <div>
                           <h4 className='text-sm font-semibold text-blue-400 mb-2'>
                             Capabilities
@@ -3613,18 +1772,6 @@ if ( {) {
                           <div className='space-y-2'>
                             {selectedService.capabilities.map(
                               (capability, idx) => (
-=======
-                          </div>;
-                        </div>;
-
-                        <div>;
-                          <h4 className='text-sm font-semibold text-blue-400 mb-2'>;
-                            Capabilities;
-                          </h4>;
-                          <div className='space-y-2'>;
-                            {selectedService && selectedService.capabilities.map(;
-                              (capability, idx) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                                 <div
                                   key={idx}
                                   className='flex items-center gap-2 text-sm'>;
@@ -3642,25 +1789,10 @@ if ( {) {
                                 <span className="text-gray-300">{capability}</span>;
                               </div>;
                             ))}
-<<<<<<< HEAD
-=======
-                        
-                        <div>
-                          <h4 className="text-sm font-semibold text-blue-400 mb-2">Capabilities</h4>
-                          <div className="space-y-2">
-                            {selectedService.capabilities.map((capability, idx) => (
-                              <div key={idx} className="flex items-center gap-2 text-sm">
-                                <Zap className="w-3 h-3 text-cyan-400 flex-shrink-0" />
-                                <span className="text-gray-300">{capability}</span>
-                              </div>
-                            ))}
-                          </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         </div>
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD
                   <div className='mt-8 pt-6 border-t border-gray-700'>
                     <div className='flex flex-col sm:flex-row gap-4 justify-between items-center'>
                       <div className='text-sm text-gray-400'>
@@ -3668,136 +1800,10 @@ if ( {) {
                         <div>Trial: {selectedService.trialDays} days</div>
                       </div>
                       <div className='flex gap-4'>
-=======
-=======
-                  <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
-                      <h3 className='text - xl font - semibold text - cyan - 400 mb - 4'>;
-                        Service Details;
-                      </h3>;
-                      <p className='text - gray - 300 mb - 6'>;
-                        {selected_service.description}
-                      </p>;
-                      <div className='space - y-4'>;
-                        <div>;
-                          <h4 className='text - sm font - semibold text - purple - 400 mb - 2'>;
-                            Pricing;
-                          </h4>;
-                          <div className='text - 2xl font - bold text - white'>;
-                            {selected_service.price}
-                            {selected_service.period}
-                          </div>;
-                          <div className='text - sm text - gray - 400'>;
-                            {selected_service.market_price}
-                          </div>;
-                        </div>;
-                        <div>;
-                          <h4 className='text - sm font - semibold text - green - 400 mb - 2'>;
-                            ROI & Market;
-                          </h4>;
-                          <div className='text - sm text - gray - 300 space - y-1'>;
-                            <div>;
-                              <span className='text - gray - 400'>ROI:</span>{' '}
-                              {selected_service.roi}
-                            </div>;
-                            <div>;
-                              <span className='text - gray - 400'>;
-                                Market Size:;
-                              </span>{' '}
-                              {selected_service.market_size}
-                            </div>;
-                            <div>;
-                              <span className='text - gray - 400'>;
-                                Growth Rate:;
-                              </span>{' '}
-                              {selected_service.growth_rate}
-                            </div>                          </div>                          <h4 className="text - sm font - semibold text - green - 400 mb - 2">ROI & Market</h4>;
-                          <div className="text - sm text - gray - 300 space - y-1">;
-                            <div><span className="text - gray - 400">ROI:</span> {selected_service.roi}</div>;
-                            <div><span className="text - gray - 400">Market Size:</span> {selected_service.market_size}</div>;
-                            <div><span className="text - gray - 400">Growth Rate:</span> {selected_service.growth_rate}</div>;
-                        </div>;
-                      </div>;
-                    </div>;
-                    <div>;
-                      <h3 className='text - xl font - semibold text - cyan - 400 mb - 4'>;
-                        Features & Capabilities;
-                      </h3>;
-                      <div className='space - y-4'>;
-                        <div>;
-                          <h4 className='text - sm font - semibold text - purple - 400 mb - 2'>;
-                            Key Features;
-                          </h4>;
-                          <div className='space - y-2'>;
-                            {selected_service.features.map ((feature, idx) => (
-                              <div;
-                                key={idx}
-                                className='flex items - center gap - 2 text - sm';
-                              >;
-                                <Check className='w - 3 h - 3 text - green - 400 flex - shrink - 0' />;
-                                <span className='text - gray - 300'>{feature}</span>                              </div>))}
-                          </div>;
-                        </div>;
-                        <div>;
-                          <h4 className="text - sm font - semibold text - purple - 400 mb - 2">Key Features</h4>;
-                          <div className="space - y-2">;
-                            {selected_service.features.map ((feature, idx) => (
-                              <div key={idx} className="flex items - center gap - 2 text - sm">;
-                                <Check className="w - 3 h - 3 text - green - 400 flex - shrink - 0" />;
-                                <span className="text - gray - 300">{feature}</span>;
-                              </div>))}
-                          </div>;
-                        </div>;
-                        <div>;
-                          <h4 className='text - sm font - semibold text - green - 400 mb - 2'>;
-                            Benefits;
-                          </h4>;
-                          <div className='space - y-2'>;
-                            {selected_service.benefits.map ((benefit, idx) => (
-                              <div;
-                                key={idx}
-                                className='flex items - center gap - 2 text - sm';
-                              >;
-                                <Star className='w - 3 h - 3 text - yellow - 400 flex - shrink - 0' />;
-                                <span className='text - gray - 300'>{benefit}</span>                              </div>))}
-                          </div>;
-                        </div>                        <div>;
-                          <h4 className="text - sm font - semibold text - green - 400 mb - 2">Benefits</h4>;
-                          <div className="space - y-2">;
-                            {selected_service.benefits.map ((benefit, idx) => (
-                              <div key={idx} className="flex items - center gap - 2 text - sm">;
-                                <Star className="w - 3 h - 3 text - yellow - 400 flex - shrink - 0" />;
-                                <span className="text - gray - 300">{benefit}</span>;
-                              </div>))}
-                          </div>;
-                        </div>;
-                        <div>;
-                          <h4 className='text - sm font - semibold text - blue - 400 mb - 2'>;
-                            Capabilities;
-                          </h4>;
-                          <div className='space - y-2'>;
-                            {selected_service.capabilities.map (
-                              (capability, idx) => (
-                                <div;
-                                  key={idx}
-                                  className='flex items - center gap - 2 text - sm';
-                                >;
-                                  <Zap className='w - 3 h - 3 text - cyan - 400 flex - shrink - 0' />;
-                                  <span className='text - gray - 300'>;
-                                    {capability}
-                                  </span>;
-                                </div>))}                          </div>                          <h4 className="text - sm font - semibold text - blue - 400 mb - 2">Capabilities</h4>;
-                          <div className="space - y-2">;
-                            {selected_service.capabilities.map ((capability, idx) => (
-                              <div key={idx} className="flex items - center gap - 2 text - sm">;
-                                <Zap className="w - 3 h - 3 text - cyan - 400 flex - shrink - 0" />;
-                                <span className="text - gray - 300">{capability}</span>;
-                              </div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         </div>;
                       </div>;
                     </div>;
                   </div>;
-<<<<<<< HEAD
 
                   <div className='mt-8 pt-6 border-t border-gray-700'>;
                     <div className='flex flex-col sm:flex-row gap-4 justify-between items-center'>;
@@ -3807,7 +1813,6 @@ if ( {) {
                       </div>;
 
                       <div className='flex gap-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         <Button
                           variant='primary'
                           onClick={() =>;
@@ -3819,7 +1824,6 @@ if ( {) {
                         </Button>;
                         <Button
                           variant='futuristic'
-<<<<<<< HEAD
                           onClick={() =>
                             window.open(
                               'https://ziontechgroup.com/contact'
@@ -3830,16 +1834,6 @@ if ( {) {
                           Contact Sales
                           <Mail className='ml-2 w-4 h-4' />
                         </Button>                      </div>
-=======
-
-                  <div className="mt-8 pt-6 border-t border-gray-700">
-                    <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
-                      <div className="text-sm text-gray-400">
-                        <div>Setup Time: {selectedService.setupTime}</div>
-                        <div>Trial: {selectedService.trialDays} days</div>
-                      </div>
-                      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       <div className="flex gap-4">
                                                  <Button
                            variant="primary"
@@ -3848,7 +1842,6 @@ if ( {) {
                            Visit Service
                            <ExternalLink className="ml-2 w-4 h-4" />
                          </Button>
-=======
                           onClick={() =>;
                             window && window.open(;
                               'https://ziontechgroup && ziontechgroup.com/contact',;
@@ -3867,13 +1860,8 @@ if ( {) {
                            Visit Service;
                            <ExternalLink className="ml-2 w-4 h-4" />;
                          </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                          <Button
                            variant="futuristic"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                            onClick={() => window && window.open('https://ziontechgroup && ziontechgroup.com/contact_blank')}
                          >;
                            Contact Sales;
@@ -3884,47 +1872,24 @@ if ( {) {
                 </div>;
               </motion && motion.div>;
             </motion && motion.div>;
-<<<<<<< HEAD
-=======
-          )}
-<<<<<<< HEAD
         </AnimatePresence>
         {/* Contact Section */}
         <section className='py-20'>
           <div className='container mx-auto px-4 text-center'>
             <motion.div
               className='max-w-4xl mx-auto'              initial={{ opacity: 0, y: 20 }}        <section className="py-20">
-=======
-                           onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
-                         >
-                           Contact Sales
-                           <Mail className="ml-2 w-4 h-4" />
-                         </Button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
         </AnimatePresence>
 
         {/* Contact Section */}
         <section className="py-20">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="container mx-auto px-4 text-center">
             <motion.div
               className="max-w-4xl mx-auto"
-<<<<<<< HEAD
-=======
-              initial={{ opacity: 0, y: 20 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Experience the Future?
               </h2>
@@ -3933,30 +1898,6 @@ if ( {) {
                 with our revolutionary micro SaaS services.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
-=======
-        </AnimatePresence>;
-
-        {/* Contact Section */}
-        <section className='py-20'>;
-          <div className='container mx-auto px-4 text-center'>;
-            <motion&& motion.div
-              className='max-w-4xl mx-auto'              initial={{ opacity: 0, y: 20 }}        <section className="py-20">;
-          <div className="container mx-auto px-4 text-center">;
-            <motion&& motion.div 
-              className="max-w-4xl mx-auto"
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0 && 0.8 }}>;
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-                Ready to Experience the Future?;
-              </h2>;
-              <p className='text-xl text-gray-300 mb-8'>;
-                Join thousands of companies already transforming their business;
-                with our revolutionary micro SaaS services.;
-              </p>;
-
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Button
                   variant='primary'
                   size='lg'
@@ -3973,7 +1914,6 @@ if ( {) {
                   onClick={() =>;
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
                   }
-<<<<<<< HEAD
                 >
                   Schedule Demo
                   <Calendar className='ml-2 w-5 h-5' />
@@ -4000,10 +1940,6 @@ if ( {) {
                     {contactInfo.address}
                   </div>
                   <div className='text-gray-400 text-sm'>Visit our office</div>                </div>                Ready to Experience the Future?
-=======
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Experience the Future?
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of companies already transforming their business with our revolutionary micro SaaS services.
@@ -4048,91 +1984,10 @@ if ( {) {
         </section>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
 );  )
 }
-=======
-                >;
-                  Schedule Demo;
-                  <Calendar className='ml-2 w-5 h-5' />;
-                </Button>;
-              </div>;
-
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>;
-                <div>;
-                  <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;
-                  <div className='text-white font-semibold'>;
-                    {contactInfo && contactInfo.mobile}
-                  </div>;
-                  <div className='text-gray-400 text-sm'>Call us anytime</div>;
-                </div>;
-                <div>;
-                  <Mail className='w-8 h-8 text-purple-400 mx-auto mb-2' />;
-                  <div className='text-white font-semibold'>;
-                    {contactInfo && contactInfo.email}
-                  </div>;
-                  <div className='text-gray-400 text-sm'>Email us 24/7</div>;
-                </div>;
-                <div>;
-                  <MapPin className='w-8 h-8 text-green-400 mx-auto mb-2' />;
-                  <div className='text-white font-semibold'>;
-                    {contactInfo && contactInfo.address}
-                  </div>;
-                  <div className='text-gray-400 text-sm'>Visit our office</div>                </div>                Ready to Experience the Future?;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Join thousands of companies already transforming their business with our revolutionary micro SaaS services.;
-              </p>;
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
-                                 <Button
-                   variant="primary" 
-                   size="lg"
-                   onClick={() => window && window.open('https://ziontechgroup && ziontechgroup.com/contact_blank')}
-                 >;
-                   Start Free Trial;
-                   <Rocket className="ml-2 w-5 h-5" />;
-                 </Button>;
-                 <Button
-                   variant="futuristic" 
-                   size="lg"
-                   onClick={() => window && window.open('https://ziontechgroup && ziontechgroup.com/contact_blank')}
-                 >;
-                   Schedule Demo;
-                   <Calendar className="ml-2 w-5 h-5" />;
-                 </Button>;
-              </div>;
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">;
-                <div>;
-                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />;
-                  <div className="text-white font-semibold">{contactInfo && contactInfo.mobile}</div>;
-                  <div className="text-gray-400 text-sm">Call us anytime</div>;
-                </div>;
-                <div>;
-                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />;
-                  <div className="text-white font-semibold">{contactInfo && contactInfo.email}</div>;
-                  <div className="text-gray-400 text-sm">Email us 24/7</div>;
-                </div>;
-                <div>;
-                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />;
-                  <div className="text-white font-semibold">{contactInfo && contactInfo.address}</div>;
-                  <div className="text-gray-400 text-sm">Visit our office</div>;
-                </div>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraFuturisticBackground>;
-  );  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   <div className='mt - 8 pt - 6 border - t border - gray - 700'>;
                     <div className='flex flex - col sm:flex - row gap - 4 justify - between items - center'>;
                       <div className='text - sm text - gray - 400'>;
@@ -4288,4 +2143,3 @@ if ( {) {
       </div>;
     </UltraFuturisticBackground>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

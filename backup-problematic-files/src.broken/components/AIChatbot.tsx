@@ -21,7 +21,7 @@ const AIChatbot:React.FC<AIChatbotProps> = ({ className = "" }) => {;
     {;
       id:'1',;
       type:'bot',;
-      content:'Hello! I\'m Zion AI, your intelligent assistant. How can I help you today? I can help with:\n\n• AI & Quantum Computing Services\n• Business Solutions\n• Technical Support\n• Pricing Information\n• Service Comparisons',;
+      content:'Hello! I\'m Zion AI, your intelligent assistant. How can I help you today? I can help with:\n\n AI & Quantum Computing Services\n Business Solutions\n Technical Support\n Pricing Information\n Service Comparisons',;
       timestamp:new Date();
     }
   ]),;
@@ -287,7 +287,7 @@ const AIChatbot:React.FC<AIChatbotProps> = ({ className = "" }) => {;
  const [messages, setMessages] = useState<ChatMessage[]> ([ {
   id: '1';
 type: 'bot';
-content: 'Hello! I\'m Zion AI, your intelligent assistant. How can I help you today? I can help with:\n\n• AI & Quantum Computing Services\n• Business Solutions\n• Technical Support\n• Pricing Information\n• Service Comparisons';
+content: 'Hello! I\'m Zion AI, your intelligent assistant. How can I help you today? I can help with:\n\n AI & Quantum Computing Services\n Business Solutions\n Technical Support\n Pricing Information\n Service Comparisons';
 timestamp: new Date () 
 }]);
 const [inputValue, setInputValue] = useState ('');

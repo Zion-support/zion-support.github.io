@@ -46,27 +46,27 @@ export default function CareersPage() {;
     {;
       title:'Remote First',;
       description:'Work from anywhere in the world with our distributed team.',;
-      icon:'🌍'},;
+      icon:''},;
     {;
       title:'Cutting-Edge Technology',;
       description:'Work with the latest AI, quantum computing, and blockchain technologies.',;
-      icon:'🚀'},;
+      icon:''},;
     {;
       title:'Flexible Hours',;
       description:'Work when you\'re most productive with flexible scheduling.',;
-      icon:'⏰'},;
+      icon:''},;
     {;
       title:'Learning & Development',;
       description:'Continuous learning opportunities and professional development.',;
-      icon:'📚'},;
+      icon:''},;
     {;
       title:'Competitive Compensation',;
       description:'Attractive salary packages with equity options.',;
-      icon:'💰'},;
+      icon:''},;
     {;
       title:'Health & Wellness',;
       description:'Comprehensive health coverage and wellness programs.',;
-      icon:'🏥'}],;
+      icon:''}],;
 ;
   return (;
     <div className="space-y-16">;
@@ -93,9 +93,9 @@ export default function CareersPage() {;
                   <h3 className="text-xl font-semibold mb-2">{position.title}</h3>;
                   <div className="flex flex-wrap gap-4 text-sm opacity-70">;
                     <span>{position.department}</span>;
-                    <span>•</span>;
+                    <span></span>;
                     <span>{position.location}</span>;
-                    <span>•</span>;
+                    <span></span>;
                     <span className="text-blue-400">{position.type}</span>;
                   </div>;
                 </div>;
@@ -127,9 +127,9 @@ in artificial intelligence, quantum computing, and blockchain technology.       
                   <h3 className="text-xl font-semibold mb-2">{position.title}</h3>
                   <div className="flex flex-wrap gap-4 text-sm opacity-70">
                     <span>{position.department}</span>
-                    <span>•</span>
+                    <span></span>
                     <span>{position.location}</span>
-                    <span>•</span>
+                    <span></span>
                     <span className="text-blue-400">{position.type}</span>                  </div>
                 </div>
                 <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors">

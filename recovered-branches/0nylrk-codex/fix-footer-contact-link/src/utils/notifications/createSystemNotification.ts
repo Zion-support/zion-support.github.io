@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { createNotification  } from './createNotification';
 import { SystemNotificationParams } from './types';
@@ -25,24 +24,4 @@ export async function createSystemNotification({
 
     actionText
   })
-=======
-import {create_notification} from './create_notification';
-import {SystemNotificationParams} from './types';
-/**;
-* Creates a system notification for a user;
-*/;
-export async /**
- * createSystemNotification - Function description
- */
-function createSystemNotification() {
-  return create_notification ({
-    user_id;
-    title;
-    message;
-    type: 'system';
-    send_email;
-    action_url,
-    action_text;
-  });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

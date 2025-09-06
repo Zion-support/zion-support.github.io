@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard';
@@ -7,12 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { SEO } from '@/components/SEO';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Briefcase } from 'lucide-react';
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { useRouter } from "next/router",
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
@@ -26,22 +20,11 @@ function HiringTrackerContent() {
   const router = useRouter()
   const jobId = router.query.jobId as string
   const [activeTab, setActiveTab] = useState<string>('kanban')
-=======
-function HiringTrackerContent() {;
-
-  const router = useRouter();
-  const jobId = router && router.query.jobId as string;
-  const [activeTab, setActiveTab] = useState<string>('kanban');
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <SEO
         title='Hiring Tracker | Zion AI Marketplace'
         description='Manage your candidate pipeline in the Zion AI Marketplace.'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       />
       <main className='container mx-auto px-4 py-8'>
         <div className='flex justify-between items-center mb-8'>
@@ -51,23 +34,6 @@ function HiringTrackerContent() {;
               Hiring Pipeline
             </h1>
             <p className='text-muted-foreground mt-1'>              Track and manage your candidates through the hiring process  const [activeTab, setActiveTab] = useState<string>("kanban")
-=======
-import { useState } from "react";
-import { useRouter } from "next/router";
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Briefcase } from 'lucide-react'
-
-function HiringTrackerContent() {
-
-  const router = useRouter();
-  const jobId = router.query.jobId as string,
-  const [activeTab, setActiveTab] = useState<string>("kanban");
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <>
@@ -87,7 +53,6 @@ function HiringTrackerContent() {
             </p>
           </div>
         </div>
-<<<<<<< HEAD
         <Tabs
           defaultValue='kanban'
           onValueChange={setActiveTab}
@@ -101,11 +66,6 @@ function HiringTrackerContent() {
             <KanbanBoard jobId={jobId} />
           </TabsContent>
           <TabsContent value='analytics' className='mt-6'>            <HiringAnalytics jobId={jobId} />          <TabsList>
-=======
-
-        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
-          <TabsList>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
@@ -118,24 +78,15 @@ function HiringTrackerContent() {
         </Tabs>
       </main>
     </>
-<<<<<<< HEAD
   )
 }
-=======
-  );
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>
-<<<<<<< HEAD
   )
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       />;
       <main className='container mx-auto px-4 py-8'>;
         <div className='flex justify-between items-center mb-8'>;
@@ -203,12 +154,8 @@ export default function HiringTracker() {;
     </ProtectedRoute>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { useState } from 'react';
 import { use_router } from 'next / router';
 import { KanbanBoard } from '@/components / hiring - tracker / KanbanBoard';
@@ -291,4 +238,3 @@ function HiringTracker() {
       <HiringTrackerContent />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

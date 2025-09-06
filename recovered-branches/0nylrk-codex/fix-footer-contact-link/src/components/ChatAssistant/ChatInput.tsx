@@ -1,20 +1,10 @@
-<<<<<<< HEAD
 
 import React, {
-<<<<<<< HEAD
   useState
   useRef
   useEffect
   FormEvent
   KeyboardEvent
-=======
-import React, {;
-  useState,;
-  useRef,;
-  useEffect,;
-  FormEvent,;
-  KeyboardEvent,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -27,7 +17,6 @@ interface ChatInputProps {;
 export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
   const [message, setMessage] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
-<<<<<<< HEAD
   useEffect(() => {
     // Focus input when component mounts
     inputRef.current?.focus();
@@ -42,25 +31,6 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       if (message.trim() && !disabled) {
-=======
-
-  useEffect(() => {;
-    // Focus input when component mounts;
-    inputRef && inputRef.current?.focus();
-  }, []);
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
-    e && e.preventDefault();
-    if (message && message.trim() && !disabled) {;
-      (onSend(message), setMessage(""));
-    }
-  };
-
-  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {;
-    if (e && e.key === "Enter" && !e && e.shiftKey) {;
-      e && e.preventDefault();
-      if (message && message.trim() && !disabled) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         (onSend(message), setMessage(""));
       }
     }
@@ -74,7 +44,6 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
         placeholder="Type your message..."
         value={message}
         onChange={(e) => setMessage(e && e.target.value)}
-=======
   useState,
   useRef,
   useEffect,
@@ -132,29 +101,19 @@ if (&& !disabled) {) {
         placeholder="Type your message...";
         value={message}
         on_change={(e) => set_message (e.target.value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
       />;
-<<<<<<< HEAD
       <Button
         type="submit"
         className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
-<<<<<<< HEAD
         disabled={!message.trim() |disabled}
       >
         <Send className="h-5 w-5" />
       </Button>
     </form>
-=======
-        disabled={!message && message.trim() || disabled}>;
-        <Send className="h-5 w-5" />;
-      </Button>;
-    </form>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
       <Button;
         type="submit";
         className="bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center";
@@ -163,5 +122,4 @@ if (&& !disabled) {) {
         <Send className="h - 5 w - 5" />;
       </Button>;
     </form>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

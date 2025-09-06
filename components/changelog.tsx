@@ -1,14 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 type Props = {;
   content: string | null;
-<<<<<<< HEAD
   generatedAt: string | null;}
 export default function ChangelogPage({ content, generatedAt }: Props) {
   return (
@@ -18,24 +12,6 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
   generatedAt: string | null
 }
 export default function ChangelogPage({ content, generatedAt }: Props) {
-=======
-  generatedAt: string | null;};
-=======
-type Props = {
-=======
-;
-type Props = {
-  content: string | null;
-  generated_at: string | null;}
-;
-export default /**
- * ChangelogPage - Function description
- */
-function ChangelogPage() {
-  return (
-    <main className='mx - auto max - w-4xl px - 4 py - 12'>;
-      <h1 className='text - 2xl font - bold text - gray - 900'>Changelog</h1 > type Props = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   content: string | null,
   generated_at: string | null;
 }
@@ -45,24 +21,11 @@ export default /**
  */
 function ChangelogPage() {
   return (
-<<<<<<< HEAD
     <main className="mx-auto max-w-4xl px-4 py-12">
       <h1 className="text-2xl font-bold text-gray-900">Changelog</h1>
       {generatedAt && (
         <p className="mt-2 text-sm text-gray-600">Generated: {generatedAt}</p>
       )}
-=======
-    <main className='mx - auto max - w-4xl px - 4 py - 12'>;
-      <h1 className='text - 2xl font - bold text - gray - 900'>Changelog</h1>;
-      {generated_at && (
-        <p className='mt - 2 text - sm text - gray - 600'>Generated: {generated_at}</p>)}
-      {content ? (
-        <pre className='mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm'>;
-          {content}
-        </pre>) : (
-        <div className='mt - 6 rounded - xl border border - gray - 200 bg - white p - 6 text - gray - 600'>          No changelog generated yet.      {generated_at && (
-        <p className="mt - 2 text - sm text - gray - 600">Generated: {generated_at}</p>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {content ? (
         <pre className="mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm">;
 {content}
@@ -72,8 +35,6 @@ function ChangelogPage() {
         </div>)}
     </main>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export default function ChangelogPage(): any ({ content, generatedAt }: Props) {;
   return (
@@ -84,7 +45,6 @@ export default function ChangelogPage(): any ({ content, generatedAt }: Props) {
 };
 
 export default function ChangelogPage(): any ({ content, generatedAt }: Props) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <main className='mx-auto max-w-4xl px-4 py-12'>;
       <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>;
@@ -111,25 +71,19 @@ export default function ChangelogPage(): any ({ content, generatedAt }: Props) {
     </main>;
   );
 }
-<<<<<<< HEAD
 export async function getStaticProps() {
   try {
     const file = path.join(process.cwd(), 'CHANGELOG.md');
     const content = fs.readFileSync(file, 'utf8');
-<<<<<<< HEAD
     return {
       props: { content, generatedAt: new Date().toISOString() }
       revalidate: 300
     }
-=======
-    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 
   } catch {
-=======
 
 export async function getStaticProps() {;
   try {;
@@ -143,17 +97,9 @@ export async function getStaticProps() {;
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
   } catch {;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export async /**
  * getStaticProps - Function description
  */
@@ -172,4 +118,3 @@ function getStaticProps() {
     return { props: { content: null, generated_at: null }, revalidate: 300 }
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,8 +1,4 @@
 export interface Revolutionary2025Service {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   id: string;
   name: string;
   tagline: string;
@@ -15,7 +11,6 @@ export interface Revolutionary2025Service {
   contact_info: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
 
     address: string;
   }
@@ -38,7 +33,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     category: 'Revolutionary 2025 Services'
     realImplementation: true
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -47,47 +41,17 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
 ];      mobile: "+1 302 464 0950";
 
       email: "kleber@ziontechgroup.com";
-=======
-=======
-    address: string;
-  }
-;
-export const revolutionary2025Services: Revolutionary2025Service[] = [;
-  {
-    id: 'revolutionary - ai - platform',
-    name: 'Revolutionary AI Platform',
-    tagline: 'Next - generation AI capabilities',
-    price: '$199 / month',
-    description:;
-      "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.",
-    features: [;
-      'Advanced AI models',
-      'Revolutionary algorithms',
-      'Breakthrough capabilities',
-      'Future - ready architecture',
-      'Cutting - edge features',
-    ],
-    link: '/services / revolutionary - ai - platform',
-    category: 'Revolutionary 2025 Services',
-    real_implementation: true,
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
-<<<<<<< HEAD
       email: "kleber@ziontechgroup && ziontechgroup.com";
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-=======
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -115,17 +79,13 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     realImplementation: true,
     contactInfo: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

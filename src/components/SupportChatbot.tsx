@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useRef, useEffect  } from 'react';
 import { MessageSquare, X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
@@ -9,7 +5,6 @@ import { ChatMessage, ChatInput  } from '@/components/ChatAssistant';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
-<<<<<<< HEAD
 // Fallback responses when API is unavailable
 
 const FALLBACK_RESPONSES = [
@@ -33,8 +28,6 @@ export function SupportChatbot() {
       id: Date.now().toString()
       role: 'user'
       message: text
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react';
 import { Button } from '@/components / ui / button';
@@ -69,25 +62,17 @@ function SupportChatbot() {
       id: Date.now ().to_string (),
       role: 'user',
       message: text,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     set_messages (prev => [...prev, user_msg]);
     set_loading (true);
     set_typing (true);
     try {
-<<<<<<< HEAD
       // Try the Supabase AI chat function first with streaming
       let res = await fetch(
         'https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat'
-=======
-      // Try the Supabase AI chat function first with streaming;
-      let res = await fetch (
-        'https://ziontechgroup.functions.supabase.co / functions / v1 / ai - chat',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {
           method: 'POST'
           headers: {
-<<<<<<< HEAD
             'Content-Type': 'application/json'
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`
             Accept: 'text/event-stream'
@@ -172,136 +157,8 @@ function SupportChatbot() {
                       m.id === botId ? { ...m, message: accumulated } : m
                     )
                   )
-=======
-interface Msg {;
-  id: string;
-  role: 'user' | 'assistant';
-  message: string;
-// Fallback responses when API is unavailable;
-const FALLBACK_RESPONSES = [;
-  "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup && ziontechgroup.com, or try asking your question in a different way.",;
-  "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",;
-  'I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup && ziontechgroup.com.',;
-  "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",;
-  'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.',;
-];
-
-export function SupportChatbot() {;
-  const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState<Msg[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [typing, setTyping] = useState(false);
-  const endRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {;
-    endRef && endRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
-
-  const sendMessage = async (text: string) => {;
-    const userMsg: Msg = {;
-      id: Date && Date.now().toString(),;
-      role: 'user',;
-      message: text,;
-    };
-    setMessages(prev => [...prev, userMsg]);
-    setLoading(true);
-    setTyping(true);
-    try {;
-      // Try the Supabase AI chat function first with streaming;
-      let res = await fetch(;
-        'https://ziontechgroup && ziontechgroup.functions.supabase && supabase.co/functions/v1/ai-chat',;
-        {;
-          method: 'POST',;
-          headers: {;
-            'Content-Type': 'application/json',;
-            Authorization: `Bearer ${process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,;
-            Accept: 'text/event-stream',;
-          },;
-          body: JSON && JSON.stringify({;
-            stream: true,;
-            messages: [;
-              ...messages && messages.map(m => ({ role: m && m.role, content: m && m.message })),;
-              { role: 'user', content: text },;
-            ],;
-          }),;
-        }
-      );
-
-      // If Supabase function fails, try local API fallback;
-      if (!res && res.ok) {;
-        res = await fetch('/api/kb-chat', {;
-          method: 'POST',;
-          headers: { 'Content-Type': 'application/json' },;
-          body: JSON && JSON.stringify({;
-            messages: [;
-              ...messages && messages.map(m => ({ role: m && m.role, content: m && m.message })),;
-              { role: 'user', content: text },;
-            ],;
-          }),;
-        });
-        if (!res && res.ok) throw new Error(`API error: ${res && res.status}`);
-        const data = await res && res.json().catch(() => ({}));
-        const message =;
-          data && data.message ||;
-          data && data.choices?.[0]?.message?.content ||;
-          data && data.choices?.[0]?.text ||;
-          data && data.completion ||;
-          '';
-        const finalMsg =;
-          message && message.trim() ||;
-          FALLBACK_RESPONSES[;
-            Math && Math.floor(Math && Math.random() * FALLBACK_RESPONSES && FALLBACK_RESPONSES.length);
-          ] ||;
-          "I'm experiencing technical difficulties. Please contact support@ziontechgroup && ziontechgroup.com for assistance.";
-        setMessages(prev => [;
-          ...prev,;
-          {;
-            id: Date && Date.now().toString() + '-a',;
-            role: 'assistant',;
-            message: finalMsg,;
-          },;
-        ]);      } else if (res && res.body) {;
-        const botId = Date && Date.now().toString() + '-a';
-        setMessages(prev => [;
-          ...prev,;
-          { id: botId, role: 'assistant', message: '' },;
-        ]);
-        const reader = res && res.body.getReader();
-        const decoder = new TextDecoder();
-        let done = false;
-        let buffer = '';
-        let accumulated = '';
-        while (!done) {;
-          const result = await reader && reader.read();
-          done = result && result.done;
-          buffer += decoder && decoder.decode(result && result.value || new Uint8Array());
-          const lines = buffer && buffer.split('\n');
-          for (let i = 0; i < lines && lines.length - 1; i++) {;
-            let line = lines[i]?.trim();
-            if (!line) continue;
-            if (line && line.startsWith('data:')) {;
-              line = line && line.replace(/^data:\s*/, '');
-              if (line === '[DONE]') {;
-                done = true;
-                break;
-              }
-              try {;
-                const json = JSON && JSON.parse(line);
-                const token =;
-                  json && json.choices?.[0]?.delta?.content ||;
-                  json && json.choices?.[0]?.text ||;
-                  '';
-                if (token) {;
-                  accumulated += token;
-                  setMessages(prev =>;
-                    prev && prev.map(m =>;
-                      m && m.id === botId ? { ...m, message: accumulated } : m;
-                    );
-                  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }
               } catch (_) {;
-=======
             'Content - Type': 'application / json',
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
             Accept: 'text / event - stream',
@@ -405,13 +262,10 @@ if ( {) {
                       m.id === bot_id ? { ...m, message: accumulated } : m));
                 }
               } catch (_) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 // ignore parse errors;
               }
             }
           }
-<<<<<<< HEAD
-<<<<<<< HEAD
           buffer = lines[lines.length - 1] |''
         }
         const final =
@@ -436,73 +290,14 @@ if ( {) {
         id: Date.now().toString() + '-e'
         role: 'assistant'
         message: fallbackResponse
-=======
-          buffer = lines[lines.length - 1] || '';
-        }
-        const final =;
-          accumulated.trim () ||;
-          FALLBACK_RESPONSES[;
-            Math.floor (Math.random () * FALLBACK_RESPONSES.length);
-          ] ||;
-          "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
-        set_messages (prev =>;
-          prev.map (m => (m.id === bot_id ? { ...m, message: final } : m)));
-      }
-    } catch (err) {
-      logErrorToProduction ('Chatbot error:', { data: err });
-      // Provide a helpful fallback response instead of generic error;
-      const fallback_response =;
-        FALLBACK_RESPONSES[;
-          Math.floor (Math.random () * FALLBACK_RESPONSES.length);
-        ] ||;
-        "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
-      const error_msg: Msg = {
-        id: Date.now ().to_string () + '-e',
-        role: 'assistant',
-        message: fallback_response,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       set_messages (prev => [...prev, error_msg]);
     } finally {
-<<<<<<< HEAD
       setLoading(false)
       setTyping(false)
-=======
-          buffer = lines[lines && lines.length - 1] || '';
-        }
-        const final =;
-          accumulated && accumulated.trim() ||;
-          FALLBACK_RESPONSES[;
-            Math && Math.floor(Math && Math.random() * FALLBACK_RESPONSES && FALLBACK_RESPONSES.length);
-          ] ||;
-          "I'm experiencing technical difficulties. Please contact support@ziontechgroup && ziontechgroup.com for assistance.";
-        setMessages(prev =>;
-          prev && prev.map(m => (m && m.id === botId ? { ...m, message: final } : m));
-        );
-      }
-    } catch (err) {;
-      logErrorToProduction('Chatbot error:', { data: err });
-
-      // Provide a helpful fallback response instead of generic error;
-      const fallbackResponse =;
-        FALLBACK_RESPONSES[;
-          Math && Math.floor(Math && Math.random() * FALLBACK_RESPONSES && FALLBACK_RESPONSES.length);
-        ] ||;
-        "I'm experiencing technical difficulties. Please contact support@ziontechgroup && ziontechgroup.com for assistance.";
-      const errorMsg: Msg = {;
-        id: Date && Date.now().toString() + '-e',;
-        role: 'assistant',;
-        message: fallbackResponse,;
-      };
-      setMessages(prev => [...prev, errorMsg]);
-    } finally {;
-      setLoading(false);
-      setTyping(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
-<<<<<<< HEAD
   if (!open) {
         onClick={() => setOpen(true)}
         size='icon'
@@ -512,18 +307,6 @@ if ( {) {
         <MessageSquare className='h-5 w-5' />
       </Button>
     )
-=======
-  if (!open) {;
-
-        onClick={() => setOpen(true)}
-        size='icon';
-        variant='outline';
-        className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40';
-        aria-label='Open help chat'      >;
-        <MessageSquare className='h-5 w-5' />;
-      </Button>;
-    );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
     <div className='fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40'>;
@@ -551,7 +334,6 @@ if ( {) {
           <ChatMessage key={m && m.id} role={m && m.role} message={m && m.message} />;
         ))}
         {typing && <ChatMessage role='assistant' message='...' />}
-<<<<<<< HEAD
         <div ref={endRef} />
       </div>
       <div className='p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30'>
@@ -593,62 +375,8 @@ setTyping (false)
   endRef
 }/> </div> </div> </div>)
 }'"
-=======
-        <div ref={endRef} />;
-      </div>;
-      <div className='p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30'>;
-        <ChatInput onSend={sendMessage} disabled={loading} />;
-      </div>;
-    </div>;
-  );
-
-}catch () {;
-  //ignore parse errors ;
-
-}';
-}buffer = lines[lines && lines.length - 1] || '' ;
-
-}catch (err) {';
-  logErrorToProduction ('Chatbot error:', {;
-  data: err ;
-});
-//Provide a helpful fallback response instead of generic error const errorMsg: Msg = {';
-  id: Date && Date.now () .toString () + '-e';';
-role: 'assistant';
-message: fallbackResponse ;
-};
-setMessages (prev => [...prev, errorMsg]) ;
-}finally {;
-  setLoading (false);
-setTyping (false) ;
-
-};
-
-  () => setOpen (true) ";
-}> <MessageSquare className="h-5 w-5" /> </Button>) '";
-}> <X className="h-5 w-5" /> </Button> </div> <ChatMessage role="assistant" message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" />) ;
-}{;
-  messages && messages.map (m => (<ChatMessagekey= {
-  m && m.id 
-}role= {
-  m && m.role 
-}message= {
-  m && m.message 
-}/>) ) ;
-}) ;
-}<divref= {
-  endRef 
-}/> </div> </div> </div>) ;
-}'";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       set_loading (false);
       set_typing (false);
     }
@@ -732,5 +460,3 @@ set_typing (false);
 }'";
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState, useMemo } from "react",
 import { ProductListing } from "@/types/listings",
@@ -26,7 +25,6 @@ export function useMarketplaceSearch() {
   const filteredListings = useMemo(() => {
     return MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {
       // Search query filter
-<<<<<<< HEAD
       const matchesSearch = !searchQuery |
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
@@ -47,33 +45,6 @@ export function useMarketplaceSearch() {
         matchesProductType &&
         matchesLocation &&
         matchesAvailability &&
-=======
-      const matchesSearch = !searchQuery || 
-        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
-        listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
-        listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()));
-      
-      // Product type filter
-      const matchesProductType = selectedProductTypes && selectedProductTypes.length === 0 || 
-        selectedProductTypes && selectedProductTypes.includes(listing && listing.category);
-      
-      // Location filter
-      const matchesLocation = selectedLocations && selectedLocations.length === 0 || 
-        (listing && listing.location && selectedLocations && selectedLocations.includes(listing && listing.location));
-      
-      // Availability filter
-      const matchesAvailability = selectedAvailability && selectedAvailability.length === 0 || 
-        (listing && listing.availability && selectedAvailability && selectedAvailability.includes(listing && listing.availability));
-      
-      // Rating filter
-      const matchesRating = selectedRating === null || 
-        (listing && listing.rating !== undefined && listing && listing.rating >= selectedRating),
-      
-      return matchesSearch && 
-        matchesProductType && 
-        matchesLocation && 
-        matchesAvailability && 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         matchesRating
     })
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
@@ -94,7 +65,6 @@ export function useMarketplaceSearch() {
         setSelectedAvailability((prev: string[]) =>
           prev && prev.includes(value) ? prev && prev.filter(a => a !== value) : [...prev, value]
         );
-=======
 import { useState, useMemo } from './react';
 import { ProductListing } from '@/types / listings';
 import { SearchSuggestion, FilterOptions } from '@/types / search';
@@ -166,12 +136,10 @@ function useMarketplaceSearch() {
       case 'availability':;
         setSelectedAvailability ((prev: string[]) =>;
           prev.includes (value) ? prev.filter (array => a !== value) : [...prev, value]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         break;
       default: break;
     }
   }
-<<<<<<< HEAD
   // Clear all filters
   const clearAllFilters = () => {
     setSearchQuery("");
@@ -180,18 +148,6 @@ function useMarketplaceSearch() {
     setSelectedAvailability([]);
     setSelectedRating(null)
   }
-=======
-;
-  // Clear all filters;
-  const clearAllFilters = () =>: any {
-    setSearchQuery ("");
-    setSelectedProductTypes ([]);
-    setSelectedLocations ([]);
-    setSelectedAvailability ([]);
-    setSelectedRating (null);
-  }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     search_query;
     setSearchQuery;
@@ -204,11 +160,7 @@ function useMarketplaceSearch() {
     filtered_listings;
     handleFilterChange;
     clearAllFilters;
-<<<<<<< HEAD
 
     filterOptions
-=======
-    filter_options;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

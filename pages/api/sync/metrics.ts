@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
@@ -13,20 +8,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const totalsByToken: Record<string, number> = {}
   const contributionsBySubject: Record<string, number> = {}
   let globalVotes = 0
-=======
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
-
-  const state = readState();
-  const events = filterEventsByScope(state.events, state.config.scope);
-
-  const totalsByToken: Record<string, number> = {};
-  const contributionsBySubject: Record<string, number> = {};
-  let globalVotes = 0;
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   for (const e of events) {
     if (e.type === "token_transfer") {
       const p = e.payload as any
@@ -44,25 +25,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .sort((a, b) => b.score - a.score)
     .slice(0, 10)
   return res.status(200).json({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     treasuryTotals: totalsByToken
     topContributors
     totalVoteCount: globalVotes
 
     lastSyncedAt: state.lastSyncedAt})
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     treasuryTotals: totalsByToken, topContributors,
     totalVoteCount: globalVotes,
     lastSyncedAt: state.lastSyncedAt})
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';,
 ;
@@ -110,5 +82,3 @@ if ( {) {
     lastSyncedAt: state.lastSyncedAt});
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

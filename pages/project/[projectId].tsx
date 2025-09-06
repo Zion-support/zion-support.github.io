@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
@@ -31,7 +24,6 @@ export default function ProjectPage() {
         const json = await res.json()
         if (!json.ok) throw new Error(json.error |"Failed to load project")
         setProject(json.project)
-=======
 import { useEffect, useState  } from './react';,
 import { use_router  } from './next / router';,
 import FeedbackModal from "../../components / ui / FeedbackModal",
@@ -68,14 +60,12 @@ if (return, ) {
   $2
 }
         set_project (json.project);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch (e: any) {
         set_error (e.message);
       } finally {
         set_loading (false);
       }
     }
-<<<<<<< HEAD
     load()
   }, [projectId])
   const [showFeedback, setShowFeedback] = useState(false)
@@ -101,49 +91,11 @@ if (return, ) {
       setProject(json.project)
 
       setShowFeedback(true)
-=======
-    load ();
-  }, [project_id]),
-  const [show_feedback, setShowFeedback] = useState (false),
-  async /**
- * add_note - Function description
- */
-function add_note() {
-    const res = await fetch (`/api / marketplace / projects`, {
-      method: "PATCH",
-      headers: { "Content - Type": "application / json", ...headers },
-      body: JSON.stringify ({ id: project_id, action: "add_note", content: note })}),
-    const json = await res.json (),
-    // Check condition
-if ( {) {
-  $2
-}
-      set_project (json.project),
-      set_note (""),
-      setShowFeedback (true);
-    }
-  }
-  async /**
- * mark_completed - Function description
- */
-function mark_completed() {
-    const res = await fetch (`/api / marketplace / projects`, {
-      method: "PATCH",
-      headers: { "Content - Type": "application / json", ...headers },
-      body: JSON.stringify ({ id: project_id, action: "mark_completed" })}),
-    const json = await res.json (),
-    // Check condition
-if ( {) {
-  $2
-}
-      set_project (json.project),
-      setShowFeedback (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
   return (
     <div className="max - w-4xl mx - auto p - 6 space - y-6">;
-      {loading && <div > Loading…</div>}
+      {loading && <div > Loading</div>}
       {error && <div className="text - red - 600">{error}</div>}
       {project && (
         <div className="space - y-6">;
@@ -151,7 +103,6 @@ if ( {) {
             <h1 className="text - 2xl font - semibold">Project Kickoff</h1>;
             <span className={`px - 2 py - 0.5 rounded text - xs ${project.status === "ACTIVE" ? "bg - emerald - 100 text - emerald - 700" : "bg - gray - 200"}`}>;
               {project.status}
-<<<<<<< HEAD
             </span>
           </div>
           <section className="rounded border p-4">
@@ -166,30 +117,13 @@ if ( {) {
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Timeline</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
-=======
-            </span>;
-          </div>;
-          <section className="rounded border p - 4">;
-            <h2 className="font - medium mb - 2">Project Summary</h2>;
-            <div className="text - sm">;
-              <div><b > Client</b>: {project.client_id}</div>;
-              <div><b > Talent</b>: {project.talent_slug}</div>;
-              <div><b > Start</b>: {new Date (project.startDateIso).toLocaleDateString ()}</div>;
-              <div className="mt - 2">{project.summary}</div>;
-            </div>;
-          </section>;
-          <section className="rounded border p - 4">;
-            <h2 className="font - medium mb - 2">Timeline</h2>;
-            <ul className="list - disc pl - 6 space - y-1 text - sm">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {project.timeline?.length ? (
                 project.timeline.map ((m: any) => (
                   <li key={m.id}>;
                     <span className="font - medium">{m.title}</span>;
-                    {m.dueDateIso && <span> • due {new Date (m.dueDateIso).toLocaleDateString ()}</span>}
-                    {m.amount_usd && <span> • ${m.amount_usd}</span>}
-                    {m.status && <span> • {m.status}</span>}
-<<<<<<< HEAD
+                    {m.dueDateIso && <span>  due {new Date (m.dueDateIso).toLocaleDateString ()}</span>}
+                    {m.amount_usd && <span>  ${m.amount_usd}</span>}
+                    {m.status && <span>  {m.status}</span>}
                   </li>
                 ))
               ) : (
@@ -200,25 +134,15 @@ if ( {) {
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Documents</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
-=======
-                  </li>))) : (
-                <li > No timeline defined</li>)}
-            </ul>;
-          </section>;
-          <section className="rounded border p - 4">;
-            <h2 className="font - medium mb - 2">Documents</h2>;
-            <ul className="list - disc pl - 6 space - y-1 text - sm">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {project.documents?.length ? (
                 project.documents.map ((d: any) => (
                   <li key={d.id}>;
                     {d.url ? (
-<<<<<<< HEAD
                       <a href={d.url} className="text-indigo-600 underline" target="_blank" rel="noreferrer">{d.name}</a>
                     ) : (
                       <span>{d.name}</span>
                     )}
-                    <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
+                    <span className="text-gray-500">  uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
                   </li>
                 ))
               ) : (
@@ -233,7 +157,7 @@ if ( {) {
                 project.notes.map((n: any) => (
                   <div key={n.id} className="text-sm">
                     <span className="font-medium">{n.authorRole}</span>: {n.content}
-                    <span className="text-gray-500"> • {new Date(n.createdAtIso).toLocaleString()}</span>
+                    <span className="text-gray-500">  {new Date(n.createdAtIso).toLocaleString()}</span>
                   </div>
                 ))
               ) : (
@@ -260,17 +184,10 @@ if ( {) {
       />
     </div>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                       <a href={d.url} className="text - indigo - 600 underline" target="_blank" rel="noreferrer">{d.name}</a>) : (
                       <span>{d.name}</span>)}
-                    <span className="text - gray - 500"> • uploaded {new Date (d.uploadedAtIso).toLocaleString ()}</span>;
+                    <span className="text - gray - 500">  uploaded {new Date (d.uploadedAtIso).toLocaleString ()}</span>;
                   </li>))) : (
                 <li > No documents</li>)}
             </ul>;
@@ -282,7 +199,7 @@ if ( {) {
                 project.notes.map ((number: any) => (
                   <div key={n.id} className="text - sm">;
                     <span className="font - medium">{n.author_role}</span>: {n.content}
-                    <span className="text - gray - 500"> • {new Date (n.createdAtIso).toLocaleString ()}</span>;
+                    <span className="text - gray - 500">  {new Date (n.createdAtIso).toLocaleString ()}</span>;
                   </div>))) : (
                 <div className="text - sm text - gray - 600">No notes yet.</div>)}
             </div>;
@@ -304,5 +221,3 @@ if ( {) {
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface SearchFilters {
   keywords?: string[];
   skills?: string[];
@@ -10,19 +9,12 @@ export interface SearchFilters {
   priceRange?: {
     min?: number;
     max?: number;
-=======
-// Search parser utilities;
-export const parseSearchQuery = (query: string) =>: any {
-  // Add search query parsing functionality here;
-  return {
-<<<<<<< HEAD
     keywords: []
     skills: []
     location: null
     type: null
   }
 }
-<<<<<<< HEAD
 export const searchAll = (parsed: any, access: any) => {
   // Add search functionality here
   return {
@@ -35,59 +27,8 @@ export const searchAll = (parsed: any, access: any) => {
 export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here
   return null;
-=======
-
-export async function parseQueryToFilters(query: string): Promise<SearchFilters> {
-  const filters: SearchFilters = {};
-  
-<<<<<<< HEAD
   if (!query || query && query.trim().length === 0) {
     return filters;
-=======
-  // rudimentary skill tokenization
-  const tokens = lower.split(/[^a-z0-9+.#]/).filter(Boolean);
-  
-  return Array.from(found);
-
-function extractKeywords(text: string): string[] {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, ' ')
-    .split(/\s+/)
-    .filter(Boolean)
-    .filter(
-      w =>
-        w.length > 2 &&
-        ![
-          'show',
-          'me',
-          'with',
-          'and',
-          'for',
-          'the',
-          'a',
-          'an',
-          'to',
-          'by',
-          'of',
-          'under',
-          'over',
-          'in',
-        ].includes(w)
-    );
-}
-
-export async function parseQueryToFilters(
-  query: string
-): Promise<ParsedFilters> {
-  const base: ParsedFilters = {
-    type: extractType(query),
-    skills: extractSkills(query),
-    location: extractLocation(query),
-    availability: extractAvailability(query),
-    ...extractBudget(query),
-    keywords: extractKeywords(query),
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
   const apiKey =
@@ -128,7 +69,6 @@ export async function parseQueryToFilters(
     };
   } catch {
     return base;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 
   const words = query && query.toLowerCase().split(/\s+/);
@@ -160,8 +100,6 @@ export async function parseQueryToFilters(
   }
   
   return filters;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     keywords: [],
     skills: [],
     location: null,
@@ -182,5 +120,4 @@ export const search_all = (parsed: any, access: any) =>: any {
 export const suggestDidYouMean = (query: string) =>: any {
   // Add did you mean functionality here;
   return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

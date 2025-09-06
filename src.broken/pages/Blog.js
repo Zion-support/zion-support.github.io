@@ -79,7 +79,7 @@ export default function Blog() {
                     <div>
                       <p className="text-white font-medium">{featuredPosts[0].author.name}</p>
                       <p className="text-sm text-zion-slate-light">
-                        {featuredPosts[0].publishedDate} • {featuredPosts[0].readTime}
+                        {featuredPosts[0].publishedDate}  {featuredPosts[0].readTime}
                       </p>
                     </div>
                   </div>

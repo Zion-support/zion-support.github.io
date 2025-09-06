@@ -6,7 +6,7 @@ export type EmptyStateProps = {
   action?: React.ReactNode
 },
 
-export default function EmptyState({ emoji = '✨', title, message, action }: EmptyStateProps) {
+export default function EmptyState({ emoji = '', title, message, action }: EmptyStateProps) {
   return (
     <div className=&quot;text-center py-12&quot;>
       <div className=&quot;mx-auto h-24 w-24 rounded-full bg-gradient-to-br from-blue-600/20 to-indigo-600/20 flex items-center justify-center&quot;>

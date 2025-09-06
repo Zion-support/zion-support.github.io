@@ -35,7 +35,7 @@ const footerSections = [
       { name: 'SEO Automation Suite', href: '/seo-automation-suite' },
       { name: 'Helpdesk & Support', href: '/helpdesk-automation' },
       { name: 'Learning Management (LMS)', href: '/lms-platform' },
-      { name: 'E‑commerce Returns', href: '/ecommerce-returns-management' },
+      { name: 'Ecommerce Returns', href: '/ecommerce-returns-management' },
       { name: 'SEO Content Optimizer', href: '/seo-content-optimizer' },
       { name: 'Keyword Research Engine', href: '/keyword-research-engine' },
       { name: 'Privacy Analytics Suite', href: '/analytics-suite' },
@@ -314,7 +314,7 @@ const UltraFuturisticFooter2035: React.FC = () => {;
           >
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="text-sm text-gray-400">
-                © 2025 Zion Tech Group. All rights reserved.
+                 2025 Zion Tech Group. All rights reserved.
               </div>
               
               <div className="flex items-center gap-6 text-sm text-gray-400">
@@ -349,7 +349,7 @@ export default UltraFuturisticFooter2035,
           >;
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">;
               <div className="text-sm text-gray-400">;
-                © 2025 Zion Tech Group. All rights reserved.;
+                 2025 Zion Tech Group. All rights reserved.;
               </div>;
               <div className="flex items-center gap-6 text-sm text-gray-400">;
                 <Link href="/privacy" className="hover:text-white transition-colors duration-200">;

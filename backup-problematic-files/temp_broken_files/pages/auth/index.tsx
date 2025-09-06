@@ -27,9 +27,9 @@ const Onboarding:NextPage = () => {;
         ))}
       </div>;
 ;
-      <div className="border rounded-md p-4 min-h-[200px]">;        {step === 0 && <div>Account setup fields…</div>}
-        {step === 1 && <div>Profile details fields…</div>}
-        {step === 2 && <div>Preferences selection…</div>}
+      <div className="border rounded-md p-4 min-h-[200px]">;        {step === 0 && <div>Account setup fields</div>}
+        {step === 1 && <div>Profile details fields</div>}
+        {step === 2 && <div>Preferences selection</div>}
         {step === 3 && <div>Preview your profile/listing before going live.</div>}
       </div>;
 ;

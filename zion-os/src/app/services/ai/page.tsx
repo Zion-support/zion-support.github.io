@@ -1,28 +1,12 @@
-<<<<<<< HEAD
 export default function AIServicesPage() {return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">;
         <div className="container mx-auto px-6 text-center">;
-          <h1 className="text-5xl font-bold mb-6">🤖 AI Services & Solutions</h1>;
+          <h1 className="text-5xl font-bold mb-6"> AI Services & Solutions</h1>;
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">;
             Transform your business with cutting-edge artificial intelligence. From automation to predictive analytics;
             we deliver enterprise-grade AI solutions that drive real results.;
-=======
-export default /**
- * AIServicesPage - Function description
- */
-function AIServicesPage() {
-  return (
-    <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
-      {/* Hero Section */}
-      <div className="bg - gradient - to - r from - blue - 600 to - purple - 600 py - 20">;
-        <div className="container mx - auto px - 6 text - center">;
-          <h1 className="text - 5xl font - bold mb - 6">🤖 AI Services & Solutions</h1>;
-          <p className="text - xl text - blue - 100 max - w-3xl mx - auto">;
-            Transform your business with cutting - edge artificial intelligence. From automation to predictive analytics,
-            we deliver enterprise - grade AI solutions that drive real results.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </p>;
           <div className="mt - 8">;
             <a href="tel:+13024640950" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 50 transition - colors mr - 4">;
@@ -37,9 +21,9 @@ function AIServicesPage() {
       {/* Contact Info Banner */}
       <div className="bg - zinc - 800 py - 4">;
         <div className="container mx - auto px - 6 text - center text - sm">;
-          <span className="mr - 8">📱 +1 302 464 0950</span>;
-          <span className="mr - 8">✉️ kleber@ziontechgroup.com</span>;
-          <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>;
+          <span className="mr - 8"> +1 302 464 0950</span>;
+          <span className="mr - 8"> kleber@ziontechgroup.com</span>;
+          <span> 364 E Main St STE 1008, Middletown DE 19709</span>;
         </div>;
       </div>;
       {/* AI Services Grid */}
@@ -47,30 +31,22 @@ function AIServicesPage() {
         <div className="container mx - auto px - 6">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
             {/* ZionGPT Core */}
-<<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
-              <div className="text-4xl mb-6">🧠</div>;
+              <div className="text-4xl mb-6"></div>;
               <h2 className="text-3xl font-bold mb-4">ZionGPT Core</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
                 Enterprise-grade AI assistant with custom knowledge base integration, workflow automation;
-=======
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">🧠</div>;
-              <h2 className="text - 3xl font - bold mb - 4">ZionGPT Core</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Enterprise - grade AI assistant with custom knowledge base integration, workflow automation,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 and seamless integration with your existing systems.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-                  <li>• Custom knowledge base training on your company data</li>;
-                  <li>• Multi - language support and localization</li>;
-                  <li>• API integration with 100+ business tools</li>;
-                  <li>• Advanced workflow automation</li>;
-                  <li>• Real - time collaboration features</li>;
-                  <li>• Enterprise - grade security & compliance</li>;
+                  <li> Custom knowledge base training on your company data</li>;
+                  <li> Multi - language support and localization</li>;
+                  <li> API integration with 100+ business tools</li>;
+                  <li> Advanced workflow automation</li>;
+                  <li> Real - time collaboration features</li>;
+                  <li> Enterprise - grade security & compliance</li>;
                 </ul>;
               </div>;
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
@@ -98,31 +74,22 @@ function AIServicesPage() {
               </a>;
             </div>;
             {/* AI Content Generation */}
-<<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
-              <div className="text-4xl mb-6">✍️</div>;
+              <div className="text-4xl mb-6"></div>;
               <h2 className="text-3xl font-bold mb-4">AI Content Generation</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
                 Automate your content creation with AI-powered writing tools that generate high-quality;
                 SEO-optimized content for blogs, social media, and marketing materials.;
-=======
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">✍️</div>;
-              <h2 className="text - 3xl font - bold mb - 4">AI Content Generation</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Automate your content creation with AI - powered writing tools that generate high - quality,
-                SEO - optimized content for blogs, social media, and marketing materials.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-                  <li>• Multi - format content generation (blogs, social, emails)</li>;
-                  <li>• SEO optimization and keyword research</li>;
-                  <li>• Brand voice consistency</li>;
-                  <li>• Plagiarism - free content</li>;
-                  <li>• Multi - language support</li>;
-                  <li>• Content calendar management</li>;
+                  <li> Multi - format content generation (blogs, social, emails)</li>;
+                  <li> SEO optimization and keyword research</li>;
+                  <li> Brand voice consistency</li>;
+                  <li> Plagiarism - free content</li>;
+                  <li> Multi - language support</li>;
+                  <li> Content calendar management</li>;
                 </ul>;
               </div>;
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
@@ -149,32 +116,23 @@ function AIServicesPage() {
                 Learn More About AI Content Generation;
               </a>;
             </div>;
-<<<<<<< HEAD
             {/* AI-Powered Analytics */}
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
-              <div className="text-4xl mb-6">📊</div>;
+              <div className="text-4xl mb-6"></div>;
               <h2 className="text-3xl font-bold mb-4">AI-Powered Analytics</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
                 Transform your data into actionable insights with machine learning-powered analytics;
-=======
-            {/* AI - Powered Analytics */}
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">📊</div>;
-              <h2 className="text - 3xl font - bold mb - 4">AI - Powered Analytics</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Transform your data into actionable insights with machine learning - powered analytics,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 predictive modeling, and intelligent business intelligence solutions.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-                  <li>• Predictive analytics and forecasting</li>;
-                  <li>• Real - time data processing</li>;
-                  <li>• Automated reporting and dashboards</li>;
-                  <li>• Anomaly detection</li>;
-                  <li>• Customer behavior analysis</li>;
-                  <li>• Market trend predictions</li>;
+                  <li> Predictive analytics and forecasting</li>;
+                  <li> Real - time data processing</li>;
+                  <li> Automated reporting and dashboards</li>;
+                  <li> Anomaly detection</li>;
+                  <li> Customer behavior analysis</li>;
+                  <li> Market trend predictions</li>;
                 </ul>;
               </div>;
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
@@ -202,30 +160,22 @@ function AIServicesPage() {
               </a>;
             </div>;
             {/* AI Customer Support */}
-<<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
-              <div className="text-4xl mb-6">💬</div>;
+              <div className="text-4xl mb-6"></div>;
               <h2 className="text-3xl font-bold mb-4">AI Customer Support</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
                 Provide 24/7 intelligent customer support with AI-powered chatbots, virtual assistants;
-=======
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">💬</div>;
-              <h2 className="text - 3xl font - bold mb - 4">AI Customer Support</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Provide 24 / 7 intelligent customer support with AI - powered chatbots, virtual assistants,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 and automated customer service solutions that never sleep.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-                  <li>• 24 / 7 automated customer support</li>;
-                  <li>• Multi - language chatbot support</li>;
-                  <li>• Seamless human handoff</li>;
-                  <li>• Customer sentiment analysis</li>;
-                  <li>• Integration with CRM systems</li>;
-                  <li>• Performance analytics and reporting</li>;
+                  <li> 24 / 7 automated customer support</li>;
+                  <li> Multi - language chatbot support</li>;
+                  <li> Seamless human handoff</li>;
+                  <li> Customer sentiment analysis</li>;
+                  <li> Integration with CRM systems</li>;
+                  <li> Performance analytics and reporting</li>;
                 </ul>;
               </div>;
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
@@ -253,31 +203,22 @@ function AIServicesPage() {
               </a>;
             </div>;
             {/* AI Process Automation */}
-<<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
-              <div className="text-4xl mb-6">⚙️</div>;
+              <div className="text-4xl mb-6"></div>;
               <h2 className="text-3xl font-bold mb-4">AI Process Automation</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
                 Streamline your business operations with intelligent workflow automation;
                 document processing, and AI-powered business process optimization.;
-=======
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">⚙️</div>;
-              <h2 className="text - 3xl font - bold mb - 4">AI Process Automation</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Streamline your business operations with intelligent workflow automation,
-                document processing, and AI - powered business process optimization.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-                  <li>• Intelligent document processing (OCR)</li>;
-                  <li>• Workflow automation and optimization</li>;
-                  <li>• Process mining and analysis</li>;
-                  <li>• Integration with existing systems</li>;
-                  <li>• Real - time monitoring and alerts</li>;
-                  <li>• Compliance and audit trails</li>;
+                  <li> Intelligent document processing (OCR)</li>;
+                  <li> Workflow automation and optimization</li>;
+                  <li> Process mining and analysis</li>;
+                  <li> Integration with existing systems</li>;
+                  <li> Real - time monitoring and alerts</li>;
+                  <li> Compliance and audit trails</li>;
                 </ul>;
               </div>;
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
@@ -305,30 +246,22 @@ function AIServicesPage() {
               </a>;
             </div>;
             {/* AI Security & Compliance */}
-<<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
-              <div className="text-4xl mb-6">🔒</div>;
+              <div className="text-4xl mb-6"></div>;
               <h2 className="text-3xl font-bold mb-4">AI Security & Compliance</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
                 Protect your enterprise with AI-powered threat detection, compliance monitoring;
-=======
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">🔒</div>;
-              <h2 className="text - 3xl font - bold mb - 4">AI Security & Compliance</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Protect your enterprise with AI - powered threat detection, compliance monitoring,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 and automated security solutions that adapt to evolving threats.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-                  <li>• AI - powered threat detection</li>;
-                  <li>• Automated compliance monitoring</li>;
-                  <li>• Behavioral analysis and anomaly detection</li>;
-                  <li>• Real - time security alerts</li>;
-                  <li>• Regulatory compliance frameworks</li>;
-                  <li>• Incident response automation</li>;
+                  <li> AI - powered threat detection</li>;
+                  <li> Automated compliance monitoring</li>;
+                  <li> Behavioral analysis and anomaly detection</li>;
+                  <li> Real - time security alerts</li>;
+                  <li> Regulatory compliance frameworks</li>;
+                  <li> Incident response automation</li>;
                 </ul>;
               </div>;
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
@@ -362,7 +295,7 @@ function AIServicesPage() {
       <section className="py - 20 bg - zinc - 800">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
-            <h2 className="text - 4xl font - bold mb - 4">🚀 AI Implementation Process</h2>;
+            <h2 className="text - 4xl font - bold mb - 4"> AI Implementation Process</h2>;
             <p className="text - xl text - zinc - 300 max - w-3xl mx - auto">;
               Our proven 6 - step process ensures successful AI implementation and maximum ROI for your business;
             </p>;
@@ -412,14 +345,14 @@ function AIServicesPage() {
           <div className="space - y-4">;
             <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
               <a href="tel:+13024640950" className="bg - white text - blue - 600 px - 8 py - 4 rounded - lg font - semibold hover:bg - blue - 50 transition - colors text - lg">;
-                📞 Call +1 302 464 0950;
+                 Call +1 302 464 0950;
               </a>;
               <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 4 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors text - lg">;
-                ✉️ Schedule AI Consultation;
+                 Schedule AI Consultation;
               </a>;
             </div>;
             <p className="text - blue - 100 text - sm">;
-              📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com;
+               364 E Main St STE 1008, Middletown DE 19709 |  https: //ziontechgroup.com;
             </p>;
           </div>;
         </div>;

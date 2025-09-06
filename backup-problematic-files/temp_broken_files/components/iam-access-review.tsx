@@ -33,7 +33,7 @@ export default function IAMAccessReviewPage() {
               <div className=&quot;flex items-end justify-between mb-3&quot;>
                 <div>
                   <div className=&quot;text-3xl font-bold text-white&quot;>{service.price}<span className=&quot;text-slate-400 text-base&quot;>{service.period}</span></div>
-                  <div className=&quot;text-slate-400&quot;>{service.trialDays ? `${service.trialDays}-day free trial • ` : ''}Setup: {service.setupTime}</div>
+                  <div className=&quot;text-slate-400&quot;>{service.trialDays ? `${service.trialDays}-day free trial  ` : ''}Setup: {service.setupTime}</div>
                 </div>
               </div>
               <Button href=&quot;/contact&quot; variant=&quot;quantum&quot; size=&quot;lg&quot; className=&quot;w-full&quot;>Start Trial<ArrowRight className=&quot;w-5 h-5 ml-2&quot; /></Button>

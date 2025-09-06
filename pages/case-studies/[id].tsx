@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next/head';
@@ -10,7 +9,6 @@ export default function CaseStudyPage() {
   // Case studies data - this should match the data in case-studies.tsx
   const caseStudies = [
     {
-<<<<<<< HEAD
       id: 'ai-automation-manufacturing'
       title: 'AI-Powered Manufacturing Automation'
       company: 'Global Manufacturing Corp'
@@ -20,26 +18,6 @@ export default function CaseStudyPage() {
       results: ['40% increase in production efficiency60% reduction in downtime25% improvement in quality control']
       duration: '6 months'
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
-=======
-      id: 'ai-automation-manufacturing',
-      title: 'AI-Powered Manufacturing Automation',
-=======
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import { use_router } from 'next / router',
-export default /**
- * CaseStudyPage - Function description
- */
-function CaseStudyPage() {
-  const router = use_router (),
-  const { id } = router.query,
-  // Case studies data - this should match the data in case - studies.tsx;
-  const case_studies = [;
-    {
-      id: 'ai - automation - manufacturing',
-      title: 'AI - Powered Manufacturing Automation',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       company: 'Global Manufacturing Corp',
       industry: 'Manufacturing',
       challenge: 'Traditional manufacturing processes were inefficient with high downtime and low production rates.',
@@ -47,11 +25,6 @@ function CaseStudyPage() {
       results: ['40% increase in production efficiency60% reduction in downtime25% improvement in quality control'],
       duration: '6 months',
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       fullContent: `
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
@@ -79,12 +52,8 @@ function CaseStudyPage() {
         <p>The project was completed in 6 months with minimal disruption to ongoing operations.
         The system was deployed in phases, allowing for gradual adoption and optimization.</p>
       `
-<<<<<<< HEAD
     };
-=======
-<<<<<<< HEAD
     }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     {
       id: 'content-generation-scale'
       title: 'Scaling Content Generation 10x'
@@ -95,9 +64,7 @@ function CaseStudyPage() {
       results: ['10x increase in content output85% improvement in engagement70% reduction in production time']
       duration: '4 months'
       description: 'Transforming content creation through autonomous AI systems.'
-=======
     };
-=======
       full_content: `;
         <h2 > Background</h2>;
         <p > Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.;
@@ -126,7 +93,6 @@ function CaseStudyPage() {
         The system was deployed in phases, allowing for gradual adoption and optimization.</p>;
       `;
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       id: 'content - generation - scale',
       title: 'Scaling Content Generation 10x',
@@ -137,11 +103,6 @@ function CaseStudyPage() {
       results: ['10x increase in content output85% improvement in engagement70% reduction in production time'],
       duration: '4 months',
       description: 'Transforming content creation through autonomous AI systems.',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       fullContent: `
         <h2>Background</h2>
         <p>A leading digital marketing agency was struggling to scale their content creation capabilities.
@@ -169,14 +130,11 @@ function CaseStudyPage() {
         <p>The system was deployed in 4 months with comprehensive training for the creative team.
         The AI systems learned from human feedback and continuously improved over time.</p>
       `
-<<<<<<< HEAD
     };
     {
       id: 'cloud-infrastructure-optimization',
       title: 'Cloud Infrastructure Optimization',
       company: 'E-commerce Platform',
-=======
-<<<<<<< HEAD
     }
     {
       id: 'cloud-infrastructure-optimization'
@@ -189,55 +147,17 @@ function CaseStudyPage() {
       duration: '8 months'
       description: 'Building self-healing, auto-scaling cloud infrastructure.'
       fullContent: `
-=======
-    };
-=======
-      full_content: `;
-        <h2 > Background</h2>;
-        <p > A leading digital marketing agency was struggling to scale their content creation capabilities.;
-        Their manual processes were limiting growth and preventing them from taking on new clients.</p>;
-        <h2 > Challenge</h2>;
-        <p > The agency needed to dramatically increase their content production capacity while maintaining;
-        high quality standards and creative excellence. They required a solution that could handle multiple;
-        content types and formats.</p>;
-        <h2 > Solution</h2>;
-        <p > We implemented an autonomous content generation system that included:</p>;
-        <ul>;
-          <li > AI - powered content creation engines</li>;
-          <li > Automated research and fact - checking</li>;
-          <li > Intelligent content optimization</li>;
-          <li > Human oversight and quality control</li>;
-        </ul>;
-        <h2 > Results</h2>;
-        <p > The transformation was remarkable:</p>;
-        <ul>;
-          <li><strong > 10x increase in content output</strong> - From 50 to 500 pieces per month</li>;
-          <li><strong > 85% improvement in engagement</strong> - AI - optimized content performed significantly better</li>;
-          <li><strong > 70% reduction in production time</strong> - Automated workflows accelerated delivery</li>;
-        </ul>;
-        <h2 > Implementation Timeline</h2>;
-        <p > The system was deployed in 4 months with comprehensive training for the creative team.;
-        The AI systems learned from human feedback and continuously improved over time.</p>;
-      `;
-    },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       id: 'cloud - infrastructure - optimization',
       title: 'Cloud Infrastructure Optimization',
       company: 'E - commerce Platform',
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       industry: 'Technology',
       challenge: 'Cloud costs were spiraling out of control with poor resource utilization.',
-<<<<<<< HEAD
       solution: 'Built self-healing, auto-scaling cloud infrastructure with intelligent cost optimization.',
     results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],
       duration: '8 months',
       description: 'Building self-healing, auto-scaling cloud infrastructure.',
     fullContent: `
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
         Their infrastructure was not scaling efficiently with their business growth.</p>
@@ -246,10 +166,6 @@ function CaseStudyPage() {
         They required a solution that could automatically adapt to traffic patterns and prevent outages.</p>
         <h2>Solution</h2>
         <p>We designed and implemented a comprehensive cloud optimization system: </p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ul>
           <li>Auto-scaling infrastructure with intelligent resource allocation</li>
           <li>Self-healing systems with automatic failure recovery</li>
@@ -268,17 +184,11 @@ function CaseStudyPage() {
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
       `
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   ]
   const caseStudy = caseStudies.find(study => study.id === id)
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
   const caseStudy = caseStudies.find(study => study.id === id);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   if (!caseStudy) {
     return (
@@ -297,7 +207,7 @@ function CaseStudyPage() {
                 href="/case-studies"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
-                ← Back to Case Studies
+                 Back to Case Studies
               </Link>
             </div>
           </main>
@@ -318,7 +228,7 @@ function CaseStudyPage() {
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
               <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Case Studies
+                 Back to Case Studies
               </Link>
             </nav>
             <header className="mb-12">
@@ -347,13 +257,7 @@ function CaseStudyPage() {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Results</h3>
@@ -366,13 +270,7 @@ function CaseStudyPage() {
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>
                   <div className="space-y-3">
@@ -388,13 +286,7 @@ function CaseStudyPage() {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
               <div
                 className="prose prose-invert max-w-none"
@@ -414,14 +306,7 @@ function CaseStudyPage() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       solution: 'Built self - healing, auto - scaling cloud infrastructure with intelligent cost optimization.',
       results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],
       duration: '8 months',
@@ -475,7 +360,7 @@ if ( {) {
                 href="/case - studies";
                 className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
               >;
-                ← Back to Case Studies;
+                 Back to Case Studies;
               </Link>;
             </div>;
           </main>;
@@ -495,7 +380,7 @@ if ( {) {
           <div className="max - w-4xl mx - auto">;
             <nav className="mb - 8">;
               <Link href="/case - studies" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
-                ← Back to Case Studies;
+                 Back to Case Studies;
               </Link>;
             </nav>;
             <header className="mb - 12">;
@@ -569,5 +454,3 @@ if ( {) {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import fs from 'fs';
 import path from 'path';
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface TokenConfig {
   token_name: string;
   token_symbol: string;
@@ -22,8 +11,6 @@ export interface TokenConfig {
   minIssueAmount: number;
   maxIssueAmount: number;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export interface Wallet {
   address: string;
@@ -39,12 +26,7 @@ export interface TokenTransaction {
   timestamp: number;
   type: 'issue' | 'redeem' | 'transfer';
 }
-=======
-const DATA_DIR = path && path.join(process && process.cwd(), 'data');
-const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
 class TokenStore {
   private config: TokenConfig = {
     token_name: 'ZION$',
@@ -57,13 +39,11 @@ class TokenStore {
     maxIssueAmount: 10000;
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface TokenStoreData {
   wallets: Record < string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
 }
-<<<<<<< HEAD
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 const STORE_FILE = path.join(DATA_DIR, 'token-store.json');
@@ -86,8 +66,6 @@ function readFromDisk(): TokenStoreData | null {
   }
 }
 
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 class TokenStore {
   private config: TokenConfig = {
     tokenName: 'ZION$'
@@ -98,46 +76,21 @@ class TokenStore {
     redeemRate: 1.0
     minIssueAmount: 1
     maxIssueAmount: 10000
-<<<<<<< HEAD
   };
 
-=======
-  }
-export interface TokenStoreData {
-  wallets: Record<string, Wallet>;
-  transactions: TokenTransaction[];
-  config: TokenConfig;
-}
-function readFromDisk(): TokenStoreData | null {
-  try {
-    ensureDataDir();
-<<<<<<< HEAD
     if (!fs.existsSync(STORE_FILE)) return null;
     const raw = fs.readFileSync(STORE_FILE, 'utf8');
     const parsed = JSON.parse(raw) as TokenStoreData;
-=======
-function readFromDisk (): TokenStoreData | null {
-  try {
-    ensureDataDir ();
-    if () return null) {
-  $2
-}
-    const raw = fs.readFileSync (STORE_FILE, 'utf8');
-    const parsed = JSON.parse (raw) as TokenStoreData;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return parsed;
   } catch {
     return null;
   }
-<<<<<<< HEAD
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   setConfig(newConfig: Partial<TokenConfig>): void {
     this.config = { ...this.config, ...newConfig }
   }
 
   getConfig(): TokenConfig {
     return { ...this.config };
-=======
     fs && fs.writeFileSync(STORE_FILE, JSON && JSON.stringify(data, null, 2), 'utf8');
   } catch {}
 
@@ -155,56 +108,11 @@ class InMemoryTokenStore {
 
   getData(): TokenStoreData {
     return this && this.data;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 }
 export const tokenStore = new TokenStore();
 
-<<<<<<< HEAD
-=======
-  save(): void {
-    writeToDisk(this && this.data);
-  }
-
-const store = new InMemoryTokenStore();
-
-export const tokenStore = {
-  getConfig() {
-    return config;
-  },
-  setConfig(config: TokenConfig): void {
-    store && store.getData().config = config;
-    store && store.save();
-  },
-  getWallet(userId: string): Wallet {
-    const wallets = store && store.getData().wallets;
-    if (!wallets[userId]) {
-      wallets[userId] = { userId, balance: 0 };
-      store && store.save();
-    }
-    return wallets[userId];
-  },
-  setWalletBalance(userId: string, balance: number): Wallet {
-    const wallets = store && store.getData().wallets;
-    wallets[userId] = { userId, balance };
-    store && store.save();
-    return wallets[userId];
-  },
-  addTransaction(tx: TokenTransaction): void {
-    store && store.getData().transactions && transactions.unshift(tx);
-    store && store.save();
-  },
-  getTransactions(userId?: string): TokenTransaction[] {
-    const txs = store && store.getData().transactions;
-    if (!userId) return txs;
-    return txs && txs.filter(t => t && t.userId === userId);
-  },
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 // Token storage utilities
 import { TokenConfig, TokenBalance } from './service';
 
@@ -254,13 +162,9 @@ export class TokenStorageManager {
 
 // Singleton instance
 export const tokenStorage = new TokenStorageManager();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   set_config (new_config: Partial < TokenConfig>): void {
     this.config = { ...this.config, ...new_config }
   }
 }
 export const token_store = new TokenStore ();
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

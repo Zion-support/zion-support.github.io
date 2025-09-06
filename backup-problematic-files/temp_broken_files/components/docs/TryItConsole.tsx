@@ -59,7 +59,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
         </div>
       )}
       <button onClick={onSend} className=&quot;px-3 py-2 rounded bg-high-contrast-accent text-black&quot; disabled={loading}>
-        {loading ? 'Sending…' : 'Send Request'}
+        {loading ? 'Sending' : 'Send Request'}
       </button>
       <div>
         <label className=&quot;block text-sm mb-1&quot;>Response</label>

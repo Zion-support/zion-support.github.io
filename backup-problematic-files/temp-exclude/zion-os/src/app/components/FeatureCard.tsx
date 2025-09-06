@@ -24,7 +24,7 @@ export default function FeatureCard({ ;
       <p className="text-white/70 mb-4">{description}</p>;
       <ul className="text-sm text-white/60 space-y-1">;
         {features.map((feature, index) => (;
-          <li key={index}>• {feature}</li>;
+          <li key={index}> {feature}</li>;
         ))}
       </ul>;
     </div>;

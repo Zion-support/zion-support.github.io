@@ -1,21 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';
 import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
-=======
-import React from "react";
-import { useAuth } from "@/hooks/useAuth";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
@@ -53,7 +43,6 @@ export function TalentOnboardingSteps() {
       action: 'View Matches'
     }
   ]
-=======
 export function TalentOnboardingSteps() {;
   const { user } = useAuth();
   const onboardingStatus = useOnboardingStatus();
@@ -88,20 +77,11 @@ export function TalentOnboardingSteps() {;
       action: 'View Matches',;
     },;
   ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-<<<<<<< HEAD
   return <OnboardingTracker steps={steps} />;
-=======
-  return <OnboardingTracker steps={steps} />
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-=======
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 import { use_auth } from '@/hooks / use_auth';
 import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
@@ -145,4 +125,3 @@ function TalentOnboardingSteps() {
   ];
   return <OnboardingTracker steps={steps} />;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

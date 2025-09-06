@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { FileText  } from 'lucide-react';
 import { ResumeOption  } from '../resume-selector/types';
 import { ResumePreviewCard  } from './ResumePreviewCard';
@@ -14,11 +13,6 @@ interface SelectResumeSectionProps {
   isLoading: boolean
 }
 export function SelectResumeSection({
-=======
-import {FileText} from 'lucide-react';
-import {ResumeOption} from '../resume - selector / types';
-import {ResumePreviewCard} from './ResumePreviewCard';
-<<<<<<< HEAD
 import {Resume} from '@/types/resume';
 interface SelectResumeSectionProps {;
   resumeOptions: ResumeOption[],;
@@ -29,7 +23,6 @@ interface SelectResumeSectionProps {;
 }
 
 export function SelectResumeSection(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   resumeOptions;
   selectedResume;
   handleResumeSelect;
@@ -46,13 +39,8 @@ export function SelectResumeSection(): any ({;
             <button
               key={option && option.id}
               className={`w-full text-left p-3 rounded-md transition ${
-<<<<<<< HEAD
                 selectedResume?.id === option.id
                   ? 'bg-zion-purple/20 border border-zion-purple'
-=======
-                selectedResume?.id === option && option.id 
-                  ? 'bg-zion-purple/20 border border-zion-purple' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
               onClick={() => handleResumeSelect(option && option.id)}
@@ -63,12 +51,7 @@ export function SelectResumeSection(): any ({;
               </div>;
             </button>;
           ))}
-<<<<<<< HEAD
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
-=======
-
-          {selectedResume?.type === 'ai_resume' && selectedResume && selectedResume.resume && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <ResumePreviewCard
               resume={selectedResume && selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
@@ -77,16 +60,9 @@ export function SelectResumeSection(): any ({;
           )}
         </>;
       )}
-<<<<<<< HEAD
     </div>
   )
 }
-=======
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {Resume} from '@/types / resume';
 interface SelectResumeSectionProps {
   resume_options: ResumeOption[],
@@ -128,4 +104,3 @@ function SelectResumeSection() {
         </>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

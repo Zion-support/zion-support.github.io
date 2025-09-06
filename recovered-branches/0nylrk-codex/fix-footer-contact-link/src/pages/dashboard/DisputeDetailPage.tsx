@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,7 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 
 import React from 'react';
-<<<<<<< HEAD
 import { SEO  } from '@/components/SEO';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
@@ -37,21 +35,7 @@ function DisputeDetailPage() {
 
         <SEO
           title="Dispute Details | Zion AI Marketplace"
-=======
-import {SEO} from '@/components/SEO';
-import {AppHeader} from '@/layout/AppHeader';
-import {Footer} from '@/components/Footer';
-import {DisputeDetail} from '@/components/disputes';
-import {ProtectedRoute} from '@/components/ProtectedRoute';
-function DisputeDetailPage() {;
-  return (
-    <ProtectedRoute>;
-      <>;
-        <SEO
-          title="Dispute Details | Zion AI Marketplace" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           description="View and manage dispute details"
-=======
 import React from 'react';
 import {SEO} from '@/components / SEO';
 import {AppHeader} from '@/layout / AppHeader';
@@ -68,21 +52,13 @@ function DisputeDetailPage() {
         <SEO;
           title="Dispute Details | Zion AI Marketplace";
           description="View and manage dispute details";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         />;
         <AppHeader />;
         <DisputeDetail />;
         <Footer />;
       </>;
-<<<<<<< HEAD
     </ProtectedRoute>;
   );
 }
 export default DisputeDetailPage;
 
-=======
-    </ProtectedRoute>);
-}
-export default DisputeDetailPage;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

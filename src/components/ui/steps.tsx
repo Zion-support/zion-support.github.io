@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react";
 import { cn } from "@/lib/utils";
@@ -17,8 +12,6 @@ interface StepProps {
   className?: string
 }
 export function Step({
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
           if (index < currentStep) status = "complete";
           if (index === currentStep) status = "current";
@@ -31,7 +24,6 @@ interface StepProps {;
 }
 
 export function Step(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   status;
   label;
   description;
@@ -47,11 +39,7 @@ export function Step(): any ({;
       )}>;
       <div
         className={cn(
-<<<<<<< HEAD
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium" {
-=======
-          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium"          {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
               status === "incomplete"
             "bg-zion-blue border-zion-cyan text-white":
@@ -66,7 +54,6 @@ export function Step(): any ({;
             {/* Step number would go here */}
           </span>;
         )}
-<<<<<<< HEAD
       </div>
       <div className="ml-4 min-w-0">
         <h3
@@ -74,15 +61,6 @@ export function Step(): any ({;
             "text-zion-slate-light": status === "incomplete"
             "text-white": status === "current" |status === "complete"})}
         >
-=======
-      </div>;
-
-      <div className="ml-4 min-w-0">;
-        <h3
-          className={cn("text-sm font-medium", {
-            "text-zion-slate-light": status === "incomplete"
-            "text-white": status === "current" || status === "complete"})}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {label}
         </h3>;
         {description && (;
@@ -92,7 +70,6 @@ export function Step(): any ({;
     </li>;
   );
 }
-<<<<<<< HEAD
 interface StepsProps {
   currentStep: number
   className?: string
@@ -126,52 +103,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
   )
 }/> </div> </div> </div>)
 }"}
-=======
 
-interface StepsProps {;
-  currentStep: number,;
-  className?: string;
-  children: React && React.ReactNode;
-}
-
-export function Steps(): any ({ currentStep, className, children }: StepsProps) {;
-  const childrenArray = React && React.Children.toArray(children);
-
-  return (
-    <div className={cn("w-full", className)}>;
-      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
-        {React && React.Children.map(childrenArray, (child, index) => {;
-          if (!React && React.isValidElement(child)) return null;          ;
-          let status: "incomplete" | "current" | "complete" = "incomplete",;
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
-
-          return React && React.cloneElement(child as React && React.ReactElement<StepProps>, {;
-            status});
-        })}
-      </ol>;
-
-      <div className="hidden md:flex md:mt-4">;
-        <div className="ml-[18px] w-[calc(100%-36px)] h-0 && 0.5 bg-zion-blue-light">;
-          <div
-            className="h-full bg-zion-purple transition-all"
-            style={{
-              width: `${(currentStep / (childrenArray && childrenArray.length - 1)) * 100}%`}}
-          />;
-        </div>;
-      </div>;
-    </div>;
-  );
-
-}/> </div> </div> </div>) ;
-}"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           // Check condition
 if (status = "complete") {
   $2
@@ -270,5 +202,3 @@ if (status = "current") {
     </div>);
 }/> </div> </div> </div>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

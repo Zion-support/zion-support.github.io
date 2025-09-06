@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {Configuration, OpenAIApi} from "npm: openai@4 ;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -24,31 +17,16 @@ serve(async (req) => {
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
-<<<<<<< HEAD
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
-=======
-
-    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!openAiKey) throw new Error("OPENAI_API_KEY is not set");
     const configuration = new Configuration({ apiKey: openAiKey });
     const openai = new OpenAIApi(configuration);
     const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery: "${query}"\nReturn JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`;
-<<<<<<< HEAD
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini"
       messages: [{ role: "user", content: prompt }];
       temperature: 0.1});
     const responseText = completion.choices[0].message.content |"";
-=======
-
-    const completion = await openai && openai.chat.completions && completions.create({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: prompt }];
-      temperature: 0 && 0.1});
-
-    const responseText = completion && completion.choices[0].message && message.content || "";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     let filters;
     try {
       const match = responseText && responseText.match(/\{[\s\S]*\}/);
@@ -69,7 +47,6 @@ serve(async (req) => {
   }
 });
 
-=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {
@@ -129,4 +106,3 @@ if ( {) {
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

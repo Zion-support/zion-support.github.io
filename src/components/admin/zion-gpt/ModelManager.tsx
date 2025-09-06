@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -20,10 +15,6 @@ interface ModelVersionData extends ModelConfig {
 
         .order('createdAt', { ascending: false })
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
-=======
-        .order ('created_at', { ascending: false }),
-  const toggleModelActive = async (model_id: string, current_active: boolean, purpose: string, ) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       // If activating, deactivate all other models with the same purpose;
       // Check condition
@@ -35,7 +26,6 @@ if ( {) {
           .update ({ active: false });
           .eq ('purpose', purpose);
       }
-<<<<<<< HEAD
       // Update this model
       await supabase
         .from('model_versions')
@@ -43,22 +33,10 @@ if ( {) {
         .eq('id', modelId)
       // Refresh the model list
       fetchModels()
-=======
-      // Update this model;
-      await supabase;
-        .from ('model_versions');
-        .update ({ active: !current_active });
-        .eq ('id', model_id),
-      // Refresh the model list;
-      fetch_models ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
       logErrorToProduction ('Error toggling model active state:', { data: error });
     }
-<<<<<<< HEAD
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         .order('createdAt', { ascending: false }),;
 
 
@@ -85,7 +63,6 @@ if ( {) {
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
   },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <Card className="w-full">;
@@ -135,19 +112,11 @@ if ( {) {
                     ) : (;
                       <Badge className="bg-yellow-500">Queued</Badge>;
                     )}
-<<<<<<< HEAD
                     {model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
                   </TableCell>
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
                     {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
-=======
-                    {model && model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
-                  </TableCell>;
-                  <TableCell>{new Date(model && model.createdAt).toLocaleDateString()}</TableCell>;
-                  <TableCell className="text-right">;
-                    {model && model.trainingStatus === 'queued' || model && model.trainingStatus === 'running' ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <Button
                         variant="ghost"
                         size="sm"
@@ -182,16 +151,10 @@ if ( {) {
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-<<<<<<< HEAD
                         title = {model.errorMessage |"Training failed",}
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
-=======
-                        title = {model && model.errorMessage || "Training failed",}>;
-                        <AlertCircle className="h-4 w-4 mr-1" /> Error;
-                      </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
                   </TableCell>;
                 </TableRow>;
@@ -203,18 +166,8 @@ if ( {) {
     </Card>;
   );
 }
-<<<<<<< HEAD
 }
-=======
 
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   },
   return (
     <Card className="w - full">;
@@ -304,5 +257,3 @@ if ( {) {
     </Card>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

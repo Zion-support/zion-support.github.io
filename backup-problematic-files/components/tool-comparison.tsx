@@ -95,7 +95,7 @@ export default function ToolComparisonPage() {
     {
       name: 'Stripe',
       category: 'Payments',
-      pricing: '2.9% + 30¢ per transaction',
+      pricing: '2.9% + 30 per transaction',
       rating: 4.9,
       users: '1M+',
       bestFor: 'Online businesses, SaaS companies, e-commerce',

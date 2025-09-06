@@ -6,7 +6,7 @@ async /**
  * runAccessibilityTests - Function description
  */
 function runAccessibilityTests() {
-  console.log ('🧪 Running accessibility tests...');
+  console.log (' Running accessibility tests...');
 ;
   try {
     // Run axe - core CLI tests;
@@ -15,7 +15,7 @@ function runAccessibilityTests() {
       stdio: 'pipe';
     });
 ;
-    console.log ('✅ Accessibility tests completed');
+    console.log (' Accessibility tests completed');
 ;
     // Parse results;
     const results = JSON.parse (result);
@@ -40,7 +40,7 @@ if ( {) {
       JSON.stringify (results, null, 2));
 ;
   } catch (error) {
-    console.error ('❌ Accessibility tests failed:', error.message);
+    console.error (' Accessibility tests failed:', error.message);
   }
 }
 runAccessibilityTests ();

@@ -10,4 +10,3 @@ export function isAdminEmail(email: string | null | undefined): boolean {
   const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter(Boolean),
   return admins.includes(email.toLowerCase())
 }
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231

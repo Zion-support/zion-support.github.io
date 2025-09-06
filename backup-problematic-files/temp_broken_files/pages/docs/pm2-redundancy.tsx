@@ -7,7 +7,7 @@ export default function Pm2RedundancyRedirect() {;
         <meta httpEquiv="refresh" content="0, url=/README_PM2_REDUNDANCY_COMPLETE.md" />;
       </Head>;
       <main style={{ padding:24 }}>;
-        <p>Redirecting to PM2 Redundancy docs…</p>;
+        <p>Redirecting to PM2 Redundancy docs</p>;
       </main>;
     </>;
   ),;}
@@ -16,5 +16,5 @@ export default function Pm2RedundancyRedirect() {;
   {
   padding: 24 
 }
-}> <p>Redirecting to PM2 Redundancy docs…</p> </main> </>) 
+}> <p>Redirecting to PM2 Redundancy docs</p> </main> </>) 
 }

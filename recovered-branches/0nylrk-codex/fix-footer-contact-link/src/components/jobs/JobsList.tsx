@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -12,32 +10,13 @@ import { Loader2, Edit, X, Eye } from "lucide-react",
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
 interface JobsListProps {
-=======
-import {useState, useEffect} from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {supabase} from "@/integrations/supabase/client";
-import {Job, JobStatus} from "@/types/jobs";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Loader2, Edit, X, Eye} from "lucide-react";
-import {format} from "date-fns";
-import {Link} from "react-router-dom";
-interface JobsListProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   filter?: JobStatus;
   onSelectJob?: (jobId: string, jobTitle: string) => void;
 }
-<<<<<<< HEAD
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
-=======
-
-export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
   useEffect(() => {
 
     const fetchJobs = async () => {
@@ -50,22 +29,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
           .order("created_at", { ascending: false })
         if (filter) {
           query = query.eq("status", filter)
-=======
-
-  useEffect(() => {;
-    const fetchJobs = async () => {;
-      if (!user) return;
-
-      try {;
-        let query = supabase;
-          .from("jobs");
-          .select("*");
-          .eq("client_id", user && user.id);
-          .order("created_at", { ascending: false }),;
-
-        if (filter) {;
-          query = query && query.eq("status", filter);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }
         const { data, error } = await query;
         if (error) throw error;
@@ -75,26 +38,16 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
       } finally {;
         setIsLoading(false);
       }
-<<<<<<< HEAD
     }
     fetchJobs()
   }, [user, filter]);
   if (isLoading) {
-=======
-    };
-
-    fetchJobs();
-  }, [user, filter]);
-
-  if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
     );
   }
-<<<<<<< HEAD
   if (jobs.length === 0) {
     return (
       <div className="text-center p-8 border rounded-md bg-muted/20">
@@ -102,16 +55,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
           {filter
             ? `No jobs with status "${filter}" found.`
             : "You haven't posted any jobs yet."
-=======
-
-  if (jobs && jobs.length === 0) {;
-    return (
-      <div className="text-center p-8 border rounded-md bg-muted/20">;
-        <p className="text-lg text-muted-foreground">;
-          {filter ;
-            ? `No jobs with status "${filter}" found.` ;
-            : "You haven't posted any jobs yet.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
         </p>;
         <Button asChild className="mt-4">;
@@ -120,45 +63,25 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
       </div>;
     );
   }
-<<<<<<< HEAD
   const getStatusColor = (status: JobStatus) => {
     switch (status) {
-=======
-
-  const getStatusColor = (status: JobStatus) => {;
-    switch (status) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "new": return "bg-blue-100 text-blue-800";
       case "in_progress":;
         return "bg-yellow-100 text-yellow-800";
       case "filled":;
         return "bg-green-100 text-green-800";
-<<<<<<< HEAD
       case "closed":
         return "bg-gray-100 text-gray-800"
       default:
         return "bg-gray-100 text-gray-800"
-=======
-      case "closed":;
-        return "bg-gray-100 text-gray-800",;
-      default:;
-        return "bg-gray-100 text-gray-800";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
   return (
-<<<<<<< HEAD
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (
         <Card
           key={job.id}
-=======
-    <div className="grid gap-6 md:grid-cols-2">;
-      {jobs && jobs.map((job) => (;
-        <Card
-          key={job && job.id} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
@@ -219,16 +142,9 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
           </CardFooter>;
         </Card>;
       ))}
-<<<<<<< HEAD
     </div>
   )
 }
-=======
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { useState, useEffect } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { supabase } from '@/integrations / supabase / client';
@@ -390,4 +306,3 @@ if ( {) {
         </Card>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

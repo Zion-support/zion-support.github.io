@@ -170,40 +170,40 @@ export default function SearchPage() {;
   ],;
 ;
   const categories = [;
-    { id:'all', name:'All Categories', icon:'📂' },;
-    { id:'AI & Machine Learning', name:'AI & Machine Learning', icon:'🧠' },;
-    { id:'Quantum Computing', name:'Quantum Computing', icon:'⚛️' },;
-    { id:'Cybersecurity', name:'Cybersecurity', icon:'🛡️' },;
-    { id:'Cloud & DevOps', name:'Cloud & DevOps', icon:'☁️' },;
-    { id:'Edge Computing', name:'Edge Computing', icon:'🌐' },;
-    { id:'Space Technology', name:'Space Technology', icon:'🚀' },;
-    { id:'Biotechnology', name:'Biotechnology', icon:'🧬' },;
-    { id:'Financial Technology', name:'Financial Technology', icon:'💰' }
+    { id:'all', name:'All Categories', icon:'' },;
+    { id:'AI & Machine Learning', name:'AI & Machine Learning', icon:'' },;
+    { id:'Quantum Computing', name:'Quantum Computing', icon:'' },;
+    { id:'Cybersecurity', name:'Cybersecurity', icon:'' },;
+    { id:'Cloud & DevOps', name:'Cloud & DevOps', icon:'' },;
+    { id:'Edge Computing', name:'Edge Computing', icon:'' },;
+    { id:'Space Technology', name:'Space Technology', icon:'' },;
+    { id:'Biotechnology', name:'Biotechnology', icon:'' },;
+    { id:'Financial Technology', name:'Financial Technology', icon:'' }
   ],;
 ;
   const statuses = [;
-    { id:'all', name:'All Statuses', icon:'📊' },;
-    { id:'active', name:'Active', icon:'✅' },;
-    { id:'beta', name:'Beta', icon:'🧪' },;
-    { id:'coming-soon', name:'Coming Soon', icon:'🚧' }
+    { id:'all', name:'All Statuses', icon:'' },;
+    { id:'active', name:'Active', icon:'' },;
+    { id:'beta', name:'Beta', icon:'' },;
+    { id:'coming-soon', name:'Coming Soon', icon:'' }
   ],;
 ;
   const priceRanges = [;
-    { id:'all', name:'All Prices', icon:'💰' },;
-    { id:'under-500', name:'Under $500/month', icon:'💵' },;
-    { id:'500-1000', name:'$500 - $1,000/month', icon:'💵' },;
-    { id:'1000-2500', name:'$1,000 - $2,500/month', icon:'💵' },;
-    { id:'over-2500', name:'Over $2,500/month', icon:'💵' }
+    { id:'all', name:'All Prices', icon:'' },;
+    { id:'under-500', name:'Under $500/month', icon:'' },;
+    { id:'500-1000', name:'$500 - $1,000/month', icon:'' },;
+    { id:'1000-2500', name:'$1,000 - $2,500/month', icon:'' },;
+    { id:'over-2500', name:'Over $2,500/month', icon:'' }
   ],;
 ;
   const technologies = [;
-    { id:'all', name:'All Technologies', icon:'🔧' },;
-    { id:'AI/ML', name:'AI/ML', icon:'🧠' },;
-    { id:'Quantum', name:'Quantum', icon:'⚛️' },;
-    { id:'Edge', name:'Edge', icon:'🌐' },;
-    { id:'Space', name:'Space', icon:'🚀' },;
-    { id:'Biotech', name:'Biotech', icon:'🧬' },;
-    { id:'DevOps', name:'DevOps', icon:'⚙️' }
+    { id:'all', name:'All Technologies', icon:'' },;
+    { id:'AI/ML', name:'AI/ML', icon:'' },;
+    { id:'Quantum', name:'Quantum', icon:'' },;
+    { id:'Edge', name:'Edge', icon:'' },;
+    { id:'Space', name:'Space', icon:'' },;
+    { id:'Biotech', name:'Biotech', icon:'' },;
+    { id:'DevOps', name:'DevOps', icon:'' }
   ],;
 ;
   // Search function;

@@ -32,7 +32,7 @@ export default function SiteValidator({ report }: Props) {
           <h2 className=&quot;font-semibold mb-2&quot;>Broken Links</h2>
           <ul className=&quot;text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800&quot;>
             {report.brokenLinks.slice(0, 500).map((b, i) => (
-              <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{b.page} → {b.url}</span><span className=&quot;text-gray-500&quot;>{b.status}</span></li>            ))}
+              <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{b.page}  {b.url}</span><span className=&quot;text-gray-500&quot;>{b.status}</span></li>            ))}
           </ul>
         </section>
       )}

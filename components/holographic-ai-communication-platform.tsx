@@ -1,52 +1,13 @@
-<<<<<<< HEAD
 import React from 'react',
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function HolographicAICommunicationPage() {
 
   const contactInfo = {
-<<<<<<< HEAD
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
-=======
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     address: '364 E Main St STE 1008 Middletown DE 19709'
   }
   const features = [
@@ -59,9 +20,6 @@ export default function HolographicAICommunicationPage() {
   }
   const features = [
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function HolographicAICommunicationPage() {;
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -80,7 +38,6 @@ export default function HolographicAICommunicationPage() {;
 
   const features = [;
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -126,7 +83,7 @@ export default function HolographicAICommunicationPage() {;
                 $1,899<span className='text-slate-400 text-base'>/month</span>;
               </div>;
               <div className='text-slate-400'>;
-                30-day free trial • Setup: 1 week;
+                30-day free trial  Setup: 1 week;
               </div>;
               <Button
                 href='/contact'
@@ -150,7 +107,7 @@ export default function HolographicAICommunicationPage() {;
                   <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
                 </div>              </div>            <div className="bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6 h-fit">;
               <div className="text-3xl font-bold text-white">$1,899<span className="text-slate-400 text-base">/month</span></div>;
-              <div className="text-slate-400">30-day free trial • Setup: 1 week</div>;
+              <div className="text-slate-400">30-day free trial  Setup: 1 week</div>;
               <Button href="/contact" variant="quantum" size="lg" className="w-full mt-4">Start Free Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>;
               <div className="mt-6 space-y-3 text-sm text-slate-300">;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{contactInfo && contactInfo.mobile}</span></div>;
@@ -162,14 +119,7 @@ export default function HolographicAICommunicationPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   ];
 
   return (
@@ -198,7 +148,7 @@ export default function HolographicAICommunicationPage() {;
             </div>
             <div className="bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6 h-fit">
               <div className="text-3xl font-bold text-white">$1,899<span className="text-slate-400 text-base">/month</span></div>
-              <div className="text-slate-400">30-day free trial • Setup: 1 week</div>
+              <div className="text-slate-400">30-day free trial  Setup: 1 week</div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full mt-4">Start Free Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{contactInfo.mobile}</span></div>
@@ -213,8 +163,6 @@ export default function HolographicAICommunicationPage() {;
   );
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
@@ -284,7 +232,7 @@ function HolographicAICommunicationPage() {
                 $1, 899 < span className='text - slate - 400 text - base'>/month</span>;
               </div>;
               <div className='text - slate - 400'>;
-                30 - day free trial • Setup: 1 week;
+                30 - day free trial  Setup: 1 week;
               </div>;
               <Button;
                 href='/contact';
@@ -309,7 +257,7 @@ function HolographicAICommunicationPage() {
                   <span className='text - xs'>{contact_info.address}</span>;
                 </div>              </div>            <div className="bg - black / 30 rounded - 2xl border border - fuchsia - 500 / 30 p - 6 h - fit">;
               <div className="text - 3xl font - bold text - white">$1, 899 < span className="text - slate - 400 text - base">/month</span></div>;
-              <div className="text - slate - 400">30 - day free trial • Setup: 1 week</div>;
+              <div className="text - slate - 400">30 - day free trial  Setup: 1 week</div>;
               <Button href="/contact" variant="quantum" size="lg" className="w - full mt - 4">Start Free Trial < ArrowRight className="w - 5 h - 5 ml - 2" /></Button>;
               <div className="mt - 6 space - y-3 text - sm text - slate - 300">;
                 <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{contact_info.mobile}</span></div>;
@@ -322,5 +270,3 @@ function HolographicAICommunicationPage() {
     </UltraAdvancedFuturisticBackground>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

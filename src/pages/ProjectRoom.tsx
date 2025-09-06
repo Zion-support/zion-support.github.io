@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -20,26 +16,9 @@ export default function ProjectRoomPage() {
       </div>
     </>
   );
-=======
-
-
-
-=======
-
-
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-}
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

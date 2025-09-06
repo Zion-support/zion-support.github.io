@@ -181,11 +181,11 @@ export function FeatureShowcase() {;
                       <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white font-bold">;
                         API;
                       </div>;
-                      <div className="text-gray-400">→</div>;
+                      <div className="text-gray-400"></div>;
                       <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold">;
                         SDK;
                       </div>;
-                      <div className="text-gray-400">→</div>;
+                      <div className="text-gray-400"></div>;
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white font-bold">;
                         UI;
                       </div>;
@@ -310,7 +310,7 @@ return (<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gr
 }className="flex items-center space-x-2 text-sm"> <div className="w-2 h-2 bg-green-500 rounded-full"></div> <span className="text-gray-300"> {
   detail 
 }</span> </div>) ) 
-}</div> </div> <div className="bg-black/30 rounded-lg p-4 border border-white/10"> <h4 className="font-semibold text-white mb-3">Integration</h4> <div className="flex items-center justify-center space-x-4"> <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white font-bold"> API </div> <div className="text-gray-400">→</div> <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold"> SDK </div> <div className="text-gray-400">→</div> <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white font-bold"> UI </div> </div> </div> <button className="w-full btn-primary"> Try {
+}</div> </div> <div className="bg-black/30 rounded-lg p-4 border border-white/10"> <h4 className="font-semibold text-white mb-3">Integration</h4> <div className="flex items-center justify-center space-x-4"> <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white font-bold"> API </div> <div className="text-gray-400"></div> <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold"> SDK </div> <div className="text-gray-400"></div> <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white font-bold"> UI </div> </div> </div> <button className="w-full btn-primary"> Try {
   features.find (f => f.id === activeFeature) ?.title 
 }Demo </button> </div>) : (<div className="text-center py-12"> <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center"> <svg className="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth= {
   2 

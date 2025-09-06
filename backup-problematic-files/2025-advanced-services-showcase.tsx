@@ -21,7 +21,6 @@ const contactInfo = {
 // Import our new service data
 
 const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 const _allServices = [
   ...advancedEnterpriseServices2025,
@@ -114,7 +113,6 @@ export default function AdvancedServicesShowcase() {
         if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant'),
         return false
       })
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
     }
 
     // Filter by search term
@@ -126,7 +124,6 @@ export default function AdvancedServicesShowcase() {
       )
     }
       );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
     setFilteredServices(filtered)
   }, [selectedCategory, searchTerm]),
@@ -513,7 +510,7 @@ export default function AdvancedServicesShowcase() {
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400">
                   {_selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
-                  {_searchTerm && ` • Search: "${searchTerm}"`}
+                  {_searchTerm && `  Search: "${searchTerm}"`}
                 </p>
               </div>
               
@@ -535,7 +532,7 @@ export default function AdvancedServicesShowcase() {
         <div className="space-y-6">
           {_filteredServices.length === 0 ? (
             <div className="text-center py-12">
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
+              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4"></div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 No services found
               </h3>

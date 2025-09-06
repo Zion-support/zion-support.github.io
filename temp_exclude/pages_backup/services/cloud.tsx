@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -31,13 +30,10 @@ import { Cloud, Server, Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 export default function CloudServicesPage() {;
   const cloudServices = [;
     {}
@@ -71,8 +67,6 @@ export default function CloudServicesPage() {;
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."">;
       <div className="min-h-screen bg-gray-50">";
   ];
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 const cloudServices = [
   {
@@ -112,7 +106,6 @@ const cloudServices = [
   }
 ];
 
-<<<<<<< HEAD
 export default function CloudServicesPage() {;
 export default function CloudServicesPage() {;
   const cloudServices = [;
@@ -147,9 +140,6 @@ export default function CloudServicesPage() {;
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."">;
       <div className="min-h-screen bg-gray-50">";
   ];
-=======
-export default function CloudServicesPage() {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout
       title="Cloud Solutions - Zion Tech Group"
@@ -162,7 +152,6 @@ export default function CloudServicesPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}
               className="text-center"">;
               <h1 className="text-4xl md: text-6xl font-bold mb-6">", Cloud Solutions,;
@@ -226,21 +215,6 @@ export default function CloudServicesPage() {
             </div>;
           </div>;
         </section>;
-=======
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Cloud Solutions
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform your business with our comprehensive cloud solutions.
-                From migration to optimization, we help you leverage the power of the cloud.
-              </p>
-            </motion.div>
-          </div>
-        </section>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -281,7 +255,6 @@ export default function CloudServicesPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-20">";
           <div className="container mx-auto px-4">";
@@ -322,8 +295,6 @@ export default function CloudServicesPage() {
             </div>;
           </div>;
         </section>;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 // Mock token service utility
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -10,8 +6,6 @@ export function getConfig() {
     decimals: 18,
     totalSupply: 1000000
   };
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export interface TokenTransaction {
   id: string;
   user_id: string;
@@ -19,14 +13,11 @@ export interface TokenTransaction {
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
-<<<<<<< HEAD
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
-<<<<<<< HEAD
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount
@@ -47,35 +38,7 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     timestamp: Date.now()
   }
   transactions.push(transaction);
-=======
-;
-export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount,
-    type: 'issue',
-    reason,
-    timestamp: Date.now ();
-  }
-;
-  transactions.push (transaction);
   return transaction;
-}
-export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount: -amount, // Negative for redemption;
-    type: 'redeem',
-    reason,
-    timestamp: Date.now ();
-  }
-;
-  transactions.push (transaction);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  return transaction;
-=======
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -85,7 +48,6 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
   transactions && transactions.push(transaction);
   return transaction;
 }
-<<<<<<< HEAD
 
 export function getConfig() {
   return {
@@ -93,24 +55,15 @@ export function getConfig() {
     rate: 1 && 1.0,
     maxPerDay: 1000
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>
 ): void {
-<<<<<<< HEAD
   const current = getConfig();
   // Update the configuration
   Object.assign(current, partial);
 }
 
-=======
-  const current = tokenStore && tokenStore.getConfig();
-  tokenStore && tokenStore.setConfig({ ...current, ...partial });
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 // Token service utilities
 export interface TokenConfig {
   id: string;
@@ -208,13 +161,9 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   }
   return [...tokenBalances];
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,8 +1,4 @@
 export interface CuttingEdgeMicroSaas2028 {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   id: string;
   name: string;
   tagline: string;
@@ -15,7 +11,6 @@ export interface CuttingEdgeMicroSaas2028 {
   contact_info: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
 
     address: string;
   }
@@ -38,7 +33,6 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
     category: 'Cutting-Edge Micro SAAS 2028'
     realImplementation: true
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -47,47 +41,17 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
 ];      mobile: "+1 302 464 0950";
 
       email: "kleber@ziontechgroup.com";
-=======
-=======
-    address: string;
-  }
-;
-export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [;
-  {
-    id: '2028 - cutting - edge - micro - saas',
-    name: '2028 Cutting - Edge Micro SAAS Platform',
-    tagline: 'Cutting - edge micro SAAS for 2028',
-    price: '$199 / month',
-    description:;
-      'Cutting - edge micro SAAS platform that showcases the latest innovations for 2028.',
-    features: [;
-      'Cutting - edge features',
-      'Latest innovations',
-      'Advanced technology',
-      'Innovation platform',
-      'Future - ready solutions',
-    ],
-    link: '/services / 2028 - cutting - edge - micro - saas',
-    category: 'Cutting - Edge Micro SAAS 2028',
-    real_implementation: true,
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
-<<<<<<< HEAD
       email: "kleber@ziontechgroup && ziontechgroup.com";
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-=======
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -115,17 +79,13 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
     realImplementation: true,
     contactInfo: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

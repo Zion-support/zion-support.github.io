@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 
 import { supabase } from "@/integrations/supabase/client";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 
-=======
-import { supabase } from '@/integrations / supabase / client';
-import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export const quoteRequestService = {
   // Get all quote requests (for admin);
   get_all: async () => {
@@ -15,25 +10,16 @@ export const quoteRequestService = {
       .select (`;
         *;
         talent:talent_id (
-<<<<<<< HEAD
           display_name
         )
       `)
       .order('created_at', { ascending: false });
     if (error) throw error;
     // Format the data to include talent_name
-<<<<<<< HEAD
     return data.map((item: any) => ({
       ...item
       talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
   }
-=======
-    return data && data.map((item: any) => ({
-      ...item,
-      talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
-  };
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Get quote requests for a specific talent
   getByTalentId: async (talentId: string) => {
     const { data, error } = await supabase
@@ -45,7 +31,6 @@ export const quoteRequestService = {
     return data as QuoteRequest[]
   }
   // Get a single quote request by id
-=======
           display_name);
       `);
       .order ('created_at', { ascending: false });
@@ -76,14 +61,12 @@ if (throw error) {
   }
 ;
   // Get a single quote request by id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   getById: async (id: string) => {
     const { data, error } = await supabase;
       .from ('quote_requests');
       .select (`;
         *;
         talent:talent_id (
-<<<<<<< HEAD
           display_name
         )
       `)
@@ -92,14 +75,8 @@ if (throw error) {
     if (error) throw error;
     return {
       ...data;
-<<<<<<< HEAD
       talent_name: data.talent?.display_name |'Unknown Talent'} as QuoteRequest
   }
-=======
-      talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
-  };
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status }
@@ -114,14 +91,8 @@ if (throw error) {
         .select('viewed_at')
         .eq('id', id)
         .single();
-<<<<<<< HEAD
       if (!data.viewed_at) {
         updates.viewed_at = new Date().toISOString()
-=======
-      
-      if (!data && data.viewed_at) {
-        updates && updates.viewed_at = new Date().toISOString()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
     const { data, error } = await supabase
@@ -153,7 +124,6 @@ if (throw error) {
   }
 }
 
-=======
           display_name);
       `);
       .eq ('id', id);
@@ -240,4 +210,3 @@ if (throw error) {
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

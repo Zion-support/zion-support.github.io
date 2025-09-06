@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export default function AISalesIntelligencePlatform() {
 	return (
@@ -10,10 +6,10 @@ export default function AISalesIntelligencePlatform() {
 			title="AI Sales Intelligence Platform"
 			slug="ai-sales-intelligence-platform"
 			description="Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows."
-			subtitle="Lift conversion rates 15–35% and shorten sales cycles with AI-first workflows."
+			subtitle="Lift conversion rates 1535% and shorten sales cycles with AI-first workflows."
 			pricePerMonthUSD={1499}
-			implementationWeeks="Implementation: 1–3 weeks"
-			roiNote="Average ROI 3–8x within 60 days"
+			implementationWeeks="Implementation: 13 weeks"
+			roiNote="Average ROI 38x within 60 days"
 			features={[
 				"AI lead scoring using firmographics, intent, and engagement"
 				"One-click hyper-personalized emails and sequences"
@@ -27,14 +23,7 @@ export default function AISalesIntelligencePlatform() {
 			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"
 		/>
 	)
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;
 export default /**
@@ -46,10 +35,10 @@ return (
   title="AI Sales Intelligence Platform";
   slug="ai - sales - intelligence - platform";
   description="Auto - prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows.";
-  subtitle="Lift conversion rates 15–35% and shorten sales cycles with AI - first workflows.";
+  subtitle="Lift conversion rates 1535% and shorten sales cycles with AI - first workflows.";
   pricePerMonthUSD={1499}
-    implementation_weeks="Implementation: 1–3 weeks";
-  roi_note="Average ROI 3–8x within 60 days";
+    implementation_weeks="Implementation: 13 weeks";
+  roi_note="Average ROI 38x within 60 days";
   features={[;
     "AI lead scoring using firmographics, intent, and engagement",
     "One - click hyper - personalized emails and sequences",
@@ -62,5 +51,3 @@ return (
     canonical="https: //ziontechgroup.com / ai - sales - intelligence - platform";
   />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

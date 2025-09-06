@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,14 +21,5 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src && src.pages.disabled/Interviews && Interviews.jsx
-<<<<<<< \"HEAD\": src && src.pages.disabled/Interviews && Interviews.jsx import React from \'react\'; export default function Interviews () { function InterviewsContent () { const { interviews,isLoading,fetchInterviews } = useInterviews () ; const [activeTab,setActiveTab] = useState (\"upcoming\") ; useEffect ( () => { import React from \'react\'; export default function Interviews () { function InterviewsContent () { const { interviews,isLoading,fetchInterviews } = useInterviews () ; const [activeTab,setActiveTab] = useState (\"upcoming\") ; useEffect ( () => {\";
-<<<<<<< HEAD
-<<<<<<< "HEAD": src && src.pages.disabled/Interviews && Interviews.jsx import _React from 'react'; export default function Interviews () { function InterviewsContent () { const { interviews,isLoading,fetchInterviews } = useInterviews () ; const [activeTab,setActiveTab] = useState ("upcoming") ; useEffect ( () => { import _React from 'react'; export default function Interviews () { function InterviewsContent () { const { interviews,isLoading,fetchInterviews } = useInterviews () ; const [activeTab,setActiveTab] = useState ("upcoming") ; useEffect ( () => {";
-=======
-<<<<<<< "HEAD": src && src.pages.disabled/Interviews && Interviews.jsx import _React from 'react'; export default function Interviews () { function InterviewsContent () { const { interviews,isLoading,fetchInterviews } = useInterviews () ; const [activeTab,setActiveTab] = useState ("upcoming") ; useEffect ( () => { import _React from 'react'; export default function Interviews () { function InterviewsContent () { const { interviews,isLoading,fetchInterviews } = useInterviews () ; const [activeTab,setActiveTab] = useState ("upcoming") ; useEffect ( () => {";
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+

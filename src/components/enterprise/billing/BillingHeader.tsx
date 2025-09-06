@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Download, Mail, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Download, Mail, BarChart3 } from 'lucide-react'
@@ -38,8 +32,6 @@ export function BillingHeader() {
 import React from "react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export function BillingHeader() {
   return (
@@ -63,22 +55,17 @@ export function BillingHeader() {
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
       <p className='text-muted-foreground'>
         Manage your subscription, view invoice history, and update payment
         methods.
       </p>
     </div>
   ) <p className="text-muted-foreground">
-=======
-      <p className="text-muted-foreground">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         Manage your subscription, view invoice history, and update payment methods.
       </p>
     </div>
   )
 }
-=======
 export function BillingHeader() {;
   return (
     <div className='space-y-2'>;
@@ -123,7 +110,6 @@ export function BillingHeader() {;
           <Button variant="outline" size="sm" className="gap-1" asChild>;
             <Link href="/dashboard/client/analytics">;
               <BarChart3 className="h-4 w-4" />;
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Download, Mail, BarChart3 } from 'lucide-react';
@@ -176,13 +162,11 @@ function BillingHeader() {
           <Button variant="outline" size="sm" className="gap - 1" as_child>;
             <Link href="/dashboard / client / analytics">;
               <BarChart3 className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Analytics;
             </Link>;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
       <p className='text-muted-foreground'>;
         Manage your subscription, view invoice history, and update payment;
         methods.;
@@ -194,11 +178,6 @@ function BillingHeader() {
     </div>;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       <p className='text - muted - foreground'>;
         Manage your subscription, view invoice history, and update payment;
         methods.;
@@ -208,4 +187,3 @@ function BillingHeader() {
       </p>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

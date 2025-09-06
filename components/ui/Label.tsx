@@ -1,27 +1,10 @@
-<<<<<<< HEAD
 import React from "react";
-<<<<<<< HEAD
-=======
-import React from './react';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface LabelProps {
   children: React.ReactNode;
   class_name?: string;
   html_for?: string;
 }
-<<<<<<< HEAD
 const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {
-=======
-
-interface LabelProps {;
-  children: React && React.ReactNode;
-  className?: string;
-  htmlFor?: string;
-}
-
-const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <label
       htmlFor={htmlFor}
@@ -31,7 +14,6 @@ const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {
   );
 }
 export { Label }
-=======
 const Label: React.FC < LabelProps> = ({ children, class_name = "", html_for }) => {
   return (
     <label;
@@ -44,4 +26,3 @@ const Label: React.FC < LabelProps> = ({ children, class_name = "", html_for }) 
 ;
 export { Label }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

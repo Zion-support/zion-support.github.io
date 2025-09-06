@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -131,20 +130,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
-=======
-import {useState} from 'react';
-import {use_form} from 'react - hook - form';
-import {zod_resolver} from '@hookform / resolvers / zod';
-import {z} from 'zod';
-import {Button} from '@/components / ui / button';
-import {Textarea} from '@/components / ui / textarea';
-import {Input} from '@/components / ui / input';
-import {Checkbox} from '@/components / ui / checkbox';
-import {format} from 'date - fns';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
-import {WorkExperience} from '@/types / resume';
-import {Loader2, Edit, Trash2} from 'lucide-react';
-<<<<<<< HEAD
 import {useResume} from '@/hooks/useResume';
 import {Alert, AlertDescription} from '@/components/ui/alert';
 import {Card, CardContent} from '@/components/ui/card';
@@ -273,7 +258,6 @@ export function WorkExperienceForm(): any ({ resumeId, workExperiences, onComple
                     </p>;
                     {work && work.location && (;
                       <p className="text-xs text-muted-foreground">{work && work.location}</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
                   </div>;
                   <div className="flex gap-2">;
@@ -301,7 +285,6 @@ export function WorkExperienceForm(): any ({ resumeId, workExperiences, onComple
           ))}
         </div>;
       )}
-<<<<<<< HEAD
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Experience' : 'Add Experience'}
@@ -309,24 +292,12 @@ export function WorkExperienceForm(): any ({ resumeId, workExperiences, onComple
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-=======
-
-      <div className="bg-muted/40 p-6 rounded-lg">;
-        <h3 className="text-md font-medium mb-4">;
-          {editingId ? 'Update Experience' : 'Add Experience'}
-        </h3>;
-
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(handleAddOrUpdate)} className="space-y-4">;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <FormField
                 control={form && form.control}
                 name="company_name"
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Company Name</FormLabel>;
-=======
 import {use_resume} from '@/hooks / use_resume';
 import {Alert, AlertDescription} from '@/components / ui / alert';
 import {Card, CardContent} from '@/components / ui / card';
@@ -501,27 +472,19 @@ if ( {) {
                 render={({ field }) => (
                   <FormItem>;
                     <FormLabel > Company Name</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <FormControl>;
                       <Input placeholder="Google, Microsoft, etc." {...field} />;
                     </FormControl>;
                     <FormMessage />;
-<<<<<<< HEAD
                   </FormItem>;
                 )}
-<<<<<<< HEAD
               />
-=======
-              />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <FormField
                 control={form && form.control}
                 name="role_title"
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Job Title</FormLabel>;
-=======
                   </FormItem>)}
               />;
               <FormField;
@@ -530,28 +493,18 @@ if ( {) {
                 render={({ field }) => (
                   <FormItem>;
                     <FormLabel > Job Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <FormControl>;
                       <Input placeholder="Software Engineer, Product Manager, etc." {...field} />;
                     </FormControl>;
                     <FormMessage />;
-<<<<<<< HEAD
                   </FormItem>;
                 )}
-<<<<<<< HEAD
               />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-=======
-              />;
-            </div>;
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <FormField
                 control={form && form.control}
                 name="start_date"
-<<<<<<< HEAD
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
@@ -567,24 +520,6 @@ if ( {) {
                 )}
               />
               <div className="space-y-4">
-=======
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Start Date</FormLabel>;
-                    <FormControl>;
-                      <Input
-                        type="date" 
-                        {...field} 
-                        value={field && field.value || ''}
-                      />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
-                )}
-              />;
-
-              <div className="space-y-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <FormField
                   control={form && form.control}
                   name="is_current"
@@ -601,18 +536,11 @@ if ( {) {
                       </div>;
                     </FormItem>;
                   )}
-<<<<<<< HEAD
                 />
                 {!form.watch('is_current') && (
-=======
-                />;
-
-                {!form && form.watch('is_current') && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <FormField
                     control={form && form.control}
                     name="end_date"
-<<<<<<< HEAD
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>End Date</FormLabel>
@@ -625,38 +553,17 @@ if ( {) {
                         </FormControl>
                         <FormMessage />
                       </FormItem>
-=======
-                    render={({ field }) => (;
-                      <FormItem>;
-                        <FormLabel>End Date</FormLabel>;
-                        <FormControl>;
-                          <Input
-                            type="date" 
-                            {...field} 
-                            value={field && field.value || ''} 
-                          />;
-                        </FormControl>;
-                        <FormMessage />;
-                      </FormItem>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
                   />;
                 )}
-<<<<<<< HEAD
               </div>
             </div>
-=======
-              </div>;
-            </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name="location"
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Location (Optional)</FormLabel>;
-=======
                   </FormItem>)}
               />;
             </div>;
@@ -719,20 +626,13 @@ if ( {) {
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Location (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <Input placeholder="San Francisco, CA (Remote)" {...field} />;
                   </FormControl>;
                   <FormMessage />;
-<<<<<<< HEAD
                 </FormItem>;
               )}
-<<<<<<< HEAD
             />
-=======
-            />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name="description"
@@ -741,11 +641,7 @@ if ( {) {
                   <FormLabel className="flex justify-between">;
                     <span>Job Description</span>;
                     <AIEnhancementButton
-<<<<<<< HEAD
                       currentContent={field.value |''}
-=======
-                      currentContent={field && field.value || ''}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       enhancementType="work-description"
                       context={`Role: ${form && form.getValues('role_title')} at ${form && form.getValues('company_name')}`}
                       onEnhanced={handleEnhanceDescription}
@@ -755,7 +651,6 @@ if ( {) {
                     <Textarea
                       placeholder="Describe your responsibilities and accomplishments..."
                       className="min-h-[100px]"
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -776,32 +671,21 @@ if ( {) {
                     <Textarea;
                       placeholder="Describe your responsibilities and accomplishments...";
                       className="min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
                   <FormMessage />;
-<<<<<<< HEAD
                 </FormItem>;
               )}
-<<<<<<< HEAD
             />
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
             <div className="flex justify-between pt-2">
-=======
-            />;
-
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-            <div className="flex justify-between pt-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 type="button"
                 variant="outline"
                 onClick={() => {;
                   if (editingId) {;
                     setEditingId(null);
-<<<<<<< HEAD
                     form.reset({
                       company_name: ''
                       role_title: ''
@@ -812,22 +696,10 @@ if ( {) {
                       location: ''})
                   } else {
                     onBack()
-=======
-                    form && form.reset({;
-                      company_name: '',;
-                      role_title: '',;
-                      start_date: format(new Date(), 'yyyy-MM-dd');
-                      is_current: false,;
-                      description: '',;
-                      location: ''});
-                  } else {;
-                    onBack();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   }
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
-<<<<<<< HEAD
               </Button>
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
@@ -847,69 +719,13 @@ if ( {) {
     </div>
   )
 }
-=======
-              </Button>;
-
-              <div className="flex gap-2">;
-                <Button type="submit" disabled={isLoading}>;
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {editingId ? 'Update' : 'Add'} Experience;
-                </Button>;
-
-                {!editingId && workExperiences && workExperiences.length > 0 && (;
-                  <Button type="button" onClick={onComplete}>;
-                    Next;
-                  </Button>;
-                )}
-=======
-                </FormItem>)}
-            />;
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-            <div className="flex justify - between pt - 2">;
-              <Button;
-                type="button";
-                variant="outline";
-                on_click={() => {
-                  // Check condition
-if ( {) {
-  $2
-}
-                    setEditingId (null);
-                    form.reset ({
-                      company_name: '',
-                      role_title: '',
-                      start_date: format (new Date (), 'yyyy - MM - dd');
-                      is_current: false,
-                      description: '',
-                      location: ''});
-                  } else {
-                    on_back ();
-                  }
-                }}
-              >;
-                {editing_id ? 'Cancel' : 'Back'}
-              </Button>;
-              <div className="flex gap - 2">;
-                <Button type="submit" disabled={is_loading}>;
-                  {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
-                  {editing_id ? 'Update' : 'Add'} Experience;
-                </Button>;
-                {!editing_id && work_experiences.length > 0 && (
-                  <Button type="button" on_click={on_complete}>;
-                    Next;
-                  </Button>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </form>;
         </Form>;
       </div>;
-<<<<<<< HEAD
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

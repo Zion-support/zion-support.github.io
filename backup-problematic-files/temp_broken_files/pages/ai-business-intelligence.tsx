@@ -480,10 +480,10 @@ initial={_{ opacity: 0, y: 20}}
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Everything you need to transform your business data into strategic insights.            </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Sales forecasting</li>
-              <li>• Customer behavior prediction</li>
-              <li>• Risk assessment</li>
-              <li>• Market trend analysis</li>
+              <li> Sales forecasting</li>
+              <li> Customer behavior prediction</li>
+              <li> Risk assessment</li>
+              <li> Market trend analysis</li>
             </ul>
           </div>
 

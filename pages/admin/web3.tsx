@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page() {
@@ -17,9 +10,6 @@ export default function AdminWeb3Page() {
   const save = (list: any) => {
     if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list))
     setUsers(list)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
   const metrics = {
     total: users.length
@@ -28,8 +18,6 @@ export default function AdminWeb3Page() {
     enabled: users.filter(u => u.enabled).length
     disabled: users.filter(u => !u.enabled).length}
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
   const metrics = {
@@ -38,15 +26,14 @@ export default function AdminWeb3Page() {
     sol: users.filter(u => u.chain === 'sol').length,
     enabled: users.filter(u => u.enabled).length,
     disabled: users.filter(u => !u.enabled).length},
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <>
-      <Head><title>Admin — Web3</title></Head>
+      <Head><title>Admin  Web3</title></Head>
       <div className="max-w-3xl mx-auto space-y-6">
         <h1 className="text-xl font-semibold">Web3 Admin</h1>
         <div className="rounded-md border p-4">
           <div className="font-medium mb-2">Usage Metrics</div>
-          <div className="text-sm text-gray-600">Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol} · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}</div>
+          <div className="text-sm text-gray-600">Total: {metrics.total}  EVM: {metrics.evm}  Solana: {metrics.sol}  Enabled: {metrics.enabled}  Disabled: {metrics.disabled}</div>
         </div>
         <div className="rounded-md border p-4">
           <div className="font-medium mb-2">Users</div>
@@ -68,14 +55,7 @@ export default function AdminWeb3Page() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next / head',
 export default /**
@@ -101,12 +81,12 @@ function AdminWeb3Page() {
     disabled: users.filter (u => !u.enabled).length},
   return (
     <>;
-      <Head><title > Admin — Web3</title></Head>;
+      <Head><title > Admin  Web3</title></Head>;
       <div className="max - w-3xl mx - auto space - y-6">;
         <h1 className="text - xl font - semibold">Web3 Admin</h1>;
         <div className="rounded - md border p - 4">;
           <div className="font - medium mb - 2">Usage Metrics</div>;
-          <div className="text - sm text - gray - 600">Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol} · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}</div>;
+          <div className="text - sm text - gray - 600">Total: {metrics.total}  EVM: {metrics.evm}  Solana: {metrics.sol}  Enabled: {metrics.enabled}  Disabled: {metrics.disabled}</div>;
         </div>;
         <div className="rounded - md border p - 4">;
           <div className="font - medium mb - 2">Users</div>;
@@ -127,5 +107,3 @@ function AdminWeb3Page() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

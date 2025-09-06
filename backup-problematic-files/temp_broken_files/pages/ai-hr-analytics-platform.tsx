@@ -49,10 +49,10 @@ const AIHrAnalyticsPlatform: React.FC = () => {
               Analyze workforce data to identify trends, patterns, and optimization opportunities.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Employee performance analysis</li>
-              <li>• Turnover prediction</li>
-              <li>• Skills gap analysis</li>
-              <li>• Productivity metrics</li>
+              <li> Employee performance analysis</li>
+              <li> Turnover prediction</li>
+              <li> Skills gap analysis</li>
+              <li> Productivity metrics</li>
             </ul>
           </div>
 
@@ -62,10 +62,10 @@ const AIHrAnalyticsPlatform: React.FC = () => {
               Optimize recruitment processes with AI-powered candidate screening and matching.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Resume screening</li>
-              <li>• Candidate matching</li>
-              <li>• Interview scheduling</li>
-              <li>• Bias detection</li>
+              <li> Resume screening</li>
+              <li> Candidate matching</li>
+              <li> Interview scheduling</li>
+              <li> Bias detection</li>
             </ul>
           </div>
 
@@ -75,10 +75,10 @@ const AIHrAnalyticsPlatform: React.FC = () => {
               Monitor and improve employee engagement with AI-powered sentiment analysis.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Sentiment analysis</li>
-              <li>• Engagement surveys</li>
-              <li>• Feedback analysis</li>
-              <li>• Retention strategies</li>
+              <li> Sentiment analysis</li>
+              <li> Engagement surveys</li>
+              <li> Feedback analysis</li>
+              <li> Retention strategies</li>
             </ul>
           </div>
         </div>

@@ -19,7 +19,7 @@ export default function BlockchainPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlockchainServiceCategory
             title="Smart Contracts"
-            icon="📜"
+            icon=""
             description="Secure and audited smart contract development"
             services={[
               "Ethereum smart contracts",
@@ -32,7 +32,7 @@ export default function BlockchainPage() {
           />
           <BlockchainServiceCategory
             title="DeFi Protocols"
-            icon="🏦"
+            icon=""
             description="Decentralized finance solutions and protocols"
             services={[
               "DEX development",
@@ -45,7 +45,7 @@ export default function BlockchainPage() {
           />
           <BlockchainServiceCategory
             title="Web3 Applications"
-            icon="🌐"
+            icon=""
             description="User-friendly Web3 interfaces and dApps"
             services={[
               "dApp frontend development",
@@ -292,7 +292,7 @@ function BlockchainServiceCategory({ title, icon, description, services }: {
       <ul className="space-y-2">
         {services.map((service, index) => (
           <li key={index} className="flex items-center text-gray-600">
-            <span className="text-orange-500 mr-2">•</span>
+            <span className="text-orange-500 mr-2"></span>
             {service}
           </li>
         ))}
@@ -321,7 +321,7 @@ function BlockchainSolution({ title, description, features, price, timeline, use
       <ul className="space-y-1 mb-4">
         {features.map((feature, index) => (
           <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="text-green-500 mr-2">✓</span>
+            <span className="text-green-500 mr-2"></span>
             {feature}
           </li>
         ))}
@@ -377,7 +377,7 @@ function BlockchainPricingPlan({ name, price, duration, features, popular }: {
       <ul className="space-y-3">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center text-gray-600">
-            <span className="text-green-500 mr-3">✓</span>
+            <span className="text-green-500 mr-3"></span>
             {feature}
           </li>
         ))}
@@ -410,7 +410,7 @@ function SecurityService({ title, description, price, timeline, features }: {
       <ul className="space-y-1 mb-4">
         {features.map((feature, index) => (
           <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="text-green-500 mr-2">✓</span>
+            <span className="text-green-500 mr-2"></span>
             {feature}
           </li>
         ))}

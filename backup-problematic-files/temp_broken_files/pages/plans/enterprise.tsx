@@ -46,7 +46,7 @@ export default function EnterprisePlans() {;
             <p style={{ color:'#4b5563' }}>{t.blurb}</p>;
             <ul style={{ marginTop:8 }}>;
               {t.highlights.map(h => (;
-                <li key={h}>• {h}</li>;
+                <li key={h}> {h}</li>;
               ))}
             </ul>;
             <div style={{ marginTop:16, display:'flex', gap:8 }}>;
@@ -77,7 +77,7 @@ export default function EnterprisePlans() {;
                   <td style={{ padding:8, borderBottom:'1px solid #f3f4f6' }}>{f.label}</td>;
                   {tiers.map(t => (;
                     <td key={t.id + f.key} style={{ textAlign:'center', padding:8, borderBottom:'1px solid #f3f4f6' }}>;
-                      {t.includes[f.key as keyof typeof t.includes] ? '✓' :'—'}
+                      {t.includes[f.key as keyof typeof t.includes] ? '' :''}
                     </td>;  {
   padding: '3rem', maxWidth: 1100, margin: '0 auto' 
 }
@@ -108,7 +108,7 @@ export default function EnterprisePlans() {_return (
             <p style={_{ color: '#4b5563'}}>{_t.blurb}</p>
             <ul style={_{ marginTop: 8}}>
               {_t.highlights.map(h => (
-                <li key={h}>• {_h}</li>
+                <li key={h}> {_h}</li>
               ))}
             </ul>
             <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
@@ -138,7 +138,7 @@ export default function EnterprisePlans() {_return (
                   <td style={_{ padding: 8, _borderBottom: '1px solid #f3f4f6'}}>{_f.label}</td>
                   {_tiers.map(t => (
                     <td key={t.id + f.key} style={_{ textAlign: 'center', _padding: 8, _borderBottom: '1px solid #f3f4f6'}}>
-                      {_t.includes[f.key as keyof typeof t.includes] ? '✓' : '—'}
+                      {_t.includes[f.key as keyof typeof t.includes] ? '' : ''}
                     </td>
                   ))}
                 </tr>;
@@ -193,7 +193,7 @@ export default function EnterprisePlans() {_return (
 }> {
   t.highlights.map (h => (<li key= {
   h 
-}>• {
+}> {
   h 
 }</li>) ) 
 }</ul> </div> </div>) ) 
@@ -240,7 +240,7 @@ export default function EnterprisePlans() {_return (
   textAlign: 'center', padding: 8, borderBottom: '1px solid #f3f4f6' 
 }
 }> {
-  t.includes[f.key as keyof typeof t.includes] ? '✓' : '—' 
+  t.includes[f.key as keyof typeof t.includes] ? '' : '' 
 }</td>) ) 
 }</tr>) ) 
 }</tbody> </table> </div> </section> <section style= {

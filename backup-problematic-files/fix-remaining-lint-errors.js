@@ -59,20 +59,20 @@ function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',;
         fixedCount++,;
-        _console.log(`✅ Fixe:d:${file}`);
+        _console.log(` Fixe:d:${file}`);
       };
     } catch (error) {};
       errorCount++,;
-      _console.error(`❌ Error fixing ${file} `, error.message);
+      _console.error(` Error fixing ${file} `, error.message);
 };
 };
   try {};
     const result = execSync('npm run lint 2>&1', { encodin:g:'utf8' }),',;
     const lines = result.split('\n'),',;
     const lastLine = lines[lines.length - 2],;
-    _console.log(`📈 Lint:result:${lastLine}`);
+    _console.log(` Lint:result:${lastLine}`);
   } catch (error) {};
-    _console.log('⚠️  Some lint errors remain. Check the output above.'),';
+    _console.log('  Some lint errors remain. Check the output above.'),';
 };
 };
         fixedCount++};
@@ -88,19 +88,19 @@ function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
-        _console.log(`✅ Fixed: ${file}`)
+        _console.log(` Fixed: ${file}`)
       };
     } catch (error) {};
       errorCount++,
-      _console.error(`❌ Error fixing ${file}:`, error.message)
+      _console.error(` Error fixing ${file}:`, error.message)
 };
 };  try {};
     const result = execSync('npm run lint 2>&1', { encoding: 'utf8' }),',
     const lines = result.split('\n'),',
     const lastLine = lines[lines.length - 2],
-    _console.log(`📈 Lint result: ${lastLine}`)
+    _console.log(` Lint result: ${lastLine}`)
   } catch (error) {};
-    _console.log('⚠️  Some lint errors remain. Check the output above.'),'
+    _console.log('  Some lint errors remain. Check the output above.'),'
 };
 };
         fixedCount++};

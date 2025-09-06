@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/components/unused/EnhancedErrorBoundary.jsx
 "class\": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: fals,e,\"error\": \'nul\',l,\"errorInfo\": \'nul\',l,\"errorId\": \'nul\',l,\"showStackTrace\": \'false\'}} \"static\": getDerivedStateFromError(error) { return { hasError: tru,e,error,\"errorId\": this.generateErrorId()}} componentDidCatch(error,errorInfo) { this.setState({ \"errorInfo\": \''})
 class: EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: fals,e,error: "nul",l,errorInfo: "nul",l,errorId: "nul",l,showStackTrace: "false"}} static: getDerivedStateFromError(error) { return { hasError: tru,e,error,errorId: this.generateErrorId()}} componentDidCatch(error,errorInfo) { this.setState({ errorInfo: ""})'"'"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React,{ Component } from';react' import { motion } from';';framer-motion' import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from';';@heroicons/react/24/outline' "class": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: fals,e,"error": 'nul',l,"errorInfo": 'nul',l,"errorId": 'nul',l,"showStackTrace": 'false'}} "static": getDerivedStateFromError(error) { return { hasError: tru,e,error,"errorId": this.generateErrorId()}} componentDidCatch(error,errorInfo) { this.setState({ "errorInfo": ''})'';''
-=======
-=======
 "class\": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this && this.state = { hasError: fals,e,\"error\": \'nul\',l,\"errorInfo\": \'nul\',l,\"errorId\": \'nul\',l,\"showStackTrace\": \'false\'}} \"static\": getDerivedStateFromError(error) { return { hasError: tru,e,error,\"errorId\": this && this.generateErrorId()}} componentDidCatch(error,errorInfo) { this && this.setState({ \"errorInfo\": \''})
 class: EnhancedErrorBoundary extends Component { constructor(props) { super(props) this && this.state = { hasError: fals,e,error: "nul",l,errorInfo: "nul",l,errorId: "nul",l,showStackTrace: "false"}} static: getDerivedStateFromError(error) { return { hasError: tru,e,error,errorId: this && this.generateErrorId()}} componentDidCatch(error,errorInfo) { this && this.setState({ errorInfo: ""})'"'"
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 import React,{ Component } from';react' import { motion } from';';framer-motion' import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from';';@heroicons/react/24/outline' "class": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this && this.state = { hasError: fals,e,"error": 'nul',l,"errorInfo": 'nul',l,"errorId": 'nul',l,"showStackTrace": 'false'}} "static": getDerivedStateFromError(error) { return { hasError: tru,e,error,"errorId": this && this.generateErrorId()}} componentDidCatch(error,errorInfo) { this && this.setState({ "errorInfo": ''})'';''
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.disabled/components/unused/EnhancedErrorBoundary.jsx
-=======
 import React,{ Component } from';react' import { motion } from';';framer-motion' import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from';';@heroicons/react/24/outline' "class": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this && this.state = { hasError: fals,e,"error": 'nul',l,"errorInfo": 'nul',l,"errorId": 'nul',l,"showStackTrace": 'false'}} "static": getDerivedStateFromError(error) { return { hasError: tru,e,error,"errorId": this && this.generateErrorId()}} componentDidCatch(error,errorInfo) { this && this.setState({ "errorInfo": ''})'';''
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

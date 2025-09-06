@@ -74,14 +74,14 @@ export default function Services2026ShowcaseEnhancedPage() {;
 ;
   // Enhanced categories for 2026;
   const categories = [;
-    { id:'all', name:'All 2026 Services', icon:'🚀', count:all2026Services.length },;
-    { id:'ai', name:'AI & Machine Learning', icon:'🧠', count:all2026Services.filter(s => s.category.includes('AI')).length },;
-    { id:'quantum', name:'Quantum & Emerging Tech', icon:'⚛️', count:all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length },;
-    { id:'enterprise', name:'Enterprise IT', icon:'🏢', count:all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length },;
-    { id:'micro-saas', name:'Micro SaaS', icon:'💻', count:all2026Services.filter(s => s.category.includes('SaaS')).length },;
-    { id:'healthcare', name:'Healthcare & Biotech', icon:'🏥', count:all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length },;
-    { id:'financial', name:'Financial Technology', icon:'💰', count:all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },;
-    { id:'manufacturing', name:'Manufacturing & IoT', icon:'🏭', count:all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length }
+    { id:'all', name:'All 2026 Services', icon:'', count:all2026Services.length },;
+    { id:'ai', name:'AI & Machine Learning', icon:'', count:all2026Services.filter(s => s.category.includes('AI')).length },;
+    { id:'quantum', name:'Quantum & Emerging Tech', icon:'', count:all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length },;
+    { id:'enterprise', name:'Enterprise IT', icon:'', count:all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length },;
+    { id:'micro-saas', name:'Micro SaaS', icon:'', count:all2026Services.filter(s => s.category.includes('SaaS')).length },;
+    { id:'healthcare', name:'Healthcare & Biotech', icon:'', count:all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length },;
+    { id:'financial', name:'Financial Technology', icon:'', count:all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },;
+    { id:'manufacturing', name:'Manufacturing & IoT', icon:'', count:all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length }
   ],;
 ;
   const priceRanges = [;
@@ -363,7 +363,7 @@ export default function Services2026ShowcaseEnhancedPage() {;
                   exit={{ opacity:0 }}
                   className="text-center py-20";
                 >;
-                  <div className="text-6xl mb-4">🔍</div>;
+                  <div className="text-6xl mb-4"></div>;
                   <h3 className="text-2xl font-semibold text-gray-300 mb-2">No services found</h3>;
                   <p className="text-gray-400">Try adjusting your search criteria or filters</p>;
                 </motion.div>;
@@ -422,7 +422,7 @@ export default function Services2026ShowcaseEnhancedPage() {;
                           {/* Service Stats */}
                           <div className="grid grid-cols-3 gap-2 mb-4 text-xs">;
                             <div className="text-center">;
-                              <div className="text-cyan-400 font-semibold">{service.rating}★</div>;
+                              <div className="text-cyan-400 font-semibold">{service.rating}</div>;
                               <div className="text-gray-400">{service.reviews} reviews</div>;
                             </div>;
                             <div className="text-center">;

@@ -43,8 +43,8 @@ const AdminReviewsPage:NextPage = () => {;
         <div className="space-y-4">;
           {pending.map((r) => (;
             <div key={r.id} className="border rounded p-3">;
-              <div className="text-sm text-gray-600 mb-1">Project:{r.projectId} • To:{r.toRole} {r.toId}</div>;
-              <div className="font-medium">{r.rating}★ — {r.text}</div>;
+              <div className="text-sm text-gray-600 mb-1">Project:{r.projectId}  To:{r.toRole} {r.toId}</div>;
+              <div className="font-medium">{r.rating}  {r.text}</div>;
               <div className="mt-2 flex gap-2">;
                 <button className="enhanced-button enhanced-button-primary" onClick={() => moderate('approve', r.id)}>Approve</button>;
                 <button className="enhanced-button enhanced-button-secondary" onClick={() => moderate('remove', r.id)}>Remove</button>;
@@ -157,7 +157,7 @@ const AdminReviewsPage: React.FC = () => {
         key={i}
         className={`text-lg ${i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
       >
-        ★
+        
       </span>
     ));
   };
@@ -176,8 +176,8 @@ const AdminReviewsPage: React.FC = () => {
         <div className=&quot;space-y-4&quot;>
           {pending.map((r) => (
             <div key={r.id} className=&quot;border rounded p-3&quot;>
-              <div className=&quot;text-sm text-gray-600 mb-1&quot;>Project: {r.projectId} • To: {r.toRole} {r.toId}</div>
-              <div className=&quot;font-medium&quot;>{r.rating}★ — {r.text}</div>
+              <div className=&quot;text-sm text-gray-600 mb-1&quot;>Project: {r.projectId}  To: {r.toRole} {r.toId}</div>
+              <div className=&quot;font-medium&quot;>{r.rating}  {r.text}</div>
               <div className=&quot;mt-2 flex gap-2&quot;>
                 <button className=&quot;enhanced-button enhanced-button-primary&quot; onClick={() => moderate('approve', r.id)}>Approve</button>
                 <button className=&quot;enhanced-button enhanced-button-secondary&quot; onClick={() => moderate('remove', r.id)}>Remove</button>              </div>

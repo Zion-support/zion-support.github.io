@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
 import { createFlag, readAllFlags } from '../../../../../utils/moderationDb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const user = parseUserFromRequest(req)
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode |403).json({ error: 'Forbidden' }) }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const user = parseUserFromRequest(req);
   try {
     ensureAdmin(user);
@@ -21,37 +12,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
   }
 
-<<<<<<< HEAD
   if (req.method === 'GET') {
     const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>;
     const flags = await readAllFlags();
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (req.method === 'GET') {
     const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>
     const flags = await readAllFlags()
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const filtered = flags.filter(f =>
-<<<<<<< HEAD
       (!status |f.status === status) &&
       (!reason |f.reason.toLowerCase().includes(reason.toLowerCase())) &&
       (!userEmail |f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
       (!contentType |f.contentType === contentType)
 )
     return res.status(200).json({ flags: filtered })
-=======
-      (!status || f.status === status) &&
-      (!reason || f.reason.toLowerCase().includes(reason.toLowerCase())) &&
-      (!userEmail || f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
-      (!contentType || f.contentType === contentType)
-    );
-    return res.status(200).json({ flags: filtered });
-  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   }
   if (req.method === 'POST') {
-<<<<<<< HEAD
 
     const init = req.body |{}
     try {
@@ -65,24 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(405).end('Method Not Allowed')
 }
 
-=======
-    const init = req.body || {};
-    try {
-      const flag = await createFlag(init);
-      return res.status(201).json({ flag });
-    } catch (e: any) {
-      return res.status(400).json({ error: e.message || 'Invalid payload' });
-    }
-  }
-
-  res.setHeader('Allow', 'GET,POST');
-  return res.status(405).end('Method Not Allowed');
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { ensure_admin, parseUserFromRequest } from '../../../../../utils / auth',
 import { create_flag, readAllFlags } from '../../../../../utils / moderation_db',
@@ -122,5 +81,3 @@ if ( {) {
   return res.status (405).end ('Method Not Allowed');
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

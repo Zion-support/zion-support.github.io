@@ -15,14 +15,14 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 },
 const serviceCategories = [
-  {title: '🧠 Revolutionary AI', icon: Brain, color: 'from-violet-500 to-purple-600', services: [
+  {title: ' Revolutionary AI', icon: Brain, color: 'from-violet-500 to-purple-600', services: [
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Advanced AI consciousness', price: '$2, 999/month'},
       {name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform', price: '$1, 999/month'},
       {name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Creative AI solutions', price: '$1, 499/month'},
       {name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Autonomous business AI', price: '$3, 999/month'}
     ]
   },
-  {title: '⚛️ Quantum & Emerging Tech', icon: Atom, color: 'from-indigo-500 to-blue-600', services: [
+  {title: ' Quantum & Emerging Tech', icon: Atom, color: 'from-indigo-500 to-blue-600', services: [
       { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Quantum security', price: '$4, 999/month'},
       {name: 'Biotech DNA Computing', href: '/biotech-dna-computing-platform', description: 'DNA computing platform', price: '$3, 999/month'},
       {name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum trading', price: '$5, 999/month'},
@@ -31,14 +31,14 @@ const serviceCategories = [
       {name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Collective robot intelligence', price: '$1, 199/month'}
     ]
   },
-  {title: '🏙️ Enterprise IT Solutions', icon: Cpu, color: 'from-blue-500 to-cyan-600', services: [
+  {title: ' Enterprise IT Solutions', icon: Cpu, color: 'from-blue-500 to-cyan-600', services: [
       { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Self-managing DevOps', price: '$2, 499/month'},
       {name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Zero trust security', price: '$1, 999/month'},
       {name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Edge computing platform', price: '$1, 799/month'},
       {name: 'AI IT Operations Center', href: '/ai-it-operations-center', description: 'AI-powered IT ops', price: '$2, 999/month'}
     ]
   },
-  {title: '🌌 Space & Metaverse Tech', icon: Rocket, color: 'from-teal-500 to-emerald-600', services: [
+  {title: ' Space & Metaverse Tech', icon: Rocket, color: 'from-teal-500 to-emerald-600', services: [
       { name: 'Space Mining Automation', href: '/space-mining-automation-platform', description: 'Space mining platform', price: '$9, 999/month'},
       {name: 'Metaverse Development', href: '/metaverse-development-platform', description: 'Metaverse platform', price: '$3, 999/month'},
       {name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform', description: 'Holographic events', price: '$2, 499/month'}

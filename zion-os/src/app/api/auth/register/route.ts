@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/prisma";
@@ -13,37 +12,10 @@ export async function POST() {
     const existingUser = await prisma.user.findUnique({where: { email }});
     if (existingUser) {return NextResponse.json(;
         { error: "User with this email already exists" }
-=======
-import { NextRequest, NextResponse  } from './next / server';,
-import bcrypt from './bcryptjs';,
-import { prisma  } from '@/lib / prisma';,
-import { z  } from './zod';,
-const register_schema = z.object ({
-  name: z.string ().min (2, "Name must be at least 2 characters"),
-  email: z.string ().email ("Invalid email address"),
-  password: z.string ().min (8, "Password must be at least 8 characters")}),
-export async /**
- * POST - Function description
- */
-function POST() {
-  try {
-    const body = await request.json (),
-    const { name, email, password } = register_schema.parse (body),
-    // Check if user already exists;
-    const existing_user = await prisma.user.find_unique ({
-      where: { email }}),
-    // Check condition
-if ( {) {
-  $2
-}
-      return NextResponse.json (
-        { error: "User with this email already exists" },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         { status: 400 }
       );
     }
     // Hash password;
-<<<<<<< HEAD
     const hashedPassword = await bcrypt.hash(password, 12);
     // Create user;
     const user = await prisma.user.create({data: {;
@@ -68,40 +40,7 @@ if ( {) {
     }
     console.error("Registration error:", error);
     return NextResponse.json(;
-=======
-    const hashed_password = await bcrypt.hash (password, 12),
-    // Create user;
-    const user = await prisma.user.create ({
-      data: {
-        name,
-        email,
-        password: hashed_password,
-        role: "user",
-        onboarding_completed: false}}),
-    // Remove password from response;
-    const { password: _, ...userWithoutPassword } = user,
-    return NextResponse.json (
-      {
-        message: "User created successfully",
-        user: userWithoutPassword;
-      },
-      { status: 201 }
-    );
-  } catch (error) {
-    // Check condition
-if ( {) {
-  $2
-}
-      return NextResponse.json (
-        { error: "Validation failed", details: error.errors },
-        { status: 400 }
-      );
-    }
-    console.error ("Registration error:", error);
-    return NextResponse.json (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       { error: "Internal server error" }
-=======
 import { NextRequest, NextResponse } from "next/server",;
 import bcrypt from "bcryptjs",;
 import { prisma } from "@/lib/prisma",;
@@ -154,7 +93,6 @@ export async function POST(request: NextRequest) {;
     console.error("Registration error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       { status: 500 }
     );
   }

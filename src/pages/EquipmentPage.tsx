@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -46,7 +44,6 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
 
 
 }
-<<<<<<< HEAD
 // Main export with error boundary
 export default function EquipmentPage() {
   return (
@@ -55,23 +52,7 @@ export default function EquipmentPage() {
     </EquipmentErrorBoundary>
   )
 }
-=======
 
-// Main export with error boundary;
-export default function EquipmentPage() {;
-  return (
-    <EquipmentErrorBoundary>;
-      <EquipmentPageContent />;
-    </EquipmentErrorBoundary>;
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 }
 // Main export with error boundary;
@@ -84,5 +65,3 @@ function EquipmentPage() {
       <EquipmentPageContent />;
     </EquipmentErrorBoundary>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

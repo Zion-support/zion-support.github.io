@@ -44,7 +44,7 @@ key={n}
               onClick={_() => setRating(n)}
               className={_(hover >= n || rating >= n) ? 'text-yellow-500' : 'text-gray-300'}
               aria-label={_`${n} stars`}
-            >★</button>
+            ></button>
           ))}
         </div>
         <div className=&quot;text-sm&quot;>
@@ -61,7 +61,7 @@ key={n}
         </div>
         <div className=&quot;flex justify-end gap-2&quot;>
           <button onClick={()=>onClose(false)} className=&quot;px-3 py-2 rounded border&quot;>Later</button>
-          <button onClick={submit} disabled={loading || rating<1} className=&quot;px-3 py-2 rounded bg-gray-900 text-white&quot;>{loading? 'Submitting…' : 'Submit'}</button>        </div>
+          <button onClick={submit} disabled={loading || rating<1} className=&quot;px-3 py-2 rounded bg-gray-900 text-white&quot;>{loading? 'Submitting' : 'Submit'}</button>        </div>
       </div>
     </div>
   )}

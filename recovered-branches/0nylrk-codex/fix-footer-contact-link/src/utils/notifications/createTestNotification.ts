@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { NotificationType  } from './types';
 import { createNotification } from './createNotification';
@@ -8,26 +7,14 @@ import { createNotification } from './createNotification';
 export async function createTestNotification(userId: string) {
   try {
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
-<<<<<<< HEAD
 
   const randomType = types[Math.floor(Math.random() * types.length)]
-=======
-  const randomType = types[Math && Math.floor(Math && Math.random() * types && types.length)],
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
   }
   const messages = {
-<<<<<<< HEAD
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!'
   }
-=======
-    'message': 'You have received a new message from a potential client && client.quote_request': 'A client has submitted a quote request for your services && services.booking_confirmation': 'Your booking has been confirmed and scheduled && scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details && details.onboarding': 'Complete your profile to get more visibility and job matches && matches.system': 'Our platform has been updated with new features. Check them out!'
-  };
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {NotificationType} from './types';
 import {create_notification} from './create_notification';
 /**;
@@ -47,7 +34,6 @@ function createTestNotification() {
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!';
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const actions = {
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
@@ -56,7 +42,6 @@ function createTestNotification() {
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
   }
-<<<<<<< HEAD
   return createNotification({
     userId;
     title: titles[randomType];
@@ -67,16 +52,4 @@ function createTestNotification() {
 
     actionText: actions[randomType].text
   })
-=======
-;
-  return create_notification ({
-    user_id;
-    title: titles[random_type];
-    message: messages[random_type];
-    type: random_type;
-    send_email: true;
-    action_url: actions[random_type].url,
-    action_text: actions[random_type].text;
-  });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

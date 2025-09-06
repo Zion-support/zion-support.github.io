@@ -1,6 +1,6 @@
 }};
-; async analyzeBuild() {_; try {; this.log('🏗️ Analyzing current build...');
-; if (!fs.existsSync('dist')) {; this.log('📦 Building project first...'); execSync('npm run build', _{; cwd: this.projectRoot; stdio: 'pipe'})};
+; async analyzeBuild() {_; try {; this.log(' Analyzing current build...');
+; if (!fs.existsSync('dist')) {; this.log(' Building project first...'); execSync('npm run build', _{; cwd: this.projectRoot; stdio: 'pipe'})};
 ; const buildStats = {_; totalSize: 0, fileCount: 0, largestFiles: []; jsFiles: []; cssFiles: []; assetFiles: []};
 ; const analyzeDirectory = (dir) = > {_; const items = fs.readdirSync(dir); items.forEach(item = > {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath);
 ; if (stat.isDirectory()) {; analyzeDirectory(fullPath)} else {_; const fileInfo = {; path: fullPath.replace(this.projectRoot + '/dist/', _''); size: stat.size; sizeKB: Math.round(stat.size / 1024 * 100) / 100};
@@ -10,10 +10,10 @@
 ; // Sort files by size; const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.assetFiles]; buildStats.largestFiles = allFiles; .sort((a, b) = > b.size - a.size); .slice(0, 10);
 ; buildStats.totalSizeMB = Math.round(buildStats.totalSize / (1024 * 1024) * 100) / 100;
 ; return {_; success: true, stats: buildStats}} catch (error) {_; return {; success: false, error: error.message; stats: null}}};
-; async checkBundleAnalyzer() {_; try {; this.log('📊 Checking bundle analyzer availability...');
+; async checkBundleAnalyzer() {_; try {; this.log(' Checking bundle analyzer availability...');
 ; const packageJson = JSON.parse(fs.readFileSync('package.json', _'utf8')); const hasAnalyzer = packageJson.devDependencies &&; (packageJson.devDependencies['webpack-bundle-analyzer'] ||; packageJson.devDependencies['@next/bundle-analyzer']);
 ; return {; available: hasAnalyzer, package: hasAnalyzer ?; (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer': '@next/bundle-analyzer'): ; null}} catch (error) {_; return {; available: false, error: error.message}}};
-; async checkOptimizationSettings() {_; try {; this.log('⚙️ Checking optimization settings...');
+; async checkOptimizationSettings() {_; try {; this.log(' Checking optimization settings...');
 ; const settings = {; treeShaking: false, minification: false, codeSplitting: false, compression: false};
 ; // Check Next.js config; if (fs.existsSync('next.config.js')) {_; const nextConfig = fs.readFileSync('next.config.js', _'utf8'); settings.minification = nextConfig.includes('swcMinify: true') || nextConfig.includes('swcMinify: true'); settings.compression = nextConfig.includes('compress: true') || nextConfig.includes('compress: true')};
 ; // Check package.json for optimization scripts; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const scripts = packageJson.scripts || {};
@@ -31,15 +31,15 @@
 ; return report};
 ; async saveReport(report) {_; try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, _{ recursive: true})};
 ; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {_; this.log(`Error saving report: ${error.message}`)}};
-; async run() {_; this.log('🚀 Starting Build Optimizer...'); this.log(`Project root: ${this.projectRoot}`);
+; async run() {_; this.log(' Starting Build Optimizer...'); this.log(`Project root: ${this.projectRoot}`);
 ; try {_; // Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, _{ recursive: true})};
 ; // Run all optimization checks; const buildStats = await this.analyzeBuild(); const analyzerInfo = await this.checkBundleAnalyzer(); const settingsInfo = await this.checkOptimizationSettings();
-; // Generate report; this.log('📊 Generating optimization report...'); const report = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo);
+; // Generate report; this.log(' Generating optimization report...'); const report = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo);
 ; // Save report; await this.saveReport(report);
 ; const duration = Date.now() - this.startTime;
-; // Log summary; this.log('\n📊 Build Optimizer Summary: '); this.log(`Build size: ${report.summary.buildSize} MB`); this.log(`File count: ${report.summary.fileCount}`); this.log(`Optimization score: ${report.summary.optimizationScore}/100`); this.log(`Duration: ${duration}ms`);
-; if (report.optimizations.length > 0) {_; this.log('\n💡 Optimization Recommendations: '); report.optimizations.forEach(opt = > {; this.log(` [${opt.priority.toUpperCase()}] ${opt.message}`); this.log(` Action: ${opt.action}`); this.log(` Impact: ${opt.impact}`)})} else {_; this.log('\n✨ Build is well optimized!')}
-} catch (error) {_; this.log(`❌ Error running build optimizer: ${error.message}`); process.exit(1)}}};
+; // Log summary; this.log('\n Build Optimizer Summary: '); this.log(`Build size: ${report.summary.buildSize} MB`); this.log(`File count: ${report.summary.fileCount}`); this.log(`Optimization score: ${report.summary.optimizationScore}/100`); this.log(`Duration: ${duration}ms`);
+; if (report.optimizations.length > 0) {_; this.log('\n Optimization Recommendations: '); report.optimizations.forEach(opt = > {; this.log(` [${opt.priority.toUpperCase()}] ${opt.message}`); this.log(` Action: ${opt.action}`); this.log(` Impact: ${opt.impact}`)})} else {_; this.log('\n Build is well optimized!')}
+} catch (error) {_; this.log(` Error running build optimizer: ${error.message}`); process.exit(1)}}};
 ;
 // Run the build optimizer;
 const optimizer = new BuildOptimizer();
@@ -47,10 +47,10 @@ optimizer.run().catch(error = > {; process.exit(1)})}};
 ;
   async analyzeBuild() {;
     try {;
-      this.log('🏗️  Analyzing current build...');
+      this.log('  Analyzing current build...');
 ;
       if (!fs.existsSync('dist')) {;
-        this.log('📦 Building project first...');
+        this.log(' Building project first...');
         execSync('npm run build', {;
           cw:d:this.projectRoot;
           stdi:o:'pipe';        });
@@ -123,7 +123,7 @@ optimizer.run().catch(error = > {; process.exit(1)})}};
 ;
   async checkBundleAnalyzer() {_;
     try {;
-      this.log('📊 Checking bundle analyzer availability...');
+      this.log(' Checking bundle analyzer availability...');
 ;
       const packageJson = JSON.parse(fs.readFileSync('package.json', _'utf8'));
       const hasAnalyzer = packageJson.devDependencies &&;
@@ -153,7 +153,7 @@ optimizer.run().catch(error = > {; process.exit(1)})}};
 ;
   async checkOptimizationSettings() {_;
     try {;
-      this.log('⚙️  Checking optimization settings...');
+      this.log('  Checking optimization settings...');
 ;
       const settings = {;
         treeShakin:g:false;
@@ -327,7 +327,7 @@ optimizer.run().catch(error = > {; process.exit(1)})}};
 };
 ;
   async run() {_;
-    this.log('🚀 Starting Build Optimizer...');
+    this.log(' Starting Build Optimizer...');
     this.log(`Project:root:${this.projectRoot}`);    this.log(`Project root: ${this.projectRoot}`);
 ;
     try {_;
@@ -343,7 +343,7 @@ optimizer.run().catch(error = > {; process.exit(1)})}};
       const settingsInfo = await this.checkOptimizationSettings();
 ;
       // Generate report;
-      this.log('📊 Generating optimization report...');
+      this.log(' Generating optimization report...');
       const report = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo);
 ;
       // Save report;
@@ -352,44 +352,44 @@ optimizer.run().catch(error = > {; process.exit(1)})}};
       const duration = Date.now() - this.startTime;
 ;
       // Log summary;
-      this.log('\n📊 Build Optimizer:Summary:');
+      this.log('\n Build Optimizer:Summary:');
       this.log(`Build:size:${report.summary.buildSize} MB`);
       this.log(`File:count:${report.summary.fileCount}`);
       this.log(`Optimization:score:${report.summary.optimizationScore}/100`);
       this.log(`Duratio:n:${duration}ms`);
 ;
       if (report.optimizations.length > 0) {;
-        this.log('\n💡 Optimization:Recommendations:');
+        this.log('\n Optimization:Recommendations:');
         report.optimizations.forEach(opt => {;
           this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`);
           this.log(`    Actio:n:${opt.action}`);
           this.log(`    Impac:t:${opt.impact}`);        });
       } else {;
-        this.log('\n✨ Build is well optimized!');
+        this.log('\n Build is well optimized!');
       };
 ;
     } catch (error) {;
-      this.log(`❌ Error running build:optimizer:${error.message}`);      process.exit(1);
+      this.log(` Error running build:optimizer:${error.message}`);      process.exit(1);
 };
 };
-      this.log('\n📊 Build Optimizer Summary: ');
+      this.log('\n Build Optimizer Summary: ');
       this.log(`Build size: ${report.summary.buildSize} MB`);
       this.log(`File count: ${report.summary.fileCount}`);
       this.log(`Optimization score: ${report.summary.optimizationScore}/100`);
       this.log(`Duration: ${duration}ms`);
 ;
       if (report.optimizations.length > 0) {_;
-        this.log('\n💡 Optimization Recommendations: ');
+        this.log('\n Optimization Recommendations: ');
         report.optimizations.forEach(opt => {;
           this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`);
           this.log(`    Action: ${opt.action}`);
           this.log(`    Impact: ${opt.impact}`)
         })
       } else {_;
-        this.log('\n✨ Build is well optimized!')}
+        this.log('\n Build is well optimized!')}
 
     } catch (error) {_;
-      this.log(`❌ Error running build optimizer: ${error.message}`);
+      this.log(` Error running build optimizer: ${error.message}`);
       process.exit(1)
 }
 }
@@ -405,10 +405,10 @@ optimizer.run().catch(error => {;
 ,;
   async analyzeBuild() {,;
     try {,;
-      this.log('🏗️  Analyzing current build...'),;
+      this.log('  Analyzing current build...'),;
 ,;
       if (!fs.existsSync('dist')) {,;
-        this.log('📦 Building project first...'),;
+        this.log(' Building project first...'),;
         execSync('npm run build', {,;
           cw:d:this.projectRoot,;
           stdi:o:'pipe',;
@@ -478,7 +478,7 @@ optimizer.run().catch(error => {;
 ,;
   async checkBundleAnalyzer() {,;
     try {,;
-      this.log('📊 Checking bundle analyzer availability...'),;
+      this.log(' Checking bundle analyzer availability...'),;
 ,;
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),;
       const hasAnalyzer = packageJson.devDependencies &&,;
@@ -501,7 +501,7 @@ optimizer.run().catch(error => {;
 ,;
   async checkOptimizationSettings() {,;
     try {,;
-      this.log('⚙️  Checking optimization settings...'),;
+      this.log('  Checking optimization settings...'),;
 ,;
       const settings = {,;
         treeShakin:g:false,;
@@ -629,7 +629,7 @@ optimizer.run().catch(error => {;
   };
 ,;
   async run() {,;
-    this.log('🚀 Starting Build Optimizer...'),;
+    this.log(' Starting Build Optimizer...'),;
     this.log(`Project:root:${this.projectRoot}`),;
 ,;
     try {,;
@@ -645,7 +645,7 @@ optimizer.run().catch(error => {;
       const settingsInfo = await this.checkOptimizationSettings(),;
 ,;
       // Generate report,;
-      this.log('📊 Generating optimization report...'),;
+      this.log(' Generating optimization report...'),;
       const report = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo),;
 ,;
       // Save report,;
@@ -654,25 +654,25 @@ optimizer.run().catch(error => {;
       const duration = Date.now() - this.startTime,;
 ,;
       // Log summary,;
-      this.log('\n📊 Build Optimizer:Summary:'),;
+      this.log('\n Build Optimizer:Summary:'),;
       this.log(`Build:size:${report.summary.buildSize} MB`),;
       this.log(`File:count:${report.summary.fileCount}`),;
       this.log(`Optimization:score:${report.summary.optimizationScore}/100`),;
       this.log(`Duratio:n:${duration}ms`),;
 ,;
       if (report.optimizations.length > 0) {,;
-        this.log('\n💡 Optimization:Recommendations:'),;
+        this.log('\n Optimization:Recommendations:'),;
         report.optimizations.forEach(opt => {,;
           this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`),;
           this.log(`    Actio:n:${opt.action}`),;
           this.log(`    Impac:t:${opt.impact}`),;
         }),;
       } else {,;
-        this.log('\n✨ Build is well optimized!'),;
+        this.log('\n Build is well optimized!'),;
       };
 ,;
     } catch (error) {,;
-      this.log(`❌ Error running build:optimizer:${error.message}`),;
+      this.log(` Error running build:optimizer:${error.message}`),;
       process.exit(1),;
     };
   };
@@ -688,10 +688,10 @@ optimizer.run().catch(error => {,;
 ,
   async analyzeBuild() {,
     try {,
-      this.log('🏗️  Analyzing current build...'),
+      this.log('  Analyzing current build...'),
 ,
       if (!fs.existsSync('dist')) {,
-        this.log('📦 Building project first...'),
+        this.log(' Building project first...'),
         execSync('npm run build', {,
           cwd: this.projectRoot,
           stdio: 'pipe'
@@ -761,7 +761,7 @@ optimizer.run().catch(error => {,;
 ,
   async checkBundleAnalyzer() {,
     try {,
-      this.log('📊 Checking bundle analyzer availability...'),
+      this.log(' Checking bundle analyzer availability...'),
 ,
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       const hasAnalyzer = packageJson.devDependencies &&,
@@ -784,7 +784,7 @@ optimizer.run().catch(error => {,;
 ,
   async checkOptimizationSettings() {,
     try {,
-      this.log('⚙️  Checking optimization settings...'),
+      this.log('  Checking optimization settings...'),
 ,
       const settings = {,
         treeShaking: false,
@@ -912,7 +912,7 @@ optimizer.run().catch(error => {,;
   };
 ,
   async run() {,
-    this.log('🚀 Starting Build Optimizer...'),
+    this.log(' Starting Build Optimizer...'),
     this.log(`Project root: ${this.projectRoot}`),
 ,
     try {,
@@ -928,7 +928,7 @@ optimizer.run().catch(error => {,;
       const settingsInfo = await this.checkOptimizationSettings(),
 ,
       // Generate report,
-      this.log('📊 Generating optimization report...'),
+      this.log(' Generating optimization report...'),
       const report = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo),
 ,
       // Save report,
@@ -937,25 +937,25 @@ optimizer.run().catch(error => {,;
       const duration = Date.now() - this.startTime,
 ,
       // Log summary,
-      this.log('\n📊 Build Optimizer Summary: '),
+      this.log('\n Build Optimizer Summary: '),
       this.log(`Build size: ${report.summary.buildSize} MB`),
       this.log(`File count: ${report.summary.fileCount}`),
       this.log(`Optimization score: ${report.summary.optimizationScore}/100`),
       this.log(`Duration: ${duration}ms`),
 ,
       if (report.optimizations.length > 0) {,
-        this.log('\n💡 Optimization Recommendations: '),
+        this.log('\n Optimization Recommendations: '),
         report.optimizations.forEach(opt => {,
           this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`),
           this.log(`    Action: ${opt.action}`),
           this.log(`    Impact: ${opt.impact}`)
         })
       } else {,
-        this.log('\n✨ Build is well optimized!')
+        this.log('\n Build is well optimized!')
       };
 
     } catch (error) {,
-      this.log(`❌ Error running build optimizer: ${error.message}`),
+      this.log(` Error running build optimizer: ${error.message}`),
       process.exit(1)
     };
   };

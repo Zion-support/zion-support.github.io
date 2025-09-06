@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -25,8 +20,6 @@ interface JobMatchProps {
   onApply?: (matchId: string) => void;
   onViewDetails?: (matchId: string) => void;
   onInvite?: (matchId: string) => void
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   talentId, ;
   name, ;
   title, ;
@@ -35,7 +28,6 @@ interface JobMatchProps {
   location, ;
   category, ;
   matchPercent, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
@@ -50,11 +42,6 @@ interface JobMatchProps {
 
 }
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   talent_id,
   name,
   title,
@@ -65,5 +52,3 @@ interface JobMatchProps {
   match_percent,
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

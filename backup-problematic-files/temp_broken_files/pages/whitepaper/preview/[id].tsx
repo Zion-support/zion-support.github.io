@@ -18,7 +18,7 @@ export default function WhitepaperPreview() {;
   }, [id]),;
 ;
   if (notFound) return <div className="container mx-auto px-4 py-6">Preview not available or expired.</div>,;
-  if (!markdown) return <div className="container mx-auto px-4 py-6">Loading…</div>,;
+  if (!markdown) return <div className="container mx-auto px-4 py-6">Loading</div>,;
 ;
   return (;
     <div className="container mx-auto px-4 py-6">;

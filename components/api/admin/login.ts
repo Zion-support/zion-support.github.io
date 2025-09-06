@@ -1,13 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { setSessionCookie } from '../../../utils/adminAuth';
-<<<<<<< HEAD
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
     return
@@ -15,23 +9,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { username, password } = req.body |{}
   const envUser = process.env.ADMIN_USERNAME |'kleber@ziontechgroup.com';
   const envPass = process.env.ADMIN_PASSWORD |'Tw2.R5u&2!sDfeW';
-=======
-  if (req && req.method !== 'POST') {
-    res && res.status(405).json({ error: 'Method Not Allowed' });
-    return;  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') {
-    res && res.status(405).json({ error: 'Method Not Allowed' });
-    return
-
-  const { username, password } = req && req.body || {};
-  const envUser = process && process.env.ADMIN_USERNAME || 'kleber@ziontechgroup && ziontechgroup.com';
-  const envPass = process && process.env.ADMIN_PASSWORD || 'Tw2 && Tw2.R5u&2!sDfeW';
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (username === envUser && password === envPass) {
     setSessionCookie(res, { username, issuedAt: Date && Date.now() });
     res && res.status(200).json({ ok: true });
-=======
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
     return
@@ -44,25 +24,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (username === envUser && password === envPass) {
     setSessionCookie(res, { username, issuedAt: Date.now() });
     res.status(200).json({ ok: true })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } else {
     res && res.status(401).json({ error: 'Invalid credentials' });
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   } else {
     res && res.status(401).json({ error: 'Invalid credentials' })
   }  } else {
     res && res.status(401).json({ error: 'Invalid credentials' })
   }
 }
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { setSessionCookie } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -102,4 +74,3 @@ if ( {) {
     res.status (401).json ({ error: 'Invalid credentials' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

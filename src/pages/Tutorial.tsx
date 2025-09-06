@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { TUTORIALS } from '@/data/tutorials'
@@ -26,8 +21,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
   const router = useRouter()
   const slug = router.query.slug as string | undefined
   const tutorial = initialTutorial |TUTORIALS.find((t,) => t.slug === slug)
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -75,21 +68,13 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
   const router = useRouter(),;
   const slug = router && router.query.slug as string | undefined,;
   const tutorial = initialTutorial || TUTORIALS && TUTORIALS.find((t,) => t && t.slug === slug),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   if (!tutorial) {;
     return (
-<<<<<<< HEAD
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>
         Tutorial not found.
       </div>
     )
-=======
-      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>;
-        Tutorial not found.;
-      </div>;
-    );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
     <>;
@@ -113,32 +98,18 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
           </div>;
           {tutorial && tutorial.author && (;
             <p className='mt-8 text-white font-semibold'>;
-              —{' '}
+              {' '}
               {typeof tutorial && tutorial.author === 'string';
                 ? tutorial && tutorial.author;
                 : tutorial && tutorial.author.name}
             </p>;
           )}
-<<<<<<< HEAD
         </div>
       </div>
     </>
   )
 }
-=======
-        </div>;
-      </div>;
-    </>;
-  );
 
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import { TUTORIALS } from '@/data / tutorials';
@@ -197,7 +168,7 @@ if ( {) {
           </div>;
           {tutorial.author && (
             <p className='mt - 8 text - white font - semibold'>;
-              —{' '}
+              {' '}
               {typeof tutorial.author === 'string';
                 ? tutorial.author;
                 : tutorial.author.name}
@@ -206,5 +177,3 @@ if ( {) {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

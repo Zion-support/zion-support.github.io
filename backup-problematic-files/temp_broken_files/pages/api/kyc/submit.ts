@@ -50,7 +50,7 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
 ;
   const ip = ((req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || '').split()[0].trim(),;
   if (ip) {;
-    // naive duplicate IP heuristic:more than 2 submissions from same IP → flag;
+    // naive duplicate IP heuristic:more than 2 submissions from same IP  flag;
     const sameIpCount = Object.values(db).filter((p) =>;
       (p.auditTrail || []).some((a) => a.action === 'kyc_submitted' && (a.details as any)?.ip === ip);
     ).length,;

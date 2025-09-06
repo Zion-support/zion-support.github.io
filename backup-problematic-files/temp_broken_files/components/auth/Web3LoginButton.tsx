@@ -43,7 +43,7 @@ export default function Web3LoginButton() {
   },
 
   if (user) {
-    const base = displayName || `${user.address.slice(0, 6)}…${user.address.slice(-4)}`,
+    const base = displayName || `${user.address.slice(0, 6)}${user.address.slice(-4)}`,
     return (
       <div className=&quot;flex items-center gap-2&quot;>
         <span className=&quot;hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5&quot;>Web3 Verified</span>

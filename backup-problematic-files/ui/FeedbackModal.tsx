@@ -44,7 +44,7 @@ export default function FeedbackModal({;
               onClick={() => setRating(n)}
               className={(hover >= n || rating >= n) ? 'text-yellow-500' : 'text-gray-300'}
               aria-label={`${n} stars`}
-            >★</button>;
+            ></button>;
           ))}
         </div>
         <div className="text-sm">
@@ -61,7 +61,7 @@ export default function FeedbackModal({;
         </div>
         <div className="flex justify-end gap-2">
           <button onClick={()=>onClose(false)} className="px-3 py-2 rounded border">Later</button>
-          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
+          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting' : 'Submit'}</button>
         </div>
       </div>
     </div>

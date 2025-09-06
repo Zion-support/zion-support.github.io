@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from 'lucide-react'
-<<<<<<< HEAD
 export function EnterpriseCTA() {
   return (
     <section id='contact' className='py-20 px-4 md:px-6'>
@@ -73,10 +65,6 @@ export function EnterpriseCTA() {
                   <li className="flex gap-3">
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <span className="text-primary text-sm font-medium">4</span>
-=======
-import { Calendar } from 'lucide-react';
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export function EnterpriseCTA() {
   return (
     <section id="contact" className="py-20 px-4 md: px-6">
@@ -136,11 +124,8 @@ export function EnterpriseCTA() {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   )
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react';
@@ -259,7 +244,6 @@ export function EnterpriseCTA() {;
                       <span className="text-primary text-sm font-medium">4</span>;
                     </div>;
                     <p>Free consultation on implementation</p>;
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Calendar, ArrowRight } from 'lucide-react';
@@ -383,7 +367,6 @@ function EnterpriseCTA() {
                       <span className="text - primary text - sm font - medium">4</span>;
                     </div>;
                     <p > Free consultation on implementation</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </li>;
                 </ul>;
               </div>;
@@ -391,16 +374,10 @@ function EnterpriseCTA() {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </section>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

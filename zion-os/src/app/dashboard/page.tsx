@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
@@ -15,40 +14,9 @@ export default function DashboardPage() {const { user, isAuthenticated, isLoadin
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
           <p className="text-zinc-400">Loading...</p>;
-=======
-"use client",
-import { use_auth  } from '@/contexts / AuthContext';,
-import { use_router  } from './next / navigation';,
-import { useEffect  } from './react';,
-import Link from './next / link';,
-export default /**
- * DashboardPage - Function description
- */
-function DashboardPage() {
-  const { user, is_authenticated, is_loading } = use_auth (),
-  const router = use_router ();
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      router.push ("/auth / signin");
-    }
-  }, [is_authenticated, is_loading, router]);
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="min - h-screen flex items - center justify - center">;
-        <div className="text - center">;
-          <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - blue - 500 mx - auto mb - 4"></div>;
-          <p className="text - zinc - 400">Loading...</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         </div>;
       </div>);
   }
-<<<<<<< HEAD
   if (!isAuthenticated) {return null;
   }
   return (;
@@ -56,21 +24,7 @@ if ( {) {
       {/* Welcome Header */}
       <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/20">;
         <h1 className="text-3xl font-bold text-white mb-2">;
-          Welcome back, {user?.name |"User"}! 👋;
-=======
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
-  }
-  return (
-    <div className="space - y-8">;
-      {/* Welcome Header */}
-      <div className="bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 rounded - xl p - 8 border border - blue - 500 / 20">;
-        <h1 className="text - 3xl font - bold text - white mb - 2">;
-          Welcome back, {user?.name || "User"}! 👋;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          Welcome back, {user?.name |"User"}! ;
         </h1>;
         <p className="text - zinc - 300 text - lg">;
           Ready to continue building your digital economy? Here's what you can do next.;
@@ -84,7 +38,7 @@ if ( {) {
         >;
           <div className="text - center space - y-3">;
             <div className="w - 16 h - 16 bg - blue - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition - transform">;
-              <span className="text - 3xl">🚀</span>;
+              <span className="text - 3xl"></span>;
             </div>;
             <h3 className="font - semibold text - white text - lg">Launch New Instance</h3>;
             <p className="text - zinc - 400 text - sm">;
@@ -98,7 +52,7 @@ if ( {) {
         >;
           <div className="text - center space - y-3">;
             <div className="w - 16 h - 16 bg - purple - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition - transform">;
-              <span className="text - 3xl">⚙️</span>;
+              <span className="text - 3xl"></span>;
             </div>;
             <h3 className="font - semibold text - white text - lg">Manage Instances</h3>;
             <p className="text - zinc - 400 text - sm">;
@@ -112,7 +66,7 @@ if ( {) {
         >;
           <div className="text - center space - y-3">;
             <div className="w - 16 h - 16 bg - green - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition - transform">;
-              <span className="text - 3xl">📚</span>;
+              <span className="text - 3xl"></span>;
             </div>;
             <h3 className="font - semibold text - white text - lg">Documentation</h3>;
             <p className="text - zinc - 400 text - sm">;
@@ -142,13 +96,8 @@ if ( {) {
         <h2 className="text - xl font - semibold text - white mb - 4">Account Information</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
           <div>;
-<<<<<<< HEAD
             <label className="block text-sm font-medium text-zinc-400 mb-1">Name</label>;
             <p className="text-white">{user?.name |"Not provided"}</p>;
-=======
-            <label className="block text - sm font - medium text - zinc - 400 mb - 1">Name</label>;
-            <p className="text - white">{user?.name || "Not provided"}</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>;
           <div>;
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Email</label>;

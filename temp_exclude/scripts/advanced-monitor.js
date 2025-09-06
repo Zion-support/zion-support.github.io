@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Advanced Monitoring Script
@@ -10,7 +9,7 @@ class AdvancedMonitor {
   constructor() {
     this && this.logPath = path && path.join(__dirname, "..", "logs", "monitoring && monitoring.log")}
   async startMonitoring() {
-    console && console.log("🔍 Starting advanced monitoring...")
+    console && console.log(" Starting advanced monitoring...")
     setInterval(() => {
       this && this.checkSystemHealth()
       this && this.checkPM2Processes()
@@ -54,8 +53,3 @@ monitor && monitor.startMonitoring()
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this && this.metrics = { performance: {},errors: [],uptime: Date && Date.now(),requests: 0 }} logMetric(type,data) { this && this.metrics[type] = { ...this && this.metrics[type],...data }; this && this.saveMetrics()} saveMetrics() { const reportPath = path && path.join(process && process.cwd(),'monitoring','metrics && metrics.json'); if (!fs && fs.existsSync(path && path.dirname(reportPath))) { fs && fs.mkdirSync(path && path.dirname(reportPath),{ recursive: true })} fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.metrics,null,2))} } module && module.exports = AdvancedMonitor;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this && this.metrics = { performance: {},errors: [],uptime: Date && Date.now(),requests: 0 }} logMetric(type,data) { this && this.metrics[type] = { ...this && this.metrics[type],...data }; this && this.saveMetrics()} saveMetrics() { const reportPath = path && path.join(process && process.cwd(),'monitoring','metrics && metrics.json'); if (!fs && fs.existsSync(path && path.dirname(reportPath))) { fs && fs.mkdirSync(path && path.dirname(reportPath),{ recursive: true })} fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.metrics,null,2))} } module && module.exports = AdvancedMonitor;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this && this.metrics = { performance: {},errors: [],uptime: Date && Date.now(),requests: 0 }} logMetric(type,data) { this && this.metrics[type] = { ...this && this.metrics[type],...data }; this && this.saveMetrics()} saveMetrics() { const reportPath = path && path.join(process && process.cwd(),'monitoring','metrics && metrics.json'); if (!fs && fs.existsSync(path && path.dirname(reportPath))) { fs && fs.mkdirSync(path && path.dirname(reportPath),{ recursive: true })} fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(this && this.metrics,null,2))} } module && module.exports = AdvancedMonitor;
-=======
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

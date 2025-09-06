@@ -102,10 +102,10 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {;
         )}
         <div className="space-y-3">
           <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">
-            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
+            {loading ? 'Connecting' : 'Connect MetaMask / WalletConnect'}
           </button>
           <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
-            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
+            {loading ? 'Connecting' : 'Connect Phantom (Solana)'}
           </button>
         </div>
         <div className="mt-4 flex justify-end">
@@ -128,10 +128,10 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {;
         )}
         <div className="space-y-3">;
           <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">;
-            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
+            {loading ? 'Connecting' : 'Connect MetaMask / WalletConnect'}
           </button>;
           <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">;
-            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
+            {loading ? 'Connecting' : 'Connect Phantom (Solana)'}
           </button>;
         </div>;
         <div className="mt-4 flex justify-end">;

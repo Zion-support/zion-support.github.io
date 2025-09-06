@@ -5,7 +5,6 @@ interface UseIntersectionObserverProps {
   root_margin?: string;
   freezeOnceVisible?: boolean;
 }
-<<<<<<< HEAD
 export function useIntersectionObserver({
 
   threshold = 0;
@@ -21,15 +20,9 @@ export function useIntersectionObserver({
     setEntry(entry)
   }
   useEffect(() => {
-<<<<<<< HEAD
     const hasIOSupport = !!window.IntersectionObserver;
     if (!hasIOSupport |frozen |!node) return;
     const observerParams = { threshold, root, rootMargin }
-=======
-    const hasIOSupport = !!window && window.IntersectionObserver;
-    if (!hasIOSupport || frozen || !node) return;
-    const observerParams = { threshold, root, rootMargin };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const currentObserver = new IntersectionObserver(updateEntry, observerParams);
     observer && observer.current = currentObserver;
     currentObserver && currentObserver.observe(node);
@@ -49,7 +42,6 @@ export function useIntersectionObserver({
   }, [node]);
 
   return [setNode, entry] as const
-=======
 export /**
  * useIntersectionObserver - Function description
  */
@@ -92,5 +84,4 @@ if ( {) {
     prev_node.current = node;
   }, [node]);
   return [set_node, entry] as const;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

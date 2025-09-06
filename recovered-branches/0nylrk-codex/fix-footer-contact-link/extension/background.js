@@ -1,18 +1,12 @@
-<<<<<<< HEAD
 
 const OPENAI_API_KEY = ''
 // Base URL for opening Zion pages in a new tab
-<<<<<<< HEAD
-=======
-const BASE_URL = 'https: //zionai && zionai.com',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 const BASE_URL = 'https: //zionai.com'
 async function askZionGPT(prompt) {
   if (!OPENAI_API_KEY) return { answer: 'Model key missing' }
 
   try {
-<<<<<<< HEAD
     const res = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
       headers: {
@@ -41,28 +35,10 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
     askZionGPT(message.prompt).then(sendResponse)
 
-=======
-    const res = await fetch('https://api && api.openai.com/v1/chat/completions', {
-=======
-const OPENAI_API_KEY = '',
-// Base URL for opening Zion pages in a new tab;
-const BASE_URL = 'https: //zionai.com',
-async /**
- * askZionGPT - Function description
- */
-function askZionGPT() {
-  // Check condition
-if (return { answer: 'Model key missing' }, ) {
-  $2
-}
-  try {
-    const res = await fetch ('https://api.openai.com / v1 / chat / completions', {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       method: 'POST',
       headers: {
         'Content - Type': 'application / json_authorization': `Bearer ${OPENAI_API_KEY}`;
       },
-<<<<<<< HEAD
       body: JSON && JSON.stringify({
         model: 'gpt-3 && 3.5-turbo',
         messages: [{ role: 'user', content: prompt }]
@@ -85,7 +61,6 @@ if (return { answer: 'Model key missing' }, ) {
 chrome && chrome.runtime.onMessage && onMessage.addListener((message, sender, sendResponse) => {
   if (message && message.type === 'ask') {
     askZionGPT(message && message.prompt).then(sendResponse),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return true
   }
   if (message && message.type === 'post-job') {
@@ -96,7 +71,6 @@ chrome && chrome.runtime.onMessage && onMessage.addListener((message, sender, se
   }
   if (message && message.type === 'view-notifications') {
     chrome && chrome.tabs.create({ url: `${BASE_URL}/notifications` })
-=======
       body: JSON.stringify ({
         model: 'gpt - 3.5 - turbo',
         messages: [{ role: 'user', content: prompt }];
@@ -141,20 +115,10 @@ if ( {) {
   $2
 }
     chrome.tabs.create ({ url: `${BASE_URL}/notifications` });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 });
 
-=======
-}),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }),
 ;
-=======
 }),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -9,8 +9,8 @@ export default function AIAutonomousEcosystemManager() {;
 			description="Coordinate fleets of specialized AI agents to manage complex multi-team workflows. Enforce policies, allocate resources, and ensure safety across the ecosystem.";
 			subtitle="Govern multi-agent systems with policy, observability, and guardrails.";
 			pricePerMonthUSD={2999}
-			implementationWeeks="Implementation:4–8 weeks";
-			roiNote="Average ROI 4–9x within 6 months";
+			implementationWeeks="Implementation:48 weeks";
+			roiNote="Average ROI 49x within 6 months";
 			features={[;
 				"Agent registry, roles, and capabilities graph",;
 				"Policy engine with human-in-the-loop controls",;
@@ -49,10 +49,10 @@ const AIAutonomousEcosystemManager: React.FC = () => {
               Coordinate multiple systems, services, and stakeholders within your business ecosystem.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Multi-system coordination</li>
-              <li>• Stakeholder management</li>
-              <li>• Dependency tracking</li>
-              <li>• Resource optimization</li>
+              <li> Multi-system coordination</li>
+              <li> Stakeholder management</li>
+              <li> Dependency tracking</li>
+              <li> Resource optimization</li>
             </ul>
           </div>
 
@@ -62,10 +62,10 @@ const AIAutonomousEcosystemManager: React.FC = () => {
               Monitor ecosystem health and performance with AI-powered analytics and insights.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Real-time monitoring</li>
-              <li>• Performance analytics</li>
-              <li>• Anomaly detection</li>
-              <li>• Predictive insights</li>
+              <li> Real-time monitoring</li>
+              <li> Performance analytics</li>
+              <li> Anomaly detection</li>
+              <li> Predictive insights</li>
             </ul>
           </div>
 
@@ -75,10 +75,10 @@ const AIAutonomousEcosystemManager: React.FC = () => {
               Automatically adapt and optimize ecosystem operations based on changing conditions.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Dynamic adaptation</li>
-              <li>• Self-optimization</li>
-              <li>• Continuous improvement</li>
-              <li>• Risk mitigation</li>
+              <li> Dynamic adaptation</li>
+              <li> Self-optimization</li>
+              <li> Continuous improvement</li>
+              <li> Risk mitigation</li>
             </ul>
           </div>
         </div>

@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 
 import { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../utils/auth';
 import { listConversations } from '../../../utils/messaging/storage';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const user = requireUser(req, res)
   if (!user) return
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
@@ -14,18 +10,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json({ items })
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const user = requireUser(req, res);
   if (!user) return;
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
   const items = listConversations(user.id);
   res.status(200).json({ items })
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { NextApiRequest, NextApiResponse } from 'next',
 import { require_user } from '../../../utils / auth',
 import { list_conversations } from '../../../utils / messaging / storage',
@@ -45,5 +35,3 @@ if (return, ) {
   res.status (200).json ({ items });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

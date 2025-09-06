@@ -1,5 +1,4 @@
 import {
-<<<<<<< HEAD
   EnvelopeIcon
   PhoneIcon
   MapPinIcon
@@ -7,15 +6,6 @@ import {
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline'
 const contactMethods = [
-=======
-  EnvelopeIcon,
-  PhoneIcon,
-  MapPinIcon,
-  ClockIcon,
-  ChatBubbleLeftRightIcon;
-} from '@heroicons / react / 24 / outline';
-const contact_methods = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     name: 'Email'
     description: 'Get in touch with our team'
@@ -23,7 +13,6 @@ const contact_methods = [;
     href: 'mailto:contact@ziontechgroup.com'
     icon: EnvelopeIcon}
   {
-<<<<<<< HEAD
     name: 'Phone'
     description: 'Speak with an expert'
     value: '+1 (555) 123-4567'
@@ -55,66 +44,19 @@ const officeLocations = [
     email: 'tokyo@ziontechgroup.com'
     hours: 'Mon-Fri: 9:00 AM - 6:00 PM JST'}]
 const faqs = [
-=======
-    name: 'Phone',
-    description: 'Speak with an expert',
-    value: '+1 (555) 123 - 4567',
-    href: 'tel:+15551234567',
-    icon: PhoneIcon},
-  {
-    name: 'Office',
-    description: 'Visit our headquarters',
-    value: '1234 Innovation Drive, Silicon Valley, CA 94025',
-    href: '#',
-    icon: MapPinIcon}];
-const office_locations = [;
-  {
-    name: 'Silicon Valley',
-    address: '1234 Innovation Drive, San Jose, CA 94025',
-    phone: '+1 (555) 123 - 4567',
-    email: 'sv@ziontechgroup.com',
-    hours: 'Mon - Fri: 9:00 AM - 6:00 PM PST'},
-  {
-    name: 'London',
-    address: '456 Tech Square, London, UK EC2A 4BX',
-    phone: '+44 20 1234 5678',
-    email: 'london@ziontechgroup.com',
-    hours: 'Mon - Fri: 9:00 AM - 6:00 PM GMT'},
-  {
-    name: 'Tokyo',
-    address: '789 Innovation Tower, Tokyo, Japan 100 - 0001',
-    phone: '+81 3 1234 5678',
-    email: 'tokyo@ziontechgroup.com',
-    hours: 'Mon - Fri: 9:00 AM - 6:00 PM JST'}];
-const faqs = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     question: 'What industries do you serve?'
     answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'}
   {
-<<<<<<< HEAD
     question: 'How long does implementation take?'
     answer: 'Implementation timelines vary depending on the complexity of your project. Simple integrations can take 2-4 weeks, while complex enterprise solutions typically take 3-6 months.'}
-=======
-    question: 'How long does implementation take?',
-    answer: 'Implementation timelines vary depending on the complexity of your project. Simple integrations can take 2 - 4 weeks, while complex enterprise solutions typically take 3 - 6 months.'},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     question: 'Do you provide ongoing support?'
     answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
   {
-<<<<<<< HEAD
     question: 'What security measures do you have?'
     answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
 export default function ContactPage() {
-=======
-    question: 'What security measures do you have?',
-    answer: 'We implement enterprise - grade security including end - to - end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}];
-export default /**
- * ContactPage - Function description
- */
-function ContactPage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className=&quot;bg - black & quot;>;
       {/* Hero section */}
@@ -123,7 +65,6 @@ function ContactPage() {
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               Get in{' '}
-<<<<<<< HEAD
               <span className=&quot;bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent&quot;>
                 Touch
               </span>
@@ -135,19 +76,6 @@ function ContactPage() {
           </div>
         </div>
       </div>
-=======
-              <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
-                Touch;
-              </span>;
-            </h1>;
-            <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-              Ready to transform your business with AI? Let's discuss how our cutting - edge;
-              technology can accelerate your growth and innovation.;
-            </p>;
-          </div>;
-        </div>;
-      </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Contact methods */}
       <div className=&quot;mx - auto max - w-7xl px - 6 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
@@ -163,7 +91,6 @@ function ContactPage() {
                 <dt className=&quot;flex items - center gap - x-3 text - base font - semibold leading - 7 text - white & quot;>;
                   <method.icon className=&quot;h - 5 w - 5 flex - none text - blue - 400 & quot; aria - hidden=&quot;true & quot; />;
                   {method.name}
-<<<<<<< HEAD
                 </dt>
                 <dd className=&quot;mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300&quot;>
                   <p className=&quot;flex-auto&quot;>{method.description}</p>
@@ -172,27 +99,12 @@ function ContactPage() {
                       href={method.href}
                       className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
                     >
-                      {method.value} <span aria-hidden=&quot;true&quot;>→</span>
+                      {method.value} <span aria-hidden=&quot;true&quot;></span>
                     </Link>
                   </p>
                 </dd>
               </div>
             ))}
-=======
-                </dt>;
-                <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
-                  <p className=&quot;flex - auto & quot;>{method.description}</p>;
-                  <p className=&quot;mt - 6&quot;>;
-                    <a;
-                      href={method.href}
-                      className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
-                    >;
-                      {method.value} <span aria - hidden=&quot;true & quot;>→</span>;
-                    </Link>;
-                  </p>;
-                </dd>;
-              </div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </dl>;
         </div>;
       </div>;
@@ -272,7 +184,6 @@ function ContactPage() {
                     name=&quot;message & quot;
                     id=&quot;message & quot;
                     rows={4}
-<<<<<<< HEAD
                     className=&quot;block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6&quot;
                     defaultValue={''}
                   />
@@ -290,25 +201,6 @@ function ContactPage() {
           </form>
         </div>
       </div>
-=======
-                    className=&quot;block w - full rounded - md border - 0 bg - white / 5 px - 3.5 py - 2 text - white shadow - sm ring - 1 ring - inset ring - white / 10 focus:ring - 2 focus:ring - inset focus:ring - blue - 500 sm:text - sm sm:leading - 6&quot;
-                    default_value={''}
-                  />;
-                </div>;
-              </div>;
-            </div>;
-            <div className=&quot;mt - 8 flex justify - end & quot;>;
-              <button;
-                type=&quot;submit & quot;
-                className=&quot;rounded - md bg - blue - 600 px - 3.5 py - 2.5 text - center text - sm font - semibold text - white shadow - sm hover:bg - blue - 500 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - blue - 600 transition - all duration - 200 hover:scale - 105 & quot;
-              >;
-                Send message;
-              </button>;
-            </div>;
-          </form>;
-        </div>;
-      </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Office locations */}
       <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
@@ -386,7 +278,7 @@ function ContactPage() {
               Explore Solutions;
             </Link>;
             <a href=&quot;/about & quot; className=&quot;text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration - 200 & quot;>;
-              Learn More <span aria - hidden=&quot;true & quot;>→</span>;
+              Learn More <span aria - hidden=&quot;true & quot;></span>;
             </Link>;
           </div>;
         </div>;

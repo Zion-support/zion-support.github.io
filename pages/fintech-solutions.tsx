@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function FintechSolutions() {
@@ -10,8 +9,8 @@ export default function FintechSolutions() {
 			description="AI solutions for fraud detection, risk scoring, KYC/AML automation, and real-time decisioning. Improve compliance and customer experience across the lifecycle."
 			subtitle="Smarter finance with lower risk and faster time to yes."
 			pricePerMonthUSD={2799}
-			implementationWeeks="Implementation: 4–8 weeks"
-			roiNote="Reduce fraud loss 15–35% and manual review by 30–50%"
+			implementationWeeks="Implementation: 48 weeks"
+			roiNote="Reduce fraud loss 1535% and manual review by 3050%"
 			features={[
 				"Transaction anomaly detection and entity resolution"
 				"Credit risk models with explainability"
@@ -25,14 +24,7 @@ export default function FintechSolutions() {
 			canonical="https: //ziontechgroup.com/fintech-solutions"
 		/>
 	)
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -46,8 +38,8 @@ return (
   description="AI solutions for fraud detection, risk scoring, KYC / AML automation, and real - time decisioning. Improve compliance and customer experience across the lifecycle.";
   subtitle="Smarter finance with lower risk and faster time to yes.";
   pricePerMonthUSD={2799}
-    implementation_weeks="Implementation: 4–8 weeks";
-  roi_note="Reduce fraud loss 15–35% and manual review by 30–50%";
+    implementation_weeks="Implementation: 48 weeks";
+  roi_note="Reduce fraud loss 1535% and manual review by 3050%";
   features={[;
     "Transaction anomaly detection and entity resolution",
     "Credit risk models with explainability",
@@ -60,5 +52,3 @@ return (
     canonical="https: //ziontechgroup.com / fintech - solutions";
   />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

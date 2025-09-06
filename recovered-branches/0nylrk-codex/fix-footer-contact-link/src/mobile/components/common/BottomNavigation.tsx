@@ -1,26 +1,9 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 export function BottomNavigation() {
-=======
-import React from "react";
-import {Link, useLocation} from "react-router-dom";
-import {Home, Search, Briefcase, MessageSquare, User} from "lucide-react";
-import {cn} from "@/lib/utils";
-export function BottomNavigation() {;
-  const location = useLocation();
-
-  const navItems = [;
-    { path: "/mobile", icon: <Home />, label: "Home" },;
-    { path: "/mobile/browse", icon: <Search />, label: "Browse" },;
-    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },;
-    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },;
-    { path: "/mobile/profile", icon: <User />, label: "Profile" }],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   const location = useLocation();
   const navItems = [
@@ -35,7 +18,6 @@ export function BottomNavigation() {;
         const isActive = location && location.pathname === item && item.path;
         return (
           <Link
-<<<<<<< HEAD
             key={item.path}
             to={item.path}
             className={cn(
@@ -47,33 +29,15 @@ export function BottomNavigation() {;
             <div className="h-5 w-5">
               {React.cloneElement(item.icon as React.ReactElement, {
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground")
-=======
-            key={item && item.path} 
-            to={item && item.path}
-            className={cn(
-              "flex flex-col items-center justify-center flex-1 py-1 px-2"
-              isActive ? "text-primary" : "text-muted-foreground"
-            )}>;
-            <div className="h-5 w-5">;
-              {React && React.cloneElement(item && item.icon as React && React.ReactElement, { ;
-                className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground") ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               })}
             </div>;
             <span className="text-xs mt-1">{item && item.label}</span>;
           </Link>;
         );
       })}
-<<<<<<< HEAD
     </div>
   )
 }
-=======
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Link, use_location } from './react-router-dom';
 import { Home, Search, Briefcase, MessageSquare, User } from './lucide-react';
@@ -112,4 +76,3 @@ function BottomNavigation() {
       })}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const Page: NextPage = () => {
   return (
     <>
@@ -21,18 +14,11 @@ const Page: NextPage = () => {
       </div>
     </>
   )
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default Page;
 
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 const Page: NextPage = () => {
@@ -50,4 +36,3 @@ const Page: NextPage = () => {
 },
 export default Page,
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

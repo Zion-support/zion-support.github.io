@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -34,15 +33,12 @@ const features = [;
     description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',;
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import {Cloud,, Server,, Database,, Shield,, Zap} from 'lucide-react';
 import React from 'react';
@@ -233,38 +229,6 @@ const benefits = [;
   'Faster time-to-market for applications';
 ];
 export default function CloudDevOpsServices() {;
-=======
-const features = [
-  {
-    icon: Cloud,
-    title: 'Cloud Migration',
-    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
-    benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
-    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
-    benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
-  },
-  {
-    icon: GitBranch,
-    title: 'CI/CD Pipelines',
-    description: 'Automated build, test, and deployment processes'
-  },
-  {
-    icon: Shield,
-    title: 'Security & Compliance',
-    description: 'Enterprise-grade security and compliance frameworks'
-  },
-  {
-    icon: Zap,
-    title: 'Performance Optimization',
-    description: 'Optimized cloud resources for maximum performance'
-  },
-  {
-    icon: CheckCircle,
-    title: 'Monitoring & Alerting',
-    description: '24/7 monitoring and proactive alerting systems'
-  }
-];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -277,7 +241,6 @@ const tools = [
   { name: 'Prometheus', description: 'Monitoring and alerting' }
 ];
 
-<<<<<<< HEAD
 export default function CloudDevOpsPage() {;
 const benefits = [;
   'Reduced infrastructure costs by up to 50%',;
@@ -288,9 +251,6 @@ const benefits = [;
   'Faster time-to-market for applications';
 ];
 export default function CloudDevOpsServices() {;
-=======
-export default function CloudDevOpsPage() {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
@@ -322,7 +282,6 @@ export default function CloudDevOpsPage() {
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-16">;
@@ -388,37 +347,6 @@ export default function CloudDevOpsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </button>;
               </div>;
-=======
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Cloud & DevOps Solutions
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive cloud and DevOps services designed to modernize your infrastructure
-                and accelerate your development processes.
-              </p>
-            </motion.div>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                    <feature.icon className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
         {/* Tools Section */}
         <section className="py-16 bg-white">
@@ -486,7 +414,6 @@ export default function CloudDevOpsPage() {
                   <p className="text-gray-600">{phase.description}</p>
                 </motion.div>
               ))}
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -549,34 +476,5 @@ export default function CloudDevOpsPage() {
     </Layout>;
     </>;
     </Layout>;
-=======
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gray-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Infrastructure?
-            </h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Contact our cloud and DevOps team to discuss your specific requirements
-              and discover how we can help modernize your infrastructure.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                Contact Cloud Team
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
-                Download Cloud Brochure
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-    </>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }

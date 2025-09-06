@@ -32,7 +32,7 @@ Tone:professional, modern, trustworthy`,;
       temperature:0.7}),;
 ;
     const content = response.choices?.[0]?.message?.content || '',;
-    const title = `Zion Marketplace — ${prompt}`,;
+    const title = `Zion Marketplace  ${prompt}`,;
 ;
     // FAQ generation;
     const faqResp = await openai.chat.completions.create({;

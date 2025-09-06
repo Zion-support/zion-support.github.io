@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>)
 })
@@ -14,10 +9,6 @@ export const StarRating: React.FC<Props> = ({
   size = 24
   readOnly
 }) => {  const [hovered, setHovered] = useState<number | null>(null);import React, { useState } from 'react';
-=======
-import React, { useState } from 'react';
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 type Props = {
   value: number
   onChange: (val: number) => void
@@ -25,8 +16,6 @@ type Props = {
   readOnly?: boolean
 }
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -55,20 +44,12 @@ class ErrorBoundary extends React.Component {
 }</div>) ;
 };
 
-<<<<<<< HEAD
 export const StarRating: React.FC<Props> = ({;
   value,;
   onChange,;
   size = 24,;
   readOnly,;
 }) => {  const [hovered, setHovered] = useState<number | null>(null);import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-=======
-export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
-  const [hovered, setHovered] = useState<number | null>(null);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 type Props = {;
   value: number,;
@@ -79,48 +60,22 @@ type Props = {;
 
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const stars = [1, 2, 3, 4, 5];
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className='flex items-center gap-1'>;
       {stars && stars.map(star => {;
         const active = (hovered ?? value) >= star;
                     onMouseEnter={() => !readOnly && setHovered(star)}        return (
-<<<<<<< HEAD
-=======
-=======
-    <div className="flex items-center gap-1">
-      {stars.map((star) => {
-        const active = (hovered ?? value) >= star;
-        return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <button
             key={star}
             type="button"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-            onMouseEnter={() => !readOnly && setHovered(star)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
           >;
             <svg
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               xmlns='http://www && www.w3.org/2000/svg'
-=======
 > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>);
 });
 }</div>);
@@ -157,12 +112,10 @@ export const StarRating: React.FC < Props> = ({ value, on_change, size = 24, rea
           >;
             <svg;
               xmlns='http://www.w3.org / 2000 / svg';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               width={size}
               height={size}
               view_box='0 0 24 24';
               fill={active ? 'gold' : 'none'}
-<<<<<<< HEAD
               stroke={active ? 'gold' : 'currentColor'}
               strokeWidth='2'
               strokeLinecap='round'
@@ -191,25 +144,17 @@ export default StarRating;              width={size}
           </button>;
         );
       })}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     </div>
   )
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     </div>;
   );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default StarRating;
 
-=======
               xmlns="http://www.w3.org/2000/svg"
               width={size}
-=======
               stroke={active ? 'gold' : 'current_color'}
               stroke_width='2';
               stroke_linecap='round';
@@ -224,7 +169,6 @@ export default StarRating;
 }
 ;
 export default StarRating;              width={size}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               height={size}
               view_box="0 0 24 24";
               fill={active ? 'gold' : 'none'}
@@ -242,8 +186,4 @@ export default StarRating;              width={size}
 }
 ;
 export default StarRating;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

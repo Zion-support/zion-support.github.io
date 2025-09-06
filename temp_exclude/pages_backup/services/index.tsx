@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 const ServicesIndex: NextPage = () => {;
   const services = [;
     {;
@@ -17,7 +16,7 @@ const ServicesIndex: NextPage = () => {;
         'Fraud Detection & Risk Assessment';
       ],;
       pricing: 'Starting at $2,500/month',;
-      icon: '🧠',;
+      icon: '',;
       link: '/services/ai-development';
     },;
     {;
@@ -33,7 +32,7 @@ const ServicesIndex: NextPage = () => {;
         'Disaster Recovery & Backup';
       ],;
       pricing: 'Starting at $1,800/month',;
-      icon: '☁️',;
+      icon: '',;
       link: '/services/cloud-solutions';
     },;
     {;
@@ -49,7 +48,7 @@ const ServicesIndex: NextPage = () => {;
         'Blockchain Security Audits';
       ],;
       pricing: 'Starting at $3,500/month',;
-      icon: '🔗',;
+      icon: '',;
       link: '/services/blockchain';
     },;
     {;
@@ -65,7 +64,7 @@ const ServicesIndex: NextPage = () => {;
         'Remote Device Control';
       ],;
       pricing: 'Starting at $2,200/month',;
-      icon: '🌐',;
+      icon: '',;
       link: '/services/iot-platforms';
     },;
     {;
@@ -81,7 +80,7 @@ const ServicesIndex: NextPage = () => {;
         'Third-party Integrations';
       ],;
       pricing: 'Starting at $1,500/month',;
-      icon: '⚡',;
+      icon: '',;
       link: '/products/micro-saas';
     },;
     {;
@@ -97,7 +96,7 @@ const ServicesIndex: NextPage = () => {;
         'Vulnerability Management';
       ],;
       pricing: 'Starting at $2,000/month',;
-      icon: '🔒',;
+      icon: '',;
       link: '/services/cybersecurity';
     },;
     {;
@@ -113,7 +112,7 @@ const ServicesIndex: NextPage = () => {;
         'Performance Optimization';
       ],;
       pricing: 'Starting at $1,200/month',;
-      icon: '💻',;
+      icon: '',;
       link: '/services/web-development';
     },;
     {;
@@ -129,7 +128,7 @@ const ServicesIndex: NextPage = () => {;
         'Custom Reporting Solutions';
       ],;
       pricing: 'Starting at $1,800/month',;
-      icon: '📊',;
+      icon: '',;
       link: '/services/data-analytics';
   const microSaasServices = [;
     {;
@@ -242,8 +241,6 @@ const ServicesIndex: NextPage = () => {;
       link: "/services/ai-automation";
     }
   ];
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
@@ -255,7 +252,7 @@ const services = [
     icon: Brain,
     features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
     pricing: 'Starting at $5,000/month',
-    icon: '🤖',
+    icon: '',
     link: '/ai-services'
   },
   {
@@ -265,7 +262,7 @@ const services = [
     icon: Cloud,
     features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Cost Optimization'],
     pricing: 'Starting at $2,000/month',
-    icon: '☁️',
+    icon: '',
     link: '/services/cloud'
   },
   {
@@ -275,7 +272,7 @@ const services = [
     icon: Shield,
     features: ['Threat Detection', 'Security Audits', 'Data Protection', 'Compliance'],
     pricing: 'Starting at $1,500/month',
-    icon: '🔒',
+    icon: '',
     link: '/services/cybersecurity'
   },
   {
@@ -285,12 +282,11 @@ const services = [
     icon: BarChart3,
     features: ['Business Intelligence', 'Predictive Analytics', 'Data Visualization', 'Reporting'],
     pricing: 'Starting at $1,800/month',
-    icon: '📊',
+    icon: '',
     link: '/services/data-analytics'
   }
 ];
 
-<<<<<<< HEAD
 export default function ServicesIndex() {;
 const ServicesIndex: NextPage = () => {;
   const services = [;
@@ -307,7 +303,7 @@ const ServicesIndex: NextPage = () => {;
         'Fraud Detection & Risk Assessment';
       ],;
       pricing: 'Starting at $2,500/month',;
-      icon: '🧠',;
+      icon: '',;
       link: '/services/ai-development';
     },;
     {;
@@ -323,7 +319,7 @@ const ServicesIndex: NextPage = () => {;
         'Disaster Recovery & Backup';
       ],;
       pricing: 'Starting at $1,800/month',;
-      icon: '☁️',;
+      icon: '',;
       link: '/services/cloud-solutions';
     },;
     {;
@@ -339,7 +335,7 @@ const ServicesIndex: NextPage = () => {;
         'Blockchain Security Audits';
       ],;
       pricing: 'Starting at $3,500/month',;
-      icon: '🔗',;
+      icon: '',;
       link: '/services/blockchain';
     },;
     {;
@@ -355,7 +351,7 @@ const ServicesIndex: NextPage = () => {;
         'Remote Device Control';
       ],;
       pricing: 'Starting at $2,200/month',;
-      icon: '🌐',;
+      icon: '',;
       link: '/services/iot-platforms';
     },;
     {;
@@ -371,7 +367,7 @@ const ServicesIndex: NextPage = () => {;
         'Third-party Integrations';
       ],;
       pricing: 'Starting at $1,500/month',;
-      icon: '⚡',;
+      icon: '',;
       link: '/products/micro-saas';
     },;
     {;
@@ -387,7 +383,7 @@ const ServicesIndex: NextPage = () => {;
         'Vulnerability Management';
       ],;
       pricing: 'Starting at $2,000/month',;
-      icon: '🔒',;
+      icon: '',;
       link: '/services/cybersecurity';
     },;
     {;
@@ -403,7 +399,7 @@ const ServicesIndex: NextPage = () => {;
         'Performance Optimization';
       ],;
       pricing: 'Starting at $1,200/month',;
-      icon: '💻',;
+      icon: '',;
       link: '/services/web-development';
     },;
     {;
@@ -419,7 +415,7 @@ const ServicesIndex: NextPage = () => {;
         'Custom Reporting Solutions';
       ],;
       pricing: 'Starting at $1,800/month',;
-      icon: '📊',;
+      icon: '',;
       link: '/services/data-analytics';
   const microSaasServices = [;
     {;
@@ -534,16 +530,6 @@ const ServicesIndex: NextPage = () => {;
   ];
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
-=======
-export default function ServicesIndex() {
-  return (
-    <>
-      <Head>
-        <title>Our Services - Zion Tech Group | AI, Cloud, Blockchain & IT Solutions</title>
-        <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
-        <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
-      </Head>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -591,28 +577,17 @@ export default function ServicesIndex() {
                     ))}
                   </div>
                   <Link
-<<<<<<< HEAD
                     href={service && service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;
                     Learn More;
                   </Link>;
                 </div>;
               </div>;
-=======
-                    href={service.link}
-                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">;
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>;
           <p className="text-xl mb-8">Let's discuss how our technology solutions can accelerate your growth</p>;
@@ -716,7 +691,7 @@ export default ServicesIndex;
                 <p className="text-gray-600 mb-4">{service && service.description}</p>;
                 <ul className="text-sm text-gray-500 mb-4">;
                   {service && service.features.map((feature, idx) => (;
-                    <li key={idx} className="mb-1">• {feature}</li>;
+                    <li key={idx} className="mb-1"> {feature}</li>;
                   ))}
                 </ul>;
                 <div className="flex justify-between items-center">;
@@ -802,7 +777,7 @@ export default ServicesIndex;
                 <p className="text-gray-600 mb-4">{service && service.description}</p>;
                 <ul className="text-sm text-gray-500 mb-4">;
                   {service && service.features.map((feature, idx) => (;
-                    <li key={idx} className="mb-1">• {feature}</li>;
+                    <li key={idx} className="mb-1"> {feature}</li>;
                   ))}
                 </ul>;
                 <div className="flex justify-between items-center">;
@@ -827,7 +802,7 @@ export default ServicesIndex;
                 <p className="text-gray-600 mb-4">{service && service.description}</p>;
                 <ul className="text-sm text-gray-500 mb-4">;
                   {service && service.features.map((feature, idx) => (;
-                    <li key={idx} className="mb-1">• {feature}</li>;
+                    <li key={idx} className="mb-1"> {feature}</li>;
                   ))}
                 </ul>;
                 <div className="flex justify-between items-center">;
@@ -906,26 +881,5 @@ export default ServicesIndex;
 }
       </div>;
     </>;
-=======
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8">Let's discuss how our technology solutions can accelerate your growth</p>
-          <div className="flex justify-center gap-4">
-            <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Get Started Today
-            </Link>
-            <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Learn More About Us
-            </Link>
-          </div>
-        </section>
-export default ServicesIndex;
-      </div>
-    </>
-  );
-}
-      </div>
-    </>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }

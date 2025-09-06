@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { createNotification  } from './createNotification';
 import { OnboardingNotificationParams } from './types';
@@ -10,11 +9,7 @@ export async function createOnboardingNotification({
   missingMilestone;
   userRole
 }: OnboardingNotificationParams) {
-<<<<<<< HEAD
 
-=======
-  try {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   let title = '';
   let message = '';
   let actionUrl = '';
@@ -22,7 +17,6 @@ export async function createOnboardingNotification({
   if (userRole === 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
-=======
 import {create_notification} from './create_notification';
 import {OnboardingNotificationParams} from './types';
 /**;
@@ -43,7 +37,6 @@ if ( {) {
 }
     switch (missing_milestone) {
       case 'profile_completed':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         title = 'Complete your profile';
         message = 'Complete your profile to get discovered by clients';
         action_url = '/profile';
@@ -84,7 +77,6 @@ if ( {) {
         break;
     }
   }
-<<<<<<< HEAD
   return createNotification({
     userId;
     title;
@@ -95,15 +87,4 @@ if ( {) {
 
     actionText
   })
-=======
-  return create_notification ({
-    user_id;
-    title;
-    message;
-    type: 'onboarding';
-    send_email: false;
-    action_url,
-    action_text;
-  });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

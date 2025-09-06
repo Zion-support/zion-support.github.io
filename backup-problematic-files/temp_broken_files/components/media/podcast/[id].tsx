@@ -13,12 +13,12 @@ export default function EpisodePage() {
       setEpisode(data.episode)
     })()
   }, [id]),
-  if (!episode) return <div>Loading…</div>,
+  if (!episode) return <div>Loading</div>,
 
   return (
     <div className=&quot;space-y-4&quot;>
       <h1 className=&quot;text-2xl font-bold&quot;>{episode.title}</h1>
-      <p className=&quot;text-sm text-gray-600&quot;>Guest: {episode.invitee?.name} · {new Date(episode.createdAt).toLocaleString()}</p>
+      <p className=&quot;text-sm text-gray-600&quot;>Guest: {episode.invitee?.name}  {new Date(episode.createdAt).toLocaleString()}</p>
       {episode.audio?.mp3Url && (
         <audio controls className=&quot;w-full&quot;>
           <source src={episode.audio.mp3Url} type=&quot;audio/mpeg&quot; />

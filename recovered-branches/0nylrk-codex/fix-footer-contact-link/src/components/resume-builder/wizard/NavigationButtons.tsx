@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import {Button} from "@/components/ui/button";
@@ -18,28 +17,16 @@ export const NavigationButtons = ({;
           {backLabel}
         </Button>;
       )}
-<<<<<<< HEAD
       {onNext && (
         <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
-=======
-      {onNext && (;
-        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
         </Button>;
       )}
-<<<<<<< HEAD
     </div>
   )
 }
 
-=======
-    </div>;
-  );
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Button } from '@/components / ui / button';
 import { Loader2 } from './lucide-react';
 import { NavigationButtonsProps } from './types';
@@ -64,4 +51,3 @@ export const NavigationButtons = ({
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

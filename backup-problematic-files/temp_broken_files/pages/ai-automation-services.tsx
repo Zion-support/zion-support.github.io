@@ -514,10 +514,10 @@ export default function AIAutomationServices() {;
               Automate complex business processes with AI-powered decision making and workflow optimization.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Document processing</li>
-              <li>• Workflow optimization</li>
-              <li>• Decision automation</li>
-              <li>• Exception handling</li>
+              <li> Document processing</li>
+              <li> Workflow optimization</li>
+              <li> Decision automation</li>
+              <li> Exception handling</li>
             </ul>
           </div>
 
@@ -527,10 +527,10 @@ export default function AIAutomationServices() {;
               Deploy intelligent chatbots and virtual assistants for enhanced customer experience.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Chatbot integration</li>
-              <li>• Natural language processing</li>
-              <li>• Multi-channel support</li>
-              <li>• 24/7 availability</li>
+              <li> Chatbot integration</li>
+              <li> Natural language processing</li>
+              <li> Multi-channel support</li>
+              <li> 24/7 availability</li>
             </ul>
           </div>
 
@@ -540,10 +540,10 @@ export default function AIAutomationServices() {;
               Leverage AI to extract insights from your data and make informed decisions.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Predictive analytics</li>
-              <li>• Pattern recognition</li>
-              <li>• Anomaly detection</li>
-              <li>• Trend analysis</li>
+              <li> Predictive analytics</li>
+              <li> Pattern recognition</li>
+              <li> Anomaly detection</li>
+              <li> Trend analysis</li>
             </ul>
           </div>
         </div>

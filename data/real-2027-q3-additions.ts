@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 
 export const real2027Q3Additions = [
   {
-<<<<<<< HEAD
     id: 'it-asset-discovery-agent',
-=======
-<<<<<<< HEAD
     id: 'it-asset-discovery-agent'
     name: 'IT Asset Discovery Agent'
     tagline: 'Agentless network-wide discovery and enrichment'
@@ -21,17 +17,6 @@ export const real2027Q3Additions = [
     category: 'Enterprise IT'
     link: '/it-asset-discovery-agent'
     realService: true
-=======
-    id: 'it-asset-discovery-agent', name: 'IT Asset Discovery Agent',
-    tagline: 'Agentless network-wide discovery and enrichment', price: '$149',
-    period: '/month',
-    description: 'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
-    features: [
-      'Agentless subnet scanning and SaaS discoveryOS, version, and CVE enrichmentCMDB, ServiceNow, and Jira exportChange detection and drift alerts'
-    ];
-    category: 'Enterprise IT', link: '/it-asset-discovery-agent',
-    realService: true,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'
   }
   {
@@ -51,7 +36,7 @@ export const real2027Q3Additions = [
     category: 'Cloud & Infrastructure'
     link: '/managed-postgres-ha'
     realService: true
-    roi: 'Eliminate 2–4 on-call incidents/month and improve p99 latency by 20–40%.'
+    roi: 'Eliminate 24 on-call incidents/month and improve p99 latency by 2040%.'
   }
   {
     id: 'vector-search-starter'
@@ -222,7 +207,7 @@ export const real2027Q3Additions = [
     category: 'Operations'
     link: '/incident-copilot'
     realService: true
-    roi: 'Reduce incident resolution time by 30–50% and improve learning capture.'
+    roi: 'Reduce incident resolution time by 3050% and improve learning capture.'
   }
   {
     id: 'ai-market-research'
@@ -241,7 +226,7 @@ export const real2027Q3Additions = [
     category: 'AI & Data'
     link: '/ai-market-research'
     realService: true
-    roi: 'Save 10–20 analyst hours per week while increasing coverage.'
+    roi: 'Save 1020 analyst hours per week while increasing coverage.'
   }
   {
     id: 'ai-sales-automation'
@@ -260,7 +245,7 @@ export const real2027Q3Additions = [
     category: 'Sales & Marketing'
     link: '/ai-sales-automation'
     realService: true
-    roi: 'Increase meetings booked by 20–40% with consistent outreach.'
+    roi: 'Increase meetings booked by 2040% with consistent outreach.'
   }
   {
     id: 'ai-legal-contract-analyzer'
@@ -298,7 +283,7 @@ export const real2027Q3Additions = [
     category: 'Content & Marketing'
     link: '/ai-content-generator'
     realService: true
-    roi: 'Publish 3–5x more content while improving rankings.'
+    roi: 'Publish 35x more content while improving rankings.'
   }
   {
     id: 'email-dmarc-analyzer'
@@ -346,15 +331,10 @@ export const real2027Q3Additions = [
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export const real2027Q3Additions = [;
   {
     id: 'it - asset - discovery - agent',
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network - wide discovery and enrichment',
     price: '$149',
@@ -388,7 +368,7 @@ export const real2027Q3Additions = [;
     category: 'Cloud & Infrastructure',
     link: '/managed - postgres - ha',
     real_service: true,
-    roi: 'Eliminate 2–4 on - call incidents / month and improve p99 latency by 20–40%.',
+    roi: 'Eliminate 24 on - call incidents / month and improve p99 latency by 2040%.',
   },
   {
     id: 'vector - search - starter',
@@ -559,7 +539,7 @@ export const real2027Q3Additions = [;
     category: 'Operations',
     link: '/incident - copilot',
     real_service: true,
-    roi: 'Reduce incident resolution time by 30–50% and improve learning capture.',
+    roi: 'Reduce incident resolution time by 3050% and improve learning capture.',
   },
   {
     id: 'ai - market - research',
@@ -578,7 +558,7 @@ export const real2027Q3Additions = [;
     category: 'AI & Data',
     link: '/ai - market - research',
     real_service: true,
-    roi: 'Save 10–20 analyst hours per week while increasing coverage.',
+    roi: 'Save 1020 analyst hours per week while increasing coverage.',
   },
   {
     id: 'ai - sales - automation',
@@ -597,7 +577,7 @@ export const real2027Q3Additions = [;
     category: 'Sales & Marketing',
     link: '/ai - sales - automation',
     real_service: true,
-    roi: 'Increase meetings booked by 20–40% with consistent outreach.',
+    roi: 'Increase meetings booked by 2040% with consistent outreach.',
   },
   {
     id: 'ai - legal - contract - analyzer',
@@ -635,7 +615,7 @@ export const real2027Q3Additions = [;
     category: 'Content & Marketing',
     link: '/ai - content - generator',
     real_service: true,
-    roi: 'Publish 3–5x more content while improving rankings.',
+    roi: 'Publish 35x more content while improving rankings.',
   },
   {
     id: 'email - dmarc - analyzer',
@@ -675,11 +655,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Prevent high - severity API incidents and cut MTTR.',
   },
-<<<<<<< HEAD
 ];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
-=======
-];      'Discovery via traffic / specsOWASP API Top 10 checksPR annotations and CI gating_change detection and drift alerts';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     category: 'Security & Identity';
     link: '/api - security - scanner';
@@ -688,4 +664,3 @@ export const real2027Q3Additions = [;
   }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

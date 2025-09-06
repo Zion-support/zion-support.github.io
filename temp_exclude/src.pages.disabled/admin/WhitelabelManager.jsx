@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,14 +21,5 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src && src.pages.disabled/admin/WhitelabelManager && WhitelabelManager.jsx
-<<<<<<< \"HEAD\": \'src && src.pages.disabled/admin/WhitelabelManager && WhitelabelManager.jsx import React\',{ useState } from \'react\'';\'; import SEO from \'@/components/SEO\'';\'; import { WhitelabelRequestForm } from \'@/components/admin/whitelabel/WhitelabelRequestForm\'';\'; import { TenantsList } from \'@/components/admin/whitelabel/TenantsList\'';\'; import { Tabs,TabsContent,TabsList,TabsTrigger } from \'@/components/ui/tabs\'';\'; import { useAuth } from \'@/hooks/useAuth\'';\'; import { Navigate } from \'react-router-dom\'; export default function WhitelabelManager() {}; const { user } = useAuth()\'; const [activeTab,setActiveTab] = useState(\'tenants\')\'; import React,{ useState } from \'react\'';\'; import SEO from \'@/components/SEO\'';\'; import { WhitelabelRequestForm } from \'@/components/admin/whitelabel/WhitelabelRequestForm\'';\'; import { TenantsList } from \'@/components/admin/whitelabel/TenantsList\'';\'; import { Tabs,TabsContent,TabsList,TabsTrigger } from \'@/components/ui/tabs\'';\'; import { useAuth } from \'@/hooks/useAuth\'';\'; import { Navigate } from \'react-router-dom\'; export default function WhitelabelManager() {}; const { user } = useAuth()\'; const [activeTab,setActiveTab] = useState(\'tenants\')\';\';\';
-<<<<<<< HEAD
-<<<<<<< "HEAD": 'src && src.pages.disabled/admin/WhitelabelManager && WhitelabelManager.jsx import _React',{ useState } from 'react'';'; import SEO from '@/components/SEO'';'; import { WhitelabelRequestForm } from '@/components/admin/whitelabel/WhitelabelRequestForm'';'; import { TenantsList } from '@/components/admin/whitelabel/TenantsList'';'; import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs'';'; import { useAuth } from '@/hooks/useAuth'';'; import { Navigate } from 'react-router-dom'; export default function WhitelabelManager() {}; const { user } = useAuth()'; const [activeTab,setActiveTab] = useState('tenants')'; import _React,{ useState } from 'react'';'; import SEO from '@/components/SEO'';'; import { WhitelabelRequestForm } from '@/components/admin/whitelabel/WhitelabelRequestForm'';'; import { TenantsList } from '@/components/admin/whitelabel/TenantsList'';'; import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs'';'; import { useAuth } from '@/hooks/useAuth'';'; import { Navigate } from 'react-router-dom'; export default function WhitelabelManager() {}; const { user } = useAuth()'; const [activeTab,setActiveTab] = useState('tenants')';';';
-=======
-<<<<<<< "HEAD": 'src && src.pages.disabled/admin/WhitelabelManager && WhitelabelManager.jsx import _React',{ useState } from 'react'';'; import SEO from '@/components/SEO'';'; import { WhitelabelRequestForm } from '@/components/admin/whitelabel/WhitelabelRequestForm'';'; import { TenantsList } from '@/components/admin/whitelabel/TenantsList'';'; import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs'';'; import { useAuth } from '@/hooks/useAuth'';'; import { Navigate } from 'react-router-dom'; export default function WhitelabelManager() {}; const { user } = useAuth()'; const [activeTab,setActiveTab] = useState('tenants')'; import _React,{ useState } from 'react'';'; import SEO from '@/components/SEO'';'; import { WhitelabelRequestForm } from '@/components/admin/whitelabel/WhitelabelRequestForm'';'; import { TenantsList } from '@/components/admin/whitelabel/TenantsList'';'; import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs'';'; import { useAuth } from '@/hooks/useAuth'';'; import { Navigate } from 'react-router-dom'; export default function WhitelabelManager() {}; const { user } = useAuth()'; const [activeTab,setActiveTab] = useState('tenants')';';';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+

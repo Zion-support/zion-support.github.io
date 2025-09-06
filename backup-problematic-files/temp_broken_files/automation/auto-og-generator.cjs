@@ -1,18 +1,18 @@
 #!/usr/bin/env node;
- ;
+ 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-;
+
 const routeMapPath = path.join(process.cwd(), 'public', 'reports', 'route-map.json');
 const outDir = path.join(process.cwd(), 'public', 'og');
-;
-function titleFromRoute(route) {;
+
+function titleFromRoute(route) {
   if (route === '/') return 'Zion AI Marketplace';
   return route.replace(/\//g, ' ').trim().replace(/\b\w/g, c => c.toUpperCase());
 }
-;
-function svgFor(title) {;
+
+function svgFor(title) {
   const esc = title.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   return `<?xml version="1.0" encoding="UTF-8"?>;
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">;
@@ -29,9 +29,9 @@ function svgFor(title) {;
   <text x="80" y="560" font-family="Inter, Arial" font-size="28" fill="#e2e8f0">Zion — Autonomous Cloud</text>;
 </svg>`;
 }
-;
-try {;
-  if (!fs.existsSync(routeMapPath)) {;
+
+try {
+  if (!fs.existsSync(routeMapPath)) {
     console.log('[og] route map not found; generate it first');
     process.exit(0);
   }
@@ -39,24 +39,24 @@ try {;
   const routes = (data.routes || []).slice(0, 30);
   fs.mkdirSync(outDir, { recursive:true });
   let changed = false;
-  for (const r of routes) {;
+  for (const r of routes) {
     const name = r.route === '/' ? 'home' :r.route.replace(/^\//,'').replace(/\//g,'_');
     const file = path.join(outDir, `${name}.svg`);
     const content = svgFor(titleFromRoute(r.route));
     const before = fs.existsSync(file) ? fs.readFileSync(file, 'utf8') :'';
-    if (before !== content) {;
+    if (before !== content) {
       fs.writeFileSync(file, content);
       changed = true;
       console.log('[og] wrote', path.relative(process.cwd(), file));
     }
   }
-  if (changed) {;
+  if (changed) {
     execSync('git add -A');
     execSync('git config user.name "zion-bot"');
     execSync('git config user.email "bot@zion.app"');
     execSync('git commit -m "chore(automation):update OG images" || true');
     try { execSync('git push') } catch {}
   }
-} catch (e) {;
+} catch (e) {
   console.log('[og] non-fatal', e.message);
 }

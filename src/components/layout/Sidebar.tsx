@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {
   Home,
   Users,
@@ -25,12 +16,7 @@ const Sidebar = () => {
     { name: 'Services', href: '/services', icon: Settings },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Contact', href: '/contact', icon: Phone }
-<<<<<<< HEAD
   ]
-=======
-  ];
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <aside className="hidden lg:block w-64 bg-white shadow-lg min-h-screen">
       <div className="p-6">
@@ -54,12 +40,9 @@ const Sidebar = () => {
         </nav>
       </div>
     </aside>
-<<<<<<< HEAD
   )
 }
 export default Sidebar
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -123,12 +106,7 @@ const Sidebar: React.FC = () => {;
   );
 };
 
-<<<<<<< HEAD
 export default Sidebar;
-=======
-export default Sidebar;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   };
 ,
   const navigationSections = [,
@@ -212,7 +190,7 @@ export default Sidebar;
               onClick={onClose};
               className="p-2 rounded-lg text-gray-500 hover: bg-gray-100 transition-colors",
             >,
-              ×,
+              ,
             </button>,
           )};
         </div>,
@@ -333,10 +311,6 @@ export default Sidebar;
     </motion.aside>,
   ),
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   );
 };
 export default Sidebar;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

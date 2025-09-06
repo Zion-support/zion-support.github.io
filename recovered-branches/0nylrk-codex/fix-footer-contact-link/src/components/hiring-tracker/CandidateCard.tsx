@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState } from "react",
 import { Draggable } from "react-beautiful-dnd",
@@ -9,7 +8,6 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Avatar } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
 import { 
   MessageSquare;
   User;
@@ -34,29 +32,12 @@ import {
   DropdownMenuContent
   DropdownMenuItem
   DropdownMenuTrigger
-=======
-import {;
-  MessageSquare,;
-  User,;
-  FileText,;
-  MoreVertical,;
-  Calendar,;
-  AlertTriangle,;
-  BriefcaseIcon,;
-} from "lucide-react";
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 
 import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
 interface CandidateCardProps {;
-=======
 import { useState  } from './react';
 import { Draggable  } from './react - beautiful - dnd';
 import { formatDistanceToNow  } from './date - fns';
@@ -85,12 +66,9 @@ import { ScoreBadge  } from '@/components / jobs / applications / ScoreBadge';
 import { toast  } from '@/hooks / use - toast';
 import { HireConfirmationModal  } from './HireConfirmationModal';
 interface CandidateCardProps {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   application: JobApplication;
   index: number
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function CandidateCard({ application, index }: CandidateCardProps) {
   const [showNotes, setShowNotes] = useState(false);
   const [notes, setNotes] = useState(application.notes |"");
@@ -115,35 +93,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     toast({
       title: "Hiring process initiated"
       description: "Offer has been sent to the talent."
-=======
-
-export function CandidateCard(): any ({ application, index }: CandidateCardProps) {;
-  const [showNotes, setShowNotes] = useState(false);
-  const [notes, setNotes] = useState(application && application.notes || "");
-  const [showHireModal, setShowHireModal] = useState(false);
-
-  // Check if application is stalled (no activity for 7 days);
-  const isStalled =;
-    application && application.updated_at &&;
-    new Date(application && application.updated_at).getTime() <;
-      Date && Date.now() - 7 * 24 * 60 * 60 * 1000;
-
-  const handleSaveNotes = () => {;
-    // Here you would save the notes to the database;
-    // For now, we'll just show a toast;
-    toast({;
-      title: "Notes saved",;
-      description: "Your notes have been saved",;
-    });
-    setShowNotes(false);
-  };
-
-  const handleHireConfirmed = () => {;
-    // Hiring process completed via the modal;
-    toast({;
-      title: "Hiring process initiated",;
-      description: "Offer has been sent to the talent.",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
   }
 
@@ -165,17 +114,12 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                       <img
                         src={application && application.talent_profile.profile_picture_url}
                         alt={
-<<<<<<< HEAD
                           application.talent_profile.full_name |"Candidate"
-=======
-                          application && application.talent_profile.full_name || "Candidate"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         }
                       />;
                     ) : (;
                       <User className="h-4 w-4" />;
                     )}
-<<<<<<< HEAD
                   </Avatar>
                   <div>
                     <h4 className="font-medium text-sm">
@@ -195,28 +139,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
-=======
-                  </Avatar>;
-                  <div>;
-                    <h4 className="font-medium text-sm">;
-                      {application && application.talent_profile?.full_name || "Candidate"}
-                    </h4>;
-                    <p className="text-xs text-muted-foreground">;
-                      {application && application.talent_profile?.professional_title ||;
-                        "Applicant"}
-                    </p>;
-                  </div>;
-                </div>;
-
-                <DropdownMenu>;
-                  <DropdownMenuTrigger asChild>;
-                    <Button variant="ghost" className="h-8 w-8 p-0">;
-                      <MoreVertical className="h-4 w-4" />;
-                    </Button>;
-                  </DropdownMenuTrigger>;
-                  <DropdownMenuContent align="end">;
-                    <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>;
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
@@ -237,7 +159,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                         </a>;
                       </DropdownMenuItem>;
                     )}
-<<<<<<< HEAD
                   </DropdownMenuContent>
                 </DropdownMenu>
               </div>
@@ -256,29 +177,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   </div>
                 )}
               </div>
-=======
-                  </DropdownMenuContent>;
-                </DropdownMenu>;
-              </div>;
-
-              {/* Application Info */}
-              <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">;
-                <div className="flex items-center">;
-                  <Calendar className="h-3 w-3 mr-1" />;
-                  {formatDistanceToNow(new Date(application && application.created_at), {;
-                    addSuffix: true,;
-                  })}
-                </div>;
-
-                {isStalled && (;
-                  <div className="flex items-center text-amber-500">;
-                    <AlertTriangle className="h-3 w-3 mr-1" />;
-                    Stalled;
-                  </div>;
-                )}
-              </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Match Score */}
               {application && application.match_score !== null &&;
                 application && application.match_score !== undefined && (;
@@ -303,7 +201,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 </div>;
               )}
               {/* Action Buttons */}
-<<<<<<< HEAD
               <div className="flex justify-between mt-2 gap-1">
                 <Button variant="outline" size="sm" className="flex-1" asChild>
                   <Link to={`/messages?talentId=${application.talent_id}`}>
@@ -312,17 +209,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 </Button>
                 <Button variant="outline" size="sm" className="flex-1" asChild>
                   {application.resume?.file_url ? (
-=======
-              <div className="flex justify-between mt-2 gap-1">;
-                <Button variant="outline" size="sm" className="flex-1" asChild>;
-                  <Link to={`/messages?talentId=${application && application.talent_id}`}>;
-                    <MessageSquare className="h-3 w-3 mr-1" /> Message;
-                  </Link>;
-                </Button>;
-
-                <Button variant="outline" size="sm" className="flex-1" asChild>;
-                  {application && application.resume?.file_url ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <a
                       href={application && application.resume.file_url}
                       target="_blank"
@@ -334,12 +220,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                       <FileText className="h-3 w-3 mr-1" /> No Resume;
                     </span>;
                   )}
-<<<<<<< HEAD
                 </Button>
-=======
-                </Button>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Button
                   variant="default"
                   size="sm"
@@ -352,13 +233,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
             </CardContent>;
           </Card>;
         )}
-<<<<<<< HEAD
       </Draggable>
-=======
-      </Draggable>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export /**
  * CandidateCard - Function description
  */
@@ -523,20 +398,13 @@ function CandidateCard() {
             </CardContent>;
           </Card>)}
       </Draggable>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         is_open={showHireModal}
         on_close={() => setShowHireModal (false)}
         application={application}
-<<<<<<< HEAD
         onConfirm={handleHireConfirmed}
       />;
     </>;
   );
-=======
-        on_confirm={handleHireConfirmed}
-      />;
-    </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

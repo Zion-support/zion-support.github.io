@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-=======
 import { ServiceVariant } from '../types / service - variants';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface EnterpriseIt2026ServiceV2 {
 
   id: string;
@@ -44,7 +37,6 @@ export interface EnterpriseIt2026ServiceV2 {
 
     website: string;
   }
-<<<<<<< HEAD
 
   realImplementation: boolean;
   implementationDetails: string;
@@ -55,29 +47,7 @@ export interface EnterpriseIt2026ServiceV2 {
 }
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture
-<<<<<<< HEAD
   {  reviews: number
-=======
-  {
-<<<<<<< HEAD
-=======
-    id: 'zero-trust-network-architecture-pro',
-=======
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
-  // Zero Trust Network Architecture;
-  {  reviews: number;
-}
-export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
-  // Zero Trust Network Architecture;
-  {
-    id: 'zero - trust - network - architecture - pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: 'Zero Trust Network Architecture Pro',
     tagline: 'Never trust, always verify - comprehensive zero trust security',
     price: '$1, 199',
@@ -96,18 +66,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise deployment',
     ],
     popular: true,
-    icon: '🔒',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-red-600 to-orange-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-network-architecture',
     marketPosition:
-=======
-    color: 'from - red - 600 to - orange - 700',
-    text_color: 'text - red - 400',
-    link: 'https://ziontechgroup.com / zero - trust - network - architecture',
-    market_position:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Competitive with Palo Alto Networks ($1000+/month), Cisco ($800+/month), and Fortinet ($600+/month). Our advantage: Zero trust focus, better pricing, and comprehensive security features.',
     target_audience:;
       'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Fortune 500 companies',
@@ -146,17 +109,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Check Point',
       'Juniper',
     ],
-<<<<<<< HEAD
     marketSize: '$67 && 67.8B market',
     growthRate: '220% annual growth',
     variant: 'security-futuristic',
     contactInfo: {
-=======
-    market_size: '$67.8B market',
-    growth_rate: '220% annual growth',
-    variant: 'security - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -170,8 +126,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4 && 4.8,
     reviews: 520,
   },
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     id: 'zero-trust-network-architecture-pro'
     name: 'Zero Trust Network Architecture Pro'
@@ -192,7 +146,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise deployment'
     ]
     popular: true
-    icon: '🔒'
+    icon: ''
     color: 'from-red-600 to-orange-700'
     textColor: 'text-red-400'
     link: 'https://ziontechgroup.com/zero-trust-network-architecture'
@@ -262,7 +216,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     description:
       'Comprehensive multi-cloud orchestration platform that enables enterprises to manage, monitor, and optimize workloads across AWS, Azure, Google Cloud, and private clouds. Perfect for enterprises with multi-cloud strategies.'
     features: [
-<<<<<<< HEAD
       'Multi-cloud management'
       'Workload orchestration'
       'Cost optimization'
@@ -275,25 +228,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise support'
     ]
     popular: true
-    icon: '☁️'
+    icon: ''
     color: 'from-blue-600 to-cyan-700'
     textColor: 'text-blue-400'
     link: 'https://ziontechgroup.com/multi-cloud-orchestration'
-=======
-      'Multi-cloud management',
-=======
-  // Multi - Cloud Orchestration Platform;
-  {
-    id: 'multi - cloud - orchestration - platform',
-    name: 'Multi - Cloud Orchestration Platform',
-    tagline: 'Seamlessly manage and orchestrate across all cloud providers',
-    price: '$899',
-    period: '/month',
-    description:;
-      'Comprehensive multi - cloud orchestration platform that enables enterprises to manage, monitor, and optimize workloads across AWS, Azure, Google Cloud, and private clouds. Perfect for enterprises with multi - cloud strategies.',
-    features: [;
-      'Multi - cloud management',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Workload orchestration',
       'Cost optimization',
       'Performance monitoring',
@@ -305,12 +243,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise support',
     ],
     popular: true,
-    icon: '☁️',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup && ziontechgroup.com/multi-cloud-orchestration',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Competitive with HashiCorp ($0-1000), Terraform Cloud ($0-500), and CloudBolt ($0-1000). Our advantage: Multi-cloud focus, better pricing, and comprehensive orchestration.'
     targetAudience:
@@ -320,7 +256,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     category: 'Cloud & DevOps'
     realService: true
     technology: [
-<<<<<<< HEAD
       'Multi-Cloud'
       'Kubernetes'
       'React'
@@ -328,31 +263,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'PostgreSQL'
       'AWS'
     ]
-=======
-      'Multi-Cloud',
-=======
-    color: 'from - blue - 600 to - cyan - 700',
-    text_color: 'text - blue - 400',
-    link: 'https://ziontechgroup.com / multi - cloud - orchestration',
-    market_position:;
-      'Competitive with HashiCorp ($0 - 1000), Terraform Cloud ($0 - 500), and CloudBolt ($0 - 1000). Our advantage: Multi - cloud focus, better pricing, and comprehensive orchestration.',
-    target_audience:;
-      'Enterprises, Cloud architects, DevOps teams, IT managers, Technology companies, Multi - cloud organizations',
-    trial_days: 30,
-    setup_time: '1 week',
-    category: 'Cloud & DevOps',
-    real_service: true,
-    technology: [;
-      'Multi - Cloud',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Kubernetes',
       'React',
       'Node && Node.js',
       'PostgreSQL',
       'AWS',
     ],
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: [
       'AWS'
       'Azure'
@@ -371,7 +287,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     ]
     roi: 'Average customer sees 500% ROI through reduced cloud costs and improved efficiency.'
     competitors: [
-<<<<<<< HEAD
       'HashiCorp'
       'Terraform Cloud'
       'CloudBolt'
@@ -395,44 +310,16 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4.7
     reviews: 750
   }
-=======
-=======
-    integrations: [;
-      'AWS',
-      'Azure',
-      'Google Cloud',
-      'Kubernetes',
-      'Terraform',
-      'Ansible',
-    ],
-    use_cases: [;
-      'Multi - cloud management',
-      'Workload orchestration',
-      'Cost optimization',
-      'Performance monitoring',
-      'Security compliance',
-      'Resource optimization',
-    ],
-    roi: 'Average customer sees 500% ROI through reduced cloud costs and improved efficiency.',
-    competitors: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'HashiCorp',
       'Terraform Cloud',
       'CloudBolt',
       'RightScale',
       'Scalr',
     ],
-<<<<<<< HEAD
     marketSize: '$28 && 28.9B market',
     growthRate: '280% annual growth',
     variant: 'cloud-futuristic',
     contactInfo: {
-=======
-    market_size: '$28.9B market',
-    growth_rate: '280% annual growth',
-    variant: 'cloud - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -446,9 +333,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4 && 4.7,
     reviews: 750,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // AI-Powered IT Operations Center
   {
     id: 'ai-powered-it-operations-center'
@@ -459,7 +344,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     description:
       'Revolutionary AI-powered IT operations center that provides intelligent monitoring, automation, and insights for enterprise IT infrastructure. Perfect for large enterprises, MSPs, and organizations with complex IT environments.'
     features: [
-<<<<<<< HEAD
       'AI-powered monitoring'
       'Predictive analytics'
       'Automated remediation'
@@ -472,25 +356,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise deployment'
     ]
     popular: true
-    icon: '🖥️'
+    icon: ''
     color: 'from-purple-600 to-indigo-700'
     textColor: 'text-purple-400'
     link: 'https://ziontechgroup.com/ai-powered-it-operations-center'
-=======
-      'AI-powered monitoring',
-=======
-  // AI - Powered IT Operations Center;
-  {
-    id: 'ai - powered - it - operations - center',
-    name: 'AI - Powered IT Operations Center',
-    tagline: 'Intelligent IT operations with AI - driven automation and insights',
-    price: '$1, 499',
-    period: '/month',
-    description:;
-      'Revolutionary AI - powered IT operations center that provides intelligent monitoring, automation, and insights for enterprise IT infrastructure. Perfect for large enterprises, MSPs, and organizations with complex IT environments.',
-    features: [;
-      'AI - powered monitoring',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Predictive analytics',
       'Automated remediation',
       'Intelligent alerting',
@@ -502,12 +371,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise deployment',
     ],
     popular: true,
-    icon: '🖥️',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-it-operations-center',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Competitive with ServiceNow ($1000+/month), BMC Helix ($800+/month), and Micro Focus ($600+/month). Our advantage: AI-first approach, better pricing, and comprehensive automation.'
     targetAudience:
@@ -517,7 +384,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     category: 'IT Operations & AI'
     realService: true
     technology: [
-<<<<<<< HEAD
       'AI/ML'
       'IT Operations'
       'React'
@@ -525,31 +391,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'PostgreSQL'
       'AWS'
     ]
-=======
-      'AI/ML',
-=======
-    color: 'from - purple - 600 to - indigo - 700',
-    text_color: 'text - purple - 400',
-    link: 'https://ziontechgroup.com / ai - powered - it - operations - center',
-    market_position:;
-      'Competitive with ServiceNow ($1000+/month), BMC Helix ($800+/month), and Micro Focus ($600+/month). Our advantage: AI - first approach, better pricing, and comprehensive automation.',
-    target_audience:;
-      'Large enterprises, MSPs, IT service providers, Technology companies, Government agencies, Fortune 500 companies',
-    trial_days: 21,
-    setup_time: '2 weeks',
-    category: 'IT Operations & AI',
-    real_service: true,
-    technology: [;
-      'AI / ML',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'IT Operations',
       'React',
       'Node && Node.js',
       'PostgreSQL',
       'AWS',
     ],
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: [
       'ServiceNow'
       'BMC'
@@ -567,7 +414,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     ]
     roi: 'Average customer sees 600% ROI through improved efficiency and reduced operational costs.'
     competitors: [
-<<<<<<< HEAD
       'ServiceNow'
       'BMC Helix'
       'Micro Focus'
@@ -591,43 +437,16 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4.8
     reviews: 420
   }
-=======
-=======
-    integrations: [;
-      'ServiceNow',
-      'BMC',
-      'Micro Focus',
-      'Custom IT systems',
-      'Monitoring tools',
-    ],
-    use_cases: [;
-      'IT monitoring',
-      'Automation',
-      'Performance optimization',
-      'Capacity planning',
-      'Incident management',
-      'Service delivery',
-    ],
-    roi: 'Average customer sees 600% ROI through improved efficiency and reduced operational costs.',
-    competitors: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'ServiceNow',
       'BMC Helix',
       'Micro Focus',
       'BMC Software',
       'CA Technologies',
     ],
-<<<<<<< HEAD
     marketSize: '$35 && 35.2B market',
     growthRate: '240% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
-    market_size: '$35.2B market',
-    growth_rate: '240% annual growth',
-    variant: 'ai - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -641,9 +460,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4 && 4.8,
     reviews: 420,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Quantum-Ready Infrastructure Platform
   {
     id: 'quantum-ready-infrastructure-platform'
@@ -654,7 +471,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     description:
       'Advanced infrastructure platform that prepares enterprises for quantum computing while maintaining current classical computing capabilities. Perfect for forward-thinking enterprises, research institutions, and government agencies.'
     features: [
-<<<<<<< HEAD
       'Quantum-ready architecture'
       'Hybrid classical-quantum'
       'Post-quantum cryptography'
@@ -667,29 +483,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise deployment'
     ]
     popular: true
-    icon: '⚛️'
+    icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-400'
     link: 'https://ziontechgroup.com/quantum-ready-infrastructure'
-=======
-      'Quantum-ready architecture',
-      'Hybrid classical-quantum',
-      'Post-quantum cryptography',
-=======
-  // Quantum - Ready Infrastructure Platform;
-  {
-    id: 'quantum - ready - infrastructure - platform',
-    name: 'Quantum - Ready Infrastructure Platform',
-    tagline: 'Prepare your infrastructure for the quantum computing era',
-    price: '$1, 799',
-    period: '/month',
-    description:;
-      'Advanced infrastructure platform that prepares enterprises for quantum computing while maintaining current classical computing capabilities. Perfect for forward - thinking enterprises, research institutions, and government agencies.',
-    features: [;
-      'Quantum - ready architecture',
-      'Hybrid classical - quantum',
-      'Post - quantum cryptography',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum simulation',
       'Performance optimization',
       'Security hardening',
@@ -699,12 +496,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise deployment',
     ],
     popular: true,
-    icon: '⚛️',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-ready-infrastructure',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Competitive with IBM Quantum ($0-1000), Google Quantum ($500+/month), and Amazon Braket ($0-1000). Our advantage: Infrastructure focus, quantum preparation, and enterprise features.'
     targetAudience:
@@ -714,7 +509,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     category: 'Quantum & Infrastructure'
     realService: true
     technology: [
-<<<<<<< HEAD
       'Quantum Computing'
       'Infrastructure'
       'React'
@@ -722,21 +516,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'PostgreSQL'
       'Quantum Simulators'
     ]
-=======
-=======
-    color: 'from - cyan - 600 to - blue - 700',
-    text_color: 'text - cyan - 400',
-    link: 'https://ziontechgroup.com / quantum - ready - infrastructure',
-    market_position:;
-      'Competitive with IBM Quantum ($0 - 1000), Google Quantum ($500+/month), and Amazon Braket ($0 - 1000). Our advantage: Infrastructure focus, quantum preparation, and enterprise features.',
-    target_audience:;
-      'Forward - thinking enterprises, Research institutions, Government agencies, Technology companies, Universities, Quantum computing companies',
-    trial_days: 14,
-    setup_time: '1 month',
-    category: 'Quantum & Infrastructure',
-    real_service: true,
-    technology: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum Computing',
       'Infrastructure',
       'React',
@@ -744,8 +523,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'PostgreSQL',
       'Quantum Simulators',
     ],
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: [
       'IBM Quantum'
       'Google Quantum'
@@ -763,7 +540,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     ]
     roi: 'Average customer sees 700% ROI through future-proofing and quantum readiness.'
     competitors: [
-<<<<<<< HEAD
       'IBM Quantum'
       'Google Quantum'
       'Amazon Braket'
@@ -787,43 +563,16 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4.9
     reviews: 180
   }
-=======
-=======
-    integrations: [;
-      'IBM Quantum',
-      'Google Quantum',
-      'Amazon Braket',
-      'Custom infrastructure',
-      'Quantum hardware',
-    ],
-    use_cases: [;
-      'Quantum preparation',
-      'Infrastructure optimization',
-      'Security hardening',
-      'Performance improvement',
-      'Future - proofing',
-      'Research collaboration',
-    ],
-    roi: 'Average customer sees 700% ROI through future - proofing and quantum readiness.',
-    competitors: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'IBM Quantum',
       'Google Quantum',
       'Amazon Braket',
       'Microsoft Azure Quantum',
       'Rigetti',
     ],
-<<<<<<< HEAD
     marketSize: '$12 && 12.8B market',
     growthRate: '380% annual growth',
     variant: 'quantum-futuristic',
     contactInfo: {
-=======
-    market_size: '$12.8B market',
-    growth_rate: '380% annual growth',
-    variant: 'quantum - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -837,9 +586,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4 && 4.9,
     reviews: 180,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform'
@@ -850,7 +597,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     description:
       'Comprehensive edge computing orchestration platform that enables enterprises to deploy, manage, and optimize applications at the edge. Perfect for IoT deployments, edge computing initiatives, and distributed applications.'
     features: [
-<<<<<<< HEAD
       'Edge deployment management'
       'Distributed orchestration'
       'Performance optimization'
@@ -863,23 +609,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise deployment'
     ]
     popular: true
-    icon: '📡'
+    icon: ''
     color: 'from-green-600 to-emerald-700'
     textColor: 'text-green-400'
     link: 'https://ziontechgroup.com/edge-computing-orchestration'
-=======
-=======
-  // Edge Computing Orchestration Platform;
-  {
-    id: 'edge - computing - orchestration - platform',
-    name: 'Edge Computing Orchestration Platform',
-    tagline: 'Orchestrate and manage edge computing infrastructure at scale',
-    price: '$799',
-    period: '/month',
-    description:;
-      'Comprehensive edge computing orchestration platform that enables enterprises to deploy, manage, and optimize applications at the edge. Perfect for IoT deployments, edge computing initiatives, and distributed applications.',
-    features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Edge deployment management',
       'Distributed orchestration',
       'Performance optimization',
@@ -892,12 +625,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise deployment',
     ],
     popular: true,
-    icon: '📡',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Competitive with AWS Greengrass ($0-500), Azure IoT Edge ($0-300), and Google Cloud IoT ($0-400). Our advantage: Multi-cloud edge, better pricing, and comprehensive orchestration.'
     targetAudience:
@@ -907,7 +638,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     category: 'Edge Computing & IoT'
     realService: true
     technology: [
-<<<<<<< HEAD
       'Edge Computing'
       'IoT'
       'React'
@@ -915,21 +645,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'PostgreSQL'
       'AWS'
     ]
-=======
-=======
-    color: 'from - green - 600 to - emerald - 700',
-    text_color: 'text - green - 400',
-    link: 'https://ziontechgroup.com / edge - computing - orchestration',
-    market_position:;
-      'Competitive with AWS Greengrass ($0 - 500), Azure IoT Edge ($0 - 300), and Google Cloud IoT ($0 - 400). Our advantage: Multi - cloud edge, better pricing, and comprehensive orchestration.',
-    target_audience:;
-      'IoT companies, Edge computing initiatives, Manufacturing companies, Smart cities, Transportation companies, Technology companies',
-    trial_days: 30,
-    setup_time: '1 week',
-    category: 'Edge Computing & IoT',
-    real_service: true,
-    technology: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Edge Computing',
       'IoT',
       'React',
@@ -937,8 +652,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'PostgreSQL',
       'AWS',
     ],
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: [
       'AWS Greengrass'
       'Azure IoT Edge'
@@ -956,7 +669,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     ]
     roi: 'Average customer sees 500% ROI through improved edge performance and reduced latency.'
     competitors: [
-<<<<<<< HEAD
       'AWS Greengrass'
       'Azure IoT Edge'
       'Google Cloud IoT'
@@ -980,43 +692,16 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4.7
     reviews: 350
   }
-=======
-=======
-    integrations: [;
-      'AWS Greengrass',
-      'Azure IoT Edge',
-      'Google Cloud IoT',
-      'Custom edge devices',
-      'IoT platforms',
-    ],
-    use_cases: [;
-      'Edge deployment',
-      'IoT management',
-      'Performance optimization',
-      'Security management',
-      'Monitoring',
-      'Edge AI',
-    ],
-    roi: 'Average customer sees 500% ROI through improved edge performance and reduced latency.',
-    competitors: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'AWS Greengrass',
       'Azure IoT Edge',
       'Google Cloud IoT',
       'FogHorn',
       'ClearBlade',
     ],
-<<<<<<< HEAD
     marketSize: '$15 && 15.7B market',
     growthRate: '320% annual growth',
     variant: 'edge-futuristic',
     contactInfo: {
-=======
-    market_size: '$15.7B market',
-    growth_rate: '320% annual growth',
-    variant: 'edge - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1030,9 +715,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4 && 4.7,
     reviews: 350,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // AI-Powered Data Governance Platform
   {
     id: 'ai-powered-data-governance-platform'
@@ -1044,7 +727,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     description:
       'Advanced AI-powered data governance platform that provides intelligent data management, compliance, and insights. Perfect for enterprises with complex data environments, compliance requirements, and data governance needs.'
     features: [
-<<<<<<< HEAD
       'AI-powered data discovery'
       'Automated classification'
       'Compliance monitoring'
@@ -1057,26 +739,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise deployment'
     ]
     popular: true
-    icon: '📊'
+    icon: ''
     color: 'from-indigo-600 to-purple-700'
     textColor: 'text-indigo-400'
     link: 'https://ziontechgroup.com/ai-powered-data-governance'
-=======
-      'AI-powered data discovery',
-=======
-  // AI - Powered Data Governance Platform;
-  {
-    id: 'ai - powered - data - governance - platform',
-    name: 'AI - Powered Data Governance Platform',
-    tagline:;
-      'Intelligent data governance with AI - driven insights and compliance',
-    price: '$1, 299',
-    period: '/month',
-    description:;
-      'Advanced AI - powered data governance platform that provides intelligent data management, compliance, and insights. Perfect for enterprises with complex data environments, compliance requirements, and data governance needs.',
-    features: [;
-      'AI - powered data discovery',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Automated classification',
       'Compliance monitoring',
       'Data lineage tracking',
@@ -1088,12 +754,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise deployment',
     ],
     popular: true,
-    icon: '📊',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-data-governance',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Competitive with Collibra ($1000+/month), Informatica ($800+/month), and Alation ($600+/month). Our advantage: AI-first approach, better pricing, and comprehensive governance.'
     targetAudience:
@@ -1103,7 +767,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     category: 'Data Governance & AI'
     realService: true
     technology: [
-<<<<<<< HEAD
       'AI/ML'
       'Data Governance'
       'React'
@@ -1111,31 +774,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'PostgreSQL'
       'AWS'
     ]
-=======
-      'AI/ML',
-=======
-    color: 'from - indigo - 600 to - purple - 700',
-    text_color: 'text - indigo - 400',
-    link: 'https://ziontechgroup.com / ai - powered - data - governance',
-    market_position:;
-      'Competitive with Collibra ($1000+/month), Informatica ($800+/month), and Alation ($600+/month). Our advantage: AI - first approach, better pricing, and comprehensive governance.',
-    target_audience:;
-      'Enterprises, Data teams, Compliance officers, IT managers, Financial institutions, Healthcare organizations',
-    trial_days: 21,
-    setup_time: '2 weeks',
-    category: 'Data Governance & AI',
-    real_service: true,
-    technology: [;
-      'AI / ML',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Data Governance',
       'React',
       'Node && Node.js',
       'PostgreSQL',
       'AWS',
     ],
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: [
       'Collibra'
       'Informatica'
@@ -1144,7 +788,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Compliance platforms'
     ]
     useCases: [
-<<<<<<< HEAD
       'Data governance'
       'Compliance monitoring'
       'Data quality'
@@ -1171,17 +814,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4.8
     reviews: 280
   }
-=======
-=======
-    integrations: [;
-      'Collibra',
-      'Informatica',
-      'Alation',
-      'Custom data systems',
-      'Compliance platforms',
-    ],
-    use_cases: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Data governance',
       'Compliance monitoring',
       'Data quality',
@@ -1190,19 +822,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Governance automation',
     ],
     roi: 'Average customer sees 500% ROI through improved compliance and data quality.',
-<<<<<<< HEAD
     competitors: ['Collibra', 'Informatica', 'Alation', 'Data && Data.World', 'Atlan'],
     marketSize: '$23 && 23.4B market',
     growthRate: '260% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
-    competitors: ['Collibra', 'Informatica', 'Alation', 'Data.World', 'Atlan'],
-    market_size: '$23.4B market',
-    growth_rate: '260% annual growth',
-    variant: 'ai - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1216,9 +840,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4 && 4.8,
     reviews: 280,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Blockchain Enterprise Platform
   {
     id: 'blockchain-enterprise-platform'
@@ -1230,7 +852,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     description:
       'Comprehensive enterprise blockchain platform that enables businesses to build, deploy, and manage blockchain applications. Perfect for enterprises exploring blockchain technology, supply chain solutions, and digital transformation.'
     features: [
-<<<<<<< HEAD
       'Multi-blockchain support'
       'Smart contract development'
       'Enterprise security'
@@ -1243,26 +864,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise support'
     ]
     popular: true
-    icon: '⛓️'
+    icon: ''
     color: 'from-orange-600 to-red-700'
     textColor: 'text-orange-400'
     link: 'https://ziontechgroup.com/blockchain-enterprise-platform'
-=======
-      'Multi-blockchain support',
-=======
-  // Blockchain Enterprise Platform;
-  {
-    id: 'blockchain - enterprise - platform',
-    name: 'Blockchain Enterprise Platform',
-    tagline:;
-      'Enterprise - grade blockchain solutions for business transformation',
-    price: '$999',
-    period: '/month',
-    description:;
-      'Comprehensive enterprise blockchain platform that enables businesses to build, deploy, and manage blockchain applications. Perfect for enterprises exploring blockchain technology, supply chain solutions, and digital transformation.',
-    features: [;
-      'Multi - blockchain support',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Smart contract development',
       'Enterprise security',
       'Compliance frameworks',
@@ -1274,12 +879,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise support',
     ],
     popular: true,
-    icon: '⛓️',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup && ziontechgroup.com/blockchain-enterprise-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Competitive with IBM Blockchain ($1000+/month), Microsoft Azure Blockchain ($500+/month), and Amazon Managed Blockchain ($0-1000). Our advantage: Multi-blockchain support, better pricing, and comprehensive tools.'
     targetAudience:
@@ -1289,7 +892,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     category: 'Blockchain & Enterprise'
     realService: true
     technology: [
-<<<<<<< HEAD
       'Blockchain'
       'Smart Contracts'
       'React'
@@ -1297,21 +899,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'PostgreSQL'
       'AWS'
     ]
-=======
-=======
-    color: 'from - orange - 600 to - red - 700',
-    text_color: 'text - orange - 400',
-    link: 'https://ziontechgroup.com / blockchain - enterprise - platform',
-    market_position:;
-      'Competitive with IBM Blockchain ($1000+/month), Microsoft Azure Blockchain ($500+/month), and Amazon Managed Blockchain ($0 - 1000). Our advantage: Multi - blockchain support, better pricing, and comprehensive tools.',
-    target_audience:;
-      'Enterprises, Supply chain companies, Financial institutions, Technology companies, Consulting firms, Blockchain startups',
-    trial_days: 30,
-    setup_time: '2 weeks',
-    category: 'Blockchain & Enterprise',
-    real_service: true,
-    technology: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Blockchain',
       'Smart Contracts',
       'React',
@@ -1319,8 +906,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'PostgreSQL',
       'AWS',
     ],
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: [
       'IBM Blockchain'
       'Microsoft Azure'
@@ -1338,7 +923,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     ]
     roi: 'Average customer sees 400% ROI through improved efficiency and transparency.'
     competitors: [
-<<<<<<< HEAD
       'IBM Blockchain'
       'Microsoft Azure Blockchain'
       'Amazon Managed Blockchain'
@@ -1362,43 +946,16 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4.7
     reviews: 420
   }
-=======
-=======
-    integrations: [;
-      'IBM Blockchain',
-      'Microsoft Azure',
-      'Amazon Managed Blockchain',
-      'Custom systems',
-      'Enterprise platforms',
-    ],
-    use_cases: [;
-      'Supply chain management',
-      'Digital identity',
-      'Smart contracts',
-      'Asset tokenization',
-      'Compliance',
-      'Business transformation',
-    ],
-    roi: 'Average customer sees 400% ROI through improved efficiency and transparency.',
-    competitors: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'IBM Blockchain',
       'Microsoft Azure Blockchain',
       'Amazon Managed Blockchain',
       'R3 Corda',
       'Hyperledger',
     ],
-<<<<<<< HEAD
     marketSize: '$19 && 19.9B market',
     growthRate: '280% annual growth',
     variant: 'blockchain-futuristic',
     contactInfo: {
-=======
-    market_size: '$19.9B market',
-    growth_rate: '280% annual growth',
-    variant: 'blockchain - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1412,9 +969,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4 && 4.7,
     reviews: 420,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // AI-Powered DevOps Platform
   {
     id: 'ai-powered-devops-platform'
@@ -1425,7 +980,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     description:
       'Revolutionary AI-powered DevOps platform that provides intelligent automation, monitoring, and insights for software development and operations. Perfect for development teams, DevOps engineers, and technology companies.'
     features: [
-<<<<<<< HEAD
       'AI-powered automation'
       'Intelligent monitoring'
       'Predictive analytics'
@@ -1438,25 +992,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise deployment'
     ]
     popular: true
-    icon: '🚀'
+    icon: ''
     color: 'from-pink-600 to-rose-700'
     textColor: 'text-pink-400'
     link: 'https://ziontechgroup.com/ai-powered-devops-platform'
-=======
-      'AI-powered automation',
-=======
-  // AI - Powered DevOps Platform;
-  {
-    id: 'ai - powered - devops - platform',
-    name: 'AI - Powered DevOps Platform',
-    tagline: 'Intelligent DevOps with AI - driven automation and insights',
-    price: '$1, 099',
-    period: '/month',
-    description:;
-      'Revolutionary AI - powered DevOps platform that provides intelligent automation, monitoring, and insights for software development and operations. Perfect for development teams, DevOps engineers, and technology companies.',
-    features: [;
-      'AI - powered automation',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Intelligent monitoring',
       'Predictive analytics',
       'Performance optimization',
@@ -1468,39 +1007,25 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'Enterprise deployment',
     ],
     popular: true,
-    icon: '🚀',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-devops-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Competitive with GitLab ($0-1000), GitHub Actions ($0-500), and Azure DevOps ($0-1000). Our advantage: AI-first approach, better pricing, and comprehensive automation.'
     targetAudience:
-<<<<<<< HEAD
       'Development teams, DevOps engineers, Technology companies, Startups, Enterprises, IT organizations'
     trialDays: 30
     setupTime: '1 week'
     category: 'DevOps & AI'
     realService: true
     technology: ['AI/ML', 'DevOps', 'React', 'Node.js', 'PostgreSQL', 'AWS']
-=======
-=======
-    color: 'from - pink - 600 to - rose - 700',
-    text_color: 'text - pink - 400',
-    link: 'https://ziontechgroup.com / ai - powered - devops - platform',
-    market_position:;
-      'Competitive with GitLab ($0 - 1000), GitHub Actions ($0 - 500), and Azure DevOps ($0 - 1000). Our advantage: AI - first approach, better pricing, and comprehensive automation.',
-    target_audience:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Development teams, DevOps engineers, Technology companies, Startups, Enterprises, IT organizations',
     trial_days: 30,
     setup_time: '1 week',
     category: 'DevOps & AI',
-<<<<<<< HEAD
     realService: true,
     technology: ['AI/ML', 'DevOps', 'React', 'Node && Node.js', 'PostgreSQL', 'AWS'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: [
       'GitLab'
       'GitHub'
@@ -1519,7 +1044,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     ]
     roi: 'Average customer sees 600% ROI through improved efficiency and faster deployments.'
     competitors: [
-<<<<<<< HEAD
       'GitLab'
       'GitHub Actions'
       'Azure DevOps'
@@ -1543,46 +1067,16 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4.8
     reviews: 580
   }
-=======
-=======
-    real_service: true,
-    technology: ['AI / ML', 'DevOps', 'React', 'Node.js', 'PostgreSQL', 'AWS'],
-    integrations: [;
-      'GitLab',
-      'GitHub',
-      'Azure DevOps',
-      'Jenkins',
-      'Custom CI / CD',
-      'Monitoring tools',
-    ],
-    use_cases: [;
-      'CI / CD automation',
-      'Performance monitoring',
-      'Security scanning',
-      'Deployment automation',
-      'Workflow optimization',
-      'DevOps insights',
-    ],
-    roi: 'Average customer sees 600% ROI through improved efficiency and faster deployments.',
-    competitors: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'GitLab',
       'GitHub Actions',
       'Azure DevOps',
       'Jenkins',
       'CircleCI',
     ],
-<<<<<<< HEAD
     marketSize: '$18 && 18.7B market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
-    market_size: '$18.7B market',
-    growth_rate: '300% annual growth',
-    variant: 'ai - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1596,9 +1090,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4 && 4.8,
     reviews: 580,
   },
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Quantum Cybersecurity Platform
   {
     id: 'quantum-cybersecurity-platform'
@@ -1609,7 +1101,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     description:
       'Advanced quantum cybersecurity platform that provides protection against quantum threats and ensures long-term security. Perfect for government agencies, financial institutions, and enterprises requiring quantum-resistant security.'
     features: [
-<<<<<<< HEAD
       'Post-quantum cryptography'
       'Quantum-resistant algorithms'
       'Threat detection'
@@ -1622,27 +1113,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       '24/7 monitoring'
     ]
     popular: true
-    icon: '🛡️'
+    icon: ''
     color: 'from-yellow-600 to-orange-700'
     textColor: 'text-yellow-400'
     link: 'https://ziontechgroup.com/quantum-cybersecurity-platform'
-=======
-      'Post-quantum cryptography',
-      'Quantum-resistant algorithms',
-=======
-  // Quantum Cybersecurity Platform;
-  {
-    id: 'quantum - cybersecurity - platform',
-    name: 'Quantum Cybersecurity Platform',
-    tagline: 'Protect against quantum threats with quantum - resistant security',
-    price: '$1, 599',
-    period: '/month',
-    description:;
-      'Advanced quantum cybersecurity platform that provides protection against quantum threats and ensures long - term security. Perfect for government agencies, financial institutions, and enterprises requiring quantum - resistant security.',
-    features: [;
-      'Post - quantum cryptography',
-      'Quantum - resistant algorithms',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Threat detection',
       'Security monitoring',
       'Compliance frameworks',
@@ -1653,12 +1127,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       '24 / 7 monitoring',
     ],
     popular: true,
-    icon: '🛡️',
-<<<<<<< HEAD
+    icon: '',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     marketPosition:
       'Competitive with specialized quantum security companies. Our advantage: Comprehensive platform, better pricing, and quantum expertise.'
     targetAudience:
@@ -1668,7 +1140,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     category: 'Quantum & Cybersecurity'
     realService: true
     technology: [
-<<<<<<< HEAD
       'Post-Quantum Cryptography'
       'Quantum Algorithms'
       'React'
@@ -1676,31 +1147,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       'PostgreSQL'
       'AWS'
     ]
-=======
-      'Post-Quantum Cryptography',
-=======
-    color: 'from - yellow - 600 to - orange - 700',
-    text_color: 'text - yellow - 400',
-    link: 'https://ziontechgroup.com / quantum - cybersecurity - platform',
-    market_position:;
-      'Competitive with specialized quantum security companies. Our advantage: Comprehensive platform, better pricing, and quantum expertise.',
-    target_audience:;
-      'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Critical infrastructure, Fortune 500 companies',
-    trial_days: 14,
-    setup_time: '1 month',
-    category: 'Quantum & Cybersecurity',
-    real_service: true,
-    technology: [;
-      'Post - Quantum Cryptography',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum Algorithms',
       'React',
       'Node && Node.js',
       'PostgreSQL',
       'AWS',
     ],
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: [
       'Security systems'
       'Compliance platforms'
@@ -1717,7 +1169,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     ]
     roi: 'Average customer sees 700% ROI through enhanced security and quantum readiness.'
     competitors: [
-<<<<<<< HEAD
       'Specialized quantum security companies'
       'Government initiatives'
       'Research projects'
@@ -1750,40 +1201,14 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     customers: 280;
     rating: 4.9
 
-=======
-=======
-    integrations: [;
-      'Security systems',
-      'Compliance platforms',
-      'Custom security tools',
-      'Enterprise platforms',
-    ],
-    use_cases: [;
-      'Quantum threat protection',
-      'Security monitoring',
-      'Compliance',
-      'Risk management',
-      'Threat detection',
-      'Security automation',
-    ],
-    roi: 'Average customer sees 700% ROI through enhanced security and quantum readiness.',
-    competitors: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Specialized quantum security companies',
       'Government initiatives',
       'Research projects',
     ],
-<<<<<<< HEAD
     marketSize: '$8 && 8.9B market',
     growthRate: '450% annual growth',
     variant: 'quantum-futuristic',
     contactInfo: {
-=======
-    market_size: '$8.9B market',
-    growth_rate: '450% annual growth',
-    variant: 'quantum - futuristic',
-    contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1799,7 +1224,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-=======
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -1825,13 +1249,11 @@ export interface EnterpriseIT2026ServiceV2 {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture
   {
-<<<<<<< HEAD
     id: 'zero-trust-network-architecture-pro',
     name: 'Zero Trust Network Architecture Pro',
     tagline: 'Never trust, always verify - comprehensive zero trust security',
@@ -1851,7 +1273,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       'Enterprise deployment',
     ],
     popular: true,
-    icon: '🔒',
+    icon: '',
     color: 'from-red-600 to-orange-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-network-architecture',
@@ -1934,7 +1356,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       'Enterprise support',
     ],
     popular: true,
-    icon: '☁️',
+    icon: '',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup && ziontechgroup.com/multi-cloud-orchestration',
@@ -2018,7 +1440,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       'Enterprise deployment',
     ],
     popular: true,
-    icon: '🖥️',
+    icon: '',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-it-operations-center',
@@ -2101,7 +1523,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       'Enterprise deployment',
     ],
     popular: true,
-    icon: '⚛️',
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-ready-infrastructure',
@@ -2184,7 +1606,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       'Enterprise deployment',
     ],
     popular: true,
-    icon: '📡',
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration',
@@ -2268,7 +1690,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       'Enterprise deployment',
     ],
     popular: true,
-    icon: '📊',
+    icon: '',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-data-governance',
@@ -2346,7 +1768,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       'Enterprise support',
     ],
     popular: true,
-    icon: '⛓️',
+    icon: '',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup && ziontechgroup.com/blockchain-enterprise-platform',
@@ -2429,7 +1851,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       'Enterprise deployment',
     ],
     popular: true,
-    icon: '🚀',
+    icon: '',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-devops-platform',
@@ -2506,7 +1928,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       '24/7 monitoring',
     ],
     popular: true,
-    icon: '🛡️',
+    icon: '',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity-platform',
@@ -2565,34 +1987,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-=======
-    id: 'zero-trust-network-architecture-pro', name: 'Zero Trust Network Architecture Pro',
-    tagline: 'Never trust, always verify - comprehensive zero trust security',
-    price: '$1,199',
-    period: '/month',
-    description: 'Advanced zero trust network architecture platform that implements comprehensive security controls and continuous verification. Perfect for enterprises, government agencies, and organizations requiring maximum security.',
-    features: [
-      'Identity verificationDevice trust scoringContinuous monitoringMicro-segmentationLeast privilege accessReal-time threat detectionCompliance frameworksAdvanced analytics';
-      'API for integrationEnterprise deployment'
-    ];
-    popular: true, icon: '🔒',
-    color: 'from-red-600 to-orange-700', textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/zero-trust-network-architecture',
-    marketPosition: 'Competitive with Palo Alto Networks ($1000+/month), Cisco ($800+/month), and Fortinet ($600+/month). Our advantage: Zero trust focus, better pricing, and comprehensive security features.',
-    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Fortune 500 companies',
-    trialDays: 21, setupTime: '2 weeks',
-    category: 'Cybersecurity & Networking', realService: true,
-    technology: ['Zero TrustNetwork SecurityReactNode.jsPostgreSQLAWS'], integrations: ['Active DirectoryLDAPSAMLOAuthCustom identity systems'],
-    useCases: ['Network securityAccess controlThreat preventionComplianceRisk managementSecurity monitoring'], roi: 'Average customer sees 400% ROI through enhanced security and reduced breach risks.',
-    competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper'], marketSize: '$67.8B market',
-    growthRate: '220% annual growth', variant: 'security-futuristic',
-    contactInfo: {
-      
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
@@ -2600,9 +1995,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     launchDate: '2026-05-01';
     customers: 280;
     rating: 4 && 4.9,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 180
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -2611,14 +2004,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     customers: 280;
     rating: 4.9,
     reviews: 180;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-<<<<<<< HEAD
 ];
-<<<<<<< HEAD
-=======
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

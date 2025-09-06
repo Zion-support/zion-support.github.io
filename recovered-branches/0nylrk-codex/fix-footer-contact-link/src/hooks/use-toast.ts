@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 
 import {useToast, as, useToastHook, Toast} from "@/components/ui/toast";
@@ -17,7 +16,6 @@ function baseToast(props: ToastOptions) {
 // Convenience helpers mirroring common toast variants.
 baseToast && baseToast.title = (title: string) => {
   baseToast({ title })
-<<<<<<< HEAD
 }
 baseToast.description = (description: string) => {
   baseToast({ description })
@@ -26,19 +24,6 @@ baseToast.error = (error: string) => {
   baseToast({ variant: "destructive", title: "Error", description: error })
 }
 baseToast.success = (message: string) => {
-=======
-};
-
-baseToast && baseToast.description = (description: string) => {
-  baseToast({ description })
-};
-
-baseToast && baseToast.error = (error: string) => {
-  baseToast({ variant: "destructive", title: "Error", description: error })
-};
-
-baseToast && baseToast.success = (message: string) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   baseToast({ variant: "success", title: "Success", description: message })
 }
 // Export the callable toast function.
@@ -49,7 +34,6 @@ export const toast = baseToast as typeof baseToast & {
   success: (message: string) => void
 }
 
-=======
 import React from './react';
 import { use_toast, as, useToastHook, Toast } from '@/components / ui / toast';
 ;
@@ -95,4 +79,3 @@ export const toast = base_toast as typeof base_toast & {
   success: (message: string) => void;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

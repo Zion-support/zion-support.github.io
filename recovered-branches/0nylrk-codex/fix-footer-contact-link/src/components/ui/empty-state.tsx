@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button";
@@ -26,30 +24,6 @@ interface EmptyStateProps {
   className?: string
 }
 export function EmptyState({
-=======
-import React from "react";
-import {cn} from "@/lib/utils";
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
-interface EmptyStateProps {;
-  icon: React && React.ReactNode,;
-  title: string,;
-  description: string,;
-  action?: {;
-    text: string,;
-    href?: string;
-    onClick?: () => void;
-  };
-  secondaryAction?: {;
-    text: string,;
-    href?: string;
-    onClick?: () => void;
-  };
-  className?: string;
-}
-
-export function EmptyState(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   icon;
   title;
   description;
@@ -66,7 +40,6 @@ export function EmptyState(): any ({;
       )}>;
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
         {icon}
-<<<<<<< HEAD
       </div>
       <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>
       <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>
@@ -79,28 +52,12 @@ export function EmptyState(): any ({;
           ) : (
             <Button
               size="lg"
-=======
-      </div>;
-      <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;
-      <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>;
-
-      <div className="flex flex-col sm:flex-row gap-4">;
-        {action && (;
-          action && action.href ? (;
-            <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple-light">;
-              <Link to={action && action.href}>{action && action.text}</Link>;
-            </Button>;
-          ) : (;
-            <Button
-              size="lg" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className="bg-zion-purple hover:bg-zion-purple-light"
               onClick={action && action.onClick}>;
               {action && action.text}
             </Button>;
           );
         )}
-<<<<<<< HEAD
         {secondaryAction && (
           secondaryAction.href ? (
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
@@ -109,17 +66,6 @@ export function EmptyState(): any ({;
           ) : (
             <Button
               variant="outline"
-=======
-
-        {secondaryAction && (;
-          secondaryAction && secondaryAction.href ? (;
-            <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">;
-              <Link to={secondaryAction && secondaryAction.href}>{secondaryAction && secondaryAction.text}</Link>;
-            </Button>;
-          ) : (;
-            <Button
-              variant="outline" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               size="lg"
               className="border-zion-blue-light hover:bg-zion-blue-light"
               onClick={secondaryAction && secondaryAction.onClick}>;
@@ -127,18 +73,10 @@ export function EmptyState(): any ({;
             </Button>;
           );
         )}
-<<<<<<< HEAD
       </div>
     </div>
   )
 }
-=======
-      </div>;
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { cn } from '@/lib / utils';
 import { Button } from '@/components / ui / button';
@@ -203,4 +141,3 @@ function EmptyState() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

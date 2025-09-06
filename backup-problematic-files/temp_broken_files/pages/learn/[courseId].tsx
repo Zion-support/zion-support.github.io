@@ -63,7 +63,7 @@ export default function CourseView() {;
       <div className="lg:col-span-2 space-y-4">;
         <div>;
           <h1 className="text-2xl font-semibold">{course.title}</h1>;
-          <div className="text-gray-500 text-sm">{course.category} • {course.level}</div>;
+          <div className="text-gray-500 text-sm">{course.category}  {course.level}</div>;
           <div className="mt-3">;
             <ProgressBar value={progress.percent || 0} />;
             <div className="text-xs text-gray-500 mt-1">Progress:{progress.percent || 0}%</div>;

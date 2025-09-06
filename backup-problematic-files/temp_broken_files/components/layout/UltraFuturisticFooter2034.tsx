@@ -19,28 +19,28 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 },
 const _serviceCategories = [
-  {_title: '🧠 Revolutionary AI Services', _icon: Brain, _services: [
+  {_title: ' Revolutionary AI Services', _icon: Brain, _services: [
       { name: 'AI Business Intelligence Pro', _href: '/ai-business-intelligence-pro', _price: '$299/month'},
       {_name: 'AI Video Generation Platform', _href: '/ai-video-generation-platform', _price: '$499/month'},
       {_name: 'AI-Powered Cybersecurity', _href: '/ai-cybersecurity-platform', _price: '$799/month'},
       {_name: 'AI Drug Discovery Platform', _href: '/ai-drug-discovery-platform', _price: '$3, _999/month'}
     ]
   },
-  {_title: '⚛️ Quantum & Emerging Tech', _icon: Atom, _services: [
+  {_title: ' Quantum & Emerging Tech', _icon: Atom, _services: [
       { name: 'Quantum Machine Learning', _href: '/quantum-machine-learning-platform', _price: '$1, _999/month'},
       {_name: 'Blockchain AI Platform', _href: '/blockchain-ai-platform', _price: '$899/month'},
       {_name: 'Edge AI Computing', _href: '/edge-ai-computing-platform', _price: '$599/month'},
       {_name: 'AI Climate Modeling', _href: '/ai-climate-modeling-platform', _price: '$1, _299/month'}
     ]
   },
-  {_title: '🏙️ Enterprise IT Solutions', _icon: Cpu, _services: [
+  {_title: ' Enterprise IT Solutions', _icon: Cpu, _services: [
       { name: 'API Security & Monitoring', _href: '/api-security-monitoring-suite', _price: '$399/month'},
       {_name: 'Customer Success Automation', _href: '/customer-success-automation', _price: '$199/month'},
       {_name: 'HR Automation Suite', _href: '/hr-automation-suite', _price: '$179/month'},
       {_name: 'Project Management AI', _href: '/project-management-ai-platform', _price: '$199/month'}
     ]
   },
-  {_title: '🛒 Business Automation', _icon: ShoppingCart, _services: [
+  {_title: ' Business Automation', _icon: ShoppingCart, _services: [
       { name: 'E-commerce Automation', _href: '/ecommerce-automation-platform', _price: '$249/month'},
       {_name: 'Marketing Automation Suite', _href: '/marketing-automation-suite', _price: '$279/month'},
       {_name: 'Financial Analytics Platform', _href: '/financial-analytics-platform', _price: '$349/month'},
@@ -313,7 +313,7 @@ export default function UltraFuturisticFooter2034() {
               
               <div className=&quot;flex items-center space-x-2 text-gray-400&quot;>
                 <Heart className=&quot;w-4 h-4 text-red-400&quot; />
-                <span className=&quot;text-sm&quot;>Made with ❤️ for the future</span>
+                <span className=&quot;text-sm&quot;>Made with  for the future</span>
               </div>
             </div>
           </div>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Education } from '@/types/resume';
 export interface EducationFormProps {
@@ -19,22 +18,3 @@ export interface EducationFormFieldsProps {
   onCancel: () => void;
 }
 
-=======
-import { Education  } from '@/types / resume';
-export interface EducationFormProps {
-  resume_id: string;
-  education_entries: Education[];
-  on_complete: () => void;
-  on_back: () => void;
-}
-export interface EducationItemProps {
-  education: Education;
-  on_edit: (education: Education) => void;
-  on_delete: (id: string) => void;
-}
-export interface EducationFormFieldsProps {
-  is_editing: boolean;
-  on_submit: (data: any) => Promise < void>;
-  on_cancel: () => void;
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

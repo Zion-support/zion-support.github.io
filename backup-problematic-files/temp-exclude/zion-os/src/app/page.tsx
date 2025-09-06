@@ -3,7 +3,7 @@ import FeatureCard from './components/FeatureCard',;
 export default function HomePage() {;
   const features = [;
     {;
-      icon:"🤖",;
+      icon:"",;
       title:"AI-Powered Intelligence",;
       description:"ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",;
       features:[;
@@ -15,7 +15,7 @@ export default function HomePage() {;
       gradient:"bg-gradient-to-r from-blue-600 to-purple-600";
     },;
     {;
-      icon:"🏪",;
+      icon:"",;
       title:"Complete Marketplace",;
       description:"Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.",;
       features:[;
@@ -27,7 +27,7 @@ export default function HomePage() {;
       gradient:"bg-gradient-to-r from-green-600 to-emerald-600";
     },;
     {;
-      icon:"🗳️",;
+      icon:"",;
       title:"Governance & DAO",;
       description:"Flexible governance from admin control to full DAO systems with dual governance options.",;
       features:[;
@@ -39,7 +39,7 @@ export default function HomePage() {;
       gradient:"bg-gradient-to-r from-purple-600 to-pink-600";
     },;
     {;
-      icon:"⚡",;
+      icon:"",;
       title:"Enterprise Infrastructure",;
       description:"Built for scale with regional dashboards, partner APIs, and white-label solutions.",;
       features:[;
@@ -51,7 +51,7 @@ export default function HomePage() {;
       gradient:"bg-gradient-to-r from-orange-600 to-red-600";
     },;
     {;
-      icon:"🎓",;
+      icon:"",;
       title:"Education & Growth",;
       description:"Zion Academy, incubator programs, and grants foster innovation and community growth.",;
       features:[;
@@ -63,7 +63,7 @@ export default function HomePage() {;
       gradient:"bg-gradient-to-r from-teal-600 to-cyan-600";
     },;
     {;
-      icon:"🚀",;
+      icon:"",;
       title:"One-Click Deployment",;
       description:"Launch your complete digital economy in minutes with our unified deployment protocol.",;
       features:[;
@@ -97,10 +97,10 @@ export default function HomePage() {;
             ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
               <a href="/multiverse/launch" className="btn-primary hover-lift">;
-                🚀 Launch Your Economy;
+                 Launch Your Economy;
               </a>;
               <a href="/admin/instances" className="btn-secondary hover-lift">;
-                📊 View Instances;
+                 View Instances;
               </a>;
             </div>;
           </div>;
@@ -146,10 +146,10 @@ export default function HomePage() {;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">;
-                🚀 Start Building Now;
+                 Start Building Now;
               </a>;
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">;
-                📊 Explore Examples;
+                 Explore Examples;
               </a>;
             </div>;
           </div>;
@@ -173,14 +173,14 @@ export default function HomePage() {;
               <div className="text-white/70">AI Orchestration</div>;
             </div>;
             <div className="animate-fade-in" style={{animationDelay:'0.3s'}}>;
-              <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>;
+              <div className="text-3xl font-bold text-orange-400 mb-2"></div>;
               <div className="text-white/70">Scalability</div>;
             </div>;
           </div>;
         </div>;
       </section>;
     </div>;
-  ),; <div className="animate-fade-in" > <h1 className="text-5xl md:text-7xl font-bold mb-6" > <span className="gradient-text" >Launch Sovereign</span> <br /> <span className="text-white" >AI-Powered Digital Economies</span> </h1> Built for the future of decentralized business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <a href="/multiverse/launch" className="btn-primary hover-lift" > 🚀 Launch Your Economy </Link> <a href="/admin/instances" className="btn-secondary hover-lift" > 📊 View Instances </Link> </div> </div> </div> </section> for launching sovereign digital economies. </p> </div> <FeatureCard key= {
+  ),; <div className="animate-fade-in" > <h1 className="text-5xl md:text-7xl font-bold mb-6" > <span className="gradient-text" >Launch Sovereign</span> <br /> <span className="text-white" >AI-Powered Digital Economies</span> </h1> Built for the future of decentralized business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <a href="/multiverse/launch" className="btn-primary hover-lift" >  Launch Your Economy </Link> <a href="/admin/instances" className="btn-secondary hover-lift" >  View Instances </Link> </div> </div> </div> </section> for launching sovereign digital economies. </p> </div> <FeatureCard key= {
   index 
 }icon= {
   feature.icon 
@@ -193,5 +193,5 @@ export default function HomePage() {;
 }gradient= {
   feature.gradient 
 }/>) ) 
-}</div> </div> </section> Ready to Build the Future? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4" > 🚀 Start Building Now </Link> <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4" > 📊 Explore Examples </Link> </div> </div> </div> </section> </div> </div> </div> </section> </div>) 
+}</div> </div> </section> Ready to Build the Future? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4" >  Start Building Now </Link> <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4" >  Explore Examples </Link> </div> </div> </div> </section> </div> </div> </div> </section> </div>) 
 }

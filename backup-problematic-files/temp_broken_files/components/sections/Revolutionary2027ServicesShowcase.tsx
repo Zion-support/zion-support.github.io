@@ -198,7 +198,7 @@ key={service.id}
                   <div className=&quot;pt-4 border-t border-gray-700/50&quot;>
                     <div className=&quot;flex justify-between items-center text-sm text-gray-400&quot;>
                       <span>Market: {service.marketSize}</span>
-                      <span className=&quot;text-green-400&quot;>↑ {service.growthRate}</span>
+                      <span className=&quot;text-green-400&quot;> {service.growthRate}</span>
                     </div>
                   </div>
 

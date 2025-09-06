@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const isGuest = !auth?.isAuthenticated
   const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return
@@ -82,90 +77,10 @@ export function ChatAssistant({
       if (initialMessages && initialMessages.length > 0) {
         setDisplayGuestMessages(initialMessages)
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
-=======
-  const is_guest = !auth?.is_authenticated;
-  const handleSendMessage = async (message_content: string) => {
-    if () return) {
-  $2
-}
-import React, {
-  useState,
-  useEffect,
-  useRef,
-  ReactNode,
-  useContext} from 'react',
-import { AuthContext } from '../../context / auth / AuthContext';
-import { use_debounce } from '../../hooks / use_debounce';
-import { useLocalStorage } from '../../hooks / useLocalStorage';
-import { ChatMessage } from './ChatMessage';
-import { ChatInput } from './ChatInput';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Button } from '@/components / ui / button';
-import { X } from 'lucide-react';
-export interface Message {
-  id: string,
-  role: 'user' | 'assistant',
-  message: string,
-  timestamp: Date,
-  read?: boolean;
-}
-export interface ChatAssistantProps {
-  is_open: boolean,
-  on_close: () => void,
-  recipient: {
-    id: string,
-    name: string,
-    avatar_url?: string,
-    role?: string;
-  },
-  conversation_id?: string,
-  initial_messages?: Message[],
-  onSendMessage: (message: string, conversation_id?: string, ) => Promise < void>,
-  context_header?: ReactNode,
-  /** Optional canned questions shown when the chat is empty */;
-  starter_questions?: string[];
-}
-export /**
- * ChatAssistant - Function description
- */
-function ChatAssistant() {
-  const auth = useContext (AuthContext),
-  const is_guest = !auth?.is_authenticated,
-  // Hooks called unconditionally at the top;
-  const localStorageKey = `chat_history-${recipient.id}`, // Key is always generated;
-  const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<;
-    Message[];
-  >(is_guest ? localStorageKey : 'dummy - guest - key', // Use a dummy key if not guest to prevent LS write for logged - in users;
-    []),
-  const [displayGuestMessages, setDisplayGuestMessages] = useState < Message[]>([]),
-  const [loggedInMessages, setLoggedInMessages] =;
-    useState < Message[]>(initial_messages),
-  const messagesEndRef = useRef < HTMLDivElement | null>(null),
-  const [pendingApiCallParams, setPendingApiCallParams] = useState<{
-    message: string,
-    conversation_id?: string;
-  } | null>(null),
-  const [showGuestModal, setShowGuestModal] = useState (false),
-  const [guest_message, setGuestMessage] = useState < string | null>(null),
-  // Effect for guest user messages;
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      // Priority: initial_messages prop > local_storage > empty array;
-      // Check condition
-if ( {) {
-  $2
-}
-        setDisplayGuestMessages (initial_messages),
-        setStoredGuestMessages (initial_messages), // Persist if initial_messages are provided;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         setDisplayGuestMessages (storedGuestMessages);
       }
     }
-<<<<<<< HEAD
   }, [
     isGuest
     initialMessages
@@ -255,8 +170,6 @@ if ( {) {
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose])
   if (!isOpen) return null
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const isGuest = !auth?.isAuthenticated;
 
   const handleSendMessage = async (messageContent: string) => {;
@@ -444,7 +357,6 @@ export function ChatAssistant(): any ({;
   }, [isOpen, onClose]),;
 
   if (!isOpen) return null,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div
@@ -476,19 +388,11 @@ export function ChatAssistant(): any ({;
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
             onClick = {onClose,}
-<<<<<<< HEAD
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
           </Button>
         </div>
-=======
-            aria-label="Close chat">;
-            <X className="h-5 w-5" />;
-          </Button>;
-        </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Context Header (Optional) */}
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
@@ -522,7 +426,6 @@ export function ChatAssistant(): any ({;
               <ChatMessage key={msg && msg.id} role={msg && msg.role} message={msg && msg.message} />;
             ));
           )}
-<<<<<<< HEAD
           <div ref={messagesEndRef} />
         </div>
         {/* Input */}
@@ -531,18 +434,6 @@ export function ChatAssistant(): any ({;
         </div>
       </div>
       {showGuestModal && guestMessage && (
-=======
-          <div ref={messagesEndRef} />;
-        </div>;
-
-        {/* Input */}
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
-          <ChatInput onSend={handleSendMessage} />;
-        </div>;
-      </div>;
-
-      {showGuestModal && guestMessage && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
@@ -567,7 +458,6 @@ export function ChatAssistant(): any ({;
               <Button
                 onClick = {handleModalSendConfirm,}
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
-=======
   }, [;
     is_guest,
     initial_messages,
@@ -782,27 +672,17 @@ if (return null, ) {
                 on_click = {handleModalSendConfirm, }
                 className="bg - zion - purple hover:bg - zion - purple - dark text - white";
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Send;
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD
         </div>;
       )}
     </div>;
   );
 }
 }
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         </div>)}
     </div>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

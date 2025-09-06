@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useRouter } from 'next/router'
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -33,8 +28,6 @@ const updatePasswordSchema = z
     message: "Passwords do not match"
     path: ["confirmPassword"]})
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useRouter } from 'next/router';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, ControllerRenderProps } from "react-hook-form";
@@ -44,7 +37,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {;
-=======
 import { use_router } from 'next / router';
 import { zod_resolver  } from '@hookform / resolvers / zod';
 import { use_form, ControllerRenderProps  } from './react - hook - form';
@@ -54,13 +46,11 @@ import { supabase  } from '@/integrations / supabase / client';
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
 import {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Form;
   FormControl;
   FormField;
   FormItem;
   FormLabel;
-<<<<<<< HEAD
   FormMessage} from "@/components/ui/form";import { toast } from "@/hooks/use-toast";
 import { cleanupAuthState } from "@/utils/authUtils";
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -80,17 +70,7 @@ type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema>;
 
 }
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-=======
-
-  )
-}
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   FormMessage } from '@/components / ui / form'; import { toast  } from '@/hooks / use - toast';
 import { cleanupAuthState  } from '@/utils / auth_utils';
 import { logErrorToProduction } from '@/utils / production_logger';
@@ -109,5 +89,3 @@ type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;
 }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

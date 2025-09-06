@@ -280,7 +280,7 @@ initial={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className=&quot;text-gray-400 text-sm&quot;            >
-              © 2025 Zion Tech Group. All rights reserved. | 
+               2025 Zion Tech Group. All rights reserved. | 
               <Link href=&quot;/privacy&quot; className=&quot;hover:text-cyan-400 transition-colors duration-300 ml-2&quot;>Privacy Policy</a> | 
               <Link href=&quot;/terms&quot; className=&quot;hover:text-cyan-400 transition-colors duration-300 ml-2&quot;>Terms of Service</a>
             </motion.div>

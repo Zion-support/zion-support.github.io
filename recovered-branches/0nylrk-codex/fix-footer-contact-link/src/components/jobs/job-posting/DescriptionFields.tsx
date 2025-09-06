@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 
 import React from "react";
 import { Control } from "react-hook-form";
-<<<<<<< HEAD
 import {
   FormField
   FormItem
@@ -10,65 +8,27 @@ import {
   FormControl
   FormDescription
   FormMessage
-=======
-import {;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormDescription,;
-  FormMessage,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
 import { JobSchemaType } from './validation';
 interface DescriptionFieldsProps {
-=======
-import { JobSchemaType } from "./validation";
-interface DescriptionFieldsProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
   editorContent: string
 }
-<<<<<<< HEAD
 export function DescriptionFields({
   control
   handleEditorChange
   editorContent
 }: DescriptionFieldsProps) {
-=======
-
-export function DescriptionFields(): any ({;
-  control,;
-  handleEditorChange,;
-  editorContent,;
-}: DescriptionFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <FormField
-<<<<<<< HEAD
         control;
                   field.onChange(e.target.value)
-=======
-        control={control}
-        name="description"
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Job Description</FormLabel>;
-            <FormControl>;
-              <Textarea
-                value={editorContent}
-                onChange={(e) => {;
-                  handleEditorChange(e && e.target.value);
-                  field && field.onChange(e && e.target.value);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }}
                 className="min-h-[200px]";
-=======
 import React from './react';
 import { Control  } from './react - hook - form';
 import {
@@ -106,7 +66,6 @@ function DescriptionFields() {
                   field.on_change (e.target.value);
                 }}
                 className="min - h-[200px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 placeholder="Enter a detailed description of the job role";
               />;
             </FormControl>;
@@ -114,15 +73,9 @@ function DescriptionFields() {
               Detailed description of the job role.;
             </FormDescription>;
             <FormMessage />;
-<<<<<<< HEAD
           </FormItem>;
         )}
-<<<<<<< HEAD
       />
-=======
-      />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <FormField
         control={control}
         name="responsibilities"
@@ -133,7 +86,6 @@ function DescriptionFields() {
               <Textarea
                 placeholder="List the main responsibilities of this job"
                 className="resize-none min-h-[100px]"
-=======
           </FormItem>)}
       />;
       <FormField;
@@ -146,7 +98,6 @@ function DescriptionFields() {
               <Textarea;
                 placeholder="List the main responsibilities of this job";
                 className="resize - none min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {...field}
               />;
             </FormControl>;
@@ -154,15 +105,9 @@ function DescriptionFields() {
               List the main responsibilities of this job.;
             </FormDescription>;
             <FormMessage />;
-<<<<<<< HEAD
           </FormItem>;
         )}
-<<<<<<< HEAD
       />
-=======
-      />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <FormField
         control={control}
         name="qualifications"
@@ -173,7 +118,6 @@ function DescriptionFields() {
               <Textarea
                 placeholder="List the required qualifications for this job"
                 className="resize-none min-h-[100px]"
-=======
           </FormItem>)}
       />;
       <FormField;
@@ -186,7 +130,6 @@ function DescriptionFields() {
               <Textarea;
                 placeholder="List the required qualifications for this job";
                 className="resize - none min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {...field}
               />;
             </FormControl>;
@@ -194,15 +137,9 @@ function DescriptionFields() {
               List the required qualifications for this job.;
             </FormDescription>;
             <FormMessage />;
-<<<<<<< HEAD
           </FormItem>;
         )}
-<<<<<<< HEAD
       />
-=======
-      />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <FormField
         control={control}
         name="benefits"
@@ -213,7 +150,6 @@ function DescriptionFields() {
               <Textarea
                 placeholder="List the benefits offered for this job"
                 className="resize-none min-h-[100px]"
-=======
           </FormItem>)}
       />;
       <FormField;
@@ -226,7 +162,6 @@ function DescriptionFields() {
               <Textarea;
                 placeholder="List the benefits offered for this job";
                 className="resize - none min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {...field}
               />;
             </FormControl>;
@@ -234,15 +169,9 @@ function DescriptionFields() {
               List the benefits offered for this job.;
             </FormDescription>;
             <FormMessage />;
-<<<<<<< HEAD
           </FormItem>;
         )}
-<<<<<<< HEAD
       />
-=======
-      />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <FormField
         control={control}
         name="application_instructions"
@@ -253,7 +182,6 @@ function DescriptionFields() {
               <Textarea
                 placeholder="Provide instructions on how to apply for this job"
                 className="resize-none min-h-[100px]"
-=======
           </FormItem>)}
       />;
       <FormField;
@@ -266,7 +194,6 @@ function DescriptionFields() {
               <Textarea;
                 placeholder="Provide instructions on how to apply for this job";
                 className="resize - none min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {...field}
               />;
             </FormControl>;
@@ -274,15 +201,9 @@ function DescriptionFields() {
               Provide instructions on how to apply for this job.;
             </FormDescription>;
             <FormMessage />;
-<<<<<<< HEAD
           </FormItem>;
         )}
       />;
     </>;
   );
-=======
-          </FormItem>)}
-      />;
-    </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

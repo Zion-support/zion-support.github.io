@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -32,7 +25,7 @@ const contactInfo = {
 const serviceCategories = [
   {
     id: 'ai-consciousness'
-    title: '🧠 AI Consciousness & Emotional Intelligence'
+    title: ' AI Consciousness & Emotional Intelligence'
     description: 'Revolutionary AI consciousness and emotional intelligence platforms'
     icon: Brain
     color: 'from-violet-500 to-purple-500'
@@ -41,7 +34,7 @@ const serviceCategories = [
   }
   {
     id: 'quantum-emerging'
-    title: '⚛️ Quantum & Emerging Tech'
+    title: ' Quantum & Emerging Tech'
     description: 'Quantum computing, DNA computing, and beyond'
     icon: Atom
     color: 'from-blue-500 to-cyan-500'
@@ -50,7 +43,7 @@ const serviceCategories = [
   }
   {
     id: 'space-tech'
-    title: '🚀 Space Technology & Satellite'
+    title: ' Space Technology & Satellite'
     description: 'Space mission management and satellite operations'
     icon: Rocket
     color: 'from-indigo-500 to-blue-500'
@@ -59,7 +52,7 @@ const serviceCategories = [
   }
   {
     id: 'cybersecurity'
-    title: '🔒 Next-Generation Cybersecurity'
+    title: ' Next-Generation Cybersecurity'
     description: 'Quantum encryption and AI threat detection'
     icon: Shield
     color: 'from-red-500 to-pink-500'
@@ -68,7 +61,7 @@ const serviceCategories = [
   }
   {
     id: 'cloud-infrastructure'
-    title: '☁️ Quantum Cloud & Infrastructure'
+    title: ' Quantum Cloud & Infrastructure'
     description: 'Quantum-enhanced cloud computing and infrastructure'
     icon: Cloud
     color: 'from-cyan-500 to-blue-500'
@@ -77,7 +70,7 @@ const serviceCategories = [
   }
   {
     id: 'fintech'
-    title: '🏦 Financial Technology Revolution'
+    title: ' Financial Technology Revolution'
     description: 'AI-powered trading and quantum risk management'
     icon: DollarSign
     color: 'from-green-500 to-emerald-500'
@@ -86,7 +79,7 @@ const serviceCategories = [
   }
   {
     id: 'industrial-iot'
-    title: '🏭 Industrial IoT & Smart Manufacturing'
+    title: ' Industrial IoT & Smart Manufacturing'
     description: 'Zero downtime manufacturing and predictive maintenance'
     icon: Building2
     color: 'from-gray-500 to-slate-500'
@@ -95,7 +88,7 @@ const serviceCategories = [
   }
   {
     id: 'edtech'
-    title: '🎓 Education Technology Revolution'
+    title: ' Education Technology Revolution'
     description: 'AI-powered personalized learning and 10x faster knowledge acquisition'
     icon: Users
     color: 'from-blue-500 to-cyan-500'
@@ -104,7 +97,7 @@ const serviceCategories = [
   }
   {
     id: 'sustainability'
-    title: '🌱 Sustainability & Green Technology'
+    title: ' Sustainability & Green Technology'
     description: 'AI-powered environmental solutions for carbon neutrality'
     icon: Globe
     color: 'from-green-500 to-emerald-500'
@@ -113,7 +106,7 @@ const serviceCategories = [
   }
   {
     id: 'logistics'
-    title: '🚛 Logistics & Supply Chain'
+    title: ' Logistics & Supply Chain'
     description: '99.9% delivery accuracy and zero waste supply chain'
     icon: Package
     color: 'from-orange-500 to-red-500'
@@ -190,7 +183,6 @@ export default function Revolutionary2025ServicesShowcase() {
             </motion.div>
           </div>
         </section>
-=======
 import React, { useState } from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -217,7 +209,7 @@ const contact_info = {
 const service_categories = [;
   {
     id: 'ai - consciousness',
-    title: '🧠 AI Consciousness & Emotional Intelligence',
+    title: ' AI Consciousness & Emotional Intelligence',
     description: 'Revolutionary AI consciousness and emotional intelligence platforms',
     icon: Brain,
     color: 'from - violet - 500 to - purple - 500',
@@ -226,7 +218,7 @@ const service_categories = [;
   },
   {
     id: 'quantum - emerging',
-    title: '⚛️ Quantum & Emerging Tech',
+    title: ' Quantum & Emerging Tech',
     description: 'Quantum computing, DNA computing, and beyond',
     icon: Atom,
     color: 'from - blue - 500 to - cyan - 500',
@@ -235,7 +227,7 @@ const service_categories = [;
   },
   {
     id: 'space - tech',
-    title: '🚀 Space Technology & Satellite',
+    title: ' Space Technology & Satellite',
     description: 'Space mission management and satellite operations',
     icon: Rocket,
     color: 'from - indigo - 500 to - blue - 500',
@@ -244,7 +236,7 @@ const service_categories = [;
   },
   {
     id: 'cybersecurity',
-    title: '🔒 Next - Generation Cybersecurity',
+    title: ' Next - Generation Cybersecurity',
     description: 'Quantum encryption and AI threat detection',
     icon: Shield,
     color: 'from - red - 500 to - pink - 500',
@@ -253,7 +245,7 @@ const service_categories = [;
   },
   {
     id: 'cloud - infrastructure',
-    title: '☁️ Quantum Cloud & Infrastructure',
+    title: ' Quantum Cloud & Infrastructure',
     description: 'Quantum - enhanced cloud computing and infrastructure',
     icon: Cloud,
     color: 'from - cyan - 500 to - blue - 500',
@@ -262,7 +254,7 @@ const service_categories = [;
   },
   {
     id: 'fintech',
-    title: '🏦 Financial Technology Revolution',
+    title: ' Financial Technology Revolution',
     description: 'AI - powered trading and quantum risk management',
     icon: DollarSign,
     color: 'from - green - 500 to - emerald - 500',
@@ -271,7 +263,7 @@ const service_categories = [;
   },
   {
     id: 'industrial - iot',
-    title: '🏭 Industrial IoT & Smart Manufacturing',
+    title: ' Industrial IoT & Smart Manufacturing',
     description: 'Zero downtime manufacturing and predictive maintenance',
     icon: Building2,
     color: 'from - gray - 500 to - slate - 500',
@@ -280,7 +272,7 @@ const service_categories = [;
   },
   {
     id: 'edtech',
-    title: '🎓 Education Technology Revolution',
+    title: ' Education Technology Revolution',
     description: 'AI - powered personalized learning and 10x faster knowledge acquisition',
     icon: Users,
     color: 'from - blue - 500 to - cyan - 500',
@@ -289,7 +281,7 @@ const service_categories = [;
   },
   {
     id: 'sustainability',
-    title: '🌱 Sustainability & Green Technology',
+    title: ' Sustainability & Green Technology',
     description: 'AI - powered environmental solutions for carbon neutrality',
     icon: Globe,
     color: 'from - green - 500 to - emerald - 500',
@@ -298,7 +290,7 @@ const service_categories = [;
   },
   {
     id: 'logistics',
-    title: '🚛 Logistics & Supply Chain',
+    title: ' Logistics & Supply Chain',
     description: '99.9% delivery accuracy and zero waste supply chain',
     icon: Package,
     color: 'from - orange - 500 to - red - 500',
@@ -378,13 +370,11 @@ function Revolutionary2025ServicesShowcase() {
             </motion.div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Search and Filter Section */}
         <section className="py - 8 px - 4 border - b border - gray - 800">;
           <div className="container mx - auto">;
             <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
               {/* Search */}
-<<<<<<< HEAD
               <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -395,22 +385,9 @@ function Revolutionary2025ServicesShowcase() {
                   className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
               </div>
-=======
-              <div className="relative flex - 1 max - w-md">;
-                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
-                <input;
-                  type="text";
-                  placeholder="Search revolutionary services...";
-                  value={search_term}
-                  on_change={(e) => setSearchTerm (e.target.value)}
-                  className="w - full pl - 10 pr - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent";
-                />;
-              </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {/* Filters */}
               <div className="flex flex - wrap gap - 4 items - center">;
                 {/* Category Filter */}
-<<<<<<< HEAD
                 <div className="relative">
                   <select
                     value={selectedCategory}
@@ -464,65 +441,10 @@ function Revolutionary2025ServicesShowcase() {
             </div>
           </div>
         </section>
-=======
-                <div className="relative">;
-                  <select;
-                    value={selected_category}
-                    on_change={(e) => setSelectedCategory (e.target.value)}
-                    className="appearance - none bg - gray - 800 / 50 border border - gray - 700 rounded - lg px - 4 py - 3 text - white focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent pr - 10";
-                  >;
-                    <option value="all">All Categories</option>;
-                    {service_categories.map (category => (
-                      <option key={category.id} value={category.id}>;
-                        {category.title.split (' ').slice (1).join (' ')}
-                      </option>))}
-                  </select>;
-                  <ChevronDown className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 4 h - 4 pointer - events - none" />;
-                </div>;
-                {/* Sort Filter */}
-                <div className="relative">;
-                  <select;
-                    value={sort_by}
-                    on_change={(e) => setSortBy (e.target.value)}
-                    className="appearance - none bg - gray - 800 / 50 border border - gray - 700 rounded - lg px - 4 py - 3 text - white focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent pr - 10";
-                  >;
-                    <option value="popularity">Most Popular</option>;
-                    <option value="rating">Highest Rated</option>;
-                    <option value="customers">Most Customers</option>;
-                    <option value="price - low">Price: Low to High</option>;
-                    <option value="price - high">Price: High to Low</option>;
-                  </select>;
-                  <ChevronDown className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 4 h - 4 pointer - events - none" />;
-                </div>;
-                {/* View Mode */}
-                <div className="flex bg - gray - 800 / 50 border border - gray - 700 rounded - lg p - 1">;
-                  <button;
-                    on_click={() => setViewMode ('grid')}
-                    className={`p - 2 rounded ${view_mode === 'grid' ? 'bg - purple - 500 text - white' : 'text - gray - 400 hover:text - white'}`}
-                  >;
-                    <svg className="w - 5 h - 5" fill="current_color" view_box="0 0 20 20">;
-                      <path d="M5 3a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2V5a2 2 0 00 - 2-2H5zM5 11a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2v - 2a2 2 0 00 - 2-2H5zM11 5a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2V5zM11 13a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2v - 2z" />;
-                    </svg>;
-                  </button>;
-                  <button;
-                    on_click={() => setViewMode ('list')}
-                    className={`p - 2 rounded ${view_mode === 'list' ? 'bg - purple - 500 text - white' : 'text - gray - 400 hover:text - white'}`}
-                  >;
-                    <svg className="w - 5 h - 5" fill="current_color" view_box="0 0 20 20">;
-                      <path fill_rule="evenodd" d="M3 4a1 1 0 011 - 1h12a1 1 0 110 2H4a1 1 0 01 - 1-1zm0 4a1 1 0 011 - 1h12a1 1 0 110 2H4a1 1 0 01 - 1-1zm0 4a1 1 0 011 - 1h12a1 1 0 110 2H4a1 1 0 01 - 1-1zm0 4a1 1 0 011 - 1h12a1 1 0 110 2H4a1 1 0 01 - 1-1z" clip_rule="evenodd" />;
-                    </svg>;
-                  </button>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Services Grid */}
         <section className="py - 16 px - 4">;
           <div className="container mx - auto">;
             {/* Results Count */}
-<<<<<<< HEAD
             <div className="mb-8">
               <p className="text-gray-400">
                 Showing <span className="text-white font-semibold">{filteredServices.length}</span> revolutionary services
@@ -531,15 +453,6 @@ function Revolutionary2025ServicesShowcase() {
                 )}
               </p>
             </div>
-=======
-            <div className="mb - 8">;
-              <p className="text - gray - 400">;
-                Showing <span className="text - white font - semibold">{filtered_services.length}</span> revolutionary services;
-                {selected_category !== 'all' && (
-                  <> in <span className="text - white font - semibold">{service_categories.find (c => c.id === selected_category)?.title.split (' ').slice (1).join (' ')}</span></>)}
-              </p>;
-            </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* Services Grid */}
             <AnimatePresence mode="wait">;
               {view_mode === 'grid' ? (
@@ -562,46 +475,25 @@ function Revolutionary2025ServicesShowcase() {
                       <div className="relative bg - gradient - to - br from - gray - 900 / 80 to - black / 90 border border - gray - 700 / 50 rounded - 2xl p - 6 h - full backdrop - blur - xl hover:border - purple - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105">;
                         {/* Popular Badge */}
                         {service.popular && (
-<<<<<<< HEAD
                           <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                             POPULAR
                           </div>
                         )}
                         {/* Service Icon */}
                         <div className="text-4xl mb-4">{service.icon}</div>
-=======
-                          <div className="absolute -top - 3 -right - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white text - xs font - bold px - 3 py - 1 rounded - full">;
-                            POPULAR;
-                          </div>)}
-                        {/* Service Icon */}
-                        <div className="text - 4xl mb - 4">{service.icon}</div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {/* Service Title */}
                         <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors">;
                           {service.name}
-<<<<<<< HEAD
                         </h3>
-=======
-                        </h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {/* Tagline */}
                         <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
                           {service.tagline}
-<<<<<<< HEAD
                         </p>
-=======
-                        </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {/* Price */}
                         <div className="text - 3xl font - bold text - white mb - 4">;
                           {service.price}
-<<<<<<< HEAD
                           <span className="text-lg text-gray-400 font-normal">{service.period}</span>
                         </div>
-=======
-                          <span className="text - lg text - gray - 400 font - normal">{service.period}</span>;
-                        </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {/* Features */}
                         <div className="space - y-2 mb - 6">;
                           <h4 className="text - sm font - semibold text - purple - 400">Key Features</h4>;
@@ -610,7 +502,6 @@ function Revolutionary2025ServicesShowcase() {
                               <li key={feature_index} className="flex items - center text - xs text - gray - 300">;
                                 <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0" />;
                                 {feature}
-<<<<<<< HEAD
                               </li>
                             ))}
                           </ul>
@@ -640,36 +531,6 @@ function Revolutionary2025ServicesShowcase() {
                             </button>
                           </Link>
                         </div>
-=======
-                              </li>))}
-                          </ul>;
-                        </div>;
-                        {/* Market Data */}
-                        <div className="grid grid - cols - 2 gap - 3 mb - 6">;
-                          <div className="bg - gray - 800 / 50 rounded - lg p - 3">;
-                            <div className="text - xs text - gray - 400 mb - 1">Market Size</div>;
-                            <div className="text - sm text - gray - 200">{service.market_size}</div>;
-                          </div>;
-                          <div className="bg - gray - 800 / 50 rounded - lg p - 3">;
-                            <div className="text - xs text - gray - 400 mb - 1">Growth Rate</div>;
-                            <div className="text - sm text - gray - 200">{service.growth_rate}</div>;
-                          </div>;
-                        </div>;
-                        {/* Action Buttons */}
-                        <div className="flex space - x-3 mb - 4">;
-                          <Link href={service.link} target="_blank" rel="noopener noreferrer">;
-                            <button className="flex - 1 bg - gradient - to - r from - purple - 500 to - blue - 600 hover:from - purple - 600 hover:to - blue - 700 text - white py - 2 px - 4 rounded - lg font - semibold transition - all duration - 300 text - sm">;
-                              <ExternalLink className="w - 4 h - 4 mr - 2 inline" />;
-                              Learn More;
-                            </button>;
-                          </Link>;
-                          <Link href="/contact">;
-                            <button className="px - 4 py - 2 border border - gray - 600 text - gray - 300 rounded - lg hover:border - purple - 500 hover:text - purple - 400 transition - all duration - 300 text - sm">;
-                              Contact;
-                            </button>;
-                          </Link>;
-                        </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {/* Contact Info */}
                         <div className="grid grid - cols - 1 gap - 2 text - xs">;
                           <div className="flex items - center gap - 2 text - purple - 400">;
@@ -713,7 +574,6 @@ function Revolutionary2025ServicesShowcase() {
                               <div className="flex items - center gap - 3 mb - 2">;
                                 <h3 className="text - xl font - bold text - white">{service.name}</h3>;
                                 {service.popular && (
-<<<<<<< HEAD
                                   <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                                     POPULAR
                                   </span>
@@ -730,23 +590,6 @@ function Revolutionary2025ServicesShowcase() {
                                 {service.features.slice(0, 4).map((feature, featureIndex) => (
                                   <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                                     <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-=======
-                                  <span className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white text - xs font - bold px - 2 py - 1 rounded - full">;
-                                    POPULAR;
-                                  </span>)}
-                              </div>;
-                              <p className="text - gray - 300 text - sm">{service.tagline}</p>;
-                            </div>;
-                          </div>;
-                          <p className="text - gray - 300 mb - 4 leading - relaxed">{service.description}</p>;
-                          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4 mb - 4">;
-                            <div>;
-                              <h4 className="text - sm font - semibold text - purple - 400 mb - 2">Key Features</h4>;
-                              <ul className="space - y-1">;
-                                {service.features.slice (0, 4).map ((feature, feature_index) => (
-                                  <li key={feature_index} className="flex items - center text - sm text - gray - 300">;
-                                    <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                     {feature}
                                   </li>))}
                               </ul>;
@@ -757,27 +600,18 @@ function Revolutionary2025ServicesShowcase() {
                                 {service.technology.slice (0, 6).map ((tech, tech_index) => (
                                   <span key={tech_index} className="bg - gray - 800 / 50 text - gray - 300 text - xs px - 2 py - 1 rounded">;
                                     {tech}
-<<<<<<< HEAD
                                   </span>
                                 ))}
                               </div>
                             </div>
                           </div>
                         </div>
-=======
-                                  </span>))}
-                              </div>;
-                            </div>;
-                          </div>;
-                        </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {/* Right Column */}
                         <div className="lg:w - 80 space - y-4">;
                           {/* Price */}
                           <div className="text - center">;
                             <div className="text - 3xl font - bold text - white mb - 1">;
                               {service.price}
-<<<<<<< HEAD
                               <span className="text-lg text-gray-400 font-normal">{service.period}</span>
                             </div>
                             <div className="text-sm text-gray-400">30-day free trial</div>
@@ -837,7 +671,7 @@ function Revolutionary2025ServicesShowcase() {
             {/* No Results */}
             {filteredServices.length === 0 && (
               <div className="text-center py-16">
-                <div className="text-6xl mb-4">🔍</div>
+                <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400 mb-6">Try adjusting your search terms or filters</p>
                 <button
@@ -854,80 +688,6 @@ function Revolutionary2025ServicesShowcase() {
             )}
           </div>
         </section>
-=======
-                              <span className="text - lg text - gray - 400 font - normal">{service.period}</span>;
-                            </div>;
-                            <div className="text - sm text - gray - 400">30 - day free trial</div>;
-                          </div>;
-                          {/* Market Data */}
-                          <div className="grid grid - cols - 2 gap - 3">;
-                            <div className="bg - gray - 800 / 50 rounded - lg p - 3 text - center">;
-                              <div className="text - xs text - gray - 400 mb - 1">Market Size</div>;
-                              <div className="text - sm text - gray - 200">{service.market_size}</div>;
-                            </div>;
-                            <div className="bg - gray - 800 / 50 rounded - lg p - 3 text - center">;
-                              <div className="text - xs text - gray - 400 mb - 1">Growth Rate</div>;
-                              <div className="text - sm text - gray - 200">{service.growth_rate}</div>;
-                            </div>;
-                          </div>;
-                          {/* ROI */}
-                          <div className="bg - green - 500 / 20 border border - green - 500 / 30 rounded - lg p - 3">;
-                            <div className="text - xs text - green - 400 mb - 1">Expected ROI</div>;
-                            <div className="text - sm text - green - 300">{service.roi}</div>;
-                          </div>;
-                          {/* Action Buttons */}
-                          <div className="space - y-3">;
-                            <Link href={service.link} target="_blank" rel="noopener noreferrer">;
-                              <button className="w - full bg - gradient - to - r from - purple - 500 to - blue - 600 hover:from - purple - 600 hover:to - blue - 700 text - white py - 3 px - 4 rounded - lg font - semibold transition - all duration - 300">;
-                                <ExternalLink className="w - 4 h - 4 mr - 2 inline" />;
-                                Learn More;
-                              </button>;
-                            </Link>;
-                            <Link href="/contact">;
-                              <button className="w - full px - 4 py - 3 border border - gray - 600 text - gray - 300 rounded - lg hover:border - purple - 500 hover:text - purple - 400 transition - all duration - 300">;
-                                Contact Sales;
-                              </button>;
-                            </Link>;
-                          </div>;
-                          {/* Contact Info */}
-                          <div className="space - y-2 text - xs">;
-                            <div className="flex items - center gap - 2 text - purple - 400">;
-                              <Phone className="w - 3 h - 3" />;
-                              <a href={`tel:${service.contact_info.mobile.replace (/[^+\d]/g, '')}`} className="hover:text - white">;
-                                {service.contact_info.mobile}
-                              </a>;
-                            </div>;
-                            <div className="flex items - center gap - 2 text - blue - 400">;
-                              <Mail className="w - 3 h - 3" />;
-                              <a href={`mailto:${service.contact_info.email}`} className="hover:text - white">;
-                                {service.contact_info.email}
-                              </a>;
-                            </div>;
-                          </div>;
-                        </div>;
-                      </div>;
-                    </motion.div>))}
-                </motion.div>)}
-            </AnimatePresence>;
-            {/* No Results */}
-            {filtered_services.length === 0 && (
-              <div className="text - center py - 16">;
-                <div className="text - 6xl mb - 4">🔍</div>;
-                <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
-                <p className="text - gray - 400 mb - 6">Try adjusting your search terms or filters</p>;
-                <button;
-                  on_click={() => {
-                    setSearchTerm (''),
-                    setSelectedCategory ('all');
-                  }}
-                  className="bg - purple - 500 hover:bg - purple - 600 text - white px - 6 py - 3 rounded - lg font - semibold transition - colors";
-                >;
-                  Clear Filters;
-                </button>;
-              </div>)}
-          </div>;
-        </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Contact Section */}
         <section className="py - 20 px - 4 bg - gradient - to - r from - purple - 900 / 20 via - blue - 900 / 20 to - cyan - 900 / 20">;
           <div className="container mx - auto text - center">;
@@ -936,7 +696,6 @@ function Revolutionary2025ServicesShowcase() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -950,7 +709,7 @@ function Revolutionary2025ServicesShowcase() {
                   <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                   <p className="text-gray-300 mb-3">{contactInfo.mobile}</p>
                   <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="text-purple-400 hover:text-purple-300">
-                    Call Now →
+                    Call Now 
                   </a>
                 </div>
                 <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-6">
@@ -958,7 +717,7 @@ function Revolutionary2025ServicesShowcase() {
                   <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                   <p className="text-gray-300 mb-3">{contactInfo.email}</p>
                   <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300">
-                    Send Email →
+                    Send Email 
                   </a>
                 </div>
                 <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-6">
@@ -966,7 +725,7 @@ function Revolutionary2025ServicesShowcase() {
                   <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                   <p className="text-gray-300 mb-3 text-sm">{contactInfo.address}</p>
                   <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">
-                    Get Directions →
+                    Get Directions 
                   </a>
                 </div>
               </div>
@@ -988,14 +747,7 @@ function Revolutionary2025ServicesShowcase() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready to Transform Your Business?;
@@ -1009,7 +761,7 @@ function Revolutionary2025ServicesShowcase() {
                   <h3 className="text - lg font - semibold text - white mb - 2">Call Us</h3>;
                   <p className="text - gray - 300 mb - 3">{contact_info.mobile}</p>;
                   <a href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`} className="text - purple - 400 hover:text - purple - 300">;
-                    Call Now →;
+                    Call Now ;
                   </a>;
                 </div>;
                 <div className="bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg p - 6">;
@@ -1017,7 +769,7 @@ function Revolutionary2025ServicesShowcase() {
                   <h3 className="text - lg font - semibold text - white mb - 2">Email Us</h3>;
                   <p className="text - gray - 300 mb - 3">{contact_info.email}</p>;
                   <a href={`mailto:${contact_info.email}`} className="text - blue - 400 hover:text - blue - 300">;
-                    Send Email →;
+                    Send Email ;
                   </a>;
                 </div>;
                 <div className="bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg p - 6">;
@@ -1025,7 +777,7 @@ function Revolutionary2025ServicesShowcase() {
                   <h3 className="text - lg font - semibold text - white mb - 2">Visit Us</h3>;
                   <p className="text - gray - 300 mb - 3 text - sm">{contact_info.address}</p>;
                   <a href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`} target="_blank" rel="noopener noreferrer" className="text - green - 400 hover:text - green - 300">;
-                    Get Directions →;
+                    Get Directions ;
                   </a>;
                 </div>;
               </div>;
@@ -1047,5 +799,3 @@ function Revolutionary2025ServicesShowcase() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

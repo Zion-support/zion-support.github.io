@@ -104,7 +104,7 @@ const testimonials = [;
     company:'QuantumTech Industries',;
     content:'Zion Tech Group\'s quantum cloud infrastructure has revolutionized our research capabilities. We\'ve achieved computational breakthroughs that were previously impossible.',;
     rating:5,;
-    avatar:'👩‍🔬';
+    avatar:'';
   },;
   {;
     name:'Robert Thompson',;
@@ -112,7 +112,7 @@ const testimonials = [;
     company:'EdgeNet Solutions',;
     content:'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.',;
     rating:5,;
-    avatar:'👨‍💼';
+    avatar:'';
   },;
   {;
     name:'Lisa Chang',;
@@ -120,7 +120,7 @@ const testimonials = [;
     company:'SecureCorp International',;
     content:'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',;
     rating:5,;
-    avatar:'👩‍🔒';
+    avatar:'';
   }
 ],;
 ;
@@ -443,8 +443,8 @@ export default function AdvancedITInfrastructureServices() {;
               </Link>;
             </div>;
             <div className="mt-8 text-center">;
-              <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>;
-              <p className="text-gray-300">🌐 {contactInfo.website}</p>;
+              <p className="text-gray-300 mb-2"> {contactInfo.address}</p>;
+              <p className="text-gray-300"> {contactInfo.website}</p>;
             </div>;
           </motion.div>;
         </div>;
@@ -458,10 +458,10 @@ export default function AdvancedITInfrastructureServices() {;
               Design and implement scalable cloud solutions that grow with your business needs.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• AWS, Azure, GCP expertise</li>
-              <li>• Multi-cloud strategies</li>
-              <li>• Cost optimization</li>
-              <li>• Disaster recovery planning</li>
+              <li> AWS, Azure, GCP expertise</li>
+              <li> Multi-cloud strategies</li>
+              <li> Cost optimization</li>
+              <li> Disaster recovery planning</li>
             </ul>
           </div>
 
@@ -471,10 +471,10 @@ export default function AdvancedITInfrastructureServices() {;
               Protect your infrastructure with advanced security measures and monitoring systems.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Firewall configuration</li>
-              <li>• Intrusion detection</li>
-              <li>• VPN setup</li>
-              <li>• Security audits</li>
+              <li> Firewall configuration</li>
+              <li> Intrusion detection</li>
+              <li> VPN setup</li>
+              <li> Security audits</li>
             </ul>
           </div>
 
@@ -484,10 +484,10 @@ export default function AdvancedITInfrastructureServices() {;
               Optimize database performance and ensure data integrity with expert management.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Performance tuning</li>
-              <li>• Backup strategies</li>
-              <li>• Data migration</li>
-              <li>• High availability setup</li>
+              <li> Performance tuning</li>
+              <li> Backup strategies</li>
+              <li> Data migration</li>
+              <li> High availability setup</li>
             </ul>
           </div>
 
@@ -497,10 +497,10 @@ export default function AdvancedITInfrastructureServices() {;
               Streamline development workflows with automated deployment and monitoring.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Pipeline automation</li>
-              <li>• Container orchestration</li>
-              <li>• Infrastructure as Code</li>
-              <li>• Monitoring & alerting</li>
+              <li> Pipeline automation</li>
+              <li> Container orchestration</li>
+              <li> Infrastructure as Code</li>
+              <li> Monitoring & alerting</li>
             </ul>
           </div>
 
@@ -510,10 +510,10 @@ export default function AdvancedITInfrastructureServices() {;
               Maintain and optimize server infrastructure for maximum uptime and performance.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Server provisioning</li>
-              <li>• Performance monitoring</li>
-              <li>• Patch management</li>
-              <li>• Load balancing</li>
+              <li> Server provisioning</li>
+              <li> Performance monitoring</li>
+              <li> Patch management</li>
+              <li> Load balancing</li>
             </ul>
           </div>
 
@@ -523,10 +523,10 @@ export default function AdvancedITInfrastructureServices() {;
               Ensure business continuity with comprehensive backup and disaster recovery solutions.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Automated backups</li>
-              <li>• Disaster recovery planning</li>
-              <li>• Data replication</li>
-              <li>• Recovery testing</li>
+              <li> Automated backups</li>
+              <li> Disaster recovery planning</li>
+              <li> Data replication</li>
+              <li> Recovery testing</li>
             </ul>
           </div>
         </div>

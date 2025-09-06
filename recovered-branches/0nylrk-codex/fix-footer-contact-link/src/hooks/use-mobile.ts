@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState, useEffect } from 'react';
 export function useIsMobile() {
@@ -8,14 +7,8 @@ export function useIsMobile() {
   useEffect(() => {
 
     const handleResize = () => {
-<<<<<<< HEAD
       setIsMobile(window.innerWidth < 768)
     }
-=======
-      setIsMobile(window && window.innerWidth < 768)
-    };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (typeof window !== 'undefined') {
       window && window.addEventListener('resize', handleResize);
       return () => window && window.removeEventListener('resize', handleResize)
@@ -24,7 +17,6 @@ export function useIsMobile() {
   }, []);
 
   return isMobile
-=======
 import {useState, useEffect} from 'react';
 export /**
  * useIsMobile - Function description
@@ -49,5 +41,4 @@ if ( {) {
   }, []);
 ;
   return is_mobile;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

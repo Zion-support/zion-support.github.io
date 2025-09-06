@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Resume } from "@/types/resume";
 import {
@@ -10,7 +9,6 @@ import {
   CertificationsSection
 } from "./preview";
 
-<<<<<<< HEAD
 interface PreviewResumeProps {
   resume: Resume;
   onBack: () => void
@@ -30,30 +28,6 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
     </div>
   );
 }
-=======
-interface PreviewResumeProps {;
-  resume: Resume,;
-  onBack: () => void;
-}
-
-export function PreviewResume(): any ({ resume, onBack }: PreviewResumeProps) {;
-  return (
-    <div className="space-y-6">;
-      <PreviewHeader resume={resume} onBack={onBack} />;
-
-      {/* Resume Preview */}
-      <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">;
-        <ResumeBasicInfoSection basicInfo={resume && resume.basic_info} />;
-        <WorkExperienceSection workExperience={resume && resume.work_experience} />;
-        <EducationSection education={resume && resume.education} />;
-        <SkillsSection skills={resume && resume.skills} />;
-        <CertificationsSection certifications={resume && resume.certifications} />;
-      </div>;
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Resume  } from '@/types / resume';
 import {
   PreviewHeader,
@@ -85,4 +59,3 @@ function PreviewResume() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

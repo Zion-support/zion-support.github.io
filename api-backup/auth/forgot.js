@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from "react";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,30 +22,21 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from "react";
-=======
 import React from './react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 (" ");
 export default /**
  * ForgotPassword - Function description
  */
 function ForgotPassword() {
   return (
-<<<<<<< HEAD
     <div>
       <h1>Forgot Password</h1>
       <p>Password reset functionality would go here.</p>
     </div>;
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <div>;
       <h1 > Forgot Password</h1>;
       <p > Password reset functionality would go here.</p>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

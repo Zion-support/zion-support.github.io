@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,10 +21,5 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src && src.pages.disabled/MoreProductsPage && MoreProductsPage.jsx
-<<<<<<< \"HEAD\": src && src.pages.disabled/MoreProductsPage && MoreProductsPage.jsx import React from \'react\'; \"export default function MoreProductsPage () {\" const CATEGORY_FILTERS = Array && Array.from (new Set (MORE_PRODUCTS && MORE_PRODUCTS.map (p => p && p.category) ) ) .map (c => ({ label: c,\"value\": \'c\' }) ) ; const [listings] = useState ([...MORE_PRODUCTS]) ; return (<DynamicListingPagetitle=\"More Products\" description=\"Browse additional offerings priced for the average market.\" categorySlug=\"more - products\" listings={listings}\" categoryFilters={CATEGORY_FILTERS} \"\" import React from \'react\' \"export default function MoreProductsPage () {\" const CATEGORY_FILTERS = Array && Array.from (new Set (MORE_PRODUCTS && MORE_PRODUCTS.map (p => p && p.category) ) ) .map (c => ({ \"label\": \'c\',\"value\": \'c\' }) ) ; const [listings] = useState ([...MORE_PRODUCTS]) ; return (<DynamicListingPagetitle=\"More Products\" description=\"Browse additional offerings priced for the average market.\" categorySlug=\"more - products\" listings={listings}\" categoryFilters={CATEGORY_FILTERS} \"\""\"
-<<<<<<< "HEAD": src && src.pages.disabled/MoreProductsPage && MoreProductsPage.jsx import _React from 'react' "export default function MoreProductsPage () {" const CATEGORY_FILTERS = Array && Array.from (new Set (MORE_PRODUCTS && MORE_PRODUCTS.map (p => p && p.category) ) ) .map (c => ({ label: c,"value": 'c' }) ) ; const [listings] = useState ([...MORE_PRODUCTS]) ; return (<DynamicListingPagetitle="More Products" description="Browse additional offerings priced for the average market." categorySlug="more - products" listings={listings}" categoryFilters={CATEGORY_FILTERS} "" import _React from 'react' "export default function MoreProductsPage () {" const CATEGORY_FILTERS = Array && Array.from (new Set (MORE_PRODUCTS && MORE_PRODUCTS.map (p => p && p.category) ) ) .map (c => ({ "label": 'c',"value": 'c' }) ) ; const [listings] = useState ([...MORE_PRODUCTS]) ; return (<DynamicListingPage title="More Products" description="Browse additional offerings priced for the average market." categorySlug="more - products" listings={listings}" categoryFilters={CATEGORY_FILTERS} ";""";
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Facebook, Twitter, Loader2 } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Web3Login } from "./Web3Login",
@@ -24,8 +19,6 @@ export function SocialLogin() {
         </div>
       </div>
       <div className='mt-6 grid grid-cols-4 gap-3'>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Web3Login } from './Web3Login';
@@ -47,7 +40,6 @@ export function SocialLogin() {;
         </div>;
         <div className='relative flex justify-center text-sm'>;
           <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>;
-=======
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import { Web3Login } from './Web3Login';
@@ -70,15 +62,12 @@ function SocialLogin() {
         </div>;
         <div className='relative flex justify - center text - sm'>;
           <span className='px - 2 bg - zion - blue - dark text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Or continue with;
           </span>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
       <div className='mt-6 grid grid-cols-4 gap-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Button
           type='button'
           variant='outline'
@@ -127,7 +116,6 @@ function SocialLogin() {
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => openAuthPopup('twitter')}
-<<<<<<< HEAD
           disabled={isLoading}        >
           <span className='sr-only'>Sign in with Twitter</span>
           <Twitter className='h-5 w-5' />
@@ -137,24 +125,7 @@ function SocialLogin() {
     </div>
   )
 }
-=======
-          disabled={isLoading}        >;
-          <span className='sr-only'>Sign in with Twitter</span>;
-          <Twitter className='h-5 w-5' />;
-        </Button>;
-        <Web3Login />;
-      </div>;
-    </div>;
-  );
 
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       <div className='mt - 6 grid grid - cols - 4 gap - 3'>;
         <Button;
           type='button';
@@ -211,5 +182,3 @@ function SocialLogin() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

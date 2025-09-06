@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
@@ -10,7 +9,7 @@ interface WalkthroughStep {id: string;
 }
 const walkthroughSteps: WalkthroughStep[] = [;
   {id: "welcome";
-    title: "Welcome to Zion OS! 🚀";
+    title: "Welcome to Zion OS! ";
     description: "Let's take a quick tour to help you get started with launching your digital economy.";
     position: "bottom";
   }
@@ -33,7 +32,7 @@ const walkthroughSteps: WalkthroughStep[] = [;
     position: "bottom";
   }
   {id: "complete";
-    title: "You're All Set! 🎉";
+    title: "You're All Set! ";
     description: "You now know the basics. Start building your digital economy or explore more features.";
     position: "top";
   }
@@ -70,109 +69,6 @@ export function OnboardingWalkthrough() {const [currentStep, setCurrentStep] = u
   if (!isVisible |isCompleted) {return null;
   }
   return (;
-=======
-"use client",
-import { useState, useEffect  } from './react';,
-import { use_auth  } from '@/contexts / AuthContext';,
-interface WalkthroughStep {
-  id: string,
-  title: string,
-  description: string,
-  target?: string,
-  position: "top" | "bottom" | "left" | "right";
-}
-const walkthrough_steps: WalkthroughStep[] = [;
-  {
-    id: "welcome",
-    title: "Welcome to Zion OS! 🚀",
-    description: "Let's take a quick tour to help you get started with launching your digital economy.",
-    position: "bottom";
-  },
-  {
-    id: "launch - wizard",
-    title: "Launch Wizard",
-    description: "Start here to create a new instance with marketplace, governance, and identity tools.",
-    target: "launch - wizard - card",
-    position: "right";
-  },
-  {
-    id: "admin - panel",
-    title: "Admin Panel",
-    description: "Manage your deployed instances, API keys, and governance settings from here.",
-    target: "admin - instances - card",
-    position: "left";
-  },
-  {
-    id: "navigation",
-    title: "Navigation",
-    description: "Use the top navigation to quickly access different sections of the platform.",
-    target: "nav - menu",
-    position: "bottom";
-  },
-  {
-    id: "complete",
-    title: "You're All Set! 🎉",
-    description: "You now know the basics. Start building your digital economy or explore more features.",
-    position: "top";
-  }
-],
-export /**
- * OnboardingWalkthrough - Function description
- */
-function OnboardingWalkthrough() {
-  const [current_step, setCurrentStep] = useState (0),
-  const [is_visible, setIsVisible] = useState (false),
-  const [is_completed, setIsCompleted] = useState (false),
-  const { user, complete_onboarding } = use_auth (),
-  useEffect (() => {
-    // Show walkthrough for new users who haven't completed onboarding;
-    // Check condition
-if ( {) {
-  $2
-}
-      setIsVisible (true);
-    }
-  }, [user]),
-  const handle_next = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep (current_step + 1);
-    } else {
-      handle_complete ();
-    }
-  },
-  const handle_previous = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      setCurrentStep (current_step - 1);
-    }
-  },
-  const handle_skip = () =>: any {
-    setIsVisible (false),
-    setIsCompleted (true);
-  },
-  const handle_complete = async () => {
-    try {
-      await complete_onboarding (),
-      setIsVisible (false),
-      setIsCompleted (true);
-    } catch (error) {
-      console.error ("Failed to complete onboarding:", error);
-    }
-  },
-  const currentStepData = walkthrough_steps[current_step],
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
-  }
-  return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     <>;
       {/* Overlay */}
       <div className="fixed inset - 0 bg - black / 50 z - 40" on_click={handle_skip} />;
@@ -229,7 +125,6 @@ if ( {) {
       {/* Highlight Target Element */}
       {currentStepData.target && (
         <div;
-<<<<<<< HEAD
           className="fixed z-30 pointer-events-none";
           style={{top: 0;
             left: 0;
@@ -241,21 +136,6 @@ if ( {) {
             style={{top: "50%";
               left: "50%";
               transform: "translate(-50%, -50%)";
-=======
-          className="fixed z - 30 pointer - events - none";
-          style={{
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0}}
-        >;
-          <div;
-            className="absolute border - 2 border - blue - 500 rounded - lg shadow - lg bg - blue - 500 / 10";
-            style={{
-              top: "50%",
-              left: "50%",
-              transform: "translate (-50%, -50%)",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               width: "300px";
               height: "200px"}}
           />;
@@ -263,16 +143,7 @@ if ( {) {
     </>);
 }
 // Hook to add data attributes for walkthrough targeting;
-<<<<<<< HEAD
 export function useWalkthroughTarget(id: string) {return {;
     "data-walkthrough-target": id;
-=======
-export /**
- * useWalkthroughTarget - Function description
- */
-function useWalkthroughTarget() {
-  return {
-    "data - walkthrough - target": id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     id}
 }

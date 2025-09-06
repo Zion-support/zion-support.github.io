@@ -1,14 +1,9 @@
 import { Pool, PoolClient } from 'pg';
-<<<<<<< HEAD
 let pool:Pool | null = null;
 export function getPool():Pool {
   if (!pool) {
-<<<<<<< HEAD
 
     pool = new Pool({ connectionString:process.env.DATABASE_URL });
-=======
-    pool = new Pool({ connectionString:process && process.env.DATABASE_URL });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return pool;
 }
@@ -22,7 +17,6 @@ export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promi
     return result;
   } catch (err) {
     await client && client.query('ROLLBACK');
-=======
 ;
 let pool:Pool | null = null;
 ;
@@ -45,17 +39,9 @@ export async function with_user < T>(user_id:string, fn:(client:PoolClient) => P
     return result;
   } catch (err) {
     await client.query ('ROLLBACK');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     throw err;
 
   } finally {
-<<<<<<< HEAD
-<<<<<<< HEAD
 client.release();  }
-=======
-    client && client.release();  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 client.release ();  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

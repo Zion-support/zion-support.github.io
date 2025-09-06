@@ -8,12 +8,12 @@
     "cancel": "Cancelar",
     "submit": "Enviar",
     "yes": "Sim",
-    "no": "Não",
+    "no": "No",
     "success": "Sucesso",
     "error": "Erro"
   },
   "nav": {
-    "home": "Início",
+    "home": "Incio",
     "marketplace": "Mercado",
     "categories": "Categorias",
     "talent": "Talento",
@@ -35,27 +35,27 @@
   },
   "home": {
     "hero_title": "O Futuro do Mercado de Tecnologia e IA",
-    "hero_subtitle": "O primeiro mercado gratuito dedicado à alta tecnologia e inteligência artificial",
+    "hero_subtitle": "O primeiro mercado gratuito dedicado  alta tecnologia e inteligncia artificial",
     "browse_marketplace": "Explorar Mercado",
     "create_profile": "Criar Perfil",
     "explore_tools": "Explorar Nossas Ferramentas",
-    "tools_description": "Tudo o que você precisa para se conectar ao ecossistema de IA e tecnologia"
+    "tools_description": "Tudo o que voc precisa para se conectar ao ecossistema de IA e tecnologia"
   },
   "jobs": {
     "post_job_title": "Publicar uma Vaga",
-    "post_job_description": "Preencha o formulário abaixo para publicar sua vaga e encontrar o talento perfeito",
-    "job_title": "Título da Vaga",
-    "job_description": "Descrição da Vaga",
-    "skills_required": "Habilidades Necessárias",
-    "budget": "Orçamento",
+    "post_job_description": "Preencha o formulrio abaixo para publicar sua vaga e encontrar o talento perfeito",
+    "job_title": "Ttulo da Vaga",
+    "job_description": "Descrio da Vaga",
+    "skills_required": "Habilidades Necessrias",
+    "budget": "Oramento",
     "deadline": "Prazo",
     "job_posted": "Vaga publicada com sucesso"
   },
   "language": {
     "en": "English",
-    "es": "Español",
-    "pt": "Português",
-    "ar": "العربية",
+    "es": "Espaol",
+    "pt": "Portugus",
+    "ar": "",
     "language_changed": "Idioma alterado para {{language}}",
     "switch_to_detected": "Mudar para {{language}}?"
   }

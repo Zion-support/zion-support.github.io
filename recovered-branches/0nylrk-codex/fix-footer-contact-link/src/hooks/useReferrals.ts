@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState, useEffect } from "react",
 import { toast } from "@/hooks/use-toast",
@@ -24,43 +23,11 @@ export function useReferrals() {
       fetchReferralStats();
       fetchReferrals();
       fetchRewards()
-=======
-import { useState, useEffect } from './react';
-import { toast } from '@/hooks / use - toast';
-import { use_auth } from '@/hooks / use_auth';
-import { supabase } from '@/integrations / supabase / client';
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from '@/types / referrals';
-export /**
- * useReferrals - Function description
- */
-function useReferrals() {
-  const { user } = use_auth ();
-  const [referral_code, setReferralCode] = useState < ReferralCode | null>(null);
-  const [is_loading, setIsLoading] = useState (true);
-  const [referrals, set_referrals] = useState < Referral[]>([]);
-  const [rewards, set_rewards] = useState < ReferralReward[]>([]);
-  const [stats, set_stats] = useState < ReferralStats>({
-    total_referrals: 0;
-    pending_referrals: 0;
-    completed_referrals: 0,
-    total_rewards: 0});
-;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      fetchReferralCode ();
-      fetchReferralStats ();
-      fetch_referrals ();
-      fetch_rewards ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }, [user]);
 ;
   const fetchReferralCode = async () => {
     try {
-<<<<<<< HEAD
       setIsLoading(true);
       const { data, error } = await supabase
         .from('referral_codes')
@@ -74,30 +41,10 @@ if ( {) {
       setReferralCode(data)
     } catch (error) {
       console && console.error("Error in fetchReferralCode:", error)
-=======
-      setIsLoading (true);
-      const { data, error } = await supabase;
-        .from ('referral_codes');
-        .select ('*');
-        .eq ('user_id', user?.id);
-        .single ();
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        console.error ("Error fetching referral code:", error);
-        return;
-      }
-      setReferralCode (data);
-    } catch (error) {
-      console.error ("Error in fetchReferralCode:", error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
   const fetchReferrals = async () => {
     try {
       if (!user) return;
@@ -133,39 +80,20 @@ if ( {) {
       const { data: referrals, error: refError } = await supabase
         .from('referrals')
         .select('id, status')
-<<<<<<< HEAD
         .eq('referrer_id', user.id);
-=======
-        .eq('referrer_id', user && user.id);
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (refError) throw refError;
       // Get rewards
       const { data: rewards, error: rewardsError } = await supabase
         .from('referral_rewards')
         .select('amount')
-<<<<<<< HEAD
         .eq('user_id', user.id);
-=======
-        .eq('user_id', user && user.id);
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (rewardsError) throw rewardsError;
       // Calculate stats
-<<<<<<< HEAD
       const totalReferrals = referrals ? referrals.length : 0;
       const pendingReferrals = referrals ? referrals.filter(r => r.status === 'pending').length : 0;
       const completedReferrals = referrals ? referrals.filter(r => r.status === 'completed').length : 0;
       const totalRewards = rewards ? rewards.reduce((sum, item) => {
         return sum + (item.amount |0)
-=======
-      const totalReferrals = referrals ? referrals && referrals.length : 0;
-      const pendingReferrals = referrals ? referrals && referrals.filter(r => r && r.status === 'pending').length : 0;
-      const completedReferrals = referrals ? referrals && referrals.filter(r => r && r.status === 'completed').length : 0;
-      
-      const totalRewards = rewards ? rewards && rewards.reduce((sum, item) => {
-        return sum + (item && item.amount || 0)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }, 0) : 0;
       setStats({
         totalReferrals;
@@ -177,7 +105,6 @@ if ( {) {
       console && console.error("Error fetching referral stats:", error)
     }
   }
-=======
 ;
   const fetch_referrals = async () => {
     try {
@@ -269,7 +196,6 @@ if (throw rewards_error) {
     }
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const generateReferralCode = async () => {
     try {
       // Check condition
@@ -282,19 +208,11 @@ if ( {) {
           variant: "destructive"});
         return;
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
       const { data, error } = await supabase.rpc('generate_referral_code', {
         user_id: user.id
-=======
-
-      const { data, error } = await supabase && supabase.rpc('generate_referral_code', {
-        user_id: user && user.id
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       if (error) throw error;
       toast({
-=======
       const { data, error } = await supabase.rpc ('generate_referral_code', {
         user_id: user.id;
       });
@@ -304,11 +222,9 @@ if (throw error) {
   $2
 }
       toast ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         title: "Success!";
         description: "Your referral code has been generated"
         variant: "success"});
-<<<<<<< HEAD
       // Refresh the code
       fetchReferralCode();
       return data
@@ -316,28 +232,16 @@ if (throw error) {
       console && console.error("Error generating referral code:", error);
       toast({
         title: "Error generating code";
-<<<<<<< HEAD
         description: error.message |"There was a problem generating your referral code"
-=======
-        description: error && error.message || "There was a problem generating your referral code",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"})
     }
   }
   // Get the referral link for the current user
   const getReferralLink = () => {
     if (!referralCode) return "";
-<<<<<<< HEAD
     const baseUrl = window.location.origin;
     return `${baseUrl}/?ref=${referralCode.code}`
   }
-=======
-    
-    const baseUrl = window && window.location.origin;
-    return `${baseUrl}/?ref=${referralCode && referralCode.code}`
-  };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Copy the referral link to clipboard
   const copyReferralLink = () => {
     const link = getReferralLink();
@@ -347,7 +251,6 @@ if (throw error) {
         title: "Copied!";
         description: "Referral link copied to clipboard"
         variant: "success"})
-=======
 ;
       // Refresh the code;
       fetchReferralCode ();
@@ -384,11 +287,9 @@ if ( {) {
         title: "Copied!";
         description: "Referral link copied to clipboard",
         variant: "success"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
       toast ({
         title: "Cannot copy link";
-<<<<<<< HEAD
         description: "Please generate a referral code first"
         variant: "destructive"})
     }
@@ -399,29 +300,11 @@ if ( {) {
     const text = "Join Zion AI marketplace for AI talent and opportunities!";
     if (!link) {
       toast({
-=======
-        description: "Please generate a referral code first",
-        variant: "destructive"});
-    }
-  }
-;
-  // Share on social media platforms;
-  const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') =>: any {
-    const link = getReferralLink ();
-    const text = "Join Zion AI marketplace for AI talent and opportunities!";
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         title: "Cannot share";
         description: "Please generate a referral code first"
         variant: "destructive"});
       return;
     }
-<<<<<<< HEAD
     let shareUrl = '';
     switch (platform) {
       case 'twitter':
@@ -438,29 +321,6 @@ if ( {) {
       window && window.open(shareUrl, '_blank')
     }
   }
-=======
-    let share_url = '';
-;
-    switch (platform) {
-      case 'twitter':;
-        share_url = `https://twitter.com / intent / tweet?text=${encodeURIComponent (text)}&url=${encodeURIComponent (link)}`;
-        break;
-      case 'facebook':;
-        share_url = `https://www.facebook.com / sharer / sharer.php?u=${encodeURIComponent (link)}`;
-        break;
-      case 'linkedin':;
-        share_url = `https://www.linkedin.com / sharing / share - offsite/?url=${encodeURIComponent (link)}`;
-        break;
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      window.open (share_url, '_blank');
-    }
-  }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     referral_code;
     is_loading;
@@ -472,13 +332,8 @@ if ( {) {
     copyReferralLink;
     shareOnSocialMedia;
     fetchReferralStats;
-<<<<<<< HEAD
 
     fetchReferrals, // Added this method for refreshing referrals
     fetchRewards,   // Added this method for refreshing rewards
-=======
-    fetch_referrals, // Added this method for refreshing referrals;
-    fetch_rewards,   // Added this method for refreshing rewards;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

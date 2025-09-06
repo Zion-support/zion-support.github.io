@@ -386,7 +386,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 animate={{ opacity:1 }}
                 className="text-center py-20";
               >;
-                <div className="text-6xl mb-4">🔍</div>;
+                <div className="text-6xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>;
                 <button;

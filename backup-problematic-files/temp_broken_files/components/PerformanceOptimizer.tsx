@@ -329,11 +329,11 @@ onClick={runAllOptimizations}
       {/* Performance Tips */}
       <div className=&quot;mt-6 pt-4 border-t border-white/10&quot;>
         <h4 className=&quot;text-sm font-semibold text-white/80 mb-3&quot;>Performance Tips</h4>
-        <ul className=&quot;text-xs text-white/60 space-y-1&quot;>          <li>• Use WebP images for better compression</li>
-          <li>• Implement lazy loading for images</li>
-          <li>• Minimize CSS and JavaScript bundles</li>
-          <li>• Use CDN for static assets</li>
-          <li>• Enable gzip compression</li>
+        <ul className=&quot;text-xs text-white/60 space-y-1&quot;>          <li> Use WebP images for better compression</li>
+          <li> Implement lazy loading for images</li>
+          <li> Minimize CSS and JavaScript bundles</li>
+          <li> Use CDN for static assets</li>
+          <li> Enable gzip compression</li>
         </ul>
       </div>
     </div>

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { SmartContractBuilder  } from '@/components/contracts/SmartContractBuilder';
 import { ContractBuilder  } from '@/components/contracts/ContractBuilder';
@@ -61,16 +59,12 @@ export function ContractBuilderContent() {
         onViewContract={handleViewContract}
       />
       {showBuilderType === 'standard' && (
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components / contracts / SmartContractBuilder';
 import {ContractBuilder} from '@/components / contracts / ContractBuilder';
 import {ContractHeader} from './ContractHeader';
 import {ContractTypeCards} from './ContractTypeCards';
 import {RecentContractsTable} from './RecentContractsTable';
-<<<<<<< HEAD
 import {TalentProfile} from '@/types/talent';
 import {useAuth} from '@/hooks/useAuth';
 // Mock data for demo purposes;
@@ -129,7 +123,6 @@ export function ContractBuilderContent() {;
       />;
 
       {showBuilderType === 'standard' && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <ContractBuilder
           isOpen={true}
           onClose={() => setShowBuilderType('none')}
@@ -138,12 +131,7 @@ export function ContractBuilderContent() {;
           onContractGenerated={handleContractGenerated}
         />;
       )}
-<<<<<<< HEAD
       {showBuilderType === 'smart' && (
-=======
-
-      {showBuilderType === 'smart' && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <SmartContractBuilder
           isOpen={true}
           onClose={() => setShowBuilderType('none')}
@@ -152,16 +140,9 @@ export function ContractBuilderContent() {;
           onContractGenerated={handleContractGenerated}
         />;
       )}
-<<<<<<< HEAD
     </>
   )
 }
-=======
-    </>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {TalentProfile} from '@/types / talent';
 import {use_auth} from '@/hooks / use_auth';
 // Mock data for demo purposes;
@@ -236,4 +217,3 @@ function ContractBuilderContent() {
         />)}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -157,7 +157,7 @@ function ProjectDetailsContent() {;
       // If offer was accepted, show a special toast;
       if (newStatus === "offer_accepted") {;
         toast({;
-          title:"Offer Accepted! 🎉",;
+          title:"Offer Accepted! ",;
           description:"The project is now in progress. Congratulations!"}),;
       }
     }

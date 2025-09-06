@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
 import { BadgeDollarSign } from 'lucide-react'
 
@@ -18,8 +13,6 @@ import { Button } from '@/components/ui/button'
 import Skeleton from '@/components/ui/skeleton'
 
 export function TokenDisplay() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import { BadgeDollarSign } from 'lucide-react';
 import { useWallet } from '@/hooks/useWallet';
@@ -33,12 +26,8 @@ import {;
 import { Button } from '@/components/ui/button';
 import Skeleton from '@/components/ui/skeleton';
 export function TokenDisplay() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { wallet, loading } = useWallet();
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <Card>
       <CardHeader className='flex flex-row items-center justify-between pb-2'>
         <div>
@@ -62,41 +51,6 @@ export function TokenDisplay() {;
             </p>
             <div className='mt-2'>
               <Button variant='outline' size='sm'>                View Wallet            <div className="mt-2">
-=======
-
-import React from "react";
-import { BadgeDollarSign } from 'lucide-react'
-import { useWallet } from "@/hooks/useWallet";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Skeleton from "@/components/ui/skeleton";
-
-export function TokenDisplay() { const { wallet, loading  } = useWallet(),
-
-
-  return (
-    <Card>
-      <CardHeader className="flex flex-row items-center justify-between pb-2">
-        <div>
-          <CardTitle className="text-xl">ZION$ Balance</CardTitle>
-          <CardDescription>Your current token balance</CardDescription>
-        </div>
-        <BadgeDollarSign className="h-6 w-6 text-primary" />
-      </CardHeader>
-      <CardContent>
-        {loading ? (
-          <Skeleton className="h-12 w-28" />
-        ) : (
-          <div className="flex flex-col gap-2">
-            <div className="flex items-end">
-              <span className="text-3xl font-bold">{wallet?.balance || 0}</span>
-              <span className="ml-1 text-muted-foreground">ZION$</span>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Use your tokens to boost visibility, access premium features, or convert to credits.
-            </p>
-            <div className="mt-2">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <Button variant="outline" size="sm">
                 View Wallet
               </Button>
@@ -105,11 +59,8 @@ export function TokenDisplay() { const { wallet, loading  } = useWallet(),
         )}
       </CardContent>
     </Card>
-<<<<<<< HEAD
   )
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <Card>;
       <CardHeader className='flex flex-row items-center justify-between pb-2'>;
         <div>;
@@ -133,73 +84,19 @@ export function TokenDisplay() { const { wallet, loading  } = useWallet(),
             </p>;
             <div className='mt-2'>;
               <Button variant='outline' size='sm'>                View Wallet            <div className="mt-2">;
-<<<<<<< HEAD
-=======
-=======
-import React from 'react';
-import { BadgeDollarSign } from 'lucide-react';
-import { use_wallet } from '@/hooks / use_wallet';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import Skeleton from '@/components / ui / skeleton';
-export /**
- * TokenDisplay - Function description
- */
-function TokenDisplay() {
-  const { wallet, loading } = use_wallet ();
-  return (
-    <Card>;
-      <CardHeader className='flex flex - row items - center justify - between pb - 2'>;
-        <div>;
-          <CardTitle className='text - xl'>ZION$ Balance</CardTitle>;
-          <CardDescription > Your current token balance</CardDescription>;
-        </div>;
-        <BadgeDollarSign className='h - 6 w - 6 text - primary' />;
-      </CardHeader>;
-      <CardContent>;
-        {loading ? (
-          <Skeleton className='h - 12 w - 28' />) : (
-          <div className='flex flex - col gap - 2'>;
-            <div className='flex items - end'>;
-              <span className='text - 3xl font - bold'>{wallet?.balance || 0}</span>;
-              <span className='ml - 1 text - muted - foreground'>ZION$</span>;
-            </div>;
-            <p className='text - sm text - muted - foreground'>;
-              Use your tokens to boost visibility, access premium features, or;
-              convert to credits.;
-            </p>;
-            <div className='mt - 2'>;
-              <Button variant='outline' size='sm'>                View Wallet            <div className="mt - 2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <Button variant="outline" size="sm">;
                 View Wallet;
               </Button>;
             </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           </div>;
         )}
       </CardContent>;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           </div>)}
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

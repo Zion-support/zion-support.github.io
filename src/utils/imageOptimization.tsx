@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -42,8 +36,6 @@ export function OptimizedImage({
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(!lazy || priority);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
  const observer = new IntersectionObserver ( ([entry]) => {;
   if (entry && entry.isIntersecting) {;
@@ -56,13 +48,9 @@ import React from 'react';
 <defs> <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop-color:#f3f4f6, stop-opacity:1" /> <stop offset="100%" style="stop-color:#e5e7eb, stop-opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .toString ('base64') ;
 }` ;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   const imgRef = useRef<HTMLDivElement>(null);
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 
-<<<<<<< HEAD
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -83,39 +71,6 @@ import React from 'react';
         if (entry && entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
-=======
-const observer = new IntersectionObserver ( ([entry]) => {
-  // Check condition
-if ( {) {
-  $2
-}
-  return () => observer.disconnect ();
-}, [lazy, priority, isInView]);
-//Generate WebP - compatible src const getOptimizedSrc = (original_src: string) =>: any {
-  //If it's already optimized or external,  return as - is if (|| original_src.includes ('/ next / image') ) {) {
-  $2
-}
-  //For internal images, Next.js will handle optimization return original_src;
-}';
-<defs> <linear_gradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop - color:#f3f4f6, stop - opacity:1" /> <stop offset="100%" style="stop - color:#e5e7eb, stop - opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .to_string ('base64');
-}`;
-}
-  const img_ref = useRef < HTMLDivElement>(null);
-  // Intersection Observer for lazy loading;
-  useEffect (() => {
-    // Check condition
-if (return) {
-  $2
-}
-    const observer = new IntersectionObserver (
-      ([entry], ) => {
-        // Check condition
-if ( {) {
-  $2
-}
-          setIsInView (true);
-          observer.disconnect ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }
       {
@@ -128,7 +83,6 @@ if ( {) {
 }
       observer.observe (img_ref.current);
     }
-<<<<<<< HEAD
     return () => observer.disconnect()
   }, [lazy, priority, isInView])
   // Generate WebP-compatible src
@@ -142,22 +96,6 @@ if ( {) {
     }
     // For internal images, Next.js will handle optimization
     return originalSrc
-=======
-    return () => observer.disconnect ();
-  }, [lazy, priority, isInView]);
-  // Generate WebP - compatible src;
-  const getOptimizedSrc = (original_src: string, ) =>: any {
-    // If it's already optimized or external, return as - is;
-    // Check condition
-if (||) {
-  $2
-}
-      original_src.includes ('/_next / image')) {
-      return original_src;
-    }
-    // For internal images, Next.js will handle optimization;
-    return original_src;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   const handle_load = () =>: any {
     setIsLoading (false);
@@ -168,7 +106,6 @@ if (||) {
     setIsLoading (false);
     on_error?.();
   }
-<<<<<<< HEAD
   // Generate blur placeholder
   const generateBlurDataURL = () => {
     if (blurDataURL) return blurDataURL
@@ -183,7 +120,6 @@ if (||) {
         </defs>
         <rect width="100%" height="100%" fill="url(#grad)" />
       </svg>`
-<<<<<<< HEAD
     ).toString('base64')}`;
   };
 
@@ -192,13 +128,8 @@ if (||) {
       ref={imgRef}
       className={cn('relative overflow-hidden', className)}
       style={{ width, height }}
-=======
-    ).toString('base64')}`
-  }
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
     >
       {isInView && !hasError && (
-=======
   // Intersection Observer for lazy loading;
   useEffect(() => {;
     if (!lazy || priority || isInView) return;
@@ -267,10 +198,8 @@ if (||) {
 
     >;
       {isInView && !hasError && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Image
           src={getOptimizedSrc(src)}
-=======
   // Generate blur placeholder;
   const generateBlurDataURL = () =>: any {
     // Check condition
@@ -293,7 +222,6 @@ if (return blurDataURL) {
       {isInView && !has_error && (
         <Image;
           src={getOptimizedSrc (src)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           alt={alt}
           width={width}
           height={height}
@@ -301,15 +229,10 @@ if (return blurDataURL) {
           blurDataURL={
             placeholder === 'blur' ? generateBlurDataURL () : undefined;
           }
-<<<<<<< HEAD
           onLoad={handleLoad}
           onError={handleError}
-<<<<<<< HEAD
           className={cn(
             'transition-opacity duration-300',
-=======
-          className={cn(            'transition-opacity duration-300'
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
             isLoading ? 'opacity-0' : 'opacity-100'
           )}
           {...props}
@@ -327,16 +250,10 @@ if (return blurDataURL) {
               src={fallbackSrc}
               alt={alt}
               className='max-w-full max-h-full object-contain'
-<<<<<<< HEAD
               onLoad={handleLoad}
             />
           ) : (
             <div className='text-gray-400 text-center'>
-=======
-              onLoad={handleLoad}            />;
-          ) : (;
-            <div className='text-gray-400 text-center'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <svg
                 className='w-8 h-8 mx-auto mb-2'
                 fill='currentColor'
@@ -356,32 +273,15 @@ if (return blurDataURL) {
       {!isInView && lazy && !priority && (;
         <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800' />;
       )}
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-=======
-    </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 
-<<<<<<< HEAD
-=======
-  )
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 // Higher-order component for easy migration from regular img tags
 export function withImageOptimization<P extends { src: string; alt: string }>(
   Component: React.ComponentType<P>
 ) {
   return function OptimizedComponent(props: P) {
-<<<<<<< HEAD
-=======
-// Higher-order component for easy migration from regular img tags;
-export function withImageOptimization<Pextends { src: string alt: string }>(;
-  Component: React && React.ComponentType<P>;
-) {;
-  return function OptimizedComponent(): any (props: P) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const { src, alt, ...otherProps } = props;
 
     return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />;
@@ -398,20 +298,6 @@ export function preloadImage(): any (src: string): Promise<void> {;
   });
 }
 
-<<<<<<< HEAD
-=======
-    const { src, alt, ...otherProps } = props
-    return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />
-  }
-// Utility to preload critical images
-export function preloadImage(src: string): Promise<void> {
-  return new Promise((resolve, reject) => {
-    const img = new window.Image()
-    img.onload = () => resolve()
-    img.onerror = reject
-    img.src = src
-  })
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 // Utility to get image dimensions
 export function getImageDimensions(
   src: string
@@ -419,26 +305,11 @@ export function getImageDimensions(
   return new Promise((resolve, reject) => {
     const img = new window.Image()
     img.onload = () =>
-<<<<<<< HEAD
       resolve({ width: img.naturalWidth, height: img.naturalHeight });
     img.onerror = reject;
     img.src = src;
   });
 }
-=======
-      resolve({ width: img.naturalWidth, height: img.naturalHeight })
-    img.onerror = reject
-    img.src = src
-  });    img.src = src
-  })
-}
-    img.onerror = reject
-    img.src = src
-  })
-}
-
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
 // Utility to get image dimensions;
 export function getImageDimensions(): any (;
   src: string;
@@ -456,13 +327,7 @@ export function getImageDimensions(): any (;
     img && img.src = src;
   });
 } ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           on_load={handle_load}
           on_error={handle_error}
           className={cn (            'transition - opacity duration - 300',
@@ -534,5 +399,3 @@ export function getImageDimensions (
     img.src = src;
   });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,18 +1,10 @@
-<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
-<<<<<<< HEAD
-=======
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ActionButtonsProps {
   flag_id: string;
   status: string;
-<<<<<<< HEAD
 
   onAction: (
     flagId: string
@@ -28,25 +20,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
   return (
 
     <div className="flex space-x-2">
-=======
-
-interface ActionButtonsProps {;
-  flagId: string;
-  status: string;
-  onAction: (;
-    flagId: string,;
-    action: "warning" | "suspension" | "ban" | "ignore",;
-  ) => void;
-}
-
-export const ActionButtons: React.FC<ActionButtonsProps> = ({;
-  flagId,;
-  status,;
-  onAction,;
-}) => {;
-  return (
-    <div className="flex space-x-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Button
         variant="ghost"
         size="icon"
@@ -60,51 +33,29 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
         size="icon"
         title="Send Warning"
         onClick={() => onAction(flagId, "warning")}
-<<<<<<< HEAD
         disabled={status === "actioned" |status === "ignored"}
       >
         <Info className="h-4 w-4" />
       </Button>
-=======
-        disabled={status === "actioned" || status === "ignored"}
-      >;
-        <Info className="h-4 w-4" />;
-      </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Button
         variant="ghost"
         size="icon"
         title="Suspend User"
         onClick={() => onAction(flagId, "suspension")}
-<<<<<<< HEAD
         disabled={status === "actioned" |status === "ignored"}
       >
         <AlertTriangle className="h-4 w-4" />
       </Button>
-=======
-        disabled={status === "actioned" || status === "ignored"}
-      >;
-        <AlertTriangle className="h-4 w-4" />;
-      </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Button
         variant="ghost"
         size="icon"
         title="Ban User"
         onClick={() => onAction(flagId, "ban")}
-<<<<<<< HEAD
         disabled={status === "actioned" |status === "ignored"}
       >
         <Ban className="h-4 w-4" />
       </Button>
       {status === "pending" && (
-=======
-        disabled={status === "actioned" || status === "ignored"}
-      >;
-        <Ban className="h-4 w-4" />;
-      </Button>;
-      {status === "pending" && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Button
           variant="ghost"
           size="sm"
@@ -117,7 +68,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
   );
 }
 
-=======
   on_action: (
     flag_id: string,
     action: "warning" | "suspension" | "ban" | "ignore",
@@ -176,4 +126,3 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

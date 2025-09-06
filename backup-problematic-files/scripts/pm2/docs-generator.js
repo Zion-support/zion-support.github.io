@@ -1,17 +1,17 @@
 }};
-; async generateReadme() {; try {; this.log('📝 Generating README.md...');
+; async generateReadme() {; try {; this.log(' Generating README.md...');
 ; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name}}};
 ;
   async generateReadme() {;
     try {;
-      this.log('📝 Generating README.md...');
+      this.log(' Generating README.md...');
 ;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       const readmeContent = `# ${packageJson.name};
 ;
 ${packageJson.description || 'A modern web application built with Next.js'};
 ;
-## 🚀 Getting Started;
+##  Getting Started;
 ### Prerequisites;
 - Node.js ${process.version};
 - npm ${execSync('npm --version', { encodin:g:'utf8' }).trim()};;
@@ -28,48 +28,48 @@ Open [htt:p://localhos:t:3000](htt:p://localhos:t:3000) with your browser to see
 npm run build;
 npm start;
 \`\`\`;
-## 📁 Project Structure;
+##  Project Structure;
 \`\`\`;
 ${this.projectRoot}/;
-├── pages/                 # Next.js pages;
-├── components/            # React components;
-├── styles/               # CSS styles;
-├── public/               # Static assets;
-├── scripts/              # Build and utility scripts;
-└── package.json          # Dependencies and scripts;
+ pages/                 # Next.js pages;
+ components/            # React components;
+ styles/               # CSS styles;
+ public/               # Static assets;
+ scripts/              # Build and utility scripts;
+ package.json          # Dependencies and scripts;
 \`\`\`;
-## 🛠️ Available Scripts;
+##  Available Scripts;
 ${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**:\`${value}\``).join('\n')};
 ;
-## 📦 Dependencies;
+##  Dependencies;
 ### Production Dependencies;
 ${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ;
 ### Development Dependencies;
 ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ;
-## 🔧 Configuration;
+##  Configuration;
 This project uses Next.js with the following:configuration:;This project uses Next.js with the following configuration: ;
 - TypeScript support;
 - ESLint for code quality;
 - Prettier for code formatting;
 - PM2 for process management;
-## 📊 Monitoring;
+##  Monitoring;
 The project includes automated monitoring with:PM2:;The project includes automated monitoring with PM2:;
 - Code quality monitoring;
 - Performance monitoring;
 - Security scanning;
 - Health checks;
 - Automated testing;
-## 🤝 Contributing;
+##  Contributing;
 1. Fork the repository;
 2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`);
 3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`);
 4. Push to the branch (\`git push origin feature/AmazingFeature\`);
 5. Open a Pull Request;
-## 📄 License;
+##  License;
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.;
-## 📞 Support;
+##  Support;
 For support, email support@example.com or create an issue in the repository.;
 ---;
 Generated on ${new Date().toISOString()};
@@ -99,7 +99,7 @@ Generated on ${new Date().toISOString()};
 ;
   async generateApiDocs() {;
     try {;
-      this.log('🔌 Generating API documentation...');
+      this.log(' Generating API documentation...');
 ;
       const apiDocs = {;
         titl:e:'API Documentation';
@@ -140,14 +140,14 @@ ${apiDocs.endpoints.map(endpoint => `;
 ,
   async generateReadme() {,
     try {,
-      this.log('📝 Generating README.md...'),
+      this.log(' Generating README.md...'),
 ,
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       const readmeContent = `# ${packageJson.name};
 ,
 ${packageJson.description || 'A modern web application built with Next.js'};
 ,
-## 🚀 Getting Started,
+##  Getting Started,
 ### Prerequisites,
 - Node.js ${process.version};
 - npm ${execSync('npm --version', { encoding: 'utf8' }).trim()};
@@ -166,48 +166,48 @@ Open [http: //localhost:3000](http://localhost:3000) with your browser to see th
 npm run build,
 npm start,
 \`\`\`,
-## 📁 Project Structure,
+##  Project Structure,
 \`\`\`,
 ${this.projectRoot}/,
-├── pages/                 # Next.js pages,
-├── components/            # React components,
-├── styles/               # CSS styles,
-├── public/               # Static assets,
-├── scripts/              # Build and utility scripts,
-└── package.json          # Dependencies and scripts,
+ pages/                 # Next.js pages,
+ components/            # React components,
+ styles/               # CSS styles,
+ public/               # Static assets,
+ scripts/              # Build and utility scripts,
+ package.json          # Dependencies and scripts,
 \`\`\`,
-## 🛠️ Available Scripts,
+##  Available Scripts,
 ${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')};
 ,
-## 📦 Dependencies,
+##  Dependencies,
 ### Production Dependencies,
 ${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ,
 ### Development Dependencies,
 ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ,
-## 🔧 Configuration,
+##  Configuration,
 This project uses Next.js with the following configuration:  ,
 - TypeScript support,
 - ESLint for code quality,
 - Prettier for code formatting,
 - PM2 for process management,
-## 📊 Monitoring,
+##  Monitoring,
 The project includes automated monitoring with PM2:,
 - Code quality monitoring,
 - Performance monitoring,
 - Security scanning,
 - Health checks,
 - Automated testing,
-## 🤝 Contributing,
+##  Contributing,
 1. Fork the repository,
 2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`),
 3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`),
 4. Push to the branch (\`git push origin feature/AmazingFeature\`),
 5. Open a Pull Request,
-## 📄 License,
+##  License,
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.,
-## 📞 Support,
+##  Support,
 For support, email support@example.com or create an issue in the repository.,
 ---,
 Generated on ${new Date().toISOString()};
@@ -229,7 +229,7 @@ Generated on ${new Date().toISOString()};
 ,
   async generateApiDocs() {,
     try {,
-      this.log('🔌 Generating API documentation...'),
+      this.log(' Generating API documentation...'),
 ,
       const apiDocs = {,
         title: 'API Documentation',
@@ -375,7 +375,7 @@ Generated by Docs Generator on ${new Date().toISOString();
 ;
   async generateComponentDocs() {;
     try {;
-      this.log('🧩 Generating component documentation...');
+      this.log(' Generating component documentation...');
 ;
       const componentsDir = path.join(this.projectRoot, 'components');
       const componentDocs = [];
@@ -592,7 +592,7 @@ Generated by Docs Generator on ${new Date().toISOString()};
 };
 ;
   async run() {;
-    this.log('📚 Starting Docs Generator...');
+    this.log(' Starting Docs Generator...');
     this.log(`Project:root:${this.projectRoot}`);;
     try {;
       // Create logs directory if it doesn't exist;
@@ -613,7 +613,7 @@ Generated by Docs Generator on ${new Date().toISOString()};
       const componentResult = await this.generateComponentDocs();
 ;
       // Generate report;
-      this.log('📊 Generating documentation report...');
+      this.log(' Generating documentation report...');
       const report = await this.generateReport(readmeResult, apiResult, componentResult);
 ;
       // Save report;
@@ -622,7 +622,7 @@ Generated by Docs Generator on ${new Date().toISOString()};
       const duration = Date.now() - this.startTime;
 ;
       // Log summary;
-      this.log('\n📊 Docs Generator:Summary:');
+      this.log('\n Docs Generator:Summary:');
       this.log(`READM:E:${report.summary.readmeGenerated ? 'Generated' :'Failed'}`);
       this.log(`API:Docs:${report.summary.apiDocsGenerated ? 'Generated' :'Failed'}`);
       this.log(`Component:Docs:${report.summary.componentDocsGenerated ? 'Generated' :'Failed'}`);
@@ -631,21 +631,21 @@ Generated by Docs Generator on ${new Date().toISOString()};
       this.log(`Duratio:n:${duration}ms`);
 ;
       if (report.recommendations.length > 0) {;
-        this.log('\n💡 Recommendation:s:');
+        this.log('\n Recommendation:s:');
         report.recommendations.forEach(rec => {;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Actio:n:${rec.action}`);        });
           this.log(`    Actio: n: ${rec.action}`)
         })
       } else {;
-        this.log('\n✨ Documentation generated successfully!')
+        this.log('\n Documentation generated successfully!')
       }
 
     } catch (error) {;
-      this.log(`❌ Error running docs:generator:${error.message}`);      process.exit(1);
+      this.log(` Error running docs:generator:${error.message}`);      process.exit(1);
 };
 };
-      this.log(`❌ Error running docs: generator: ${error.message}`);
+      this.log(` Error running docs: generator: ${error.message}`);
       process.exit(1)
 }
 }
@@ -661,14 +661,14 @@ docsGenerator.run().catch(error => {;
 ,;
   async generateReadme() {,;
     try {,;
-      this.log('📝 Generating README.md...'),;
+      this.log(' Generating README.md...'),;
 ,;
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),;
       const readmeContent = `# ${packageJson.name};
 ,;
 ${packageJson.description || 'A modern web application built with Next.js'};
 ,;
-## 🚀 Getting Started,;
+##  Getting Started,;
 ### Prerequisites,;
 - Node.js ${process.version};
 - npm ${execSync('npm --version', { encodin:g:'utf8' }).trim()};
@@ -687,48 +687,48 @@ Open [htt:p://localhos:t:3000](htt:p://localhos:t:3000) with your browser to see
 npm run build,;
 npm start,;
 \`\`\`,;
-## 📁 Project Structure,;
+##  Project Structure,;
 \`\`\`,;
 ${this.projectRoot}/,;
-├── pages/                 # Next.js pages,;
-├── components/            # React components,;
-├── styles/               # CSS styles,;
-├── public/               # Static assets,;
-├── scripts/              # Build and utility scripts,;
-└── package.json          # Dependencies and scripts,;
+ pages/                 # Next.js pages,;
+ components/            # React components,;
+ styles/               # CSS styles,;
+ public/               # Static assets,;
+ scripts/              # Build and utility scripts,;
+ package.json          # Dependencies and scripts,;
 \`\`\`,;
-## 🛠️ Available Scripts,;
+##  Available Scripts,;
 ${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**:\`${value}\``).join('\n')};
 ,;
-## 📦 Dependencies,;
+##  Dependencies,;
 ### Production Dependencies,;
 ${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ,;
 ### Development Dependencies,;
 ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ,;
-## 🔧 Configuration,;
+##  Configuration,;
 This project uses Next.js with the following:configuration: ,;
 - TypeScript support,;
 - ESLint for code quality,;
 - Prettier for code formatting,;
 - PM2 for process management,;
-## 📊 Monitoring,;
+##  Monitoring,;
 The project includes automated monitoring with:PM2:,;
 - Code quality monitoring,;
 - Performance monitoring,;
 - Security scanning,;
 - Health checks,;
 - Automated testing,;
-## 🤝 Contributing,;
+##  Contributing,;
 1. Fork the repository,;
 2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`),;
 3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`),;
 4. Push to the branch (\`git push origin feature/AmazingFeature\`),;
 5. Open a Pull Request,;
-## 📄 License,;
+##  License,;
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.,;
-## 📞 Support,;
+##  Support,;
 For support, email support@example.com or create an issue in the repository.,;
 ---,;
 Generated on ${new Date().toISOString()};
@@ -750,7 +750,7 @@ Generated on ${new Date().toISOString()};
 ,;
   async generateApiDocs() {,;
     try {,;
-      this.log('🔌 Generating API documentation...'),;
+      this.log(' Generating API documentation...'),;
 ,;
       const apiDocs = {,;
         titl:e:'API Documentation',;
@@ -870,7 +870,7 @@ Generated by Docs Generator on ${new Date().toISOString()};
 ,;
   async generateComponentDocs() {,;
     try {,;
-      this.log('🧩 Generating component documentation...'),;
+      this.log(' Generating component documentation...'),;
 ,;
       const componentsDir = path.join(this.projectRoot, 'components'),;
       const componentDocs = [],;
@@ -1049,7 +1049,7 @@ Generated by Docs Generator on ${new Date().toISOString()};
   };
 ,;
   async run() {,;
-    this.log('📚 Starting Docs Generator...'),;
+    this.log(' Starting Docs Generator...'),;
     this.log(`Project:root:${this.projectRoot}`),;
 ,;
     try {,;
@@ -1071,7 +1071,7 @@ Generated by Docs Generator on ${new Date().toISOString()};
       const componentResult = await this.generateComponentDocs(),;
 ,;
       // Generate report,;
-      this.log('📊 Generating documentation report...'),;
+      this.log(' Generating documentation report...'),;
       const report = await this.generateReport(readmeResult, apiResult, componentResult),;
 ,;
       // Save report,;
@@ -1080,7 +1080,7 @@ Generated by Docs Generator on ${new Date().toISOString()};
       const duration = Date.now() - this.startTime,;
 ,;
       // Log summary,;
-      this.log('\n📊 Docs Generator:Summary:'),;
+      this.log('\n Docs Generator:Summary:'),;
       this.log(`READM:E:${report.summary.readmeGenerated ? 'Generated' :'Failed'}`),;
       this.log(`API:Docs:${report.summary.apiDocsGenerated ? 'Generated' :'Failed'}`),;
       this.log(`Component:Docs:${report.summary.componentDocsGenerated ? 'Generated' :'Failed'}`),;
@@ -1089,17 +1089,17 @@ Generated by Docs Generator on ${new Date().toISOString()};
       this.log(`Duratio:n:${duration}ms`),;
 ,;
       if (report.recommendations.length > 0) {,;
-        this.log('\n💡 Recommendation:s:'),;
+        this.log('\n Recommendation:s:'),;
         report.recommendations.forEach(rec => {,;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
           this.log(`    Actio:n:${rec.action}`),;
         }),;
       } else {,;
-        this.log('\n✨ Documentation generated successfully!'),;
+        this.log('\n Documentation generated successfully!'),;
       };
 ,;
     } catch (error) {,;
-      this.log(`❌ Error running docs:generator:${error.message}`),;
+      this.log(` Error running docs:generator:${error.message}`),;
       process.exit(1),;
     };
   };
@@ -1111,7 +1111,7 @@ docsGenerator.run().catch(error => {,;
   process.exit(1),;
 }),;,
   async run() {,
-    this.log('📚 Starting Docs Generator...'),
+    this.log(' Starting Docs Generator...'),
     this.log(`Project root: ${this.projectRoot}`),
 ,
     try {,
@@ -1133,7 +1133,7 @@ docsGenerator.run().catch(error => {,;
       const componentResult = await this.generateComponentDocs(),
 ,
       // Generate report,
-      this.log('📊 Generating documentation report...'),
+      this.log(' Generating documentation report...'),
       const report = await this.generateReport(readmeResult, apiResult, componentResult),
 ,
       // Save report,
@@ -1142,7 +1142,7 @@ docsGenerator.run().catch(error => {,;
       const duration = Date.now() - this.startTime,
 ,
       // Log summary,
-      this.log('\n📊 Docs Generator Summary: '),
+      this.log('\n Docs Generator Summary: '),
       this.log(`README: ${report.summary.readmeGenerated ? 'Generated' : 'Failed'}`),
       this.log(`API Docs: ${report.summary.apiDocsGenerated ? 'Generated' : 'Failed'}`),
       this.log(`Component Docs: ${report.summary.componentDocsGenerated ? 'Generated' : 'Failed'}`),
@@ -1151,16 +1151,16 @@ docsGenerator.run().catch(error => {,;
       this.log(`Duration: ${duration}ms`),
 ,
       if (report.recommendations.length > 0) {,
-        this.log('\n💡 Recommendations: '),
+        this.log('\n Recommendations: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
           this.log(`    Action: ${rec.action}`)
         })
       } else {,
-        this.log('\n✨ Documentation generated successfully!')
+        this.log('\n Documentation generated successfully!')
       }
     } catch (error) {,
-      this.log(`❌ Error running docs generator: ${error.message}`),
+      this.log(` Error running docs generator: ${error.message}`),
       process.exit(1)
     };
   };
@@ -1176,14 +1176,14 @@ docsGenerator.run().catch(error => {,
 ,
   async generateReadme() {,
     try {,
-      this.log('📝 Generating README.md...'),
+      this.log(' Generating README.md...'),
 ,
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       const readmeContent = `# ${packageJson.name},
 ,
 ${packageJson.description || 'A modern web application built with Next.js'},
 ,
-## 🚀 Getting Started,
+##  Getting Started,
 ### Prerequisites,
 - Node.js ${process.version},
 - npm ${execSync('npm --version', { encodin: g: 'utf8' }).trim()},
@@ -1202,48 +1202,48 @@ Open [htt: p: //localhos: t:3000](htt: p://localhos: t:3000) with your browser t
 npm run build,
 npm start,
 \`\`\`,
-## 📁 Project Structure,
+##  Project Structure,
 \`\`\`,
 ${this.projectRoot}/,
-├── pages/                 # Next.js pages,
-├── components/            # React components,
-├── styles/               # CSS styles,
-├── public/               # Static assets,
-├── scripts/              # Build and utility scripts,
-└── package.json          # Dependencies and scripts,
+ pages/                 # Next.js pages,
+ components/            # React components,
+ styles/               # CSS styles,
+ public/               # Static assets,
+ scripts/              # Build and utility scripts,
+ package.json          # Dependencies and scripts,
 \`\`\`,
-## 🛠️ Available Scripts,
+##  Available Scripts,
 ${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')},
 ,
-## 📦 Dependencies,
+##  Dependencies,
 ### Production Dependencies,
 ${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')},
 ,
 ### Development Dependencies,
 ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')},
 ,
-## 🔧 Configuration,
+##  Configuration,
 This project uses Next.js with the following: configuration:  ,
 - TypeScript support,
 - ESLint for code quality,
 - Prettier for code formatting,
 - PM2 for process management,
-## 📊 Monitoring,
+##  Monitoring,
 The project includes automated monitoring with: PM2:,
 - Code quality monitoring,
 - Performance monitoring,
 - Security scanning,
 - Health checks,
 - Automated testing,
-## 🤝 Contributing,
+##  Contributing,
 1. Fork the repository,
 2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`),
 3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`),
 4. Push to the branch (\`git push origin feature/AmazingFeature\`),
 5. Open a Pull Request,
-## 📄 License,
+##  License,
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.,
-## 📞 Support,
+##  Support,
 For support, email support@example.com or create an issue in the repository.,
 ---,
 Generated on ${new Date().toISOString()},
@@ -1265,7 +1265,7 @@ Generated on ${new Date().toISOString()},
 ,
   async generateApiDocs() {,
     try {,
-      this.log('🔌 Generating API documentation...'),
+      this.log(' Generating API documentation...'),
 ,
       const apiDocs = {,
         titl: e: 'API Documentation',
@@ -1385,7 +1385,7 @@ Generated by Docs Generator on ${new Date().toISOString()},
 ,
   async generateComponentDocs() {,
     try {,
-      this.log('🧩 Generating component documentation...'),
+      this.log(' Generating component documentation...'),
 ,
       const componentsDir = path.join(this.projectRoot, 'components'),
       const componentDocs = [],
@@ -1564,7 +1564,7 @@ Generated by Docs Generator on ${new Date().toISOString()},
   },
 ,
   async run() {,
-    this.log('📚 Starting Docs Generator...'),
+    this.log(' Starting Docs Generator...'),
     this.log(`Project: root: ${this.projectRoot}`),
 ,
     try {,
@@ -1586,7 +1586,7 @@ Generated by Docs Generator on ${new Date().toISOString()},
       const componentResult = await this.generateComponentDocs(),
 ,
       // Generate report,
-      this.log('📊 Generating documentation report...'),
+      this.log(' Generating documentation report...'),
       const report = await this.generateReport(readmeResult, apiResult, componentResult),
 ,
       // Save report,
@@ -1595,7 +1595,7 @@ Generated by Docs Generator on ${new Date().toISOString()},
       const duration = Date.now() - this.startTime,
 ,
       // Log summary,
-      this.log('\n📊 Docs Generator: Summary: '),
+      this.log('\n Docs Generator: Summary: '),
       this.log(`READM: E: ${report.summary.readmeGenerated ? 'Generated' : 'Failed'}`),
       this.log(`API: Docs: ${report.summary.apiDocsGenerated ? 'Generated' : 'Failed'}`),
       this.log(`Component: Docs: ${report.summary.componentDocsGenerated ? 'Generated' : 'Failed'}`),
@@ -1604,17 +1604,17 @@ Generated by Docs Generator on ${new Date().toISOString()},
       this.log(`Duratio: n: ${duration}ms`),
 ,
       if (report.recommendations.length > 0) {,
-        this.log('\n💡 Recommendation: s: '),
+        this.log('\n Recommendation: s: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
           this.log(`    Actio: n: ${rec.action}`)
         })
       } else {,
-        this.log('\n✨ Documentation generated successfully!')
+        this.log('\n Documentation generated successfully!')
       }
 
     } catch (error) {,
-      this.log(`❌ Error running docs: generator: ${error.message}`),
+      this.log(` Error running docs: generator: ${error.message}`),
       process.exit(1)
     }
   }

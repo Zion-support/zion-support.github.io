@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   LucideIcon,
   BadgeCheck,
@@ -8,12 +7,8 @@ import {
   BadgePlus,
   BadgeDollarSign,;
 } from 'lucide-react';
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 import {
-<<<<<<< HEAD
   LucideIcon
   BadgeCheck
   Award
@@ -29,23 +24,6 @@ export type BadgeKey =
   | 'featured_creator'
   | 'first_action'
   | 'monetized'
-=======
-  LucideIcon,
-  BadgeCheck,
-  Award,
-  Star,
-  Trophy,
-  BadgePlus,
-  BadgeDollarSign,
-} from 'lucide-react';
-export type BadgeKey =;
-  | 'first_listing';
-  | 'top_contributor';
-  | 'profile_complete';
-  | 'featured_creator';
-  | 'first_action';
-  | 'monetized';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface BadgeMeta {
   key: BadgeKey;
   name: string;
@@ -55,7 +33,6 @@ export interface BadgeMeta {
   bg: string;
 export const badge_list: BadgeMeta[] = [;
   {
-<<<<<<< HEAD
     key: 'first_listing'
     name: 'First Listing'
     description: 'Published your first product, service, or listing.'
@@ -105,19 +82,10 @@ export const badge_list: BadgeMeta[] = [;
   }
 ]
 export const getBadgeMeta = (key: BadgeKey) =>
-<<<<<<< HEAD
   badgeList.find(b => b.key === key)
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key)
-=======
-  badgeList && badgeList.find(b => b && b.key === key);
-export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList && badgeList.find((b) => b && b.key === key);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     key: 'first_listing',
     name: 'First Listing',
     description: 'Published your first product, service, or listing.',
@@ -166,17 +134,9 @@ export const getBadgeMeta = (key: BadgeKey) =>
     bg: '#F2FCE2', // Soft Green;
   },
 ];
-<<<<<<< HEAD
 
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList && badgeList.find(b => b && b.key === key);
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList && badgeList.find((b) => b && b.key === key);
 
-=======
-export const getBadgeMeta = (key: BadgeKey) =>: any;
-  badge_list.find (boolean => b.key === key);
-export const getBadgeMeta = (key: BadgeKey) =>: any;
-  badge_list.find ((b) => b.key === key);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

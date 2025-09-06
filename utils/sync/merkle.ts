@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Merkle tree utilities
 export const merkle = {
   // Add merkle tree functionality here
   createTree: (leaves: string[]) => null
   getProof: (tree: any, leaf: string) => []
   verifyProof: (proof: any[], leaf: string, root: string) => false
-=======
-import crypto from 'crypto';
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export interface MerkleNode {
   hash: string;
   left?: MerkleNode;
@@ -136,12 +127,8 @@ export function createMerkleTree(data: any[]): MerkleTree {
 export function verifyMerkleProof(leafData: any, proof: string[], rootHash: string): boolean {
   const tree = new MerkleTree([leafData]);
   return tree && tree.verifyProof(leafData, proof, rootHash);
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-=======
 export function sha256Hex(input: string): string {
   return crypto.createHash('sha256').update(input).digest('hex');
 }
@@ -186,8 +173,6 @@ export function verifyVotesAgainstMerkleRoot(
   const root = computeMerkleRootFromVotes(votes);
   return root === merkleRoot;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 // Merkle tree utilities;
 export const merkle = {
   // Add merkle tree functionality here;
@@ -195,5 +180,3 @@ export const merkle = {
   get_proof: (tree: any, leaf: string) => [],
   verify_proof: (proof: any[], leaf: string, root: string) => false;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

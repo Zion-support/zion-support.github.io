@@ -20,7 +20,7 @@ export default function DepRadarPage({ outdated, generatedAt } { outdated:Outdat
   return (;
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation:Dependency Radar</h1>;
-      <div className="text-xs text-gray-500">Last updated:{generatedAt ? new Date(generatedAt).toLocaleString() :'—'}</div>;
+      <div className="text-xs text-gray-500">Last updated:{generatedAt ? new Date(generatedAt).toLocaleString() :''}</div>;
       {outdated.length === 0 ? (;
         <div className="text-sm text-gray-600">All dependencies up to date.</div>;
       ) :(;

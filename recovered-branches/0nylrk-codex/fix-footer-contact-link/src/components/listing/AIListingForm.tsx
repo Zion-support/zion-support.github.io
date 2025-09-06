@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -18,23 +16,6 @@ interface AIListingFormProps {
   isLoading: boolean
 
   initialValues?: {
-=======
-import React, { useState } from "react";
-import {useToast} from "@/hooks/use-toast";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Sparkles} from "lucide-react";
-interface AIListingFormProps {;
-  onSubmit: (formData: {;
-    title: string,;
-    category: string,;
-    keyFeatures: string,;
-    targetAudience: string;
-  }) => void;
-  isLoading: boolean,;
-  initialValues?: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     title?: string;
     category?: string;
     keyFeatures?: string;
@@ -44,7 +25,6 @@ interface AIListingFormProps {;
 
 export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
   const { toast } = useToast();
-<<<<<<< HEAD
   const [title, setTitle] = useState(initialValues.title |"");
   const [category, setCategory] = useState(initialValues.category |"");
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures |"");
@@ -55,23 +35,9 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
         title: "Missing required fields"
         description: "Please provide at least a title and category."
         variant: "destructive"
-=======
-  const [title, setTitle] = useState(initialValues && initialValues.title || "");
-  const [category, setCategory] = useState(initialValues && initialValues.category || "");
-  const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");
-  const [targetAudience, setTargetAudience] = useState(initialValues && initialValues.targetAudience || "");
-
-  const handleSubmit = () => {;
-    if (!title || !category) {;
-      toast({;
-        title: "Missing required fields",;
-        description: "Please provide at least a title and category.",;
-        variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
     }
-<<<<<<< HEAD
     onSubmit({
       title;
       category;
@@ -79,16 +45,6 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
       targetAudience
     })
   }
-=======
-
-    onSubmit({;
-      title;
-      category;
-      keyFeatures;
-      targetAudience;
-    });
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className="space-y-4">;
@@ -134,7 +90,6 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
           placeholder="e && e.g. Developers, Marketers, Startups";
           className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
-<<<<<<< HEAD
         />
       </div>
       <Button
@@ -154,27 +109,6 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
     </div>
   )
 }
-=======
-        />;
-      </div>;
-      <Button
-        onClick={handleSubmit}
-        disabled={isLoading || !title || !category}
-        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2">;
-        {isLoading ? (;
-          <>Generating Optimized Content...</>;
-        ) : (;
-          <>;
-            <Sparkles className="h-4 w-4 mr-2" />;
-            Generate Optimized Content;
-          </>;
-        )}
-      </Button>;
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -286,4 +220,3 @@ if ( {) {
       </Button>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

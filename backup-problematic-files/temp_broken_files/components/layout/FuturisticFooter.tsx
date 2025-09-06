@@ -29,9 +29,9 @@ export default function FuturisticFooter() {
     { name: 'Blockchain & Web3', href: '/services?category=Blockchain%20%26%20Web3' }],
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: '💼' },
-    { name: 'X', href: 'https://x.com/ziontechgroup', icon: '🐦' },
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' }],
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: '' },
+    { name: 'X', href: 'https://x.com/ziontechgroup', icon: '' },
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '' }],
 
   return (
     <footer className=&quot;relative bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden&quot;>
@@ -156,7 +156,7 @@ export default function FuturisticFooter() {
         <div className=&quot;pt-8 border-t border-gray-800&quot;>
           <div className=&quot;flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0&quot;>
             <div className=&quot;text-gray-400 text-sm&quot;>
-              © {currentYear} Zion Tech Group. All rights reserved.            </div>
+               {currentYear} Zion Tech Group. All rights reserved.            </div>
             
             <div className=&quot;flex space-x-6 text-sm&quot;>
               <Link href=&quot;/privacy&quot; className=&quot;text-gray-400 hover:text-white transition-colors duration-200&quot;>

@@ -47,7 +47,7 @@ const serviceCategories = [  {
 }
 }transition= {
   {
-    title: '🚗 Autonomous & Mobility',
+    title: ' Autonomous & Mobility',
     description: 'Self-driving and mobility solutions',
     icon: Car,
     color: 'from-red-600 to-pink-600',

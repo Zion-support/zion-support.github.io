@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react";
 import Head from "next/head";
 import {
@@ -11,53 +9,13 @@ import {
   ArrowRight
   Brain
   Star
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-import Head from "next/head";
-import {;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Check,;
-  ArrowRight,;
-  Brain,;
-  Star,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
-<<<<<<< HEAD
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
     s.link.endsWith("/quantum-ai-brain-computer-interface")
-=======
-export default function QuantumAIBCIPage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
-    s && s.link.endsWith("/quantum-ai-brain-computer-interface"),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
   if (!service) return null;
 
@@ -107,7 +65,7 @@ export default function QuantumAIBCIPage() {;
                     </span>;
                   </div>;
                   <div className="text-slate-400">;
-                    {service && service.trialDays}-day free trial • Setup:{" "}
+                    {service && service.trialDays}-day free trial  Setup:{" "}
                     {service && service.setupTime}
                   </div>;
                 </div>;
@@ -144,7 +102,6 @@ export default function QuantumAIBCIPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-=======
 import React from './react';
 import Head from './next / head';
 import {
@@ -216,7 +173,7 @@ if (return null) {
                     </span>;
                   </div>;
                   <div className="text - slate - 400">;
-                    {service.trial_days}-day free trial • Setup:{" "}
+                    {service.trial_days}-day free trial  Setup:{" "}
                     {service.setup_time}
                   </div>;
                 </div>;
@@ -253,5 +210,4 @@ if (return null) {
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

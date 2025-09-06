@@ -41,7 +41,6 @@ class FileWatcher {
       if (content.includes('return()') && !content.includes('return ()')) {
         issues.push('Invalid return statement syntax');
       }
-      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
         issues.push('Merge conflict markers found');
       }
 

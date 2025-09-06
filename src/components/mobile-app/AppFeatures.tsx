@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
 const features = [;
   {
-<<<<<<< HEAD
     icon: <Brain className="h-10 w-10 text-zion-cyan" />
     title: "AI Talent Matching"
     description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements."
@@ -25,31 +20,10 @@ const features = [;
     icon: <Zap className="h-10 w-10 text-zion-cyan" />
     title: "Real-time Notifications"
     description: "Get instant alerts about new job opportunities, messages, and hiring requests."
-=======
-    icon: <Brain className="h - 10 w - 10 text - zion - cyan" />,
-    title: "AI Talent Matching",
-    description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements.";
-  }
-  {
-    icon: <Clock className="h - 10 w - 10 text - zion - cyan" />,
-    title: "1 - Click Hiring",
-    description: "Streamlined hiring process that lets you connect with talent instantly with just one click.";
-  }
-  {
-    icon: <Award className="h - 10 w - 10 text - zion - cyan" />,
-    title: "Resume Builder",
-    description: "Create professional, AI - enhanced resumes that highlight your skills and increase your chances of getting hired.";
-  }
-  {
-    icon: <Zap className="h - 10 w - 10 text - zion - cyan" />,
-    title: "Real - time Notifications",
-    description: "Get instant alerts about new job opportunities, messages, and hiring requests.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 ];
 export const AppFeatures: React.FC = () => {
   return (
-<<<<<<< HEAD
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -104,8 +78,6 @@ export const AppFeatures: React.FC = () => {"
 }
 "
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 };
 
@@ -187,15 +159,8 @@ export const AppFeatures: React.FC = () => {";
 }</CardDescription> ;
 }</div> </div> </section>) ;
 };
-<<<<<<< HEAD
 "
-=======
-"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <section className="py - 16 bg - zion - blue">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 12">;
@@ -247,5 +212,3 @@ export const AppFeatures: React.FC = () => {";
 }</div> </div> </section>);
 }
 ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

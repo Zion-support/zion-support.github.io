@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from 'react'
 import { useToast } from '@/hooks/use-toast'
@@ -36,43 +31,7 @@ export function GeneratedDescriptionDisplay({
       title: 'Description Saved'
       description: 'Your edited description has been saved.'
     })
-=======
-import React, { useState } from 'react';
-import { use_toast } from '@/hooks / use - toast';
-import { Button } from '@/components / ui / button';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardFooter,
-} from '@/components / ui / card';
-import { Textarea } from '@/components / ui / textarea';
-import { Check, Pencil } from 'lucide-react';
-interface GeneratedDescriptionDisplayProps {
-  description: string;
-  on_save: (edited_description: string) => void;interface GeneratedDescriptionDisplayProps {
-  description: string,
-  on_save: (edited_description: string, ) => void;
-}
-export /**
- * GeneratedDescriptionDisplay - Function description
- */
-function GeneratedDescriptionDisplay() {
-  const { toast } = use_toast ();
-  const [is_editing, setIsEditing] = useState (false);
-  const [edited_description, setEditedDescription] = useState (description);
-  const handle_save = () =>: any {
-    on_save (edited_description);
-    setIsEditing (false);
-    toast ({
-      title: 'Description Saved',
-      description: 'Your edited description has been saved.',
-    });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -109,10 +68,8 @@ export function GeneratedDescriptionDisplay(): any ({;
       description: 'Your edited description has been saved.',;
     });
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
-<<<<<<< HEAD
     <Card className='border border-zion-blue-light bg-zion-blue-dark'>;
       <CardHeader>;
         <CardTitle className='text-white flex items-center justify-between'>;
@@ -133,31 +90,10 @@ export function GeneratedDescriptionDisplay(): any ({;
                 Edit;
               </>;
             )}
-=======
-    <Card className='border border - zion - blue - light bg - zion - blue - dark'>;
-      <CardHeader>;
-        <CardTitle className='text - white flex items - center justify - between'>;
-          Generated Description;
-          <Button;
-            variant='outline';
-            size='sm';
-            on_click={() => setIsEditing (!is_editing)}
-            className='border - zion - blue - light text - zion - slate - light hover:text - white'          >;
-            {is_editing ? (
-              <>;
-                <Check className='h - 4 w - 4 mr - 1' />;
-                Done;
-              </>) : (
-              <>;
-                <Pencil className='h - 4 w - 4 mr - 1' />;
-                Edit;
-              </>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </Button>;
         </CardTitle>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
         {isEditing ? (;
           <Textarea
             value={editedDescription}
@@ -178,7 +114,6 @@ export function GeneratedDescriptionDisplay(): any ({;
           </Button>;
         </CardFooter>;
       )}
-<<<<<<< HEAD
     </Card>
   )
   isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>)
@@ -193,30 +128,8 @@ export function GeneratedDescriptionDisplay(): any ({;
 }</Card>)
 }'"
 }
-=======
-    </Card>;
-  );
-
-  isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>) ;
-}</Button> </CardTitle> </CardHeader> <CardContent> {;
-  isEditing ? (<Textareavalue= {
-  editedDescription 
-}</div>) ;
-}</CardContent> {;
-  isEditing && (<CardFooter> <ButtononClick={
-  handleSave "
-}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"> Save Changes </Button> </CardFooter>) ;
-}</Card>) ;
-}'";
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         {is_editing ? (
           <Textarea;
             value={edited_description}
@@ -247,5 +160,3 @@ export function GeneratedDescriptionDisplay(): any ({;
 }</Card>);
 }'";
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

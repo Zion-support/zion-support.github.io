@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import SEO from '../components/SEO';
 
@@ -23,7 +19,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>
 					<p className="text-slate-300">Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $20–$80/mo</li>
+						<li>Typical SMB budget: $20$80/mo</li>
 						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
 						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</a></li>
 					</ul>
@@ -42,7 +38,7 @@ export default function ServicesAdvertisingPage() {
         { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' }
         { name: 'Humanloop', href: 'https://humanloop.com/pricing' }
       ]
-      note: 'SMB budgets: $100–$2,000/mo. Enterprise: $5k–$100k+/mo depending on volume and models.'
+      note: 'SMB budgets: $100$2,000/mo. Enterprise: $5k$100k+/mo depending on volume and models.'
     }
     {
       title: 'Security & Compliance'
@@ -54,7 +50,7 @@ export default function ServicesAdvertisingPage() {
         { name: 'Snyk', href: 'https://snyk.io/plans/' }
         { name: 'Okta', href: 'https://www.okta.com/pricing/' }
       ]
-      note: 'SMB budgets: $200–$5,000/mo. Enterprise: $10k–$250k/yr+ for broader suites.'
+      note: 'SMB budgets: $200$5,000/mo. Enterprise: $10k$250k/yr+ for broader suites.'
     }
     {
       title: 'Vector & Search'
@@ -65,7 +61,7 @@ export default function ServicesAdvertisingPage() {
         { name: 'Elasticsearch Serverless', href: 'https://www.elastic.co/pricing/' }
         { name: 'Milvus', href: 'https://zilliz.com/pricing' }
       ]
-      note: 'SMB budgets: $50–$1,000/mo. Enterprise: $2k–$50k+/mo depending on throughput/latency.'
+      note: 'SMB budgets: $50$1,000/mo. Enterprise: $2k$50k+/mo depending on throughput/latency.'
     }
     {
       title: 'Cloud & Edge'
@@ -77,7 +73,7 @@ export default function ServicesAdvertisingPage() {
         { name: 'Netlify', href: 'https://www.netlify.com/pricing/' }
         { name: 'Vercel', href: 'https://vercel.com/pricing' }
       ]
-      note: 'SMB budgets: $200–$10,000/mo.'
+      note: 'SMB budgets: $200$10,000/mo.'
     }
     {
       title: 'Product Analytics'
@@ -86,16 +82,16 @@ export default function ServicesAdvertisingPage() {
         { name: 'Amplitude', href: 'https://amplitude.com/pricing' }
         { name: 'PostHog', href: 'https://posthog.com/pricing' }
       ]
-      note: 'SMB budgets: $0–$1,500/mo.'
+      note: 'SMB budgets: $0$1,500/mo.'
     }
     {
-      title: 'Incident & On‑Call'
+      title: 'Incident & OnCall'
       links: [
         { name: 'PagerDuty', href: 'https://www.pagerduty.com/pricing/' }
         { name: 'Opsgenie', href: 'https://www.atlassian.com/software/opsgenie/pricing' }
         { name: 'Better Stack', href: 'https://betterstack.com/status/pricing' }
       ]
-      note: 'SMB budgets: $10–$1,000/mo.'
+      note: 'SMB budgets: $10$1,000/mo.'
     }
     {
       title: 'Email & Deliverability'
@@ -104,7 +100,7 @@ export default function ServicesAdvertisingPage() {
         { name: 'Mailgun', href: 'https://www.mailgun.com/pricing/' }
         { name: 'Postmark', href: 'https://postmarkapp.com/pricing' }
       ]
-      note: 'SMB budgets: $15–$500/mo.'
+      note: 'SMB budgets: $15$500/mo.'
     }
     {
       title: 'Observability & APM'
@@ -113,14 +109,14 @@ export default function ServicesAdvertisingPage() {
         { name: 'New Relic', href: 'https://newrelic.com/pricing' }
         { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' }
       ]
-      note: 'SMB budgets: $50–$2,000/mo.'
+      note: 'SMB budgets: $50$2,000/mo.'
     }
   ]
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Document Summarizer</h2>
 					<p className="text-slate-300">Concise summaries with citations for PDFs, docs, and URLs with export options.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $10–$30/mo + usage</li>
+						<li>Typical budget: $10$30/mo + usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
 						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</a></li>
 					</ul>
@@ -179,7 +175,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">Browser Automation Cloud</h2>
 					<p className="text-slate-300">Scale Playwright/Puppeteer jobs with proxy pools, recorder-to-code and webhooks.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $40–$200/mo</li>
+						<li>Typical budget: $40$200/mo</li>
 						<li>References: {ext('https://apify.com/pricing')}, {ext('https://www.browserless.io/pricing')}</li>
 						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</a></li>
 					</ul>
@@ -188,7 +184,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">API Performance Testing</h2>
 					<p className="text-slate-300">Load, latency and regression testing with CI gates and dashboards.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $30–$150/mo</li>
+						<li>Typical budget: $30$150/mo</li>
 						<li>References: {ext('https://k6.io/pricing')}, {ext('https://jmeter.apache.org/')}</li>
 						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</a></li>
 					</ul>
@@ -197,7 +193,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">Email Deliverability Monitor</h2>
 					<p className="text-slate-300">DMARC/SPF/DKIM health, blocklists, and inbox placement with alerts.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $15–$60/mo</li>
+						<li>Typical budget: $15$60/mo</li>
 						<li>References: {ext('https://dmarc.org/overview/')}, {ext('https://postmarkapp.com/support/category/dmarc')}</li>
 						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</a></li>
 					</ul>
@@ -206,7 +202,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">Podcast Transcription & Insights</h2>
 					<p className="text-slate-300">Transcripts, chapters, show notes, and SEO-ready blog pages.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $10–$60/mo + usage</li>
+						<li>Typical budget: $10$60/mo + usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.descript.com/pricing')}</li>
 						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</a></li>
 					</ul>
@@ -215,7 +211,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">AI Evaluation Orchestrator</h2>
 					<p className="text-slate-300">Automate LLM evals, regression tests, red-teaming, and leaderboards across OpenAI, Anthropic, Groq, and more.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $50–$400/mo + API usage</li>
+						<li>Typical SMB budget: $50$400/mo + API usage</li>
 						<li>References: {ext('https://openai.com/pricing')}, {ext('https://www.anthropic.com/pricing')}, {ext('https://openrouter.ai/models')}</li>
 					</ul>
 				</section>
@@ -223,7 +219,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">Vector Search Starter</h2>
 					<p className="text-slate-300">Production RAG starter with Pinecone/Weaviate/Elastic, eval harness, and observability.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $50–$1,000/mo</li>
+						<li>Typical SMB budget: $50$1,000/mo</li>
 						<li>References: {ext('https://www.pinecone.io/pricing/')}, {ext('https://console.weaviate.cloud/pricing')}, {ext('https://www.elastic.co/pricing')}</li>
 					</ul>
 				</section>
@@ -231,7 +227,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">Managed Postgres HA</h2>
 					<p className="text-slate-300">SRE-backed high availability Postgres with PITR backups, failover, and tuning.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $1,200–$5,000/mo</li>
+						<li>Typical SMB budget: $1,200$5,000/mo</li>
 						<li>References: {ext('https://cloud.google.com/sql/pricing')}, {ext('https://aws.amazon.com/rds/postgresql/pricing/')}</li>
 					</ul>
 				</section>
@@ -239,7 +235,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">AI Guardrails & Safety</h2>
 					<p className="text-slate-300">Policy engine, PII detection, jailbreak protection, and audit logs for LLM apps.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $0–$500/mo</li>
+						<li>Typical SMB budget: $0$500/mo</li>
 						<li>References: {ext('https://platform.openai.com/docs/guides/safety-best-practices')}, {ext('https://github.com/guardrails-ai/guardrails')}</li>
 					</ul>
 				</section>
@@ -247,7 +243,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">Identity & SSO/SCIM</h2>
 					<p className="text-slate-300">Enterprise SSO and user lifecycle with Okta/Auth0/WorkOS.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $100–$1,500/mo</li>
+						<li>Typical SMB budget: $100$1,500/mo</li>
 						<li>References: {ext('https://auth0.com/pricing')}, {ext('https://workos.com/pricing')}, {ext('https://www.okta.com/pricing/')}</li>
 					</ul>
 				</section>
@@ -255,7 +251,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">API Observability Starter</h2>
 					<p className="text-slate-300">Distributed tracing, golden signals dashboards, opinionated SLOs and alerting. Go live in under 60 minutes.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $99–$350/mo</li>
+						<li>Typical SMB budget: $99$350/mo</li>
 						<li>References: {ext('https://www.honeycomb.io/pricing/')}, {ext('https://www.datadoghq.com/pricing/')}, {ext('https://newrelic.com/pricing')}</li>
 					</ul>
 				</section>
@@ -297,32 +293,32 @@ export default function ServicesAdvertisingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Average Market Price Ranges</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { title: 'AI Evaluations & Prompting', range: '$50–$800/mo', links: [
+                { title: 'AI Evaluations & Prompting', range: '$50$800/mo', links: [
                   { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' }
                   { name: 'Humanloop', href: 'https://humanloop.com/pricing' }
                   { name: 'Promptfoo', href: 'https://www.promptfoo.dev/pricing' }
                 ]}
-                { title: 'LLM Platforms', range: '$100–$2,000/mo', links: [
+                { title: 'LLM Platforms', range: '$100$2,000/mo', links: [
                   { name: 'OpenAI', href: 'https://openai.com/api/pricing' }
                   { name: 'Anthropic', href: 'https://www.anthropic.com/pricing' }
                   { name: 'OpenRouter', href: 'https://openrouter.ai/models' }
                 ]}
-                { title: 'Observability/APM', range: '$50–$2,000/mo', links: [
+                { title: 'Observability/APM', range: '$50$2,000/mo', links: [
                   { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' }
                   { name: 'New Relic', href: 'https://newrelic.com/pricing' }
                   { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' }
                 ]}
-                { title: 'Security & Compliance', range: '$200–$5,000/mo', links: [
+                { title: 'Security & Compliance', range: '$200$5,000/mo', links: [
                   { name: 'Wiz', href: 'https://www.wiz.io/pricing' }
                   { name: 'Prisma Cloud', href: 'https://www.paloaltonetworks.com/prisma/cloud/pricing' }
                   { name: 'Vault', href: 'https://www.hashicorp.com/products/vault/pricing' }
                 ]}
-                { title: 'Vector DB & Retrieval', range: '$20–$1,000/mo', links: [
+                { title: 'Vector DB & Retrieval', range: '$20$1,000/mo', links: [
                   { name: 'Pinecone', href: 'https://www.pinecone.io/pricing/' }
                   { name: 'Weaviate', href: 'https://weaviate.io/pricing' }
                   { name: 'Qdrant', href: 'https://qdrant.tech/pricing/' }
                 ]}
-                { title: 'Email Deliverability', range: '$50–$300/mo', links: [
+                { title: 'Email Deliverability', range: '$50$300/mo', links: [
                   { name: 'Mailgun', href: 'https://www.mailgun.com/pricing/' }
                   { name: 'SendGrid', href: 'https://sendgrid.com/pricing/' }
                   { name: 'Postmark', href: 'https://postmarkapp.com/pricing' }
@@ -396,14 +392,7 @@ export default function ServicesAdvertisingPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import SEO from '../components / SEO',
 const ext = (url: string) =>: any (
@@ -426,7 +415,7 @@ return (
     <h2 className="text - 2xl font - semibold text - white">AI Social Media Manager</h2>;
     <p className="text - slate - 300">Generate, schedule, and optimize multi - platform posts with best - time recommendations and analytics.</p>;
     <ul className="list - disc list - inside text - slate - 300 space - y-1">;
-      <li > Typical SMB budget: $20–$80 / mo</li>;
+      <li > Typical SMB budget: $20$80 / mo</li>;
       <li > References: {ext ('https://buffer.com / pricing')}, {ext ('https://www.hootsuite.com / plans')}</li>;
       <li > Try: <a href="/services / ai - social - media - manager" className="text - cyan - 400 underline">ziontechgroup.com / services / ai - social - media - manager</a></li>;
     </ul>;
@@ -445,7 +434,7 @@ return (
         { name: 'Weights & Biases', href: 'https://wandb.ai / site / pricing' },
         { name: 'Humanloop', href: 'https://humanloop.com / pricing' }
       ],
-      note: 'SMB budgets: $100–$2, 000 / mo. Enterprise: $5k–$100k+/mo depending on volume and models.';
+      note: 'SMB budgets: $100$2, 000 / mo. Enterprise: $5k$100k+/mo depending on volume and models.';
     },
     {
       title: 'Security & Compliance',
@@ -457,7 +446,7 @@ return (
         { name: 'Snyk', href: 'https://snyk.io / plans/' },
         { name: 'Okta', href: 'https://www.okta.com / pricing/' }
       ],
-      note: 'SMB budgets: $200–$5, 000 / mo. Enterprise: $10k–$250k / yr+ for broader suites.';
+      note: 'SMB budgets: $200$5, 000 / mo. Enterprise: $10k$250k / yr+ for broader suites.';
     },
     {
       title: 'Vector & Search',
@@ -468,7 +457,7 @@ return (
         { name: 'Elasticsearch Serverless', href: 'https://www.elastic.co / pricing/' },
         { name: 'Milvus', href: 'https://zilliz.com / pricing' }
       ],
-      note: 'SMB budgets: $50–$1, 000 / mo. Enterprise: $2k–$50k+/mo depending on throughput / latency.';
+      note: 'SMB budgets: $50$1, 000 / mo. Enterprise: $2k$50k+/mo depending on throughput / latency.';
     },
     {
       title: 'Cloud & Edge',
@@ -480,7 +469,7 @@ return (
         { name: 'Netlify', href: 'https://www.netlify.com / pricing/' },
         { name: 'Vercel', href: 'https://vercel.com / pricing' }
       ],
-      note: 'SMB budgets: $200–$10, 000 / mo.';
+      note: 'SMB budgets: $200$10, 000 / mo.';
     },
     {
       title: 'Product Analytics',
@@ -489,16 +478,16 @@ return (
         { name: 'Amplitude', href: 'https://amplitude.com / pricing' },
         { name: 'PostHog', href: 'https://posthog.com / pricing' }
       ],
-      note: 'SMB budgets: $0–$1, 500 / mo.';
+      note: 'SMB budgets: $0$1, 500 / mo.';
     },
     {
-      title: 'Incident & On‑Call',
+      title: 'Incident & OnCall',
       links: [;
         { name: 'PagerDuty', href: 'https://www.pagerduty.com / pricing/' },
         { name: 'Opsgenie', href: 'https://www.atlassian.com / software / opsgenie / pricing' },
         { name: 'Better Stack', href: 'https://betterstack.com / status / pricing' }
       ],
-      note: 'SMB budgets: $10–$1, 000 / mo.';
+      note: 'SMB budgets: $10$1, 000 / mo.';
     },
     {
       title: 'Email & Deliverability',
@@ -507,7 +496,7 @@ return (
         { name: 'Mailgun', href: 'https://www.mailgun.com / pricing/' },
         { name: 'Postmark', href: 'https://postmarkapp.com / pricing' }
       ],
-      note: 'SMB budgets: $15–$500 / mo.';
+      note: 'SMB budgets: $15$500 / mo.';
     },
     {
       title: 'Observability & APM',
@@ -516,14 +505,14 @@ return (
         { name: 'New Relic', href: 'https://newrelic.com / pricing' },
         { name: 'Grafana Cloud', href: 'https://grafana.com / pricing/' }
       ],
-      note: 'SMB budgets: $50–$2, 000 / mo.';
+      note: 'SMB budgets: $50$2, 000 / mo.';
     }
   ],
     <section className="space - y-6">;
     <h2 className="text - 2xl font - semibold text - white">AI Document Summarizer</h2>;
     <p className="text - slate - 300">Concise summaries with citations for PDFs, docs, and URLs with export options.</p>;
     <ul className="list - disc list - inside text - slate - 300 space - y-1">;
-      <li > Typical budget: $10–$30 / mo + usage</li>;
+      <li > Typical budget: $10$30 / mo + usage</li>;
       <li > References: {ext ('https://openai.com / api / pricing')}, {ext ('https://www.pinecone.io / pricing/')}</li>;
       <li > Try: <a href="/services / ai - document - summarizer" className="text - cyan - 400 underline">ziontechgroup.com / services / ai - document - summarizer</a></li>;
     </ul>;
@@ -580,7 +569,7 @@ return (
     <h2 className="text - 2xl font - semibold text - white">Browser Automation Cloud</h2>;
     <p className="text - slate - 300">Scale Playwright / Puppeteer jobs with proxy pools, recorder - to - code and webhooks.</p>;
     <ul className="list - disc list - inside text - slate - 300 space - y-1">;
-      <li > Typical budget: $40–$200 / mo</li>;
+      <li > Typical budget: $40$200 / mo</li>;
       <li > References: {ext ('https://apify.com / pricing')}, {ext ('https://www.browserless.io / pricing')}</li>;
       <li > Try: <a href="/services / browser - automation - cloud" className="text - cyan - 400 underline">ziontechgroup.com / services / browser - automation - cloud</a></li>;
     </ul>;
@@ -589,7 +578,7 @@ return (
     <h2 className="text - 2xl font - semibold text - white">API Performance Testing</h2>;
     <p className="text - slate - 300">Load, latency and regression testing with CI gates and dashboards.</p>;
     <ul className="list - disc list - inside text - slate - 300 space - y-1">;
-      <li > Typical budget: $30–$150 / mo</li>;
+      <li > Typical budget: $30$150 / mo</li>;
       <li > References: {ext ('https://k6.io / pricing')}, {ext ('https://jmeter.apache.org/')}</li>;
       <li > Try: <a href="/services / api - performance - testing" className="text - cyan - 400 underline">ziontechgroup.com / services / api - performance - testing</a></li>;
     </ul>;
@@ -598,7 +587,7 @@ return (
     <h2 className="text - 2xl font - semibold text - white">Email Deliverability Monitor</h2>;
     <p className="text - slate - 300">DMARC / SPF / DKIM health, blocklists, and inbox placement with alerts.</p>;
     <ul className="list - disc list - inside text - slate - 300 space - y-1">;
-      <li > Typical budget: $15–$60 / mo</li>;
+      <li > Typical budget: $15$60 / mo</li>;
       <li > References: {ext ('https://dmarc.org / overview/')}, {ext ('https://postmarkapp.com / support / category / dmarc')}</li>;
       <li > Try: <a href="/services / email - deliverability - monitor" className="text - cyan - 400 underline">ziontechgroup.com / services / email - deliverability - monitor</a></li>;
     </ul>;
@@ -607,7 +596,7 @@ return (
     <h2 className="text - 2xl font - semibold text - white">Podcast Transcription & Insights</h2>;
     <p className="text - slate - 300">Transcripts, chapters, show notes, and SEO - ready blog pages.</p>;
     <ul className="list - disc list - inside text - slate - 300 space - y-1">;
-      <li > Typical budget: $10–$60 / mo + usage</li>;
+      <li > Typical budget: $10$60 / mo + usage</li>;
       <li > References: {ext ('https://openai.com / api / pricing')}, {ext ('https://www.descript.com / pricing')}</li>;
       <li > Try: <a href="/services / podcast - transcription - insights" className="text - cyan - 400 underline">ziontechgroup.com / services / podcast - transcription - insights</a></li>;
     </ul>;
@@ -616,7 +605,7 @@ return (
     <h2 className="text - 2xl font - semibold text - white">AI Evaluation Orchestrator</h2>;
     <p className="text - slate - 300">Automate LLM evals, regression tests, red - teaming, and leaderboards across OpenAI, Anthropic, Groq, and more.</p>;
     <ul className="list - disc list - inside text - slate - 300 space - y-1">;
-      <li > Typical SMB budget: $50–$400 / mo + API usage</li>;
+      <li > Typical SMB budget: $50$400 / mo + API usage</li>;
       <li > References: {ext ('https://openai.com / pricing')}, {ext ('https://www.anthropic.com / pricing')}, {ext ('https://openrouter.ai / models')}</li>;
     </ul>;
     </section>;
@@ -624,7 +613,7 @@ return (
     <h2 className="text - 2xl font - semibold text - white">Vector Search Starter</h2>;
     <p className="text - slate - 300">Production RAG starter with Pinecone / Weaviate / Elastic, eval harness, and observability.</p>;
     <ul className="list - disc list - inside text - slate - 300 space - y-1">;
-      <li > Typical SMB budget: $50–$1, 000 / mo</li>;
+      <li > Typical SMB budget: $50$1, 000 / mo</li>;
       <li > References: {ext ('https://www.pinecone.io / pricing/')}, {ext ('https://console.weaviate.cloud / pricing')}, {ext ('https://www.elastic.co / pricing')}</li>;
     </ul>;
     </section>;
@@ -632,7 +621,7 @@ return (
     <h2 className="text - 2xl font - semibold text - white">Managed Postgres HA</h2>;
     <p className="text - slate - 300">SRE - backed high availability Postgres with PITR backups, failover, and tuning.</p>;
     <ul className="list - disc list - inside text - slate - 300 space - y-1">;
-      <li > Typical SMB budget: $1, 200–$5, 000 / mo</li>;
+      <li > Typical SMB budget: $1, 200$5, 000 / mo</li>;
       <li > References: {ext ('https://cloud.google.com / sql / pricing')}, {ext ('https://aws.amazon.com / rds / postgresql / pricing/')}</li>;
     </ul>;
     </section>;
@@ -640,7 +629,7 @@ return (
     <h2 className="text - 2xl font - semibold text - white">AI Guardrails & Safety</h2>;
     <p className="text - slate - 300">Policy engine, PII detection, jailbreak protection, and audit logs for LLM apps.</p>;
     <ul className="list - disc list - inside text - slate - 300 space - y-1">;
-      <li > Typical SMB budget: $0–$500 / mo</li>;
+      <li > Typical SMB budget: $0$500 / mo</li>;
       <li > References: {ext ('https://platform.openai.com / docs / guides / safety - best - practices')}, {ext ('https://github.com / guardrails - ai / guardrails')}</li>;
     </ul>;
     </section>;
@@ -648,7 +637,7 @@ return (
     <h2 className="text - 2xl font - semibold text - white">Identity & SSO / SCIM</h2>;
     <p className="text - slate - 300">Enterprise SSO and user lifecycle with Okta / Auth0 / WorkOS.</p>;
     <ul className="list - disc list - inside text - slate - 300 space - y-1">;
-      <li > Typical SMB budget: $100–$1, 500 / mo</li>;
+      <li > Typical SMB budget: $100$1, 500 / mo</li>;
       <li > References: {ext ('https://auth0.com / pricing')}, {ext ('https://workos.com / pricing')}, {ext ('https://www.okta.com / pricing/')}</li>;
     </ul>;
     </section>;
@@ -656,7 +645,7 @@ return (
     <h2 className="text - 2xl font - semibold text - white">API Observability Starter</h2>;
     <p className="text - slate - 300">Distributed tracing, golden signals dashboards, opinionated SLOs and alerting. Go live in under 60 minutes.</p>;
     <ul className="list - disc list - inside text - slate - 300 space - y-1">;
-      <li > Typical SMB budget: $99–$350 / mo</li>;
+      <li > Typical SMB budget: $99$350 / mo</li>;
       <li > References: {ext ('https://www.honeycomb.io / pricing/')}, {ext ('https://www.datadoghq.com / pricing/')}, {ext ('https://newrelic.com / pricing')}</li>;
     </ul>;
     </section>;
@@ -696,32 +685,32 @@ return (
             <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 6 text - center">Average Market Price Ranges</h2>;
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
               {[;
-                { title: 'AI Evaluations & Prompting', range: '$50–$800 / mo', links: [;
+                { title: 'AI Evaluations & Prompting', range: '$50$800 / mo', links: [;
                   { name: 'Weights & Biases', href: 'https://wandb.ai / site / pricing' },
                   { name: 'Humanloop', href: 'https://humanloop.com / pricing' },
                   { name: 'Promptfoo', href: 'https://www.promptfoo.dev / pricing' }
                 ]},
-                { title: 'LLM Platforms', range: '$100–$2, 000 / mo', links: [;
+                { title: 'LLM Platforms', range: '$100$2, 000 / mo', links: [;
                   { name: 'OpenAI', href: 'https://openai.com / api / pricing' },
                   { name: 'Anthropic', href: 'https://www.anthropic.com / pricing' },
                   { name: 'OpenRouter', href: 'https://openrouter.ai / models' }
                 ]},
-                { title: 'Observability / APM', range: '$50–$2, 000 / mo', links: [;
+                { title: 'Observability / APM', range: '$50$2, 000 / mo', links: [;
                   { name: 'Datadog', href: 'https://www.datadoghq.com / pricing/' },
                   { name: 'New Relic', href: 'https://newrelic.com / pricing' },
                   { name: 'Grafana Cloud', href: 'https://grafana.com / pricing/' }
                 ]},
-                { title: 'Security & Compliance', range: '$200–$5, 000 / mo', links: [;
+                { title: 'Security & Compliance', range: '$200$5, 000 / mo', links: [;
                   { name: 'Wiz', href: 'https://www.wiz.io / pricing' },
                   { name: 'Prisma Cloud', href: 'https://www.paloaltonetworks.com / prisma / cloud / pricing' },
                   { name: 'Vault', href: 'https://www.hashicorp.com / products / vault / pricing' }
                 ]},
-                { title: 'Vector DB & Retrieval', range: '$20–$1, 000 / mo', links: [;
+                { title: 'Vector DB & Retrieval', range: '$20$1, 000 / mo', links: [;
                   { name: 'Pinecone', href: 'https://www.pinecone.io / pricing/' },
                   { name: 'Weaviate', href: 'https://weaviate.io / pricing' },
                   { name: 'Qdrant', href: 'https://qdrant.tech / pricing/' }
                 ]},
-                { title: 'Email Deliverability', range: '$50–$300 / mo', links: [;
+                { title: 'Email Deliverability', range: '$50$300 / mo', links: [;
                   { name: 'Mailgun', href: 'https://www.mailgun.com / pricing/' },
                   { name: 'SendGrid', href: 'https://sendgrid.com / pricing/' },
                   { name: 'Postmark', href: 'https://postmarkapp.com / pricing' }
@@ -790,5 +779,3 @@ return (
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

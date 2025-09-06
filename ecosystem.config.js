@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 module.exports = {;
-=======
-module && module.exports = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps:[;
-=======
 module.exports = {apps:[;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     {;
-<<<<<<< HEAD
       name:'error-fixer';
       script:'automation/lint-error-fixer.cjs';
       args:'continuous';
@@ -49,51 +39,9 @@ module.exports = {apps:[;
       autorestart:true;
       watch:false;
       max_memory_restart:'1G';
-=======
-      name:'error-fixer',;
-      script:'automation/lint-error-fixer && fixer.cjs',;
-      args:'continuous',;
-      instances:1,;
-      autorestart:true,;
-      watch:false,;
-      max_memory_restart:'1G',;
-      env:{;
-        NODE_ENV:'production';
-      },;
-      error_file:'./logs/error-fixer-error && error.log',;
-      out_file:'./logs/error-fixer-out && out.log',;
-      log_file:'./logs/error-fixer-combined && combined.log',;
-      time:true;
-    },;
-    {;
-      name:'intelligent-orchestrator',;
-      script:'automation/intelligent-orchestrator && orchestrator.cjs',;
-      args:'continuous',;
-      instances:1,;
-      autorestart:true,;
-      watch:false,;
-      max_memory_restart:'1G',;
-      env:{;
-        NODE_ENV:'production';
-      },;
-      error_file:'./logs/orchestrator-error && error.log',;
-      out_file:'./logs/orchestrator-out && out.log',;
-      log_file:'./logs/orchestrator-combined && combined.log',;
-      time:true;
-    },;
-    {;
-      name:'automation-dashboard',;
-      script:'automation/automation-dashboard && dashboard.cjs',;
-      args:'start',;
-      instances:1,;
-      autorestart:true,;
-      watch:false,;
-      max_memory_restart:'1G',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       env:{;
         NODE_ENV:'production';
         PORT:3001;
-<<<<<<< HEAD
       }
       error_file:'./logs/dashboard-error.log';
       out_file:'./logs/dashboard-out.log';
@@ -126,168 +74,23 @@ module.exports = {apps:[;
       error_file:'./logs/performance-error.log';
       out_file:'./logs/performance-out.log';
       log_file:'./logs/performance-combined.log';
-=======
-      },;
-      error_file:'./logs/dashboard-error && error.log',;
-      out_file:'./logs/dashboard-out && out.log',;
-      log_file:'./logs/dashboard-combined && combined.log',;
-      time:true;
-    },;
-    {;
-      name:'code-quality-monitor',;
-      script:'automation/code-quality-monitor && monitor.cjs',;
-      instances:1,;
-      autorestart:true,;
-      watch:false,;
-      max_memory_restart:'512M',;
-      env:{;
-        NODE_ENV:'production';
-      },;
-      error_file:'./logs/code-quality-error && error.log',;
-      out_file:'./logs/code-quality-out && out.log',;
-      log_file:'./logs/code-quality-combined && combined.log',;
-      time:true;
-    },;
-    {;
-      name:'performance-optimizer',;
-      script:'automation/performance-optimizer && optimizer.cjs',;
-      instances:1,;
-      autorestart:true,;
-      watch:false,;
-      max_memory_restart:'512M',;
-      env:{;
-        NODE_ENV:'production';
-      },;
-      error_file:'./logs/performance-error && error.log',;
-      out_file:'./logs/performance-out && out.log',;
-      log_file:'./logs/performance-combined && combined.log',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       time:true;
     }
   ];
 };      env: {
         NODE_ENV: 'production'
-<<<<<<< HEAD
       }
       error_file: './logs/performance-error.log'
       out_file: './logs/performance-out.log'
       log_file: './logs/performance-combined.log'
-=======
-      },
-      error_file: './logs/performance-error && error.log',
-      out_file: './logs/performance-out && out.log',
-      log_file: './logs/performance-combined && combined.log',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       time: true
     }
   ]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
-=======
-module.exports = {
-  apps:[;
-    {
-      name:'error - fixer',
-      script:'automation / lint - error - fixer.cjs',
-      args:'continuous',
-      instances:1,
-      autorestart:true,
-      watch:false,
-      max_memory_restart:'1G',
-      env:{
-        NODE_ENV:'production';
-      },
-      error_file:'./logs / error - fixer - error.log',
-      out_file:'./logs / error - fixer - out.log',
-      log_file:'./logs / error - fixer - combined.log',
-      time:true;
-    },
-    {
-      name:'intelligent - orchestrator',
-      script:'automation / intelligent - orchestrator.cjs',
-      args:'continuous',
-      instances:1,
-      autorestart:true,
-      watch:false,
-      max_memory_restart:'1G',
-      env:{
-        NODE_ENV:'production';
-      },
-      error_file:'./logs / orchestrator - error.log',
-      out_file:'./logs / orchestrator - out.log',
-      log_file:'./logs / orchestrator - combined.log',
-      time:true;
-    },
-    {
-      name:'automation - dashboard',
-      script:'automation / automation - dashboard.cjs',
-      args:'start',
-      instances:1,
-      autorestart:true,
-      watch:false,
-      max_memory_restart:'1G',
-      env:{
-        NODE_ENV:'production',
-        PORT:3001;
-      },
-      error_file:'./logs / dashboard - error.log',
-      out_file:'./logs / dashboard - out.log',
-      log_file:'./logs / dashboard - combined.log',
-      time:true;
-    },
-    {
-      name:'code - quality - monitor',
-      script:'automation / code - quality - monitor.cjs',
-      instances:1,
-      autorestart:true,
-      watch:false,
-      max_memory_restart:'512M',
-      env:{
-        NODE_ENV:'production';
-      },
-      error_file:'./logs / code - quality - error.log',
-      out_file:'./logs / code - quality - out.log',
-      log_file:'./logs / code - quality - combined.log',
-      time:true;
-    },
-    {
-      name:'performance - optimizer',
-      script:'automation / performance - optimizer.cjs',
-      instances:1,
-      autorestart:true,
-      watch:false,
-      max_memory_restart:'512M',
-      env:{
-        NODE_ENV:'production';
-      },
-      error_file:'./logs / performance - error.log',
-      out_file:'./logs / performance - out.log',
-      log_file:'./logs / performance - combined.log',
-      time:true;
-    }
-  ];
-}      env: {
-        NODE_ENV: 'production';
-      },
-      error_file: './logs / performance - error.log',
-      out_file: './logs / performance - out.log',
-      log_file: './logs / performance - combined.log',
-      time: true;
-    }
-  ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 },
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default {
   apps: [;
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       name: 'bolt-zion-app'
       script: 'npm'
       args: 'run preview'
@@ -463,11 +266,6 @@ export default {
     }
   ]
 module.exports = {
-=======
-      name: 'bolt-zion-app',
-=======
-      name: 'bolt - zion - app',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       script: 'npm',
       args: 'run preview',
       cwd: './',
@@ -478,24 +276,14 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
       },
-<<<<<<< HEAD
       log_file: 'logs/pm2/preview && preview.log',
       error_file: 'logs/pm2/preview-error && error.log',
       out_file: 'logs/pm2/preview-out && out.log',
-=======
-      log_file: 'logs / pm2 / preview.log',
-      error_file: 'logs / pm2 / preview - error.log',
-      out_file: 'logs / pm2 / preview - out.log',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     },
     {
       name: 'auto - fix',
       script: 'node',
-<<<<<<< HEAD
       args: 'scripts/pm2/auto-fix && fix.js',
-=======
-      args: 'scripts / pm2 / auto - fix.js',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       cron_restart: '0 */6 * * *',
       autorestart: true,
       watch: false,
@@ -503,24 +291,14 @@ module.exports = {
       env: {
         NODE_ENV: 'production';
       },
-<<<<<<< HEAD
       log_file: 'logs/pm2/auto-fix && fix.log',
       error_file: 'logs/pm2/auto-fix-error && error.log',
       out_file: 'logs/pm2/auto-fix-out && out.log',
-=======
-      log_file: 'logs / pm2 / auto - fix.log',
-      error_file: 'logs / pm2 / auto - fix - error.log',
-      out_file: 'logs / pm2 / auto - fix - out.log',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     },
     {
       name: 'healthcheck',
       script: 'node',
-<<<<<<< HEAD
       args: 'scripts/pm2/healthcheck && healthcheck.js',
-=======
-      args: 'scripts / pm2 / healthcheck.js',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       cron_restart: '*/5 * * * *',
       autorestart: true,
       watch: false,
@@ -528,7 +306,6 @@ module.exports = {
       env: {
         NODE_ENV: 'production';
       },
-<<<<<<< HEAD
       log_file: 'logs/pm2/health && health.log',
       error_file: 'logs/pm2/health-error && error.log',
       out_file: 'logs/pm2/health-out && out.log',
@@ -536,15 +313,6 @@ module.exports = {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor && monitor.js',
-=======
-      log_file: 'logs / pm2 / health.log',
-      error_file: 'logs / pm2 / health - error.log',
-      out_file: 'logs / pm2 / health - out.log',
-    },
-    {
-      name: 'code - quality - monitor',
-      script: 'scripts / pm2 / code - quality - monitor.js',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       instances: 1,
       autorestart: true,
       watch: false,
@@ -556,7 +324,6 @@ module.exports = {
         AUTO_FIX_CRITICAL: 'true',
       },
       cron_restart: '0 */6 * * *',
-<<<<<<< HEAD
       log_file: 'logs/pm2/code-quality-monitor && monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error && error.log',
       out_file: 'logs/pm2/code-quality-monitor-out && out.log',
@@ -564,15 +331,6 @@ module.exports = {
     {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes && fixes.js',
-=======
-      log_file: 'logs / pm2 / code - quality - monitor.log',
-      error_file: 'logs / pm2 / code - quality - monitor - error.log',
-      out_file: 'logs / pm2 / code - quality - monitor - out.log',
-    },
-    {
-      name: 'auto - commit - fixes',
-      script: 'scripts / pm2 / auto - commit - fixes.js',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       instances: 1,
       autorestart: true,
       watch: false,
@@ -584,7 +342,6 @@ module.exports = {
         AUTO_PUSH: 'false',
       },
       cron_restart: '0 */2 * * *',
-<<<<<<< HEAD
       log_file: 'logs/pm2/auto-commit-fixes && fixes.log',
       error_file: 'logs/pm2/auto-commit-fixes-error && error.log',
       out_file: 'logs/pm2/auto-commit-fixes-out && out.log',
@@ -592,15 +349,6 @@ module.exports = {
     {
       name: 'dependency-monitor',
       script: 'scripts/pm2/dependency-monitor && monitor.js',
-=======
-      log_file: 'logs / pm2 / auto - commit - fixes.log',
-      error_file: 'logs / pm2 / auto - commit - fixes - error.log',
-      out_file: 'logs / pm2 / auto - commit - fixes - out.log',
-    },
-    {
-      name: 'dependency - monitor',
-      script: 'scripts / pm2 / dependency - monitor.js',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       instances: 1,
       autorestart: true,
       watch: false,
@@ -612,7 +360,6 @@ module.exports = {
         SECURITY_ALERTS: 'true',
       },
       cron_restart: '0 0 * * 0',
-<<<<<<< HEAD
       log_file: 'logs/pm2/dependency-monitor && monitor.log',
       error_file: 'logs/pm2/dependency-monitor-error && error.log',
       out_file: 'logs/pm2/dependency-monitor-out && out.log',
@@ -620,15 +367,6 @@ module.exports = {
     {
       name: 'performance-monitor',
       script: 'scripts/pm2/performance-monitor && monitor.js',
-=======
-      log_file: 'logs / pm2 / dependency - monitor.log',
-      error_file: 'logs / pm2 / dependency - monitor - error.log',
-      out_file: 'logs / pm2 / dependency - monitor - out.log',
-    },
-    {
-      name: 'performance - monitor',
-      script: 'scripts / pm2 / performance - monitor.js',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       instances: 1,
       autorestart: true,
       watch: false,
@@ -640,7 +378,6 @@ module.exports = {
         BUNDLE_SIZE_LIMIT: '2MB',
       },
       cron_restart: '0 */8 * * *',
-<<<<<<< HEAD
       log_file: 'logs/pm2/performance-monitor && monitor.log',
       error_file: 'logs/pm2/performance-monitor-error && error.log',
       out_file: 'logs/pm2/performance-monitor-out && out.log',
@@ -648,15 +385,6 @@ module.exports = {
     {
       name: 'git-workflow',
       script: 'scripts/pm2/git-workflow-automator && automator.js',
-=======
-      log_file: 'logs / pm2 / performance - monitor.log',
-      error_file: 'logs / pm2 / performance - monitor - error.log',
-      out_file: 'logs / pm2 / performance - monitor - out.log',
-    },
-    {
-      name: 'git - workflow',
-      script: 'scripts / pm2 / git - workflow - automator.js',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       instances: 1,
       autorestart: true,
       watch: false,
@@ -670,7 +398,6 @@ module.exports = {
         BRANCH_STRATEGY: 'gitflow',
       },
       cron_restart: '0 */6 * * *',
-<<<<<<< HEAD
       log_file: 'logs/pm2/git-workflow && workflow.log',
       error_file: 'logs/pm2/git-workflow-error && error.log',
       out_file: 'logs/pm2/git-workflow-out && out.log',
@@ -678,15 +405,6 @@ module.exports = {
     {
       name: 'error-detection',
       script: 'scripts/pm2/error-detection-service && service.js',
-=======
-      log_file: 'logs / pm2 / git - workflow.log',
-      error_file: 'logs / pm2 / git - workflow - error.log',
-      out_file: 'logs / pm2 / git - workflow - out.log',
-    },
-    {
-      name: 'error - detection',
-      script: 'scripts / pm2 / error - detection - service.js',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       instances: 1,
       autorestart: true,
       watch: false,
@@ -698,7 +416,6 @@ module.exports = {
         MONITOR_FREQUENCY: '*/5 * * * *',
       },
       cron_restart: '*/5 * * * *',
-<<<<<<< HEAD
       log_file: 'logs/pm2/error-detection && detection.log',
       error_file: 'logs/pm2/error-detection-error && error.log',
       out_file: 'logs/pm2/error-detection-out && out.log',
@@ -706,15 +423,6 @@ module.exports = {
     {
       name: 'syntax-fixer',
       script: 'scripts/pm2/syntax-error-fixer && fixer.js',
-=======
-      log_file: 'logs / pm2 / error - detection.log',
-      error_file: 'logs / pm2 / error - detection - error.log',
-      out_file: 'logs / pm2 / error - detection - out.log',
-    },
-    {
-      name: 'syntax - fixer',
-      script: 'scripts / pm2 / syntax - error - fixer.js',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       instances: 1,
       autorestart: true,
       watch: false,
@@ -726,21 +434,13 @@ module.exports = {
         MONITOR_FREQUENCY: '*/10 * * * *',
       },
       cron_restart: '*/10 * * * *',
-<<<<<<< HEAD
       log_file: 'logs/pm2/syntax-fixer && fixer.log',
       error_file: 'logs/pm2/syntax-fixer-error && error.log',
       out_file: 'logs/pm2/syntax-fixer-out && out.log',
-=======
-      log_file: 'logs / pm2 / syntax - fixer.log',
-      error_file: 'logs / pm2 / syntax - fixer - error.log',
-      out_file: 'logs / pm2 / syntax - fixer - out.log',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ],
 module && module.exports = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps: [{
-<<<<<<< HEAD
     name: "ziontechgroup-site"
     script: "npm"
     args: "start"
@@ -753,35 +453,16 @@ module && module.exports = {
     env_production: {
       NODE_ENV: "production"
       PORT: 3000
-<<<<<<< HEAD
     }
     max_memory_restart: "1G"
     node_args: "--max-old-space-size=1024"
     error_file: "./logs/err.log"
     out_file: "./logs/out.log"
     log_file: "./logs/combined.log"
-=======
-    },
-    max_memory_restart: "1G",
-    node_args: "--max-old-space-size=1024",
-    error_file: "./logs/err && err.log",
-    out_file: "./logs/out && out.log",
-    log_file: "./logs/combined && combined.log",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     time: true
   }]
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
-=======
-=======
-};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     name: "ziontechgroup - site",
     script: "npm",
     args: "start",
@@ -804,4 +485,3 @@ module && module.exports = {
   }];
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -41,7 +41,7 @@ export default function AIGuardrailsPage() {
 						<Card className=&quot;bg-black/30 border border-rose-500/30&quot;>
 							<div className=&quot;p-6&quot;>
 								<div className=&quot;text-3xl font-bold text-white&quot;>Starting at $199<span className=&quot;text-base text-gray-400&quot;>/month</span></div>
-								<div className=&quot;text-sm text-gray-400 mt-1&quot;>14-day trial • Setup: 30 minutes</div>
+								<div className=&quot;text-sm text-gray-400 mt-1&quot;>14-day trial  Setup: 30 minutes</div>
 								<div className=&quot;mt-4&quot;>
 									<Button href=&quot;/contact&quot; className=&quot;w-full bg-gradient-to-r from-rose-500 to-orange-600 text-white&quot;>Request Demo</Button>
 								</div>

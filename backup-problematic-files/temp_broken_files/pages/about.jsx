@@ -22,7 +22,7 @@ const About = ({ className }) => {
           {/* Mission & Vision */}
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="text-4xl mb-4">🎯</div>
+              <div className="text-4xl mb-4"></div>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
               <p className="text-gray-600 text-lg">
                 To empower businesses with cutting-edge technology solutions that drive growth, 
@@ -31,7 +31,7 @@ const About = ({ className }) => {
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="text-4xl mb-4">🔮</div>
+              <div className="text-4xl mb-4"></div>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
               <p className="text-gray-600 text-lg">
                 To be the global leader in technology transformation, helping businesses 
@@ -70,7 +70,7 @@ const About = ({ className }) => {
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Core Values</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-4xl mb-4">💡</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Innovation</h3>
                 <p className="text-gray-600">
                   We constantly push the boundaries of what&apos;s possible, embracing new technologies 
@@ -78,7 +78,7 @@ const About = ({ className }) => {
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">🤝</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Partnership</h3>
                 <p className="text-gray-600">
                   We believe in building long-term relationships with our clients, working as 
@@ -86,7 +86,7 @@ const About = ({ className }) => {
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">⭐</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
                 <p className="text-gray-600">
                   We maintain the highest standards in everything we do, from project planning 

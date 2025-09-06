@@ -6,10 +6,10 @@ export default function AICustomerSuccessPlatform() {;
 			title="AI Customer Success Platform";
 			slug="ai-customer-success-platform";
 			description="Predict churn, orchestrate proactive outreach, and increase lifetime value. Our AI monitors accounts across product usage, tickets, billing, and NPS to trigger playbooks that prevent churn and expand revenue.";
-			subtitle="Reduce churn by 20–45% and grow NRR with automated, data-driven customer health.";
+			subtitle="Reduce churn by 2045% and grow NRR with automated, data-driven customer health.";
 			pricePerMonthUSD={1999}
-			implementationWeeks="Implementation:2–4 weeks";
-			roiNote="Average ROI 4–10x within 90 days";
+			implementationWeeks="Implementation:24 weeks";
+			roiNote="Average ROI 410x within 90 days";
 			features={[;
 				"Unified customer health scoring (usage, support, sentiment, billing)",;
 				"Churn risk prediction with explainable insights",;
@@ -18,7 +18,7 @@ export default function AICustomerSuccessPlatform() {;
 				"Executive QBR reports and cohort analytics",;
 				"Integrations:HubSpot, Salesforce, Zendesk, Intercom, Segment";
 			]}
-			industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
+			industries={["SaaS", "Fintech", "Media", "Ecommerce"]}
 			canonical="https://ziontechgroup.com/ai-customer-success-platform";
 		/>;
 	);}
@@ -48,10 +48,10 @@ const AICustomerSuccessPlatform: React.FC = () => {
               Identify at-risk customers before they churn with advanced AI algorithms.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Risk scoring</li>
-              <li>• Early warning signals</li>
-              <li>• Behavioral analysis</li>
-              <li>• Predictive modeling</li>
+              <li> Risk scoring</li>
+              <li> Early warning signals</li>
+              <li> Behavioral analysis</li>
+              <li> Predictive modeling</li>
             </ul>
           </div>
 
@@ -61,10 +61,10 @@ const AICustomerSuccessPlatform: React.FC = () => {
               Automate customer success workflows and interventions based on AI insights.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Automated workflows</li>
-              <li>• Intervention triggers</li>
-              <li>• Task automation</li>
-              <li>• Follow-up scheduling</li>
+              <li> Automated workflows</li>
+              <li> Intervention triggers</li>
+              <li> Task automation</li>
+              <li> Follow-up scheduling</li>
             </ul>
           </div>
 
@@ -74,10 +74,10 @@ const AICustomerSuccessPlatform: React.FC = () => {
               Get actionable insights to drive customer growth and expansion.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Expansion opportunities</li>
-              <li>• Usage analytics</li>
-              <li>• Success metrics</li>
-              <li>• Growth recommendations</li>
+              <li> Expansion opportunities</li>
+              <li> Usage analytics</li>
+              <li> Success metrics</li>
+              <li> Growth recommendations</li>
             </ul>
           </div>
         </div>

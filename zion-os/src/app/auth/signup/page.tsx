@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -30,55 +29,11 @@ export default function SignUpPage() {const [name, setName] = useState("");
           <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
           <p className="text-zinc-400 mb-4">;
             Start your free trial and launch sovereign AI-powered digital economies;
-=======
-"use client",
-import { useState  } from './react';,
-import Link from './next / link';,
-import { use_auth  } from '@/contexts / AuthContext';,
-export default /**
- * SignUpPage - Function description
- */
-function SignUpPage() {
-  const [name, set_name] = useState (""),
-  const [email, set_email] = useState (""),
-  const [password, set_password] = useState (""),
-  const [confirm_password, setConfirmPassword] = useState (""),
-  const [is_loading, setIsLoading] = useState (false),
-  const [error, set_error] = useState (""),
-  const { register } = use_auth (),
-  const handle_submit = async (e: React.FormEvent) => {
-    e.prevent_default (),
-    setIsLoading (true),
-    set_error (""),
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ("Passwords do not match"),
-      setIsLoading (false);
-      return;
-    }
-    try {
-      await register (name, email, password);
-    } catch (error) {
-      set_error (error instanceof Error ? error.message : "Registration failed");
-    } finally {
-      setIsLoading (false);
-    }
-  }
-  return (
-    <div className="min - h-screen flex items - center justify - center bg - gradient - to - br from - zinc - 900 to - zinc - 800">;
-      <div className="max - w-md w - full space - y-8 p - 8">;
-        <div className="text - center">;
-          <h1 className="text - 3xl font - bold text - white mb - 2">Join Zion OS</h1>;
-          <p className="text - zinc - 400 mb - 4">;
-            Start your free trial and launch sovereign AI - powered digital economies;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </p>;
           {/* Free Trial Badge */}
           <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded - full">;
             <span className="text - green - 400 text - sm font - medium">;
-              🚀 Free Trial Available;
+               Free Trial Available;
             </span>;
           </div>;
         </div>;
@@ -87,24 +42,23 @@ if ( {) {
           <h3 className="text - sm font - semibold text - zinc - 300 mb - 3">What you'll get:</h3>;
           <ul className="space - y-2 text - sm text - zinc - 400">;
             <li className="flex items - center gap - 2">;
-              <span className="text - green - 400">✓</span>;
+              <span className="text - green - 400"></span>;
               Launch new instances in minutes;
             </li>;
             <li className="flex items - center gap - 2">;
-              <span className="text - green - 400">✓</span>;
+              <span className="text - green - 400"></span>;
               Access to marketplace templates;
             </li>;
             <li className="flex items - center gap - 2">;
-              <span className="text - green - 400">✓</span>;
+              <span className="text - green - 400"></span>;
               Governance and identity tools;
             </li>;
             <li className="flex items - center gap - 2">;
-              <span className="text - green - 400">✓</span>;
+              <span className="text - green - 400"></span>;
               Full admin dashboard access;
             </li>;
           </ul>;
         </div>;
-<<<<<<< HEAD
         <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50">;
           <form onSubmit={handleSubmit} className="space-y-6">;
             {error && (;
@@ -112,14 +66,6 @@ if ( {) {
                 <p className="text-red-400 text-sm">{error}</p>;
               </div>;
             )}
-=======
-        <div className="bg - zinc - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - zinc - 700 / 50">;
-          <form on_submit={handle_submit} className="space - y-6">;
-            {error && (
-              <div className="bg - red - 500 / 10 border border - red - 500 / 20 rounded - lg p - 3">;
-                <p className="text - red - 400 text - sm">{error}</p>;
-              </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <div>;
               <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Full Name;

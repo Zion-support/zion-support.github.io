@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react'
 import { Globe } from 'lucide-react'
 
@@ -52,8 +47,6 @@ export function CountrySelector({
     onCountryChange(country)
   }
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useState, useEffect } from 'react';
 import { Globe } from 'lucide-react';
 import {;
@@ -67,8 +60,6 @@ import {;
   CountryPricing,;
   onsiteServicePricing,;
 } from '@/data/onsiteServicePricing';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 interface CountrySelectorProps {;
   onCountryChange: (country: CountryPricing | null) => void;
@@ -106,21 +97,14 @@ export function CountrySelector(): any ({;
       onsiteServicePricing && onsiteServicePricing.find(item => item && item.country === countryName) || null;
     onCountryChange(country);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
     <div className='mb-6'>;
       <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>;
         <Globe className='mr-2 h-5 w-5 text-zion-cyan' />;
         {selectedCountry;
           ? `IT Onsite Service in ${selectedCountry && selectedCountry.country}`;
           : 'Select Country for IT Onsite Service'}
-<<<<<<< HEAD
       </h3>
-=======
-      </h3>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Select
         onValueChange={handleCountryChange}
         value={selectedCountry?.country}>;
@@ -165,22 +149,11 @@ export function CountrySelector(): any ({;
                 {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
               </SelectItem>;
             ))}
-<<<<<<< HEAD
         </SelectContent>
       </Select>
     </div>
   )
 }
-=======
-        </SelectContent>;
-      </Select>;
-    </div>;
-<<<<<<< HEAD
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     <div className="mb-6">
       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
         <Globe className="mr-2 h-5 w-5 text-zion-cyan" />
@@ -216,11 +189,8 @@ export function CountrySelector(): any ({;
         </SelectContent>
       </Select>
     </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { useState, useEffect } from 'react';
 import { Globe } from 'lucide-react';
 import {
@@ -320,4 +290,3 @@ function CountrySelector() {
       </Select>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

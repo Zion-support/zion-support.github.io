@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
@@ -81,8 +76,6 @@ const listingSchema = z.object({
   image: z.string().optional()})
       const maxRetries = 3
   const sourceListings = listings
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const listingSchema = z && z.object({;
   id: z && z.string(),;
   title: z && z.string(),;
@@ -96,17 +89,7 @@ const listingSchema = z && z.object({;
   const sourceListings = listings;
 }
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-=======
-
-  )
-}
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 const listing_schema = z.object ({
   id: z.string (),
   title: z.string (),
@@ -117,5 +100,3 @@ const listing_schema = z.object ({
 }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

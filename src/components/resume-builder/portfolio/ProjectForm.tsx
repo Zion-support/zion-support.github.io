@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -78,84 +73,6 @@ export function ProjectForm({
         github_url: data.github_url |undefined
         demo_url: data.demo_url |undefined
         pdf_url: data.pdf_url
-=======
-import { useState } from 'react';
-import { use_form } from 'react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { z } from 'zod';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
-import { logErrorToProduction } from '@/utils / production_logger'; import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components / ui / form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
-import { PortfolioProject } from '@/types / resume';
-import { use_portfolio } from '@/hooks / use_portfolio';
-import { use_auth } from '@/hooks / use_auth';
-// Define schema for form validation;
-const project_schema = z.object ({
-  title: z.string ().min (1, 'Project title is required'),
-  description: z.string ().optional (),
-  technologies: z.string ().optional (),
-  image_url: z.string ().optional (),
-  github_url: z;
-    .union ([z.string ().url ('Please enter a valid URL'), z.literal ('')]);
-    .optional (),
-  demo_url: z;
-    .union ([z.string ().url ('Please enter a valid URL'), z.literal ('')]);
-    .optional (),
-  pdf_url: z.string ().optional (),
-});
-type ProjectFormValues = z.infer < typeof project_schema>;
-interface ProjectFormProps {
-  project?: PortfolioProject;
-  on_success: () => void;
-  on_cancel: () => void;
-export /**
- * ProjectForm - Function description
- */
-function ProjectForm() {
-  const { user } = use_auth ();
-  const { add_project, update_project } = use_portfolio ();
-  const [is_loading, setIsLoading] = useState (false);
-  const is_editing = !!project;
-  const form = use_form < ProjectFormValues>({
-    resolver: zod_resolver (project_schema),
-    default_values: {
-      title: project?.title || '',
-      description: project?.description || '',
-      technologies: project?.technologies;
-        ? project.technologies.join (', ');
-        : '',
-      image_url: project?.image_url || '',
-      github_url: project?.github_url || '',
-      demo_url: project?.demo_url || '',
-      pdf_url: project?.pdf_url || '',
-    },
-  });
-  const on_submit = async (data: ProjectFormValues) => {
-    // Check condition
-if (return) {
-  $2
-}
-    setIsLoading (true);
-    try {
-      const project_data: PortfolioProject = {
-        title: data.title,
-        description: data.description,
-        technologies: data.technologies;
-          ? data.technologies.split (', ').map (tech => tech.trim ());
-          : [],
-        image_url: data.image_url,
-        github_url: data.github_url || undefined,
-        demo_url: data.demo_url || undefined,
-        pdf_url: data.pdf_url,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       let success = false;
       // Check condition
@@ -167,26 +84,14 @@ if ( {) {
         const project_id = await add_project (project_data);
         success = !!project_id;
       }
-<<<<<<< HEAD
       if (success) {
         onSuccess()
         form.reset()
-=======
-      // Check condition
-if ( {) {
-  $2
-}
-        on_success ();
-        form.reset ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     } catch (error) {
       logErrorToProduction ('Error saving project:', { data: error });
     } finally {
-<<<<<<< HEAD
       setIsLoading(false)
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -287,7 +192,6 @@ export function ProjectForm(): any ({;
       logErrorToProduction('Error saving project:', { data: error });
     } finally {;
       setIsLoading(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
@@ -308,12 +212,7 @@ export function ProjectForm(): any ({;
               <FormMessage />;
             </FormItem>;
           )}
-<<<<<<< HEAD
         />
-=======
-        />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
           control={form && form.control}
           name='description'
@@ -323,7 +222,6 @@ export function ProjectForm(): any ({;
                 <Textarea
                   placeholder='Describe what the project does and your role in it...'
                   className='min-h-[100px]'
-=======
       setIsLoading (false);
     }
   }
@@ -353,20 +251,13 @@ export function ProjectForm(): any ({;
                 <Textarea;
                   placeholder='Describe what the project does and your role in it...';
                   className='min - h-[100px]';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
             </FormItem>;
           )}
-<<<<<<< HEAD
         />
-=======
-        />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
           control={form && form.control}
           name='technologies'
@@ -376,7 +267,6 @@ export function ProjectForm(): any ({;
               <FormControl>;
                 <Input
                   placeholder='React, Node && Node.js, MongoDB, etc. (comma separated)'
-=======
             </FormItem>)}
         />;
         <FormField;
@@ -388,22 +278,14 @@ export function ProjectForm(): any ({;
               <FormControl>;
                 <Input;
                   placeholder='React, Node.js, MongoDB, etc. (comma separated)';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
             </FormItem>;
           )}
-<<<<<<< HEAD
         />
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-=======
-        />;
-
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <FormField
             control={form && form.control}
             name='github_url'
@@ -415,7 +297,6 @@ export function ProjectForm(): any ({;
                 <FormControl>;
                   <Input
                     placeholder='https://github && github.com/yourusername/project'
-=======
             </FormItem>)}
         />;
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
@@ -447,20 +328,13 @@ export function ProjectForm(): any ({;
                 <FormControl>;
                   <Input;
                     placeholder='https://your - project - demo.com';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-<<<<<<< HEAD
               </FormItem>;
             )}
-<<<<<<< HEAD
           />
-=======
-          />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <FormField
             control={form && form.control}
             name='demo_url'
@@ -478,14 +352,8 @@ export function ProjectForm(): any ({;
                 <FormMessage />;
               </FormItem>;
             )}
-<<<<<<< HEAD
           />
         </div>
-=======
-          />;
-        </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
           control={form && form.control}
           name='image_url'
@@ -497,7 +365,6 @@ export function ProjectForm(): any ({;
               <FormControl>;
                 <Input
                   placeholder='https://example && example.com/screenshot && screenshot.jpg'
-=======
               </FormItem>)}
           />;
         </div>;
@@ -512,15 +379,12 @@ export function ProjectForm(): any ({;
               <FormControl>;
                 <Input;
                   placeholder='https://example.com / screenshot.jpg';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
             </FormItem>;
           )}
-<<<<<<< HEAD
         />
         {/* Future file upload field would go here */}
         <div className='flex justify-end space-x-2 pt-4'>
@@ -535,33 +399,7 @@ export function ProjectForm(): any ({;
       </form>
     </Form>
   )
-=======
-        />;
-
-        {/* Future file upload field would go here */}
-
-        <div className='flex justify-end space-x-2 pt-4'>;
-          <Button type='button' variant='outline' onClick={onCancel}>;
-            Cancel;
-          </Button>;
-          <Button type='submit' disabled={isLoading}>;
-            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
-            {isEditing ? 'Update' : 'Add'} Project;
-          </Button>;
-        </div>;
-      </form>;
-    </Form>;
-  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-}
-<<<<<<< HEAD
-=======
-}
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             </FormItem>)}
         />;
         {/* Future file upload field would go here */}
@@ -578,5 +416,3 @@ export function ProjectForm(): any ({;
     </Form>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

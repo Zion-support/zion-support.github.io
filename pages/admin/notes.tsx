@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 
 type Note = {
-<<<<<<< HEAD
   id: string
   targetType: string
   targetId: string
@@ -10,35 +9,21 @@ type Note = {
   createdAt: number
 }
 export default function AdminNotesConsole() {
-<<<<<<< HEAD
   const [isAdmin, setIsAdmin] = useState(true)
   const [notes, setNotes] = useState<Note[]>([])
   const [loading, setLoading] = useState(false)
-=======
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(false);
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   useEffect(() => {
     async function load() {
       setLoading(true)
       try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } })
         if (!res.ok) return
         const data = await res.json()
         setNotes(data.notes |[])
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
         if (!res.ok) return;
         const data = await res.json();
         setNotes(data.notes || [])
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   id: string,
   target_type: string,
   target_id: string,
@@ -67,12 +52,10 @@ if (return, ) {
 }
         const data = await res.json (),
         set_notes (data.notes || []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         set_loading (false);
       }
     }
-<<<<<<< HEAD
     if (isAdmin) load()
   }, [isAdmin])
 
@@ -86,15 +69,15 @@ if (return, ) {
         </label>
       </div>
       {loading ? (
-        <div>Loading…</div>
+        <div>Loading</div>
       ) : notes.length === 0 ? (
         <div className="opacity-70">No notes found.</div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {notes.map((n) => (
             <div key={n.id} className="rounded border p-3 text-sm">
-              <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
-              <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
+              <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()}  {n.authorId}</div>
+              <div className="font-medium mb-1">{n.targetType}  {n.targetId}</div>
               <div>{n.text}</div>
             </div>
           ))}
@@ -102,14 +85,7 @@ if (return, ) {
       )}
     </div>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     if (load ()) {
   $2
 }
@@ -124,17 +100,15 @@ if (return, ) {
         </label>;
       </div>;
       {loading ? (
-        <div > Loading…</div>) : notes.length === 0 ? (
+        <div > Loading</div>) : notes.length === 0 ? (
         <div className="opacity - 70">No notes found.</div>) : (
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 3">;
           {notes.map ((n) => (
             <div key={n.id} className="rounded border p - 3 text - sm">;
-              <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
-              <div className="font - medium mb - 1">{n.target_type} • {n.target_id}</div>;
+              <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()}  {n.author_id}</div>;
+              <div className="font - medium mb - 1">{n.target_type}  {n.target_id}</div>;
               <div>{n.text}</div>;
             </div>))}
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -202,7 +202,7 @@ initial={{ opacity: 0, y: 30 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className=&quot;bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm&quot;              >
-                <div className=&quot;text-4xl mb-4&quot;>📊</div>
+                <div className=&quot;text-4xl mb-4&quot;></div>
                 <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>Competitive Pricing</h3>
                 <p className=&quot;text-gray-300 text-sm mb-4&quot;>
                   Our pricing is strategically positioned to be 20-40% more affordable than enterprise competitors,
@@ -220,7 +220,7 @@ initial={{ opacity: 0, y: 30 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className=&quot;bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm&quot;              >
-                <div className=&quot;text-4xl mb-4&quot;>🎯</div>
+                <div className=&quot;text-4xl mb-4&quot;></div>
                 <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>ROI Guarantee</h3>
                 <p className=&quot;text-gray-300 text-sm mb-4&quot;>
                   Every service comes with our 1000% ROI guarantee, ensuring that customers see,
@@ -238,7 +238,7 @@ initial={{ opacity: 0, y: 30 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className=&quot;bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm&quot;              >
-                <div className=&quot;text-4xl mb-4&quot;>🚀</div>
+                <div className=&quot;text-4xl mb-4&quot;></div>
                 <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>Future-Proof Technology</h3>
                 <p className=&quot;text-gray-300 text-sm mb-4&quot;>
                   Our 2026 services incorporate cutting-edge technologies that will remain,
@@ -375,7 +375,7 @@ href={service.link}
 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className=&quot;text-center py-16&quot;              >
-                <div className=&quot;text-6xl mb-4&quot;>🔍</div>
+                <div className=&quot;text-6xl mb-4&quot;></div>
                 <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No services found</h3>
                 <p className=&quot;text-gray-400&quot;>Try adjusting your category or price range filters</p>
               </motion.div>
@@ -400,15 +400,15 @@ can transform your business with exceptional ROI
               
               <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mb-8&quot;>
                 <div className=&quot;flex items-center justify-center space-x-3 text-cyan-300&quot;>
-                  <span className=&quot;text-2xl&quot;>📱</span>
+                  <span className=&quot;text-2xl&quot;></span>
                   <span className=&quot;font-semibold&quot;>{contactInfo.mobile}</span>
                 </div>
                 <div className=&quot;flex items-center justify-center space-x-3 text-purple-300&quot;>
-                  <span className=&quot;text-2xl&quot;>✉️</span>
+                  <span className=&quot;text-2xl&quot;></span>
                   <span className=&quot;font-semibold&quot;>{contactInfo.email}</span>
                 </div>
                 <div className=&quot;flex items-center justify-center space-x-3 text-pink-300&quot;>
-                  <span className=&quot;text-2xl&quot;>📍</span>
+                  <span className=&quot;text-2xl&quot;></span>
                   <span className=&quot;font-semibold text-sm&quot;>{contactInfo.address}</span>                </div>
               </div>
 

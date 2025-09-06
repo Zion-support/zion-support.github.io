@@ -1,24 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
-=======
-import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && server.ts',
-import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface TenantInfo {
   id: string;
   brand_name: string;
   subdomain: string;
   custom_domain: string | null;
   primary_color: string;
-<<<<<<< HEAD
 
   logo_url: string | null
   theme_preset: string
@@ -26,16 +17,9 @@ interface TenantInfo {
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'GET, POST, OPTIONSAccess-Control-Allow-Headers': 'Content-Type, Authorization, x-client-infoAccess-Control-Max-Age': '86400'}
 // Initialize Supabase client
-<<<<<<< HEAD
 const supabaseUrl = Deno.env.get('SUPABASE_URL');
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
 if (!supabaseUrl |!supabaseServiceKey) {
-=======
-const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL');
-const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
-
-if (!supabaseUrl || !supabaseServiceKey) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   throw new Error('Required environment variables are not set')
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
@@ -47,7 +31,6 @@ serve(async (req) => {
       headers: corsHeaders})
   }
   try {
-<<<<<<< HEAD
     const url = new URL(req.url);
     const hostnameParam = url.searchParams.get('host');
     const subdomainParam = url.searchParams.get('subdomain');
@@ -56,18 +39,6 @@ serve(async (req) => {
     const hostname = hostnameParam |
       (forwardedHost ? forwardedHost.split()[0].trim().split(':')[0] : null) |
       url.hostname;
-=======
-    const url = new URL(req && req.url);
-    const hostnameParam = url && url.searchParams.get('host');
-    const subdomainParam = url && url.searchParams.get('subdomain');
-    
-    // Get hostname from parameters or headers
-    const forwardedHost = req && req.headers.get('x-forwarded-host');
-    const hostname = hostnameParam || 
-      (forwardedHost ? forwardedHost && forwardedHost.split()[0].trim().split(':')[0] : null) ||
-      url && url.hostname;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!hostname && !subdomainParam) {
       throw new Error('No hostname or subdomain provided')
     }
@@ -104,15 +75,8 @@ serve(async (req) => {
             .eq('subdomain', subdomain)
             .eq('is_active', true)
             .single();
-<<<<<<< HEAD
           if (!subdomainResult.error) {
             tenantInfo = subdomainResult.data as TenantInfo
-=======
-
-          if (!subdomainResult && subdomainResult.error) {
-            tenantInfo = subdomainResult && subdomainResult.data as TenantInfo
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   logo_url: string | null,
   theme_preset: string;
 }
@@ -210,7 +174,6 @@ if ( {) {
   $2
 }
             tenant_info = subdomain_result.data as TenantInfo;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
         }
       } else // Check condition
@@ -220,15 +183,9 @@ if ( {) {
         tenant_info = data as TenantInfo;
       }
     }
-<<<<<<< HEAD
     return new Response(
-<<<<<<< HEAD
       JSON.stringify({
         tenant: tenantInfo
-=======
-      JSON && JSON.stringify({
-        tenant: tenantInfo,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         status: 'success'
       });
       {
@@ -239,15 +196,9 @@ if ( {) {
   } catch (error) {
     console && console.error('Tenant detector error:', error);
     return new Response(
-<<<<<<< HEAD
       JSON.stringify({
         error: error.message |'Internal server error'
-=======
-      JSON && JSON.stringify({ 
-        error: error && error.message || 'Internal server error',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         status: 'error'
-=======
     return new Response (
       JSON.stringify ({
         tenant: tenant_info,
@@ -264,23 +215,13 @@ if ( {) {
       JSON.stringify ({
         error: error.message || 'Internal server error',
         status: 'error';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       {
         status: 500;
         headers: {
-<<<<<<< HEAD
           'Content-Type': 'application/json'
           ...corsHeaders}}
     )
   }
 });
 
-=======
-          'Content - Type': 'application / json',
-          ...cors_headers}}
-    );
-  }
-});
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

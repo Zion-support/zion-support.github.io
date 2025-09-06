@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
@@ -22,19 +15,10 @@ export default function AdminKycPage() {
   }, [])
   async function act(userId: string, action: 'approve' | 'reject' | 'needs_more_info') {
     const res = await fetch('/api/admin/kyc-queue', {
-<<<<<<< HEAD
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, action, reason: reason |undefined })})
     const data = await res.json()
-=======
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, action, reason: reason || undefined })}),
-    const data = await res.json();
-    if (data.ok) load()
-  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     if (data.ok) load()
   }
@@ -57,7 +41,7 @@ export default function AdminKycPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <div className="font-semibold">{p.fullLegalName |p.businessName |p.userId}</div>
-                  <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
+                  <div className="text-xs text-gray-500">Role: {p.role}  Status: {p.status}  AML: {p.amlStatus}</div>
                   {p.flags && p.flags.length > 0 && (
                     <div className="text-xs mt-1">Flags: {p.flags.join()}</div>
                   )}
@@ -86,14 +70,7 @@ export default function AdminKycPage() {
       </main>
     </>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next / head',
 import type { KycProfile } from '../../utils / kyc',
@@ -148,7 +125,7 @@ function act() {
               <div className="flex items - center justify - between">;
                 <div>;
                   <div className="font - semibold">{p.fullLegalName || p.business_name || p.user_id}</div>;
-                  <div className="text - xs text - gray - 500">Role: {p.role} • Status: {p.status} • AML: {p.aml_status}</div>;
+                  <div className="text - xs text - gray - 500">Role: {p.role}  Status: {p.status}  AML: {p.aml_status}</div>;
                   {p.flags && p.flags.length > 0 && (
                     <div className="text - xs mt - 1">Flags: {p.flags.join ()}</div>)}
                 </div>;
@@ -174,5 +151,3 @@ function act() {
       </main>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

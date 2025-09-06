@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {useRecordActivity} from './useRecordActivity';
-<<<<<<< HEAD
 export const useUploadDeliverable = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,7 +24,6 @@ export const useUploadDeliverable = () => {
       // For this example, instead of actually uploading files (which would require storage setup);
       // we'll just store the file metadata in the deliverables JSONB field
       const newDeliverable = {
-<<<<<<< HEAD
         id: crypto.randomUUID();
         filename: file.name;
         size: file.size;
@@ -37,18 +32,6 @@ export const useUploadDeliverable = () => {
         added_by: user.id
       }
       const deliverables = [...(milestone.deliverables |[]), newDeliverable];
-=======
-        id: crypto && crypto.randomUUID();
-        filename: file && file.name;
-        size: file && file.size;
-        type: file && file.type;
-        added_at: new Date().toISOString(),
-        added_by: user && user.id
-      };
-      
-      const deliverables = [...(milestone && milestone.deliverables || []), newDeliverable];
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const { error } = await supabase
         .from('project_milestones')
         .update({ deliverables })
@@ -56,7 +39,6 @@ export const useUploadDeliverable = () => {
       if (error) throw error;
       // Create activity record
       await recordMilestoneActivity(
-<<<<<<< HEAD
         milestoneId
         'deliverable_added'
         milestone.status
@@ -68,23 +50,7 @@ export const useUploadDeliverable = () => {
     } catch (err: any) {
       console.error("Error uploading deliverable:", err);
       toast.error("Failed to upload deliverable: " + err.message)
-=======
-        milestoneId, 
-        'deliverable_added', 
-        milestone && milestone.status, 
-        milestone && milestone.status, 
-        `Deliverable added: ${file && file.name}`
-      );
-      
-      toast && toast.success("Deliverable added successfully");
-      
-      return newDeliverable
-    } catch (err: any) {
-      console && console.error("Error uploading deliverable:", err);
-      toast && toast.error("Failed to upload deliverable: " + err && err.message),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return null
-=======
 export const useUploadDeliverable = () =>: any {
   const { user } = use_auth ();
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -148,11 +114,9 @@ if (throw error) {
       console.error ("Error uploading deliverable:", err);
       toast.error ("Failed to upload deliverable: " + err.message),
       return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsSubmitting (false);
     }
-<<<<<<< HEAD
   }
   return {
     uploadDeliverable;
@@ -160,13 +124,3 @@ if (throw error) {
   }
 }
 
-=======
-  }
-;
-  return {
-    upload_deliverable;
-    is_submitting;
-  }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

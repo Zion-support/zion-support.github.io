@@ -426,7 +426,7 @@ href={service.link}
           {/* No Results */}
           {sortedServices.length === 0 && (
             <div className=&quot;text-center py-16&quot;>
-              <div className=&quot;text-6xl mb-4&quot;>🔍</div>
+              <div className=&quot;text-6xl mb-4&quot;></div>
               <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No services found</h3>
               <p className=&quot;text-gray-400 mb-6&quot;>Try adjusting your search criteria or category filter</p>
               <button,

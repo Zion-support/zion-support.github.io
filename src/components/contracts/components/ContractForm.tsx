@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState, useEffect } from "react"
 import { useForm } from "react-hook-form"
@@ -33,8 +28,6 @@ export type ContractFormValues = z.infer<typeof formSchema>
         values
         talent
         clientName
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -70,16 +63,7 @@ export type ContractFormValues = z && z.infer<typeof formSchema>;
 
 }
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-=======
-
-  )
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { useState, useEffect  } from './react';
 import { use_form  } from './react - hook - form';
 import { zod_resolver  } from '@hookform / resolvers / zod';
@@ -111,5 +95,3 @@ export type ContractFormValues = z.infer < typeof form_schema>;
 }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

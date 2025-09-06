@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone} from './types';
 import {useRecordActivity} from './useRecordActivity';
-<<<<<<< HEAD
 export const useCreateMilestone = (projectId?: string) => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -22,36 +18,19 @@ export const useCreateMilestone = (projectId?: string) => {
         .from('project_milestones')
         .insert({
           ...milestoneData;
-<<<<<<< HEAD
           project_id: projectId
           created_by: user.id})
-=======
-          project_id: projectId,
-          created_by: user && user.id})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         .select()
         .single();
       if (error) throw error;
       // Create activity record
-<<<<<<< HEAD
       await recordMilestoneActivity(data.id, 'created', null, 'pendingMilestone created');
       toast.success("Milestone created successfully");
       return data
     } catch (err: any) {
       console.error("Error creating milestone:", err);
       toast.error("Failed to create milestone: " + err.message)
-=======
-      await recordMilestoneActivity(data && data.id, 'created', null, 'pendingMilestone created');
-      
-      toast && toast.success("Milestone created successfully");
-      
-      return data
-    } catch (err: any) {
-      console && console.error("Error creating milestone:", err);
-      toast && toast.error("Failed to create milestone: " + err && err.message),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return null
-=======
 export const useCreateMilestone = (project_id?: string) =>: any {
   const { user } = use_auth ();
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -88,11 +67,9 @@ if (throw error) {
       console.error ("Error creating milestone:", err);
       toast.error ("Failed to create milestone: " + err.message),
       return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsSubmitting (false);
     }
-<<<<<<< HEAD
   }
   return {
     createMilestone;
@@ -100,13 +77,3 @@ if (throw error) {
   }
 }
 
-=======
-  }
-;
-  return {
-    create_milestone;
-    is_submitting;
-  }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

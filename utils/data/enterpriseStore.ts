@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
-=======
-import {
-  CompanyRecord,
-  CompanyMember,
-  EnterpriseRole,
-  InvoiceRecord,
-} from '../types/enterprise';
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const generateId = () => Math.random().toString(36).slice(2, 10);
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
   name: 'Acme Corporation';
@@ -93,7 +82,6 @@ export const store = {getCompanyBySlug(slug: string) {;
     return true;
   }
   listInvoices(companyId: string): InvoiceRecord[] {const company = companiesById[companyId];
-=======
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types / enterprise',
 const generate_id = () =>: any Math.random ().to_string (36).slice (2, 10),
 const seed_company: CompanyRecord = {
@@ -206,6 +194,5 @@ if (return false, ) {
   },
   list_invoices (company_id: string): InvoiceRecord[] {
     const company = companiesById[company_id];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return company ? company.invoices : [];
   }}

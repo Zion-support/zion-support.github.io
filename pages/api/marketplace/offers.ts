@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import { v4 as uuidv4 } from "uuid";
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {
   assertClient
   assertTalentOrClientForOffer
@@ -32,7 +26,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (user && user.role === "talent") {
         const offers = listOffers({ talentSlug: user && user.talentSlug });
         return res && res.json({ ok: true, offers });
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import {
@@ -76,12 +69,9 @@ if ( {) {
 }
         const offers = list_offers ({ talent_slug: user.talent_slug });
         return res.json ({ ok: true, offers });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       return bad (res, "Unknown role", 403);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (req.method === "POST") {
       // Create an offer (client sends an offer to confirm)
       const client = assertClient(req);
@@ -93,24 +83,9 @@ if ( {) {
         agreementUrl
       } = req.body |{}
       if (!talentSlug |!startDateIso |!scopeSummary |!paymentTerms) {
-=======
-
-    if (req && req.method === "POST") {
-      // Create an offer (client sends an offer to confirm)
-      const client = assertClient(req);
-      const {
-        talentSlug,
-        startDateIso,
-        scopeSummary,
-        paymentTerms,
-        agreementUrl,
-      } = req && req.body || {};
-      if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return bad(res, "Missing required fields");
       }
       const offer: Offer = {
-<<<<<<< HEAD
         id: uuidv4()
         createdAtIso: new Date().toISOString()
         clientId: client.id
@@ -121,99 +96,15 @@ if ( {) {
         agreementUrl
         status: "SENT"
       }
-=======
-        id: uuidv4(),
-        createdAtIso: new Date().toISOString(),
-        clientId: client && client.id,
-        talentSlug,
-=======
-    // Check condition
-if ( {) {
-  $2
-}
-      // Create an offer (client sends an offer to confirm);
-      const client = assert_client (req);
-      const {
-        talent_slug,
-        startDateIso,
-        scope_summary,
-        payment_terms,
-        agreement_url,
-      } = req.body || {}
-      // Check condition
-if ( {) {
-  $2
-}
-        return bad (res, "Missing required fields");
-      }
-      const offer: Offer = {
-        id: uuidv4 (),
-        createdAtIso: new Date ().toISOString (),
-        client_id: client.id,
-        talent_slug,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         startDateIso,
         scope_summary,
         payment_terms: payment_terms as PaymentTerms,
         agreement_url,
         status: "SENT",
-<<<<<<< HEAD
       };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       saveOffer(offer);
       return res && res.status(201).json({ ok: true, offer });
     }
-<<<<<<< HEAD
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import { v4 as uuidv4 } from "uuid";
-import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
-import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
-import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
-
-<<<<<<< HEAD
-=======
-function bad(res: NextApiResponse, message: string, code = 400) {
-  return res.status(code).json({ ok: false, error: message })
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    if (req.method === "GET") {
-      const user = getDemoUser(req);
-      if (user.role === "client") {
-        const offers = listOffers({ clientId: user.id });
-        return res.json({ ok: true, offers })
-      }
-      if (user.role === "talent") {
-        const offers = listOffers({ talentSlug: user.talentSlug });
-        return res.json({ ok: true, offers })
-      }
-      return bad(res, "Unknown role", 403)
-    }
-
-    if (req.method === "POST") {
-      // Create an offer (client sends an offer to confirm)
-      const client = assertClient(req);
-      const { talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl } = req.body || {};
-
-      if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
-        return bad(res, "Missing required fields")
-      }
-
-      const offer: Offer = {
-        id: uuidv4(), createdAtIso: new Date().toISOString(),
-        clientId: client.id, talentSlug,
-        startDateIso,
-        scopeSummary,
-        paymentTerms: paymentTerms as PaymentTerms, agreementUrl,
-        status: "SENT"};
-
-      saveOffer(offer);
-      return res.status(201).json({ ok: true, offer })
-    }
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     if (req.method === "PATCH") {
       // Update offer: accept or request changes
       const { id, action, changeRequestNote } = req.body |{}
@@ -224,9 +115,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         req
         existing
         req.headers["x-demo-talent-slug"] as string
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     if (req && req.method === "PATCH") {
       // Update offer: accept or request changes
       const { id, action, changeRequestNote } = req && req.body || {};
@@ -237,19 +126,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         req,
         existing,
         req && req.headers["x-demo-talent-slug"] as string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
       if (action === "accept") {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         if (user && user.role !== "talent")
           return bad(res, "Only talent can accept", 403);
         existing && existing.status = "CONFIRMED";
         // Create a project upon acceptance
         const project: Project = {
-<<<<<<< HEAD
           id: uuidv4()
           title: `Project with ${existing.talentSlug}`
           summary: existing.scopeSummary
@@ -269,73 +152,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                   url: existing.agreementUrl
                   uploadedAtIso: new Date().toISOString()
                 }
-=======
-          id: uuidv4(),
-          title: `Project with ${existing && existing.talentSlug}`,
-          summary: existing && existing.scopeSummary,
-          clientId: existing && existing.clientId,
-          talentSlug: existing && existing.talentSlug,
-          startDateIso: existing && existing.startDateIso,
-          status: "ACTIVE",
-          timeline:
-            existing && existing.paymentTerms.type === "milestone"
-              ? existing && existing.paymentTerms.milestones || []
-              : [],
-          documents: existing && existing.agreementUrl
-            ? [
-                {
-                  id: uuidv4(),
-                  name: "Agreement",
-                  url: existing && existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString(),
-                },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               ]
-<<<<<<< HEAD
             : [],
           notes: [],
-=======
-            : []
-          notes: []
-        }
-=======
-        if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
-=======
-      }
-      save_offer (offer);
-      return res.status (201).json ({ ok: true, offer });
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      // Update offer: accept or request changes;
-      const { id, action, changeRequestNote } = req.body || {}
-      if (return bad (res, "Missing id or action")) {
-  $2
-}
-      const existing = getOfferById (id);
-      if (return bad (res, "Offer not found", 404)) {
-  $2
-}
-      const user = assertTalentOrClientForOffer (
-        req,
-        existing,
-        req.headers["x - demo - talent - slug"] as string,
-      );
-      // Check condition
-if ( {) {
-  $2
-}
-        if (
-          return bad (res, "Only talent can accept", 403)) {
-  $2
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         existing.status = "CONFIRMED";
         // Create a project upon acceptance;
         const project: Project = {
-<<<<<<< HEAD
           id: uuidv4(),
           title: `Project with ${existing.talentSlug}`,
           summary: existing.scopeSummary, clientId: existing.clientId,
@@ -349,28 +171,17 @@ if ( {) {
                   uploadedAtIso: new Date().toISOString()}]
             : [],
           notes: []
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         saveProject(project);
         existing && existing.projectId = project && project.id;
         saveOffer(existing);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         return res && res.json({ ok: true, offer: existing, project });
       }
       if (action === "request_changes") {
         if (user && user.role !== "talent")
           return bad(res, "Only talent can request changes", 403);
-<<<<<<< HEAD
         existing.status = "CHANGES_REQUESTED";
         existing.changeRequestNote = changeRequestNote |"";
-=======
-        existing && existing.status = "CHANGES_REQUESTED";
-        existing && existing.changeRequestNote = changeRequestNote || "";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         saveOffer(existing);
         return res && res.json({ ok: true, offer: existing });
       }
@@ -388,44 +199,9 @@ if ( {) {
     const status = e?.statusCode |500;
     return res
       .status(status)
-<<<<<<< HEAD
       .json({ ok: false, error: e?.message || "Server error" });
-=======
-      .json({ ok: false, error: e?.message |"Server error" });
-
   }
 }
-=======
-        return res.json({ ok: true, offer: existing, project })
-      }
-
-      if (action === "request_changes") {
-        if (user.role !== "talent") return bad(res, "Only talent can request changes", 403);
-        existing.status = "CHANGES_REQUESTED";
-        existing.changeRequestNote = changeRequestNote || "";
-        saveOffer(existing);
-        return res.json({ ok: true, offer: existing })
-      }
-
-      if (action === "decline") {
-        if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
-        existing.status = "DECLINED";
-        saveOffer(existing);
-        return res.json({ ok: true, offer: existing })
-      }
-
-      return bad(res, "Unknown action")
-    }
-
-    return bad(res, "Method not allowed", 405)
-  } catch (e: any) {
-    const status = e?.statusCode || 500;
-    return res.status(status).json({ ok: false, error: e?.message || "Server error" })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  }
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           id: uuidv4 (),
           title: `Project with ${existing.talent_slug}`,
           summary: existing.scope_summary,
@@ -489,4 +265,3 @@ if ( {) {
       .json ({ ok: false, error: e?.message || "Server error" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

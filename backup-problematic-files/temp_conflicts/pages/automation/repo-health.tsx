@@ -35,7 +35,7 @@ export default function RepoHealth({ report } Props) {;
         <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Commits (7d)</div><div className="text-2xl font-semibold">{report.commits.last7d}</div></div>;
         <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Commits (30d)</div><div className="text-2xl font-semibold">{report.commits.last30d}</div></div>;
         <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Changed Files (7d)</div><div className="text-2xl font-semibold">{report.changes.last7dFiles.length}</div></div>;
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Largest File</div><div className="text-sm font-medium truncate">{report.largestFiles[0]?.file || '—'}</div></div>;
+        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Largest File</div><div className="text-sm font-medium truncate">{report.largestFiles[0]?.file || ''}</div></div>;
       </div>;
       <section>;
         <h2 className="font-semibold mb-2">Largest Files</h2>;

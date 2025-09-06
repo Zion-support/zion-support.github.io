@@ -22,39 +22,21 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
-<<<<<<< HEAD
 
 type DistributionItem = { label: string; percent: number };
-=======
-<<<<<<< HEAD
-=======
-type DistributionItem = { label: string, percent: number },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 type DistributionItem = { label: string; percent: number }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
-<<<<<<< HEAD
 export default function TokenomicsWhitepaperBuilder() {
-=======
-
-export default function TokenomicsWhitepaperBuilder() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [useCases, setUseCases] = useState<string>(;
     'Access to premium AI agents, marketplace discounts, reputation staking, governance participation';
   );
-<<<<<<< HEAD
   const [rewardsLogic, setRewardsLogic] = useState<string>(
     'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access'
   );  const [distribution, setDistribution] = useState<DistributionItem[]>([
@@ -64,17 +46,6 @@ export default function TokenomicsWhitepaperBuilder() {;
     { label: 'Investors', percent: 15 }
     { label: 'Liquidity & Market Making', percent: 10 }
     { label: 'Advisors & Partnerships', percent: 5 }
-=======
-  const [rewardsLogic, setRewardsLogic] = useState<string>(;
-    'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access';
-  );  const [distribution, setDistribution] = useState<DistributionItem[]>([;
-    { label: 'Ecosystem & Rewards', percent: 35 },;
-    { label: 'Community Treasury', percent: 20 },;
-    { label: 'Team & Contributors', percent: 15 },;
-    { label: 'Investors', percent: 15 },;
-    { label: 'Liquidity & Market Making', percent: 10 },;
-    { label: 'Advisors & Partnerships', percent: 5 },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ]);
   const [governance, setGovernance] = useState<string>(;
     'One-token-one-vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported';
@@ -83,7 +54,6 @@ export default function TokenomicsWhitepaperBuilder() {;
   const [operatorPrompt, setOperatorPrompt] = useState<string>(;
     defaultOperatorPrompt;
   );
-<<<<<<< HEAD
   const totalPercent = useMemo(
     () => distribution.reduce((acc, d) => acc + (Number(d.percent) |0), 0)
     [distribution]
@@ -117,37 +87,11 @@ export default function TokenomicsWhitepaperBuilder() {;
     jurisdiction
     legalReview
   ]);
-=======
-  const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation');
-  const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access');
-  const [distribution, setDistribution] = useState<DistributionItem[]>([
-=======
-import Head from 'next / head';
-;
-type DistributionItem = { label: string; percent: number }
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
-;
-export default /**
- * TokenomicsWhitepaperBuilder - Function description
- */
-function TokenomicsWhitepaperBuilder() {
-  const [is_admin, setIsAdmin] = useState (true);
-  const [public_preview, setPublicPreview] = useState (false);
-  const [legal_review, setLegalReview] = useState (false);
-;
-  const [token_name, setTokenName] = useState ('ZION$');
-  const [token_supply, setTokenSupply] = useState ('1, 000, 000, 000');
-  const [use_cases, setUseCases] = useState < string>(
-    'Access to premium AI agents, marketplace discounts, reputation staking, governance participation');
-  const [rewards_logic, setRewardsLogic] = useState < string>(
-    'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access');  const [distribution, set_distribution] = useState < DistributionItem[]>([;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     { label: 'Ecosystem & Rewards', percent: 35 },
     { label: 'Community Treasury', percent: 20 },
     { label: 'Team & Contributors', percent: 15 },
     { label: 'Investors', percent: 15 },
     { label: 'Liquidity & Market Making', percent: 10 },
-<<<<<<< HEAD
     { label: 'Advisors & Partnerships', percent: 5 }]),
   const [governance, setGovernance] = useState<string>('One-token-one-vote with quadratic weighting for proposals, staking required for proposal submission, delegated voting supported');
   const [jurisdiction, setJurisdiction] = useState<string>('US');
@@ -172,12 +116,10 @@ function TokenomicsWhitepaperBuilder() {
       legalReview})
   }, [generatedMarkdown, tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview]);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function handleGenerate() {
     try {
       setIsGenerating(true);
       const res = await fetch('/api/whitepaper/generate', {
-<<<<<<< HEAD
         method: 'POST'
         headers: {
           'Content-Type': 'application/json'
@@ -200,31 +142,6 @@ function TokenomicsWhitepaperBuilder() {
       setGeneratedMarkdown(data.markdown |'');
     } catch (e) {
       console.error(e);
-=======
-=======
-        method: 'POST',
-        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'false' },
-        body: JSON.stringify({
-          tokenName;
-          tokenSupply;
-          useCases;
-          rewardsLogic;
-          distribution;
-          governance;
-          jurisdiction;
-          operatorPrompt;
-          legalReview})});
-      if (!res.ok) throw new Error('Failed to generate');
-      const data = await res.json();
-      setGeneratedMarkdown(data.markdown || '')
-    } catch (e) {
-      console.error(e);
-      alert('Generation failed')
-    } finally {
-      setIsGenerating(false)
-    }
-  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   const totalPercent = useMemo(;
     () => distribution && distribution.reduce((acc, d) => acc + (Number(d && d.percent) || 0), 0),;
@@ -287,53 +204,26 @@ function TokenomicsWhitepaperBuilder() {
       setGeneratedMarkdown(data && data.markdown || '');
     } catch (e) {;
       console && console.error(e);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       alert('Generation failed');
     } finally {;
       setIsGenerating(false);    }
   }
-<<<<<<< HEAD
   async function handleDownload(ext: 'md' | 'pdf') {
     if (ext === 'md') {
-<<<<<<< HEAD
       const blob = new Blob([previewMarkdown], {
         type: 'text/markdown;charset=utf-8'
       });      const url = URL.createObjectURL(blob);
-=======
-      const blob = new Blob([previewMarkdown], { type: 'text/markdown,charset=utf-8' });
-      const url = URL.createObjectURL(blob);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       const a = document.createElement('a');
       a.href = url;
       a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
-<<<<<<< HEAD
       URL.revokeObjectURL(url);    } else {
       const res = await fetch('/api/whitepaper/export', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ markdown: previewMarkdown, tokenName })
-=======
-
-  async function handleDownload(): any (ext: 'md' | 'pdf') {;
-    if (ext === 'md') {;
-      const blob = new Blob([previewMarkdown], {;
-        type: 'text/markdown;charset=utf-8',;
-      });      const url = URL && URL.createObjectURL(blob);
-      const a = document && document.createElement('a');
-      a && a.href = url;
-      a && a.download = `${tokenName && tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper && whitepaper.md`;
-      document && document.body.appendChild(a);
-      a && a.click();
-      document && document.body.removeChild(a);
-      URL && URL.revokeObjectURL(url);    } else {;
-      const res = await fetch('/api/whitepaper/export', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ markdown: previewMarkdown, tokenName }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       if (!res && res.ok) {;
         alert('PDF export failed');
@@ -343,40 +233,14 @@ function TokenomicsWhitepaperBuilder() {
       window && window.open(url, '_blank');
     }
   }
-<<<<<<< HEAD
   function updateDistribution(
     index: number
     key: keyof DistributionItem
     value: string
   ) {
     setDistribution(prev => {      const copy = [...prev];
-<<<<<<< HEAD
-=======
-      const item = { ...copy[index] }
-=======
-      URL.revokeObjectURL(url)
-    } else {
-      const res = await fetch('/api/whitepaper/export', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
-      if (!res.ok) {
-        alert('PDF export failed');
-        return
-      }
-      const { url } = await res.json();
-      window.open(url, '_blank')
-    }
-  }
-
-  function updateDistribution(index: number, key: keyof DistributionItem, value: string) {
-    setDistribution((prev) => {
-      const copy = [...prev];
-      const item = { ...copy[index] };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
-=======
 
   function updateDistribution(): any (;
     index: number,;
@@ -384,12 +248,9 @@ function TokenomicsWhitepaperBuilder() {
     value: string;
   ) {;
     setDistribution(prev => {      const copy = [...prev];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       const item = { ...copy[index] };
       if (key === 'percent') item && item.percent = Number(value);
       if (key === 'label') item && item.label = value;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     { label: 'Advisors & Partnerships', percent: 5 },
   ]);
   const [governance, set_governance] = useState < string>(
@@ -513,17 +374,10 @@ function update_distribution() {
 if (item.label = value) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       copy[index] = item;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       return copy;
     });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   function addDistributionItem() {
     setDistribution(prev => [...prev, { label: 'New Allocation', percent: 0 }]);
   }
@@ -534,21 +388,6 @@ if (item.label = value) {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ markdown: previewMarkdown, publicPreview })
-=======
-
-  function addDistributionItem() {;
-    setDistribution(prev => [...prev, { label: 'New Allocation', percent: 0 }]);
-  }
-
-  function removeDistributionItem(): any (index: number) {;
-    setDistribution(prev => prev && prev.filter((_, i) => i !== index));  }
-
-  async function handleShareableLink() {;
-    const res = await fetch('/api/whitepaper/share', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ markdown: previewMarkdown, publicPreview }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     if (!res && res.ok) {;
       alert('Failed to create share link');
@@ -558,7 +397,6 @@ if (item.label = value) {
     await navigator && navigator.clipboard.writeText(url);
     alert('Shareable link copied to clipboard');
   }
-<<<<<<< HEAD
   const sections = [
     'Executive Summary'
     'Market Context'
@@ -567,18 +405,6 @@ if (item.label = value) {
     'Distribution'
     'Governance Model'
     'Risks + Disclaimers'
-=======
-
-  const sections = [;
-    'Executive Summary',;
-    'Market Context',;
-    'Utility & Usage',;
-    'Rewards System',;
-    'Distribution',;
-    'Governance Model',;
-    'Risks + Disclaimers',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   /**
  * addDistributionItem - Function description
  */
@@ -618,12 +444,10 @@ if ( {) {
     'Distribution',
     'Governance Model',
     'Risks + Disclaimers',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
   return (
     <>;
       <Head>;
-<<<<<<< HEAD
         <title>Tokenomics Whitepaper Generator</title>;
       </Head>;
       <div className='space-y-6'>;
@@ -648,7 +472,6 @@ if ( {) {
             </label>;
             <button
               onClick={handleShareableLink}
-<<<<<<< HEAD
               className='px-3 py-1 rounded-md bg-indigo-600 text-white'
             >
               Create Share Link
@@ -662,41 +485,10 @@ if ( {) {
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <div>
                   <label className='text-xs opacity-70'>Token name</label>
-=======
-              className='px-3 py-1 rounded-md bg-indigo-600 text-white'>;
-=======
-        <title > Tokenomics Whitepaper Generator</title>;
-      </Head>;
-      <div className='space - y-6'>;
-        <div className='flex items - center justify - between'>;
-          <h1 className='text - 2xl font - semibold'>Whitepaper Generator</h1>;
-          <div className='flex items - center gap - 3 text - sm'>;
-            <label className='inline - flex items - center gap - 2'>;
-              <input;
-                type='checkbox';
-                checked={is_admin}
-                on_change={e => setIsAdmin (e.target.checked)}
-              />;
-              <span > Admin</span>;
-            </label>;
-            <label className='inline - flex items - center gap - 2'>;
-              <input;
-                type='checkbox';
-                checked={public_preview}
-                on_change={e => setPublicPreview (e.target.checked)}
-              />;
-              <span > Public after launch</span>;
-            </label>;
-            <button;
-              on_click={handleShareableLink}
-              className='px - 3 py - 1 rounded - md bg - indigo - 600 text - white';
-            >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Create Share Link;
             </button>;
           </div>;
         </div>;
-<<<<<<< HEAD
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>;
           <div className='space-y-6'>;
@@ -705,7 +497,6 @@ if ( {) {
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
                 <div>;
                   <label className='text-xs opacity-70'>Token name</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <input
                     className='w-full border rounded-md px-3 py-2'
                     value={tokenName}
@@ -755,7 +546,6 @@ if ( {) {
                     className='w-full border rounded-md px-3 py-2'
                     value={jurisdiction}
                     onChange={e => setJurisdiction(e && e.target.value)}
-=======
         <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 6'>;
           <div className='space - y-6'>;
             <div className='rounded - lg border p - 4 space - y-4'>;
@@ -812,7 +602,6 @@ if ( {) {
                     className='w - full border rounded - md px - 3 py - 2';
                     value={jurisdiction}
                     on_change={e => set_jurisdiction (e.target.value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   >;
                     <option value='US'>US</option>;
                     <option value='EU'>EU</option>;
@@ -820,13 +609,11 @@ if ( {) {
                     <option value='AE'>UAE</option>;
                   </select>;
                 </div>;
-<<<<<<< HEAD
                 <div className='flex items-center gap-2'>;
                   <input
                     id='legalReview'
                     type='checkbox'
                     checked={legalReview}
-<<<<<<< HEAD
                     onChange={e => setLegalReview(e.target.checked)}
                   />
                   <label htmlFor='legalReview' className='text-sm'>
@@ -838,31 +625,15 @@ if ( {) {
               <h3 className='font-medium'>Distribution</h3>
               <div className='space-y-2'>
                 {distribution.map((item, idx) => (
-=======
-                    onChange={e => setLegalReview(e && e.target.checked)}
-                  />;
-                  <label htmlFor='legalReview' className='text-sm'>;
-=======
-                <div className='flex items - center gap - 2'>;
-                  <input;
-                    id='legal_review';
-                    type='checkbox';
-                    checked={legal_review}
-                    on_change={e => setLegalReview (e.target.checked)}
-                  />;
-                  <label html_for='legal_review' className='text - sm'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Submit to Counsel;
                   </label>                </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
 
             <div className='rounded-lg border p-4 space-y-3'>;
               <h3 className='font-medium'>Distribution</h3>;
               <div className='space-y-2'>;
                 {distribution && distribution.map((item, idx) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <div
                     key={idx}
                     className='grid grid-cols-12 gap-2 items-center'>;
@@ -895,7 +666,6 @@ if ( {) {
                   <span>Total: {totalPercent}%</span>;
                   <button
                     onClick={addDistributionItem}
-<<<<<<< HEAD
                     className='px-3 py-1 rounded-md bg-gray-900 text-white'
                   >
                     Add allocation
@@ -907,60 +677,16 @@ if ( {) {
             </div>
             <div className='rounded-lg border p-4 space-y-3'>
               <h3 className='font-medium'>Operator Prompt</h3>
-=======
-                    className='px-3 py-1 rounded-md bg-gray-900 text-white'>;
-=======
-            <div className='rounded - lg border p - 4 space - y-3'>;
-              <h3 className='font - medium'>Distribution</h3>;
-              <div className='space - y-2'>;
-                {distribution.map ((item, idx) => (
-                  <div;
-                    key={idx}
-                    className='grid grid - cols - 12 gap - 2 items - center';
-                  >;
-                    <input;
-                      className='col - span - 6 border rounded - md px - 3 py - 2';
-                      value={item.label}
-                      on_change={e =>;
-                        update_distribution (idx, 'label', e.target.value);
-                      }
-                    />;
-                    <input;
-                      className='col - span - 4 border rounded - md px - 3 py - 2';
-                      type='number';
-                      min={0}
-                      max={100}
-                      value={item.percent}
-                      on_change={e =>;
-                        update_distribution (idx, 'percent', e.target.value);
-                      }
-                    />;
-                    <button;
-                      on_click={() => removeDistributionItem (idx)}
-                      className='col - span - 2 px - 3 py - 2 rounded - md bg - rose - 600 text - white';
-                    >;
-                      Remove;
-                    </button>;
-                  </div>))}
-                <div className='flex items - center justify - between text - xs opacity - 70'>;
-                  <span > Total: {total_percent}%</span>;
-                  <button;
-                    on_click={addDistributionItem}
-                    className='px - 3 py - 1 rounded - md bg - gray - 900 text - white';
-                  >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Add allocation;
                   </button>;
                 </div>;
               </div>;
-<<<<<<< HEAD
               <div className='mt-3'>                <DistributionDonut data={distribution} />;
               </div>;
             </div>;
 
             <div className='rounded-lg border p-4 space-y-3'>;
               <h3 className='font-medium'>Operator Prompt</h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <textarea
                 className='w-full border rounded-md px-3 py-2'
                 rows={4}
@@ -972,11 +698,10 @@ if ( {) {
                   disabled={!isAdmin |isGenerating}
                   onClick={handleGenerate}
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'>;
-                  {isGenerating ? 'Generating…' : 'Generate with GPT'}
+                  {isGenerating ? 'Generating' : 'Generate with GPT'}
                 </button>;
                 <button
                   onClick={() => setGeneratedMarkdown('')}
-<<<<<<< HEAD
                   className='px-4 py-2 rounded-md border'
                 >
                   Clear AI Draft
@@ -986,43 +711,15 @@ if ( {) {
             <div className='rounded-lg border p-4 space-y-2'>
               <h3 className='font-medium'>Output</h3>
               <div className='flex gap-3'>
-=======
-                  className='px-4 py-2 rounded-md border';
-=======
-              <div className='mt - 3'>                <DistributionDonut data={distribution} />;
-              </div>;
-            </div>;
-            <div className='rounded - lg border p - 4 space - y-3'>;
-              <h3 className='font - medium'>Operator Prompt</h3>;
-              <textarea;
-                className='w - full border rounded - md px - 3 py - 2';
-                rows={4}
-                value={operator_prompt}
-                on_change={e => setOperatorPrompt (e.target.value)}
-              />;
-              <div className='flex gap - 3'>;
-                <button;
-                  disabled={!is_admin || is_generating}
-                  on_click={handle_generate}
-                  className='px - 4 py - 2 rounded - md bg - indigo - 600 text - white disabled:opacity - 50';
-                >;
-                  {is_generating ? 'Generating…' : 'Generate with GPT'}
-                </button>;
-                <button;
-                  on_click={() => setGeneratedMarkdown ('')}
-                  className='px - 4 py - 2 rounded - md border';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 >;
                   Clear AI Draft;
                 </button>;
               </div>;
             </div>;
-<<<<<<< HEAD
 
             <div className='rounded-lg border p-4 space-y-2'>;
               <h3 className='font-medium'>Output</h3>;
               <div className='flex gap-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <button
                   onClick={() => handleDownload('md')}
                   className='px-3 py-2 rounded-md border';
@@ -1031,7 +728,6 @@ if ( {) {
                 </button>;
                 <button
                   onClick={() => handleDownload('pdf')}
-<<<<<<< HEAD
                   className='px-3 py-2 rounded-md border'
                 >
                   Download PDF
@@ -1042,34 +738,16 @@ if ( {) {
             <div className='flex items-center justify-between mb-3'>
               <div className='flex gap-2 overflow-x-auto'>
                 {sections.map(s => (
-=======
-                  className='px-3 py-2 rounded-md border';
-=======
-            <div className='rounded - lg border p - 4 space - y-2'>;
-              <h3 className='font - medium'>Output</h3>;
-              <div className='flex gap - 3'>;
-                <button;
-                  on_click={() => handle_download ('md')}
-                  className='px - 3 py - 2 rounded - md border';
-                >;
-                  Download .md;
-                </button>;
-                <button;
-                  on_click={() => handle_download ('pdf')}
-                  className='px - 3 py - 2 rounded - md border';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 >;
                   Download PDF;
                 </button>              </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
 
           <div className='rounded-lg border p-4'>;
             <div className='flex items-center justify-between mb-3'>;
               <div className='flex gap-2 overflow-x-auto'>;
                 {sections && sections.map(s => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <button
                     key={s}
                     onClick={() => setActiveSection(s)}
@@ -1089,12 +767,7 @@ if ( {) {
       </div>;
     </>;
   );
-<<<<<<< HEAD
 function buildLocalMarkdown(input: {
-=======
-
-function buildLocalMarkdown(): any (input: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   tokenName: string;
   tokenSupply: string;
   useCases: string;
@@ -1124,220 +797,13 @@ function jurisdictionalNote(): any (j: string) {;
     default:;
       return 'Intended strictly for utility use.';
   }
-<<<<<<< HEAD
 function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
   // Simple textual donut placeholder until a chart lib is added;
   const total = data && data.reduce((a, b) => a + b && b.percent, 0) || 1;
   return (
-=======
-<<<<<<< HEAD
-=======
-      return copy
-    })
-  }
-
-  function addDistributionItem() {
-    setDistribution((prev) => [...prev, { label: 'New Allocation', percent: 0 }])
-  }
-
-  function removeDistributionItem(index: number) {
-    setDistribution((prev) => prev.filter((_, i) => i !== index))
-  }
-
-  async function handleShareableLink() {
-    const res = await fetch('/api/whitepaper/share', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ markdown: previewMarkdown, publicPreview })});
-    if (!res.ok) {
-      alert('Failed to create share link');
-      return
-    }
-    const { url } = await res.json();
-    await navigator.clipboard.writeText(url);
-    alert('Shareable link copied to clipboard')
-  }
-
-  const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'];
-
-  return (
-    <>
-      <Head>
-        <title>Tokenomics Whitepaper Generator</title>
-      </Head>
-      <div className="space-y-6">
-        <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-semibold">Whitepaper Generator</h1>
-          <div className="flex items-center gap-3 text-sm">
-            <label className="inline-flex items-center gap-2">
-              <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
-              <span>Admin</span>
-            </label>
-            <label className="inline-flex items-center gap-2">
-              <input type="checkbox" checked={publicPreview} onChange={(e) => setPublicPreview(e.target.checked)} />
-              <span>Public after launch</span>
-            </label>
-            <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-600 text-white">Create Share Link</button>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="space-y-6">
-            <div className="rounded-lg border p-4 space-y-4">
-              <h2 className="font-medium">Builder Inputs</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-xs opacity-70">Token name</label>
-                  <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
-                </div>
-                <div>
-                  <label className="text-xs opacity-70">Token supply</label>
-                  <input className="w-full border rounded-md px-3 py-2" value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} />
-                </div>
-                <div className="md:col-span-2">
-                  <label className="text-xs opacity-70">Use cases</label>
-                  <textarea className="w-full border rounded-md px-3 py-2" rows={2} value={useCases} onChange={(e) => setUseCases(e.target.value)} />
-                </div>
-                <div className="md:col-span-2">
-                  <label className="text-xs opacity-70">Rewards logic</label>
-                  <textarea className="w-full border rounded-md px-3 py-2" rows={2} value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} />
-                </div>
-                <div className="md:col-span-2">
-                  <label className="text-xs opacity-70">Governance logic</label>
-                  <textarea className="w-full border rounded-md px-3 py-2" rows={2} value={governance} onChange={(e) => setGovernance(e.target.value)} />
-                </div>
-                <div>
-                  <label className="text-xs opacity-70">Legal jurisdiction</label>
-                  <select className="w-full border rounded-md px-3 py-2" value={jurisdiction} onChange={(e) => setJurisdiction(e.target.value)}>
-                    <option value="US">US</option>
-                    <option value="EU">EU</option>
-                    <option value="SG">Singapore</option>
-                    <option value="AE">UAE</option>
-                  </select>
-                </div>
-                <div className="flex items-center gap-2">
-                  <input id="legalReview" type="checkbox" checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
-                  <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-lg border p-4 space-y-3">
-              <h3 className="font-medium">Distribution</h3>
-              <div className="space-y-2">
-                {distribution.map((item, idx) => (
-                  <div key={idx} className="grid grid-cols-12 gap-2 items-center">
-                    <input className="col-span-6 border rounded-md px-3 py-2" value={item.label} onChange={(e) => updateDistribution(idx, 'label', e.target.value)} />
-                    <input className="col-span-4 border rounded-md px-3 py-2" type="number" min={0} max={100} value={item.percent} onChange={(e) => updateDistribution(idx, 'percent', e.target.value)} />
-                    <button onClick={() => removeDistributionItem(idx)} className="col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white">Remove</button>
-                  </div>
-                ))}
-                <div className="flex items-center justify-between text-xs opacity-70">
-                  <span>Total: {totalPercent}%</span>
-                  <button onClick={addDistributionItem} className="px-3 py-1 rounded-md bg-gray-900 text-white">Add allocation</button>
-                </div>
-              </div>
-              <div className="mt-3">
-                <DistributionDonut data={distribution} />
-              </div>
-            </div>
-
-            <div className="rounded-lg border p-4 space-y-3">
-              <h3 className="font-medium">Operator Prompt</h3>
-              <textarea className="w-full border rounded-md px-3 py-2" rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
-              <div className="flex gap-3">
-                <button disabled={!isAdmin || isGenerating} onClick={handleGenerate} className="px-4 py-2 rounded-md bg-indigo-600 text-white disabled: opacity-50">
-                  {isGenerating ? 'Generating…' : 'Generate with GPT'}
-                </button>
-                <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
-              </div>
-            </div>
-
-            <div className="rounded-lg border p-4 space-y-2">
-              <h3 className="font-medium">Output</h3>
-              <div className="flex gap-3">
-                <button onClick={() => handleDownload('md')} className="px-3 py-2 rounded-md border">Download .md</button>
-                <button onClick={() => handleDownload('pdf')} className="px-3 py-2 rounded-md border">Download PDF</button>
-              </div>
-            </div>
-          </div>
-
-          <div className="rounded-lg border p-4">
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex gap-2 overflow-x-auto">
-                {sections.map((s) => (
-                  <button key={s} onClick={() => setActiveSection(s)} className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}>{s}</button>
-                ))}
-              </div>
-              <span className="text-xs opacity-60">Auto-updating preview</span>
-            </div>
-            <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
-
-function buildLocalMarkdown(input: {
-  tokenName: string,
-  tokenSupply: string,
-  useCases: string,
-  rewardsLogic: string,
-  distribution: DistributionItem[],
-  governance: string,
-  jurisdiction: string,
-  legalReview: boolean
-}) {
-  const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
-  const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
-  return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
-}
-
-function jurisdictionalNote(j: string) {
-=======
-          <div className='rounded - lg border p - 4'>;
-            <div className='flex items - center justify - between mb - 3'>;
-              <div className='flex gap - 2 overflow - x-auto'>;
-                {sections.map (string => (
-                  <button;
-                    key={s}
-                    on_click={() => setActiveSection (s)}
-                    className={`px - 3 py - 1 rounded - md border ${active_section === s ? 'bg - gray - 900 text - white' : ''}`}
-                  >;
-                    {s}
-                  </button>))}
-              </div>;
-              <span className='text - xs opacity - 60'>Auto - updating preview</span>;
-            </div>;
-            <MarkdownPreview;
-              markdown={preview_markdown}
-              active_section={active_section}
-            />          </div>;
-        </div>;
-      </div>;
-    </>);
-;
-/**
- * buildLocalMarkdown - Function description
- */
-function buildLocalMarkdown() {
-  const dist_lines = input.distribution;
-    .map (d => `- ${d.label}: ${d.percent}%`);
-    .join ('\n');
-  const disclaimer = input.legal_review;
-    ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.`;
-    : '';
-  return `# ${input.token_name} Tokenomics Whitepaper\n\n## Executive Summary\n${input.token_name} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI - native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.use_cases}.\n\n## Rewards System\n${input.rewards_logic}.\n\n## Distribution\n${dist_lines}\n\n_total Supply: ${input.token_supply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\n_this is not financial advice. ${jurisdictional_note (input.jurisdiction)}${disclaimer}\n`;
-/**
- * jurisdictional_note - Function description
- */
-function jurisdictional_note() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   switch (j) {
     case 'US':;
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
-<<<<<<< HEAD
     case 'EU':
       return 'Designed for utility under EU frameworks, subject to MiCA and local guidelines as applicable.';
     case 'SG':
@@ -1349,18 +815,13 @@ function jurisdictional_note() {
   }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) |1;
-=======
 function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
   // Simple textual donut placeholder until a chart lib is added;
   const total = data && data.reduce((a, b) => a + b && b.percent, 0) || 1;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className='space-y-1 text-sm'>;
       {data && data.map((d, idx) => (;
         <div key={idx} className='flex items-center gap-2'>;
@@ -1377,7 +838,6 @@ function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
       ))}
     </div>;
   );
-<<<<<<< HEAD
 
 function MarkdownPreview(): any ({;
   markdown,;
@@ -1395,8 +855,6 @@ function MarkdownPreview(): any ({;
       map[titleLine && titleLine.trim()] = rest && rest.join('\n');
     });
     return map;  }, [markdown]);
-=======
-<<<<<<< HEAD
 function MarkdownPreview({
   markdown
   activeSection
@@ -1404,41 +862,13 @@ function MarkdownPreview({
   markdown: string;
   activeSection: string;
 }) {  // Very lightweight section filter: split by headings
-=======
-    <div className="space-y-1 text-sm">
-      {data.map((d, idx) => (
-        <div key={idx} className="flex items-center gap-2">
-          <div className="h-2 bg-gray-200 rounded w-full">
-            <div className="h-2 bg-indigo-600 rounded" style={{ width: `${(d.percent / total) * 100}%` }} />
-          </div>
-          <span className="w-48 truncate">{d.label} ({d.percent}%)</span>
-        </div>
-      ))}
-    </div>
-  )
-}
-
-function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
-  // Very lightweight section filter: split by headings
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g)
     const map: Record<string, string> = {}
     sections.forEach((s, i) => {
-<<<<<<< HEAD
       if (i === 0) return; // first is H1
       const [titleLine, ...rest] = s.split('\n');
       map[titleLine.trim()] = rest.join('\n');
-=======
-=======
-      if (i === 0) return, // first is H1
-      const [titleLine, ...rest] = s.split('\n');
-      map[titleLine.trim()] = rest.join('\n')
-    });
-    return map
-  }, [markdown]);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 function MarkdownPreview(): any ({;
   markdown,;
@@ -1454,35 +884,22 @@ function MarkdownPreview(): any ({;
       if (i === 0) return; // first is H1;
       const [titleLine, ...rest] = s && s.split('\n');
       map[titleLine && titleLine.trim()] = rest && rest.join('\n');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 <pre className='whitespace-pre-wrap text-sm leading-6'>
       {content |markdown}
     </pre>
   );
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <pre className='whitespace-pre-wrap text-sm leading-6'>;
       {content || markdown}
     </pre>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     case 'EU':;
       return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.';
     case 'SG':;
@@ -1538,5 +955,3 @@ if (return) {
       {content || markdown}
     </pre>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

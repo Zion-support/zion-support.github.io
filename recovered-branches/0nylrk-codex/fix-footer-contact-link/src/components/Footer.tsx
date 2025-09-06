@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -50,7 +49,6 @@ export function Footer() {;
                 href="https://github && github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-<<<<<<< HEAD
                 className="text-zion-slate hover:text-zion-cyan transition-colors"
               >
                 <Github className="h-5 w-5" />
@@ -63,24 +61,9 @@ export function Footer() {;
             </h3>
             <ul className="space-y-2">
               <li>
-=======
-                className="text-zion-slate hover:text-zion-cyan transition-colors">;
-                <Github className="h-5 w-5" />;
-              </a>;
-            </div>;
-          </div>;
-
-          <div>;
-            <h3 className="text-white font-semibold mb-4 text-lg">;
-              Marketplace;
-            </h3>;
-            <ul className="space-y-2">;
-              <li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Link
                   to="/marketplace"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
 import { NewsletterForm  } from '@/components / NewsletterForm';
 import { Twitter, Linkedin, Facebook, Instagram, Github  } from './lucide-react';
 import { Link  } from './react-router-dom';
@@ -155,71 +138,40 @@ function Footer() {
                   to="/marketplace";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Products;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
                 <Link
                   to="/services"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
-                <Link;
-                  to="/services";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Services;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
                 <Link
                   to="/talent"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
-                <Link;
-                  to="/talent";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Talent;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
                 <Link
                   to="/equipment"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
-                <Link;
-                  to="/equipment";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Equipment;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
                 <Link
                   to="/categories"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
-                <Link;
-                  to="/categories";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Categories;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
                 <Link
                   to="/green-it"
-<<<<<<< HEAD
                   className="text-zion-slate hover:text-zion-cyan transition-colors"
                 >
                   Green IT
@@ -231,30 +183,19 @@ function Footer() {
             <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>
             <ul className="space-y-2">
               <li>
-=======
-                  className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
-                <Link;
-                  to="/green - it";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Green IT;
                 </Link>;
               </li>;
             </ul>;
           </div>;
-<<<<<<< HEAD
 
           <div>;
             <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>;
             <ul className="space-y-2">;
               <li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Link
                   to="/content/about"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
           <div>;
             <h3 className="text - white font - semibold mb - 4 text - lg">Company</h3>;
             <ul className="space - y-2">;
@@ -263,71 +204,40 @@ function Footer() {
                   to="/content / about";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   About Us;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
                 <Link
                   to="/blog"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
-                <Link;
-                  to="/blog";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Blog;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
                 <Link
                   to="/partners"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
-                <Link;
-                  to="/partners";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Partners;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
                 <Link
                   to="/careers"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
-                <Link;
-                  to="/careers";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Careers;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
                 <Link
                   to="/contact"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
-                <Link;
-                  to="/contact";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Contact;
                 </Link>;
               </li>;
               <li>;
-<<<<<<< HEAD
                 <Link
                   to="/sitemap-page"
-<<<<<<< HEAD
                   className="text-zion-slate hover:text-zion-cyan transition-colors"
                 >
                   Sitemap
@@ -353,40 +263,23 @@ function Footer() {
               reserved.
             </p>
             <div className="flex space-x-6 mt-4 md: mt-0">
-=======
-                  className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
-                <Link;
-                  to="/sitemap - page";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Sitemap;
                 </Link>;
               </li>;
             </ul>;
           </div>;
-<<<<<<< HEAD
 
           <div>;
             <h3 className="text-white font-semibold mb-4 text-lg">;
               Subscribe to our newsletter;
             </h3>;
             <p className="text-zion-slate mb-4">;
-=======
-          <div>;
-            <h3 className="text - white font - semibold mb - 4 text - lg">;
-              Subscribe to our newsletter;
-            </h3>;
-            <p className="text - zion - slate mb - 4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Stay updated with the latest news on tech, AI, and marketplace;
               opportunities.;
             </p>;
             <NewsletterForm />;
           </div>;
         </div>;
-<<<<<<< HEAD
 
         <div className="mt-12 pt-8 border-t border-zion-blue-light">;
           <div className="flex flex-col md: flex-row justify-between items-center">;
@@ -395,7 +288,6 @@ function Footer() {
               reserved.;
             </p>;
             <div className="flex space-x-6 mt-4 md: mt-0">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Link
                 to="/privacy"
                 className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">;
@@ -404,7 +296,6 @@ function Footer() {
               <Link
                 to="/terms"
                 className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">;
-=======
         <div className="mt - 12 pt - 8 border - t border - zion - blue - light">;
           <div className="flex flex - col md: flex - row justify - between items - center">;
             <p className="text - zion - slate text - sm">;
@@ -422,17 +313,12 @@ function Footer() {
                 to="/terms";
                 className="text - zion - slate hover:text - zion - cyan text - sm transition - colors";
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Terms of Service;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </footer>;
   );
-=======
-    </footer>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

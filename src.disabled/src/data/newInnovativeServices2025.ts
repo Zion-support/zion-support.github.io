@@ -1,11 +1,4 @@
-<<<<<<< HEAD:src.disabled/src/data/newInnovativeServices2025.ts
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 module.exports = type ServiceItem = { id: string; title: string; description: string; category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Data & Analytics" | "Cloud & DevOps" | "Quantum Computing" | "Blockchain & Web3" | "IoT & Edge" | "Green Tech" | "Space Tech" | "BioTech & Health" | "FinTech & DeFi" | "Metaverse & AR/VR" | "Autonomous Systems" | "Sustainability" | "Digital Transformation" | "Enterprise Solutions"; price: string;'"'"
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,7 +23,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 module && module.exports = type ServiceItem = { id: string; title: string; description: string; category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Data & Analytics" | "Cloud & DevOps" | "Quantum Computing" | "Blockchain & Web3" | "IoT & Edge" | "Green Tech" | "Space Tech" | "BioTech & Health" | "FinTech & DeFi" | "Metaverse & AR/VR" | "Autonomous Systems" | "Sustainability" | "Digital Transformation" | "Enterprise Solutions"; price: string;'"'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.disabled/src/data/newInnovativeServices2025.ts
 import React from 'react';
 interface NewInnovativeServices2025Props {
   // Add props here as needed
@@ -42,9 +34,4 @@ export default function NewInnovativeServices2025({ }: NewInnovativeServices2025
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

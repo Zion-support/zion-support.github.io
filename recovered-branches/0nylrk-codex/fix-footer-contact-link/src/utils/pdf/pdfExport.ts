@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Resume  } from '@/types/resume';
 import { jsPDF  } from 'jspdf';
@@ -41,7 +40,6 @@ export async function exportResumeToPDF(
   // Set up colors based on theme
   const colors = getPdfThemeColors(theme);
   // Set background color
-<<<<<<< HEAD
   doc.setFillColor(colors.background);
   doc.rect(0, 0, 210, 297, 'F'), // Fill entire page
   // Set text color based on theme
@@ -53,34 +51,12 @@ export async function exportResumeToPDF(
   currentY = addEducationSection(doc, resume.education, colors, currentY);
   currentY = addCertificationsSection(doc, resume.certifications, colors, currentY);
 
-=======
-  doc && doc.setFillColor(colors && colors.background);
-  doc && doc.rect(0, 0, 210, 297, 'F'), // Fill entire page
-  
-  // Set text color based on theme
-  doc && doc.setTextColor(colors && colors.text);
-  
-  // Add each section of the resume
-  let currentY = addBasicInfoSection(doc, resume && resume.basic_info, colors);
-  currentY = addSkillsSection(doc, resume && resume.skills, colors, currentY);
-  currentY = addWorkExperienceSection(doc, resume && resume.work_experience, colors, currentY);
-  currentY = addEducationSection(doc, resume && resume.education, colors, currentY);
-  currentY = addCertificationsSection(doc, resume && resume.certifications, colors, currentY);
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Add portfolio projects if needed
   if (includePortfolio && resume && resume.portfolio_projects && resume && resume.portfolio_projects.length > 0) {
     currentY = addPortfolioSection(doc, resume && resume.portfolio_projects, colors, currentY, maxProjects)
   }
-<<<<<<< HEAD
   return doc.output('blob')
 }
-=======
-  
-  return doc && doc.output('blob')
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {Resume} from '@/types / resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf - autotable';
@@ -147,4 +123,3 @@ if ( {) {
   }
   return doc.output ('blob');
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

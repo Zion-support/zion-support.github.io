@@ -37,7 +37,7 @@ const testimonials = [;
     company: 'Mindful Wellness Center',;
     content: 'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.',;
     rating: 5,;
-    avatar: '👩‍⚕️';
+    avatar: '';
   },;
   {;
     name: 'Michael Rodriguez',;
@@ -45,7 +45,7 @@ const testimonials = [;
     company: 'InnovateTech Solutions',;
     content: 'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.',;
     rating: 5,;
-    avatar: '👨‍💼';
+    avatar: '';
   },;
   {;
     name: 'Dr. Emily Watson',;
@@ -53,7 +53,7 @@ const testimonials = [;
     company: 'Consciousness Research Institute',;
     content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.',;
     rating: 5,;
-    avatar: '👩‍🔬';
+    avatar: '';
   }
 ],
 

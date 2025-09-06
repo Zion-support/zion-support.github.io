@@ -373,9 +373,9 @@ export default function AiToolsPage() {_const _aiTools = [
                   Begin with one AI tool that addresses your most immediate need. Master it before adding more.
                 </p>
                 <ul className=&quot;space-y-2 text-sm text-gray-300&quot;>
-                  <li>• Choose based on your primary use case</li>
-                  <li>• Start with free tiers when available</li>
-                  <li>• Focus on one tool at a time</li>
+                  <li> Choose based on your primary use case</li>
+                  <li> Start with free tiers when available</li>
+                  <li> Focus on one tool at a time</li>
                 </ul>
               </div>
             </Card>
@@ -390,9 +390,9 @@ export default function AiToolsPage() {_const _aiTools = [
                   Follow proven strategies to get the most out of your AI tools and ensure quality output.
                 </p>
                 <ul className=&quot;space-y-2 text-sm text-gray-300&quot;>
-                  <li>• Always review and edit AI-generated content</li>
-                  <li>• Use specific, detailed prompts</li>
-                  <li>• Maintain human oversight and creativity</li>
+                  <li> Always review and edit AI-generated content</li>
+                  <li> Use specific, detailed prompts</li>
+                  <li> Maintain human oversight and creativity</li>
                 </ul>
               </div>
             </Card>

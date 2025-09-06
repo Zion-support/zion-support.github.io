@@ -4,7 +4,7 @@ export default function Placeholder() {
   return (
     <main className="min-h-screen p-8">
       <Head>
-        <title>Services • Landing-page-generator - Placeholder</title>
+        <title>Services  Landing-page-generator - Placeholder</title>
         <meta name="robots" content="noindex" />
       </Head>
       

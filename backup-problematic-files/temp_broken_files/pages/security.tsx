@@ -183,10 +183,10 @@ export default function Security() {;
                       Detection & Response;
                     </h4>;
                     <ul className="space-y-2 text-gray-300">;
-                      <li>• 24/7 security monitoring</li>;
-                      <li>• Automated threat detection</li>;
-                      <li>• Rapid incident response team</li>;
-                      <li>• Regular security drills</li>;
+                      <li> 24/7 security monitoring</li>;
+                      <li> Automated threat detection</li>;
+                      <li> Rapid incident response team</li>;
+                      <li> Regular security drills</li>;
                     </ul>;
                   </div>;
                   ;
@@ -196,10 +196,10 @@ export default function Security() {;
                       Business Continuity;
                     </h4>;
                     <ul className="space-y-2 text-gray-300">;
-                      <li>• Disaster recovery plans</li>;
-                      <li>• Regular backup testing</li>;
-                      <li>• Redundant infrastructure</li>;
-                      <li>• Recovery time objectives (RTO)</li>;
+                      <li> Disaster recovery plans</li>;
+                      <li> Regular backup testing</li>;
+                      <li> Redundant infrastructure</li>;
+                      <li> Recovery time objectives (RTO)</li>;
                     </ul>;
                   </div>;
                 </div>;
@@ -301,7 +301,7 @@ export default function Security() {;
 }<motion.div > <h3 className="text-3xl font-bold text-white mb-6 text-center" >Security Certifications & Compliance</h3> </motion.div>) ) 
 }</div> </motion.div> {
   /* Security Incident Response */ 
-}<motion.div > <h3 className="text-3xl font-bold text-white mb-6" >Incident Response</h3> <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10" > <div className="grid md:grid-cols-2 gap-8" > <div> <h4 className="text-white font-semibold mb-4 flex items-center" > <Eye className="w-5 h-5 text-cyan-400 mr-2" /> Detection & Response </h4> <ul className="space-y-2 text-gray-300" > <li>• 24/7 security monitoring</li> <li>• Automated threat detection</li> <li>• Rapid incident response team</li> <li>• Regular security drills</li> </ul> </div> <div> <h4 className="text-white font-semibold mb-4 flex items-center" > <Lock className="w-5 h-5 text-cyan-400 mr-2" /> Business Continuity </h4> <ul className="space-y-2 text-gray-300" > <li>• Disaster recovery plans</li> <li>• Regular backup testing</li> <li>• Redundant infrastructure</li> <li>• Recovery time objectives (RTO) </li> </ul> </div> </div> </div> </motion.div> {
+}<motion.div > <h3 className="text-3xl font-bold text-white mb-6" >Incident Response</h3> <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10" > <div className="grid md:grid-cols-2 gap-8" > <div> <h4 className="text-white font-semibold mb-4 flex items-center" > <Eye className="w-5 h-5 text-cyan-400 mr-2" /> Detection & Response </h4> <ul className="space-y-2 text-gray-300" > <li> 24/7 security monitoring</li> <li> Automated threat detection</li> <li> Rapid incident response team</li> <li> Regular security drills</li> </ul> </div> <div> <h4 className="text-white font-semibold mb-4 flex items-center" > <Lock className="w-5 h-5 text-cyan-400 mr-2" /> Business Continuity </h4> <ul className="space-y-2 text-gray-300" > <li> Disaster recovery plans</li> <li> Regular backup testing</li> <li> Redundant infrastructure</li> <li> Recovery time objectives (RTO) </li> </ul> </div> </div> </div> </motion.div> {
   /* Vulnerability Management */ 
 }<motion.div > <h3 className="text-3xl font-bold text-white mb-6" >Vulnerability Management</h3> <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10" > <p className="text-gray-300 leading-relaxed mb-6" > We maintain a proactive approach to identifying and addressing security vulnerabilities: </p> <div className="grid md:grid-cols-3 gap-6" > <div className="text-center" > <div className="w-16 h-16 bg-cyan-900/30 rounded-full flex items-center justify-center mx-auto mb-4" > <Eye className="w-8 h-8 text-cyan-400" /> </div> <h4 className="text-white font-semibold mb-2" >Regular Scanning</h4> <p className="text-gray-300 text-sm" >Continuous automated vulnerability scanning</p> </div> <div className="text-center" > <div className="w-16 h-16 bg-cyan-900/30 rounded-full flex items-center justify-center mx-auto mb-4" > <Shield className="w-8 h-8 text-cyan-400" /> </div> <h4 className="text-white font-semibold mb-2" >Penetration Testing</h4> <p className="text-gray-300 text-sm" >Annual third-party security assessments</p> </div> <div className="text-center" > <div className="w-16 h-16 bg-cyan-900/30 rounded-full flex items-center justify-center mx-auto mb-4" > <CheckCircle className="w-8 h-8 text-cyan-400" /> </div> <h4 className="text-white font-semibold mb-2" >Rapid Remediation</h4> <p className="text-gray-300 text-sm" >Quick patching and vulnerability resolution</p> </div> </div> </div> </motion.div> {
   /* Contact Security Team */ 

@@ -1,41 +1,20 @@
-<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 export default function CaseStudyPage() {
   const caseStudy = {
-<<<<<<< HEAD
     id: 'content-generation-scale'
     title: 'Scaling Content Generation 10x'
     company: 'Digital Marketing Agency'
     industry: 'Marketing'
     challenge: 'Unable to meet client demand for high-quality content at scale'
     solution: 'Deployed autonomous content generation systems with human oversight and quality control'
-=======
-    id: 'content-generation-scale',
-=======
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-export default /**
- * CaseStudyPage - Function description
- */
-function CaseStudyPage() {
-  const case_study = {
-    id: 'content - generation - scale',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     title: 'Scaling Content Generation 10x',
     company: 'Digital Marketing Agency',
     industry: 'Marketing',
-<<<<<<< HEAD
     challenge: 'Unable to meet client demand for high-quality content at scale',
-=======
-    challenge: 'Unable to meet client demand for high - quality content at scale',
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     solution: 'Deployed autonomous content generation systems with human oversight and quality control',
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     results: [
       '10x increase in content output85% improvement in engagement metrics70% reduction in content creation time95% client satisfaction rate'
     ]
@@ -43,14 +22,8 @@ function CaseStudyPage() {
     duration: '4 months'
     teamSize: '5 engineers + 3 content specialists'
     featured: false
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <>
@@ -65,7 +38,7 @@ function CaseStudyPage() {
             {/* Breadcrumb */}
             <nav className="mb-8">
               <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Case Studies
+                 Back to Case Studies
               </Link>
             </nav>
             {/* Header */}
@@ -115,7 +88,7 @@ function CaseStudyPage() {
                   <div key={index} className="bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
-                        <span className="text-yellow-900 font-bold text-sm">✓</span>
+                        <span className="text-yellow-900 font-bold text-sm"></span>
                       </div>
                       <span className="text-white/90 font-semibold">{result}</span>
                     </div>
@@ -152,14 +125,7 @@ function CaseStudyPage() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     results: [;
       '10x increase in content output85% improvement in engagement metrics70% reduction in content creation time95% client satisfaction rate';
     ],
@@ -181,7 +147,7 @@ function CaseStudyPage() {
             {/* Breadcrumb */}
             <nav className="mb - 8">;
               <Link href="/case - studies" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
-                ← Back to Case Studies;
+                 Back to Case Studies;
               </Link>;
             </nav>;
             {/* Header */}
@@ -230,7 +196,7 @@ function CaseStudyPage() {
                   <div key={index} className="bg - yellow - 500 / 10 rounded - lg p - 6 border border - yellow - 500 / 20">;
                     <div className="flex items - center gap - 3">;
                       <div className="w - 8 h - 8 bg - yellow - 400 rounded - full flex items - center justify - center">;
-                        <span className="text - yellow - 900 font - bold text - sm">✓</span>;
+                        <span className="text - yellow - 900 font - bold text - sm"></span>;
                       </div>;
                       <span className="text - white / 90 font - semibold">{result}</span>;
                     </div>;
@@ -266,5 +232,3 @@ function CaseStudyPage() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

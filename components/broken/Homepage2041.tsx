@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
@@ -27,38 +26,6 @@ import {
   ArrowRight;
   Star
 
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import Layout from './layout / Layout';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   ArrowRight,;
   Star,;
@@ -80,16 +47,8 @@ import {;
   Users,;
   Award,;
   Clock,;} from 'lucide-react';import { ;
-<<<<<<< HEAD
-=======
-=======
-import { 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ArrowRight;
   Star, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {
   ArrowRight,
   Star,
@@ -113,7 +72,6 @@ import {
   Clock,} from 'lucide-react';import {
   ArrowRight;
   Star,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Search;
   Shield;
   Globe;
@@ -131,40 +89,21 @@ import {
   Target;
   Users;
   Award;
-<<<<<<< HEAD
   Clock;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   Clock
-<<<<<<< HEAD
  } from 'lucide-react';
 import Link from 'next/link',
-=======
-  Clock;
-=======
-} from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Link from 'next/link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import { innovative2041MicroSaasServices  } from '../data/innovative-2041-micro-saas-services';
 import { innovative2041ITServices  } from '../data/innovative-2041-it-services';
 import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const Homepage2041: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
     if (searchQuery.trim()) {
-<<<<<<< HEAD
       window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`;      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`
     }
   }
@@ -184,7 +123,7 @@ const Homepage2041: React.FC = () => {
       company: 'FutureTech Inc.'
       content:
         "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago."
-      avatar: '👩‍💼'
+      avatar: ''
     }
     {
       name: 'Marcus Rodriguez'
@@ -193,7 +132,7 @@ const Homepage2041: React.FC = () => {
       content:
         "Their quantum bio-computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation."
       rating: 5
-      avatar: '👨‍💻'
+      avatar: ''
     }
     {
       name: 'Dr. Emily Watson'
@@ -202,7 +141,7 @@ const Homepage2041: React.FC = () => {
       content:
         "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency."
       rating: 5
-      avatar: '👩‍🔬'
+      avatar: ''
     }
   ];
   const stats = [
@@ -212,8 +151,6 @@ const Homepage2041: React.FC = () => {
     { number: '24/7', label: 'AI Operations', icon: Brain },  ];    { number: "500+", label: "Revolutionary Services", icon: Rocket }
     { number: "50+", label: "Quantum Solutions", icon: Atom }
     { number: "1000x", label: "Performance Boost", icon: Zap }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const Homepage2041: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -242,7 +179,7 @@ const Homepage2041: React.FC = () => {;
       company: 'FutureTech Inc.',;
       content:;
         "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.",;
-      avatar: '👩‍💼',;
+      avatar: '',;
     },;
     {;
       name: 'Marcus Rodriguez',;
@@ -251,7 +188,7 @@ const Homepage2041: React.FC = () => {;
       content:;
         "Their quantum bio-computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.",;
       rating: 5,;
-      avatar: '👨‍💻',;
+      avatar: '',;
     },;
     {;
       name: 'Dr. Emily Watson',;
@@ -260,7 +197,7 @@ const Homepage2041: React.FC = () => {;
       content:;
         "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.",;
       rating: 5,;
-      avatar: '👩‍🔬',;
+      avatar: '',;
     },;
   ];
 
@@ -271,90 +208,25 @@ const Homepage2041: React.FC = () => {;
     { number: '24/7', label: 'AI Operations', icon: Brain },  ];    { number: "500+", label: "Revolutionary Services", icon: Rocket },;
     { number: "50+", label: "Quantum Solutions", icon: Atom },;
     { number: "1000x", label: "Performance Boost", icon: Zap },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     { number: "24/7", label: "AI Operations", icon: Brain }
-<<<<<<< HEAD
-=======
-=======
-      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`
-    }
-  };
-
-  const featuredServices = [
-    ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3);
-    ...innovative2041ITServices.filter(s => s.popular).slice(0, 2);
-    ...innovative2041AIServices.filter(s => s.popular).slice(0, 1)
-=======
-  Clock;
-import Link from 'next / link';
-import UltraFuturisticServiceCard2026 from './ui / UltraFuturisticServiceCard2026';
-import { innovative2041MicroSaasServices } from '../data / innovative - 2041 - micro - saas - services';
-import { innovative2041ITServices } from '../data / innovative - 2041 - it - services';
-import { innovative2041AIServices } from '../data / innovative - 2041 - ai - services';
-const Homepage2041: React.FC = () => {
-  const [search_query, setSearchQuery] = useState ('');
-;
-  const handle_search = (e: React.FormEvent) =>: any {
-    e.prevent_default (),
-    if () {) {
-  $2
-}
-      window.location.href = `/services?search=${encodeURIComponent (search_query.trim ())}`;      window.location.href = `/services?search=${encodeURIComponent (search_query.trim ())}`;
-    }
-  }
-;
-  const featured_services = [;
-    ...innovative2041MicroSaasServices.filter (string => s.popular).slice (0, 3),
-    ...innovative2041ITServices.filter (string => s.popular).slice (0, 2),
-    ...innovative2041AIServices.filter (string => s.popular).slice (0, 1),  ];
-;
-  const testimonials = [;
-    {    ...innovative2041MicroSaasServices.filter (string => s.popular).slice (0, 3);
-    ...innovative2041ITServices.filter (string => s.popular).slice (0, 2);
-    ...innovative2041AIServices.filter (string => s.popular).slice (0, 1);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   const testimonials = [;
     {
-<<<<<<< HEAD
       name: "Dr. Sarah Chen",
       role: "Chief AI Officer, FutureTech Inc.";
       company: "FutureTech Inc.",
       content: "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.",
-=======
-      name: 'Dr. Sarah Chen',
-      role: 'Chief AI Officer, FutureTech Inc.',
-      company: 'FutureTech Inc.',
-      content:;
-        "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.",
-      avatar: '👩‍💼',
-    },
-    {
-      name: 'Marcus Rodriguez',
-      role: 'VP Quantum Computing, QuantumCorp',
-      company: 'QuantumCorp',
-      content:;
-        "Their quantum bio - computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       rating: 5,
-      avatar: "👩‍💼"
+      avatar: ""
     };
     {
-<<<<<<< HEAD
       name: "Marcus Rodriguez",
       role: "VP Quantum Computing, QuantumCorp";
       company: "QuantumCorp",
       content: "Their quantum bio-computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.",
-=======
-      name: 'Dr. Emily Watson',
-      role: 'Research Director, SpaceLabs',
-      company: 'SpaceLabs',
-      content:;
-        "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       rating: 5,
-      avatar: "👨‍💻"
+      avatar: ""
     };
     {
       name: "Dr. Emily Watson",
@@ -362,10 +234,9 @@ const Homepage2041: React.FC = () => {
       company: "SpaceLabs",
       content: "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.",
       rating: 5,
-      avatar: "👩‍🔬"
+      avatar: ""
     }
   ];
-<<<<<<< HEAD
 
   const stats = [
     { number: "500+", label: "Revolutionary Services", icon: Rocket },
@@ -373,38 +244,23 @@ const Homepage2041: React.FC = () => {
     { number: "1000x", label: "Performance Boost", icon: Zap },
     { number: "24/7", label: "AI Operations", icon: Brain }
   ];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <Layout>;
       {/* Main Content */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <main className='relative z-10'>;
         <section
           className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'
           aria-labelledby='hero-heading'>;
           {/* Optimized Background Elements */}
-<<<<<<< HEAD
           <div className='absolute inset-0 -z-10'>
             <div className='absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
             <div className='absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
             <div className='absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>
-=======
-          <div className='absolute inset-0 -z-10'>;
-            <div className='absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>;
-            <div className='absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
-            <div className='absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Enhanced particle system */}
             <div className='absolute inset-0'>;
               {[...Array(12)].map((_, i) => (;
                 <motion&& motion.div
-=======
 ;
   const stats = [;
     { number: '500+', label: 'Revolutionary Services', icon: Rocket },
@@ -431,12 +287,9 @@ const Homepage2041: React.FC = () => {
             <div className='absolute inset - 0'>;
               {[...Array (12)].map ((_, i) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={i}
                   className='absolute w - 2 h - 2 bg - cyan - 400 / 40 rounded - full';
                   animate={{
-<<<<<<< HEAD
-<<<<<<< HEAD
                     x: [0, 60, 0]
                     y: [0, -60, 0]
                     opacity: [0, 0.7, 0]
@@ -446,17 +299,6 @@ const Homepage2041: React.FC = () => {
                     repeat: Infinity
                     delay: i * 0.2,                    x: [0, 60, 0];
                     y: [0, -60, 0];
-=======
-                    coordinate_x: [0, 60, 0],
-                    coordinate_y: [0, -60, 0],
-                    opacity: [0, 0.7, 0],
-                    scale: [0.5, 1, 0.5],
-                  }}                  transition={{
-                    duration: 5 + i * 0.3,
-                    repeat: Infinity,
-                    delay: i * 0.2,                    coordinate_x: [0, 60, 0];
-                    coordinate_y: [0, -60, 0];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     opacity: [0, 0.7, 0];
                     scale: [0.5, 1, 0.5]}}
                     duration: 5 + i * 0.3
@@ -465,69 +307,13 @@ const Homepage2041: React.FC = () => {
                     ease: 'easeInOut'
                   }}
                   style={{
-<<<<<<< HEAD
-=======
-                    left: `${Math.random() * 100}%`
-                    top: `${Math.random() * 100}%`
-                  }}                />                    ease: "easeInOut"
-=======
-      <main className="relative z-10">
-        {/* Hero Section */}
-        <section 
-          className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden"
-          aria-labelledby="hero-heading"
-        >
-          {/* Optimized Background Elements */}
-          <div className="absolute inset-0 -z-10">
-            <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
-            
-            {/* Enhanced particle system */}
-            <div className="absolute inset-0">
-              {[...Array(12)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-2 h-2 bg-cyan-400/40 rounded-full"
-                  animate={{
-                    x: [0, 60, 0];
-                    y: [0, -60, 0];
-                    opacity: [0, 0.7, 0];
-                    scale: [0.5, 1, 0.5]}}
-                  transition={{
-                    duration: 5 + i * 0.3,
-                    repeat: Infinity,
-                    delay: i * 0.2,
-                    ease: "easeInOut"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   }}
                   style={{
-<<<<<<< HEAD
                     left: `${Math.random() * 100}%`
                     top: `${Math.random() * 100}%`}}
-<<<<<<< HEAD
               ))}
             </div>
           </div>
-=======
-                    x: [0, 60, 0],
-                    y: [0, -60, 0],
-                    opacity: [0, 0 && 0.7, 0],
-                    scale: [0 && 0.5, 1, 0 && 0.5],
-                  }}                  transition={{
-                    duration: 5 + i * 0 && 0.3,
-                    repeat: Infinity,
-                    delay: i * 0 && 0.2,                    x: [0, 60, 0]
-                    y: [0, -60, 0]
-                    opacity: [0, 0 && 0.7, 0]
-                    scale: [0 && 0.5, 1, 0 && 0.5]}}
-                    duration: 5 + i * 0 && 0.3,
-                    repeat: Infinity,
-                    delay: i * 0 && 0.2,
-                    ease: 'easeInOut',
-                  }}
-                  style={{
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     left: `${Math && Math.random() * 100}%`,
                     top: `${Math && Math.random() * 100}%`,
                   }}                />                    ease: "easeInOut";
@@ -539,7 +325,6 @@ const Homepage2041: React.FC = () => {
             </div>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Hero Content */}
           <div className='text-center max-w-7xl mx-auto relative z-10'>            <motion && motion.div          <div className="text-center max-w-7xl mx-auto relative z-10">;
             <motion&& motion.div
@@ -548,7 +333,6 @@ const Homepage2041: React.FC = () => {
               transition={{ duration: 0 && 0.8 }}>;
               <h1
                 id='hero-heading'
-<<<<<<< HEAD
                 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight'
               >
                 <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
@@ -562,45 +346,11 @@ const Homepage2041: React.FC = () => {
                 2041 services. From AI consciousness evolution to quantum space
                 mining, we're redefining what's possible.
               </p>
-=======
-                className='text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight'>;
-                <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>;
-                  2041;
-                </span>;
-                <br />;
-                <span className='text-white'>Future is Now</span>;
-              </h1>;
-
-              <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed'>;
-                Experience the revolution of technology with our cutting-edge;
-                2041 services. From AI consciousness evolution to quantum space;
-                mining, we're redefining what's possible.;
-              </p>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Search Bar */}
               <motion&& motion.div
                 className='max-w-3xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.2 }}
-=======
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Hero Content */}
-          <div className="text-center max-w-7xl mx-auto relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 
-                id="hero-heading"
-                className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               >
                 <form onSubmit={handleSearch} className='relative'>              >
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -617,7 +367,6 @@ const Homepage2041: React.FC = () => {
               </p>
               {/* Search Bar */}
               <motion.div
-=======
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
                 <form onSubmit={handleSearch} className='relative'>              >;
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
@@ -636,14 +385,9 @@ const Homepage2041: React.FC = () => {
 
               {/* Search Bar */}
               <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="max-w-3xl mx-auto mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
                 <form onSubmit={handleSearch} className='relative'>;
                   <input
@@ -656,15 +400,6 @@ const Homepage2041: React.FC = () => {
                   <button
                     type='submit'
                     className='absolute right-3 top-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold'>                  <input
-<<<<<<< HEAD
-=======
-=======
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                <form onSubmit={handleSearch} className="relative">
-                  <input
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     type="text"
                     placeholder="Search revolutionary 2041 services..."
                     value={searchQuery}
@@ -673,9 +408,6 @@ const Homepage2041: React.FC = () => {
                   />;
                   <button
                     type="submit"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                     className="absolute right-3 top-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold"
                   >
                     Explore Future
@@ -685,8 +417,6 @@ const Homepage2041: React.FC = () => {
               {/* CTA Buttons */}
               <motion.div
                 className='flex flex-col sm:flex-row gap-6 justify-center items-center'                initial={{ opacity: 0, y: 20 }}              <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     className="absolute right-3 top-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold">;
                     Explore Future;
                   </button>;
@@ -694,27 +424,15 @@ const Homepage2041: React.FC = () => {
               </motion && motion.div>;
 
               {/* CTA Buttons */}
-<<<<<<< HEAD
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-6 justify-center items-center'                initial={{ opacity: 0, y: 20 }}              <motion && motion.div 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
               <motion.div 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                 <Link
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   href='/2041-futuristic-services-showcase'
-<<<<<<< HEAD
                   className='px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3'
                 >
                   <Rocket className='w-6 h-6' />
@@ -726,11 +444,6 @@ const Homepage2041: React.FC = () => {
                   className='px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3'
                 >
                   <Users className='w-6 h-6' />                  Start Your Journey                >
-=======
-                  href="/2041-futuristic-services-showcase"
-                  className="px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3"
-                >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <Rocket className="w-6 h-6" />
                   Explore 2041 Services
                   <ArrowRight className="w-5 h-5" />
@@ -747,48 +460,12 @@ const Homepage2041: React.FC = () => {
           </div>
         </section>
         {/* Stats Section */}
-<<<<<<< HEAD
         <section className='py-20 px-4'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
               className='grid grid-cols-2 md:grid-cols-4 gap-8'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-=======
-                  className='px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3'>;
-                  <Rocket className='w-6 h-6' />;
-                  Explore 2041 Services;
-                  <ArrowRight className='w-5 h-5' />;
-                </Link>;
-
-                <Link
-                  href='/contact'
-                  className='px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3'>;
-                  <Users className='w-6 h-6' />                  Start Your Journey                >;
-                  <Rocket className="w-6 h-6" />;
-                  Explore 2041 Services;
-                  <ArrowRight className="w-5 h-5" />;
-                </Link>;
-
-                <Link
-                  href="/contact"
-                  className="px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3">;
-                  <Users className="w-6 h-6" />;
-                  Start Your Journey;
-                </Link>;
-              </motion && motion.div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-        {/* Stats Section */}
-        <section className='py-20 px-4'>;
-          <div className='max-w-7xl mx-auto'>;
-            <motion&& motion.div
-              className='grid grid-cols-2 md:grid-cols-4 gap-8'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className="grid grid-cols-2 md:grid-cols-4 gap-8"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -812,152 +489,12 @@ const Homepage2041: React.FC = () => {
                   </div>;
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat && stat.number}</div>;
                   <div className="text-gray-400">{stat && stat.label}</div>;
-<<<<<<< HEAD
-=======
-=======
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-4 gap-8"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-=======
-                    left: `${Math.random () * 100}%`,
-                    top: `${Math.random () * 100}%`,
-                  }}                />                    ease: "easeInOut";
-                  }}
-                  style={{
-                    left: `${Math.random () * 100}%`,
-                    top: `${Math.random () * 100}%`}}
-              ))}
-            </div>;
-          </div>;
-          {/* Hero Content */}
-          <div className='text - center max - w-7xl mx - auto relative z - 10'>            <motion.div          <div className="text - center max - w-7xl mx - auto relative z - 10">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 50 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-            >;
-              <h1;
-                id='hero - heading';
-                className='text - 6xl md:text - 8xl lg:text - 9xl font - bold mb - 8 leading - tight';
-              >;
-                <span className='bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent'>;
-                  2041;
-                </span>;
-                <br />;
-                <span className='text - white'>Future is Now</span>;
-              </h1>;
-              <p className='text - xl md:text - 2xl lg:text - 3xl text - gray - 300 mb - 12 max - w-5xl mx - auto leading - relaxed'>;
-                Experience the revolution of technology with our cutting - edge;
-                2041 services. From AI consciousness evolution to quantum space;
-                mining, we're redefining what's possible.;
-              </p>;
-              {/* Search Bar */}
-              <motion.div;
-                className='max - w-3xl mx - auto mb - 12'                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >;
-                <form on_submit={handle_search} className='relative'>              >;
-                <span className="bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">;
-                  2041;
-                </span>;
-                <br />;
-                <span className="text - white">;
-                  Future is Now;
-                </span>;
-              </h1>;
-              <p className="text - xl md:text - 2xl lg:text - 3xl text - gray - 300 mb - 12 max - w-5xl mx - auto leading - relaxed">;
-                Experience the revolution of technology with our cutting - edge 2041 services.;
-                From AI consciousness evolution to quantum space mining, we're redefining what's possible.;
-              </p>;
-              {/* Search Bar */}
-              <motion.div;
-                className="max - w-3xl mx - auto mb - 12";
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >;
-                <form on_submit={handle_search} className='relative'>;
-                  <input;
-                    type='text';
-                    placeholder='Search revolutionary 2041 services...';
-                    value={search_query}
-                    on_change={e => setSearchQuery (e.target.value)}
-                    className='w - full px - 8 py - 6 bg - black / 50 border border - cyan - 500 / 50 rounded - 3xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 4 focus:ring - cyan - 500 / 30 focus:border - transparent backdrop - blur - sm text - lg';
-                  />;
-                  <button;
-                    type='submit';
-                    className='absolute right - 3 top - 3 px - 8 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - 2xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 font - semibold'                  >                  <input;
-                    type="text";
-                    placeholder="Search revolutionary 2041 services...";
-                    value={search_query}
-                    on_change={(e) => setSearchQuery (e.target.value)}
-                    className="w - full px - 8 py - 6 bg - black / 50 border border - cyan - 500 / 50 rounded - 3xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 4 focus:ring - cyan - 500 / 30 focus:border - transparent backdrop - blur - sm text - lg";
-                  />;
-                  <button;
-                    type="submit";
-                    className="absolute right - 3 top - 3 px - 8 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - 2xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 font - semibold";
-                  >;
-                    Explore Future;
-                  </button>;
-                </form>;
-              </motion.div>;
-              {/* CTA Buttons */}
-              <motion.div;
-                className='flex flex - col sm:flex - row gap - 6 justify - center items - center'                initial={{ opacity: 0, coordinate_y: 20 }}              <motion.div;
-                className="flex flex - col sm:flex - row gap - 6 justify - center items - center";
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >;
-                <Link;
-                  href='/2041 - futuristic - services - showcase';
-                  className='px - 10 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - 2xl font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 flex items - center gap - 3';
-                >;
-                  <Rocket className='w - 6 h - 6' />;
-                  Explore 2041 Services;
-                  <ArrowRight className='w - 5 h - 5' />;
-                </Link>;
-                <Link;
-                  href='/contact';
-                  className='px - 10 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 rounded - 2xl font - semibold hover:bg - cyan - 500 / 10 transition - all duration - 300 flex items - center gap - 3';
-                >;
-                  <Users className='w - 6 h - 6' />                  Start Your Journey                >;
-                  <Rocket className="w - 6 h - 6" />;
-                  Explore 2041 Services;
-                  <ArrowRight className="w - 5 h - 5" />;
-                </Link>;
-                <Link;
-                  href="/contact";
-                  className="px - 10 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 rounded - 2xl font - semibold hover:bg - cyan - 500 / 10 transition - all duration - 300 flex items - center gap - 3";
-                >;
-                  <Users className="w - 6 h - 6" />;
-                  Start Your Journey;
-                </Link>;
-              </motion.div>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Stats Section */}
-        <section className='py - 20 px - 4'>;
-          <div className='max - w-7xl mx - auto'>;
-            <motion.div;
-              className='grid grid - cols - 2 md:grid - cols - 4 gap - 8'              initial={{ opacity: 0, coordinate_y: 30 }}        <section className="py - 20 px - 4">;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-              className="grid grid - cols - 2 md:grid - cols - 4 gap - 8";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >;
               {stats.map ((stat, index) => (
                 <motion.div;
                   key={stat.label}
-<<<<<<< HEAD
                   className="text-center"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -970,34 +507,22 @@ const Homepage2041: React.FC = () => {
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-400">{stat.label}</div>
                 </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
-<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
         {/* Featured Services Section */}
-<<<<<<< HEAD
         <section className='py-20 px-4 bg-gradient-to-b from-black to-gray-900/50'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50">
-=======
-        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-<<<<<<< HEAD
-=======
-              initial={{ opacity: 0, y: 30 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
               <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
                 Revolutionary 2041 Services
               </h2>
@@ -1009,17 +534,12 @@ const Homepage2041: React.FC = () => {
             </motion.div>
             <motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Revolutionary 2041 Services
-=======
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Revolutionary 2041 Services
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible.
               </p>
             </motion.div>
             <motion.div
-=======
             </motion && motion.div>;
           </div>;
         </section>;
@@ -1054,7 +574,6 @@ const Homepage2041: React.FC = () => {
             </motion && motion.div>;
 
             <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1070,47 +589,24 @@ const Homepage2041: React.FC = () => {
                   <UltraFuturisticServiceCard2026 service={service} />;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </motion.div>
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div
-=======
-            </motion && motion.div>;
-
-            <motion&& motion.div
-              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion && motion.div 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
             </motion.div>
 
             <motion.div 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="text-center mt-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
               viewport={{ once: true }}>;
               <Link
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 href='/2041-futuristic-services-showcase'
-<<<<<<< HEAD
                 className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'
               >
                 <Eye className='w-5 h-5' />
                 View All 2041 Services
                 <ArrowRight className='w-5 h-5' />              </Link>              >
-=======
-                href="/2041-futuristic-services-showcase"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <Eye className="w-5 h-5" />
                 View All 2041 Services
                 <ArrowRight className="w-5 h-5" />
@@ -1119,26 +615,17 @@ const Homepage2041: React.FC = () => {
           </div>
         </section>
         {/* Testimonials Section */}
-<<<<<<< HEAD
         <section className='py-20 px-4'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">
-=======
-        <section className="py-20 px-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-<<<<<<< HEAD
-=======
-              initial={{ opacity: 0, y: 30 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
               <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
                 Leading the Future
               </h2>
@@ -1149,17 +636,12 @@ const Homepage2041: React.FC = () => {
             </motion.div>
             <motion.div
               className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Leading the Future
-=======
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Leading the Future
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 See how industry leaders are transforming their businesses with our revolutionary 2041 services.
               </p>
             </motion.div>
             <motion.div
-=======
                 className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'>;
                 <Eye className='w-5 h-5' />;
                 View All 2041 Services;
@@ -1201,14 +683,9 @@ const Homepage2041: React.FC = () => {
             </motion && motion.div>;
 
             <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}>;
               {testimonials && testimonials.map((testimonial, index) => (;
@@ -1245,137 +722,12 @@ const Homepage2041: React.FC = () => {
                   <div className="text-cyan-400">{testimonial && testimonial.role}</div>;
                   <div className="text-gray-500 text-sm">{testimonial && testimonial.company}</div>;
                 </motion && motion.div>;
-<<<<<<< HEAD
-=======
-=======
-=======
-                  className='text - center'                  initial={{ opacity: 0, coordinate_y: 20 }}                  className="text - center";
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >;
-                  <div className='w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
-                    <stat.icon className='w - 8 h - 8 text - white' />;
-                  </div>;
-                  <div className='text - 3xl md:text - 4xl font - bold text - white mb - 2'>;
-                    {stat.number}
-                  </div>;
-                  <div className='text - gray - 400'>{stat.label}</div>                </motion.div>                  <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                    <stat.icon className="w - 8 h - 8 text - white" />;
-                  </div>;
-                  <div className="text - 3xl md:text - 4xl font - bold text - white mb - 2">{stat.number}</div>;
-                  <div className="text - gray - 400">{stat.label}</div>))}
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Featured Services Section */}
-        <section className='py - 20 px - 4 bg - gradient - to - b from - black to - gray - 900 / 50'>;
-          <div className='max - w-7xl mx - auto'>;
-            <motion.div;
-              className='text - center mb - 16'              initial={{ opacity: 0, coordinate_y: 30 }}        <section className="py - 20 px - 4 bg - gradient - to - b from - black to - gray - 900 / 50">;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-              className="text - center mb - 16";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className='text - 5xl md:text - 6xl font - bold text - white mb - 6'>;
-                Revolutionary 2041 Services;
-              </h2>;
-              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-                Experience the future of technology with our cutting - edge;
-                services that are redefining industries and pushing the;
-                boundaries of what's possible.;
-              </p>;
-            </motion.div>;
-            <motion.div;
-              className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'              initial={{ opacity: 0, coordinate_y: 30 }}                Revolutionary 2041 Services;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Experience the future of technology with our cutting - edge services that are redefining industries and pushing the boundaries of what's possible.;
-              </p>;
-            </motion.div>;
-            <motion.div;
-              className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >;
-              {featured_services.map ((service, index) => (
-                <motion.div;
-                  key={service.id}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  viewport={{ once: true }}
-                >;
-                  <UltraFuturisticServiceCard2026 service={service} />;
-                </motion.div>))}
-            </motion.div>;
-            <motion.div;
-              className='text - center mt - 12'              initial={{ opacity: 0, coordinate_y: 20 }}            <motion.div;
-              className="text - center mt - 12";
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true }}
-            >;
-              <Link;
-                href='/2041 - futuristic - services - showcase';
-                className='inline - flex items - center gap - 3 px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 600 text - white rounded - 2xl font - semibold hover:from - purple - 600 hover:to - pink - 700 transition - all duration - 300 transform hover:scale - 105';
-              >;
-                <Eye className='w - 5 h - 5' />;
-                View All 2041 Services;
-                <ArrowRight className='w - 5 h - 5' />              </Link>              >;
-                <Eye className="w - 5 h - 5" />;
-                View All 2041 Services;
-                <ArrowRight className="w - 5 h - 5" />;
-              </Link>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Testimonials Section */}
-        <section className='py - 20 px - 4'>;
-          <div className='max - w-7xl mx - auto'>;
-            <motion.div;
-              className='text - center mb - 16'              initial={{ opacity: 0, coordinate_y: 30 }}        <section className="py - 20 px - 4">;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-              className="text - center mb - 16";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className='text - 5xl md:text - 6xl font - bold text - white mb - 6'>;
-                Leading the Future;
-              </h2>;
-              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-                See how industry leaders are transforming their businesses with;
-                our revolutionary 2041 services.;
-              </p>;
-            </motion.div>;
-            <motion.div;
-              className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'              initial={{ opacity: 0, coordinate_y: 30 }}                Leading the Future;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                See how industry leaders are transforming their businesses with our revolutionary 2041 services.;
-              </p>;
-            </motion.div>;
-            <motion.div;
-              className="grid grid - cols - 1 md:grid - cols - 3 gap - 8";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >;
               {testimonials.map ((testimonial, index) => (
                 <motion.div;
                   key={testimonial.name}
-<<<<<<< HEAD
                   className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1393,25 +745,17 @@ const Homepage2041: React.FC = () => {
                   <div className="text-cyan-400">{testimonial.role}</div>
                   <div className="text-gray-500 text-sm">{testimonial.company}</div>
                 </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
-<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className='py-20 px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
               className='bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">
-=======
-        <section className="py-20 px-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-=======
             </motion && motion.div>;
           </div>;
         </section>;
@@ -1423,9 +767,7 @@ const Homepage2041: React.FC = () => {
               className='bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className="bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm"
-<<<<<<< HEAD
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -1446,26 +788,15 @@ const Homepage2041: React.FC = () => {
                 </Link>;
                 <Link
                   href='/2041-futuristic-services-showcase'
-<<<<<<< HEAD
                   className='px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3'
                 >
                   <Target className='w-6 h-6' />                  Explore Services                Ready to Shape the Future?
-=======
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-                Ready to Shape the Future?
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </h2>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
                 Join the technological revolution with our cutting-edge 2041 services.
                 Transform your business, accelerate innovation, and lead the future of technology.
               </p>
               <div className="flex flex-col sm: flex-row gap-6 justify-center">
-=======
                   className='px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3'>;
                   <Target className='w-6 h-6' />                  Explore Services                Ready to Shape the Future?;
               </h2>;
@@ -1474,10 +805,6 @@ const Homepage2041: React.FC = () => {
                 Transform your business, accelerate innovation, and lead the future of technology.;
               </p>;
               <div className="flex flex-col sm: flex-row gap-6 justify-center">;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <Link
                   href="/contact"
                   className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3">;
@@ -1486,10 +813,6 @@ const Homepage2041: React.FC = () => {
                 </Link>;
                 <Link
                   href="/2041-futuristic-services-showcase"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3">;
                   <Target className="w-6 h-6" />;
                   Explore Services;
@@ -1501,7 +824,6 @@ const Homepage2041: React.FC = () => {
       </main>;
     </Layout>;
   );
-<<<<<<< HEAD
 }
 Math.random () * 100
 }%`;
@@ -1510,18 +832,6 @@ top: `$ {
 }%`
 }/>) )
 }</div> </div> <motion.div initial= {
-=======
-};
-
-  Math && Math.random () * 100 ;
-}%`;
-top: `$ {;
-  Math && Math.random () * 100 ;
-}%` ;
-
-}/>) ) ;
-}</div> </div> <motion&& motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
   opacity: 0, y: 50
 }animate= {
@@ -1529,7 +839,6 @@ top: `$ {;
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
   duration: 0.8
 }> <h1 id="hero-heading" className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" > 2041 </span> <br /> <span className="text-white" > Future is Now </span> </h1> <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed" > Experience the revolution of technology with our cutting-edge 2041 services. From AI consciousness evolution to quantum space mining, we're redefining what's possible. </p> {
   /* Search Bar */
@@ -1542,21 +851,6 @@ top: `$ {;
 }</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-6" > Revolutionary 2041 Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible. </p> </motion.div> <motion.div > {
   featuredServices.map ( (service, index) => (<motion.div key= {
   service.id
-=======
-  duration: 0 && 0.8 
-
-}> <h1 id="hero-heading" className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" > 2041 </span> <br /> <span className="text-white" > Future is Now </span> </h1> <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed" > Experience the revolution of technology with our cutting-edge 2041 services. From AI consciousness evolution to quantum space mining, we're redefining what's possible. </p> {;
-  /* Search Bar */ ;
-}<motion && motion.div /> <button type="submit" className="absolute right-3 top-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold" > Explore Future </button> </form> </motion && motion.div> {;
-  /* CTA Buttons */ ;
-}<motion && motion.div > <Link href="/2041-futuristic-services-showcase" className="px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3" > <Rocket className="w-6 h-6" /> Explore 2041 Services <ArrowRight className="w-5 h-5" /> </a> <Link href="/contact" className="px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3" > <Users className="w-6 h-6" /> Start Your Journey </a> </motion && motion.div> </motion && motion.div> </div> </section> > {;
-  stats && stats.map ( (stat, index) => (<motion&& motion.div key= {
-  stat && stat.label 
-}> <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat && stat.icon className="w-8 h-8 text-white" /> </div> </motion && motion.div>) ) ;
-}</motion && motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-6" > Revolutionary 2041 Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible. </p> </motion && motion.div> <motion && motion.div > {;
-  featuredServices && featuredServices.map ( (service, index) => (<motion&& motion.div key= {
-  service && service.id 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }initial= {
   {
   opacity: 0, y: 30
@@ -1565,7 +859,6 @@ top: `$ {;
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
   duration: 0.5, delay: 0.4 + index * 0.1
 }viewport= {
   {
@@ -1581,49 +874,10 @@ top: `$ {;
 }
 export default Homepage2041;  )
 }
-=======
-  duration: 0 && 0.5, delay: 0 && 0.4 + index * 0 && 0.1 
-
-}viewport= {
-  {
-  once: true 
-
-}> <UltraFuturisticServiceCard2026service= {
-  service 
-}/> </motion && motion.div>) ) ;
-}</motion && motion.div> <motion && motion.div > <Link href="/2041-futuristic-services-showcase" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105" > <Eye className="w-5 h-5" /> View All 2041 Services <ArrowRight className="w-5 h-5" /> </a> </motion && motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-6" > Leading the Future </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > See how industry leaders are transforming their businesses with our revolutionary 2041 services. </p> </motion && motion.div> <motion && motion.div > {;
-  testimonials && testimonials.map ( (testimonial, index) => (<motion&& motion.div key= {
-  testimonial && testimonial.name 
-}</motion && motion.div>) ) ;
-}</motion && motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion && motion.div> </div> </section> </main> </Layout>) ;
-};
-export default Homepage2041;  );
-<<<<<<< HEAD
-=======
-=======
-                  className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3"
-                >
-                  <Target className="w-6 h-6" />
-                  Explore Services
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
-    </Layout>
-  )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Homepage2041;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   className='bg - gradient - to - br from - gray - 900 / 50 to - black / 50 border border - cyan - 500 / 30 rounded - 3xl p - 8 backdrop - blur - sm'                  initial={{ opacity: 0, coordinate_y: 30 }}                  className="bg - gradient - to - br from - gray - 900 / 50 to - black / 50 border border - cyan - 500 / 30 rounded - 3xl p - 8 backdrop - blur - sm";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1770,4 +1024,3 @@ export default Homepage2041);
 ;
 export default Homepage2041;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,19 +1,13 @@
-<<<<<<< HEAD
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FilePlus } from 'lucide-react';
 import { EmptyResumeProps } from './types';
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { FilePlus } from 'lucide-react'
 import { EmptyResumeProps } from './types'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {  return (
-<<<<<<< HEAD
     <Card className='w-full max-w-2xl mx-auto'>
       <CardContent className='py-8'>
         <div className='text-center'>
@@ -23,15 +17,6 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {  retu
           </p>
           <Button onClick={onCreateClick} className='gap-2'>
             <FilePlus className='h-4 w-4' />            Create Resume    <Card className="w-full max-w-2xl mx-auto">
-=======
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FilePlus } from 'lucide-react'
-import { EmptyResumeProps } from "./types";
-export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
-  return (
-    <Card className="w-full max-w-2xl mx-auto">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <CardContent className="py-8">
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-2">Create Your Resume</h2>
@@ -41,62 +26,23 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
             className="gap-2"
           >
             <FilePlus className="h-4 w-4" />
-<<<<<<< HEAD
-=======
-            Create Resume
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </Button>
         </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 }
 "}
   )
 }
 
-=======
-    <Card className='w-full max-w-2xl mx-auto'>;
-      <CardContent className='py-8'>;
-        <div className='text-center'>;
-          <h2 className='text-2xl font-bold mb-2'>Create Your Resume</h2>;
-          <p className='text-muted-foreground mb-6'>;
-            Create a professional resume to showcase your skills and experience;
-          </p>;
-          <Button onClick={onCreateClick} className='gap-2'>;
-            <FilePlus className='h-4 w-4' />            Create Resume    <Card className="w-full max-w-2xl mx-auto">;
-      <CardContent className="py-8">;
-        <div className="text-center">;
-          <h2 className="text-2xl font-bold mb-2">Create Your Resume</h2>;
-          <p className="text-muted-foreground mb-6">Create a professional resume to showcase your skills and experience</p>;
-          <Button
-            onClick = {onCreateClick,}
-            className="gap-2">;
-            <FilePlus className="h-4 w-4" />;
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-};
-"},;
-<<<<<<< HEAD
 
   );
 };
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   );
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { FilePlus } from 'lucide-react';
@@ -128,5 +74,3 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any { 
 "},
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

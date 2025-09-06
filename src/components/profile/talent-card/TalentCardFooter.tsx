@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -60,8 +55,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       onViewProfile(profile.id |'')
     }
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import { useRouter } from 'next/router';
 interface TalentCardFooterProps {;
@@ -117,7 +110,6 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
       onViewProfile(profile && profile.id || '');
     }
   },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
@@ -135,7 +127,6 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
               <span className="text-zion-slate-light">{profile && profile.years_experience} years exp.</span>;
             </div>;
           )}
-<<<<<<< HEAD
         </div>
         {/* Action Buttons */}
         <div className="flex gap-2">
@@ -158,54 +149,17 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
           </Button>
         </div>
       </div>
-=======
-        </div>;
-
-        {/* Action Buttons */}
-        <div className="flex gap-2">;
-          <Button
-            variant="default" 
-            size="sm" 
-            onClick = {handleRequestHire,}
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
-            Hire;
-          </Button>;
-
-          <Button
-            variant="outline" 
-            size="sm" 
-            onClick = {handleViewProfile,}
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
-            View;
-            <ExternalLink className="h-3 w-3 ml-1" />;
-          </Button>;
-        </div>;
-      </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Hire Request Modal */}
       <HireRequestModal
         talent = {profile,}
         isOpen = {isHireModalOpen,}
         onClose = {() => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
-<<<<<<< HEAD
       />
     </>
   )
 }
-=======
-      />;
-    </>;
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { use_router } from 'next / router';
 interface TalentCardFooterProps {
   profile: TalentProfile,
@@ -306,5 +260,3 @@ if ( {) {
       />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -58,10 +58,10 @@ const AIEvaluationOrchestrator: React.FC = () => {
               Coordinate and manage complex AI evaluation workflows across multiple models and datasets.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Workflow automation</li>
-              <li>• Parallel testing</li>
-              <li>• Resource management</li>
-              <li>• Progress tracking</li>
+              <li> Workflow automation</li>
+              <li> Parallel testing</li>
+              <li> Resource management</li>
+              <li> Progress tracking</li>
             </ul>
           </div>
 
@@ -71,10 +71,10 @@ const AIEvaluationOrchestrator: React.FC = () => {
               Analyze evaluation results and generate comprehensive reports with insights.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Performance comparison</li>
-              <li>• Statistical analysis</li>
-              <li>• Visualization tools</li>
-              <li>• Report generation</li>
+              <li> Performance comparison</li>
+              <li> Statistical analysis</li>
+              <li> Visualization tools</li>
+              <li> Report generation</li>
             </ul>
           </div>
 
@@ -84,10 +84,10 @@ const AIEvaluationOrchestrator: React.FC = () => {
               Ensure evaluation quality and consistency across all testing scenarios.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Quality checks</li>
-              <li>• Validation rules</li>
-              <li>• Error handling</li>
-              <li>• Compliance monitoring</li>
+              <li> Quality checks</li>
+              <li> Validation rules</li>
+              <li> Error handling</li>
+              <li> Compliance monitoring</li>
             </ul>
           </div>
         </div>

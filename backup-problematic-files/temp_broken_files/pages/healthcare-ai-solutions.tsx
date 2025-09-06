@@ -9,8 +9,8 @@ export default function HealthcareAISolutions() {;
 			description="Deploy AI for diagnostics assistance, care management, operational optimization, and compliance workflows. Improve outcomes while protecting patient privacy.";
 			subtitle="Clinically aware AI that augments providers and reduces administrative burden.";
 			pricePerMonthUSD={2999}
-			implementationWeeks="Implementation:6–12 weeks";
-			roiNote="Reduce admin time 20–40% and improve throughput";
+			implementationWeeks="Implementation:612 weeks";
+			roiNote="Reduce admin time 2040% and improve throughput";
 			features={[;
 				"Clinical note summarization and coding (CPT/ICD)",;
 				"Diagnostic support with literature grounding",;

@@ -59,7 +59,7 @@ export default function GrantsPage() {;
             <div className="flex items-center justify-between">;
               <div>;
                 <h3 className="text-lg font-medium"><Link href={`/grants/${g.id}`}><a>{g.projectName}</a></Link></h3>;
-                <div className="text-xs text-gray-600 dark:text-gray-400">{g.sector || 'General'} • {g.region || 'Global'} • {g.program === 'incubator' ? 'Incubator' :'Grant'}</div>;
+                <div className="text-xs text-gray-600 dark:text-gray-400">{g.sector || 'General'}  {g.region || 'Global'}  {g.program === 'incubator' ? 'Incubator' :'Grant'}</div>;
               </div>;
               <div className="flex gap-2 items-center">;
                 {g.program === 'incubator' && <span className="px-2 py-1 text-xs rounded bg-purple-100 text-purple-700">Incubated by Zion</span>}

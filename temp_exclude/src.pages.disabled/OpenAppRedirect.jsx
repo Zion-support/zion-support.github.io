@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,18 +22,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from \'react\' export default OpenAppRedirect\';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src && src.pages.disabled/OpenAppRedirect && OpenAppRedirect.jsx
 import _React from 'react' export default OpenAppRedirect';
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src && src.pages.disabled/OpenAppRedirect && OpenAppRedirect.jsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
 import _React from 'react' export default OpenAppRedirect';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
