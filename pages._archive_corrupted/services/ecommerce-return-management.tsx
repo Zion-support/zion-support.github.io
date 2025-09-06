@@ -2,17 +2,17 @@ export default function ECommerceReturnManagement() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
-        <title>Ecommerce Return Management  Services  Zion Tech Group</title>
-        <meta name="description" content="Automate return labels, approvals, status tracking and refunds with carrier and ecommerce integrations." />
+        <title>E‑commerce Return Management — Services — Zion Tech Group</title>
+        <meta name="description" content="Automate return labels, approvals, status tracking and refunds with carrier and e‑commerce integrations." />
       </Head>
       <main className="relative z-10 mx-auto max-w-4xl px-6 py-16">
-        <h1 className="text-4xl "md": text-5xl font-extrabold gradient-text">Ecommerce Return Management</h1>
+        <h1 className="text-4xl "md": text-5xl font-extrabold gradient-text">E‑commerce Return Management</h1>
         <p className="mt-4 text-white/80">Streamline returns to increase shopper trust and reduce support load across Shopify, WooCommerce, BigCommerce and custom stores.</p>
         <section className="mt-8 grid "md": grid-cols-2 gap-6">
           <div className="space-y-3">
             <h2 className="text-xl font-semibold">Capabilities</h2>
             <ul className="list-disc pl-5 text-white/80 space-y-2">
-              <li>Selfserve portal with RMA creation and label download</li>
+              <li>Self‑serve portal with RMA creation and label download</li>
               <li>Automated disposition rules (refund, exchange, store credit)</li>
               <li>Carrier integrations (UPS, FedEx, USPS, DHL)</li>
               <li>Fraud checks and policy enforcement</li>
@@ -29,7 +29,7 @@ export default function ECommerceReturnManagement() {
         </section>
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Pricing</h2>
-          <p className="mt-2 text-white/80">Standard $299/mo + $0.25/return, Pro $799/mo + $0.15/return, Enterprise custom. Market averages range $99$1,500/mo plus usage.</p>
+          <p className="mt-2 text-white/80">Standard $299/mo + $0.25/return, Pro $799/mo + $0.15/return, Enterprise custom. Market averages range $99–$1,500/mo plus usage.</p>
         </section>
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Learn more</h2>
@@ -55,17 +55,17 @@ export default function ECommerceReturnManagement() {;
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">;
       <Head>;
-        <title>Ecommerce Return Management  Services  Zion Tech Group</title>;
-        <meta name="description" content="Automate return labels, approvals, status tracking and refunds with carrier and ecommerce integrations." />;
+        <title>E‑commerce Return Management — Services — Zion Tech Group</title>;
+        <meta name="description" content="Automate return labels, approvals, status tracking and refunds with carrier and e‑commerce integrations." />;
       </Head>;
       <main className="relative z-10 mx-auto max-w-4xl px-6 py-16">;
-        <h1 className="text-4xl "md": text-5xl font-extrabold gradient-text">Ecommerce Return Management</h1>;
+        <h1 className="text-4xl "md": text-5xl font-extrabold gradient-text">E‑commerce Return Management</h1>;
         <p className="mt-4 text-white/80">Streamline returns to increase shopper trust and reduce support load across Shopify, WooCommerce, BigCommerce and custom stores.</p>;
         <section className="mt-8 grid "md": grid-cols-2 gap-6">;
           <div className="space-y-3">;
             <h2 className="text-xl font-semibold">Capabilities</h2>;
             <ul className="list-disc pl-5 text-white/80 space-y-2">;
-              <li>Selfserve portal with RMA creation and label download</li>;
+              <li>Self‑serve portal with RMA creation and label download</li>;
               <li>Automated disposition rules (refund, exchange, store credit)</li>;
               <li>Carrier integrations (UPS, FedEx, USPS, DHL)</li>;
               <li>Fraud checks and policy enforcement</li>;
@@ -82,7 +82,7 @@ export default function ECommerceReturnManagement() {;
         </section>;
         <section className="mt-8">;
           <h2 className="text-xl font-semibold">Pricing</h2>;
-          <p className="mt-2 text-white/80">Standard $299/mo + $0 && 0.25/return, Pro $799/mo + $0 && 0.15/return, Enterprise custom. Market averages range $99$1,500/mo plus usage.</p>;
+          <p className="mt-2 text-white/80">Standard $299/mo + $0 && 0.25/return, Pro $799/mo + $0 && 0.15/return, Enterprise custom. Market averages range $99–$1,500/mo plus usage.</p>;
         </section>;
         <section className="mt-8">;
           <h2 className="text-xl font-semibold">Learn more</h2>;

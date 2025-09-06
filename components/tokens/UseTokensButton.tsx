@@ -1,4 +1,3 @@
-
   serviceId
   defaultType
 }: {
@@ -6,45 +5,6 @@
   defaultType?: RedemptionType;
   const [open, setOpen] = useState(false);
   return (
-    <>
-      <button
-        onClick={() => setOpen(true)}
-        className="enhanced-button enhanced-button-primary"
-      >
-        Use Tokens
-      </button>
-      <UseTokensModal
-        isOpen={open}
-        onClose={() => setOpen(false)}
-        serviceId={serviceId}
-        defaultType={defaultType}
-      />
-    </>
-  );
-  const [open, setOpen] = useState(false);
-  return (
-    <>
-      <button
-        onClick={() => setOpen(true)}
-        className="enhanced-button enhanced-button-primary"
-      >
-        Use Tokens
-      </button>
-      <UseTokensModal
-        isOpen={open}
-        onClose={() => setOpen(false)}
-        serviceId={serviceId}
-        defaultType={defaultType}
-      />
-    </>
-  );
-
-}: {;
-  serviceId?: string;
-  defaultType?: RedemptionType;
-}) {;
-  const [open, setOpen] = useState(false);
-  return (
     <>;
       <button
         onClick={() => setOpen(true)}
@@ -57,6 +17,9 @@
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
+
+export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
+
       />
     </>
 
@@ -74,6 +37,21 @@
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
+      />
+    </>
+);
+  );
+  const [open, setOpen] = useState(false);
+  return (
+      <UseTokensModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        serviceId={serviceId}
+        defaultType={defaultType}
+      />
+    </>
+  );
+  const [open, setOpen] = useState(false);
   return (
     <>;
       <button;
@@ -105,5 +83,3 @@
         default_type={default_type}
       />;
     </>);
-}
-

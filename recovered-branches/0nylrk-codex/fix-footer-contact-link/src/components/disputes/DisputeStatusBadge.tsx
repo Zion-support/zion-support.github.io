@@ -1,4 +1,3 @@
-
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
@@ -8,8 +7,6 @@ interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
-  let message = "This item has an open dispute";
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
   let message = "This item has an open dispute";
 export /**
@@ -30,7 +27,6 @@ function DisputeStatusBadge() {
       variant = "outline";
       message = "This dispute has been closed";
       break;
-
     default:
       break
   }
@@ -47,10 +43,6 @@ function DisputeStatusBadge() {
       </TooltipContent>
     </Tooltip>
   )
-}
-
-
-
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from "lucide-react",;
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -67,5 +59,6 @@ interface DisputeStatusBadgeProps {;
 
 
 }
+;
     </Tooltip>);
 }

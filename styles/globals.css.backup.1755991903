@@ -353,6 +353,7 @@ body::after {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -385,6 +386,8 @@ body::after {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 @keyframes particleFloat {
   0% { transform: translateY(0px); }
   100% { transform: translateY(-100px); }
@@ -810,6 +813,7 @@ body::after {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -851,6 +855,10 @@ body::after {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+}
+}
+>>>>>>> origin/main
 
 @keyframes holographicShift {
   0%, 100% { 
@@ -1242,6 +1250,7 @@ body::after {
   100% { background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px; }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a01f
@@ -1266,3 +1275,5 @@ body::after {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

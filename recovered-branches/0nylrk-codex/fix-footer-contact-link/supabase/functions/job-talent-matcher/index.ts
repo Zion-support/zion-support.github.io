@@ -1,15 +1,8 @@
 
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 // Initialize the Supabase client
-
-
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
-import {processJobMatching, storeMatchResults} from "./job-matching.ts";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",
@@ -47,6 +40,8 @@ serve(async (req) => {
     if (talentsError) {
       throw new Error(`Failed to fetch talent profiles: ${talentsError && talentsError.message}`)
     }
+      return new Response(
+        JSON && JSON.stringify({ message: "No talent profiles found" });
         { headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
@@ -142,9 +137,7 @@ if ( {) {
       {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
-
+      }
+    );
   }
 });
-
-;
-

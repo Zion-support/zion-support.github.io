@@ -1,4 +1,3 @@
-
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
@@ -18,16 +17,6 @@ export function ApiErrorCodes() {
       "error": "Title is required"
     }
     },
-
-
-    {
-      "field": "budget.min";
-      "error": "Budget minimum must be greater than 0"
-      "error": "Title is required";
-    };
-    {;
-      "field": "budget && budget.min";
-      "error": "Budget minimum must be greater than 0";
     }
   ]
 }`;
@@ -113,25 +102,42 @@ export function ApiErrorCodes() {
       endpoint: "Webhook delivery"
       limit: "N/A"
       notes: "Webhooks don't count against your rate limits"
-  return (
 
 
           If you're encountering persistent errors or need higher rate limits, please 
           <a href="#" className="text-zion-cyan"> contact our support team</Link>.
-
-
         </p>
       </div>
     </ApiDocsLayout>
   )
         <p>;
+          When an error occurs, the API will return an appropriate HTTP status code along with ;
+          a JSON response body containing details about the error.;
+        </p>;
+
+  "error": "validation_error";
+  "message": "The request was invalid";
+  "details": [;
+    {;
+      "field": "title";
+    }
+  ];
+}`;
+  const rateLimitExample = `{
+
+  const rateLimitExample = `{;
+  "error": "rate_limit_exceeded";
+  "message": "Rate limit exceeded. Try again in 30 seconds";
+  "retry_after": 30;
+}`;
+    }
+  ];
+  return (
+        <p>;
           To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.;
           The limits are based on the number of requests per minute per API key.;
         </p>;
-
-;
-
-
+}
 export default ApiErrorCodes;
 
         <div className="overflow - x-auto mb - 8">;

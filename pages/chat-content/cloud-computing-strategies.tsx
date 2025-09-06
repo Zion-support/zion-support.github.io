@@ -8,8 +8,6 @@ const CloudComputingStrategies: NextPage = () => {
         <title>CloudComputingStrategies - Zion Tech Solutions</title>
         <meta name="description" content="CloudComputingStrategies page" />
       </Head>
-
-
       <main>
         <h1>CloudComputingStrategies</h1>
         <p>This page is under construction.</p>

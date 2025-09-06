@@ -1,5 +1,3 @@
-
-
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },
   accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },
@@ -58,6 +56,3 @@ interface QuoteStatusBadgeProps {;
 
 
 };
-    </Badge>);
-}
-;

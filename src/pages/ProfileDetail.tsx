@@ -6,10 +6,47 @@ export default function ProfileDetail() {;
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+import { useState, useEffect } from "react",
+import { useRouter } from "next/router",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { SEO } from "@/components/SEO",
+import { Header } from "@/components/Header",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge";
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
+
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+  useEffect((,) => {;
+    const fetchProfile = async () => {;
+      setIsLoading(true);
+      setError(null);
+      try {;
+        if (!profileId) {;
+          setError("Profile ID is missing.");
+          return;
+
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      setIsLoading(true),
+      setError(null),
+      try {
+        if (!profileId) {
+        }
+        const { data, error } = await supabase
+          .from("talent_profiles")
+          .select("*")
+          .eq("id", profileId)
         if (error) {
           throw new Error(error.message);
         }
         if (!data) {
+        setProfileData(data)
       } catch (err: any) {
         setError(err.message || "Failed to fetch profile.");
         toast({
@@ -32,17 +69,126 @@ export default function ProfileDetail() {;
       <div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>
+        description = {profileData.bio || "Check out this talent's profile on Zion!",}
+import { useState, useEffect } from "react",;
+import { useRouter } from "next/router",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+import { SEO } from "@/components/SEO",;
+import { Header } from "@/components/Header",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react';
+import { HireNowCTA } from "@/components/profile/HireNowCTA",;
+export default function ProfileDetail() {;
+  // useParams is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const router = useRouter(),;
+  const profileId = router.query.profileId as string,;
+  const [profileData, setProfileData] = useState<any>(null),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+  useEffect(() => {;
+    const fetchProfile = async () => {;
+      setIsLoading(true),;
+      setError(null),;
+      try {;
+        if (!profileId) {;
+          setError("Profile ID is missing."),;
+          return;
+        }
+;
+        const { data, error } = await supabase;
+          .from("talent_profiles");
+          .select("*");
+          .eq("id", profileId);
+          .single(),;
+        if (error) {;
+          throw new Error(error.message);
+        }
+;
+        if (!data) {;
+          setError("Profile not found."),;
+          return;
+        }
+;
+        setProfileData(data);
+      } catch (err: any) {;
+        setError(err.message || "Failed to fetch profile."),;
+        toast({;
+          title: "Error",;
+          description: err.message || "Failed to fetch profile.",;
+          variant: "destructive"});
+      } finally {;
+        setIsLoading(false);
+      }
+    },;
+    fetchProfile();
+  }, [profileId]),;
+  if (isLoading) {;
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <p>Loading profile...</p>;
+      </div>;
+    );
+  }
+;
+  if (error) {;
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <p>Error: {error}</p>;
+      </div>;
+    );
+  }
+;
+  if (!profileData) {;
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <p>Profile not found.</p>;
+      </div>;
+    );
+  }
+;
+  return (;
+    <>;
+      <SEO;
+        title={`${profileData.full_name} | Zion AI Marketplace`}
+        description={profileData.bio || "Check out this talent's profile on Zion!"}
+
+
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
-      />;
-      <Header />;
-      <div className="container mx-auto px-4 py-8">;
-        <div className="grid grid-cols-12 gap-6">;
-          {/* Main Content */}
-          <div className="col-span-12 lg:col-span-8">
-            {/* Profile Header */}
+
+
+                    </CardTitle>
+                    <CardDescription className="text-zion-cyan">{profileData.professional_title}</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  {profileData.location && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <MapPin className="h-4 w-4 mr-1" />
+                      <span>{profileData.location}</span>
+                    </div>
+                  )}
+                  {profileData.availability && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <Clock className="h-4 w-4 mr-1" />
+                      <span>{profileData.availability}</span>
+                    </div>
+                  )}
+                  {profileData.hourly_rate && (
+                    <div className="text-white font-bold">
+                      ${profileData.hourly_rate}
+                      <span className="text-zion-slate-light font-normal">/hr</span>
+                    </div>
+                  )}
             {/* About Section */}
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-white">About Me</CardTitle>
@@ -105,6 +251,14 @@ export default function ProfileDetail() {;
                   </div>
                 ) : (
                   <p className="text-zion-slate-light">No portfolio links provided.</p>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-zion-slate-light">No portfolio links provided.</p>
+                )}
+              </CardContent>
+            </Card>
+          </div>
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">;
             <HireNowCTA
@@ -114,18 +268,25 @@ export default function ProfileDetail() {;
             {/* Contact Information */}
                 )}
                 )}
+
+
+
             {/* Social Links */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
-              <h3 className="text-xl font-bold mb-4">Social</h3>;
-              <div className="flex flex-col space-y-3">;
-                {profileData && profileData.github_url && (;
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
+              <h3 className="text-xl font-bold mb-4">Social</h3>
+              <div className="flex flex-col space-y-3">
+                {profileData.github_url && (
+                  <a
+                    href={profileData.github_url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="GitHub"
+
                     target="_blank"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="Twitter"
+
                     target="_blank"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="LinkedIn"

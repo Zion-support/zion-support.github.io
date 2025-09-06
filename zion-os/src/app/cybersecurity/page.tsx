@@ -22,7 +22,7 @@
                 </h2>;
                 <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
                   In today's interconnected world, cybersecurity is not just a technical;
-                  requirementit's a business imperative. Our multi - layered security;
+                  requirement—it's a business imperative. Our multi - layered security;
                   approach protects your organization from sophisticated threats while;
                   ensuring compliance with industry standards.;
                 </p>;
@@ -84,13 +84,13 @@
                 rapid incident response capabilities.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li> AI - powered threat detection</li>;
-                <li> Real - time monitoring</li>;
-                <li> Incident response automation</li>;
-                <li> Threat intelligence feeds</li>;
+                <li>• AI - powered threat detection</li>;
+                <li>• Real - time monitoring</li>;
+                <li>• Incident response automation</li>;
+                <li>• Threat intelligence feeds</li>;
               </ul>;
               <Link href="/cybersecurity / threat - detection" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* Security Assessment */}
@@ -103,13 +103,13 @@
                 vulnerability scanning, and risk analysis.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li> Penetration testing</li>;
-                <li> Vulnerability assessments</li>;
-                <li> Security architecture review</li>;
-                <li> Risk analysis & reporting</li>;
+                <li>• Penetration testing</li>;
+                <li>• Vulnerability assessments</li>;
+                <li>• Security architecture review</li>;
+                <li>• Risk analysis & reporting</li>;
               </ul>;
               <Link href="/cybersecurity / security - assessment" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* Compliance Management */}
@@ -122,13 +122,13 @@
                 GDPR, and industry-specific regulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li> SOC2 compliance</li>;
-                <li> ISO 27001 certification</li>;
-                <li> GDPR compliance</li>;
-                <li> Industry regulations</li>;
+                <li>• SOC2 compliance</li>;
+                <li>• ISO 27001 certification</li>;
+                <li>• GDPR compliance</li>;
+                <li>• Industry regulations</li>;
               </ul>;
               <Link href="/cybersecurity / compliance" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* Identity & Access Management */}
@@ -144,13 +144,13 @@
                 single sign - on, and privileged access management.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li> Multi - factor authentication</li>;
-                <li> Single sign - on (SSO)</li>;
-                <li> Privileged access management</li>;
-                <li> Identity governance</li>;
+                <li>• Multi - factor authentication</li>;
+                <li>• Single sign - on (SSO)</li>;
+                <li>• Privileged access management</li>;
+                <li>• Identity governance</li>;
               </ul>;
               <Link href="/cybersecurity / identity - access" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* Data Protection */}
@@ -166,13 +166,13 @@
                 and disaster recovery solutions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li> Data encryption</li>;
-                <li> Backup & recovery</li>;
-                <li> Data loss prevention</li>;
-                <li> Privacy protection</li>;
+                <li>• Data encryption</li>;
+                <li>• Backup & recovery</li>;
+                <li>• Data loss prevention</li>;
+                <li>• Privacy protection</li>;
               </ul>;
               <Link href="/cybersecurity / data - protection" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* Security Training */}
@@ -188,13 +188,13 @@
                 to build a security - conscious culture.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li> Security awareness training</li>;
-                <li> Phishing simulations</li>;
-                <li> Incident response training</li>;
-                <li> Compliance training</li>;
+                <li>• Security awareness training</li>;
+                <li>• Phishing simulations</li>;
+                <li>• Incident response training</li>;
+                <li>• Compliance training</li>;
               </ul>;
               <Link href="/cybersecurity / security - training" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
           </div>;

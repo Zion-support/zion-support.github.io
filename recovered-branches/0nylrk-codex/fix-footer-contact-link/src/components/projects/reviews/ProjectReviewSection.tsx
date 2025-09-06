@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -48,12 +47,7 @@ import { useAuth } from "@/hooks/useAuth",
 interface ProjectReviewSectionProps {
   project: Project;
 }
-interface ProjectReviewSectionProps {
-  project: Project;
-}
 
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-  const { user } = useAuth();
 
 
   const { user } = useAuth(),
@@ -94,35 +88,25 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
             {(isClient |isTalent) && (
               <div className="border-b pb-4 mb-4">
                 {canLeaveReview ? (
-                  <div className="bg - muted / 20 rounded - lg p - 4 text - center">;
-                    <h3 className="font - medium mb - 2">Share your experience</h3>;
-                    <p className="text - sm text - muted - foreground mb - 3">;
-                      Your review will help build a trustworthy community;
-                    </p>;
-                    <Button on_click={() => setIsReviewModalOpen (true)}>;
-                      Leave Review;
-                    </Button>;
-                  </div>) : hasLeftReview ? (
-                  <div className="bg - muted / 20 rounded - lg p - 4 text - center">;
-                    <h3 className="font - medium mb - 2">;
-                      Thank you for your review!;
-                    </h3>;
-                    <p className="text - sm text - muted - foreground mb - 3">;
+                  <div className="bg-muted/20 rounded-lg p-4 text-center">
+                    <h3 className="font-medium mb-2">Share your experience</h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Your review will help build a trustworthy community
+                    </p>
+                    <Button onClick={() => setIsReviewModalOpen(true)}>
+                      Leave Review
+                    </Button>
+                  </div>
+                ) : hasLeftReview ? (
+                  <div className="bg-muted/20 rounded-lg p-4 text-center">
+                    <h3 className="font-medium mb-2">
+                      Thank you for your review!
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-3">
                       Your review is{" "}
-                      {user_review.status === "approved";
-                        ? "published";
+                      {userReview.status === "approved"
+                        ? "published"
                         : "pending approval"}
-
-import {useState} from "react";
-import {Star} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {ReviewsList} from "@/components/reviews/ReviewsList";
-import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
-import {useReviews} from "@/hooks/useReviews";
-import {Project} from "@/types/projects";
-import {useAuth} from "@/hooks/useAuth";
-
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -185,12 +169,6 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
                   <div className="bg-muted/20 rounded-lg p-4 text-center">;
                     <h3 className="font-medium mb-2">Thank you for your review!</h3>;
                     <p className="text-sm text-muted-foreground mb-3">;
-                      <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
-                        Edit Review;
-                      </Button>;
-
-
-
                     )}
                   </div>;
                 ) : null}

@@ -165,9 +165,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
   const [name, setName] = useState(''),
   const [email, setEmail] = useState(''),
   const [role, setRole] = useState<Member['role']>('viewer'),
-
-
-
   const add = async () => {
     const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) });
     const created = await r.json();
@@ -245,39 +242,17 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
                   <option value='admin'>Admin</option>;
                 </select>;
               </td>;
-              <td
+
+              <td;
+
                 style={{
-                  padding: 8
-                  borderBottom: '1px solid #f3f4f6'
-                  textAlign: 'right'
-                }}
-              >
-                  borderBottom: '1px solid #f3f4f6',
-                  textAlign: 'right',
-                }}>;
-                <button
-                  onClick={() => remove(m && m.id)}
-                  border_bottom: '1px solid #f3f4f6',
-                  text_align: 'right',
-                }}
-              >;
-                <button;
-                  on_click={() => remove (m.id)}
+
+                  padding: 8,
+
                   style={{ color: '#b91c1c' }}
                 >;
                   Remove;
                 </button>              </td>;
-            </tr>;
-          ))}
-        </tbody>;
-      </table>;
-    </section>;
-  );
-function UsageTab({
-  usage
-  setUsage
-  seatsUsed
-}: {
   usage: Usage;
 
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage && usage.budgetCapUsd);

@@ -69,8 +69,6 @@ try {;
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),;
     if (conflictFiles.trim()) {;
       console.log('Found merge conflicts in:', conflictFiles.trim()),;
-      const files = conflictFiles.trim().split('\n'),;
-      const files = conflictFiles.trim().split('\n');
 
 
       for (const file of files) {;
@@ -83,23 +81,16 @@ try {;
             execSync(`git checkout --ours "${file}"`);
           } catch (e) {;
             execSync(`git checkout --theirs "${file}"`);
+      for (const file of files) {;
+        if (file.trim()) {;
           }
-          exec_sync (`git add "${file}"`);
+          execSync(`git add "${file}"`);
         }
       }
       // Commit the merge;
-      exec_sync ('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
+      execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
     }
   }
-  // Merge each branch;
-  for (const branch of branchList) {try {;
-      const branchName = branch.replace('origin/', '');
-      console.log(`\n Merging branch: ${branchName}`);
-      // Checkout the branch;
-      execSync(`git checkout ${branchName}`);
-      // Merge into main;
-      execSync('git checkout main');
-      execSync(`git merge ${branchName} --no-ff -m "feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`);
       // Continue with other branches;
     }
   }
@@ -136,14 +127,4 @@ try {;
 } catch (error) {;
   console.error('❌ Error during merge process:', error.message),;
   process.exit(1);
-}
-  console.log ('📤 Pushing all changes to main...'),
-  exec_sync ('git push origin main'),
-  console.log ('🎉 All merge operations completed successfully!'),
-  console.log ('✅ All PRs have been merged into main branch'),
-  console.log ('✅ All merge conflicts have been resolved'),
-  console.log ('✅ Repository is now clean and up to date');
-} catch (error) {
-  console.error ('❌ Error during merge process:', error.message),
-  process.exit (1);
 }

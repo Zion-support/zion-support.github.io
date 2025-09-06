@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
@@ -35,10 +34,6 @@ function ReferralGuide() {
       title: "They sign up",;
       description: "When someone clicks your link and creates an account, they're tagged as your referral"};
 
-
-      title: "They sign up",;
-      description: "When someone clicks your link and creates an account, they're tagged as your referral"};
-
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"},
     {
@@ -68,7 +63,6 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
                 <p className="text-sm text-muted-foreground">{step.description}</p>
               </div>
             </div>
-}
 
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -80,6 +74,8 @@ export function ReferralGuide() {;
       description: "Copy your unique referral link and share it with potential clients or talent"},;
     {;
       title: "They sign up",;
+
+  return (
     <Card>;
       <CardHeader>;
         <CardTitle>How Referrals Work</CardTitle>;
@@ -92,11 +88,15 @@ export function ReferralGuide() {;
 
 
 }
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
+;
+                {index + 1}
+              </div>;
+              <div className="space-y-1">;
+                <h4 className="font-medium">{step && step.title}</h4>;
+                <p className="text-sm text-muted-foreground">{step && step.description}</p>;
+              </div>;
+            </div>;
+          ))}
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
     {

@@ -1,4 +1,3 @@
-
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
 import { useFilterTalents } from "./talent/useFilterTalents";
@@ -24,8 +23,10 @@ function useTalentDirectory() {
 ;
   // Fetch talent data;
   const {
-  }
-}
+    isMobileFilterOpen;
+    setIsMobileFilterOpen;
+    isHireModalOpen;
+    setIsHireModalOpen;
 
     expanded_sections;
 
@@ -113,11 +114,6 @@ export function useTalentDirectory() {;
     clearFilters;
     toggleSection;
     handleToggleSave;
-
-
-
   }
 }
 ;
-  }
-}

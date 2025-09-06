@@ -1,4 +1,3 @@
-import {
   Brain,
   Network,
   Cloud,
@@ -12,89 +11,86 @@ import {
   Star,
   Award,
   Clock,
-} from "lucide-react";
-import Layout from "../components/Layout";
-const serviceCategories = [
   {
-    title: "AI Services"
-    description:
-      "Cutting-edge artificial intelligence solutions for modern businesses"
-    icon: Brain
-    services: [
-      "AI Analytics"
-      "Machine Learning"
-      "Natural Language Processing"
-      "Computer Vision"
-    ]
-    link: "/ai-services"
-    color: "from-blue-500 to-purple-600"
-  }
+    title: "AI Services",
+    description:;
+      "Cutting - edge artificial intelligence solutions for modern businesses",
+    icon: Brain,
+    services: [;
+      "AI Analytics",
+      "Machine Learning",
+      "Natural Language Processing",
+      "Computer Vision",
+    ],
+    link: "/ai - services",
+    color: "from - blue - 500 to - purple - 600",
+  },
   {
-    title: "IT Services"
-    description: "Comprehensive IT solutions and infrastructure management"
-    icon: Network
-    services: [
-      "Cloud Migration"
-      "System Integration"
-      "Network Security"
-      "Data Management"
-    ]
-    link: "/it-services"
-    color: "from-green-500 to-blue-600"
-  }
+    title: "IT Services",
+    description: "Comprehensive IT solutions and infrastructure management",
+    icon: Network,
+    services: [;
+      "Cloud Migration",
+      "System Integration",
+      "Network Security",
+      "Data Management",
+    ],
+    link: "/it - services",
+    color: "from - green - 500 to - blue - 600",
+  },
   {
-    title: "Micro SAAS"
-    description:
-      "Innovative micro software solutions for specific business needs"
-    icon: Cloud
-    services: [
-      "Workflow Automation"
-      "Project Management"
-      "Customer Analytics"
-      "API Integration"
-    ]
-    link: "/micro-saas"
-    color: "from-purple-500 to-pink-600"
-  }
+    title: "Micro SAAS",
+    description:;
+      "Innovative micro software solutions for specific business needs",
+    icon: Cloud,
+    services: [;
+      "Workflow Automation",
+      "Project Management",
+      "Customer Analytics",
+      "API Integration",
+    ],
+    link: "/micro - saas",
+    color: "from - purple - 500 to - pink - 600",
+  },
   {
-    title: "Security"
-    description: "Advanced cybersecurity and data protection solutions"
-    icon: Shield
-    services: [
-      "Threat Detection"
-      "Data Encryption"
-      "Access Control"
-      "Compliance Management"
-    ]
-    link: "/security"
-    color: "from-red-500 to-orange-600"
-  }
+    title: "Security",
+    description: "Advanced cybersecurity and data protection solutions",
+    icon: Shield,
+    services: [;
+      "Threat Detection",
+      "Data Encryption",
+      "Access Control",
+      "Compliance Management",
+    ],
+    link: "/security",
+    color: "from - red - 500 to - orange - 600",
+  },
   {
-    title: "Automation"
-    description: "Intelligent automation solutions to streamline operations"
-    icon: Zap
-    services: [
-      "Process Automation"
-      "Workflow Optimization"
-      "Task Scheduling"
-      "Integration Hub"
-    ]
-    link: "/automation"
-    color: "from-yellow-500 to-red-600"
-  }
+    title: "Automation",
+    description: "Intelligent automation solutions to streamline operations",
+    icon: Zap,
+    services: [;
+      "Process Automation",
+      "Workflow Optimization",
+      "Task Scheduling",
+      "Integration Hub",
+    ],
+    link: "/automation",
+    color: "from - yellow - 500 to - red - 600",
+  },
   {
-    title: "Analytics"
-    description: "Data-driven insights and business intelligence solutions"
-    icon: BarChart3
-    services: [
-      "Business Intelligence"
-      "Predictive Analytics"
-      "Data Visualization"
-      "Reporting"
-    ]
-    link: "/analytics"
-    color: "from-indigo-500 to-purple-600"
-  }
+    title: "Analytics",
+    description: "Data - driven insights and business intelligence solutions",
+    icon: BarChart3,
+    services: [;
+      "Business Intelligence",
+      "Predictive Analytics",
+      "Data Visualization",
+      "Reporting",
+    ],
+    link: "/analytics",
+    color: "from - indigo - 500 to - purple - 600",
+  },
 ];
   { number: "500+", label: "Projects Completed" },
   { number: "99.9%", label: "Uptime Guarantee" },
@@ -497,7 +493,6 @@ function ServicesOverviewPage() {
                       <ul className="space-y-1">
                         {category.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;

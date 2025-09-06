@@ -106,6 +106,5 @@ export default function handler(req, res) {
     if (existingIdx >= 0) state.connections[existingIdx] = connection; else state.connections.push(connection);
     state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })
   });
-}
 
 

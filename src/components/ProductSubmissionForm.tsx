@@ -1,3 +1,63 @@
+import {
+
+  Form
+  FormControl
+  FormDescription
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
+import { AIListingGenerator } from '@/components/listing/AIListingGenerator'
+import { Sparkles } from 'lucide-react'
+// Define the form schema with zod
+const productSchema = z.object({
+  title: z.string().min(3, 'Title must be at least 3 characters')
+  description: z.string().min(10, 'Description must be at least 10 characters')
+  price: z
+    .string()
+    .refine(val => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
+      message: 'Price must be a valid number'
+    })
+  category: z.string().min(1, 'Please select a category')
+  image:
+    typeof window === 'undefined'
+      ? z.any().optional()
+      : z.instanceof(File).optional()
+  video:
+    typeof window === 'undefined'
+      ? z.any().optional()
+      : z.instanceof(File).optional()
+  model:
+    typeof window === 'undefined'
+      ? z.any().optional()
+      : z.instanceof(File).optional()
+  tags: z.string().optional()
+})
+// Type for our form values
+type ProductFormValues = z.infer<typeof productSchema>
+export function ProductSubmissionForm() {
+  const { user } = useAuth()
+  const { toast } = useToast()
+  const router = useRouter()
+  const [isSubmitting, setIsSubmitting] = React.useState(false)
+  const [imagePreview, setImagePreview] = React.useState(null as string | null)
+  const [activeTab, setActiveTab] = React.useState('manual')
+import React from "react",
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import z from "zod",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast",
+import { useRouter } from "next/router",
+import Image from 'next/image', // Import next/image
+import {logErrorToProduction} from '@/utils/productionLogger',
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema)
@@ -97,10 +157,10 @@
       const productData = {
         title: values.title,
         description: values.description,
-        price: parse_float (values.price),
+        price: parseFloat(values.price),
         category: values.category,
-        currency: 'USD', // Default currency;
-        tags: values.tags ? values.tags.split (', ').map (tag => tag.trim ()) : [],
+        currency: "USD", // Default currency
+        tags: values.tags ? values.tags.split().map(tag => tag.trim()) : [],
         author: {
       }
       // Upload video if provided;
@@ -193,6 +253,10 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 
 
+          name: user.displayName || "Anonymous Creator",
+          id: user.id},
+        createdAt: new Date().toISOString()},
+      
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
         .insert([productData])
@@ -278,52 +342,34 @@ import {;
     }
   },
 
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
-              control={form && form.control}
-              name='title'
-      // Show success message;
-      toast ({
-        title: 'Product Published!',
-        description: 'Your product has been successfully published on Zion.',
-      });
-      // Redirect to product page;
-      router.push (`/marketplace / listing/${product_record.id}`);
-    } catch (error) {
-      toast ({
-        title: 'Publication Failed',
-        description:;
-          error instanceof Error ? error.message : 'An unknown error occurred',
-        variant: 'destructive',
-      });
-    } finally {
-      setIsSubmitting (false);
-    }
-  }
+
+
   return (
-    <Tabs value={active_tab} onValueChange={setActiveTab} className='w - full'>;
-      <TabsList className='grid grid - cols - 2 mb - 6'>;
-        <TabsTrigger;
-          value='manual';
-          className='data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple';
-        >;
-          Manual Creation;
-        </TabsTrigger>;
-        <TabsTrigger;
-          value='ai';
-          className='data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple';
-        >;
-          <Sparkles className='h - 4 w - 4 mr - 2' />;
-          AI - Powered Creation;
-        </TabsTrigger>;
-      </TabsList>;
-      <TabsContent value='manual'>;
-        <Form {...form}>;
-          <form on_submit={form.handle_submit (on_submit)} className='space - y-6'>;
-            <FormField;
+    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+      <TabsList className="grid grid-cols-2 mb-6">
+        <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">
+          Manual Creation
+        </TabsTrigger>
+        <TabsTrigger value="ai" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">
+          <Sparkles className="h-4 w-4 mr-2" />
+          AI-Powered Creation
+        </TabsTrigger>
+      </TabsList>
+
+
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <FormField
               control={form.control}
+
+
+                  <FormItem>
+                    <FormLabel>Product Title</FormLabel>
+                    <FormControl>
+                      <Input
                         ref={ref}
                       />;
+
                     </FormControl>;
                     <FormDescription>;
                       Create a compelling title that describes your product;
@@ -339,6 +385,10 @@ import {;
                 );
               }}
             />;
+
+                field: ControllerRenderProps < ProductFormValues, 'title'>;
+              }) => {
+                const { on_change, on_blur, value, ref } = field; return (
             <FormField;
               control={form.control}
               name="description"
@@ -458,6 +508,32 @@ import {;
                 name="category"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (
                   <FormItem>
+                    <FormLabel>Category</FormLabel>
+                    <FormControl>
+                      <select
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                        {...field}
+                      >
+                        <option value="">Select a category</option>
+                        <option value="digital_product">Digital Product</option>
+                        <option value="service">Service</option>
+                        <option value="ai_tool">AI Tool</option>
+                        <option value="course">Course</option>
+                        <option value="template">Template</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+            <FormField
+              control={form && form.control}
+              name='tags'
+                name="category";
+                render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (;
+                  <FormItem>;
+                    <FormLabel>Category</FormLabel>;
+                    <FormControl>;
+                      <select
                         className='flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm'
                         {...field}>;
                   field: ControllerRenderProps < ProductFormValues, 'category'>;
@@ -478,28 +554,21 @@ import {;
                       </select>;
                     </FormControl>;
                     <FormMessage />;
+
+              />;
+            </div>;
+
+
             <FormField
               control={form && form.control}
               name='tags'
                   </FormItem>)}
-                name="category";
-                render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (;
-                  <FormItem>;
-                    <FormLabel>Category</FormLabel>;
-                    <FormControl>;
-                      <select;
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormDescription>Set your price in USD</FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
               />;
             </div>;
             <FormField;
               control={form.control}
+
+
                   <FormLabel>Tags</FormLabel>
                     <Input
                       placeholder='Enter tags separated by commas'
@@ -507,21 +576,24 @@ import {;
                     />
                   </FormControl>
                   <FormDescription>
+              name="tags";
+              render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (;
+                <FormItem>;
                   <FormLabel>Tags</FormLabel>;
                   <FormControl>;
-                    <Input
-                      placeholder='Enter tags separated by commas'
-                      {...field}
-                    />;
+                    <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
                   <FormDescription>;
-                    Add relevant tags to help users find your product (e && e.g., ai,;
-                    productivity, design);
+                    Add relevant tags to help users find your product (e.g., ai, productivity, design);
                   </FormDescription>;
                   <FormMessage />;
                 </FormItem>;
               )}
             />;
+              render={() => (
+                <FormItem>
+                  <FormLabel>Product Image</FormLabel>
+                  <FormControl>
                     <Input
                       type='file'
                       accept='image/*'
@@ -532,21 +604,32 @@ import {;
                       onChange={handleImageChange}
                       className="cursor-pointer"
                     />
+
+
                   </FormControl>
                   <FormDescription>
                     Upload a high-quality image of your product (recommended size: 1200x800px)
                   </FormDescription>
                   <FormMessage />
+
+
+                  {imagePreview && (
+                    <div className="mt-2 w-full max-w-md border rounded overflow-hidden">
+                      <AspectRatio ratio={3/2}>
+                        <Image
+                          src={imagePreview}
+
+
                           height={400} // Example height, adjust as needed
                           className='w-full h-full object-cover'
                           // `sizes` might not be strictly necessary for a preview of this nature
                           // but can be added if responsive behavior is critical here.
                           // For local object URLs, optimization via loader won't occur.
-                        />;
-                      </AspectRatio>;
-                    </div>;
+                        />
+                      </AspectRatio>
+                    </div>
                   )}
-                </FormItem>;
+                </FormItem>
               )}
             <FormField
               control={form && form.control}
@@ -736,6 +819,7 @@ import {;
               control={form.control}
               name="model"
               render={() => (
+
                 <FormItem>
                   <FormLabel>3D Model (glb)</FormLabel>
                   <FormControl>
@@ -748,6 +832,17 @@ import {;
                 </FormItem>
               )}
             />
+
+
+
+
+            <div className="flex justify-end">
+              <Button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+              >
+                {isSubmitting ? "Publishing..." : "Publish Product"}
               </Button>
             </div>
           </form>
@@ -769,6 +864,9 @@ import {;
 }catch (error) {
   toast ({
 }finally {
+  setIsSubmitting (false);
+
+
       
       <TabsContent value="ai">
         <AIListingGenerator 
@@ -781,27 +879,6 @@ import {;
       </TabsContent>;
     </Tabs>;
   );
+
+
 }
-}className="w - full"> <TabsList className="grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple"> <Sparkles className="h - 4 w - 4 mr - 2"/> AI - Powered Creation </TabsTrigger> </TabsList>;
-}";
-}/> <FormField Describe your product in detail..." className="min - h-32" {
-  ...field ';
-}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";
-}/> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6" > <FormField <FormItem> <FormLabel > Price (USD) </FormLabel> <FormControl> <Input type="number" min="0" step="0.01" placeholder="0.00" {
-  ...field;
-}/> ";
-}/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ";
-}/> </div> <FormField <FormItem> <FormLabel > Tags</FormLabel> <FormControl> <Input placeholder="Enter tags separated by commas" {
-  ...field;
-}/> ";
-}/> <FormField <FormItem> <FormLabel > Product Image</FormLabel> <FormControl> <Input type="file" accept="image/*" on_change= {
-  handleImageChange ";
-}className="cursor - pointer" /> </FormControl> <FormDescription> Upload a high - quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;';
-//but can be added if responsive behavior is critical here. //For local object URLs, optimization via loader won't occur. /> </AspectRatio> </div>);
-}</FormItem>) ";
-}/> <FormField <FormItem> <FormLabel > Product Video (MP4) </FormLabel> <FormControl> <Input type="file" accept="video / mp4" on_change= {
-  handleVideoChange ";
-}className="cursor - pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>);
-}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
-}/> <div className="flex justify - end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>);
-}'"  );

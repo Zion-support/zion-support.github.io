@@ -215,7 +215,6 @@ const benefits = [;
     title: 'Real-time Insights',;
     description: 'Instant analytics and decision-making support',;
     icon: BarChart3,;
-export default function AIAutomationServices() {
     color: 'text-pink-400',;
   },];
 
@@ -246,8 +245,6 @@ export default function AIAutomationServices() {;
         <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
-
-
           >
             <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8'>
               <Zap className='w-5 h-5 text-emerald-400' />
@@ -356,8 +353,6 @@ export default function AIAutomationServices() {;
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
-
-
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -416,7 +411,25 @@ export default function AIAutomationServices() {;
           <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
         </div>
       </section>
-
+      {/* Service Highlights */}
+      <section
+        id='services'
+        className='py-20 bg-gradient-to-b from-black to-gray-900'
+      >
+        <div className='container mx-auto px-4'>          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+      {/* Service Highlights */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="container mx-auto px-4">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -425,12 +438,6 @@ export default function AIAutomationServices() {;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               AI Automation <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Services</span>
             </h2>
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Comprehensive AI automation solutions that transform every aspect
-              of your business operations
-            </p>
-          </motion.div>
-              <motion.div
               <motion.div
 
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
@@ -487,12 +494,6 @@ export default function AIAutomationServices() {;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span> Portfolio
             </h2>
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Discover our comprehensive range of AI automation services
-              designed for modern enterprises
-            </p>
-          </motion.div>
-              <motion.div
               <motion.div
 
 
@@ -594,12 +595,10 @@ export default function AIAutomationServices() {;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span>
             </h2>
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Transform your business with intelligent automation that delivers
-              measurable results
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your business with intelligent automation that delivers measurable results
             </p>
           </motion.div>
-              <motion.div
               <motion.div
 
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
@@ -672,19 +671,13 @@ export default function AIAutomationServices() {;
                 </button>
               </Link>
             </div>
-
-
               <div>
-                <div className='text-3xl font-bold text-emerald-400 mb-2'>
-                  24/7
-                </div>
-                <div className='text-gray-300'>AI Monitoring</div>
+                <div className="text-3xl font-bold text-emerald-400 mb-2">24/7</div>
+                <div className="text-gray-300">AI Monitoring</div>
               </div>
               <div>
-                <div className='text-3xl font-bold text-emerald-400 mb-2'>
-                  99.9%
-                </div>
-                <div className='text-gray-300'>Uptime Guarantee</div>
+                <div className="text-3xl font-bold text-emerald-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Uptime Guarantee</div>
               </div>
               <div>
             </div>
@@ -731,8 +724,6 @@ export default function AIAutomationServices() {;
               with AI automation. Get started today and see the difference;
               intelligent automation can make.;
             </p>;
-  )
-}
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
               <Link href='/contact' className='group'>;
                 <button className='bg - gradient - to - r from - emerald - 500 to - teal - 600 hover:from - emerald - 600 hover:to - teal - 700 text - white px - 8 py - 4 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center space - x-2'>;
@@ -768,49 +759,9 @@ export default function AIAutomationServices() {;
                   350%;
                 </div>;
                 <div className='text - gray - 300'>Average ROI</div>              </div>;
-
-  )
-            className="max-w-4xl mx-auto";
-          >;
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
-              Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-              Join thousands of companies already transforming their operations with AI automation.;
-              Get started today and see the difference intelligent automation can make.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
-              <Link href="/contact" className="group">;
-                <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">;
-                  <span>Start Your Automation Journey</span>;
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
-                </button>;
-              </Link>;
-              <Link href="/comprehensive-services-showcase-2025" className="group">;
-                <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">;
-                  <span>View All Services</span>;
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
-                </button>;
-              </Link>;
-            </div>;
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
-              <div>;
-                <div className="text-3xl font-bold text-emerald-400 mb-2">24/7</div>;
-                <div className="text-gray-300">AI Monitoring</div>;
-              </div>;
-              <div>;
-                <div className="text-3xl font-bold text-emerald-400 mb-2">99.9%</div>;
-                <div className="text-gray-300">Uptime Guarantee</div>;
-              </div>;
-              <div>;
-                <div className="text-3xl font-bold text-emerald-400 mb-2">350%</div>;
-                <div className="text-gray-300">Average ROI</div>;
-              </div>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
-    </Layout>);
-;
 
 

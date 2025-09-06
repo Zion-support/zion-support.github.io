@@ -4,9 +4,6 @@ export interface Branding {logoUrl?: string;
   subdomain?: string;
 }
 export interface DeployModules {marketplace: boolean;
-
-
-
 export interface Branding {;
   logoUrl?: string;
   primaryColor?: string;
@@ -47,9 +44,6 @@ export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "eve
   description?: string;
 }
 export interface DeployResult {success: boolean;
-
-
-
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
   referralAmbassadors?: boolean,;
@@ -91,8 +85,6 @@ export interface GeneratedAsset {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
 }
 ;
 export interface DeployResult {;
@@ -103,9 +95,6 @@ export interface DeployResult {;
   logs: DeployLogEntry[];
   summary: string;
   version: string;
-}
-export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
-  adminKeyConfigured: boolean;
 
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid",
 export interface Branding {
@@ -187,3 +176,5 @@ export interface AccessControlConfig {
 
 }
 
+  adminKeyConfigured: boolean;
+}

@@ -1,4 +1,3 @@
-
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';
@@ -17,8 +16,10 @@ import {toast} from '@/hooks/use-toast';
   options: AIEnhancementOptions
   onEnhanced: (enhancedContent: string) => void
 
-export function AIEnhancementButton(): any ({;
-
+  buttonText?: string;
+  className?: string;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
   options;
   onEnhanced;
 
@@ -31,16 +32,11 @@ export function AIEnhancementButton(): any ({;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const [showActions, setShowActions] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<string | null>(null);
-
-
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
 import { toast } from '@/hooks/use-toast',
-
-
-
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -83,9 +79,6 @@ export function AIEnhancementButton({
   const [showActions, setShowActions] = useState(false),
   const [generatedContent, setGeneratedContent] = useState<string | null>(null),
   
-
-
-
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -93,8 +86,6 @@ export function AIEnhancementButton({
         title: "Not enough content"
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
-  }
-  };
 
 
 
@@ -129,12 +120,10 @@ export function AIEnhancementButton({;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
   const [showActions, setShowActions] = useState(false),;
   const [generatedContent, setGeneratedContent] = useState<string | null>(null),;
+
   const handleEnhance = async () => {;
     if ((!options && options.content || options && options.content.trim().length < contentLength) && ;
         (!options && options.context || options && options.context.trim().length < contentLength)) {;
-  const handleEnhance = async () => {;
-    if ((!options.content || options.content.trim().length < contentLength) &&;
-        (!options.context || options.context.trim().length < contentLength)) {;
       toast({;
         title: "Not enough content",;
         description: `Please enter at least ${contentLength} characters before enhancing.`,;
@@ -142,36 +131,9 @@ export function AIEnhancementButton({;
       });
       return;
     }
-
-
-    const enhancedContent = await enhanceContent(options);
-
-    if (enhancedContent) {;
-
       setGeneratedContent(enhancedContent);
       setShowActions(true);
     }
-
-  },
-
-
-
-  
-  const handleAccept = () => {
-    if (generatedContent) {
-      onEnhanced(generatedContent);
-      setShowActions(false);
-      setGeneratedContent(null);
-      }),;
-      return;
-    }
-;
-    const enhancedContent = await enhanceContent(options),;
-    if (enhancedContent) {;
-      setGeneratedContent(enhancedContent),;
-      setShowActions(true);
-    }
-  },
   
   const handleAccept = () => {
     if (generatedContent) {
@@ -370,17 +332,25 @@ export function AIEnhancementButton({;
   return (
     <Button;
       type="button";
-
-
-
       variant={variant}
       size={size}
-
-      <span className="text-xs">{buttonText}</span>;
-    </Button>;
-  );
+      className={`gap-1 ${className}`}
+      onClick={handleEnhance}
+      disabled={isEnhancing}
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-4 w-4 animate-spin" />
+      ) : (
+        <Sparkles className="h-4 w-4" />
+      )}
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+  )
 }
-
+}
+;
+      variant={variant}
+      size={size}
       className={`gap - 1 ${class_name}`}
       on_click={handle_enhance}
       disabled={is_enhancing}
@@ -391,7 +361,3 @@ export function AIEnhancementButton({;
       <span className="text - xs">{button_text}</span>;
     </Button>);
 }
-
-}
-;
-

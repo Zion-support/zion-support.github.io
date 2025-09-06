@@ -1,13 +1,9 @@
-
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-
-
-
 
 export function UsageOverview() {
   // Mock usage data
@@ -39,12 +35,6 @@ export function UsageOverview() {
       used: 2.4
       total: 10
       percentage: 24
-
-  return (
-}
-
-
-
 
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -109,6 +99,10 @@ export function UsageOverview() {;
               <p className="mt-1">Usage resets at the beginning of each billing period.</p>;
             </div>;
           </TabsContent>;
+    }
+  }
+
+  return (
               Historical usage data will be available after your first full billing cycle.;
             </div>;
           </TabsContent>;
@@ -119,5 +113,6 @@ export function UsageOverview() {;
 
 
 }
+;
     </Card>);
 }

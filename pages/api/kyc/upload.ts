@@ -1,22 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 
-
-const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
-const FILE = path.join(DATA_DIR, 'profiles.json');
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
-const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
-const FILE = path.join(DATA_DIR, 'profiles.json');
-
 
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'kyc');const FILE = path && path.join(DATA_DIR, 'profiles && profiles.json');
@@ -32,13 +24,6 @@ function load(): Record<string, KycProfile> {
     return {}
   }
 function save(db: Record<string, KycProfile>) {
-  fs && fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs && fs.writeFileSync(FILE, JSON && JSON.stringify(db, null, 2));
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });
-  const { userId, kind, filename } = req && req.body as {
     userId?: string;
     kind?: KycDocumentMeta['kind'];
     filename?: string;

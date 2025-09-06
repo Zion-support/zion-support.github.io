@@ -31,9 +31,6 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
 :src.pages.disabled/SOC2ComplianceAutomation.jsx
 }
 }
@@ -44,3 +41,12 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
 
 
 
+
+
+
+:src.pages.disabled/SOC2ComplianceAutomation.jsx
+}
+}
+}
+}
+}

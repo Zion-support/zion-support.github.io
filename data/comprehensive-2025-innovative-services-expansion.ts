@@ -55,7 +55,7 @@ const contact = {
       'Collaboration toolsAPI integration';
     ];
     popular: true;
-    icon: '';
+    icon: '✍️';
     color: 'from - blue - 600 to - indigo - 600';
     text_color: 'text - blue - 400';
     link: 'https://ziontechgroup.com / ai - content - generation';
@@ -126,7 +126,7 @@ const contact = {
       'Compliance automation_analytics and reporting';
     ];
     popular: true;
-    icon: '';
+    icon: '⚙️';
     color: 'from - green - 600 to - teal - 600';
     text_color: 'text - green - 400';
     link: 'https://ziontechgroup.com / ai - devops - automation';
@@ -175,7 +175,7 @@ const contact = {
       'Performance optimization_integration APIs';
     ];
     popular: false;
-    icon: '';
+    icon: '🌐';
     color: 'from - purple - 600 to - blue - 600';
     text_color: 'text - purple - 400';
     link: 'https://ziontechgroup.com / iot - edge - intelligence';
@@ -333,7 +333,7 @@ const contact = {
       'Performance analytics_integration with smart meters';
     ];
     popular: false;
-    icon: '';
+    icon: '⚡';
     color: 'from - green - 600 to - emerald - 600';
     text_color: 'text - green - 400';
     link: 'https://ziontechgroup.com / ai - energy - optimization';
@@ -368,3 +368,6 @@ const contact = {
   }
 ];
 export default comprehensiveInnovativeServices;
+;
+export default comprehensiveInnovativeServices;
+;

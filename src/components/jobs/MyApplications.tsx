@@ -1,11 +1,9 @@
-default:
+      default:
         return <Badge variant="outline">{status}</Badge>
     }
+  }
 
-  const { applications, isLoading, error } = useJobApplications()
-  const getStatusBadge = (status: ApplicationStatus,) => {
-import {ApplicationStatus} from "@/types/jobs";
-    switch (status) {
+  if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -64,10 +62,6 @@ export function MyApplications() {;
   const getStatusBadge = (status: ApplicationStatus,) => {;
     switch (status) {;
       case "new": return <Badge variant="secondary">New</Badge>;
-        return <Badge className="bg - red - 100 text - red - 800">Rejected</Badge>;
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
-    }
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
@@ -92,6 +86,22 @@ export function MyApplications() {;
       </Card>;
     );
   }
+                  {application.cover_letter}
+                </p>
+              )}
+              <div className="flex justify-between items-center">
+                <Button
+                  variant="outline"
+                  size="sm"
+              
+              <div className="flex justify-between items-center">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+
+                  {application.cover_letter}
+                </p>
+              )}
                   className="text-xs"
                   asChild
                 >
@@ -100,26 +110,36 @@ export function MyApplications() {;
                   </Link>
                 </Button>
                 <Button
+                  variant="outline" 
+                  size="sm" 
+                  className="text-xs"
+                  asChild>;
+                  <Link href={`/jobs/${application && application.job_id}`}>;
+                    <ExternalLink className="h-3 w-3 mr-1" /> View Job;
+                  </Link>;
+                </Button>;
+
                 <Button
 
                 
 
                 <Button 
-
                   variant="default" 
                   size="sm"
                   className="text-xs"
-                  asChild>;
-                  <Link href={`/messages?jobId=${application && application.job_id}`}>;
-                    <MessageSquare className="h-3 w-3 mr-1" /> Contact Client;
-                  </Link>;
-                </Button>;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
+                  asChild
+                >
+                  <Link href={`/messages?jobId=${application.job_id}`}>
+                    <MessageSquare className="h-3 w-3 mr-1" /> Contact Client
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       ))}
 }
+
   },
   // Check condition
 if ( {) {
@@ -208,6 +228,7 @@ if ( {) {
   );
 }
 ;
+
     </div>;
   );
 };

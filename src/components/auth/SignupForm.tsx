@@ -1,4 +1,4 @@
-passwordStrength.strength >= 4 ? 'text-green-600' :
+                passwordStrength.strength >= 4 ? 'text-green-600' :
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
               )}>

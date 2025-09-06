@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {Star} from "lucide-react";
 import {ReviewStats} from "@/components/reviews/ReviewStats";
@@ -22,7 +21,6 @@ interface ProfileRatingsProps {;
   averageRating?: number;
   ratingCount?: number;
 }
-
 
 
 interface ProfileRatingsProps {
@@ -85,8 +83,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-;
-;
 
 ;
   // Fetch reviews when component mounts;

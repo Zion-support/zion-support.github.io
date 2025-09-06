@@ -2,9 +2,10 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       destination: '/plans/enterprise'
-
-
       permanent: false}}
+}
+export default function EnterpriseRedirect() { return null }
+
 },
 ;
 export default function EnterpriseRedirect() { return null };
@@ -24,6 +25,5 @@ export default function EnterpriseRedirect() { return null   } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 
 

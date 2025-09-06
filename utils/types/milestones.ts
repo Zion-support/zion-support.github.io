@@ -6,7 +6,6 @@ export type ProjectParticipants = {;
   clientUserId: string;
   talentUserId: string;
 }
-;
 export type Project = {  id: string;
   title: string;
   description?: string;
@@ -27,15 +26,13 @@ export interface CreateMilestoneRequest {;
 
   title: string;
   description?: string;
-
-  attachments?: MilestoneAttachment[]
-
 }
 export interface UpdateMilestoneRequest {
 
 
 export interface UpdateMilestoneRequest {;
 
+export interface UpdateMilestoneRequest {
   title?: string;
   description?: string;
   due_date?: string;
@@ -53,4 +50,5 @@ export function getDaysUntilDue(milestone: Milestone): number | null {
   return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 }
 
+}
 }

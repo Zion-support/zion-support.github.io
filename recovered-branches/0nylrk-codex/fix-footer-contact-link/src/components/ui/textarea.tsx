@@ -1,4 +1,3 @@
-
 const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
   ({ className, ...props }, ref) => {
     return (
@@ -30,6 +29,4 @@ Textarea.displayName = "Textarea"
 
 export { Textarea }
 ;
-
-
-;
+export { Textarea }

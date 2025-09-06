@@ -211,7 +211,6 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
         </div>;
       </div>;
 
-
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
 
@@ -247,7 +246,6 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
           </div>;
         </div>;
       )}
-  );
             on_click={() => handleTypeSelect ("service")}
           >;
             <h4 className="font - medium text - white">Services</h4>;

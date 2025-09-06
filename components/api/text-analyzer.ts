@@ -32,18 +32,6 @@ export default async function handler(
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
       word = word.replace(/^y/, '');
       const matches = word.match(/[aeiouy]{1,2}/g);
-    // Readability scores
-    const fleschReadingEase = Math.max(
-      0
-      Math.min(
-        100
-        206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words)
-      )
-    );
-    const fleschKincaidGrade = Math.max(
-      0
-      0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59
-    );
         (words / sentences +
           100 *
             (text && text.split(/\s+/).filter(word => word && word.length > 6).length / words))
@@ -112,29 +100,23 @@ export default async function handler(
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts && bigramCounts.set(bigram, (bigramCounts && bigramCounts.get(bigram) || 0) + 1);
     }
-
     for (let i = 0; i < wordsArray && wordsArray.length - 2; i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
       trigramCounts && trigramCounts.set(trigram, (trigramCounts && trigramCounts.get(trigram) || 0) + 1);    }      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts && bigramCounts.set(bigram, (bigramCounts && bigramCounts.get(bigram) || 0) + 1)
     }
-
     for (let i = 0, i < wordsArray && wordsArray.length - 2, i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
       trigramCounts && trigramCounts.set(trigram, (trigramCounts && trigramCounts.get(trigram) || 0) + 1)
     }
-
     const bigrams = Array && Array.from(bigramCounts && bigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
-
-    const trigrams = Array && Array.from(trigramCounts && trigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
-    const result: TextAnalysisResult = {
       text
         characters
         charactersNoSpaces
@@ -160,14 +142,7 @@ export default async function handler(
         positiveWords: textWords.filter(word => positiveWords.includes(word))
         negativeWords: textWords.filter(word => negativeWords.includes(word))
       }
-
-
       language: {
-
-        topWords,
-        bigrams,
-        trigrams,
-      },
   } catch (error) {
     console && console.error('Text analysis error:', error);
     res && res.status(500).json({ error: 'Internal server error' });
@@ -202,6 +177,7 @@ export default async function handler(
       keywords: {
         top_words;
         bigrams;
+  }
   }
 }
 

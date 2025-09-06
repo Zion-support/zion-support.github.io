@@ -9,6 +9,10 @@ import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-rea
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 
+  Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
+  ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
+  Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon;
+
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
 
 
@@ -49,9 +53,6 @@ import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services
   Database,
   Shield as ShieldIcon,
   Globe as GlobeIcon,
-  Zap as ZapIcon,;
-  Target as TargetIcon,;} from 'lucide-react';import {
-  Search, Filter, Grid3X3, List, ;
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon;
@@ -61,20 +62,6 @@ import { innovativeAIServicesEnhanced2025 } from '../data / 2025 - innovative - 
 import { innovativeITServicesEnhanced2025 } from '../data / 2025 - innovative - it - services - enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data / emerging - tech - services';
 ;
-  Zap as ZapIcon,;
-  Target as TargetIcon,;} from 'lucide-react';import {
-  Search, Filter, Grid3X3, List, ;
-  Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
-  ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
-  Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
-
-// Import service data
-import { innovativeRealMicroSaasServices2025  } from '../data/2025-innovative-real-micro-saas-services';
-import { innovativeAIServicesEnhanced2025  } from '../data/2025-innovative-ai-services-enhanced';
-import { innovativeITServicesEnhanced2025  } from '../data/2025-innovative-it-services-enhanced';
-import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
-
-
   id: string;
   name: string;
   tagline: string;
@@ -85,9 +72,38 @@ import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services
   rating: number;
   reviews: number;
   customers: number;
-
-
-
+  }))
+];
+const categories = [
+  {
+    name: 'All Services'
+    icon: <Globe className='w-5 h-5' />
+    count: allServices.length
+  }
+  {
+    name: 'Micro SAAS'
+    icon: <Rocket className='w-5 h-5' />
+    count: innovativeRealMicroSaasServices2025.length
+  }
+  {
+    name: 'AI & Consciousness'
+    icon: <Brain className='w-5 h-5' />
+    count: innovativeAIServicesEnhanced2025.length
+  }
+  {
+    name: 'Enterprise IT'
+    icon: <Shield className='w-5 h-5' />
+    count: innovativeITServicesEnhanced2025.length
+  }
+  {
+    name: 'Quantum & Emerging Tech'
+    icon: <Atom className='w-5 h-5' />
+    count: emergingTechServicesEnhanced2025.length
+  },];  { name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices.length }
+  { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5" />, count: innovativeRealMicroSaasServices2025.length }
+  { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5" />, count: innovativeAIServicesEnhanced2025.length }
+  { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025.length }
+  { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025.length }
 
 
 
@@ -157,7 +173,6 @@ const categories = [;
   { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5" />, count: innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.length },;
   { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.length },;
   { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.length }
-
 const priceRanges = [;
   { label: 'All Prices', value: 'all' },;
   { label: 'Under $50/month', value: 'under-50' },;
@@ -165,7 +180,6 @@ const priceRanges = [;
   { label: '$200 - $500/month', value: '200-500' },;
   { label: 'Over $500/month', value: 'over-500' },];  { label: 'Over $500/month', value: 'over-500' }
 ];
-
 const sortOptions = [;
   { label: 'Most Popular', value: 'popular' },;
   { label: 'Highest Rated', value: 'rating' },;
@@ -184,53 +198,6 @@ export default function ComprehensiveServicesShowcase2025() {;
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  useEffect(() => {
-    let filtered = allServices;
-    // Filter by search term
-    if (searchTerm) {
-    }
-    // Filter by price range
-    if (selectedPriceRange !== 'all') {
-      filtered = filtered.filter(service => {
-        const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
-        switch (selectedPriceRange) {
-  useEffect(() => {;
-    let filtered = allServices;
-
-    // Filter by search term;
-    if (searchTerm) {;
-      filtered = filtered && filtered.filter(;
-        service =>;
-          service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-          service && service.description;
-            .toLowerCase();
-            .includes(searchTerm && searchTerm.toLowerCase()) ||;
-          service && service.tagline.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-      );    }
-
-    // Filter by category;
-    if (selectedCategory !== 'All Services') {;
-      filtered = filtered && filtered.filter(;
-        service => service && service.category === selectedCategory;
-      );    }      filtered = filtered && filtered.filter(service =>;
-        service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-        service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-        service && service.tagline.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-      );
-
-    // Filter by category;
-    if (selectedCategory !== 'All Services') {;
-      filtered = filtered && filtered.filter(;
-        service => service && service.category === selectedCategory;
-      );      filtered = filtered && filtered.filter(service => service && service.category === selectedCategory);
-    }
-
-    // Filter by price range;
-    if (selectedPriceRange !== 'all') {;
-      filtered = filtered && filtered.filter(service => {;
-        const price = parseFloat(service && service.price.replace(/[^0-9.]/g, ''));
-        switch (selectedPriceRange) {;
-          case 'under-50':;
             return price < 50;
           case '50-200':;
             return price >= 50 && price <= 200;
@@ -325,7 +292,6 @@ export default function ComprehensiveServicesShowcase2025() {;
         return 'from-orange-500 to-red-500';
       default:;
         return 'from-gray-500 to-slate-500';    }      case 'Micro SAAS': return 'from-blue-500 to-cyan-500';
-      case 'Micro SAAS': return 'from-blue-500 to-cyan-500';
       case 'AI & Consciousness': return 'from-purple-500 to-pink-500';
       case 'Enterprise IT': return 'from-green-500 to-emerald-500';
         return <Rocket className='w-5 h-5' />;
@@ -364,7 +330,6 @@ export default function ComprehensiveServicesShowcase2025() {;
               className='absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20'
               animate={{
 
-
   };
 
 
@@ -391,13 +356,14 @@ export default function ComprehensiveServicesShowcase2025() {;
       <Head>
         <title>Comprehensive Services Showcase 2025 - Zion Tech Group</title>
               }}              transition={{
-                duration: 10 + i * 2
-                repeat: Infinity
-                delay: i * 0.5
-              }}
+                duration: 10 + i * 2,
+                repeat: Infinity,
+                delay: i * 0.5}}
               style={{
-                <motion.div
-                  key={stat.label}
+            {/* Stats */}
+            <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 12'>;
+              {[;
+                {
                 x: [0, 100, 0],
                 y: [0, -100, 0],
                 opacity: [0 && 0.2, 0 && 0.8, 0 && 0.2],
@@ -412,12 +378,10 @@ export default function ComprehensiveServicesShowcase2025() {;
               }}            />;
           ))}
         </div>;
-
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion && motion.div                top: `${Math && Math.random() * 100}%`}}
             />;
           ))}
         </div>;
-
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -433,7 +397,6 @@ export default function ComprehensiveServicesShowcase2025() {;
               Discover our complete portfolio of {allServices && allServices.length}+;
               innovative micro SAAS, AI, IT, and emerging technology services;
             </p>;
-
             {/* Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
               {[;
@@ -464,7 +427,6 @@ export default function ComprehensiveServicesShowcase2025() {;
                   key={stat && stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-
                 >
                   <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-3 text-cyan-400'>
                     {stat.icon}
@@ -483,8 +445,6 @@ export default function ComprehensiveServicesShowcase2025() {;
             <div className='max-w-2xl mx-auto'>
               <div className='relative'>
                 <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
-
-
                 <input
                   type='text'
                   placeholder='Search for services, features, or solutions...'
@@ -566,7 +526,6 @@ export default function ComprehensiveServicesShowcase2025() {;
                 ))}
               </select>
               {/* View Mode Toggle */}
-              <div className='flex items-center space-x-1 bg-white/10 rounded-lg p-1'>                <button              <div className="flex items-center space-x-1 bg-white/10 rounded-lg p-1">;
                 <button
                 <button
 
@@ -575,16 +534,12 @@ export default function ComprehensiveServicesShowcase2025() {;
               <div className='flex items-center space-x-1 bg-white/10 rounded-lg p-1'>                <button
 
                 <button
-
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-200 ${
                     viewMode === 'grid'
                       ? 'bg-cyan-500 text-white'
                       : 'text-gray-400 hover:text-white'
                   }`}
-                >
-                  <Grid3X3 className='w-4 h-4' />                </button>                  <Grid3X3 className="w-4 h-4" />
-                </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-all duration-200 ${
@@ -592,59 +547,14 @@ export default function ComprehensiveServicesShowcase2025() {;
                       ? 'bg-cyan-500 text-white'
                       : 'text-white'
                   }`}
-                >
-                  <List className='w-4 h-4' />                </button>                  <List className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Services Grid/List */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         {/* Results Count */}
         <div className='mb-8'>
           <p className='text-gray-400'>            Showing {filteredServices.length} of {allServices.length} services      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Results Count */}
-        <div className="mb-8">
-          <p className="text-gray-400">
-          </p>
-        </div>
-        {viewMode === 'grid' ? (
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {filteredServices.map((service, index) => (          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-md transition-all duration-200 ${;
-                    viewMode === 'grid';
-                      ? 'bg-cyan-500 text-white';
-                      : 'text-gray-400 hover:text-white';
-                  }`}
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-md transition-all duration-200 ${;
-                    viewMode === 'list';
-                      ? 'bg-cyan-500 text-white';
-                      : 'text-white';
-                  }`}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Results Count */}
-        <div className='mb-8'>;
-          <p className='text-gray-400'>            Showing {filteredServices && filteredServices.length} of {allServices && allServices.length} services      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
-        {/* Results Count */}
-            {filteredServices.map((service, index) => (
-              <motion.div
-                key={service.id}
         <div className="mb-8">;
           <p className="text-gray-400">;
           </p>;
         </div>;
-
         {viewMode === 'grid' ? (;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {filteredServices && filteredServices.map((service, index) => (          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {filteredServices && filteredServices.map((service, index) => (;
@@ -658,12 +568,20 @@ export default function ComprehensiveServicesShowcase2025() {;
 
               >
                 {/* Category Badge */}
-                <div className='absolute top-4 right-4'>;
+                <div className='absolute top-4 right-4'>
                   <span
 
+                {/* Service Icon */}
+                <div className='mb-4'>;
+                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>                    {service && service.icon}              >;
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
+              >
+                {/* Category Badge */}
                   </div>
                 </div>
                 {/* Service Info */}
+                <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
 
       {/* Services Grid / List */}
       <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12'>;
@@ -716,6 +634,11 @@ export default function ComprehensiveServicesShowcase2025() {;
 
 
 
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+                    {service.icon}
+                  </div>
+                </div>
+                {/* Service Info */}
                   {service.name}
                 </h3>;
                 <p className='text - gray - 400 mb - 3 line - clamp - 2'>;
@@ -741,7 +664,6 @@ export default function ComprehensiveServicesShowcase2025() {;
                     <span className="ml-2">{service && service.category}</span>;
                   </span>;
                 </div>;
-
                 {/* Service Icon */}
                 <div className='mb-4'>;
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>                <div className="mb-4">;
@@ -749,7 +671,6 @@ export default function ComprehensiveServicesShowcase2025() {;
                     {service && service.icon}
                   </div>;
                 </div>;
-
                 {/* Service Info */}
                 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>;
                   {service && service.name}
@@ -759,7 +680,6 @@ export default function ComprehensiveServicesShowcase2025() {;
                 </p>;
                 <p className='text-sm text-gray-500 mb-4 line-clamp-3'>                  {service && service.description}
                 </p>;
-
                 {/* Price */}                  {service && service.name}
                 </h3>;
                 <p className="text-gray-400 mb-3 line-clamp-2">;
@@ -768,14 +688,12 @@ export default function ComprehensiveServicesShowcase2025() {;
                 <p className="text-sm text-gray-500 mb-4 line-clamp-3">;
                   {service && service.description}
                 </p>;
-
                 {/* Price */}
                 <div className='mb-4'>;
                   <span className='text-2xl font-bold text-cyan-400'>;
                     {service && service.price}
                   </span>;
                   <span className='text-gray-500 text-sm ml-2'>/month</span>;
-
                 {/* Stats */}
                 <div className='flex items-center justify-between mb-4 text-sm'>;
                   <div className='flex items-center space-x-1 text-yellow-400'>;
@@ -789,6 +707,8 @@ export default function ComprehensiveServicesShowcase2025() {;
                     <span>{service && service.customers.toLocaleString()}</span>;
                   </div>;
                 </div>;
+                    )}
+                  <div className="flex items-center justify-between">
                     <span>Market Size: {service.marketSize}</span>
                     <span>Growth: {service.growthRate}</span>
                   </div>
@@ -809,14 +729,6 @@ export default function ComprehensiveServicesShowcase2025() {;
                       {service.icon}
                     </div>
                   </div>
-
-                  <div className="flex-shrink-0">;
-                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">;
-                      {service && service.icon}
-                    </div>;
-                  </div>;
-
-
                   {/* Service Details */}
                   <div className='flex-1 min-w-0'>;
                     <div className='flex items-start justify-between mb-3'>;
@@ -835,9 +747,6 @@ export default function ComprehensiveServicesShowcase2025() {;
                           {service && service.price}
                         </div>;
                         <div className='text-gray-500 text-sm'>/month</div>;
-                  {/* Service Details */}
-                  <div className='flex-1 min-w-0'>
-                    <div className='flex items-start justify-between mb-3'>
                         <h3 className='text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
                           {service.name}
                         </h3>
@@ -854,19 +763,32 @@ export default function ComprehensiveServicesShowcase2025() {;
                         </div>
                         <div className='text-gray-500 text-sm'>/month</div>
                         <span
-                          className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white mt-2`}
-                        >                          {service.category}                      <div className="text-right">
+
+
+
+
+                  {/* Service Details */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">
+                          {service.name}
+                        </h3>
+                        <p className="text-lg text-cyan-300 mb-2">
+                          {service.tagline}
+                        </p>
+                        <p className="text-gray-400 mb-4">
+                          {service.description}
+                        </p>
+                      </div>
+                      <div className="text-right">
                         <div className="text-3xl font-bold text-cyan-400 mb-2">{service.price}</div>
                         <div className="text-gray-500 text-sm">/month</div>
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white mt-2`}>
-
-
-
                         </span>
                       </div>
                     </div>
                     {/* Stats Row */}
-
                       <div className='flex items-center space-x-1 text-gray-400'>
                         <Users className='w-4 h-4' />
                         <span className='text-white font-medium'>
@@ -892,6 +814,7 @@ export default function ComprehensiveServicesShowcase2025() {;
                         <Globe className="w-4 h-4" />
                         <span className="text-white font-medium">{service.marketSize}</span>
                         <span className="text-gray-500">market</span>
+                      </div>
                     </div>
                           className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service && service.category)} text-white mt-2`}>                          {service && service.category}                      <div className="text-right">;
                         <div className="text-3xl font-bold text-cyan-400 mb-2">{service && service.price}</div>;
@@ -900,7 +823,6 @@ export default function ComprehensiveServicesShowcase2025() {;
                         </span>;
                       </div>;
                     </div>;
-
                     {/* Stats Row */}
                     <div className='flex items-center space-x-8 mb-4 text-sm'>;
                       <div className='flex items-center space-x-1 text-yellow-400'>;
@@ -932,24 +854,50 @@ export default function ComprehensiveServicesShowcase2025() {;
                         </span>;
                         <span className='text-gray-500'>market</span>                      </div>;
                     </div>;
-
                     {/* Features */}                      <div className="flex items-center space-x-1 text-gray-400">;
                         <Globe className="w-4 h-4" />;
                         <span className="text-white font-medium">{service && service.marketSize}</span>;
                         <span className="text-gray-500">market</span>;
                     </div>;
-
                     {/* Features */}
                         ))}
-
-
                     {/* CTA */}
-
-
+                    <div className='flex items-center justify-between'>
+                      <button className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105'>
+                        Learn More
+                      </button>
+                      <div className='text-xs text-gray-500'>
+                        Launched:{' '}
+                        {new Date(service.launchDate).toLocaleDateString()}                      </div>                    <div className="flex items-center justify-between">
+                      <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
+                        Learn More
+                      </button>
+                      <div className="text-xs text-gray-500">
+                        Launched: {new Date(service.launchDate).toLocaleDateString()}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+                    {/* CTA */}
+                    <div className='flex items-center justify-between'>;
+                      <button className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105'>;
+                        Learn More;
+                      </button>;
+                      <div className='text-xs text-gray-500'>;
+                        Launched:{' '}
+                        {new Date(service && service.launchDate).toLocaleDateString()}                      </div>                    <div className="flex items-center justify-between">;
+                      <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">;
+                        Learn More;
+                      </button>;
+                      <div className="text-xs text-gray-500">;
+                        Launched: {new Date(service && service.launchDate).toLocaleDateString()}
+                    </div>;
+                  </div>;
+                </div>;
+              </motion && motion.div>;
             ))}
-</div>;
+          </div>;
         )}
-
             <button
               onClick={() => {;
                 setSearchTerm('');
@@ -1124,9 +1072,6 @@ export default function ComprehensiveServicesShowcase2025() {;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <motion.div
 
-
-
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1134,6 +1079,14 @@ export default function ComprehensiveServicesShowcase2025() {;
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
+              }}
+              className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white font - medium py - 3 px - 6 rounded - xl transition - all duration - 200";
+            >;
+              Clear All Filters;
+            </button>;
+          </div>)}
+      </div>;
+      {/* CTA Section */}
             </h2>
             <p className="text-xl text-cyan-300 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement the perfect solution for your needs.

@@ -26,8 +26,6 @@ export default function Certifications() {
   useEffect(() => {
     fetch('/api/learn/leaderboard').then(r => r.json()).then(d => setLeaderboard(d.leaderboard || []))
   }, []),
-
-
   return (
     <div className="space-y-6">
       <div>

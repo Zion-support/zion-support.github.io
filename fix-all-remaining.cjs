@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:fix-all-remaining.cjs
 <<<<<<< HEAD
 const fs = require('fs');
@@ -587,3 +588,5 @@ console.log('✅ Fixed industries/education.tsx');
 ;
 console.log('🎉 All remaining syntax errors fixed!');
 >>>>>>> main
+=======
+>>>>>>> origin/main

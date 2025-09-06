@@ -134,6 +134,33 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
+  type: "jobs" | "talents"
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Slider } from "@/components/ui/slider",;
+import { Switch } from "@/components/ui/switch",;
+import { Input } from "@/components/ui/input",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { X, Filter } from 'lucide-react';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",;
+import { Badge } from "@/components/ui/badge",;
+import { Label } from "@/components/ui/label",;
+interface BrowseFiltersProps {;
+  type: "jobs" | "talents";
+}
+;
+export function BrowseFilters({ type }: BrowseFiltersProps) {;
+  const [activeFilters, setActiveFilters] = useState<string[]>([]),;
+  const addFilter = (filter: string) => {;
+    if (!activeFilters.includes(filter)) {;
+      setActiveFilters([...activeFilters, filter]);
+    }
+  },
+  
+  const removeFilter = (filter: string) => {
+    setActiveFilters(activeFilters.filter(f => f !== filter))
+  },
+  
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -149,6 +176,7 @@ interface BrowseFiltersProps {
               <SheetHeader>
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
+
                   <>
                     <div className="space-y-2">
                       <Label>Job Type</Label>
@@ -159,6 +187,7 @@ interface BrowseFiltersProps {
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
                       </div>
                     </div>
+
                       <Label>Experience Level</Label>
                       <div className="flex gap-2 flex-wrap">
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>
@@ -184,6 +213,7 @@ interface BrowseFiltersProps {
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
+
                         <span>0+ years</span>
                         <span>20+ years</span>
                       </div>
@@ -205,6 +235,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </SelectContent>
                   </Select>
                 </div>
+
+
+                  <Label>Salary Range</Label>
+                  <div className="flex gap-4 items-center">
+                    <Input placeholder="Min" type="number" className="w-full" />
+                    <span>to</span>
+                    <Input placeholder="Max" type="number" className="w-full" />
+                  </div>
+                </div>
+
+
                   <Label>Skills</Label>
                   <div className='grid grid-cols-2 gap-2'>
                   <Select>;
@@ -231,16 +272,32 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                 
                 <div className="flex items-center justify-between">
+
+
+                  <Label>Skills</Label>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">React</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Python</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Figma</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">UI/UX</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js</Badge>
+                  </div>
+                </div>
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
+
+
               <SheetFooter>
                 <Button variant="outline" className="w-full">Reset</Button>
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
+
+
           <Select>
             <SelectTrigger className="w-[120px] h-8">
               <SelectValue placeholder="Sort By" />
@@ -251,6 +308,26 @@ ursor/fix-website-loading-errors-and-merge-6662
               <SelectItem value="salary">Highest Pay</SelectItem>
             </SelectContent>
           </Select>
+
+                      className='cursor-pointer hover:bg-primary/5 justify-start'>;
+                      Node && Node.js;
+                    </Badge>;
+                  </div>;
+                </div>;
+
+                <div className='flex items-center justify-between'>;
+                  <Label>Only show verified profiles</Label>;
+                  <Switch />;
+                </div>;
+              </div>;
+
+              <SheetFooter>;
+                <Button variant='outline' className='w-full'>;
+                  Reset;
+                </Button>;
+                <Button
+                  className='w-full'
+                  onClick={() => addFilter('Experience: 3+ years')}
                 <div className='space - y-2'>;
                   <Label > Salary Range</Label>;
                   <div className='flex gap - 4 items - center'>;
@@ -331,6 +408,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </SelectContent>;
           </Select>;
 
+
           
           {activeFilters.map((filter) => (
             <Badge 
@@ -344,4 +422,3 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={() => removeFilter(filter)}              />;
             </Badge>;
           ))}
-

@@ -1,4 +1,3 @@
-
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
@@ -29,11 +28,6 @@ export default function CreateTalentProfile() {
       </div>
     </div>
   )
-}
-
-import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
-
-
 import React from "react",;
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
 
@@ -48,5 +42,3 @@ export default function CreateTalentProfile() {;
             to get discovered for AI and tech projects on the Zion Marketplace.;
           </p>;
         </div>;
-
-

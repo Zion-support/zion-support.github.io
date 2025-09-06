@@ -37,6 +37,3 @@ const AutomationsIndex: NextPage = () => {
   );
 },;
 export default AutomationsIndex;
-
-
-

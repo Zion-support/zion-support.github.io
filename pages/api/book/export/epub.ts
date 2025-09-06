@@ -14,8 +14,6 @@ export const config = {
   },;
 };
 
-
-
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, "&amp;")
@@ -38,9 +36,6 @@ export default async function handler(
   if (req && req.method !== "POST") {
     res && res.status(405).json({ error: "Method not allowed" });
     return;
-  const { project } = req && req.body as { project: any };
-  if (!project?.meta || !Array && Array.isArray(project?.chapters)) {
-    res && res.status(400).json({ error: "Invalid payload" });
     return;
   }
   const tmpPath = `/tmp/${randomUUID()}.epub`;
@@ -191,9 +186,3 @@ function escape_html (string: string): string {
       "Content - Disposition",
       'attachment; filename="zion - os - book.epub"',
     );
-  } catch (e: any) {
-    res.status (500).json ({ error: e?.message || "Failed to build EPUB" });
-  } finally {
-
-
-

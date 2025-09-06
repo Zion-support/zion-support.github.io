@@ -1,5 +1,4 @@
 
-
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -28,10 +27,6 @@ if (return) {
       set_timeout (() => {
         setIsSuccess (false);
       }, 5000);
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    if (!email || isSubmitting) return;
-    setIsSubmitting(true),;
     try {;
       // In a real implementation, this would connect to a backend service;
       // For now, we'll simulate a successful submission;
@@ -83,7 +78,7 @@ export const MobileEmailCapture: React.FC = () => {;
         setIsSuccess(false)
       }, 5000)
     } catch (error) {
-      console.error ("Error subscribing:", error);
+      console.error("Error subscribing:", error)
     } finally {
       setIsSubmitting(false)
     }
@@ -129,6 +124,10 @@ export const MobileEmailCapture: React.FC = () => {;
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">;
             Subscribe to our mobile app updates and be the first to try new features before they're released to the public.;
           </p>;
+            <Input
+              type="email"
+              placeholder="Enter your email address"
+              value={email}
             We respect your privacy and will never share your information.;
           </p>;
         </div>;

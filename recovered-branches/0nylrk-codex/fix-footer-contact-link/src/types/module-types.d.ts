@@ -43,6 +43,4 @@ declare module 'lovable-tagger' {;
   export function componentTagger(): Plugin;
 }
 ;
-
-
-
+}

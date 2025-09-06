@@ -1,28 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -30,34 +5,14 @@ import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRig
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ;
-  Heart, ;
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { Heart, ;
-  DollarSign, ;
-  Settings, ;
-  ShoppingCart, ;
-  BookOpen, ;
   Building,;
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
-
 import SimpleLayout from '../../components/SimpleLayout';
   Brain;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
-const industries = [;
-  {;
-    name: 'Healthcare',;
-    description: 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',;
-    icon: Heart,;
-    href: '/industries/healthcare',;
-    features: ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],;
-    color: 'from-red-500 to-pink-500';
   Brain;
 } from 'lucide-react';
   Brain;
@@ -210,8 +165,6 @@ const stats = [;
   { number: '24/7, label: 'Industry Support' }',;
 ;];
 
-
-
 export default function IndustriesPage() {
   return (;
     <Layout);
@@ -267,14 +220,6 @@ const industries = [;
     href: '/industries/government',;
     features: ['Citizen Services', 'Data Security', 'Digital Transformation'];
   }
-];
-export default function Industries() {;
-  return (
-    <Layout
-      title="Industry Solutions - Zion Tech Group"
-      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."
-      keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -282,15 +227,11 @@ export default function Industries() {;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
           </div>;
-
-
 
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
@@ -433,8 +374,6 @@ export default function Industries() {;
                 Our deep industry expertise allows us to deliver tailored solutions that address specific sector challenges;
                 and drive measurable business outcomes.;
               </p>;
-
-
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Industries We Serve
@@ -476,9 +415,6 @@ export default function Industries() {;
                   <motion&& motion.div)
 
                     key={index}
-
-
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
                     className="bg-white/10 backdrop-blur-md rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -505,9 +441,6 @@ export default function Industries() {;
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-
-
-
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
             <motion&& motion.div
@@ -522,7 +455,6 @@ export default function Industries() {;
                 We combine deep industry knowledge with cutting-edge technology to deliver solutions that truly understand your business.;
               </p>;
             </motion.div>;
-
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
@@ -601,7 +533,6 @@ export default function Industries() {;
                   We ensure all solutions meet industry-specific regulatory requirements and;
                   maintain the highest security standards.;
                 </p>;
-
               <motion.div
                 className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}

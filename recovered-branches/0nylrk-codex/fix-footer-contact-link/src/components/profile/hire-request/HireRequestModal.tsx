@@ -22,9 +22,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { HireRequestForm } from "./HireRequestForm",
 import { TalentProfile } from "@/types/talent",
 import { UserProfile } from "@/types/auth",
-
-
-
 interface HireRequestModalProps {
   talent: TalentProfile | null;
   isOpen: boolean;
@@ -38,9 +35,10 @@ export function HireRequestModal({
   userDetails
 }: HireRequestModalProps) {
   const handleClose = () => {
-  }
-  if (!talent) return null;
-  };
+    onClose()
+  },
+
+  if (!talent) return null,
 
 import React from './react';
 import {
@@ -88,22 +86,14 @@ import {UserProfile} from "@/types/auth";
           </DialogTitle>
         </DialogHeader>
         <HireRequestForm
-
-
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
         <HireRequestForm 
+        <HireRequestForm
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}
-
-        />;
-      </DialogContent>;
-    </Dialog>;
-  );
-}
-
           </DialogTitle>;
         </DialogHeader>;
         <HireRequestForm;

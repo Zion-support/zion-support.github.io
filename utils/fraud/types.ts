@@ -5,6 +5,7 @@ export interface AdminAction {;
 export interface AdminAction {
 
 
+
 export interface AdminAction {;
 
   id: string;
@@ -28,19 +29,13 @@ export interface FraudDetectionResult {;
   isFraud: boolean;
   confidence: number;
   reasons: string[];
-export interface FraudDetectionConfig {
-}
-
-
-export interface FraudDetectionConfig {;
-
   enabled: boolean;
   rules: {
-    suspicious_activity: {
+    suspiciousActivity: {
       enabled: boolean;
-}
 
 
     confidenceThreshold: number,
   };
 
+}

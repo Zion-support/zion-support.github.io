@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -9,6 +10,8 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -107,6 +110,7 @@ module.exports = SEOOptimizer;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 =======
@@ -120,6 +124,8 @@ module.exports = SEOOptimizer;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -131,6 +137,7 @@ const path = require('path')
         if (!content.includes('<Head>') && !content.includes('<title>')
             "issue"
 <<<<<<< HEAD
+<<<<<<< HEAD
             "recommendation"
 =======
             "recommendation"
@@ -147,3 +154,5 @@ const path = require('path')
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main

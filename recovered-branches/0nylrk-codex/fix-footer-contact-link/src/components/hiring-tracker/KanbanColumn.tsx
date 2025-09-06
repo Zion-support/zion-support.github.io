@@ -1,4 +1,3 @@
-
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -6,9 +5,6 @@ import { Badge } from "@/components/ui/badge";
 import { CandidateCard } from "./CandidateCard";
 import { Badge } from "@/components/ui/badge",
 import { CandidateCard } from "./CandidateCard",
-
-
-
 interface KanbanColumnProps {
 
   id: string
@@ -179,6 +175,19 @@ return (<Card className= {
 
                 <CandidateCard 
 
+  return (
+    <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>;
+      <CardHeader className="pb-2">;
+        <div className="flex justify-between items-center">;
+          <CardTitle className="text-base">{title}</CardTitle>;
+          <Badge variant={getBadgeVariant(id) as any}>{count}</Badge>;
+        </div>;
+        <p className="text-xs text-muted-foreground">{description}</p>;
+      </CardHeader>;
+      <CardContent className="flex-grow p-3 overflow-y-auto">;
+        <Droppable droppableId={id}>;
+          {(provided) => (;
+            <div
                   key={application.id}
               ref={provided && provided.innerRef}
               {...provided && provided.droppableProps}
@@ -197,8 +206,16 @@ return (<Card className= {
               )}
             </div>;
           )}
-        </Droppable>
-      </CardContent>
-    </Card>
-  )
+                />))}
+              {provided.placeholder}
+              {applications.length === 0 && (
+                <div className="h - full flex items - center justify - center border - 2 border - dashed border - muted rounded - md p - 4">;
+                  <p className="text - center text - sm text - muted - foreground">;
+                    Drag candidates here;
+                  </p>;
+                </div>)}
+            </div>)}
+        </Droppable>;
+      </CardContent>;
+    </Card>);
 }

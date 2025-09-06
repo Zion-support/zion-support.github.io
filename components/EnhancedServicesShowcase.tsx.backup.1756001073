@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { 
 <<<<<<< HEAD
+<<<<<<< HEAD
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
   ChevronRight, Shield, Zap, Globe
 =======
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
   CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+=======
+>>>>>>> origin/main
 } from 'lucide-react';
 
 interface Service {
@@ -28,6 +31,7 @@ interface Service {
   color: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' },
@@ -159,6 +163,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       color: 'from-blue-500 to-cyan-500'
     }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+=======
+>>>>>>> origin/main
   ];
 
   const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))];
@@ -237,6 +243,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <AnimatePresence>
             {filteredServices.map((service, index) => (
               <motion.div
@@ -267,6 +274,8 @@ const EnhancedServicesShowcase: React.FC = () => {
                     <Star className="w-3 h-3" />
                     Popular
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+=======
+>>>>>>> origin/main
                   </div>
                 </div>
               )}

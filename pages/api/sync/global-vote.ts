@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from "uuid",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
@@ -33,8 +34,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     payload: { id: proposalId, proposalId, title, votes },
     originInstanceId: state.config.instanceId,
     version,
-
-
     timestamp: Date.now(),
     merkleRoot};
 
@@ -115,13 +114,6 @@ export default async function handler(req, res) {
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {
-
-}
-
-      })),
-  return res.status (200).json ({ status: "created", merkle_root, version, event_id: event.event_id });
-}
-;
           // ignore
 
           } catch (error) {

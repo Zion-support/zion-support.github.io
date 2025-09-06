@@ -1,4 +1,3 @@
-
 import { jsPDF  } from 'jspdf';
 import { WorkExperience  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
@@ -9,7 +8,6 @@ import {WorkExperience} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
 import {format_date} from '../formatters';
 export function addWorkExperienceSection (
-
 
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
@@ -25,40 +23,16 @@ export function addWorkExperienceSection(;
   doc: jsPDF;
   work_experience: WorkExperience[];
   colors: PdfThemeColors;
-  doc: jsPDF;
-  work_experience: WorkExperience[];
-  colors: PdfThemeColors;
-  startY: number
-): number {
-
-  if (workExperience.length === 0) return startY;
   let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
-    doc.addPage()
-    yPos = 20
-  }
-  doc.setFontSize(16);
-  doc.setTextColor(colors.heading);
-  doc.text('Professional Experience', 20, yPos);
-  yPos += 8;
-  doc.setDrawColor(colors.accent);
-  doc.line(20, yPos, 100, yPos);
   yPos += 8;
   // Sort work experience by date (newest first)
   const sortedWorkExperience = [...workExperience].sort((a, b) => {
-    if (a.is_current && !b.is_current) return -1;
-    if (!a.is_current && b.is_current) return 1;
-    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
-    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
-    return dateB.getTime() - dateA.getTime()
   });
   for (const work of sortedWorkExperience) {
     // Check if we need to add a new page
     if (yPos > 260) {
-
-
-
     }
   }
   return yPos + 5
@@ -145,3 +119,4 @@ if ( {) {
     }
   }
   return y_pos + 5;
+}

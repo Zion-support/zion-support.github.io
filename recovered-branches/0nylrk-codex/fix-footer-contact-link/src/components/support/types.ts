@@ -1,7 +1,3 @@
-
-import { ReactNode } from "react";
-import { ReactNode  } from './react';
-
 export interface HelpArticle {
   id: string;
   title: string;

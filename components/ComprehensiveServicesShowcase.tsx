@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
   Star
   Clock
   Users
@@ -44,7 +43,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
   Grid,
   List,
   ArrowRight,
-
 import {;
   Star,;
   Clock,;
@@ -68,12 +66,6 @@ import {;
   Target,;
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import { ;
-  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, ;
-
-import { 
-  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
-
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, Grid, List, ArrowRight, Award, Target;
 } from 'lucide-react';
@@ -88,13 +80,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           return b.popular ? 1 : -1;
         case 'price':
 
-
-  return (
-
-
-        {/* Header */}
-        <motion&& motion.div
-
     <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
       <div className='max-w-7xl mx-auto'>        {/* Header */}
 
@@ -102,11 +87,17 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 
 
         <motion.div
+  const formatPrice = (price: string) => {;
+    return price && price.replace('$', '').replace(, '');
+  };
+
+  return (
+        {/* Header */}
+        <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-
 
         >
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
@@ -283,12 +274,11 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
 
-
         >
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
             {/* Search */}
-            <div className='relative flex-1 max-w-md'>;
-              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5' />;
+            <div className='relative flex-1 max-w-md'>
+              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5' />
               <input
                 type='text'
                 placeholder='Search services...'
@@ -306,7 +296,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                 <option value='rating'>Highest Rated</option>;
                 <option value='newest'>Newest First</option>;
               </select>;
-              <div className='flex bg-white/10 rounded-xl p-1'>;
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all ${;
@@ -348,6 +337,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
               >;
                 <span>{category.icon}</span>;
                 {category.name}
+            ))}
         {/* Services Display */}
         {viewMode === 'grid' ? (;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -355,13 +345,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
-        {/* Services Display */}
-        {viewMode === 'grid' ? (
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnimatePresence>
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
@@ -391,19 +374,13 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   exit={{ opacity: 0, coordinate_y: -30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                    </div>
-                  )}
-
-
                       <Star className='w-3 h-3' />                      Popular
 
                       Popular
 
-
-
-
                     </div>
                   )}
+
                   {/* Service Content */}
                   <div className='p-6'>
                     <div className='flex items-start justify-between mb-4'>
@@ -414,11 +391,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                         </div>
                         <div className='text-xs text-white/60'>
                           {service.period}
-                        </div>
-
-
-
-
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2'>
@@ -475,8 +447,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                         <div className="text-xs text-white/60">Trial</div>
                       </div>
                     </div>
-                    </div>;
-
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>;
                       <div>;
@@ -512,6 +482,34 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 
                     {/* CTA */}
                     <a
+                      href={service.link}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'
+                    >
+                      Learn More
+                      <ExternalLink className='w-4 h-4' />                    </a>                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
+                    >
+                      Learn More
+                      <ExternalLink className="w-4 h-4" />
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
+        ) : (
+          <div className='space-y-6'>            <AnimatePresence>          <div className="space-y-6">
+            <AnimatePresence>
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 30 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
 
                       )}
 
@@ -523,12 +521,13 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                       {service.popular && (
                       )}
                     </div>
-                      )}
-                    </div>
-
-
-                        <div>
-                          <h3 className='text-2xl font-bold text-white mb-2'>
+                    {/* CTA */}
+                    <a
+                    {/* Center - Service Details */}
+                    <div className='flex - 1'>;
+                      <div className='flex items - start justify - between mb - 4'>;
+                        <div>;
+                          <h3 className='text - 2xl font - bold text - white mb - 2'>;
                             {service.name}
                           </h3>;
                           <p className='text - white / 70 text - lg mb - 3'>;
@@ -540,6 +539,27 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                         </div>;
                         <div className='text - right'>;
                           <div className='text - 3xl font - bold text - white'>;
+                            {service.price}
+                      )}
+                    </div>
+
+                    {/* Center - Service Details */}
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+                        <div>
+                          <h3 className='text-2xl font-bold text-white mb-2'>
+                            {service.name}
+                          </h3>
+                          <p className='text-white/70 text-lg mb-3'>
+                            {service.tagline}
+                          </p>
+                          <p className='text-white/60 text-sm'>
+                            {service.description}
+                          </p>
+                        </div>
+                        <div className='text-right'>
+                          <div className='text-3xl font-bold text-white'>
                             {service.price}
                           </div>
                           <div className='text-white/60'>{service.period}</div>                        </div>
@@ -554,8 +574,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                           <div className="text-white/60">{service.period}</div>
                         </div>
                       </div>
-                    </div>;
-
                     {/* Center - Service Details */}
                     <div className='flex-1'>;
                       <div className='flex items-start justify-between mb-4'>;
@@ -576,7 +594,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                           </div>;
                           <div className='text-white/60'>{service && service.period}</div>                        </div>;
                       </div>;
-
                       {/* Features Grid */}                        <div>;
                           <h3 className="text-2xl font-bold text-white mb-2">{service && service.name}</h3>;
                           <p className="text-white/70 text-lg mb-3">{service && service.tagline}</p>;
@@ -587,7 +604,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                           <div className="text-white/60">{service && service.period}</div>;
                         </div>;
                       </div>;
-
                       {/* Features Grid */}
                       {/* Stats Row */}
                       <div className='flex items-center gap-6 text-sm text-white/60'>
@@ -632,9 +648,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                         <div className="flex items-center gap-2 text-white">
                           <span>{getCategoryIcon(service.category)}</span>
                           <span className="text-sm">{service.category}</span>
-                      </div>
-                      </div>;
-
                       {/* Stats Row */}
                       <div className='flex items-center gap-6 text-sm text-white/60'>;
                         <div className='flex items-center gap-2'>;
@@ -658,7 +671,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                         </div>;
                       </div>;
                     </div>;
-
                     {/* Right Side - CTA and Category */}
                     <div className='flex-shrink-0 flex flex-col items-end gap-4'>;
                       <div className='text-right'>;
@@ -707,13 +719,13 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 
         )}
 
+        )}
         {/* Contact CTA */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
-
 
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>
@@ -726,14 +738,14 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
-                href='mailto:kleber@ziontechgroup && ziontechgroup.com'
-                className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'>;
-                Contact Sales Team;
-                <ArrowRight className='w-5 h-5' />;
-              </a>;
+                href='mailto:kleber@ziontechgroup.com'
+                className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'
+              >
+                Contact Sales Team
+                <ArrowRight className='w-5 h-5' />
+              </a>
               <a
                 href='tel:+13024640950'
-              <a
                 className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Call +1 302 464 0950
@@ -750,8 +762,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
               </a>;
             </div>;
           </div>;
-
-
+  );
 }
   );
 }
@@ -759,32 +770,4 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
         </motion.div>;
       </div>;
     </section>);
-              <a
-                href=&quot;mailto:kleber@ziontechgroup.com&quot;
-                className=&quot;bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2&quot;
-              >
-                Contact Sales Team
-                <ArrowRight className=&quot;w-5 h-5&quot; />
-              </a>
-              <a
-                href=&quot;tel:+13024640950&quot;
-                className=&quot;bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2&quot;
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Contact Sales Team
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Call +1 302 464 0950
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-}
 }

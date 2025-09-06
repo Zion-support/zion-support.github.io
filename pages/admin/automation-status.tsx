@@ -23,8 +23,6 @@ export default AutomationStatus,;
 };
 export default AutomationStatus;
 
-
-
 export default AutomationStatus,;
 
   );

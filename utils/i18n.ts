@@ -30,3 +30,4 @@ export const i18n = {
   language: 'en',
   resolved_language: 'en';
 }
+}

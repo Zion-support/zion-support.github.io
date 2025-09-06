@@ -1,3 +1,4 @@
+              }
               onClose(), // Close mobile menu on any click
             }}
           >

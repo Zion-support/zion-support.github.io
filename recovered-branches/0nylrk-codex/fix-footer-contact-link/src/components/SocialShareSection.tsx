@@ -1,11 +1,8 @@
-
 import { Button } from "./ui/button",
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
 import { toast } from "./ui/use-toast";
 export function SocialShareSection() {
   // Current URL and text to share
-
-
 
   const shareUrl = encodeURIComponent(window.location.href);
   const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
@@ -90,9 +87,6 @@ export function SocialShareSection() {
                 key={index}
                 className={`${link.color} text-white`}
                 size="sm"
-}
-
-
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
 import { toast } from "./ui/use-toast",;
@@ -200,19 +194,6 @@ function SocialShareSection() {
     }];
 ;
   return (
-
-            {shareLinks.map((link, index) => (;
-              <Button;
-
-
-
-}
-          </div>;
-        </div>;
-      </div>;
-    </section>;
-  );
-}
     <section className="py - 12 bg - zion - blue">;
       <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6">;

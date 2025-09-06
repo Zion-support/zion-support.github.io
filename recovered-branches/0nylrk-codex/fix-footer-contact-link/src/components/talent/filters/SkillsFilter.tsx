@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
@@ -91,14 +89,6 @@ const POPULAR_SKILLS = [;
   "DevOps";
   "Security";
 ];
-
-      </button>;
-
-      {expanded && (;
-        <div className="mt-4 space-y-2">;
-          {POPULAR_SKILLS && POPULAR_SKILLS.map(skill => (;
-            <div key={skill} className="flex items-center">;
-
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
@@ -112,6 +102,7 @@ const POPULAR_SKILLS = [;
               >
 
 
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer">;
                 {skill}
               </label>;
             </div>;

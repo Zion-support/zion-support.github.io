@@ -178,7 +178,8 @@
     implementation_details: 'Production financial AI platform with real - time trading and comprehensive risk management.';
     launch_date: '2025 - 01 - 15';
 
-
+  }
+];
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -837,6 +838,3 @@ export const innovative2025Services: Innovative2025Service[] = [;
     reviews: 32;
   }
 ];
-
-;
-

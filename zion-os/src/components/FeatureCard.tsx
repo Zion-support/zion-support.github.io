@@ -1,5 +1,3 @@
-          e.preventDefault();
-          onClick();
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -27,8 +25,6 @@ function FeatureCard() {
   }
   return (
     <div;
-          e.preventDefault();
-          onClick();
         }
       }}
       tab_index={0}
@@ -51,7 +47,7 @@ function FeatureCard() {
           className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 rounded";
           on_click={(e) => e.stop_propagation ()}
         >;
-          Learn more ;
+          Learn more →;
         </Link>;
       </div>;
     </div>);

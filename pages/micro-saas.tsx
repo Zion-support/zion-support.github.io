@@ -1,21 +1,24 @@
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-origin/main
-
-
-
-
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-
 import React from 'react';
 import Layout from '../components / layout / Layout';
 import { motion } from 'framer-motion';
 import Link from 'next / link';
 import {
 
+const microSaasProducts = [
+  {
+    id: 1
+    title: "AI-Powered Voice Assistant Builder"
+    description: "Create custom voice assistants for your business with our no-code platform"
+    icon: Mic
+    category: "Voice Technology"
+    pricing: "$99/month"
+    features: ["No-code voice assistant creation", "Multi-language support", "Custom wake words", "Analytics dashboard"]
+    benefits: ["95% accuracy rate", "24/7 availability", "Easy integration", "Custom branding"]
+  }
   {
     id: 2
     title: "Smart IoT Device Manager"
@@ -253,6 +256,9 @@ origin/main
 </Link>
 </Link>;
 import React from 'react';
+import Head from 'next / head';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
 import {
   Cloud
   Zap
@@ -300,168 +306,6 @@ import {
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  useEffect(() => {;
-    const timer = setTimeout(() => setIsLoaded(true), 100),;
-    return () => clearTimeout(timer);
-  }, []),;
-  const contact: ContactInfo = {;
-    phone: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    site: 'https://ziontechgroup.com';
-  },;
-  const categories = [;
-    { id: 'all', name: 'All Products', count: 150 },;
-    { id: 'ai', name: 'AI-Powered', count: 45 },;
-    { id: 'analytics', name: 'Analytics', count: 30 },;
-    { id: 'automation', name: 'Automation', count: 25 },;
-    { id: 'security', name: 'Security', count: 20 },;
-    { id: 'productivity', name: 'Productivity', count: 15 },;
-    { id: 'marketing', name: 'Marketing', count: 15   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],;
-  const products = [;
-    {;
-      id: 1;
-      name: 'AI-Powered Video Clip Maker';
-      description: 'Automatically create engaging video clips from long-form content using advanced AI algorithms.';
-      category: 'ai';
-      features: ['AI Content AnalysisAuto-EditingMultiple FormatsCloud Processing'],;
-      price: '$29/month',;
-      popular: true;
-    },;
-    {;
-      id: 2,;
-      name: 'Smart Contract Analyzer',;
-      description: 'Comprehensive analysis and security auditing for blockchain smart contracts.',;
-      category: 'security',;
-      features: ['Vulnerability DetectionGas OptimizationCode ReviewAudit Reports'],;
-      price: '$99/month',;
-      popular: false;
-    },;
-    {;
-      id: 3,;
-      name: 'Cybersecurity Threat Intelligence',;
-      description: 'Real-time threat monitoring and intelligence gathering for enhanced security.',;
-      category: 'security',;
-      features: ['Threat DetectionRisk AssessmentIncident ResponseCompliance Monitoring'],;
-      price: '$149/month',;
-      popular: true;
-    },;
-    {;
-      id: 4,;
-      name: 'Multi-Language Website Translator',;
-      description: 'Automatically translate websites into multiple languages with context awareness.',;
-      category: 'automation',;
-      features: ['100+ LanguagesContext TranslationSEO OptimizationReal-time Updates'],;
-      price: '$49/month',;
-      popular: false;
-    },;
-    {;
-      id: 5,;
-      name: 'Predictive Inventory Optimizer',;
-      description: 'AI-driven inventory management with demand forecasting and optimization.',;
-      category: 'analytics',;
-      features: ['Demand ForecastingStock OptimizationCost AnalysisIntegration APIs'],;
-      price: '$79/month',;
-      popular: true;
-    },;
-    {;
-      id: 6,;
-      name: 'Real-Time Analytics Dashboard',;
-      description: 'Comprehensive business intelligence dashboard with real-time data visualization.',;
-      category: 'analytics',;
-      features: ['Real-time DataCustom DashboardsAlert SystemExport Capabilities'],;
-      price: '$59/month',;
-      popular: false;
-    },;
-    {;
-      id: 7,;
-      name: 'Automated Customer Support',;
-      description: 'AI-powered customer support system with natural language processing.',;
-      category: 'ai',;
-      features: ['Chatbot IntegrationTicket ManagementKnowledge BaseMulti-channel Support'],;
-      price: '$89/month',;
-      popular: true;
-    },;
-    {;
-      id: 8,;
-      name: 'Blockchain Transaction Monitor',;
-      description: 'Monitor and analyze blockchain transactions across multiple networks.',;
-      category: 'analytics',;
-      features: ['Multi-chain SupportTransaction TrackingAlert SystemAPI Access'],;
-      price: '$69/month',;
-      popular: false;
-    },;
-    {;
-      id: 9,;
-      name: 'Social Media Scheduler',;
-      description: 'Advanced social media management with AI-powered content optimization.',;
-      category: 'marketing',;
-      features: ['Multi-platformContent CalendarAnalyticsAuto-posting'],;
-      price: '$39/month',;
-      popular: false;
-    },;
-    {;
-      id: 10,;
-      name: 'Document Processing AI',;
-      description: 'Intelligent document processing with OCR and data extraction capabilities.',;
-      category: 'ai',;
-      features: ['OCR TechnologyData ExtractionFormat ConversionBatch Processing'],;
-      price: '$59/month',;
-      popular: true;
-    },;
-    {;
-      id: 11,;
-      name: 'Workflow Automation Engine',;
-      description: 'Create and manage complex business workflows with drag-and-drop interface.',;
-      category: 'automation',;
-      features: ['Visual BuilderIntegration HubConditional LogicMonitoring'],;
-      price: '$79/month',;
-      popular: false;
-    },;
-    {;
-      id: 12,;
-      name: 'Email Marketing Optimizer',;
-      description: 'AI-powered email marketing with personalization and performance optimization.',;
-      category: 'marketing',;
-      features: ['PersonalizationA/B TestingAnalyticsTemplate Library'],;
-      price: '$49/month',;
-      popular: true;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-}
-  ],
-  const filteredProducts = selectedCategory === 'all'
-    ? products
-    : products.filter(product => product.category === selectedCategory),
-  return (
-
-
-
-
-</Link>
-</Link>;
-import React from 'react';
-import Head from 'next / head';
-import Link from 'next / link';
-import { motion } from 'framer-motion';
-
-    return () => clearTimeout(timer);
-
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
 export default function MicroSaaS() {
 
   Cloud,
@@ -529,20 +373,6 @@ export default function MicroSaaS() {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
 
-
-  const contact: ContactInfo = {
-
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-
-  const products = [
-    {
-
-
-
-
-
   const filteredProducts =
     selectedCategory === 'all'
       ? products
@@ -561,8 +391,10 @@ export default function MicroSaas() {
         <meta
           name='description'
           content='Explore our 150+ innovative micro SaaS products including AI-powered tools, analytics dashboards, automation solutions, and security services.'
-      <ErrorBoundary level='page'>
-        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
+        />;
+        <meta
+          name='keywords'
+          content='micro SaaS, SaaS products, AI tools, analytics, automation, security, productivity, marketing tools'
 
         />;
         <meta name='viewport' content='width=device-width, initial-scale=1 && 1.0' />;
@@ -584,8 +416,6 @@ export default function MicroSaas() {
                       selectedCategory === category && category.id;
                         ? 'bg-blue-600 text-white';
                         : 'bg-slate-800 text-slate-300 hover:bg-slate-700';
-
-
 
 
           {/* Products Grid */}
@@ -812,8 +642,6 @@ export default function MicroSaas() {
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-
-
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Lightning Fast</h3>
@@ -903,8 +731,6 @@ export default function MicroSaas() {
                     Specialized tools that solve specific business problems
                   </p>
                 </div>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>
 
                       />;
                     </svg>;
@@ -967,12 +793,6 @@ export default function MicroSaas() {
                 Contact our experts to discuss which micro SaaS products are
                 right for your business and get started with a free trial.
               </p>
-              <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-
-
-
-
 
 
                 <Link
@@ -992,6 +812,17 @@ export default function MicroSaas() {
                   Call {contact && contact.phone}
                 </a>;
                 <a
+                  href={`mailto:${contact.email}`}
+                  className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'                >
+                  Email Us
+                </a>
+              </div>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+            </motion.div>
+          </div>
+        </section>
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
@@ -1008,10 +839,6 @@ origin/automation-improvements-final
         </section>;
 
 
-            </motion.div>
-          </div>
-        </section>
-
         {/* Products Grid */}
         <section className="py-20 bg-gray-50">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -1020,32 +847,10 @@ origin/automation-improvements-final
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16">;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-                Our Micro SaaS Products;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-                Each product is designed to solve a specific business challenge with powerful, easy-to-use tools;
-              </p>;
-            </motion && motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {microSaasProducts && microSaasProducts.map((product, index) => (;
-                <motion&& motion.div
-                  key={product && product.id}
-
-
-
-
-
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-                >
-                  <div className="flex items-center mb-4">
-                    <product.icon className="w-8 h-8 text-blue-600 mr-3" />
-                    <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                 >
                   <div className="flex items-center mb-4">
@@ -1107,6 +912,10 @@ origin/automation-improvements-final
             </div>
           </div>
         </section>
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
 
 
                   </div>;
@@ -1205,9 +1014,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 }
             </div>
-
-            </div>
-
           </section>
         </main>
       </ErrorBoundary>
@@ -1269,8 +1075,6 @@ origin/main
     </Layout>;
   );
 }
-
-
 
 
 }

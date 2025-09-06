@@ -6,7 +6,6 @@ import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-
   Code,
   GitBranch,
   Database,
@@ -38,14 +37,45 @@ import {
   TrendingUp;
   Cpu;
 
-export default function DeveloperToolsPage() {
-  const developerTools = [
-    {
-      icon: <Code className='w-8 h-8 text-white' />
-      title: 'GitHub Copilot'
-      description:
-        'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.'
-      features: [
+      pricing: '$10 / month',
+      market_price: '$10 - 20 / month',
+      website: 'https://github.com / features / copilot',
+      color: 'bg - gradient - to - br from - gray - 500 to - black',
+      text_color: 'text - gray - 400',
+      gradient: 'from - gray - 400 to - black',
+      popular: true,
+      ];
+      pricing: '$4 / month',
+      market_price: '$4 / month',
+      website: 'https://github.com / pricing',
+      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
+      text_color: 'text - green - 400',
+      gradient: 'from - green - 400 to - emerald - 500',
+      popular: true,
+      ];
+      pricing: '$9 / month',
+      market_price: '$9 - 57 / month',
+      website: 'https://www.mongodb.com / atlas',
+      color: 'bg - gradient - to - br from - green - 500 to - blue - 600',
+      text_color: 'text - green - 400',
+      gradient: 'from - green - 400 to - blue - 500',
+      popular: false,
+      ];
+      pricing: '$20 / month',
+      market_price: '$20 / month',
+      website: 'https://vercel.com / pricing',
+      color: 'bg - gradient - to - br from - black to - gray - 600',
+      text_color: 'text - gray - 400',
+      gradient: 'from - black to - gray - 500',
+      popular: false,
+      ];
+      pricing: '$25 / month',
+      market_price: '$25 - 100 / month',
+      website: 'https://snyk.io / pricing',
+      color: 'bg - gradient - to - br from - red - 500 to - pink - 600',
+      text_color: 'text - red - 400',
+      gradient: 'from - red - 400 to - pink - 500',
+      popular: false,
       ];
       pricing: '$12 / month',
       market_price: '$12 - 99 / month',
@@ -55,173 +85,50 @@ export default function DeveloperToolsPage() {
       gradient: 'from - orange - 400 to - red - 500',
       popular: false,
   ];
-
-;
-  const devMarketStats = [;
-
     {
-
-      title: 'Dev Tools Market',
-      value: '$8.2B',
-      growth: '+24% YoY',
-      description: 'Global developer tools market size'
-    };
+      description: 'Average productivity improvement'
+    },  ];      description: 'Global developer tools market size'
+    }
+    {
+      title: 'AI Code Tools'
+      value: '$2.1B'
+      growth: '+45% YoY'
+      description: 'AI-powered development tools market'
+    },      description: 'AI-powered development tools market'
+    }
+    {
+      title: 'Cloud Dev Tools'
+      value: '$4.8B'
+      growth: '+32% YoY'
+      description: 'Cloud-based development platforms'
+    },      description: 'Cloud-based development platforms'
+    }
+    {
+      title: 'Dev Productivity'
+      value: '35%'
+      growth: '+18% YoY'
+      description: 'Average productivity improvement'
+    },      description: 'Average productivity improvement'
+    }
+  ];
+  const devCategories = [
+      description: 'AI - powered development tools market',
+    },    {
+      title: 'Cloud Dev Tools',
+      value: '$4.8B',
+      growth: '+32% YoY',
+      description: 'Cloud - based development platforms',
+    },    {
+      title: 'Dev Productivity',
+      value: '35%',
+      growth: '+18% YoY',
+      description: 'Average productivity improvement',
+    },  ];      description: 'Global developer tools market size';
+    }
     {
       title: 'AI Code Tools',
       value: '$2.1B',
       growth: '+45% YoY',
-
-    {
-
-      name: 'Code Generation',
-      description: 'AI - powered coding assistants and code completion tools',
-      tools: 1,
-
-  ];
-  const devWorkflow = [
-    {
-
-      phase: 'Development',
-      tools: ['GitHub CopilotVS CodeGit'],
-
-      description: 'Write and manage code with AI assistance'
-    }
-
-export default function DeveloperToolsPage() {;
-  const developerTools = [;
-    {;
-      icon: <Code className='w-8 h-8 text-white' />,;
-      title: 'GitHub Copilot',;
-      description:;
-        'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',;
-      features: [;
-        'Intelligent code completion',;
-        'Multi-language support',;
-        'IDE integration',;
-        'Code explanation',;
-        'Security vulnerability detection',;
-      ],      pricing: '$10/month',      title: 'GitHub Copilot',;
-      description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',;
-      features: [;
-        'Intelligent code completionMulti-language supportIDE integrationCode explanationSecurity vulnerability detection';
-      ];
-      pricing: '$10/month',;
-      marketPrice: '$10-20/month',;
-      website: 'https://github && github.com/features/copilot',;
-      color: 'bg-gradient-to-br from-gray-500 to-black',;
-      textColor: 'text-gray-400',;
-      gradient: 'from-gray-400 to-black',;
-      popular: true,;
-      category: 'Code Generation',;
-    },;
-      icon: <GitBranch className='w-8 h-8 text-white' />,;
-      title: 'GitHub Pro',;
-      description:;
-        'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.',;
-      features: [;
-        'Unlimited private repositories',;
-        'Advanced code review tools',;
-        'Priority support',;
-        'Advanced insights',;
-        'Team management features',;
-      ],      pricing: '$4/month',        'Unlimited private repositoriesAdvanced code review toolsPriority supportAdvanced insightsTeam management features';
-      ];
-      pricing: '$4/month',;
-      marketPrice: '$4/month',;
-      website: 'https://github && github.com/pricing',;
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',;
-      textColor: 'text-green-400',;
-      gradient: 'from-green-400 to-emerald-500',;
-      popular: true,;
-      category: 'Version Control',;
-    },;
-      icon: <Database className='w-8 h-8 text-white' />,;
-      title: 'MongoDB Atlas',;
-      description:;
-        'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.',;
-      features: [;
-        'Fully managed MongoDB',;
-        'Auto-scaling & optimization',;
-        'Global distribution',;
-        'Advanced security',;
-        'Real-time analytics',;
-      ],      pricing: '$9/month',        'Fully managed MongoDBAuto-scaling & optimizationGlobal distributionAdvanced securityReal-time analytics';
-      ];
-      pricing: '$9/month',;
-      marketPrice: '$9-57/month',;
-      website: 'https://www && www.mongodb.com/atlas',;
-      color: 'bg-gradient-to-br from-green-500 to-blue-600',;
-      textColor: 'text-green-400',;
-      gradient: 'from-green-400 to-blue-500',;
-      popular: false,;
-      category: 'Database',;
-    },;
-      icon: <Cloud className='w-8 h-8 text-white' />,;
-      title: 'Vercel Pro',;
-      description:;
-        'Next && Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.',;
-      features: [;
-        'Zero-config deployments',;
-        'Preview deployments',;
-        'Advanced analytics',;
-        'Team collaboration',;
-        'Custom domains',;
-      ],      pricing: '$20/month',        'Zero-config deploymentsPreview deploymentsAdvanced analyticsTeam collaborationCustom domains';
-      ];
-      pricing: '$20/month',;
-      marketPrice: '$20/month',;
-      website: 'https://vercel && vercel.com/pricing',;
-      color: 'bg-gradient-to-br from-black to-gray-600',;
-      textColor: 'text-gray-400',;
-      gradient: 'from-black to-gray-500',;
-      popular: false,;
-      category: 'Deployment',;
-    },;
-      icon: <Shield className='w-8 h-8 text-white' />,;
-      title: 'Snyk',;
-      description:;
-        'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.',;
-      features: [;
-        'Vulnerability scanning',;
-        'Dependency monitoring',;
-        'Container security',;
-        'Infrastructure as Code',;
-        'CI/CD integration',;
-      ],      pricing: '$25/month',        'Vulnerability scanningDependency monitoringContainer securityInfrastructure as CodeCI/CD integration';
-      ];
-      pricing: '$25/month',;
-      marketPrice: '$25-100/month',;
-      website: 'https://snyk && snyk.io/pricing',;
-      color: 'bg-gradient-to-br from-red-500 to-pink-600',;
-      textColor: 'text-red-400',;
-      gradient: 'from-red-400 to-pink-500',;
-      popular: false,;
-      category: 'Security',;
-    },;
-      icon: <Zap className='w-8 h-8 text-white' />,;
-      title: 'Postman',;
-      description:;
-        'Complete API development platform for building, testing, and documenting APIs with team collaboration.',;
-      features: [;
-        'API design & testing',;
-        'Team collaboration',;
-        'API documentation',;
-        'Mock servers',;
-        'Monitoring & analytics',;
-      ],      pricing: '$12/month',        'API design & testingTeam collaborationAPI documentationMock serversMonitoring & analytics';
-      ];
-      pricing: '$12/month',;
-      marketPrice: '$12-99/month',;
-      website: 'https://www && www.postman.com/pricing',;
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',;
-      textColor: 'text-orange-400',;
-      gradient: 'from-orange-400 to-red-500',;
-      popular: false,;
-      category: 'API Development',;
-    },  ];      category: 'API Development';
-    }
-  ];
-
     }
   ];
 ;
@@ -232,20 +139,6 @@ export default function DeveloperToolsPage() {;
           Developer Tools & Services | Zion Tech Group - Real Dev Tools with;
           Pricing;
         </title>;
-
-  ];
-
-  return (
-    <>
-      <Head>
-        <title>Developer Tools & Services | Zion Tech Group - Real Dev Tools with Pricing</title>
-        <meta name="description" content="Discover real developer tools and services including GitHub Copilot, MongoDB Atlas, Vercel, and more. All tools include pricing, features, and direct links." />
-        <meta property="og:title" content="Developer Tools & Services | Zion Tech Group" />
-        <meta property="og:description" content="Real developer tools with pricing and direct links to boost your development workflow." />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-
-
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
@@ -266,36 +159,10 @@ export default function DeveloperToolsPage() {;
         </div>
       </section>
       {/* Developer Market Statistics */}
-      <section className='section-padding bg-gradient-cursor-accent'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-            </h2>
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              Understanding the developer tools landscape helps you make
-              informed decisions about your development stack.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>
-            {devMarketStats.map((stat, index) => (
               Understanding the developer tools landscape helps you make;
               informed decisions about your development stack.;
             </p>;
           </div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>;
-            {devMarketStats && devMarketStats.map((stat, index) => (;
-              <Card
-                key={index}
-                className='card-hover border-gradient-blue text-center'
-                  <h3 className="text-lg font-semibold text-white mb-3">{stat.title}</h3>
-                  <div className="text-2xl font-bold text-cursor-blue mb-2">{stat.value}</div>
-                  <div className="text-sm text-green-400 mb-3">{stat.growth}</div>
-                  <p className="text-sm text-gray-400">{stat.description}</p>
-                </div>
-              </Card>
-
-            ))}
 
 
 
@@ -305,17 +172,7 @@ export default function DeveloperToolsPage() {;
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-
-
-
               Curated Developer Tools & Services
-            </h2>
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              Each tool has been carefully selected based on performance
-              reliability, and real-world developer usage.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {developerTools.map((tool, index) => (              Curated Developer Tools & Services
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.
@@ -323,10 +180,6 @@ export default function DeveloperToolsPage() {;
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {developerTools.map((tool, index) => (
-          </div>;
-        </div>;
-      </section>;
-
       {/* Developer Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -339,16 +192,12 @@ export default function DeveloperToolsPage() {;
               reliability, and real-world developer usage.;
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {developerTools && developerTools.map((tool, index) => (              Curated Developer Tools & Services;
             </h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.;
             </p>;
           </div>;
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {developerTools && developerTools.map((tool, index) => (;
               <Card
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${
@@ -382,26 +231,6 @@ export default function DeveloperToolsPage() {;
                   </div>;
                 </div>;
               </Card>;
-                        variant="primary"
-                        size="sm"
-                        className="bg-cursor-blue hover:bg-cursor-blue-dark"
-                      >
-                        Try Tool
-                        <ExternalLink className="w-4 h-4 ml-2" />
-                      </Button>
-                      <div className="text-right">
-                        <div className="text-xs text-gray-500">Direct Link</div>
-                        <div className="text-xs text-cursor-blue font-mono">{tool.website}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-
-            ))}
-
-
-
       {/* Developer Workflow */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -420,6 +249,10 @@ export default function DeveloperToolsPage() {;
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {devWorkflow.map((phase, index) => (
+              Build a complete development pipeline with these essential tools;
+              that work together seamlessly.;
+            </p>;
+          </div>;
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Build a complete development pipeline with these essential tools that work together seamlessly.
@@ -433,6 +266,16 @@ export default function DeveloperToolsPage() {;
               Build a complete development pipeline with these essential tools that work together seamlessly.;
             </p>;
           </div>;
+                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                <div className="p-6 text-center">;
+                  <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <Cpu className="w-8 h-8 text-cursor-blue" />;
+                  </div>;
+                  <h3 className="text-xl font-semibold text-white mb-3">{phase && phase.phase}</h3>;
+                  <p className="text-gray-400 mb-4">{phase && phase.description}</p>;
+                  <div className="space-y-1">;
+                    {phase && phase.tools.map((tool, toolIndex) => (;
+                      <div key={toolIndex} className="text-sm text-cursor-blue font-medium">;
                         {tool}
                       </div>
                     ))}
@@ -440,17 +283,6 @@ export default function DeveloperToolsPage() {;
                 </div>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Tool Categories */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-              Developer Tool Categories
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of developer tools helps you
@@ -459,15 +291,37 @@ export default function DeveloperToolsPage() {;
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {devCategories.map((category, index) => (
-              Understanding the different types of developer tools helps you;
-              build a comprehensive development stack.;
-            </p>;
           </div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-            {devCategories && devCategories.map((category, index) => (;
-              <Card
+        </div>;
+      </section>;
+      {/* Tool Categories */}
+      <section className='section-padding bg-gradient-cursor'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
+            {dev_workflow.map ((phase, index) => (
+            ))}
+      {/* CTA Section */}
+      <section className='section-padding bg-gradient-cursor-accent'>;
+        <div className='container-cursor text-center'>;
+          <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+          </h2>;
+          <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
+            {dev_categories.map ((category, index) => (
+              <Card;
                 key={index}
+                className='card - hover border - gradient - blue';
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                </div>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
       {/* Tool Categories */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -546,6 +400,7 @@ export default function DeveloperToolsPage() {;
               href='/contact'
               variant='outline'
               size='lg'
+              Get Dev Consultation
             </Button>;
           </div>;
         </div>;

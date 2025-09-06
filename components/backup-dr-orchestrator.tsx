@@ -1,3 +1,9 @@
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button';
+import { extraServices } from '../data/extra-services';
+
 export default function BackupDROrchestratorPage() {
 
   const service = extraServices.find(s =>
@@ -58,7 +64,7 @@ export default function BackupDROrchestratorPage() {;
                   </div>;
                   <div className='text-slate-400'>;
                     {service && service.trialDays;
-                      ? `${service && service.trialDays}-day free trial  `;
+                      ? `${service && service.trialDays}-day free trial • `;
                       : ''}
                     Setup: {service && service.setupTime}
                   </div>;
@@ -157,7 +163,7 @@ if (return null) {
                   </div>;
                   <div className='text - slate - 400'>;
                     {service.trial_days;
-                      ? `${service.trial_days}-day free trial  `;
+                      ? `${service.trial_days}-day free trial • `;
                       : ''}
                     Setup: {service.setup_time}
                   </div>;
@@ -193,17 +199,6 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import Button from '../components/ui/Button';
-import { extraServices } from '../data/extra-services';
-
-export default function BackupDROrchestratorPage() {
-
-  const service = extraServices.find(s =>
-    s.link.endsWith('/backup-dr-orchestrator');
-  );  if (!service) return null;export default function BackupDROrchestratorPage() {;
   const service = extraServices.find(s => s.link.endsWith('/backup-dr-orchestrator'));
   if (!service) return null;
 
@@ -224,3 +219,6 @@ export default function BackupDROrchestratorPage() {
 }
 
 
+    </UltraAdvancedFuturisticBackground>);
+}
+;

@@ -1,4 +1,3 @@
-
 import React from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -14,9 +13,6 @@ import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",
 import { FeatureHighlights } from "@/components/home/FeatureHighlights",
-
-
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -39,7 +35,6 @@ export default function Home() {
       <Footer />
     </div>
   )
-}
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -109,5 +104,5 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
       <FeaturedListingsSection />;
       <NewsletterSection />;
       <Footer />;
-
-
+    </div>);
+}

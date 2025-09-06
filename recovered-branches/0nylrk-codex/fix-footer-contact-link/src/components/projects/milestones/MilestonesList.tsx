@@ -41,7 +41,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
   onDeleteMilestone;
   onUploadDeliverable;
   isSubmitting;
-
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -88,19 +87,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onUpdateStatus;
   onDeleteMilestone;
   onUploadDeliverable;
-
-  if (isLoading) {
-  onApprove,;
-  onReject;
-}) => {;
-  const [showAddForm, setShowAddForm] = useState(false);
-
-  const handleSubmit = async (data: any) => {;
-    await onCreateMilestone(data),;
-    setShowAddForm(false);
-  };
-
-  if (isLoading) {;
     return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
@@ -115,15 +101,10 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       </div>;
     );
   }
-
-
-  
-
-
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
-        icon={<span className="text-3xl"></span>}
+        icon={<span className="text-3xl">📊</span>}
         title="No Milestones Yet"
         description={isClient ?
           "Break down the project into manageable milestones to track progress and payments." :
@@ -160,6 +141,18 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       <div className="space-y-4">;
         {milestones && milestones.map((milestone) => (;
           <MilestoneCard
+            key={milestone && milestone.id}
+            id={milestone && milestone.id}
+            projectId={milestone && milestone.project_id}
+            title={milestone && milestone.title}
+            description={milestone && milestone.description}
+            amount={parseFloat(milestone && milestone.amount.toString())}
+            status={milestone && milestone.status}
+            dueDate={milestone && milestone.due_date}
+            onApprove={onApprove}
+            onReject={onReject}
+          />;
+        ))}
 }
 
       </div>;

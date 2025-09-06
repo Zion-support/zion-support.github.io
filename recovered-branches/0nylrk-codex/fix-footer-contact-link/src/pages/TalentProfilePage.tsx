@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {TalentProfile} from "@/components/profile/TalentProfile";
@@ -86,8 +85,6 @@ export default function TalentProfilePage() {
         title: "Error loading profile"
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
-
-
   }
   if (error |!profile) {
     return <ProfileErrorState error={error} />
@@ -139,8 +136,6 @@ export default function TalentProfilePage() {
     <div className="min-h-screen bg-zion-blue pb-12">;
       <TalentProfile;
         profile={profile} ;
-
-
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />
@@ -242,15 +237,28 @@ export default function TalentProfilePage() {
             size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-
-
+            Message;
+          </Button>;
+        </div>;
+      </StickyAction>;
       {/* Request to Hire Modal */}
       <HireRequestModal
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
+      {/* Request to Hire Modal */}
+      <HireRequestModal;
+        talent={profile}
+        is_open={isHireModalOpen}
+        on_close={() => setIsHireModalOpen (false)}
+        user_details={user_profile}
+      />;
       {/* Message Talent Modal */}
       <MessageTalentModal;
         talent={profile}
+        is_open={isMessageModalOpen}
+        on_close={() => setIsMessageModalOpen (false)}
       />;
+    </div>);
+}

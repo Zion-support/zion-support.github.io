@@ -2,7 +2,6 @@ import React from 'react';
 
 
 export default function ZionTechGroupPage() {;
-import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import {
@@ -147,7 +146,6 @@ export default function ZionTechGroupPage() {
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <Link href="/" className="text-2xl font-bold text-white">Zion Tech Group</Link>
-
                 </div>
               </div>
               <div className="hidden md:block">
@@ -175,14 +173,12 @@ export default function ZionTechGroupPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <nav className="flex" aria-label="Breadcrumb">
               <ol className="flex items-center space-x-4">
-
-
-
                 <li>
                   <div>
-                    <Link href='/' className='text-gray-300 hover:text-white'>
-                      <Home className='h-4 w-4' />
-                      <span className='sr-only'>Home</span>                    </Link>
+                    <Link href="/" className="text-gray-300 hover:text-white">
+                      <Home className="h-4 w-4" />
+                      <span className="sr-only">Home</span>
+                    </Link>
                   </div>
                 </li>
                 <li>
@@ -220,28 +216,18 @@ export default function ZionTechGroupPage() {
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-
               <div>
-                <div className='w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6'>
-                  <Target className='h-8 w-8 text-white' />
+                <div className="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
+                  <Target className="h-8 w-8 text-white" />
                 </div>
-                <h2 className='text-3xl font-bold text-white mb-4'>
-                  Our Mission
-                </h2>
-                <p className='text-lg text-gray-300 mb-6'>
-                  To accelerate human progress through revolutionary quantum AI
-                  technology, autonomous systems, and cutting-edge platforms
-                  that solve humanity's greatest challenges.
+                <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>
+                <p className="text-lg text-gray-300 mb-6">
+                  To accelerate human progress through revolutionary quantum AI technology, autonomous systems, and cutting-edge platforms that solve humanity's greatest challenges.
                 </p>
                 </div>
-                <h2 className='text-3xl font-bold text-white mb-4'>
-                  Our Vision
-                </h2>
-                <p className='text-lg text-gray-300 mb-6'>
-                  To be the global leader in quantum AI innovation, creating a
-                  world where artificial intelligence and human intelligence
-                  work in perfect harmony to solve complex problems.
+                <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>
+                <p className="text-lg text-gray-300 mb-6">
+                  To be the global leader in quantum AI innovation, creating a world where artificial intelligence and human intelligence work in perfect harmony to solve complex problems.
                 </p>
               </div>
             </div>
@@ -260,9 +246,6 @@ export default function ZionTechGroupPage() {
               <div className='text-center'>
                 <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Shield className='h-8 w-8 text-white' />
-
-
-
         {/* Core Values Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -291,61 +274,51 @@ export default function ZionTechGroupPage() {
 
 
                 </div>
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  Ethical Responsibility
-                </h3>
-                <p className='text-gray-300'>
-                  We develop technology with a deep commitment to ethical
-                  principles, ensuring our solutions benefit humanity and
-                  protect our future.
+                <h3 className="text-xl font-semibold text-white mb-2">Innovation First</h3>
+                <p className="text-gray-300">
+                  We constantly push the boundaries of what's possible, embracing cutting-edge technologies and unconventional thinking.
                 </p>
               </div>
-
-
-
                 </div>
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  Human-Centric Design
-                </h3>
-                <p className='text-gray-300'>
-                  Every solution we create is designed with human needs at the
-                  center, ensuring technology serves people, not the other way
-                  around.
+                <h3 className="text-xl font-semibold text-white mb-2">Ethical Responsibility</h3>
+                <p className="text-gray-300">
+                  We develop technology with a deep commitment to ethical principles, ensuring our solutions benefit humanity and protect our future.
                 </p>
               </div>
-
-
-
+              <div className='text-center'>
+                <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+                  <Users className='h-8 w-8 text-white' />
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-8 w-8 text-white" />
                 </div>
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  Global Impact
-                </h3>
-                <p className='text-gray-300'>
-                  We think globally and act locally, creating solutions that can
-                  scale to benefit communities around the world.
+                <h3 className="text-xl font-semibold text-white mb-2">Human-Centric Design</h3>
+                <p className="text-gray-300">
+                  Every solution we create is designed with human needs at the center, ensuring technology serves people, not the other way around.
                 </p>
               </div>
-
-
-
                 </div>
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  Excellence
-                </h3>
-                <p className='text-gray-300'>
-                  We maintain the highest standards of quality in everything we
-                  do, from research and development to customer support.
+                <h3 className="text-xl font-semibold text-white mb-2">Global Impact</h3>
+                <p className="text-gray-300">
+                  We think globally and act locally, creating solutions that can scale to benefit communities around the world.
+                </p>
+              </div>
+              <div className='text-center'>
+                <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+                  <Award className='h-8 w-8 text-white' />
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Excellence</h3>
+                <p className="text-gray-300">
+                  We maintain the highest standards of quality in everything we do, from research and development to customer support.
                 </p>
               </div>
                 </div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Future-Focused
                 </h3>
-                <p className='text-gray-300'>
-                  We don't just adapt to change; we anticipate it and create the
-                  technologies that will define tomorrow.                </p>
-
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Rocket className="h-8 w-8 text-white" />
@@ -362,40 +335,28 @@ export default function ZionTechGroupPage() {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Brain className="h-6 w-6 text-white" />
-
-
-
                 </div>
-                <h3 className='text-lg font-semibold text-white mb-2'>
-                  Quantum Computing
-                </h3>
-                <p className='text-gray-300 text-sm'>
-                  Next-generation quantum processors and algorithms for
-                  unprecedented computational power.
+                <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>
+                <p className="text-gray-300 text-sm">
+                  Next-generation quantum processors and algorithms for unprecedented computational power.
                 </p>
               </div>
-
-
-
                 </div>
-                <h3 className='text-lg font-semibold text-white mb-2'>
-                  Artificial Intelligence
-                </h3>
-                <p className='text-gray-300 text-sm'>
-                  Advanced machine learning, neural networks, and AI systems
-                  that learn and adapt.
+                <h3 className="text-lg font-semibold text-white mb-2">Artificial Intelligence</h3>
+                <p className="text-gray-300 text-sm">
+                  Advanced machine learning, neural networks, and AI systems that learn and adapt.
                 </p>
               </div>
-
-
-
+              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center'>
+                <div className='w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4'>
+                  <Server className='h-6 w-6 text-white' />
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Server className="h-6 w-6 text-white" />
                 </div>
-                <h3 className='text-lg font-semibold text-white mb-2'>
-                  Cloud Infrastructure
-                </h3>
-                <p className='text-gray-300 text-sm'>
-                  Scalable, secure cloud platforms built for the most demanding
-                  applications.
+                <h3 className="text-lg font-semibold text-white mb-2">Cloud Infrastructure</h3>
+                <p className="text-gray-300 text-sm">
+                  Scalable, secure cloud platforms built for the most demanding applications.
                 </p>
               </div>
 
@@ -448,9 +409,6 @@ export default function ZionTechGroupPage() {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <User className="h-10 w-10 text-white" />
-
-
-
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Kleber</h3>
                 <p className="text-purple-400 mb-2">CEO & Founder</p>
@@ -458,22 +416,13 @@ export default function ZionTechGroupPage() {
                   Visionary leader with over a decade of experience in quantum computing and AI innovation.
                 </p>
               </div>
-
-
-
                 </div>
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  Dr. Sarah Chen
-                </h3>
-                <p className='text-purple-400 mb-2'>Chief Technology Officer</p>
-                <p className='text-gray-300 text-sm'>
-                  Quantum computing expert with PhD from MIT and 15+ years in
-                  advanced AI research.
+                <h3 className="text-xl font-semibold text-white mb-2">Dr. Sarah Chen</h3>
+                <p className="text-purple-400 mb-2">Chief Technology Officer</p>
+                <p className="text-gray-300 text-sm">
+                  Quantum computing expert with PhD from MIT and 15+ years in advanced AI research.
                 </p>
               </div>
-
-
-
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Marcus Rodriguez</h3>
                 <p className="text-purple-400 mb-2">Chief Security Officer</p>
@@ -484,9 +433,6 @@ export default function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-
-
-
             </h2>
             <p className="mt-4 text-lg leading-6 text-purple-100">
               Discover how Zion Tech Group can transform your business with revolutionary technology solutions.
@@ -502,8 +448,6 @@ export default function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-
-                className='inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-purple-700'>                Schedule Consultation;
               </Link>;
             </div>;
           </div>;

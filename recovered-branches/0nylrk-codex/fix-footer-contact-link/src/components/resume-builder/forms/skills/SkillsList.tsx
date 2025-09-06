@@ -10,8 +10,6 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
   const [skillsByCategory, setSkillsByCategory] = useState<;
     Record < string, Skill[]>;
   >({});
-
-
 interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise<void>
@@ -45,9 +43,6 @@ if ( {) {
         }
         acc[category].push (skill);
         return acc;
-    return null;
-  }
-    return null
 
 
     return null
@@ -69,9 +64,6 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
       if (!acc[category]) {;
         acc[category] = [];
       }
-
-
-
   }
   
   return (

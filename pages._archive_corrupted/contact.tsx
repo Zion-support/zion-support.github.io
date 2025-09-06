@@ -1,3 +1,11 @@
+const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
+const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
+const \"ContactPage\": React.FC = () => {
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -135,6 +143,11 @@ const "ContactPage": React.FC = () => {;
                 <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">;
                   <motion&& motion.a
                     href=\"tel:+13024640950\"
+const \"Contact\": NextPage = () => {
+import type { NextPage } from 'next';
+import MainLayout from '../components/layout/MainLayout';
+import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+const "Contact": NextPage = () => {
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -406,6 +419,12 @@ const "Contact": NextPage = () => {;
         </div>;
       </section>;
       {/* FAQ Section */}
+          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
+            <div className=\"bg-white rounded-lg shadow-lg p-6\">
+              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
@@ -666,6 +685,10 @@ const "Contact": NextPage = () => {;
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your company name\"
+                  <div className=\"mb-6\">
+                    <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
+                  <div className="mb-6">
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                       Service Interest
                     </label>
                        />;
@@ -687,6 +710,10 @@ const "Contact": NextPage = () => {;
                           {service}
                         </option>;
                       ))}
+                  <div className=\"mb-6\">
+                    <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
+                  <div className="mb-6">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                       Message *
                     </label>
                     </select>;
@@ -972,6 +999,8 @@ const "Contact": NextPage = () => {;
                     </h3>;
                   </motion && motion.div>;
                 ))}
+
+export default ContactPage
           </div>
         </section>
       </div>
@@ -990,3 +1019,6 @@ export default ContactPage;
       </div>;
     </>;
   );
+
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';

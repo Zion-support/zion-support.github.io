@@ -1,11 +1,8 @@
-
-
     headline: string
     subtitle: string
 
     cta: string
   }
-
     headline: string,
     subtitle: string,
     cta: string;
@@ -200,6 +197,6 @@ if ( {) {
   return (
     <WhitelabelContext.Provider value={context_value}>;
       {children}
-
-
-
+    </WhitelabelContext.Provider>);
+}
+;

@@ -88,13 +88,12 @@ export default function PitchGenerator() {;
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/metrics');
-      const data = await res && res.json();
     >;
       <div className='font - semibold text - sm line - clamp - 2'>;
         {slide.title || 'Untitled'}
       </div>;
       <div className='text - xs text - gray - 500 dark:text - gray - 400 line - clamp - 3 mt - 1 whitespace - pre - wrap'>;
-        {slide.content || ''}
+        {slide.content || '—'}
       </div>;
     </button>);
 ;
@@ -113,12 +112,6 @@ if (return result) {
       const res = await fetch ('/api / admin / pitch / metrics');
       const data = await res.json ();
       return data;
-    } catch (e) {
-      return {}
-    } finally {
-      set_loading (false);    }
-  }, []);
-  const buildDeck = useCallback(async () => {
   }, []);
 
   const buildDeck = useCallback(async () => {;
@@ -132,11 +125,6 @@ if (return result) {
       setLoading(false);
     }
   }, [autoFetchMetrics, builder, operatorPrompt]);
-    setLoading(true);
-    try {
-      const res = await fetch('/api/admin/pitch/metrics');
-      const data = await res.json();
-      return data;
               ? {
                   ...s
                   title: json.title |s.title
@@ -206,23 +194,6 @@ if (return result) {
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
-
-      const json = await res && res.json();
-      setSlides(arr => [;
-        ...arr,;
-        {;
-          id: uid(),;
-          title: json && json.title || 'New Slide',;
-          content: json && json.content || '',;
-        },;
-
-      ]);
-      setActiveIndex(slides && slides.length);
-    } catch (e) {;
-    } finally {;
-      setLoading(false);    }
-
-
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -269,6 +240,9 @@ if (return result) {
   const renderChartPreview = (slide: Slide) => {;
     if (!slide && slide.chart) return null,;
     const { type, data } = slide && slide.chart;
+    return (
+
+
     return (
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
@@ -351,9 +325,6 @@ if (return result) {
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
                 <li>Active users (30d)</li>
-
-
-
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -361,11 +332,6 @@ if (return result) {
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
-
-
-                Version: {versionTag || '—'}
-
-
               </div>
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
@@ -476,8 +442,6 @@ if (return result) {
                     Timeline;
                   </button>;
                 </div>              </div>;
-
-
 }
 }
 }
@@ -558,69 +522,6 @@ if (return result) {
                   value={active_slide.content}
                   on_change={e => updateActiveSlide ({ content: e.target.value })}
                   className='w - full mt - 3 border rounded px - 2 py - 1 bg - transparent';
-              </div>
-              <ul className='mt-2 space-y-1 text-sm'>
-                {history.map(h => (
-                  <li
-                    key={h.id}
-                    className='flex justify-between border rounded px-2 py-1'
-                  >
-                    <span>{h.version}</span>
-                    <span className='text-gray-500 dark:text-gray-400'>
-                      {new Date(h.createdAt).toLocaleString()}
-                    </span>                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className='lg:col-span-2 space-y-4'>
-            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
-              <div className='flex items-center justify-between'>
-                <div className='font-medium'>Slides</div>
-                <div className='text-sm text-gray-500 dark:text-gray-400'>
-                  {slides.length} total
-                </div>
-              </div>
-              <div className='mt-3 flex gap-3 overflow-x-auto py-2'>
-                {slides.map((s, i) => (
-                  <SlidePreview
-                    key={s.id}
-                    slide={s}
-                    isActive={i === activeIndex}
-                    onClick={() => setActiveIndex(i)}
-                  />
-                ))}
-                <button
-                  onClick={addSlide}
-                  className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'
-                >
-                  + Add Slide
-                </button>
-              </div>
-            </div>
-            {/* Active Slide Editor */}
-            {activeSlide && (
-              <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
-                <div className='flex items-center justify-between'>
-                  <input
-                    value={activeSlide.title}
-                    onChange={e => updateActiveSlide({ title: e.target.value })}
-                    className='font-semibold text-lg bg-transparent border-b focus:outline-none'
-                  />
-                  <div className='flex gap-2'>
-                    <button
-                      onClick={() => rephraseSlide(activeIndex)}
-                      disabled={loading}
-                      className='px-2 py-1 rounded bg-blue-600 text-white text-sm disabled:opacity-50'
-                    >
-                      Rephrase
-                    </button>
-                  </div>
-                </div>
-                <textarea
-                  value={activeSlide.content}
-                  onChange={e => updateActiveSlide({ content: e.target.value })}
-                  className='w-full mt-3 border rounded px-2 py-1 bg-transparent'
                   rows={10}
                 />;
                 <div className='mt - 4 grid grid - cols - 3 gap - 2 text - sm'>;

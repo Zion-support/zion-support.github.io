@@ -12,118 +12,13 @@ export interface BlockchainWeb3Service {;
     trialDays: number;
     setupTime: string;
 
-    enterprise: string;
-  }
 
-  features: string[];
-  benefits: string[];
-  target_audience: string[];
-  market_position: string;
-  competitors: string[];
-  tech_stack: string[];
-  real_implementation: boolean;
-  implementation_details: string;
-  roi: string;
-  use_cases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launch_date: string;
-  customers: number;
-  rating: number;
+  {
 
-  reviews: number;
-export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
-  {
-    id: 'decentralized-identity-management'
-    name: 'Decentralized Identity Management Platform'
-    tagline: 'Self-sovereign identity with zero-knowledge proof verification'
-    description:
-      'Revolutionary decentralized identity platform that gives users complete control over their digital identity while maintaining privacy through zero-knowledge proofs and blockchain technology.'
-    category: 'Blockchain & Web3'
-    price: {
-      monthly: 99
-      yearly: 990
-      currency: 'USD'
-      trialDays: 30
-      setupTime: '1-2 days'
-      enterprise: 'Custom pricing'
-    }
-    features: [
-      'Self-sovereign identity management'
-      'Zero-knowledge proof verification'
-      'Multi-chain identity support'
-      'Decentralized identifiers (DIDs)'
-      'Verifiable credentials'
-      'Privacy-preserving authentication'
-      'Cross-platform identity portability'
-      'Advanced encryption standards'
-      'Compliance with W3C standards'
-      'API for enterprise integration'
-    ]
-    benefits: [
-      'Eliminate identity theft and fraud'
-      'Reduce compliance costs by 60%'
-      'Improve user privacy and control'
-      'Enable seamless cross-platform authentication'
-      'Reduce data breach risks'
-    ]
-    targetAudience: [
-      'Financial institutions'
-      'Healthcare providers'
-      'Government agencies'
-      'Educational institutions'
-      'E-commerce platforms'
-      'Social media companies'
-    ]
-    marketPosition:
-      'Leading decentralized identity platform. Competes with Microsoft Entra ID ($6/user), Okta ($2-8/user), and Auth0 ($23-240/user). Our advantage: True decentralization and privacy.'
-    competitors: ['Microsoft Entra ID, Okta, Auth0, Ping Identity, ForgeRock']
-    techStack: [
-      'Ethereum, Polygon, Solana, IPFS, React, Node.js, PostgreSQL, Redis'
-    ]
-    realImplementation: true
-    implementationDetails:
-      'Production-ready decentralized identity platform with enterprise-grade security, mobile SDK, and comprehensive API. Includes admin dashboard and compliance tools.'
-    roi: 'Organizations achieve 400% ROI through reduced fraud, improved compliance, and enhanced user trust.'
-    useCases: [
-      'KYC/AML compliance'
-      'Healthcare patient identity'
-      'Educational credentials'
-      'Professional certifications'
-      'Financial services authentication'
-      'Government digital identity'
-    ]
-    integrations: [
-      'Salesforce, SAP, Oracle, Microsoft 365, Custom enterprise systems'
-    ]
-    support:
-      '24/7 technical support, compliance consulting, custom development, and dedicated success manager.'
-    compliance: [
-      'GDPR, CCPA, HIPAA, SOC 2 Type II, ISO 27001, W3C DID standards'
-    ]
-    link: 'https://ziontechgroup.com/decentralized-identity-management'
-    icon: ''
-    color: 'from-indigo-500 to-purple-600'
-    popular: true
-    launchDate: '2024-02-20'
-    customers: 1200
-    rating: 4.8
-    reviews: 850
-  }
-    icon: '',
-    color: 'from - indigo - 500 to - purple - 600',
-    popular: true,
-    launch_date: '2024 - 02 - 20',
-    customers: 1200,
-    rating: 4 && 4.8,
-    reviews: 850,
-  },
-  {
+      'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
+    ],
+    realImplementation: true,
+
     implementationDetails:
       'Production-ready DeFi optimization platform with real-time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.'
     roi: 'Users achieve 200-400% ROI through optimized yields and reduced risks compared to manual DeFi strategies.'
@@ -309,6 +204,9 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     popular: true;
     launch_date: '2024 - 01 - 01';
     customers: 25000;
+    rating: 4.6,
+    reviews: 18000;
+  }
 ;
   }
 ];
@@ -573,6 +471,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     launchDate: '2024-01-01',;
     customers: 25000,;
     rating: 4.6,;
+    reviews: 18000;
+    rating: 4.6,
     reviews: 18000;
   }
 ];

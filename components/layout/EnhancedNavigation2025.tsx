@@ -1,16 +1,9 @@
 
+};export default EnhancedNavigation2025;
+export default function EnhancedNavigation2025() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
-
-  useEffect(() => {;
-    const handleScroll = () => {;
-      setIsScrolled(window && window.scrollY > 20);
-    };
-    window && window.addEventListener('scroll', handleScroll);
-    return () => window && window.removeEventListener('scroll', handleScroll);
-
   }, []);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -27,7 +20,6 @@
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name} className="relative group">;
                   <button
-
                   {/* Submenu */}
                   <AnimatePresence>;
                     {activeSubmenu === item && item.name && (;
@@ -287,9 +279,6 @@ function EnhancedNavigation2025() {
                           {item && item.badge}
                         </span>;
                       )}
-
-
-
                   {activeDropdown === item.name && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
@@ -308,6 +297,8 @@ function EnhancedNavigation2025() {
                   )}
                 </div>;
               ))}
+              {/* Mobile CTA */}
+              <div className="pt-4">;
                 <Link
                   href="/contact"
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
@@ -354,9 +345,6 @@ function EnhancedNavigation2025() {
             />;
 
 
-
-            
-
             {/* Menu Panel */}
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
               <div className="p-6">;
@@ -364,13 +352,6 @@ function EnhancedNavigation2025() {
                 <div className="flex justify-end mb-6">;
                   <button
                     onClick={closeMenu}
-
-                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200">;
-                    <X className="w-6 h-6" />;
-                  </button>;
-                </div>;
-
-
                 {/* Mobile Navigation Items */}
                 <div className="space-y-4">;
                   {navigationItems && navigationItems.map((item) => (;
@@ -388,9 +369,6 @@ function EnhancedNavigation2025() {
                           activeSubmenu === item && item.name ? 'rotate-180' : ''
                         }`} />;
                       </button>;
-
-
-
 
 
                       {/* Mobile Submenu */}
@@ -465,7 +443,6 @@ function EnhancedNavigation2025() {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="ml - 8 mt - 2 space - y-2";
                     >;
                       {item.children?.map ((child) => (
                         <Link;
@@ -530,10 +507,6 @@ function EnhancedNavigation2025() {
                       <AnimatePresence>;
                         {active_submenu === item.name && (
                           <motion.div;
-                      {/* Mobile Submenu */}
-                      <AnimatePresence>
-                        {activeSubmenu === item.name && (
-                          <motion.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
@@ -590,64 +563,6 @@ function EnhancedNavigation2025() {
 
           </motion.div>)}
       </AnimatePresence>;
-                            className="ml-8 space-y-2"
-                          >
-                            {item.submenu?.map((subitem) => (
-                              <Link
-                                key={subitem.name}
-                                href={subitem.href}
-                                onClick={closeMenu}
-                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200"
-                              >
-                                <h4 className="text-white font-medium">{subitem.name}</h4>
-                                <p className="text-sm text-gray-400 mt-1">{subitem.description}</p>
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ))}
-                </div>
-                {/* Mobile CTA */}
-                <div className="mt-8 space-y-4">
-                  <Link
-                    href="/pricing"
-                    onClick={closeMenu}
-                    className="block w-full text-center px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-200"
-                  >
-                    View Pricing
-                  </Link>
-                  <Link
-                    href="/contact"
-                    onClick={closeMenu}
-                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                  >
-                    Contact Us
-                  </Link>
-                </div>
-                {/* Mobile Contact Info */}
-                <div className="mt-8 pt-6 border-t border-gray-700/50">
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Phone className="w-4 h-4 text-cyan-400" />
-                      <span>{contactInfo.phone}</span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Mail className="w-4 h-4 text-purple-400" />
-                      <span>{contactInfo.email}</span>
-                    </div>
-                    <div className="flex items-start space-x-3 text-gray-400">
-                      <MapPin className="w-4 h-4 text-green-400 mt-0.5" />
-                      <span className="text-xs">{contactInfo.address}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
       {/* Spacer for fixed navigation */}
       <div className="h - 20" />;
     </>);

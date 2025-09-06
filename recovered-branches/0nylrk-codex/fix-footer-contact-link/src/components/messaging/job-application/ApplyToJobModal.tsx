@@ -22,7 +22,6 @@ export function ApplyToJobModal({
             Complete your application for this position
           </DialogDescription>
         </DialogHeader>
-    </Dialog>
 
 import {;
   Dialog,;
@@ -70,15 +69,11 @@ function ApplyToJobModal() {
             Complete your application for this position;
           </DialogDescription>;
         </DialogHeader>;
-        ;
-        <ApplyForm ;
           job={job}
           on_close={on_close}
           onApplySuccess={onApplySuccess}
         />;
       </DialogContent>;
-
-
   );
     </Dialog>);
 }

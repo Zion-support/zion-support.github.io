@@ -31,6 +31,7 @@ import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useNotificationOperations } from './useNotificationOperations',;
 import { NotificationContextType } from './types',;
+
 // Default context used when React type definitions are missing. Providing a;
 // fully-typed object here avoids TypeScript errors that occur when an untyped;
 // `createContext` call returns `{}` instead of the expected shape.;
@@ -62,7 +63,6 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   
   // Load notifications when user changes
   useEffect(() => {
-    notificationOps.fetchNotifications();
     // Set up real-time subscription for new notifications
     if (user) {
       const channel = supabase
@@ -93,19 +93,39 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
 
 
   return context;
-},;
-export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {;
-  const { user } = useAuth(),;
-  const notificationOps = useNotificationOperations(user?.id),;
+};
+
+export const NotificationProvider = ({ children }: { children: ReactNode }): JSX && JSX.Element => {;
+  const { user } = useAuth();
+  const notificationOps = useNotificationOperations(user?.id);
+
   // Load notifications when user changes;
   useEffect(() => {;
-    notificationOps.fetchNotifications(),;
+    notificationOps && notificationOps.fetchNotifications();
+
     // Set up real-time subscription for new notifications;
     if (user) {;
       const channel = supabase;
         .channel('notifications-changes');
+  const context = useContext(NotificationContext) as NotificationContextType;
+  if (!context) {;
+    throw new Error('useNotifications must be used within a NotificationProvider');
+  }
+          }
+        );
+        .subscribe();
+      return () => {
+        supabase.remove_channel (channel);
       }
     }
   }, [user]);
-
-
+  return (
+    <NotificationContext && NotificationContext.Provider value={notificationOps}>;
+      {children}
+;
+  return (
+    <NotificationContext.Provider value={notification_ops}>;
+      {children}
+    </NotificationContext.Provider>);
+}
+;

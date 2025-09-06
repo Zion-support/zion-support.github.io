@@ -59,6 +59,7 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
   Star, TrendingUp, Users, Award, Clock, Heart
   Brain, Atom, Shield, Rocket, Zap, Globe
 
+import {
   Star,
   TrendingUp,
   Users,
@@ -116,8 +117,9 @@ import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
   Star, TrendingUp, Users, Award, Clock, Heart, 
   Brain, Atom, Shield, Rocket, Zap, Globe, ;
-
-
+  Brain as BrainIcon,
+  Play as PlayIcon,
+} from 'lucide-react';
   CheckCircle, ArrowRight, Search, Filter;
   ChevronDown, ChevronUp, Eye, Play, Sparkles;
   Target, Microscope, Lock, Cloud, BarChart3;
@@ -127,25 +129,17 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
   CpuIcon, DollarSign, Phone, Mail, MapPin;
   Dna, Target as TargetIcon, Shield as ShieldIcon;
   BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
-  Brain as BrainIcon, Play as PlayIcon
- } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
-
-export default function UltimateFuturisticServicesShowcase2025() {
-
-export default function UltimateFuturisticServicesShowcase2025() {;
 
 export default function UltimateFuturisticServicesShowcase2025() {;
 
 
 export default function UltimateFuturisticServicesShowcase2025() {;
 
+export default function UltimateFuturisticServicesShowcase2025() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
   const [viewMode, setViewMode] = useState('grid');
-  const filteredServices = ultimateFuturisticServices2025.filter(service => {
         return (
           parseFloat(a && a.price.replace(/[^0-9.]/g, '')) -;
           parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
@@ -170,53 +164,12 @@ export default function UltimateFuturisticServicesShowcase2025() {;
         return b && b.popular ? 1 : -1;      default: return b && b.popular ? 1 : -1;
     }
   });
-  const containerVariants = {
-    hidden: { opacity: 0 }
-    visible: {
-      opacity: 1
-      transition: {
-        staggerChildren: 0.1
-      }
-    },  };        staggerChildren: 0.1
-      }
-    }
-  }
   return (
     <Layout>;
       <Head>;
         <title>;
           Ultimate Futuristic Services Showcase 2025 | Zion Tech Group;
         </title>;
-        <meta
-          name='description'
-          content='Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting-edge technology.'
-        />;
-        <meta
-          name='keywords'
-          content='futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group'
-        />;
-        <meta
-          property='og:title'
-          content='Ultimate Futuristic Services Showcase 2025 | Zion Tech Group'
-        />;
-        <meta
-          property='og:description'
-          content='Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations.'
-        />;
-        <meta
-          property='og:url'
-          content='https://ziontechgroup && ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
-        />;
-        <meta property='og:type' content='website' />;
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
-        />
-      </Head>
-      {/* Hero Section */}
-      <section className='relative py-20 lg:py-32 overflow-hidden'>
-        <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
-        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div        <title>Ultimate Futuristic Services Showcase 2025 | Zion Tech Group</title>
         <meta name="description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group" />
         <meta property="og:title" content="Ultimate Futuristic Services Showcase 2025 | Zion Tech Group" />
@@ -258,6 +211,11 @@ export default function UltimateFuturisticServicesShowcase2025() {;
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
 
 
+              ))}
+      {/* Search and Filter Section */}
+      <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
             {/* Search */}
             <div className='relative flex-1 max-w-md'>;
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
@@ -307,24 +265,11 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 
                   <option key={category.title} value={category.title}>
 
-
-
                     {category.title} ({category.count})
                   </option>
                 ))}
               </select>
 
-              {/* Sort Options */}
-              <select
-                value={sortBy}
-
-              >
-                <option value='popular'>Most Popular</option>
-                <option value='price-low'>Price: Low to High</option>
-                <option value='price-high'>Price: High to Low</option>
-                <option value='rating'>Highest Rated</option>
-                <option value='customers'>Most Customers</option>
-              </select>
               {/* Sort Options */}
               <select
                 value={sortBy}
@@ -338,6 +283,12 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                 <option value='rating'>Highest Rated</option>
                 <option value='customers'>Most Customers</option>
               </select>
+              {/* Sort Options */}
+              <select
+                value={sortBy}
+                onChange={e => setSortBy(e.target.value)}
+                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                ))}
               {/* View Mode Toggle */}
               <div className='flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1'>                <button
                   onClick={() => setViewMode('grid')}
@@ -355,14 +306,18 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                 <option value="rating">Highest Rated</option>;
                 <option value="customers">Most Customers</option>;
               </select>;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
                 </button>;
               </div>;
             </div>;
           </div>;
         </div>;
       </section>;
-
-
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -410,12 +365,16 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     : 'bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 8 hover:border - purple - 500 / 50 transition - all duration - 300';
                 }`}
               >;
-
                       {service.icon}
                     </div>
                   </div>
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'>
+                    Popular;
+                  </div>;
+                {service.popular && (
+                )}
+                {/* Service Header */}
                       {service.name}
                     </h3>;
                     <p className='text - gray - 300 text - sm mb - 3'>;
@@ -453,31 +412,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                         <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                        {feature}
                       </div>;
                     ))}
-                      {service.icon}
-                    </div>
-                  </div>
-                  <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'>
-                      {service.name}
-                    </h3>;
-                    <p className="text - gray - 300 text - sm mb - 3">{service.tagline}</p>;
-                    {/* Price */}
-                    <div className="flex items - center justify - center space - x-2 mb - 4">;
-                      <span className="text - 3xl font - bold text - white">{service.price}</span>;
-                      <span className="text - gray - 400">{service.period}</span>;
-                    </div>;
-                  </div>;
-                </div>;
-                {/* Description */}
-                <p className='text - gray - 300 mb - 6 leading - relaxed'>;
-                  {service.description}
-                </p>;
-                {/* Features */}
-                <div className="mb-6">;
-                  <h4 className="text-white font-semibold mb-3 flex items-center">;
-                    <Sparkles className="w-4 h-4 mr-2 text-purple-400" />;
-                    Key Features;
-                  </h4>;
                         {feature}
                       </div>))}
                     {service.features.length > 4 && (
@@ -504,7 +438,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     )}
                   </div>
                 </div>
-
 
                 {/* Service Details */}
                 <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
@@ -540,6 +473,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     </span>                  </div>
                 </div>
                 {/* ROI and Market Info */}                  </div>
+                    )}
                   <div className="text-gray-400">
                     <span className="block">Trial</span>
                     <span className="text-white font-medium">{service.trialDays} days</span>
@@ -573,8 +507,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     </div>
                     <div className="text-gray-300">
                       <span className="font-semibold text-white">Market Size: </span> {service.marketSize}
-                  </div>
-                </div>
                       {service && service.marketSize}                    </div>                <div className="mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20">;
                   <div className="text-sm">;
                     <div className="text-gray-300 mb-2">;
@@ -593,6 +525,34 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     <Eye className="w-5 h-5" />
                   </button>
                 </div>
+                {/* Contact Info */}
+                <div className='mt-6 pt-6 border-t border-white/10'>;
+                  <div className='text-center text-sm text-gray-400'>;
+                    <p>Contact us for custom pricing and implementation</p>;
+                    <div className='flex items-center justify-center space-x-4 mt-2'>;
+                      <a
+                        href={`tel:${contactInfo && contactInfo.mobile}`}
+                        className='flex items-center text-purple-400 hover:text-purple-300'>;
+                        <Phone className='w-4 h-4 mr-1' />;
+                        {contactInfo && contactInfo.mobile}
+                      </a>;
+                      <a
+                        href={`mailto:${contactInfo && contactInfo.email}`}
+                        className='flex items-center text-purple-400 hover:text-purple-300'>;
+                        <Mail className='w-4 h-4 mr-1' />                        {contactInfo && contactInfo.email}                    <p>Contact us for custom pricing and implementation</p>;
+                    <div className="flex items-center justify-center space-x-4 mt-2">;
+                      <a href={`tel:${contactInfo && contactInfo.mobile}`} className="flex items-center text-purple-400 hover:text-purple-300">;
+                        <Phone className="w-4 h-4 mr-1" />;
+                        {contactInfo && contactInfo.mobile}
+                      </a>;
+                      <a href={`mailto:${contactInfo && contactInfo.email}`} className="flex items-center text-purple-400 hover:text-purple-300">;
+                        <Mail className="w-4 h-4 mr-1" />;
+                        {contactInfo && contactInfo.email}
+                      </a>;
+                    </div>;
+                  </div>;
+                </div>;
+              </motion && motion.div>;
                       </a>
                     </div>
                   </div>
@@ -601,24 +561,27 @@ export default function UltimateFuturisticServicesShowcase2025() {;
             ))}
           </motion.div>
 
-
-
-
           {/* No Results */}
-          {sortedServices && sortedServices.length === 0 && (;
-            <div className='text-center py-16'>;
-              <div className='text-6xl mb-4'></div>;
-              <h3 className='text-2xl font-bold text-white mb-2'>;
-                No services found;
-              </h3>;
-              <p className='text-gray-400 mb-6'>;
-                Try adjusting your search criteria or category filter;
-              </p>;
-              <button
-                onClick={() => {;
                   setSearchTerm('');
-                  setSelectedCategory('all');
                 }}
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300";
+              >;
+                Clear Filters;
+              </button>;
+            </div>;
+          )}
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>
+        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">;
@@ -644,13 +607,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
               </Link>;
               <Link
                 href='/pricing'
-
-
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+            </h2>
             <p className="text-xl text-gray-300 mb-8">
               Transform your business with our revolutionary futuristic services.
               Get in touch with our experts to discuss your specific needs and implementation strategy.
@@ -663,8 +620,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
               Get in touch with our experts to discuss your specific needs and implementation strategy.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link
-                href="/contact"
   );
 }
 }

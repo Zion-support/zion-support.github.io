@@ -68,7 +68,7 @@ export default function MDMPage() {;
                   </div>;
                   <div className='text-slate-400'>;
                     {service && service.trialDays;
-                      ? `${service && service.trialDays}-day free trial  `;
+                      ? `${service && service.trialDays}-day free trial • `;
                       : ''}
                     Setup: {service && service.setupTime}
                   </div>;
@@ -175,7 +175,7 @@ if (return null) {
                   </div>;
                   <div className='text - slate - 400'>;
                     {service.trial_days;
-                      ? `${service.trial_days}-day free trial  `;
+                      ? `${service.trial_days}-day free trial • `;
                       : ''}
                     Setup: {service.setup_time}
                   </div>;
@@ -215,7 +215,6 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-export default function MDMPage() {
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
   if (!service) return null;
 
@@ -236,3 +235,6 @@ export default function MDMPage() {
 }
 
 
+    </UltraAdvancedFuturisticBackground>);
+}
+;

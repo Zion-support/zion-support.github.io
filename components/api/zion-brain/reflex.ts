@@ -16,9 +16,9 @@ function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] |req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken |token === superToken;
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
+
   if (req && req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
@@ -58,6 +58,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(405).json({ error: 'Method not allowed' });
 
 
+}
 }
   append_log,
   evaluate_reflexes,
@@ -141,8 +142,6 @@ return res.status (405).json ({ error: 'Method not allowed' });
       return res.status (500).json ({ error: 'Reflex failure' });
   }
   return res.status (405).json ({ error: 'Method not allowed' });
-
-}
 
 
   return res.status(405).json({ error: 'Method not allowed' });

@@ -7,11 +7,6 @@
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-} from 'lucide-react';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-
-
 
 export default function AIGuardrailsPage() {
   const contactInfo = {
@@ -29,21 +24,32 @@ export default function AIGuardrailsPage() {
     'Human handoff flows and escalation policies'
     'Audit logs, alerting and exportable evidence'
 
-export default function AIGuardrailsPage() {;
-  const contactInfo = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup && ziontechgroup.com',;
-  };
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next/head';
 
-  const features = [;
-    'Prompt/output policy engine with allow/deny lists',;
-    'Jailbreak and prompt injection detection',;
-    'PII/PHI detection and redaction',;
-    'Toxicity, bias and safety classifiers',;
-    'Human handoff flows and escalation policies',;
-    'Audit logs, alerting and exportable evidence',;
+
   ];
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -56,30 +62,10 @@ export default function AIGuardrailsPage() {;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-guardrails' />;
       </Head>;
 
-      <section className='min-h-screen pt-28 pb-20 px-4'>
-        <div className='max-w-6xl mx-auto'>
-          <div className='text-center mb-12'>
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-rose-400 via-red-500 to-orange-500 bg-clip-text text-transparent'>
-              AI Guardrails Suite
-            </h1>
-            <p className='mt-4 text-xl text-gray-300'>
-              Safety and governance for LLM apps with minimal integration and
-              strong guarantees.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10'>
-            <Card className='lg:col-span-2 bg-black/30 border border-rose-500/30'>
-              <div className='p-6'>
-                <h2 className='text-2xl font-semibold text-white mb-4'>
-                  Capabilities
-                </h2>
-                <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>
-                  {features.map(f => (
               Safety and governance for LLM apps with minimal integration and;
               strong guarantees.;
             </p>;
           </div>;
-
                       className='flex items - start gap - 2 text - gray - 200';
                     >;
                       <Check className='w - 5 h - 5 text - emerald - 400 mt - 0.5' />{' '}
@@ -109,18 +95,14 @@ export default function AIGuardrailsPage() {;
               </div>;
             </Card>;
           </div>;
-
                 Slack, PagerDuty, Datadog and SIEM integrations for alerting and;
                 incident response.;
               </p>;
             </Card>;
           </div>;
-
-}
 	);
 }
-
-
+	);
     </UltraAdvancedFuturisticBackground>);					<div className="bg - black / 20 border border - rose - 500 / 30 rounded - 2xl p - 6">;
       <h3 className="text - xl font - semibold text - white mb - 4 text - center">Contact</h3>;
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - sm">;

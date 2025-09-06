@@ -44,9 +44,14 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   },
   
   const handleRemoveEntry = (id: string) => {
+    setEntries(entries.filter(entry => entry.id !== id))
+  }
+  )
+  const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id)),
   };
   );
+
 };  const handleRemoveEntry = (id: string,) => {
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,) => {
@@ -69,6 +74,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <Input
                 type="date"
                 name="date"
+              disabled = {!newEntry.version || !newEntry.changes,}
+
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -79,7 +86,6 @@ import { AppPlatform } from "./MetadataManager",;
 interface ChangelogManagerProps {;
   platform: AppPlatform;
 }
-  return (
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle>Version History</CardTitle>;
@@ -98,10 +104,15 @@ interface ChangelogManagerProps {;
             <Button;
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
+
+
+
             >
               Add
             </Button>
           </div>
+
+
                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"
                 <div className="flex justify-between mb-2">
                   <div className="flex items-center gap-3">
@@ -116,6 +127,7 @@ interface ChangelogManagerProps {;
                 <p className="text-sm whitespace-pre-wrap">{entry.changes}</p>
               </div>
             ))}
+};
           </div>;
         </div>;
       </CardContent>;

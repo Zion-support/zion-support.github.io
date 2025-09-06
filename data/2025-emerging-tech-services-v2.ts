@@ -1,5 +1,3 @@
-export interface EmergingTechService {
-export interface EmergingTechService {;
   id: string;
   name: string;
   tagline: string;
@@ -9,11 +7,7 @@ export interface EmergingTechService {;
     monthly: number;
     yearly: number;
     currency: string;
-    trialDays: number;
-    setupTime: string;
 
-    enterprise: number;
-  }
 
   features: string[];
   benefits: string[];
@@ -36,61 +30,6 @@ export interface EmergingTechService {;
   customers: number;
   rating: number;
   reviews: number;
-  marketSize: string;
-
-  growthRate: string;
-export const emergingTechServicesV2: EmergingTechService[] = [
-  {
-    id: 'space-mining-platform'
-    name: 'Space Mining Platform'
-    tagline: 'Revolutionary asteroid mining and space resource extraction'
-    description:
-      'Advanced platform that enables automated asteroid mining, resource extraction, and space resource management using cutting-edge robotics and AI technology.'
-    category: 'Space & Emerging Tech'
-    price: {
-      monthly: 999
-      yearly: 9990
-      currency: 'USD'
-      trialDays: 7
-      setupTime: '24 hours'
-      enterprise: 4999
-    }
-    features: [
-      'Asteroid identification and mapping'
-      'Automated mining operations'
-      'Resource extraction systems'
-      'Space logistics management'
-      'Real-time monitoring'
-      'Resource processing'
-      'Transportation coordination'
-      'Market analysis'
-      'Risk assessment'
-      'Regulatory compliance tools'
-    ]
-    benefits: [
-      'Access to rare earth elements'
-      'Reduce Earth resource dependency'
-      'Enable space colonization'
-      'Create new economic opportunities'
-      'Advance space technology'
-    ]
-    targetAudience: [
-      'Space agencies'
-      'Mining companies'
-      'Investment firms'
-      'Research institutions'
-      'Government agencies'
-      'Technology companies'
-    ]
-    marketPosition:
-      'Competitive with Planetary Resources ($1000+), Deep Space Industries ($800+), and AstroForge ($600+). Our advantage: Advanced automation, AI optimization, and comprehensive platform.'
-    competitors: [
-      'Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+'
-    ]
-    techStack: [
-      'Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems'
-    ]
-    realImplementation: true
     implementationDetails:
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.'
@@ -108,28 +47,13 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     support:
       '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.'
     compliance: [
-      'Space regulations, International treaties, Safety standards, Industry regulations'
-    ]
-    link: 'https://ziontechgroup.com/space-mining-platform'
-    icon: ''
-    color: 'from-purple-500 to-pink-600'
-    popular: true
-    launchDate: '2024-01-05'
-    customers: 120
-    rating: 4.9
-    reviews: 45
-    marketSize: '$3.5B space mining market'
-    growthRate: '85% annually'
-  }
-    icon: '',
+    icon: '🚀',
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
     launch_date: '2024 - 01 - 05',
     customers: 120,
     rating: 4 && 4.9,
     reviews: 45,
-    marketSize: '$3 && 3.5B space mining market',
-    growthRate: '85% annually',
   },
   {
     implementationDetails:
@@ -299,6 +223,17 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     market_size: '$35B autonomous vehicle market',
     growth_rate: '75% annually',
   },
+    ];
+    ];
+    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
+    support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
+    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],
+    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform';
+    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
+    support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
+    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
+    link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform';
+    icon: '🚗';
     color: 'from - red - 500 to - pink - 600';
     popular: true;
     launch_date: '2024 - 01 - 25';
@@ -306,9 +241,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4 && 4.9;
     reviews: 65;
   }
-
-];
-
   id: string,;
   name: string,;
   tagline: string,;
@@ -387,6 +319,6 @@ export interface EmergingTechService {;
   growthRate: string;
 }
 ;
-
   }
 ];
+;

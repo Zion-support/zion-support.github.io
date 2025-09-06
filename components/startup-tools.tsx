@@ -3,6 +3,16 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
+  Rocket;
+  DollarSign, ;
+  Users, ;
+  BarChart3, ;
+  Mail, ;
+  Calendar, ;
+  Shield, ;
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
 import {
   Rocket,
   DollarSign,
@@ -38,39 +48,6 @@ import {
   Target;
   Lightbulb;
 
-export default function StartupToolsPage() {
-  const startupTools = [
-    {
-      name: 'HubSpot'
-      description:
-        'All-in-one inbound marketing, sales, and customer service platform designed to help businesses grow better.'
-      pricing: 'Free - $45/month'
-      rating: 4.7
-      users: '135K+'
-      icon: <Target className='w-8 h-8 text-orange-400' />
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-      features: [
-        'CRM system'
-        'Email marketing'
-        'Lead generation'
-        'Analytics & reporting'
-        'Marketing automation'
-        'Free tier available'
-      ]
-      website: 'https://hubspot.com'
-      useCase:
-        'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.'
-      pros: [
-        'Free tier'
-        'All-in-one solution'
-        'Great for beginners'
-        'Excellent support'
-      ]
-      cons: [
-        'Can get expensive'
-        'Complex for small teams'
-        'Limited customization'
-      ]
       bestFor: 'B2B startups, SaaS companies, marketing teams'
     }
     {
@@ -242,7 +219,6 @@ export default function StartupToolsPage() {
                 Start Learning;
               </Button>;
             </Card>;
-
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>;
                 <TrendingUp className='w-8 h-8 text-white' />;
@@ -260,10 +236,11 @@ export default function StartupToolsPage() {
           </div>;
         </div>;
       </section>;
-
 }
     </>);
-);
+}
+
+import React from 'react';
 }
 
 import React from 'react';

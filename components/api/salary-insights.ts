@@ -78,13 +78,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .filter((s) => s && s.score > 0)
     .sort((a, b) => b && b.score - a && a.score)
     .slice(0, 20);
-
   const sample = scored && scored.length > 0 ? scored && scored.map((s) => s && s.profile) : TALENT_PROFILES;
   const rates = sample && sample.map((p) => p && p.hourlyRateUsd);
   const baseMedian = median(rates);
   const min = Math && Math.min(...rates);
   const max = Math && Math.max(...rates);
-
   // Adjustments
   const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
   const regionalComparison = Object.entries(byRegion)
@@ -92,14 +90,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
   // Tags
-
-  const undersupplied = (skills || []).some(s =>
-    scarceSkills && scarceSkills.some(t => s && s.toLowerCase().includes(t && t.toLowerCase()))
-  );
-  if (remote) tags && tags.push('Remote Premium');
-  if (undersupplied) tags && tags.push('Undersupplied Skill'),
-
-
   const gptRecommendation = await maybeGetGptRecommendation(body, {
     median: baseMedian
     min
@@ -118,8 +108,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     trendMonthly: trend, regionalComparison,
     tags;
     gptRecommendation};
-
-  return res.status(200).json(response)
 }
 export default async /**
  * handler - Function description

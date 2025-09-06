@@ -1,6 +1,3 @@
-
-
-
 export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;
 export type TimelineType = "fixed" | "flexible";
@@ -62,11 +59,6 @@ export interface QuoteFormData {;
   startDate?: Date;
   endDate?: Date;
   timeline: TimelineType;
-  budget: Budget
-  contactInfo: ContactInfo
-}
-export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'closed' | 'archived';
-export interface QuoteRequest {
 
 export interface QuoteRequest {;
 export interface QuoteRequest {
@@ -74,6 +66,8 @@ export interface QuoteRequest {
 
 export interface QuoteRequest {;
 
+  timeline: TimelineType;
+export interface QuoteRequest {
   id: string;
   talent_id: string;
   talent_name?: string;
@@ -92,6 +86,4 @@ export interface QuoteRequest {;
   is_archived: boolean;
   viewed_at?: string;
   replied_at?: string;
-  created_at: string,
-  updated_at: string;
-
+}

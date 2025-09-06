@@ -50,10 +50,6 @@ export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
 
 }) => {
 
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
-  severity,;
-}) => {;
-  return (
 
     <SeverityIndicator;
       severity={severity as "safe" | "suspicious" | "dangerous"}

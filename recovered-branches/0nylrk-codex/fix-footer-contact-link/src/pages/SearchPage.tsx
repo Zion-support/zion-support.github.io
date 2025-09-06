@@ -1,4 +1,3 @@
-
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -35,15 +34,12 @@ export default function SearchPage() {
 
   const navigate = useNavigate();
 
-
-
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
   useEffect(() => {
     if (initial) {
       search(initial)
     }
-
   return (
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;

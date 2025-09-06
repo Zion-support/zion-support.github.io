@@ -1,4 +1,3 @@
-
 interface SmartContractBuilderProps {
 
   isOpen: boolean
@@ -173,9 +172,10 @@ if ( {) {
 }
         onContractGenerated (generatedContractText);
       }
+      }
     } catch (error) {
-      console.error ("Error generating contract:", error);
-      toast.error ("Failed to generate smart contract");
+      console.error("Error generating contract:", error),
+      toast.error("Failed to generate smart contract")
     }
       if (contractInfo) {
         setDeploymentInfo(contractInfo),
@@ -199,6 +199,10 @@ if ( {) {
         setDeployStatus ('deployed');
         toast.success ("Smart contract deployed successfully!");
       } else {
+        setDeployStatus ('error');
+        toast.error ("Failed to deploy smart contract");
+      }
+    } catch (error) {
   }
   };
 
@@ -279,9 +283,6 @@ export function SmartContractBuilder({;
     setGeneratedContract(contract);
     setActiveTab("preview")
 
-
-
-
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -356,12 +357,11 @@ export function SmartContractBuilder({;
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
+  }
                 Templates;
               </Button>;
             </div>;
           </div>;
-
-            <ContractForm;
 
 
             <ContractForm 

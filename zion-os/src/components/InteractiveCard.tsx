@@ -38,13 +38,19 @@ export default function InteractiveCard({;
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-label={`Navigate to ${title} page`}
+    <Link;
+      href={href}
+      className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
+      onMouseEnter={() => setIsHovered (true)}
+      onMouseLeave={() => setIsHovered (false)}
+      aria - label={`Navigate to ${title} page`}
+>;
+      <div className=&quot;relative & quot;>;
         {/* Animated background */}
         <div;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
         />;
         {/* Icon */}
-
-
             {title}
           </h3>;
           <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
@@ -58,9 +64,6 @@ export default function InteractiveCard({;
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
           {children || (
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
-
-
-
               <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${

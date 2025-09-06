@@ -9,8 +9,6 @@ interface QuoteStatusCardsProps {
     in_review: number;
     responded: number;
     accepted: number;
-
-
 interface QuoteStatusCardsProps {
   statusCounts: {
     new: number,
@@ -31,10 +29,6 @@ interface QuoteStatusCardsProps {
           </CardTitle>
         </CardHeader>
         <CardContent>
-
-      
-
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -43,10 +37,6 @@ interface QuoteStatusCardsProps {
           </CardTitle>
         </CardHeader>
         <CardContent>
-
-      
-
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -55,10 +45,6 @@ interface QuoteStatusCardsProps {
           </CardTitle>
         </CardHeader>
         <CardContent>
-
-      
-
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -67,10 +53,6 @@ interface QuoteStatusCardsProps {
           </CardTitle>
         </CardHeader>
         <CardContent>
-
-      
-
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -132,3 +114,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
           </p>;
         </CardContent>;
       </Card>;
+  );
+}
+

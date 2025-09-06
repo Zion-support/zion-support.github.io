@@ -1,8 +1,8 @@
 
 
 
-
 export function AIMilestoneGenerator({;
+import React, { useState } from 'react';
   scope;
   startDate;
   endDate;
@@ -11,11 +11,6 @@ export function AIMilestoneGenerator({;
   onAddMilestone;
 }: AIMilestoneGeneratorProps) {;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
-
-  }
-  };
-
-  };
 
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -48,11 +43,12 @@ export function AIMilestoneGenerator({;
 }: AIMilestoneGeneratorProps) {;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator(),;
   const [selectedMilestones, setSelectedMilestones] = useState<Record<string boolean>>({}),;
+
   const handleGenerateMilestones = async () => {;
     if (!scope || !startDate || !projectType) {;
       return;
     }
-;
+
     const input: MilestoneInput = {;
     }
 
@@ -61,6 +57,8 @@ export function AIMilestoneGenerator({;
 
 
 
+    }
+  }
   return (
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
@@ -110,11 +108,6 @@ export function AIMilestoneGenerator({;
           </CardContent>;
         </Card>;
       )}
-
-    </div>;
-  );
-}
-
                     <Button;
                       variant="ghost";
                       size="sm";

@@ -9,17 +9,6 @@ function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
 function readGrant(id: string): GrantApplication | null {
-  const p = grantPath(id);
-  if (!fs.existsSync(p)) return null;
-  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
-function writeGrant(record: GrantApplication) {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  fs.writeFileSync(
-    grantPath(record.id)
-    JSON.stringify(record, null, 2)
-    'utf8'
-  );
-function isAuthorized(req: NextApiRequest) {
 }
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
@@ -31,7 +20,6 @@ function isAuthorized(req: NextApiRequest) {
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
   );
-}
 
   if (!existing) return res && res.status(404).json({ error: 'Not found' });
   const ms = existing && existing.milestones || [];
@@ -43,8 +31,6 @@ function isAuthorized(req: NextApiRequest) {
   existing && existing.fundsReleased = (existing && existing.fundsReleased || 0) + tranche;
   existing && existing.milestones = ms;
   existing && existing.updatedAt = new Date().toISOString();
-  writeGrant(existing);
-
 }
 
   res.status(200).json({ record: existing })
@@ -146,6 +132,11 @@ writeGrant(existing);
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
 }
 
+}
+}
+}
+  writeGrant(existing);
+  res.status(200).json({ record: existing });
 }
 }
 }

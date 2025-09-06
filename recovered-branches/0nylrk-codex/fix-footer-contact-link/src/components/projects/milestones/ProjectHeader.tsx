@@ -21,14 +21,6 @@ function ProjectHeader() {
         </Button>;
         <h1 className="text - 2xl md:text - 3xl font - bold truncate max - w-xl">;
           {title}
-import React from 'react';
-import { useNavigate  } from 'react-router-dom';
-import { Button  } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
-interface ProjectHeaderProps {
-  title: string;
-}
-export function ProjectHeader({ title }: ProjectHeaderProps) {
 
   title: string
 }
@@ -56,3 +48,7 @@ interface ProjectHeaderProps {;
           size="sm" 
           className="mr-2"
           onClick={() => navigate(-1)}
+        </h1>;
+      </div>;
+    </div>);
+}

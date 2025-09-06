@@ -7,46 +7,6 @@
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: PerformanceData) => void
 }
-declare global {
-  interface Window {
-    performance: Performance
-  }
-  interface Performance {
-    getEntriesByType(type: string): PerformanceEntry[]
-    memory?: {
-      usedJSHeapSize: number, totalJSHeapSize: number
-      jsHeapSizeLimit: number
-    }
-  }
-  interface PerformanceEntry {
-    name: string, startTime: number
-    duration: number
-  }
-  interface PerformanceNavigationTiming extends PerformanceEntry {
-    domContentLoadedEventStart: number, domContentLoadedEventEnd: number
-    loadEventStart: number, loadEventEnd: number
-    fetchStart: number
-  }
-// Define Performance types if not available
-interface PerformanceEntry {
-  name: string
-  entryType: string
-  startTime: number
-  duration: number
-}
-interface Performance {
-  getEntriesByType(type: string): PerformanceEntry[]
-}
-interface PerformanceNavigationTiming extends PerformanceEntry {
-  loadEventEnd: number
-  loadEventStart: number
-  domContentLoadedEventEnd: number
-  domContentLoadedEventStart: number
-  responseEnd: number
-  responseStart: number
-  requestStart: number
-  navigationStart: number
-}
 interface Performance {
   getEntriesByType (type: string): PerformanceEntry[];
   now (): number;
@@ -161,33 +121,6 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   readonly unloadEventEnd: number;
   readonly unloadEventStart: number;
 }
-      const navigation = navigationEntries[0] as PerformanceNavigationTiming;
-      const paintEntries = window.performance.getEntriesByType('paint');
-      const performanceData = {
-        // Navigation timing
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
-        // Paint timing
-        firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime |0
-        firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime |0
-        // Resource timing
-        resourceCount: window.performance.getEntriesByType('resource').length
-// Memory usage (if available)
-
-        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
-          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize
-          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize
-          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
-      }
-      if (onPerformanceData) {
-        onPerformanceData(performanceData);
-      }
-      // Log performance data in development
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Performance Metrics:', performanceData);
-      }
       measurePerformance();
     } else {;
       window && window.addEventListener('load', measurePerformance);
@@ -287,16 +220,6 @@ interface PerformanceMetrics {fcp?: number;
         )}
           </div>;
         )}
-        {metrics.fid && (;
-<div className="flex justify-between>            <span className="text-gray-600">FID: </span>"            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>"              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})</span>;
-          </div>;
-        )}
-        {metrics.cls && (;
-<div className="flex justify-between>            <span className="text-gray-600">CLS: </span>"            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>"              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})</span>;
-          </div>;
-        )}
-          </div>;
-        )}
 const PerformanceMonitor: React.FC = () => {
   const [metrics, set_metrics] = useState < PerformanceMetrics>({});
   const [is_visible, setIsVisible] = useState (false);
@@ -388,4 +311,3 @@ if (return 'Needs Improvement) {
 <div className="mt - 3 pt - 2 border - t border - gray - 200>        <button"          on_click={() => setIsVisible (false)}
           className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;
       </div>;
-

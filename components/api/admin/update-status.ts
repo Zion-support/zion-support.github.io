@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-
     return;
   }
   if (!isInternalAgentRequest(req)) {
@@ -18,11 +17,6 @@ import path from 'path';
   const merged = {
     ...existing;
     ...body;
-    updatedAt: new Date().toISOString()}
-  fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2));
-
-  res.status(200).json({ ok: true })
-}
 import { isInternalAgentRequest } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -88,6 +82,6 @@ if ( {) {
     updated_at: new Date ().toISOString ()}
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
   res.status (200).json ({ ok: true });
-}
+
 
 

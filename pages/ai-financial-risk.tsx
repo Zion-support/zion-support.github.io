@@ -39,26 +39,6 @@
                   ];
                 ).map((feat, i) => (;
 
-const AIFinancialRisk: React.FC = () => {;
-  return (
-import NextHead from 'next / head';
-import {DollarSign, Check, Phone, Mail, MapPin} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
-import Button from '../components / ui / Button';
-import {innovativeAIServices} from '../data / innovative - ai - services';
-export default /**
- * AIFinancialRiskPage - Function description
- */
-function AIFinancialRiskPage() {
-  const service = innovativeAIServices.find (string =>;
-    (s.link || '').ends_with ('/ai - financial - risk'));
-  const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  }
-;
-const AIFinancialRisk: React.FC = () => {
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;

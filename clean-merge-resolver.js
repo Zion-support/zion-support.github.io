@@ -4,9 +4,6 @@ const { exec_sync } = require ('child_process'),
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🚀 Starting comprehensive merge conflict resolution and PR merging...'),
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 // Function to fix merge conflicts in a file;
 /**
  * fixMergeConflicts - Function description
@@ -28,6 +25,14 @@ function fixMergeConflicts(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8'),;
     if (content !== originalContent) {;
+      fs.writeFileSync(filePath, content, 'utf8'),;
+      console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
+
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.log (`❌ Error fixing ${file_path}: ${error.message}`),
     return false;
   }
 }
@@ -77,7 +82,6 @@ function fixMergeConflicts(filePath) {;
 ;
 // Function to get all files recursively;
 function getAllFiles(dir, extensions) {;
-  let files = [];
   try {;
     const items = fs.readdirSync(dir);
     for (const item of items) {;
@@ -140,39 +144,40 @@ function main() {
 // Main execution;
 async function main() {try {;
     // Check if we're in a git repository;
-    execSync('git rev-parse --git-dir', { stdio: 'pipe' });
-    console.log(' Git repository detected');
-  } catch (error) {console.error(' Not in a git repository');
     process.exit(1);
   }
-  try {// Ensure clean working directory;
-    const status = execSync('git status --porcelain', { encoding: 'utf8' });
-    if (status.trim()) {console.log('  Working directory has changes. Stashing...');
+;
+  try {;
+    // Ensure clean working directory;
+    const status = execSync('git status --porcelain', { encoding: 'utf8' }),;
+    if (status.trim()) {;
+      console.log('⚠️  Working directory has changes. Stashing...'),;
       execSync('git stash push -m "Auto-stash before merge process"');
     }
+;
     // Fetch latest changes;
-    console.log(' Fetching latest changes...');
-    execSync('git fetch --all --prune');
+    console.log('📥 Fetching latest changes...'),;
+    execSync('git fetch --all --prune'),;
     // Switch to main branch;
-    console.log(' Switching to main branch...');
-    execSync('git checkout main');
+    console.log('🔄 Switching to main branch...'),;
+    execSync('git checkout main'),;
     // Pull latest changes;
-    console.log(' Pulling latest changes from main...');
-    try {execSync('git pull origin main');
-    } catch (error) {console.log('  Merge conflicts detected. Resolving...');
+    console.log('📥 Pulling latest changes from main...'),;
+    try {;
+      execSync('git pull origin main');
+    } catch (error) {;
+      console.log('⚠️  Merge conflicts detected. Resolving...'),;
       // Find files with merge conflicts;
-        const files = conflictFiles.trim().split('\n'),;
-        const files = conflictFiles.trim().split('\n');
 
 
         for (const file of files) {;
           if (file.trim()) {;
             }
-            exec_sync (`git add "${file}"`);
+            execSync(`git add "${file}"`);
           }
         }
         // Commit the merge;
-        exec_sync ('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
+        execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
       }
     }
     let fixedCount = 0;
@@ -187,6 +192,7 @@ async function main() {try {;
         // Skip files that can't be read;
       }
     }
+;
 ;
     if (fixedCount > 0) {;
       console.log(`✅ Fixed merge conflicts in ${fixedCount} files`),;
@@ -233,4 +239,3 @@ async function main() {try {;
 }
 ;
 main().catch(console.error),;
-

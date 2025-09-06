@@ -1,12 +1,8 @@
-
 import { useWallet  } from '@/hooks/useWallet';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
 import { BadgeDollarSign } from 'lucide-react';
 export default function WalletPage() {
-
-
-
 import {useWallet} from '@/hooks/useWallet';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components/ui/card';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
@@ -38,7 +34,6 @@ export default function WalletPage() {
           ) : (;
             <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>;
           )}
-
-}
-;
-
+              ))}
+            </ul>
+          )}

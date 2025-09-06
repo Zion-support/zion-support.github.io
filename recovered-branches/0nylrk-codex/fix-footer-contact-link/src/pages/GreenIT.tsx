@@ -1,4 +1,3 @@
-
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -7,9 +6,6 @@ import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
-
-
-
 export default function GreenIT() {
 
   const greenITSolutions = [
@@ -47,14 +43,6 @@ function GreenIT() {
   ];
 ;
   return (
-
-    <AppLayout>
-
-      <SEO 
-        title="Green IT Solutions - Sustainable Technology" 
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance." 
-
-
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
       />
@@ -115,19 +103,19 @@ function GreenIT() {
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                   <h3 className="text-white font-medium text-xl mb-4">Environmental Benefits</h3>
                   <ul className="text-zion-slate-light space-y-2">
-                    <li> Reduced carbon footprint and greenhouse gas emissions</li>
-                    <li> Lower energy consumption and resource utilization</li>
-                    <li> Decreased electronic waste through better lifecycle management</li>
-                    <li> Support for renewable energy initiatives</li>
+                    <li>• Reduced carbon footprint and greenhouse gas emissions</li>
+                    <li>• Lower energy consumption and resource utilization</li>
+                    <li>• Decreased electronic waste through better lifecycle management</li>
+                    <li>• Support for renewable energy initiatives</li>
                   </ul>
                 </div>
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                   <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>
                   <ul className="text-zion-slate-light space-y-2">
-                    <li> Significant cost savings on energy and cooling</li>
-                    <li> Enhanced brand reputation and stakeholder relations</li>
-                    <li> Compliance with emerging environmental regulations</li>
-                    <li> Improved operational efficiency and performance</li>
+                    <li>• Significant cost savings on energy and cooling</li>
+                    <li>• Enhanced brand reputation and stakeholder relations</li>
+                    <li>• Compliance with emerging environmental regulations</li>
+                    <li>• Improved operational efficiency and performance</li>
                   </ul>
                 </div>
               </div>
@@ -146,10 +134,6 @@ function GreenIT() {
       </main>
     </AppLayout>
   )
-}
-
-
-
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -172,6 +156,7 @@ export default function GreenIT() {;
       icon: Leaf}
   ];
   return (;
+
     <AppLayout>;
       <SEO
         title="Green IT Solutions - Sustainable Technology" 
@@ -220,5 +205,6 @@ export default function GreenIT() {;
 
 
 }
+;
     </AppLayout>);
 }

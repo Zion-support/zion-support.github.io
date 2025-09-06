@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
@@ -13,7 +12,6 @@ export function useReferrals() {
   const [stats, setStats] = useState<ReferralStats>({
     totalReferrals: 0;
     pendingReferrals: 0;
-
 
     completedReferrals: 0
     totalRewards: 0});
@@ -79,10 +77,9 @@ if ( {) {
       setReferralCode(data)
     } catch (error) {
     } finally {
-      setIsLoading (false);
+      setIsLoading(false)
     }
-
-
+  }
   },
 
   const fetchReferrals = async () => {
@@ -129,8 +126,6 @@ if ( {) {
     try {
       if (!user) return,
       
-
-
       // Get total referrals
       const { data: referrals, error: refError } = await supabase
         .from('referrals')
@@ -139,6 +134,9 @@ if ( {) {
       const { data: rewards, error: rewardsError } = await supabase
         .from('referral_rewards')
         .select('amount')
+      if (rewardsError) throw rewardsError;
+      // Calculate stats
+      }, 0) : 0;
       setStats({
         totalReferrals;
         pendingReferrals;
@@ -148,7 +146,6 @@ if ( {) {
     } catch (error) {
       console && console.error("Error fetching referral stats:", error)
     }
-
 ;
   const fetch_referrals = async () => {
     try {
@@ -172,11 +169,89 @@ if (throw error) {
     }
   }
       }
-
-
-      const { data, error } = await supabase && supabase.rpc('generate_referral_code', {
-        user_id: user && user.id
-
+      const { data, error } = await supabase.rpc('generate_referral_code', {
+        user_id: user.id
+;
+  const fetch_rewards = async () => {
+    try {
+      // Check condition
+if (return) {
+  $2
+}
+      const { data, error } = await supabase;
+        .from ('referral_rewards');
+        .select ('*');
+        .eq ('user_id', user.id);
+        .order ('created_at', { ascending: false });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      set_rewards (data || []);
+    } catch (error) {
+      console.error ("Error fetching rewards:", error);
+    }
+  }
+;
+  const fetchReferralStats = async () => {
+    try {
+      // Check condition
+if (return) {
+  $2
+}
+      // Get total referrals;
+      const { data: referrals, error: ref_error } = await supabase;
+        .from ('referrals');
+        .select ('id, status');
+        .eq ('referrer_id', user.id);
+;
+      // Check condition
+if (throw ref_error) {
+  $2
+}
+      // Get rewards;
+      const { data: rewards, error: rewards_error } = await supabase;
+        .from ('referral_rewards');
+        .select ('amount');
+        .eq ('user_id', user.id);
+;
+      // Check condition
+if (throw rewards_error) {
+  $2
+}
+      // Calculate stats;
+      const total_referrals = referrals ? referrals.length : 0;
+      const pending_referrals = referrals ? referrals.filter (r => r.status === 'pending').length : 0;
+      const completed_referrals = referrals ? referrals.filter (r => r.status === 'completed').length : 0;
+;
+      const total_rewards = rewards ? rewards.reduce ((sum, item) => {
+        return sum + (item.amount || 0);
+      }, 0) : 0;
+;
+      set_stats ({
+        total_referrals;
+        pending_referrals;
+        completed_referrals;
+        total_rewards;
+      });
+    } catch (error) {
+      console.error ("Error fetching referral stats:", error);
+    }
+  }
+;
+  const generateReferralCode = async () => {
+    try {
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          title: "Authentication required";
+          description: "You need to be logged in to generate a referral code"
+          variant: "destructive"});
+        return;
+      }
       });
       if (error) throw error;
       toast({
@@ -227,6 +302,9 @@ if ( {) {
         title: "Copied!";
         description: "Referral link copied to clipboard",
         variant: "success"});
+    } else {
+      toast ({
+        title: "Cannot copy link";
         title: "Cannot share";
         description: "Please generate a referral code first"
         variant: "destructive"});
@@ -278,8 +356,6 @@ export function useReferrals() {;
       console.error("Error in fetchReferralCode:", error);
     } finally {;
       setIsLoading(false);
-
-
     }
     if (shareUrl) {
       window && window.open(shareUrl, '_blank')
@@ -318,7 +394,5 @@ if ( {) {
     copyReferralLink;
     shareOnSocialMedia;
     fetchReferralStats;
-
-
   }
 }

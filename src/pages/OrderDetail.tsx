@@ -44,25 +44,6 @@ interface Order {
       status: 'shipped'
       total: 299.99
       items: [
-;
-export default /**
- * OrderDetail - Function description
- */
-function OrderDetail() {
-  const router = use_router ();
-  const { user } = use_auth ();
-  const [order, set_order] = useState < Order | null>(null);
-  const [loading, set_loading] = useState (true);
-;
-  useEffect (() => {
-    // Mock data - replace with actual API call;
-    const mock_order: Order = {
-      id: router.query.id as string || '1',
-      order_id: 'ORD - 2024 - 001',
-      date: '2024 - 01 - 15',
-      status: 'shipped',
-      total: 299.99,
-      items: [;
         {
           id: '1'
           name: 'Premium Web Development Service'
@@ -86,24 +67,29 @@ function OrderDetail() {
         </div>;
       </div>);
   }
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Order not found</h1>
+          <Link href="/orders">
+            <Button>
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to orders
+            </Button>
+          </Link>
     );
   }
   return (
-    <div className='container max-w-3xl py-10 space-y-6'>
-      <h1 className='text-3xl font-bold'>Order #{order.orderId}</h1>
 
-      <div>
-        <h2 className='font-semibold mb-2'>Items</h2>
-        <ul className='space-y-1'>
-          {order.items.map((item, idx) => (
-            <li key={idx} className='flex justify-between'>
-              <span>
-                {item.name} x {item.quantity}
-              </span>
-              <span>${item.price.toFixed(2)}</span>
-            </li>
-          ))}
-        </ul>
+    <div className="container mx-auto px-4 py-8">
+      <div className="mb-6">
+        <Link href="/orders">
+          <Button variant="ghost" className="mb-4">
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Back to orders
+          </Button>
+        </Link>
+        <h1 className="text-3xl font-bold">Order Details</h1>
+
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Order Summary */}
@@ -302,6 +288,7 @@ if ( {) {
                     <span className="text - sm">Shipped</span>;
                   </div>)}
                 {order.status === 'delivered' && (
+
                   <div className="flex items - center space - x-3">;
                     <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
                     <span className="text - sm">Delivered</span>;
@@ -396,6 +383,8 @@ export default function OrderDetailPage() {;
     return (
       <div className="container max-w-3xl py-10">
         <Skeleton className="h-6 w-full" />
+
+
       </div>
     )
   }

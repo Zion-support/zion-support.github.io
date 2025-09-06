@@ -1,15 +1,14 @@
 
 
-
 import React from 'react';
+import React from 'react';
+import Layout from '../components/Layout';
 
 export default function Training() {
 
 
 
 import React from 'react';
-import React from 'react';
-import Layout from '../components/Layout';
 
 export default function Training() {
   return (
@@ -834,10 +833,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 export default Training;
 };export default Training;
 
-  )
-  );
-};
-export default Training;
 },
 export default Training,
             >;

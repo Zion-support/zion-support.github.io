@@ -4,7 +4,6 @@ import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import {FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck} from 'lucide-react';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components/ui/card';
-export default function AuditLogVaultPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -44,8 +43,14 @@ export default function AuditLogVaultPage() {
   ];
 
   return (
+              </div>;
+            </Card>;
+          </div>;
+        </div>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>);
 }
-
+;
 
 }
 

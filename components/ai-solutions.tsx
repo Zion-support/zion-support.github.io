@@ -25,7 +25,7 @@ export default function AISolutionsPage() {
       title: 'Natural Language Processing'
       description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.';
       features: ['Text AnalysisSentiment AnalysisLanguage TranslationChatbot Development']
-      icon: ''
+      icon: '💬'
       category: 'Language AI'
       complexity: 'Advanced'
     }
@@ -34,7 +34,7 @@ export default function AISolutionsPage() {
       title: 'Computer Vision'
       description: 'Computer vision solutions for image recognition, object detection, and visual analytics.';
       features: ['Image RecognitionObject DetectionFacial RecognitionQuality Control']
-      icon: ''
+      icon: '👁️'
       category: 'Visual AI'
       complexity: 'Advanced'
     }
@@ -43,7 +43,7 @@ export default function AISolutionsPage() {
       title: 'Autonomous Systems'
       description: 'Self-operating systems that can make decisions and take actions independently.'
       features: ['Decision MakingSelf-LearningAdaptive BehaviorContinuous Improvement']
-      icon: ''
+      icon: '🤖'
       category: 'Autonomy'
       complexity: 'Expert'
     }
@@ -52,9 +52,35 @@ export default function AISolutionsPage() {
       title: 'Predictive Analytics'
       description: 'Data-driven insights that help predict future trends and behaviors.'
       features: ['Trend AnalysisRisk AssessmentForecastingBehavioral Prediction']
-      icon: ''
+      icon: '📊'
       category: 'Analytics'
       complexity: 'Intermediate'
+  const technologies = [
+    'TensorFlow'
+    'PyTorch'
+    'Scikit-learn'
+    'OpenAI GPT'
+    'BERT'
+    'YOLO'
+    'Keras'
+    'Pandas',  ];    {
+      industry: 'Healthcare'
+      solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery']
+      icon: '🏥'
+    }
+    {
+      industry: 'Finance'
+      solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading']
+      icon: '💳'
+    }
+    {
+      industry: 'Retail'
+      solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing']
+      icon: '🛍️'
+    }
+  ];
+  const technologies = [
+    'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas'
   const use_cases = [;
     {
       industry: 'Manufacturing',
@@ -63,7 +89,7 @@ export default function AISolutionsPage() {
         'Predictive Maintenance',
         'Supply Chain Optimization',
       ],
-      icon: '',
+      icon: '🏭',
     },
     {
       industry: 'Healthcare',
@@ -72,12 +98,12 @@ export default function AISolutionsPage() {
         'Patient Care Optimization',
         'Drug Discovery',
       ],
-      icon: '',
+      icon: '🏥',
     },
     {
       industry: 'Finance',
       solutions: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading'],
-      icon: '',
+      icon: '💳',
     },
     {
       industry: 'Retail',
@@ -86,7 +112,7 @@ export default function AISolutionsPage() {
         'Inventory Management',
         'Personalized Marketing',
       ],
-      icon: '',
+      icon: '🛍️',
     },
   ];
 ;
@@ -101,17 +127,17 @@ export default function AISolutionsPage() {
     'Pandas',  ];    {
       industry: 'Healthcare',
       solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery'],
-      icon: '';
+      icon: '🏥';
     }
     {
       industry: 'Finance',
       solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading'],
-      icon: '';
+      icon: '💳';
     }
     {
       industry: 'Retail',
       solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing'],
-      icon: '';
+      icon: '🛍️';
     }
   ];
 ;
@@ -153,7 +179,7 @@ export default function AISolutionsPage() {
                         <li
                           key={featureIndex}
                           className='text-sm text-white/60 flex items-center'>;
-                          <span className='text-cyan-400 mr-2'></span>                          {feature}
+                          <span className='text-cyan-400 mr-2'>•</span>                          {feature}
                         </li>;
                       ))}
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
@@ -186,6 +212,17 @@ export default function AISolutionsPage() {
                     <ul className="space-y-1 mb-4">;
                       {solution && solution.features.map((feature, featureIndex) => (;
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
+                    </ul>
+
+                    <Link
+                      href={`/services#${solution.id}`}
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
+                    >
+                      Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      Learn More <span className="ml-1">→</span>
+                    </Link>
 
                           {feature}
                         </li>;
@@ -194,10 +231,10 @@ export default function AISolutionsPage() {
                     <Link
                       href={`/services#${solution && solution.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
-                      Learn More <span className='ml-1'></span>                    </Link>                      href={`/services#${solution && solution.id}`}
+                      Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution && solution.id}`}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors";
                     >;
-                      Learn More <span className="ml-1"></span>;
+                      Learn More <span className="ml-1">→</span>;
                     </Link>;
                   </div>;
             {/* AI Solutions Grid */}
@@ -216,21 +253,12 @@ export default function AISolutionsPage() {
                     <ul className="space - y-1 mb - 4">;
                       {solution.features.map ((feature, feature_index) => (
                         <li key={feature_index} className="text - sm text - white / 60 flex items - center">;
-                          <span className="text - cyan - 400 mr - 2"></span>;
-                          <span className="text-cyan-400 mr-2">•</span>;
-                    <Link
-
-                          {feature}
 
                   </div>
                 ))}
 
               </div>;
             </div>;
-
-
-            {/* Industry Use Cases */}
-
 
             {/* Industry Use Cases */}
             <div className='mb-16'>
@@ -239,8 +267,15 @@ export default function AISolutionsPage() {
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
 
-
                 {useCases.map((useCase, index) => (
+                ))}
+            {/* Industry Use Cases */}
+            <div className='mb-16'>;
+              <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>;
+                Industry Applications;
+              </h2>;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
+                {useCases && useCases.map((useCase, index) => (;
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'>;
@@ -283,15 +318,18 @@ export default function AISolutionsPage() {
                       {tech}
                     </span>;
                   ))}
+                </div>
+              </div>
+            </div>
 
                 </div>;
               </div>;
             </div>;
 
 
-
-
-
+                      {tech}
+                    </span>;
+                  ))}
             {/* Success Stories */}
             <div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>;
@@ -308,10 +346,6 @@ export default function AISolutionsPage() {
                   </p>;
                   <Link
                     href='/case-studies#ai-automation-manufacturing'
-                    className='text-fuchsia-400 hover:text-fuchsia-300 transition-colors'                  >
-                    Read Case Study 
-                  </Link>
-                </div>            <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-blue-400">AI Success Stories</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
@@ -320,7 +354,7 @@ export default function AISolutionsPage() {
                     Implemented computer vision and ML solutions that improved quality control by 85% and reduced defects by 60%.
                   </p>
                     className='text-fuchsia-400 hover:text-fuchsia-300 transition-colors'>;
-                    Read Case Study ;
+                    Read Case Study →;
                   </Link>;
                 </div>            <div className="mb-16">;
               <h2 className="text-3xl font-bold mb-8 text-center text-blue-400">AI Success Stories</h2>;
@@ -333,16 +367,6 @@ export default function AISolutionsPage() {
                   <Link
                     href="/case-studies#ai-automation-manufacturing"
                     className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
-                  </Link>;
-                </div>;
-                <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>;
-                  <h3 className='text-xl font-bold mb-3 text-fuchsia-400'>;
-                    Content Generation Scale;
-                  </h3>;
-                  <p className='text-white/70 mb-4'>;
-                    Built autonomous content generation systems that increased;
-                    output by 10x while maintaining quality standards.;
-                  </p>;
                   </Link>;
                 </div>;
               </div>;
@@ -371,6 +395,4 @@ export default function AISolutionsPage() {
 
 }
     </>);
-}
-  );
 }

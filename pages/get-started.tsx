@@ -165,6 +165,305 @@ export default function GetStarted() {;
   const [selectedPath, setSelectedPath] = useState<string>('');
   const [currentStep, setCurrentStep] = useState(1);
 
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
+import {
+  Rocket, CheckCircle, ArrowRight, Brain, Atom,
+  Shield, Zap, Users, Clock, Target, Star,
+  FileText, Video, Code, Globe, Building
+} from 'lucide-react',
+export default function GetStarted() {
+  const [selectedPath, setSelectedPath] = useState<string>(''),
+  const [currentStep, setCurrentStep] = useState(1),
+  const onboardingSteps = [
+    {
+      step: 1,
+      title: 'Choose Your Path',
+      description: 'Select the technology area that best fits your needs',
+      icon: <Target className="w-8 h-8 text-cyan-400" />
+    },
+    {
+      step: 2,
+      title: 'Define Requirements',
+      description: 'Tell us about your project goals and constraints',
+      icon: <FileText className="w-8 h-8 text-purple-400" />
+    },
+    {
+      step: 3,
+      title: 'Get Your Proposal',
+      description: 'Receive a detailed proposal and implementation plan',
+      icon: <Star className="w-8 h-8 text-yellow-400" />
+    },
+    {
+      step: 4,
+      title: 'Begin Implementation',
+      description: 'Start your journey with our expert team',
+      icon: <Rocket className="w-8 h-8 text-green-400" />
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const technologyPaths = [
+    {
+      id: 'ai-consciousness',
+      name: 'AI Consciousness & Emotional Intelligence',
+      description: 'Develop AI systems with genuine self-awareness and emotional intelligence',
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      features: [
+        'AI consciousness developmentEmotional intelligence trainingSelf-aware neural networksAutonomous decision making'
+      ],
+      useCases: ['Customer SuccessHR AnalyticsMental HealthEducation'],
+      timeline: '6-12 months',
+      complexity: 'Advanced'
+    },
+    {
+      id: 'quantum-computing',
+      name: 'Quantum Computing Solutions',
+      description: 'Leverage quantum computing for cryptography, optimization, and simulation',
+      icon: <Atom className="w-8 h-8 text-purple-400" />,
+      features: [
+        'Quantum algorithmsPost-quantum cryptographyQuantum machine learningQuantum simulation'
+      ],
+      useCases: ['Financial ServicesHealthcareResearchCybersecurity'],
+      timeline: '8-18 months',
+      complexity: 'Expert'
+    },
+    {
+      id: 'autonomous-systems',
+      name: 'Autonomous Business Systems',
+      description: 'Build self-managing and self-optimizing business operations',
+      icon: <Rocket className="w-8 h-8 text-green-400" />,
+      features: [
+        'Process automationSelf-healing infrastructurePredictive maintenanceAutonomous operations'
+      ],
+      useCases: ['ManufacturingDevOpsCustomer ServiceSupply Chain'],
+      timeline: '3-9 months',
+      complexity: 'Intermediate'
+    },
+    {
+      id: 'enterprise-solutions',
+      name: 'Enterprise Technology Platform',
+      description: 'Modernize your infrastructure with cloud-native and AI-powered solutions',
+      icon: <Building className="w-8 h-8 text-blue-400" />,
+      features: [
+        'Cloud migrationMicroservices architectureAI-powered analyticsSecurity automation'
+      ],
+      useCases: ['Digital TransformationLegacy ModernizationData AnalyticsSecurity'],
+      timeline: '4-12 months',
+      complexity: 'Intermediate'
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const quickStartOptions = [
+    {
+      title: 'Free Consultation',
+      description: '30-minute session to discuss your needs',
+      duration: '30 min',
+      icon: <Users className="w-6 h-6" />,
+      action: 'Schedule Call',
+      color: 'from-cyan-500 to-blue-600'
+    },
+    {
+      title: 'Demo Session',
+      description: 'See our technology in action',
+      duration: '45 min',
+      icon: <Video className="w-6 h-6" />,
+      action: 'Book Demo',
+      color: 'from-purple-500 to-pink-600'
+    },
+    {
+      title: 'Technical Assessment',
+      description: 'Evaluate your current technology stack',
+      duration: '2 hours',
+      icon: <Code className="w-6 h-6" />,
+      action: 'Start Assessment',
+      color: 'from-green-500 to-emerald-600'
+    },
+    {
+      title: 'Pilot Project',
+      description: 'Small-scale implementation to prove value',
+      duration: '4-8 weeks',
+      icon: <Rocket className="w-6 h-6" />,
+      action: 'Discuss Pilot',
+
+  Globe,;
+  Building,;} from 'lucide-react';
+
+export default function GetStarted() {;
+  const [selectedPath, setSelectedPath] = useState<string>('');
+  const [currentStep, setCurrentStep] = useState(1);
+
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
+import {
+  Rocket, CheckCircle, ArrowRight, Brain, Atom,
+  Shield, Zap, Users, Clock, Target, Star,
+  FileText, Video, Code, Globe, Building
+} from 'lucide-react',
+export default function GetStarted() {
+  const [selectedPath, setSelectedPath] = useState<string>(''),
+  const [currentStep, setCurrentStep] = useState(1),
+  const onboardingSteps = [
+    {
+      step: 1,
+      title: 'Choose Your Path',
+      description: 'Select the technology area that best fits your needs',
+      icon: <Target className="w-8 h-8 text-cyan-400" />
+    },
+    {
+      step: 2,
+      title: 'Define Requirements',
+      description: 'Tell us about your project goals and constraints',
+      icon: <FileText className="w-8 h-8 text-purple-400" />
+    },
+    {
+      step: 3,
+      title: 'Get Your Proposal',
+      description: 'Receive a detailed proposal and implementation plan',
+      icon: <Star className="w-8 h-8 text-yellow-400" />
+    },
+    {
+      step: 4,
+      title: 'Begin Implementation',
+      description: 'Start your journey with our expert team',
+      icon: <Rocket className="w-8 h-8 text-green-400" />
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const technologyPaths = [
+    {
+      id: 'ai-consciousness',
+      name: 'AI Consciousness & Emotional Intelligence',
+      description: 'Develop AI systems with genuine self-awareness and emotional intelligence',
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      features: [
+        'AI consciousness developmentEmotional intelligence trainingSelf-aware neural networksAutonomous decision making'
+      ],
+      useCases: ['Customer SuccessHR AnalyticsMental HealthEducation'],
+      timeline: '6-12 months',
+      complexity: 'Advanced'
+    },
+    {
+      id: 'quantum-computing',
+      name: 'Quantum Computing Solutions',
+      description: 'Leverage quantum computing for cryptography, optimization, and simulation',
+      icon: <Atom className="w-8 h-8 text-purple-400" />,
+      features: [
+        'Quantum algorithmsPost-quantum cryptographyQuantum machine learningQuantum simulation'
+      ],
+      useCases: ['Financial ServicesHealthcareResearchCybersecurity'],
+      timeline: '8-18 months',
+      complexity: 'Expert'
+    },
+    {
+      id: 'autonomous-systems',
+      name: 'Autonomous Business Systems',
+      description: 'Build self-managing and self-optimizing business operations',
+      icon: <Rocket className="w-8 h-8 text-green-400" />,
+      features: [
+        'Process automationSelf-healing infrastructurePredictive maintenanceAutonomous operations'
+      ],
+      useCases: ['ManufacturingDevOpsCustomer ServiceSupply Chain'],
+      timeline: '3-9 months',
+      complexity: 'Intermediate'
+    },
+    {
+      id: 'enterprise-solutions',
+      name: 'Enterprise Technology Platform',
+      description: 'Modernize your infrastructure with cloud-native and AI-powered solutions',
+      icon: <Building className="w-8 h-8 text-blue-400" />,
+      features: [
+        'Cloud migrationMicroservices architectureAI-powered analyticsSecurity automation'
+      ],
+      useCases: ['Digital TransformationLegacy ModernizationData AnalyticsSecurity'],
+      timeline: '4-12 months',
+      complexity: 'Intermediate'
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const quickStartOptions = [
+    {
+      title: 'Free Consultation',
+      description: '30-minute session to discuss your needs',
+      duration: '30 min',
+      icon: <Users className="w-6 h-6" />,
+      action: 'Schedule Call',
+      color: 'from-cyan-500 to-blue-600'
+    },
+    {
+      title: 'Demo Session',
+      description: 'See our technology in action',
+      duration: '45 min',
+      icon: <Video className="w-6 h-6" />,
+      action: 'Book Demo',
+      color: 'from-purple-500 to-pink-600'
+    },
+    {
+      title: 'Technical Assessment',
+      description: 'Evaluate your current technology stack',
+      duration: '2 hours',
+      icon: <Code className="w-6 h-6" />,
+      action: 'Start Assessment',
+      color: 'from-green-500 to-emerald-600'
+    },
+    {
+      title: 'Pilot Project',
+      description: 'Small-scale implementation to prove value',
+      duration: '4-8 weeks',
+      icon: <Rocket className="w-6 h-6" />,
+      action: 'Discuss Pilot',
+      color: 'from-orange-500 to-red-600',
+    },  ];
+
+
+
+
+
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Zap,
+  Users,
+  Clock,
+  Target,
+  Star,
+  FileText,
+  Video,
+  Code,
+
+      step: 1,
+      title: 'Choose Your Path',
+      description: 'Select the technology area that best fits your needs',
+
+  Globe,;
+  Building,;} from 'lucide-react';
+
+export default function GetStarted() {;
+  const [selectedPath, setSelectedPath] = useState<string>('');
+  const [currentStep, setCurrentStep] = useState(1);
+
+
+
+
+
+  const handlePathSelection = (pathId: string) => {;
+    setSelectedPath(pathId);
+    setCurrentStep(2);  };
+
   const handleNextStep = () => {;
     if (currentStep < 4) {;
       setCurrentStep(currentStep + 1);    }
@@ -173,8 +472,6 @@ export default function GetStarted() {;
       title: 'Free Consultation',
       description: '30 - minute session to discuss your needs',
       duration: '30 min',
-  };
-
   };
 
       color: 'from-orange-500 to-red-600'
@@ -251,28 +548,17 @@ export default function GetStarted() {;
           </motion.div>
         </div>
       </section>
-              Begin your journey into the future of AI consciousness, quantum;
-              computing, and autonomous systems. Our expert team will guide you;
-              every step of the way.;
-            </p>;
-
-
       {/* Onboarding Steps */}
       <section className='py-20'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-
           >
-            <h2 className='text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Simple 4-Step Process
             </h2>
-            <p className='text-xl text-gray-400'>
-              From initial consultation to full implementation
-            </p>
+            <p className="text-xl text-gray-400">From initial consultation to full implementation</p>
           </motion.div>
-              <motion.div
               <motion.div
 
 
@@ -328,12 +614,10 @@ export default function GetStarted() {;
           <div className="container mx-auto px-4">
             <motion.div
             >
-              <h2 className='text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Choose Your Technology Path
               </h2>
-              <p className='text-xl text-gray-400'>
-                Select the area that best aligns with your business goals
-              </p>
+              <p className="text-xl text-gray-400">Select the area that best aligns with your business goals</p>
             </motion.div>
                 <motion.div
 
@@ -350,7 +634,6 @@ export default function GetStarted() {;
             <div className='grid lg:grid-cols-2 gap-8'>              {technologyPaths && technologyPaths.map((path, index) => (;
                 <motion&& motion.div
                   key={path && path.id}
-
 
                 >
                   <div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
@@ -467,8 +750,6 @@ export default function GetStarted() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
       {currentStep === 2 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
@@ -492,15 +773,11 @@ export default function GetStarted() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                   </h3>
                   <p className="text-gray-300">
                     Now let's gather more details about your specific needs
                   </p>
                 </div>
-
-
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Project Timeline</label>
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
@@ -596,17 +873,11 @@ export default function GetStarted() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
           >
-            <h2 className='text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Start Options
             </h2>
-            <p className='text-xl text-gray-400'>
-              Get started immediately with these quick options
-            </p>
+            <p className="text-xl text-gray-400">Get started immediately with these quick options</p>
           </motion.div>
               <motion.div
 
@@ -637,8 +908,6 @@ export default function GetStarted() {;
                   </h3>;
                   <p className='text - gray - 300 mb - 4 text - center leading - relaxed'>;
                     {option.description}
-
-
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -758,6 +1027,3 @@ export default function GetStarted() {;
   }
 }
 ;
-
-
-

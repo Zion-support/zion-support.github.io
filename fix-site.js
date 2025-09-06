@@ -49,8 +49,6 @@ const nextConfig = {;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
   images: {;
-
-    domains: ["localhost", "ziontechgroup.com"];
 ],;
 ];
 

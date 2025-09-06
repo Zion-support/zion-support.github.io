@@ -8,7 +8,6 @@ export default function CaseStudyPage() {
 
 
 
-
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -28,19 +27,6 @@ import { useRouter } from 'next/router';
         <p>The company needed to modernize their manufacturing operations while maintaining high quality standards
         and reducing operational costs. They required a solution that could adapt to changing production demands
         and minimize human intervention.</p>
-        <h2>Solution</h2>
-        <p>We implemented a comprehensive AI automation system that included:</p>
-        <ul>
-          <li>Predictive maintenance algorithms</li>
-          <li>Real-time production optimization</li>
-          <li>Automated quality control systems</li>
-          <li>Intelligent scheduling and resource allocation</li>
-
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
         <h2>Solution</h2>
         <p>We implemented a comprehensive AI automation system that included:</p>
         <ul>
@@ -225,8 +211,6 @@ export default function CaseStudyPage(req, res) {
               <p className="text-xl text-white/80 mb-8">
                 The case study you're looking for doesn't exist.
               </p>
-              <Link 
-              <Link
 
 
 
@@ -234,7 +218,7 @@ export default function CaseStudyPage(req, res) {
                 href="/case-studies"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
-                 Back to Case Studies
+                ← Back to Case Studies
               </Link>
             </div>
           </main>
@@ -265,8 +249,6 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -392,10 +374,10 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                   </ul>
                 </div>
+
+
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>
                   <div className="space-y-3">
@@ -580,8 +562,5 @@ if ( {) {
             </div>;
           </div>;
         </main>;
-}
-    </>);
-}
 
 

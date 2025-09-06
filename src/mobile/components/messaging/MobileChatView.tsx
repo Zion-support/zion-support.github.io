@@ -1,33 +1,54 @@
+interface Message {
+  id: string;
   content: string;
   timestamp: string;
-  isMe: boolean;
+  is_me: boolean;
   sender?: string;
   avatar?: string;
+  status?: 'sent' | 'delivered' | 'read';
+interface MobileChatViewProps {
+  contact: {
     id: string;
     name: string;
     avatar?: string;
-    status?: string
-  },
-  messages: Message[];
-  onBack: () => void;
-  onSendMessage: (content: string) => void
-
-interface Message {
-    }
-  }
-  const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {    // Check condition
-if ( {) {
-  $2
+    id: string,;
+    name: string,;
+    avatar?: string,;
+    status?: string;
+  },;
+  messages: Message[],;
+  onBack: () => void,;
+  onSendMessage: (content: string) => void;
 }
-      e.prevent_default ();
-      handle_send ();
+
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+  const [newMessage, setNewMessage] = useState(""),
+  const router = useRouter(),
+  
+  const handleSend = () => {
+    if (newMessage.trim() !== "") {
+      onSendMessage(newMessage),
+      setNewMessage("")
+;
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState(""),;
+  const router = useRouter(),;
+  const handleSend = () => {;
+    if (newMessage.trim() !== "") {;
+      onSendMessage(newMessage),;
+      setNewMessage("");
     }
   }
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      handleSend()
+    }
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
         <div className="flex items-center h-14 px-4">
           <Button
+
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
               <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
@@ -36,10 +57,12 @@ if ( {) {
             <Button
               variant='ghost'
               size='icon'
+              variant="ghost"
+              size="icon"
               onClick={startAudioCall}
             <Button
-              variant='ghost'
-              size='icon'
+              variant="ghost"
+              size="icon"
               onClick={startVideoCall}
               <h3 className="font-medium">{contact.name}</h3>
               <p className="text-xs text-muted-foreground">
@@ -47,6 +70,17 @@ if ( {) {
               </p>
             </div>
           </div>
+              aria-label="Start video call"
+            >
+              <Video className="h-5 w-5" />
+            </Button>
+            
+            <Button variant="ghost" size="icon" aria-label="More options">
+              <MoreVertical className="h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+      </header>
             </Button>;
           </div>;
         </div>;
@@ -58,21 +92,16 @@ if ( {) {
               <p>{message && message.content}</p>;
               <div
                 className={cn(
-                    ? 'text-primary-foreground/80'
-                    : 'text-muted-foreground'
-                )}>;
-                {message && message.timestamp}
-                {message && message.isMe && message && message.status && (;
-                  <span className='ml-1'>;
-                    {message && message.status === 'read' ? '' : ''}
-                  </span>;
-                )}
-                    {message.status === 'read' ? '✓✓' : '✓'}
 
-              </div>;
-            </div>;
-          </div>;
+
+                    {message.status === 'read' ? '✓✓' : '✓'}
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
         ))}
+      </div>
           </Button>
           <Input
             value={newMessage}
@@ -138,14 +167,19 @@ if ( {) {
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
+            onChange={(e) => setNewMessage(e.target.value)}
+
+            onKeyDown={handleKeyDown}
+
+            className={!newMessage.trim() ? "opacity-50" : ""}
+            aria-label="Send message"
+          >
+            <Send className="h-5 w-5" />
           </Button>
         </div>
       </div>
     </div>
   )
-}
-}
-;
                   </span>)}
               </div>;
             </div>;

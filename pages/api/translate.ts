@@ -1,6 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import OpenAI from 'openai',;
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 
 
 
@@ -48,7 +45,9 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
+
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
@@ -83,18 +82,6 @@ if (|| targets.length === 0) {) {
         temperature: 0.2}),
       const translated = completion.choices?.[0]?.message?.content?.trim () || '',
       results[lng] = translated;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ translation: 'Translated content' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-export default async function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const { text, targets } = req.body as { text: string, targets: string[] },;
-  if (!text || !Array.isArray(targets) || targets.length === 0) {;
-    return res.status(400).json({ error: 'Invalid input' });
-    } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {

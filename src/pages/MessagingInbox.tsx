@@ -1,10 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react';
-import { use_messaging } from '@/context / MessagingContext';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { ConversationsList, ConversationDetailView } from '@/components / messaging';
-import { useIsMobile } from '@/hooks / use - mobile';
-import { toast } from 'sonner';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export default function MessagingInbox() {;
+import { useRouter } from 'next/router'; // Changed from react-router-dom
+
+import {logErrorToProduction} from '@/utils/productionLogger';
+
+import { Button } from '@/components/ui/button';
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
+import { useRouter } from 'next/router'; // Changed from react-router-dom
+import React, { useEffect, useState } from 'react',
+import { MessageSquare, Video } from 'lucide-react'
+import { useMessaging } from '@/context/MessagingContext',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { ConversationsList, ConversationDetailView } from '@/components/messaging',
+import { useIsMobile } from '@/hooks/use-mobile',
+import { toast } from 'sonner',
+import { Button } from '@/components/ui/button',
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
+import { useRouter } from 'next/router', // Changed from react-router-dom
+import {logErrorToProduction} from '@/utils/productionLogger',
 export default function MessagingInbox() {
 
 
@@ -17,12 +30,17 @@ export default function MessagingInbox() {
 
     markAsRead;
     fetchConversations;
-    isLoading
-  } = useMessaging();
+export default function MessagingInbox() {
 
-  const isMobile = useIsMobile();
+    isLoading
+  } = useMessaging(),
+  const isMobile = useIsMobile(),
   const router = useRouter(), // Changed from navigate
-  const [activeCall, setActiveCall] = useState<string | null>(null);
+    // Fetch conversations when component mounts
+    const loadData = async () => {
+      try {
+        await fetchConversations()
+      } catch (error) {
     };
     
     loadData()
@@ -31,6 +49,10 @@ export default function MessagingInbox() {
   
     if (!activeConversation) {
       toast.error("Please select a conversation first");
+
+        logErrorToProduction('Failed to load conversations:', { data: error })
+        toast.error("Failed to load messages. Please try again.")
+      }
     },
     
     loadData()
@@ -41,6 +63,23 @@ export default function MessagingInbox() {
       toast.error("Please select a conversation first"),
       return
     }
+
+    
+    const roomId = `msg-${activeConversation.id}`,
+    setActiveCall(roomId),
+    
+    const roomId = `msg-${activeConversation.id}`,
+    setActiveCall(roomId),
+
+    
+    // Show toast notification
+    toast.success("Starting video call", {
+      description: "Initializing video call connection..."
+    }),
+    
+    // Navigate to video call page
+    router.push(`/call/${roomId}`), // Changed from navigate
+  },
   
   return (
       <div className="min-h-screen bg-zion-blue">
@@ -50,6 +89,13 @@ export default function MessagingInbox() {
               <MessageSquare className="h-6 w-6" />
               Messages
             </h1>
+
+
+  useEffect((,) => {;
+
+
+            
+            
             {activeConversation && (
               <Button 
                 onClick={startVideoCall}
@@ -60,6 +106,7 @@ export default function MessagingInbox() {
               </Button>
             )}
           </div>
+
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}
@@ -69,6 +116,8 @@ export default function MessagingInbox() {
                 </div>
               ) : (
                 <ConversationsList
+              
+
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext',;
@@ -107,9 +156,6 @@ export default function MessagingInbox() {;
               <MessageSquare className="h-6 w-6" />;
               Messages;
             </h1>;
-              <Button
-                onClick = {startVideoCall,}
-                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
                 <Video className="h-4 w-4" />;
                 Start Call;
               </Button>;
@@ -127,6 +173,9 @@ export default function MessagingInbox() {;
                   markAsRead = {markAsRead,}
                 />;
               )}
+
+
+
               {/* Conversation Detail */}
             </div>
           </div>

@@ -12,16 +12,11 @@ export default function JobDetailsPage() {
   const { isMobile } = useResponsive();
   const { notify } = useToast();
   const [loading, setLoading] = useState(true);
-
-
 import {useRouter} from 'next/router';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import useResponsive from '../../hooks/useResponsive';
-
-
-
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
@@ -59,9 +54,9 @@ export default function JobDetailsPage() {;
       {loading ? (
         <EnhancedLoading lines={5} />
       ) : (
-        <div className='space-y-4'>
+        <div className="space-y-4">
           <EnhancedCard>
-            <div className='flex items-start justify-between gap-3'>
+            <div className="flex items-start justify-between gap-3">
               <div>
               <li>3+ years with Python or TypeScript</li>
 
@@ -70,8 +65,6 @@ export default function JobDetailsPage() {;
             </ul>
           </EnhancedCard>
         </div>
-
-    <div className='relative'>;
                   Apply Now;
                 </EnhancedButton>              )}
             </div>;
@@ -82,9 +75,6 @@ export default function JobDetailsPage() {;
             <EnhancedButton onClick={onApply} variant="primary" fullWidth>Apply Now</EnhancedButton>
           </div>
         </div>
-
-
-}
 
           <EnhancedCard>;
             <h2 className='font - semibold mb - 2'>Requirements</h2>;

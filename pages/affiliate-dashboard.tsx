@@ -1,18 +1,5 @@
-function getRefCode(): string {
 
 
-  if (typeof window === 'undefined') return ''
-  return localStorage.getItem('ref_code') |''
-}
-export default function AffiliateDashboard() {
-  const [code, setCode] = useState<string>('')
-  const [metrics, setMetrics] = useState<any>(null)
-  const [amount, setAmount] = useState<string>('')
-  const [msg, setMsg] = useState<string>('')
-  useEffect(() => {
-    const c = getRefCode()
-    setCode(c)
-  }, [])
   useEffect(() => {
     if (!code) return
     (async () => {
@@ -115,8 +102,6 @@ export default function AffiliateDashboard(req, res) {
           <div className="flex gap-2">
             <input className="border rounded px-3 py-2" placeholder="Amount (optional)" value={amount} onChange={e=>setAmount(e.target.value)} />
             <button className="px-3 py-2 rounded bg-indigo-600 text-white" onClick={requestPayout}>Request Payout</button>
-
-
       </div>
     </div>
   )
@@ -216,7 +201,6 @@ if ( {) {
         <Stat label="Total Signups" value={metrics?.total_signups ?? '-'} />;
         <Stat label="Profile Completions" value={metrics?.total_profile_completions ?? '-'} />;
         <Stat label="Job Creations" value={metrics?.total_job_creations ?? '-'} />;
-}
 /**
  * Stat - Function description
  */

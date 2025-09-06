@@ -1,6 +1,5 @@
 
 
-
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
 
@@ -13,6 +12,7 @@ export function ProjectMilestonesContent() {;
     isLoading: milestonesLoading
 
 
+import React, { useState, useEffect } from 'react';
     createMilestone;
     updateMilestoneStatus;
     deleteMilestone;
@@ -32,12 +32,13 @@ export function ProjectMilestonesContent() {;
       ;
       setIsLoading(true),;
       try {;
-        const projectData = await getProjectById(projectId),;
+
+
+
+
+        const projectData = await getProjectById(projectId);
         if (projectData) {;
-
-
-
-
+          setProject(projectData);
         }
       } catch (error) {;
         console.error("Error loading project:", error),;
@@ -72,9 +73,6 @@ export function ProjectMilestonesContent() {;
   // Determine if the user is the client or talent;
   const isClient = user?.id === project?.client_id;
   const isTalent = user?.id === project?.talent_id;
-  // Determine project type based on job category or default to "Other"
-  const projectType = job?.category |"Other";
-  if (isLoading |!project) {
     return (
       <div className="container mx-auto py-8 px-4">;
         <div className="flex justify-center items-center h-64">;

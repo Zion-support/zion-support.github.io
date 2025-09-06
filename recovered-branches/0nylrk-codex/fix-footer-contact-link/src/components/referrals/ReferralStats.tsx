@@ -1,12 +1,8 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralStats as ReferralStatsType } from "@/types/referrals";
 import { Award, Share, Star, TrendingUp } from "lucide-react";
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",
 import { Award, Share, Star, TrendingUp } from "lucide-react",
-
-
-
 
 interface ReferralStatsProps {
   stats: ReferralStatsType;
@@ -39,7 +35,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       description: "Credits earned from referrals"
     }
   ];
-;
   return (
     <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;
       {stat_cards.map ((card, i) => (
@@ -55,12 +50,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
                 <div className="text - 2xl font - bold">{card.value}</div>;
                 <p className="text - xs text - muted - foreground">;
                   {card.description}
-
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
-import {Award, Share, Star, TrendingUp} from "lucide-react";
-
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
 import { Award, Share, Star, TrendingUp } from "lucide-react",;
@@ -107,15 +96,17 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
                 <div className="text-2xl font-bold">{card && card.value}</div>;
                 <p className="text-xs text-muted-foreground">{card && card.description}</p>;
               </>;
-
-
-
             )}
           </CardContent>;
         </Card>;
       ))}
-    </div>
 
   )
 }
 ;
+                </p>;
+              </>)}
+          </CardContent>;
+        </Card>))}
+    </div>);
+}

@@ -72,7 +72,10 @@ if (return { description }) {
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
     return res && res.rows;
+  return { items }
 });
+});
+
 ;
 app.get ('/talent / search', async (req, reply) => {
   const q = (req.query as any).q as string;

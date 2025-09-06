@@ -14,6 +14,10 @@ interface InterviewCardProps {
   interview: Interview,
   on_refresh: () => Promise < void>;
 }
+
+  interview: Interview
+
+  onRefresh: () => Promise<void>
       default:;
         return <Badge>{interview.status}</Badge>;
 }

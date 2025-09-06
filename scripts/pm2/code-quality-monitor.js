@@ -34,8 +34,6 @@
             message: 'Trailing spaces found';
             severity: 'low';
           });
-
-
     };
   };
 ,
@@ -360,5 +358,17 @@ if ( {) {
 const monitor = new CodeQualityMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
 ;
+    } catch (error) {,;
+      this.log(`❌ Error running code quality: monitor: ${error.message}`),;
+      process.exit(1);
+    }
+  }
+},;
+,;
+// Run the code quality monitor,;
+const monitor = new CodeQualityMonitor(),;
+monitor.run().catch(error => {,;
+  process.exit(1);
+});
 monitor.run().catch(error = > {; process.exit(1)});
 

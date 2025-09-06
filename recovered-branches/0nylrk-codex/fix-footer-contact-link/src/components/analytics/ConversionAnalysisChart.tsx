@@ -45,28 +45,11 @@ import {
   CardTitle,
 } from '@/components / ui / card';
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
-
 interface ConversionAnalysisProps {
   data: Array < Record < string, any>>;
   time_range: string;
   onTimeRangeChange: (range: string) => void;
 }
-
-
-
-  return (
-
-    <Card className="bg - zion - blue - dark border - zion - blue - light">;
-      <CardHeader>;
-        <CardTitle className="text - white text - lg">;
-          Conversion Analysis;
-        </CardTitle>;
-        <CardDescription className="text - zion - slate - light">;
-
-          Track different conversion types;
-        </CardDescription>;
-      </CardHeader>;
-      <CardContent>;
 
 
 import React from "react",;
@@ -108,4 +91,18 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
         />;
       </CardContent>;
     </Card>);
+export /**
+ * ConversionAnalysisChart - Function description
+ */
+function ConversionAnalysisChart() {
+  const data_keys =;
+    data && data.length > 0;
+      ? Object.keys (data[0]).filter ((key) => key !== "date");
+      : [];
+;
+  return (
+          Track different conversion types;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
 }

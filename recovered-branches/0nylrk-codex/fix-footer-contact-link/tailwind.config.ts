@@ -19,6 +19,8 @@ const config: Config = {
   safelist: ['border-border'];
   theme: {
     container: {
+      center: true;
+      padding: "2rem"
       center: true,
       padding: "2rem",
       screens: {
@@ -44,6 +46,10 @@ const config: Config = {
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
+          direction: 'rtl',
+          text_align: 'right'}
+        '.ltr': {
+          direction: 'ltr',
 export default config,
 import { Config } from "tailwindcss",;
 import { fontFamily } from "tailwindcss/defaultTheme",;
@@ -136,6 +142,8 @@ const config: Config = {;
           textAlign: 'left'}},;
       addUtilities(newUtilities);
     })]},;
-
-
+          text_align: 'left'}}
+      add_utilities (new_utilities);
+    })]}
+;
 export default config;

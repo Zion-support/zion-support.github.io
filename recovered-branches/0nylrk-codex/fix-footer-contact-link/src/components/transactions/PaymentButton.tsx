@@ -1,4 +1,3 @@
-
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
@@ -26,10 +25,6 @@ interface PaymentButtonProps {
   onPaymentInitiated?: () => void;
   redirectUrl?: string;
 }
-
-
-export function PaymentButton(): any ({;
-
   amount;
   serviceId;
   providerId;
@@ -41,21 +36,9 @@ export function PaymentButton(): any ({;
   const [isProcessing, setIsProcessing] = useState(false);
   const { isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
-
-
-  const handlePaymentClick = async () => {;
-    if (!isAuthenticated) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to make a purchase."}),;
-
-      navigate("/login", { ;
-        state: { from: window && window.location.pathname } ;
-
       });
       return;
     }
-
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -152,9 +135,6 @@ export function PaymentButton({;
       setIsProcessing(true),;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
-
-
-
       }
       
       // Call the create-checkout edge function
@@ -279,15 +259,16 @@ if ( {) {
         variant: "destructive"});
     } finally {;
       // Reset button state after a short delay;
-
-
-
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
-
-        "relative min-w-[120px]"
-
+        "relative min-w-[120px]",
+  }
+  return (
+    <Button
+      onClick={handlePaymentClick}
+      disabled={isProcessing}
+      className={cn(
         className
       )}>;
       {isProcessing ? (;
@@ -304,6 +285,7 @@ if ( {) {
     </Button>;
   );
 }
+}
 
     </Button>;
   );
@@ -316,19 +298,3 @@ if ( {) {
 
 }
 ;
-  return (
-    <Button;
-      on_click={handlePaymentClick}
-      disabled={is_processing}
-      className={cn (
-        "relative min - w-[120px]";
-        class_name)}
-    >;
-      {is_processing ? (
-        <>;
-          <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;
-          Processing...;
-        </>) : (
-        button_text)}
-    </Button>);
-}

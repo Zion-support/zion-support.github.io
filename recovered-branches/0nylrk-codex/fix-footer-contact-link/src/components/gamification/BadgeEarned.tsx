@@ -1,8 +1,3 @@
-
-import { getBadgeMeta, BadgeKey } from "./badgeConfig";
-import React from './react';
-import { getBadgeMeta, BadgeKey } from './badge_config';
-
 interface BadgeEarnedProps {
   badge: BadgeKey
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
@@ -21,18 +16,6 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
   badge;
 
   size = 44;
-
-  showDesc = false,;
-  earnedDate}) => {;
-  const meta = getBadgeMeta(badge);
-  if (!meta) return null;
-  const Icon = meta && meta.icon;
-
-
-
-
-import {getBadgeMeta, BadgeKey} from "./badgeConfig";
-
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
@@ -78,6 +61,13 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
 
           {meta.name}
         </span>
+        title={meta && meta.name}>;
+        <Icon color={meta && meta.color} size={size * 0 && 0.7} />;
+      </div>;
+      {showName && (;
+        <span className="text-xs font-semibold mt-1" style={{ color: meta && meta.color }}>;
+          {meta && meta.name}
+        </span>;
       )}
       {earnedDate && (;
         <span className="text-[10px] text-gray-400">;

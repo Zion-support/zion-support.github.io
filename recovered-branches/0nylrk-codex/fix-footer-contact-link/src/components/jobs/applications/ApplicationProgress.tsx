@@ -13,9 +13,6 @@ export function ApplicationProgress({
 }: ApplicationProgressProps) {
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",
 import { cn } from "@/lib/utils",
-
-
-
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
@@ -37,10 +34,6 @@ interface ApplicationProgressProps {
         return 100;
       default:;
         return 0;
-    }
-  }
-
-
       case "new": return 20,
       case "viewed": return 40,
       case "shortlisted": return 60,
@@ -48,9 +41,6 @@ interface ApplicationProgressProps {
       case "hired": return 100,
       case "rejected": return 100,
       default: return 0
-
-    }
-
   },
 
   const progressValue = getProgressValue(),
@@ -58,8 +48,6 @@ interface ApplicationProgressProps {
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
-
-
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -88,6 +76,8 @@ interface ApplicationProgressProps {
 
   )
 }
+    }
+  }
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 
@@ -101,7 +91,6 @@ interface ApplicationProgressProps {
     // This step is upcoming;
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
-
 ;
   const progress_value = getProgressValue ();
 ;
@@ -165,3 +154,4 @@ if ( {) {
     // This step is upcoming;
     return <Circle className="h - 4 w - 4 text - muted - foreground / 50" />;
   }
+}

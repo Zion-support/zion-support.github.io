@@ -1,34 +1,11 @@
+    { name: 'Contact', href: '/contact', icon: Phone }
+
   ];
-  const serviceCategories = [;
-    {name: 'Micro SaaS'
-      href: '/services/micro-saas'
-      description: 'Innovative focused software solutions'
-      popular: ['AI Content Generator', 'Social Media Scheduler', 'Invoice Management', 'Time Tracking'];
-}
-    {name: 'IT Services'
-      href: '/services/it-services'
-      description: 'Enterprise infrastructure & security'
-      popular: ['Cloud Migration', 'Edge Computing', 'Zero Trust Security', '5G Networks'];
-}
-    {name: 'AI Services'
-      href: '/services/ai-services'
-      description: 'Cutting-edge AI & machine learning'
       popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
 }
   ];
-  const serviceCategories = [;
-    { name: 'AI Solutions', href: '/services/ai-solutions' }
-    { name: 'Cloud & DevOps', href: '/services/cloud' }
-    { name: 'Cybersecurity', href: '/services/cybersecurity' }
-    { name: 'Data & Analytics', href: '/services/data' }
-    { name: 'Micro SaaS', href: '/services/micro-saas' }
-    { name: 'Digital Transformation', href: '/services/transformation' }
   ];
-  const solutionCategories = [;
-    { name: 'Enterprise', href: '/solutions/enterprise' }
-    { name: 'SMB', href: '/solutions/smb' }
-    { name: 'Startup', href: '/solutions/startup' }
-  ];
+  const isActive = (path: string) => location && location.pathname === path;
   const resourceCategories = [;
   const service_categories = [;
     { name: 'AI Solutions', href: '/services / ai - solutions' },
@@ -80,7 +57,6 @@
                   {item && item.name}
                 </Link>;
               ))}
-
           {/* Mobile menu button */}
           <div className="md:hidden">;
             <button              onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -113,10 +89,6 @@
       </nav>;
     </header>;
   );
-
-
-
-
           <div className="flex - shrink - 0">;
             <Link href="/" className="text - 2xl font - bold text - blue - 600">;
               Zion Tech Group;

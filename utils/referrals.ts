@@ -7,8 +7,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire';
 export async function triggerReferralEvent() {
   try {const refCode = code |(typeof window !== 'undefined' ? (localStorage.getItem('ref_code') |'') : '');
@@ -49,9 +47,4 @@ if (return, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}
-}
-
-
 }

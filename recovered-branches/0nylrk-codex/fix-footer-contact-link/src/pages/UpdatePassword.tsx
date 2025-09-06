@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {useNavigate, useLocation} from "react-router-dom";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -91,14 +90,8 @@ const updatePasswordSchema = z
   useEffect(() => {
     // Extract access token from URL hash
     } else {
-      set_error ("No access token found. Please request a new password reset link.");
+      setError("No access token found. Please request a new password reset link.")
     }
-
-
-  }, [location]),
-
-
-
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
@@ -260,6 +253,7 @@ export default function UpdatePassword() {;
                 Enter your new password below.;
               </p>;
             </div>;
+
             <div className="bg-zion-blue-dark rounded-lg p-6">;
               {error && (;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
@@ -274,11 +268,6 @@ export default function UpdatePassword() {;
                   <Button
                     className="mt-3 text-xs"
                     variant="outline"
-
-                  <Button 
-                    className="mt-3 text-xs"
-                    variant="outline"
-
                     onClick={() => navigate('/forgot-password')}
                   >;
                     Request new reset link;
@@ -357,7 +346,6 @@ export default function UpdatePassword() {;
                         variant="link"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
                         onClick={() => navigate("/login")}
-}
     // Clean up auth state to prevent issues;
     cleanupAuthState ();
   }, [location]);
@@ -464,7 +452,7 @@ if ( {) {
                             <Input;
                               type="password";
                               className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
-                              placeholder="";
+                              placeholder="••••••••";
                               disabled={is_loading}
                               {...field}
                             />;
@@ -482,7 +470,7 @@ if ( {) {
                             <Input;
                               type="password";
                               className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
-                              placeholder="";
+                              placeholder="••••••••";
                               disabled={is_loading}
                               {...field}
                             />;
@@ -539,5 +527,6 @@ if ( {) {
 
 
 }
+;
     </>);
 }

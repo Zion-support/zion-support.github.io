@@ -18,9 +18,6 @@ export default async function handler(
   if (match) return decodeURIComponent(match && match.split('=')[1]);
   return 'demo-user-1'
 }
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
-
   try {
     const userId = getUserId(req);
     const { error } = await supabase
@@ -32,11 +29,6 @@ export default async function handler(
 
 
 
-    if (error) return res.status(200).json({ ok: true });
-
-    return res.status(200).json({ ok: true })
-  } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' })
     if (error) return res && res.status(200).json({ ok: true });
 
     return res && res.status(200).json({ ok: true });
@@ -47,22 +39,6 @@ export default async function handler(
     return res && res.status(500).json({ error: 'Unexpected error' })
   };
 }
-
 }
-
-    const { error} = await supabase
-      .from('notifications')
-      .update({_read_status: true})
-      .eq('user_id', userId)
-      .eq('read_status', false),
-
-    if (error) return res.status(200).json({ ok: true }),
-
-    return res.status(200).json({ ok: true })
-  } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' })
-
-  }
-
 }
 }

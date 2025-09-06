@@ -12,6 +12,7 @@
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
   }
   async function broadcast() {
+    setStatus('Broadcasting manifesto...');
     });
     setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed');
 
@@ -172,13 +173,11 @@ function broadcast() {
           Broadcast;
         </button>;
       </section>;
+
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
 );
 }
-    setStatus('Broadcasting manifesto...');
-
-
         <button;
           className='px - 3 py - 2 bg - black text - white rounded';
           on_click={cast_vote}
@@ -218,5 +217,3 @@ function broadcast() {
       </section>;
       {status && <p className='text - sm text - gray - 700'>{status}</p>}
     </div>);
-
-}

@@ -1,7 +1,3 @@
-const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
-  return (import React from 'react';
-import StarRating from './StarRating';
-import type { PublicReview } from '../../types/reviews';
 import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
@@ -46,3 +42,59 @@ type Props = {;
         {review.categories?.wouldWorkWithAgain && (
           <span className='pill pill-success'>Would work again</span>
         )}
+
+      </div>;
+      <p className='text-sm leading-6'>{review && review.text}</p>;
+
+      <div className='flex flex-wrap gap-2 mt-3'>;
+        {typeof review && review.categories?.communication === 'number' && (;
+          <span className='pill'>;
+            Communication: {review && review.categories.communication}★;
+          </span>;
+
+        )}
+        {typeof review && review.categories?.qualityOfWork === 'number' && (;
+          <span className='pill'>;
+            Quality: {review && review.categories.qualityOfWork}★;
+          </span>;
+        )}
+        {typeof review && review.categories?.timeliness === 'number' && (;
+          <span className='pill'>;
+            Timeliness: {review && review.categories.timeliness}★;
+          </span>;
+        )}
+      </div>;
+    </div>;
+  );
+}
+};
+
+:components/reviews/ReviewCard.tsx
+export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
+          <span className="pill pill-success">Would work again</span>
+        )}
+      </div>
+      <p className="text-sm leading-6">{review.text}</p>
+      <div className="flex flex-wrap gap-2 mt-3">
+        {typeof review.categories?.communication === 'number' && (
+          <span className="pill">Communication: {review.categories.communication}★</span>
+        )}
+        {typeof review.categories?.qualityOfWork === 'number' && (
+          <span className="pill">Quality: {review.categories.qualityOfWork}★</span>
+        )}
+        {typeof review.categories?.timeliness === 'number' && (
+          <span className="pill">Timeliness: {review.categories.timeliness}★</span>
+        )}
+      </div>
+    </div>
+  )
+}
+export default ReviewCard;
+
+:components/reviews/ReviewCard.tsx
+main:components/reviews/ReviewCard.tsx
+export default ReviewCard;
+:backup-problematic-files/reviews/ReviewCard.tsx
+main:components/reviews/ReviewCard.tsx
+export default ReviewCard;
+:backup-problematic-files/reviews/ReviewCard.tsx

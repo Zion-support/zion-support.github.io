@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -59,7 +58,6 @@ export function OnChainExport() {
         description: error.message |"Could not export tokens"
         variant: "destructive"
       })
-
   return (
     <Card>;
       <CardHeader>;
@@ -165,6 +163,7 @@ export function OnChainExport() {;
           ) : (;
             <Wallet className="h-5 w-5" />;
           )}
+
           On-chain Export;
           <TooltipProvider>;
             <Tooltip>;
@@ -177,3 +176,52 @@ export function OnChainExport() {;
             </Tooltip>;
           </TooltipProvider>;
         </CardTitle>;
+                {isExporting ? "Processing..." : "Export Tokens"}
+                {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
+              </Button>;
+            )}
+          </div>;
+        ) : (;
+          <div className="space-y-2">;
+            <p className="text-sm text-muted-foreground mb-3">;
+              Connect your web3 wallet to export tokens to the blockchain.;
+            </p>;
+            <Button onClick={handleConnectWallet} className="w-full">;
+              Connect Wallet;
+            </Button>;
+          </div>;
+        )}
+        <CardDescription > Export your ZION$ to an external wallet</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        {is_connected ? (
+          <div className="space - y-4">;
+            <div className="flex justify - between text - sm">;
+              <span > Available to export:</span>;
+              <span className="font - medium">250 ZION$</span>;
+            </div>;
+            {export_status === 'success' ? (
+              <Button className="w - full bg - green - 600 hover:bg - green - 700" disabled>;
+                <Check className="mr - 2 h - 4 w - 4" />;
+                Tokens Exported;
+              </Button>) : (
+              <Button;
+                className="w - full";
+                on_click={handleExportTokens}
+                disabled={is_exporting}
+              >;
+                {is_exporting ? "Processing..." : "Export Tokens"}
+                {!is_exporting && <ArrowUpRight className="ml - 2 h - 4 w - 4" />}
+              </Button>)}
+          </div>) : (
+          <div className="space - y-2">;
+            <p className="text - sm text - muted - foreground mb - 3">;
+              Connect your web3 wallet to export tokens to the blockchain.;
+            </p>;
+            <Button on_click={handleConnectWallet} className="w - full">;
+              Connect Wallet;
+            </Button>;
+          </div>)}
+      </CardContent>;
+    </Card>);
+}

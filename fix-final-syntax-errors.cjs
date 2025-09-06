@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
@@ -263,3 +264,5 @@ const report = {
 fs.writeFileSync('/workspace/final-syntax-errors-fix-report.json', JSON.stringify(report, null, 2));
 console.log('📄 Report saved to final-syntax-errors-fix-report.json');
 >>>>>>> main
+=======
+>>>>>>> origin/main

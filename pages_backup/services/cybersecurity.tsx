@@ -7,17 +7,6 @@ const benefits = [
   'Peace of mind with 24/7 monitoring'
 ];
 export default function CybersecurityServices() {
-export default function CybersecurityPage() {;
-const benefits = [;
-  'Protection against cyber threats and attacks',;
-  'Compliance with industry regulations',;
-  'Reduced risk of data breaches',;
-  'Enhanced customer trust and confidence',;
-  'Lower insurance costs and liability',;
-  'Peace of mind with 24/7 monitoring';
-];
-export default function CybersecurityServices() {;
-
   return (
     <Layout
       title="Cybersecurity Services - Zion Tech Group"

@@ -8,7 +8,6 @@ const localeToFlag: Record<string, string> = {
   es: 'es',
   ar: 'sa'},
 const localeLabelKey: Record<string, string> = {
-export default function LanguageSwitcher() {
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
@@ -173,14 +172,3 @@ function LanguageSwitcher() {
             </li>))}
         </ul>)}
     </div>);
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-    </div>
-
-  );
-}
-

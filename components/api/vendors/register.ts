@@ -24,6 +24,15 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     services_offered,
     team_size,
     about,
+    const vendor = registerVendor({
+      slug;
+      name;
+  } catch (e: any) {
+    res && res.status(500).json({ error: e && e.message });
+  }
+    });
+    res && res.status(201).json({ vendor });
+  } catch (e: any) {
     verification_docs,
     case_studies,
   } = req.body || {}

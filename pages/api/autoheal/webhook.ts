@@ -1,6 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { Octokit } from '@octokit/rest';
-
     } catch (e) {
       // ignore if missing
     }

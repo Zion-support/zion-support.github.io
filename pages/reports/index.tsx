@@ -1,5 +1,3 @@
-import { useEffect, useState  } from 'react';
-import { useEffect, useState } from 'react';
 
 
 import { useEffect, useState } from 'react';
@@ -23,12 +21,6 @@ export default function Reports() {
   const [pagespeed, setPagespeed] = useState<any>({});
   useEffect(() => {
     Promise.all([
-  const [pagespeed, setPagespeed] = useState<any>({});
-  useEffect(() => {
-    Promise.all([
-
-
-
 
       fetch('/api/reports/uptime')
         .then(r => r.json())
@@ -64,7 +56,7 @@ export default function Reports() {
           <div className='font-medium mb-1'>Uptime</div>
           {lastUptime ? (
             <div className='text-sm'>
-              Last check: {new Date(lastUptime.timestamp).toLocaleString()} {' '}
+              Last check: {new Date(lastUptime.timestamp).toLocaleString()} —{' '}
               {
                 lastUptime.results?.filter(
                   (r: any) => r.status >= 200 && r.status < 400
@@ -231,7 +223,6 @@ function Reports() {
           <div className="font-medium mb-1">Changelog (weekly)</div>
           <div className="text-sm text-gray-600">Commits: {changelog?.totalCommits || 0}</div>
         </div>
-
 
 
 

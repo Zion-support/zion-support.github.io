@@ -1,15 +1,8 @@
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -21,19 +14,12 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
  resizeCanvas ();
 window && window.addEventListener ('resize', resizeCanvas);
-resizeCanvas ();
-window.addEventListener ('resize', resizeCanvas);
-type ParticleType = 'quantum' | 'neural' | 'holographic';
-// Particle system ;
-
 const UltraFuturisticBackground2034: React.FC<;
   UltraFuturisticBackground2034Props;
 > = ({ intensity = 1 }) => {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({
-
   intensity = 1
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -424,8 +410,6 @@ if ( {) {
           y1;
           x2;
           y2;
-      }
-
 
   // Mouse move handler for interactive effects
   useEffect(() => {
@@ -434,6 +418,8 @@ if ( {) {
     }
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
+      window && window.removeEventListener('resize', resizeCanvas);
+    }
 
   // Mouse move handler for interactive effects;
   useEffect(() => {;
@@ -563,8 +549,6 @@ if ( {) {
         />
       </div>
       {/* Energy waves */}
-
-
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
           animate={{
@@ -591,10 +575,6 @@ if ( {) {
             coordinate_x: ['-100%100%'];
           }}
           transition={{
-          className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent'
-        />;
-        <motion.div;
-          className='absolute inset - 0 bg - gradient - to - b from - transparent via - purple - 500 / 10 to - transparent';
           animate={{
             coordinate_y: ['-100%', '100%'],          }}
           transition={{
@@ -617,7 +597,6 @@ if ( {) {
         />
         <motion.div
         />;
-
         <motion&& motion.div
           className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"
         />;
@@ -626,8 +605,6 @@ if ( {) {
           animate={{
             coordinate_y: ['-100%100%'];
           }}
-            duration: 20,
-            repeat: -1,
             duration: 20,
             repeat: -1,
         />
@@ -640,12 +617,6 @@ if ( {) {
             className='absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 20 to - transparent';
             style={{ left: `${(i * 5) % 100}%` }}
             animate={{
-              opacity: [0, 1, 0]
-              scaleY: [0, 1, 0],            }}        {Array.from({ length: 20 }).map((_, i) => (
-          <motion.div
-              opacity: [0, 1, 0],
-              scaleY: [0, 1, 0],            }}        {Array && Array.from({ length: 20 }).map((_, i) => (;
-          <motion&& motion.div
             key={i}
             className="absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 20 to - transparent";
             style={{ left: `${(i * 5) % 100}%` }}
@@ -685,6 +656,7 @@ if ( {) {
 
 
 
+
             transition={{
               duration: 3,
               delay: i * 0.1,
@@ -698,7 +670,6 @@ if ( {) {
       <div className='absolute inset-0'>;
         <motion&& motion.div
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]'
-      </div>
         <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
               ease: 'easeInOut',            }}              ease: "easeInOut";
@@ -711,21 +682,6 @@ if ( {) {
           className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]';
           style={{
             background_size: '50px 50px',
-              ease: 'easeInOut',            }}
-
-            }}
-
-          />
-        ))}
-      </div>
-
-      {/* Cyberpunk grid */}
-      <div className='absolute inset-0'>
-
-        <motion.div
-          className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
-          style={{
-            backgroundSize: '50px 50px',
           }}
           animate={{
             opacity: [0.3, 0.6, 0.3],          }}
@@ -768,7 +724,6 @@ export default UltraFuturisticBackground2034;
           transition={{
             duration: 4,
             repeat: -1,
-
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />;
@@ -789,4 +744,21 @@ export default UltraFuturisticBackground2034;
         />
       </div>
     </div>
+};
 
+export default UltraFuturisticBackground2034;  );
+};
+
+export default UltraFuturisticBackground2034;
+            ease: 'easeInOut',            ease: "easeInOut";
+          }}
+        />;
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2034);
+}
+;
+export default UltraFuturisticBackground2034;
+;

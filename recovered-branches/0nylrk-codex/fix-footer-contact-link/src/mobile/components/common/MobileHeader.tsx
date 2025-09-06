@@ -1,4 +1,3 @@
-
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {ChevronLeft, Bell, Settings} from "lucide-react";
@@ -20,10 +19,6 @@ interface MobileHeaderProps {
   onNotificationsClick?: () => void;
   onSettingsClick?: () => void;
 }
-
-
-export function MobileHeader(): any ({;
-
   title;
 
   showBack = false;
@@ -34,7 +29,6 @@ export function MobileHeader(): any ({;
   onSettingsClick}: MobileHeaderProps) {;
   const navigate = useNavigate();
   return (
-
 interface MobileHeaderProps {
   title: string,
   showBack?: boolean,
@@ -42,7 +36,8 @@ interface MobileHeaderProps {
   showSettings?: boolean,
   className?: string,
   onNotificationsClick?: () => void,
-
+  onSettingsClick?: () => void
+}
 export function MobileHeader({;
   title;
   showBack = false;
@@ -76,9 +71,6 @@ export function MobileHeader({
               variant="ghost"
               size="icon"
               className="mr-2"
-    <headerclassName={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
-      className
               onClick={() => navigate(-1)}
             >
               <ChevronLeft className="h-5 w-5" />

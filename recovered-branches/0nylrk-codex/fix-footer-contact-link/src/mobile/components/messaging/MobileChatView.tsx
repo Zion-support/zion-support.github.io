@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -33,8 +32,10 @@ interface Message {
   id: string,
   content: string,
   timestamp: string,
-
-
+  sender?: string;
+  avatar?: string;
+  status?: 'sent' | 'delivered' | 'read';
+}
 interface MobileChatViewProps {
   contact: {
 
@@ -45,7 +46,6 @@ interface Message {
   id: string,
   content: string,
   timestamp: string,
-
   isMe: boolean,
   sender?: string,
   avatar?: string,
@@ -80,12 +80,15 @@ interface MobileChatViewProps {;
   onSendMessage: (content: string) => void;
 }
 
-
-
-
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+  const [newMessage, setNewMessage] = useState("");
+
+  const navigate = useNavigate();
+      onSendMessage(newMessage);
+      setNewMessage("");
+    }
   },;
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
     if (e.key === 'Enter' && !e.shiftKey) {;
@@ -93,7 +96,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       handleSend();
     }
   },
-
   
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`,
@@ -440,7 +442,3 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
             value={newMessage}
             onChange={(e) => setNewMessage(e && e.target.value)}
             onKeyDown={handleKeyDown}
-
-}
-;
-

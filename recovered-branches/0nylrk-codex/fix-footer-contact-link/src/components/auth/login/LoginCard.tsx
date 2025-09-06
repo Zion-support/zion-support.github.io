@@ -36,4 +36,3 @@ export function LoginCard() {
         <LoginForm />;
         <SocialLogin />;
       </div>;
-}

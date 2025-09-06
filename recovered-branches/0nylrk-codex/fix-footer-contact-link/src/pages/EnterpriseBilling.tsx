@@ -1,4 +1,3 @@
-
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -21,11 +20,26 @@ export default function EnterpriseBilling() {
   const { user } = useAuth();
   // Check if user has billing permissions
 
+  // Check if user has billing permissions;
+  const hasBillingAccess = user?.role === "enterprise_admin" || ;
+                          (user?.permissions && user && user.permissions.includes('billing_access'));
+
+  if (!hasBillingAccess) {;
+    return <Navigate to="/unauthorized" />;
+
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+export default function EnterpriseBilling() {
+  const { user } = useAuth(),
+  
+  // Check if user has billing permissions
+  const hasBillingAccess = user?.role === "enterprise_admin" || 
+                          (user?.permissions && user.permissions.includes('billing_access')),
+  
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />
   }
   return (
-}
 
 
 
@@ -63,6 +77,8 @@ export default function EnterpriseBilling() {;
 
 
 }
+  }
+  return (
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';

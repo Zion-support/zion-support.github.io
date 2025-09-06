@@ -2,8 +2,6 @@ const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
   return (
     <main className="space-y-4">
       <h1 className="text-2xl font-semibold">Sitemap Status</h1>
-
-
       <div className="enhanced-card">
         <div className="text-lg">Indexed URLs: {urlCount}</div>
       </div>
@@ -38,4 +36,3 @@ export default SitemapStatus;
 }
 };
 export default SitemapStatus;
-

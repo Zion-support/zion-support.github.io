@@ -1,4 +1,3 @@
-
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
@@ -79,7 +78,6 @@ export function TalentCard(): any ({;
     if (onRequestHire) {;
       onRequestHire(talent);
     }
-  };
 
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [],
@@ -124,12 +122,6 @@ export function TalentCard(): any ({;
                   {skill}
                 </span>;
               ))}
-
-              {(talent && talent.skills?.length || 0) > 5 && (;
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
-                  +{(talent && talent.skills?.length || 0) - 5} more;
-                </span>;
-
               )}
             </div>;
           </div>;
@@ -196,13 +188,7 @@ isAuthenticated: boolean
 }
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
-
-
-
             )}
-          </div>
-          <div className="flex items-center gap-2">
-            {isAuthenticated && (
               <Button
                 size="sm"
                 variant="secondary"
@@ -215,4 +201,3 @@ isAuthenticated: boolean
               size="sm"
               variant="ghost"
               onClick={handleViewProfile}
-}

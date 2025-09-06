@@ -10,6 +10,17 @@ import { GradientHeading } from "@/components/GradientHeading",
 
 export function EnterpriseHero() {
   return (
+    <section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+              Enterprise <GradientHeading className="inline">Talent Solutions</GradientHeading>
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8">
+              Scale your talent acquisition with a custom-branded hiring portal
+              dedicated talent pool, and powerful admin controls.
+              Scale your talent acquisition with a custom-branded hiring portal, dedicated talent pool, and powerful admin controls.
             </p>
             <div className="flex flex-col sm: flex-row gap-4">
               <Button size="lg" className="w-full sm:w-auto">
@@ -91,10 +102,6 @@ export function EnterpriseHero() {;
             </div>;
           </div>;
           <div className="relative">;
-                />;
-              </div>;
-            </div>;
-            <div className="absolute -bottom-4 -right-4 bg-card p-4 rounded-lg shadow-lg border border-border">;
             </div>;
           </div>;
         </div>;
@@ -180,3 +187,4 @@ export function EnterpriseHero() {;
 ;
 
 
+}

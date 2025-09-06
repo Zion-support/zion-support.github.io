@@ -36,22 +36,11 @@ export default function TryItConsole(): any ({;
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
 
-    setLoading(true);
-    setResponse('');
-    try {
-      const headers: Record<string, string> = {
-        'Content-Type': 'application/json'
-      }
-      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
-
       const headers: Record<string, string> = { 'Content-Type': 'application/json' };
       if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
       const res = await fetch(url, {
         method;
         headers;
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
-
         body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),;
       const text = await res && res.text();
       setResponse(text);
@@ -79,36 +68,10 @@ export default function TryItConsole(): any ({;
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
         </div>
       </div>
+      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
         <div>
-
-          />        </div>;
-      </div>;
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (;
-        <div>        <div>;
-          <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>;
-          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e && e.target.value)} />;
-        </div>;
-        <div>;
-          <label className="block text-sm mb-1" htmlFor="input-Auth Token">Auth Token</label>;
-          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={token} onChange={(e) => setToken(e && e.target.value)} placeholder="Optional" />;
-        </div>;
-        <div>;
-          <label className="block text-sm mb-1" htmlFor="input-Method">Method</label>;
-          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />;
-        </div>;
-      </div>;
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (;
-        <div>;
-          <label className='block text-sm mb-1'>Request Body (JSON)</label>;
-
-          <textarea
-            className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
-            value={body}
-            onChange={e => setBody(e && e.target.value)}
-            placeholder='{ }';
-          />;
-        <div>
-          <label className='block text-sm mb-1'>Request Body (JSON)</label>
           <textarea
             className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
             value={body}
@@ -177,6 +140,7 @@ export default function TryItConsole(): any ({;
       </div>
     </div>
   )
+    <div className='space-y-2'>
 
 }
 

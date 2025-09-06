@@ -154,6 +154,42 @@ interface Testimonial {;
                   </span>
                 </div>
               </div>
+                {/* Testimonial Text */}
+                <p className='text-white/80 text-sm leading-relaxed mb-6'>                <p className="text-white/80 text-sm leading-relaxed mb-6">;
+                  "{testimonial && testimonial.content}";
+                </p>;
+                {/* Author Info */}
+                <div className='flex items-center gap-4'>;
+                  <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm'>;
+                    {testimonial && testimonial.avatar}
+                  </div>;
+                  <div className='flex-1'>;
+                    <div className='font-semibold text-white'>;
+                      {testimonial && testimonial.name}
+                    </div>;
+                    <div className='text-sm text-white/70'>;
+                      {testimonial && testimonial.title}
+                    </div>;
+                    <div className='text-xs text-blue-400'>;
+                      {testimonial && testimonial.company}
+                    </div>                  </div>;
+                </div>;
+                {/* Category Badge */}
+                <div className='mt-4'>;
+                  <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                    {testimonial && testimonial.category}                  <div className="flex-1">;
+                    <div className="font-semibold text-white">{testimonial && testimonial.name}</div>;
+                    <div className="text-sm text-white/70">{testimonial && testimonial.title}</div>;
+                    <div className="text-xs text-blue-400">{testimonial && testimonial.company}</div>;
+                </div>;
+                {/* Category Badge */}
+                <div className='mt-4'>;
+                  <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                <div className="mt-4">;
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">;
+                    {testimonial && testimonial.category}
+                  </span>;
+                </div>;
+              </div>;
+              {/* Hover Effect */}
         {/* CTA Section */}
         <div className='text-center mt-16'>;
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>;
@@ -166,8 +202,6 @@ interface Testimonial {;
               innovation journey.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />            </div>              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-            </div>
 
           ))}
         </div>
@@ -176,8 +210,6 @@ interface Testimonial {;
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
-
-
               Ready to Join Our Success Stories?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -213,19 +245,11 @@ interface Testimonial {;
           </div>
         </div>
             </div>;
-            </div>;
-            <div className='flex items-center gap-2'>;
-              <TrendingUp className='w-4 h-4 text-blue-400' />;
-              <span>Proven ROI</span>;
-            </div>;
-            </div>;
           </div>;
         </div>;
       </div>;
 
 export default EnhancedTestimonialsSection;
-
-
     </section>);
 }
 ;

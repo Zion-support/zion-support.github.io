@@ -16,10 +16,14 @@ interface ChangelogManagerProps {
   platform: AppPlatform
 }
 
-              onClick={handleAddEntry}
-              disabled={!newEntry.version |!newEntry.changes}
-
-
+type ChangelogEntry = {
+  id: string;
+  version: string;
+  date: string;
+  changes: string;
+}) => {
+  const [entries, setEntries] = useState<ChangelogEntry[]>([
+    {
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -108,19 +112,22 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 onChange={handleInputChange}
               />;
             </div>;
-
-
-
               onClick={handleAddEntry}
-
+              disabled={!newEntry.version || !newEntry.changes}
+            >
+              <Plus className="mr-2 h-4 w-4" />
+              Add
+            </Button>
+          </div>
+          
+            <Button
+              onClick={handleAddEntry}
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
             value={newEntry && newEntry.changes}
             onChange={handleInputChange}
             rows={3}
-
-
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
           />;

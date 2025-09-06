@@ -5,16 +5,6 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     name: 'TechSolutions Inc.'
     title: 'Enterprise AI Integration Services'
     avatarUrl:
-      'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=200&h=200'
-    coverImageUrl:
-      'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600'
-    bio: 'Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.'
-    location: 'San Francisco, CA'
-    rating: 4.9
-    reviewCount: 124
-    aiScore: 95
-    profileType: 'service' as 'service' | 'talent'
-    hourlyRate: 200
     skills: [
       { name: 'AI Integration', level: 5, endorsements: 87 }
       { name: 'Machine Learning', level: 5, endorsements: 76 }
@@ -30,22 +20,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         description:
           'Built an AI-powered system for medical diagnostics, reducing diagnosis time by 60%.'
         imageUrl:
-          'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&h=300'
-        tags: ['Healthcare', 'AI', 'Machine Learning']
-        date: 'Oct 2023'
-      }
-
-
       {
-
-          'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',
-        id: 'p2',
-        title: 'Financial Analytics Suite',
-        description:;
-          'Developed predictive models for investment analysis with 92% accuracy.',
-        image_url:;
-          'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=500 & h=300',
-
         tags: ['Finance', 'Analytics', 'Python'],
         date: 'Jun 2023',
       },
@@ -113,16 +88,6 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     name: 'Alexandra Chen'
     title: 'Senior AI Engineer & Machine Learning Expert'
     avatarUrl:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200'
-    coverImageUrl:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&h=600'
-    bio: 'AI specialist with expertise in computer vision and natural language processing.'
-    location: 'Boston, MA'
-    rating: 4.9
-    reviewCount: 43
-    aiScore: 97
-    profileType: 'talent' as 'service' | 'talent'
-    hourlyRate: 150
     skills: [
       { name: 'Machine Learning', level: 5, endorsements: 38 }
       { name: 'TensorFlow', level: 5, endorsements: 32 }
@@ -184,26 +149,15 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       ]
     }
   },};        { day: "Monday", hours: "10:00 AM - 6:00 PM" }
-    experience: [;
-      {
-        id: 'e1',
-        role: 'Senior AI Engineer',
-        company: 'Innovate AI',
-        description:;
-          'Leading computer vision projects and mentoring junior engineers in deep learning techniques.',
-        start_date: 'Mar 2021',
         current: true,
       },
       {
         id: 'e2',
         role: 'Machine Learning Engineer',
         company: 'TechGiant Inc.',
-        description:
-          'Developed and deployed ML models for product recommendation systems.',
       'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600',
     bio: 'Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.',
     location: 'San Francisco, CA',
-
 
 import { ProfileData } from "@/types/profile",
 export const MOCK_PROFILES: Record<string ProfileData> = {
@@ -240,17 +194,10 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
         id: 'e3',
         role: 'Data Scientist',
         company: 'DataCorp',
-        description:
-          'Analyzed large datasets to extract business insights and develop predictive models.',
-        startDate: 'Aug 2016',
-        endDate: 'May 2018',
       },
     ],
     availability: {
       status: 'available',
-      message:
-        'Open to new projects starting immediately. Prefer projects with 3+ month engagement.',
-      availableHours: [
         { day: 'Monday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Wednesday', hours: '10:00 AM - 6:00 PM' },
@@ -261,8 +208,6 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
         { day: "Friday", hours: "10:00 AM - 2:00 PM" }
       ];
     }
-
-
       status: "limited",
       nextAvailable: "Jun 15, 2024",
       message: "Currently booked for the next 3 weeks. Available for new projects starting mid-June.",
@@ -351,3 +296,4 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
       status: "available",
       message: "Open to new projects starting immediately. Prefer projects with 3+ month engagement.",
       availableHours: [
+  }

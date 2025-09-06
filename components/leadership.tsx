@@ -12,19 +12,14 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-
-
-export default function LeadershipPage() {
 
 export default function LeadershipPage() {
 
@@ -90,10 +85,6 @@ function LeadershipPage() {
             </p>;
           </div>;
         </div>;
-          Contact:{' '}
-          <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
-            kleber@ziontechgroup && ziontechgroup.com;
-          </a>{' '}
     </div>);	return (
   <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
   <Head>;
@@ -118,7 +109,3 @@ function LeadershipPage() {
   </div>;
   </div>),
 }
-
-	),
-}
-

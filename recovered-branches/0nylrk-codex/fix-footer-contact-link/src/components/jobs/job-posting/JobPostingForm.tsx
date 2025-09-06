@@ -28,10 +28,6 @@ import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Button } from "@/components/ui/button",
 interface JobPostingFormProps {
-  jobId?: string,
-  onSuccess?: () => void
-}
-interface JobPostingFormProps {
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm && JobPostingForm.tsx;
 
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / jobs / job - posting / JobPostingForm.tsx;
@@ -78,7 +74,6 @@ function JobPostingForm() {
     setEndDate;
     is_remote;
     setIsRemote;
-      setIsFormLoading(true);
 
 
   const {
@@ -163,10 +158,7 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
 ;
   useEffect(() => {;
     if (jobId) {;
-      setIsFormLoading(true),;
-  useEffect(() => {;
-    if (jobId) {;
-      setIsFormLoading(true),;
+      setIsFormLoading(true);
       getJobById(jobId);
         .then((job) => {;
           if (job) {;
@@ -241,6 +233,7 @@ if ( {) {
               }
             });
           }
+        });
         await updateJob(jobId, jobData);
         toast && toast.success("Job updated successfully!");
       } else {;
@@ -248,13 +241,27 @@ if ( {) {
         toast && toast.success("Job posted successfully!");
         form && form.reset();
         setEditorContent("");
-
-
-
       }
-      if (onSuccess) {
-        onSuccess()
+
+
+      if (onSuccess) {;
+        onSuccess();
       }
+    } catch (error: any) {
+      console.error("Error creating/updating job:", error);
+      toast.error(error.message |"Failed to post job")
+    } finally {
+      setIsFormLoading(false)
+    }
+  }
+  if (isLoading |isFormLoading) {
+      console.error("Error creating/updating job:", error),
+      toast.error(error.message || "Failed to post job")
+    } finally {
+      setIsFormLoading(false)
+    }
+  },
+
 
 
   if (isLoading || isFormLoading) {;
@@ -279,6 +286,9 @@ if ( {) {
               id="isRemote"
               checked={isRemote}
               className="mr-2"
+            <Input
+              type="checkbox"
+              id="isRemote"
               checked={isRemote}
               className="mr-2"
               onChange={(e) => setIsRemote(e.target.checked)}
@@ -314,27 +324,4 @@ if ( {) {
             Remote;
           </Label>;
         </div>;
-
-          handleEditorChange={handleEditorChange}
-          editorContent={editorContent}
-        />;
-;
-        <Button type="submit" disabled={isSubmitting || isFormLoading}>;
-          {isSubmitting || isFormLoading ? "Submitting..." :jobId ? "Update Job" :"Post Job"}
-        </Button>;
-      </form>;
-    </Form>;
-  ),; interface JobPostingFormProps {
-  jobId?: string;
-onSuccess?: () => void 
-}export function JobPostingForm ({
-  jobId, onSuccess 
-}: JobPostingFormProps) {
-  const [isFormLoading, setIsFormLoading] = useState (false);
-const [editorContent, setEditorContent] = useState ("");
-  if (job) {
-  //Set form values Object.entries (job) .forEach ( ([key, value]) => {
-  if (key === 'published date' && value) {
-  
 }
-

@@ -29,9 +29,6 @@ function BillingHeader() {
             <Mail className="h-4 w-4" />;
             Contact Billing Support;
           </Button>;
-          <Button variant="outline" size="sm" className="gap-1" asChild>;
-            <Link to="/dashboard/client/analytics">;
-              <BarChart3 className="h-4 w-4" />;
               Analytics;
             </Link>;
           </Button>;
@@ -102,3 +99,4 @@ export function BillingHeader() {;
 ;
 
 
+}

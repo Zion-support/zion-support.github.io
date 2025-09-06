@@ -100,9 +100,6 @@ export default function BusinessToolsPage() {
           icon: <Calendar className='w-6 h-6' />
           color: 'bg-gradient-to-br from-red-500 to-pink-600'
         }
-      ];
-    };
-      category: 'Communication & Collaboration',
 
 
       ];
@@ -249,7 +246,7 @@ export default function BusinessToolsPage() {
             'Developer APIs'
             'Analytics'
           ]
-          pricing: '2.9% + 30 per transaction'
+          pricing: '2.9% + 30¢ per transaction'
           website: 'https://stripe.com'
           icon: <CreditCard className='w-6 h-6' />
           color: 'bg-gradient-to-br from-purple-500 to-blue-600'
@@ -414,59 +411,54 @@ import React from 'react';
         {
           name: 'Google Analytics',
 
-
-
-
   const businessInsights = [
     {
       title: 'Remote Work Tools'
       description:
         'Essential tools for distributed teams and hybrid work environments.'
-      trend: ' Growing Demand'
-      color: 'text-green-400',      trend: ' Growing Demand'
+      trend: '📈 Growing Demand'
+      color: 'text-green-400',      trend: '📈 Growing Demand'
       color: 'text-green-400'
     }
     {
       title: 'AI-Powered Solutions'
       description: 'Business tools leveraging AI for automation and intelligent insights.'
-      trend: ' High Growth'
+      trend: '🚀 High Growth'
       color: 'text-blue-400'
     }
     {
       title: 'Cloud-Native Platforms'
       description: 'Business applications built for scalability and global accessibility.'
-      trend: ' Mainstream'
+      trend: '☁️ Mainstream'
       color: 'text-cyan-400'
     }
     {
       title: 'AI-Powered Solutions'
       description:
         'Business tools leveraging AI for automation and intelligent insights.'
-      trend: ' High Growth'
+      trend: '🚀 High Growth'
       color: 'text-blue-400'
     }
     {
       title: 'Cloud-Native Platforms'
       description:
         'Business applications built for scalability and global accessibility.'
-      trend: ' Mainstream'
+      trend: '☁️ Mainstream'
       color: 'text-cyan-400'
     },    {
       title: 'Security & Compliance'
       description: 'Tools ensuring data protection and regulatory compliance.'
-      trend: ' Critical'
+      trend: '🔒 Critical'
       color: 'text-orange-400'
     },  ];      color: 'text-cyan-400'
     }
     {
       title: 'Security & Compliance'
       description: 'Tools ensuring data protection and regulatory compliance.'
-      trend: ' Critical'
+      trend: '🔒 Critical'
       color: 'text-orange-400'
     },      color: 'text-orange-400'
     }
-  const productivityTips = [
-    {
     }
   ];
 
@@ -534,9 +526,6 @@ import React from 'react';
               Stay ahead of the curve with our analysis of the business tools landscape and emerging opportunities.;
             </p>;
           </div>;
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {businessInsights && businessInsights.map((insight, index) => (;
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
@@ -549,18 +538,17 @@ import React from 'react';
 
 
       {/* Business Tools */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-              Essential Business Tools
-            </h2>
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              Hand-picked business tools that deliver real value for your
-              organization. Each tool has been evaluated for features, pricing
-              and business impact.            </p>
-          </div>
-          {businessTools.map((category, categoryIndex) => (      <section className="section-padding bg-gradient-cursor">
+
+      <section className="section-padding bg-gradient-cursor">
+
+                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                <h3 className="text-xl font-bold text-white mb-3">{insight && insight.title}</h3>;
+                <p className="text-gray-400 text-sm mb-4 leading-relaxed">{insight && insight.description}</p>;
+                <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${insight && insight.color} bg-gray-800/50`}>;
+                  {insight && insight.trend}
+                </div>;
+              </Card>;
+            ))}
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
@@ -630,20 +618,25 @@ import React from 'react';
                     <Button
 
 
+                    <Button
+                      href={tool && tool.website}
+                      variant='primary'
+                      size='sm'
+                      className='w-full group-hover:scale-105 transition-transform duration-300'
+                      external>;
+                      Visit Website;
+                      <ExternalLink className='w-4 h-4 ml-2' />                    </Button>                      variant="primary";
+                      size="sm";
+                      className="w-full group-hover:scale-105 transition-transform duration-300";
+                      external;
+                    >;
+                      Visit Website;
+                      <ExternalLink className="w-4 h-4 ml-2" />;
+                  </Card>;
                 ))}
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Productivity Tips */}
-      <section className='section-padding bg-gradient-cursor-accent'>
-        <div className='container-cursor'>
-          <div className='text-center mb-16'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-              Productivity Tips & Best Practices
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Maximize the value of your business tools with these proven
@@ -652,13 +645,90 @@ import React from 'react';
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {productivityTips.map((tip, index) => (
+        </div>;
+      </section>;
+      {/* Productivity Tips */}
+      <section className='section-padding bg-gradient-cursor-accent'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-16'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+                      </p>;
+                    </div>;
+                    <div className='mb - 6'>;
+                      <div className='text - center mb - 4'>;
+                        <span className='text - 2xl font - bold text - cursor - blue'>;
+                          {tool.pricing}
+                        </span>;
+                      </div>;
+                      <ul className='space - y-2'>;
+                        {tool.features.map ((feature, feature_index) => (
+                          <li;
+                            key={feature_index}
+                            className='flex items - center text - gray - 300 text - sm';
+                          >;
+                            <Check className='w - 4 h - 4 text - cursor - blue mr - 3 flex - shrink - 0' />                            {feature}                        {tool.icon}
+                      </div>;
+                      <h4 className="text - xl font - bold text - white mb - 2">{tool.name}</h4>;
+                      <p className="text - gray - 400 text - sm leading - relaxed">{tool.description}</p>;
+                    </div>;
+                    <div className="mb - 6">;
+                      <div className="text - center mb - 4">;
+                        <span className="text - 2xl font - bold text - cursor - blue">{tool.pricing}</span>;
+                      </div>;
+                      <ul className="space - y-2">;
+                        {tool.features.map ((feature, feature_index) => (
+                          <li key={feature_index} className="flex items - center text - gray - 300 text - sm">;
+                            <Check className="w - 4 h - 4 text - cursor - blue mr - 3 flex - shrink - 0" />;
+                            {feature}
+                          </li>))}
+                      </ul>;
+                    </div>;
+                    <Button;
+                      href={tool.website}
+                      variant='primary';
+                      size='sm';
+                      className='w - full group - hover:scale - 105 transition - transform duration - 300';
+                      external;
+                    >;
+                      Visit Website;
+                      <ExternalLink className='w - 4 h - 4 ml - 2' />                    </Button>                      variant="primary";
+                      size="sm";
+                      className="w - full group - hover:scale - 105 transition - transform duration - 300";
+                      external;
+                    >;
+                      Visit Website;
+                      <ExternalLink className="w - 4 h - 4 ml - 2" />;
+                  </Card>))}
+              </div>;
+            </div>))}
+        </div>;
+      </section>;
+      {/* Productivity Tips */}
+      <section className='section - padding bg - gradient - cursor - accent'>;
+        <div className='container - cursor'>;
+          <div className='text - center mb - 16'>;
+            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+            </h2>;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
               Maximize the value of your business tools with these proven;
               strategies and best practices.;
             </p>;
           </div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
-            {productivityTips && productivityTips.map((tip, index) => (;
+      {/* Productivity Tips */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-16'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Maximize the value of your business tools with these proven
+              strategies and best practices.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {productivityTips.map((tip, index) => (
               <Card
                 key={index}
                   {tip.icon}
@@ -680,15 +750,41 @@ import React from 'react';
       </section>
 
             ))}
-
+      {/* CTA Section */}
+      <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
+        <div className='container-cursor text-center relative z-10'>;
+          <h2 className='text-responsive-lg font-bold text-white mb-8'>;
+          </h2>;
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
+            {productivity_tips.map ((tip, index) => (
+              <Card;
+                key={index}
+                className='card - hover border - gradient - blue text - center';
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                <div className='flex justify - center mb - 4'>{tip.icon}</div>;
+                <h3 className='text - xl font - bold text - white mb - 3'>;
+                  {tip.title}
+                </h3>;
+                <p className='text - gray - 400 text - sm leading - relaxed'>;
+                  {tip.description}
+                </p>              </Card>                <div className="flex justify - center mb - 4">;
+                  {tip.icon}
+                </div>;
+                <h3 className="text - xl font - bold text - white mb - 3">{tip.title}</h3>;
+                <p className="text - gray - 400 text - sm leading - relaxed">{tip.description}</p>))}
           </div>;
         </div>;
       </section>;
-
-
       {/* CTA Section */}
-
-
+      <section className='section - padding bg - gradient - to - r from - cursor - blue to - purple - 600 relative overflow - hidden'>;
+        <div className='absolute inset - 0 bg-[radial - gradient (circle, rgba (255, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:20px_20px] opacity - 10' />;
+        <div className='container - cursor text - center relative z - 10'>;
+          <h2 className='text - responsive - lg font - bold text - white mb - 8'>;
+          </h2>;
+          <p className='text - xl text - blue - 100 mb - 12 max - w-4xl mx - auto leading - relaxed'>;
             These business tools can streamline your operations, improve team;
             collaboration, and drive growth. Start with the essentials and build;
             your tech stack strategically.;
@@ -750,25 +846,12 @@ href="/contact"
             >
 
               Get Business Consultation
-
-          <div className='flex flex - col sm:flex - row gap - 6 justify - center'>;
-            <Button;
-              href='/micro - saas';
-              variant='secondary';
-              size='lg';
-              className='bg - white text - cursor - blue hover:bg - gray - 100 shadow - 2xl'            >;
-              Explore Micro SaaS;
             </Button>;
-            <Button;
-              href='/contact';
-              variant='outline';
-              size='lg';
-              className='border - white text - white hover:bg - white hover:text - cursor - blue shadow - 2xl'            >              href="/micro - saas";
-              variant="secondary";
-              size="lg";
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl";
-              Explore Micro SaaS;
-            </Button>;
+          </div>;
+        </div>;
+      </section>;
+    </>);
+}
               className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'            >              href="/micro-saas"
               variant="secondary"
               size="lg"

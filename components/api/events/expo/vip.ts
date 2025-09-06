@@ -1,6 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
+const allowlist = new Set<string>(
+  [(process.env.EXPO_VIP_ADDRESS |'').toLowerCase()].filter(Boolean)
+);
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
 
 ;
 const allowlist = new Set < string>(
@@ -46,6 +50,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ allowed: allowlist.has(address) })
 
 }
-
-
-

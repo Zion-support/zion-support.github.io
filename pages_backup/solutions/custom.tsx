@@ -1,28 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -32,7 +7,6 @@ import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
-
 
 const features = [;
   {}

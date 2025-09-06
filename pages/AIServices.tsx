@@ -2,24 +2,9 @@ export default function AIServices() {
   return (
     <Layout
       title="AI Services - Zion Tech Group"
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
             </p>
-          </div>
-          <div className="text-center">
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform your business with cutting-edge AI solutions and
-              services.
-            </p>
-            <p className="text-gray-600">AI Services page is under construction.</p>
-              AI Services page is under construction.;
-            </p>;
-          </div>;
-        </div>;
-      </div>;
-
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -129,6 +114,4 @@ export default function AIServices() {
     </Layout>
   );
 }
-}
-    </Layout>);
 }

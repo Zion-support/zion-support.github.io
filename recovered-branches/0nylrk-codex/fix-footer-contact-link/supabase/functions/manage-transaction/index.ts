@@ -1,5 +1,4 @@
 
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -11,7 +10,6 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
@@ -43,12 +41,8 @@ serve(async (req) => {
       throw new Error("You are not authorized to manage this transaction")
     }
 
-
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"}),
-
-    let result,
-    
 
     switch (action) {
       case 'release':;
@@ -67,9 +61,6 @@ if ( {) {
         // Process refund via Stripe
         if (transaction && transaction.stripe_session_id) {
           // Retrieve payment intent from session
-              reason: "requested_by_customer"
-
-
             }),
             
             // Update transaction status
@@ -78,11 +69,16 @@ if ( {) {
               .update({ 
                 status: "refunded",
                 refunded_at: new Date().toISOString(),
-
-
                 refund_id: refund.id
                 refunded_at: new Date().toISOString(),
                 refund_id: refund && refund.id
+              reason: "requested_by_customer"
+            });
+            // Update transaction status
+            await supabaseAdmin
+              .from("transactions")
+              .update({
+                status: "refunded";
               })
               .eq("id", transactionId)
         // Update transaction status;
@@ -134,6 +130,8 @@ if ( {) {
               .eq ("id", transaction_id);
           }
         }
+        result = { message: "Refund processed successfully" }
+        break;
       case 'cancel':
         // Only allow cancellation for pending transactions
         if (transaction && transaction.status !== "pending") {
@@ -201,4 +199,3 @@ if ( {) {
 
   }
 });
-;

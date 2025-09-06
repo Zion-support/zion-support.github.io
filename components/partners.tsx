@@ -12,19 +12,14 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-
-
-export default function PartnersPage() {
 
 export default function PartnersPage() {
 
@@ -44,7 +39,7 @@ export default function PartnersPage() {
 			</Head>
 			<div className="max-w-5xl mx-auto space-y-6">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Partners</h1>
-				<p className="text-slate-300">We work with bestinclass platforms across AI, cloud, data, security, and DevOps.</p>
+				<p className="text-slate-300">We work with best‑in‑class platforms across AI, cloud, data, security, and DevOps.</p>
 				<ul className="list-disc list-inside text-slate-300 space-y-1">
 					<li>Cloud & Edge: AWS, Azure, Cloudflare</li>
 					<li>AI & LLM: OpenAI, Anthropic, Groq</li>
@@ -107,7 +102,3 @@ function PartnersPage() {
   </div>;
   </div>),
 }
-
-	),
-}
-

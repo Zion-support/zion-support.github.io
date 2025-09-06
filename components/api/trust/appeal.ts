@@ -59,4 +59,3 @@ if ( {) {
   } catch {}
 return res.status (200).json ({ ok: true, appeal });
 }
-

@@ -2,7 +2,6 @@
 
 
 
-
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -53,11 +52,6 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
       setProcessingId(null);
     }
 
-
-  };
-
-
-
   const handleViewScore = (application: JobApplication) => {
     setSelectedApplication(application)
     setShowScoreDialog(true)
@@ -69,23 +63,14 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     refetch()
   }
 
+
+  if (isLoading) {;
+    return <LoadingState />;
+
   if (isLoading) {;
     return <LoadingState />;
   }
-
-
-  if (error) {;
-    return <ErrorState error={error} />;
   }
-
-  if (applications && applications.length === 0) {;
-    return <EmptyState />;
-
-  }
-  }
-
-
-
   return (
     <>;
       <ApplicationsTable
@@ -136,10 +121,7 @@ if ( {) {
         onStatusChange={handleStatusChange}
         onViewScore={handleViewScore}
       <ScoreDialog
-      />;
-      <ScoreDialog;
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}
         application={selected_application}
         onScoreUpdated={handleScoreUpdated}
-}

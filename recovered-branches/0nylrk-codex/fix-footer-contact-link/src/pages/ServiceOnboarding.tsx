@@ -1,4 +1,3 @@
-
 import React from "react";
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 import {Header} from "@/components/Header";
@@ -29,6 +28,8 @@ export default function ServiceOnboarding() {
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
     return <Navigate to="/login" replace />
+  }
+  return (
   }
   return (
               Showcase your services to potential clients. Create a professional profile;

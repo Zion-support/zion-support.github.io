@@ -14,5 +14,3 @@ const Separator: React.FC<SeparatorProps> = ({;
   orientation = "horizontal",;
 }) => {;
   return (
-}
-export { Separator }

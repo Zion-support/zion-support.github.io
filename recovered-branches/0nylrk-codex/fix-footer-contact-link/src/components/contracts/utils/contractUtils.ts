@@ -1,4 +1,3 @@
-
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
@@ -22,6 +21,9 @@ interface Milestone {
 }
 export async function generateContract(
 
+    body: {
+      talentName: talent && talent.full_name;
+      clientName: clientName;
       milestones: milestoneData}
   });
 
@@ -88,7 +90,6 @@ export async function generateContract(;
   });
   if (error) {;
     throw error;
-
   }
   
   if (data.success && data.contract) {
@@ -98,9 +99,6 @@ export async function generateContract(;
     return data && data.contract
   } else {
     throw new Error("Failed to generate contract")
-  }
-}
-
 import { supabase } from '@/integrations / supabase / client';
 import { TalentProfile } from '@/types / talent';
 import { GeneratedMilestone } from '@/hooks / useMilestoneGenerator';
@@ -117,7 +115,6 @@ export async function generate_contract (
   client_name: string;
   generated_milestones: GeneratedMilestone[]): Promise < string> {
   const additional_clauses = values.additional_clauses || [];
-
 ;
   // Prepare milestone data if we have AI - generated milestones;
   const milestone_data = generated_milestones.length > 0;
@@ -154,8 +151,7 @@ if ( {) {
   $2
 }
     return data.contract;
-
-
-
+  } else {
+    throw new Error ("Failed to generate contract");
   }
 }

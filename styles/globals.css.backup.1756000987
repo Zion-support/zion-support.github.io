@@ -4,6 +4,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -36,6 +37,8 @@
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
@@ -59,6 +62,7 @@ a {
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -84,6 +88,12 @@ a {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 /* Enhanced scrollbar */
+=======
+/* Enhanced scrollbar */
+/* Import Inter font for modern typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 ::-webkit-scrollbar {
@@ -133,20 +143,10 @@ a {
 }
 
 /* Enhanced Scrollbar */
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
-<<<<<<< HEAD
-::-webkit-scrollbar {
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 ::-webkit-scrollbar {
 /* Enhanced scrollbar */::-webkit-scrollbar {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
 /* Enhanced scrollbar */::-webkit-scrollbar {
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
@@ -160,12 +160,15 @@ a {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -199,6 +202,8 @@ a {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
   background: rgba(15, 23, 42, 0.3);
   backdrop-filter: blur(10px);
 }
@@ -338,6 +343,7 @@ a {
 /* Quantum Field Effects */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -362,6 +368,13 @@ a {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 .quantum-field-2029 {
+=======
+.quantum-field-2029 {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 =======
@@ -849,17 +862,8 @@ body::after {
 }
 
 .quantum-field {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
-<<<<<<< HEAD
-  position: relative;
-  overflow: hidden;
-}
-
-<<<<<<< HEAD
-.quantum-field-2029::before {
-=======
-.quantum-field::before {
   content: '';
+<<<<<<< HEAD
   position: absolute;
   top: -50%;
   left: -50%;
@@ -1120,6 +1124,8 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
   position: relative;
   overflow: hidden;
 }
@@ -1130,12 +1136,16 @@ body::after {
 }
 
 .quantum-field-2029::before {  content: '';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 .quantum-field-2029 {  position: relative;
   overflow: hidden;
 }
 
 .quantum-field-2029::before {  content: '';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1152,6 +1162,8 @@ body::after {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
   position: absolute;
   top: -50%;
   left: -50%;
@@ -1160,6 +1172,7 @@ body::after {
   background: conic-gradient(
     from 0deg,
     transparent,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1195,6 +1208,8 @@ body::after {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
     rgba(0, 255, 255, 0.1),
     transparent,
     rgba(139, 92, 246, 0.1),
@@ -1400,6 +1415,7 @@ body::after {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1424,6 +1440,20 @@ body::after {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 /* Hover effects */
+=======
+/* Hover effects */
+    rgba(59, 130, 246, 0.1),
+    transparent,
+    rgba(147, 51, 234, 0.1),
+    transparent,
+    rgba(16, 185, 129, 0.1),
+    transparent,
+    rgba(239, 68, 68, 0.1),
+    transparent
+  );
+  animation: quantumRotate 10s linear infinite;
+}
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 .hover-lift {
@@ -1438,20 +1468,10 @@ body::after {
 }
 
 /* Enhanced hover effects */
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
-<<<<<<< HEAD
-.hover-lift {
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 .hover-lift {
 /* Hover effects */.hover-lift {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
 /* Hover effects */.hover-lift {
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
@@ -1465,12 +1485,15 @@ body::after {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1504,6 +1527,8 @@ body::after {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
@@ -1560,6 +1585,7 @@ body::after {
   @apply card hover:bg-white/20 hover:transform hover:scale-105 hover:shadow-xl;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1597,6 +1623,10 @@ body::after {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+}
+}
+>>>>>>> origin/main
 
 .hover-glow:hover {
   box-shadow: 
@@ -1770,6 +1800,7 @@ body::after {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
@@ -1794,3 +1825,5 @@ body::after {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

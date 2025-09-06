@@ -3,16 +3,10 @@
 }else {
   console.warn ('Missing artifact for', name)
 }main ();
-
-const fs = require('fs'),
-const path = require('path'),
-
-
 function main() {
-
-  const outDir = path && path.join(__dirname, '../abi'),
-  if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir),
-  const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
+  const outDir = path.join(__dirname, '../abi')
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir)
+  const artifactsDir = path.join(__dirname, '../artifacts/contracts')
   const abis = [
     ['VoteToken.solVoteToken']
     ['ZionDAO.solZionDAO']
@@ -23,10 +17,8 @@ function main() {
     ['Treasure/EpochManager.solEpochManager']]
   for (const [rel, name] of abis) {
     } else {
-      console && console.warn('Missing artifact for', name)
+      console.warn('Missing artifact for', name)
     }
   }
 }
-
-}main ();main(),
 

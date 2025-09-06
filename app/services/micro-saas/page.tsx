@@ -2,71 +2,71 @@
 
 export default function MicroSaaSPage() {
   return (
+          />
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Core Technology Stack</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <TechStack
+            title="Frontend"
+            technologies={["React/Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Chart.js"]}
+          />
+          <TechStack
+            title="Backend"
+            technologies={["Node.js/Express", "Python/FastAPI", "PostgreSQL", "Redis", "Docker"]}
+          />
+          <TechStack
+            title="AI/ML"
+            technologies={["OpenAI GPT-4", "Hugging Face", "LangChain", "Vector DBs", "MLflow"]}
+          />
+        </div>
+      </section>
+
+      <Pricing />
+      
+      <section className="mt-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Our Micro SaaS Development?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <BenefitCard
+            title="Rapid Time-to-Market"
+            description="Launch your MVP in 4-8 weeks with our proven development framework"
+            icon="⚡"
+          />
+          <BenefitCard
+            title="Scalable Architecture"
+            description="Built for growth with cloud-native, microservices architecture"
+            icon="🏗️"
+          />
+          <BenefitCard
+            title="Revenue-Focused"
+            description="Every feature designed to drive user engagement and revenue growth"
+            icon="💰"
+          />
+          <BenefitCard
+            title="24/7 Support"
+            description="Round-the-clock monitoring and support for your critical systems"
+            icon="🛡️"
+          />
+          <BenefitCard
+            title="AI Integration"
+            description="Leverage cutting-edge AI to differentiate your product in the market"
+            icon="🧠"
+          />
+          <BenefitCard
+            title="Growth Analytics"
+            description="Built-in analytics and growth tools to optimize user acquisition and retention"
+            icon="📊"
+          />
+        </div>
+      </section>
+
+      <CTASection />
     </div>
   );
 }
 
-function MicroSaaSCategory({ title, icon, description, services }: {
-  title: string;
-  icon: string;
-  description: string;
-  services: string[];
-}) {
-  return (
-    <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-      <div className="text-3xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2">
-        {services.map((service, index) => (
-          <li key={index} className="flex items-center text-gray-600">
-            <span className="text-blue-500 mr-2">•</span>
-            {service}
-          </li>
-        ))}
-      </ul>
-    <section className="py-12">
-      <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Development Packages</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="MVP Sprint" 
-          price="$8k–$20k" 
-          duration="2–4 weeks"
-          features={[
-            "Core MVP features",
-            "Stripe billing integration", 
-            "Basic analytics dashboard",
-            "User authentication",
-            "Admin panel",
-            "Mobile responsive design"
-          ]} 
-        />
-        <Plan 
-          name="Growth Ready" 
-          price="$20k–$60k" 
-          duration="6–10 weeks"
-          features={[
-            "Full feature set",
-            "SEO-optimized marketing site",
-            "Email marketing automation",
-            "Advanced analytics",
-            "API documentation",
-            "Performance optimization"
-          ]} 
-        />
-        <Plan 
-          name="Enterprise Scale" 
-          price="$60k+" 
-          duration="12+ weeks"
-          features={[
-            "Custom enterprise features",
-            "Advanced security & compliance",
-            "Multi-region deployment",
-            "24/7 monitoring & support",
-            "SLA guarantees",
-            "Dedicated success manager"
-          ]} 
-        />
       </div>
     </section>
   );
@@ -101,178 +101,18 @@ function Plan({ name, price, duration, features }: {
   );
 }
 
-function MicroSaaSSolution({ title, description, features, price, timeline, useCase, marketSize }: {
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
-  timeline: string;
-  useCase: string;
-  marketSize: string;
-}) {
-  return (
-    <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="mb-4 flex flex-wrap gap-2">
-        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-          {useCase}
-        </span>
-        <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-          {marketSize} market
-        </span>
-      </div>
-      <ul className="space-y-1 mb-4">
-        {features.map((feature, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="text-green-500 mr-2">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-      <div className="flex justify-between items-center pt-4 border-t border-gray-200">
-        <div>
-          <div className="font-bold text-blue-600">{price}</div>
-          <div className="text-sm text-gray-500">{timeline}</div>
-        </div>
-        <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Get Quote
-        </a>
-      </div>
-    </div>
-  );
 }
-
-function CoreFeature({ title, description, features }: {
-  title: string;
-  description: string;
-  features: string[];
-}) {
-  return (
-    <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-      <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-1">
-        {features.map((feature, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="text-blue-500 mr-2">•</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
 }
-
-function TechStack({ category, technologies }: { category: string; technologies: string[] }) {
-  return (
-    <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-      <h3 className="font-bold text-gray-900 mb-4">{category}</h3>
-      <div className="flex flex-wrap gap-2">
-        {technologies.map((tech, index) => (
-          <span key={index} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
-            {tech}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function MicroSaaSPricingPlan({ name, price, duration, features, popular }: {
-  name: string;
-  price: string;
-  duration: string;
-  features: string[];
-  popular: boolean;
-}) {
-  return (
-    <div className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? 'border-blue-500' : 'border-gray-200'} relative`}>
-      {popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
-        </div>
-      )}
-      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-      <div className="text-3xl font-bold text-blue-600 mb-1">{price}</div>
-      <div className="text-gray-500 mb-6">{duration}</div>
-      <ul className="space-y-3">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-gray-600">
-            <span className="text-green-500 mr-3">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-      <a
-        href="tel:+13024640950"
-        className={`w-full mt-6 py-3 rounded-lg font-semibold text-center block transition-colors ${
-          popular 
-            ? 'bg-blue-600 text-white hover:bg-blue-700' 
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-        }`}
-      >
-        Get Started
-      </a>
-    </div>
-  );
-}
-
-function SuccessStory({ title, description, metrics, industry }: {
-  title: string;
-  description: string;
-  metrics: string[];
-  industry: string;
-}) {
-  return (
-    <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-      <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="mb-4">
-        <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-          {industry}
-        </span>
-      </div>
-      <div className="space-y-1">
-        {metrics.map((metric, index) => (
-          <div key={index} className="text-sm font-semibold text-green-600">
-            {metric}
-          </div>
-        ))}
-      </div>
-    </div>
-function ContactSection() {
-  return (
-    <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
-      <div className="text-center">
-        <h3 className="text-3xl font-bold text-gray-900 mb-4">
-          Ready to Build Your Micro SaaS?
-        </h3>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Let's discuss your idea and create a custom solution that drives real revenue. 
-          Our team has launched 50+ successful micro SaaS products.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-        <div className="mt-8 text-sm text-gray-500">
-          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-        </div>
-      </div>
-    </section>
-  );
-}
+export const metadata = { title: 'Micro SaaS Development | Zion Tech Group' } export default /**
+ * MicroSaaSPage - Function description
+ */
+function MicroSaaSPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>Micro SaaS Development</h1> <p style={{margin_top: 8, color: '#374151'}}>We design, build, launch and operate revenue - generating micro SaaS products end - to - end.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Core features" details={["Multi - tenant architecture", "Auth (email, OAuth)", "Billing (Stripe)", "Admin + analytics", "In - app onboarding"]} /> <Item title="Growth stack" details={["SEO - ready marketing site", "Blog + docs", "Email campaigns", "Referral + affiliates"]} /> <Item title="Ops & reliability" details={["CI / CD", "Observability", "Error budgets", "SLOs", "On - call setup"]} /> </div> <Pricing /> </section> )} /**
+ * Item - Function description
+ */
+function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
+ * Pricing - Function description
+ */
+function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="MVP Sprint" price="$8k–$20k" features={["2–4 weeks", "MVP scope", "Stripe billing", "Basic analytics"]} /> <Plan name="Growth" price="$20k–$60k" features={["6–10 weeks", "SEO + content", "CRM + email", "Observability"]} /> <Plan name="Scale" price="$60k+" features={["Custom roadmap", "SRE + security", "Multi - region", "SLAs"]} /> </div> )} /**
+ * Plan - Function description
+ */
+function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}

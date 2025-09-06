@@ -1,4 +1,3 @@
-
 import { Button  } from '@/components/ui/button';
 import { useNavigate  } from 'react-router-dom';
 import { XCircle } from 'lucide-react';
@@ -56,18 +55,14 @@ export default function PaymentCanceled() {
       </div>
     </div>
   )
-}
 
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {XCircle} from 'lucide-react';
-
-
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
 import { XCircle } from 'lucide-react',;
-
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">;
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">;
         <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">;
@@ -88,5 +83,6 @@ import { XCircle } from 'lucide-react',;
 
 
 }
+;
     </div>);
 }

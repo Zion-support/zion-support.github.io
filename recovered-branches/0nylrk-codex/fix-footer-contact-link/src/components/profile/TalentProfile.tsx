@@ -1,4 +1,3 @@
-
 interface TalentProfileProps {
 
   profile: TalentProfileType
@@ -112,15 +111,14 @@ export function TalentProfile({;
   })) || [];
   return (;
     <div className="container mx-auto px-4 py-8">;
-
+  return (
+    <div className="container mx-auto px-4 py-8">;
       {/* Profile Header */}
       <ProfileHero
         name={profile && profile.full_name}
         title={profile && profile.professional_title}
         avatarUrl={profile && profile.profile_picture_url}
         profileType="talent"
-
-
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
           {/* Ratings Section */}

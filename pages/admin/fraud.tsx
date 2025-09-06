@@ -1,6 +1,3 @@
-import React, { useEffect, useMemo, useState } from 'react',;
-;
-import React, { useEffect, useMemo, useState } from 'react';
 
 
 
@@ -15,6 +12,11 @@ export default function FraudAdminPage() {
   const [error, setError] = useState<string | null>(null)
   useEffect(() => {
 
+    const saved = localStorage.getItem('admin-token') || '';
+    setAdminToken(saved)
+  }, []);
+
+
     const saved = localStorage.getItem('admin-token') |''
     setAdminToken(saved)
   }, [])
@@ -23,7 +25,9 @@ export default function FraudAdminPage() {
     setError(null)
     try {
     } finally {
-      setLoading(false)
+
+      set_loading (false);
+
     }
     fetchItems()
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -43,13 +47,10 @@ export default function FraudAdminPage() {
         <input
           className="border rounded px-2 py-1 w-80"
           placeholder="Admin token (optional)"
-
-
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
-
 
 
 
@@ -64,9 +65,6 @@ export default function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -89,8 +87,6 @@ export default function FraudAdminPage() {
                   <div className="text-sm space-y-1">
                     {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
                       <div key={idx} className="text-gray-700">{r}</div>
-
-
                   </div>
                 </td>
                 <td className="p-2 border">
@@ -118,4 +114,3 @@ export default function FraudAdminPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-

@@ -4,12 +4,6 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 import {Html, Head, Main, NextScript} from 'next/document';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
-
-
-
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-
-import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 import {Html, Head, Main, NextScript} from 'next/document';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
@@ -35,8 +29,6 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
-
-
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#0a0a0a" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -48,9 +40,6 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  );
-
-}
   );
 }
   );
@@ -112,5 +101,7 @@ function Document() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 

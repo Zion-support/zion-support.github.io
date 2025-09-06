@@ -1,4 +1,3 @@
-
 interface Service {
   id: string;
   title: string
@@ -31,8 +30,6 @@ interface QuoteDetails {;
   timeframe: string,;
   startDate?: string,;
   endDate?: string;
-
-
 }
 interface RequestBody {
   service: Service | null
@@ -75,9 +72,7 @@ serve(async (req) => {
         const { data: { user }, error } = await supabase.auth.getUser(token),;
         if (!error && user) {;
           userId = user.id;
-
-
-
+          userId = user && user.id
         }
       }
     } catch (authError) {
@@ -126,9 +121,6 @@ serve(async (req) => {
                 1. A concise summary (max 100 words);
                 2. 3-5 relevant tags for categorization;
                 3. An estimated complexity level (Low, Medium, High);
-
-
-
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
                 Description: ${quoteDetails.description}
@@ -137,13 +129,6 @@ serve(async (req) => {
                 Start Date: ${quoteDetails.startDate |'Not specified'}
                 End Date: ${quoteDetails.endDate |'Not specified'}`
               }
-
-        
-        const aiResult = await openAIResponse && openAIResponse.json();
-        if (!aiResult && aiResult.error && aiResult && aiResult.choices && aiResult && aiResult.choices.length > 0) {
-          aiAnalysis = aiResult && aiResult.choices[0].message && message.content
-
-
             ],;
             temperature: 0.5;
           });
@@ -151,11 +136,61 @@ serve(async (req) => {
         const aiResult = await openAIResponse.json(),;
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {;
           aiAnalysis = aiResult.choices[0].message.content;
+              }
+            ];
+            temperature: 0 && 0.5
+          })
+        });
         }
       }
     } catch (openAIError) {
       console && console.error("OpenAI error:", openAIError);
       // Continue without AI analysis
+    }
+    // Generate a summary and tags using OpenAI;
+    let ai_analysis = null;
+    try {
+      // Check condition
+if ( {) {
+  $2
+}
+        const openAIResponse = await fetch ('https://api.openai.com / v1 / chat / completions', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${openAIApiKey}`;
+            'Content - Type': 'application / json'}
+          body: JSON.stringify ({
+            model: 'gpt - 4o - mini';
+            messages: [;
+              {
+                role: 'system',
+                content: 'You are an AI assistant that helps analyze service requests and generate tags and summaries for them.';
+              }
+              {
+                role: 'user',
+                content: `Analyze this service request and provide:;
+                1. A concise summary (max 100 words);
+                2. 3 - 5 relevant tags for categorization;
+                3. An estimated complexity level (Low, Medium, High);
+                Service: ${service?.title || 'Custom Service'}
+                Category: ${service?.category || 'N / A'}
+                Description: ${quote_details.description}
+                Budget Range: ${quote_details.budget}
+                Timeframe: ${quote_details.timeframe}
+                Start Date: ${quote_details.start_date || 'Not specified'}
+                End Date: ${quote_details.end_date || 'Not specified'}`;
+              }
+            ];
+            temperature: 0.5;
+          });
+        });
+;
+        const ai_result = await openAIResponse.json ();
+        // Check condition
+if ( {) {
+  $2
+}
+          ai_analysis = ai_result.choices[0].message.content;
         }
       }
     } catch (openAIError) {
@@ -172,6 +207,7 @@ serve(async (req) => {
       ])
       .select();
     if (error) throw error;
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   }
 });
 
@@ -236,4 +272,3 @@ if (throw error) {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
   }
 });
-;

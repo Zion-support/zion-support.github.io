@@ -7,21 +7,52 @@ import {
   CardTitle
 } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
-
-
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {ReferralReward} from "@/types/referrals";
 import {formatDate} from "@/utils/referralUtils";
 import {BadgeDollarSign, Badge} from "lucide-react";
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals",
 import { formatDate } from "@/utils/referralUtils",
 import { BadgeDollarSign, Badge } from "lucide-react",
 
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { ReferralReward } from "@/types/referrals";
+import { formatDate } from "@/utils/referralUtils";
+import { BadgeDollarSign, Badge } from "lucide-react";
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean
+  isLoading: boolean;
+}
+export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
+  if (isLoading) {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { ReferralReward  } from '@/types / referrals';
+import { format_date  } from '@/utils / referral_utils';
+import { BadgeDollarSign, Badge  } from './lucide-react';
+interface RewardsCardProps {
+  rewards: ReferralReward[];
+  is_loading: boolean;
+}
+export /**
+ * RewardsCard - Function description
+ */
+function RewardsCard() {
+  // Check condition
+if ( {) {
+  $2
 }
     return (
       <Card>;
@@ -62,6 +93,35 @@ interface RewardsCardProps {
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? "border-b pb-3" : ""
 
+              }`}
+            >
+              <div>
+                <div className="flex items-center gap-2">
+                  {reward.reward_type === "credit" ? (
+                    <BadgeDollarSign className="h-4 w-4 text-green-600" />
+                  ) : (
+                    <Badge className="h-4 w-4 text-blue-600" />
+                  )}
+                  <p className="font-medium">
+                    {reward.reward_type === "credit"
+                      ? `$${reward.amount?.toFixed(2)} Credit`
+                      : "Visibility Boost"}
+                  </p>
+                </div>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Earned on {formatDate(reward.created_at)}
+                </p>
+                {reward.expires_at && (
+                  <p className="text-xs text-muted-foreground">
+                    Expires on {formatDate(reward.expires_at)}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
   )
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -71,6 +131,7 @@ import { BadgeDollarSign, Badge } from "lucide-react",;
 interface RewardsCardProps {;
   rewards: ReferralReward[];
   isLoading: boolean;
+  );
 }
 ;
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
@@ -183,3 +244,4 @@ if ( {) {
           ))}
 
 }
+import {

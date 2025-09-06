@@ -12,6 +12,10 @@ export default function CybersecurityPage() {
         </div>
       </section>
 
+          />
+        </div>
+      </section>
+
       <Pricing />
     </div>
   );
@@ -35,6 +39,12 @@ export default function CybersecurityPage() {
   );
 }
 
+    </div>
+  );
+}
+
+function Pricing() {
+  return (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Plan 
           name="Security Assessment" 

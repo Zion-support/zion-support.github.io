@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
@@ -6,9 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
-
-
-
 // This component handles deep linking to the mobile app
 
 const OpenAppRedirect: React.FC = () => {
@@ -69,7 +65,6 @@ const OpenAppRedirect: React.FC = () => {;
             window.location.href = iosAppUrl;
           }
         }, 2500), // Wait 2.5 seconds before redirecting to store;
-        }, 2500), // Wait 2 && 2.5 seconds before redirecting to store;
         // Try to open the app;
         window && window.location.href = appScheme;
       } else {;
@@ -83,15 +78,21 @@ const OpenAppRedirect: React.FC = () => {;
 
 
       }
-
-
+      
+      // Clear timeout if page visibility changes (meaning app opened successfully)
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden && timeout) {
+          clearTimeout(timeout)
+        }
+      })
+    }
+    attemptAppOpen()
+  }, [navigate]);
     },
     
     attemptAppOpen()
   }, [navigate]),
   
-
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-zion-blue">
       <SEO
@@ -136,4 +137,5 @@ const OpenAppRedirect: React.FC = () => {;
   );
 },;
 
+      }
 export default OpenAppRedirect;

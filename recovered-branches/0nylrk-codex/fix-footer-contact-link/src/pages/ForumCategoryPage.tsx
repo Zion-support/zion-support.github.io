@@ -2,7 +2,6 @@
 
 
 
-
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -18,9 +17,6 @@ import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/com
 
     icon: "Briefcase"
   }
-
-
-
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -43,9 +39,6 @@ import {
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
-
-
-
     adminOnly: false,
     icon: "Briefcase"
   },
@@ -58,12 +51,10 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 
     icon: "MessageSquare"
   "ai-tools": {
-
-    id: "ai-tools"
-    name: "AI Tools Discussion"
-    description: "Discuss AI tools, frameworks, and best practices.";
-    adminOnly: false
-
+    id: "ai-tools",
+    name: "AI Tools Discussion",
+    description: "Discuss AI tools, frameworks, and best practices.",
+    adminOnly: false,
     icon: "Code"
   "feedback": {
 
@@ -133,6 +124,10 @@ const postsByCategory: Record<string, ForumPost[]> = {
   ];
   "feedback": [;
     {
+    }
+  ];
+  "announcements": [;
+    {
       id: "9",
       title: "Platform Update: New AI Matching Algorithm",
       content: "We're excited to announce the launch of our new and improved AI matching algorithm...",
@@ -164,6 +159,10 @@ const postsByCategory: Record<string, ForumPost[]> = {
       reply_count: 2,
       is_pinned: true;
     }
+  "Briefcase": Briefcase;
+  "MessageSquare": MessageSquare;
+  "Code": Code;
+  "FileText": FileText;
     return (
       <AppLayout>;
         <div className="container py-8">;
@@ -182,9 +181,6 @@ const postsByCategory: Record<string, ForumPost[]> = {
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
-  // For announcements, check if user is admin
-  const canCreatePost = categoryId !== "announcements" |(user?.userType === 'admin' |user?.role === 'admin');
-
   return (
     <AppLayout>
       <SEO
@@ -224,33 +220,10 @@ const postsByCategory: Record<string, ForumPost[]> = {
             <Input
               placeholder="Search posts in this category..."
               className="pl-10"
-
-
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </div>
-        </div>
-        {posts.length > 0 ? (
-          <div className="space-y-4">
-            {filteredPosts.map((post) => (
-              <PostCard key={post.id} post={post} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-16">
-            <h2 className="text-xl font-medium mb-2">No posts yet</h2>
-            <p className="text-muted-foreground mb-6">Be the first to start a discussion in this category!</p>
-            {canCreatePost && (
-              <Button asChild>
-                <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>
-                  Create New Post
-                </Link>
-              </Button>
             )}
           </div>;
         )}
-}
   "Megaphone": Megaphone;
 }
 ;

@@ -1,3 +1,8 @@
+export { urlShortenerService } from './urlShortenerService';
+export { passwordGeneratorService } from './passwordGeneratorService';
+export { qrCodeService } from './qrCodeService';
+export { fileConverterService } from './fileConverterService';
+export { textAnalysisService } from './textAnalysisService';
   ShortUrl;
   UrlAnalytics;
   ClickEvent;
@@ -5,36 +10,27 @@
 } from './urlShortenerService';
 export type {
 
+
 export type {;
 export type {
-
-
-export type {;
-
   PasswordOptions;
   PasswordStrength;
   GeneratedPassword;
 } from './passwordGeneratorService';
 export type {
 
+
 export type {;
 export type {
-
-
-export type {;
-
   QRCodeOptions;
   QRCodeResult;
   QRCodeTemplate;
 } from './qrCodeService';
 export type {
 
+
 export type {;
 export type {
-
-
-export type {;
-
   ConversionOptions;
   ConversionResult;
   SupportedFormat;
@@ -42,12 +38,9 @@ export type {;
 } from './fileConverterService';
 export type {
 
+
 export type {;
 export type {
-
-
-export type {;
-
   TextAnalysisResult;
   BasicTextStats;
   ReadabilityMetrics;
@@ -62,35 +55,32 @@ export type {;
     name: 'URL Shortener',;
 
     description: 'Create short, trackable URLs with analytics';
-    icon: '';
+    icon: '🔗';
     category: 'UTILITIES';
     features: [;
       'Custom short codes_click tracking_analytics dashboard_expiration datesQR code generation';
     ];
     name: 'Password Generator';
     description: 'Generate secure passwords with strength analysis';
-    icon: '';
+    icon: '🔐';
     category: 'UTILITIES';
   }
   qrCodeGenerator: {
     name: 'QR Code Generator';
     description: 'Create QR codes for various purposes';
-    icon: '';
+    icon: '📱';
     category: 'UTILITIES';
     name: 'File Converter';
     description: 'Convert files between different formats';
-    icon: '';
+    icon: '🔄';
     category: 'MEDIA';
-    apiEndpoint: '/api/file-converter'
-  }
-  textAnalysis: {
     pricing: 'Free (Basic) / $9.99 / month (Pro)',
     api_endpoint: '/api / file - converter';
   }
   text_analysis: {
     name: 'Text Analysis';
     description: 'Analyze text for insights and optimization';
-    icon: '';
+    icon: '📊';
     category: 'ANALYSIS';
     apiEndpoint: '/api/text-analysis'
   }
@@ -108,6 +98,7 @@ export const getServiceStatus = () => {
     qrCodeGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     fileConverter: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     textAnalysis: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() }
+  return {
   }
 }
 // Service usage statistics
@@ -298,11 +289,6 @@ textAnalysis: {
   users: 3890, requests: 11500, avgResponse: 178 
 }
 
-      urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
-      passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };
-      qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 };
-      fileConverter: { users: 5430, requests: 234000, avgResponse: 234 };
-
     pricing: 'Free (Basic) / $19.99 / month (Pro)',
     api_endpoint: '/api / text - analysis';
 
@@ -366,8 +352,33 @@ export const SERVICE_CATEGORIES = {;
     description: 'Text analysis and content insights',;
     services: ['textAnalysis'];
 
-
-
+  }
+} as const;
+;
+// Service availability and status;
+export const getServiceStatus = () =>: any {
+  return {
+    url_shortener: { status: 'active', uptime: '99.9%', last_updated: new Date () }
+    password_generator: { status: 'active', uptime: '99.9%', last_updated: new Date () }
+    qrCodeGenerator: { status: 'active', uptime: '99.9%', last_updated: new Date () }
+    file_converter: { status: 'active', uptime: '99.9%', last_updated: new Date () }
+    text_analysis: { status: 'active', uptime: '99.9%', last_updated: new Date () }
+  }
+}
+;
+// Service usage statistics;
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
+export const getServiceStats = () =>: any {
+  return {
+    total_users: 15420;
+    total_requests: 2847500;
+    averageResponseTime: 125,
+    services: {
+      url_shortener: { users: 8920, requests: 1250000, avg_response: 89 }
+      password_generator: { users: 12450, requests: 890000, avg_response: 45 }
+      qrCodeGenerator: { users: 6780, requests: 456000, avg_response: 156 }
+      file_converter: { users: 5430, requests: 234000, avg_response: 234 }
+      text_analysis: { users: 3890, requests: 11500, avg_response: 178 }
     }
   }
+};

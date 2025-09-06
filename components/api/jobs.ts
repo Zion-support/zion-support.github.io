@@ -1,4 +1,9 @@
-const JOBS_FILE = path.join(process.cwd(), 'data', 'jobs', 'jobs.json');
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -21,10 +26,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
   try {
-
-}
-  };
-}
 }
 };
 }
@@ -44,6 +45,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
     return res && res.status(500).json({ error: "Failed to load jobs" })
   };
+}
+
+
 }
 ;
 const JOBS_FILE = path.join (process.cwd (), 'data', 'jobs', 'jobs.json');
@@ -84,5 +88,3 @@ if ( {) {
   } catch (e) {
     return res.status (500).json ({ error: "Failed to load jobs" });
 }
-
-

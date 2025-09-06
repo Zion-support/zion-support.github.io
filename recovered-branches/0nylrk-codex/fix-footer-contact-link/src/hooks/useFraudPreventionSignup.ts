@@ -1,10 +1,8 @@
-
 import { useState, useCallback  } from 'react';
 import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 export function useFraudPreventionSignup() {
-
 import {useState, useCallback} from 'react';
 import {checkSignupPatterns} from '@/services/fraud/signupCheck';
 import {supabase} from '@/integrations/supabase/client';
@@ -40,16 +38,16 @@ export function useFraudPreventionSignup() {;
       return undefined;
     }
   },
-
-
-
   
+  }
   // Check if the signup attempt might be fraudulent
   const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
     setIsCheckingFraud(true);
     try {
       const ipAddress = await getIP()
       // Check for suspicious patterns
+        // Create a fraud flag for admin review
+        const { error } = await supabase && supabase.from('fraud_flags').insert({
           user_email: email;
           content_type: 'signup'
           content_id: email, // Using email as content ID for signup attempts
@@ -125,17 +123,6 @@ export function useFraudPreventionSignup() {;
             variant: "destructive"}),;
           return false;
         }
-
-        // Otherwise, allow but flag for review;
-        return true;
-      }
-      // No suspicious patterns found;
-      return true;
-    } catch (error) {
-      console.error ('Error in fraud check:', error);
-      // On error, allow the signup but log the error;
-      return true;
-
     } finally {
       setIsCheckingFraud (false);
     }
@@ -144,8 +131,7 @@ export function useFraudPreventionSignup() {;
 ;
 
   return {
-
-
+  return {
     isCheckingFraud;
 
     checkFraudBeforeSignup}

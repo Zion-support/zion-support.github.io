@@ -50,6 +50,8 @@ const GuidedTour = dynamic(
     import('@/components/onboarding/GuidedTour').then(mod => ({
       default: mod.GuidedTour
     }))
+)
+// Lazy load notification functions
   const { user, loading } = useRequireAuth(); // This will handle authentication and redirects
   const { toast } = useToast()
   // Add safe checks for user ID to prevent premature API calls
@@ -59,6 +61,48 @@ const GuidedTour = dynamic(
   const { favorites } = useFavorites()
   // Type assertion to work around Supabase User type limitations
   const userWithExtendedProps = user as any
+
+
+  const userType = null;
+    userWithExtendedProps?.userType ||
+    user?.user_metadata?.userType ||
+    'talent'
+  const roleForTour = null;
+    userType === 'client' || userType === 'admin' ? 'client' : 'talent'
+import React from 'react',
+import dynamic from 'next/dynamic',
+import { useAuth } from "@/hooks/useAuth",
+import { useRequireAuth } from "@/hooks/useAuthGuard",
+import { Button } from "@/components/ui/button",
+import { Header } from "@/components/Header",
+import { Badge } from "@/components/ui/badge",
+import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings, FileText, Heart, Key, ShoppingBag } from 'lucide-react'
+import { useGetOrdersQuery } from '@/hooks/useOrders',
+import { useFavorites } from '@/hooks/useFavorites',
+import { useToast } from "@/hooks/use-toast",
+import { EmptyState } from "@/components/ui/empty-state",
+import Link from 'next/link',
+// Lazy load heavy components to prevent router abort
+const CommunityDiscussion = dynamic(() => import("@/components/CommunityDiscussion").then(mod => ({ default: mod.CommunityDiscussion })), {
+  loading: () => <div className="h-32 bg-zion-blue-light rounded animate-pulse" />,
+  ssr: false}),
+
+const PointsBadge = dynamic(() => import('@/components/loyalty/PointsBadge').then(mod => ({ default: mod.PointsBadge })), {
+  loading: () => <span className="text-zion-cyan font-medium">Loading...</span>,
+  ssr: false}),
+
+const ApiKeysManager = dynamic(() => import('@/components/developers/ApiKeysManager').then(mod => ({ default: mod.ApiKeysManager })), {
+  loading: () => <div className="h-24 bg-zion-blue-light rounded animate-pulse" />,
+  ssr: false}),
+
+const NotificationBell = dynamic(() => import("@/components/NotificationBell").then(mod => ({ default: mod.NotificationBell })), {
+  loading: () => <Bell size={16} className="text-zion-cyan" />,
+  ssr: false}),
+
+const GuidedTour = dynamic(() => import("@/components/onboarding/GuidedTour").then(mod => ({ default: mod.GuidedTour })), {
+  ssr: false}),
+
+// Lazy load notification functions
 const loadNotificationFunctions = () => import("@/utils/notifications"),
 
 export default function Dashboard() {
@@ -76,35 +120,32 @@ export default function Dashboard() {
   const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent',
   const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent',
 
+
+
+
   if (loading) {
-);
-// Lazy load notification functions;
-const loadNotificationFunctions = () =>: any import ('@/utils / notifications');
-export default /**
- * Dashboard - Function description
- */
-function Dashboard() {
-  const { logout } = use_auth ();
-  const { user, loading } = useRequireAuth (); // This will handle authentication and redirects;
-  const { toast } = use_toast ();
-  // Add safe checks for user ID to prevent premature API calls;
-  const user_id = user?.id;
-  const { data: orders = [], is_loading: orders_loading } =;
-    useGetOrdersQuery (user_id);
-  const { favorites } = use_favorites ();
-  // Type assertion to work around Supabase User type limitations;
-  const userWithExtendedProps = user as any;
-  const user_type =;
-    userWithExtendedProps?.user_type ||;
-    user?.user_metadata?.user_type ||;
-    'talent';
-  const roleForTour =;
-    user_type === 'client' || user_type === 'admin' ? 'client' : 'talent';
-  // Check condition
-if ( {) {
-  $2
-}
     return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading dashboard...</p>
+        </div>
+      </div>
+    )
+  }
+  // useRequireAuth will handle redirect if user is not authenticated
+  if (!user) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Redirecting to login...</p>
+        </div>
+      </div>
+    )
+  }
+  const handleTestNotification = async () => {
+    try {
     }
   }
 }
@@ -230,6 +271,8 @@ export default function Dashboard() {;
       </div>;
     );
   }
+
+
                     <UserCheck size={16} />
                   </Button>
                 </div>
@@ -240,6 +283,40 @@ export default function Dashboard() {;
                 </div>;
               </div>;
 
+              {/* Stats & Metrics */}
+              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
+                <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">Profile Completion</span>
+                    <span className="text-zion-cyan font-medium">65%</span>
+                  </div>
+                  <div className="w-full bg-zion-blue rounded-full h-2">
+                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
+                  </div>
+
+                    <PointsBadge />
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">ZION$ Balance</span>
+                    <span className="text-zion-cyan font-medium">
+                      <Link href="/wallet" className="hover:underline">View Wallet</Link>
+                    </span>
+                  </div>
+
+                      style={{ width: '65%' }}></div>;
+                  </div>;
+
+                  <div className='flex justify-between items-center'>;
+                    <span className='text-zion-slate-light'>Points</span>;
+                    <PointsBadge />;
+                  </div>;
+                  <div className='flex justify-between items-center'>;
+                    <span className='text-zion-slate-light'>ZION$ Balance</span>;
+                    <span className='text-zion-cyan font-medium'>;
+              {/* Stats & Metrics */}
+              <div className='bg - zion - blue - dark rounded - xl p - 6 mb - 6'>;
+                <h3 className='text - lg font - bold text - white mb - 4'>;
                   Your Activity;
                 </h3>;
                 <div className='space-y-4'>;
@@ -260,6 +337,46 @@ export default function Dashboard() {;
                       </Link>;
                     </span>;
                   </div>;
+
+                  
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">Badges Earned</span>
+                    <span className="text-zion-cyan font-medium">3/12</span>
+                  </div>
+                  
+                  {/* Test notification buttons */}
+                  <div className="flex flex-col gap-2 mt-4">
+                    <Button 
+                      className="w-full flex items-center justify-center gap-2"
+                      variant="outline"
+                      onClick={handleTestNotification}
+                    >
+                      <Send size={16} className="text-zion-cyan" />
+                      Send Test Notification
+                    </Button>
+
+                    <Button 
+                      className="w-full flex items-center justify-center gap-2"
+                      variant="outline"
+                      onClick={async () => {
+                        try {
+                          const { createOnboardingNotification } = await loadNotificationFunctions(),
+                          await createOnboardingNotification({
+                            userId: user?.id ?? "",
+                            missingMilestone: 'profile_completed',
+                            userRole: roleForTour
+                          }),
+                          toast({
+                            title: "Onboarding notification sent",
+                            description: "Check your notification center"
+                          })
+                        } catch (error) {
+                          toast({
+                            title: "Error sending notification",
+                            description: "Please try again",
+                            variant: "destructive"})
+
+
 
                         }
                     >
@@ -290,6 +407,13 @@ export default function Dashboard() {;
               </div>;
             </div>;
 
+            {/* Main Content - Dashboard */}
+            <div className="lg:col-span-2">
+              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-2xl font-bold text-white" data-testid="dashboard-header">Dashboard</h2>
+                  <div className="flex items-center gap-2">
+                    <NotificationBell />
                       Welcome,{' '}
                       {userWithExtendedProps?.displayName?.split(' ')[0] |
                         'User'}
@@ -358,6 +482,7 @@ export default function Dashboard() {;
                     </div>
                   </div>
                 </div>
+
                 {/* Community Section */}
                 <div id="community-section">
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>
@@ -378,19 +503,146 @@ export default function Dashboard() {;
                         description="You haven't purchased anything yet."
                         action={{ text: 'Visit Marketplace', href: '/marketplace' }}
                         className="border-none bg-transparent text-center";
+
+
+
                         ))}
-                      </ul>;
+                      </ul>
                     )}
+
+                        className='text-zion-purple underline'>;
+                        className='border - none bg - transparent text - center';
+                      />) : (
+                      <ul className='space - y-1'>;
+                        {orders.slice (0, 3).map (object => (
+                          <li key={o.order_id} className='flex justify - between'>;
+                            <span>#{o.order_id}</span>;
+                            <Link;
+                              href={`/orders/${o.order_id}`}
+                              className='text - zion - purple underline';
+                            >;
+                              View;
+                            </Link>;
+                          </li>))}
+                      </ul>)}
+                    <div className='mt - 2 text - right'>;
+                      <Link;
+                        href='/orders';
+                        className='text - zion - purple underline';
+                      >;
+                        View all;
+                      </Link>;
+
+                    <div className="mt-2 text-right">;
+                      <Link href="/orders" className="text-zion-purple underline">View all</Link>;
+
+                    </div>;
+                  </div>;
+                  <div className="bg-zion-blue-dark rounded-xl p-6">;
+                    <h3 className="text-lg font-bold text-white mb-4 flex items-center">;
+                      <Heart className="mr-2" size={18} /> Wishlist;
+                    </h3>;
+                    {favorites.length === 0 ? (
+                      <p className='text - zion - slate - light'>No items saved.</p>) : (
+                      <ul className='space - y-1'>;
+                        {favorites.slice (0, 3).map (function => (
+                          <li key={f.item_id}>{f.item_id}</li>))}
+                      </ul>)}
+                    <div className='mt - 2 text - right'>;
+                      <Link;
+                        href='/wishlist';
+                        className='text - zion - purple underline';
+                      >;
+                        View all;
+                      </Link>;
+                    </div>;
+                  </div>;
+
+                      <ul className="space-y-1">;
+                        {favorites.slice(0, 3).map(f => (;
+                          <li key={f.item_id}>{f.item_id}</li>;
+
+
+                        ))}
+                      </ul>
+                    )}
+                    <div className='mt-2 text-right'>
+                      <Link
+                        href='/wishlist'
+                        className='text-zion-purple underline'
+                      >
+                        View all
+                      </Link>
+                    </div>
+                  </div>
+                  <div className='bg-zion-blue-dark rounded-xl p-6'>
+                    <h3 className='text-lg font-bold text-white mb-4 flex items-center'>
+                      <Key className='mr-2' size={18} /> API Keys
+                    </h3>
+                    <ApiKeysManager />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <GuidedTour role={roleForTour} />
+    </>
+  )
+};"
+return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className="container mx-auto px-4 py-8"> <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"> {
+  /* Left Sidebar - User Profile */ "
+}<div className="lg:col-span-1"> <div className="bg-zion-blue-dark rounded-xl p-6 mb-6"> <div className="flex flex-col items-center text-center"> <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4"> {'
+  userWithExtendedProps?.displayName?.split (' ') .map ( (name: string) => name[0]) .join ('') |userWithExtendedProps?.email?.charAt (0) .toUpperCase () "
+}</div> <h2 className="text-xl font-bold text-white"> {
+  userWithExtendedProps?.displayName |userWithExtendedProps?.email "
+}</h2> <p className="text-zion-slate-light mb-2"> {
+  user?.email "
+}</p> <Badge className="bg-zion-purple text-white mb-4" > > <UserCheck size= {
+  16
 }/> Edit Profile </Button> </div> </div> {
-  /* Stats & Metrics */ "
-}<div className="bg-zion-blue-dark rounded-xl p-6 mb-6"> <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3> <div className="space-y-4"> <div className="flex justify-between items-center"> <span className="text-zion-slate-light">Profile Completion</span> <span className="text-zion-cyan font-medium">65%</span> </div> <div className="w-full bg-zion-blue rounded-full h-2"> </div> <div className="flex justify-between items-center"> <span className="text-zion-slate-light">Points</span> <PointsBadge /> </div> <div className="flex justify-between items-center"> <span className="text-zion-slate-light">ZION$ Balance</span> <span className="text-zion-cyan font-medium"> <Link href="/wallet" className="hover:underline">View Wallet</Link> </span> </div> <div className="flex justify-between items-center"> <span className="text-zion-slate-light">Badges Earned</span> <span className="text-zion-cyan font-medium">3/12</span> </div> {
-  /* Test notification buttons */ "
-}<div className="flex flex-col gap-2 mt-4"> <Button > <Send size= {
-  16 "
-}className="text-zion-cyan" /> Send Test Notification </Button> <Button
+  /* Stats & Metrics */ ";
+}<div className="bg - zion - blue - dark rounded - xl p - 6 mb - 6"> <h3 className="text - lg font - bold text - white mb - 4">Your Activity</h3> <div className="space - y-4"> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">Profile Completion</span> <span className="text - zion - cyan font - medium">65%</span> </div> <div className="w - full bg - zion - blue rounded - full h - 2"> </div> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">Points</span> <PointsBadge /> </div> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">ZION$ Balance</span> <span className="text - zion - cyan font - medium"> <Link href="/wallet" className="hover:underline">View Wallet</Link> </span> </div> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">Badges Earned</span> <span className="text - zion - cyan font - medium">3 / 12</span> </div> {
+  /* Test notification buttons */ ";
+}<div className="flex flex - col gap - 2 mt - 4"> <Button > <Send size= {
+  16 ";
+}className="text - zion - cyan" /> Send Test Notification </Button> <Button;
+
 }> <Settings size= {
   16 ";
 }className="text - zion - purple" /> async () => {
   try {
   const {
+
+                        className='text-zion-purple underline'>;
+                        View all;
+                      </Link>;
+
 ;
+                        ))}
+                      </ul>
+                    )}
+                        ))}
+                      </ul>
+                    )}
+                    <div className="mt-2 text-right">;
+                      <Link href="/wishlist" className="text-zion-purple underline">View all</Link>;
+                    </div>;
+                  </div>;
+                  <div className="bg-zion-blue-dark rounded-xl p-6">;
+                    <h3 className="text-lg font-bold text-white mb-4 flex items-center">;
+                      <Key className="mr-2" size={18} /> API Keys;
+                    </h3>;
+                    <ApiKeysManager />;
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      <GuidedTour role={roleForTour} />;
+    </>;
+  );
+}

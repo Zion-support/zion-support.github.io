@@ -20,7 +20,6 @@ export default function AccessibilityScannerPage() {
 			</section>
 		</>
 	)
-
 }
 
 import React from 'react',

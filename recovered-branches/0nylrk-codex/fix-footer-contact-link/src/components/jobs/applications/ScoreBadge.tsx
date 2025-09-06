@@ -1,11 +1,3 @@
-
-import { JobApplication } from "@/types/jobs";
-interface ScoreBadgeProps {;
-  application: JobApplication;
-}
-
-
-
   // Determine color based on score
   let className = "text-gray-700 bg-gray-100",
   if (score >= 80) className = "text-green-700 bg-green-100",
@@ -37,7 +29,6 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {;
       {score ? `${score}%` : "Not scored"}
     </span>;
   );
-
 import { JobApplication  } from '@/types / jobs';
 interface ScoreBadgeProps {
   application: JobApplication;
@@ -70,3 +61,4 @@ if (class_name = "text - orange - 700 bg - orange - 100") {
     <span className={`rounded - full px - 2 py - 1 text - xs font - medium ${class_name}`}>;
       {score ? `${score}%` : "Not scored"}
     </span>);
+}

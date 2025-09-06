@@ -27,18 +27,6 @@ import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   const categories = [;
     {
-      name: 'AI & Marketing'
-      icon: Brain
-      color: 'from-purple-500 to-pink-500'
-    }
-  ];
-
-  const getCategoryIcon = (category: string) => {
-    const cat = categories.find(c => c.name === category);
-    return cat ? cat.icon : Star;  }
-  const getCategoryColor = (category: string) => {
-    const cat = categories.find(c => c.name === category);
-    return cat ? cat.color : 'from-gray-500 to-gray-600';  }
   return (
     <Layout>;
       <SEO
@@ -51,16 +39,30 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   };
 
   return (
-
-        <div className='absolute inset-0 pointer-events-none'>;
-          <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse'></div>;
-          <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>;
-          <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>;
-          <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500'></div>;
-          <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500'></div>;
-        </div>;
-
-        <div className='text-center max-w-6xl mx-auto relative z-10'>          <motion&& motion.div
+    <Layout>
+      <SEO
+        title='2025 Innovative Services Showcase | Zion Tech Group'
+        description='Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.'
+        keywords={[
+          'innovative services 2025'
+          'micro SAAS'
+          'quantum computing'
+          'space technology'
+          'AI platforms'
+          'autonomous systems'
+        ]}
+      />
+      {/* Hero Section */}
+      <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>
+        {/* Enhanced Background Elements */}
+        <div className='absolute inset-0 pointer-events-none'>
+          <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse'></div>
+          <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>
+          <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>
+          <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500'></div>
+          <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500'></div>
+        </div>
+        <div className='text-center max-w-6xl mx-auto relative z-10'>          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -72,7 +74,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             className='space-y-6'            className="space-y-6">;
-
     <Layout>
       <SEO 
         title="2025 Innovative Services Showcase | Zion Tech Group"
@@ -95,14 +96,10 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         
         <div className="text-center max-w-6xl mx-auto relative z-10">
 
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-
-
-
             {/* Enhanced Company Badge */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -223,7 +220,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
 
-
             >
               <Star className='w-5 h-5' />
               <span>Innovation Leader 2025</span>
@@ -262,11 +258,12 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             </p>
             
 
+
+
             {/* Enhanced Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-
 
             >
               <div className='p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20'>
@@ -291,7 +288,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               </div>
               <div className='p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-green-400/20'>
                 <div className='text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors'>
-                  
+                  ∞
                 </div>
                 <div className='text-gray-300 text-sm'>
                   Future Possibilities
@@ -309,7 +306,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                 <div className="text-gray-300 text-sm">Autonomous Operations</div>
               </div>
               <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-green-400/20">
-                <div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors"></div>
+                <div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors">∞</div>
                 <div className="text-gray-300 text-sm">Future Possibilities</div>
               </div>
             </motion.div>
@@ -325,7 +322,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
 
           >
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
@@ -360,9 +356,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             </p>;
           </motion && motion.div>;
 
-              
-
-                >
                   <div
                     className={`p-8 rounded-2xl bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`}>;
                     <div className='text-center'>;
@@ -482,7 +475,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
             {categories.map ((category, index) => {
               const IconComponent = category.icon;
-              return (
                 <motion.div
                   key={category.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -512,8 +504,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
 
 
 
-
-
       {/* Featured Services */}
       <section className='py-20 px-4'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
@@ -525,7 +515,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {innovative2025MicroSaasBatch
@@ -543,55 +532,17 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               industries;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {innovative2025MicroSaasBatch;
               .filter(service => service && service.popular);
               .map((service, index) => {;
                 const IconComponent = getCategoryIcon(service && service.category);
-
-                  >;
-                    <div className='p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm'>;
                       {/* Popular Badge */}
                       {service && service.popular && (;
                         <div className='absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full'>;
                           Popular;
                         </div>;
                       )}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-                <motion.div;
-                  key={category.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group relative";
-                >;
-                  <div className={`p - 8 rounded - 2xl bg - gradient - to - br ${category.color} bg - opacity - 10 border border - white / 10 hover:border - white / 20 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl`}>;
-                    <div className="text - center">;
-                      <div className={`w - 16 h - 16 mx - auto mb - 6 rounded - full bg - gradient - to - br ${category.color} bg - opacity - 20 flex items - center justify - center border border - white / 20`}>;
-                        <IconComponent className="w - 8 h - 8 text - white" />;
-                      </div>;
-                      <h3 className="text - 2xl font - bold text - white mb - 4">{category.name}</h3>;
-                      <div className="text - gray - 300 text - sm">;
-                        {innovative2025MicroSaasBatch.filter (service => service.category === category.name).length} Services;
-                      </div>;
-                    </div>;
-                  </div>;
-                </motion.div>);
-            })}
-          </div>;
-        </div>;
-      </section>;
-      {/* Featured Services */}
-      <section className='py - 20 px - 4'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -656,32 +607,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                         <div className='text-xs text-gray-500 mt-2'>;
                           {service && service.category}
                         </div>                      </div>                      ))}
-
-
-                    {/* Market Info */}
-
-
-          >
-            <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>
-              Complete Service Portfolio
-            </h2>
-            <p className='text-xl text-gray-300 max-w-4xl mx-auto'>
-              Explore our entire collection of innovative services designed for
-              the future
-            </p>
-          </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            {innovative2025MicroSaasBatch.map((service, index) => {
-              const IconComponent = getCategoryIcon(service.category);
-              
-
-                >
-                  <div className='p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm'>
-                    <div className='flex items-start space-x-4'>
-                      <div
-
-              );
-            })}
       {/* Contact CTA */}
       <section className='py-20 px-4'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion && motion.div      {/* All Services Grid */}
@@ -699,14 +624,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='space-y-8'
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
 
           >
             <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -726,7 +645,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               Get in touch with our team to discuss how our innovative services;
               can drive your success;
             </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <a
                 href='tel:+13024640950'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2'>;
@@ -755,8 +673,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         </div>;
       </section>;
       {/* Contact CTA */}
-export default Comprehensive2025InnovativeServicesShowcase;
-
 export default Comprehensive2025InnovativeServicesShowcase;
 
 }

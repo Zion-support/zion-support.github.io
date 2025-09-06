@@ -1,11 +1,9 @@
-    <div className="min-h-screen py-20">;
 export default /**
  * CookiesPage - Function description
  */
 function CookiesPage() {
   return (
     <div className="min - h-screen py - 20">;
-    <div className="min-h-screen py-20">;
       {/* Hero Section */}
       <section className="relative mb - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -38,12 +36,12 @@ function CookiesPage() {
                 Zion Tech Group uses cookies and similar technologies for several purposes:;
               </p>;
               <ul className="text - white / 70 space - y-2 mb - 4">;
-                <li> To remember your preferences and settings</li>;
-                <li> To analyze website traffic and usage patterns</li>;
-                <li> To provide personalized content and advertisements</li>;
-                <li> To improve website functionality and performance</li>;
-                <li> To ensure security and prevent fraud</li>;
-                <li> To understand how visitors interact with our content</li>;
+                <li>• To remember your preferences and settings</li>;
+                <li>• To analyze website traffic and usage patterns</li>;
+                <li>• To provide personalized content and advertisements</li>;
+                <li>• To improve website functionality and performance</li>;
+                <li>• To ensure security and prevent fraud</li>;
+                <li>• To understand how visitors interact with our content</li>;
               </ul>;
             </div>;
             <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;
@@ -93,10 +91,10 @@ function CookiesPage() {
                 Some cookies on our website are set by third - party services that we use to enhance your experience:;
               </p>;
               <ul className="text - white / 70 space - y-2 mb - 4">;
-                <li> <strong > Google Analytics:</strong> To analyze website traffic and user behavior</li>;
-                <li> <strong > Social Media Platforms:</strong> To enable social sharing and integration</li>;
-                <li> <strong > Advertising Networks:</strong> To display relevant advertisements</li>;
-                <li> <strong > Customer Support Tools:</strong> To provide live chat and support services</li>;
+                <li>• <strong > Google Analytics:</strong> To analyze website traffic and user behavior</li>;
+                <li>• <strong > Social Media Platforms:</strong> To enable social sharing and integration</li>;
+                <li>• <strong > Advertising Networks:</strong> To display relevant advertisements</li>;
+                <li>• <strong > Customer Support Tools:</strong> To provide live chat and support services</li>;
               </ul>;
               <p className="text - white / 80">;
                 These third - party services have their own privacy policies and cookie practices.;
@@ -125,10 +123,10 @@ function CookiesPage() {
                 You have several options for managing cookies:;
               </p>;
               <ul className="text - white / 70 space - y-2 mb - 4">;
-                <li> <strong > Browser Settings:</strong> Most browsers allow you to control cookies through their settings</li>;
-                <li> <strong > Cookie Consent:</strong> Use our cookie consent banner to manage preferences</li>;
-                <li> <strong > Third - Party Opt - Out:</strong> Use opt - out tools provided by third - party services</li>;
-                <li> <strong > Delete Cookies:</strong> Remove existing cookies from your device</li>;
+                <li>• <strong > Browser Settings:</strong> Most browsers allow you to control cookies through their settings</li>;
+                <li>• <strong > Cookie Consent:</strong> Use our cookie consent banner to manage preferences</li>;
+                <li>• <strong > Third - Party Opt - Out:</strong> Use opt - out tools provided by third - party services</li>;
+                <li>• <strong > Delete Cookies:</strong> Remove existing cookies from your device</li>;
               </ul>;
               <p className="text - white / 80">;
                 Please note that disabling certain cookies may affect website functionality and your user experience.;
@@ -140,25 +138,25 @@ function CookiesPage() {
                 <div>;
                   <h3 className="text - lg font - semibold text - white mb - 2">Chrome</h3>;
                   <p className="text - white / 70 text - sm">;
-                    Settings  Privacy and security  Cookies and other site data;
+                    Settings → Privacy and security → Cookies and other site data;
                   </p>;
                 </div>;
                 <div>;
                   <h3 className="text - lg font - semibold text - white mb - 2">Firefox</h3>;
                   <p className="text - white / 70 text - sm">;
-                    Options  Privacy & Security  Cookies and Site Data;
+                    Options → Privacy & Security → Cookies and Site Data;
                   </p>;
                 </div>;
                 <div>;
                   <h3 className="text - lg font - semibold text - white mb - 2">Safari</h3>;
                   <p className="text - white / 70 text - sm">;
-                    Preferences  Privacy  Manage Website Data;
+                    Preferences → Privacy → Manage Website Data;
                   </p>;
                 </div>;
                 <div>;
                   <h3 className="text - lg font - semibold text - white mb - 2">Edge</h3>;
                   <p className="text - white / 70 text - sm">;
-                    Settings  Cookies and site permissions  Cookies and site data;
+                    Settings → Cookies and site permissions → Cookies and site data;
                   </p>;
                 </div>;
               </div>;
@@ -169,9 +167,9 @@ function CookiesPage() {
                 We may update this Cookie Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:;
               </p>;
               <ul className="text - white / 70 space - y-2 mb - 4">;
-                <li> Posting the updated policy on our website</li>;
-                <li> Updating the "Last Updated" date at the top of this policy</li>;
-                <li> Sending you an email notification for significant changes</li>;
+                <li>• Posting the updated policy on our website</li>;
+                <li>• Updating the "Last Updated" date at the top of this policy</li>;
+                <li>• Sending you an email notification for significant changes</li>;
               </ul>;
               <p className="text - white / 80">;
                 We encourage you to review this policy periodically to stay informed about our cookie practices.;

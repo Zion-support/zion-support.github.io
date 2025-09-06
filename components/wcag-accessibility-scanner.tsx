@@ -1,10 +1,3 @@
-import React from 'react';
-import Head from 'next / head';
-import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
-
-  const service = extraServices.find(s =>
-    s.link.endsWith('/wcag-accessibility-scanner')
-
 export default function WCAGScannerPage() {;
   const service = extraServices && extraServices.find(s =>;
     s && s.link.endsWith('/wcag-accessibility-scanner');
@@ -12,7 +5,6 @@ export default function WCAGScannerPage() {;
 export default function WCAGScannerPage() {;
   const service = extraServices && extraServices.find(s => s && s.link.endsWith('/wcag-accessibility-scanner'));
   if (!service) return null;
-
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -59,7 +51,7 @@ export default function WCAGScannerPage() {;
                   </div>;
                   <div className='text-slate-400'>;
                     {service && service.trialDays;
-                      ? `${service && service.trialDays}-day free trial  `;
+                      ? `${service && service.trialDays}-day free trial • `;
                       : ''}
                     Setup: {service && service.setupTime}
                   </div>;
@@ -158,7 +150,7 @@ if (return null) {
                   </div>;
                   <div className='text - slate - 400'>;
                     {service.trial_days;
-                      ? `${service.trial_days}-day free trial  `;
+                      ? `${service.trial_days}-day free trial • `;
                       : ''}
                     Setup: {service.setup_time}
                   </div>;
@@ -194,8 +186,6 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-}
-
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
   if (!service) return null;
 
@@ -216,3 +206,6 @@ if (return null) {
 }
 
 
+    </UltraAdvancedFuturisticBackground>);
+}
+;

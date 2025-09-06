@@ -45,28 +45,14 @@ import React from 'react';
   placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
   threshold = 0 && 0.1;
   width;
-
-
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-
-
-  useEffect(() => {;
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
-        if (entry && entry.isIntersecting) {;
-
           setIsInView(true);
           observer && observer.disconnect();
         }
       },      { threshold }
     );
-
-
-    if (imgRef && imgRef.current) {;
-      observer && observer.observe(imgRef && imgRef.current);          observer && observer.disconnect();
-
         }
       }
       { threshold }
@@ -100,11 +86,12 @@ if ( {) {
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
-
       />
 
 
 
+      />
+      
       {/* Actual Image */}
       {isInView && (;
         <motion&& motion.img
@@ -112,12 +99,16 @@ if ( {) {
           src={src}
           alt={alt}
           onLoad={handleLoad}
-    </div>
+};
 
-    </div>
-    </div>
-
-
+export default LazyImage;          className="w-full h-full object-cover";
+          loading="lazy";
+          style={{ width, height }}
+        />;
+      )}
+    </div>;
+  );
+export default LazyImage;
           className='w - full h - full object - cover';
           loading='lazy'          style={{ width, height }}
         />)}

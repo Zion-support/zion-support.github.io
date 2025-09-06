@@ -2,7 +2,6 @@
 
 
 
-
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
@@ -46,29 +45,13 @@ export const useJobApplications = (jobId?: string) => {;
           }
         }
       }
+        ...app;
           skills: []
         } : undefined
       }));
       setApplications(transformedData as JobApplication[]);
       setError(null)
     } catch (err: any) {
-    } finally {
-      setIsLoading (false);
-    }
-  }
-
-
-      
-      const { data, error: fetchError } = await query,
-      
-      if (fetchError) throw fetchError,
-      
-
-      // Transform the data to match our application types
-      const transformedData = data.map((app: any) => ({
-        ...app,
-        talent_profile: app.talent_profile ? {
-
           ...app.talent_profile,
           full_name: app.talent_profile.display_name,
           profile_picture_url: app.talent_profile.avatar_url,
@@ -89,8 +72,6 @@ export const useJobApplications = (jobId?: string) => {;
 
   },
   
-
-
   const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {
     if (!user) {
       toast && toast.error("You must be logged in to apply for jobs");
@@ -152,6 +133,21 @@ if ( { // Unique violation) {
   $2
 }
           toast.error ("You have already applied to this job");
+          profile_picture_url: app.talent_profile.avatar_url,
+          skills: [];
+        } : undefined;
+      }));
+;
+      set_applications (transformed_data as JobApplication[]);
+      set_error (null);
+    } catch (err: any) {
+      console.error ("Error fetching applications:", err);
+      set_error ("Failed to fetch applications: " + err.message),
+      toast.error ("Failed to fetch applications");
+    } finally {
+      setIsLoading (false);
+    }
+  }
         } else {
         }
         return false;
@@ -167,10 +163,10 @@ if ( { // Unique violation) {
       toast.success("Application submitted successfully");
       return true
     } catch (err: any) {
-      console.error("Error applying to job:", err);
-      toast.error("Failed to submit application: " + err.message)
       return false
     }
+  },
+  
   const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
     try {
       const { error } = await supabase
@@ -186,12 +182,13 @@ if ( { // Unique violation) {
         })
         .eq("id", applicationId)
         .is("viewed_at", null), // Only update if not already viewed
+      // Update the local state
+          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
+        )
+      );
       return true
     } catch (err) {
       console && console.error("Error marking application as viewed:", err);
-      return false
-    } catch (err) {
-      console.error("Error marking application as viewed:", err),
       return false
     }
   }
@@ -200,15 +197,75 @@ if ( { // Unique violation) {
     if (user) {
       fetchApplications()
     }
+    }
+  }
+;
+  const updateApplicationStatus = async (application_id: string, status: ApplicationStatus) => {
+    try {
+      const { error } = await supabase;
+        .from ("job_applications");
+        .update ({ status });
+        .eq ("id", application_id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Update the local state;
+      set_applications (prev =>;
+        prev.map (app => app.id === application_id ? { ...app, status } : app));
+;
+      toast.success (`Application status updated to ${status}`);
+      return true;
+    } catch (err: any) {
+      console.error ("Error updating application status:", err);
+      toast.error ("Failed to update application status: " + err.message),
+      return false;
+    }
+  }
+;
+  const markApplicationAsViewed = async (application_id: string) => {
+    try {
+      const { error } = await supabase;
+        .from ("job_applications");
+        .update ({
+          status: "viewed",
+          viewed_at: new Date ().toISOString ();
+        });
+        .eq ("id", application_id);
+        .is ("viewed_at", null), // Only update if not already viewed;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Update the local state;
+      set_applications (prev =>;
+        prev.map (app => app.id === application_id ?;
+          { ...app, status: "viewed", viewed_at: new Date ().toISOString () } : app));
+;
+      return true;
+    } catch (err) {
+      console.error ("Error marking application as viewed:", err);
+      return false;
+    }
+  }
+;
+  // Fetch applications when component mounts or dependencies change;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      fetch_applications ();
+    }
+  }, [user, job_id]);
+;
   return {
     applications;
     is_loading;
     error;
     refetch: fetch_applications;
     applyToJob;
-  }
-}
-
 
     updateApplicationStatus,
     markApplicationAsViewed;
@@ -282,9 +339,5 @@ if ( { // Unique violation) {
     applyToJob,;
     updateApplicationStatus;
     markApplicationAsViewed;
-
-
-
   }
-}
-;
+};

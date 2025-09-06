@@ -31,9 +31,6 @@ export default function PricingGuidePage({ }: PricingGuidePageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
 :src.pages.disabled/PricingGuidePage.jsx
 }
 }
@@ -44,3 +41,12 @@ export default function PricingGuidePage({ }: PricingGuidePageProps) {
 
 
 
+
+
+
+:src.pages.disabled/PricingGuidePage.jsx
+}
+}
+}
+}
+}

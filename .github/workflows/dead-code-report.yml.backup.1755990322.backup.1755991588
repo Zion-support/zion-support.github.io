@@ -1,0 +1,60 @@
+name: Guardian Scheduler
+name: Dead Code Report
+
+<:.github/workflows/guardian-scheduler.yml.backup.1755991400
+name: Guardian Scheduler
+=
+name: Dead Code Report
+>
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+  actions: read
+  contents: read
+
+<:.github/workflows/guardian-scheduler.yml.backup.1755991400
+=
+>  contents: write
+  actions: read
+<:.github/workflows/guardian-scheduler.yml.backup.1755991400
+=
+>  contents: write
+  actions: read
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+          echo "Workflow Workflow completed successfully"
+        run: echo "Workflow completed successfully"
+<:.github/workflows/guardian-scheduler.yml.backup.1755991400
+      - name: Run workflow
+        run: |
+          echo "Workflow Workflow completed successfully"=
+          echo "Workflow Workflow completed successfully"=
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+>
+>

@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node;
 /**;
  * Git Workflow Automator Script;
@@ -177,11 +176,6 @@ async function main() {const automator = new GitWorkflowAutomator();
     process.exit(0);
   } catch (error) {automator.log(`Git workflow automation:failed:${error.message}`, 'ERROR');
     process.exit(1);
-  }
-}
-if (require.main === module) {main();
-}
-module.exports = GitWorkflowAutomator;#!/usr/bin/env node;
 #!/usr/bin/env node;
 /**;
  * Git Workflow Automator Script;
@@ -476,6 +470,7 @@ async function main() {;
   } catch (error) {;
     automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR');
     process.exit(1);
+// Run git workflow automation;
 };
 };
 ;
@@ -751,9 +746,6 @@ if (require.main === module) {,
 };
 ,
 module.exports = GitWorkflowAutomator,
-
-
-
   }
 }
 if (require.main === module) {main();
@@ -787,19 +779,10 @@ class GitWorkflowAutomator {constructor() {; this.logFile = './logs/pm2/git-work
 async function main() {const automator = new GitWorkflowAutomator(); try {; await automator.automateGitWorkflow(); process.exit(0)} catch (error) {automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR'); process.exit(1)}}
 if (require.main = = = module) {main()}
 module.exports = GitWorkflowAutomator;
-
 async function main() {const automator = new GitWorkflowAutomator(); try {; await automator.automateGitWorkflow(); process.exit(0)} catch (error) {automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR'); process.exit(1)}}
 if (require.main = = = module) {main()}
 module.exports = GitWorkflowAutomator;
-; try {; await automator && automator.automateGitWorkflow(); process && process.exit(0)} catch (error) {; automator && automator.log(`Git workflow automation failed: ${error && error.message}`, 'ERROR'); process && process.exit(1)}};
-
-if (require && require.main = = = module) {; main()};
-
-module && module.exports = GitWorkflowAutomator;
-
-
 ;
-
 module.exports = GitWorkflowAutomator;
 },;
 ,;
@@ -808,6 +791,3 @@ if (require.main === module) {,;
 },;
 ,;
 module.exports = GitWorkflowAutomator,;
-
-
-

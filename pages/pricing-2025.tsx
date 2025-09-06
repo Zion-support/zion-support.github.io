@@ -9,7 +9,6 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
-
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -24,12 +23,12 @@ export default function Pricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly')
   const categories = [
-    { id: 'all', name: 'All Services', icon: '' }
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: '' }
-    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', icon: '' }
-    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '' }
-    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '' }
-    { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '' }
+    { id: 'all', name: 'All Services', icon: '🚀' }
+    { id: 'AI & Analytics', name: 'AI & Analytics', icon: '🧠' }
+    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', icon: '🔒' }
+    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '🌐' }
+    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '🚀' }
+    { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '🧬' }
   ]
   const filteredServices = innovative2025MicroSaasExpansionV3.filter(service =>
     selectedCategory === 'all' |service.category.includes(selectedCategory)
@@ -56,9 +55,6 @@ export default function Pricing2025() {
         duration: 0.5;
       }
     }
-
-
-
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -127,23 +123,18 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
   },
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
-        <title>2025 Pricing & Services  Zion Tech Group</title>
+        <title>2025 Pricing & Services — Zion Tech Group</title>
         <meta name="description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transparent pricing with flexible plans." />
-        <meta property="og:title" content="2025 Pricing & Services  Zion Tech Group" />
+        <meta property="og:title" content="2025 Pricing & Services — Zion Tech Group" />
         <meta property="og:description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
         <meta name="keywords" content="pricing, micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/pricing-2025" />
-        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"2025 Pricing & Services  Zion Tech Group","url":"https://ziontechgroup.com/pricing-2025","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"2025 Pricing & Services — Zion Tech Group","url":"https://ziontechgroup.com/pricing-2025","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
       <EnhancedNavigation />
-
-
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -184,9 +175,6 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
             <div className="flex items-center justify-center gap-4 mb-12">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-white/60'}`}>
                 Monthly
@@ -308,8 +296,6 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                 <div className="text-center mb-8">
                   <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} p-5 mx-auto mb-4 flex items-center justify-center text-3xl`}>
                     {service.icon  } catch (error) {
@@ -341,16 +327,12 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                     </span>
                   </div>
                   {billingCycle === 'annual' && (
                     <p className="text-green-400 text-sm">
                       Save ${Math.round(parseFloat(service.price.replace('$', '')) * 12 * 0.2)} annually
                     </p>
-
-
                 <div className="flex items-center justify-center gap-2 mb-6">
                   <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
@@ -398,15 +380,50 @@ export default function Pricing2025(req, res) {
   }
 }
                     {service.features.length > 5 && (
+                      <div className="text-cyan-400 text-sm font-medium text-center">
+                        +{service.features.length - 5} more features
+                      </div>
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </div>;
+                </div>;
+                {/* Market Info */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
+                  <div className="text-center p-3 bg-white/5 rounded-lg">
+                    <div className="text-white/60 mb-1">Market Size</div>
+                    <div className="text-white font-medium">{service.marketSize}</div>
+                  </div>
+                  <div className="text-center p-3 bg-white/5 rounded-lg">
+                    <div className="text-white/60 mb-1">Growth Rate</div>
+                    <div className="text-white font-medium">{service.growthRate}</div>
+                  </div>
+                </div>
+                {/* Market Info */}
+                <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
+                  <div className="text-center p-3 bg-white/5 rounded-lg">
+                    <div className="text-white/60 mb-1">Market Size</div>
+                    <div className="text-white font-medium">{service.marketSize}</div>
+                  </div>
+                  <div className="text-center p-3 bg-white/5 rounded-lg">
+                    <div className="text-white/60 mb-1">Growth Rate</div>
+                    <div className="text-white font-medium">{service.growthRate}</div>
+                  </div>
+                </div>
+                {/* ROI and Setup */}
                 {/* ROI and Setup */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                 <div className="mb-8 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">
-                  <div className="text-cyan-400 font-semibold mb-2 text-center"> Expected ROI:</div>
+                  <div className="text-cyan-400 font-semibold mb-2 text-center">🚀 Expected ROI:</div>
                   <p className="text-white/80 text-sm text-center">{service.roi}</p>
                   <div className="mt-3 grid grid-cols-2 gap-4 text-center text-sm">
                     <div>
@@ -423,8 +440,6 @@ export default function Pricing2025(req, res) {
                 <div className="space - y-3">;
                   <a;
                     href={service.link}
-
-
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg font-semibold text-white text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
@@ -438,15 +453,11 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                     className="w-full px-6 py-3 border border-white/20 hover:border-cyan-400/30 rounded-lg font-semibold text-white text-center transition-all duration-300 hover:bg-white/5"
                   >
                     Contact Sales
                   </a>
                 </div>
-
-
                 <div className="mt-6 pt-4 border-t border-white/10 text-center">
                   <div className="text-white/60 text-sm mb-2">Need help? Contact us:</div>
                   <div className="flex items-center justify-center gap-4 text-sm">
@@ -462,23 +473,17 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
-              <div className="text-6xl mb-4"></div>
+              <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-white/70 mb-6">Try selecting a different category</p>
               <button
-
-
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 View All Services
               </button>
             </div>
-
-
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -507,8 +512,6 @@ export default function Pricing2025(req, res) {
               Need Enterprise Solutions?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              We offer custom enterprise solutions, volume discounts, and dedicated support 
-              We offer custom enterprise solutions, volume discounts, and dedicated support
 
 
 
@@ -522,8 +525,6 @@ export default function Pricing2025(req, res) {
               >
                 Contact Enterprise Sales
                 <ArrowRight className="w-5 h-5" />
-
-
               <a
                 href="tel:+13024640950"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10"
@@ -562,8 +563,6 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -605,8 +604,6 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                 className="p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl"
               >
                 <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
@@ -621,7 +618,6 @@ export default function Pricing2025(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
           </div>;
         </div>;
       </section>;
@@ -632,5 +628,3 @@ export default function Pricing2025(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-

@@ -3,8 +3,6 @@ import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
 export function useFetchResume() {
-
-
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
@@ -83,10 +81,6 @@ if ( {) {
           set_resume (null);
           setIsLoading (false);
           return null;
-
-
-
-
         }
         throw resume_error;
       }
@@ -201,8 +195,7 @@ if (throw cert_error) {
       setIsLoading (false);
     }
   }
-
+    is_loading;
     error;
     resume;
-
-    fetchResume}
+}

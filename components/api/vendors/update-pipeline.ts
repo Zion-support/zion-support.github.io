@@ -22,6 +22,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     updatePipelineItemStatus(String(itemId), String(status) as any);
     res && res.status(200).json({ ok: true });
   } catch (e: any) {
+  }
   try {
     updatePipelineItemStatus(String(itemId), String(status) as any);
     res.status(200).json({ ok: true })

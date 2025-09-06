@@ -1,4 +1,3 @@
-
 import { useState, useEffect  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -13,9 +12,6 @@ import { Switch  } from '@/components/ui/switch';
 import { Label  } from '@/components/ui/label';
 import { toast } from 'sonner';
 export default function AccountSettings() {
-
-
-
 import {useState, useEffect} from 'react';
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
@@ -29,15 +25,11 @@ import {Separator} from '@/components / ui / separator';
 import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
-
-
-
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
 
 
   useEffect(() => {;
@@ -106,8 +98,6 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed.displayWeb3),;
         setDidHandle(parsed.didHandle || ''),;
         setEnableBackup(!!parsed.enableBackup);
-
-
       }
     } catch (e) {;
       console && console.error('Error loading account settings', e);
@@ -146,18 +136,14 @@ export default function AccountSettings() {;
         const ensName = await provider && provider.lookupAddress(address);
         if (ensName) {;
           setDidHandle(ensName);
-
-
-
         }
       } catch (error) {;
         console && console.error('ENS lookup error:', error);
       }
-  }
-  },
   };
   },
 
+  }
 
   },
 
@@ -166,20 +152,6 @@ export default function AccountSettings() {;
 
 
   return (
-    <>
-      <SEO title="Account Settings" description="Manage your account" />
-      <Header />
-      <main className="container mx-auto py-8 px-4">
-        <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
-        <div className="grid gap-6 md:grid-cols-2">
-          <Card>
-            <CardHeader>
-              <CardTitle>Profile Settings</CardTitle>
-              <CardDescription>Manage your personal information and privacy</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
                 <Input
                   id="email"
                   value={user?.email |''}

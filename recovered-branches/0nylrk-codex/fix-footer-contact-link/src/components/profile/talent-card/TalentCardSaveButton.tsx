@@ -1,13 +1,9 @@
-
 import React from "react",
 import { Heart } from "lucide-react",
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils",
 import { useToast } from "@/hooks/use-toast",
-
-
-
 interface TalentCardSaveButtonProps {
 
   profileId: string
@@ -53,6 +49,7 @@ import React from "react",;
 import { Heart } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 import { useToast } from "@/hooks/use-toast",;
+
 interface TalentCardSaveButtonProps {;
   profileId: string,;
   profileName: string,;
@@ -60,6 +57,7 @@ interface TalentCardSaveButtonProps {;
   onToggleSave?: (id: string, isSaved: boolean) => void,;
   isAuthenticated: boolean;
 }
+
 ;
 export function TalentCardSaveButton({;
   profileId,;
@@ -73,33 +71,21 @@ export function TalentCardSaveButton({;
   // Handle save toggle;
   const handleSaveToggle = (e: React.MouseEvent) => {;
     e.stopPropagation(),;
-export function TalentCardSaveButton(): any ({ ;
-  profileId, ;
-  profileName;
-  isSaved, ;
-  onToggleSave;
-  isAuthenticated ;
-}: TalentCardSaveButtonProps) {;
-  const { toast } = useToast();
-  const [localIsSaved, setLocalIsSaved] = React && React.useState(isSaved);
-  // Handle save toggle;
-  const handleSaveToggle = (e: React && React.MouseEvent) => {;
-    e && e.stopPropagation(),;
     if (!isAuthenticated) {;
       toast({;
         title: "Authentication required",;
         description: "Please log in to save talents to your favorites",;
         variant: "destructive";
-      });
+    setLocalIsSaved(!localIsSaved);
+    if (onToggleSave) {;
+      onToggleSave(profileId, !localIsSaved);
+    }
       return;
     }
     setLocalIsSaved(!localIsSaved);
     if (onToggleSave) {;
       onToggleSave(profileId, !localIsSaved);
     }
-
-
-
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites"
       description: localIsSaved
@@ -117,7 +103,6 @@ export function TalentCardSaveButton(): any ({ ;
           "h-4 w-4 transition-colors"
 
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
-}
 
         )} 
       />;

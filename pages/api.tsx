@@ -1,4 +1,3 @@
-import {
   Code,
   Check,
   Globe,
@@ -59,9 +58,6 @@ export default function APIPage() {
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
-} from "lucide-react";
-export default function APIPage() {
-  const apiEndpoints = [
     {
       id: "auth",
       title: "Authentication",
@@ -139,55 +135,40 @@ export default function APIPage() {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Quick Start Guide
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              </p>
-            </motion.div>
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <motion.div
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
-                >
-                  <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="w-8 h-8 text-indigo-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    1. Get API Key
-                  </h3>
-                  <p className="text-gray-600">
-                    Sign up and obtain your API key from the dashboard
-                  </p>
-                </motion.div>
-                <motion.div
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                >;
+                  <div className="bg - indigo - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                    <Shield className="w - 8 h - 8 text - indigo - 600" />;
+                  </div>;
+                  <h3 className="text - xl font - semibold text - gray - 900 mb - 2">;
+                    1. Get API Key;
+                  </h3>;
+                  <p className="text - gray - 600">;
+                    Sign up and obtain your API key from the dashboard;
+                  </p>;
+                </motion.div>;
+                <motion.div;
+                  className="text - center";
+                  initial={{ opacity: 0, coordinate_y: 30 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: 0.1 }}
                   viewport={{ once: true }}
-                >
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Code className="w-8 h-8 text-purple-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    2. Make Request
-                  </h3>
-                  <p className="text-gray-600">
-                    Use our RESTful APIs with your preferred language
-                  </p>
-                </motion.div>
-                <motion.div
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                >;
+                  <div className="bg - purple - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                    <Code className="w - 8 h - 8 text - purple - 600" />;
+                  </div>;
+                  <h3 className="text - xl font - semibold text - gray - 900 mb - 2">;
+                    2. Make Request;
+                  </h3>;
+                  <p className="text - gray - 600">;
+                    Use our RESTful APIs with your preferred language;
+                  </p>;
+                </motion.div>;
+                <motion.div;
+                  className="text - center";
+                  initial={{ opacity: 0, coordinate_y: 30 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                   viewport={{ once: true }}
                   className="bg-white border border-gray-200 rounded-lg p-6"
@@ -298,11 +279,6 @@ export default function APIPage() {
         </section>
       </div>
     </Layout>
-
-
-
-  );
-  );
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4">;

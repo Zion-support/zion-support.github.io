@@ -1,7 +1,3 @@
-import Link from 'next/link',;
-const features = [
-
-
   { key: 'private_portal', label: 'Private hiring portal' },
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },
   { key: 'custom_sla', label: 'Custom SLA' },
@@ -41,7 +37,7 @@ export default function EnterprisePlans() {
             <p style={{ color: '#4b5563' }}>{t.blurb}</p>
             <ul style={{ marginTop: 8 }}>
               {t.highlights.map(h => (
-                <li key={h}> {h}</li>
+                <li key={h}>• {h}</li>
               ))}
             </ul>
             <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
@@ -178,8 +174,6 @@ export default function EnterprisePlans(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             </tbody>
           </table>
         </div>

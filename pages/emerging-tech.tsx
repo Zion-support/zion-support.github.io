@@ -44,8 +44,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Emerging Technology</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Accelerate innovation responsibly across blockchain, IoT/edge, 5G, and spatial computing.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-
-
             </div>
           </header>
           <section>
@@ -69,7 +67,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -124,12 +121,6 @@ function EmergingTechPage() {
                   <div className="text - gray - 200 font - semibold mb - 2">{s.name}</div>;
                   <p className="text - gray - 300 text - sm">Learn more</p>;
                 </a>))}
-                </Link>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
             </div>;
           </section>;
         </div>;
@@ -140,5 +131,3 @@ function EmergingTechPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-

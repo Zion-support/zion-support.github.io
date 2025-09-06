@@ -24,8 +24,6 @@ import { requireUser } from '../../../utils/auth';
 import { getConversationById, markAsRead } from '../../../utils/messaging/storage';
 export default function handler(req, res) {
   try {
-
-
   const user = requireUser(req, res);
   if (!user) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });

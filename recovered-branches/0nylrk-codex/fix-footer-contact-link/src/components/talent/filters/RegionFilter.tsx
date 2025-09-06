@@ -1,13 +1,9 @@
-
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";
 
 import { Checkbox } from "@/components/ui/checkbox",
 import { RegionFilterProps } from "@/types/filters",
-
-
-
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" }
   { id: "Europe", label: "Europe" }
@@ -15,11 +11,6 @@ const REGION_OPTIONS = [
   { id: "South America", label: "South America" }
   { id: "Australia", label: "Australia" }
   { id: "Africa", label: "Africa" }
-
-export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
-
-  return (
-
 ],
 
 
@@ -46,21 +37,16 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
                 onCheckedChange={() => toggleRegion(region.id)}
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
-              <label
-                htmlFor={`region-${region.id}`}
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
-              >
-
-import { ChevronDown, ChevronUp } from "lucide-react",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import { RegionFilterProps } from "@/types/filters",;
-const REGION_OPTIONS = [;
-  { id: "North America", label: "North America" },;
-  { id: "Europe", label: "Europe" },;
-  { id: "Asia", label: "Asia" },;
-  { id: "South America", label: "South America" },;
-  { id: "Australia", label: "Australia" },;
   { id: "Africa", label: "Africa" }
+];
+export function RegionFilter({
+  selectedRegions
+  toggleRegion
+  expanded
+  toggleSection
+  isMobileFilterOpen
+}: RegionFilterProps) {
+
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button
         onClick={toggleSection}
@@ -78,8 +64,6 @@ const REGION_OPTIONS = [;
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
               />;
               <label
-
-
                 {region.label}
               </label>
             </div>

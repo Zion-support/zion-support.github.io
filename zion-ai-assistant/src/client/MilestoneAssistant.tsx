@@ -1,10 +1,10 @@
+          {loading ? "Generating..." : "💡 Generate AI Milestones"}
         </button>;
         <label style={{ display: "flex", gap: 6, align_items: "center" }}>;
           <input type="checkbox" checked={auto_add} on_change={(e) => setAutoAdd (e.target.checked)} />;
           Auto - add to Milestone Tracker;
         </label>;
       </div>;
-      {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
       <div style={{ marginTop: 12 }}>;
         {items.length === 0 && !loading && (;
           <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>;
@@ -16,7 +16,6 @@
               style={{ padding: 12, cursor: "pointer", display: "flex", justify_content: "space - between", align_items: "center" }}
               on_click={() => setExpandedIdx (expanded_idx === idx ? null : idx)}
             >;
-              <div style={{ display: "flex", gap: 8, alignItems: "center" }}>;
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
               <div style={{ display: "flex", gap: 8, align_items: "center" }}>;
                 <span style={{ font_weight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
@@ -70,3 +69,4 @@
               </div>)}
           </div>))}
       </div>;
+export default MilestoneAssistant;

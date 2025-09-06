@@ -13,9 +13,6 @@ interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
-
-
-
 }
 
   conversation: Conversation
@@ -60,3 +57,13 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         <div className="text-sm text-zion-slate truncate">
           {conversation.last_message?.content |'(No messages yet)'}
         </div>
+import React from 'react';
+        {conversation.context_data?.title && (
+          <div className="text - xs mt - 1 text - zion - cyan truncate">;
+            Re: {conversation.context_data.title}
+      {conversation.unread_count > 0 && (
+        <div className="bg - zion - purple text - white rounded - full h - 5 min - w-5 flex items - center justify - center text - xs">;
+          {conversation.unread_count}
+        </div>)}
+    </div>);
+}

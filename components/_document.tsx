@@ -1,4 +1,5 @@
-
+import Document, {
+} from 'next/document';
 
   return (
     <Html lang='en'>;

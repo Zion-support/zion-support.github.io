@@ -82,13 +82,13 @@
                 from optimization challenges to complex simulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li> Custom algorithm design</li>;
-                <li> Problem - specific optimization</li>;
-                <li> Hybrid classical - quantum approaches</li>;
-                <li> Performance benchmarking</li>;
+                <li>• Custom algorithm design</li>;
+                <li>• Problem - specific optimization</li>;
+                <li>• Hybrid classical - quantum approaches</li>;
+                <li>• Performance benchmarking</li>;
               </ul>;
               <Link href="/quantum - services / algorithm - development" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* Quantum Machine Learning */}
@@ -104,13 +104,13 @@
                 superposition for faster training and better pattern recognition.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li> Quantum neural networks</li>;
-                <li> Quantum feature mapping</li>;
-                <li> Quantum kernel methods</li>;
-                <li> Hybrid ML pipelines</li>;
+                <li>• Quantum neural networks</li>;
+                <li>• Quantum feature mapping</li>;
+                <li>• Quantum kernel methods</li>;
+                <li>• Hybrid ML pipelines</li>;
               </ul>;
               <Link href="/quantum - services / quantum - ml" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* Quantum Optimization */}
@@ -126,13 +126,13 @@
                 can find global minima in exponentially large search spaces.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li> Quantum annealing</li>;
-                <li> Variational quantum algorithms</li>;
-                <li> Combinatorial optimization</li>;
-                <li> Supply chain optimization</li>;
+                <li>• Quantum annealing</li>;
+                <li>• Variational quantum algorithms</li>;
+                <li>• Combinatorial optimization</li>;
+                <li>• Supply chain optimization</li>;
               </ul>;
               <Link href="/quantum - services / quantum - optimization" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* Quantum Simulation */}
@@ -148,13 +148,13 @@
                 chemistry, and physics research applications.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li> Molecular dynamics</li>;
-                <li> Chemical reaction modeling</li>;
-                <li> Material property prediction</li>;
-                <li> Quantum chemistry</li>;
+                <li>• Molecular dynamics</li>;
+                <li>• Chemical reaction modeling</li>;
+                <li>• Material property prediction</li>;
+                <li>• Quantum chemistry</li>;
               </ul>;
               <Link href="/quantum - services / quantum - simulation" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* Quantum Error Correction */}
@@ -170,13 +170,13 @@
                 and ensure reliable quantum computations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li> Surface code implementation</li>;
-                <li> Fault - tolerant quantum computing</li>;
-                <li> Quantum memory protection</li>;
-                <li> Noise mitigation strategies</li>;
+                <li>• Surface code implementation</li>;
+                <li>• Fault - tolerant quantum computing</li>;
+                <li>• Quantum memory protection</li>;
+                <li>• Noise mitigation strategies</li>;
               </ul>;
               <Link href="/quantum - services / error - correction" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* Quantum Consulting */}
@@ -192,13 +192,13 @@
                 and integration with existing IT infrastructure.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li> Quantum readiness assessment</li>;
-                <li> Implementation roadmap</li>;
-                <li> Talent development</li>;
-                <li> ROI analysis</li>;
+                <li>• Quantum readiness assessment</li>;
+                <li>• Implementation roadmap</li>;
+                <li>• Talent development</li>;
+                <li>• ROI analysis</li>;
               </ul>;
               <Link href="/quantum - services / consulting" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
           </div>;

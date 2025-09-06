@@ -19,45 +19,21 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useMemo, useState } from 'react';
 
+import {;
+  getWhitepaperSections,;
+  OPERATOR_PROMPT,;
 } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {;
 export default function WhitepaperBuilderPage() {
-
-import React, { useMemo, useState } from 'react';
-
-import Link from 'next/link';
-
-import {
-
-  getWhitepaperSections,;
-  OPERATOR_PROMPT,;
-
-} from '../utils/whitepaper/zionWhitepaper';
-import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
-import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
-
-export default function WhitepaperBuilderPage() {
-
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
-  const downloadHref = useMemo(() => {
-    if (edition === 'full') return '/docs/zion-protocol.pdf';
     return `/api/zion-whitepaper-pdf?edition=${edition}`;
   }, [edition]);
   return (
-    <div className='space-y-6'>
-      <div className='flex flex-col gap-2'>
-        <h1 className='text-3xl font-bold'>Zion Protocol Whitepaper</h1>
-        <p className='text-gray-600 dark:text-gray-300'>
-          Investor and Developer editions. Toggle, review, and download as PDF.
-        </p>
-      </div>
-      <div className='flex flex-wrap gap-3 items-center'>
-        <label className='font-medium'>Edition</label>
-        <select
-          value={edition}
+
+  return (
         {sections.map((s) => (
           <section key={s.id} className="space-y-2">
             <h2 className="text-2xl font-bold">{s.title}</h2>
@@ -76,7 +52,25 @@ export default function WhitepaperBuilderPage() {
         ))}
       </div>
     </div>
-
-  );
+      <div className='rounded border p - 4 bg - gray - 50 dark:bg - gray - 900'>;
+        <h2 className='text - xl font - semibold mb - 2'>Operator Prompt</h2>;
+        <pre className='whitespace - pre - wrap text - sm text - gray - 700 dark:text - gray - 200'>;
+          {OPERATOR_PROMPT}
+        </pre>;
+      </div>;
+      <div className='space - y-10'>;
+        {sections.map (string => (
+          <section key={s.id} className='space - y-2'>;
+            <h2 className='text - 2xl font - bold'>{s.title}</h2>;
+            {s.subtitle ? <p className='text - gray - 500'>{s.subtitle}</p> : null}
+            <article className='prose dark:prose - invert max - w-none whitespace - pre - wrap'>;
+              {s.content_md}
+            </article>          </section>      <div className="space - y-10">;
+        {sections.map ((s) => (
+          <section key={s.id} className="space - y-2">;
+            <h2 className="text - 2xl font - bold">{s.title}</h2>;
+            {s.subtitle ? <p className="text - gray - 500">{s.subtitle}</p> : null}
+            <article className="prose dark:prose - invert max - w-none whitespace - pre - wrap">{s.content_md}</article>))}
+      </div>;
+    </div>);
 }
-

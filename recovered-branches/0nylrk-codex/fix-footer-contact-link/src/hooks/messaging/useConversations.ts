@@ -1,9 +1,7 @@
-
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Conversation, ConversationContextData  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
-
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Conversation, ConversationContextData} from '@/types/messaging';
@@ -14,6 +12,11 @@ type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle conversation operations
  */
+  user: UserWithProfile;
+  set_conversations: (conversations: Conversation[]) => void;
+  setUnreadCount: (count: number) => void;
+      if (error) throw error;
+      // Format conversations
   setIsLoading: (loading: boolean) => void) {
   /**;
   * Fetch conversations for the current user;
@@ -119,8 +122,6 @@ if (throw error) {
         conversationId = newConversation && newConversation.id
 
       }
-
-
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Conversation, ConversationContextData } from '@/types/messaging',;
@@ -256,10 +257,14 @@ export function useConversations(;
         conversationId = newConversation.id;
       }
       
+      }
       // Send the initial message
       await supabase
         .from('messages')
         .insert({
+          read: false
+        });
+      // Update conversations list
       // Return the conversation ID
       return conversationId
     } catch (error) {
@@ -291,8 +296,11 @@ export function useConversations(;
     }
   };
   return {;
-
-
+        variant: "destructive"
+      })
+    }
+  }
+  return {
     fetchConversations;
 
     createConversation}

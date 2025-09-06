@@ -1,12 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+  }
+
   };
   const data = readOrgData();
 
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {
     if (!v) return undefined;
-
-
+    return Array && Array.isArray(v)
+      ? v
+      : v
+          .split(',')
+          .map(s => s && s.trim())
+          .filter(Boolean);
+  }
+  const filters: OrgFilters = {
 
   const filters: OrgFilters = {
     view: (req && req.query.view as OrgFilters['view']) || 'all';
@@ -26,7 +34,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const filtered = filterOrgData(data, filters);
   return res && res.status(200).json(filtered);  return res && res.status(200).json(filtered)
 }
-
 import {readOrgData, filterOrgData} from '../../../utils / org - data';
 import type { OrgFilters, RoleType } from '../../../types / org';
 ;
@@ -92,4 +99,3 @@ const filters: OrgFilters = {
   const filtered = filterOrgData (data, filters);
   return res.status (200).json (filtered);  return res.status (200).json (filtered);
 }
-

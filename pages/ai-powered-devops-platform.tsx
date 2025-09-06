@@ -1,6 +1,3 @@
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIPoweredDevOpsPlatformPage() {
 
 
 class ErrorBoundary extends React.Component {
@@ -94,10 +91,6 @@ export default function AIPoweredDevOpsPlatformPage() {
 		</>
 	)
 }
-
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIPoweredDevOpsPlatformPage() {
 
   return (
     <>;

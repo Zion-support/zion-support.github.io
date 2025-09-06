@@ -17,6 +17,21 @@
 ; const quality_tests = [;
     ; { cmd:"npm run lint: check", desc: "Lint check" } { cmd:"npm run format: check", desc: "Format check" },
     { cmd:"npm run test: coverage", desc: "Test coverage" }
+;
+    } catch (error) {,;
+      this.log(`❌ Automation runner: failed: ${error.message}`, "ERROR"),;
+      throw error;
+    }
+  }
+},;
+,;
+// Main execution,;
+if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
+  const runner = new ComprehensiveAutomationRunner(),;
+  runner.runAll().catch(console.error);
+},;
+,;
+export default ComprehensiveAutomationRunner;
 
 
 #!/usr/bin/env node,
@@ -469,5 +484,4 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default ComprehensiveAutomationRunner;
-;
 

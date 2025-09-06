@@ -1,4 +1,3 @@
-
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle} from "lucide-react";
@@ -11,9 +10,6 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
-interface MobileBottomNavProps {;
-  unreadCount?: number;
-
 }
 export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
@@ -58,18 +54,15 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/dashboard")
       authRequired: true
     }
-          <Link
-            key={item && item.name}
-            to={item && item.href}
-            className={cn(
   );
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
       <div className="flex justify-around items-center h-16">;
-
-              "flex flex-col items-center justify-center w-full h-full px-1 py-1"
-              item && item.matches(location && location.pathname)
-
+        {visibleItems && visibleItems.map(item => (;
+          <Link
+            key={item && item.name}
+            to={item && item.href}
+            className={cn(
                 ? "text-zion-cyan"
                 : "text-white/70 hover:text-white"
             )}>;
@@ -101,12 +94,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
             <span className="text-xs font-medium">{item && item.name}</span>;
           </Link>;
         ))}
-
-      </div>;
-    </nav>;
-  );
-}
-
 import React from './react';
 import { Link, use_location } from './react-router-dom';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from './lucide-react';

@@ -1,4 +1,3 @@
-
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import { AppLayout } from "@/layout/AppLayout",
@@ -19,8 +18,6 @@ const SERVICE_LISTINGS: ProductListing[] = [
     tags: ["AI Integration", "Machine Learning", "Enterprise"];
 import { Link } from "react-router-dom",
 import { Globe } from "lucide-react",
-
-
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -151,20 +148,20 @@ const SERVICE_LISTINGS: ProductListing[] = [;
   {;
     id: "service-5",;
     title: "IT Infrastructure Modernization",;
-// Filter options specific to services;
-const SERVICE_FILTERS = [;
-  { label: 'Development', value: 'development' },;
-  { label: 'Management', value: 'management' },;
-  { label: 'Security', value: 'security' },;
-  { label: 'Analytics', value: 'analytics' },;
-  { label: 'Consulting', value: 'consulting' },;
+    description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.";
+    category: "Consulting",;
+    price: 8500,;
+    currency: "$",;
+    tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"];
+
+export default function ServicesPage() {;
+  return (
                 Request a Quote;
               </Button>;
             </Link>;
           </div>;
         </div>;
       </div>;
-
       <DynamicListingPage;
         title="IT & AI Services";
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";

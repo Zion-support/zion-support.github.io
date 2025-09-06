@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -38,9 +37,9 @@ export default async function handler(
 
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
-  if (!dispute) return res && res.status($1).json({ $2 });
+  if (!dispute) return res.status($1).json({ $2 });
   try {
-    ensureInvolvedOrAdmin(user, dispute && dispute.clientUserId, dispute && dispute.talentUserId);
+    ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
   } catch (e: any) {
     return res.status(e.statusCode |403).json({ error: "Forbidden" });
   }
@@ -53,12 +52,6 @@ export default async function handler(
     "Content-Disposition"
     `attachment; filename="${path.basename(att.fileName)}"`
   );
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'Download endpoint' });
-
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';

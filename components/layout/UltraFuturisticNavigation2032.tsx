@@ -83,6 +83,7 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
+import {
   Menu,
   X,
   ChevronDown,
@@ -158,19 +159,12 @@ import {
   BrainIcon,
   AtomIcon,
   MenuIcon,
-  CloseIcon,;
-  ChevronRightIcon,;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, ;
 
   CloseIcon,;
   ChevronRightIcon,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
-
-
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -178,28 +172,21 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;
   Network, Server, HardDrive, Monitor;
-
 const serviceCategories = [
   {
-    title: ' AI & Consciousness 2030'
+    title: '🧠 AI & Consciousness 2030'
     icon: BrainIcon
     color: 'from-violet-600 via-purple-600 to-indigo-600'
     description: 'Next-generation AI consciousness and emotional intelligence'
     services: [
 
-
 ];
 
 ];
-    ];
-  };
-
-
     title: '⚛️ Quantum & Emerging Tech 2030',
     icon: AtomIcon,
     color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
     description: 'Quantum computing and beyond',
-
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
@@ -209,12 +196,6 @@ const mainNavigation = [
   { name: 'Resources', href: '/resources', icon: BookOpen }
   { name: 'Case Studies', href: '/case-studies', icon: TrendingUp }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
-
-  { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
-;
-const company_links = [;
-
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
   { name: 'News', href: '/news' },
@@ -248,7 +229,6 @@ const companyLinks = [;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
@@ -258,7 +238,6 @@ const companyLinks = [;
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
-
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
@@ -399,8 +378,6 @@ const companyLinks = [;
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
-
-
                               </Link>
                             ))}
                           </div>;
@@ -415,7 +392,6 @@ const companyLinks = [;
                 </div>;
               </div>;
             </div>;
-
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>;
               <Link href='/contact'>;
@@ -572,21 +548,36 @@ const companyLinks = [;
 
 
 
-
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-
-
+              className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'
+            >
+              {isOpen ? (
+                <X className='w-6 h-6' />
+              ) : (
+                <Menu className='w-6 h-6' />
+              )}            </button>              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
+            >
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMenu}
+              className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'>;
+              {isOpen ? (;
+                <X className='w-6 h-6' />;
+              ) : (;
+                <Menu className='w-6 h-6' />;
+              )}            </button>              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors";
+            >;
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </nav>
             </button>;
           </div>;
         </div>;
       </nav>;
-
-
-
-
-
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -594,7 +585,6 @@ const companyLinks = [;
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-
 
           >
             <div
@@ -682,8 +672,6 @@ const companyLinks = [;
                       </span>;
                       <ChevronRightIcon
                         className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`}
-
-
                       />;
                     </button>;
 
@@ -703,7 +691,6 @@ const companyLinks = [;
                       </span>;
                       <ChevronRightIcon className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`} />;
                     </button>;
-
                     {activeCategory === 0 && (;
                       <div className="pl-8 space-y-2">;
                         {serviceCategories && serviceCategories.map((category, index) => (;
@@ -719,7 +706,6 @@ const companyLinks = [;
                         ))}
                       </div>;
                     )}
-
                   {/* Company Links */}
 
 
@@ -748,6 +734,9 @@ const companyLinks = [;
                       <div className='flex items-center space-x-2'>
                         <MapPin className='w-4 h-4 text-pink-400' />
                         <span className='text-xs'>{contactInfo.address}</span>                      </div>                        <span>{contactInfo.mobile}</span>
+
+                        <span>{contactInfo.mobile}</span>
+                      ))}
                       </div>
                       <div className="flex items-center space-x-2">
                         <Mail className="w-4 h-4 text-purple-400" />
@@ -773,7 +762,7 @@ const companyLinks = [;
               </div>;
             </div>;
           </motion && motion.div>;
-
+    </>
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}
       <div className='h-20' />;

@@ -1,4 +1,3 @@
-
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
@@ -165,11 +164,6 @@ export default function ListingDetail() {;
   return (;
     );
   }
-;
-  const handleContact = () => {;
-    setIsContactDialogOpen(true);
-  },;
-  return (;
     <AppLayout>;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
@@ -227,8 +221,6 @@ export default function ListingDetail() {;
                     ))}
                   </div>;
                 )}
-
-
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -362,9 +354,9 @@ export default function ListingDetail() {;
                       Featured;
                     </Badge>;
                   )}
-
-
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+                            "h-5 w-5"
+                            i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
                         />;
                       ))}
@@ -407,8 +399,6 @@ export default function ListingDetail() {;
                           title: "Payment Processing";
                           description: "Redirecting to secure checkout...";
                         });
-
-
                       }}
                     />
                   ) : (
@@ -463,10 +453,6 @@ export default function ListingDetail() {;
                         <span className="text-lg font-medium text-zion-purple">{listing && listing.author.name && name.charAt(0)}</span>;
                       </div>;
                     )}
-}
-
-
-
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
                       {isLoading ? "Processing..." : "Request Quote"}
@@ -513,9 +499,6 @@ export default function ListingDetail() {;
           </div>;
         </div>;
       </div>;
-          />;
-        </DialogContent>;
-      </Dialog>;
     </AppLayout>);
 }
 ;

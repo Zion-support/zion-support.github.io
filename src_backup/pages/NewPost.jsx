@@ -5,9 +5,6 @@ export default function NewPost() {
       <p>Component placeholder - needs implementation</p>
     </div>
   )
-
-}
-
 export default /**
  * NewPost - Function description
  */

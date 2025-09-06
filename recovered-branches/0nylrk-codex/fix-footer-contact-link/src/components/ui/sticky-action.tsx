@@ -1,5 +1,5 @@
+interface StickyActionProps {
 
-import React, { useEffect, useState } from "react",
 interface StickyActionProps {
 
 
@@ -34,10 +34,6 @@ interface StickyActionProps {
 export function StickyAction({
   position?: "bottom" | "top";
 }
-
-
-export function StickyAction(): any ({;
-
   className;
   children;
 
@@ -66,6 +62,7 @@ function StickyAction() {
       } else {
         setIsVisible (false);
       }
+    }
     return () => {
       window.removeEventListener ("scroll", handle_scroll);
     }
@@ -74,7 +71,6 @@ function StickyAction() {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-
 
 
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
@@ -95,12 +91,10 @@ export function StickyAction({;
   position = "bottom";
 }: StickyActionProps) {;
   const [isVisible, setIsVisible] = useState(false),;
+
   useEffect(() => {;
     const handleScroll = () => {;
       if (window && window.scrollY > showAfterScroll) {;
-  useEffect(() => {;
-    const handleScroll = () => {;
-      if (window.scrollY > showAfterScroll) {;
         setIsVisible(true);
       } else {;
         setIsVisible(false);
@@ -110,6 +104,10 @@ export function StickyAction({;
       {isVisible && (;
         <motion&& motion.div
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          transition={{ duration: 0 && 0.2 }}
+          className={cn(
             className
           )}>;
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">;

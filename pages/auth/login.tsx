@@ -42,17 +42,6 @@ import {;
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-} from '@/components/ui/card';
-const LoginPage = () => {;
-
-import { useRouter } from 'next/router';
-import { useEffect, useState, FormEvent } from 'react';
-import Link from 'next/link';
-import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
-import Head from 'next/head';
-import { signIn } from 'next-auth/react';
-import { supabase } from '@/utils/supabase/client';
-import {
   Card
   CardContent
   CardDescription
@@ -80,24 +69,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
   // Effect for initial session check and auth state changes
   useEffect(() => {
     let mounted = true;
-        if (sessionError) {
-          logErrorToProduction('LoginPage: Error getting session:', { data: sessionError }),
-          setError(sessionError as any), // Cast to any if type is too strict
-        } else {
-          logInfo('LoginPage: getSession returned, user:', { data: session?.user?.id }),
-          setUser(session?.user ?? null)
-        }
-      } catch (e) {
-        if (mounted) {
-          logErrorToProduction('LoginPage: Exception during getSession:', { data: e }),
-          clearTimeout(sessionTimeoutId), // Ensure timeout is cleared on error too
-        }
       } finally {
         if (mounted) {
           setIsCheckingSession(false);
           setSessionChecked(true);
-          logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true')
-        }
           );        }
       }
 
@@ -255,79 +230,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
       setIsProactivelyResending(false)
     }
   };
-
-          logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
-          } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      // Listener for auth state changes
-      logInfo('LoginPage: Setting up onAuthStateChange listener.'),
-      const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {
-        if (!mounted) return,
-        logInfo('LoginPage: onAuthStateChange event:', {
-          event,
-          userId: session?.user?.id
-        }),
-        setUser(session?.user ?? null),
-        // If auth state changes after initial check, ensure sessionChecked is true
-        // This handles cases like login/logout in another tab.
-        if (!sessionChecked && event !== "INITIAL_SESSION") {
-           setSessionChecked(true),
-           logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.')
-;
-      // Listener for auth state changes;
-      logInfo('LoginPage: Setting up onAuthStateChange listener.');
-      const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {;
-        if (!mounted) return,;
-        logInfo('LoginPage: onAuthStateChange event:', {;
-          event,;
-          userId: session?.user?.id;
-        });
-            handleResendVerification();
-          }, 1000);
-        } else {;
-          // MODIFIED SECTION FOR BETTER ERROR MESSAGES;
-          let displayMessage =;
-            'Login failed. Please check your credentials and try again.'; // Default user-friendly message;
-          if (signInError && signInError.message) {;
-            if (;
-              signInError && signInError.message;
-                .toLowerCase();
-                .includes('invalid login credentials');
-            ) {;
-              displayMessage = 'Invalid email or password. Please try again.';
-            } else if (;
-              signInError && signInError.message;
-                .toLowerCase();
-                .includes('network request failed');
-            ) {;
-              displayMessage =;
-                'Network error. Please check your internet connection and try again.';
-            } else if (;
-              signInError && signInError.message.toLowerCase().includes('user disabled');
-            ) {;
-              displayMessage =;
-                'Your account has been disabled. Please contact support.';
-            }
-            // Add more specific checks here if needed for other Supabase error messages;
-          }
-
-          setError({;
-            name: signInError && signInError.name || 'AuthApiError',;
-            message: displayMessage,;
-
-    try {
-      logInfo('Attempting Supabase login with email:', { data: email }),
-      const { data, error: signInError } = await supabase.auth.signInWithPassword({
-        email;
-        password});
 
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
           } catch (error) {
@@ -548,30 +450,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
     try {
       logInfo('Attempting Supabase login with email:', { data: email }),
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
-        email,
-        password}),
       if (signInError) {
         logErrorToProduction('Supabase sign-in error:', { data: signInError }),
         // Check if error is related to email verification
         const messageIncludesEmailNotConfirmed = signInError.message?.toLowerCase().includes('email not confirmed') ||
                                                  signInError.message?.toLowerCase().includes('email_not_confirmed') ||
                                                  signInError.message?.toLowerCase().includes('verify') ||
-      });
-      // Check if the caught error is a network error;
-      let exceptionMessage = 'An unexpected error occurred. Please try again.';
-      if (;
-        catchedError && catchedError.message &&;
-        catchedError && catchedError.message;
-          .toLowerCase();
-          .includes('networkerror when attempting to fetch resource');
-      ) {;
-        exceptionMessage =;
-          'Network error. Please check your internet connection and try again.';
-      } else if (catchedError && catchedError.message) {;
-        exceptionMessage = catchedError && catchedError.message;
-      }
-
-
           // Auto-resend verification email
           setTimeout(() => {
             handleResendVerification()
@@ -583,14 +467,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
-
-              if (signInError.message.toLowerCase().includes('invalid login credentials')) {
-                  displayMessage = 'Invalid email or password. Please try again.'
-              } else if (signInError.message.toLowerCase().includes('network request failed')) {
-                  displayMessage = 'Network error. Please check your internet connection and try again.'
-              } else if (signInError.message.toLowerCase().includes('user disabled')) {
-                  displayMessage = 'Your account has been disabled. Please contact support.'
-  };
 
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
@@ -837,7 +713,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
                   disabled={isLoading}
 
-
                 </Link>
               </p>
             </div>
@@ -849,25 +724,150 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
-
   )
 },
 export default LoginPage,
                 />;
+              </div>;
+
+              <Button
+                type='submit'
+                className='w-full'
+                disabled={isLoading || isEmailUnverified}>;
+                {isLoading;
+                  ? 'Signing in...';
+                  : isEmailUnverified;
+                    ? t('auth && auth.email_verification_required');
+                    : t('auth && auth.sign_in')}
+              </Button>;
+            </form>;
+
+            <div className='mt-6 text-center'>;
+              <p className='text-sm text-gray-600'>;
+                Don't have an account?{' '}
+                <Link
+                  href='/auth/register'
+                  className='text-blue-600 hover:underline'>                  Sign up;
+
+;
+  // --- Rendering Logic ---;
+  // 1. Primary Loading State: During initial session check;
+  // Check condition
+if ( {) {
+  $2
+}
+    log_info ('LoginPage: Rendering "Checking authentication..."');
+    return (
+      <div className='min - h-screen flex items - center justify - center'>;
+        <div className='text - center'>;
+          <div className='animate - spin rounded - full h - 16 w - 16 border - b-2 border - blue - 600 mx - auto mb - 4'></div>;
+          <p className='text - gray - 600'>Checking authentication...</p>;
+          <p className='text - sm text - gray - 500 mt - 2'>;
+            This should only take a moment;
+          </p>;
+        </div>;
+      </div>);  }
+  // 2. Redirecting State: If session is checked, user exists, and not currently submitting form;
+  // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.;
+  // Check condition
+if ( {) {
+  $2
+}
+    log_info ('LoginPage: Rendering "Already Logged In / Redirecting..."');
+    return (
+      <div className='min - h-screen flex items - center justify - center'>;
+        <div className='text - center'>;
+          <div className='animate - spin rounded - full h - 16 w - 16 border - b-2 border - blue - 600 mx - auto mb - 4'></div>;
+          <h2 className='text - 2xl font - bold mb - 4'>Already Logged In</h2>;
+          <p className='text - gray - 600 mb - 4'>Redirecting to your dashboard...</p>;
+        </div>;
+      </div>);  }
+  // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (is_loading);
+  // This also covers the case where a user was present but a login attempt failed, clearing the user.;
+  log_info (
+    `LoginPage: Rendering login form. session_checked: ${session_checked}, user: ${user?.id}, is_loading: ${is_loading}, pathname: ${router.pathname}`);
+;
+  // Defensive check: If router.pathname is not /auth / login, do not render the login form.;
+  // This is a safeguard against the component's content persisting on other auth routes.;
+  // Check condition
+if ( {) {
+  $2
+}
+    log_warn (
+      `LoginPage: Current pathname is ${router.pathname}, not /auth / login or /login. Rendering null to prevent incorrect display.`);
+    return null; // Or a minimal loader / empty div  }
+  return (
+    <>;
+      <Head>;
+        <title>{`${t ('auth.sign_in')} - Zion Tech Marketplace`}</title>;
+        <meta;
+          name='description';
+          content='Sign in to your Zion Tech Marketplace account';
+        />;
+      </Head>;
+      <div className='min - h-screen flex items - center justify - center bg - gray - 50 py - 12 px - 4 sm:px - 6 lg:px - 8'>;
+        <Card className='w - full max - w-md'>          <CardHeader>;
+            <CardTitle > Sign In</CardTitle>;
+            <CardDescription>;
+              Enter your email and password to access your account;
+            </CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <form on_submit={handle_login} className='space - y-4'>;
+              {error && (
+                <div className='p - 3 bg - red - 50 border border - red - 200 rounded - md'>;
+                  <p className='text - sm text - red - 600'>{error.message}</p>;
+                </div>)}
+              <div className='space - y-2'>;
+                <label html_for='email' className='text - sm font - medium'>;
+                  Email;
+                </label>;
+                <Input;
+                  id='email';
+                  type='email';
+                  value={email}
+                  on_change={e => set_email (e.target.value)}                  required;
+                  disabled={is_loading}
+                />;
+              </div>;
+              <div className='space - y-2'>;
+                <label html_for='password' className='text - sm font - medium'>;
+                  Password;
+                </label>;
+                <Input;
+                  id='password';
+                  type='password';
+                  value={password}
+                  on_change={e => set_password (e.target.value)}                  required;
+                  disabled={is_loading}
+                />;
+              </div>;
+              <Button;
+                type='submit';
+                className='w - full';
+                disabled={is_loading || isEmailUnverified}
+              >;
+                {is_loading;
+                  ? 'Signing in...';
+                  : isEmailUnverified;
+                    ? t ('auth.email_verification_required');
+                    : t ('auth.sign_in')}
+              </Button>;
+            </form>;
+            <div className='mt - 6 text - center'>;
+              <p className='text - sm text - gray - 600'>;
+                Don't have an account?{' '}
+                <Link;
+                  href='/auth / register';
+                  className='text - blue - 600 hover:underline';
+                >                  Sign up;
+
                 </Link>;
               </p>;
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-    </>;
-  );
-};export default LoginPage;
-    </>;
-  );
-};export default LoginPage;
 
-  )
-};
-
+},;
 export default LoginPage;

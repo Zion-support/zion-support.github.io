@@ -205,7 +205,6 @@
     competitors: ['Bentley SystemsAutodeskSiemens'], marketSize: '$30B smart city market',
     growthRate: '90% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-    
     },
     realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
     launchDate: '2026-05-15', customers: 30,
@@ -222,8 +221,6 @@
     launchDate: '2026-05-15';
     customers: 30;
 
-  }
-];
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV4 {;
   id: string,;
@@ -620,6 +617,3 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     reviews: 25;
   }
 ];
-
-;
-

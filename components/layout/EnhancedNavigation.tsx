@@ -1,4 +1,3 @@
-
   Menu,
   X,
   ChevronDown,
@@ -20,11 +19,6 @@
   Bot,
   Factory,
   Car,;
-} from "lucide-react";
-import Link from "next/link";
-interface EnhancedNavigationProps {
-  className?: string;
-}
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
@@ -136,6 +130,37 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     address: "364 E Main St STE 1008 Middletown DE 19709"
     website: "https://ziontechgroup.com"
   }
+  ];
+
+  ];
+  return (
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-black/80 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10"
+          : "bg-transparent"
+      } ${className}`}>;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+        <div className="flex items-center justify-between h-20">;
+          {" "}
+          {/* Logo */}
+          <motion&& motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0 && 0.5 }}
+            className="flex items-center space-x-3">;
+            <Link href="/" className="flex items-center space-x-3 group">;
+              <div className="relative">;
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
+                  <Zap className="w-6 h-6 text-white" />;
+                </div>;
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />;
+              </div>;
+              <div className="hidden sm:block">;
+                <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">;
+                  Zion Tech Group;
+                </div>;
+                <div className="text-xs text-cyan-400">;
 ;
   const contact_info = {
     mobile: "+1 302 464 0950",
@@ -269,7 +294,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -281,7 +305,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -462,9 +485,6 @@ export default EnhancedNavigation;
 ;
 
 };
-
-export default EnhancedNavigation;
-
 );
 };
 export default EnhancedNavigation;

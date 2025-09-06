@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next / head';
 import {
   BarChart3,
   TrendingUp,
@@ -93,8 +94,6 @@ export default function AnalyticsPage() {;
       title: 'Performance Monitoring',;
       description: 'Track system performance and user behavior',;
     },;
-
-
 export default function AnalyticsPage() {
   const features = [
     {
@@ -134,10 +133,6 @@ export default function AnalyticsPage() {
                 Start Analyzing
                 <ArrowRight className='w-5 h-5 ml-2' />
               </a>
-
-
-
-
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
         <section className="pt-32 pb-20 relative overflow-hidden">
@@ -160,9 +155,6 @@ export default function AnalyticsPage() {
             <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
               Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities.
             </p>
-
-
-
               <a
                 href="/contact" className="shadow-2xl shadow-blue-500/25">
                 Start Analyzing
@@ -229,9 +221,6 @@ export default function AnalyticsPage() {
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-
-
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Transform Data into Action
@@ -244,24 +233,15 @@ export default function AnalyticsPage() {
                       </div>
                       <span className="text-gray-300 text-lg">{benefit}</span>
                     </div>
-                  ))}
-
-              
-
-
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
                   <div className="text-center">
                     <Eye className="w-24 h-24 mx-auto mb-6 text-blue-400" />
                     <h3 className="text-2xl font-bold text-white mb-4">
-
-
-
                       Visual Insights
                     </h3>
-                    <p className='text-gray-300 mb-6'>
-                      Beautiful charts and graphs that make complex data easy to
-                      understand
+                    <p className="text-gray-300 mb-6">
+                      Beautiful charts and graphs that make complex data easy to understand
                     </p>
                     </div>
                   </div>
@@ -463,8 +443,6 @@ export default function AnalyticsPage() {
       </div>;
 
 
-    </>);
-;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

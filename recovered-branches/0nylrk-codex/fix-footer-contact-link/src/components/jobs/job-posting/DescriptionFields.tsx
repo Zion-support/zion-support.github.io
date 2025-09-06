@@ -25,8 +25,6 @@ import {;
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
-import { JobSchemaType } from './validation';
-interface DescriptionFieldsProps {
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
   editorContent: string
@@ -80,8 +78,6 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
                 value={editorContent}
                 onChange={(e) => {;
-                  handleEditorChange(e && e.target.value);
-                  field && field.onChange(e && e.target.value);
                 }}
                 className="min-h-[200px]";
 import React from './react';
@@ -184,8 +180,6 @@ function DescriptionFields() {
               Provide instructions on how to apply for this job.;
             </FormDescription>;
             <FormMessage />;
-
-
   );
           </FormItem>)}
       />;

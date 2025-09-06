@@ -22,4 +22,5 @@ export type UserRole = 'admin' | 'user' | 'guest';
 
 
 
-
+export interface Application {
+  id: string;

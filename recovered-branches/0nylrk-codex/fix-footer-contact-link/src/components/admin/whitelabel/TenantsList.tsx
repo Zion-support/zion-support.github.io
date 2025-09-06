@@ -1,6 +1,3 @@
-
-import React, { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -146,14 +143,12 @@ export function TenantsList() {;
       setIsLoading(false);
     }
   },;
-  };
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {;
     try {;
       const { error } = await supabase;
         .from("whitelabel_tenants");
         .update({ is_active: !tenant && tenant.is_active });
         .eq("id", tenant && tenant.id);
-      if (error) throw error;
       // Update local state;
       setTenants(;
         tenants && tenants.map((t) =>;
@@ -178,65 +173,69 @@ export function TenantsList() {;
       // In a real implementation, this would verify DNS records;
       // For now, we'll just mark it as verified;
       const { error } = await supabase;
-        .update({ dns_verified: true });
-        .eq("id", tenant && tenant.id);
-
-      if (error) throw error;
-
-      // Update local state;
-      setTenants(;
-        tenants && tenants.map((t) =>;
-          t && t.id === tenant && tenant.id ? { ...t, dns_verified: true } : t,;
-        ),;
-      );
-
-      toast({;
-        title: "DNS verified",;
-        description: `Custom domain for ${tenant && tenant.brand_name} has been verified.`,;
-      });
-    } catch (error: any) {;
-      console && console.error("Error verifying DNS:", error);
-      toast({;
-        variant: "destructive",;
-        title: "Failed to verify DNS",;
-        description: error && error.message,;
       });
     }
 
   },
 
-
-
-
   return (
-    <div className="space-y-4">
-      <div className="flex justify-between items-center">
-        <h2 className="text-xl font-semibold">White-Label Tenants</h2>
-        <Button onClick={loadTenants} variant="outline" size="sm">
-          <RefreshCcw className="mr-2 h-4 w-4" />
-          Refresh
-        </Button>
-      </div>
-      {isLoading ? (
-        <div className="flex justify-center p-8">
-          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary"></div>
-        </div>
-      ) : (
-        <div className="rounded-md border">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Brand</TableHead>
-                <TableHead>Subdomain</TableHead>
-                <TableHead>Custom Domain</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead>Created At</TableHead>
-                <TableHead className="text-right">Actions</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {tenants.length === 0 ? (
-                <TableRow>
+
+    <div className="space-y-4">;
+      <div className="flex justify-between items-center">;
+        <h2 className="text-xl font-semibold">White-Label Tenants</h2>;
+        <Button onClick={loadTenants} variant="outline" size="sm">;
+          <RefreshCcw className="mr-2 h-4 w-4" />;
+          Refresh;
+        </Button>;
+      </div>;
+
+      {isLoading ? (;
+        <div className="flex justify-center p-8">;
+          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary"></div>;
+        </div>;
+      ) : (;
+        <div className="rounded-md border">;
+          <Table>;
+            <TableHeader>;
+              <TableRow>;
+                <TableHead>Brand</TableHead>;
+                <TableHead>Subdomain</TableHead>;
+                <TableHead>Custom Domain</TableHead>;
+                <TableHead>Status</TableHead>;
+                <TableHead>Created At</TableHead>;
+                <TableHead className="text-right">Actions</TableHead>;
+              </TableRow>;
+            </TableHeader>;
+            <TableBody>;
+              {tenants && tenants.length === 0 ? (;
+                <TableRow>;
+
+                  <TableCell
+                    colSpan={6}
+                    className="text-center py-8 text-muted-foreground">;
+                    No tenants found. Create a new white-label instance to get;
+                    started.;
+                  </TableCell>;
+                </TableRow>;
+              ) : (;
+                tenants && tenants.map((tenant) => (;
+                  <TableRow key={tenant && tenant.id}>;
+                    <TableCell className="font-medium">;
+                      {tenant && tenant.brand_name}
+                    </TableCell>;
+                    <TableCell>;
+                      <a
+                        href={`https://${tenant && tenant.subdomain}.ziontechmarketplace && ziontechmarketplace.com`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center hover:underline">;
+                        {tenant && tenant.subdomain}
+                        <ExternalLink className="ml-1 h-3 w-3" />;
+                      </a>;
+                    </TableCell>;
+                    <TableCell>;
+                      {tenant && tenant.custom_domain ? (;
+                        <div className="flex items-center">;
                           <a
                             href={`https://${tenant && tenant.custom_domain}`}
                             target="_blank"

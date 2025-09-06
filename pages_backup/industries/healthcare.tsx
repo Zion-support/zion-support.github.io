@@ -1,5 +1,3 @@
-
-
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -55,13 +53,6 @@ const benefits = [;
     title: 'Improved Patient Outcomes,',;
     description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.,',;
     icon: Heart;
-];
-const benefits = [
-  {
-    title: 'Improved Patient Outcomes',
-    description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.',
-    icon: Heart
-  },
   {}
 
     title: 'Enhanced Efficiency,',;
@@ -84,11 +75,6 @@ const benefits = [
 ;];
 const caseStudies = [;
   {}
-
-
-    title: 'AI Diagnostic System Implementation,',;
-    description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.,',;
-    results: ['60% faster diagnosis, '25% accuracy improvement', '40% cost reduction']',;
 ];
 const caseStudies = [;
   {;

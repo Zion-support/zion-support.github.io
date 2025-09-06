@@ -2,6 +2,8 @@
 
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
+      x: number;
+      y: number;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
   const particles_ref = useRef < any[]>([]);
   const animation_ref = useRef < number>();
@@ -50,16 +52,9 @@ if (return) {
           case 'energy':;
             this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
             break;        }            break;
-      }
-
-
-
             break;        }
 
         }
-
-
-
 
       }
 
@@ -81,17 +76,11 @@ if (return) {
         this.vx = Math.max(-3, Math.min(3, this.vx));
         this.vy = Math.max(-3, Math.min(3, this.vy))
 
+        }
+      }
       }
       draw() {
         if (!ctx) return;
-
-        
-        const alpha = this.life / this.maxLife;
-        ctx.save();
-        ctx.globalAlpha = alpha;
-        
-        switch (this.type) {
-
           case 'quantum':
             // Quantum particles with wave function
             ctx.beginPath();
@@ -237,6 +226,84 @@ if ( {) {
               }
             });
             break;
+            ctx.fillRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
+            ctx.beginPath();
+            ctx.moveTo(this.x, this.y);
+            ctx.lineTo(this.x + this.vx * 10, this.y + this.vy * 10);
+            ctx.strokeStyle = this.color;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+            break;
+          case 'energy':
+            // Energy particles with glow effect
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            // Glow effect
+            const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 3);
+            gradient.addColorStop(0, this.color);
+            gradient.addColorStop(1, 'transparent');
+            ctx.fillStyle = gradient;
+            ctx.fill();
+        ctx.restore()
+      }
+      isDead() {
+        return this.life <= 0
+    }
+    // Initialize particles
+    const initParticles = () => {
+      particlesRef.current = [];
+        particlesRef.current.push(new Particle())
+      }
+    }
+    // Animation loop
+    const animate = () => {
+      // Clear canvas with fade effect
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Update and draw particles
+      particlesRef.current.forEach((particle, index) => {
+        particle.update();
+        particle.draw();
+      drawNeuralGrid(ctx, canvas.width, canvas.height);
+      animationRef.current = requestAnimationFrame(animate)
+    }
+    // Quantum field lines
+    const drawQuantumField = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
+      const time = Date.now() * 0.001;
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
+      ctx.lineWidth = 1;
+      for (let i = 0, i < 20, i++) {
+        ctx.beginPath();
+        const x = (i / 20) * width;
+        const y = Math.sin(time + i * 0.5) * 50 + height / 2;
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+        // Add wave interference
+        for (let j = 0, j < height, j += 10) {
+          const waveY = y + Math.sin(time * 2 + i * 0.3) * 30;
+          ctx.lineTo(x + Math.sin(time + j * 0.01) * 20, j)
+        }
+        ctx.stroke()
+      }
+    }
+    // Neural network grid
+          ctx.moveTo(x + offset, y);
+          ctx.lineTo(x + gridSize + offset, y);
+          ctx.moveTo(x, y + offset);
+          ctx.lineTo(x, y + gridSize + offset);
+        }
+      }
+    }
+    // Start animation
+    initParticles();
+    animate();
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+      if (animationRef.current) {
+  }, []);
   return (
     <div className='fixed inset-0 pointer-events-none z-0'>;
       {/* Animated gradient background */}
@@ -461,6 +528,7 @@ if ( {) {
           ],
         }}
         transition={{
+        }}
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
@@ -526,6 +594,7 @@ if ( {) {
             height: ['24px', '40px', '24px']
           }}
           transition={{
+          }}
       {/* Quantum interference patterns */}
       <div className='absolute inset-0'>;
         {[...Array(5)].map((_, i) => (;
@@ -547,9 +616,16 @@ if ( {) {
       </div>;
     </div>;
   );
-  );
 };
 
+export default UltraFuturisticBackground2046;              ease: "easeInOut",;
+              delay: i * 0 && 0.8}}
+          />;
+        ))}
+      </div>
+    </div>
+  );
+export default UltraFuturisticBackground2046;
 
     </div>
     </div>

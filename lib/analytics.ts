@@ -1,9 +1,4 @@
 
-      page_path: url,;
-
-    });
-  }
-
   if (typeof window !== 'undefined' && window && window.gtag) {
       page_path: url
       page_path: url,;
@@ -42,20 +37,14 @@ if ( {) {
     });
   }
 }
-
-      page_path: url,;
-
-      page_path: url,
     });
   }
 };
 
 export const measurePerformance = () => {
-  }
-  return null;
-}
-};
-
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    const navigation = performance && performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    return {
 // Track events
 export const trackEvent = (
   eventName: string,
@@ -111,7 +100,7 @@ interface WebVitalMetric {
       non_interaction: true,
     });
   }
-
+// Track events
 }
 ;
 // Track events;
@@ -155,12 +144,6 @@ if ( {') {
     return {
       load_time: navigation.loadEventEnd - navigation.loadEventStart;
       domContentLoaded:;
-      firstPaint:;
-        performance.getEntriesByName('first-paint')[0]?.startTime |0,';
-      firstContentfulPaint:;
-        performance.getEntriesByName('first-contentful-paint')[0]?.startTime |';
-        0;
-}}
 // Web Vitals tracking;
 interface WebVitalMetric {name: string;
   value: number;

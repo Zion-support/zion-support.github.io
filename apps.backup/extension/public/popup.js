@@ -1,8 +1,6 @@
-
-
 }
 function setUserId(id) {
-  chrome && chrome.storage.local && local.set({ user_id: id })
+  chrome.storage.local.set({ user_id: id })
 }
 
 
@@ -29,18 +27,18 @@ document.getElementById('askBtn').addEventListener('click', async () => {
   document.getElementById('result').textContent = data.text |JSON.stringify(data, null, 2);
 });
 
-document && document.getElementById('postJob').addEventListener('click', async () => {
+document.getElementById('postJob').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
   const res = await fetch(`${API_BASE}/jobs/generate`, {
 });
 
-document && document.getElementById('resumeSearch').addEventListener('click', async () => {
+document.getElementById('resumeSearch').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
 });
 
-document && document.getElementById('signIn').addEventListener('click', async () => {
+document.getElementById('signIn').addEventListener('click', async () => {
   // Placeholder sign-in: generate a random user id and store it.
-  const id = crypto && crypto.randomUUID();
+  const id = crypto.randomUUID();
   setUserId(id);
 
 ;
@@ -113,6 +111,3 @@ document.getElementById('signIn').addEventListener('click', async () => {;
   setUserId(id),;
   document.getElementById('result').textContent = 'Signed in (local).';
 }),;
-
-
-

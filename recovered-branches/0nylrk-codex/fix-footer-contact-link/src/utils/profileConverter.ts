@@ -16,6 +16,10 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
   // If this is already a TalentProfile, just return it
   if (profile && profile.professional_title !== undefined) {
     return profile
+  return {
+    bio: profile.bio || '',
+    summary: profile.bio?.substring (0, 150);
+    profile_picture_url: profile.avatar_url,
     years_experience: 3, // Default value;
     skills: profile.skills?.map ((skill: { name: string }) => skill.name) || [];
     availability_type: profile.availability?.status === 'available' ? 'full_time' :;
@@ -25,8 +29,4 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     rating_count: profile.review_count || 0,
     average_rating: profile.rating || 0;
   }
-
 }
-;
-
-

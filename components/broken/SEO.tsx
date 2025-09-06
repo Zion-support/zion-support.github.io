@@ -45,6 +45,41 @@
 }{
   section && <meta property="article:section" content= {
   section
+}
+import React from 'react';
+ {;
+  /* Robots Meta */ ;
+}{;
+  noindex && <meta name="robots" content="noindex" /> ;
+}{;
+  nofollow && <meta name="robots" content="nofollow" /> ;
+}{;
+  !noindex && !nofollow && <meta name="robots" content="index, follow" /> ;
+}{;
+  /* Open Graph Meta Tags */ ;
+}<metaproperty="og:title" content= {
+  fullTitle 
+}/> <metaproperty="og:description" content= {
+  description 
+}/> <metaproperty="og:type" content= {
+  type 
+}/> <metaproperty="og:url" content= {
+  fullUrl 
+}/> <metaproperty="og:image" content= {
+  fullImage 
+}/> <meta property="og:site name" content="Zion Tech Group" /> <meta property="og:locale" content="en US" /> {;
+  /* Twitter Card Meta Tags */ ;
+}<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@ziontechgroup" /> <meta name="twitter:creator" content="@ziontechgroup" /> <metaname="twitter:title" content= {
+  fullTitle 
+}/> <metaname="twitter:description" content= {
+  description 
+}/> <metaname="twitter:image" content= {
+  fullImage 
+}/> {;
+  /* Article Specific Meta Tags */ ;
+}{;
+  type === 'article' && (<> {;
+  publishedTime && <metaproperty="article:published time" content= {
   publishedTime 
 }/> ;
 }{;
@@ -206,6 +241,45 @@ const SEO: React.FC<SEOProps> = ({
       <meta
         name='viewport'
         content='width=device-width, initial-scale=1, shrink-to-fit=no'
+      <meta property='og:title' content={full_title} />;
+      <meta property='og:description' content={description} />;
+      <meta property='og:type' content={type} />;
+      <meta property='og:url' content={full_url} />;
+      <meta property='og:image' content={full_image} />;
+      <meta property='og:site_name' content='Zion Tech Group' />;
+      <meta property='og:locale' content='en_US' />;
+      {/* Twitter Card Meta Tags */}
+      <meta name='twitter:card' content='summary_large_image' />;
+      <meta name='twitter:site' content='@ziontechgroup' />;
+      <meta name='twitter:creator' content='@ziontechgroup' />;
+      <meta name='twitter:title' content={full_title} />;
+      <meta name='twitter:description' content={description} />;
+      <meta name='twitter:image' content={full_image} />;
+      {/* Article Specific Meta Tags */}
+      {type === 'article' && (
+        <>;
+          {published_time && (
+            <meta property='article:published_time' content={published_time} />)}
+          {modified_time && (
+            <meta property='article:modified_time' content={modified_time} />)}
+          {author && <meta property='article:author' content={author} />}
+          {section && <meta property='article:section' content={section} />}
+          {tags.map ((tag, index) => (
+            <meta key={index} property='article:tag' content={tag} />))}
+        </>)}
+      {/* Additional Meta Tags */}
+      <meta;
+        name='viewport';
+        content='width = device - width, initial - scale = 1, shrink - to - fit = no';
+      />;
+      <meta name='theme - color' content='#000000' />;
+      <meta name='msapplication - TileColor' content='#000000' />;
+      <meta name='apple - mobile - web - app - capable' content='yes' />;
+      <meta;
+        name='apple - mobile - web - app - status - bar - style';
+        content='black - translucent';
+      />;
+      <meta name='apple - mobile - web - app - title' content='Zion Tech Group' />;
 
 
 
@@ -213,19 +287,6 @@ const SEO: React.FC<SEOProps> = ({
       <script;
         type='application / ld + json';
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org'
-            '@type': 'Organization'
-            name: 'Zion Tech Group'
-            url: 'https://ziontechgroup.com'
-            logo: 'https://ziontechgroup.com/images/zion-tech-group-logo.png'
-            description: description
-            foundingDate: '2020'
-            sameAs: [
-              'https://www.linkedin.com/company/zion-tech-group'
-              'https://twitter.com/ziontechgroup'
-              'https://github.com/Zion-Holdings'
-            ]
             contactPoint: {
               '@type': 'ContactPoint'
               telephone: '+1-800-ZION-TECH'
@@ -256,6 +317,10 @@ const SEO: React.FC<SEOProps> = ({
                 },
                 {
                   '@type': 'Offer',
+                  }
+                }
+                {
+                  '@type': 'Offer'
                   itemOffered: {
                     '@type': 'Service'
                     name: 'Quantum Computing Services'
@@ -272,9 +337,6 @@ const SEO: React.FC<SEOProps> = ({
             }
           })
         }}
-
-
-
 
 
 
@@ -325,8 +387,6 @@ export default SEO;            __html: JSON && JSON.stringify(structuredData);
       )}
   );
 export default SEO;  );
-}
-export default SEO;            __html: JSON.stringify(structuredData)
 };
 
 

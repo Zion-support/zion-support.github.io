@@ -19,7 +19,6 @@ export default function BlogIndexPage() {
             <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
               <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>
               <p className="text-gray-400 mb-4">{p.excerpt}</p>
-
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

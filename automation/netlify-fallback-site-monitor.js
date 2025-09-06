@@ -43,11 +43,6 @@ exports.handler = async (_event, _context) => {
         return {
 
 
-
-},
-
-;
-
 #!/usr/bin/env node;
 // Netlify Function Fallback: site-monitor;
 // This is a local fallback when the main function is unavailable;
@@ -74,6 +69,3 @@ exports.handler = async (_event, _context) => {;
             });
         }
     }
-
-
-

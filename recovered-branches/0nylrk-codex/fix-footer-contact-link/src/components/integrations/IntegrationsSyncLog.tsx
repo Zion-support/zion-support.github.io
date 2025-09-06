@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import {
   Table;
@@ -27,9 +26,6 @@ import {
   TableHeader,
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
-
-
-
 // Sample data for integration sync logs
 
 const syncLogs = [
@@ -105,8 +101,6 @@ const syncLogs = [
     </Card>
   )
 }
-
-
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import {;
@@ -152,6 +146,9 @@ const syncLogs = [;
     timestamp: "2024-05-18T09:10:05Z",;
     details: "Updated candidate status to 'Interview Scheduled'";
   }
+      case "success": return <Badge className="bg-green-500">Success</Badge>;
+      case "error":;
+        return <Badge variant="destructive">Error</Badge>;
 
   return (
     <Card>;
@@ -182,13 +179,6 @@ const syncLogs = [;
 
 
             ))}
-
-          </TableBody>;
-        </Table>;
-      </div>;
-    </Card>;
-  );
-}
 import React from './react';
 import { Card } from '@/components / ui / card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';

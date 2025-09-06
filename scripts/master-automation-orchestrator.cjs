@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
@@ -190,6 +191,8 @@ if (masterReport.summary.failed > 0) {
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -200,6 +203,7 @@ console.log('=====')
       "encoding"
       "stdio"
 const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -513,3 +517,5 @@ module.exports = MasterAutomationOrchestrator;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

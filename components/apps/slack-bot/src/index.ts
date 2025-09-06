@@ -1,5 +1,6 @@
-  socketMode: true,});
 
+
+  socketMode: true,});
 function helpText(): string {
   return [  token: process && process.env.SLACK_BOT_TOKEN;
   signingSecret: process && process.env.SLACK_SIGNING_SECRET;
@@ -19,12 +20,6 @@ function helpText(): string {
           headers: { 'x-user-id': userId }
         }
       );
-        .slice(0, 5)
-        .map(
-          (t: any) =>
-            ` ${t.full_name}  ${t.country}  ${t.skills?.slice(0, 3).join(', ') |''}`
-        );
-      await respond({
       });
       return;
     }
@@ -50,15 +45,6 @@ function helpText(): string {
     await respond({ response_type: 'ephemeral', text: helpText() });
   } catch (err: any) {
     await respond({
-      const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`, {
-        headers: { 'x-user-id': userId }
-      });
-      const data = (await res.json()) as any;
-      const lines = (data.results |[]).slice(0, 5).map((t: any) => ` ${t.full_name}  ${t.country}  ${t.skills?.slice(0,3).join() |''}`);
-      await respond({ response_type: 'ephemeral', text: lines.length ? lines.join('\n') : 'No matches yet.' });
-      return
-    }
-    if (sub === 'track-project') {
       const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`, {
         headers: { 'x-user-id': userId }
       });
@@ -73,15 +59,7 @@ function helpText(): string {
   } catch (err: any) {
   }
 });
-
 (async () => {
-
-  const port = Number(process && process.env.SLACK_PORT || 3001);
-  await app && app.start(port);
-  // eslint-disable-next-line no-console
-})();
-
-  console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })();
 
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
@@ -101,7 +79,7 @@ if ( {) {
         headers: { 'x - user - id': user_id }
       });
       const data = (await res.json ()) as any;
-      const lines = (data.results || []).slice (0, 5).map ((t: any) => ` ${t.full_name}  ${t.country}  ${t.skills?.slice (0, 3).join () || ''}`);
+      const lines = (data.results || []).slice (0, 5).map ((t: any) => `• ${t.full_name} – ${t.country} – ${t.skills?.slice (0, 3).join () || ''}`);
       await respond ({ response_type: 'ephemeral', text: lines.length ? lines.join ('\n') : 'No matches yet.' });
       return;
     }
@@ -121,7 +99,7 @@ if ( {) {
         await respond ({ response_type: 'ephemeral', text: 'Project not found.' });
         return;
       }
-      await respond ({ response_type: 'ephemeral', text: `*${data.project.name}*  status: ${data.project.status}\n_milestones: ${JSON.stringify (data.project.milestones)}` });
+      await respond ({ response_type: 'ephemeral', text: `*${data.project.name}* – status: ${data.project.status}\n_milestones: ${JSON.stringify (data.project.milestones)}` });
       return;
     }
     await respond ({ response_type: 'ephemeral', text: help_text () });
@@ -134,6 +112,6 @@ if ( {) {
   const port = Number (process.env.SLACK_PORT || 3001);
   await app.start (port);
   // eslint - disable - next - line no - console;
-console.log (` Zion Slack bot running on port ${port}`);
-})();  console.log (` Zion Slack bot running on port ${port}`);
+console.log (`⚡️ Zion Slack bot running on port ${port}`);
+})();  console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })();

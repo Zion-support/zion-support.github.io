@@ -71,13 +71,13 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
           queryString,
           formData.serviceType,
           3
-        setMatches(results)
-      } catch (error) {
-        console.error("Error during AI matching:", error);
-        toast({
-          title: "Matching Error"
-          description: "We couldn't find matches for your request. Please try again."
-          variant: "destructive"})
+  const [isMatching, setIsMatching] = useState(false);
+
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+          queryString;
+          formData && formData.serviceType;
+          3;
+        );
       } finally {
         setIsMatching (false);
       }
@@ -100,8 +100,6 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
       handleSelectMatch(matchResult)
     }
   }
-
-
 
       {/* AI Matching Results */}
       <AIMatchingResults
@@ -228,8 +226,6 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
       </div>
     </div>
   )
-};
-}
 
 
         setMatches(results);
@@ -291,115 +287,9 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
           <CardContent className="pt-4">;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
               <div>;
-                </div>;
-              )}
-            </div>;
-          </CardContent>;
-        </Card>;
-      </div>;
-      handleSelectMatch (match_result);
-    }
-  }
-;
-  return (
-    <div className="space - y-6">;
-      <h3 className="text - xl font - semibold text - white mb - 4">Review Your Request</h3>;
-      {/* AI Matching Results */}
-      <AIMatchingResults;
-        service_type={form_data.service_type}
-        project_description={form_data.project_description}
-        matches={match_items}
-        onSelectMatch={handleItemSelect}
-        is_loading={is_matching}
-      />;
-      {/* Service Information */}
-      <div>;
-        <h4 className="text - lg font - medium text - white mb - 2">Service Information</h4>;
-        <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-          <CardContent className="pt - 4">;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-              <div>;
-                <Label className="text - zion - slate - light">Service Type</Label>;
-                <div className="text - white">{form_data.service_type}</div>;
-              </div>;
-              {form_data.specific_item && (
-                <div>;
-                  <Label className="text - zion - slate - light">Selected Item</Label>;
-                  <div className="text - white">{form_data.specific_item.title}</div>;
-                </div>)}
-            </div>;
-          </CardContent>;
-        </Card>;
-      </div>;
-      {/* Project Details */}
-      <div>;
-        <h4 className="text - lg font - medium text - white mb - 2">Project Details</h4>;
-        <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-          <CardContent className="pt - 4">;
-            <div className="space - y-4">;
-              <div>;
-                <Label className="text - zion - slate - light">Project Name</Label>;
-                <div className="text - white">{form_data.project_name}</div>;
-              </div>;
-              <div>;
-                <Label className="text - zion - slate - light">Project Description</Label>;
-                <div className="text - white whitespace - pre - wrap">{form_data.project_description}</div>;
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-      {/* Timeline */}
-      <div>;
-        <h4 className="text - lg font - medium text - white mb - 2">Timeline</h4>;
-        <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-          <CardContent className="pt - 4">;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-              <div>;
-                <Label className="text - zion - slate - light">Timeline Type</Label>;
-                <div className="text - white capitalize">{form_data.timeline}</div>;
-              </div>;
-              {form_data.start_date && (
-                <div>;
-                  <Label className="text - zion - slate - light">Start Date</Label>;
-                  <div className="text - white">;
-                    {form_data.start_date.toLocaleDateString ()}
-                  </div>;
-                </div>)}
-              {form_data.end_date && (
-                <div>;
-                  <Label className="text - zion - slate - light">End Date</Label>;
-                  <div className="text - white">;
-                    {form_data.end_date.toLocaleDateString ()}
-                  </div>;
-                </div>)}
-            </div>;
-          </CardContent>;
-        </Card>;
-      </div>;
-      {/* Budget */}
-      <div>;
-        <h4 className="text - lg font - medium text - white mb - 2">Budget</h4>;
-        <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-          <CardContent className="pt - 4">;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-              <div>;
-                <Label className="text - zion - slate - light">Budget Type</Label>;
-                <div className="text - white capitalize">{form_data.budget.type}</div>;
-              </div>;
-              <div>;
-                <Label className="text - zion - slate - light">Amount</Label>;
-                <div className="text - white">;
-                  ${form_data.budget.amount.toLocaleString ()}
-                  {form_data.budget.max_amount ? ` - $${form_data.budget.max_amount.toLocaleString ()}` : ''}
-                </div>;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </div>;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </div>;
+}

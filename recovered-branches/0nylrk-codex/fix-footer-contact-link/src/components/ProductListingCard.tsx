@@ -10,9 +10,12 @@ import { ProductListing } from "@/types/listings";
 import { Star, DollarSign } from "lucide-react";
 interface ProductListingCardProps {
 
+interface ProductListingCardProps {;
+  listing: ProductListing,;
+
+  view?: 'grid' | 'list';
+  onRequestQuote?: (id: string) => void;
 }
-export function ProductListingCard({
-  listing
   view = 'grid';
   onRequestQuote;
 }: ProductListingCardProps) {;
@@ -52,54 +55,7 @@ export function ProductListingCard({
       navigate (`/request - quote?listing=${listing.id}`);
     }
   }
-
-
-  // Get the first image or use a placeholder;
-  const imageUrl = listing && listing.images && listing && listing.images.length > 0 ;
-    ? listing && listing.images[0] ;
-    : '/placeholder && placeholder.svg';
-
-  // Format price display;
-  const formatPrice = () => {;
-    if (listing && listing.price === null) return "Custom pricing";
-    return `${listing && listing.currency}${listing && listing.price.toLocaleString()}`;
-  };
-
-  // Handle image loading errors;
-  const handleImageError = (e: React && React.SyntheticEvent<HTMLImageElement>) => {;
-    e && e.currentTarget.src = '/placeholder && placeholder.svg';
-  };
-
-  // Handle navigating to listing detail;
-  const handleViewListing = () => {;
-    navigate(`/listing/${listing && listing.id}`);
-  };
-
-  // Handle request quote button click;
-  const handleRequestQuote = (e: React && React.MouseEvent) => {;
-    e && e.preventDefault();
-    e && e.stopPropagation(),;
-
-    if (onRequestQuote) {;
-      onRequestQuote(listing && listing.id);
-    } else {;
-      // Default behavior if no handler provided;
-      navigate(`/request-quote?listing=${listing && listing.id}`);
-    }
-  };
-
-
-  return (
-    <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
-
-
-
       {/* Image */}
-      <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>
-        <div className={`relative ${isGrid ? 'h-48' : 'h-full'}`}>
-          <img
-            src={imageUrl}
-            alt={listing.title}
             className="w-full h-full object-cover"
             onError={handleImageError}
           />;
@@ -169,9 +125,6 @@ export function ProductListingCard({
               onClick={(e) => {
                 e.stopPropagation();
 
-
-          </div>;
-
           {/* Title & Description */}
           <div on_click={handleViewListing} className="block">;
             <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition - colors">;
@@ -196,7 +149,6 @@ export function ProductListingCard({
             ) : (;
               <span className="text-zion-slate-light">;
                 {formatPrice()}
-            )}
 
 
                 e.stopPropagation(),

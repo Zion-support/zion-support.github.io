@@ -20,9 +20,6 @@ interface CategoryCardProps {
    * callers could not customise the icon colour as intended.
    */
 
-
-
-
   const slug = slugify(title);
   return (
     <Link
@@ -42,18 +39,9 @@ interface CategoryCardProps {;
   className?: string;
 }
 
-
-export function CategoryCard(): any ({ title, description, icon, color, count, className }: CategoryCardProps) {;
-  // Create a URL-friendly slug from the category title;
-  const slug = slugify(title);
-
-
   const slug = slugify(title);
   return (
     <Link
-
-      to={`/category/${slug}`} 
-
       className={cn(
         "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
         className
@@ -61,9 +49,9 @@ export function CategoryCard(): any ({ title, description, icon, color, count, c
       <div
         className={cn(
         )}
-
-
-        )}
+        className={cn (
+          "mb - 4 p - 3 bg - zion - blue - dark rounded - full";
+          !color && "text - zion - cyan")}
         style={color ? { color } : undefined}
       >;
         {icon}

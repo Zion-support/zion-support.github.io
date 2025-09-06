@@ -6,6 +6,17 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 
 
+  participants = [], ;
+    const secs = seconds % 60;
+};  onLeave,
+  onToggleMute,
+  onToggleVideo,
+  onToggleScreenShare,
+  className 
+
+}
+export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
+  roomId
 },) => {
   const [isMuted, setIsMuted] = useState(false)
   const [isVideoEnabled, setIsVideoEnabled] = useState(true)
@@ -67,9 +78,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
         <div className="flex items-center space-x-2">
           <CardTitle className="text-white">Video Call</CardTitle>
           <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">
-        <div className="flex items-center space-x-2">;
-          <Badge variant="secondary" className="bg-zion-blue-light text-white">;
-            {formatDuration(callDuration)}
+
               <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
                   <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
@@ -91,6 +100,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
             </div>
           )}
         </div>
+
+
+        <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
           <Button
             variant="outline"
             size="icon"
@@ -111,11 +123,24 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
             variant="destructive"
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
+
+
             <Phone className="rotate-135" />
         </div>
       </CardContent>
     </Card>
   )
+
+            aria-label="Leave call">;
+            <Phone className="rotate-135" />;
+          </Button>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+},;
+
+
                   <div className="bg - zion - blue - light h - full w - full flex items - center justify - center text - white">;
                     {/* Placeholder for actual video stream */}
                     <Video className="h - 12 w - 12 opacity - 50" />;
@@ -195,4 +220,5 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
         </div>;
       </CardContent>;
     </Card>);
+};
 },

@@ -54,7 +54,6 @@
       {/* Highlight Target Element */}
       {currentStepData.target && (
         <div;
-          className="fixed z-30 pointer-events-none";
             bottom: 0}}
         >;
           <div;
@@ -66,5 +65,6 @@
     </>);
 }
     "data-walkthrough-target": id;
+// Hook to add data attributes for walkthrough targeting;
     id}
 }

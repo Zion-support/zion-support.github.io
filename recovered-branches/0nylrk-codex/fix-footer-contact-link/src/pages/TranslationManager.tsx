@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -31,7 +30,6 @@ import { useIsMobile } from "@/hooks/use-mobile",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
 export default function TranslationManager() {
-
   const { t, i18n } = useTranslation();
 
   const isMobile = useIsMobile();
@@ -50,29 +48,6 @@ export default function TranslationManager() {
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
           return Object.keys(obj).reduce((acc, key) => {
-            const pre = prefix.length ? `${prefix}.` : '';
-            // Check condition
-if ( {) {
-  $2
-}
-              Object.assign (acc, flatten_object (obj[key], `${pre}${key}`));
-            } else {
-
-
-  // Simulated translation data - in a real app, this would come from your backend;
-  useEffect(() => {;
-    // For demo purposes, we're using the loaded translations from i18next;
-    const currentTranslations: Record<string, any> = {};
-
-    supportedLanguages && supportedLanguages.forEach(lang => {;
-      const res = i18n && i18n.getResourceBundle(lang && lang.code, selectedNamespace);
-      if (res) {;
-        // Flatten nested objects for easier management;
-        const flattenObject = (obj: any, prefix = '') => {;
-          return Object && Object.keys(obj).reduce((acc, key) => {;
-            const pre = prefix && prefix.length ? `${prefix}.` : '';
-            if (typeof obj[key] === 'object' && obj[key] !== null) {;
-              Object && Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
               acc[`${pre}${key}`] = obj[key]
           updatedTranslations[lang.code] = {}
         }
@@ -123,7 +98,15 @@ export default function TranslationManager() {;
             const pre = prefix.length ? `${prefix}.` : '',;
             if (typeof obj[key] === 'object' && obj[key] !== null) {;
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
+
             } else {;
+            const pre = prefix.length ? `${prefix}.` : '';
+            // Check condition
+if ( {) {
+  $2
+}
+              Object.assign (acc, flatten_object (obj[key], `${pre}${key}`));
+            } else {
               acc[`${pre}${key}`] = obj[key];
             }
     const allKeys = new Set<string>();
@@ -140,9 +123,6 @@ export default function TranslationManager() {;
         }
       })
     });
-
-
-
           updatedTranslations[lang.code] = {}
         }
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
@@ -156,7 +136,6 @@ export default function TranslationManager() {;
         title: t("translation.saved")
         description: t("translation.changes_saved")})
     }, 1000)
-    let sourceText = '';
         sourceLanguage = lang;
         sourceText = translations[lang][key];
         break;
@@ -220,9 +199,6 @@ export default function TranslationManager() {;
         ...editedTranslations[key]
         [lang]: value
       }
-
-
-
         description={t('translation.manager_description')}
       />
       <Header />
@@ -270,6 +246,9 @@ export default function TranslationManager() {;
         <Card>;
           <CardHeader>;
             <CardTitle className="text-2xl">{t('translation && translation.manager_title')}</CardTitle>;
+        ...editedTranslations;
+        [key]: translatedText;
+      });
               {/* Search and filter */}
               <div className="flex flex-col sm:flex-row gap-4">;
                 <div className="relative flex-1">;
@@ -279,8 +258,6 @@ export default function TranslationManager() {;
                     placeholder={t('translation && translation.search_placeholder')}
                     className="pl-8"
                     value={searchQuery}
-
-
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
@@ -321,18 +298,14 @@ export default function TranslationManager() {;
                                       dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                                     />
                                   )}
-                                </div>;
+                                </div>
                               ))}
-
-                            </div>;
-                            <div className="flex gap-2 mt-4">;
                               <Button
                                 size="sm" 
 
 
                               <Button 
                                 size="sm" 
-
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >;
@@ -348,9 +321,7 @@ export default function TranslationManager() {;
                                   </>;
                                 )}
                               <Button
-
-
-
+                              <Button
                                 size="sm"
                                 variant="secondary"
                                 onClick={() => handleTranslateKey(key)}

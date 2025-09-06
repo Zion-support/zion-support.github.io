@@ -1,3 +1,4 @@
+
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
 import {useToast} from "@/hooks/use-toast"
@@ -17,6 +18,22 @@ import {Sparkles, Loader2} from 'lucide-react'
 import {z} from "zod"
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary"
 const serviceStepSchema = z.object({
+export function QuoteRequestForm() {
+  const router = useRouter()
+  const { toast } = useToast()
+  const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [autoFillLoading, setAutoFillLoading] = useState(false)
+  const [autoFillOpen, setAutoFillOpen] = useState(false)
+
+export function QuoteRequestForm() {
+  const router = useRouter(),
+  const { toast } = useToast(),
+  const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [autoFillLoading, setAutoFillLoading] = useState(false),
+  const [autoFillOpen, setAutoFillOpen] = useState(false),
+  
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -29,12 +46,17 @@ const serviceStepSchema = z.object({
     budget: {
       amount: 0
       type: "fixed"
+
+
     contactInfo: {
       name: ""
       email: ""
       phone: ""
       company: ""
     }
+
+  )
+}
 
 
 

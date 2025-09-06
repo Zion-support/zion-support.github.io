@@ -8,8 +8,6 @@
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
-
-
             <nav className="mb-8">
 
               <Link href="/resources" className="text-cyan-400 hover: text-cyan-300 transition-colors">
@@ -17,24 +15,18 @@
                 ← Back to Resources
               </Link>
             </nav>
-
-
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
               <p className="text-xl text-cyan-400 font-semibold mb-4">{caseStudy.company}</p>
               <p className="text-white/80 text-lg max-w-3xl mx-auto">{caseStudy.description}</p>
             </header>
-
-
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Key Results</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
                 <p className="text-white/90 text-lg">{caseStudy.results}</p>
               </div>
             </section>
-
-
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Detailed Analysis</h2>
               <div className="space-y-6">
@@ -67,8 +59,6 @@
                 <div className="bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20">
                   <h3 className="text-xl font-semibold text-yellow-400 mb-3">Business Impact</h3>
                   <p className="text-white/90">
-
-
                     These improvements directly translated to increased profitability and customer satisfaction.
                   </p>
                 </div>
@@ -78,7 +68,6 @@
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link 
-
             {/* Related Resources */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -98,8 +87,6 @@
                   <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Full Case Study</h3>
                   <p className="text-white/80 text-sm">Read the complete case study with detailed implementation insights.</p>
                 </Link>
-                <Link 
-                <Link
 
 
 
@@ -112,8 +99,6 @@
                 </Link>
               </div>
             </section>
-
-
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Implement Similar Solutions?</h2>
@@ -132,8 +117,6 @@
                   >
                     Get Started
                   </Link>
-                  <Link 
-                  <Link
 
 
 
@@ -251,8 +234,5 @@ function ResourceCaseStudyPage() {
             </section>;
           </div>;
         </main>;
-}
-    </>);
-}
 
 

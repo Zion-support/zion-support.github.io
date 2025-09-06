@@ -17,11 +17,6 @@
                 key={i}
                 className=&quot;absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 30 to - transparent & quot;
                 style={{
-                }}
-                animate={{opacity: [0.3, 0.8, 0.3]}}
-                transition={{duration: 3;
-                  repeat: Infinity;
-                  delay: i * 0.5}}
         {/* AI neural network overlay */}
 {variant === 'ai' && (
           <div className=&quot;absolute inset - 0&quot;>;

@@ -81,9 +81,6 @@ export function PartnerResources() {
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
-
-
-
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>
@@ -112,15 +109,9 @@ export function PartnerResources() {
                   >;
                     <Download className="h - 4 w - 4" />;
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
+                    {resource && resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>;
                 </CardContent>;
-              </Card>))}
-          </div>;
-        </CardContent>;
-      </Card>;
-      <Card className="bg - zion - blue - dark border - zion - blue - light">;
-        <CardHeader>;
-          <CardTitle > Promotion Guidelines</CardTitle>;
           <CardDescription>;
             Best practices for promoting the Zion AI Marketplace;
           </CardDescription>;
@@ -137,12 +128,9 @@ export function PartnerResources() {
           </Button>;
         </CardContent>;
       </Card>;
-}
-}
 
     </div>);
 
 }
-
+    </div>);
 }
-

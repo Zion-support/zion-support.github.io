@@ -28,12 +28,6 @@
     mobile: string;
     email: string;
     address: string;
-
-    website: string;
-  }
-  customers: number;
-  rating: number;
-    {
         'Demand forecasting',
         'Inventory optimization',
         'Route optimization',
@@ -207,127 +201,21 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
+      'Custom algorithmsCompliance tools'
+    ];
+    technology: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];
+    integrations: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'];
+    useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];
+    roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.'
     competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
     marketSize: '$45B supply chain management market', growthRate: '28% annual growth'
     variant: 'logistics'
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true, implementationDetails: 'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.'
-    launchDate: '2025-01-26', customers: 156
-    rating: 4.8
-
-      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
-      'Custom algorithmsCompliance tools'
-    ];
-
-    popular: true, icon: '📦',
-
-    ];
-
-    popular: false, icon: '⚛️',
-
-    ];
-
-    popular: true, icon: '🚛',
-
-    ];
-
-    popular: false, icon: '⛓️',
-
-    ];
-
     marketSize: '$28B warehouse automation market', growthRate: '38% annual growth'
     variant: 'ai-supply-chain-enterprise'
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true, implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.'
-    launchDate: '2025-02-18', customers: 178
-    rating: 4.8
-
     reviews: 112
-import { ServiceVariant } from '../types/service-variants',;
-export interface AdvancedLogisticsSupplyChainSolution2025 {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-;
-export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
-  {;
-    id: 'ai-powered-supply-chain-optimization',;
-    name: 'AI-Powered Supply Chain Optimization',;
-    tagline: 'Intelligent supply chain planning and optimization',;
-    price: '$1,299',;
-    period: '/month',;
-    description: 'Advanced AI-powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',;
-    features: [;
-      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration',;
-      'Custom algorithmsCompliance tools';
-    ],;
-    popular: true,;
-    icon: '📦',;
-    color: 'from-blue-600 via-indigo-600 to-purple-600',;
-    textColor: 'text-blue-400',;
-    link: 'https://ziontechgroup.com/ai-powered-supply-chain-optimization',;
-    marketPosition: 'Leading AI supply chain optimization platform with advanced analytics',;
-    targetAudience: 'Manufacturing companies, Retail chains, E-commerce platforms, Logistics providers, Distribution centers',;
-    trialDays: 30,;
-    setupTime: '15-20 days',;
-    category: 'Logistics & Supply Chain',;
-    realService: true,;
-    technology: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'],;
-    integrations: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'],;
-    useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'],;
-    roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.',;
-    competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'],;
-    marketSize: '$45B supply chain management market',;
-    growthRate: '28% annual growth',;
-    variant: 'logistics',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -510,3 +398,4 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     reviews: 112;
   }
 ];
+;

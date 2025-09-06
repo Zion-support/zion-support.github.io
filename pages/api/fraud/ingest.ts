@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
 import { classifyWithGPT } from "../../../utils/fraud/gpt";
@@ -28,22 +27,13 @@ export default async function handler(
     res && res.status(405).json({ error: "Method not allowed" });
     return;
 
-  }
-  try {
-
-    const body = req.body |{}
-    const source = body.source as MonitoredSource;
-    if (!allowedSources.includes(source)) {
-      res.status(400).json({ error: "Invalid source" });
-      return;
-    }
-    const userId = typeof body.userId === "string" ? body.userId : null;
-    const content = typeof body.content === "string" ? body.content : null;
       return;
     }
 
     const userId = typeof body && body.userId === "string" ? body && body.userId : null;
     const content = typeof body && body.content === "string" ? body && body.content : null;
+
+
     const metadata =
       body && body.metadata && typeof body && body.metadata === "object" ? body && body.metadata : null;
       res.status(400).json({ error: 'Invalid source' });
@@ -253,7 +243,6 @@ export default async function handler(req, res) {
       .json({ error: "Internal error", details: e?.message || String(e) });
 
 
-      .json({ error: "Internal error", details: e?.message |String(e) });
   }
 }
     res

@@ -1,6 +1,3 @@
-export default function DisputesIndexPage() {
-  const { data } = useSWR('/api/disputes', fetcher)
-  const disputes = data?.disputes |[]
 import useSWR from 'swr',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 import Link from 'next / link',
@@ -12,8 +9,6 @@ function DisputesIndexPage() {
   const { data } = useSWR ('/api / disputes', fetcher),
   const disputes = data?.disputes || [],
   return (
-
-
           <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
 
 
@@ -89,46 +84,9 @@ function DisputesIndexPage() {
           </table>;
         </div>;
       </div>;
-    </EnhancedLayout>);
-        </div>
-        <div className=&quot;overflow-auto border rounded&quot;>
-          <table className=&quot;min-w-full text-sm&quot;>
-            <thead className=&quot;bg-gray-50 dark:bg-gray-900&quot;>
-              <tr>
-                <th className=&quot;text-left px-3 py-2&quot;>Case ID</th>
-                <th className=&quot;text-left px-3 py-2&quot;>Project</th>
-                <th className=&quot;text-left px-3 py-2&quot;>Created At</th>
-                <th className=&quot;text-left px-3 py-2&quot;>Status</th>
-
-  return (
-    <EnhancedLayout>
-      <div className="max-w-4xl mx-auto">
-        <div className="flex items-center justify-between mb-4">
-          <h1 className="text-2xl font-semibold">My Disputes</h1>
-          <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</a></Link>
-          <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
-        </div>
-        <div className="overflow-auto border rounded">
-          <table className="min-w-full text-sm">
-            <thead className="bg-gray-50 dark:bg-gray-900">
-              <tr>
-                <th className="text-left px-3 py-2">Case ID</th>
-                <th className="text-left px-3 py-2">Project</th>
-                <th className="text-left px-3 py-2">Created At</th>
-                <th className="text-left px-3 py-2">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {disputes.map((d: any) => (
-                  <td className="px-3 py-2">{d.projectId}</td>
-                  <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
-                  <td className="px-3 py-2">{d.status}</td>
-                </tr>
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-    </EnhancedLayout>);
 }
 
 

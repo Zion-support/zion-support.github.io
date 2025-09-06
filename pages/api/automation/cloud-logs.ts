@@ -14,7 +14,6 @@ return results;
     return [];
   }
 }
-    // fall through to GitHub;
   }
 const remote = await fetchFromGitHub()
 
@@ -114,14 +113,13 @@ export default async function handler(req, res) {
 }
 }
 };
-    // fall through to GitHub;
-  }
-
-}
-
 const remote = await fetchFromGitHub (),
   return res.status (200).json ({ logs: remote });
 }
 ;
 
+
+  return res.status(200).json({ logs: remote });
+
+};
 

@@ -1,4 +1,3 @@
-
 			pricePerMonthUSD={279}
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
@@ -23,7 +22,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
@@ -57,5 +55,3 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-

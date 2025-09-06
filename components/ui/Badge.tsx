@@ -4,11 +4,6 @@
   textContent: string | null;
   style: { [key: string]: string }
 }
-  }
-);
-export interface BadgeProps
-  extends React.HTMLAttributes<HTMLDivElement>
-    VariantProps<typeof badgeVariants> {}
   return (
     <div className={cn(badgeVariants({ variant }), className)} {...props} />;
   );

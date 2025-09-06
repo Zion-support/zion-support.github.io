@@ -7,12 +7,12 @@
 }
 
 export function AIEnhancementDialog({;
+import React from 'react';
   title;
   isOpen;
   onClose;
   onApply;
   defaultOptions;
-
 import React from 'react',;
 import {;
   Dialog,;
@@ -39,22 +39,8 @@ interface AIEnhancementDialogProps {;
   initialContent?: string
 }
 export function AIEnhancementDialog({
-  title;
-  isOpen;
-  onClose;
-  onApply;
-  defaultOptions;
-
-  initialContent;
-}: AIEnhancementDialogProps) {;
-  const handleApply = (content: string) => {;
-    onApply(content),;
-    onClose();
-  };
-
 
   },
-
 
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;

@@ -183,7 +183,6 @@ import React from 'react';
           </div>;
           <Badge variant="outline" className="bg-background">;
             {formatDistanceToNow(postedDate, { addSuffix: true })}
-}
 
 
 

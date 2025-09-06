@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -137,10 +136,12 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
           id: 'ultimate-redundancy',
+
           name: 'Ultimate Redundancy System',
           description: 'Advanced redundancy with automated failover',
           status: 'active',
           complexity: 'critical',
+
           lastUpdated: '2025-01-16'
         },
         { 
@@ -159,8 +160,6 @@ const BlueprintsIndexPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
       ]
     },
     {
@@ -182,10 +181,12 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
           id: 'canary-deployment',
+
           name: 'Canary Deployment',
           description: 'Gradual rollout with traffic splitting',
           status: 'active',
           complexity: 'high',
+
           lastUpdated: '2025-01-13'
         },
         { 
@@ -193,10 +194,12 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
           id: 'rolling-update',
+
           name: 'Rolling Update Strategy',
           description: 'Sequential instance updates with health monitoring',
           status: 'active',
           complexity: 'medium',
+
           lastUpdated: '2025-01-12'
         }
           } catch (error) {
@@ -204,8 +207,6 @@ const BlueprintsIndexPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
       ]
     },
     {
@@ -216,10 +217,12 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
           id: 'health-check-system',
+
           name: 'Health Check System',
           description: 'Comprehensive health monitoring and alerting',
           status: 'active',
           complexity: 'medium',
+
           lastUpdated: '2025-01-11'
         },
         { 
@@ -238,6 +241,7 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
           id: 'logging-aggregation',
+
           name: 'Logging Aggregation',
           description: 'Centralized logging with search and analytics',
           status: 'active',
@@ -246,17 +250,6 @@ const BlueprintsIndexPage: React.FC = () => {
         }
       ]
     }
-    {
-      category: 'Deployment Patterns'
-      blueprints: [
-          id: 'zero-downtime-deployment',
-          name: 'Zero-Downtime Deployment',
-          description: 'Blue-green deployment with health checks',
-          status: 'active',
-          complexity: 'medium',
-          lastUpdated: '2025-01-14'
-        },
-          id: 'canary-deployment',
 
           } catch (error) {
     console.error("Error:", error);
@@ -348,9 +341,6 @@ const BlueprintsIndexPage: React.FC = () => {
   }
 }
   };
-
-
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white">
       <Head>
@@ -359,11 +349,9 @@ const BlueprintsIndexPage: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
-
-
         <div className="mb-8">
           <Link href="/reports" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-             Back to Reports
+            ← Back to Reports
           </Link>
           <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">
             System Blueprints
@@ -372,8 +360,6 @@ const BlueprintsIndexPage: React.FC = () => {
             Architectural patterns and deployment strategies for scalable systems
           </p>
         </div>
-
-
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-indigo-400">Total Blueprints</h3>
@@ -396,8 +382,6 @@ const BlueprintsIndexPage: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Conceptual phase</p>
           </div>
         </div>
-
-
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Categories</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -408,9 +392,6 @@ const BlueprintsIndexPage: React.FC = () => {
                   {category.blueprints.map((blueprint, blueprintIndex) => (
                     <div key={blueprintIndex} className="border-l-2 border-indigo-400/30 pl-4">
                       <div className="flex justify-between items-start mb-2">
-                          href={`/reports/blueprints/${blueprint.id}`}
-                          className="text-white font-medium hover:text-indigo-300 transition-colors"
-                        >
 
 ;
   return (
@@ -514,14 +495,10 @@ const BlueprintsIndexPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                         </span>
                         <span className="text-gray-400">{blueprint.lastUpdated}</span>
                       </div>
                     </div>
-
-
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Blueprints</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -553,21 +530,17 @@ const BlueprintsIndexPage: React.FC = () => {
 
                     className="text-indigo-400 hover:text-indigo-300 text-sm transition-colors"
                   >
-                    View Blueprint 
+                    View Blueprint →
                   </Link>
                 </div>
               </div>
-
-
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Benefits</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
             <div className="text-center">
-              <div className="text-6xl font-bold text-indigo-400 mb-4"></div>
+              <div className="text-6xl font-bold text-indigo-400 mb-4">🏗️</div>
               <h3 className="text-xl font-semibold mb-2 text-white">Proven Architecture</h3>
               <p className="text-gray-300 mb-6">
-                Our blueprints provide battle-tested architectural patterns that ensure 
-                Our blueprints provide battle-tested architectural patterns that ensure
 
 
 
@@ -612,8 +585,6 @@ const BlueprintsIndexPage: React.FC = () => {
           >
             All Reports
           </Link>
-          <Link 
-          <Link
 
 
 
@@ -623,8 +594,6 @@ const BlueprintsIndexPage: React.FC = () => {
           >
             Performance
           </Link>
-          <Link 
-          <Link
 
 
 
@@ -638,7 +607,6 @@ const BlueprintsIndexPage: React.FC = () => {
       </div>
     </div>
   );
-
 ;
 
 

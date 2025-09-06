@@ -3,7 +3,6 @@ import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 
-
   } catch {
     return {}
   }
@@ -77,7 +76,3 @@ export default function handler(req, res) {
   }
 }
 }
-}
-}
-
-

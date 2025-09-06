@@ -1,4 +1,3 @@
-
 import React from "react";
 import {CheckCircle, Circle, ArrowRight} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -105,6 +104,9 @@ export function OnboardingTracker(): any ({ ;
           style={{ width: `${progress}%` }}
         ></div>
       </div>
+  title?: string;
+  className?: string;
+}
       {/* Steps list */}
       <div className="space-y-3">;
         {steps && steps.map((step) => (;
@@ -118,7 +120,6 @@ export function OnboardingTracker(): any ({ ;
             )}
           </div>;
         ))}
-}
 import React from './react';
 import { CheckCircle, Circle, ArrowRight } from './lucide-react';
 import { cn } from '@/lib / utils';

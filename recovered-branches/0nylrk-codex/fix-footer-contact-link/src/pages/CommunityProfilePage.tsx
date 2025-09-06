@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -15,9 +14,6 @@ import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
 import UserBadges from "@/components/community/UserBadges",
 import ReputationDisplay from "@/components/community/ReputationDisplay",
-
-
-
 // Mock user data
 
 const mockUser: CommunityUser = {
@@ -180,12 +176,6 @@ export default function CommunityProfilePage() {;
   const [user, setUser] = useState<CommunityUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState<ForumPost[]>([]);
-
-
-  useEffect(() => {;
-    // In a real app, we would fetch the user data here;
-    // For now, we'll just use the mock data;
-
     setUser(mockUser);
     setPosts(userPosts);
     setIsLoading(false);
@@ -209,9 +199,6 @@ export default function CommunityProfilePage() {;
       </AppLayout>;
     );
   }
-
-
-
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
@@ -279,16 +266,7 @@ export default function CommunityProfilePage() {;
                         <path fillRule="evenodd" d="M8 && M8.603 3 && 3.799A4.49 4 && 4.49 0 0112 2 && 2.25c1.357 0 2 && 2.573.6 3 && 3.397 1 && 1.549a4.49 4 && 4.49 0 013 && 013.498 1 && 1.307 4 && 4.491 4 && 4.491 0 011 && 011.307 3 && 3.497A4.49 4 && 4.49 0 0121 && 0121.75 12a4 && 12a4.49 4 && 4.49 0 01-1 && 1.549 3 && 3.397 4 && 4.491 4 && 4.491 0 01-1 && 1.307 3 && 3.497 4 && 4.491 4 && 4.491 0 01-3 && 3.497 1 && 1.307A4.49 4 && 4.49 0 0112 21 && 21.75a4.49 4 && 4.49 0 01-3 && 3.397-1 && 1.549 4 && 4.49 4 && 4.49 0 01-3 && 3.498-1 && 1.306 4 && 4.491 4 && 4.491 0 01-1 && 1.307-3 && 3.498A4.49 4 && 4.49 0 012 && 012.25 12c0-1 && 1.357.6-2 && 2.573 1 && 1.549-3 && 3.397a4.49 4 && 4.49 0 011 && 011.307-3 && 3.497 4 && 4.49 4 && 4.49 0 013 && 013.497-1 && 1.307zm7.007 6 && 6.387a.75 && 75.75 0 10-1 && 1.22-.872l-3 && 3.236 4 && 4.53L9.53 12 && 12.22a.75 && 75.75 0 00-1 && 1.06 1 && 1.06l2.25 2 && 2.25a.75 && 75.75 0 001 && 001.14-.094l3 && 094l3.75-5 && 5.25z" clipRule="evenodd" />;
                       </svg>;
                     </span>;
-                  )}
-                </CardTitle>;
-                {user && user.role && (;
-                  <Badge variant="outline" className="mt-1">;
-                    {user && user.role}
-                  </Badge>;
-                )}
-                {user && user.isModerator && (;
-                  <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
-                )}
+  return (
                   )}
                 </CardTitle>;
                 {user && user.role && (;
@@ -303,9 +281,6 @@ export default function CommunityProfilePage() {;
       </div>
     </AppLayout>
   )
-}
-
-
                 {user.isModerator && (;
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
                 )}
@@ -388,5 +363,6 @@ export default function CommunityProfilePage() {;
 
 
 }
+;
     </AppLayout>);
 }

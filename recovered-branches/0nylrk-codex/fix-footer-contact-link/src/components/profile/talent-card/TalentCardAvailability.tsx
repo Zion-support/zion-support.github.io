@@ -1,6 +1,3 @@
-
-  }
-  };
 import {Clock} from "lucide-react";
 interface TalentCardAvailabilityProps {;
   availabilityType: string;
@@ -27,16 +24,11 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
     switch (status) {;
       case 'full-time':;
       case 'part-time':;
+        return 'bg-yellow-500/20 text-yellow-400';
+        return 'Full-time';
+      case 'part-time':;
         return 'Part-time';
-      case 'project-based':
-        return 'Project'
-      default:
-        return status
     }
-
-
-
-
 
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
@@ -45,6 +37,9 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
     </div>
   )
 }
+  }
+
+  return (
 export /**
  * TalentCardAvailability - Function description
  */

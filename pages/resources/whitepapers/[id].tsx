@@ -39,7 +39,6 @@ const whitepapers = {
       ],
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }
-
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -129,19 +128,15 @@ function WhitepaperPage() {
           <header className="text-center mb-16">
             <div className="mb-6">
               <span className="px-4 py-2 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30">
-
-
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
               <span>By {whitepaper.author}</span>
-              <span></span>
+              <span>•</span>
               <span>{whitepaper.pages} pages</span>
-              <span></span>
+              <span>•</span>
               <span>{whitepaper.publishDate}</span>
             </div>
           </header>
-
-
           <div className="max-w-4xl mx-auto">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Executive Summary</h2>
@@ -161,8 +156,6 @@ function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             <section className="mb-12">
               <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-2xl p-8 border border-fuchsia-500/20 text-center">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Download?</h2>
@@ -188,8 +181,6 @@ function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -506,8 +497,5 @@ export default function WhitepaperPage(req, res) {
           </div>;
         </main>;
       </div>;
-}
-    </>);
-}
 
 

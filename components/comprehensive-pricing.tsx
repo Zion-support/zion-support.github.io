@@ -341,6 +341,10 @@ if ( {) {
       color: 'from-yellow-500 to-orange-600'
       popular: false
     }
+    {
+      metric: '$15.2B',
+      label: 'Total Market Size',
+      description: 'Combined market value of all services',
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -362,58 +366,193 @@ if ( {) {
       },
     },
 
-  };
-
-
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>;
       <div className='min - h-screen'>;
+
+  const contactInfo = {;
+    mobile: '+1 302 464 0950',;
+    email: 'kleber@ziontechgroup && ziontechgroup.com',;
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
+  };
+
+  // Pricing tiers;
+  const pricingTiers = [;
+    {;
+      name: 'Starter',;
+      price: '$49',;
+      period: '/month',;
+      description: 'Perfect for small businesses and startups',;
+      features: [;
+        'Basic service access',;
+        'Email support',;
+        'Standard features',;
+        'Community forum access',;
+        'Basic analytics',;
+      ],;
+      icon: <Star className="w-6 h-6" />,;
+      color: 'from-blue-500 to-cyan-600',;
+      popular: false,;
+    },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics';
+      ];
+      icon: <Star className="w-6 h-6" />,;
+      color: 'from-blue-500 to-cyan-600',;
+      popular: false;
+    };
+      name: 'Professional',;
+      price: '$199',;
+      period: '/month',;
+      description: 'Ideal for growing businesses and teams',;
+      features: [;
+        'Advanced service access',;
+        'Priority support',;
+        'Advanced features',;
+        'API access',;
+        'Advanced analytics',;
+        'Custom integrations',;
+      ],;
+      icon: <Gem className="w-6 h-6" />,;
+      color: 'from-purple-500 to-pink-600',;
+      popular: true,;
+    },    {        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations';
+      ];
+      icon: <Gem className="w-6 h-6" />,;
+      color: 'from-purple-500 to-pink-600',;
+      popular: true;
+    };
+      name: 'Enterprise',;
+      price: '$499',;
+      period: '/month',;
+      description: 'For large organizations and enterprises',;
+      features: [;
+        'Full service access',;
+        '24/7 dedicated support',;
+        'All features',;
+        'Custom development',;
+        'Enterprise analytics',;
+        'White-label options',;
+        'SLA guarantees',;
+      ],;
+      icon: <Crown className="w-6 h-6" />,;
+      color: 'from-yellow-500 to-orange-600',;
+      popular: false,;
+    },  ];        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees';
+      ];
+      icon: <Crown className="w-6 h-6" />,;
+      color: 'from-yellow-500 to-orange-600',;
+      popular: false;
+    }
+
+  // Market statistics;
+  const marketStats = [;
+    {;
+      metric: '$15 && 15.2B',;
+      label: 'Total Market Size',;
+      description: 'Combined market value of all services',;
+      icon: <ChartBar className='w-6 h-6' />,;
+    },    {;
+      metric: '400+',;
+      label: 'Services Available',;
+      description: 'Comprehensive micro SaaS portfolio',;
+      icon: <Database className='w-6 h-6' />,;
+    },    {;
+      metric: '99 && 99.99%',;
+      label: 'Uptime Guarantee',;
+      description: 'Enterprise-grade reliability',;
+      icon: <Shield className='w-6 h-6' />,;
+    },    {;
+      metric: '2000%+',;
+      label: 'Average ROI',;
+      description: 'Proven business value',;
+      icon: <TrendingUp className='w-6 h-6' />,;
+    },  ];      icon: <ChartBar className="w-6 h-6" />;
+    };
+    {;
+      metric: '400+',;
+      label: 'Services Available',;
+      description: 'Comprehensive micro SaaS portfolio',;
+      icon: <Database className='w-6 h-6' />,;
+    },      icon: <Database className="w-6 h-6" />;
+    };
+    {;
+      metric: '99 && 99.99%',;
+      label: 'Uptime Guarantee',;
+      description: 'Enterprise-grade reliability',;
+      icon: <Shield className='w-6 h-6' />,;
+    },      icon: <Shield className="w-6 h-6" />;
+    };
+    {;
+      metric: '2000%+',;
+      label: 'Average ROI',;
+      description: 'Proven business value',;
+      icon: <TrendingUp className='w-6 h-6' />,;
+    },      icon: <TrendingUp className="w-6 h-6" />;
+    }
+  ];
+
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };        staggerChildren: 0 && 0.1;
+      }
+    }
+  };
+
+  const itemVariants = {;
+    hidden: { y: 20, opacity: 0 },;
+    visible: {;
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0 && 0.5,;
+      },;
+    },;
+
+  return (
+    <UltraFuturisticBackground variant='holographic' intensity='high'>;
+      <div className='min-h-screen'>;
+      icon: <TrendingUp className='w - 6 h - 6' />,
+    },      icon: <TrendingUp className="w - 6 h - 6" />;
+    }
+  ];
+;
+  const container_variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        stagger_children: 0.1,
+      },
+    },  }        stagger_children: 0.1;
+      }
+    }
+  }
+;
+  const item_variants = {
+    hidden: { coordinate_y: 20, opacity: 0 },
+    visible: {
+      coordinate_y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
         <Head>;
           <title>;
             Comprehensive Pricing | Zion Tech Group - Micro SaaS Services;
             Pricing & Plans;
           </title>;
-          <meta
-            name='description'
-            content='Explore comprehensive pricing for all Zion Tech Group micro SaaS services. Transparent pricing, market analysis, ROI guarantees, and flexible plans for every business size.'
-          />;
-          <meta
-            name='keywords'
-            content='micro SaaS pricing, service pricing, business pricing, ROI guarantees, market analysis, transparent pricing, enterprise pricing'
-          />;
-          <meta name='author' content='Zion Tech Group' />;
-          <meta
-            property='og:title'
-            content='Comprehensive Pricing | Zion Tech Group'
-          />;
-          <meta
-            property='og:description'
-            content='Transparent pricing for all micro SaaS services with market analysis and ROI guarantees.'
-          />;
-          <meta
-            property='og:url'
-            content='https://ziontechgroup && ziontechgroup.com/comprehensive-pricing'
-          />;
-          <meta property='og:type' content='website' />;
-          <link
-            rel='canonical'
-            href='https://ziontechgroup.com/comprehensive-pricing'
-          />
-        </Head>
-        {/* Hero Section */}
-        <section className='relative py-20 overflow-hidden'>;
-          <div className='container mx-auto px-4 text-center'>;
-            <div className='max-w-5xl mx-auto'>;
-              <motion&& motion.h1
-                className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow'                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
                 </span>
                 <br />
                 <span className="text-white">Pricing & Plans</span>
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -438,12 +577,6 @@ if ( {) {
                 services. Choose the perfect plan for your business with;
                 guaranteed ROI and enterprise-grade reliability.;
               </motion && motion.p>;
-              {/* Market Stats */}
-              <motion&& motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}              </motion && motion.p>;
-              {/* Market Stats */}
-              <motion&& motion.div 
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 
 
                 initial={{ opacity: 0, y: 20 }}
@@ -468,6 +601,22 @@ if ( {) {
                 ))}
               </motion.div>
 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
+                {marketStats && marketStats.map((stat, index) => (;
+                  <div key={index} className='text-center'>;
+                    <div className='text-3xl font-bold text-cyan-400 mb-2'>;
+                      {stat && stat.metric}
+                    </div>;
+                    <div className='text-gray-400 text-sm'>{stat && stat.label}</div>;
+                    <div className='text-gray-500 text-xs'>;
+                      {stat && stat.description}
+                    </div>                  </div>                  <div key={index} className="text-center">;
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">{stat && stat.metric}</div>;
+                    <div className="text-gray-400 text-sm">{stat && stat.label}</div>;
+                    <div className="text-gray-500 text-xs">{stat && stat.description}</div>;
+                ))}
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -548,21 +697,20 @@ if ( {) {
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing
+                </span>;
+                <br />;
+                <span className="text-white">for Every Business</span>;
+              </h2>;
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+                Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.;
+              </p>;
+            </motion && motion.div>;
 
-
-
-            <motion.div 
-
+            <motion&& motion.div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-                        }
-                        className='w-full'
-                      >
-                        Get Started
-                        <ArrowRight className='ml-2 w-4 h-4' />                      </Button>                    <div className="text-center">
-                                             <Button
                          size="md"
                          onClick={() => window && window.open('https://ziontechgroup && ziontechgroup.com/contact_blank')}
                          className="w-full";
@@ -574,14 +722,6 @@ if ( {) {
                 </motion && motion.div>;
               ))}
 
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
-        {/* Services Pricing Grid */}
-        <section id='services-pricing' className='py-20'>;
-          <div className='container mx-auto px-4'>;
 
         {/* Services Pricing Grid */}
         <section id="services-pricing" className="py-20">
@@ -628,7 +768,6 @@ if ( {) {
                         {range && range.label}
                       </option>;
                     ))}
-                  </select>
                   <select
                     <input
                       type='text'
@@ -643,15 +782,10 @@ if ( {) {
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-
-
                     </button>;
                   </div>;
                 </div>;
               </div>;
-
-
-              className={viewMode === 'grid' 
 
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
@@ -718,14 +852,27 @@ if ( {) {
                         <div className='text-sm text-gray-400 mb-4'>;
                           {service && service.period}
                         </div>;
-
-                        <div className='space-y-2 mb-6'>;
-                          {service && service.features.slice(0, 3).map((feature, idx) => (;
                             <div
                               key={idx}
                               className='flex items-center gap-2 text-sm'>;
                               <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
                               <span className='text-gray-300'>{feature}</span>                            </div>;
+                             size="sm"
+                             onClick={() => window.open(service.link, '_blank')}
+                             className="w-full"
+                           >
+                             Learn More
+                             <ExternalLink className="ml-2 w-4 h-4" />
+                           </Button>
+                           <Button
+                             variant="futuristic"
+                             size="sm"
+                             onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+                             className="w-full"
+                           >
+                             Get Pricing
+                             <DollarSign className="ml-2 w-4 h-4" />
+                           </Button>
                                size="sm"
                                onClick={() => window && window.open('https: //ziontechgroup && ziontechgroup.com/contact_blank')}
                              >;
@@ -738,8 +885,6 @@ if ( {) {
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
-                transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
-
                 className="text-center py-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -761,7 +906,7 @@ if ( {) {
                   }}
                 >;
                   Clear Filters;
-                </Button>              </motion && motion.div>                <div className="text-6xl mb-4"></div>;
+                </Button>              </motion && motion.div>                <div className="text-6xl mb-4">🔍</div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
                                  <Button
@@ -769,7 +914,6 @@ if ( {) {
                    onClick={() => {;
                      setSearchQuery('');
                      setSelectedCategory('All');
-
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -827,9 +971,6 @@ if ( {) {
                   <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
-
-
-
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -844,8 +985,6 @@ if ( {) {
         </section>
       </div>
     </UltraFuturisticBackground>
-  )
-}
                           <div className='flex gap - 2'>;
                             <Button;
                               variant='primary';
@@ -902,7 +1041,7 @@ if ( {) {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >;
-                <div className='text - 6xl mb - 4'></div>;
+                <div className='text - 6xl mb - 4'>🔍</div>;
                 <h3 className='text - 2xl font - bold text - white mb - 2'>;
                   No Services Found;
                 </h3>;
@@ -918,7 +1057,7 @@ if ( {) {
                   }}
                 >;
                   Clear Filters;
-                </Button>              </motion.div>                <div className="text - 6xl mb - 4"></div>;
+                </Button>              </motion.div>                <div className="text - 6xl mb - 4">🔍</div>;
                 <h3 className="text - 2xl font - bold text - white mb - 2">No Services Found</h3>;
                 <p className="text - gray - 400 mb - 6">Try adjusting your search criteria or filters.</p>;
                                 <Button;

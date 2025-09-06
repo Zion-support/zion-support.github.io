@@ -1,3 +1,6 @@
+import React from 'react';
+interface BlogProps {
+  // Add props here as needed
 export default function Blog({ }: BlogProps) {
   return (
     <div>

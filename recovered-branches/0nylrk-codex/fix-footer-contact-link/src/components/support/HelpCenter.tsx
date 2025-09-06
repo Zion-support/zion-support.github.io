@@ -34,23 +34,25 @@ export default function HelpCenter() {
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
-
-
-
-
-
   
   const handleCategorySelect = (categoryId: string) => {
-    (setSelectedCategory(categoryId), setSelectedArticle(null));
-  }
+    setSelectedCategory(categoryId),
+    setSelectedArticle(null)
+  },
+  
   const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId);
-  }
+    setSelectedArticle(articleId)
+  },
+  
   const handleBackToCategories = () => {
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  }
+    setSelectedCategory(null),
+    setSelectedArticle(null)
+  },
+  
   const handleBackToArticles = () => {
+    setSelectedArticle(null)
+  },
+  
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -87,31 +89,10 @@ import { HelpArticleView } from "./HelpArticleView",;
 import { HELP_CATEGORIES } from "./help-content",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { Search } from "lucide-react",;
-;
 export default function HelpCenter() {;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
   const [searchQuery, setSearchQuery] = useState(""),;
-  ;
-  const handleCategorySelect = (categoryId:string) => {;
-    setSelectedCategory(categoryId),;
-    setSelectedArticle(null);
-  },;
-  ;
-  const handleArticleSelect = (articleId:string) => {;
-    setSelectedArticle(articleId);
-  },;
-  ;
-  const handleBackToCategories = () => {;
-    setSelectedCategory(null),;
-    setSelectedArticle(null),;
-  },;
-  ;
-  const handleBackToArticles = () => {;
-    setSelectedArticle(null),;
-  },;
-  ;
-  return (;
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
     setSelectedArticle(null);
@@ -176,7 +157,7 @@ export default function HelpCenter() {;
                     onClick={handleBackToCategories}
                     className="mb-4"
                   >
-                     All Categories
+                    ← All Categories
                   </Button>
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
@@ -369,4 +350,19 @@ export default function HelpCenter() {;
                   <div>;
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>;
                     <p className="text-zion-slate-light">;
+                    </p>;
+                  </div>;
+                </div>;
+              </div>;
+            </TabsContent>;
+                      Submit Feedback;
+                    </Button>;
+                  </form>;
+                </div>;
+              </div>;
+            </TabsContent>;
+          </Tabs>;
+        </div>;
+      </div>;
 }
+;

@@ -63,6 +63,8 @@ export function HelpCategoryList({
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       {filteredCategories && filteredCategories.map(category => (;
 
+    : categories;
+
         <Card
           key={category && category.id}
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -78,30 +80,6 @@ export function HelpCategoryList({
           <CardContent>;
             <p className="text-sm text-zion-slate-light">;
               {category && category.articles.length} articles;
-    ),;
-  }
-;
-  return (;
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-      {filteredCategories.map(category => (;
-        <Card;
-          key={category.id}
-          className="cursor-pointer hover:border-zion-purple/50 transition-colors";
-          onClick={() => onCategorySelect(category.id)}
-        >;
-          <CardHeader className="pb-2">;
-            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">;
-              {category.icon}
-            </div>;
-            <CardTitle>{category.name}</CardTitle>;
-            <CardDescription>{category.description}</CardDescription>;
-          </CardHeader>;
-          <CardContent>;
-            <p className="text-sm text-zion-slate-light">;
-              {category.articles.length} articles;
-            </p>;
-          </CardContent>;
-        </Card>;
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map(category => (
         <Card
@@ -123,6 +101,11 @@ export function HelpCategoryList({
           </CardContent>
         </Card>
       ))}
+
+    </div>;
+  );
+}
+
 import React from './react';
 import {
   Card,

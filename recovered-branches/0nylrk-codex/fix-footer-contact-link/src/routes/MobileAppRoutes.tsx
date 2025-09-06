@@ -35,9 +35,6 @@ const MobileAppRoutes = () => {;
     <Routes>;
       {/* Mobile App Routes */}
 
-};
-
-
 import { Route, Routes } from './react-router-dom';
 import MobileAppPage from "../pages / MobileAppPage";
 import MobileLaunchPage from "../pages / MobileLaunchPage";

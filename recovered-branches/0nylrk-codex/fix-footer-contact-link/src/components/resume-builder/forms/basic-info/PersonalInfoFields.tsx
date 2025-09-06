@@ -16,8 +16,6 @@ import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/compon
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
-
-
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
@@ -56,10 +54,11 @@ function PersonalInfoFields() {
               <Input placeholder="John Doe" {...field} />;
             </FormControl>;
             <FormMessage />;
-
-
         )}
-      />
+
+      />;
+
+
       <FormField
         control={control}
         name="title"
@@ -84,6 +83,7 @@ function PersonalInfoFields() {
             <FormMessage />;
           </FormItem>;
         )}
+        render={({ field }) => (
           <FormItem>;
             <FormLabel > Email</FormLabel>;
             <FormControl>;
@@ -96,4 +96,13 @@ function PersonalInfoFields() {
         control={control}
         name="email";
         render={({ field }) => (
-
+          <FormItem>;
+            <FormLabel > Phone</FormLabel>;
+            <FormControl>;
+              <Input placeholder="+1 234 567 8900" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>)}
+      />;
+    </div>);
+}

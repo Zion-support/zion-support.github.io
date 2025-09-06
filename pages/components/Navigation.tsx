@@ -184,88 +184,88 @@ const navigation_items = [;
       }
       {
       {
-        title: "Data Analytics"
-        href: "/data-analytics"
-        icon: BarChart3
-        description: "Advanced analytics platform"
-        popular: false
-      }
-    ]
-  }
+        title: "Data Analytics",
+        href: "/data - analytics",
+        icon: BarChart3,
+        description: "Advanced analytics platform",
+        popular: false,
+      },
+    ],
+  },
   {
-    title: "Solutions"
-    href: "/solutions"
-    icon: Target
-    submenu: [
+    title: "Solutions",
+    href: "/solutions",
+    icon: Target,
+    submenu: [;
       {
-        title: "Enterprise Solutions"
-        href: "/solutions/enterprise"
-        icon: Building
-        description: "Comprehensive enterprise solutions"
-      }
+        title: "Enterprise Solutions",
+        href: "/solutions / enterprise",
+        icon: Building,
+        description: "Comprehensive enterprise solutions",
+      },
       {
-        title: "Startup Solutions"
-        href: "/solutions/startup"
-        icon: Rocket
-        description: "Rapid deployment for startups"
-      }
+        title: "Startup Solutions",
+        href: "/solutions / startup",
+        icon: Rocket,
+        description: "Rapid deployment for startups",
+      },
       {
-        title: "Industry Solutions"
-        href: "/solutions/industry"
-        icon: BarChart3
-        description: "Industry-specific solutions"
-      }
+        title: "Industry Solutions",
+        href: "/solutions / industry",
+        icon: BarChart3,
+        description: "Industry - specific solutions",
+      },
       {
-        title: "Custom Solutions"
-        href: "/solutions/custom"
-        icon: Settings
-        description: "Tailored custom solutions"
-      }
-    ]
-  }
+        title: "Custom Solutions",
+        href: "/solutions / custom",
+        icon: Settings,
+        description: "Tailored custom solutions",
+      },
+    ],
+  },
   {
-    title: "Industries"
-    href: "/industries"
-    icon: Building
-    submenu: [
+    title: "Industries",
+    href: "/industries",
+    icon: Building,
+    submenu: [;
       {
-        title: "Healthcare"
-        href: "/industries/healthcare"
-        icon: Heart
-        description: "Medical AI and health tech"
-      }
+        title: "Healthcare",
+        href: "/industries / healthcare",
+        icon: Heart,
+        description: "Medical AI and health tech",
+      },
       {
-        title: "Finance"
-        href: "/industries/finance"
-        icon: DollarSign
-        description: "Fintech and financial services"
-      }
+        title: "Finance",
+        href: "/industries / finance",
+        icon: DollarSign,
+        description: "Fintech and financial services",
+      },
       {
-        title: "Manufacturing"
-        href: "/industries/manufacturing"
-        icon: Settings
-        description: "Industrial automation"
-      }
+        title: "Manufacturing",
+        href: "/industries / manufacturing",
+        icon: Settings,
+        description: "Industrial automation",
+      },
       {
-        title: "Retail"
-        href: "/industries/retail"
-        icon: ShoppingCart
-        description: "E-commerce and retail tech"
-      }
+        title: "Retail",
+        href: "/industries / retail",
+        icon: ShoppingCart,
+        description: "E - commerce and retail tech",
+      },
       {
-        title: "Education"
-        href: "/industries/education"
-        icon: BookOpen
-        description: "EdTech solutions"
-      }
+        title: "Education",
+        href: "/industries / education",
+        icon: BookOpen,
+        description: "EdTech solutions",
+      },
       {
-        title: "Real Estate"
-        href: "/industries/real-estate"
-        icon: Home
-        description: "PropTech innovations"
-      }
-    ]
-  }
+        title: "Real Estate",
+        href: "/industries / real - estate",
+        icon: Home,
+        description: "PropTech innovations",
+      },
+    ],
+  },
   {
       {
         title: "Blog"
@@ -275,11 +275,11 @@ const navigation_items = [;
       }
       {
       {
-        title: "White Papers"
-        href: "/white-papers"
-        icon: FileText
-        description: "In-depth research reports"
-      }
+        title: "White Papers",
+        href: "/white - papers",
+        icon: FileText,
+        description: "In - depth research reports",
+      },
       {
       {
         title: "FileTextation"
@@ -329,8 +329,6 @@ const navigation_items = [;
     ]
   }
 ];
-];
-
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
@@ -373,8 +371,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Main Navigation */}
-      <div className="container mx-auto px-4">;
-        <div className="flex justify-between items-center py-4">;
+      <div className="container mx - auto px - 4">;
+        <div className="flex justify - between items - center py - 4">;
           {/* Logo */}
                 AI & Technology Solutions;
               </div>;

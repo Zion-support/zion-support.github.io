@@ -23,10 +23,19 @@ export default function GrantsPage() {;
     region?: string;
     program?: string;
   }>({});
-  const [items, setItems] = useState<GrantApplication[]>([]);
-  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
   useEffect(() => {
 
+    const params = new URLSearchParams();
+    if (filters.sector) params.set('sector', filters.sector);
+    if (filters.status) params.set('status', filters.status);
+    if (filters.region) params.set('region', filters.region);
+    if (filters.program) params.set('program', filters.program);
+    fetch(`/api/grants?${params.toString()}`)
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;
+export default function GrantsPage() {;
+  const [items, setItems] = useState<GrantApplication[]>([]);
+  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
 
   useEffect(() => {;
     const params = new URLSearchParams();
@@ -39,8 +48,6 @@ export default function GrantsPage() {;
       .then(d => setItems(d && d.items || []));
       .catch(() => setItems([]));  }, [filters]);
   return (
-    <EnhancedLayout>      .then((r) => r.json())
-      .then((d) => setItems(d.items |[]))
       .catch(() => setItems([]))
 
     <EnhancedLayout>      .then((r) => r && r.json());
@@ -66,11 +73,43 @@ export default function GrantsPage() {;
           value={filters.sector |''}
           onChange={e =>
             setFilters(f => ({ ...f, sector: e.target.value |undefined }))
+export default /**
+ * GrantsPage - Function description
+ */
+function GrantsPage() {
+  const [items, set_items] = useState < GrantApplication[]>([]);
+  const [filters, set_filters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+;
+  useEffect (() => {
+    const params = new URLSearchParams ();
+    if (params.set ('sector', filters.sector)) {
+  $2
+}
+    if (params.set ('status', filters.status)) {
+  $2
+}
+    if (params.set ('region', filters.region)) {
+  $2
+}
+    if (params.set ('program', filters.program)) {
+  $2
+}
+    fetch (`/api / grants?${params.to_string ()}`);
+      .then (r => r.json ());
+      .then (d => set_items (d.items || []));
+      .catch (() => set_items ([]));  }, [filters]);
+;
+  return (
+    <EnhancedLayout>      .then ((r) => r.json ());
+      .then ((d) => set_items (d.items || []));
+      .catch (() => set_items ([]));
+  }, [filters]);
+;
+  return (
               Incubator;
             </a>;
           </Link>;
       </div>;
-
           }
         >
           <option value=''>All Stages</option>
@@ -88,20 +127,36 @@ export default function GrantsPage() {;
         <select
           className='border rounded p-2'
           }
-        >
-          <option value=''>All Programs</option>
-          <option value='grant'>Grant</option>
-          <option value='incubator'>Incubator</option>
-        </select>
-      </div>
-      <div className='grid gap-4'>
-        {items.map(g => (
-          <div
-            key={g.id}
+        >;
+          <option value=''>All Sectors</option>;
+          {categories && categories.map(c => (;
+            <option key={c} value={c}>;
+              {c}
+            </option>;
+          ))}
+        </select>;
+        <select
+          className='border rounded p-2'
+          }
+        >;
+          <option value=''>All Stages</option>;
+          {statuses && statuses.map(s => (;
+            <option key={s} value={s}>;
+              {s}
+            </option>;
+          ))}
+        </select>;
+        <input
+          className='border rounded p-2'
+          placeholder='Region'
+          }
+        />;
+        <select
+          className='border rounded p-2'
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
-                </div>
-              </div>
-              <div className='flex gap-2 items-center'>
+                </div>;
+              </div>;
+              <div className='flex gap - 2 items - center'>;
                 {g.program === 'incubator' && (
       <div className='grid gap-4'>;
         {items && items.map(g => (;
@@ -125,30 +180,54 @@ export default function GrantsPage() {;
                     Incubated by Zion;
                   </span>;
                 )}
-                {g.status === 'Approved' && (
-                  <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>
-                    Grant Winner
-                  </span>
+                {g && g.status === 'Approved' && (;
+                  <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
+                    Grant Winner;
+                  </span>;
                 )}
-                <span className='px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800'>
-                  {g.status}
-                </span>
-              </div>
-            </div>
-            <p className='mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3'>
-              {g.proposalSummary}
-            </p>
-            <div className='mt-3 text-sm text-gray-600 dark:text-gray-400'>
-              Budget: {g.budgetAmount} {g.budgetCurrency}
-            </div>
-          </div>
+                <span className='px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800'>;
+                  {g && g.status}
+                </span>;
+              </div>;
+            </div>;
+            <p className='mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3'>;
+              {g && g.proposalSummary}
+            </p>;
+            <div className='mt-3 text-sm text-gray-600 dark:text-gray-400'>;
+              Budget: {g && g.budgetAmount} {g && g.budgetCurrency}
+            </div>;
+          </div>;
         ))}
-        {items.length === 0 && (
-          <div className='text-sm text-gray-600'>No grants found.</div>
+        {items && items.length === 0 && (;
+          <div className='text-sm text-gray-600'>No grants found.</div>;
         )}
+      </div>;
+    </EnhancedLayout>;
+  );
+}
 
 
-  return (
-    <EnhancedLayout>
-
-
+                  <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
+                    Incubated by Zion;
+                  </span>)}
+                {g.status === 'Approved' && (
+                  <span className='px - 2 py - 1 text - xs rounded bg - emerald - 100 text - emerald - 700'>;
+                    Grant Winner;
+                  </span>)}
+                <span className='px - 2 py - 1 text - xs rounded bg - gray - 100 dark:bg - gray - 800'>;
+                  {g.status}
+                </span>;
+              </div>;
+            </div>;
+            <p className='mt - 2 text - sm text - gray - 700 dark:text - gray - 300 line - clamp - 3'>;
+              {g.proposal_summary}
+            </p>;
+            <div className='mt - 3 text - sm text - gray - 600 dark:text - gray - 400'>;
+              Budget: {g.budget_amount} {g.budget_currency}
+            </div>;
+          </div>))}
+        {items.length === 0 && (
+          <div className='text - sm text - gray - 600'>No grants found.</div>)}
+      </div>;
+    </EnhancedLayout>);
+}

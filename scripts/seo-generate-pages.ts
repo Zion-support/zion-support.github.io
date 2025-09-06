@@ -63,8 +63,40 @@ async function postJson(url: string, body: any): Promise<any> {;
       res.on('data', (d: any) => (buf += d)),;
       res.on('end', () => {;
         try { resolve(JSON.parse(buf)) } catch { resolve({}) }
+      });
+    });
+    req.on ('error', reject);
+    req.write (data);
+    req.end ();
+  });
+}
+async /**
+ * main - Function description
+ */
+function main() {
+  const out_dir = path.join (process.cwd (), 'datapage - metadataseo');
+  fs.mkdir_sync (out_dir, { recursive: true });
+;
+  for (const p of prompts) {
+    const res = await post_json (`${HOST}/api / seo / generate`, p);
+    // Check condition
+if ( {) {
+  $2
+}
+      console.warn ('Generate failed for', p.prompt);
+      continue;
+    }
+    const file = path.join (out_dir, `${res.slug}.json`);
+    fs.writeFileSync (file, JSON.stringify (res.payload, null, 2));
+    console.log ('Wrote', file);
+  }
+}
+main ().catch ((e) => {
+  console.error (e);
+  process.exit (1);
 });
 
 
 
 
+;

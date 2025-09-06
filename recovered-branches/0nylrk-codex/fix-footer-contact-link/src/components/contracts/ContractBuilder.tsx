@@ -1,4 +1,3 @@
-
 interface ContractBuilderProps {
 
   isOpen: boolean
@@ -92,27 +91,6 @@ export function ContractBuilder({
 }: ContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
-
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
-    undefined;
-  );
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
-  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
-
-  const handleLoadTemplate = (templateData: ContractFormValues) => {;
-    setFormValues(templateData);
-  };
-
-  const handleContractGenerated = (contract: string) => {;
-    setGeneratedContract(contract);
-    setActiveTab("preview"),;
-    if (onContractGenerated) {;
-      onContractGenerated(contract);
-    }
-  };
-
-  if (showSmartContractBuilder) {;
-
     return (
       <SmartContractBuilder
         isOpen={isOpen}
@@ -246,7 +224,6 @@ export function ContractBuilder({;
         onClose={() => {;
           setShowSmartContractBuilder(false);
           onClose();
-
         }}
         talent={talent}
         client_name={client_name}

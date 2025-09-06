@@ -1,4 +1,3 @@
-      });
       setSubmitStatus('success');
     } catch {;
       setSubmitStatus('error');
@@ -27,4 +26,3 @@
       </form>;
     </div>;
   );
-export default ContactForm;

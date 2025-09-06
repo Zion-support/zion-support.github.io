@@ -1,3 +1,4 @@
+
   }
   try {
 
@@ -58,32 +59,10 @@ if ( {) {
     }
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
-
-return res && res.status(409).json({
-    const to_role = counterpart_role (from_role);
-    const to_id = to_role === "talent" ? project.talent_slug : project.client_id;
-;
-    const expectedFromId =;
-      from_role === "client" ? project.client_id : project.talent_slug;
-    // Check condition
-if ( {) {
-  $2
-}
-      return res;
-        .status (403);
-        .json ({ error: "Invalid reviewer for this project" });
-    }
-    const existing = await hasExistingReview (project_id, from_role, from_id);
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (409).json ({
-
-        error: "You have already submitted a review for this project",
+      return res.status(409).json({
+        error: "You have already submitted a review for this project"
       });
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
-
     }
     const now = new Date().toISOString();
     const review: Review = {
@@ -120,5 +99,28 @@ if ( {) {
 
   }
 }
+  }
+}
+      approved: false, // requires admin approval;
+      reported: false,
+      reports: [],
+      removed: false,
+      created_at: now,
+    }
+;
+    await upsert_review (review);
+;
+    return res;
+      .status (201);
+      .json ({ message: "Review submitted", review_id: review.id });
+  } catch (error: any) {
+    return res;
+      .status (500);
+      .json ({ error: "Internal server error", details: error?.message });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

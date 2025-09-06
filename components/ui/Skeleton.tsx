@@ -3,15 +3,6 @@ export type SkeletonProps = {
 }
 export type SkeletonProps = {;
 
-export type SkeletonProps = {
-  className?: string;
-};
-
-export default function Skeleton({ className = '' }: SkeletonProps) {
-    >
-      <div className='absolute inset-0 -translate-x-full animate-[shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent' />
-      <style jsx global>{`
-        @keyframes shimmer {
             transform: translateX(100%);
           }        }
       `}</style>;
@@ -33,12 +24,20 @@ function Skeleton() {
           }        }
       `}</style>;
     </div>);
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
 }
 export type SkeletonProps = {;
   className?: string;
 }
-
-
 
 
 export const Skeleton: React.FC<SkeletonProps> = ({ ",;
@@ -47,13 +46,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({ ",;
   height,;
   rounded = false}) => {;
   const style: React && React.CSSProperties = {}
-  );
-import React from "react";
-interface SkeletonProps {
-  className?: string;
-  width?: string | number;
-  height?: string | number;
-  rounded?: boolean}
 export const Skeleton: React.FC<SkeletonProps> = ({ "
   className = "
   width

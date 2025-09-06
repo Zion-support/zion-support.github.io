@@ -1,4 +1,3 @@
-
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
@@ -20,14 +19,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Star, AlertTriangle } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 function ReviewsModerationContent() {
-function ReviewsModerationContent() {;
-
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
-
-
 
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
@@ -57,9 +51,6 @@ export default function ReviewsModeration() {
     </ProtectedRoute>
   )
 }
-
-
-
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;

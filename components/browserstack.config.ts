@@ -16,7 +16,6 @@
     }
     {
       name: Mobile Safari',      use: {
-        browserName: webkit',        ...devices['iPhone 12']}
+        browser_name: webkit',        ...devices['i_phone 12']}
     }
   ];
-

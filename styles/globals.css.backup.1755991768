@@ -41,6 +41,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,10 +56,14 @@
   --space-glow: 0 0 35px rgba(59, 130, 246, 0.5);
   --biotech-glow: 0 0 30px rgba(16, 185, 129, 0.6);
   --metaverse-glow: 0 0 40px rgba(139, 92, 246, 0.7);
+=======
+}
+>>>>>>> origin/main
 }
   --space-glow: 0 0 35px rgba(59, 130, 246, 0.5);
   --biotech-glow: 0 0 30px rgba(16, 185, 129, 0.6);
   --metaverse-glow: 0 0 40px rgba(139, 92, 246, 0.7);}
+<<<<<<< HEAD
 
   --space-glow: 0 0 35px rgba(59, 130, 246, 0.5);
   --biotech-glow: 0 0 30px rgba(16, 185, 129, 0.6);
@@ -153,6 +158,11 @@
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+  --space-glow: 0 0 35px rgba(59, 130, 246, 0.5);
+  --biotech-glow: 0 0 30px rgba(16, 185, 129, 0.6);
+  --metaverse-glow: 0 0 40px rgba(139, 92, 246, 0.7);}
+>>>>>>> origin/main
 
 /* Base styles */
 @layer base {

@@ -30,9 +30,11 @@ export default function CareersPage() {;
         "Strong background in machine learning algorithms"
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
-      icon: Brain
-      color: "from-purple-500 to-pink-500"
     }
+    {
+      title: "Quantum Computing Researcher"
+      department: "Quantum Computing"
+      location: "San Francisco, CA / Remote";
       type: "Full - time",
       experience: "3+ years",
       salary: "$120, 000 - $180, 000";
@@ -49,12 +51,6 @@ export default function CareersPage() {;
       title: "Cybersecurity Architect"
       department: "Cybersecurity"
       location: "San Francisco, CA / Remote";
-        "Bachelor's degree in Computer Science or related field";
-        "Expertise in security frameworks and compliance standards";
-        "Experience with zero-trust architecture implementation";
-        "Strong knowledge of threat detection and response"
-      ]
-      benefits: ["Competitive salary", "Security certifications", "Health insurance", "Remote work"];
     }
     {
       title: "Cloud Infrastructure Engineer"
@@ -92,10 +88,6 @@ export default function CareersPage() {;
         "Excellent communication and leadership abilities";
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Professional development"];
-    }
-  ];
-  const benefits = [
-    {
     }
     {
       title: "Health & Wellness"
@@ -393,6 +385,4 @@ export default function CareersPage() {;
             </div>;
           </div>;
 }
-
 }
-

@@ -1,7 +1,7 @@
 
-
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
+
   {
     id: "salesforce"
     name: "Salesforce"

@@ -2,7 +2,6 @@
 
 
 
-
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";
@@ -37,10 +36,6 @@ export function WebhooksManager() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showTestDialog, setShowTestDialog] = useState<string | null>(null),
   const [showTestResult, setShowTestResult] = useState(false);
-
-
-  // Create webhook form state;
-
   const [webhookName, setWebhookName] = useState("");
   const [webhookUrl, setWebhookUrl] = useState("");
   const [webhookSecret, setWebhookSecret] = useState("");
@@ -588,33 +583,9 @@ function WebhooksManager() {
             </DialogContent>;
           </Dialog>;
         </div>;
-
-
-
         {/* Webhooks List */}
         <div className="space - y-4">;
           {loading ? (
-            <div className="text-center py-8 text-zinc-500">Loading webhooks...</div>
-          ) : webhooks.length === 0 ? (
-            <div className="text-center py-8 text-zinc-500">
-              <Webhook className="mx-auto mb-2 opacity-30" size={24} />
-              <p>No webhooks found.</p>
-              <p className="text-sm mt-1">Create one to receive event notifications.</p>
-            </div>
-          ) : (
-            webhooks.map((webhook) => (
-              <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="font-medium">{webhook.name}</h3>
-                    <div className="flex items-center text-sm text-zinc-400 mt-1">
-                      <Globe size={14} className="mr-1" />
-                      <span className="max-w-md truncate">{webhook.url}</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="flex items-center mr-2">
-                      <Switch
                         checked={webhook.is_active}
                         onCheckedChange={() => handleToggleStatus (webhook.id, webhook.is_active)}
                       />;
@@ -624,17 +595,11 @@ function WebhooksManager() {
                       </DropdownMenuContent>;
                     </DropdownMenu>;
                   </div>;
-                </div>;
-                </div>;
-              </div>;
-            ));
+                  )}
+                </div>
+              </div>
+            ))
           )}
-
-
-      <Dialog 
-        open={showTestDialog !== null} 
-
-
         onOpenChange={(open) => {
           if (!open) {
             setShowTestDialog(null);
@@ -660,71 +625,45 @@ function WebhooksManager() {
             }
           }
         }}
-      >
-        <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
-          <DialogHeader>
-            <DialogTitle>Test Webhook</DialogTitle>
-            <DialogDescription className="text-zinc-400">
-              Send a test webhook to your endpoint.
-            </DialogDescription>
-          </DialogHeader>
-          {!showTestResult ? (
-            <>
-              <div className="space-y-4 py-4">
-                <div className="space-y-2">
-                  <Label htmlFor="test-event-type">Event Type</Label>
                   <Select
                     value={testEventType}
                     onValueChange={(value) => setTestEventType(value as WebhookEventType)}
+                  >;
+                    <SelectTrigger className="bg-zinc-800 border-zinc-700">;
+                      <SelectValue placeholder="Select an event type" />;
+                    </SelectTrigger>;
+                    <SelectContent className="bg-zinc-900 border-zinc-800">;
+                      {eventOptions && eventOptions.map((option) => (;
+                        <SelectItem key={option && option.value} value={option && option.value}>;
+                          {option && option.label}
+                        </SelectItem>;
+                      ))}
+                    The event type will determine the structure of the test payload.;
+                  </p>;
+                </div>;
+              </div>;
                   clearTestResult()
                 }}>
                   Test Another Event
                 </Button>
               </DialogFooter>
             </>
-                  <div className="space-y-2 mt-4">;
-                    <Label>Response Body</Label>;
-                    <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">;
-                      <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;
-                        {testResult?.responseBody || "No response body"}
-              <DialogFooter>;
-                <Button variant="outline" onClick={() => setShowTestDialog(null)}>;
-                  Cancel;
-                </Button>;
-                <Button onClick={() => showTestDialog && handleTestWebhook(showTestDialog)}>;
-                  Send Test;
-                </Button>;
-              </DialogFooter>;
-            </>;
-          ) :(;
-            <>;
-              <div className="space-y-4 py-4">;
-                <div className="space-y-2">;
-                  <div className="flex items-center justify-between">;
-                    <Label>Response Status</Label>;
-                    <Badge;
-                      className={;
-                        testResult && testResult.status >= 200 && testResult.status < 300;
+                      className={
+                        testResult && testResult.status>= 200 && testResult.status < 300;
                           ? "bg-green-700";
-                          :"bg-red-700";
+                          : "bg-red-700";
                       }
                     >;
                       {testResult?.status} {testResult?.statusText}
-                    </Badge>;
-                  </div>;
                       </pre>;
                     </ScrollArea>;
                   </div>;
                 </div>;
               </div>;
-                  clearTestResult();
-                }}>;
                   Test Another Event;
                 </Button>;
               </DialogFooter>;
             </>;
-
-
           )}
         </DialogContent>
       </Dialog>
@@ -747,6 +686,15 @@ function WebhooksManager() {
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
+                  Close;
+                </Button>;
+                <Button variant="outline" onClick={() => {;
+                  setShowTestResult(false);
+              This action will permanently remove this webhook.;
+              You will no longer receive events at this endpoint.;
+            </AlertDialogDescription>;
+          </AlertDialogHeader>;
+          <AlertDialogFooter>;
             >;
               Delete;
             </AlertDialogAction>;

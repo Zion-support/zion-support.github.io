@@ -4,31 +4,10 @@ export interface WarningEmailPayload {
   subject: string;
   body: string;
 }
-
 export interface EmailOptions {
   to: string;
   subject: string;
   body: string;
-}
-  await fs.appendFile(logPath, line, 'utf8');
-// Email utilities
-export interface EmailConfig {
-  provider: 'smtp' | 'sendgrid' | 'ses' | 'mailgun' | 'nodemailer';
-  apiKey?: string;
-  fromEmail: string;
-  fromName: string;
-  replyTo?: string;
-  smtp?: {
-    host: string;
-    port: number;
-    secure: boolean;
-    auth: {
-      user: string;
-      pass: string;
-    };
-  };
-
-}
 }
 export async function sendEmail(options: EmailOptions): Promise<void> {
   // Mock implementation - in production, this would send actual emails

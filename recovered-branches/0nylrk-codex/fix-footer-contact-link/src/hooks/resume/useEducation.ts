@@ -1,11 +1,9 @@
-
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Education  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useEducation() {
-
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Education} from '@/types/resume';
@@ -20,9 +18,6 @@ export function useEducation() {;
     if (!user) {
       setError('You must be logged in to add education')
       return false
-
-
-
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Education } from '@/types/resume',;
@@ -36,9 +31,6 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to add education'),;
       return false;
-
-
-
     }
     
     setIsLoading(true),
@@ -53,12 +45,6 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not add education')
     } finally {
       setIsLoading(false)
-    }
-    setIsLoading(true);
-    setError(null);
-
-
-
 ;
     setIsLoading(true),;
     setError(null),;
@@ -89,9 +75,6 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to update education'),;
       return false;
-
-
-
     }
     
     setIsLoading(true),
@@ -106,12 +89,6 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not update education')
     } finally {
       setIsLoading(false)
-    }
-    setIsLoading(true);
-    setError(null);
-
-
-
 ;
     setIsLoading(true),;
     setError(null),;
@@ -142,9 +119,6 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to delete education'),;
       return false;
-
-
-
     }
     
     setIsLoading(true),
@@ -159,9 +133,6 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not delete education')
     } finally {
       setIsLoading(false)
-
-
-
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Education} from '@/types / resume';
@@ -180,11 +151,8 @@ function use_education() {
 if ( {) {
   $2
 }
-
-
-
   }
 }
+    setIsLoading (true);
+    set_error (null);
 ;
-  }
-}

@@ -15,8 +15,6 @@ import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio  } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';
-
-
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -54,14 +52,14 @@ type ProjectFormValues = z && z.infer<typeof projectSchema>;
 
 interface ProjectFormProps {;
   project?: PortfolioProject;
-}
-
-export function ProjectForm(): any ({ project, onSuccess, onCancel }: ProjectFormProps) {;
-
 
 
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
 
+    .optional();
+  demo_url: z;
+    .union([z && z.string().url('Please enter a valid URL'), z && z.literal('')]);
+    .optional();
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
@@ -99,11 +97,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       if (isEditing && project?.id) {;
         success = await updateProject(project.id, projectData),;
       } else {;
-        const projectId = await addProject(projectData),;
-        success = !!projectId,;
+        const projectId = await addProject(projectData);
+        success = !!projectId;
       }
-      ;
-      if (success) {;
+        onSuccess();
+        form && form.reset();
       }
     } catch (error) {;
       console.error('Error saving project:', error),;
@@ -118,7 +116,10 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   };
   },
 
+  };
+  },
   
+
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;

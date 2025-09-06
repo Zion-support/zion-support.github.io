@@ -1,8 +1,3 @@
-import { useState  } from 'react';
-import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
-import { quoteRequestService  } from '@/services/quoteRequestService';
-
-
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
@@ -27,9 +22,6 @@ export const useAdminQuotes = () => {;
     // Status filter
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
-
-
-
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -70,7 +62,6 @@ export const useAdminQuotes = () => {;
         return false
       }
     }
-    
 
 
     
@@ -106,9 +97,6 @@ export const useAdminQuotes = () => {;
       }
     }
     
-
-
-
     return true
   });
   // Update quote status mutation
@@ -162,15 +150,6 @@ export const useAdminQuotes = () => {;
     }
   });
   return {
-    quotes: filtered_quotes;
-    is_loading;
-    error;
-    status_filter;
-    setStatusFilter;
-    archive_filter;
-    setArchiveFilter;
-    search_query;
-    setSearchQuery;
     toggleArchive: (id: string, isArchived: boolean) =>
     toggleArchive: (id: string, isArchived: boolean) => 
 
@@ -260,9 +239,6 @@ export const useAdminQuotes = () => {;
     updateStatus: (id: string, status: QuoteStatus) =>;
       updateStatusMutation.mutate({ id, status }),;
     toggleArchive: (id: string, isArchived: boolean) =>;
-
-
-
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }

@@ -1,8 +1,3 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
   Calendar,
   Clock,
   Users,
@@ -622,14 +617,14 @@ function CalendarPage() {
                 </div>;
               </div>;
                   <div>;
-                    <div className="font-semibold">Business Hours</div>;
-                    <div className="text-blue-100">;
-                      Mon-Fri: 9:00 AM - 6:00 PM PST;
+                    <div className="font - semibold">Business Hours</div>;
+                    <div className="text - blue - 100">;
+                      Mon - Fri: 9:00 AM - 6:00 PM PST;
                     </div>;
                   </div>;
                 </div>;
-                <div className="flex items-center">;
-                  <Video className="w-6 h-6 mr-4" />;
+                <div className="flex items - center">;
+                  <Video className="w - 6 h - 6 mr - 4" />;
                   <div>;
                       Zoom, Teams, or Google Meet;
                     </div>;

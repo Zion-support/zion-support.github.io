@@ -1,4 +1,3 @@
-    args: ['--no-sandbox--disable-setuid-sandbox']});
 
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import puppeteer from 'puppeteer',;

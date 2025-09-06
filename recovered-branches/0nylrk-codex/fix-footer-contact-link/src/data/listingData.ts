@@ -1,35 +1,28 @@
 
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion } from "@/types/search";
+// Shared data source for marketplace listings
+export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
 
-        'https://images && images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100',
-    },
-    images: [
-      'https://images && images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500',
-    ],
-    createdAt: '2024-02-15T10:45:00 && 00.000Z',
-    rating: 4 && 4.8,
-    reviewCount: 32,
-    id: 'ai - service - 2',
-    title: 'Custom Machine Learning Model Development',
-    description:;
-      'End - to - end development of custom ML models tailored to your specific business needs. From data preparation to deployment and monitoring.',
-    category: 'Services',
-    price: 5999,
-    currency: '$',
-    tags: ['Machine Learning', 'Custom Development', 'Data Science'],
+    id: 'ai-model-1'
+    title: 'GPT-4 API Integration Package'
+    description:
+      'Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.'
+    category: 'AI Models & APIs'
+    price: 1999
+    currency: '$'
+    tags: ['GPT-4', 'API Integration', 'NLP']
     author: {
-      name: 'DataMinds',
-      id: 'dataminds',
-      avatar_url:;
-        'https://images.unsplash.com / photo - 1568602471122 - 7832951cc4c5?auto = format & fit = crop & w=100 & h=100',
-    },
-    images: [;
-      'https://images.unsplash.com / photo - 1581092918056 - 0c4c3acd3789?auto = format & fit = crop & w=800 & h=500',
-    ],
-    created_at: '2024 - 02 - 15T10:45:00.000Z',
-    rating: 4.8,
-    review_count: 32,
-
+      name: 'AI Solutions Inc.'
+      id: 'ai-solutions'
+      avatarUrl:
+    featured: true,
+    location: 'Global',
+    availability: 'Immediate',
+    ai_score: 98,
+  },
+  {
     location: 'North America',
     availability: '4 - 6 Weeks',
     ai_score: 92,
@@ -63,10 +56,6 @@
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
-
-
-
-
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -217,43 +206,11 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "Virtual assistant",
     "Enterprise AI solutions"
   ],
+  
+  return suggestions.map(text => ({
+    text,
     type: 'product' // Use a valid type from the SearchSuggestion interface
   }))
-}
-// Generate filter options for sidebar
-export const generateFilterOptions = () => {
-  // Extract unique categories, locations, and availability options from listings
-  const productTypes = [
-    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
-  ].sort();
-  const locations = [
-    ...new Set(
-      MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean)
-    )
-  ].sort();
-  const availability = [
-    ...new Set(
-      MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)
-    )
-  ].sort();
-    productTypes: productTypes.map(type => ({
-      label: type
-      value: type
-    }))
-    locations: locations.map(location => ({
-      label: location
-      value: location
-    }))
-    availabilityOptions: availability.map(item => ({
-      label: item
-      value: item
-    }))
-    ratingOptions: [1, 2, 3, 4, 5]
-  }
-}
-export const MAX_PRICE = Math.max(
-  ...MARKETPLACE_LISTINGS.map(listing => listing.price |0)
-);
 );
 reviewCount: 58;
 featured: true;
@@ -279,6 +236,60 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 // Generate filter options for sidebar
 export const generateFilterOptions = () => {
   // Extract unique categories, locations, and availability options from listings
+      avatar_url: "https://images.unsplash.com / photo - 1600180758890 - 6b94519a8ba6?auto = format & fit = crop & w=100 & h=100"}
+    images: ["https://images.unsplash.com / photo - 1624355834900 - 99cd2071585b?auto = format & fit = crop & w=800 & h=500"];
+    created_at: "2023 - 12 - 10T16:45:00.000Z";
+    rating: 4.8;
+    review_count: 36;
+    featured: true;
+    location: "Global";
+    availability: "Immediate",
+    ai_score: 94;
+  }
+];
+;
+// Generate search suggestions based on existing listings;
+export const generateSearchSuggestions = (): SearchSuggestion[] => {
+  const suggestions = [;
+    'AI models',
+    'GPT integration',
+    'Machine learning',
+    'Computer vision',
+    'Speech recognition',
+    'Data analysis',
+    'Content generation',
+    'Code assistant',
+    'Virtual assistant',
+    'Enterprise AI solutions',
+  ];
+;
+  return suggestions.map (text => ({
+    text,
+    type: 'product', // Use a valid type from the SearchSuggestion interface;
+  }));}  ];
+;
+  return suggestions.map (text => ({
+    text;
+    type: 'product' // Use a valid type from the SearchSuggestion interface;
+  }));
+}
+;
+// Generate filter options for sidebar;
+export const generateFilterOptions = () =>: any {
+  // Extract unique categories, locations, and availability options from listings;
+  const product_types = [;
+    ...new Set (MARKETPLACE_LISTINGS.map (listing => listing.category)),
+  ].sort ();
+  const locations = [;
+    ...new Set (
+      MARKETPLACE_LISTINGS.map (listing => listing.location).filter (Boolean)),
+  ].sort ();
+  const availability = [;
+    ...new Set (
+      MARKETPLACE_LISTINGS.map (listing => listing.availability).filter (Boolean)),
+  ].sort ();
+;
+    product_types: product_types.map (type => ({
       label: type,
       value: type,
     })),
@@ -342,7 +353,6 @@ rating_options: [1, 2, 3, 4, 5];
 }export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
-
     ratingOptions: [1, 2, 3, 4, 5]
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion } from "@/types/search",;

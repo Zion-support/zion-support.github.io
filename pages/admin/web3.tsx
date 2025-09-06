@@ -18,8 +18,6 @@ export default function AdminWeb3Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           <ul className="space-y-2">
             {users.map((u, i) => (
               <li key={i} className="flex items-center justify-between">
@@ -114,8 +112,5 @@ function AdminWeb3Page() {
           </ul>;
         </div>;
       </div>;
-}
-    </>);
-}
 
 

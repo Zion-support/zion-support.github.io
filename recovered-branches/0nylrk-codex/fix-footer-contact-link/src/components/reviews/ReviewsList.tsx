@@ -1,4 +1,3 @@
-
 import { Review } from "@/types/reviews";
 import { ReviewCard } from "./ReviewCard";
 import { Review } from "@/types/reviews",
@@ -33,8 +32,6 @@ export function ReviewsList({
           .map ((_, i) => (
             <div;
               key={i}
-import { Review } from "@/types/reviews",;
-import { ReviewCard } from "./ReviewCard",;
 
 import {Review} from "@/types/reviews";
 import {ReviewCard} from "./ReviewCard";

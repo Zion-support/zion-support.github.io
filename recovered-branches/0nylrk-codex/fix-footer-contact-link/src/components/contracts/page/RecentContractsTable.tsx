@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 
 
 import { Button  } from '@/components / ui / button';
@@ -41,8 +40,6 @@ interface RecentContractsTableProps {;
 
 
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
-
-
   return (
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
@@ -195,10 +192,6 @@ function RecentContractsTable() {
                     View;
                   </Button>;
                 </td>;
-
-
-
-
           </tbody>;
         </table>;
       </div>;
@@ -213,3 +206,4 @@ function RecentContractsTable() {
         </table>;
       </div>;
     </>);
+}

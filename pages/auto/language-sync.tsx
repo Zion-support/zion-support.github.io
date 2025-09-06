@@ -23,6 +23,13 @@ const LanguageSync: NextPage = () => {
 export default LanguageSync,
 },
 
+},
+export default LanguageSync,
+
+},
+export default LanguageSync,
+},
+
 export default LanguageSync,;
 export default LanguageSync,
 

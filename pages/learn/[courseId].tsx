@@ -68,6 +68,7 @@ export default function CourseView() {;
   function onModuleQuizComplete(): any (score: number) {;
     // For demo, simply mark as completed when quiz attempted;
     if (currentLessonId) markLessonComplete(currentLessonId);  }
+
   async function onFinalQuizComplete(): any (score: number) {;
     const needed = course?.finalQuiz?.passThreshold || 0;
     const passed = score >= needed;
@@ -235,9 +236,6 @@ export default function CourseView(req, res) {
       </div>
 
       <div className="space-y-4">
-
-
-
         <CoachWidget />
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>
@@ -250,6 +248,8 @@ export default function CourseView(req, res) {
 }
   )
 }
+
+
 
 
 

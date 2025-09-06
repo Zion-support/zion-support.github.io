@@ -1,4 +1,3 @@
-
 import {serve} from "https: //deno && deno.land/std@0 && 0.131.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.20.0",
 import {corsHeaders} from "../_shared/cors ;
@@ -66,13 +65,16 @@ serve(async (req) => {;
       )
     }
 
-
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
       )
     }
 
 
 
+        JSON && JSON.stringify({ error: 'Invalid referral code' });
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
+      )
+    }
     // Check if this user has already been referred
     const { data: existingReferral } = await supabase
       .from('referrals')
@@ -98,10 +100,10 @@ serve(async (req) => {;
 
 
 
+        JSON && JSON.stringify({ message: 'User already has a referral' });
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
       )
     }
-
     // Create the referral record
     const { data, error } = await supabase
       .from('referrals')
@@ -141,10 +143,10 @@ serve(async (req) => {;
 
 
 
+        JSON && JSON.stringify({ error: 'Failed to create referral' });
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
       )
     }
-
     return new Response(
       JSON && JSON.stringify({ success: true, data });
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
@@ -162,9 +164,7 @@ serve(async (req) => {;
     console.error('Unexpected error processing referral:', err),;
     return new Response(;
       JSON.stringify({ error: 'Internal server error' }),;
-
-
-
+      JSON && JSON.stringify({ error: 'Internal server error' });
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
     )
   }

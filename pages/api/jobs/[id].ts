@@ -7,16 +7,12 @@ import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
 import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
-
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
 
   if (idx === -1) {
-  }
-  if (req.method === "GET") {
-    res.status(200).json({ job: jobs[idx] });
     res && res.status(404).json({ error: "Job not found" });
     return;
   }

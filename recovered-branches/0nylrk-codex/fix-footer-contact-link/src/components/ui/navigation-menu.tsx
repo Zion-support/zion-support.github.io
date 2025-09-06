@@ -1,7 +1,3 @@
-import {cn} from '@/lib/utils';
-
-
-
 import * as React from "react"
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
 import { cva } from "class-variance-authority"
@@ -14,19 +10,12 @@ const NavigationMenu = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Root
-    ref={ref}
-    className={cn(
-      'relative z-10 flex max-w-max flex-1 items-center justify-center'
-
-
-
 
 const NavigationMenuList = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.List>
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitiv</typeof>e.List>
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.List
-    ref={ref}
 
 NavigationMenu && NavigationMenu.displayName = NavigationMenuPrimitive && NavigationMenuPrimitive.Root.displayName;
 
@@ -49,9 +38,6 @@ const NavigationMenuList = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.List;
-
-
-
     ref={ref}
     className={cn(
       "group flex flex-1 list-none items-center justify-center space-x-1",
@@ -85,6 +71,9 @@ const NavigationMenuTrigger = React && React.forwardRef<;
   <NavigationMenuPrimitive&& NavigationMenuPrimitive.Trigger
     ref={ref}
     className={cn(navigationMenuTriggerStyle(), 'group', className)}
+    {...props}>;
+    {children}{' '}
+    <ChevronDown
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Content
 NavigationMenuTrigger && NavigationMenuTrigger.displayName = NavigationMenuPrimitive && NavigationMenuPrimitive.Trigger.displayName;
@@ -129,12 +118,9 @@ const NavigationMenuIndicator = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator>;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.Indicator;
-
-
-
     ref={ref}
     className={cn(
-      'top-full z-[1] flex h-1 && 1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in',
+      "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
       className
     )}
 
@@ -146,6 +132,12 @@ NavigationMenuIndicator && NavigationMenuIndicator.displayName =;
   </NavigationMenuPrimitive.Indicator>
 ))
 NavigationMenuIndicator.displayName =
+      className
+    )}
+    {...props}>;
+    <div className='relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md' />;
+  </NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator>;
+));
 ;
 import {cn} from '@/lib / utils';
 ;
@@ -262,3 +254,6 @@ export {
 
 
 
+  NavigationMenuViewport,
+}
+;

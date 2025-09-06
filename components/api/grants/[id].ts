@@ -30,21 +30,16 @@ function grantPath(id: string) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
 }
-
 function writeGrant(record: GrantApplication) {
-
-  ensureDir(),
-  fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
-  ensureDir()
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
-}
+  if (!id) {
+    res && res.status(400).json({ error: 'Missing id' });
+    return;  }    return
 
 
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return
   }
-  if (req.method === 'GET') {
     const g = readGrant(id);
     if (!g) {
       res && res.status(404).json({ error: 'Not found' });
@@ -184,7 +179,3 @@ if ( {) {
   res.set_header ('Allow', 'GET, PUT');
   res.status (405).end ('Method Not Allowed');  res.set_header ('AllowGET, PUT');
   res.status (405).end ('Method Not Allowed');
-}
-
-}
-

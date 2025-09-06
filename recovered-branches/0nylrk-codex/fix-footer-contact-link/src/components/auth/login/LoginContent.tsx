@@ -22,7 +22,11 @@ function LoginContent() {
               </h3>;
                 Connect with thousands of AI professionals, discover new;
                 opportunities, and showcase your services to a global audience.;
-
+              </p>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
 export function LoginContent() {
   return (
     <div className="flex min-h-screen bg-zion-blue">
@@ -66,8 +70,5 @@ export function LoginContent() {;
         </div>;
       </div>;
 
-    </div>);
 
 }
-
-

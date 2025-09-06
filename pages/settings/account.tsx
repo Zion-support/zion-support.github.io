@@ -3,7 +3,6 @@
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 
-
 export default function AccountSettingsPage(req, res) {
   try {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
@@ -363,7 +362,7 @@ if (return) {
   return (
     <>
       <Head>
-        <title>Account Settings  Zion</title>
+        <title>Account Settings — Zion</title>
       </Head>
       <div className="max-w-3xl mx-auto space-y-8">
         <section className="rounded-xl border p-5">
@@ -388,7 +387,7 @@ if (return) {
             <input value={lens} onChange={(e) => setLens(e.target.value)} placeholder="Lens handle (e.g. alice.lens)" className="w-full rounded-md border px-3 py-2" />
             <input value={ceramic} onChange={(e) => setCeramic(e.target.value)} placeholder="Ceramic DID (did:3:...)" className="w-full rounded-md border px-3 py-2" />
             <input value={farcaster} onChange={(e) => setFarcaster(e.target.value)} placeholder="Farcaster handle (e.g. @alice)" className="w-full rounded-md border px-3 py-2" />
-            <button onClick={linkDID} disabled={linking} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2">{linking ? 'Linking' : 'Link & Verify'}</button>
+            <button onClick={linkDID} disabled={linking} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2">{linking ? 'Linking…' : 'Link & Verify'}</button>
           </div>
         </section>
 
@@ -402,8 +401,6 @@ if (return) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />

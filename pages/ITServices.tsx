@@ -12,14 +12,6 @@ export default function ITServices() {
             </p>
           </div>
           <div className="text-center">
-              IT Services page is under construction.;
-            </p>;
-          </div>;
-        </div>;
-      </div>;
-
-
-
 }
 
 

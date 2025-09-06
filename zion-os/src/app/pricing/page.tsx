@@ -248,14 +248,6 @@ const service_pricing: ServicePricing[] = [;
       }
     ];
   }
-  const filteredServices = selectedCategory === "All";
-    ? servicePricing;
-    : servicePricing.filter(service => service.category === selectedCategory);
-  return (;
-    <div className="space-y-8">;
-      <div className="text-center space-y-4">;
-        <h1 className="text-4xl font-bold">Pricing & Plans</h1>;
-        <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Choose the perfect plan for your business needs. All plans include our core features with transparent pricing and no hidden fees.;
         </p>;
       </div>;

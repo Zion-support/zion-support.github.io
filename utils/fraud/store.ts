@@ -1,3 +1,11 @@
+  private records: Map < string, FraudRecord> = new Map ();
+;
+  create_record (record: Omit < FraudRecord, 'id' | 'timestamp'>): FraudRecord {
+    const id = Date.now ().to_string ();
+    const new_record: FraudRecord = {
+      ...record,
+      id,
+      timestamp: new Date ().toISOString ();
     }
     this.records.set (id, new_record);
     return new_record;

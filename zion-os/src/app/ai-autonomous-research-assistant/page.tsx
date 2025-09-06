@@ -1,11 +1,9 @@
-    <div className="min-h-screen bg-white">;
 export default /**
  * AIAutonomousResearchAssistantPage - Function description
  */
 function AIAutonomousResearchAssistantPage() {
   return (
     <div className="min - h-screen bg - white">;
-    <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - red - 600 to - pink - 600 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
@@ -174,10 +172,10 @@ function AIAutonomousResearchAssistantPage() {
                 Accelerate drug discovery by analyzing molecular structures, predicting drug interactions, and identifying potential therapeutic targets.;
               </p>;
               <ul className="space - y-2 text - gray - 600">;
-                <li> Drug repurposing analysis</li>;
-                <li> Clinical trial optimization</li>;
-                <li> Adverse effect prediction</li>;
-                <li> Biomarker identification</li>;
+                <li>• Drug repurposing analysis</li>;
+                <li>• Clinical trial optimization</li>;
+                <li>• Adverse effect prediction</li>;
+                <li>• Biomarker identification</li>;
               </ul>;
             </div>;
             <div className="border border - gray - 200 rounded - xl p - 8">;
@@ -186,10 +184,10 @@ function AIAutonomousResearchAssistantPage() {
                 Discover new materials with desired properties through computational modeling and experimental design optimization.;
               </p>;
               <ul className="space - y-2 text - gray - 600">;
-                <li> Novel material discovery</li>;
-                <li> Property optimization</li>;
-                <li> Manufacturing process design</li>;
-                <li> Sustainability analysis</li>;
+                <li>• Novel material discovery</li>;
+                <li>• Property optimization</li>;
+                <li>• Manufacturing process design</li>;
+                <li>• Sustainability analysis</li>;
               </ul>;
             </div>;
             <div className="border border - gray - 200 rounded - xl p - 8">;
@@ -198,10 +196,10 @@ function AIAutonomousResearchAssistantPage() {
                 Develop advanced trading strategies, risk models, and market analysis through pattern recognition and predictive modeling.;
               </p>;
               <ul className="space - y-2 text - gray - 600">;
-                <li> Market trend analysis</li>;
-                <li> Risk assessment models</li>;
-                <li> Algorithmic trading strategies</li>;
-                <li> Portfolio optimization</li>;
+                <li>• Market trend analysis</li>;
+                <li>• Risk assessment models</li>;
+                <li>• Algorithmic trading strategies</li>;
+                <li>• Portfolio optimization</li>;
               </ul>;
             </div>;
             <div className="border border - gray - 200 rounded - xl p - 8">;
@@ -210,10 +208,10 @@ function AIAutonomousResearchAssistantPage() {
                 Model complex climate systems, predict environmental changes, and develop sustainable solutions through advanced data analysis.;
               </p>;
               <ul className="space - y-2 text - gray - 600">;
-                <li> Climate modeling</li>;
-                <li> Impact assessment</li>;
-                <li> Adaptation strategies</li>;
-                <li> Policy recommendations</li>;
+                <li>• Climate modeling</li>;
+                <li>• Impact assessment</li>;
+                <li>• Adaptation strategies</li>;
+                <li>• Policy recommendations</li>;
               </ul>;
             </div>;
           </div>;

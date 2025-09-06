@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 
 
 class ErrorBoundary extends React.Component {
@@ -38,10 +37,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
 import Layout from '../../components/Layout';
-
-const Index: NextPage = () => {
-  return (
-
 
     <Layout
       title="Products - Zion Tech Group"
@@ -295,14 +290,12 @@ const ProductsIndex: NextPage = () => {
             </div>;
           </div>;
         </section>;
-                      </div>;
                             {feature}
-                          </li>
+                          </li>;
                         ))}
                             {benefit}
-                          </li>
+                          </li>;
                         ))}
-            )}
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -470,6 +463,3 @@ export default Index,
       </div>;
     </Layout>);
 }
-},
-export default Index,
-

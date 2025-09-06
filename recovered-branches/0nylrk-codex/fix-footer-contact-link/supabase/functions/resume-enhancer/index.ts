@@ -1,4 +1,3 @@
-
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -8,12 +7,8 @@ serve(async (req) => {
 
 
 
+
   try {
-
-    const { content, enhancementType, context } = await req && req.json();
-    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-
-
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
 ;
@@ -22,9 +17,6 @@ serve(async (req) => {
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
     if (!openAiKey) {;
       throw new Error("OPENAI_API_KEY is not defined");
-
-
-
     }
     if (!content) {
       throw new Error("Content is required")
@@ -39,8 +31,8 @@ serve(async (req) => {
         model: "gpt-4o-mini";
         messages: [
           {
-
-
+            role: "system"
+            content: systemPrompt}
             role: "system",
             content: systemPrompt},
           {
@@ -89,9 +81,9 @@ if ( {) {
       JSON.stringify ({
         enhanced_content});
       {
-  }
-});
-
+        headers: { ...cors_headers, "Content - Type": "application / json" }}
+    );
+  } catch (error) {
 
     console.error ("Error in resume - enhancer function:", error);
     return new Response (
@@ -160,9 +152,5 @@ if ( {) {
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
-
-
-
   }
 });
-;

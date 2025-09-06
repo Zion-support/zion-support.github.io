@@ -17,8 +17,6 @@ export interface CustomerTicket {;
   attachments: string[],
   conversation_history: CustomerMessage[];
 
-  attachments: string[],
-  conversation_history: CustomerMessage[];
 }
 export interface CustomerMessage {
   id: string;
@@ -29,8 +27,6 @@ export interface CustomerMessage {
   timestamp: Date;
   attachments?: string[];
   sentiment: 'positive' | 'neutral' | 'negative';
-  intent: string,
-  confidence: number;
 }
 export interface CustomerProfile {
   id: string;
@@ -51,33 +47,21 @@ export interface AIResponse {
   ticket_id: string;
   response: string;
   confidence: number;
-  totalTickets: number;
-  openTickets: number;
-  resolvedTickets: number;
 export interface CustomerServiceMetrics {
   total_tickets: number;
   open_tickets: number;
   resolved_tickets: number;
   averageResolutionTime: number;
-  customerSatisfaction: number;
-
-  firstResponseTime: number
-  ticketVolumeByCategory: Record<string, number>;
-  agentPerformance: Record<string, {
-    ticketsResolved: number;
-    averageResolutionTime: number
-
     customerSatisfaction: number
   }>
 }
+export interface CustomerServiceRequest {
   customerId: string;
   customer_id: string;
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   category: string;
-  attachments?: string[],
-  preferred_channel?: 'email' | 'chat' | 'phone';
 }
   ticketId: string;
 export interface CustomerServiceResponse {
@@ -85,9 +69,6 @@ export interface CustomerServiceResponse {
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   ai_response?: AIResponse;
   estimatedResolutionTime: string;
-
-export class AICustomerServiceService {
-
 export class AICustomerServiceService {;
   private apiKey: string;
 
@@ -98,37 +79,6 @@ export class AICustomerServiceService {;
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
-
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
-    this && this.apiKey = apiKey,
-    this && this.baseUrl = baseUrl
-  }
-  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
-    try {
-      const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
-        body: JSON && JSON.stringify(request)});
-      if (!response && response.ok) {
-        throw new Error(`Create ticket API error: ${response && response.statusText}`)
-      }
-      const data = await response && response.json();
-      return data
-    } catch (error) {
-      console && console.error('Error creating ticket:', error);
-  }
-  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
-    try {
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets`, {
-        method: 'POST'
-        headers: {
-          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
-        body: JSON.stringify(request)});
-      if (!response.ok) {
-        throw new Error(`Create ticket API error: ${response.statusText}`)
-      }
-      const data = await response.json();
       return data
     } catch (error) {
       console && console.error('Error creating ticket:', error);
@@ -219,9 +169,6 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
   tags: string[],;
   attachments: string[],;
   conversationHistory: CustomerMessage[];
-
-export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
-
   next_steps: string[],
   assigned_agent?: string;
 }
@@ -461,6 +408,3 @@ if ( {) {
 }
 export const aiCustomerServiceService = new AICustomerServiceService (process.env.CUSTOMER_SERVICE_API_KEY || '');
 ;
-
-export interface CustomerTicket {;
-

@@ -1,5 +1,3 @@
-export type TokenSymbol = "ZION$",;
-export type TokenSymbol = "ZION$";
 
 export type TokenSymbol = "ZION$",
 
@@ -47,15 +45,9 @@ export interface TokenTransaction {;
 export interface TokenConfig {
   symbol: TokenSymbol,
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
-
-
-
-
+  earn_rules: Record < string number>, // action -> tokens;
+  burn_rules: Record < string number>, // feature -> tokens;
 }
-
-export interface WalletSummary {
-  wallet: Wallet,
-
   transactions: TokenTransaction[];
   config: TokenConfig;
   id: string;
@@ -108,3 +100,4 @@ export interface WalletSummary {;
 
 }
 
+}

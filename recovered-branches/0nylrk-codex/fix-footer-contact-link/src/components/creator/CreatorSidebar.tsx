@@ -1,4 +1,3 @@
-
   Bell,
   FileText,
   Home,
@@ -26,10 +25,6 @@ import {;
 
 export function AppSidebar() {;
   return (
-
-
-
-
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -53,8 +48,6 @@ export function AppSidebar() {;
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-
-
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -94,7 +87,6 @@ import {;
   SidebarGroupContent} from "@/components/ui/sidebar";
 export function AppSidebar() {;
   return (;
-
     <Sidebar>;
       <SidebarContent>;
         <SidebarGroup>;
@@ -125,5 +117,5 @@ export function AppSidebar() {;
         </SidebarGroup>;
       </SidebarContent>;
   );
-    </Sidebar>);
 }
+;

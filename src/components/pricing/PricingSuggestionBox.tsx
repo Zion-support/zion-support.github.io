@@ -1,19 +1,3 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import {;
-  TooltipProvider,;
-  Tooltip,;
-  TooltipTrigger,;
-  TooltipContent,;
-} from '@/components/ui/tooltip';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Loader2, Info, ThumbsUp } from 'lucide-react';
-import { PricingSuggestion } from '@/services/pricingSuggestionService';
-interface PricingSuggestionBoxProps {;
-  suggestion: PricingSuggestion | null;
-  isLoading: boolean;
-  onApplySuggestion: () => void;
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
@@ -46,11 +30,16 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   rateType}) => {
   if (isLoading) {
 
+
+export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     return (
         <CardContent className="flex items-center justify-center p-6">
           <div className="text-center">
             <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />
             <p className="text-sm text-muted-foreground">
+
+
+
             </p>
           </div>
         </CardContent>
@@ -60,6 +49,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     return null
   }
   const confidenceColor = {
+
+
+
       <CardContent className="p-5 space-y-4">
           <h4 className="font-semibold">AI Suggested Price</h4>
           <Badge variant="outline" className={confidenceColor}>
@@ -68,16 +60,38 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
           <span className="text-2xl font-bold">
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
+
+
+
+          <span className="text-sm text-muted-foreground ml-1">
+            {rateType === "hourly" ? "/hour" : " total"}
+
+
+
+
+
+          <span className="text-sm text-muted-foreground ml-1">
+            {rateType === "hourly" ? "/hour" : " total"}
+          </span>
+        </div>
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
           <p>{suggestion.explanation}</p>
         </div>
+
+
               </TooltipTrigger>
                 <p>Apply this suggestion to your pricing field</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
         </div>
+
+
+        </p>
+      </CardContent>
+    </Card>
+  )
   )
 
 
@@ -85,6 +99,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 };
 "  );
 };
+
 },
 ;
   const confidenceColor = {;
@@ -119,7 +134,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
                 <Button;
                   variant="default";
                   onClick={onApplySuggestion}
-
                   className="w-full";
                 >;
                   <ThumbsUp className="h-4 w-4 mr-2" /> Apply Suggestion;
@@ -138,6 +152,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     </Card>;
   );
 };
+
+
 
 };
 

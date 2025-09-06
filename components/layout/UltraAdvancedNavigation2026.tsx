@@ -277,20 +277,15 @@ import { motion, AnimatePresence } from 'framer-motion';
       { name: 'Quantum Internet Infrastructure', href: '/quantum-internet-infrastructure-platform', description: 'Build the quantum internet', price: '$15,999/month' }
     ];
   };
-
-
       { name: 'Space Debris Management', href: '/space-debris-management-ai-platform', description: 'AI space safety', price: '$5,999/month' };
       { name: 'AI Climate Prediction', href: '/ai-climate-prediction-platform', description: 'Climate change prediction', price: '$1,999/month' };
       { name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing-ai-platform', description: 'Self-optimizing manufacturing', price: '$3,499/month' }
     ];
   };
-
-
     title: 'Healthcare & Life Sciences',
     icon: Microscope,
     color: 'from - teal - 600 to - cyan - 600',
     description: 'Healthcare innovation',
-
 
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home }
@@ -301,26 +296,6 @@ const companyLinks = [
     href: '/2026-innovative-services-showcase'
     icon: Zap
   }
-  {
-    name: 'Ultimate 2026'
-    href: '/ultimate-2026-services-showcase'
-    icon: Sparkles
-  }
-  {
-    name: '2026 Pricing'
-    href: '/revolutionary-2026-pricing'
-    icon: DollarSign
-  }
-  { name: 'Case Studies', href: '/case-studies', icon: Briefcase }
-  { name: 'Blog & Resources', href: '/blog', icon: BookOpen }
-  { name: 'Careers', href: '/careers', icon: Users }
-  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Innovative 2026', href: '/2026-innovative-services-showcase', icon: Zap }
-  { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Sparkles }
-  { name: '2026 Pricing', href: '/revolutionary-2026-pricing', icon: DollarSign }
-  { name: 'Case Studies', href: '/case-studies', icon: Briefcase }
-  { name: 'Blog & Resources', href: '/blog', icon: BookOpen }
-  { name: 'Careers', href: '/careers', icon: Users }
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
 const UltraAdvancedNavigation2026 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -368,7 +343,6 @@ const UltraAdvancedNavigation2026 = () => {;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
@@ -378,7 +352,6 @@ const UltraAdvancedNavigation2026 = () => {;
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
-
   const navigationItems = [;
     {;
       name: 'AI Services',;
@@ -490,6 +463,38 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'Digital Reality', href: '/services?category=digital-reality', description: 'Immersive experiences' },;
         { name: 'Holographic Tech', href: '/services?category=holographic', description: '3D holographic systems' },;
         { name: 'Consciousness Interface', href: '/services?category=consciousness-interface', description: 'Brain-computer interfaces' }
+      ];
+    };
+      name: 'Enterprise IT',;
+      href: '/services?category=enterprise',;
+      icon: Zap,;
+      color: 'from-green-500 to-emerald-500',;
+      description: 'Enterprise solutions and infrastructure',;
+      subItems: [;
+        {;
+          name: 'Cloud Solutions',;
+          href: '/services?category=cloud',;
+          description: 'Cloud infrastructure and services',;
+        },;
+        {;
+          name: 'Cybersecurity',;
+          href: '/services?category=security',;
+          description: 'Advanced security solutions',;
+        },;
+        {;
+          name: 'Data Analytics',;
+          href: '/services?category=analytics',;
+          description: 'Business intelligence and analytics',;
+        },;
+        {;
+          name: 'DevOps',;
+          href: '/services?category=devops',;
+          description: 'Development and operations',;
+        },;
+      ],;
+    },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },;
+        { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },;
+        { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },;
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ];
     }
@@ -503,7 +508,6 @@ const UltraAdvancedNavigation2026 = () => {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
-
 
   const contactInfo = {
     phone: '+1 302 464 0950'
@@ -646,34 +650,15 @@ const UltraAdvancedNavigation2026 = () =>: any {
         { name: 'DevOps', href: '/services?category = devops', description: 'Development and operations' }
       ];
     }
-  ];
-
-  const contactInfo = {
+  const contact_info = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
-
+    address: '364 E Main St STE 1008 Middletown DE 19709',  }    address: '364 E Main St STE 1008 Middletown DE 19709';
+  }
+;
   return (
     <>;
       {/* Enhanced Navigation Bar */}
-            {/* Logo */}
-            <Link href='/' className='flex items - center space - x-3 group'>;
-              <div className='relative'>;
-                <div className='w - 12 h - 12 bg - gradient - to - br from - purple - 500 via - pink - 500 to - cyan - 500 rounded - 2xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300'>;
-                  <Rocket className='w - 6 h - 6 text - white' />;
-                </div>;
-                <div className='absolute inset - 0 bg - gradient - to - br from - purple - 500 via - pink - 500 to - cyan - 500 rounded - 2xl blur - xl opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300'></div>;
-              </div>;
-              <div className='hidden sm:block'>;
-                <div className='text - 2xl font - bold bg - gradient - to - r from - purple - 400 via - pink - 400 to - cyan - 400 bg - clip - text text - transparent'>;
-                  Zion Tech Group;
-                </div>;
-                <div className='text - xs text - gray - 400'>;
-                  Revolutionary Technology Solutions;
-                </div>              </div>;
-            </Link>;
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items - center space - x-8'>;
               {navigation_items.map (item => (
@@ -713,24 +698,18 @@ const UltraAdvancedNavigation2026 = () =>: any {
                       <motion&& motion.div
                         initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
-
-
                               <Link
                                 key={subItem && subItem.name}
                                 href={subItem && subItem.href}
                                 className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
                                 onClick={() => setActiveDropdown(null)}
-
-
                                   {subItem.description}
                                 </div>
                               </Link>
                             ))}
-                          </div>;
-                            ))}
-                          </div>
                           <Link
-                            href={item.href}
+                            href={item && item.href}
+                            className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                            onClick={() => setActiveDropdown(null)}                          ;
                           <Link
                             href={item && item.href}
                             className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200">;
@@ -742,14 +721,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   </AnimatePresence>;
                 </div>;
               ))}
-
-
-
-              {/* Quick Links */}
-
-                  All Services
-                </Link>
-
                 <Link
                   href='/pricing'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'>;
@@ -854,24 +825,38 @@ const UltraAdvancedNavigation2026 = () =>: any {
               </div>;
             </div>;
 
-                Get Started
-              </Link>
-            </div>
-
-
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-
-
+              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200'
+            >
+              {isOpen ? (
+                <X className='w-6 h-6' />
+              ) : (
+                <Menu className='w-6 h-6' />
+              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
+            >
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200';
+            >;
+              {isOpen ? (;
+                <X className='w-6 h-6' />;
+              ) : (;
+                <Menu className='w-6 h-6' />;
+              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200";
+            >;
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </nav>
             </button>;
           </div>;
         </div>;
       </nav>;
-
-
-
 
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
@@ -891,37 +876,14 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
           >
             <motion.div
+            onClick={() => setIsOpen(false)}
+          >;
+            <motion&& motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
                 <button
                   onClick={() => setIsOpen(false)}
-                  className='p-2 text-gray-300 hover:text-white transition-colors duration-200'
-                >
-                  <X className='w-6 h-6' />                </button>
-              </div>
-              {/* Mobile Navigation Items */}            >
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="p-2 text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-                  className="p-2 text-gray-300 hover:text-white transition-colors duration-200";
-                >;
-                  <X className="w-6 h-6" />;
-                </button>;
-              </div>;
-
-              {/* Mobile Navigation Items */}
-                  <div
-                    key={item && item.name}
-                    className='border-b border-gray-700/50 pb-4'>;
-                      href={item && item.href}
-                      className='flex items-center space-x-3 text-white hover:text-purple-300 transition-colors duration-200 py-2';
-                      onClick={() => setIsOpen(false)}
-                    >;
                       <div
                         className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center`}
                       >
@@ -929,11 +891,20 @@ const UltraAdvancedNavigation2026 = () =>: any {
                       </div>
                       <span className='font-medium'>{item.name}</span>
                     </Link>
-
-
                         >
                           {subItem.name}
                         </Link>
+                    {/* Mobile Sub-items */}
+                    <div className='mt-3 ml-11 space-y-2'>;
+                      {item && item.subItems.slice(0, 3).map(subItem => (;
+                        <Link
+                          key={subItem && subItem.name}
+                          href={subItem && subItem.href}
+                          className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1'                          onClick={() => setIsOpen(false)}                          className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1";
+                          onClick={() => setIsOpen(false)}
+                        >;
+                          {subItem && subItem.name}
+                        </Link>;
                       ))}
                   <Link
                     href='/services'
@@ -983,11 +954,10 @@ const UltraAdvancedNavigation2026 = () =>: any {
       <div className="h-20"></div>
     </>
 
+      {/* Spacer for fixed navigation */}
   );
 }
 export default UltraAdvancedNavigation2026;
-
-
             </motion.div>;
           </motion.div>)}
       </AnimatePresence>;

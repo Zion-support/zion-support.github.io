@@ -1,5 +1,4 @@
 
-
 export type InterviewStatus =
   | 'requested'
   | 'confirmed'
@@ -34,6 +33,7 @@ export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-a
 
 export interface Interview {;
 
+export interface Interview {
   id: string;
   client_id: string;
   talent_id: string;
@@ -56,6 +56,8 @@ export interface Interview {;
 export interface InterviewRequest {
 
 export interface InterviewRequest {;
+}
+export interface InterviewRequest {
   talent_id: string;
   client_id: string;
   scheduled_date: string;
@@ -123,10 +125,14 @@ export interface InterviewResponse {;
   message?: string;
 }
 ;
-
   interview_id: string;
   status: InterviewStatus;
 
   alternative_date?: string,
   message?: string;
 
+}
+export interface InterviewResponse {
+  interview_id: string;
+  status: InterviewStatus;
+}

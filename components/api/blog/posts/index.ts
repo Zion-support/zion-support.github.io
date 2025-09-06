@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (req.method === 'GET') {
 
   if (req.method === 'GET') {;
-
+  if (req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req.query;
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
@@ -90,6 +90,8 @@ if ( {) {
       tags: body.tags || [],
       topics: body.topics || [],
       seo: {
+        meta_title: body.seo?.meta_title || body.title!,
+        meta_description: body.seo?.meta_description || '',
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
       },
       body: body.body || '',
@@ -106,6 +108,5 @@ return res.status(405).end();
 }
 }
   return res.status(405).end();
-
-
-
+return res.status (405).end ();
+}

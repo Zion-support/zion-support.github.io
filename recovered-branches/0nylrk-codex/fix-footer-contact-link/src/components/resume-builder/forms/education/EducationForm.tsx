@@ -1,6 +1,3 @@
-
-
-
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -91,6 +88,7 @@ export function EducationForm({ ;
       await deleteEducation(id);
     }
   };
+
   const handleCancel = () => {;
     if (editingId) {;
       setEditingId(null);
@@ -122,8 +120,6 @@ export function EducationForm({ ;
         onDelete={handleDelete}
       />
 
-
-
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
@@ -146,6 +142,15 @@ export function EducationForm({ ;
         <h3 className="text-md font-medium mb-4">;
           {editingId ? 'Update Education' :'Add Education'}
         </h3>;
+    }
+    }
+  }
+
+  return (
+        <EducationFormFields
+          isEditing={!!editingId}
+          onSubmit={handleAddOrUpdate}
+          onCancel={handleCancel}
 export /**
  * EducationForm - Function description
  */

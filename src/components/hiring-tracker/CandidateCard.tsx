@@ -1,3 +1,7 @@
+  const handleSaveNotes = () => {
+    // Here you would save the notes to the database
+    // For now, we'll just show a toast
+    toast({
     })
     setShowNotes(false)
   }
@@ -8,6 +12,10 @@
       description: 'Offer has been sent to the talent.'
     })
   }
+
+
+import { useState } from 'react';
+
   const candidateName = application.talent_profile?.full_name || 'Candidate'
   return (
     <>
@@ -16,6 +24,7 @@
           <Card
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
+
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
@@ -30,7 +39,6 @@
     })
   },
 
-
   const candidateName = application.talent_profile?.full_name || "Candidate",
   
   return (
@@ -40,6 +48,10 @@
           <Card 
             className="mb-2 p-0 shadow-sm border"
 import { useState } from "react",;
+            {...provided.dragHandleProps}
+          >
+            <CardContent className='p-3'>
+              {/* Candidate Header */}
               <div className='flex justify-between items-start mb-2'>
                 <div className='flex items-center gap-2'>
                   <AvatarPrimitive className='h-8 w-8'>
@@ -67,71 +79,7 @@ import { useState } from "react",;
                     </p>
                   </div>
                 </div>
-import { useState } from 'react';
-// Local stub is used in place of the @hello-pangea/dnd package which isn't;
-// available in this environment.;
-import { Draggable } from '@/lib/dnd-stub';
-import { formatDistanceToNow } from 'date-fns';
-import Link from 'next/link';
-import { JobApplication } from '@/types/jobs';
-import { Card, CardContent } from '@/components/ui/card';
-import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict;
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import {;
-  MessageSquare,;
-  User,;
-  FileText,;
-  MoreVertical,;
-  Calendar,;
-  AlertTriangle,;
-  BriefcaseIcon,;
-} from 'lucide-react';// Local stub is used in place of the @hello-pangea/dnd package which isn't;
-// available in this environment.;
-import { Draggable } from "@/lib/dnd-stub";
-import { formatDistanceToNow } from "date-fns";
-import Link from "next/link";
-import { JobApplication } from "@/types/jobs";
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict;
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react",;
-// Local stub is used in place of the @hello-pangea/dnd package which isn't;
-// available in this environment.;
-import { Draggable } from "@/lib/dnd-stub",;
-import { formatDistanceToNow } from "date-fns",;
-import Link from "next/link",;
-import { JobApplication } from "@/types/jobs",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict;
-import { Button } from "@/components/ui/button",;
-import { Textarea } from "@/components/ui/textarea",;
-import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react';
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
 
-  return (
-    <>;
-
-      <Draggable draggableId={application.id} index={index}>;
-        {(provided) => (;
-          <Card;
-            className="mb-2 p-0 shadow-sm border";
-            ref={provided.innerRef}
-            {...provided.draggableProps}
-            {...provided.dragHandleProps}
-          >
-            <CardContent className='p-3'>
-              {/* Candidate Header */}
-                <DropdownMenu>
-                    <Button variant='ghost' className='h-8 w-8 p-0'>
-                      <MoreVertical className='h-4 w-4' />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align='end'>
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
@@ -140,31 +88,6 @@ import {;
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
-                      {showNotes ? 'Hide notes' : 'Add notes'}
-                    </DropdownMenuItem>;
-                    <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
-                      <BriefcaseIcon
-                        className='h-4 w-4 mr-2'
-                        aria-hidden='true'
-                      />{' '}
-                      Hire Candidate;
-                    </DropdownMenuItem>;
-                    <DropdownMenuItem asChild>;
-                      <Link
-                        href={`/messages?talentId=${application && application.talent_id}`}>;
-                        Message;
-                      </Link>;
-                    </DropdownMenuItem>;
-                    {application && application.resume?.file_url && (;
-                      <DropdownMenuItem asChild>;
-                        <a
-                          href={application && application.resume.file_url}
-                          target='_blank'
-                          rel='noopener noreferrer'>;
-                          View Resume;
-                        </a>;
-                      </DropdownMenuItem>;
-                    )}
                 )}
               {/* Notes Section */}
               {showNotes && (;
@@ -184,25 +107,33 @@ import {;
                   className="flex-1"
                   asChild
                 >
+
+
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
                 </Button>
-                    <a
-                      href={application && application.resume.file_url}
-                      target='_blank'
-                      rel='noopener noreferrer'>;
-                      <FileText className='h-3 w-3 mr-1' /> Resume;
-                    </a>;
-                  ) : (;
-                    <span>;
-                      <FileText className='h-3 w-3 mr-1' /> No Resume;
-                    </span>;
+
+
+                  {application.resume?.file_url ? (
+                    <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
+                      <FileText className="h-3 w-3 mr-1" /> Resume
+                    </Link>
+                  ) : (
+                    <span>
+                      <FileText className="h-3 w-3 mr-1" /> No Resume
+                    </span>
                   )}
                 <Button
                   variant='default'
                   size='sm'
                   className='flex-1'
+  handleHireConfirmed 
+}/> </>) 
+}'"};
+;
+
+                </Button>
                 
                 <Button 
                   variant="default" 
@@ -216,51 +147,6 @@ import {;
             </CardContent>;
           </Card>;
         )}
-      {/* Hire Confirmation Modal */}
-      <HireConfirmationModal
-        isOpen = {showHireModal,}
-        onClose = {() => setShowHireModal(false),}
-        application = {application,}
-        onConfirm = {handleHireConfirmed,}
-  //Here you would save the notes to the database //For now, we'll just show a toast toast ({
-  setShowNotes (false);
-}
-  //Hiring process completed via the modal toast ({
-}</DropdownMenuContent> </DropdownMenu> </div> {
-  /* Application Info */ ";
-}<div className="flex flex - wrap gap - 2 items - center text - xs text - muted - foreground mb - 2"> <div className="flex items - center"> <Calendar className="h - 3 w - 3 mr - 1" /> {
-  formatDistanceToNow (new Date (application.created at), {
-  add_suffix: true;
-});
-}</div> {";
-  is_stalled && (<div className="flex items - center text - amber - 500"> <AlertTriangle className="h - 3 w - 3 mr - 1" /> Stalled </div>);
-}</div> {
-  /* Match Score */;
-}{";
-  application.match score !== null && application.match score !== undefined && (<div className="mb - 2"> <ScoreBadge application= {
-  application;
-}/> </div>) ";
-}<Textarea placeholder="Add private notes about this candidate..." className="text - xs min - h-[60px]" value= {
-  notes;
-}on_change= {
-  (e) => set_notes (e.target.value);
-}/> </div> </div>) ";
-}<Button variant="outline" size="sm" className="flex - 1" as_child > </Link> </Button> <Button variant="outline" size="sm" className="flex - 1" as_child > <FileText className="h - 3 w - 3 mr - 1" /> Resume </Link>) : (<span> <FileText className="h - 3 w - 3 mr - 1" /> No Resume </span>) ";
-}</Button> <Button variant="default" size="sm" className="flex - 1" on_click={
-  () => setShowHireModal (true) ";
-}> <BriefcaseIcon className="h - 3 w - 3 mr - 1" /> Hire </Button> </div> </CardContent> </Card>);
-}</Draggable> {
-  /* Hire Confirmation Modal */;
-}<HireConfirmationModal is_open= {
-  showHireModal;
-}on_close= {
-  () => setShowHireModal (false);
-}application= {
-  application;
-}on_confirm= {
-  handleHireConfirmed;
-}/> </>);
-}'"}
       </Draggable>;
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;

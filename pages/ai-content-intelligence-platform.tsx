@@ -294,8 +294,8 @@ export default function AIContentIntelligencePlatform() {
                 <Link
                     <span>300%+ ROI improvement</span>
                   </div>
-                  <div className='flex items-center text-green-400'>
-                    <CheckCircle className='w-5 h-5 mr-3' />
+                  <div className="flex items-center text-green-400">
+                    <CheckCircle className="w-5 h-5 mr-3" />
                     <span>80% faster content optimization</span>
                   </div>
                   </div>
@@ -304,7 +304,6 @@ export default function AIContentIntelligencePlatform() {
             </motion.div>
           </div>
         </div>
-
 
       {/* Features Section */}
 
@@ -327,8 +326,6 @@ export default function AIContentIntelligencePlatform() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-
-
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -371,8 +368,6 @@ export default function AIContentIntelligencePlatform() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
-
-
               >
                 <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -415,8 +410,6 @@ export default function AIContentIntelligencePlatform() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
-
-
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -444,8 +437,6 @@ export default function AIContentIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                   </ul>
                   <Link
 
@@ -674,6 +665,13 @@ export default function AIContentIntelligencePlatform() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
       {/* Contact Section */}
       <section className='py-20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
@@ -862,61 +860,10 @@ export default function AIContentIntelligencePlatform() {
               <Link;
                 href='/2025 - innovative - new - services - showcase';
                 className='inline - flex items - center px - 8 py - 4 bg - white / 10 backdrop - blur - sm border border - gray - 600 text - white font - semibold rounded - lg hover:bg - white / 20 transition - all duration - 200'              >;
-  )
-          >;
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
-              Ready to Transform Your Content Strategy?;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-              Get in touch with our team to discuss how our AI Content Intelligence Platform can revolutionize your content creation and optimization.;
-            </p>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
-              <div className="flex flex-col items-center space-y-3">;
-                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">;
-                  <Phone className="w-6 h-6 text-blue-400" />;
-                </div>;
-                <div>;
-                  <h3 className="text-white font-semibold">Call Us</h3>;
-                  <p className="text-gray-400">{contactInfo.mobile}</p>;
-                </div>;
-              </div>;
-              <div className="flex flex-col items-center space-y-3">;
-                <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">;
-                  <Mail className="w-6 h-6 text-green-400" />;
-                </div>;
-                <div>;
-                  <h3 className="text-white font-semibold">Email Us</h3>;
-                  <p className="text-gray-400">{contactInfo.email}</p>;
-                </div>;
-              </div>;
-              <div className="flex flex-col items-center space-y-3">;
-                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">;
-                  <MapPin className="w-6 h-6 text-purple-400" />;
-                </div>;
-                <div>;
-                  <h3 className="text-white font-semibold">Visit Us</h3>;
-                  <p className="text-gray-400">{contactInfo.address}</p>;
-                </div>;
-              </div>;
-            </div>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-              <Link;
-                href="/contact";
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105";
-              >;
-                Start Your Free Trial;
-                <ArrowRight className="w-5 h-5 ml-2" />;
-              </Link>;
-              <Link;
-                href="/2025-innovative-new-services-showcase";
-                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200";
-              >;
                 View All Services;
               </Link>;
             </div>;
           </motion.div>;
         </div>;
-    </Layout>);
-;
 
 

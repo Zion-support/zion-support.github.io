@@ -42,10 +42,6 @@ import React from 'react';
 
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-
-
-
-
 export default function AIBusinessIntelligencePage() {
 
   const features = [
@@ -114,12 +110,6 @@ const AIBusinessIntelligence: React.FC = () => {
   ];
 ;
   return (
-    <Layout>;
-      <Head>;
-
-          content='https://ziontechgroup && ziontechgroup.com/ai-business-intelligence'
-        />      </Head>;
-
       <EnhancedNavigation />;
 
 
@@ -187,18 +177,12 @@ const AIBusinessIntelligence: React.FC = () => {
               insights.;
             </p>;
             <ul className="text-sm text-gray-500 space-y-2">;
-              <li> Sales forecasting</li>;
-              <li> Customer behavior prediction</li>;
-              <li> Risk assessment</li>;
-              <li> Market trend analysis</li>;
             </ul>;
           </div>;
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (;
               <motion&& motion.div
                 key={feature && feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
       {/* Benefits */}
 
       <section className="py-20 bg-slate-50">
@@ -341,54 +325,10 @@ const AIBusinessIntelligence: React.FC = () => {
                 reduced costs, see the difference data-driven decisions can;
                 make.;
               </p>;
-              <div className='space-y-4'>                {benefits && benefits.map((benefit, index) => (;
-                  <motion&& motion.div
-                    key={benefit}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                    className='flex items-center space-x-3'>;
-                    <CheckCircle className='w-6 h-6 text-green-500 flex-shrink-0' />;
-                    <span className='text-slate-700'>{benefit}</span>                  </motion && motion.div>;
                     key={benefit}
                     initial={{ opacity: 0, coordinate_x: -20 }}
                     whileInView={{ opacity: 1, coordinate_x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="flex items-center space-x-3"
-                  >
-                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
-                    <span className="text-slate-700">{benefit}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className='bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8'
-            >
-              <h3 className='text-2xl font-bold text-slate-900 mb-6'>
-                Key Metrics
-              </h3>
-              <div className='space-y-6'>
-                <div className='text-center'>
-                  <div className='text-4xl font-bold text-blue-600 mb-2'>
-                    95%
-                  </div>
-                  <div className='text-slate-600'>Prediction Accuracy</div>
-                </div>
-                <div className='text-center'>
-                  <div className='text-4xl font-bold text-green-600 mb-2'>
-                    40%
-                  </div>
-                  <div className='text-slate-600'>Average Revenue Increase</div>
-                </div>
-                <div className='text-center'>
-                  <div className='text-4xl font-bold text-purple-600 mb-2'>
-                    80%
-                  </div>
-                  <div className='text-slate-600'>Time Saved on Reporting</div>                </div>
               </div>
             </motion.div>
           </div>
@@ -399,20 +339,6 @@ const AIBusinessIntelligence: React.FC = () => {
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className='text-center mb-16'
-          >
-            <h2 className='text-4xl font-bold text-slate-900 mb-6'>
-              Industry Applications
-            </h2>
-            <p className='text-xl text-slate-600 max-w-3xl mx-auto'>
-              See how businesses across different industries are leveraging AI
-              to transform their operations.
-            </p>
-          </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
-              <motion.div
-                key={useCase.industry}
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-slate-900 mb-6'>;
@@ -427,31 +353,10 @@ const AIBusinessIntelligence: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases && useCases.map((useCase, index) => (;
               <motion&& motion.div
                 key={useCase && useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-            ))}
-          </div>
-        </div>
 
       {/* Pricing */}
-      <section className='py-20 bg-slate-900'>;
-        <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className='text-center mb-16'
-          >
-            <h2 className='text-4xl font-bold text-white mb-6'>
-              Simple, Transparent Pricing
-            </h2>
-            <p className='text-xl text-white/70 max-w-3xl mx-auto'>
-              Choose the plan that fits your business needs. All plans include
-              our core AI features.
-            </p>
-          </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (
-              <motion.div
-                key={plan.plan}
+
+
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -466,22 +371,16 @@ const AIBusinessIntelligence: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing && pricing.map((plan, index) => (;
               <motion&& motion.div
                 key={plan && plan.plan}
+
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 className={`relative bg-white rounded-2xl p-8 ${
-                  plan && plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
-                }`}>;
-                {plan && plan.popular && (;
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>;
-                    Most Popular;
-                  </div>;
                     {plan.price}
-                    <span className='text - lg text - slate - 600'>;
-                      {plan.period}
-                    </span>
+                    <span className="text-lg text-slate-600">{plan.period}</span>
                   </div>
-                  <p className='text-slate-600'>{plan.description}</p>
+                  <p className="text-slate-600">{plan.description}</p>
                 </div>
                   ))}
       </section>
@@ -964,6 +863,5 @@ const AIBusinessIntelligence: React.FC = () => {
       <EnhancedFooter />;
     </>);
 ;
-
 
 

@@ -2,7 +2,6 @@
 
 
 
-
 import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -34,9 +33,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       text: "New"
       colors: "bg-green-500/20 text-green-400"}
     "top-rated": {
-}
-
-
 import React from "react",;
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -79,6 +75,8 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
     </div>;
 
 }
+  const { icon: Icon, text, colors } = badgeConfig[type];
+  return (
 import React from './react';
 import { BadgeCheck, Star, Clock, Award } from './lucide-react';
 import { cn } from '@/lib / utils';

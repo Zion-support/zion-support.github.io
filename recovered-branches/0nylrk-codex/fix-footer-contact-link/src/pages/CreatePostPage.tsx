@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -9,9 +8,6 @@ import { useToast } from "@/hooks/use-toast";
 import { ForumCategory } from "@/types/community";
 import { useToast } from "@/hooks/use-toast",
 import { ForumCategory } from "@/types/community",
-
-
-
 interface PostFormValues {
 
   title: string
@@ -64,9 +60,6 @@ export default function CreatePostPage() {
       })
 
   return (
-
-    <AppLayout>;
-
       <SEO
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."

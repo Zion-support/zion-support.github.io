@@ -27,7 +27,6 @@ import React from 'react';
       </div>
     </>
   );
-
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -68,5 +67,4 @@ const NotFoundPage: NextPage = () => {
             Go Home;
           </Link>;
         </div>;
-
 

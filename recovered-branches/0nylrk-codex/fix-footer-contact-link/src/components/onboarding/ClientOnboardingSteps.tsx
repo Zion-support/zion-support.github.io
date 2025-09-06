@@ -1,10 +1,8 @@
-
 import React from "react",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function ClientOnboardingSteps() {
-
 
   const onboardingStatus = useOnboardingStatus();
 import { PlusCircle, SendIcon, InboxIcon } from "lucide-react",
@@ -44,7 +42,6 @@ export function ClientOnboardingSteps() {;
     {;
       id: "invite",;
       label: "Send invitation to talent",;
-      completed: onboardingStatus && onboardingStatus.inviteSent,;
       link: "/talent",;
       action: "Find Talent"},;
     {;
@@ -54,6 +51,7 @@ export function ClientOnboardingSteps() {;
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 
 
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
 
 import React from './react';

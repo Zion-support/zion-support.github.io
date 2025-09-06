@@ -1,8 +1,3 @@
-// Additional 2025 real micro-SaaS, AI and IT services
-export const new2025Services: EnhancedRealMicroSaasService[] = [
-  {
-
-
       'Jailbreak and injection detection',
       'PII redaction and audit trail',
       'Hallucination and grounding score',
@@ -10,35 +5,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     ],
     popular: true,
     icon: '🛡️',
-
-    color: 'from - rose - 600 to - red - 700',
-    text_color: 'text - rose - 300',
-    link: 'https://ziontechgroup.com / services / llm - safety - observability - suite',
-    market_position:;
-      'Comparable to Lakera / Guardrails AI at a lower entry price with built - in observability.',
-    target_audience: 'Teams shipping AI copilots and assistants',
-    trial_days: 14,
-    setup_time: '30 minutes',
-    category: 'AI & Data',
-    real_service: true,
-    technology: ['TypeScript', 'OpenAI', 'Anthropic', 'OpenTelemetry'],
-    integrations: ['Slack', 'PagerDuty', 'Datadog', 'GitHub Actions'],
-    use_cases: [;
-
-      'Prevent unsafe outputs',
-      'Compliance readiness',
-      'Model regression detection',
-    ],
-    roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks',
-    competitors: ['Lakera', 'Guardrails AI', 'Azure AI Content Safety'],
-    market_size: '$3.5B+ AI safety & governance',
-    growth_rate: '200% annual growth',
-    variant: 'holographic - matrix',
-    contact_info: contact,    features: [;
-      'Prompt / output policy engine_jailbreak and injection detectionPII redaction and audit trail_hallucination and grounding score_dashboards and CI quality gates';
-    ];
-    popular: true;
-    icon: '';
     color: 'from - rose - 600 to - red - 700';
     text_color: 'text - rose - 300';
     link: 'https://ziontechgroup.com / services / llm - safety - observability - suite';
@@ -66,7 +32,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Human-readable schedulesIdempotency keys and dedupeMulti-cloud triggersJitter and backoff tuningDLQ with webhooks and alerts'
     ];
     popular: true;
-    icon: '';
+    icon: '⏱️';
     color: 'from-cyan-600 to-blue-700';
     textColor: 'text-cyan-300';
     link: 'https://ziontechgroup && ziontechgroup.com/services/serverless-cron-orchestrator';
@@ -99,7 +65,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Human - readable schedules_idempotency keys and dedupe_multi - cloud triggers_jitter and backoff tuningDLQ with webhooks and alerts';
     ];
     popular: true;
-    icon: '';
+    icon: '⏱️';
     color: 'from - cyan - 600 to - blue - 700';
     text_color: 'text - cyan - 300';
     link: 'https://ziontechgroup.com / services / serverless - cron - orchestrator';
@@ -114,7 +80,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     use_cases: ['Scheduled syncs_data pipelines_maintenance tasks'];
     roi: 'Cut failed schedules by 90% with automated retries and DLQ';
     competitors: ['Temporal (schedules)AirflowCloud Scheduler'];
-    reviews: 19
     market_size: '$8B workflow automation';
     growth_rate: '22% CAGR';
     variant: 'quantum - matrix';
@@ -143,7 +108,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Identity verification and consent_connectors for common SaaSData discovery and redactionSLA timers and reminders_evidence reports and exports';
     ];
     popular: true;
-    icon: '';
+    icon: '🔐';
     color: 'from - emerald - 600 to - green - 700';
     text_color: 'text - emerald - 300';
     link: 'https://ziontechgroup.com / services / gdpr - dsar - automation - pro';
@@ -158,7 +123,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     use_cases: ['Right to access_right to erase_compliance evidence'];
     roi: 'Reduce DSAR handling time by 80%';
     competitors: ['TranscendOneTrustDidomi'];
-    reviews: 13
     market_size: '$4B privacy tech';
     growth_rate: '28% CAGR';
     variant: 'quantum - cyberpunk';
@@ -175,17 +139,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     name: 'API Contract Testing Hub';
     tagline: 'OpenAPI / GraphQL contract tests with cloud runners';
     price: '$79';
-    ];
-    popular: false;
-    icon: '';
-    color: 'from-indigo-600 to-violet-700';
-    textColor: 'text-indigo-300';
-    link: 'https://ziontechgroup && ziontechgroup.com/services/api-contract-testing-hub';
-    marketPosition: 'Cheaper and simpler than bespoke CI pipelines with OpenAPI diffs.';
-    targetAudience: 'Backend and platform teams';
-    trialDays: 14;
-    setupTime: '1 hour';
-    category: 'Developer Tools';
     integrations: ['GitHubGitLabCircleCI'];
     use_cases: ['Prevent breaking changes_improve API reliability'];
     roi: 'Cut API incidents by 50% within 60 days';
@@ -217,9 +170,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Cost explorer with tags_anomaly detection and alerts_rightsizing recommendations_savings plan / RI advisor_forecasting and budgets';
     ];
     popular: true;
-    targetAudience: 'FinOps, platform and CTOs';
-    trialDays: 14;
-    setupTime: '1 day';
     color: 'from - amber - 600 to - orange - 700';
     text_color: 'text - amber - 300';
     link: 'https://ziontechgroup.com / services / cloud - cost - finops - copilot';
@@ -232,7 +182,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     technology: ['AWSGCPAzureBigQuery'];
     integrations: ['SlackEmailPagerDuty'];
     use_cases: ['Cost reduction_budget control_capacity planning'];
-    roi: 'Save 1035% cloud spend in first 90 days';
+    roi: 'Save 10–35% cloud spend in first 90 days';
     competitors: ['CloudHealthVantageCloudZero'];
     reviews: 14
   }
@@ -279,9 +229,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     technology: ['IMAPSMTPNode.js'];
     integrations: ['SendGridMailgunPostmark'];
     use_cases: ['Protect sender score_warm new domains_monitor inbox placement'];
-    roi: 'Improve inbox rate by 1540% in 30 days';
+    roi: 'Improve inbox rate by 15–40% in 30 days';
     competitors: ['MailreachWarmup InboxLemlist'];
-    reviews: 12
     market_size: '$2B email tooling';
     growth_rate: '18% CAGR';
     variant: 'ai - futuristic';
@@ -313,7 +262,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Ingestion pipeline templates_hybrid retrieval patterns_evaluation notebooks_dashboards and alerts_deploy buttons';
     ];
     popular: true;
-    icon: '';
+    icon: '🔎';
     color: 'from - fuchsia - 600 to - pink - 700';
     text_color: 'text - fuchsia - 300';
     link: 'https://ziontechgroup.com / services / vector - search - starter - pro',
@@ -349,7 +298,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Shadow API discoveryAuth and RBAC checksSchema drift and diffsSecret/key exposure checksPR suggestions and tickets'
     ];
     popular: true;
-    icon: '';
+    icon: '🧰';
     color: 'from-red-600 to-rose-700';
     textColor: 'text-red-300';
     link: 'https://ziontechgroup && ziontechgroup.com/services/api-security-attack-surface-scanner';
@@ -374,7 +323,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Shadow API discovery_auth and RBAC checks_schema drift and diffs_secret / key exposure checksPR suggestions and tickets';
     ];
     popular: true;
-    icon: '';
+    icon: '🧰';
     color: 'from - red - 600 to - rose - 700';
     text_color: 'text - red - 300';
     link: 'https://ziontechgroup.com / services / api - security - attack - surface - scanner';
@@ -421,7 +370,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     use_cases: ['Define SLOsAlert on burn_improve reliability'];
     roi: 'Reduce alert fatigue by 30%+ while focusing on user impact';
     competitors: ['Nobl9Datadog SLO'];
-    reviews: 9
     market_size: '$15B observability';
     growth_rate: '19% CAGR';
     variant: 'quantum - matrix';
@@ -438,20 +386,9 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     name: 'AI Website Personalization Pro';
     tagline: 'On - site experiences tailored by intent and persona';
     price: '$129';
-    ];
-    popular: true;
-    icon: '';
-    color: 'from-purple-600 to-fuchsia-700';
-    textColor: 'text-purple-300';
-    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-website-personalization-pro';
-    marketPosition: 'Accessible alternative to enterprise personalization tools.';
-    targetAudience: 'Growth and product teams';
-    trialDays: 14;
-    setupTime: '1 day';
-    category: 'AI & Data';
     integrations: ['SegmentRudderStackGoogle Analytics'];
     use_cases: ['Increase conversion_tailor content_experiment fast'];
-    roi: 'Boost conversion by 1025% in 60 days';
+    roi: 'Boost conversion by 10–25% in 60 days';
     competitors: ['MutinyOptimizely'];
     reviews: 13
   }
@@ -466,7 +403,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'SAML/OIDC templatesSCIM provisioning flowsIdP compatibility matrixCompliance and security guidesDemo tenants and sandboxes'
     ];
     popular: true;
-    icon: '';
+    icon: '🔐';
     color: 'from-slate-600 to-gray-700';
     textColor: 'text-slate-300';
     link: 'https://ziontechgroup && ziontechgroup.com/services/sso-scim-starter-kit';
@@ -499,7 +436,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'SAML / OIDC templatesSCIM provisioning flowsIdP compatibility matrix_compliance and security guides_demo tenants and sandboxes';
     ];
     popular: true;
-    icon: '';
+    icon: '🔐';
     color: 'from - slate - 600 to - gray - 700';
     text_color: 'text - slate - 300';
     link: 'https://ziontechgroup.com / services / sso - scim - starter - kit';
@@ -512,7 +449,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     technology: ['Node.js_next.jsIdP SDKs'];
     integrations: ['OktaAuth0WorkOS'];
     use_cases: ['Close enterprise deals_reduce integration time'];
-    roi: 'Shorten sales cycles by 2040%';
+    roi: 'Shorten sales cycles by 20–40%';
     competitors: ['WorkOSAuth0 blueprints'];
     market_size: '$12B identity';
     growth_rate: '18% CAGR';
@@ -522,9 +459,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     implementation_details: 'Reference implementations and test harnesses.';
     launch_date: '2025 - 01 - 30';
     customers: 19;
-    reviews: 9
-    rating: 4.8,
-    reviews: 9;
   }
   {
     id: 'managed - postgres - ha - pro';
@@ -542,7 +476,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     technology: ['PostgreSQLPatroniPgBouncer'];
     integrations: ['GrafanaPrometheusPagerDuty'];
     use_cases: ['HA databases_disaster recovery_performance tuning'];
-    roi: 'Reduce downtime risk and improve throughput by 2040%';
+    roi: 'Reduce downtime risk and improve throughput by 20–40%';
     competitors: ['Crunchy DataAiven'];
     market_size: '$10B managed DBs';
     growth_rate: '24% CAGR';
@@ -565,7 +499,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Persona and ICP modelsMulti-channel sequencesGuardrails and blocklist checksCRM sync and dedupeA/B tests and analytics'
     ];
     popular: true;
-    icon: '';
+    icon: '📬';
     color: 'from-pink-600 to-rose-700';
     textColor: 'text-pink-300';
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-sales-email-copilot';
@@ -590,7 +524,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Persona and ICP models_multi - channel sequences_guardrails and blocklist checksCRM sync and dedupe_a / B tests and analytics';
     ];
     popular: true;
-    icon: '';
+    icon: '📬';
     color: 'from - pink - 600 to - rose - 700';
     text_color: 'text - pink - 300';
     link: 'https://ziontechgroup.com / services / ai - sales - email - copilot';
@@ -626,9 +560,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     technology: ['GoeBPFSQLite'];
     integrations: ['JiraServiceNow'];
     use_cases: ['Asset inventory_risk visibility_change tracking'];
-    roi: 'Improve inventory accuracy by 3060%';
+    roi: 'Improve inventory accuracy by 30–60%';
     competitors: ['AxoniusLansweeper'];
-    reviews: 6
     market_size: '$7B ITAM';
     growth_rate: '17% CAGR';
     variant: 'quantum - holographic';
@@ -665,7 +598,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Dataset/version registryTraining run trackingCost/performance dashboardsEval suites and red-teamingCanary and rollout controls'
     ];
     popular: true;
-    icon: '';
+    icon: '🧪';
     color: 'from-purple-600 to-fuchsia-700';
     textColor: 'text-purple-300';
     link: 'https://ziontechgroup && ziontechgroup.com/services/llm-finetune-ops-manager';
@@ -695,7 +628,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Dataset / version registry_training run tracking_cost / performance dashboards_eval suites and red - teaming_canary and rollout controls';
     ];
     popular: true;
-    icon: '';
+    icon: '🧪';
     color: 'from - purple - 600 to - fuchsia - 700';
     text_color: 'text - purple - 300';
     link: 'https://ziontechgroup.com / services / llm - finetune - ops - manager';
@@ -708,7 +641,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     technology: ['OpenAIHugging FaceWeights & Biases'];
     integrations: ['GitHubLangfusePromptfoo'];
     use_cases: ['Improve response quality_reduce cost / latency_governance'];
-    roi: 'Increase task success rate 1025% with controlled spend';
+    roi: 'Increase task success rate 10–25% with controlled spend';
     competitors: ['OpenAI finetune UIHF AutoTrain'];
     reviews: 6
   }
@@ -723,7 +656,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'RUM + synthetic testsCore Web Vitals dashboardsPerformance budgetsPR suggestions and diffsAlerting and reports'
     ];
     popular: false;
-    icon: '';
+    icon: '📈';
     color: 'from-emerald-600 to-teal-700';
     textColor: 'text-emerald-300';
     marketPosition: 'Opinionated budgets and PRs, not just charts.';
@@ -752,7 +685,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'RUM + synthetic tests_core Web Vitals dashboards_performance budgetsPR suggestions and diffs_alerting and reports';
     ];
     popular: false;
-    icon: '';
+    icon: '📈';
     color: 'from - emerald - 600 to - teal - 700';
     text_color: 'text - emerald - 300';
     link: 'https://ziontechgroup.com / services / browser - performance - monitor - pro',
@@ -765,7 +698,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     technology: ['Lighthouse CIWeb VitalsPlaywright'];
     integrations: ['GitHubSlackNetlify'];
     use_cases: ['Prevent perf regressions_improve CWV scores'];
-    roi: 'Boost conversion 310% by improving CWV';
+    roi: 'Boost conversion 3–10% by improving CWV';
     competitors: ['SpeedCurveCalibre'];
     reviews: 5
   }
@@ -794,9 +727,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Model and dataset registry_risk and policy mappingsPII / PHI tagging and checks_change approvals and trails_reports and exports';
     ];
     popular: true;
-    targetAudience: 'Product, security and compliance';
-    trialDays: 14;
-    setupTime: '2 days';
     color: 'from - slate - 700 to - gray - 700';
     text_color: 'text - slate - 300';
     link: 'https://ziontechgroup.com / services / ai - governance - registry';
@@ -940,3 +870,4 @@ reviews: 6,
 
 
 
+];

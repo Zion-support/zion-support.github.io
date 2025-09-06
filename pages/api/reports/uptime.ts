@@ -1,14 +1,35 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-    try {
-      const data = fs.readFileSync (p, 'utf8');
-      const uptime = JSON.parse (data);
-      return res.status (200).json (uptime);
+
+const p = path.join(
+  process.cwd()
+  'data'
+  'reports'
+  'uptime.json'
+);
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    try {;
+      const data = fs.readFileSync(p, 'utf8');
+      const uptime = JSON.parse(data);
+      return res.status(200).json(uptime);
     } catch (error) {
-      return res.status (500).json ({ error: 'Failed to read uptime report' });
+      return res.status(500).json({ error: 'Failed to read uptime report' });
     }
 
+const p = path.join(process.cwd(), 'dataopsuptime-log.json');
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (!fs.existsSync(p)) return res.status(200).json({});
+    res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'Failed to read uptime' });
   }
+if (req.method === 'POST') {
     try {
+      const { uptime, downtime, incidents } = req && req.body;
+      
+
       const report = {
         uptime: uptime |0
         downtime: downtime |0
@@ -36,5 +57,13 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
 
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 

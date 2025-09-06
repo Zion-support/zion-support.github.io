@@ -14,8 +14,6 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
   const { companyId, invoiceId } = req.query;
-
-
   if (
     !companyId |
     typeof companyId !== "string" |

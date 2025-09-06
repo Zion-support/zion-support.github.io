@@ -1,4 +1,3 @@
-
 import React, { useState } from "react",
 import type { UserProfile } from "@/types/auth";
 import type { UserProfile } from "@/types/auth",
@@ -15,8 +14,6 @@ export function useAuthState() {
     setIsLoading,
     onboardingStep,
     setOnboardingStep
-  }
-}
 
 
 import React, { useState } from "react",;
@@ -48,9 +45,3 @@ export function useAuthState() {;
     set_user;
     is_loading;
     setIsLoading;
-
-    onboarding_step;
-
-    setOnboardingStep;
-  }
-}

@@ -3,7 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
-import {
   BookOpen,
   Clock,
   User,
@@ -584,7 +583,6 @@ export default function GuidesPage() {
           </div>;
         </section>;
       </div>;
-      </div>
     </Layout>;
   );
                       </span>;

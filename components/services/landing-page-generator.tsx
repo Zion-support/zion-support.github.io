@@ -1,9 +1,3 @@
-  );
-
-}
-
-}
-
 import Link from 'next / link';
 export default /**
  * Placeholder - Function description
@@ -22,4 +16,3 @@ function Placeholder() {
       </main>;
     </div>);
 }
-

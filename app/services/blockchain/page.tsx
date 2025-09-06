@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export const metadata = { 
 };
 
@@ -7,7 +9,18 @@ export default function BlockchainPage() {
   );
 }
 
+    </div>
+  );
+}
+
+            {tech}
+          </span>
+        ))}
       </div>
+    </div>
+  );
+}
+
     </div>
   );
 }

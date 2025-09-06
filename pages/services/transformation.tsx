@@ -49,6 +49,67 @@ export default /**
 function DigitalTransformationPage() {
   const services = [;
     {
+      title: 'Digital Strategy & Roadmap'
+      description:
+        'Comprehensive digital transformation strategy and implementation planning'
+      features: [
+        'Technology Assessment'
+        'Change Management'
+        'ROI Planning'
+        'Implementation Roadmap'
+      ]
+      price: 'From $15,000'
+      icon: Rocket
+      color: 'from-yellow-500 to-orange-500'
+    }
+    {
+      title: 'Legacy System Modernization'
+      description: 'Transform outdated systems into modern, scalable solutions'
+      features: [
+        'System Analysis'
+        'Migration Planning'
+        'Data Migration'
+        'Performance Optimization'
+      ]
+      price: 'From $25,000'
+      icon: Cpu
+      color: 'from-blue-500 to-cyan-500'
+    }
+    {
+      title: 'Process Automation'
+      description:
+        'AI-powered automation for improved efficiency and productivity'
+      features: [
+        'Workflow Analysis'
+        'RPA Implementation'
+        'Integration'
+        'Monitoring'
+      ]
+      price: 'From $12,000'
+      icon: Zap
+      color: 'from-purple-500 to-pink-500'
+    }
+    {
+      title: 'Change Management'
+      description: 'Comprehensive change management and training programs'
+      features: [
+        'Stakeholder Engagement'
+        'Training Programs'
+        'Communication Strategy'
+        'Success Metrics'
+      ]
+      price: 'From $8,000'
+      icon: Users
+      color: 'from-emerald-500 to-teal-500'
+    }
+  ];
+  const stats = [
+    { number: '500+', label: 'Transformations Completed', icon: Rocket }
+    { number: '40%', label: 'Average Cost Reduction', icon: TrendingUp }
+    { number: '300%', label: 'ROI Improvement', icon: Star }
+    { number: '24/7', label: 'Support Available', icon: Clock }
+  ];
+
   Rocket,
   Zap,
   Shield,
@@ -119,6 +180,26 @@ export default function DigitalTransformationPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+          >
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
+              Digital Transformation
+            </h1>
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
+              End-to-end digital transformation solutions that modernize your
+              business            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='mb-12'
+          >
+            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
+              From strategy development to implementation, we guide businesses
+              through complete digital transformation journeys that drive
+              innovation, efficiency, and growth.
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              End-to-end digital transformation solutions that modernize your business
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Start Transformation
@@ -211,15 +292,11 @@ export default function DigitalTransformationPage() {
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className='text-4xl font-bold text-white mb-6'>
-              Digital Transformation Services
-            </h2>
-            <p className='text-xl text-white/70 max-w-3xl mx-auto'>
-              Comprehensive transformation solutions designed to modernize your
-              business operations
+            <h2 className="text-4xl font-bold text-white mb-6">Digital Transformation Services</h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              Comprehensive transformation solutions designed to modernize your business operations
             </p>
           </motion.div>
-              <motion.div
               <motion.div
 
 
@@ -311,14 +388,13 @@ export default function DigitalTransformationPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           >
+
+            <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
-              Let's discuss how our digital transformation solutions can
-              modernize your operations and drive sustainable growth.
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+              Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth.
             </p>
               </button>
             </div>
@@ -359,7 +435,6 @@ export default function DigitalTransformationPage() {
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
-}</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -480,20 +555,6 @@ export default function DigitalTransformationPage() {
                 Transformation Assessment;
               </button>;
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Success Stories;
-  )
-          >;
-            <h2 className="text-4xl font-bold text-white mb-6">;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
-              Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth.;
-            </p>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-              <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">;
-                Transformation Assessment;
-              </button>;
-              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
-                View Success Stories;
               </button>;
             </div>;
           </motion.div>;
@@ -507,6 +568,3 @@ export default function DigitalTransformationPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-

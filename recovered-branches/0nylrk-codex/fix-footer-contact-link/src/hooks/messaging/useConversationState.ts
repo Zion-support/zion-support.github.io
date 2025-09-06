@@ -1,13 +1,3 @@
-
-import { useState  } from 'react';
-import { Conversation, Message  } from '@/types/messaging';
-/**
- * Hook to manage messaging state
- */
-export function useConversationState() {
-  const [messages, setMessages] = useState<Message[]>([]),
-  const [activeMessages, setActiveMessages] = useState<Message[]>([]),
-
 import {useState} from 'react';
 import {Conversation, Message} from '@/types/messaging';
 /**
@@ -70,9 +60,7 @@ export function useConversationState() {;
     unreadCount,;
     setUnreadCount,;
     activeConversation,;
-
-
-
+    active_conversation;
     setActiveConversation;
     is_loading;
     setIsLoading}

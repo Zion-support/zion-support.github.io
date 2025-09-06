@@ -1,4 +1,3 @@
-
 // Initialize i18next
 i18n
   .use(LanguageDetector) // Detect user language
@@ -33,6 +32,13 @@ i18n
 });
 export default i18n;
 
+import i18n from 'i18next';
+import {initReactI18next} from 'react - i18next';
+import LanguageDetector from 'i18next - browser - languagedetector';
+import en_translation from './locales / en / translation.json';
+import es_translation from './locales / es / translation.json';
+import pt_translation from './locales / pt / translation.json';
+import ar_translation from './locales / ar / translation.json';
 // Initialize i18next;
 i18n;
   .use (LanguageDetector) // Detect user language;
@@ -75,8 +81,6 @@ i18n.on ('language_changed', (lng) => {
 ;
   // If user is authenticated, save language preference to profile;
   // This will be implemented in the LanguageContext;
-
-}),;
-
-
+});
+;
 export default i18n;

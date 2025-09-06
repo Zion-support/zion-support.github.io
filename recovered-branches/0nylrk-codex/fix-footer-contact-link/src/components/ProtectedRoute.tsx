@@ -1,18 +1,10 @@
 
-import {Navigate} from 'react-router-dom';
-
-export interface ProtectedRouteProps {
-  children: React.ReactNode,;
-
-
-
 
 import {Navigate} from 'react-router-dom';
 
 export interface ProtectedRouteProps {
   children: React.ReactNode,;
-
-
+import React from 'react';
   adminOnly?: boolean;
   tenantAdminAllowed?: boolean;
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
@@ -81,6 +73,9 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
   children,;
   adminOnly = false,;
+
+
+
 
 
 

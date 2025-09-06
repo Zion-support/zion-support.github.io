@@ -47,26 +47,26 @@ import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 
   const categories = [;
-    { id: 'all', name: 'All Services', icon: '', count: allServices && allServices.length },;
-    { id: 'ai', name: 'AI & Machine Learning', icon: '', count: aiCount },;
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },;
     {;
       id: 'quantum',;
       name: 'Quantum Computing',;
-      icon: '',;
+      icon: '⚛️',;
       count: quantumCount,;
     },;
     {;
       id: 'blockchain',;
       name: 'Blockchain & Web3',;
-      icon: '',;
+      icon: '⛓️',;
       count: blockchainCount,;
     },;
-    { id: 'iot', name: 'IoT & Edge Computing', icon: '', count: iotCount },;
-    { id: 'space', name: 'Space Technology', icon: '', count: spaceCount },;
+    { id: 'iot', name: 'IoT & Edge Computing', icon: '🌐', count: iotCount },;
+    { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },;
     {;
       id: 'security',;
       name: 'Cybersecurity',;
-      icon: '',;
+      icon: '🔒',;
       count: cybersecurityCount,;
     },  ];
 
@@ -334,6 +334,19 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
             >
+              <div className="flex items-center justify-center mb-6">
+                <Sparkles className="w-12 h-12 text-cyan-400 mr-4" />
+                <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                  2025 Innovation Showcase
+                </h1>
+                <Sparkles className="w-12 h-12 text-pink-400 ml-4" />
+              </div>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Revolutionary AI, Quantum Computing & Emerging Technology Services
+              </p>
+              <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+                Discover our cutting-edge solutions that are transforming industries and driving the future of technology
+              </p>
               {/* Service Statistics */}
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
                 <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
@@ -376,8 +389,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
             </motion.div>
           </div>
         </section>
-
-
                   <input
                     type="text"
                     placeholder="Search services..."
@@ -388,13 +399,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
                 {/* Category Filter */}
                 <select
                   value={selectedCategory}
-                  onChange={e => setSelectedCategory(e && e.target.value)}
-                  className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
-                >;
-                  {categories && categories.map(category => (                    <option key={category && category.id} value={category && category.id}>;
-                      {category && category.name} ({category && category.count});
-                    </option>;
                   ))}
+
+                </select>;
+
+
           <meta;
             name='description';
             content="Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting - edge emerging technologies. Contact: +1 302 464 0950";
@@ -633,8 +642,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
   }
 }
                     <div className="flex gap-3">
-
-
                       <a
                         href={service && service.link}
                         target='_blank'
@@ -651,18 +658,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                         <div>🌐 {service.contactInfo.website}</div>
                       </div>
                     </div>
-                    {/* Contact Information */}
-                    <div className='mt-4 pt-4 border-t border-gray-700'>;
-                      <div className='text-xs text-gray-400 mb-2'>;
-                        Contact Information:;
-                      </div>;
-                      <div className='text-xs text-gray-300 space-y-1'>                        <div>📱 {service && service.contactInfo.mobile}</div>;
-                        <div>✉️ {service && service.contactInfo.email}</div>;
-                        <div>🌐 {service && service.contactInfo.website}</div>;
-                      </div>;
-                    </div>;
-                  </motion && motion.div>;
-                ))}
             {/* No Results Message */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -687,35 +682,31 @@ export default function EnhancedServicesShowcase2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             >
+
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
-              <p className='text-xl text-gray-300 mb-8'>
-                Join thousands of companies achieving breakthrough results with
-                our revolutionary services
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of companies achieving breakthrough results with our revolutionary services
               </p>
               {/* Contact Information */}
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='flex items-center justify-center space-x-3'>
                   <div className='w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center'>
                     <Target className='w-6 h-6 text-cyan-400' />
-
                   </div>
-                  <span className='text-lg text-white'>+1 302 464 0950</span>
+                  <span className="text-lg text-white">+1 302 464 0950</span>
                 </div>
-                <div className='flex items-center justify-center space-x-3'>
-                  <div className='w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center'>
-                    <Award className='w-6 h-6 text-purple-400' />
+                <div className="flex items-center justify-center space-x-3">
+                  <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
+                    <Award className="w-6 h-6 text-purple-400" />
                   </div>
-                  <span className='text-lg text-white'>
-                    kleber@ziontechgroup.com
-                  </span>
+                  <span className="text-lg text-white">kleber@ziontechgroup.com</span>
                 </div>
-                <div className='flex items-center justify-center space-x-3'>
-                  <div className='w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center'>
-                    <Lightbulb className='w-6 h-6 text-green-400' />
+                <div className="flex items-center justify-center space-x-3">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
+                    <Lightbulb className="w-6 h-6 text-green-400" />
                   </div>
               </div>
               {/* Action Buttons */}
@@ -726,8 +717,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
   }
 }
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-
-
                 <a
                   href='/contact'
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'>;
@@ -805,12 +794,10 @@ export default function EnhancedServicesShowcase2025(req, res) {
   );
 
 
-  )
-}
                 animate={{ opacity: 1 }}
                 className='text - center py - 16';
               >;
-                <div className='text - 6xl mb - 4'></div>;
+                <div className='text - 6xl mb - 4'>🔍</div>;
                 <h3 className='text - 2xl font - semibold text - white mb - 2'>;
                   No services found;
                 </h3>;

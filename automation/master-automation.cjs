@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,16 +28,18 @@ const { execSync } = require('child_process');
 =======
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
 const { promisify } = require("util");
 const execAsync = promisify(exec);
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,11 +69,14 @@ const { execSync } = require('child_process');
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/main
+=======
+>>>>>>> origin/main
 class MasterAutomation {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
     this.ensureLogsDir();
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -105,6 +111,8 @@ class MasterAutomation {
 =======
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
   log(message) {
 class MasterAutomation {}
   constructor() {}
@@ -118,10 +126,13 @@ class MasterAutomation {}
   log(message) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
+=======
+>>>>>>> origin/main
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
@@ -130,9 +141,12 @@ class MasterAutomation {}
   }
 
   log(message, type = 'info') {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
@@ -142,6 +156,7 @@ class MasterAutomation {}
     const logFile = path.join(this.logsDir, 'master-automation.log');
     fs.appendFileSync(logFile, logMessage + '\n');
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   async runCommand(command, options = {}) {
@@ -219,6 +234,10 @@ class MasterAutomation {}
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/main
+=======
+
+  async runCommand(command, description) {
+>>>>>>> origin/main
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
@@ -226,6 +245,7 @@ class MasterAutomation {}
         cwd: '/workspace',
         stdio: 'pipe',
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -263,6 +283,8 @@ class MasterAutomation {}
       });
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
   };
   async runCommand(command, options = {}) {}
     try {}
@@ -354,6 +376,7 @@ class MasterAutomation {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
@@ -390,6 +413,8 @@ class MasterAutomation {}
 
 
 >>>>>>> origin/main
+=======
+>>>>>>> origin/main
 
   async runBuildProcess() {
     this.log('🚀 Starting build process...');
@@ -408,6 +433,7 @@ class MasterAutomation {}
       if (!result.success) {
         this.log(`❌ Build process failed at: ${step.description}`, 'error');
         return { success: false, results };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -444,12 +470,15 @@ class MasterAutomation {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 >>>>>>> origin/main
+=======
+>>>>>>> origin/main
       }
     }
 
     this.log('✅ Build process completed successfully');
     return { success: true, results };
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -483,6 +512,8 @@ class MasterAutomation {}
   }
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
   async performHealthCheck() {
     this.log("Performing health check.");
     // Check if PM2 is running
@@ -594,7 +625,6 @@ class MasterAutomation {}
     } else {
       this.log("All processes are running normally");
 
-
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
 <<<<<<< HEAD
@@ -613,6 +643,7 @@ class MasterAutomation {}
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -715,6 +746,8 @@ class MasterAutomation {}
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/main
+=======
+>>>>>>> origin/main
     }
 
     this.log('✅ Quality checks completed');
@@ -779,6 +812,7 @@ class MasterAutomation {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 <<<<<<< HEAD
@@ -805,6 +839,8 @@ class MasterAutomation {}
 =======
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
     if (runningProcesses < expectedProcesses) {}
       this.log()
         `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
@@ -825,7 +861,6 @@ class MasterAutomation {}
         "buildMonitor": await this.getPM2Logs('build-monitor', 20),
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
-
 
     // Calculate summary
     if (report.build.success) report.summary.successfulScripts++;
@@ -848,6 +883,7 @@ class MasterAutomation {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 <<<<<<< HEAD
@@ -894,6 +930,8 @@ class MasterAutomation {}
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/main
+=======
+>>>>>>> origin/main
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report saved to: ${reportFile}`);
@@ -901,6 +939,7 @@ class MasterAutomation {}
   }
 
   async start() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -931,6 +970,8 @@ class MasterAutomation {}
 =======
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
     this.log("Master Automation started");
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, "logs");
@@ -962,17 +1003,23 @@ class MasterAutomation {}
     }, 24 * 60 * 60 * 1000);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
+=======
+>>>>>>> origin/main
     this.log('🎯 Starting Master Automation System...');
     const report = await this.generateReport();
     this.log('🏁 Master Automation completed');
     return report;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
   }
 
@@ -1020,6 +1067,7 @@ class MasterAutomation {}
     return status;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Handle command line arguments
@@ -1179,11 +1227,16 @@ class MasterAutomation {}
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/main
+=======
+
+// CLI interface
+>>>>>>> origin/main
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
 
   switch (command) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1218,6 +1271,8 @@ if (require.main === module) {
 =======
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
@@ -1248,7 +1303,6 @@ if (require.main === module) {}
   const automation = new MasterAutomation();
   const command = process.argv[2];
   switch (command) {}
-
     case 'start':
       automation
         .start()
@@ -1262,12 +1316,8 @@ if (require.main === module) {}
         });
       break;
     case 'status':
-automation.monitorProcesses().catch(error => {})
-        console.error('Failed to get "status": ', error);
-        process.exit(1);
-      }
-});
       break;
+<<<<<<< HEAD
 <<<<<<< HEAD
     case "report":
       automation.generateReport().catch(error => {
@@ -1338,6 +1388,8 @@ module.exports = MasterAutomation;
         });
       break;
     case 'status':
+=======
+>>>>>>> origin/main
       automation
         .status()
         .then(status => {
@@ -1349,14 +1401,20 @@ module.exports = MasterAutomation;
           process.exit(1);
         });
       break;
+<<<<<<< HEAD
     default: console.log('Usage: node master-automation.cjs [start|status]'), process.exit(1),
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/main
+=======
+    default: console.log('Usage: node master-automation.cjs [start|status]'); process.exit(1);
+>>>>>>> origin/main
   }
 }
+
 module.exports = MasterAutomation;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1390,12 +1448,15 @@ module.exports = MasterAutomation;
 module.exports = MasterAutomation;
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
       process.exit(1);
   };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = MasterAutomation;
@@ -1432,4 +1493,6 @@ module.exports = MasterAutomation;
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main

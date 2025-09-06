@@ -118,6 +118,11 @@ import React, { useMemo, useState } from 'react';
     mutate ();  }
   return (
     <EnhancedLayout>;
+
+            value={filters && filters.status || ''}
+            onChange={e =>;
+              setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
+
             }
             className='border rounded px-2 py-1';
       <div className='max - w-7xl mx - auto'>;
@@ -194,10 +199,6 @@ import React, { useMemo, useState } from 'react';
             Reset;
           </button>;
         </div>;
-                </tr>              )}
-            </tbody>
-          </table>
-        </div>
               </tr>
             </thead>
             <tbody>
@@ -213,11 +214,6 @@ import React, { useMemo, useState } from 'react';
                     <button onClick={() => setSelected(f)} className="px-2 py-1 rounded border">Review</button>
                   </td>
                 </tr>
-
-
-}
-
-
 
 
 }

@@ -15,8 +15,6 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
-  }
-
 
 
 
@@ -61,9 +59,6 @@ function useCarousel(): CarouselContextProps {;
   const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {;
     throw new Error("useCarousel must be used within a <Carousel />");
-
-
-
   }
 ;
   return context as CarouselContextProps;
@@ -132,9 +127,6 @@ on_select (api);
       return () => {
         api?.off (&quot;select & quot;, on_select);
       }
-
-    }, [api, on_select]);
-
     return (
       <CarouselContext.Provider;
         value={{
@@ -143,15 +135,15 @@ on_select (api);
         <div;
           ref={ref}
           onKeyDownCapture={handleKeyDown}
-
-
+className={cn (&quot;relative & quot;, class_name)}
+          role=&quot;region & quot;
+          aria - roledescription=&quot;carousel & quot;
           {...props}
         >;
           {children}
         </div>;
       </CarouselContext.Provider>);
   }
-)
 const CarouselContent = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
@@ -161,13 +153,6 @@ const CarouselContent = React.forwardRef<
     <div ref={carousel_ref} className=&quot;overflow - hidden & quot;>;
       <div;
         ref={ref}
-
-        className={cn(
-
-          "flex",
-          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
-
-
           className
         )}
         {...props}
@@ -226,11 +211,13 @@ const CarouselPrevious = React.forward_ref<;
 >(({ class_name, variant = &quot;outline & quot;, size = &quot;icon & quot;, ...props }, ref) => {
   const { orientation, scroll_prev, canScrollPrev } = use_carousel ();
   return (
+    <div;
+      ref={ref}
+  return (
     <Button;
       ref={ref}
       variant={variant}
       size={size}
-      className={cn(
       disabled={!canScrollPrev}
       on_click={scroll_prev}
       {...props}
@@ -241,9 +228,6 @@ CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
     >
       <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
-
-
-
     >
       <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
@@ -277,7 +261,6 @@ const CarouselNext = React.forward_ref<;
       ref={ref}
       variant={variant}
       size={size}
-      className={cn(
       disabled={!canScrollNext}
       on_click={scroll_next}
       {...props}
@@ -303,8 +286,6 @@ export {
 });
 CarouselNext.display_name = &quot;CarouselNext & quot;
 ;
-
-
     >
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
@@ -322,6 +303,4 @@ export {
   CarouselContent,
   CarouselItem,
   CarouselPrevious,
-
-;
-
+  CarouselNext}

@@ -1,4 +1,3 @@
-
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 
@@ -8,6 +7,10 @@ import {
       await logout ();
     } catch (error) {
 
+
+      });
+    }
+  }
 
   if (!user) {;
     return (
@@ -47,8 +50,12 @@ import {
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+    <DropdownMenu>;
+      <DropdownMenuTrigger asChild>;
+        <Button variant="ghost" className="h-8 w-8 rounded-full">;
+          <Avatar className="h-8 w-8">;
+            <AvatarImage
   );
-
       toast ({
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
@@ -116,3 +123,4 @@ if ( {) {
         <DropdownMenuItem on_click={handleSignOut}>Sign Out</DropdownMenuItem>;
       </DropdownMenuContent>;
     </DropdownMenu>);
+}

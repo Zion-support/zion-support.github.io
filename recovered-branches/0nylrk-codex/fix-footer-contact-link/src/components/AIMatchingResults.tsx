@@ -31,10 +31,6 @@ interface AIMatchingResultsProps {;
   projectDescription?: string;
   serviceType?: string;
 }
-
-
-export function AIMatchingResults(): any ({;
-
   matches;
   onSelectMatch;
 
@@ -119,9 +115,6 @@ export function AIMatchingResults({
               <p className="text-xs text-zion-slate-light">Your search:</p>;
               <p className="text-sm text-white">{projectDescription}</p>;
             </div>;
-
-
-
           )}
         </CardContent>;
       </Card>;
@@ -241,7 +234,10 @@ if ( {) {
         </TabsList>;
         {Object.entries (categories).map (([tab, items]) => (
           <TabsContent key={tab} value={tab} className="mt - 4 space - y-3">;
-
+            {items.length > 0 ? (
+              items.map ((match) => {
+                const CategoryIcon = getCategoryIcon (match.category);
+                return (
                         "bg-green-500"
                       )} />;
                       <div className="flex-1 p-4">;
@@ -257,4 +253,9 @@ if ( {) {
                                   {skill}
                                 </Badge>;
                               ))}
+                            </div>;
+                          </div>;
+                        </div>;
+                      </div>;
+                    </div>;
 }

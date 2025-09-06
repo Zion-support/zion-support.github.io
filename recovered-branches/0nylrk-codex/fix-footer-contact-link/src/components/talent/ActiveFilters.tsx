@@ -1,4 +1,3 @@
-
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {Button} from "@/components/ui/button";
@@ -22,10 +21,6 @@ interface ActiveFiltersProps {;
   setExperienceRange: (range: [number, number]) => void;
   clearFilters: () => void;
 }
-
-
-export function ActiveFilters(): any ({;
-
   selectedSkills;
   toggleSkill;
   selectedAvailability;
@@ -36,9 +31,6 @@ export function ActiveFilters(): any ({;
   setPriceRange;
   experienceRange;
   setExperienceRange;
-
-
-
 interface ActiveFiltersProps {
   selectedSkills: string[],
   toggleSkill: (skill: string) => void,
@@ -73,9 +65,6 @@ export function ActiveFilters({
   setPriceRange,
   experienceRange,
   setExperienceRange,
-
-
-
   clearFilters
 }: ActiveFiltersProps) {
   // Check if any filters are active
@@ -87,13 +76,11 @@ export function ActiveFilters({
       {selectedSkills.map(skill => (
         <ClickableBadge
           key={skill}
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-        <ClickableBadge
-          key={skill}
 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
-
-
+        <ClickableBadge
+          key={skill}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => toggleSkill(skill)}
         >;
           {skill}
@@ -135,7 +122,6 @@ export function ActiveFilters({
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
-}
         variant="ghost" 
         size="sm" 
 

@@ -124,10 +124,6 @@ function Footer() {
               </li>;
             </ul>;
           </div>;
-          <div>;
-            <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>;
-            <ul className="space-y-2">;
-              <li>;
                 <Link
                   to="/content/about"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
@@ -164,14 +160,12 @@ function Footer() {
               </li>;
             </ul>;
           </div>;
-          <div>;
-            <h3 className="text-white font-semibold mb-4 text-lg">;
-              Subscribe to our newsletter;
-            </h3>;
             </p>;
             <NewsletterForm />;
           </div>;
         </div>;
+                Terms of Service;
+              </Link>;
             </div>;
           </div>;
         </div>;
@@ -256,4 +250,3 @@ export function Footer() {;
 
     </footer>;
   );
-}

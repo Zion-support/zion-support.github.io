@@ -51,35 +51,177 @@ export function getEntityId(event: SyncEvent): string {
       );
     default:
       return (event.payload as any).id |event.eventId;
+import fs from 'fs';
+import path from 'path';
+import { MultiverseState, InstanceConfig, SyncEvent } from './types';
+  }
+  if (isNewer) {
+    state && state.latestVersionByEntityId[entityId] = event && event.version;
+  }
+  return state;
+export function getEntityId(event: SyncEvent): string {
+  switch (event && event.type) {
+    case 'proposal':
+      return (event && event.payload as any).proposalId;
+    case 'token_transfer':
+      return (event && event.payload as any).txId;
+    case 'talent_mobility':
+      return (
+        (event && event.payload as any).personId + ':' + (event && event.payload as any).startDate
+      );
+    case 'dao_endorsement':
+      return (event && event.payload as any).resolutionId;
+    case 'leaderboard_entry':
+      return (
+        (event && event.payload as any).subjectId + ':' + (event && event.payload as any).period
+      );
+    default:
   }
 export function filterEventsByScope(
   events: SyncEvent[]
   scope: InstanceConfig['scope']
-): SyncEvent[] {;
-  if (scope === 'full') return events;
-  if (scope === 'dao') {
-    return events.filter(
-      e => e.type === 'proposal' |e.type === 'dao_endorsement'
-    );
-  }
-  if (scope === 'marketplace') {
-    return events.filter(
-      e =>
-        e.type === 'token_transfer' |
-        e.type === 'talent_mobility' |
-        e.type === 'leaderboard_entry'
-    );
-  }
 }
 
 
 
+): SyncEvent[] {
+  if (scope === 'full') return events;
+  if (scope === 'dao') {
     );
   }
+  if (scope === 'marketplace') {
+    return events && events.filter(
+      e =>
+// Sync storage utilities
+export interface SyncJob {
+  id: string;
+  type: 'full' | 'incremental' | 'realtime';
+  status: 'pending' | 'running' | 'completed' | 'failed' | 'cancelled';
+  source: string;
+  destination: string;
+  config: {
+    batchSize?: number;
+    retryAttempts?: number;
+    timeout?: number;
+    filters?: Record<string, any>;
+    mappings?: Record<string, string>;
+  };
+  progress: {
+    total: number;
+    processed: number;
+    failed: number;
+    skipped: number;
+  };
+  startedAt?: string;
+  completedAt?: string;
+  error?: string;
+  metadata?: Record<string, any>;
+  createdAt: string;
+  updatedAt: string;
+}
 
-  return events;export function resetState(): void {
-  state = { ...defaultState }
+export interface SyncConnection {
+  id: string;
+  name: string;
+  type: 'database' | 'api' | 'file' | 'cloud' | 'custom';
+  config: {
+    url?: string;
+    credentials?: Record<string, string>;
+    options?: Record<string, any>;
+  };
+  isActive: boolean;
+  lastSyncAt?: string;
+  createdAt: string;
+  updatedAt: string;
+}
 
+export interface SyncMapping {
+  id: string;
+  name: string;
+  sourceConnectionId: string;
+  destinationConnectionId: string;
+  sourceTable?: string;
+  destinationTable?: string;
+  fieldMappings: Record<string, string>;
+  transformations?: Array<{
+    field: string;
+    type: 'format' | 'convert' | 'calculate' | 'filter';
+    config: Record<string, any>;
+  }>;
+  isActive: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SyncLog {
+  id: string;
+  jobId: string;
+  level: 'info' | 'warn' | 'error' | 'debug';
+  message: string;
+  details?: Record<string, any>;
+  timestamp: string;
+}
+
+class SyncStorage {
+  private jobs: Map<string, SyncJob> = new Map();
+  private connections: Map<string, SyncConnection> = new Map();
+  private mappings: Map<string, SyncMapping> = new Map();
+  private logs: Map<string, SyncLog> = new Map();
+
+  // Job methods
+  async createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {
+    const newJob: SyncJob = {
+      ...job,
+      id: `job_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      progress: {
+        total: 0,
+        processed: 0,
+        failed: 0,
+        skipped: 0
+      },
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+
+    this.jobs.set(newJob.id, newJob);
+    return newJob;
+  }
+
+  async getJob(id: string): Promise<SyncJob | null> {
+    return this.jobs.get(id) || null;
+  }
+
+  async updateJob(id: string, updates: Partial<SyncJob>): Promise<SyncJob | null> {
+    const job = this.jobs.get(id);
+    if (!job) return null;
+
+    const updatedJob = {
+      ...job,
+      ...updates,
+      updatedAt: new Date().toISOString()
+    };
+
+    this.jobs.set(id, updatedJob);
+    return updatedJob;
+  }
+
+  async deleteJob(id: string): Promise<boolean> {
+    return this.jobs.delete(id);
+  }
+
+  async getJobsByStatus(status: SyncJob['status']): Promise<SyncJob[]> {
+    return Array.from(this.jobs.values()).filter(job => job.status === status);
+  }
+
+  async getJobsByType(type: SyncJob['type']): Promise<SyncJob[]> {
+    return Array.from(this.jobs.values()).filter(job => job.type === type);
+  }
+
+  async getAllJobs(): Promise<SyncJob[]> {
+    return Array.from(this.jobs.values()).sort((a, b) => 
+      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    );
+  }
 }
 // Singleton instance
 export const syncStorage = new SyncStorage();
@@ -219,9 +361,6 @@ export function formatDuration(startTime: string, endTime?: string): string {
     return `${seconds}s`;
   }
 }
-
-
-
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',

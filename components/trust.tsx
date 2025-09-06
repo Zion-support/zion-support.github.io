@@ -1,9 +1,10 @@
 
-import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
+
+
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
@@ -61,14 +62,10 @@ import RiskIndicator from '../components/ui/RiskIndicator';
                       <li key={c.key} className="flex justify-between">
 
 
-
   }
   return (
     <EnhancedLayout>
 
-
-
-                      </li>
 
 
                       </li>
@@ -81,7 +78,6 @@ import RiskIndicator from '../components/ui/RiskIndicator';
                 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data && data.reasonSummary}
                 </div>;
               )}
-
                     ))}
                   </ul>
                 </div>
@@ -97,41 +93,27 @@ import RiskIndicator from '../components/ui/RiskIndicator';
                 <button
                   className='text-sm px-3 py-1 rounded bg-green-600 text-white'
                   onClick={() => submitPeer('endorse')}
-                >;
-                  Endorse;
-                </button>;
-                <button
-                  className='text-sm px-3 py-1 rounded bg-red-600 text-white'
-                  onClick={() => submitPeer('flag')}
-                >;
-                  Flag;
-                </button>;
-              </div>;
-              {data && data.total < 70 && (;
-                <div className='bg-white dark:bg-gray-900 rounded border p-4 space-y-3'>;
-                  <h3 className='font-medium'>Appeal Score</h3>;
-                  <form onSubmit={submitAppeal} className='space-y-2'>;
                     <input
                       name='email'
                       type='email'
                       placeholder='Contact email'
                       className='w-full border rounded px-2 py-1 text-sm'
-                    />;
                     <textarea
                       name='message'
                       placeholder='Explain why your score should be reconsidered'
                       className='w-full border rounded px-2 py-1 text-sm'
                       rows={4}
                       required
-                    />;
-                    <button
-                      className='text-sm px-3 py-1 rounded bg-blue-600 text-white'
 
       </div>;
     </EnhancedLayout>;
   );
 }
 
+              )}
+            </div>;
+          </div>;
+        )}
   );
 }
 import EnhancedLayout from '../components / layout / EnhancedLayout';

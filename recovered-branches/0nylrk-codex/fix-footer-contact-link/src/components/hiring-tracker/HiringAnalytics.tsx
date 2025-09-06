@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -103,6 +102,19 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
 
   if (isLoading) {;
     return <div>Loading analytics data...</div>;
+    return (
+      <Card className="text-center py-16">;
+        <CardContent>;
+          <h3 className="text-lg font-semibold mb-2">No data available</h3>;
+          <p className="text-muted-foreground mb-6">;
+            You need applications to generate analytics;
+          </p>;
+        </CardContent>;
+      </Card>;
+    );
+  }
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
+
   }
   
   if (!applications || applications.length === 0) {

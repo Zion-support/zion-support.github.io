@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -102,28 +101,15 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
-  const handle_generate = async ({
-
     title;
     category;
     key_features;
     target_audience;
   }: {
-
-    title: string,
-    category: string,
-    key_features: string,
-    target_audience: string;
-  }) => {
-    setIsLoading (true);
-;
-
     try {
       const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
         body: { title, category, key_features, target_audience }
       });
-
-
       }
       if (data.error) {
         throw new Error(data.error)
@@ -169,37 +155,32 @@ if ( {) {
       setIsLoading (false);
     }
   }
-
-  return (
-
-    <div className="space-y-6">;
-      <Card className="border border-zion-blue-light bg-zion-blue-dark">;
-        <CardHeader>;
-          <CardTitle className="flex items-center text-white">;
-            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />;
-            AI Listing Optimizer;
-          </CardTitle>;
-          <p className="text-sm text-zion-slate-light">;
-            Provide basic information and let AI generate optimized, SEO-friendly content for your listing;
-          </p>;
-        </CardHeader>;
-        <CardContent>;
-          <AIListingForm
-            onSubmit={handleGenerate} 
-            isLoading={isLoading} 
-
-          <AIListingForm 
-            onSubmit={handleGenerate} 
-            isLoading={isLoading} 
-
-
             initialValues={initialValues}
-          />
-        </CardContent>
-      </Card>
+          />;
+        </CardContent>;
+      </Card>;
+
       {isLoading && <LoadingContentSkeleton />}
-      {generatedContent && !isLoading && (
-        <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
+
+      {generatedContent && !isLoading && (;
+        <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
       )}
+    </div>
+  )
+}
+    </div>;
+  );
 }
 ;
+          <AIListingForm;
+            on_submit={handle_generate}
+            is_loading={is_loading}
+            initial_values={initial_values}
+          />;
+        </CardContent>;
+      </Card>;
+      {is_loading && <LoadingContentSkeleton />}
+      {generated_content && !is_loading && (
+        <GeneratedContentDisplay content={generated_content} on_apply={handle_apply} />)}
+    </div>);
+}

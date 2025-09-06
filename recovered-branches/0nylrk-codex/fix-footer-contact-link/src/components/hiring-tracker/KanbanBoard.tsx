@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react",
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -28,8 +27,6 @@ import { useIsMobile } from "@/hooks/use-mobile",;
 interface DnDLocation {;
   droppableId: string,;
   index: number;
-
-
 }
 ;
 interface DropResult {;
@@ -151,6 +148,7 @@ const COLUMNS = [;
     id: "rejected",;
     title: "Rejected",;
     description: "Not moving forward"}],;
+
 interface KanbanBoardProps {;
   jobId?: string;
 }
@@ -159,8 +157,6 @@ interface KanbanBoardProps {;
   useEffect(() => {;
     if (applications) {;
       // Group applications by status;
-      return;
-    }
 
 
 
@@ -179,7 +175,7 @@ interface KanbanBoardProps {;
     setColumns({
     // Update status in the database
     try {
-      await updateApplicationStatus(draggableId, newStatus);
+      await updateApplicationStatus(draggableId, newStatus),
       toast({
         title: "Status updated"
         description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`})
@@ -231,7 +227,7 @@ interface KanbanBoardProps {;
     }
   };
   if (isLoading) {;
-    return (;
+    return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
         {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
           <Card key={i} className="h-[500px]">;
@@ -242,9 +238,6 @@ interface KanbanBoardProps {;
               <Skeleton className="h-[400px] w-full" />;
             </CardContent>;
           </Card>;
-
-
-
         ))}
       </div>;
     );

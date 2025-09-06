@@ -4,8 +4,6 @@ const STEPS = [
   { key: 'job', label: 'Job posted' }
   { key: 'invite', label: 'First invite sent' }
   { key: 'response', label: 'First response received' }
-
-
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -13,7 +11,6 @@ const STEPS = [
   { key: 'job', label: 'Job posted' },
   { key: 'invite', label: 'First invite sent' },
   { key: 'response', label: 'First response received' }] as const,
-  });
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ job: false, invite: false, response: false }),
   useEffect(() => {
     try {
@@ -149,10 +146,6 @@ export default function ClientDashboard(req, res) {
 }
 
 
-
-
-}
-
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -165,6 +158,12 @@ export default function ClientDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+        </ul>;
+      </EnhancedCard>;
+    </div>;
+  );
+
+
   )
 }
 import EnhancedCard from '../../components / ui / EnhancedCard';
@@ -236,7 +235,7 @@ function ClientDashboard() {
                 <span;
                   className={`inline - flex h - 5 w - 5 items - center justify - center rounded - full border ${completed[s.key] ? 'bg - emerald - 500 text - white border - emerald - 500' : 'border - gray - 300 dark:border - gray - 700'}`}
                 >;
-                  {completed[s.key] ? '' : ''}
+                  {completed[s.key] ? '✓' : ''}
                 </span>;
                 <span className='text - sm'>{s.label}</span>;
               </div>;

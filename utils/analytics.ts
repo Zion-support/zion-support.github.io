@@ -1,4 +1,3 @@
-export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
 
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
 export type TrackEventPayload = {
@@ -23,8 +22,6 @@ function track_event() {
 
   }
 }
-
-
     await fetch('/api/analytics/events/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
@@ -44,5 +41,7 @@ function track_event() {
 }
 
 
+  }
+}
   }
 }

@@ -1,7 +1,3 @@
-
-import {ReactNode} from 'react';
-
-
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
 import {ReactNode} from 'react';
@@ -11,7 +7,6 @@ declare module '@/components / FeatureCard' {
     title: string;
     description: string;
     icon: ReactNode;
-
     title: string;
     description: string;
     category: string;
@@ -21,8 +16,5 @@ declare module '@/components / FeatureCard' {
     author_image?: string;
     ai_score?: number;
     rating?: number;
-  }
-}
-
   }
 }

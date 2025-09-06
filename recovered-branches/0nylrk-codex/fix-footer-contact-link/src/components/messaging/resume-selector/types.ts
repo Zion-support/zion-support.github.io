@@ -1,5 +1,3 @@
-import { Resume } from "@/types/resume";
-export interface ResumeOption {;
 
 
 import { Resume  } from '@/types / resume';
@@ -11,7 +9,6 @@ export interface ResumeOption {
   resume?: Resume;
   file?: File
 }
-
 import { Resume } from "@/types/resume",
 export interface ResumeOption {
   id: string,
@@ -28,11 +25,6 @@ export interface ResumeOption {;
   file?: File;
 }
 ;
-
-
-  onResumeSelected: (resumeOption: ResumeOption) => void;
-  onResumeSelected: (resume_option: ResumeOption) => void;
-export interface ResumeSelectorProps {;
   onResumeSelected: (resumeOption: ResumeOption) => void;
   onResumeSelected: (resume_option: ResumeOption) => void;
 }

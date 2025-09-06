@@ -8,8 +8,6 @@ export default function AdminTokens() {
   const [amount, setAmount] = useState(100),
   const [reason, setReason] = useState("admin_action"),
   const [config, setConfig] = useState<any>(null),
-
-
   async function load() {
     const [txRes, cfgRes] = await Promise.all([
       fetch("/api/admin/tokens").then((r) => r.json())
@@ -137,7 +135,6 @@ export default function AdminTokens() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
 
 import React, { useEffect, useState } from './react';,
@@ -246,9 +243,6 @@ function save_config() {
           </div>;
         </div>;
       </div>;
-}
-    </EnhancedLayout>);
-}
 
                 <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
 

@@ -33,5 +33,3 @@ const Input: React.FC < InputProps> = ({
       disabled={disabled}
       required={required}
       {...props}
-}
-export { Input }

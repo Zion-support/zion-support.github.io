@@ -35,5 +35,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     summary: e.best_quote || '',
     audio: e.audio || {}}));
   return res.status (200).json ({ episodes: simplified });
-
-}

@@ -1,10 +1,3 @@
-
-import React from "react",
-import { AdminHeader } from "./AdminHeader",
-import { TeamManagement } from "./TeamManagement",
-import { UsageStats } from "./UsageStats",
-
-
       <Tabs defaultValue="team" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="team">Team Management</TabsTrigger>
@@ -21,8 +14,6 @@ import { UsageStats } from "./UsageStats",
         <TabsContent value="usage" className="space-y-8">
           <UsageStats />
         </TabsContent>
-
-
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
         </TabsContent>
@@ -52,10 +43,4 @@ export function AdminDashboard() {;
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>;
           <TabsTrigger value="activity">Team Activity</TabsTrigger>;
         </TabsList>;
-
-        <TabsContent value="activity" className="space-y-8">;
-          <TeamActivity />;
-        </TabsContent>;
-      </Tabs>;
-
-
+}

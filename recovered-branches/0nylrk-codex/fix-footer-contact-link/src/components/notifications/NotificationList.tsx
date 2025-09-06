@@ -11,7 +11,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   error;
   notifications;
   onMarkAsRead;
-
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
@@ -40,7 +39,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   error;
   notifications;
   onMarkAsRead;
-
   onRetry
   on_dismiss,
   on_retry;

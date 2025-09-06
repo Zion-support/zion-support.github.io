@@ -1,4 +1,3 @@
-
 import {useState} from 'react';
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -16,8 +15,6 @@ import {format} from "date-fns";
 import {CalendarIcon, Loader2} from "lucide-react";
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
-
-
 import { useState } from 'react',
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -36,8 +33,8 @@ import { CalendarIcon, Loader2 } from "lucide-react",
 // Define form schema
 
 const formSchema = z.object({
-  company_name: z.string().min(1, "Company name is required");
-  role_title: z.string().min(1, "Role title is required");
+  company_name: z.string().min(1, "Company name is required"),
+  role_title: z.string().min(1, "Role title is required"),
   start_date: z.date({
 
 export function WorkExperienceItemForm({;
@@ -65,6 +62,8 @@ export function WorkExperienceItemForm({
       is_current: values.is_current,      // Required
       description: values.description,    // Optional
       location: values.location,          // Optional
+  onCancel}: WorkExperienceItemFormProps) {;
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
   return (
     <>;
       <Form {...form}>;
@@ -197,10 +196,6 @@ function WorkExperienceItemForm() {
                   <div className="flex items - center gap - 2 h - 10">;
                     <Switch;
                       checked={field.value}
-
-            />;
-
-
             <FormField
               control={form && form.control}
               name="is_current"
@@ -222,52 +217,10 @@ function WorkExperienceItemForm() {
                     </label>;
                   </div>;
                   <FormMessage />;
-
-                </FormItem>)}
-            />;
-          </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-            <FormField;
-              control={form.control}
-              name="start_date";
-              render={({ field }) => (
-                <FormItem className="flex flex - col">;
-                  <FormLabel > Start Date</FormLabel>;
-                  <Popover>;
-                    <PopoverTrigger as_child>;
-                      <FormControl>;
-                        <Button;
-                          variant={"outline"}
-                          className={cn (
-                            "w - full pl - 3 text - left font - normal";
-                            !field.value && "text - muted - foreground")}
-                        >;
-                          {field.value ? (
-                            format (field.value, "MMM yyyy")) : (
-                            <span > Select date</span>)}
-                          <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
-                        </Button>;
-                      </FormControl>;
-                    </PopoverTrigger>;
-                    <PopoverContent className="w - auto p - 0" align="start">;
-                      <Calendar;
-                        mode="single";
-                        selected={field.value}
-                        on_select={field.on_change}
-                        initial_focus;
-                        caption_layout="dropdown - buttons";
-                        from_year={1990}
-                        to_year={new Date ().getFullYear ()}
-
                       />;
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
-
-            />;
-
-            {!watchIsCurrent && (;
-
               <FormField
                 control={form && form.control}
                 name="end_date"
@@ -323,60 +276,25 @@ function WorkExperienceItemForm() {
                   </div>;
                 </div>;
                 <FormControl>;
-
-                  <Textarea;
-                    placeholder="Describe your responsibilities, achievements, and skills used in this role...";
-                    className="min - h-[150px]";
-
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-
-          />;
-
-          <div className="flex justify-end gap-2">;
-            <Button type="button" variant="outline" onClick={onCancel}>;
-              Cancel;
-            </Button>;
-            <Button type="submit" disabled={isSubmitting}>;
-              {isSubmitting ? (;
-                <>;
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-                  Saving...;
-                </>;
-              ) : (;
-                <>Save</>;
-              )}
-              </FormItem>)}
-          />;
-          <div className="flex justify - end gap - 2">;
-            <Button type="button" variant="outline" on_click={on_cancel}>;
-              Cancel;
-            </Button>;
-            <Button type="submit" disabled={is_submitting}>;
-              {is_submitting ? (
-                <>;
-                  <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
-                  Saving...;
-                </>) : (
-                <>Save</>)}
-
             </Button>;
           </div>;
         </form>;
       </Form>;
-
-        defaultOptions={{;
-          enhancementType: "work-description",;
-          content: form && form.getValues("description") || "",;
+      <AIEnhancementDialog
+        title="Enhance Work Experience Description"
+        isOpen={isEnhancementDialogOpen}
+        onClose={() => setIsEnhancementDialogOpen(false)}
+        onApply={handleAIEnhancement}
           context: `${watchRoleTitle} at ${watchCompanyName}`}}
         initialContent={form && form.getValues("description") || ""}
       />;
     </>;
   );
 }
-
       <AIEnhancementDialog;
         title="Enhance Work Experience Description";
         is_open={isEnhancementDialogOpen}
@@ -390,7 +308,3 @@ function WorkExperienceItemForm() {
       />;
     </>);
 }
-
-}
-;
-

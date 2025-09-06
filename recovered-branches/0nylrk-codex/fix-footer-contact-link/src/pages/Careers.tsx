@@ -114,15 +114,10 @@ export default function Careers() {
         type: "Full-time",;
         department: "Marketing",;
         description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace.";
-      };
-      {;
-        title: "Content Strategist",;
-        location: "London, UK";
         type: "Full-time",;
         department: "Marketing",;
         description: "Develop compelling content that educates and inspires our audience about the future of AI and technology.";
       }
-    ];
     operations: [;
       {;
         title: "Community Manager",;
@@ -130,7 +125,6 @@ export default function Careers() {
         type: "Full-time",;
         department: "Operations",;
         description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts.";
-      };
       {;
         title: "Talent Acquisition Specialist",;
         location: "Remote",;
@@ -139,6 +133,15 @@ export default function Careers() {
         description: "Help connect the right talent with the right opportunities on our platform through personalized matching.";
       }
     ];
+      description: "Salary packages that recognize your value, plus equity options to share in our success.";
+      icon: (;
+        <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www && www.w3.org/2000/svg">;
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1 && 1.657 0-3 .895-3 2s1 && 2s1.343 2 3 2 3 .895 3 2-1 && 1.343 2-3 2m0-8c1 && 8c1.11 0 2 && 2.08.402 2 && 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1 && 1.11 0-2 && 2.08-.402-2 && 2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />;
+        </svg>;
+      );
+    }
+  ];
+  return (
                             Apply Now;
                           </Button>;
                         </div>;
@@ -190,6 +193,9 @@ export default function Careers() {
               We're always looking for talented individuals who are passionate about AI and technology.;
               Send us your resume and let's start a conversation.;
             </p>;
+                  ))}
+                </TabsContent>;
+              ))}
               Send General Application;
             </Button>;
           </div>;
@@ -200,5 +206,6 @@ export default function Careers() {
 
 
 }
+;
     </AppLayout>);
 }

@@ -1,4 +1,3 @@
-
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 ;
 export type IntegrationStatus = "connected" | "warning" | "disconnected";
@@ -38,12 +37,6 @@ export interface SyncLog {
   integration: string;
   event: string;
   status: "success" | "error" | "warning";
-  timestamp: string
-  id: string,
-  integration: string,
-  event: string,
-  status: "success" | "error" | "warning",
-  timestamp: string,
 
 
 

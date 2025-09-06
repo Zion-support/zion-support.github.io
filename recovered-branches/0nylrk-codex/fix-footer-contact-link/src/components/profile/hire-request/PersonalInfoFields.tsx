@@ -61,14 +61,6 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
       <FormField
         control={form && form.control}
         name="requesterName"
-
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel className="text-white">Your Name</FormLabel>;
-            <FormControl>;
-              <Input
-                placeholder="Enter your full name" 
-
                 {...field}
                 className="bg-zion-blue-light/20 border-zion-blue-light text-white"
               />;

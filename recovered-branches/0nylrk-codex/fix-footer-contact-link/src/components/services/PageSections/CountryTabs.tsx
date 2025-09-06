@@ -1,4 +1,3 @@
-
 import { useState } from "react",
 import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input",
@@ -8,9 +7,6 @@ import { CountryServiceCard } from "@/components/services/CountryServiceCard";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceCard } from "@/components/services/CountryServiceCard",
 import { CountryPricing } from "@/data/onsiteServicePricing",
-
-
-
 interface CountryTabsProps {
 
   popularCountries: string[]

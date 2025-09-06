@@ -8,7 +8,6 @@ export default async function handler(
       if (hasSupabase) {
         const { data, error } = await supabaseClient
           .from('talent_profiles')
-          .select('*');
           .order('created_at', { ascending: false });
         if (error) throw error;
         return res && res.status(200).json({ items: data as TalentProfile[] });
@@ -33,4 +32,5 @@ if (throw error) {
       return res.status (500).json ({ error: e.message });
     }
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+}
 }

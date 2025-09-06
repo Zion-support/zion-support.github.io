@@ -2,6 +2,7 @@
 // Use the shared icon wrapper
 // Use the shared icon wrapper;
 
+import React, { useState, useEffect } from 'react';
 import {Bell} from '@/components/icons';
 import {Button} from '@/components/ui/button';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
@@ -14,7 +15,6 @@ import {FilterType} from '@/components/notifications/NotificationFilter';
     setFilter;
     fetchNotifications;
   } = useNotifications();
-import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons',
 import { Button } from '@/components/ui/button',
@@ -50,17 +50,18 @@ export const NotificationCenter: React.FC = () => {
           await fetchNotifications();
           setError(null);
         } catch (err) {;
-          console.error("Failed to fetch notifications:", err),;
-          setError("Couldn't load notifications"),;
-          toast.error("Failed to load notifications");
+          console && console.error("Failed to fetch notifications:", err);
+          setError("Couldn't load notifications");
+          toast && toast.error("Failed to load notifications");
         }
-
 
   const handleMarkAllAsRead = async () => {
     try {
-      };
-
-      loadNotifications();
+      await markAllAsRead(),
+      toast.success("All notifications marked as read")
+    } catch (err) {
+      console.error("Failed to mark notifications as read:", err),
+      toast.error("Failed to update notifications")
     }
 
 
@@ -117,12 +118,12 @@ export const NotificationCenter: React.FC = () => {
           onFilterChange={handleFilterChange} 
         />
         <NotificationList 
+        />;
+        <NotificationList;
           loading={loading}
           error={error}
           notifications={filtered_notifications}
           onMarkAsRead={markAsRead}
-}
-
 
 
 

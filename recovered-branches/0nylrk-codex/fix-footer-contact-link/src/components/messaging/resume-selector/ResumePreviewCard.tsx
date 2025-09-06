@@ -18,9 +18,6 @@ export function ResumePreviewCard({
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react',
 import { Resume } from "@/types/resume",
-
-
-
 interface ResumePreviewCardProps {
   resume: Resume,
   onDownload: () => void,
@@ -41,11 +38,6 @@ interface ResumePreviewCardProps {
             <span className="sr-only">Download Resume</span>;
           </Button>;
         </div>;
-        {resume && resume.basic_info.summary && (;
-          <p className="text-xs text-zion-slate line-clamp-2 mb-2">;
-            {resume.basic_info.summary}
-          </p>
-        )}
             {resume.basic_info.summary}
           </p>
         )}
@@ -84,6 +76,9 @@ interface ResumePreviewCardProps {
         {resume && resume.skills && resume && resume.skills.length > 0 && (;
           <div className="flex flex-wrap gap-1 mt-2">;
             {resume && resume.skills.slice(0, 5).map((skill, index) => (;
+        {resume.basic_info.summary && (
+          <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;
+            {resume.basic_info.summary}
               <Badge
                 key={index}
                 variant="outline"

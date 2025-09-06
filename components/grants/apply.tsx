@@ -9,6 +9,15 @@ const categories: GrantCategory[] = [
   'Research Grants',
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
+
+export default function ApplyGrantPage() {
+const categories: GrantCategory[] = [;
+  'Ecosystem Tools',;
+  'Talent Development',;
+  'Regional Expansion',;
+  'Research Grants',;
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
+export default function ApplyGrantPage() {;
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -38,14 +47,34 @@ export default function ApplyGrantPage() {;
     }
   }
 
-  };
-
-
-  return (
+          <textarea
+            className='mt-1 w-full border rounded p-2'
+            rows={3}
+            value={teamInfo}
+          <textarea
+            className='mt-1 w-full border rounded p-2'
+            rows={6}
+            value={proposalSummary}
+            <input
+              type='number'
+              className='mt-1 w-full border rounded p-2'
+              value={budgetAmount}
+          <textarea
+            className='mt-1 w-full border rounded p-2'
+            rows={3}
+            value={supportingLinks}
 
 
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
+            onChange={e => setSupportingLinks(e && e.target.value)}
+          />;
+        </label>;
+        <label className='text-sm'>;
+          Pitch Deck URL;
+          <input
+            className='mt-1 w-full border rounded p-2'
+            value={pitchDeckUrl}
           <button
             disabled={loading}
             onClick={() => save(false)}
@@ -56,5 +85,30 @@ export default function ApplyGrantPage() {;
           <button
             disabled={loading}
             onClick={() => save(true)}
+              <option value="USDC">USDC</option>;
+              <option value="ZION$">ZION$</option>;
+            </select>;
+          </label>;
+          <label className="text-sm">Region;
+            <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e && e.target.value)} placeholder="e && e.g., LATAM, EU, Global" />;
+          </label>;
+        </div>;
+        <label className="text-sm">Supporting Links (one per line);
+          <textarea className="mt-1 w-full border rounded p-2" rows={3} value={supportingLinks} onChange={(e) => setSupportingLinks(e && e.target.value)} />;
+        </label>;
+        <label className="text-sm">Pitch Deck URL;
+          <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;
+        </label>;
+
+        {error && <div className="text-sm text-red-600">{error}</div>}
+
+        <div className="flex gap-3">;
+          <button disabled={loading} onClick={() => save(false)} className="px-4 py-2 border rounded disabled:opacity-50">Save Draft</button>;
+          <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50">Submit for Review</button>;
+        </div>;
+      </div>;
+    </EnhancedLayout>;
+  );
 }
   );
+}

@@ -1,9 +1,23 @@
+} from "@/components/ui/card";
 
+interface GeneratedContent {;
+  description: string;
+  tags: string[];
+  suggestedPrice: {;
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { Badge  } from '@/components / ui / badge';
+import { ArrowRight  } from './lucide-react';
+import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/components/ui/card";
+    min: number;
+
+}
+interface GeneratedContentDisplayProps {
+interface GeneratedContentDisplayProps {;
   CardTitle,;
 } from "@/components/ui/card";
 
@@ -38,12 +52,14 @@ interface GeneratedContent {;
 ;
 interface GeneratedContentDisplayProps {;
   content: GeneratedContent;
-
-
+  onApply: () => void
+}
+export function GeneratedContentDisplay({
+  content
+  onApply
+}: GeneratedContentDisplayProps) {
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
-
-
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -51,8 +67,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
-
-
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Tags
@@ -62,11 +76,9 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
                 {tag}
               </Badge>;
             ))}
-
-
+          </div>
+        </div>
         
-
-
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Suggested Price Range
@@ -76,8 +88,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-
-
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Key Selling Points
@@ -85,6 +95,13 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           <ul className="list-disc pl-5 text-white space-y-1">
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
+  content: GeneratedContent;
+              <Badge
+                key={index}
+                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
+                {tag}
+              </Badge>;
+            ))}
             ))}
   on_apply: () => void;
 }

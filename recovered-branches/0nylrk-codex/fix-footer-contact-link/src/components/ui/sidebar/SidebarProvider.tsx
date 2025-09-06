@@ -1,4 +1,3 @@
-
 interface SidebarContextType {
   is_open: boolean;
   toggle: () => void;
@@ -16,7 +15,6 @@ export function SidebarProvider({
 
 
 
-
 export function SidebarProvider({ 
   children, 
   defaultOpen = true 
@@ -27,7 +25,6 @@ export function SidebarProvider({
   const close = () => setIsOpen(false);
 
   return (
-    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
 
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
 
@@ -45,17 +42,15 @@ const SidebarContext = createContext<SidebarContextType>({;
   open: () => {},;
   close: () => {}}),;
 
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const toggle = () => setIsOpen(!isOpen);
+  const open = () => setIsOpen(true);
+  const close = () => setIsOpen(false);
+
   return (;
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
-
-
-
         {children}
       </div>
     </SidebarContext.Provider>
   );
-;
-
-}
-

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -10,13 +9,6 @@ import Link from 'next / link';
 const GitHubActionsAutomationBlueprint: React.FC = () => {
   const automation_workflows = [;
     {
-
-
-
-      name: 'Continuous Integration',
-      description: 'Automated testing, building, and quality checks',
-      status: 'active',
-      frequency: 'on-push',
       health: 'excellent'
     }
     {
@@ -60,18 +52,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       description: 'Automatic detection and resolution of pipeline failures',
       benefit: 'Reduced manual intervention and faster deployments',
       status: 'implemented';
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
-  const automationFeatures = [
-    {
-      feature: 'Self-Healing CI/CD',
-      description: 'Automatic detection and resolution of pipeline failures',
-      benefit: 'Reduced manual intervention and faster deployments',
-      status: 'implemented'
     },
     {
       feature: 'Intelligent Branch Management',
@@ -166,9 +146,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
   }
 }
   };
-
-
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-gray-900 text-white">
       <Head>
@@ -177,11 +154,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
-
-
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-             Back to Blueprints
+            ← Back to Blueprints
           </Link>
           <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
             GitHub Actions Automation
@@ -190,8 +165,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             Complete CI/CD automation with self-healing capabilities and intelligent workflows
           </p>
         </div>
-
-
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-green-400">Status</h3>
@@ -214,8 +187,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Recently optimized</p>
           </div>
         </div>
-
-
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Automation Workflows</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -243,8 +214,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                   <span className="text-xs text-green-400">● {workflow.health}</span>
                 </div>
               </div>
-
-
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Automation Features</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -263,8 +232,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
                 <p className="text-green-400 text-sm font-medium">Benefit: {feature.benefit}</p>
               </div>
-
-
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
@@ -304,13 +271,11 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             </div>
           </div>
         </div>
-
-
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Automation Pipeline</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
             <div className="text-center">
-              <div className="text-6xl font-bold text-green-400 mb-4"></div>
+              <div className="text-6xl font-bold text-green-400 mb-4">⚡</div>
               <h3 className="text-xl font-semibold mb-2 text-white">Intelligent Automation</h3>
               <p className="text-gray-300 mb-6">
                 Our GitHub Actions automation system provides intelligent CI/CD pipelines with 
@@ -348,31 +313,29 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             </div>
           </div>
         </div>
-
-
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-white/10 rounded-xl p-6 border border-white/20">
               <h3 className="text-xl font-semibold mb-4 text-green-400">CI/CD Tools</h3>
               <ul className="space-y-2 text-gray-300">
-                <li> GitHub Actions for workflow automation</li>
-                <li> Docker for containerization</li>
-                <li> Kubernetes for orchestration</li>
-                <li> Helm for package management</li>
-                <li> ArgoCD for GitOps deployment</li>
-                <li> Tekton for cloud-native CI/CD</li>
+                <li>• GitHub Actions for workflow automation</li>
+                <li>• Docker for containerization</li>
+                <li>• Kubernetes for orchestration</li>
+                <li>• Helm for package management</li>
+                <li>• ArgoCD for GitOps deployment</li>
+                <li>• Tekton for cloud-native CI/CD</li>
               </ul>
             </div>
             <div className="bg-white/10 rounded-xl p-6 border border-white/20">
               <h3 className="text-xl font-semibold mb-4 text-green-400">Testing & Quality</h3>
               <ul className="space-y-2 text-gray-300">
-                <li> Jest for unit testing</li>
-                <li> Playwright for E2E testing</li>
-                <li> SonarQube for code quality</li>
-                <li> Lighthouse for performance</li>
-                <li> OWASP ZAP for security</li>
-                <li> Snyk for dependency scanning</li>
+                <li>• Jest for unit testing</li>
+                <li>• Playwright for E2E testing</li>
+                <li>• SonarQube for code quality</li>
+                <li>• Lighthouse for performance</li>
+                <li>• OWASP ZAP for security</li>
+                <li>• Snyk for dependency scanning</li>
               </ul>
             </div>
           </div>
@@ -392,8 +355,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
           >
             All Blueprints
           </Link>
-          <Link 
-          <Link
 
 
 
@@ -403,8 +364,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
           >
             Comprehensive Redundancy
           </Link>
-          <Link 
-          <Link
 
 
 
@@ -418,7 +377,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       </div>
     </div>
   );
-
 ;
 
 

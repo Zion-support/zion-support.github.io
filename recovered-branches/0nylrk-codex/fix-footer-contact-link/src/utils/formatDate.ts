@@ -1,6 +1,5 @@
 
 
-
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
 
 
@@ -93,7 +92,11 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 },
 };
 },
-
+        return dateObj && dateObj.toLocaleDateString()
+      }
+    default: return dateObj && dateObj.toLocaleDateString()
+  }
+}
 /**
  * Format a date to show how long ago it was
  * @param date Date to format
@@ -225,7 +228,4 @@ if ( {) {
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
 ;
-
-export const timeAgo = (date: Date | string | number): string => {
-
 };

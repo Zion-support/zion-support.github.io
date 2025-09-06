@@ -55,14 +55,7 @@ export default OptimizedImage;
       quality={quality}
       style={style}
 
-  );
-};
-
-export default OptimizedImage;
-      quality={quality}
+quality={quality}
       style={style}
-
   );
-};
-
-export default OptimizedImage;
+}

@@ -1,11 +1,15 @@
 
-  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-
 };
 
-export default function MilestoneForm({ onSubmit }: Props) {;
-
+export default function MilestoneForm(): any ({ onSubmit }: Props) {;
+type Props = {
+  onSubmit: (payload: {
+    title: string;
+    description?: string;
+    dueDate: string;
+    amountUsd: number;
+  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
+  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -14,34 +18,20 @@ export default function MilestoneForm({ onSubmit }: Props) {;
   const [loading, setLoading] = useState(false);
     }
   }
-
   };
-
-
+      setLoading(false);    }
+  }
   return (
-
+    <form onSubmit={handleSubmit} className='space-y-4'>;
+      {error && <div className='text-red-600 text-sm'>{error}</div>}    }
+    setLoading(true);
+    }
+  }
 
           placeholder='Phase 1 – Backend Setup'          required;
         />;
       </div>;
       <div>;
-
-    <form onSubmit={handleSubmit} className="space-y-4">
-      {error && <div className="text-red-600 text-sm">{error}</div>}
-      <div>
-        <label className="block text-sm font-medium" htmlFor="input-Title">Title</label>
-        <input
-          className="mt-1 w-full rounded border px-3 py-2"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="Phase 1 – Backend Setup"
-          required
-        />
-      </div>
-      <div>
-        <label className="block text-sm font-medium" htmlFor="input-Description">Description</label>
-        <textarea
-
           className="mt-1 w-full rounded border px-3 py-2"
           value={description}
           onChange={(e) => setDescription(e && e.target.value)}
@@ -51,7 +41,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           className="mt - 1 w - full rounded border px - 3 py - 2";
           value={title}
           on_change={(e) => set_title (e.target.value)}
-          placeholder="Phase 1  Backend Setup";
+          placeholder="Phase 1 – Backend Setup";
           required;
         />;
       </div>;

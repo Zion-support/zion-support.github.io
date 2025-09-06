@@ -16,8 +16,6 @@ const features = [
   },
   {
     icon: Users,
-
-
   return (
     <Layout
       title="Finance Solutions - Zion Tech Group"
@@ -202,6 +200,47 @@ const features = [
             </div>;
           </div>;
         </section>;
+                </button>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Transforming Financial Services
+                </h2>
+                <p className="text-xl text-gray-600 mb-8">
+                  Our finance solutions help financial institutions modernize their operations,
+                  enhance security, and improve customer experiences.
+                </p>
+                <ul className="space-y-4">
+                  {benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-gradient-to-r from-blue-600 to-green-700 p-8 rounded-xl text-white">
+                <h3 className="text-2xl font-bold mb-6">Ready to Modernize Finance?</h3>
+                <p className="text-lg mb-6">
+                  Let our financial technology experts help you implement secure,
+                  compliant solutions that drive growth and innovation.
+                </p>
+                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
+                  Schedule Consultation
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
+              </div>
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>

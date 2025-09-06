@@ -39,18 +39,7 @@ import { JobMatch } from "@/types/jobs";
   showApplied?: boolean
 }
 
-
-export function JobMatchesCard(): any ({;
-  match,;
-  onApply,;
-  onDecline,;
-  showApplied = false,;
-}: JobMatchCardProps) {;
-  const job = match && match.job;
-
-
   if (!job) return null;
-
 
 interface JobMatchCardProps {
   match: JobMatch,
@@ -70,8 +59,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
       <CardHeader className="p-4 pb-2">;
         <div className="flex justify-between items-start">;
           <div>;
-
-
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
             <p className="text-xs text-muted-foreground mb-1">
@@ -110,6 +97,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
                   (Viewed {format(new Date(match.viewed_at), "MMM d")});
                 </span>;
               )}
+
             </CardDescription>;
           </div>;
           <Badge variant="outline" className="flex items-center">;
@@ -153,14 +141,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           </div>;
         )}
 
-
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />$
             {job.budget.min} - ${job.budget.max}
-
-
-
           </div>
           <div className="flex items-center text-sm">
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
@@ -201,8 +185,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             </Button>;
           </div>;
         )}
-
-
+      </CardFooter>;
+    </Card>;
   );
 import { useState  } from './react';
 import {

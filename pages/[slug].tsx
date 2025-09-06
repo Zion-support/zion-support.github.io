@@ -502,8 +502,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
 								{(service.features || []).slice(0, 12).map((f: string) => (
-
-
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
@@ -522,8 +520,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
 							</div>
 						</Card>
 					</div>
@@ -643,6 +639,3 @@ if ( {) {
 }
   return { not_found: true }
   }
-
-
-

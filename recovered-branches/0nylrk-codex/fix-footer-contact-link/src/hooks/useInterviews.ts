@@ -1,4 +1,3 @@
-
 import { useState  } from 'react';
 import { useAuth } from "@/hooks/useAuth";
 import { supabase  } from '@/integrations/supabase/client';
@@ -8,7 +7,6 @@ export function useInterviews() {
   const [interviews, setInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
-
 import {useState} from 'react';
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from '@/integrations/supabase/client';
@@ -35,16 +33,9 @@ export function useInterviews() {
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
     if (!user) {
       toast({
-      });
-      return null;
-    }
-
-
 
     setIsLoading(true),
     setError(null),
-
-
 
     try {
       // Insert the interview into the database
@@ -62,8 +53,6 @@ export function useInterviews() {
     } catch (err: any) {
       console && console.error("Error in requestInterview:", err);
       setError(err && err.message);
-    } finally {
-
       setIsLoading(false)
     setIsLoading(true);
     setError(null);
@@ -90,10 +79,12 @@ export function useInterviews() {;
       return null;
     }
 
-
     setIsLoading(true),
     setError(null),
 
+      setIsLoading (false);
+    }
+  }
     try {
       // Get interviews where the user is either the client or the talent;
       const { data, error: fetch_error } = await supabase;
@@ -129,31 +120,6 @@ export function useInterviews() {;
       console && console.error("Error in fetchInterviews:", err);
       setError(err && err.message);
       return []
-;
-      set_interviews (formatted_interviews);
-      return formatted_interviews;
-    } catch (err: any) {
-      console.error ("Error in fetch_interviews:", err);
-      set_error (err.message);
-      return [];
-    } finally {
-      setIsLoading (false);
-    }
-
-;
-  // Respond to an interview request (as talent);
-
-  const respondToInterview = async (
-    interview_id: string;
-    response: InterviewResponse): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: "Authentication required";
-
-
   },
 
 
@@ -170,24 +136,18 @@ if ( {) {
 
 
         variant: "destructive"
-        description: "You must be logged in to respond to interviews",
-        variant: "destructive";
-      });
-      return false;
-    }
-
-
 
     setIsLoading(true),
     setError(null),
-
-
 
     try {
       // Update the interview status
       const { error: updateError } = await supabase
         .from('interviews')
         .update({
+      if (updateError) {
+        console && console.error("Error responding to interview:", updateError);
+        setError(updateError && updateError.message);
         return false
       }
       // Get the interview to notify the client
@@ -195,10 +155,6 @@ if ( {) {
         .from('interviews')
         .select('*')
         .eq('id', interviewId)
-        console.error("Error fetching interview:", fetchError);
-        setError(fetchError.message);
-        return false
-
     setIsLoading (true);
     set_error (null);
 ;
@@ -357,6 +313,7 @@ if ( {) {
 
 
 
+      }
       await createInterviewNotification(
         interview && interview.client_id;
         notificationType;
@@ -508,9 +465,6 @@ if ( {) {
         : interview && interview.client_id;
 
 
-
-
-
 ;
       // Check if user is part of this interview;
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {;
@@ -634,6 +588,9 @@ if ( {) {
     fetchInterviews;
     respondToInterview;
 
+    cancelInterview}
 }
 }
 ;
+    respondToInterview;
+}

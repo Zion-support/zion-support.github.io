@@ -376,8 +376,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                 <span className="text-sm font-semibold">{contactInfo.address}</span>
               </motion.div>
             </div>
-
-
                 Get Started Today
               </a>
               <a href="/services" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">
@@ -388,12 +386,12 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
           </motion.div>
         </div>
       </section>
-
-
               <input
-                type='text'
-                placeholder='Search revolutionary services...'
+                type="text"
+                placeholder="Search revolutionary services..."
                 value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
             </div>
             {/* Filters */}
 
@@ -416,25 +414,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
                 <select
                   value={selectedCategory}
-              <input
-                type="text"
-                placeholder="Search revolutionary services..."
-                value={searchTerm  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
-            </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
-                <select
-                  value={selectedCategory  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                   onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -542,9 +521,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                   <span className="font-semibold text-purple-400">{allServices.length}</span>
                   <span className="text-sm"> services</span>
                 </div>
-
-
-
               </div>
             </div>
           </div>
@@ -622,8 +598,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
                               POPULAR
                             </div>
-                          )}
-                        </div>
                         <div className="flex items-baseline gap-2 mb-4">
                           <span className="text-3xl font-bold text-white">{service.price}</span>
                           <span className="text-gray-400">{service.period}</span>
@@ -654,7 +628,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                         {/* Description */}
                         <p className='text-gray-300 text-sm mb-4 line-clamp-3'>                          {service && service.description}
                         </p>;
-
                         {/* Features */}
 
                         <div className="mb-4">
@@ -665,7 +638,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                                 <CheckCircle className="w-3 h-3 text-emerald-400 flex-shrink-0" />
                                 <span className="line-clamp-1">{feature}</span>
                               </li>
-
                           <div>
                             <div className="text-lg font-bold text-cyan-400">{service.customers}</div>
                             <div className="text-xs text-gray-400">Customers</div>
@@ -762,9 +734,57 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
   }
 }
               </div>;
+            ) : (;
+              <motion&& motion.div
+                            </div>;
+                            <div className='text - xs text - gray - 400'>Reviews</div>                          </div>;
+                        </div>;
+                        {/* Category Badge */}
+                        <div className='mb - 4'>;
+                          <span;
+                            className={`inline - block px - 3 py - 1 rounded - full text - xs font - semibold ${service.color} text - white`}
+                          >                            {service.category}
+                          </span>;
+                        </div>;
+                        {/* Action Buttons */}
+                        <div className='flex gap - 2'>;
+                          <a;
+                            href={service.link}
+                            className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - sm py - 2 hover:from - cyan - 600 hover:to - blue - 700 transform hover:scale - 105 transition - all duration - 300';
+                          >;
+                            <ArrowRight className='w - 4 h - 4 mr - 1' />;
+                            Learn More;
+                          </a>;
+                          <a;
+                            href='/contact';
+                            className='px - 4 py - 2 border border - gray - 600 text - gray - 200 hover:bg - gray - 700 hover:border - gray - 500 transform hover:scale - 105 transition - all duration - 300';
+                          >;
+                            <MessageSquare className='w - 4 h - 4' />                          </a>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </motion.div>))}
+              </div>) : (
+              <motion.div;
 
 
+      {/* Contact CTA Section */}
+      <section className='py-16 px-4'>;
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
 
+                initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1 }} className="text-center py-16">
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters</p>
                 <button
                   onClick={() => {
                     setSearchTerm(''),
@@ -916,5 +936,3 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-

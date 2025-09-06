@@ -1,3 +1,12 @@
+interface TutorialPageProps {
+  tutorial?: TutorialType
+export default function Tutorial({
+  tutorial: initialTutorial,;
+}: TutorialPageProps) {;
+  const router = useRouter();
+  const slug = router.query.slug as string | undefined;
+  const tutorial = initialTutorial || TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
+  tutorial?: TutorialType
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
 
@@ -5,55 +14,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
   const slug = router.query.slug as string | undefined
   const tutorial = initialTutorial |TUTORIALS.find((t,) => t.slug === slug)
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { TUTORIALS } from '@/data/tutorials';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
-import ReactMarkdown from 'react-markdown';
-import type { Tutorial as TutorialType } from '@/types/tutorial';
 
-interface TutorialPageProps {;
-  tutorial?: TutorialType;
-
-export default function Tutorial(): any ({;
-  tutorial: initialTutorial,;
-}: TutorialPageProps) {;
-  const router = useRouter();
-  const slug = router && router.query.slug as string | undefined;
-  const tutorial = initialTutorial || TUTORIALS && TUTORIALS.find(t => t && t.slug === slug);interface TutorialPageProps {;
-  tutorial?: TutorialType;
-}
-export default function Tutorial(): any ({ tutorial: initialTutorial }: TutorialPageProps) {;
-  const router = useRouter(),;
-  const slug = router && router.query.slug as string | undefined,;
-  const tutorial = initialTutorial || TUTORIALS && TUTORIALS.find((t,) => t && t.slug === slug),;
-
-  if (!tutorial) {;
-    return (
             <p className="mt-8 text-white font-semibold">
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -73,12 +34,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
   if (!tutorial) {;
     return (;
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">;
-
-        Tutorial not found.;
-      </div>;
-    );
-
-  if (!tutorial) {
     return (
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Tutorial not found.
@@ -86,8 +41,3 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
     )
   }
   return (
-    <>
-      <SEO title={tutorial.title} description={tutorial.excerpt} />
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
-        <div className="container mx-auto max-w-3xl">
-          <Button

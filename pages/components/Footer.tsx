@@ -169,12 +169,10 @@ origin/automation-improvements-final
 
 
 
-
-            <motion.div
             <motion.div
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
-               {currentYear} Zion Tech Group. All rights reserved.;
+              © {currentYear} Zion Tech Group. All rights reserved.;
             </motion && motion.div>;
 
             <motion&& motion.div

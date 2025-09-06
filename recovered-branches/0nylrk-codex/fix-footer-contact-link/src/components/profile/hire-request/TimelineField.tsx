@@ -57,8 +57,6 @@ import {FormValues} from "./useHireRequestForm";
     { value: "1-2 months", label: "1-2 months" },
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
-    { value: "Ongoing", label: "Ongoing" }
-  ],
 
 
   return (
@@ -112,10 +110,6 @@ function TimelineField() {
   ];
 ;
   return (
-        <FormItem>;
-          <FormLabel className="text - white">Project Timeline</FormLabel>;
-          <FormControl>;
-
                     {option.label}
                   </SelectItem>
                 ))}
@@ -124,7 +118,3 @@ function TimelineField() {
             </Select>;
           </FormControl>;
           <FormMessage />;
-
-    />;
-  );
-}

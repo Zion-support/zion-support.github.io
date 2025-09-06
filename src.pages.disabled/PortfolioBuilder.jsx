@@ -31,9 +31,6 @@ export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
 :src.pages.disabled/PortfolioBuilder.jsx
 }
 }
@@ -44,3 +41,12 @@ export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
 
 
 
+
+
+
+:src.pages.disabled/PortfolioBuilder.jsx
+}
+}
+}
+}
+}

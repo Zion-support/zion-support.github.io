@@ -1,10 +1,4 @@
 
-import {useState, useEffect} from "react";
-import {format} from "date-fns";
-import {List, RefreshCw} from "lucide-react";
-import {useApiKeys, type, ApiLog} from "@/hooks/useApiKeys";
-
-
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
@@ -67,10 +61,6 @@ export function ApiLogs() {
     } else {
       return <Badge className="bg-blue-700">Other</Badge>
     }
-  return (
-
-            <Select
-
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { List, RefreshCw } from "lucide-react",;
@@ -126,14 +116,13 @@ export function ApiLogs() {;
         <div className="flex justify-between items-center mb-6">;
           <div className="flex items-center space-x-2">;
             <span className="text-sm text-zinc-400">Show</span>;
+  const hasNextPage = currentPage < totalPages - 1;
+  const hasPrevPage = currentPage > 0;
+  return (
             <Select
               value={pageSize && pageSize.toString()}
               onValueChange={(value) => {;
                 setPageSize(Number(value));
-
-                setCurrentPage(0), // Reset to first page when changing page size;
-
-
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
@@ -249,6 +238,10 @@ export function ApiLogs() {;
                     </div>;
                   </td>;
                 </tr>;
+                            ? "border-blue-500 text-blue-400"
+                            : log && log.method === 'PUT'
+                            ? "border-yellow-500 text-yellow-400"
+                            : "border-red-500 text-red-400"
               <Button
                 variant="outline"
                 size="sm"
@@ -268,7 +261,6 @@ export function ApiLogs() {;
             </div>;
           </div>;
         )}
-}
 import { useState, useEffect } from './react';
 import { format } from './date - fns';
 import { List, RefreshCw } from './lucide-react';

@@ -1,7 +1,4 @@
 
-
-
-
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
 import {format} from "date-fns";
@@ -26,15 +23,14 @@ import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSqu
   const { user } = useAuth();
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
+
+
   const [project, setProject] = useState<Project | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [notes, setNotes] = useState<any[]>([]);
   const [newNote, setNewNote] = useState("");
   const [isSubmittingNote, setIsSubmittingNote] = useState(false);
   const [activeTab, setActiveTab] = useState("details");
-
-
-
 import { useState, useEffect } from "react",
 import { useParams, useNavigate, Link } from "react-router-dom",
 import { format } from "date-fns",
@@ -121,17 +117,6 @@ function ProjectDetailsContent() {
         .from ("project_notes");
         .select (`;
           *;
-
-          created_by_profile:profiles ! user_id (display_name, avatar_url);
-        `);
-        .eq ("project_id", project_id);
-        .order ("created_at", { ascending: false }),
-      // Check condition
-if (throw error) {
-  $2
-}
-      set_notes (data || []);
-
     } catch (err) {
       console.error ("Error fetching project notes:", err);
     }
@@ -144,29 +129,6 @@ if (throw error) {
   useEffect(() => {;
     async function loadProject() {;
       if (!projectId) return;
-      setIsLoading(true);
-      const projectData = await getProjectById(projectId);
-      if (projectData) {;
-        setProject(projectData);
-  // type argument and cast the result instead to prevent TS2347 errors.;
-  const { projectId } = useParams() as { projectId?: string },;
-  const { user } = useAuth(),;
-  const navigate = useNavigate(),;
-  const { getProjectById, updateProjectStatus } = useProjects(),;
-  const [project, setProject] = useState<Project | null>(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [notes, setNotes] = useState<any[]>([]),;
-  const [newNote, setNewNote] = useState(""),;
-  const [isSubmittingNote, setIsSubmittingNote] = useState(false),;
-  const [activeTab, setActiveTab] = useState("details"),;
-  // Load project data;
-  useEffect(() => {;
-    async function loadProject() {;
-      if (!projectId) return,;
-      setIsLoading(true),;
-      const projectData = await getProjectById(projectId),;
-      if (projectData) {;
-        setProject(projectData),;
         // Now fetch notes;
         fetchProjectNotes(projectId);
       } else {;
@@ -175,11 +137,9 @@ if (throw error) {
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
         navigate("/dashboard");
-
-
-
       }
-      setIsLoading(false)
+
+      setIsLoading(false);
     }
       case "canceled":
         return <Badge variant="destructive">Canceled</Badge>
@@ -191,10 +151,31 @@ if (throw error) {
         return <Badge variant="destructive">Canceled</Badge>,;
       default:;
         return <Badge variant="outline">{status}</Badge>;
+
+    loadProject();
+  }, [projectId]);
+
+  const fetchProjectNotes = async (projectId: string) => {;
+    try {;
+      const { data, error } = await supabase;
+        .from("project_notes");
+        .select(`;
+          *;
+          created_by_profile:profiles!user_id(display_name, avatar_url);
+        `);
+        .eq("project_id", projectId);
+        .order("created_at", { ascending: false }),;
+
+      if (error) throw error;
+
+      setNotes(data || []);
+    } catch (err) {;
+      console && console.error("Error fetching project notes:", err);
     }
   };
 
-  if (isLoading) {;
+      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>;
+      case "offer_accepted":;
     return (
       <div className="container mx-auto py-8">;
         <div className="flex justify-center items-center h-64">;
@@ -253,18 +234,13 @@ if (throw error) {
     )
   }
   // Check if user is either the client or the talent
-    navigate("/unauthorized");
-    return null;
   }
-
 
   
   const isOfferPending = project.status === "offer_sent",
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
-
-
   return (
     <>
       <SEO
@@ -654,6 +630,14 @@ if ( {) {
                     </CardDescription>;
                   </CardHeader>;
                   <CardContent>;
+    navigate("/unauthorized");
+    return null;
+  }
+                        {notes.length > 0 ? (
+                          notes.map ((note) => (
+                            <div key={note.id} className="bg - muted / 30 p - 3 rounded - md">;
+                              <div className="flex items - center gap - 2 mb - 2">;
+                                <Avatar className="h - 6 w - 6">;
                                   {note.created_by_profile?.avatar_url ? (
                                     <img
                                       src={note && note.created_by_profile.avatar_url}
@@ -675,11 +659,11 @@ if ( {) {
                         </div>;
                       )}
                         <img
-                          src={project && project.talent_profile.profile_picture_url}
-                          alt={project && project.talent_profile.full_name}
-                        />;
-                      ) : (;
-                        <User className="h-6 w-6" />;
+                          src={project.talent_profile.profile_picture_url}
+                          alt={project.talent_profile.full_name}
+                        />
+                      ) : (
+                        <User className="h-6 w-6" />
                       )}
                     </Avatar>
                     <div>
@@ -694,10 +678,10 @@ if ( {) {
                           variant="outline"
                           size="sm"
                           className="mt-2"
-                          onClick={() => navigate(`/messages?talentId=${project && project.talent_id}`)}
-                        >;
-                          <MessageSquare className="mr-1 h-3 w-3" /> Message;
-                        </Button>;
+                          onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
+                        >
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message
+                        </Button>
                       )}
                     </div>
                   </div>
@@ -705,11 +689,11 @@ if ( {) {
                     <Avatar className="h-10 w-10">
                       {project.client_profile?.avatar_url ? (
                         <img
-                          src={project && project.client_profile.avatar_url}
-                          alt={project && project.client_profile.display_name}
-                        />;
-                      ) : (;
-                        <User className="h-6 w-6" />;
+                          src={project.client_profile.avatar_url}
+                          alt={project.client_profile.display_name}
+                        />
+                      ) : (
+                        <User className="h-6 w-6" />
                       )}
                     </Avatar>
                     <div>
@@ -729,17 +713,6 @@ if ( {) {
                       ) : (;
                         <User className="h-6 w-6" />;
                       )}
-
-                    </Avatar>;
-                    <div>;
-                      <h3 className="font-semibold">;
-                        {project && project.talent_profile?.full_name || "Talent"}
-                      </h3>;
-                      <p className="text-sm text-muted-foreground">;
-                        {project && project.talent_profile?.professional_title || "Professional"}
-                      </p>;
-                      {isClient && (;
-
                         <Button
                           variant="outline"
                           size="sm"
@@ -749,9 +722,6 @@ if ( {) {
                           <MessageSquare className="mr-1 h-3 w-3" /> Message;
                         </Button>;
                       )}
-                    </div>;
-                  </div>;
-
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -802,6 +772,22 @@ if ( {) {
                   <p className="text-sm text-amber-600 flex items-center gap-1">;
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.;
                   </p>;
+                        <img
+                          src={project && project.client_profile.avatar_url}
+                          alt={project && project.client_profile.display_name}
+                        />;
+                      ) : (;
+                        <User className="h-6 w-6" />;
+                      )}
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="mt-2"
+                          onClick={() => navigate(`/messages?clientId=${project && project.client_id}`)}
+                        >;
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message;
+                        </Button>;
+                      )}
                   <Button
                     variant="outline"
                     onClick={() => navigate(`/messages?talentId=${project && project.talent_id}`)}
@@ -811,17 +797,19 @@ if ( {) {
                   </Button>;
                 </CardFooter>;
               )}
-
-
-              {project && project.status === "offer_sent" && isClient && (;
-                <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
-                  <p className="text-sm text-muted-foreground">;
-                    Waiting for the talent to accept your offer.;
-                  </p>;
-                </CardFooter>;
-              )}
             </Card>;
           </div>;
         </div>;
       </main>;
       <Footer />;
+    </>);
+}
+export default /**
+ * ProjectDetails - Function description
+ */
+function ProjectDetails() {
+  return (
+    <ProtectedRoute>;
+      <ProjectDetailsContent />;
+    </ProtectedRoute>);
+}

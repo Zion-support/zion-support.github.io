@@ -1,3 +1,21 @@
+import { Calendar, Clock, Video } from 'lucide-react'
+import { format, isAfter, parseISO, startOfDay } from "date-fns";
+function InterviewsContent() {
+      if (!grouped[dateKey]) {
+        grouped[dateKey] = []
+      }
+      grouped[dateKey].push(interview)
+    return Object.entries(groupedInterviews)
+      .sort(
+        ([dateA], [dateB]) =>
+          parseISO(dateA).getTime() - parseISO(dateB).getTime()
+      )
+      .map(([date, interviews]) => (
+            ))}
+          </div>
+        </div>
+      ))
+
   return (
     <>;
       <SEO
@@ -18,6 +36,19 @@
           </div>;
         </div>;
 
+  return (
+    <>
+      <SEO 
+        title="Interviews | Zion AI Marketplace" 
+        description="Manage your scheduled interviews with clients and talent" 
+      />
+      <main className="container mx-auto px-4 py-8">
+        <div className="flex justify-between items-center mb-8">
+          <div>
+            <h1 className="text-3xl font-bold">Interviews</h1>
+            <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>
+          </div>
+        </div>
                   {upcomingInterviews.length}
                 </span>
               )}
@@ -25,6 +56,15 @@
             <TabsTrigger value="pending">
               Pending
               {pendingInterviews.length > 0 && (
+
+                  {pendingInterviews.length}
+                </span>
+              )}
+            </TabsTrigger>
+            <TabsTrigger value="past">Past</TabsTrigger>
+          </TabsList>
+
+
             {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
@@ -39,6 +79,9 @@
               </div>
             )}
           </TabsContent>
+
+
+            {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>
@@ -52,6 +95,9 @@
               </div>
             )}
           </TabsContent>
+
+
+            {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>

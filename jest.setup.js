@@ -3,9 +3,6 @@
 jest.mock("next/router", () => ({
   useRouter() {
     return {
-// Mock Next.js Image component
-jest.mock("next/image", () => {
-  return function MockImage({ src, alt, ...props }) {
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,

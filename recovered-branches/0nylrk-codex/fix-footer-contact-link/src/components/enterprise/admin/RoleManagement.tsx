@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import {
   Table,
@@ -214,9 +212,6 @@ export function RoleManagement() {;
     "Manager": "Can view candidates and create jobs";
     "Viewer": "Read-only access to candidates"}
 
-      title: "Permission updated",
-
-
   return (
     <div className="space-y-6">;
       <div>;
@@ -230,198 +225,6 @@ export function RoleManagement() {;
               <p className="text-sm text-muted-foreground">{description}</p>;
             </div>;
           ))}
-
-
-                  <Switch 
-                    checked={member.permissions.viewCandidates} 
-
-
-                    onCheckedChange={(checked) =>
-                      handlePermissionChange(member.id, "viewCandidates", checked)
-                    }
-                  />
-                </TableCell>
-                <TableCell className="text-center">
-
-
-                  <Switch 
-                    checked={member.permissions.editCandidates} 
-
-
-                    onCheckedChange={(checked) =>
-                      handlePermissionChange(member.id, "editCandidates", checked)
-                    }
-                  />
-                </TableCell>
-                <TableCell className="text-center">
-
-
-                  <Switch 
-                    checked={member.permissions.createJobs} 
-
-
-                    onCheckedChange={(checked) =>
-                      handlePermissionChange(member.id, "createJobs", checked)
-                    }
-                  />
-                </TableCell>
-                <TableCell className="text-center">
-
-
-                  <Switch 
-                    checked={member.permissions.manageTeam} 
-
-
-                    onCheckedChange={(checked) =>
-                      handlePermissionChange(member.id, "manageTeam", checked)
-                    }
-                  />
-                </TableCell>
-                <TableCell className="text-center">
-
-        </div>;
-      </div>;
-
-      <div className="rounded-md border">;
-        <Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead>Team Member</TableHead>;
-              <TableHead>Role</TableHead>;
-              <TableHead className="text-center">;
-                <div className="flex items-center justify-center gap-1">;
-                  View Candidates;
-                  <TooltipProvider>;
-                    <Tooltip>;
-                      <TooltipTrigger>;
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />;
-                      </TooltipTrigger>;
-                      <TooltipContent>;
-                        Can view candidate profiles and applications;
-                      </TooltipContent>;
-                    </Tooltip>;
-                  </TooltipProvider>;
-                </div>;
-              </TableHead>;
-              <TableHead className="text-center">;
-                <div className="flex items-center justify-center gap-1">;
-                  Edit Candidates;
-                  <TooltipProvider>;
-                    <Tooltip>;
-                      <TooltipTrigger>;
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />;
-                      </TooltipTrigger>;
-                      <TooltipContent>;
-                        Can edit candidate information and status;
-                      </TooltipContent>;
-                    </Tooltip>;
-                  </TooltipProvider>;
-                </div>;
-              </TableHead>;
-              <TableHead className="text-center">;
-                <div className="flex items-center justify-center gap-1">;
-                  Create Jobs;
-                  <TooltipProvider>;
-                    <Tooltip>;
-                      <TooltipTrigger>;
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />;
-                      </TooltipTrigger>;
-                      <TooltipContent>;
-                        Can create and publish job listings;
-                      </TooltipContent>;
-                    </Tooltip>;
-                  </TooltipProvider>;
-                </div>;
-              </TableHead>;
-              <TableHead className="text-center">;
-                <div className="flex items-center justify-center gap-1">;
-                  Manage Team;
-                  <TooltipProvider>;
-                    <Tooltip>;
-                      <TooltipTrigger>;
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />;
-                      </TooltipTrigger>;
-                      <TooltipContent>;
-                        Can add, edit, and remove team members;
-                      </TooltipContent>;
-                    </Tooltip>;
-                  </TooltipProvider>;
-                </div>;
-              </TableHead>;
-              <TableHead className="text-center">;
-                <div className="flex items-center justify-center gap-1">;
-                  Billing Access;
-                  <TooltipProvider>;
-                    <Tooltip>;
-                      <TooltipTrigger>;
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />;
-                      </TooltipTrigger>;
-                      <TooltipContent>;
-                        Can view and manage billing information;
-                      </TooltipContent>;
-                    </Tooltip>;
-                  </TooltipProvider>;
-                </div>;
-              </TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-            {teamMembers && teamMembers.map((member) => (;
-              <TableRow key={member && member.id}>;
-                <TableCell>;
-                  <div className="font-medium">{member && member.name}</div>;
-                  <div className="text-sm text-muted-foreground">;
-                    {member && member.email}
-                  </div>;
-                </TableCell>;
-                <TableCell>;
-                  <select
-                    className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                    defaultValue={member && member.role}>;
-                    <option value="Admin">Admin</option>;
-                    <option value="Recruiter">Recruiter</option>;
-                    <option value="Manager">Manager</option>;
-                    <option value="Viewer">Viewer</option>;
-                  </select>;
-                </TableCell>;
-                <TableCell className="text-center">;
-                  <Switch
-                    checked={member && member.permissions.viewCandidates} 
-                    onCheckedChange={(checked) => ;
-                      handlePermissionChange(member && member.id, "viewCandidates", checked);
-                    }
-                  />;
-                </TableCell>;
-                <TableCell className="text-center">;
-                  <Switch
-                    checked={member && member.permissions.editCandidates} 
-                    onCheckedChange={(checked) => ;
-                      handlePermissionChange(member && member.id, "editCandidates", checked);
-                    }
-                  />;
-                </TableCell>;
-                <TableCell className="text-center">;
-                  <Switch
-                    checked={member && member.permissions.createJobs} 
-                    onCheckedChange={(checked) => ;
-                      handlePermissionChange(member && member.id, "createJobs", checked);
-                    }
-                  />;
-                </TableCell>;
-                <TableCell className="text-center">;
-                  <Switch
-                    checked={member && member.permissions.manageTeam} 
-                    onCheckedChange={(checked) => ;
-                      handlePermissionChange(member && member.id, "manageTeam", checked);
-                    }
-                  />;
-                </TableCell>;
-                <TableCell className="text-center">;
-                  <Switch
-                    checked={member && member.permissions.viewBilling} 
-                    onCheckedChange={(checked) => ;
-                      handlePermissionChange(member && member.id, "viewBilling", checked);
-
                     }
                   />;
                 </TableCell>;
@@ -431,14 +234,6 @@ export function RoleManagement() {;
                     checked={member.permissions.viewBilling} 
 
             ))}
-
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>;
-  );
-}
-
         view_candidates: true,
         edit_candidates: false,
         create_jobs: false,

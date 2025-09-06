@@ -1,3 +1,5 @@
+
+export function MobileConversationList({
   onSelectConversation
 }: MobileConversationListProps) {
   return (
@@ -141,6 +143,21 @@ function MobileConversationList() {
                     {conversation.isTyping 
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
+
+
+
+                  </p>
+                  {conversation.unreadCount > 0 && (
+                    <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
+                      {conversation.unreadCount}
+                    </Badge>
+                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
+                      {conversation.unreadCount}
+                    </Badge>;
+
+
+                  </p>
+                  {conversation.unreadCount > 0 && (
                   )}
                 </div>
               </div>

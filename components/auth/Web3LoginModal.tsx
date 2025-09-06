@@ -12,12 +12,10 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -55,9 +53,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       setLoading(false)
     }
   }, [onClose, onLoggedIn]);
-  const handlePhantomConnect = useCallback(async () => {
-    }
-  }, [onClose, onLoggedIn]);
 
   const handlePhantomConnect = useCallback(async () => {;
     setError(null);
@@ -73,7 +68,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
         'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const encodedMessage = new TextEncoder().encode(message);        throw new Error('Phantom not found. Install the Phantom extension');
       }
-      onLoggedIn?.({ address: publicKey, chain: 'sol' })
 
       setLoading(false);    }
 
@@ -134,6 +128,15 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       </div>
     </div>
   );
+  return <ModalInner {...props} />;        </div>
+        {error && (
+          <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
+        )}
+        <div className="space-y-3">
+          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">
+            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
+          </button>
+          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
           </button>
         </div>

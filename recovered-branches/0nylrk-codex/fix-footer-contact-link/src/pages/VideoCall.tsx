@@ -1,4 +1,3 @@
-
 import { useState, useEffect  } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
 import { Header  } from '@/components/Header';
@@ -7,8 +6,6 @@ import { SEO  } from '@/components/SEO';
 import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
 import { Button  } from '@/components/ui/button';
 import { toast } from 'sonner';
-
-
 import {useState, useEffect} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import {Header} from '@/components/Header';
@@ -28,28 +25,10 @@ import {SEO} from '@/components / SEO';
 import {VideoCallRoom} from '@/components / video / VideoCallRoom';
 import {Button} from '@/components / ui / button';
 import {toast} from 'sonner';
-
-export default /**
- * VideoCall - Function description
- */
-function VideoCall() {
-  // use_params is typed as `any` in this environment due to missing type;
-  // definitions, so avoid passing a type argument to prevent TS2347.;
-  const { room_id } = use_params ();
-  const navigate = use_navigate ();
-  const [is_joining, setIsJoining] = useState (false);
-  const [has_joined, setHasJoined] = useState (false);
-  const [participants, set_participants] = useState < Array<{
-    id: string,
-    name: string,
-
     avatar?: string;
     is_muted?: boolean;
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
-
-
-  const handleJoinCall = () => {;
     setIsJoining(true);
     // Simulate connection delay;
     setTimeout(() => {;
@@ -60,6 +39,19 @@ function VideoCall() {
       description: "You have left the meeting";
     });
 
+  const handleJoinCall = () => {
+    setIsJoining(true),
+    // Simulate connection delay
+    setTimeout(() => {
+      setHasJoined(true),
+      setIsJoining(false),
+      toast.success("Call joined", {
+        description: `You have joined meeting room ${roomId}`
+      })
+    }, 1500)
+  }
+  },
+
   const handleLeaveCall = () => {
     setHasJoined(false),
     toast.info("Call ended", {
@@ -68,6 +60,10 @@ function VideoCall() {
     setTimeout(() => {
       navigate(-1)
     }, 1500)
+      setParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser && randomUser.name} joined the call`);
+    }
+  }
   ]),;
   const handleJoinCall = () => {;
     setIsJoining(true),;
@@ -96,18 +92,7 @@ function VideoCall() {
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
 
-
   return (
-    <>
-      <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />
-      <Header />
-      <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">
-        {!hasJoined ? (
-          <div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">
-            <h1 className="text-3xl font-bold mb-6 text-white">Join Video Call</h1>
-            <p className="text-zion-slate-light mb-8">Room ID: {roomId}</p>
-            <Button
-              onClick={handleJoinCall}
               disabled={isJoining}
               size="lg"
               className="bg-zion-purple hover:bg-zion-purple-light">;
@@ -134,7 +119,3 @@ function VideoCall() {
   ]);
 ;
 ;
-
-
-;
-

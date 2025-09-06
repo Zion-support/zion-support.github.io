@@ -1,4 +1,3 @@
-
 export function ConversationsList({
   conversations;
 
@@ -47,17 +46,13 @@ export function ConversationsList({
         <div>
           {conversations.map((conversation) => (
             <ConversationItem
-              key={conversation && conversation.id}
+              key={conversation.id}
               conversation={conversation}
-
-                markAsRead(conversation && conversation.id);
-
               isActive={activeConversation?.id === conversation.id}
 
+              isActive={activeConversation?.id === conversation && conversation.id}
               onClick={() => {;
                 setActiveConversation(conversation);
-                markAsRead(conversation.id);
-
               }}
             />;
           ))}

@@ -1,7 +1,4 @@
 
-
-import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
-import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 interface CreateKeyRequest {
   name: string;
   scopes: string[]
@@ -21,8 +18,6 @@ interface CreateKeyRequest {;
   name: string,;
   scopes: string[],;
   expiresAt?: string | null;
-
-
 }
 ;
 interface RegenerateKeyRequest {;
@@ -57,6 +52,12 @@ if ( {) {
 }
     return new Response ('ok', {
       headers: {
+        headers: { 'Content-Type': 'application/json' }})
+    }
+    // Verify the token with Supabase auth
+        headers: { 'Content-Type': 'application/json' }})
+    }
+    // Parse URL to determine action
     // Handle different actions
     if (req && req.method === 'POST') {
       if (path === 'create') {
@@ -91,6 +92,9 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
       .from('api_keys')
       .insert({
         user_id: userId;
+        key_prefix: prefix;
+        key_hash: hash_data;
+        name: name;
         headers: { 'Content-Type': 'application/json' }})
     }
     // Return the created key (only shown once)
@@ -424,8 +428,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {;
         status: 500,;
         headers: { 'Content-Type': 'application/json' }});
-
-
     }
     if (!keyIds |keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
@@ -435,6 +437,8 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 
 
 
+        headers: { 'Content-Type': 'application/json' }})
+    }
     // Get logs for those keys
     const ids = keyIds && keyIds.map(k => k && k.id);
     const { data: logs, error: logsError, count } = await supabase
@@ -492,5 +496,3 @@ function getApiLogs() {
       .select ('id');
       .eq ('user_id', user_id);
 ;
-  }
-}

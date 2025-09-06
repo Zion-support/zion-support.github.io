@@ -1,6 +1,5 @@
 
 
-
   const { projectId } = useParams() as { projectId: string },;
 
 
@@ -25,14 +24,6 @@
       isMuted: false
     }
   ]);
-import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
-import {VideoCallRoom} from '@/components / video / VideoCallRoom';
-import {toast} from 'sonner';
-
-  ]),
-
-
-
   
   const startVideoCall = () => {
     setIsInCall(true),
@@ -48,6 +39,10 @@ import {toast} from 'sonner';
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     })
+      setCallParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser && randomUser.name} joined the call`);
+    }
+
   ]),;
   const startVideoCall = () => {;
     setIsInCall(true),;
@@ -71,7 +66,6 @@ import {toast} from 'sonner';
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-
   
   return (
     <>;
@@ -89,10 +83,6 @@ import {toast} from 'sonner';
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
-
-                    />;
-
-
                     {/* This button is just for demo/testing purposes */}
                     <div className="flex justify-center mt-4">;
                       <Button variant="outline" onClick={simulateUserJoining} className="text-sm">;
@@ -115,6 +105,7 @@ import {toast} from 'sonner';
                   </div>;
                 )}
 }
+;
   return (
     <>;
       <SEO title={`Project Room - ${project_id}`} description="Collaborate on your project" />;
@@ -177,15 +168,6 @@ import {toast} from 'sonner';
               </CardContent>;
             </Card>;
           </TabsContent>;
-          <TabsContent value="settings" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Project Settings</CardTitle>;
-                <CardDescription>Configure project parameters</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items-center justify-center h-full">;
-                  <p className="text-muted-foreground">Settings will be implemented soon</p>;
                 </div>;
               </CardContent>;
             </Card>;

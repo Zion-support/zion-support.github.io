@@ -45,9 +45,6 @@ const EnterpriseRoutes = () => {;
     <Routes>;
       {/* Enterprise Routes */}
 
-};
-
-
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import EnterprisePlans from "../pages / EnterprisePlans";

@@ -39,8 +39,6 @@ export default function MDMPage() {
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Mobile Device Management (MDM)</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, compliant device fleets across iOS, Android, macOS, and Windows.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-
-
             </div>
           </header>
           <section>
@@ -54,8 +52,6 @@ export default function MDMPage() {
               ))}
             </div>
           </section>
-
-
             </div>
           </section>
 

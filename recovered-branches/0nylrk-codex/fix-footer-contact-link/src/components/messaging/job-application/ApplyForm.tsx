@@ -1,4 +1,3 @@
-
 interface ApplyFormProps {
 
   job: Job
@@ -32,6 +31,7 @@ interface ApplyFormProps {
   onClose: () => void
 
   onApplySuccess?: (jobId: string) => Promise<void>
+}
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -142,8 +142,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       let fullMessage = message,;
       if (proposalLink) {;
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
-
-
       }
       // Add info about attached resume if available
       if (selectedResume) {
@@ -188,15 +186,14 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
           type: selectedResume && selectedResume.type;
         } : null;
       };
+      });
+      return;
+    }
         fullMessage;
         'job';
         job && job.id;
         contextData;
       );
-      }
-
-
-
 ;
       // Create context data for the conversation;
       const contextData = {;
@@ -219,9 +216,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       // Call onApplySuccess to update job status in the UI;
       if (onApplySuccess) {;
         await onApplySuccess(job.id);
-
-
-
       }
       
       toast({
@@ -268,21 +262,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 
 
   return (
-
-    <>;
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
-        <TabsList className="w-full mb-4 bg-zion-blue-dark/30">;
-          <TabsTrigger value="message" className="flex-1">;
-            Message;
-          </TabsTrigger>;
-          <TabsTrigger value="resume" className="flex-1">;
-            Resume;
-          </TabsTrigger>;
-        </TabsList>;
-
-        <TabsContent value="message">;
-
-          <MessageTab
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Loader2 } from './lucide-react';
@@ -415,9 +394,6 @@ if ( {) {
         </TabsList>;
         <TabsContent value="message">;
           <MessageTab;
-
-          <MessageTab 
-
             message={message}
             set_message={set_message}
             proposal_link={proposal_link}

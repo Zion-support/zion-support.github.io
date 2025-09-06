@@ -1,15 +1,5 @@
 
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe;
-  Twitter, Linkedin, Facebook, Instagram;
-  ArrowRight, Rocket, Brain, Cpu, Shield;
-  Star, Users, TrendingUp, Zap
- } from 'lucide-react';
-const contactInfo = null;
-  ];
-
 
 
 const EnhancedFooter: React.FC = () => {;
@@ -18,12 +8,9 @@ const EnhancedFooter: React.FC = () => {;
 
   const company = null;
   ];
-
   const resources = null;
   ];
-
   const socialLinks = null;
-
 const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYear();
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -48,49 +35,15 @@ const serviceCategories = [
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' }
       { name: 'AI Quantum Hybrid Computing', href: '/ai-quantum-hybrid-computing' }
     ]
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-  {
-    title: 'Cutting-Edge IT'
-    services: [
-      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' }
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' }
-      { name: '5G Private Networks', href: '/5g-private-network-solutions' }
-      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' }
-    ]
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
-  {
-    title: 'Innovative SaaS'
-    services: [
-      { name: 'AI Brand Personality', href: '/ai-brand-personality-generator' }
-      { name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform' }
-      { name: 'AI Meeting Transcriber', href: '/ai-meeting-transcriber-pro' }
-      { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion' }
-    ]
-  }
-]
-const companyLinks = [
-  { name: 'About Us', href: '/about' }
-  { name: 'Careers', href: '/careers' }
-  { name: 'News', href: '/news' }
-  { name: 'Case Studies', href: '/case-studies' }
-  { name: 'Blog', href: '/blog' }
-  { name: 'Resources', href: '/resources' }
-]
-const supportLinks = [
-  { name: 'Contact Support', href: '/contact' }
-  { name: 'Documentation', href: '/docs' }
-  { name: 'API Reference', href: '/api' }
-  { name: 'Status Page', href: '/status' }
-  { name: 'Security', href: '/security' }
-  { name: 'Privacy Policy', href: '/privacy' }
-]
-const socialLinks = [
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin }
-  { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram }
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Globe }]
-export default function EnhancedFooter() {
-  const currentYear = new Date().getFullYear()
-  const services = [
     { name: 'AI Services', href: '/ai-services' }
     { name: 'IT Services', href: '/it-services' }
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' }
@@ -142,10 +95,6 @@ const EnhancedFooter: React.FC = () => {
             <p className="text-gray-300 mb-6">
               Leading technology solutions provider helping businesses transform
               their digital presence.
-
-
-            </p>
-            <div className="flex space-x-4">
     <footer className="bg-gray-900 text-white">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
@@ -350,133 +299,46 @@ function EnhancedFooter() {
             </div>;
           </div>;
           {/* Services */}
-
-          <div className="space - y-4">;
-            <h3 className="text - lg font - semibold">Services</h3>;
-            <ul className="space - y-2">;
-              <li>;
-                <Link;
-                  href="/services / web - development";
-                  className="text - gray - 300 hover:text - white transition - colors";
-                >;
-
                   Web Development;
                 </Link>;
               </li>;
               <li>;
-
-                <Link;
-                  href="/services / mobile - apps";
-                  className="text - gray - 300 hover:text - white transition - colors";
-                >;
-
                   Mobile Apps;
                 </Link>;
               </li>;
               <li>;
-
-                <Link;
-                  href="/services / ai - solutions";
-                  className="text - gray - 300 hover:text - white transition - colors";
-                >;
-
                   AI Solutions;
                 </Link>;
               </li>;
               <li>;
-
-                <Link;
-                  href="/services / cloud - services";
-                  className="text - gray - 300 hover:text - white transition - colors";
-                >;
-
                   Cloud Services;
                 </Link>;
               </li>;
             </ul>;
           </div>;
           {/* Company */}
-
-          <div className="space - y-4">;
-            <h3 className="text - lg font - semibold">Company</h3>;
-            <ul className="space - y-2">;
-              <li>;
-                <Link;
-                  href="/about";
-                  className="text - gray - 300 hover:text - white transition - colors";
-                >;
-
                   About Us;
                 </Link>;
               </li>;
               <li>;
-
-                <Link;
-                  href="/careers";
-                  className="text - gray - 300 hover:text - white transition - colors";
-                >;
-
                   Careers;
                 </Link>;
               </li>;
               <li>;
-
-                <Link;
-                  href="/blog";
-                  className="text - gray - 300 hover:text - white transition - colors";
-                >;
-
                   Blog;
                 </Link>;
               </li>;
               <li>;
-
-                <Link;
-                  href="/contact";
-                  className="text - gray - 300 hover:text - white transition - colors";
-                >;
-
                   Contact;
                 </Link>;
               </li>;
             </ul>;
           </div>;
           {/* Contact Info */}
-
-          <div className="space-y-4">;
-            <h3 className="text-lg font-semibold">Contact</h3>;
-            <div className="space-y-2">;
-              <div className="flex items-center space-x-2">;
-                <Mail className="h-4 w-4 text-gray-400" />;
-                <span className="text-gray-300">info@ziontechgroup && ziontechgroup.com</span>;
-              </div>;
-              <div className="flex items-center space-x-2">;
-                <Phone className="h-4 w-4 text-gray-400" />;
-                <span className="text-gray-300">+1 (555) 123-4567</span>;
-              </div>;
-              <div className="flex items-center space-x-2">;
-                <MapPin className="h-4 w-4 text-gray-400" />;
-                <span className="text-gray-300">New York, NY</span>;
-          <div className="space - y-4">;
-            <h3 className="text - lg font - semibold">Contact</h3>;
-            <div className="space - y-2">;
-              <div className="flex items - center space - x-2">;
-                <Mail className="h - 4 w - 4 text - gray - 400" />;
-                <span className="text - gray - 300">info@ziontechgroup.com</span>;
-              </div>;
-              <div className="flex items - center space - x-2">;
-                <Phone className="h - 4 w - 4 text - gray - 400" />;
-                <span className="text - gray - 300">+1 (555) 123 - 4567</span>;
-              </div>;
-              <div className="flex items - center space - x-2">;
-                <MapPin className="h - 4 w - 4 text - gray - 400" />;
-                <span className="text - gray - 300">New York, NY</span>;
-
               </div>;
             </div>;
           </div>;
         </div>;
-
         <div className="border - t border - gray - 800 mt - 8 pt - 8">;
           <div className="flex flex - col md:flex - row justify - between items - center">;
 <p className="text - gray - 400 text - sm">;
@@ -493,22 +355,12 @@ function EnhancedFooter() {
                 href="/terms";
                 className="text - gray - 400 hover:text - white text - sm transition - colors";
               >;
-
                 Terms of Service;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
-
-
-    </footer>);
 }
-;
 export default EnhancedFooter;
 ;
-
-};
-
-export default EnhancedFooter;
-

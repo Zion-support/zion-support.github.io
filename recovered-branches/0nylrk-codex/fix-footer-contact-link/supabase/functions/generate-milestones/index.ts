@@ -1,4 +1,3 @@
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
@@ -21,14 +20,10 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
-
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
-    }
-    // Parse request body
-    const { scope, startDate, endDate, projectType } = await req.json();
 
     const { scope, startDate, endDate, projectType } = await req && req.json();
 
@@ -48,9 +43,12 @@ serve(async (req) => {;
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;
     if (!apiKey) {;
       throw new Error('OPENAI_API_KEY is not set');
-
-
-
+  }
+  try {
+    // Get the OpenAI API key from environment variables
+    const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
+    if (!apiKey) {
+      throw new Error('OPENAI_API_KEY is not set')
     }
     // Parse request body
     
@@ -71,10 +69,11 @@ serve(async (req) => {;
     Format the response as a valid JSON array of milestone objects with these fields:
     "title", "description", "dueDate", "estimatedHours"
     Ensure your response is ONLY the JSON array with no additional text.
+    // Call OpenAI API
         model: 'gpt-4o-mini';
         messages: [
           {
-
+            role: 'system'
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts",
 const cors_headers = {
@@ -129,7 +128,6 @@ if ( {) {
         messages: [;
           {
             role: 'system',
-
             content: 'You are a project management expert that breaks work into appropriate milestones.'}
           {
             role: 'user'
@@ -179,7 +177,6 @@ if ( {) {
       JSON.stringify({ error: error.message || 'Failed to generate milestones' }),;
       {;
         status: 500,;
-
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }

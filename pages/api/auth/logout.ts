@@ -1,5 +1,3 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-
 
 import { clearUserCookie } from '../../../utils/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -7,11 +5,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearUserCookie(res)
 
   res.status(200).json({ success: true })
-}
-}
-
-}
-
 import { NextApiRequest, NextApiResponse } from 'next',
 import { clearUserCookie } from '../../../utils / auth',
 export default /**

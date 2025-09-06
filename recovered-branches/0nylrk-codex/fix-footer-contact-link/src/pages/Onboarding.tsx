@@ -1,4 +1,3 @@
-
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useAuth} from "@/hooks/useAuth";
@@ -23,23 +22,11 @@ import { Steps, Step } from "@/components/ui/steps",
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 export default function Onboarding() {
-
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
 
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
-
-  // Convert our user types to match what's expected in the database
-  const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
-    switch (type) {
-
-  // Convert our user types to match what's expected in the database;
-  const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {;
-    switch (type) {;
-      case "serviceProvider": return "creator";
-      case "talent":;
-        return "jobSeeker";
 
 
   },
@@ -47,31 +34,11 @@ export default function Onboarding() {
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type),
     
-
-
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
       navigate('/service-onboarding')
       return
     } else if (type === "talent") {
-      navigate('/talent-onboarding');
-      return;
-    }
-
-
-    // Continue with the onboarding flow for clients;
-    setCurrentStep(1);
-  };
-
-  const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {;
-    if (!user || !userType) {;
-      toast({;
-        title: "Authentication Error",;
-        description: "Your session may have expired. Please log in again.",;
-        variant: "destructive"}),;
-
-      navigate('/login');
-      return;
     }
 
 
@@ -91,8 +58,6 @@ export default function Onboarding() {
     
     const dbUserType = mapUserTypeToDatabase(userType),
     
-
-
     try {
       await updateProfile({
         id: user.id
@@ -159,6 +124,17 @@ export default function Onboarding() {
     return null;
   }
   return (
+      case "serviceProvider": return "creator";
+      case "talent":;
+        return "jobSeeker";
+      navigate('/talent-onboarding');
+      return;
+    }
+      navigate('/login');
+      return;
+    }
+  }
+  return (
                 <Step
                   key={index}
                   status={
@@ -169,9 +145,6 @@ export default function Onboarding() {
                       : currentStep === index;
                       ? "current";
                       : "incomplete";
-
-
-
                   }
                   label={step && step.label}
                   description={step && step.description}
@@ -181,7 +154,6 @@ export default function Onboarding() {
                   variant="outline"
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
                   onClick={() => setCurrentStep(0)}
-}
 
 
 
@@ -343,7 +315,8 @@ if ( {) {
                 >;
                   Back to Role Selection;
                 </Button>;
-              </div>)}
+              </div>;
+            )}
           </div>;
         </div>;
       </div>;
@@ -353,5 +326,6 @@ if ( {) {
 
 
 }
+;
     </>);
 }

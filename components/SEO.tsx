@@ -1,6 +1,4 @@
 
-
-
 import React from './react';
 import Head from './next / head';
 ;
@@ -10,10 +8,6 @@ interface SEOProps {;
   description?: string;
   keywords?: string;
 }
-const SEO: React.FC<SEOProps> = ({
-  title = "Zion Tech Group - Technology Solutions"
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development."
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting"
 }) => {
 
 const SEO: React.FC<SEOProps> = ({;
@@ -38,12 +32,5 @@ export default function SEO({
   const canonicalUrl = url || `https://zion.app${router.asPath}`;
 }
 export default SEO;
-    <Head>;
-      <title>{title}</title>;
-      <meta name="description" content={description} />;
-      <meta name="keywords" content={keywords} />;
-      <meta name="viewport" content="width = device - width, initial - scale = 1.0" />;
-    </Head>);
 }
-;
 export default SEO;

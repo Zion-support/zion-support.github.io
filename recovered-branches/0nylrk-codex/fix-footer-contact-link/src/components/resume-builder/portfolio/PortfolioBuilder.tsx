@@ -1,4 +1,3 @@
-
 import { useState, useEffect  } from 'react';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -8,8 +7,6 @@ import { ProjectForm  } from './ProjectForm';
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {
-
-
 import {useState, useEffect} from 'react';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -74,9 +71,6 @@ export function PortfolioBuilder() {;
       fetchProjects();
     }
   },
-
-
-
   
   if (isLoading) {
     return (
@@ -217,7 +211,3 @@ export function PortfolioBuilder() {;
                 </Button>;
               </div>;
             </CardContent>;
-          </Card>;
-        );
-      )}
-    </div>;

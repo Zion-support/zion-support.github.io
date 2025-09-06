@@ -1,4 +1,4 @@
-
+}
 import React from 'react';
 import type { KycProfile } from '../../utils / kyc';
 import { getBadgeLabels } from '../../utils / kyc';

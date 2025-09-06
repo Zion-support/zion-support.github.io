@@ -1,4 +1,3 @@
-
 import React from 'react';
   id: string;
 label: string;
@@ -39,16 +38,6 @@ import React from 'react';
 label: string;
 threshold: number, //token balance threshold;
 }
-;
-const BADGES: Badge[] = [;
-  { id: 'starter', label: 'Starter', threshold: 50 },
-  { id: 'rising', label: 'Rising Star', threshold: 200 },
-  { id: 'pro', label: 'Pro', threshold: 500 },
-  { id: 'elite', label: 'Elite', threshold: 1000 },
-];
-  let current: Badge | null = null;
-;
-  return current;
   return (
     <div className='flex gap - 2 items - center flex - wrap'>;
       {BADGES.map (boolean => (        <span;
@@ -71,12 +60,11 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
   return (
 
 
-  }
-  return current;
-}
 
 
 
+export default function Badges(): any ({ balance }: { balance: number }) {;
+  const active = currentBadge(balance);
   return (
     <div className='flex gap-2 items-center flex-wrap'>;
       {BADGES && BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">;
@@ -99,10 +87,6 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
           Current: {active && active.label}
         </span>;
       )}
-
-    </div>;
-  );        <span className="ml-2 text-xs text-green-600">Current: {active && active.label}</span>;
-
       )}
     </div>;
   );
@@ -159,3 +143,9 @@ export default function Badges({ balance }: { balance: number }) {
         <span className='ml - 2 text - xs text - green - 600'>;
           Current: {active.label}
 
+        <span className='ml - 2 text - xs text - green - 600'>;
+          Current: {active.label}
+        </span>)}
+    </div>);        <span className="ml - 2 text - xs text - green - 600">Current: {active.label}</span>)}
+    </div>);
+}

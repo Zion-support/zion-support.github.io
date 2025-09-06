@@ -162,11 +162,11 @@ function FeatureShowcase() {
                       <div className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg flex items - center justify - center text - white font - bold">;
                         API;
                       </div>;
-                      <div className="text - gray - 400"></div>;
+                      <div className="text - gray - 400">→</div>;
                       <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - blue - 500 rounded - lg flex items - center justify - center text - white font - bold">;
                         SDK;
                       </div>;
-                      <div className="text - gray - 400"></div>;
+                      <div className="text - gray - 400">→</div>;
                       <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 to - pink - 500 rounded - lg flex items - center justify - center text - white font - bold">;
                         UI;
                       </div>;

@@ -1,4 +1,4 @@
-function toSDL() {
+
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";

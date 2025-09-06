@@ -12,7 +12,6 @@
 			industries={["E‑commerce", "Media", "SaaS", "Education"]}
 
 
-
 			pricePerMonthUSD={1299  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -48,5 +47,3 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-

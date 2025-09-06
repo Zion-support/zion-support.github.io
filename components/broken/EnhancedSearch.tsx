@@ -1,46 +1,19 @@
-//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
- //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
-  
-
-
 }];
 setIsSearching (true);
-//Simulate API call delay setTimeout ( () => {
-  const filteredResults = mockSearchResults.filter (result => {
-  const matchesQuery = result.name.toLowerCase () .includes (searchQuery.toLowerCase () ) |result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) |result.category.toLowerCase () .includes (searchQuery.toLowerCase () );
-const matchesFilters = selectedFilters.length === 0 |selectedFilters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) |result.type.toLowerCase () .includes (filter.toLowerCase () ) );
-setResults (sortedResults);
+
+//Simulate API call delay set_timeout ( () => {
+  const filtered_results = mockSearchResults.filter (result => {
+  const matches_query = result.name.toLowerCase () .includes (search_query.toLowerCase () ) || result.description.toLowerCase () .includes (search_query.toLowerCase () ) || result.category.toLowerCase () .includes (search_query.toLowerCase () );
+const matches_filters = selected_filters.length === 0 || selected_filters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) || result.type.toLowerCase () .includes (filter.toLowerCase () ) );
+set_results (sorted_results);
 setShowResults (true);
-setIsSearching (false)
-}, 300)
+setIsSearching (false);
+
 }, 300);
 }, 300);
 [selected_filters]);
 [selected_filters]);
 //Close search on outside click useEffect ( () => {
-  const handleClickOutside = (event: MouseEvent) => {
-  if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
-}, []);
-//Handle filter toggle const toggleFilter = (filterId: string) => {
-  setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId)
-}> {
-  /* Search Form */
-}<form onSubmit= {
-  handleSearch
-}className="relative"> <div className="relative"> <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> <input /> {
-  /* Clear Button */
-}{
-  query && (<button type="button" onClick= {
-  clearSearch
-}className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors" > <X className="w-4 h-4" /> </button>)
-}{
-  /* Search Button */
-}<button type="submit" className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50" > Search </button> </div> </form> {
-  /* Search Results Dropdown */
-}<AnimatePresence> {
-  show_results && (<motion.div initial= {
-  {
-  opacity: 0, y: -10, scale: 0.95
 }animate= {
   {
   opacity: 1, y: 0, scale: 1
@@ -123,7 +96,7 @@ function debounce<T extends (...args: any[]) => any>(
   suggestion && suggestion.text ;
 }</div> <div className="text-sm text-gray-400 capitalize"> {;
   suggestion && suggestion.type ;
-} {;
+}• {;
   suggestion && suggestion.category ;
 }</div> </div> <ArrowRight className="w-4 h-4 text-gray-400" /> </button>) ) ;
 }</div> </motion && motion.div>) ;
@@ -137,7 +110,6 @@ function debounce<T extends (...args: any[]) => any>(
 }whileHover= {
   {
   scale: 1 && 1.02 
-
 }className="p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-all duration-300 border border-transparent hover:border-cyan-400/30" onClick= {
   () => handleResultSelect (result) ;
 }> <div className="flex items-start justify-between"> <div className="flex-1"> <h4 className="font-medium text-white mb-1"> {;
@@ -194,7 +166,6 @@ function debounce<T extends (...args: any[]) => any>(;
   };
 }
 export default EnhancedSearch;
-
   category.id;
 }on_click= {
   () => toggle_filter (category.id);
@@ -250,7 +221,7 @@ export default EnhancedSearch;
   suggestion.text;
 }</div> <div className="text - sm text - gray - 400 capitalize"> {
   suggestion.type;
-} {
+}• {
   suggestion.category;
 }</div> </div> <ArrowRight className="w - 4 h - 4 text - gray - 400" /> </button>) );
 }</div> </motion.div>);
@@ -318,5 +289,3 @@ function debounce < T extends (...args: any[]) => any>(
     timeout = set_timeout (() => func (...args), wait);
   }
 }
-export default EnhancedSearch;
-;

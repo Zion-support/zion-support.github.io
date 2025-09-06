@@ -1,5 +1,3 @@
-
-
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -32,10 +30,6 @@ interface TemplateSaveFormProps {;
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues;
 }
-
-
-export function TemplateSaveForm(): any ({;
-
   onCancel;
   onComplete;
   editTemplate;
@@ -43,10 +37,6 @@ export function TemplateSaveForm(): any ({;
 }: TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
-
-
-
-
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -124,8 +114,6 @@ export function TemplateSaveForm({;
           title: values.title,;
           templateData: currentValues;
           isDefault: values.isDefault});
-
-
       }
       onComplete()
     } finally {

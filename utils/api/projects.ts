@@ -1,3 +1,7 @@
+import fs from 'fs';
+import path from 'path';
+import { NextApiRequest, NextApiResponse } from 'next';
+import {
   Project
   Milestone
   MilestoneStatus
@@ -55,11 +59,6 @@ export interface Project {
 import { CurrentUser } from './auth';
 ;
 export interface Milestone {
-} from '../types/milestones';
-import { CurrentUser } from './auth';
-
-export interface Milestone {;
-
   id: string;
   title: string;
   description?: string;
@@ -70,15 +69,11 @@ export interface Milestone {;
   createdAt: string;
   updatedAt: string;
 }
-
-// Mock storage
-const projects: Project[] = [];
   return projects.find(p => p.id === id) |null;
 
   return projects && projects.find(p => p && p.id === id) || null,
 }
 export function getAllProjects(): Project[] {
-
 
 export function getProjectById(id: string): Project | null {;
   return projects.find(p => p.id === id) || null;
@@ -111,10 +106,6 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 
 
   Object.assign(project, updates, { updatedAt: new Date().toISOString() });
-  const project = projects && projects.find(p => p && p.id === id);
-  if (!project) return null,
-  
-  Object && Object.assign(project, updates, { updatedAt: new Date().toISOString() });
   return project;
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
@@ -126,9 +117,6 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     id: `milestone_${Date && Date.now()}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
-  };
-
-
   };
   }
   project.milestones.push(newMilestone);
@@ -244,6 +232,3 @@ if (return false) {
 ;
   return true;
 }
-
-
-

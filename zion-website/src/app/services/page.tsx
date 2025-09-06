@@ -1,46 +1,5 @@
 import {
   {
-    name: 'AI Strategy & Consulting'
-    description: 'Comprehensive assessment and strategic planning for AI transformation initiatives.'
-    icon: LightBulbIcon
-    features: [
-      'Technology AssessmentROI AnalysisImplementation RoadmapChange Management Planning'
-    ]
-    duration: '4-8 weeks'}
-  {
-    name: 'Custom AI Development'
-    description: 'Tailored AI solutions built specifically for your business needs and objectives.'
-    icon: CogIcon
-    features: [
-      'Custom Algorithm DevelopmentIntegration ServicesTesting & ValidationDocumentation & Training'
-    ]
-    duration: '8-24 weeks'}
-  {
-    name: 'AI Integration & Deployment'
-    description: 'Seamless integration of AI solutions into your existing infrastructure and workflows.'
-    icon: RocketLaunchIcon
-    features: [
-      'System IntegrationAPI DevelopmentPerformance OptimizationGo-live Support'
-    ]
-    duration: '4-12 weeks'}
-  {
-    name: 'AI Training & Education'
-    description: 'Comprehensive training programs to ensure your team maximizes AI solution value.'
-    icon: AcademicCapIcon
-    features: [
-      'Technical TrainingBest PracticesOngoing SupportCertification Programs'
-    ]
-    duration: '2-4 weeks'}
-  {
-    name: 'AI Maintenance & Support'
-    description: 'Continuous monitoring, optimization, and support for your AI solutions.'
-    icon: ShieldCheckIcon
-    features: [
-      '24/7 MonitoringPerformance OptimizationSecurity UpdatesTechnical Support'
-    ]
-    duration: 'Ongoing'}
-  {
-  {
     step: '01'
     title: 'Discovery & Assessment'
     description: 'We begin by understanding your business challenges, current technology stack, and AI objectives.'
@@ -66,6 +25,12 @@ import {
     description: 'Successfully delivered 500+ AI solutions across diverse industries worldwide.'
     icon: ChartBarIcon}
   {
+      {/* Hero section */}
+      <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
+        <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
+          <div className=&quot;text - center & quot;>;
+            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
+              Professional{' '}
   return (
     <div className="bg-black">
       {/* Hero section */}
@@ -236,31 +201,10 @@ import {
                   <p className=&quot;flex - auto & quot;>{reason.description}</p>;
                 </dd>;
               </div>))}
-            The Zion Tech Group Advantage
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Discover what sets us apart and why leading organizations choose us for their AI transformation.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-            {reasonsToChoose.map((reason) => (
-              <div key={reason.name} className="flex flex-col group">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                  <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {reason.name}
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">{reason.description}</p>
-                </dd>
-              </div>
-            ))}
           </dl>;
         </div>;
       </div>;
       {/* CTA section */}
-
-
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

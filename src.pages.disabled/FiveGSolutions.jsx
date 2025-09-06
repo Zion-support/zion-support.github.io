@@ -31,9 +31,6 @@ export default function FiveGSolutions({ }: FiveGSolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
 :src.pages.disabled/FiveGSolutions.jsx
 }
 }
@@ -44,3 +41,12 @@ export default function FiveGSolutions({ }: FiveGSolutionsProps) {
 
 
 
+
+
+
+:src.pages.disabled/FiveGSolutions.jsx
+}
+}
+}
+}
+}

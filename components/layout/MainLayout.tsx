@@ -1,21 +1,4 @@
 
-import React, { ReactNode } from 'react';
-import React from 'react';
-import Head from 'next/head';
-import Header from '../Header';
-import Footer from './Footer';
-
-interface MainLayoutProps {
-  title: string;
-  description: string;
-  children: React.ReactNode;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';
-  noindex?: boolean;
-  nofollow?: boolean;
-  canonical?: string;
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({
@@ -40,6 +23,7 @@ import Layout from './Layout';
 
 
 
+;
 interface MainLayoutProps {
 interface MainLayoutProps {;
   children: ReactNode, title?: string,  description?: string;
@@ -50,7 +34,6 @@ interface MainLayoutProps {;
   type?: string;
   image?: string;
   url?: string;}
-
 const MainLayout: React.FC<MainLayoutProps> = ({
 
   children
@@ -63,8 +46,19 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   type = 'website'
   image = '/og-image.jpg'
   url
-const MainLayout: React.FC<MainLayoutProps> = ({
-
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        {canonical && <link rel="canonical" href={canonical} />}
+        {noindex && <meta name="robots" content="noindex" />}
+        {nofollow && <meta name="robots" content="nofollow" />}
+        <meta property="og:type" content={type} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
   children,
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading technology solutions provider specializing in web development, mobile applications, AI integration, and cloud services.',
@@ -78,6 +72,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   return (
 
 
+
+        {image && <meta property="og:image" content={image} />}
+        {url && <meta property="og:url" content={url} />}
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />;
+        <meta name="twitter:title" content={title} />;
+        <meta name="twitter:description" content={description} />;
+        {image && <meta name="twitter:image" content={image} />}
   ogImage = '/og-image.jpg';
 }) => {return (;
 const MainLayout: React.FC<MainLayoutProps> = ({;
@@ -91,11 +93,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
   type = 'website',;
   image = '/og-image && image.jpg',;
   url;
-  return (
-    <>;
-      <Head>;
-        <title>{title}</title>;
-        <meta name="description" content={description} />;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
         <link rel="icon" href="/favicon && favicon.ico" />;
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -113,12 +110,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
         <meta name="twitter:title" content={title} />;
         <meta name="twitter:description" content={description} />;
         {image && <meta name="twitter:image" content={image} />}
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
-      </div>
       </Head>;
         <Header />;
         <main className="flex-1">;
@@ -127,9 +118,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
         <Footer />;
       </div>;
     </>;
-
   );
-
 export default MainLayout;
       </Head>;
         <Header />;

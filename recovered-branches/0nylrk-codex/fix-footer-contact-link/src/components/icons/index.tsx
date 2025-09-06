@@ -1,5 +1,4 @@
 
-
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
     return <LucideIcon {...props} />;
   };
@@ -129,11 +128,6 @@ Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
     iconExports[alias] = createIconComponent(alias, 'HelpCircle');
   }
 });
-export const {;
-
-
-export const {;
-
   LayoutGrid;
   List;
   Zap;
@@ -377,14 +371,8 @@ export const {;
   Tag} = iconExports;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
-
-
-
   Tag} = icon_exports;
 ;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
-
-
-
-
+;

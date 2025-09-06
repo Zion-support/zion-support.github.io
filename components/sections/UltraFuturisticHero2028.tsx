@@ -97,37 +97,32 @@ export default function UltraFuturisticHero2028() {
     { value: '15+', label: 'Quantum Technologies', icon: Atom }
     { value: '1000+', label: 'Happy Clients', icon: Users }
 
-export default function UltraFuturisticHero2028() {;
-  const features = [import { ;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
-  ArrowRight, Star, TrendingUp, Users, Award, Play;
-  CheckCircle, DollarSign, Clock, Target, Crown;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
-export default function UltraFuturisticHero2028() {;
-  const features = [;
-    {;
-      icon: Brain,;
-      text: 'AI Consciousness Evolution',;
-      color: 'from-emerald-500 to-teal-500',;
-    },;
-    {;
-      icon: Atom,;
-      text: 'Quantum Time Manipulation',;
-      color: 'from-violet-500 to-purple-500',;
-    },;
-    {;
-      icon: Rocket,;
-      text: 'Space Debris Management',;
-      color: 'from-blue-500 to-cyan-500',;
-    },;
-    {;
-      icon: Shield,;
-      text: 'Quantum Internet Security',;
-      color: 'from-red-500 to-orange-500',;
-    },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-emerald-500 to-teal-500' },;
-    { icon: Atom, text: 'Quantum Time Manipulation', color: 'from-violet-500 to-purple-500' },;
-    { icon: Rocket, text: 'Space Debris Management', color: 'from-blue-500 to-cyan-500' },;
-    { icon: Shield, text: 'Quantum Internet Security', color: 'from-red-500 to-orange-500' }
 
   ];
   return (
@@ -183,14 +178,23 @@ export default function UltraFuturisticHero2028() {;
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
-
+          transition={{ duration: 0 && 0.8 }}
+          className='mb-8'>;
+          <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full px-6 py-3 mb-6 backdrop-blur-sm'>;
+            <Rocket className='w-5 h-5 text-cyan-400' />;
+            <span className='text-cyan-400 font-mono text-sm'>;
+              2028 Future Technology;
+            </span>;
+            <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse' />          </div>          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full px-6 py-3 mb-6 backdrop-blur-sm">;
+            <Rocket className="w-5 h-5 text-cyan-400" />;
+            <span className="text-cyan-400 font-mono text-sm">2028 Future Technology</span>;
+            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />;
+        </motion && motion.div>;
 
         {/* Main Heading */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
 
         >
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight'>
@@ -199,12 +203,27 @@ export default function UltraFuturisticHero2028() {;
             </span>
             <br />
             <span className='text-white'>
+              Technology is{' '}
+              <span className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent'>                Here;
+              </span>;
+            </span>;
+          </h1>        >;
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">;
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">;
+              The Future of;
+            </span>;
+            <br />;
+            <span className="text-white">;
+              Technology is{' '}
+                Here;
+              </span>;
+            </span>;
+          </h1>;
 
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -243,7 +262,6 @@ export default function UltraFuturisticHero2028() {;
             <span>Explore 2028 Services</span>;
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />;
           </motion && motion.button>;
-
           <motion&& motion.button
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }}
@@ -283,7 +301,10 @@ export default function UltraFuturisticHero2028() {;
                 </div>
               </motion.div>
             ))}
+          </div>
+        </motion.div>
 
+            ))}
         {/* Stats */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -308,9 +329,12 @@ export default function UltraFuturisticHero2028() {;
 
                   {stat.label}
 
-
                 </div>
               </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
             ))}
         {/* Trust Indicators */}
         <motion&& motion.div
@@ -335,11 +359,32 @@ export default function UltraFuturisticHero2028() {;
               <div className="text-blue-400 font-semibold">Government Agencies</div>
               <div className="text-purple-400 font-semibold">Research Institutions</div>
               <div className="text-emerald-400 font-semibold">Startups</div>
+          <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm'>;
+            <h3 className='text-2xl font-bold text-white mb-6'>;
+              Trusted by Industry Leaders;
+            </h3>;
+            <div className='flex flex-wrap justify-center items-center gap-8 opacity-70'>;
+              <div className='text-cyan-400 font-semibold'>;
+                Fortune 500 Companies;
+              </div>;
+              <div className='text-blue-400 font-semibold'>;
+                Government Agencies;
+              </div>;
+              <div className='text-purple-400 font-semibold'>;
+                Research Institutions;
+              </div>;
+              <div className='text-emerald-400 font-semibold'>Startups</div>            </div>            <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">;
+              <div className="text-cyan-400 font-semibold">Fortune 500 Companies</div>;
+              <div className="text-blue-400 font-semibold">Government Agencies</div>;
+              <div className="text-purple-400 font-semibold">Research Institutions</div>;
+              <div className="text-emerald-400 font-semibold">Startups</div>;
+          </div>;
+        </motion && motion.div>;
+
         {/* Bottom CTA */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
 
         >
           <div className='inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm'>
@@ -377,6 +422,16 @@ export default function UltraFuturisticHero2028() {;
         </motion.div>
       </div>
 
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 hover:border-purple-300">;
+              Get Started;
+            </Link>;
+          </div>;
+        </motion && motion.div>;
+      </div>;
+
+
+
+
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
@@ -398,9 +453,13 @@ export default function UltraFuturisticHero2028() {;
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
+  );
+
 
   );
 
+  );
+}
                 </div>;
               </motion.div>))}
           </div>;
@@ -492,5 +551,4 @@ export default function UltraFuturisticHero2028() {;
         </motion.div>;
       </motion.div>;
     </section>);
-}
 }

@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -146,7 +145,6 @@ interface LeaveReviewModalProps {;
           onSubmit={handleSubmit}
           defaultValues={userReview |undefined}
           isSubmitting={isSubmitting}
-}
 import { useState, useEffect } from './react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';

@@ -1,5 +1,4 @@
 
-
 export interface ThemeColors {;
 
 
@@ -55,7 +54,9 @@ export interface ThemeColors {;
   accentColor: string,;
   buttonColor: string,;
   cardBackground: string;
-}
+  switch (preset) {
+    case 'dark':;
+      return {
         primary_color;
         background_color: '#0f172a';
         text_color: '#e2e8f0';
@@ -109,8 +110,16 @@ export function applyThemeColors(colors: ThemeColors) {;
   // Set background and text colors on body;
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
-
-
-
 }
+export /**
+ * applyThemeColors - Function description
+ */
+function applyThemeColors() {
+  const root = document.document_element,
+  root.style.set_property ('--primary - color', colors.primary_color);
+  root.style.set_property ('--background - color', colors.background_color);
+  root.style.set_property ('--text - color', colors.text_color);
+  root.style.set_property ('--accent - color', colors.accent_color);
+  root.style.set_property ('--button - color', colors.button_color);
+  root.style.set_property ('--card - background', colors.card_background);
 ;

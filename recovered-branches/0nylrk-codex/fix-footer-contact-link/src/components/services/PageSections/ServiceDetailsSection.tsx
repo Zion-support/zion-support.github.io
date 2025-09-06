@@ -1,4 +1,3 @@
-
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
 import { CountryPricing } from "@/data/onsiteServicePricing",
@@ -30,7 +29,6 @@ export function ServiceDetailsSection({
         <CountryServiceSelector;
           selected_country={selected_country}
           onCountryChange={setSelectedCountry}
-
         />) : (
         <div className="text - center">;
           <h2 className="text - 2xl font - bold text - white mb - 4">;

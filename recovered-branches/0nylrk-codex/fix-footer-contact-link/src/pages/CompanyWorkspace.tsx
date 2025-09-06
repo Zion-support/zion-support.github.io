@@ -1,4 +1,3 @@
-
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -94,13 +93,12 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
       </div>;
     );
   }
+  }
+
 ;
   return (;
     <ProtectedRoute>;
       <SEO;
-
-
-
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />
@@ -114,6 +112,7 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
       <Footer />
     </ProtectedRoute>
   )
+;
   // Check condition
 if ( {) {
   $2
@@ -160,6 +159,3 @@ if ( {) {
       <Footer />;
     </ProtectedRoute>);
 }
-
-}
-

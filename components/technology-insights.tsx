@@ -29,86 +29,41 @@ export default function TechnologyInsightsPage() {
     },      featured: false
     }
   ];
-  const researchAreas = [
-    {
-      title: 'Autonomous Systems Research'
-      description:
-        'Pioneering research in building truly autonomous systems that can operate independently.'
-      focus: [
-        'Decision Making'
-        'Self-Learning'
-        'Adaptive Behavior'
-        'System Integration'
-      ]
-      icon: ''
+
+  const researchAreas = [;
+    {;
+      title: 'Autonomous Systems Research',;
+      description:;
+        'Pioneering research in building truly autonomous systems that can operate independently.',;
+      focus: [;
+        'Decision Making',;
+        'Self-Learning',;
+        'Adaptive Behavior',;
+        'System Integration',;
+      ],;
+      icon: '🔬',;
+    },;
+      title: 'AI Ethics & Governance',;
+      description:;
+        'Research into responsible AI development and ethical considerations for autonomous systems.',;
+      focus: ['Ethical AI', 'Bias Detection', 'Transparency', 'Accountability'],;
+      icon: '⚖️',;
+    },;
+    {;
+      title: 'Human-AI Collaboration',;
+      description:;
+        'Exploring how humans and AI can work together effectively and safely.',;
+      focus: [;
+        'Human-AI Interface',;
+        'Collaborative Decision Making',;
+        'Safety Protocols',;
+        'Trust Building',;
+      ],;
+      icon: '🤝',;
+    },  ];      description: 'Exploring how humans and AI can work together effectively and safely.',;
+      focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],;
+      icon: '🤝';
     }
-      title: 'AI Ethics & Governance'
-      description:
-        'Research into responsible AI development and ethical considerations for autonomous systems.'
-      focus: ['Ethical AI', 'Bias Detection', 'Transparency', 'Accountability']
-      icon: ''
-    }
-    {
-      title: 'Human-AI Collaboration'
-      description:
-        'Exploring how humans and AI can work together effectively and safely.'
-      focus: [
-        'Human-AI Interface'
-        'Collaborative Decision Making'
-        'Safety Protocols'
-        'Trust Building'
-      ]
-      icon: ''
-    },  ];      description: 'Exploring how humans and AI can work together effectively and safely.'
-      focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building']
-      icon: ''
-    }
-  const whitepapers = [
-    {
-      id: 'autonomous-systems-whitepaper'
-      title: 'The Future of Autonomous Systems'
-      description:
-        'A comprehensive analysis of autonomous technology trends and implementation strategies.'
-      pages: '45'
-      category: 'Technology'
-      downloadUrl: '/whitepapers/autonomous-systems-future.pdf',      pages: '45'
-      category: 'Technology'
-      downloadUrl: '/whitepapers/autonomous-systems-future.pdf'
-    }
-    {
-      id: 'ai-ethics-framework'
-      title: 'AI Ethics Framework for Business'
-      description: 'Establishing ethical guidelines for AI implementation in enterprise environments.'
-      pages: '32'
-      category: 'Ethics'
-      downloadUrl: '/whitepapers/ai-ethics-framework.pdf'
-    }
-    {
-      id: 'automation-roi-guide'
-      title: 'Automation ROI Guide'
-      description: 'How to calculate and maximize return on investment for automation initiatives.'
-      pages: '28'
-      category: 'Business'
-      downloadUrl: '/whitepapers/automation-roi-guide.pdf'
-    }
-    {
-      id: 'ai-ethics-framework'
-      title: 'AI Ethics Framework for Business'
-      description:
-        'Establishing ethical guidelines for AI implementation in enterprise environments.'
-      pages: '32'
-      category: 'Ethics'
-      downloadUrl: '/whitepapers/ai-ethics-framework.pdf'
-    }
-    {
-      id: 'automation-roi-guide'
-      title: 'Automation ROI Guide'
-      description:
-        'How to calculate and maximize return on investment for automation initiatives.'
-      pages: '28'
-      category: 'Business'
-      downloadUrl: '/whitepapers/automation-roi-guide.pdf'
-    },  ];      downloadUrl: '/whitepapers/automation-roi-guide.pdf'
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
         <main className='container mx-auto px-6 py-12'>;
           <section className='text-center mb-16'>;
@@ -142,16 +97,15 @@ export default function TechnologyInsightsPage() {
               AI, automation, and emerging technologies;
             </p>;
           </section>;
-
                   </div>
                 ))}
               </div>
             </div>
 
-
                       href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
                       Read More <span className='ml-1'>→</span>                    </Link>      </Head>;
+
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
         <main className="container mx-auto px-6 py-12">;
           <section className="text-center mb-16">;
@@ -185,17 +139,19 @@ export default function TechnologyInsightsPage() {
               </div>;
             </div>;
             {/* Research Areas */}
-
-
             {/* Research Areas */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Research Focus Areas
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-
-
                 {researchAreas.map((area, index) => (
+            <div className='mb-16'>;
+              <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>;
+                Research Focus Areas;
+              </h2>;
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
+                {researchAreas && researchAreas.map((area, index) => (;
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>;
@@ -228,24 +184,23 @@ export default function TechnologyInsightsPage() {
                 Research Whitepapers
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-
-
                 {whitepapers.map((paper, index) => (
                   <div
                     key={index}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>;
-                    <div className='flex items-center justify-between mb-3'>;
-                      <span className='px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full'>;
-                        {paper && paper.category}
-                      </span>;
-                      <span className='text-white/60 text-sm'>;
-                        {paper && paper.pages} pages;
-                      </span>;
-                    </div>;
-                    <h3 className='text-xl font-bold mb-3 text-white'>;
-                      {paper && paper.title}
-                    </h3>;
-                    <p className='text-white/70 mb-4'>{paper && paper.description}</p>;
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'
+                  >
+                    <div className='flex items-center justify-between mb-3'>
+                      <span className='px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full'>
+                        {paper.category}
+                      </span>
+                      <span className='text-white/60 text-sm'>
+                        {paper.pages} pages
+                      </span>
+                    </div>
+                    <h3 className='text-xl font-bold mb-3 text-white'>
+                      {paper.title}
+                    </h3>
+                    <p className='text-white/70 mb-4'>{paper.description}</p>
                     <Link
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="flex items-center justify-between mb-3">
@@ -258,7 +213,7 @@ export default function TechnologyInsightsPage() {
                       href={paper.downloadUrl}
                       className="inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
                     >
-                      Download PDF <span className="ml-1"></span>
+                      Download PDF <span className="ml-1">→</span>
                     </Link>
                       Download PDF <span className='ml-1'>→</span>                    </Link>
 
@@ -280,9 +235,6 @@ export default function TechnologyInsightsPage() {
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
 
-
-
-
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
                       Cutting-Edge Research
@@ -297,13 +249,12 @@ export default function TechnologyInsightsPage() {
                     <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>
                     <p className="text-white/80 mb-6">
                       Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
-
                     </p>
                     <ul className="space-y-2 text-white/70">
-                      <li> Advanced AI research and development</li>
-                      <li> Autonomous system prototyping</li>
-                      <li> Ethical AI framework development</li>
-                      <li> Industry collaboration and partnerships</li>
+                      <li>• Advanced AI research and development</li>
+                      <li>• Autonomous system prototyping</li>
+                      <li>• Ethical AI framework development</li>
+                      <li>• Industry collaboration and partnerships</li>
                     </ul>
                   </div>
                     <p className="text-white/60 text-sm">Innovation Lab</p>
@@ -323,8 +274,6 @@ export default function TechnologyInsightsPage() {
                 </Link>
                 <Link
                   href="/blog"
-
-
                   Read Our Blog;
                 </Link>;
               </div>;
@@ -332,11 +281,12 @@ export default function TechnologyInsightsPage() {
           </section>;
         </main>;
       </div>;
-
-
-}
   );
 }
+}
+    </>);
+}
+  );
 }
     </>);
 }

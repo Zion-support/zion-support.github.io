@@ -47,8 +47,28 @@ export default async function handler(
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
+  params: { shortCode: string };
+}) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
+  const shortCode = params && params.shortCode;
+  const shortUrl = urlStorage && urlStorage.get(shortCode);
+
+      data: urls as any
+    })
+  } else {
+    res.status(405).json({
+      success: false,
+      error: 'Method not allowed'
+    })
+  }
+}
+// Handle redirects for short URLs
+export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
+  const shortCode = params.shortCode;
+  const shortUrl = urlStorage.get(shortCode);
+  if (!shortUrl || !shortUrl.isActive) {
     return {
-      notFound: true,    };      notFound: true
+      notFound: true
+
     };
   }
 
@@ -61,10 +81,24 @@ export default async function handler(
       permanent: false
     }
 }
+      permanent: false
+    }
 }
-  const shortCode = params.shortCode;
-  const shortUrl = urlStorage.get(shortCode);
-  if (!shortUrl |!shortUrl.isActive) {
+// Handle redirects for short URLs;
+export async /**
+ * getServerSideProps - Function description
+ */
+function getServerSideProps() {  const short_code = params.short_code;export async /**
+ * getServerSideProps - Function description
+ */
+function getServerSideProps() {
+  const short_code = params.short_code;
+  const short_url = url_storage.get (short_code);
+;
+  // Check condition
+if ( {) {
+  $2
+}
     return {
       not_found: true,    }      not_found: true;
     }

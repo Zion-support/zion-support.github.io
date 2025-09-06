@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 <<<<<<< HEAD
 =======
@@ -12,41 +13,14 @@
 #!/usr/bin/env node/usr/bin/env node/ Master Automation Orchestrator (clean version)const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class MasterOrchestrator { constructor() { this.projectRoot = process.cwd();" this.logsDir = path.join(this.projectRoot, "logs");" this.logFile = path.join(this.logsDir, "master-orchestrator.log"); this.startTime = Date.now(); this.results = {}; try { fs.mkdirSync(this.logsDir, { recursive: true }); } catch {} }" log(message, level = "INFO") { const line = `[${new Date().toISOString()}] [${level}] ${message}\n`; try { fs.appendFileSync(this.logFile, line); } catch {} process.stdout.write(line); } runCmd(cmd) { try {"" const out = execSync(cmd, { stdio: "pipe", encoding: "utf8" });" return { success: true, output: out }; } catch (e) { return {" success: false," error: e.message,"" output: e.stdout?.toString?.() | ""}; } } async runAllChecks() {" this.log("Starting comprehensive system check.");" const tasks = [["health", "node automation/health-check.cjs"]," ["security", "node automation/security-scanner.cjs"]," ["performance", "node scripts/performance-monitor.cjs"]," ["codeQuality", "node automation/code-quality-monitor.cjs"]," ["build", "npm run build"]," ["lint", "npm run lint"]," ["typeCheck", "npm run type-check"], ]; for (const [name, cmd] of tasks) {"` this.log(`Running: ${name}`); const res = this.runCmd(cmd);" this.results[name] = { success: res.success, error: res.error | null };" if (!res.success && name === "lint") {" this.log("Attempting lint auto-fix.");"" const fixRes = this.runCmd("npm run lint: fix"); this.results.lint.autoFixed = fixRes.success; } } const passed = Object.values(this.results).filter(r => r.success).length; const total = Object.keys(this.results).length; const durationMs = Date.now() - this.startTime; const summary = {" timestamp: new Date().toISOString(), durationMs, total, passed," failed: total - passed," status: passed === total" ? "HEALTHY" : passed >= Math.floor(total * 0.8)" ? "WARNING"" : "CRITICAL"}; try { fs.writeFileSync(" path.join(this.logsDir, "master-orchestrator-report.json")," JSON.stringify({ summary, results: this.results }, null, 2) ); } catch {} this.log("` `Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})` ); return passed === total; }}if (require.main === module) { const orchestrator = new MasterOrchestrator();" const command = process.argv[2] | "check"; switch (command) {" case check: orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1)); break; default:" console.log("Usage: node automation/master-orchestrator.cjs check"); process.exit(1); }}module.exports = MasterOrchestrator;""`"`
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
-#!/usr/bin/env node
 =======
+#!/usr/bin/env node
+>>>>>>> origin/main
+#!/usr/bin/env node
 #!/usr/bin/env node
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 // Master Automation Orchestrator (clean version)
-<<<<<<< HEAD
-=======
-
-=======
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-class MasterOrchestrator {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.logsDir = path.join(this.projectRoot, 'logs');
-    this.logFile = path.join(this.logsDir, 'master-orchestrator.log');
-    this.startTime = Date.now();
-    this.results = {};
-    
-    try {
-<<<<<<< HEAD
-      fs.mkdirSync(this.logsDir, { recursive: true });
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       fs.mkdirSync(this.logsDir, { "recursive": true });
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
     } catch {}
   }
 
@@ -64,19 +38,9 @@ class MasterOrchestrator {
       return { success: true, output: out };
     } catch (e) {
       return {
-<<<<<<< HEAD
-        success: false,
-        error: e.message,
-        output: e.stdout?.toString?.() || ''
-      };
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "success": false,
         "error": e.message,
         "output": e.stdout?.toString?.() || ''};
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
     }
   }
 
@@ -114,44 +78,23 @@ class MasterOrchestrator {
       durationMs,
       total,
       passed,
-<<<<<<< HEAD
-      failed: total - passed,
-      status: passed === total ? 'HEALTHY' : passed >= Math.floor(total * 0.8) ? 'WARNING' : 'CRITICAL'
-    };
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       "failed": total - passed,
       "status": passed === total
           ? 'HEALTHY'
           : passed >= Math.floor(total * 0.8)
             ? 'WARNING'
             : 'CRITICAL'};
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
     try {
       fs.writeFileSync(
         path.join(this.logsDir, 'master-orchestrator-report.json'),
         JSON.stringify({ summary, results: this.results }, null, 2)
       );
     } catch {}
-<<<<<<< HEAD
-    this.log(
-<<<<<<< HEAD
-      `Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
-=======
 
     this.log(`Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`);
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
     return passed === total;
   }
 }
@@ -164,18 +107,12 @@ if (require.main === module) {
     case 'check':
       orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
       break;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "default": 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
     default:
       console.log('Usage: node automation/master-orchestrator.cjs check');
       process.exit(1);
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = MasterOrchestrator;
@@ -192,8 +129,9 @@ module.exports = MasterOrchestrator;
 
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-const { execSync } = require('child_process');
+=======
 >>>>>>> origin/main
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
@@ -201,23 +139,7 @@ console.log('🚀 Starting Master Automation Orchestrator...');
 
 class MasterAutomationOrchestrator {
   constructor() {
-<<<<<<< HEAD
-    this.projectRoot = process.cwd();
-    this.logsDir = path.join(this.projectRoot, 'logs');
-    this.logFile = path.join(this.logsDir, 'master-orchestrator.log');
-    this.startTime = Date.now();
-    this.results = {};
-    
-    try {
-<<<<<<< HEAD
-      fs.mkdirSync(this.logsDir, { recursive: true });
-=======
-<<<<<<< HEAD
-      fs.mkdirSync(this.logsDir, { recursive: true });
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       fs.mkdirSync(this.logsDir, { "recursive": true });
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     } catch {}
   }
 
@@ -235,23 +157,13 @@ class MasterAutomationOrchestrator {
       return { success: true, output: out };
     } catch (e) {
       return {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         success: false,
         error: e.message,
         output: e.stdout?.toString?.() || ''
       };
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "success": false,
         "error": e.message,
         "output": e.stdout?.toString?.() || ''};
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
     this.logFile = path.join(
       __dirname,
       '..',
@@ -265,7 +177,6 @@ class MasterAutomationOrchestrator {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
->>>>>>> origin/main
     }
   }
 
@@ -360,17 +271,8 @@ class MasterAutomationOrchestrator {
 
     const report = {
       timestamp: new Date().toISOString(),
-<<<<<<< HEAD
-      durationMs,
-      total,
-      passed,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       failed: total - passed,
       status: passed === total ? 'HEALTHY' : passed >= Math.floor(total * 0.8) ? 'WARNING' : 'CRITICAL'
-=======
       status: 'completed',
       scripts: {
         linting: 'completed',
@@ -378,43 +280,21 @@ class MasterAutomationOrchestrator {
         automation: 'completed',
       },
       summary: 'Master automation orchestrator completed successfully',
->>>>>>> origin/main
     };
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       "failed": total - passed,
       "status": passed === total
           ? 'HEALTHY'
           : passed >= Math.floor(total * 0.8)
             ? 'WARNING'
             : 'CRITICAL'};
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     try {
       fs.writeFileSync(
         path.join(this.logsDir, 'master-orchestrator-report.json'),
         JSON.stringify({ summary, results: this.results }, null, 2)
       );
     } catch {}
-<<<<<<< HEAD
-
-    this.log(`Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`);
-=======
-    this.log(
-<<<<<<< HEAD
-      `Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     return passed === total;
   }
 }
@@ -427,15 +307,9 @@ if (require.main === module) {
     case 'check':
       orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
       break;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    "default": 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     default:
       console.log('Usage: node automation/master-orchestrator.cjs check');
+<<<<<<< HEAD
 =======
     const reportPath = path.join(
       __dirname,
@@ -897,6 +771,8 @@ class MasterAutomationOrchestrator {
       summary: 'Master automation orchestrator completed successfully'
     };
 
+=======
+>>>>>>> origin/main
     const reportPath = path.join(
       __dirname,
       '..',
@@ -923,6 +799,7 @@ class MasterAutomationOrchestrator {
     }
   }
 }
+<<<<<<< HEAD
 
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
@@ -933,20 +810,14 @@ orchestrator.run().catch(console.error);
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+>>>>>>> origin/main
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
-orchestrator.run().catch(console.error);
-=======
-orchestrator.run().catch(console.error);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
 module.exports = MasterOrchestrator;
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -963,3 +834,5 @@ orchestrator.run().catch(console.error);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

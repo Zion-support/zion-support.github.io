@@ -22,7 +22,6 @@ const RegisterPage = () => {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
-
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -31,23 +30,6 @@ import { AuthButtons } from '@/components/AuthButtons';
 import { fireEvent } from '@/lib/analytics';
 import { logInfo } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
-import React, { useEffect } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import SignupForm from '@/components/auth/SignupForm',;
-import { AuthButtons } from '@/components/AuthButtons',;
-import { fireEvent } from '@/lib/analytics',;
-import { logInfo } from '@/utils/productionLogger',;
-import { useRouter } from 'next/router',;
-const RegisterPage = () => {
-  const router = useRouter(),
-
-  useEffect(() => {
-    fireEvent('signup_page_view')
-  }, []),
-  const handle_success = ({ email, emailVerificationRequired }: {
-    email: string,
-
 const RegisterPage = () => {;
   const router = useRouter();
   useEffect(() => {;
@@ -101,8 +83,6 @@ const RegisterPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               Create your account
@@ -122,8 +102,6 @@ const RegisterPage = () => {;
             </p>
           </div>
           <SignupForm onSuccess={handleSuccess} />
-
-
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -159,8 +137,6 @@ const RegisterPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
                 Privacy Policy
               </Link>

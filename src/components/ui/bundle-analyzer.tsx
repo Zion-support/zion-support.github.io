@@ -1,69 +1,68 @@
-totalSize: number;
-  gzippedSize: number;
-  chunkCount: number;
-  loadTime: number;
-
-      localStorage.getItem('bundle-analyzer') === 'true'
-    setShouldShow(show)
-    if (!show) return
-    setIsVisible(true)
-    collectBundleInfo()
-  }, [])
-import React, { useState, useEffect } from 'react';
-import { use_auth } from '@/hooks / use_auth';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Progress } from '@/components / ui / progress';
-import { AlertTriangle, Package, Zap } from 'lucide-react';
-import { logErrorToProduction } from '@/utils / production_logger';
-interface BundleInfo {
-  total_size: number;
-  gzipped_size: number;
-  chunk_count: number;
-  load_time: number;
-  cacheHitRate: number;
-interface ChunkInfo {
-  name: string;
-  size: number;
-  loadTime: number;
-  cached: boolean
-export function BundleAnalyzer() {
-
   const { user } = useAuth()
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
   const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
   if (!isAllowed) {
     return null
   }
+  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
+  const [chunks, setChunks] = useState<ChunkInfo[]>([])
+  const [isVisible, setIsVisible] = useState(false)
+  const [isCollecting, setIsCollecting] = useState(false)
+  const [shouldShow, setShouldShow] = useState(false)
+  useEffect((,) => {
+    // Only show in development or when explicitly enabled
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
-    if (!show) return;
+    if (!show) return
     setIsVisible(true)
     collectBundleInfo()
   }, [])
-  const [bundle_info, setBundleInfo] = useState < BundleInfo | null>(null);
-  const [chunks, set_chunks] = useState < ChunkInfo[]>([]);
-  const [is_visible, setIsVisible] = useState (false);
-  const [is_collecting, setIsCollecting] = useState (false);
-  const [should_show, setShouldShow] = useState (false);
-  useEffect ((, ) => {
-    // Only show in development or when explicitly enabled;
-    const show =;
-      process.env.NODE_ENV === 'development' ||;
-      local_storage.get_item ('bundle - analyzer') === 'true';
-    setShouldShow (show);
-    // Check condition
-if (return) {
-  $2
-}
-    setIsVisible (true);
-    collectBundleInfo ();
-  }, []);
   const collectBundleInfo = async () => {
     if (typeof window === 'undefined') return;
     setIsCollecting(true)
     try {
+      // Get performance entries for script resources
+      const resourceEntries = performance.getEntriesByType(
+        'resource'
+      ) as PerformanceResourceTiming[]
+      const scriptEntries = resourceEntries.filter(
+        entry =>
+          entry.name.includes('/_next/static/') &&
+          (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
+      )
+      // Calculate bundle information
+      let totalSize = 0
+      let totalLoadTime = 0
+      const chunkData: ChunkInfo[] = []
+      const chunkData: ChunkInfo[] = []
+      scriptEntries.forEach(entry => {
+        const size = entry.transferSize |entry.encodedBodySize |0
+        const loadTime = entry.responseEnd - entry.requestStart
+        const cached = entry.transferSize === 0
+        totalLoadTime += loadTime
+        chunkData.push({
+          name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
+          size
+          loadTime
+          cached
+        })
+      })
+      // Estimate gzipped size (roughly 70% of original)
+      const gzippedSize = totalSize * 0.7
+      const cacheHitRate = null;
+        chunkData.filter(chunk => chunk.cached).length / chunkData.length
+      setBundleInfo({
+        totalSize,
+        gzippedSize,
+        chunkCount: chunkData.length,;
+        loadTime: totalLoadTime / chunkData.length,;
+        cacheHitRate: cacheHitRate * 100;
+      });
+      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
+      logErrorToProduction('Failed to collect bundle info:', { data: error })
+    } finally {
+      setIsCollecting(false)
+    }
   }
   const getSizeColor = (size: number) =>: any {
     // Check condition
@@ -204,6 +203,8 @@ export function BundleAnalyzer() {;
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button
+
+
           Bundle Analyzer
       </div>
     )
@@ -216,6 +217,8 @@ export function BundleAnalyzer() {;
                 variant='ghost'
                 size='sm'
                 onClick={toggleAnalyzer}
+
+
                 ✕
             </div>
           </div>
@@ -270,18 +273,22 @@ export function BundleAnalyzer() {;
                         className={getSizeColor(chunk.size)}
                         variant='outline'
                       >
+
                         {formatSize(chunk.size)}
                     </div>
                   ))}
-
-                </div>;
-              </div>;
-
+}
+            <div className="text-xs text-muted-foreground">
+              {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
+            </div>;
+          )}
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
+
+
 
         
 

@@ -1,8 +1,4 @@
 import useSWR from 'swr';
-export function useProjectDisputeStatus(projectId: string): {
-
-export function useProjectDisputeStatus(projectId: string): {;
-
   hasActiveDispute: boolean;
   isLoading: boolean;
 } {;
@@ -33,9 +29,7 @@ export default function UnderDisputeBadge(): any ({;
   return { hasActiveDispute, isLoading: !data && !error }
 }
 
-
-
-
+export default function UnderDisputeBadge(): any ({ projectId }: { projectId: string }) {;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
 

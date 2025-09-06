@@ -34,8 +34,6 @@ if ( {) {
     return res.status (200).json ({
       route: "/multiverse / hub",
       instance_id: state.config.instance_id,
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -127,8 +125,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}
 }
 }
 

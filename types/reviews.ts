@@ -22,17 +22,10 @@ export type ReviewCategoryScores = {
 };
 export type ReviewRole = 'client' | 'talent';
 export type ReviewCategoryScores = {
-
-
-
   communication?: number, // 1-5 optional;
   qualityOfWork?: number, // 1-5 optional;
   timeliness?: number, // 1-5 optional;
   wouldWorkWithAgain?: boolean, // optional;
-};
-
-
-
 export type Review = {
   id: string;
   projectId: string;
@@ -50,13 +43,10 @@ export type Review = {
   anonymous?: boolean,;
   approved: boolean, // admin moderated visibility;
   reported: boolean;
-
-
   reports?: { reason: string, reportedAt: string }[],;
   removed?: boolean,;
   createdAt: string, // ISO;
 },;
-export type PublicReview = Omit<Review 'fromId'> & { authorName: string };
 
 
 export type ReviewsSummary = {

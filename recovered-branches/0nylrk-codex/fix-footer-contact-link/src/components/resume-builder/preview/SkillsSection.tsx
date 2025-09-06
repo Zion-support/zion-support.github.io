@@ -1,7 +1,3 @@
-
-import {Skill} from '@/types/resume';
-
-
 interface SkillsSectionProps {
   skills: Skill[];
 }
@@ -36,7 +32,6 @@ if ( {) {
       acc[category] = []
     }
     acc[category].push(skill);
-
 import { Skill } from '@/types/resume',;
 interface SkillsSectionProps {;
   skills: Skill[];
@@ -50,9 +45,6 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
       acc[category] = [];
     }
     acc[category].push(skill),
-
-
-
     return acc
   }, {} as Record<string Skill[]>),
 
@@ -78,7 +70,6 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
   // Check condition
 if (return null) {
   $2
-}
   return (
     <div className="mb - 6">;
       <h2 className="text - lg font - semibold border - b mb - 3">Skills</h2>;

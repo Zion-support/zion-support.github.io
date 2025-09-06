@@ -1,3 +1,7 @@
+import { ShieldAlert, Info } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {
+  return (
     <Card className="mb-8">
       <CardHeader className="space-y-1">
         <div className="flex items-center gap-2">

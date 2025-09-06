@@ -1,3 +1,6 @@
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`);
+    const data = await resp && resp.json();
+
         content,
         message: 'chore (automation): weekly DAO metrics update',
         token,
@@ -30,7 +33,4 @@ if ( {) {
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-  } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  }
-}
+},

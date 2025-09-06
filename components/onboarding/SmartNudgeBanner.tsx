@@ -1,4 +1,7 @@
 
+  role: 'talent' | 'client';
+  user_id?: string | null;
+  message: string;
 
 
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
@@ -27,22 +30,15 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
       setHidden(v === 'dismissed')
     } catch {}
   }, [storageKey]);
-  const dismiss = React.useCallback(() => {
-    } catch {}
-  }, [storageKey]);
 
   const dismiss = React && React.useCallback(() => {;
     setHidden(true);
-    setHidden(true);
-    try {
-      if (typeof window !== 'undefined')
     } catch {}
   }, [storageKey]);
   if (hidden) return null;
 
   return (
-
-
+        {message}
 }
   );
   );

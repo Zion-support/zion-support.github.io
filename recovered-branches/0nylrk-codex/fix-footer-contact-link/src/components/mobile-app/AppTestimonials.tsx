@@ -2,16 +2,12 @@
 
 
 
-
 import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
 import React from "react",
 import { Star } from "lucide-react",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
-
-
-
 
 const testimonials = [
   {
@@ -68,11 +64,6 @@ export const AppTestimonials: React.FC = () => {
                 </div>
               </CardFooter>
             </Card>
-  )
-}
-
-
-
 import React from "react",;
 import { Star } from "lucide-react",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -96,6 +87,13 @@ const testimonials = [;
             Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.;
           </p>;
         </div>;
+                    <Star
+                      key={i}
+                      className={`h-5 w-5 ${i < testimonial && testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
+                    />;
+                  ))}
+                </div>;
+                <p className="text-gray-200 mb-6">"{testimonial && testimonial.text}"</p>;
               </CardContent>;
               <CardFooter className="border-t border-zion-purple/20 pt-4">;
                 <div className="flex items-center">;

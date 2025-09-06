@@ -25,9 +25,6 @@ export function resetState(): void {
   connections: [],
   logs: [],
   overrides: [];
-  connections: []
-  logs: []
-  overrides: []
 }
 ;
 export function get_state (): IntegrationState {
@@ -44,4 +41,3 @@ export function reset_state (): void {
     logs: [],
     overrides: [];
   };
-}

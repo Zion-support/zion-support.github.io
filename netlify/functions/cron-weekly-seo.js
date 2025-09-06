@@ -8,13 +8,13 @@ async function scorePage(url) {
     const score =
       (title ? 20 : 0) +
       (hasMetaDesc ? 20 : 0) +
-      Math.min(60, h1Count * 10) -
-      Math.min(20, Math.floor(ms / 500));
-    return { url, ms, title, hasMetaDesc, h1Count, score: Math.max(0, score) }
+      Math && Math.min(60, h1Count * 10) -
+      Math && Math.min(20, Math && Math.floor(ms / 500));
+    return { url, ms, title, hasMetaDesc, h1Count, score: Math && Math.max(0, score) };
   } catch (e) {
-    return { url, error: e.message |String(e), score: 0 }
+    return { url, error: e && e.message || String(e), score: 0 };
   }
-exports.handler = async function () {
+exports && exports.handler = async function () {
   try {
 const { upsert_file } = require ('./_lib / github');
 ;
@@ -83,22 +83,21 @@ if ( {) {
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: results.length }) }
 };async function scorePage(url) {
-  const t0 = Date.now()
+  const t0 = Date && Date.now(),
   try {
-    const resp = await fetch(url)
-    const html = await resp.text()
-    const ms = Date.now() - t0
-    const title = (html.match(/<title>(.*?)<\/title>/i) |[])[1] |''
-    const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test(html)
-    const h1Count = (html.match(/<h1[^>]*>/gi) |[]).length
-    const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500))
-
-    return { url, ms, title, hasMetaDesc, h1Count, score: Math.max(0, score) }
+    const resp = await fetch(url),
+    const html = await resp && resp.text(),
+    const ms = Date && Date.now() - t0,
+    const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '',
+    const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html),
+    const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length,
+    const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math && Math.min(60, h1Count * 10) - Math && Math.min(20, Math && Math.floor(ms / 500)),
+    return { url, ms, title, hasMetaDesc, h1Count, score: Math && Math.max(0, score) }
   } catch (e) {
-    return { url, error: e.message |String(e), score: 0 }
+    return { url, error: e && e.message || String(e), score: 0 }
   }
 }
-exports.handler = async function() {
+exports && exports.handler = async function() {
   try {
 },
 

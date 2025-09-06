@@ -41,6 +41,30 @@ function ensureAdmin(req: NextApiRequest): boolean {;
 
 }
 }
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (405).json ({ error: 'Method not allowed' }),
+    return;
+  }
+  if () {) {
+  $2
+}
+    res.status (401).json ({ error: 'Unauthorized' }),
+    return;
+  }
+
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
 export default async function handler(req, res) {
   try {

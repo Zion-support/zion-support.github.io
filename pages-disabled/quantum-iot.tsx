@@ -53,7 +53,7 @@ import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-
                     </span>;
                   </div>;
                   <div className="text-slate-400">;
-                    {service && service.trialDays}-day free trial  Setup:{" "}
+                    {service && service.trialDays}-day free trial • Setup:{" "}
                     {service && service.setupTime}
                   </div>;
                 </div>;
@@ -163,7 +163,7 @@ if (return null) {
                     </span>;
                   </div>;
                   <div className="text - slate - 400">;
-                    {service.trial_days}-day free trial  Setup:{" "}
+                    {service.trial_days}-day free trial • Setup:{" "}
                     {service.setup_time}
                   </div>;
                 </div>;

@@ -31,9 +31,6 @@ export default function CloudDevOps({ }: CloudDevOpsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
 :src.pages.disabled/CloudDevOps.jsx
 }
 }
@@ -44,3 +41,12 @@ export default function CloudDevOps({ }: CloudDevOpsProps) {
 
 
 
+
+
+
+:src.pages.disabled/CloudDevOps.jsx
+}
+}
+}
+}
+}

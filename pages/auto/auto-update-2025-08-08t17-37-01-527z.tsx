@@ -3,12 +3,9 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
       </div>;
+
     </>;
   );
 };
 export default Page;
-
-
-

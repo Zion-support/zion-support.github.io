@@ -12,16 +12,11 @@ import { useState } from 'react';
   defaultKind = 'general',
   userHeaders,
 }: {;
-
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
   userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
-
-export type FeedbackContext = { actionType?: string, metadata?: any };
-export default function FeedbackModal({
-
   isOpen;
   onClose;
   defaultContext;
@@ -34,9 +29,9 @@ export default function FeedbackModal({
   if (!isOpen) return null;
 
 
+
     setLoading(false);
     onClose(true);
-
 
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
@@ -58,7 +53,7 @@ export default function FeedbackModal({
               }
               aria-label={`${n} stars`}
             >;
-              ;
+              ★;
             </button>;
           ))}
         </div>;
@@ -172,7 +167,7 @@ function submit() {
               }
               aria - label={`${n} stars`}
             >;
-              ;
+              ★;
             </button>))}
         </div>;
         <div className='text - sm'>;
@@ -213,6 +208,11 @@ function submit() {
             </label>;
           </div>;
         </div>;
+          ))}
+          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
+        </div>
+      </div>
+    </div>
   );
 }
         <div className='flex justify - end gap - 2'>;

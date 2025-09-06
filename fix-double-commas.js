@@ -34,13 +34,6 @@ if ( {) {
     }
     return modified;
   } catch (error) {
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
-        // Skip certain directories
-        if (
-          [
           ].includes(item)
         ) {
           continue;

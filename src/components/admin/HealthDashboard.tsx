@@ -34,7 +34,20 @@ import {;
   Activity,;
 } from 'lucide-react';
 interface HealthData {;
+import React, { useState, useEffect } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
+  AlertTriangle
+  CheckCircle
+  XCircle
+  Clock
+  TrendingUp
+  Activity
+} from 'lucide-react'
+
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
@@ -60,21 +73,9 @@ interface HealthData {
       solution?: string
     }>
     byCategory: { [category: string]: number }
-      low: number;
-    }
-    top_errors: Array<{
-      pattern_id: string;
-      description: string;
-      occurrences: number;
-      severity: string;
-      solution?: string;
-    }>;
-    by_category: { [category: string]: number }
-  }
 
-  if (loading) {
-      <div className='flex items-center justify-center p-8'>
-        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>
+
+
   if (loading) {
     return (
       <div className="flex items-center justify-center p-8">
@@ -97,8 +98,36 @@ interface HealthData {
       </Card>
     )
 
+
+
+  const fetchHealthData = async () => {;
+    try {;
+      const response = await fetch('/api/admin/health');
+      if (!response && response.ok) {;
+        throw new Error(`HTTP ${response && response.status}`);
+      }
+      const data = await response && response.json();
+      setHealthData(data);
+      setError(null);
+    } catch (err) {;
+      setError(;
+        err instanceof Error ? err && err.message : 'Failed to fetch health data';
+      );
+    } finally {;
+      setLoading(false);
+    }
+  };
+
+
+
+
+
+  if (!healthData) return null,
+
+
   if (!healthData) return null
   if (!healthData) return null,
+
 
   return (
     <div className="space-y-6">
@@ -114,6 +143,7 @@ interface HealthData {
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
           >
+
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
           <Button onClick={fetchHealthData} size="sm">
@@ -176,6 +206,7 @@ interface HealthData {
           <TabsTrigger value="metrics">Metrics</TabsTrigger>
           <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
+
             <Card>
               <CardHeader>
                 <CardTitle>System Information</CardTitle>
@@ -210,7 +241,6 @@ interface HealthData {
               </CardHeader>
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
-                    {healthData.health.issues.map((issue, index) => (
                       <li key={index} className="text-sm text-red-600 flex items-start">
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
 ;
@@ -288,43 +318,23 @@ interface HealthData {
           <Button
             variant='outline'
             size='sm'
+                      </li>
                     ))}
-                  </ul>;
-                ) : (;
-                  <p className='text-green-600 text-sm'>No issues detected</p>;
-            <Card>
-                <CardTitle>Error Summary</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className='grid grid-cols-2 gap-4'>
-                  <div className='text-center'>
-                    <p className='text-2xl font-bold text-red-600'>
-                      {healthData.errors.summary.critical}
-                    </p>
-                    <p className='text-sm text-gray-600'>Critical</p>
-                  </div>
-                  <div className='text-center'>
-                    <p className='text-2xl font-bold text-orange-600'>
-                      {healthData.errors.summary.high}
-                    </p>
-                    <p className='text-sm text-gray-600'>High</p>
-                  </div>
-                  <div className='text-center'>
-                    <p className='text-2xl font-bold text-yellow-600'>
-                      {healthData.errors.summary.medium}
-                    </p>
-                    <p className='text-sm text-gray-600'>Medium</p>
-                  </div>
-                  <div className='text-center'>
-                    <p className='text-2xl font-bold text-gray-600'>
-                      {healthData.errors.summary.low}
-                    </p>
-                    <p className='text-sm text-gray-600'>Low</p>
+                  </ul>
+                ) : (
+                  <p className="text-green-600 text-sm">No issues detected</p>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
         <TabsContent value='errors' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
 
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+
+
             <Card>
               <CardHeader>
                 <CardTitle>Error Summary</CardTitle>
@@ -370,6 +380,21 @@ interface HealthData {
                 ) : (;
                   <p className='text-gray-600 text-sm'>No recurring errors</p>;
 
+
+                ) : (
+                  <p className="text-gray-600 text-sm">No recurring errors</p>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+        <TabsContent value='metrics' className='space-y-4'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+
+        <TabsContent value="metrics" className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+
             <Card>
               <CardHeader className='pb-2'>
                 <CardTitle className='text-sm'>Error Rate</CardTitle>
@@ -411,11 +436,15 @@ interface HealthData {
                   {formatBytes(healthData.metrics.memoryUsage)}
                 </p>
                 <p className='text-xs text-gray-600'>JavaScript heap</p>
-        <TabsContent value='metrics' className='space-y-4'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+                ) : (
+                  <p className="text-gray-600 text-sm">No recurring errors</p>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
 
-        <TabsContent value="metrics" className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm">Error Rate</CardTitle>
@@ -461,15 +490,24 @@ interface HealthData {
             <CardContent>
               {healthData.health.recommendations.length > 0 ? (
                   ))}
-                </ul>;
-              ) : (;
-                <p className='text-gray-600'>;
-                  No specific recommendations at this time;
-                </p>;
+                </ul>
+              ) : (
+                <p className="text-gray-600">No specific recommendations at this time</p>
               )}
+
+
+export default HealthDashboard, ;
+export default HealthDashboard;
+}
+
 
       const response = await fetch ('/api / admin / health');
       // Check condition
 if ( {) {
   $2
 }
+            </CardContent>;
+          </Card>;
+        </TabsContent>;
+      </Tabs>;
+export default HealthDashboard;

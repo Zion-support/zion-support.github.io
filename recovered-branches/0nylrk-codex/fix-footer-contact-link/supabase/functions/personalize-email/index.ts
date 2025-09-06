@@ -1,17 +1,7 @@
 
-
-import "https: //deno.land/x/xhr@0.1.0/mod.ts"
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-
-
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
-
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
@@ -27,12 +17,30 @@ serve(async (req) => {
   }
   try {
     // Get personalization request data
+      throw new Error("Missing required parameters: emailType and userData")
+    }
+    // Create a prompt based on the email type and user data
+    let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.";
+    let userPrompt = "";
+    // Subject line context
+    let subjectContext = "";
+    switch (emailType) {
+      case "welcome_series":
+        userPrompt = `Create a welcome email for a new ${userData && userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData && userData.firstName}. The email should introduce them to the platform and guide them through their next steps.`;
+        break;
+      case "inactivity_reminder":
+        userPrompt = `Create a re-engagement email for a ${userData && userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData && userData.firstName} who has been inactive for ${activityData && activityData.daysInactive} days. They haven't completed their ${activityData && activityData.incompleteAction}.`;
+        subjectContext = "Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.";
+        break;
+      case "job_application":
+        userPrompt = `Create an email encouraging a talent named ${userData && userData.firstName} who hasn't applied to any jobs yet. Their skills are: ${userData && userData.skills ? userData && userData.skills.join(", ") : "AI-related skills"}. Encourage them to complete their profile and apply to relevant positions.`;
+        subjectContext = "Create a subject line that emphasizes opportunity and personal growth.";
+        break;
+      case "profile_completion":
       default:
         userPrompt = `Create a re-engagement email for a user named ${userData && userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
     // Add subject line request to the prompt
-        messages: [
-
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 const openAIApiKey = Deno.env.get ("OPENAI_API_KEY");
@@ -108,37 +116,7 @@ if ( {) {
         messages: [;
           { role: "system", content: system_prompt }
           { role: "user", content: user_prompt }
-
         ];
-
-
-          { role: "system", content: systemPrompt },
-          { role: "user", content: userPrompt }
-        ],
-        temperature: 0.7})}),
-
-
-
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
-    }
-
-        temperature: 0 && 0.7})});
-
-
-
-    if (!response && response.ok) {
-      const errorData = await response && response.json();
-      throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
-    }
-
-    const data = await response && response.json();
-    const generatedContentText = data && data.choices[0].message && message.content;
-    
-
-
-
     // Parse the JSON response from OpenAI
     let generatedContent;
     try {
@@ -184,9 +162,6 @@ if ( {) {
         throw new Error ("Could not extract JSON from the generated content");
       }
     }
-  }
-});
-
 
     console && console.error("Error in personalize-email function:", error);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
@@ -202,8 +177,6 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       status: 500,
       headers: { ...cors_headers, "Content - Type": "application / json" }});
-
-
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
@@ -303,9 +276,5 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, "Content-Type": "application/json" }});
-
-
-
   }
 });
-;

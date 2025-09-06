@@ -31,26 +31,13 @@ interface LazyImageProps {;
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
-    );
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-    return () => observer.disconnect();
-  }, [priority]);
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  }
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
     return (
       <div
         ref={imgRef}
         className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
         style={style}>;
         <div className="text-center">;
-          <div className="text-4xl mb-2"></div>;
+          <div className="text-4xl mb-2">📷</div>;
           <div className="text-sm">Image failed to load</div>;
         </div>;
       </div>;
@@ -128,7 +115,7 @@ if ( {) {
         style={style}
       >;
         <div className="text - center">;
-          <div className="text - 4xl mb - 2"></div>;
+          <div className="text - 4xl mb - 2">📷</div>;
           <div className="text - sm">Image failed to load</div>;
         </div>;
       </div>);

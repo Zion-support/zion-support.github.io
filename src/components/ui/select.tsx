@@ -1,3 +1,4 @@
+
 const Select = SelectPrimitive.Root
 const SelectGroup = SelectPrimitive.Group
 const SelectValue = SelectPrimitive.Value
@@ -8,10 +9,14 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
+
+
       className
     {...props}
   >;
     {children}
+
+
     </SelectPrimitive.Icon>
 ))
 SelectTrigger.displayName = SelectPrimitive.Trigger.displayName
@@ -22,6 +27,8 @@ const SelectScrollUpButton = React.forwardRef<
   <SelectPrimitive.ScrollUpButton
     ref={ref}
     className={cn(
+
+
       className
     {...props}
   >
@@ -36,6 +43,8 @@ const SelectScrollDownButton = React.forwardRef<
   <SelectPrimitive.ScrollDownButton
     ref={ref}
     className={cn(
+
+
       className
     {...props}
   >
@@ -51,6 +60,8 @@ const SelectContent = React.forwardRef<
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
+
+
         className
       position={position}
       {...props}
@@ -58,16 +69,33 @@ const SelectContent = React.forwardRef<
       <SelectScrollUpButton />
       <SelectPrimitive.Viewport
         className={cn(
+
+
         )}
       >;
         {children}
       </SelectPrimitive.Viewport>;
       <SelectScrollDownButton />;
     </SelectPrimitive.Content>;
+
+
+  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
+>(({ className, ...props }, ref) => (;
+  <SelectPrimitive.Label;
+    ref={ref}
+    {...props}
+  />;
+));
+SelectLabel.displayName = SelectPrimitive.Label.displayName;
+const SelectItem = React.forwardRef<;
+
+
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
 >(({ className, children, ...props }, ref) => (;
   <SelectPrimitive.Item;
     ref={ref}
+
+
       className
     {...props}
   >
@@ -85,3 +113,11 @@ const SelectSeparator = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Separator
+    {...props}
+  />;
+));
+SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
+  SelectSeparator;
+  SelectScrollUpButton;
+  SelectScrollDownButton}
+;

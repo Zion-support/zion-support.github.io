@@ -31,6 +31,5 @@ function handler() {
   updates.unshift (update);
   writeJsonFile ('updates.json', updates);
   res.status (200).json (update);
-}
 
 

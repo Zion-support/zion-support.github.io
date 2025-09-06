@@ -1,4 +1,3 @@
-
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
 
@@ -60,8 +59,6 @@ if (return, ) {
   } catch (error) {
     console.error ('Error loading custom fonts:', error);
     // Fall back to default font;
-
-
-
+    doc.set_font ('helvetica');
   }
 }

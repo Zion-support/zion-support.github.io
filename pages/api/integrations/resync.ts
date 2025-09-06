@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../lib/integrations/fileStore";
 import { getProviderById } from "../../../lib/integrations/registry";
@@ -68,6 +67,12 @@ export default async function handler(
     const target = s.connections.find(c => c.providerId === providerId);
     if (target) target.lastSyncAt = now
   });
+}
+
+    const target = s.connections.find ((c) => c.provider_id === provider_id);
+    // Check condition
+if (target.lastSyncAt = now) {
+  $2
 }
   } catch (error) {
     console.error("Error:", error);

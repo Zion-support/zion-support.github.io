@@ -16,8 +16,6 @@ import { useLocation } from 'react-router-dom',
  * Attaches event listeners to track route changes and logs page views
  */
 
-
-
   const location = useLocation();
   useEffect(() => {
     const handleRouteChange = () => {
@@ -26,6 +24,8 @@ import { useLocation } from 'react-router-dom',
 
     handleRouteChange(),
     
+    // Initial page load
+    handleRouteChange();
     return () => {
       window && window.removeEventListener('popstate', handleRouteChange)
     }
@@ -33,9 +33,6 @@ import { useLocation } from 'react-router-dom',
 
   // Also track when location changes directly via React Router
   useEffect(() => {
-}
-import { useEffect } from 'react',;
-import { useLocation } from 'react-router-dom',;
 
     console && console.log('Page view:', location && location.pathname)
   }, [location && location.pathname])
@@ -71,8 +68,5 @@ function usePageViewTracking() {
       window.removeEventListener ('popstate', handleRouteChange);
     }
   }, []);
-
-
-
 }
 ;

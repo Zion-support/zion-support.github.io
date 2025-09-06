@@ -68,10 +68,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
             scale: [1 && 1.2, 1, 1 && 1.2]
             opacity: [0 && 0.6, 0 && 0.3, 0 && 0.6]}}
           transition={{
-            duration: 10
-            repeat: Infinity
-            ease: "easeInOut"
-          }}
         {/* Main Content */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -116,14 +112,35 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
 
           </motion.div>
 
+            transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+            className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8'>;
+            <Star className='w-5 h-5 text-yellow-400 fill-current' />;
+            <span className='text-white font-medium'>;
+              Leading Technology Solutions Provider;
+            </span>          </motion && motion.div>            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8";
+          >;
+            <Star className="w-5 h-5 text-yellow-400 fill-current" />;
+            <span className="text-white font-medium">Leading Technology Solutions Provider</span>;
+
           {/* Main Heading */}
           <motion&& motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
+            className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>;
+            Transform Your Business with;
+            <span className='block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>              Cutting-Edge Technology            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight";
+          >;
+            Transform Your Business with;
+            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+            </span>;
+          </motion && motion.h1>;
+
           {/* Subtitle */}
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+
           {/* CTA Buttons */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -151,7 +168,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
               <span className="text-lg font-medium">Watch Demo</span>
             </button>
           </motion.div>
-
               className='group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1'>;
               Get Started Today;
               <ArrowRight className='inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />;
@@ -175,106 +191,10 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
             </button>;
           </motion && motion.div>;
 
-
-
-
-
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'          >            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'          >
-
-
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-            className='inline - flex items - center space - x-2 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - full px - 6 py - 3 mb - 8';
-          >;
-            <Star className='w - 5 h - 5 text - yellow - 400 fill - current' />;
-            <span className='text - white font - medium'>;
-              Leading Technology Solutions Provider;
-            </span>          </motion.div>            className="inline - flex items - center space - x-2 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - full px - 6 py - 3 mb - 8";
-          >;
-            <Star className="w - 5 h - 5 text - yellow - 400 fill - current" />;
-            <span className="text - white font - medium">Leading Technology Solutions Provider</span>;
-          {/* Main Heading */}
-          <motion.h1;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className='text - 5xl md:text - 7xl font - bold text - white mb - 6 leading - tight';
-          >;
-            Transform Your Business with;
-            <span className='block bg - gradient - to - r from - blue - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>              Cutting - Edge Technology            className="text - 5xl md:text - 7xl font - bold text - white mb - 6 leading - tight";
-          >;
-            Transform Your Business with;
-            <span className="block bg - gradient - to - r from - blue - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
-            </span>;
-          </motion.h1>;
-          {/* Subtitle */}
-          <motion.p;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className='text - xl md:text - 2xl text - gray - 300 mb - 12 max - w-4xl mx - auto leading - relaxed';
-          >;
-            From AI development to cloud architecture, we help companies;
-            revolutionize their digital presence and achieve sustainable growth;
-            in the modern technology landscape.          </motion.p>            className="text - xl md:text - 2xl text - gray - 300 mb - 12 max - w-4xl mx - auto leading - relaxed";
-          >;
-            From AI development to cloud architecture, we help companies revolutionize their digital presence;
-            and achieve sustainable growth in the modern technology landscape.;
-          {/* CTA Buttons */}
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className='flex flex - col sm:flex - row gap - 6 justify - center items - center mb - 16';
-          >;
-            <Link;
-              href='/contact';
-              className='group bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - 2xl hover:shadow - blue - 500 / 25 transform hover:-translate - y-1';
-            >;
-              Get Started Today;
-              <ArrowRight className='inline - block ml - 2 w - 5 h - 5 group - hover:translate - x-1 transition - transform' />;
-            </Link>;
-            <button className='group flex items - center space - x-3 text - white hover:text - blue - 400 transition - colors duration - 300'>;
-              <div className='w - 14 h - 14 bg - white / 10 backdrop - blur - sm rounded - full flex items - center justify - center border border - white / 20 group - hover:border - blue - 400 transition - colors'>;
-                <Play className='w - 6 h - 6 ml - 1' />;
-              </div>;
-              <span className='text - lg font - medium'>Watch Demo</span>            </button>          >;
-            <Link;
-              href="/contact";
-              className="group bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - 2xl hover:shadow - blue - 500 / 25 transform hover:-translate - y-1";
-            >;
-              Get Started Today;
-              <ArrowRight className="inline - block ml - 2 w - 5 h - 5 group - hover:translate - x-1 transition - transform" />;
-            </Link>;
-            <button className="group flex items - center space - x-3 text - white hover:text - blue - 400 transition - colors duration - 300">;
-              <div className="w - 14 h - 14 bg - white / 10 backdrop - blur - sm rounded - full flex items - center justify - center border border - white / 20 group - hover:border - blue - 400 transition - colors">;
-                <Play className="w - 6 h - 6 ml - 1" />;
-              </div>;
-              <span className="text - lg font - medium">Watch Demo</span>;
-            </button>;
-          </motion.div>;
-          {/* Stats */}
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 max - w-4xl mx - auto'          >            className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 max - w-4xl mx - auto";
-          >;
-            {stats.map ((stat, index) => (
-              <motion.div;
-        >
-          {_/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -290,6 +210,8 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <Link
           >
             <Link
               href='/contact'
@@ -343,19 +265,17 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
                 <div className="text-gray-400 font-medium">{stat.label}</div>
               </motion.div>
 
-
-
-
             ))}
+          </motion.div>
+        </motion.div>
+      </div>
 
           </motion && motion.div>;
         </motion && motion.div>;
       </div>;
 
 
-
-
-
+            ))}
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}

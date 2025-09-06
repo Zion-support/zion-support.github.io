@@ -1,13 +1,3 @@
-
-
-
-import '../src/styles/globals.css';
-
-export default function App({ Component, pageProps }: AppProps) {
-
-
-
-
 import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
 return <Component {...pageProps} />;
@@ -201,9 +191,4 @@ export default /**
  */
 function App() {
   return <Component {...page_props} />;
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }

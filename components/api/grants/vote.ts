@@ -6,10 +6,6 @@ import {v4, as, uuidv4} from 'uuid';
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
-function readGrant(id: string): GrantApplication | null {
-  ensureDir();
-
-  const p = grantPath(id);
 function writeGrant(record: GrantApplication) {
   ensureDir();
   fs && fs.writeFileSync(
@@ -25,7 +21,6 @@ function writeGrant(record: GrantApplication) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
-  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
     res.status(400).json({ error: 'Missing fields' });
     return
   }
@@ -36,9 +31,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   g.votes = [...(g.votes |[]), vote];
   g.updatedAt = new Date().toISOString();
   writeGrant(g);
-
-  res.status(200).json({ record: g })
-}
 
     id: uuidv4(),
     voter: payload && payload.voter,

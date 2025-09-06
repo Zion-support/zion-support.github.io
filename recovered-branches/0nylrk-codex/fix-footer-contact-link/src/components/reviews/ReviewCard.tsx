@@ -20,6 +20,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
+  const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
+
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map((star) => (;
@@ -239,8 +243,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
 
           
-
-
           <div>
             <div className="font-medium">
               {review.is_anonymous
@@ -249,8 +251,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 addSuffix: true
               })}
             </div>
-
-
               {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
             </div>;
           </div>;
@@ -263,7 +263,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
 
                 </AvatarFallback>)}
             </Avatar>)}

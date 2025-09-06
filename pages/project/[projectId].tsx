@@ -15,11 +15,6 @@ export default function ProjectPage() {
     // For talent view demo, swap role and provide slug
     // "x-demo-user-role": "talent"
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>
-import { useEffect, useState } from "react",
-import { useRouter } from "next/router",
-import FeedbackModal from "../../components/ui/FeedbackModal",
-
-
 export default function ProjectPage() {
   const router = useRouter(),
   const { projectId } = router.query as { projectId?: string },
@@ -76,9 +71,6 @@ export default function ProjectPage() {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
-
-
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -123,8 +115,6 @@ export default function ProjectPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             </span>
           </div>
           <section className="rounded border p-4">
@@ -179,8 +169,6 @@ export default function ProjectPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             </ul>
           </section>
           <section className="rounded border p-4">
@@ -192,8 +180,6 @@ export default function ProjectPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                     <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
                   </li>
                 ))
@@ -208,15 +194,11 @@ export default function ProjectPage() {
               {project.notes?.length ? (
                 project.notes.map((n: any) => (
                   <div key={n.id} className="text-sm">
-
-
                     <span className="text-gray-500"> • {new Date(n.createdAtIso).toLocaleString()}</span>
                   </div>
                 ))
               ) : (
                 <div className="text-sm text-gray-600">No notes yet.</div>
-
-
             </div>
             <div className="flex gap-2">
               <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a note" className="flex-1 border rounded px-3 py-2" />
@@ -226,15 +208,6 @@ export default function ProjectPage() {
           <div className="flex justify-end">
             {project.status !== "COMPLETED" && (
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
-
-}
-          </div>;
-        </div>;
-      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
   );
 };

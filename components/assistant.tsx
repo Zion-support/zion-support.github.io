@@ -1,3 +1,7 @@
+interface Message {;
+  role: 'user' | 'assistant';
+  content: string;
+
 export default function Assistant() {;
   const params =;
     typeof window !== 'undefined';
@@ -47,19 +51,8 @@ export default function Assistant() {;
       ]);
       return;
     }
-
-    // Basic fallback;
-    setMessages(prev => [;
-      ...prev,;
-      { role: 'user', content: question },;
-      {;
-        role: 'assistant',;
-        content: 'Thanks! A recruiter will follow up shortly.',;
-      },;
-
     ]);
   }
-
   return (
     <div className='min-h-full h-full w-full flex flex-col bg-white'>;
       <div className='px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2'>;
@@ -82,41 +75,6 @@ export default function Assistant() {;
             }>            {m && m.content}    }
     // Basic fallback;
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
-
-interface Message { role: 'user' | 'assistant', content: string }
-export default function Assistant() {
-  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
-  const tenantId = params.get('tenantId') || '';
-  const brand = params.get('brand') || 'Zion AI';
-  const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
-  const [input, setInput] = useState('');
-
-import {useEffect, useMemo, useState} from 'react';
-interface Message {
-  role: 'user' | 'assistant';
-  content: string;
-export default function Assistant() {
-  const params =
-    typeof window !== 'undefined'
-  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
-  const tenantId = params.get('tenantId') |'';
-  const brand = params.get('brand') |'Zion AI';
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      role: 'assistant'
-      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`
-    }
-  ]);
-  const [input, setInput] = useState('');
-  const faqs: Record<string, string> = useMemo(() => ({
-    'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
-  async function handleAsk(question: string) {
-    const lower = question.toLowerCase();
-          </div>
-        ))}
-      </div>
-      <form
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
           placeholder="Ask about the role..."
@@ -134,7 +92,6 @@ export default function Assistant() {
         </button>
       </form>
     </div>
-
 }
   );
   );

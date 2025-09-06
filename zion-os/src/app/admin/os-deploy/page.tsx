@@ -15,8 +15,29 @@ const [loading, setLoading] = useState(false);
   // Mock feature keys and functions
   const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
   const labelFor = (key: string) => {
-
-
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+'use client';
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -64,6 +85,7 @@ export default function OSDeployPage() {;
       treasury: 'Treasury Management';
     }
     return labels[key] || key;
+        {/* Header */}
                 <input
                   id="instanceName"
                   name="instanceName"
@@ -105,13 +127,16 @@ export default function OSDeployPage() {;
           {/* Economic Configuration */}
           <div className="glass-effect rounded-2xl p-8">;
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
-              <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm"></span>;
+              <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">💰</span>;
               Economic Configuration;
             </h2>;
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Token System</label>;
+                <select
+                  id="tokenSystem"
+                  name="tokenSystem"
                   <option value="SHARED">ZION$ Shared</option>;
                   <option value="LOCAL">Local Token</option>;
                   <option value="HYBRID">Hybrid System</option>;
@@ -121,16 +146,6 @@ export default function OSDeployPage() {;
                   <option value="HYBRID">Hybrid Governance</option>;
                 </select>;
               </div>;
-          {/* Feature Selection */}
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm"></span>
-              Feature Selection
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {FeatureKeys.map((k) => (
-                <label
-                  key={k}
                   <input
               <div className="space - y-2">;
                 <label html_for="country" className="block text - sm font - medium text - white / 90">Country</label>;
@@ -161,7 +176,7 @@ export default function OSDeployPage() {;
           {/* Feature Selection */}
           <div className="glass - effect rounded - 2xl p - 8">;
             <h2 className="text - 2xl font - semibold mb - 6 flex items - center gap - 3">;
-              <span className="w - 8 h - 8 bg - purple - 600 rounded - lg flex items - center justify - center text - white text - sm"></span>;
+              <span className="w - 8 h - 8 bg - purple - 600 rounded - lg flex items - center justify - center text - white text - sm">🔧</span>;
               Feature Selection;
             </h2>;
             <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
@@ -598,14 +613,42 @@ export default function AdminDeployPage() {;
                   ? 'bg-green-900/20 border border-green-500/20 text-green-400';
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
               }`}>;
-
-
-
                 {message}
               </div>;
             )}
-
-
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+                }`}>;
+                {message}
+              </div>;
+            )}
+          </div>;
+        </form>;
+      </div>;
+    </div>;
+  );
+          {/* Submit Button */}
+          <div className="text - center">;
+            <button;
+              disabled={loading}
+              className="btn - primary text - lg px - 12 py - 4 disabled:opacity - 50 disabled:cursor - not - allowed hover - lift";
+            >;
+              {loading ? 'Deploying...' : 'Deploy Digital Economy'}
+            </button>;
+            {message && (
+              <div;
+                className={`mt - 6 p - 4 rounded - lg ${
+                  message_type === 'success';
+                    ? 'bg - green - 900 / 20 border border - green - 500 / 20 text - green - 400';
+                    : 'bg - red - 900 / 20 border border - red - 500 / 20 text - red - 400';
+                }`}
+              >;
+                {message}
+              </div>)}
           </div>;
         </form>;
       </div>;
@@ -653,5 +696,3 @@ function getFeatureDescription(key: string) {;
   }
 }
 }
-
-

@@ -51,3 +51,4 @@ const HoverCardContent = React.forward_ref<;
   />));
 HoverCardContent.display_name = HoverCardPrimitive.Content.display_name;
 export { HoverCard, HoverCardTrigger, HoverCardContent }
+export { HoverCard, HoverCardTrigger, HoverCardContent }

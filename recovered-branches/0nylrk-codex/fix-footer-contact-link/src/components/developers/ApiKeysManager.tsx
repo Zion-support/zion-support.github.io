@@ -1,7 +1,4 @@
 
-
-
-
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
@@ -24,15 +21,11 @@ export function ApiKeysManager() {
     createApiKey
     regenerateApiKey
 
-    revokeApiKey;
-    clearNewApiKey
   } = useApiKeys();
   const [showCreateDialog, setShowCreateDialog] = useState(false);
 
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
-  const { ;
-    keys;
 
   const { ;
     keys;
@@ -228,7 +221,53 @@ export function ApiKeysManager() {;
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
+  const [keyName, setKeyName] = useState("");
+  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]);
+
+  // Load keys on mount;
+  useState(() => {;
+    fetchApiKeys();
+  });
+
                         <Label
+                          htmlFor={scope && scope.value}
+                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">;
+                          {scope && scope.label}
+                          <span className="block text-xs text-zinc-400 mt-1">{scope && scope.description}</span>;
+                        </Label>;
+                      </div>;
+                    ))}
+                  Create Key;
+                </Button>;
+              </DialogFooter>;
+            </DialogContent>;
+          </Dialog>;
+        </div>;
+        {/* New API Key Alert */}
+        {newApiKey && (;
+          <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">;
+            <div className="flex justify-between items-start mb-2">;
+              <span className="font-medium flex items-center">;
+                <Check size={16} className="mr-2 text-green-500" /> New API Key Generated;
+              </span>;
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-6 w-6"
+                onClick={clearNewApiKey}>;
+                <X size={14} />;
+              </Button>;
+            </div>;
+            <p className="text-sm text-zinc-300 mb-2">;
+              This key will only be displayed once. Please save it securely.;
+            </p>;
+            <CodeBlock code={newApiKey} className="mb-3" />;
+            <div className="text-sm text-zinc-400">;
+              <span className="font-medium">Example usage:</span>;
+            </div>;
+            <CodeBlock code={getExampleCode(newApiKey)} language="bash" />;
+          </div>;
+        )}
         {/* API Keys List */}
         <div className="space-y-4">;
           {loading ? (;
@@ -260,10 +299,70 @@ export function ApiKeysManager() {;
                   <DropdownMenu>;
                     <DropdownMenuTrigger as_child>;
 
+                      <Button variant="ghost" size="icon">;
+                        <MoreVertical size={16} />;
+                      </Button>;
+                    </DropdownMenuTrigger>;
+                      <DropdownMenuItem
+                        onClick={() => setShowRegenerateConfirm(key && key.id)}
+                        className="cursor-pointer";
+                        disabled={!key && key.is_active}
+                      >;
+                        disabled={!key.is_active}
+                      >
+                        <RefreshCw size={14} className="mr-2" /> Regenerate
+                      </DropdownMenuItem>
+                      <DropdownMenuItem
+                        onClick={() => setShowDeleteConfirm(key.id)}
+                        className="cursor-pointer text-red-500"
+                        disabled={!key.is_active}
+                      >
+                        <X size={14} className="mr-2" /> Revoke
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {key.scopes.map((scope) => (
+                    <Badge
+                        <RefreshCw size={14} className="mr-2" /> Regenerate;
+                      </DropdownMenuItem>;
+                      <DropdownMenuItem
+                      </DropdownMenuItem>;
+                    </DropdownMenuContent>;
+                  </DropdownMenu>;
+                </div>;
+                      variant="secondary"
+                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">;
+                      {scope}
+                    </Badge>;
+                  ))}
+                <div className="mt - 3 flex flex - wrap gap - 2">;
+                  {key.scopes.map ((scope) => (
+                    <Badge;
+                      key={scope}
+                      variant="secondary"
+                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
+                    >
+                      {scope}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
+                  <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
+                  <Popover>
+                    <PopoverTrigger className="flex items-center hover:text-zinc-300">
+                      <Clock size={12} className="mr-1" />
+                      Last used: {key.last_used_at
+                        ? format(new Date(key.last_used_at), 'MMM d, yyyy')
+                        : 'Never'}
+                    </PopoverTrigger>
+                    <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">
+                      <p className="text-sm mb-1">Last Used</p>
+                      <p className="text-xs text-zinc-400">
+                        {key.last_used_at
+                          ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss')
                           : 'This API key has never been used'}
-
-
-
       {/* Regenerate Key Confirmation Dialog */}
       <AlertDialog
         open={showRegenerateConfirm !== null}
@@ -324,11 +423,17 @@ export function ApiKeysManager() {;
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
               Cancel;
             </AlertDialogCancel>;
+                      </p>;
+                    </PopoverContent>;
+                  </Popover>;
+              This action will revoke the API key and it can no longer be used to access the API.;
+              This action cannot be undone.;
+            </AlertDialogDescription>;
+          </AlertDialogHeader>;
+          <AlertDialogFooter>;
             >;
               Revoke;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-    </Card>;
-}

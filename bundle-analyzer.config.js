@@ -32,22 +32,12 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
     if (process && process.env.ANALYZE === 'true') {
       config && config.plugins.push(
         new BundleAnalyzerPlugin({
+          reportFilename: 'bundle-analysis.html'
         })
       );
     }
     return config;
   }
-
-      config.plugins.push(};
-        new BundleAnalyzerPlugin({;
-          "analyzerMode": 'static';
-
-
-}
-
-}
-
-};
 
 }
 }
@@ -70,20 +60,44 @@ module.exports = {,;
 
 }
 }
-
-
-;
-const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer');
+};
+/* eslint-env node */
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {
-  "webpack": (config { is_server }) => {
-    // Check condition
-if ( {) {
-  $2
+  webpack: (config) => {
+    if (process.env.ANALYZE === 'true') {
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'static'
+          openAnalyzer: false
+      config.plugins.push(};
+        new BundleAnalyzerPlugin({;
+          "analyzerMode": 'static';
+          openAnalyzer: false;
+          reportFilename: 'bundle-analysis.htm,l'});
+          "analyzerMode": 'static',
+          openAnalyzer: false,
+          reportFilename: 'bundle-analysis.html'
+        })
+      );
+    }
+    return config;
+  }
 }
-    {
-      config.plugins.push (}
-        new BundleAnalyzerPlugin ({
-          "analyzer_mode": 'static';
-          open_analyzer: false,
-          report_filename: 'bundle - analysis.htm, l'}))}
+}
+};
+;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+module.exports = {,;
+  "webpack": (config { isServer }) => {,;
+    if ( {,;
+      config.plugins.push() {,;
+     {,;
+      config.plugins.push(},;
+        new BundleAnalyzerPlugin({,;
+          "analyzerMode": 'static',;
+          openAnalyze: r: false,;
+          reportFilenam: e: 'bundle-analysis.htm,l'}),;
+      )},;
     return config}
+},;

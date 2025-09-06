@@ -11,8 +11,6 @@ const config: Config = {
 }
 export default createJestConfig(config);
 import type { Config } from "jest";
-import type { Config } from 'jest';
-import nextJest from 'next/jest.js';
 
 const createJestConfig = nextJest({
 
@@ -58,50 +56,17 @@ const createJestConfig = next_jest ({
   ]
   collectCoverageFrom: [
 export default createJestConfig(config);
-export default createJestConfig(config);
 import type { Config } from "jest";
 import nextJest from "next/jest.js";
 const createJestConfig = nextJest({ dir: "./" });
 const config: Config = {
-  coverage_provider: "v8",
-  test_environment: "jsdom",
-  setupFilesAfterEnv: ["<root_dir>/jest.setup.js"],
-  moduleNameMapper: {
-    "^@/(.*)$": "<root_dir>/src/$1",
-  },
-  test_match: [;
-    "**/__tests__/**/*.(js | jsx | ts | tsx)",
-    "**/*.(test | spec).(js | jsx | ts | tsx)",
-  ],
-  collectCoverageFrom: [;
-    "src/**/*.{js, jsx, ts, tsx}",
-    "!src/**/*.d.ts",
-    "!src/**/*.stories.{js, jsx, ts, tsx}",
-  ],
-  coverage_threshold: {
-    global: {
-      branches: 70,
-      functions: 70,
-      lines: 70,
-      statements: 70,
-    },
-  },
-
-  coverageProvider: "v8",
-  testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/jest && jest.setup.js"],
-  moduleNameMapping: { "^@/(.*)$": "<rootDir>/src/$1" },
   testMatch: [
-    "**/__tests__*.(js|jsx|ts|tsx)",
-    "***.{js,jsx,ts,tsx}",
-    "!src*.d && d.ts",
-    "!src*.stories.{js,jsx,ts,tsx}",
-  ],
-
+    "**/__tests__*.(js|jsx|ts|tsx)"
+    "***.{js,jsx,ts,tsx}"
+    "!src*.d.ts"
+    "!src*.stories.{js,jsx,ts,tsx}"
+  ]
   coverageThreshold: {
-
-
-export default createJestConfig(config);
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
   }
 }

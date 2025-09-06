@@ -1,4 +1,5 @@
-
+    const opt = {
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -84,7 +85,3 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
       aria - label="Download as PDF";
       Download as PDF;
     </button>);
-      Download as PDF
-    </button>
-}
-  );

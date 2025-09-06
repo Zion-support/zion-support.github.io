@@ -167,7 +167,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient();
-  }
   )
   } catch (error) {
     console.error("Error:", error);

@@ -1,9 +1,41 @@
 
 type RoadmapInputs = {
-  milestones: string
-  keywords: string
-  milestones: string,
-  keywords: string,
+
+
+  const priorityList = priorities
+    .split(/,|\n/)
+    .map((s) => s.trim())
+    .filter(Boolean)
+  const baseThemes = [
+
+    'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces',
+    'Governance & OwnershipGlobal Scale'
+  ];
+
+  return baseThemes.map((theme, index) => {
+    const id = index + 1;
+    const name = `Zion v${id}`;
+
+    const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join() || 'core principles'}, focus: ${
+      priorityList.join() || 'execution and learning'
+    }.`;
+
+    const highlights: string[] = [
+      index === 0 && 'Design system, domain model, and initial data architecture';
+      index === 1 && 'Verifiable credentials, attestations, and dispute primitives';
+      index === 2 && 'AI-assisted scoping, matching, and brief generation';
+      index === 3 && 'Reputation graph, portable profiles, contribution proofs';
+      index === 4 && 'Programmable escrow, milestone releases, stable on/off-ramps';
+      index === 5 && 'Liquidity flywheel: supply activation, demand orchestration';
+      index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations';
+      index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem';
+      index === 8 && 'Progressive decentralization, contributor ownership, councils';
+
+      index === 9 && 'Regionalization, localization, reliability, and performance']
+      .filter(Boolean)
+      .map((s) => String(s))
+    const metrics: string[] = [
+      'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS']
   priorities: string;
 },
 type Stage = {
@@ -55,15 +87,12 @@ Inputs you will receive:
 - keywords (string list)
 - priorities (string list)
 Goals:
-1) Produce a 10-stage roadmap labeled Zion v1  v10
+1) Produce a 10-stage roadmap labeled Zion v1 → v10
 2) For each stage: theme, objective, 3-5 highlights, 3-5 measurable metrics
 3) Ensure alignment with AI-native, trustless, talent-first, and sovereign tools ethos
 4) Include explicit risks and validation signals per stage
 5) Output concise, skimmable, exec-ready text
 Format:
-function defaultOperatorPrompt (): string {
-
-
 type RoadmapInputs = {
   milestones: string;
   keywords: string;
@@ -137,53 +166,36 @@ Goals:;
 5) Output concise, skimmable, exec - ready text;
 Format:;
 Zion v{n} — {theme}
+Objective: ...;
+Highlights:;
+- ...;
+Metrics:;
+- ...;
+Risks:;
+- ...;
+Validation:;
+- ...;
+`;
 }
+
     () => generateStages({ milestones, keywords, priorities });
-Objective: ...
-Highlights:
-- ...
-Metrics:
-- ...
-Risks:
-- ...
-Validation:
-- ...
-`
-}
-export default function RoadmapPage(): JSX.Element {
-  const [milestones, setMilestones] = useState('MVP live, First 50 users, First 10 paid engagements')
-  const [keywords, setKeywords] = useState('AI-native, trustless, talent-first, sovereign tools')
-  const [priorities, setPriorities] = useState('governance, scale, regional expansion')
-  const [copied, setCopied] = useState(false)
-  const stages = useMemo(
-    () => generateStages({ milestones, keywords, priorities })
+
     [milestones, keywords, priorities]
   )
   const operatorPrompt = useMemo(() => defaultOperatorPrompt(), [])
   const copyPrompt = async () => {
     try {
 
-      setTimeout(() => setCopied(false), 1500)
-export default function RoadmapPage (): JSX.Element {
-  const [milestones, set_milestones] = useState ('MVP live, First 50 users, First 10 paid engagements'),
-  const [keywords, set_keywords] = useState ('AI - native, trustless, talent - first, sovereign tools'),
-  const [priorities, set_priorities] = useState ('governance, scale, regional expansion'),
-  const [copied, set_copied] = useState (false),
-  const stages = useMemo (
-    () => generate_stages ({ milestones, keywords, priorities }),
-    [milestones, keywords, priorities]),
-  const operator_prompt = useMemo (() => defaultOperatorPrompt (), []),
-  const copy_prompt = async () => {
-    try {
-      await navigator.clipboard.write_text (operator_prompt),
-      set_copied (true),
-      set_timeout (() => set_copied (false), 1500);
-    } catch {
-
-      set_copied (false);
-
-    }
-
+      await navigator.clipboard.writeText(operatorPrompt);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {;
+      setCopied(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   },
   return (
     <>;
@@ -210,25 +222,6 @@ export default function RoadmapPage (): JSX.Element {
                   value={milestones}
                   on_change={(e) => set_milestones (e.target.value)}
                   rows={3}
-                  className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
-                  placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors";
-                />;
-              </div>;
-              <div>;
-                <label className="block text - sm font - medium text - gray - 700">Vision keywords</label>;
-                <input;
-                  value={keywords}
-                  on_change={(e) => set_keywords (e.target.value)}
-                  className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
-                  placeholder="e.g., AI - native, trustless, talent - first, sovereign tools";
-                />;
-              </div>;
-              <div>;
-                <label className="block text - sm font - medium text - gray - 700">Upcoming priorities</label>;
-                <input;
-                  value={priorities}
-
-
                   value={milestones  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -244,8 +237,6 @@ export default function RoadmapPage (): JSX.Element {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
                 />
@@ -296,8 +287,6 @@ export default function RoadmapPage (): JSX.Element {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'}
@@ -306,11 +295,11 @@ export default function RoadmapPage (): JSX.Element {
             <pre className="whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800">{operatorPrompt}</pre>
           </section>
           <section>
-            <h2 className="mb-4 text-xl font-semibold">Zion v1  v10</h2>
+            <h2 className="mb-4 text-xl font-semibold">Zion v1 → v10</h2>
             <div className="grid gap-6 md:grid-cols-2">
               {stages.map((stage) => (
                 <article key={stage.id} className="rounded-lg border border-gray-200 p-5 shadow-sm">
-                  <h3 className="text-lg font-bold">{stage.name}  {stage.theme}</h3>
+                  <h3 className="text-lg font-bold">{stage.name} — {stage.theme}</h3>
                   <p className="mt-2 text-gray-700"><span className="font-semibold">Objective:</span> {stage.objective}</p>
                   <div className="mt-3">
                     <p className="font-semibold">Highlights</p>
@@ -371,7 +360,6 @@ export default function RoadmapPage (): JSX.Element {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
                   onChange={(e) => setMilestones(e.target.value)  } catch (error) {
     console.error("Error:", error);
@@ -427,8 +415,5 @@ export default function RoadmapPage (): JSX.Element {
           </section>;
         </div>;
       </main>;
-}
-    </>);
-}
 
 

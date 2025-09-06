@@ -115,17 +115,11 @@ export default function ServiceDescriptionGeneratorPage() {;
 
   }
   return (
-
-    <div className='max-w-3xl mx-auto'>;
-      <h1 className='text-2xl font-semibold mb-4'>;
-        Service Description Generator;
-      </h1>;
-      <p className='text-sm text-gray-600 dark:text-gray-300 mb-6'>;
-        Enter your service details. We will generate a polished description;
-        using GPT-4. You can edit it on the page and accept when ready.;
-      </p>;
-
-
+    <div className="max-w-3xl mx-auto">
+      <h1 className="text-2xl font-semibold mb-4">Service Description Generator</h1>
+      <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
+        Enter your service details. We will generate a polished description using GPT-4. You can edit it on the page and accept when ready.
+      </p>
       <form
         onSubmit={handleSubmit}
         className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'>;
@@ -264,6 +258,3 @@ export default function ServiceDescriptionGeneratorPage() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-

@@ -1,4 +1,3 @@
-
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
@@ -114,6 +113,10 @@ export function IntegrationCard({;
   status = "disconnected";
   href;
   onConnect}: IntegrationCardProps) {;
+  status?: "connected" | "disconnected" | "pending";
+  href?: string;
+  onConnect?: () => void;
+}
   return (
     <Card className="overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -124,25 +127,10 @@ export function IntegrationCard({;
             </div>;
             <div>;
         )}
-      </CardFooter>
-    </Card>
-  )
-}
-        )}
       </CardFooter>;
     </Card>;
   );
 }
-
-export function IntegrationCards() {
-  return (
-    <div className="grid md:grid-cols-3 gap-6">;
-      {/* Integration cards would go here */}
-
-    </div>;
-  );
-}
-
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
@@ -199,6 +187,3 @@ function IntegrationCards() {
   return (
     <div className="grid md:grid - cols - 3 gap - 6">;
       {/* Integration cards would go here */}
-}
-;
-

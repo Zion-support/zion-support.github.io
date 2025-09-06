@@ -3,8 +3,6 @@ import globals from "globals",
 import reactHooks from "eslint-plugin-react-hooks",
 import reactRefresh from "eslint-plugin-react-refresh",
 import tseslint from "typescript-eslint",
-
-
 export default tseslint.config(
   { ignores: ["dist"] }
   {
@@ -13,14 +11,6 @@ export default tseslint.config(
     languageOptions: {
       ecmaVersion: 2020
       globals: globals.browser}
-export default tseslint && tseslint.config(
-  { ignores: ["dist"] },
-  {
-    extends: [js && js.configs.recommended, ...tseslint && tseslint.configs.recommended],
-    files: ["**/*.{ts,tsx}"],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals && globals.browser},
     plugins: {
       "react-hooks": reactHooks
       "react-refresh": reactRefresh}
@@ -30,7 +20,6 @@ export default tseslint && tseslint.config(
         "warn"
         { allowConstantExport: true }]
       "@typescript-eslint/no-unused-vars": "off"}}
-;
 import js from "@eslint/js",;
 import globals from "globals",;
 import reactHooks from "eslint-plugin-react-hooks",;
@@ -54,4 +43,3 @@ export default tseslint.config(;
         { allowConstantExport: true }];
       "@typescript-eslint/no-unused-vars": "off"}}
 );
-

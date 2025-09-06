@@ -1,11 +1,10 @@
+
+  title: string,
+  avatar_url: string;
+
 export interface BlogAuthor {
-export interface BlogAuthor {;
   name: string;
-
-
-  avatarUrl: string
 }
-export interface BlogPost {
   id: string;
   title: string;
   slug: string;
@@ -20,7 +19,6 @@ export interface BlogPost {
   meta_description: string;
   body: string;
   tags: string[];
-
   name: string,;
   title: string,;
   avatarUrl: string;
@@ -59,6 +57,4 @@ export interface GeneratedNewsletterContent {
   subject: string;
   previewText: string;
 
-
-export interface BlogAuthor {;
-
+}

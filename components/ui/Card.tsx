@@ -1,4 +1,3 @@
-  <div
   />));
 CardDescription.display_name = "CardDescription";
 ;
@@ -62,7 +61,6 @@ interface CardProps {
       on_click={on_click}
     >;
       {/* Subtle background pattern */}
-
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
     </div>);
 
@@ -73,3 +71,5 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
+        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
+    </div>);

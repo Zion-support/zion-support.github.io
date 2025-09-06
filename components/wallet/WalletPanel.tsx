@@ -31,15 +31,6 @@ type Tx = {
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
   amount: number;
   reason: string;
-
-};
-type Summary = {;
-  wallet: { userId: string; balance: number };
-  transactions: Tx[];
-  config: { usdPerToken: number; symbol: string };
-};
-function getUserId(): any (): string {;
-
   if (typeof window === 'undefined') return 'demo-user';
   const fromStorage = window && window.localStorage.getItem('zion_user_id');
   if (fromStorage) return fromStorage;
@@ -82,8 +73,6 @@ type Summary = {;
   config: { usdPerToken: number, symbol: string }
 };
   if (typeof window === "undefined") return "demo-user";
-
-
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
@@ -123,7 +112,7 @@ type Summary = {;
       <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>;
         <div className='flex items-center justify-between'>;
           <div className='flex items-center gap-2'>;
-            <span className='text-2xl'></span>;
+            <span className='text-2xl'>⚡</span>;
               <div className='text-sm text-gray-500'>Balance</div>;
               <div className='text-2xl font-semibold'>;
       const accounts = await eth.request ({ method: "eth_requestAccounts" }),
@@ -162,7 +151,7 @@ if ( {) {
       <div className='p - 4 border rounded - lg bg - white dark:bg - zinc - 900'>;
         <div className='flex items - center justify - between'>;
           <div className='flex items - center gap - 2'>;
-            <span className='text - 2xl'></span>;
+            <span className='text - 2xl'>⚡</span>;
               <div className='text - sm text - gray - 500'>Balance</div>;
               <div className='text - 2xl font - semibold'>;
                 {balance} {symbol}
@@ -331,13 +320,10 @@ if ( {) {
       console.error(e)
     }
   }
-      </div>;
-    </div>;
-  );
+}
 
   );
 }
-
             <div className='text - xs text - gray - 500'>;
               Coming soon: Redeem for branded perks and courses.;
             </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;

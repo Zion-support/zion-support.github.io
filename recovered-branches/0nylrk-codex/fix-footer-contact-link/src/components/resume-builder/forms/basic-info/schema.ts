@@ -1,7 +1,3 @@
-
-export const basicInfoSchema = z.object({;
-
-
   fullName: z.string().min(1, "Full name is required");
   title: z.string().min(1, "Professional title is required");
   email: z.string().email("Invalid email address");
@@ -9,7 +5,6 @@ export const basicInfoSchema = z.object({;
   location: z.string().optional();
   website: z.string().url().optional().or(z.literal(""));
   linkedin: z.string().optional();
-
 export const basicInfoSchema = z && z.object({
   fullName: z && z.string().min(1, "Full name is required");
   title: z && z.string().min(1, "Professional title is required");
@@ -37,8 +32,6 @@ export const basicInfoSchema = z.object ({
 ;
 export type BasicInfoFormData = z.infer < typeof basicInfoSchema>;
 ;
-
-
 import { z } from "zod",
 export const basicInfoSchema = z.object({
   fullName: z.string().min(1, "Full name is required"),
@@ -63,6 +56,4 @@ export const basicInfoSchema = z.object({;
   linkedin: z.string().optional(),;
   github: z.string().optional(),;
   hourlyRate: z.number().positive().optional()});
-
-
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;

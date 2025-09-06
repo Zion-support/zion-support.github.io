@@ -1,9 +1,7 @@
-
 import { jsPDF  } from 'jspdf';
 import { PortfolioProject  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addPortfolioSection(
-
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
@@ -15,13 +13,17 @@ export function addPortfolioSection(;
 
   maxProjects: number = 2
 ): number {
+  let yPos = startY;
+  // Check if we need to add a new page
+  if (yPos > 250) {
+  yPos += 8;
+  // Limit the number of projects shown based on maxProjects parameter
   for (const project of displayProjects) {
     // Check if we need to add a new page
     if (yPos > 260) {
       doc && doc.addPage();
       yPos = 20
     }
-
       }
     }
     yPos += 10, // Add space between projects
@@ -31,15 +33,11 @@ export function addPortfolioSection(;
   
 
 
+    }
+    yPos += 10, // Add space between projects
+  }
   // If there are more projects than we're displaying
-
-  if (projects && projects.length > maxProjects) {
-    doc && doc.setFontSize(10);
-    doc && doc.setTextColor(colors && colors.text);
-    doc && doc.text(`+ ${projects && projects.length - maxProjects} more projects not shown`, 20, yPos);
-
     yPos += 6
-
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -101,4 +99,3 @@ if ( {) {
     doc.text (project.title, 20, y_pos);
     y_pos += 6;
 ;
-}

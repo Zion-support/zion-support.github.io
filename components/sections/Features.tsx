@@ -30,6 +30,12 @@ import React from 'react';
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
 
+  title: string;
+  description: string;
+  color: string;
+  gradient: string;
+
+  delay?: number;
   return (
     <section className='py-24 bg-black relative overflow-hidden'>;
       <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
@@ -44,9 +50,7 @@ import { Zap } from 'lucide-react';
             {title}
           </h2>;
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-
             {subtitle}
-
           </p>;
         </div>;
 
@@ -56,3 +60,21 @@ import { Zap } from 'lucide-react';
           {features && features.map((feature, index) => (;
             <Card
               key={index}
+};
+
+export default Features;  );
+};
+
+export default Features;
+              </p>;
+            </Card>))}
+        </div>;
+      </div>;
+    </section>);
+}
+;
+export default Features);
+}
+;
+export default Features;
+;

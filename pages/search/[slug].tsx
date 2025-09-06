@@ -12,8 +12,6 @@ import { BLOG_POSTS  } from '@/data/blog-posts';
 import { useDebounce  } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface BaseSearchResult {
-
-
   id: string;
   title: string;
   description?: string;
@@ -53,7 +51,6 @@ import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
-import { Search, Filter, Grid, List } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -84,8 +81,6 @@ interface OfflineFilters {
           const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
           return bPrice - aPrice;        });
         break;
-            b.type === 'product' |b.type === 'talent' ? (b.rating ?? 0) : 0;
-            b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
 
 
 
@@ -288,7 +283,6 @@ export default function SearchResultsPage(): any ({;
   query,;
   slug,;
   totalCount,;
-}: SearchResultsPageProps) {  const router = useRouter();
 
 
 }: SearchResultsPageProps) {  const router = useRouter();
@@ -348,7 +342,7 @@ export default function SearchResultsPage(req, res) {
       setTotalResults(0);    }
   }, [debouncedQuery]);
   const categories = Array.from(
-    new Set(results.map(r => r.category).filter(Boolean))
+    new Set(results.map((r) => r.category).filter(Boolean));
   );
       categoryFilter !== 'all' &&
       categoryFilter &&
@@ -360,6 +354,14 @@ export default function SearchResultsPage(req, res) {
       if (!acc[result.type]) acc[result.type] = [];
       acc[result.type]!.push(result);
       return false;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    if (minPrice && r.type === 'product') {;
+      if ((r.price ?? 0) < Number(minPrice)) {;
+        return false;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -447,6 +449,21 @@ export default function SearchResultsPage(req, res) {
         return (
           <div key={result && result.id} data-testid='result-card'>            <ProductCard
               product={{
+                id: result.id
+                name: result.title
+                title: result.title
+                description: result.description |''
+                price: result.price |0
+                images: result.image ? [result.image] : []
+                rating: result.rating |0
+                reviewCount: 0
+                tags: result.tags |[]
+                category: result.category |''
+                currency: '$'
+                created_at: new Date().toISOString()
+                updated_at: new Date().toISOString()
+                stock: (result as any).stock
+                in_stock: ((result as any).stock |0) > 0,              }}
                 id: result.id,
                 name: result.title,
                 title: result.title,
@@ -536,8 +553,6 @@ export default function SearchResultsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             />;
           </div>;
         );
@@ -554,9 +569,6 @@ export default function SearchResultsPage(req, res) {
 
 }
   },
-
-
-
   return (
     <>;
       <SEO
@@ -603,8 +615,6 @@ export default function SearchResultsPage(req, res) {
                 >
                   {filteredResults.length > 0
                     ? `Found ${filteredResults.length} results for "${query}"`
-
-
                 <Input
                   type="text"
                   value={searchQuery  } catch (error) {
@@ -622,24 +632,11 @@ export default function SearchResultsPage(req, res) {
                 />
               </div>
             </div>
-
-
-                  onChange={e => handleSearch(e && e.target.value)}
-                  placeholder='Search marketplace...';
-                  className='pl-10'                />;
-              </div>;
-            </div>;
-
-
-
-            {/* Controls */}
-
-
                 <Button
-                  variant='outline'
-                  size='sm'
-                  className='flex items-center gap-2'
-                  data-testid='filter-button'
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center gap-2"
+                  data-testid="filter-button"
                 >
                 </Button>
                 <select
@@ -746,11 +743,6 @@ export default function SearchResultsPage(req, res) {
                   <input
                     type="number"
                     placeholder="Min $"
-                    value={minPrice}
-                    onChange={(e) => setMinPrice(e.target.value)}
-                  <input
-                    type="number"
-                    placeholder="Min $"
                     value={minPrice  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -787,14 +779,6 @@ export default function SearchResultsPage(req, res) {
                   <option value="2">2★ & up</option>
                 </select>
               </div>
-                >;
-                  <option value=''>All Ratings</option>;
-                  <option value='4'>4★ & up</option>;
-                  <option value='3'>3★ & up</option>;
-                  <option value='2'>2★ & up</option>;
-                </select>;
-              </div>;
-
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -828,11 +812,17 @@ export default function SearchResultsPage(req, res) {
   }
 }
           {loading && results.length === 0 && (
-
           {!loading && filteredResults.length === 0 && (
             <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
+          {filteredResults && filteredResults.length > 0 && (;
+            <div className='space-y-8'>;
+              {Object && Object.entries(groupedResults).map(([type, typeResults]) => (;
+                <div key={type}>;
+                  <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults && typeResults.length});
+                  </h2>;
+
                   <div
                     className={
                       viewMode === 'grid'

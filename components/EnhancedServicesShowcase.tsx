@@ -27,8 +27,8 @@
   ChevronDown,;
 
 } from 'lucide-react';
-interface Service {;
 
+interface Service {;
   Brain,
   Shield,
   Rocket,
@@ -87,73 +87,24 @@ interface Service {
   return (
     <section id='services' className='py-24 px-6 relative overflow-hidden'>;
       {/* Background */}
-
-      <div className='absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]' />;
-      </div>;
-      <div className='max-w-7xl mx-auto relative z-10'>;
-        {/* Header */}
-        <div className='text-center mb-16'>;
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-            <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
-              Our Services;
-            </span>;
-          </h2>;
-          <p className='text-xl text-white/70 max-w-3xl mx-auto leading-relaxed'>;
-            Cutting-edge technology solutions designed to transform your;
-            business and accelerate innovation          </p>;
-        </div>;
-        {/* Filters */}
-        <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>    };
-    return iconMap[category] || Brain;
-
   };
+
   return (
     <section id="services" className="py-24 px-6 relative overflow-hidden">;
       {/* Background */}
-
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]" />;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]" />;
-      </div>;
-      <div className="max-w-7xl mx-auto relative z-10">;
-        {/* Header */}
-        <div className="text-center mb-16">;
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">;
-              Our Services;
-            </span>;
-          </h2>;
-          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">;
-            Cutting-edge technology solutions designed to transform your business and accelerate innovation;
-          </p>;
-        </div>;
-
-
         {/* Filters */}
           {/* Category Filter */}
           <div className="relative">
             <select
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e && e.target.value)}
-              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12";
-            >;
-              {categories && categories.map((category) => (;
-                <option key={category} value={category} className="bg-slate-800 text-white">;
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12"
             >
               {categories.map((category) => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
-
-
-
                   {category === 'all' ? 'All Categories' : category}
-                </option>
+                </option>;
               ))}
-
-
             </select>;
             <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />;
           </div>;
@@ -233,9 +184,6 @@ interface Service {
                 </div>;
               )}
               {/* Service Content */}
-
-              <div className='p-8'>
-
                 {/* Icon and Category */}
                 <div className='flex items-center justify-between mb-4'>;
                   <div
@@ -450,7 +398,6 @@ interface Service {
                       {service && service.category}
                     </div>                  </div>;
                 </div>;
-
                 {/* Service Info */}                {/* Icon and Category */}
                 <div className="flex items-center justify-between mb-4">;
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`}>;
@@ -466,8 +413,6 @@ interface Service {
                     </span>
                   </div>
                 </div>
-                    ))}
-
                 {/* Benefits */}
                 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-white mb-3'>
@@ -490,15 +435,12 @@ interface Service {
                 </div>;
 
 
-
-
-
                 {/* Benefits */}
 
 
                     ))}
-
-
+                  </div>
+                </div>
 
                 {/* ROI and Market Info */}
 
@@ -508,6 +450,10 @@ interface Service {
                   <div className="mt-2 text-xs text-white/60">
                     Market: {service.marketSize} • Growth: {service.growthRate}
 
+                {/* Benefits */}
+
+
+                    ))}
                   </div>
                 </div>
                   </div>;
@@ -520,32 +466,13 @@ interface Service {
                   <div className='text-xs text-white/80 leading-relaxed'>;
                     {service && service.roi}
                   </div>;
-                  <div className='mt-2 text-xs text-white/60'>                    Market: {service && service.marketSize}  Growth: {service && service.growthRate}                <div className="mb-6 p-4 bg-white/5 rounded-lg">;
+                  <div className='mt-2 text-xs text-white/60'>                    Market: {service && service.marketSize} • Growth: {service && service.growthRate}                <div className="mb-6 p-4 bg-white/5 rounded-lg">;
                   <div className="text-xs text-white/60 mb-2">ROI & Market Position</div>;
                   <div className="text-xs text-white/80 leading-relaxed">{service && service.roi}</div>;
                   <div className="mt-2 text-xs text-white/60">;
                   </div>;
                 </div>;
                 {/* Action Buttons */}
-                    }
-                    className='flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105'                  >;
-                    Get Started;
-                  </button>;
-                  <button
-                    onClick={() =>;
-                      (window && window.location.href = `mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Demo request for ${service && service.name}`);
-                    }
-                    className='px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                  >                <div className="flex gap-3">;
-                  <button
-                    onClick={() => window && window.location.href = `mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Inquiry about ${service && service.name}`}
-                    className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105";
-                  >;
-                    Get Started;
-                  </button>;
-                  <button
-                    onClick={() =>;
-                      (window && window.location.href = `mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Demo request for ${service && service.name}`);
-                    }
                   >;
                     Demo;
                   </button>;
@@ -579,8 +506,6 @@ interface Service {
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
-
-
               Ready to Transform Your Business?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -588,6 +513,18 @@ interface Service {
               accelerate your digital transformation journey.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+          ))}
+        {/* CTA Section */}
+        <div className='text-center mt-16'>;
+          <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>;
+            <h3 className='text-2xl font-bold text-white mb-4'>;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className='text-white/70 mb-6 max-w-2xl mx-auto'>;
+              Let's discuss how our cutting-edge technology solutions can;
+              accelerate your digital transformation journey.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <a
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Consultation Request'
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -652,14 +589,9 @@ interface Service {
           </div>;
         </div>;
       </div>;
-
-
-};
 export default EnhancedServicesShowcase;  );
 };
 export default EnhancedServicesShowcase;
-
-
     </section>);
 }
 ;

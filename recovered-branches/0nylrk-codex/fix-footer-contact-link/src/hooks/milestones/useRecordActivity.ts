@@ -1,5 +1,4 @@
 
-
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
 import {MilestoneActivity} from './types';
@@ -15,9 +14,6 @@ import {supabase} from '@/integrations/supabase/client';
 import {MilestoneActivity} from './types';
 export const useRecordActivity = () => {;
   const { user } = useAuth();
-export const useRecordActivity = () => {;
-  const { user } = useAuth();
-
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
@@ -35,14 +31,10 @@ export const useRecordActivity = () => {
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
     }
-  }
-  return {
-    }
   };
   
   return {
     recordMilestoneActivity
-
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { MilestoneActivity } from './types',;
@@ -92,3 +84,4 @@ export const useRecordActivity = () => {;
 
   }
 
+};

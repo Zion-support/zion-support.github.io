@@ -13,10 +13,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res && res.status(200).json({ item, translated })
     }
     const { item, translated } = applyTranslations(base, lang);
-
-    return res.status(200).json({ item, translated })
+    return res && res.status(200).json({ item, translated })
   } catch (e: any) {
-
 
 
 
@@ -104,5 +102,4 @@ if (throw error) {
     return res.status (200).json ({ item, translated });
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
-}
 }

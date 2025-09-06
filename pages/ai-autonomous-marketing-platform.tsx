@@ -15,8 +15,6 @@ export async function getStaticProps() {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;
 export async /**

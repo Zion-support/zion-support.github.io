@@ -1,5 +1,4 @@
 
-
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Sparkles, RefreshCcw } from "lucide-react",
@@ -49,6 +48,7 @@ export interface EmptyMatchesCardProps {;
 ;
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {;
   return (;
+  return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
       <div className="mb-4 flex justify-center">;
         <Sparkles className="h-12 w-12 text-muted-foreground" />;
@@ -104,5 +104,3 @@ function EmptyMatchesCard() {
       </Button>;
     </Card>);
 }
-
-

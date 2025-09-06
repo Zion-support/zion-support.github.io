@@ -91,7 +91,7 @@ interface MarketplaceCardProps {
 }
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           <div className="text-sm text-gray-500 group-hover:text-blue-600 transition-colors">;
-            Learn more ;
+            Learn more →;
           </div>;
         </div>;
       </div>;
@@ -105,7 +105,6 @@ interface MarketplaceCardProps {;
   onAddToCart?: () => void;
   on_favorite?: () => void;
 }
-const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
   title;
   description;
   price;

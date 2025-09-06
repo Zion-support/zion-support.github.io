@@ -1,7 +1,3 @@
-let pool: Pool | null = null;
- let pool: Pool | null = null;
-
-
 }return pool 
 export async function withUser<T>(
   userId: string
@@ -9,3 +5,8 @@ export async function withUser<T>(
 ): Promise<T> {
   const client = await getPool().connect();
   try {
+
+  } finally {
+    client.release ();
+  }
+}

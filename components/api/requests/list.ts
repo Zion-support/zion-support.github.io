@@ -3,6 +3,7 @@
 
 
     res.status(200).json({ items })
+  } catch {
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON && JSON.parse(raw);
     res && res.status(200).json({ items });
@@ -31,6 +32,3 @@ function handler() {
     res.status (200).json ({ items });
   } catch {
     res.status (200).json ({ items: [] });
-
-  }
-}

@@ -5,6 +5,9 @@
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
 
 //Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
+import React from 'react';
+ //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+//Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
 ...cuttingEdgeITServices;
 ...innovativeMicroSaasV2Services;
 ...enhancedRealMicroSaasServices;
@@ -44,15 +47,19 @@ const Button = ({
   className = '';
   children, onClick
 }: {
+  href,
+  variant = 'primary';
+  size = 'md';
+  href?: string;
+  variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
     return (
       <a href={href} className={classes}>;
         {children}
       </a>;
     );
   }
-  return (
-    <button onClick={onClick} className={classes}>;
-      {children}
 
     </button>;
   );
@@ -86,6 +93,14 @@ const Button = ({
 if ( {) {
   $2
 }
-
-};
-
+    return (
+      <a href={href} className={classes}>;
+        {children}
+      </a>);
+  }
+  return (
+    <button on_click={on_click} className={classes}>;
+      {children}
+    </button>);
+}
+;

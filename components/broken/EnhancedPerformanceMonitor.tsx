@@ -1,7 +1,3 @@
-//FCP recommendations if (metrics.fcp > 2000) {
- //FCP recommendations if (metrics.fcp > 2000) {
-
-
   recs.push ({
 }return recs;
 }, []);
@@ -37,6 +33,8 @@ if (!performanceData) {;
 if ( {) {
   $2
 }
+//FCP recommendations if (metrics.fcp > 2000) {
+ //FCP recommendations if (metrics.fcp > 2000) {
   recs.push ({
 }return recs;
 }, []);
@@ -78,8 +76,3 @@ if ( {) {
   metrics.fcp > 2000 ? 'text - red - 400': 'text - green - 400';
 }`;
 }> {
-export default EnhancedPerformanceMonitor;
-
-
-;
-

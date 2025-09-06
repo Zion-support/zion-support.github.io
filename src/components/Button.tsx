@@ -1,11 +1,4 @@
 import React from 'react';
-import LoadingSpinner from './LoadingSpinner';
-
-interface ButtonProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
   };
   
   const sizeClasses = {
@@ -17,11 +10,10 @@ interface ButtonProps {
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   
   return (
-    <button
     >
       {loading && <LoadingSpinner size="sm" />}
       {children}
-    </button>
+    </motion.button>
   );
 };
 

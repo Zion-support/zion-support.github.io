@@ -1,10 +1,8 @@
-
 import {Button} from "@/components/ui/button";
 import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
-
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { 
@@ -16,15 +14,19 @@ import {
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 interface TalentRateRecommenderProps {
 
+  skills;
+  years_experience;
+  location;
+  const [isLoading, setIsLoading] = useState(false);
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
+  const { user } = useAuth();
+
     }
     setIsLoading(true);
     try {;
       const params: TalentRateParams = {;
         skills;
       const result = await getTalentRateSuggestion(params);
-import { useAuth } from "@/hooks/useAuth",
-import { Sparkles } from "lucide-react",
-
 interface TalentRateRecommenderProps {
   skills: string[],
   yearsExperience: number,
@@ -48,12 +50,21 @@ interface TalentRateRecommenderProps {;
   location?: string,;
   onSuggestionApplied: (value: number) => void,;
   rateType: "hourly" | "fixed";
-
-
 }
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
+  skills;
+  yearsExperience;
+  location;
+  onSuggestionApplied,
+  rateType}) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
+  const { user } = useAuth();
 
+  const generateSuggestion = async () => {
+    if (skills.length === 0 || yearsExperience <= 0) {
+      return
   skills,;
   yearsExperience,;
   location,;
@@ -65,7 +76,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const generateSuggestion = async () => {;
     if (skills.length === 0 || yearsExperience <= 0) {;
       return;
-
     }
 
     setIsLoading(true),
@@ -81,11 +91,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       console.error("Error generating rate suggestion:", error)
     } finally {
       setIsLoading(false)
-  }
-  };
-
-  };
-
 ;
     setIsLoading(true),;
     try {;
@@ -114,6 +119,15 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
 
 
+      setSuggestion(result);
+    } catch (error) {;
+      console && console.error("Error generating rate suggestion:", error);
+    } finally {;
+      setIsLoading(false);
+    }
+      }
+    }
+  }
   return (
     <div className="space-y-4">;
       <div>;

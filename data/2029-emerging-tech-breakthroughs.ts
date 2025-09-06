@@ -1,5 +1,3 @@
-export interface EmergingTechBreakthrough2029 {
-export interface EmergingTechBreakthrough2029 {;
   id: string;
   name: string;
   tagline: string;
@@ -40,6 +38,15 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     }
+  real_implementation: boolean;
+  contact_info: {
+    mobile: string;
+    email: string;
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+      },
+    },
   ];    features: [
 
       "Emerging tech breakthroughs";
@@ -94,6 +101,8 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
   }
 }
 
+export interface EmergingTechBreakthrough2029 {;
+
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
   {
     id: "2029-emerging-tech-breakthrough",
@@ -114,4 +123,4 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     contactInfo: {
     }
   }
-];
+;

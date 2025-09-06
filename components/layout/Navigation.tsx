@@ -10,7 +10,6 @@
   Globe
   ChevronDown;
 
-
   Globe,;
   ChevronDown,;
 } from 'lucide-react';
@@ -32,37 +31,15 @@ import {
 import Link from 'next/link';
 const Navigation: React.FC = () => {
 
+import Link from 'next/link';
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-      setIsScrolled(window.scrollY > 50)
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, []);
-
-  const navigationItems = [
-    {
-      name: 'Home',
-      href: '/',
-      icon: Home
-    };
-
     {
       name: 'Services'
       href: '/services'
       icon: Rocket
       dropdown: [
-
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Revolutionary AI solutions' },
-        { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Enterprise IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: Rocket, description: 'Specialized software solutions' },
-        { name: 'Innovative Showcase', href: '/innovative-services-showcase', icon: Globe, description: 'Cutting-edge technology' }
-
-      ]
-    }
   Menu,
   X,
   Home,
@@ -125,64 +102,6 @@ import Link from 'next / link';import {
         },
       ],
     },
-  Globe,;
-  ChevronDown,;
-} from 'lucide-react';
-import Link from 'next/link';import { ;
-  Menu, X, Home, Brain, Cpu, Rocket, ;
-  Phone, Mail, MapPin, Globe, ChevronDown;
-} from 'lucide-react';
-import Link from 'next/link';
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
-  const navigationItems = [
-    {
-      name: 'Home'
-      href: '/'
-      icon: Home
-    },    {      icon: Home
-    }
-    {
-      name: 'Services'
-      href: '/services'
-      icon: Rocket
-      dropdown: [
-        {
-          name: 'AI Services'
-          href: '/ai-services'
-          icon: Brain
-          description: 'Revolutionary AI solutions'
-        }
-        {
-          name: 'IT Services'
-          href: '/it-services'
-          icon: Cpu
-          description: 'Enterprise IT solutions'
-        }
-        {
-          name: 'Micro SaaS'
-          href: '/micro-saas'
-          icon: Rocket
-          description: 'Specialized software solutions'
-        }
-        {
-          name: 'Innovative Showcase'
-          href: '/innovative-services-showcase'
-          icon: Globe
-          description: 'Cutting-edge technology'
-        }
-      ]
-    }
     {
       name: 'Solutions'
       href: '/solutions'
@@ -223,8 +142,6 @@ import Link from 'next/link';
                     <div
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
-
-
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -232,9 +149,6 @@ import Link from 'next/link';
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
                             transition={{ duration: 0.2 }}
-
-
-
                           >
                             <div className='grid grid-cols-1 gap-3'>
                               {item.dropdown.map(dropdownItem => {
@@ -263,7 +177,6 @@ import Link from 'next/link';
                     >;
                       <span className="font-medium">{item && item.name}</span>;
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />;
-
                       <AnimatePresence>;
                         {activeDropdown === item && item.name && (;
                           <motion&& motion.div
@@ -275,7 +188,6 @@ import Link from 'next/link';
                             <div className='grid grid-cols-1 gap-3'>;
                               {item && item.dropdown.map(dropdownItem => {;
                                 const Icon = dropdownItem && dropdownItem.icon;
-
                                   >;
                                     <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300'>;
                                       <Icon className='w-5 h-5 text-cyan-400' />;
@@ -310,33 +222,32 @@ import Link from 'next/link';
                     >;
                       <item && item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />;
                       <span className="font-medium">{item && item.name}</span>;
+                                    key={dropdownItem && dropdownItem.name}
+                                    href={dropdownItem && dropdownItem.href}
+                                    className="flex items-center space-x-3 p-3 rounded-xl hover:bg-cyan-500/10 hover:border border-cyan-500/30 transition-all duration-300 group/item">;
+                                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300">;
+                                      <Icon className="w-5 h-5 text-cyan-400" />;
+                                    </div>;
+                                    <div>;
+                                      <div className="text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300">;
+                                        {dropdownItem && dropdownItem.name}
+                                      </div>;
+                                      <div className="text-gray-400 text-sm">;
+                                        {dropdownItem && dropdownItem.description}
+                                      </div>;
+                                    </div>;
+                                  </Link>;
+                                );                                );
+                              })}
+                            </div>;
+                          </motion.div>)}
+                      </AnimatePresence>;
                   )}
                 </div>
               ))}
             </div>
-            {/* CTA Button */}
-            <div className='hidden lg:block'>
 
-            {/* CTA Button */}
-            <div className='hidden lg:block'>
-
-              <motion.a
-                href='/contact'
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
-                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'>              <motion&& motion.a
-            <div className="hidden lg:block">
-              <motion.a
                 href="/contact"
-
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40">;
-                Get Started;
-              </motion && motion.a>;
-            </div>;
-
-
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
               <motion&& motion.button
@@ -370,9 +281,9 @@ import Link from 'next/link';
             </div>
               <motion.a
                 href='/contact'
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
-                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'>              <motion&& motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >              <motion.a
                 href="/contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -382,12 +293,16 @@ import Link from 'next/link';
               </motion.a>
             </div>
             {/* Mobile Menu Button */}
-              <motion.button
-                whileTap={{ scale: 0.95 }}
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-gray-300 hover:text-white transition-colors duration-300";
               >;
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </motion && motion.button>;
+            </div>;
+          </div>;
+        </div>;
+      </motion && motion.nav>;
+
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -407,9 +322,6 @@ import Link from 'next/link';
               className='absolute inset-0 bg-black/50 backdrop-blur-sm'
               onClick={() => setIsOpen(false)}
             {/* Backdrop */}
-            />          >
-            {/* Backdrop */}
-
             <div 
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
@@ -422,9 +334,6 @@ import Link from 'next/link';
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ duration: 0.3 }}
-              className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
-
 
             >
               <div className='p-6'>
@@ -433,44 +342,11 @@ import Link from 'next/link';
                   <motion&& motion.button
                     whileTap={{ scale: 0 && 0.95 }}
                     onClick={() => setIsOpen(false)}
-            >
-              <div className='p-6'>
-                {/* Close Button */}
-                <div className='flex justify-end mb-6'>
-                  <motion.button
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => setIsOpen(false)}
-                    className='text-gray-300 hover:text-white transition-colors duration-300'
-                  >
-                    <X className='w-6 h-6' />                  </motion.button>
-                </div>
-                {/* Mobile Menu Items */}
-              <div className="p-6">
                 {/* Close Button */}
                 <div className="flex justify-end mb-6">;
                   <motion&& motion.button
                     whileTap={{ scale: 0 && 0.95 }}
                     onClick={() => setIsOpen(false)}
-                    <div key={item.name}>
-                          </div>;
-                          <div className='pl - 4 space - y-2'>;
-                            {item.dropdown.map (dropdown_item => {
-                              const Icon = dropdown_item.icon;
-;
-                                  on_click={() => setIsOpen (false)}
-                                  className='flex items - center space - x-3 p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300';
-                                >;
-                                  <Icon className='w - 5 h - 5 text - cyan - 400' />;
-                                  <div>;
-                                    <div className='text - white font - medium'>;
-                                      {dropdown_item.name}
-                                    </div>;
-                                    <div className='text - gray - 400 text - sm'>;
-                                      {dropdown_item.description}
-                                    </div>;
-                                  </div>;
-                                </Link>);                            })}                    <div key={item.name}>;
-
                       {item.dropdown ? (
                         <div className='space-y-2'>
                           <div className='text-gray-400 font-medium text-sm uppercase tracking-wider'>
@@ -516,6 +392,9 @@ import Link from 'next/link';
                                 </Link>
                               )
                             })}
+                          </div>;
+                        </div>;
+                      ) : (;
                           </div>
                         </div>
                       ) : (
@@ -554,17 +433,22 @@ import Link from 'next/link';
                     <div className='flex items-center space-x-2 text-gray-300'>
                       <Phone className='w-4 h-4 text-cyan-400' />
 
-
-
                       <span>{contactInfo.mobile}</span>
-                    </div>
-                    <div className='flex items-center space-x-2 text-gray-300'>
-                      <Mail className='w-4 h-4 text-purple-400' />
-                      <span>{contactInfo.email}</span>
-                    </div>
-                    <div className='flex items-center space-x-2 text-gray-300'>
-                      <MapPin className='w-4 h-4 text-pink-400' />
-                      <span className='text-xs'>{contactInfo.address}</span>                    </div>                      <span>{contactInfo.mobile}</span>
+                        <Link
+                          href={item && item.href}
+                          onClick={() => setIsOpen(false)}
+                          className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300';
+                        >;
+                          <item && item.icon className='w-5 h-5 text-cyan-400' />;
+                          <span className='text-white font-medium'>;
+                            {item && item.name}
+                          </span>                        </Link>                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300";
+                        >;
+                          <item && item.icon className="w-5 h-5 text-cyan-400" />;
+                          <span className="text-white font-medium">{item && item.name}</span>;
+                      )}
+                    </div>;
+                  ))}
                     </div>
                     <div className="flex items-center space-x-2 text-gray-300">
                       <Mail className="w-4 h-4 text-purple-400" />
@@ -576,8 +460,6 @@ import Link from 'next/link';
                     </div>
                   </div>
                 </div>
-                </div>;
-
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>;
                   <h3 className='text-cyan-400 font-semibold mb-3'>;
@@ -606,10 +488,25 @@ import Link from 'next/link';
                     </div>;
                   </div>;
                 </div>;
+                    onClick={() => setIsOpen(false)}
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25";
+                  >;
+                    Get Started Today;
+                  </motion && motion.a>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </motion && motion.div>;
+        )}
+      </AnimatePresence>;
+    </>;
+  );
+};
+
+export default Navigation;  );
+};
 
 export default Navigation;
-
-
                           </div>;
                           <div className="pl - 4 space - y-2">;
                             {item.dropdown.map ((dropdown_item) => {

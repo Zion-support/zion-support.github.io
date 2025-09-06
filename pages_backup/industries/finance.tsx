@@ -1,5 +1,3 @@
-
-
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -55,13 +53,6 @@ const benefits = [;
     title: 'Enhanced Security,',;
     description: 'Bank-grade security measures protect sensitive financial data and transactions.,',;
     icon: Shield;
-];
-const benefits = [
-  {
-    title: 'Enhanced Security',
-    description: 'Bank-grade security measures protect sensitive financial data and transactions.',
-    icon: Shield
-  },
   {}
 
     title: 'Improved Efficiency,',;

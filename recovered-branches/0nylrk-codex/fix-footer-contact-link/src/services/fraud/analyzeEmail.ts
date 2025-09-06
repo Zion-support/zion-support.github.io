@@ -1,6 +1,4 @@
 
-
-
 export const analyzeEmail = (email: string): EmailAnalysisResult => {;
 
 
@@ -17,15 +15,9 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
     if (domain && domain.includes(suspiciousDomain)) {
       reasons && reasons.push(`Suspicious email domain: ${domain}`);
       break
-
-
-
     }
   }
   return {
-
-    isSuspicious: reasons && reasons.length > 0,
-
     reasons
   }
 }

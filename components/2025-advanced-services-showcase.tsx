@@ -1,24 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-import React, { useState, useEffect } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
-  Brain, Atom, Shield, Building, Globe;
-  Users, TrendingUp, Award, Phone, Mail, MapPin
-} from 'lucide-react';
-
-// Import our new service data
-import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
-import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
-import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-
   website: 'https://ziontechgroup.com'
 }
 const allServices = [
@@ -76,7 +57,6 @@ const allServices = [;
   ...innovativeMicroSaasExpansion2025,;
   ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup && ziontechgroup.com';
 };
-
 const allServices = [;
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
@@ -85,9 +65,6 @@ const allServices = [;
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filteredServices, setFilteredServices] = useState(allServices);
-  }, [selectedCategory, searchTerm]);
-  const ServiceCard = ({ service }: { service: any }) => (
-    <motion.div
   }, [selectedCategory, searchTerm]);
 
   const ServiceCard = ({ service }: { service: any }) => (;
@@ -124,9 +101,6 @@ const allServices = [;
   )
   const ServiceList = ({ service }: { service: any }) => (
     <motion.div
-          </div>;
-        </div>;
-
         <div className='mb-6'>;
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
             ROI & Benefits:;
@@ -135,7 +109,6 @@ const allServices = [;
             {service && service.roi}
           </p>;
         </div>;
-
         <div className='mb-6'>;
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
             Market Position:;
@@ -144,7 +117,6 @@ const allServices = [;
             {service && service.marketPosition}
           </p>;
         </div>;
-
         <div className='flex items-center justify-between'>;
           <a
             href={service && service.link}
@@ -152,20 +124,17 @@ const allServices = [;
             Learn More;
             <ArrowRight className='w-4 h-4' />;
           </a>;
-
           <a
             href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
             className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'>            {service && service.roi}
           </p>;
         </div>;
-
         <div className="mb-6">;
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>;
           <p className="text-sm text-gray-600 dark:text-gray-400">;
             {service && service.marketPosition}
           </p>;
         </div>;
-
         <div className="flex items-center justify-between">;
           <a
             href={service && service.link}
@@ -173,10 +142,6 @@ const allServices = [;
             Learn More;
             <ArrowRight className="w-4 h-4" />;
           </a>;
-
-          <a
-            href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
-            className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300">;
 import React, { useState, useEffect } from './react';
 import { motion, AnimatePresence  } from './framer-motion';
   Search,
@@ -210,7 +175,7 @@ const advancedEnterpriseServices2025 = [;
     rating: 4.9,
     tags: ["AI", "Machine Learning", "Enterprise"],
     color: "from - blue - 500 to - purple - 500",
-    icon: "",
+    icon: "🤖",
   },
 ];
 ;
@@ -224,7 +189,7 @@ const innovativeMicroSaasExpansion2025 = [;
     rating: 4.7,
     tags: ["SaaS", "Micro Services", "Cloud"],
     color: "from - green - 500 to - teal - 500",
-    icon: "",
+    icon: "⚡",
   },
 ];
 ;
@@ -238,7 +203,7 @@ const cuttingEdgeITInfrastructureServices = [;
     rating: 4.8,
     tags: ["Cloud", "Infrastructure", "DevOps"],
     color: "from - orange - 500 to - red - 500",
-    icon: "",
+    icon: "☁️",
   },
 ];// Import our new service data;
 import { advancedEnterpriseServices2025 } from '../data / 2025 - advanced - enterprise - services - expansion';
@@ -767,6 +732,7 @@ if ( {) {
                 >;
                   {category.icon}
                   {category.name}
+              ))}
         {/* Results Summary */}
         <div className='mb-8'>;
           <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>;
@@ -778,22 +744,13 @@ if ( {) {
                 <p className='text-gray-600 dark:text-gray-400'>;
                   {selectedCategory !== 'all' &&;
                     `Filtered by: ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}
-                  {searchTerm && `  Search: "${searchTerm}"`}
-                </p>
-              </div>
-              <div className='flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400'>
-                <div className='flex items-center gap-2'>
-                  <TrendingUp className='w-4 h-4 text-green-500' />
-                  <span>Market Growth: 150%+ YoY</span>
-                </div>
-                <div className='flex items-center gap-2'>
-                  <Award className='w-4 h-4 text-blue-500' />                  <span>4.8+ Average Rating</span>              <div>
+                  {searchTerm && ` • Search: "${searchTerm}"`}
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   {filteredServices.length} Services Found
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400">
                   {selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
-                  {searchTerm && `  Search: "${searchTerm}"`}
+                  {searchTerm && ` • Search: "${searchTerm}"`}
                 </p>
               </div>
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
@@ -824,7 +781,7 @@ if ( {) {
                 </h2>;
                 <p className="text-gray-600 dark:text-gray-400">;
                   {selectedCategory !== 'all' && `Filtered by: ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}
-                  {searchTerm && `  Search: "${searchTerm}"`}
+                  {searchTerm && ` • Search: "${searchTerm}"`}
                 </p>;
               </div>;
 
@@ -851,7 +808,7 @@ if ( {) {
                 <p className='text - gray - 600 dark:text - gray - 400'>;
                   {selected_category !== 'all' &&;
                     `Filtered by: ${categories.find (c => c.id === selected_category)?.name}`}
-                  {search_term && `  Search: "${search_term}"`}
+                  {search_term && ` • Search: "${search_term}"`}
                 </p>;
               </div>;
               <div className='flex items - center gap - 4 text - sm text - gray - 600 dark:text - gray - 400'>;
@@ -866,7 +823,7 @@ if ( {) {
                 </h2>;
                 <p className="text - gray - 600 dark:text - gray - 400">;
                   {selected_category !== 'all' && `Filtered by: ${categories.find (c => c.id === selected_category)?.name}`}
-                  {search_term && `  Search: "${search_term}"`}
+                  {search_term && ` • Search: "${search_term}"`}
                 </p>;
               </div>;
               <div className="flex items - center gap - 4 text - sm text - gray - 600 dark:text - gray - 400">;
@@ -906,12 +863,6 @@ if ( {) {
                 <ArrowRight className='w-5 h-5' />;
               </a>;
               <a
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business?
-
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions.
@@ -925,8 +876,6 @@ if ( {) {
                 <ArrowRight className="w-5 h-5" />;
               </a>;
               <a
-
-
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300">;
                 <Phone className="w-5 h-5" />;
@@ -952,6 +901,12 @@ if ( {) {
             </div>;
           </div>;
   );
-
+          <button className="px - 8 py - 4 bg - white text - blue - 600 rounded - xl font - semibold hover:bg - gray - 100 transition - all duration - 300">;
+            Get Started Today;
+          </button>;
+        </motion.div>;
+      </div>;
+    </div>);        </div>;
+      </div>;
+    </div>);
 }
-          </div>

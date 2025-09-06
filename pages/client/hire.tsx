@@ -1,19 +1,6 @@
 import {useState} from 'react';
 
 
-export default function ClientHirePage() {;
-  const [talentSlug, setTalentSlug] = useState('ava-chen');
-  const [startDateIso, setStartDateIso] = useState<string>(;
-    new Date().toISOString().slice(0, 10);
-  );
-  const [scopeSummary, setScopeSummary] = useState(;
-    'Build AI-enabled reporting module';
-  );
-  const [termsType, setTermsType] = useState('hourly');
-  const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
-  const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
-  const [agreementUrl, setAgreementUrl] = useState('');  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any | null>(null);
   const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
   const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
   const [agreementUrl, setAgreementUrl] = useState("");
@@ -87,7 +74,6 @@ export default function ClientHirePage() {
   const [loading, setLoading] = useState(false),
   const [result, setResult] = useState<any | null>(null),
   const [showFeedback, setShowFeedback] = useState(false),
-
   async function sendOffer() {
     setLoading(true),
     setResult(null),
@@ -96,8 +82,6 @@ export default function ClientHirePage() {
         ? { type: "hourly", hourlyRateUsd   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
-
   }
 }
         : termsType === "fixed";
@@ -125,6 +109,9 @@ export default function ClientHirePage() {
 
   }
   return (
+    <div className='max-w-3xl mx-auto p-6 space-y-6'>
+      <h1 className='text-xl font-semibold'>Hire Talent</h1>
+      <div className='space-y-4 border rounded p-4'>
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       <h1 className="text-xl font-semibold">Hire Talent</h1>
 
@@ -188,11 +175,6 @@ export default function ClientHirePage() {
         userHeaders={{ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }}
       />
     </div>
-        <div>
-          <label className="block text-sm font-medium">Agreement URL (optional)</label>
-          <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder="https://..." className="w-full border rounded px-3 py-2" />
-        </div>
-      {result && (
         <div className='border rounded p - 4 bg - emerald - 50'>;
           <div className='font - medium'>Offer sent</div>;
           <div className='text - sm'>Offer ID: {result.id}</div>        </div>)}
@@ -222,7 +204,6 @@ export default function ClientHirePage() {
         </div>
       </div>
       {result && (
-
         <div className="border rounded p-4 bg-emerald-50">
           <div className="font-medium">Offer sent</div>
           <div className="text-sm">Offer ID: {result.id}</div>

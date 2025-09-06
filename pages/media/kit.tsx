@@ -56,8 +56,6 @@ const KitPage = () => {
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
-
-
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
@@ -153,8 +151,11 @@ if ( {) {
     y -= 16;
       y -= 14;
     });
-    if (y < 120) {;
-      pdfDoc && pdfDoc.addPage([612, 792]);
+    // Check condition
+if ( {) {
+  $2
+}
+      pdf_doc.add_page ([612, 792]);
     }
     const blob = new Blob([pdfBytes], { type: 'application/pdf' });
     const url = URL && URL.createObjectURL(blob);
@@ -332,9 +333,6 @@ if ( {) {
             </div>
             {timeline.length>0 && (
               <ul className="mt-3 text-sm list-disc list-inside space-y-1">
-
-
-
             {assets.map(a => (
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
@@ -374,6 +372,7 @@ export default KitPage;
       </div>
     </div>
 
+
         <section className='p-4 border rounded-lg space-y-4'>;
           <h3 className='font-semibold'>Prewritten Press Releases</h3>;
           <div className='grid md:grid-cols-3 gap-4'>;
@@ -385,26 +384,7 @@ export default KitPage;
         </section>;
       </div>;
     </div>;
-            {assets.map(a => (
-              <li key={a.filename} className="flex items-center justify-between border rounded p-2">
-                <span className="text-sm">{a.filename}</span>
-                {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</Link> : <span className="text-gray-400 text-xs">generated</span>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </li>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </ul>
-        </section>
   );
 
 },;
-
-
-
 export default KitPage;

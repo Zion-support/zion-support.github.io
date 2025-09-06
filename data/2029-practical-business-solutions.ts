@@ -1,5 +1,3 @@
-export interface PracticalBusinessSolution2029 {
-export interface PracticalBusinessSolution2029 {;
   id: string;
   name: string;
   tagline: string;
@@ -41,7 +39,16 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       }
     }
   ];    features: [
-
+  real_implementation: boolean;
+  contact_info: {
+    mobile: string;
+    email: string;
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+      },
+    },
+  ];    features: [
 
       "Practical solutions";
       "Business applications";
@@ -78,22 +85,14 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     address: string;
   }
 }
-
-export interface PracticalBusinessSolution2029 {;
-
       "Affordable pricing"
     ],
     link: "/services/2029-practical-business-solution",
     category: "Practical Business Solutions 2029",
     realImplementation: true,
     contactInfo: {
-
-
     }
   }
-
-];
-
 ;
 export interface PracticalBusinessSolution2029 {;
   };

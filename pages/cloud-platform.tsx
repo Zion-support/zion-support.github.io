@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next / head';
 import {
   Cloud,
   Shield,
@@ -115,34 +116,9 @@ export default function CloudPlatformPage() {
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Enterprise Security',
-
-import Head from 'next/head',
-import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react',
-export default function CloudPlatformPage() {
-  const features = [
-    {
-      icon: <Server className="w-8 h-8 text-white" />,
-      title: 'Scalable Infrastructure',
-      description: 'Auto-scaling compute resources that grow with your needs'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-white" />,
-      title: 'Managed Databases',
-      description: 'Fully managed databases with automated backups and scaling'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-white" />,
-      title: 'Global CDN',
-      description: 'Lightning-fast content delivery across the globe'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-white" />,
-      title: 'Enterprise Security',
-
   const benefits = [
     '99.99% uptime guaranteeGlobal edge locationsReal-time monitoringAutomated scalingPay-as-you-go pricing24/7 expert support'
   ],
-
   return (
 
 
@@ -151,17 +127,6 @@ export default function CloudPlatformPage() {
         <title>Cloud Platform - Zion Tech Group</title>
         <meta name="description" content="Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee." />
       </Head>
-
-      <div className="min-h-screen bg-black">
-        {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="pt-32 pb-20 relative overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
           </div>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
             <div className='mb-8'>
@@ -170,14 +135,10 @@ export default function CloudPlatformPage() {
                 Enterprise Cloud Infrastructure
               </div>
             </div>
-
-
-
               Cloud Platform
             </h1>
-            <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
-              Enterprise-grade cloud infrastructure with global reach, automated
-              scaling, and 99.99% uptime guarantee.
+            <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+              Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee.
             </p>
 
 
@@ -248,9 +209,6 @@ export default function CloudPlatformPage() {
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-
-
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Why Choose Our Cloud Platform?
@@ -263,24 +221,15 @@ export default function CloudPlatformPage() {
                       </div>
                       <span className="text-gray-300 text-lg">{benefit}</span>
                     </div>
-                  ))}
-
-              
-
-
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
                   <div className="text-center">
                     <Cloud className="w-24 h-24 mx-auto mb-6 text-blue-400" />
                     <h3 className="text-2xl font-bold text-white mb-4">
-
-
-
                       Global Infrastructure
                     </h3>
-                    <p className='text-gray-300 mb-6'>
-                      Deploy your applications across multiple regions for
-                      optimal performance
+                    <p className="text-gray-300 mb-6">
+                      Deploy your applications across multiple regions for optimal performance
                     </p>
                     </div>
                   </div>
@@ -512,8 +461,6 @@ export default function CloudPlatformPage() {
       </div>;
 
 
-    </>);
-;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

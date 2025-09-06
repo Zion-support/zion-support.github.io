@@ -1,4 +1,3 @@
-
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",
@@ -11,9 +10,6 @@ import { ForumPost } from "@/types/community";
 import { ProfileBadge } from "@/components/profile/ProfileBadge";
 import { ForumPost } from "@/types/community",
 import { ProfileBadge } from "@/components/profile/ProfileBadge",
-
-
-
 interface PostCardProps {
 
   post: ForumPost
@@ -36,19 +32,13 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             </Link>
             {post.isAnswered && (
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
-interface PostCardProps {;
-  post: ForumPost,;
-  compact?: boolean;
-}
             )}
-            {post && post.isPinned && (;
-              <Pin className="h-4 w-4 text-amber-500 ml-2" />;
+            {post.isPinned && (
+              <Pin className="h-4 w-4 text-amber-500 ml-2" />
             )}
-            {post && post.isLocked && (;
-              <Lock className="h-4 w-4 text-red-500 ml-2" />;
+            {post.isLocked && (
+              <Lock className="h-4 w-4 text-red-500 ml-2" />
             )}
-
-
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;
@@ -98,8 +88,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
           <div className="flex flex-wrap gap-2 mt-2">;
             {post.tags?.map(tag => (;
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
-
-
                 {tag}
               </Badge>
             ))}

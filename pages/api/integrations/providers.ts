@@ -1,5 +1,3 @@
-import { PROVIDERS } from '[^']*';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 }

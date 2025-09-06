@@ -59,7 +59,6 @@ export default function InnovativeMicroSaasShowcase() {
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
 
     return matchesCategory && matchesSearch
-
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -92,11 +91,6 @@ export default function InnovativeMicroSaasShowcase() {
   const [sortBy, setSortBy] = useState('popularity')
   // Combine all services
   const allServices = [
-  // Filter services based on category and search
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
-      service.category.toLowerCase().includes(selectedCategory) ||
-      service.name.toLowerCase().includes(selectedCategory);
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -183,7 +177,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
   }),
   return (
     <Layout>
@@ -198,8 +191,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -221,8 +212,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-
-
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >
                   <stat.icon className={`w-5 h-5 ${stat.color}`} />
@@ -250,128 +239,35 @@ export default function InnovativeMicroSaasShowcase(req, res) {
               <MapPin className="w-5 h-5 text-white" />
               <span className="text-white text-sm">{contactInfo.address}</span>
             </div>
-          </div>
-        </div>
-      </section>
-                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
-                >
-                  <stat.icon className={`w-5 h-5 ${stat.color}`} />
-                  <span className="text-white font-semibold">{stat.number}</span>
-                  <span className="text-gray-300 text-sm">{stat.label}</span>
-                </motion.div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-            {/* Search */}
-
-
-      {/* Filters and Search */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-8 bg-black/50 backdrop-blur-sm border-b border-white/10">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Search */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search services..."
-                >
-                  <category.icon className="w-4 h-4" />
-                  <span className="text-sm font-medium">{category.name}</span>
-                </button>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-            {/* View Mode and Sort */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
-            <div className="flex flex - wrap gap - 2">;
-              {categories.map ((category) => (
-                <button;
-                  key={category.value}
-                  on_click={() => setSelectedCategory (category.value)}
-                  className={`flex items - center space - x-2 px - 4 py - 2 rounded - lg border transition - all duration - 300 ${
-                    selected_category === category.value;
-                      ? `bg - gradient - to - r ${category.color} border - transparent text - white`;
-                      : 'bg - white / 10 border - white / 20 text - gray - 300 hover:bg - white / 20';
-                  }`}
-
-
-            <div className="flex items-center space-x-4">
-              <div className="flex bg-white/10 rounded-lg p-1">
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}
-                >
-                  <Grid className="w-5 h-5" />
-                </button>
-                <button
-                >
-                  <List className="w-5 h-5" />
-                </button>
-              </div>
-              <select
-                className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-              >
-                <option value="popularity">Most Popular</option>
-                <option value="rating">Highest Rated</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="newest">Newest First</option>
-              </select>
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              />
             </div>
-          </div>
-        </div>
-      </section>
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-white mb-2">
-            </h2>
-            <p className="text-gray-400">
-              {filteredServices.length} services found
-            </p>
-          </div>
-          {viewMode === 'grid' ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {sortedServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
-                >
-                  {/* Popular Badge */  } catch (error) {
+            {/* Category Filter */}
+                value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            <div className="flex items-center space-x-4">
-              <MapPin className="w-5 h-5 text-white" />
-              <span className="text-white text-sm">{contactInfo.address}</span>
+                onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              />
             </div>
+            {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
@@ -552,8 +448,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                       <span className="text-sm text-gray-400 font-normal">{service.period}</span>
                     </div>
                     <div className="flex items-center space-x-1">
@@ -562,8 +456,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                       <span className="text-xs text-gray-500">({service.reviews})</span>
                     </div>
                   </div>
-
-
                   <div className="mb-4">
                     <div className="text-sm text-gray-400 mb-2">Key Features:</div>
                     <div className="space-y-1">
@@ -572,15 +464,10 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                           <CheckCircle className="w-3 h-3 text-green-400" />
                           <span>{feature}</span>
                         </div>
-
-
                   <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
                     <span className="bg-white/10 px-2 py-1 rounded">{service.category}</span>
                     <span>Setup: {service.setupTime}</span>
                   </div>
-                      href={service.link}
-
-
                   {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -593,8 +480,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                       className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
                     >
                       Learn More
@@ -608,8 +493,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-6">
                     <div className="text-center w-full">
                       <p className="text-white text-sm mb-3 line-clamp-3">{service.description}</p>
@@ -619,8 +502,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                         className="inline-flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors"
                       >
                         <span>View Details</span>
@@ -673,8 +554,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-3">
                         <div>
@@ -712,8 +591,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                         </div>
                         <div className="flex space-x-2">
                           <Link
-
-
                             className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
                           >
                             Learn More
@@ -871,8 +748,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-    </Layout>);
 }
 
 

@@ -1,8 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { readJson, writeJson } from '../../../utils/fsDb',;
-;
-
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const requests = readJson<any[]>('support/requests.json', [])
@@ -55,9 +50,10 @@ if ( {) {
     return res.status (200).json ({ requests });
   }
 }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-}
-}
-;
 
 

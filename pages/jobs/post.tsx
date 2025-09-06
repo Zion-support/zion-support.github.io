@@ -93,9 +93,6 @@ const PostJob: NextPage = () => {
             <EnhancedButton type="submit">Post Job</EnhancedButton>
           </div>
         </form>
-
-
-
           {preview ? (
             <div className="space-y-2">
               <div>
@@ -218,7 +215,4 @@ import EnhancedButton from '../../components / ui / EnhancedButton';
     </div>);
 }
 ;
-
-
-
 export default PostJob;

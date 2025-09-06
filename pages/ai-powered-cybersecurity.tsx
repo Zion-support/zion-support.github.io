@@ -1,6 +1,3 @@
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIPoweredCybersecurityPage() {
 
 
 class ErrorBoundary extends React.Component {
@@ -100,10 +97,6 @@ export default function AIPoweredCybersecurityPage() {
 		</>
 	)
 }
-
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIPoweredCybersecurityPage() {
 
   return (
     <>;

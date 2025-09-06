@@ -1,8 +1,6 @@
 
 
 
-
-
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -36,6 +34,10 @@ const signupSchema = z
       .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   // Initialize react-hook-form
   const form = useForm({
     resolver: zodResolver(signupSchema)
@@ -136,19 +138,21 @@ if ( {) {
   return (
     <>;
       <Header />;
-                Create your account;
-              </h2>;
-              <p className="mt-2 text-sm text-zion-slate-light">;
-                Already have an account?{" "}
                   Sign in;
                 </Link>;
               </p>;
             </div>;
-
-
-
+                            <Input
+                              placeholder="John Doe"
+                              className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              {...field}
+                            />;
+                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+                          </div>;
+                        </FormControl>;
+                        <FormMessage className="text-red-400" />;
+                      </FormItem>;
                     )}
-                  />
                   <FormField
                     control={form && form.control}
                     name="email"
@@ -179,7 +183,7 @@ if ( {) {
                           <div className="relative">;
                             <Input
                               type={showPassword ? "text" : "password"}
-                              placeholder=""
+                              placeholder="••••••••"
                               className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple"
                               {...field}
                               autoComplete="new-password"
@@ -197,7 +201,6 @@ if ( {) {
                               {...field}
                               autoComplete="new-password";
                             />;
-                            <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                             <Button;
                               type="button";
                               variant="ghost";
@@ -205,41 +208,6 @@ if ( {) {
                               className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan";
                               onClick={() => setShowPassword(!showPassword)}
                             >;
-                              {showPassword ? (;
-                                <EyeOff className="h-4 w-4" />;
-                      <FormItem>;
-                        <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>;
-                        <FormControl>;
-                          <div className="relative">;
-                            <Input
-                        <FormMessage className="text - red - 400" />;
-                      </FormItem>)}
-                  />;
-                  <FormField;
-                    control={form.control}
-                    name="confirm_password";
-                    render={({ field }) => (
-                      <FormItem>;
-                        <FormLabel className="text - zion - slate - light">Confirm Password</FormLabel>;
-                        <FormControl>;
-                          <div className="relative">;
-                            <Input;
-                              className="bg - zion - blue pl - 10 text - white border - zion - blue - light focus:border - zion - purple";
-                              {...field}
-                              auto_complete="new - password";
-                            />;
-                            <Lock className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
-                            <Button;
-                              type="button";
-                              variant="ghost";
-                              size="sm";
-                              className="absolute right - 1 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 8 hover:text - zion - cyan";
-                              on_click={() => setShowConfirmPassword (!showConfirmPassword)}
-                            >;
-                              {showConfirmPassword ? (
-                                <EyeOff className="h - 4 w - 4" />) : (
-                                <Eye className="h - 4 w - 4" />)}
-                              <span className="sr - only">;
                               </span>;
                             </Button>;
                           </div>;
@@ -266,6 +234,14 @@ if ( {) {
                           <div className="relative">;
                             <Input;
                               type={showConfirmPassword ? "text" : "password"}
+                              placeholder="••••••••";
+                              className="bg - zion - blue pl - 10 text - white border - zion - blue - light focus:border - zion - purple";
+                              {...field}
+                                {showConfirmPassword ? "Hide password" : "Show password"}
+                              </span>;
+                            </Button>;
+                          </div>;
+                        </FormControl>;
                   <FormField
                     control={form && form.control}
                     name="termsAccepted"
@@ -291,11 +267,6 @@ if ( {) {
                     type="button";
                     variant="outline";
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
-                    onClick={() => loginWithGoogle()}
-                    disabled={isLoading || isSubmitting}
-                  >;
-                    <span className="sr-only">Sign in with Google</span>;
-                    <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">;
                     onClick={() => loginWithGoogle()}
                   <Button
                     type="button"

@@ -1,4 +1,3 @@
-
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
@@ -20,9 +19,6 @@ import {
   TableHeader,
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
-
-
-
 export function EnterprisePricingTable() {
 
   const plans = [
@@ -184,9 +180,6 @@ export function EnterprisePricingTable() {;
             <TableHeader>;
               <TableRow>;
                 <TableHead className="w-[200px]">Plan Features</TableHead>;
-
-
-
                       )}
                       <span className="font-bold text-xl">{plan && plan.name}</span>;
                       <div className="flex items-baseline mt-1">;

@@ -35,7 +35,7 @@
         >;
           <div className="text - center space - y-3">;
             <div className="w - 16 h - 16 bg - blue - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition - transform">;
-              <span className="text - 3xl"></span>;
+              <span className="text - 3xl">🚀</span>;
             </div>;
             <h3 className="font - semibold text - white text - lg">Launch New Instance</h3>;
             <p className="text - zinc - 400 text - sm">;
@@ -49,7 +49,7 @@
         >;
           <div className="text - center space - y-3">;
             <div className="w - 16 h - 16 bg - purple - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition - transform">;
-              <span className="text - 3xl"></span>;
+              <span className="text - 3xl">⚙️</span>;
             </div>;
             <h3 className="font - semibold text - white text - lg">Manage Instances</h3>;
             <p className="text - zinc - 400 text - sm">;
@@ -63,7 +63,7 @@
         >;
           <div className="text - center space - y-3">;
             <div className="w - 16 h - 16 bg - green - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition - transform">;
-              <span className="text - 3xl"></span>;
+              <span className="text - 3xl">📚</span>;
             </div>;
             <h3 className="font - semibold text - white text - lg">Documentation</h3>;
             <p className="text - zinc - 400 text - sm">;

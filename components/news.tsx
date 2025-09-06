@@ -6,35 +6,6 @@
   title: 'Cybersecurity Partnership with Global Tech Leaders';
 excerpt: 'Strategic collaboration to advance AI - powered threat detection and response systems.';
 author: 'Partnerships Team';
-
-const categories = [ {;
-  id: 'all', name: 'All News', icon: Newspaper, count: 45 ;
-};
-{;
-  id: 'ai', name: 'AI & Technology', icon: Brain, count: 18 ;
-};
-{;
-  id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 12 ;
-};
-{;
-  id: 'space', name: 'Space Technology', icon: Rocket, count: 8 ;
-};
-{;
-  id: 'security', name: 'Cybersecurity', icon: Shield, count: 7 ;
-}];
-const years = [ {
-  id: 'all', name: 'All Years'
-}
-{
-  id: '2025', name: '2025'
-}
-{
-  id: '2024', name: '2024'
-}
-{
-  id: '2023', name: '2023'
-}];
-TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
 date: '2025 - 01 - 10';
 const [search_query, setSearchQuery] = useState ('');
 const [selected_category, setSelectedCategory] = useState ('all');
@@ -70,47 +41,6 @@ TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
 Clock, BookOpen, Video, Podcast, FileText, Search;
 }from 'lucide-react';
 return (<UltraFuturisticBackground> <div className="min - h-screen" > <Head> <title > News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title> <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." /> </Head> id: 1;
-};
-
-{
-  title: 'Cybersecurity Partnership with Global Tech Leaders';
-excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.';
-author: 'Partnerships Team';
-date: '2025-01-10';
-const [searchQuery, setSearchQuery] = useState ('');
-const [selectedCategory, setSelectedCategory] = useState ('all');
-const [selectedYear, setSelectedYear] = useState ('all');
-const categories = [ {
-  id: 'all', name: 'All News', icon: Newspaper, count: 45
-}
-{
-  id: 'ai', name: 'AI & Technology', icon: Brain, count: 18
-}
-{
-  id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 12
-}
-{
-  id: 'space', name: 'Space Technology', icon: Rocket, count: 8
-}
-{
-  id: 'security', name: 'Cybersecurity', icon: Shield, count: 7
-}];
-const years = [ {
-  id: 'all', name: 'All Years'
-}
-{
-  id: '2025', name: '2025'
-}
-{
-  id: '2024', name: '2024'
-}
-{
-  id: '2023', name: '2023'
-}];
-TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
-Clock, BookOpen, Video, Podcast, FileText, Search
-}from 'lucide-react';
-return (<UltraFuturisticBackground> <div className="min-h-screen" > <Head> <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title> <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." /> </Head> id: 1;
 title: "Zion Tech Group Launches Revolutionary Quantum AI Platform";
 excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.";
 category: "Product Launch";
@@ -158,6 +88,51 @@ export default function News () {
   Search, Calendar, Clock, User, Tag;
 ArrowRight, ExternalLink, TrendingUp;
 BookOpen, Globe, Video
+date: "2025 - 01 - 15";
+read_time: "5 min read";
+image: "/images / news / quantum - ai - launch.jpg";
+tags: ["Quantum Computing", "AI", "Product Launch" ];
+}
+export default /**
+ * News - Function description
+ */
+function News() {
+  const featured_news = [ {
+  export default /**
+ * NewsPage - Function description
+ */
+function NewsPage() {
+  const news_articles = [ {
+  </div> </section> {
+  /* Featured Article */;
+}> <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6" > Featured Story </h2> </motion.div> <motion.div <span key= {
+  tag;
+}className="bg - gray - 800 / 50 text - gray - 300 text - sm px - 3 py - 1 rounded - full border border - gray - 700 / 50" > {
+  tag;
+}</span>) );
+}</div> <Link > Read Full Article <ArrowRight className="w - 5 h - 5 ml - 2" /> </a> </div> <div className="relative h - 64 lg:h - auto" > <div className="absolute inset - 0 bg - gradient - to - br from - purple - 900 / 50 to - blue - 900 / 50 flex items - center justify - center" > <Newspaper className="w - 24 h - 24 text - purple - 400" /> </div> </div> </div> </motion.div> </div> </section>);
+}<button key= {
+  category.name;
+}className= {
+  `px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 $ {
+  category.active ? 'bg - gradient - to - r from - purple - 500 to - blue - 600 text - white' : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50 border border - gray - 700 / 50';
+}`;
+}> </button>) );
+}</div> </section>);
+}> <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6" > Latest News </h2> <p className="text - xl text - gray - 400 max - w-3xl mx - auto" > Stay updated with our latest developments and breakthroughs </p> </motion.div> > <div className="relative h - 48 bg - gradient - to - br from - purple - 900 / 30 to - blue - 900 / 30 flex items - center justify - center" > <Newspaper className="w - 16 h - 16 text - purple - 400" /> </div> <span key= {
+  tag;
+}className="bg - gray - 800 / 30 text - gray - 400 text - xs px - 2 py - 1 rounded - full border border - gray - 700 / 30" > {
+  tag;
+}</span>) );
+}</div> <Link > Read More <ArrowRight className="w - 4 h - 4 ml - 1" /> </a> </div> <section className="py - 20 px - 4 sm:px - 6 lg:px - 8" > <div className="max - w-7xl mx - auto" > <motion.div > <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - blue - 500 / 20 to - cyan - 500 / 20 border border - blue - 500 / 30 text - blue - 300 text - sm font - medium mb - 6" > <Newspaper className="w - 4 h - 4 mr - 2" /> <section className="relative py - 20 px - 4" > <div className="container mx - auto max - w-6xl" > <motion.div > <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - blue - 400 via - indigo - 500 to - purple - 600 bg - clip - text text - transparent mb - 6" > Latest News & Updates </div> <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - blue - 400 via - cyan - 400 to - indigo - 400 bg - clip - text text - transparent mb - 6" > News & Press </h1> <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed" > Stay updated with the latest developments, breakthroughs, and innovations from Zion Tech Group and the technology industry. </p> </motion.div> > {
+  categories.map ( (category, index) => (<button key= {
+  category;
+}import {
+  {
+  {
+  Search, Calendar, Clock, User, Tag;
+ArrowRight, ExternalLink, TrendingUp;
+BookOpen, Globe, Video;
 }from 'lucide-react';
 import Link from 'next / link';
 export default /**
@@ -167,23 +142,6 @@ function News() {
   const [search_term, setSearchTerm] = useState ('');
 const [selected_category, setSelectedCategory] = useState ('all');
 const categories = [ {
-  id: 'all', name: 'All News', count: 24
-}
-{
-  id: 'ai', name: 'AI & Consciousness', count: 8
-}
-{
-  id: 'quantum', name: 'Quantum Computing', count: 6
-}
-{
-  id: 'enterprise', name: 'Enterprise IT', count: 5
-}
-{
-  id: 'research', name: 'Research & Development', count: 3
-}
-{
-  id: 'industry', name: 'Industry Insights', count: 2
-}];
   id: 1;
 title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform';
 excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.';
@@ -215,11 +173,6 @@ title: 'Quantum Machine Learning: Bridging Two Revolutionary Technologies';
 excerpt: 'Our research team explores the intersection of quantum computing and machine learning, revealing exciting possibilities for the future.';
 category: 'quantum';
 author: 'Dr. Elena Petrova';
-date: '2024-01-03';
-readTime: '8 min read';
-image: '/images/news/quantum-ml.jpg';
-tags: ['Quantum MLResearchTechnology Convergence']
-}];
   id: 7;
 title: 'The Rise of Conscious AI: Ethical Considerations and Business Impact';
 excerpt: 'Examining the ethical implications of AI consciousness and how businesses can navigate this new frontier responsibly.';
@@ -278,15 +231,8 @@ type: 'Workshop';
   opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.6, delay: 0.8
-}> <h2 className="text-4xl font-bold mb-6" >Stay Updated</h2> <p className="text-xl text-gray-400 mb-8" > Subscribe to our newsletter for the latest news, insights, and technology updates </p> <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto" > <input type="email" placeholder="Enter your email" className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50" /> <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300" > Subscribe </button> </div> </motion.div> </div> </motion.article>) )
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-4" > News Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore news by category to find updates in your areas of interest. </p> </motion.div> </motion.div>) )
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-4" > Recent News </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Stay updated with our latest announcements and developments. </p> </motion.div> </div> </div> </motion.article>) )
-}</div> </div> </section> <motion.div initial= {
-  {
 }transition= {
   {
-  duration: 0.8
 }viewport= {
   {
   once: true
@@ -306,6 +252,8 @@ type: 'Workshop';
   {
   opacity: 0, y: 20
 }whileInView= {
+  {
+}transition= {
   {
 description: 'Hands - on workshop covering quantum computing fundamentals and practical applications.';
 registration: 'https://ziontechgroup.com / events / quantum - workshop';
@@ -416,7 +364,7 @@ author: "Sarah Chen";
 }
 }
 {
-image: "" ;
+image: "🤝" ;
 };
 };
 {;
@@ -428,7 +376,7 @@ category: "Sustainability";
 author: "Lisa Park";
 }
 {
-image: "" ;
+image: "🌱" ;
 };
 {;
   id: 7;
@@ -439,7 +387,7 @@ category: "Case Studies";
 author: "Alex Thompson";
 }
 {
-image: "" ;
+image: "📊" ;
 };
 {;
   id: 8;
@@ -448,17 +396,6 @@ excerpt: "Published in leading AI journal, our research explores the future of s
 date: "2025 - 01 - 12";
 category: "Research";
 author: "Prof. Maria Garcia";
-}];
-min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className=" container mx-auto px-6 py-12"> <section className=" text-center mb-16"> <h1 className=" text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> Latest News </h1> > {
-  category
-}</button>) )
-}</div> <span></span> <span> {
-  article.date
-}</span> <span></span> <span> {
-  article.readTime
-}</span> </div> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read Full Article </button> </div> </div> </div>) )
-}</div> <button className=" w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read More </button> </article>) )
-}</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>)       {/* Latest News Section */}
       {/* Upcoming Events Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -467,8 +404,11 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.h2 
 
-          <motion.h2 
 
+      {/* Upcoming Events Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -534,23 +474,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
-            className="text-4xl md:text-5xl font-bold text-center mb-16">;
-            Upcoming Events;
-          </motion && motion.h2>;
-          <div className="grid md:grid-cols-2 gap-8">;
-            {upcomingEvents && upcomingEvents.map((event, index) => (;
-              <motion&& motion.div
-                key={event && event.id}
-
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -572,6 +495,14 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
                       </div>;
                     </div>;
 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
                     <a
                       href={event && event.registration}
                       target="_blank"
@@ -584,7 +515,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
                 </div>;
               </motion && motion.div>;
             ))}
-
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -624,7 +554,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
                   </button>;
                 </motion && motion.article>;
               ))}
-
         {/* Newsletter Signup */}
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
                 Stay Updated;
@@ -740,13 +669,11 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
       id: 3
       title: "AI Ethics Guidelines Released for Responsible Development"
       excerpt: "Comprehensive framework ensuring our AI solutions are developed with transparency, fairness, and societal benefit in mind.";
-    }
-  ];
       date: "2025 - 01 - 17",
       category: "Innovation",
       author: "Dr. Emily Watson",
       read_time: "4 min read",
-      image: "";
+      image: "⚖️";
     }
     {
       id: 4,
@@ -756,7 +683,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
       category: "Company News",
       author: "Marcus Rodriguez",
       read_time: "2 min read",
-      image: "";
+      image: "🌏";
     }
     {
       id: 5,
@@ -766,7 +693,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
       category: "Technology",
       author: "Dr. James Wilson",
       read_time: "5 min read",
-      image: "";
+      image: "🧠";
     }
     {
       id: 6,
@@ -776,7 +703,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
       category: "Sustainability",
       author: "Lisa Park",
       read_time: "6 min read",
-      image: "";
+      image: "🌱";
     }
     {
       id: 7,
@@ -786,7 +713,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
       category: "Case Studies",
       author: "Alex Thompson",
       read_time: "4 min read",
-      image: "";
+      image: "📊";
     }
     {
       id: 8,
@@ -796,7 +723,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
       category: "Research",
       author: "Prof. Maria Garcia",
       read_time: "7 min read",
-      image: "";
+      image: "📚";
     }
   ];
 ;
@@ -808,8 +735,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
         <meta property="og:description" content="Latest company news, partnerships, and technology insights." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-
-
 
 
             {/* Featured Article */}
@@ -834,9 +759,9 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
                     </p>;
                     <div className="flex items-center gap-4 text-sm text-white/60 mb-4">;
                       <span>By {article && article.author}</span>;
-                      <span></span>;
+                      <span>•</span>;
                       <span>{article && article.date}</span>;
-                      <span></span>;
+                      <span>•</span>;
                       <span>{article && article.readTime}</span>;
                     </div>;
                     <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">;
@@ -887,9 +812,9 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
                     </p>;
                     <div className="flex items - center gap - 4 text - sm text - white / 60 mb - 4">;
                       <span > By {article.author}</span>;
-                      <span></span>;
+                      <span>•</span>;
                       <span>{article.date}</span>;
-                      <span></span>;
+                      <span>•</span>;
                       <span>{article.read_time}</span>;
                     </div>;
                     <button className="px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white font - semibold rounded - lg hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 200">;
@@ -917,7 +842,3 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
           </section>;
         </main>;
       </div>;
-
-  ),
-}
-

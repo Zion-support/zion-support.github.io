@@ -1,13 +1,10 @@
+interface FraudDetectionMiddlewareProps {
 }
 // Interface for the context
 interface FraudDetectionContextType {
   scanMessageContent: (
   children: React.ReactNode;
 }
-
-
-
-
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
 import { toast } from '@/hooks/use-toast',;
@@ -15,9 +12,6 @@ import { supabase } from '@/integrations/supabase/client',;
 // Props for the middleware component;
 interface FraudDetectionMiddlewareProps {;
   children: React.ReactNode;
-
-
-
 }
 ;
 // Interface for the context;
@@ -114,8 +108,6 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         return {;
           isSafe: false,;
           explanation: data.explanation;
-
-
         }
       }
       */
@@ -178,35 +170,16 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     </FraudDetectionContext && FraudDetectionContext.Provider>;
 
 
+      return { isSafe: true }
     } catch (error) {;
-      console.error('Error in fraud detection:', error),;
+      console && console.error('Error in fraud detection:', error);
       // On error, let the message pass through but log the error;
       return { isSafe: true }
     }
-  }, []),;
-  // Create the context value;
-  const contextValue: FraudDetectionContextType = {;
-    scanMessageContent},;
-  return (;
-    <FraudDetectionContext.Provider value={contextValue}>;
+  }, []);
+  return (
+    <FraudDetectionContext && FraudDetectionContext.Provider value={contextValue}>;
       {children}
-    </FraudDetectionContext.Provider>;
-
-  );
-};
-
-// Hook to use the fraud detection context;
-export const useFraudDetection = () => {;
-  const context = React && React.useContext(FraudDetectionContext);
-  if (context === undefined) {;
-    throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
-  }
-  return context;
-
-
-
-
-};
 // Interface for the context;
 interface FraudDetectionContextType {
   scanMessageContent: (

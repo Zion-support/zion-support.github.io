@@ -1,23 +1,19 @@
+}
   id: string;
   title: string;
   description: string;
   image_url?: string;
   tags?: string[];
-
-export interface ProfileExperience {
   id: string;
   role: string;
   company: string;
   description: string;
-export interface Availability {
   status: 'available' | 'limited' | 'unavailable';
-  nextAvailable?: string;
+  next_available?: string;
+  message?: string,
+  available_hours?: { day: string, hours: string }[];
 
-  message?: string
-
-  availableHours?: { day: string, hours: string }[]
 }
-export interface ProfileData {
   id: string;
   name: string;
   title: string;
@@ -33,7 +29,6 @@ export interface ProfileData {
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
-
 ;
 export interface ProfileProject {;
   id: string,;
@@ -82,3 +77,4 @@ export interface ProfileData {;
   contactEmail?: string;
 }
 ;
+}

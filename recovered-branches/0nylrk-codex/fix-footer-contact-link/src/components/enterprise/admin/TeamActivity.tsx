@@ -1,12 +1,9 @@
-
-
   Table
   TableBody
   TableCell
   TableHead
   TableHeader
   TableRow
-
   Table,
   TableBody,
   TableCell,
@@ -17,19 +14,6 @@ TableRow,;
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-export function TeamActivity() {
-  // Mock activity data
-
-      id: 6
-      user: "Jamie Smith"
-      action: "Updated budget"
-      target: "Monthly spending cap"
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3)
-      category: "billing"
-    }
-
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
@@ -37,7 +21,6 @@ export function TeamActivity() {
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
       category: "billing",
     },;
-  ];
   ];
   // Function to format the date in a readable way
   const formatDate = (date: Date) => {
@@ -76,7 +59,6 @@ export function TeamActivity() {
 
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
   },
-
 
   return (
     <div className="space-y-6">;
@@ -216,9 +198,9 @@ export function TeamActivity() {;
         <Button variant="outline" size="sm">
           Previous
         </Button>
-        <div className="text-sm text-muted-foreground">Page 1 of 10</div>
         <Button variant="outline" size="sm">
           Next
         </Button>
       </div>
     </div>
+}

@@ -89,6 +89,17 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
   setStatusFilter;
   archive_filter;
   setArchiveFilter;
+
+  setDateRange
+  searchQuery,
+  setSearchQuery,
+  statusFilter,
+  setStatusFilter,
+  archiveFilter,
+  setArchiveFilter,
+  dateRange,
+  setDateRange,
+  onReset
   date_range;
   setDateRange,
   on_reset;
@@ -101,7 +112,6 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
 
   onReset;
 }) => {;
-  return (
     <Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">;
       <CardContent className="p-6">;
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">;
@@ -115,23 +125,21 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
               </SelectContent>;
             </Select>;
           </div>;
-          ;
-          <div>;
-            <p className="text-zion-slate-light text-sm mb-2">Archive</p>;
-            <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>;
-              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
-                <SelectValue placeholder="Archive Status" />;
-              </SelectTrigger>;
-              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
                 <SelectItem value="active">Active Only</SelectItem>;
                 <SelectItem value="archived">Archived Only</SelectItem>;
                 <SelectItem value="all">All Quotes</SelectItem>;
               </SelectContent>;
             </Select>;
           </div>;
-
-
-
+                    );
+                  ) : (;
+                    <span>Date range</span>;
+                  )}
+                </Button>;
+              </PopoverTrigger>;
+              <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">;
+                <CalendarComponent
+                  initialFocus
                   mode="range"
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
@@ -179,8 +187,3 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
             </Popover>;
           </div>;
         </div>;
-          >;
-            <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters;
-          </Button>;
-        </div>;
-      </CardContent>;

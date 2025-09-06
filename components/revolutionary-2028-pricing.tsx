@@ -75,81 +75,6 @@ import {
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
   Crown, Award, Target, Users, Clock, Globe2
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  TrendingUp,;
-  Phone,;
-  Zap,;
-  DollarSign,;
-  Shield,;
-  Mail,;
-  MapPin,;
-  Rocket,;
-  Brain,;
-  Sparkles,;
-  Globe,;
-  Atom,;
-  Heart,;
-  Leaf,;
-  Car,;
-  GraduationCap,;
-  Scale,;
-  Building,;
-  Factory,;
-  Camera,;
-  Video,;
-  Music,;
-  Gamepad2,;
-  Crown,;
-  Award,;
-  Target,;
-  Users,;
-  Clock,;
-  Globe2,;} from 'lucide-react';import { ;
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
-  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
-  Building, Factory, Camera, Video, Music, Gamepad2;
-  Crown, Award, Target, Users, Clock, Globe2;
-
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-
 const pricingTiers = [
   {
     name: 'Starter'
@@ -203,11 +128,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 const contactInfo = {
 const pricingTiers = [
   {
-    name: 'Starter'
-    price: '$299'
-    period: '/month'
-    description: 'Perfect for small businesses and startups'
-    features: [
     ];
     popular: false
     color: 'from-blue-600 to-cyan-600'
@@ -288,20 +208,18 @@ const contactInfo = {;
     cta: 'Contact Sales',
     href: '/contact';
   }
-  {
-    category: ' Quantum & Advanced Tech'
     services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
   }
   {
-    category: ' AI & Machine Learning'
+    category: '🤖 AI & Machine Learning'
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
 const service_pricing = [;
   {
-    category: ' 2028 Futuristic Innovations',
+    category: '🚀 2028 Futuristic Innovations',
     services: futuristic2028Services.slice (0, 6),
   },
   {
-    category: ' Smart City & Infrastructure',
+    category: '🏙️ Smart City & Infrastructure',
     services: emergingTech2028Services;
       .filter (
         string =>;
@@ -310,26 +228,26 @@ const service_pricing = [;
       .slice (0, 4),
   },
   {
-    category: ' Quantum & Advanced Tech',
+    category: '⚛️ Quantum & Advanced Tech',
     services: futuristic2028Services;
       .filter (string => s.category.includes ('Quantum'));
       .slice (0, 4),
   },
   {
-    category: ' AI & Machine Learning',
+    category: '🤖 AI & Machine Learning',
     services: emergingTech2028Services;
       .filter (string => s.category.includes ('AI'));
       .slice (0, 4),
   }, ];  {
-    category: ' Smart City & Infrastructure',
+    category: '🏙️ Smart City & Infrastructure',
     services: emergingTech2028Services.filter (string => s.category.includes ('Smart City') || s.category.includes ('Infrastructure')).slice (0, 4);
   }
   {
-    category: ' Quantum & Advanced Tech',
+    category: '⚛️ Quantum & Advanced Tech',
     services: futuristic2028Services.filter (string => s.category.includes ('Quantum')).slice (0, 4);
   }
   {
-    category: ' AI & Machine Learning',
+    category: '🤖 AI & Machine Learning',
     services: emergingTech2028Services.filter (string => s.category.includes ('AI')).slice (0, 4);
   }
   return (
@@ -339,7 +257,6 @@ const service_pricing = [;
         <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2028-pricing" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2028-pricing" />
-      <UltraFuturisticNavigation2028 />
           href='https://ziontechgroup && ziontechgroup.com/revolutionary-2028-pricing'
         />      </Head>        <meta name="description" content="Competitive pricing for our cutting-edge 2028 services. Transparent pricing with flexible plans for AI, quantum computing, and futuristic technology solutions." />;
         <meta name="keywords" content="2028 pricing, AI services pricing, quantum computing pricing, technology pricing, Zion Tech Group pricing" />;
@@ -348,19 +265,15 @@ const service_pricing = [;
         <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/revolutionary-2028-pricing" />;
         <meta property="og:type" content="website" />;
         <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/revolutionary-2028-pricing" />;
-
-      <UltraFuturisticNavigation2028 />;
                 className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'>;
                 <span>View Services</span>;
                 <Rocket className='w-5 h-5' />              </Link>;
             </div>;
-
             {/* Pricing Stats */}          >;
             <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">;
               <DollarSign className="w-4 h-4" />;
               <span>Transparent Pricing</span>;
             </div>;
-
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">;
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">;
                 Revolutionary;
@@ -368,13 +281,10 @@ const service_pricing = [;
               <br />;
               <span className="text-white">2028 Pricing</span>;
             </h1>;
-
             <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed">;
               Experience cutting-edge technology at competitive prices. Our transparent pricing model ;
               ensures you get maximum value for your investment in the future.;
             </p>;
-
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
               <Link
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2">;
@@ -400,13 +310,11 @@ const service_pricing = [;
               small and grow with us.;
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingTiers && pricingTiers.map((tier, index) => (            </h2>;
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">;
               Flexible pricing plans designed to scale with your business. Start small and grow with us.;
             </p>;
           </div>;
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {pricingTiers && pricingTiers.map((tier, index) => (;
               <motion&& motion.div
@@ -415,6 +323,8 @@ const service_pricing = [;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+                      ))}
+                    </ul>;
 
                     <Link
                       href={tier && tier.href}
@@ -426,26 +336,39 @@ const service_pricing = [;
               </motion && motion.div>;
             ))}
       {/* Service Pricing */}
-
+      <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Service{' '}
+              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
+                Pricing
+              </span>
+            </h2>
+            <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
+              Detailed pricing for our individual services. Mix and match to
+              create your perfect solution.            </p>
+          </div>
+          {servicePricing.map((category, categoryIndex) => (      <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Service <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Pricing</span>
+            </h2>
+            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+              Detailed pricing for our individual services. Mix and match to create your perfect solution.
+          </div>
+          {servicePricing.map((category, categoryIndex) => (
+            <div key={category.category} className='mb-16'>
+              <h3 className='text-3xl font-bold text-white mb-8 text-center'>
+                {category.category}
+              </h3>
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+                {category.services.map((service, serviceIndex) => (
+                  <motion.div
+                    key={service.id}
 
                     initial={{
-
-                      opacity: 0,
-                      coordinate_x: service_index % 2 === 0 ? -30 : 30,
-                    }}
-                    whileInView={{ opacity: 1, coordinate_x: 0 }}
-                    transition={{ duration: 0.6, delay: service_index * 0.1 }}
-                    viewport={{ once: true }}
-                    className='group relative';
-                  >;
-                    <div className='relative p - 6 bg - black / 40 backdrop - blur - sm border border - purple - 500 / 30 rounded - xl hover:border - purple - 500 / 60 transition - all duration - 300 hover:transform hover:scale - 105'>;
-                      <div className='absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - blue - 500 / 5 rounded - xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300'></div>;
-                      <div className='relative z - 10'>;
-                        <div className='flex items - start justify - between mb - 4'>;
-                          <div className='text - 3xl'>{service.icon}</div>;
-                          <div className='text - right'>;
-                            <div className='text - xl font - bold text - purple - 400'>;
-
                               {service.price}
                             </div>;
                             <div className='text - sm text - purple - 300'>;
@@ -458,8 +381,6 @@ const service_pricing = [;
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
                     viewport={{ once: true }}
-
-
                           <Link
                             href={service.link}
                             className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-sm"
@@ -493,6 +414,7 @@ const service_pricing = [;
 
 
 
+
       {/* Value Proposition */}
 
 
@@ -503,6 +425,12 @@ const service_pricing = [;
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div            </h2>
+      {/* Value Proposition */}
+      <section className='py-20 bg-black/50'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='text-center mb-16'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+              Why Choose{' '}
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               We offer the best value in the market with transparent pricing and unmatched features.
             </p>
@@ -609,13 +537,10 @@ const service_pricing = [;
 
 
 
-
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
-
 
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
@@ -658,13 +583,10 @@ const service_pricing = [;
               <div className="text-3xl font-bold text-green-400">30%</div>;
               <div className="text-purple-300">Lower than Market</div>;
             </motion && motion.div>;
-
-            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               viewport={{ once: true }}
-
 
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
@@ -681,7 +603,6 @@ const service_pricing = [;
               <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>
               <p className="text-blue-300 mb-6">
                 Transparent pricing with no surprise fees. What you see is what you pay
-
                 with clear value for every dollar.
               </p>
               <div className="text-3xl font-bold text-blue-400">100%</div>
@@ -708,13 +629,10 @@ const service_pricing = [;
               <div className="text-3xl font-bold text-blue-400">100%</div>;
               <div className="text-blue-300">Transparent Pricing</div>;
             </motion && motion.div>;
-
-            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
               viewport={{ once: true }}
-
 
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
@@ -747,7 +665,6 @@ const service_pricing = [;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -886,7 +803,11 @@ const service_pricing = [;
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-}
+                Get Started;
+              </span>;
+              ?;
+            </h2>;
+  );
     </>;
 );
 }

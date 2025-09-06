@@ -30,8 +30,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       existing.status = action === 'apply' ? 'applied' : 'skipped'
       writeJsonFile<Application[]>(FILE, apps)
       res.status(200).json({ application: existing })
-
-
       return
     }
     const app: Application = {

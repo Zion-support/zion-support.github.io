@@ -3,12 +3,10 @@ import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
-
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {;
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
+  if (req && req.method !== 'POST') {
+    res && res.setHeader('Allow', 'POST');
+    return res && res.status(405).json({ error: 'Method not allowed' });
   }
   try {
     const seedTopics = [

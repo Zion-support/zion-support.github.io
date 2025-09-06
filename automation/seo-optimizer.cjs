@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -197,10 +198,13 @@ console.log(' SEO Optimizer Starting...\n')
  * SEO Optimizer
  * Automatically optimizes SEO for the application
  */
+=======
+>>>>>>> origin/main
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 class SEOOptimizer {
   constructor() {
@@ -474,18 +478,24 @@ class SEOOptimizer {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
   optimizer.start().catch(console.error);
 }
+module.exports = SEOOptimizer;
 
 module.exports = SEOOptimizer;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+>>>>>>> origin/main
 
 =======
 =======
@@ -493,6 +503,7 @@ module.exports = SEOOptimizer;
 // Run SEO optimization
 const optimizer = new SEOOptimizer();
 optimizer.optimizeSEO().catch(console.error);
+<<<<<<< HEAD
 >>>>>>> origin/main
 <<<<<<< HEAD
 =======
@@ -508,3 +519,5 @@ optimizer.optimizeSEO().catch(console.error);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

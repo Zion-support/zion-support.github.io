@@ -84,9 +84,6 @@ export interface UserDetails {
   headline?: string;
   profile_complete?: boolean;
   role?: string;
-
-
-
 }
 ;
 export interface AuthContextType {;
@@ -131,9 +128,6 @@ export interface AuthContextType {;
 
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth
-  const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
-    // This would be replaced with actual Supabase auth
-    console.log("Sign up attempted with:", email, userData);
       companyId: "company-123"
     }),
     return { error: null }
@@ -468,7 +462,6 @@ if ( {) {
       console && console.warn("No wallet detected");
       return;
     }
-      });
     } catch (err) {
       console.error ('Web3 login failed', err);
     }
@@ -495,14 +488,4 @@ export function useAuth(): any (): AuthContextType {;
   }
   return context;
 }
-// Custom hook to use the auth context;
-export function use_auth (): AuthContextType {
-  const context = useContext (AuthContext);
-  // Check condition
-if ( {) {
-  $2
-}
-    throw new Error ("use_auth must be used within an AuthProvider");
-  }
-  return context;
-}
+;

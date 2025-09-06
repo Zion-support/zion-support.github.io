@@ -71,6 +71,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { read_json, write_json } from '../../../utils / fs_db',
 ;
@@ -103,9 +104,5 @@ if ( {) {
   return res.status (200).json ({ ok: true, id });
 }
 ;
-}
-}
-}
-}
 
 

@@ -1,5 +1,3 @@
-
-
 import React from 'react',;
 import ReactMarkdown from 'react-markdown',;
 import { useRouter } from 'next/router',;
@@ -89,8 +87,11 @@ if ( {) {
   $2
 }
   }
-    tags: post.tags || []},
-  const body = (post as any).body || post.content;
+  const articleLd = {
+    author: post.author.name
+    publishedTime: post.publishedDate
+    tags: post.tags |[]}
+  const body = (post as any).body |post.content
   return (
     <>;
       <AdvancedSEO;
@@ -101,8 +102,6 @@ if ( {) {
           <img;
             src={post.author.avatar_url}
             alt={post.author.name}
-
-
             className="w-10 h-10 rounded-full"
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement
@@ -118,16 +117,11 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           </div>
         </div>
         {post.featuredImage && (
           <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
             <img
-              alt={post.title}
-
-
               src={post.featuredImage  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -138,13 +132,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               className="object-cover w-full h-full"
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
-
 
               }  } catch (error) {
     console.error("Error:", error);

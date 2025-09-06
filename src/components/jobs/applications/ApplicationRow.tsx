@@ -1,8 +1,10 @@
+
 interface ApplicationRowProps {
-  application: JobApplication;
-  processing_id: string | null;
-  onViewApplication: (application_id: string) => Promise < void>;
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (
+
 export function ApplicationRow({
 
   application
@@ -12,6 +14,9 @@ export function ApplicationRow({
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
+
+  const talentName = application.talent_profile?.full_name || 'Unknown'
+
 import { formatDistanceToNow } from 'date-fns';
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -51,6 +56,9 @@ export function ApplicationRow(): any ({;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 
+
+  const talentName = application.talent_profile?.full_name || 'Unknown'
+
   return (
   const talentName = application.talent_profile?.full_name |'Unknown'
 
@@ -66,12 +74,16 @@ export function ApplicationRow(): any ({;
                 height={36} // Corresponds to h-9 w-9
                 className='rounded-full object-cover' // Ensure rounded and object-cover
                 onError={() => setAvatarError(true)}
+            ) : (
+              <User className="h-5 w-5 text-gray-400" />
+            )}
+          </AvatarPrimitive>
+          <div>
             </div>
           </div>
         </div>
       </TableCell>
       <TableCell>
-
         </div>
       </TableCell>
       <TableCell>

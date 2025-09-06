@@ -54,10 +54,6 @@ export default function Home() {
           </button>
         </div>
       </div>
-    )
-  }
-
-
     ),
   };
   return (;
@@ -86,87 +82,6 @@ export default function Home() {
         <meta name="twitter:creator" content="@ziontechgroup" />;
         <script;
           type="application/ld+json";
-
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect, Suspense } from 'react';
-import { ContactInfo, AnimationState } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-
-import PerformanceMonitor from '../components/PerformanceMonitor';
-export default function Home() {;
-  const [animationState, setAnimationState] = useState<AnimationState>({;
-    isLoaded: false,;
-    hasError: false;
-
-  });
-  useEffect(() => {;
-    const timer = setTimeout(() => {;
-      setAnimationState(prev => ({ ...prev, isLoaded: true }));
-    }, 100);
-    return () => clearTimeout(timer);
-  }, []);
-  if (animationState && animationState.hasError) {;
-    return (
-
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center">;
-        <div className="text-center text-white">;
-          <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>;
-          <button
-            onClick={() => window && window.location.reload()} ;
-            className="px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700";
-import Link from 'next / link';
-import Head from 'next / head';
-import {useState, useEffect, Suspense} from 'react';
-import {ContactInfo, AnimationState} from '../types';
-import ErrorBoundary from '../components / ErrorBoundary';
-import LoadingSpinner from '../components / LoadingSpinner';
-import PerformanceMonitor from '../components / PerformanceMonitor';
-export default /**
- * Home - Function description
- */
-function Home() {
-  const [animation_state, setAnimationState] = useState < AnimationState>({
-    is_loaded: false,
-    has_error: false;
-  });
-  useEffect (() => {
-    const timer = set_timeout (() => {
-      setAnimationState (prev => ({ ...prev, is_loaded: true }));
-    }, 100);
-    return () => clear_timeout (timer);
-  }, []);
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="min - h-screen bg - slate - 950 flex items - center justify - center">;
-        <div className="text - center text - white">;
-          <h1 className="text - 2xl font - bold mb - 4">Something went wrong</h1>;
-          <button;
-            on_click={() => window.location.reload ()}
-            className="px - 4 py - 2 bg - blue - 600 rounded - lg hover: bg - blue - 700";
-
-          >;
-            Reload Page;
-          </button>;
-        </div>;
-
-      </div>),
-  }
-  return (
-    <>
-      <Head>
-        <title>Zion Tech Group - Advanced IT Solutions & AI Services</title>
-        <meta name="description" content="Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for modern businesses." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         {/* Contact Section */}
         <section className="py-16 px-4 bg-slate-900/40">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -177,47 +92,20 @@ if ( {) {
               Get in touch with our experts to discuss your project requirements and discover ;
               how our innovative solutions can drive your business forward.;
             </p>;
-
-            <div className="flex flex - col sm:flex - row items - center justify - center gap - 4 mb - 8">;
-              <a href={`tel:${contact.phone.replace (/[^\d+]/g, '')}`} className="px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 rounded - lg font - semibold transition - colors">;
                 Call {contact.phone}
               </a>;
               <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">;
                 Email {contact.email}
-
               </a>;
               <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">;
                 Contact Form;
               </Link>;
             </div>;
-
-            <div className="text - slate - 400">;
-              <p>{contact.address}</p>;
-              <p className="mt - 2">Visit us at <a href={contact.site} className="text - blue - 400 hover:text - blue - 300">{contact.site}</a></p>;
-
             </div>;
           </div>;
         </section>;
           </main>;
         </Suspense>;
-
-          onThresholdExceeded={(metrics) => {;
-            console && console.warn('Performance thresholds exceeded:', metrics);
-
-        {/* <PerformanceMonitor ;          show_metrics={process.env.NODE_ENV === 'development'}
-          log_metrics={true}
-          onThresholdExceeded={(metrics) => {
-            console.warn ('Performance thresholds exceeded:', metrics);
-
-
-            </div>
-          </div>
-        </section>
-        {/* Services Overview */}
-
-          onThresholdExceeded={(metrics) => {;
-            console.warn('Performance thresholds exceeded:', metrics);
-
           }}
         /> */}
       </ErrorBoundary>;
@@ -232,20 +120,6 @@ export default /**
  */
 function HomePage() {
   return (
-    <div className="min - h-screen bg - gray - 50 flex items - center justify - center">;
-      <div className="text - center">;
-        <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
-          Welcome to Zion Tech Group;
-        </h1>;
-        <p className="text - xl text - gray - 600 mb - 8">;
-
-          Your trusted partner in technology solutions;
-        </p>;
-        <Button size="lg">;
-          Get Started;
-        </Button>;
-      </div>;
-
 
 
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
@@ -371,14 +245,14 @@ function HomePage() {
                   Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li> AI-Powered Video Clip Maker</li>
-                  <li> Smart Contract Analyzer</li>
-                  <li> Cybersecurity Threat Intelligence</li>
-                  <li> Multi-Language Website Translator</li>
-                  <li> Predictive Inventory Optimizer</li>
+                  <li>• AI-Powered Video Clip Maker</li>
+                  <li>• Smart Contract Analyzer</li>
+                  <li>• Cybersecurity Threat Intelligence</li>
+                  <li>• Multi-Language Website Translator</li>
+                  <li>• Predictive Inventory Optimizer</li>
                 </ul>
                 <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">
-                  View All Micro SaaS 
+                  View All Micro SaaS →
                 </Link>
               </div>
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">
@@ -388,14 +262,14 @@ function HomePage() {
                   financial trading systems, legal document analysis, and 40+ more AI-powered services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li> Autonomous AI Agents</li>
-                  <li> AI-Powered Financial Trading</li>
-                  <li> AI Legal Document Analysis</li>
-                  <li> AI-Powered Voice Analytics</li>
-                  <li> AI-Powered Search & Discovery</li>
+                  <li>• Autonomous AI Agents</li>
+                  <li>• AI-Powered Financial Trading</li>
+                  <li>• AI Legal Document Analysis</li>
+                  <li>• AI-Powered Voice Analytics</li>
+                  <li>• AI-Powered Search & Discovery</li>
                 </ul>
                 <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold">
-                  View All AI Services 
+                  View All AI Services →
                 </Link>
               </div>
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">
@@ -405,14 +279,14 @@ function HomePage() {
                   DevSecOps automation, and 40+ more enterprise-grade services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li> Quantum Computing Consulting</li>
-                  <li> Blockchain & Web3 Solutions</li>
-                  <li> DevSecOps & Security Automation</li>
-                  <li> Enterprise Data Platform</li>
-                  <li> High-Performance Computing Solutions</li>
+                  <li>• Quantum Computing Consulting</li>
+                  <li>• Blockchain & Web3 Solutions</li>
+                  <li>• DevSecOps & Security Automation</li>
+                  <li>• Enterprise Data Platform</li>
+                  <li>• High-Performance Computing Solutions</li>
                 </ul>
                 <Link href="/it-services" className="text-green-400 hover:text-green-300 font-semibold">
-                  View All IT Services 
+                  View All IT Services →
                 </Link>
               </div>
             </div>
@@ -457,7 +331,6 @@ function HomePage() {
       </ErrorBoundary>
     </>
   )
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -521,7 +394,6 @@ origin/main
 }
           </div>
 }          </div>
-
         </section>
 
         {/* Services Section */}
@@ -543,8 +415,6 @@ origin/main
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
             </motion.div>
-
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
@@ -569,6 +439,8 @@ origin/main
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
                   <div className="text-4xl mb-4">;
@@ -642,12 +514,9 @@ origin/main
           </div>
         </section>
 
-
-
         {/* Services Preview */}
         <section className="py-20">
             </motion.div>
-
 
         {/* Featured Services */}
         <section className="py-16 bg-white">
@@ -735,9 +604,29 @@ origin/main
           </div>
         </section>
 
+                  </ul>;
+                  <div className="mt-4">;
+                    <span className="text-2xl font-bold text-blue-600">{service && service.price}</span>;
+                  </div>;
+                </motion && motion.div>;
+              ))}
+            </div>;
+          </div>;
+        </section>;
+
+
+
+
+
+
         {/* Why Choose Us */}
 
 
+
+origin/automation-improvements-final
+        {/* Why Choose Us */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
@@ -942,17 +831,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 <Button variant="outline" size="lg">
                   Schedule Consultation
                 </Button>
-
-
-              </div>
-
-                </Link>              </div>
-
-            </motion.div>
-
-
-
-
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold mb-6 gradient-text">Ready to Transform Your Business?</h2>
@@ -1237,14 +1115,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         </section>
           </div>
         </section>
+origin/automation-improvements-final
       </div>
-
     </MainLayout>
   );
 }
       </main>
-    </>
-</main>
     </>
 
 

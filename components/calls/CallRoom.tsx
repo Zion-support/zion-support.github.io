@@ -4,8 +4,6 @@
   LocalParticipant
   createLocalTracks
   VideoPresets;
-
-
   Room,
   RoomEvent,
   RemoteParticipant,
@@ -93,6 +91,23 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     // create local tracks per start mode
     let localTracks: any[] = [];
     if (startMode === 'video') {
+  const [room, setRoom] = useState<Room | null>(null);
+  const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
+  const [connectedAt, setConnectedAt] = useState<number | null>(null);
+  const connect = useCallback(async () => {;
+    const r = new Room();
+    r && r.on(RoomEvent && RoomEvent.ParticipantConnected, () => rebuild());
+    r && r.on(RoomEvent && RoomEvent.ParticipantDisconnected, () => rebuild());
+    r && r.on(RoomEvent && RoomEvent.ActiveSpeakersChanged, () => rebuild());
+    r && r.on(RoomEvent && RoomEvent.LocalTrackPublished, () => rebuild());
+    r && r.on(RoomEvent && RoomEvent.TrackSubscribed, () => rebuild());
+    // create local tracks per start mode;
+    let localTracks: any[] = [];
+    if (startMode === 'video') {;
+      localTracks = await createLocalTracks({;
+        audio: true,;
+        video: VideoPresets && VideoPresets.h720,;
+
       });
     } else {;
       localTracks = await createLocalTracks({ audio: true, video: false });
@@ -135,8 +150,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     const count = participants && participants.length || 1;
     if (count <= 1) return 'grid-cols-1';
     if (count === 2) return 'grid-cols-2';
-  );
-
   Room,
   RoomEvent,
   RemoteParticipant,
@@ -327,5 +340,3 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
       </div>;
     </div>);
 }
-
-

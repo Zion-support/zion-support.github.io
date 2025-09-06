@@ -7,6 +7,7 @@ publish = "dist"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=4096"
 =======
@@ -79,6 +80,10 @@ status = 200
   to = "/.netlify/functions/:splat"
   status = 200
 >>>>>>> pr-12166
+=======
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> origin/main
 
 # Security and caching headers for static assets
 [[headers]]
@@ -108,6 +113,7 @@ status = 200
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
@@ -147,6 +153,15 @@ status = 200
 =======
 # Static redirects for exported site
 >>>>>>> pr-12166
+=======
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Static redirects for specific routes
+>>>>>>> origin/main
 [[redirects]]
 <<<<<<< HEAD
 from = "/ai-customer-success-platform"
@@ -226,6 +241,7 @@ status = 301
 
 [[redirects]]
 <<<<<<< HEAD
+<<<<<<< HEAD
 from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
@@ -271,3 +287,8 @@ status = 301
   to = "/services/affiliate-attribution-suite/"
   status = 301
 >>>>>>> pr-12166
+=======
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+>>>>>>> origin/main

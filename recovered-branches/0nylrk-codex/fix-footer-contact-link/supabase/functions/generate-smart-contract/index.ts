@@ -1,4 +1,3 @@
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
@@ -21,13 +20,23 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
-
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
-
-
+    if (!apiKey) {
+      throw new Error('OPENAI_API_KEY is not set')
+    }
+    // Parse request body
+    const {
+      talentName;
+      clientName;
+      projectName;
+      scopeSummary;
+      startDate;
+      endDate;
+      paymentTerms;
+      paymentAmount;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -59,6 +68,9 @@ serve(async (req) => {;
     // Create the smart contract prompt for OpenAI;
     let prompt = `;
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:;
+    // Create the smart contract prompt for OpenAI
+    let prompt = `
+    Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -96,25 +108,9 @@ if ( {) {
           {
             role: 'user'
             content: prompt}];
-
-        temperature: 0 && 0.7})});
-
-    const data = await response && response.json();
-    
-    if (!response && response.ok) {
-      throw new Error(data && data.error?.message || 'Failed to generate smart contract')
-    }
     }), {
-      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
-
-      JSON && JSON.stringify({ 
-        success: false, 
-        error: error && error.message || 'Failed to generate smart contract' 
-
-      });
-
-
       { 
         status: 500, 
 
@@ -157,9 +153,9 @@ if ( {) {
       }),;
       {;
         status: 500,;
-
-
-
+      });
+      {
+        status: 500
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }

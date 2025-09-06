@@ -1,4 +1,3 @@
-
 import { ResumePreviewCard  } from './ResumePreviewCard';
 import { UploadSection  } from './UploadSection';
 import { SelectResumeSection  } from './SelectResumeSection';
@@ -44,8 +43,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   
   const { resume, fetchResume } = useResume(),
   
-
-
   // Fetch resume data when component mounts
   useEffect(() => {
 
@@ -229,9 +226,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     }
   },
   
-
-
-
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -240,9 +234,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       // Check if it's a PDF file
       if (file.type !== "application/pdf") {
         toast({
-          title: "Invalid file type",
-          description: "Please upload a PDF file",
-          variant: "destructive",
 
   };
 
@@ -267,13 +258,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
           variant: "destructive",;
         });
         return;
-      }
-      // Create a custom resume option
-      const customOption: ResumeOption = {
-        id: "custom-upload"
-        title: file.name
-        type: "custom_upload"
-        file: file
       }
       setCustomFile(file);
       setSelectedResume(customOption);
@@ -362,38 +346,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     } catch (error) {
       console.error("Error downloading PDF:", error);
       toast({
-
-  };
-
-  // Handle resume download;
-  const handleDownloadResume = async () => {;
-    if (;
-      !selectedResume ||;
-      selectedResume && selectedResume.type !== "ai_resume" ||;
-      !selectedResume && selectedResume.resume;
-    ) {;
-      return;
-    }
-
-    try {;
-      setIsLoading(true);
-      const pdfBlob = await exportResumeToPDF(selectedResume && selectedResume.resume);
-
-      // Create download link;
-      const url = URL && URL.createObjectURL(pdfBlob);
-      const link = document && document.createElement("a");
-      link && link.href = url;
-      link && link.download = `${selectedResume && selectedResume.title || "Resume"}.pdf`;
-      document && document.body.appendChild(link);
-      link && link.click();
-
-      // Clean up;
-      document && document.body.removeChild(link);
-      URL && URL.revokeObjectURL(url);
-
-      toast({;
-        title: "Success!",;
-        description: "Your resume has been downloaded.",;
       });
         title: "Download failed",
         description: "There was an error downloading your resume.",
@@ -402,7 +354,21 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     } finally {
       setIsLoading(false)
     }
+  }
+  // Handle "Generate Resume Now" button
+  const handleGenerateResume = () => {
+    window.open("/dashboard/talent/portfolio_blank");
+  }
 
+  return (
+    <div className="space-y-4">;
+      <h3 className="text-lg font-medium text-white">Attach Resume</h3>;
+
+
+      });
+    } finally {;
+      setIsLoading(false);
+    }
       <RadioGroup
         value={selectedOption}
         onValueChange={(value) =>
@@ -418,22 +384,16 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   return (
     <div className="space-y-4">
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>
-
-
         className="space-y-3"
       >
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="recent" id="recent" />
-
-
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="select" id="select" />
           <Label htmlFor="select" className="text-white">
             Select from saved versions
           </Label>
         </div>
-
-
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
           <Label htmlFor="upload" className="text-white">
@@ -445,18 +405,14 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
           </Label>;
         </div>;
       </RadioGroup>;
-
       {/* Resume selection options based on radio selection */}
-      {selectedOption === 'recent' && resume && (;
-        <ResumePreviewCard;
-
-
+      {selectedOption === "recent" && resume && (;
+        <ResumePreviewCard
           resume={resume}
           onDownload={handleDownloadResume}
           isLoading={isLoading}
         />;
       )}
-      {selectedOption === "select" && (
 
       {selectedOption === "select" && (;
 
@@ -469,6 +425,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 ;
       {selectedOption === 'select' && (;
         <SelectResumeSection;
+        <SelectResumeSection
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
           handleResumeSelect={handleResumeSelect}
@@ -476,7 +433,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
           isLoading={isLoading}
         />;
       )}
-      {selectedOption === "upload" && (
 
       {selectedOption === "upload" && (;
 
@@ -489,23 +445,20 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 ;
       {selectedOption === 'upload' && (;
         <UploadSection;
+        <UploadSection
           customFile={customFile}
           onFileUpload={handleFileUpload}
         />;
       )}
-
-;
-
-
 ;
 
 ;
+
       {/* Generate Resume Now button */}
       <div className="flex justify-between items-center pt-2">;
         <Button
           variant="outline"
           onClick={handleGenerateResume}
-
       {/* Resume selection options based on radio selection */}
       {selected_option === "recent" && resume && (
         <ResumePreviewCard;
@@ -538,8 +491,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         </Button>;
       </div>;
     </div>);
-
-}
           className="text-zion-purple border-zion-purple/20"
         >
           <Plus className="h-4 w-4 mr-2" />
@@ -547,3 +498,4 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         </Button>
       </div>
     </div>
+}

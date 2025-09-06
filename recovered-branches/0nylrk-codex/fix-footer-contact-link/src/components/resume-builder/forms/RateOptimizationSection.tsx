@@ -1,10 +1,8 @@
-
 import {Control} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
 import {Card, CardContent} from "@/components/ui/card";
-
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 import { 
@@ -81,6 +79,9 @@ interface RateOptimizationSectionProps {;
   setValue: (name: string, value: any) => void,;
   skills: string[],;
   yearsExperience: number,;
+  location?: string;
+  rateType: "hourly" | "fixed";
+}
 import React, { useState } from './react';
 import { Control } from './react - hook - form';
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '@/components / ui / form';
@@ -109,8 +110,7 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
                 type="number";
                 min="1";
                 step="0.01";
-
-
+                placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}
                 {...field}
               />;
             </FormControl>;
@@ -128,8 +128,6 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
             years_experience={years_experience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
-}
-
 
 
 

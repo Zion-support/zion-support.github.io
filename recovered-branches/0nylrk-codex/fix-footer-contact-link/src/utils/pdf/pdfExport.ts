@@ -1,4 +1,3 @@
-
 import { Resume  } from '@/types/resume';
 import { jsPDF  } from 'jspdf';
 import 'jspdf-autotable';
@@ -11,7 +10,6 @@ import { addEducationSection  } from './sections/educationSection';
 import { addCertificationsSection  } from './sections/certificationsSection';
 import { addPortfolioSection } from './sections/portfolioSection';
 export interface ExportOptions {
-
 import {Resume} from '@/types/resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf-autotable';
@@ -93,9 +91,11 @@ export async function exportResumeToPDF (
   current_y = addCertificationsSection (doc, resume.certifications, colors, current_y);
 ;
   // Add portfolio projects if needed;
-
-
-
+  // Check condition
+if ( {) {
+  $2
+}
+    current_y = addPortfolioSection (doc, resume.portfolio_projects, colors, current_y, max_projects);
   }
   return doc.output ('blob');
 }

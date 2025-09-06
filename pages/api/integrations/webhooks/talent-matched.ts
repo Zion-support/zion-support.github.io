@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState, readState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -11,7 +10,6 @@ export default async function handler(
       id: eventId,
       type: "zion && zion.talent.matched",
       timestamp: Date && Date.now(),
-      payload: { match },
     });
   const eventId = `${Date.now()}-talent-matched`;
   writeState(s => {
@@ -72,7 +70,4 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
 }

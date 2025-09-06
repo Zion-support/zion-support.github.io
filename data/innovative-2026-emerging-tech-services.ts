@@ -28,12 +28,6 @@
     mobile: string;
     email: string;
     address: string;
-
-    website: string;
-  }
-  customers: number;
-  rating: number;
-    {
         'Spiking neural networks (SNNs)',
         'Ultra - low power consumption',
         'Real - time learning and adaptation',
@@ -148,85 +142,6 @@
       ],
       popular: false,
       icon: '🌐',
-
-      color: 'from - cyan - 500 to - blue - 600',
-      text_color: 'text - cyan - 400',
-      link: 'https://ziontechgroup.com / services / quantum - internet - platform - 2026',
-      market_position:;
-        'Competitive with Quantum Xchange ($50, 000+/setup), ID Quantique ($30, 000+/setup), and Toshiba Quantum ($40, 000+/setup). Our advantage: Modern architecture, faster deployment, and 70% cost savings.',
-      target_audience:;
-        'Government agencies, Financial institutions, Defense contractors, Healthcare organizations, Critical infrastructure, Technology companies',
-      trial_days: 60,
-      setup_time: '6 - 8 weeks',
-      category: 'Emerging Technology & Quantum Internet',
-      real_service: true,
-      technology: [;
-        'Quantum Key Distribution',
-        'Quantum Networks',
-        'Quantum Cryptography',
-        'Quantum Repeaters',
-        'Python',
-        'Quantum Algorithms',
-      ],
-      integrations: [;
-        'Government networks',
-        'Financial systems',
-        'Defense networks',
-        'Healthcare systems',
-        'Critical infrastructure',
-        'Cloud platforms',
-      ],
-      use_cases: [;
-        'Secure communications',
-        'Government networks',
-        'Financial transactions',
-        'Defense communications',
-        'Healthcare data',
-        'Critical infrastructure',
-      ],
-      roi: 'Average customer sees 500% ROI within 12 months through improved security and new capabilities.',
-      competitors: [;
-
-        'Quantum Xchange',
-        'ID Quantique',
-        'Toshiba Quantum',
-        'NTT Quantum',
-        'Chinese Quantum Network',
-      ],
-
-      market_size: '$18.7B market',
-      growth_rate: '480% annual growth',
-      variant: 'quantum - futuristic',
-      contact_info: {
-
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;
-
-      id: 'quantum-internet-platform-2026'
-      name: 'Quantum Internet Platform 2026'
-      tagline: 'Ultra-secure quantum communication network for the future'
-      price: '$5,999'
-      period: '/month'
-      description:
-        'Revolutionary quantum internet platform that provides ultra-secure communication, quantum key distribution, and next-generation networking capabilities for government, financial, and critical infrastructure.'
-      features: [
-        'Quantum key distribution (QKD)'
-        'Quantum secure communication'
-        'Quantum network infrastructure'
-        'Entanglement-based protocols'
-        'Quantum repeaters and nodes'
-        'Advanced cryptography'
-        'Real-time quantum monitoring'
-        'Professional installation services'
-        '24/7 network operations'
-        'Government compliance features'
-      ]
-      popular: false
       marketPosition:
         'Competitive with Quantum Xchange ($50,000+/setup), ID Quantique ($30,000+/setup), and Toshiba Quantum ($40,000+/setup). Our advantage: Modern architecture, faster deployment, and 70% cost savings.'
       targetAudience:
@@ -261,46 +176,7 @@
       ]
       roi: 'Average customer sees 500% ROI within 12 months through improved security and new capabilities.'
       competitors: [
-        'Quantum Xchange'
-        'ID Quantique'
-        'Toshiba Quantum'
-        'NTT Quantum'
-        'Chinese Quantum Network'
-      ]
-      marketSize: '$18.7B market'
-      growthRate: '480% annual growth'
-      variant: 'quantum-futuristic'
-      contactInfo: {
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup.com'
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-        website: 'https://ziontechgroup.com'
-      }
-      realImplementation: true
-      implementationDetails:
-        'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
-      launch_date: '2026 - 01 - 25',
-      customers: 60,
-      rating: 4 && 4.9,
-      reviews: 30,
-    },
   ];
-
-
-export const getPopularEmergingTechServices = () => {;
-  return innovative2026EmergingTechServices.filter(service => service.popular);
-}
-        'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
-      launchDate: '2026-01-25',
-      customers: 60,
-      rating: 4.9,
-      reviews: 30,
-    },;
-  ];
-
-export const getPopularEmergingTechServices = () => {;
-  return innovative2026EmergingTechServices.filter(service => service.popular);
-}
 // DNA Computing Platform realImplementation: true;
 implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';
 launchDate: '2026-01-20';
@@ -355,7 +231,6 @@ export const getEmergingTechServicesByPriceRange = (
   maxPrice: number
 ) => {
     return price >= minPrice && price <= maxPrice;
-  });};
 
 export interface Innovative2026EmergingTechService {
   id: string, name: string,
@@ -590,8 +465,10 @@ export const getEmergingTechServicesByCategory = (category: string) => {
 
 
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-}
-
+  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
+    const price = parseInt(service && service.price.replace('$', '').replace(, ''));
+    return price >= minPrice && price <= maxPrice
+  })
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026EmergingTechService {;
   id: string,;

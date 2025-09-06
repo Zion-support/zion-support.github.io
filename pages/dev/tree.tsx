@@ -16,22 +16,15 @@ import React, { useEffect, useState } from 'react';
 
 import Tree, { TreeNode } from '../../components / ui / Tree';
 interface ApiResponse {
-
 interface ApiResponse {
   nodes: TreeNode[],
   status: { gitConnected: boolean, gitBranch?: string }
 }
 
-interface ApiResponse {;
-  nodes: TreeNode[],;
-status: {;
-  gitConnected: boolean, gitBranch?: string ;
-export default function DevTreePage() {;
   const [nodes, setNodes] = useState<TreeNode[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [git, setGit] = useState<ApiResponse['status'] | null>(null);
   const [adminToken, setAdminToken] = useState<string>('');
-
 
 import React, { useEffect, useState } from "react",
 import Tree, { TreeNode } from "../../components/ui/Tree",
@@ -132,7 +125,6 @@ export default function DevTreePage() {
 }
 }
 }
-
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 interface ApiResponse {;
@@ -261,8 +253,6 @@ export default function DevTreePage(req, res) {
   );
 
 
-  )
-}
       set_error (e.message || 'Failed to load');    }
   }
 ;

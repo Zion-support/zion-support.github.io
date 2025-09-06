@@ -2,8 +2,6 @@ import { useState  } from 'react';
 import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
 import { quoteRequestService  } from '@/services/quoteRequestService';
 import { useAuth  } from '@/hooks/useAuth';
-
-
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
@@ -32,9 +30,6 @@ export const useTalentQuotes = () => {;
     // Status filter
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
-
-
-
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -43,6 +38,10 @@ export const useTalentQuotes = () => {;
     if (archiveFilter === 'archived' && !quote && quote.is_archived) {
       return false
     }
+    return true
+  });
+  // Mark as viewed/responded mutation
+  const updateStatusMutation = useMutation({
     onSuccess: (_, variables) => {
       let message = "Status updated";
       if (variables && variables.status === 'in_review') {
@@ -94,12 +93,6 @@ export const useTalentQuotes = () => {;
     }
   });
   return {
-    quotes: filtered_quotes;
-    unread_count;
-    is_loading;
-    error;
-    status_filter;
-    setStatusFilter;
     toggleArchive: (id: string, isArchived: boolean) =>
     toggleArchive: (id: string, isArchived: boolean) => 
 
@@ -177,9 +170,6 @@ export const useTalentQuotes = () => {;
     markAsResponded: (id: string) =>;
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
-
-
-
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 

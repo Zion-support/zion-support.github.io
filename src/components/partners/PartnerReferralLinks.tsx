@@ -34,6 +34,21 @@ import {;
   const [selectedCampaign, setSelectedCampaign] = useState<string>('default');
   const [customParam, setCustomParam] = useState<string>('');
   const [generatedLinks, setGeneratedLinks] = useState<;
+      }
+
+      // Add custom parameter if provided;
+      if (customParam) {;
+        url && url.searchParams.append('source', customParam);
+      }
+
+      const newLink = {;
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : ''}`,;
+        link: url && url.toString(),;
+      };
+
+      setGeneratedLinks(prev => [...prev, newLink]);
+      setIsDialogOpen(false);
+      setCustomParam('');
     }
   };
 
@@ -68,6 +83,8 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Label } from "@/components/ui/label",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
+import { Copy, Download, Link, Plus } from 'lucide-react'
+
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
   const [isDialogOpen, setIsDialogOpen] = useState(false),
@@ -94,6 +111,41 @@ export function PartnerReferralLinks() {
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
         url.searchParams.append("campaign", selectedCampaign)
+      }
+      
+      // Add custom parameter if provided
+      if (customParam) {
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
+        link: url.toString()
+      },
+      
+      setGeneratedLinks(prev => [...prev, newLink]),
+      setIsDialogOpen(false),
+      setCustomParam("")
+    }
+  },
+  
+  const handleDownloadLinks = () => {
+    const allLinks = [
+      { name: "Default", link: baseLink },
+      ...generatedLinks
+    ],
+    
+    const csvContent = [
+      "Name,Link",
+      ...allLinks.map(l => `${l.name},${l.link}`)
+    ].join("\n"),
+    
+    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),
+    const url = URL.createObjectURL(blob),
+    const link = document.createElement("a"),
+    link.setAttribute("href", url),
+    link.setAttribute("download", "zion_referral_links.csv"),
+    link.style.visibility = 'hidden',
+    document.body.appendChild(link),
+    link.click(),
+    document.body.removeChild(link)
+  },
 
   return (
     <div className="space-y-6">
@@ -181,11 +233,6 @@ export function PartnerReferralLinks() {;
           <CardDescription>Share this link with your audience to earn rewards</CardDescription>;
         </CardHeader>;
         <CardContent>;
-          <div className='flex space-x-2'>;
-            <Input value={baseLink} readOnly className='font-mono text-sm' />;
-            <Button variant='outline' onClick={() => handleCopyLink(baseLink)}>;
-              <Copy className='h-4 w-4' />;
-              <span className='sr-only'>Copy</span>            </Button>;
           </div>;
         </CardContent>;
       </Card>;
@@ -213,6 +260,7 @@ export function PartnerReferralLinks() {;
                 >
                   <SelectTrigger id="campaign">
                     <SelectValue placeholder="Select campaign type" />
+
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="default">General (Default)</SelectItem>
@@ -241,6 +289,23 @@ export function PartnerReferralLinks() {;
               >
                 Cancel
               </Button>
+
+              >
+                Cancel
+              </Button>
+              <Button
+                type='button'
+                onClick={handleGenerateLink}
+                className='bg-zion-purple hover:bg-zion-purple-dark'              >
+                Generate Link
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      </div>
+                    <span>{item.name || 'Campaign Link'}</span>                  </div>
+
+
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
           generatedLinks.map((item, index) => (
@@ -251,9 +316,18 @@ export function PartnerReferralLinks() {;
                     <Link className="h-4 w-4 text-zion-purple" />
                     <span>{item.name || "Campaign Link"}</span>
                   </div>
+
+
+
                 </CardTitle>
-              <CardContent className='pb-4'>
-                <div className='flex space-x-2'>
+              </CardHeader>
+              <CardContent className="pb-4">
+                <div className="flex space-x-2">
+                  <Input
+                    value={item.link}
+                    readOnly
+                    className="font-mono text-xs"
+                  />
                   </Button>
                 </div>
               </CardContent>

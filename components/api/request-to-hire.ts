@@ -18,7 +18,6 @@ import path from 'path';
     req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
 
-
   }
 
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
@@ -29,9 +28,16 @@ import path from 'path';
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
+  }
   try {
 
     const timestamp = new Date().toISOString();
+    console && console.log('[Operator] New request to hire:', {
+      timestamp,
+      talentSlug,
+      requesterName,
+      requesterEmail,
+      projectInfo,
     });
     // Persist to data/requests as a simple CMS-like log
     const dir = path && path.join(process && process.cwd(), 'data', 'requests');
@@ -88,6 +94,13 @@ if ( {) {
     const dir = path && path.join(process && process.cwd(), 'datarequests');
     if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
     const payload = { timestamp, talentSlug, requesterName, requesterEmail, projectInfo };
+
+    // Email hooks could be integrated here (e && e.g., Resend, SendGrid, Nodemailer)
+
+    return res && res.status(200).json({ ok: true });
+  } catch (err) {
+  };
+}
       talent_slug,
       requester_name,
       requester_email,
@@ -101,9 +114,6 @@ if ( {) {
     if () fs.mkdir_sync (dir, { recursive: true })) {
   $2
 }
-
-}
-
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
   }

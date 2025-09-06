@@ -13,6 +13,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
   );
 
 
+
   return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
       <Avatar className="h-8 w-8">
@@ -30,6 +31,19 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
           </>
         )}
+          'max-w-[80%] rounded-lg px-4 py-2 text-sm'
+      </Avatar>
+
+          'max-w-[80%] rounded-lg px-4 py-2 text-sm',
+          isUser
+            ? 'bg-zion-purple text-white'
+            : theme === 'dark'
+              ? 'bg-zion-blue-light text-white'
+              : 'bg-gray-100 text-gray-800'
+        )}
+      >
+
+
       
       <div className={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",

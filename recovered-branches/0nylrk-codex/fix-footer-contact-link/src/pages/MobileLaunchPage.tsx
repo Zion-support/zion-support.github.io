@@ -22,17 +22,16 @@ import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture",
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
 import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",
-
-
-
 const MobileLaunchPage: React.FC = () => {
+const MobileLaunchPage: React.FC = () => {;
   return (
-    <AppLayout>
       <SEO
         title="Get the Zion App - AI Marketplace in Your Pocket"
         description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go."
         keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app"
         canonical="/mobile-launch"
+export default MobileLaunchPage;
+
 export default MobileLaunchPage,
 import React from "react",;
 import { SEO } from "@/components/SEO",;
@@ -71,12 +70,8 @@ const MobileLaunchPage: React.FC = () => {
       <AppTestimonials />;
       <MobileEmailCapture />;
       <AppStoreBanner />;
-    </AppLayout>);
-}
-;
 
 },
 
 
 export default MobileLaunchPage;
-;

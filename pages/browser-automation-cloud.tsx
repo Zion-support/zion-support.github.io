@@ -48,7 +48,6 @@ export default function BrowserAutomationCloudPage() {
 			</main>
 		</>
 	)
-}
 
 
 
@@ -74,8 +73,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
-
 import React from 'react';
 import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
@@ -123,6 +120,3 @@ export default function BrowserAutomationCloudPage() {;
 			</main>;
 		</>;
 	);
-;
-
-

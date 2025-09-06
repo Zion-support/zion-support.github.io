@@ -4,7 +4,6 @@
 
 export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {;
   if (!verified) return null;
-
 import React from 'react',;
 import { CheckCircle } from 'lucide-react',;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
@@ -36,6 +35,7 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
     </TooltipProvider>
   )
 }
+import React from 'react';
 import {CheckCircle} from 'lucide-react';
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components / ui / tooltip';
 interface VerifiedBadgeProps {

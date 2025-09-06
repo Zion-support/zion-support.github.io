@@ -53,8 +53,6 @@ import { readState } from "../../../utils/sync/storage",
 import { filterEventsByScope } from "../../../utils/sync/storage",
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
-
-
   if (req.method === "GET") {
     const scope = state.config.scope,
     const scoped_events = filterEventsByScope (state.events, scope),

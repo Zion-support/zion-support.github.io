@@ -3,7 +3,7 @@ export interface WhitelabelTenant {
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
-
+export interface WhitelabelTenant {
   id: string;
   brand_name: string;
   subdomain: string;
@@ -13,15 +13,10 @@ export interface WhitelabelTenant {;
   theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
   landing_page_copy: {
     headline: string;
-  }
-
   is_active: boolean;
   created_at: string;
   updated_at: string;
   account_manager_id: string | null;
-
-  dns_verified: boolean
-
 
 export function useWhitelabelTenant(externalSubdomain?: string) {;
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
@@ -78,14 +73,15 @@ if ( {) {
         const function_name = 'tenant - detector';
 ;
         // Build the query parameters;
+          {
+            headers: {
+              'Content - Type': 'application / json'}}
+        );
 ;
         if (!data) {;
           console.warn('No tenant data received'),;
           setTenant(null),;
           return;
-
-
-
         }
         if (data.tenant) {
           setTenant(data.tenant)
@@ -105,14 +101,7 @@ if ( {) {
         } else {
           set_tenant (null);
         }
-
-        console && console.error('Error loading tenant:', err);
-        let message = err && err.message || 'An unexpected error occurred while loading tenant configuration';
-        if (
-          message && message.includes('Failed to send a request to the Edge Function') ||
-          message && message.includes('Failed to connect to Supabase') ||
-          message && message.includes('No internet connection')
-
+      } catch (err: any) {
         ) {
           message = 'Unable to reach the server. Please check your internet connection and try again.'
         }

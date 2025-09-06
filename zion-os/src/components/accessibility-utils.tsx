@@ -34,7 +34,6 @@
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
-
             firstElement.focus();
           }
         }
@@ -127,7 +126,7 @@ if ( {) {
       >;
         {title}
         <span className="text-[var (--accent)]">;
-          {is_expanded ? "" : "+"}
+          {is_expanded ? "−" : "+"}
         </span>;
       </button>;
       <div;

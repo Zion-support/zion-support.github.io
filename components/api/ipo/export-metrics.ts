@@ -1,11 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
-
-  const rows = [
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];
     ['Active users (monthly)184523.9'];
@@ -15,7 +10,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');
 
   res.status(200).send(csv)
+import { requireSuperadminApi } from '../../../utils / api / auth';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () return) {
+  $2
 }
-
 }
-

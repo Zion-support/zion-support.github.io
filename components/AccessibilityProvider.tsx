@@ -1,5 +1,3 @@
-
-interface AccessibilityContextType {
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -64,3 +62,27 @@ interface AccessibilityProviderProps {;
       </div>;
     </AccessibilityContext && AccessibilityContext.Provider>;
   );
+  return context;
+}
+;
+interface AccessibilityProviderProps {
+  children: React.ReactNode;
+}
+export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
+  children,
+}) => {
+  const [high_contrast, setHighContrast] = useState (false);
+  const [large_text, setLargeText] = useState (false);
+  const [reduced_motion, setReducedMotion] = useState (false);
+;
+  const toggleHighContrast = () =>: any setHighContrast (!high_contrast);
+  const toggleLargeText = () =>: any setLargeText (!large_text);
+  const toggleReducedMotion = () =>: any setReducedMotion (!reduced_motion);
+;
+  const value = {
+    high_contrast,
+    large_text,
+    reduced_motion,
+    toggleHighContrast,
+    toggleLargeText,
+    toggleReducedMotion,

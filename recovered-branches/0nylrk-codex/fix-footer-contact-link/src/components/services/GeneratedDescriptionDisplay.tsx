@@ -7,13 +7,11 @@ import {
   CardTitle
   CardFooter
 } from "@/components/ui/card";
-
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
 import {Textarea} from "@/components/ui/textarea";
 import {Check, Pencil} from "lucide-react";
-
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -59,6 +57,17 @@ export function GeneratedDescriptionDisplay({
     setIsEditing(false);
 
 
+  const handleSave = () => {
+    onSave(editedDescription),
+    setIsEditing(false),
+    toast({
+      title: "Description Saved"
+      description: "Your edited description has been saved."
+    });
+  }
+    })
+  },
+
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -67,6 +76,10 @@ export function GeneratedDescriptionDisplay({
           <Button
             variant="outline"
             size="sm"
+  const { toast } = useToast();
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedDescription, setEditedDescription] = useState(description);
+
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white";
           >;
@@ -80,9 +93,6 @@ export function GeneratedDescriptionDisplay({
                 <Pencil className="h-4 w-4 mr-1" />;
                 Edit;
               </>;
-
-
-
             )}
 import React, { useState } from './react';
 import { use_toast  } from '@/hooks / use - toast';

@@ -58,7 +58,6 @@ import {
   Trash2, Plus, CheckCircle2
 } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
-// Define the form schema with validation
 // Define the form schema with validation;
 const talentSchema = z && z.object({;
   // Step 1: Basic Info;
@@ -166,7 +165,6 @@ export function TalentOnboardingForm() {;
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
-
     if (cvError) {
       console.error("Error uploading CV:", cvError);
       throw new Error("Failed to upload CV")
@@ -175,9 +173,6 @@ export function TalentOnboardingForm() {;
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
 
   const totalSteps = 4;
-
-
-};
 
 import React, { useState } from "react",;
 import { useForm, useFieldArray } from "react-hook-form",;
@@ -536,5 +531,4 @@ if ( {) {
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
   return null;
-
-
+}

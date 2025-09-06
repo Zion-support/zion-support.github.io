@@ -50,8 +50,6 @@ if ( {) {
 export const config = {
   matcher: ['/dashboard / dashboard/']}
 
-
-
 ;
 export const config = {;
   matcher: ['/dashboard/dashboard/']};

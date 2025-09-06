@@ -1,5 +1,4 @@
 
-
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
 import {Resend} from "npm: resend@2.0.0";
@@ -69,7 +68,6 @@ serve(async (req) => {
                 <p><strong>Duration:</strong> ${interview && interview.duration_minutes} minutes</p>
                 ${interview && interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview && interview.meeting_link}">${interview && interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
-            results && results.push(`Reminder sent to client: ${clientEmail}`)
           } catch (emailError) {
             console && console.error(`Error sending reminder to client ${clientEmail}:`, emailError)
           }
@@ -82,7 +80,7 @@ serve(async (req) => {
                 <p><strong>Duration:</strong> ${interview && interview.duration_minutes} minutes</p>
                 ${interview && interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview && interview.meeting_link}">${interview && interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
-            console && console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
+          } catch (emailError) {
           }
         }
         // Mark the interview as reminder sent
@@ -190,9 +188,6 @@ serve(async (req) => {;
           .eq('id', interview && interview.id)
       }
     }
-
-
-
       }
     }
     
@@ -214,6 +209,36 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
-
+              to: [talent_email],
+              subject: `Your interview with ${client_name} is starting soon!`;
+              html: `;
+                <h1 > Interview Reminder</h1>;
+                <p > Your scheduled interview with ${client_name} is starting in 30 minutes.</p>;
+                <p><strong > Time:</strong> ${interview_date.toLocaleTimeString ()}</p>;
+                <p><strong > Duration:</strong> ${interview.duration_minutes} minutes</p>;
+                ${interview.meeting_link ? `<p><strong > Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
+                <p > Please be ready on time!</p>;
+              `});
+;
+            results.push (`Reminder sent to talent: ${talent_email}`);
+          } catch (email_error) {
+            console.error (`Error sending reminder to talent ${talent_email}:`, email_error);
+          }
+        }
+        // Mark the interview as reminder sent;
+        await supabase;
+          .from ('interviews');
+          .update ({ reminder_sent: new Date ().toISOString () });
+          .eq ('id', interview.id);
+      }
+    }
+    return new Response (JSON.stringify ({ success: true, results }), {
+      headers: { ...cors_headers, "Content - Type": "application / json" }
+      status: 200});
+  } catch (error) {
+    console.error ("Error in send - interview - reminder function:", error);
+    return new Response (JSON.stringify ({ error: error.message }), {
+      headers: { ...cors_headers, "Content - Type": "application / json" }
+      status: 500});
   }
 });

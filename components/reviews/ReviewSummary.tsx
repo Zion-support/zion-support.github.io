@@ -11,12 +11,6 @@ const ReviewSummary: React.FC < Props> = ({ summary }) => {
 import type { ReviewsSummary } from '../../types / reviews';
 import StarRating from './StarRating';
 import {Star} from 'lucide-react';
-
-type Props = {;
-  summary: ReviewsSummary;
-
-const ReviewSummary: React.FC<Props> = ({ summary }) => {;
-
   return (
     <div className='enhanced-card flex items-center justify-between'>;
       <div>;
@@ -36,11 +30,6 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {;
       </div>;
     </div>;
   );
-
-};
-
-const ReviewSummary: React.FC<Props> = ({ summary }) => {
-  return (
         <div className="flex items-center gap-3">
           <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
           <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
@@ -54,7 +43,6 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
 };
 
 export default ReviewSummary;
-
   summary: ReviewsSummary;
 const ReviewSummary: React.FC < Props> = ({ summary }) => {
   return (

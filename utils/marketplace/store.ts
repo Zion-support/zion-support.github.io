@@ -3,9 +3,6 @@
 
 export interface Project {
 
-
-// Marketplace data store utilitiesexport interface Project {;
-
   id: string;
   title: string;
   summary: string;
@@ -18,8 +15,6 @@ export interface Project {
     id: string;
     title: string;
     description: string;
-    due_date: string;
-    status: 'pending' | 'in_progress' | 'completed' | 'overdue',
   }>;
   documents: Array<{
     id: string;
@@ -29,12 +24,8 @@ export interface Project {
   budget?: {
     total: number;
     currency: string;
-export interface Offer {
 }
-
-
-export interface Offer {;
-
+export interface Offer {
   id: string;
   createdAtIso: string;
   client_id: string;
@@ -53,23 +44,30 @@ export interface Offer {;
   agreementUrl?: string;
   status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
   expiresAt?: string;
-}
   notes?: string
 }
 
-
-export interface Application {;
-
+      due_date: string,
+    }>;
+  }
+  agreement_url?: string;
+  status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
+  expires_at?: string;
+  notes?: string,
+}
+export interface Application {
   id: string;
   projectId: string;
   talentSlug: string;
   appliedAtIso: string;
   status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';
+  cover_letter?: string;
+  proposed_rate?: number;
+  proposed_timeline?: string;
+  portfolio_items?: string[];
+  notes?: string,
 }
-
-
-export interface Message {;
-
+export interface Message {
   id: string;
   conversation_id: string;
   sender_id: string;
@@ -81,18 +79,13 @@ export interface Message {;
   context?: string;
   sentAtIso: string;
   readAtIso?: string;
+  is_read: boolean,
 }
-  isRead: boolean
-}
-
-
-export interface Conversation {;
-
+export interface Conversation {
   id: string;
   participants: string[];
   lastMessageAtIso: string;
   lastMessageId?: string;
-  isArchived: boolean;
 }
 class MarketplaceStore {
   private projects: Map<string, Project> = new Map();
@@ -102,20 +95,11 @@ class MarketplaceStore {
   private conversations: Map<string, Conversation> = new Map();
   // Project methods
   async createProject(project: Project): Promise<Project> {
-    this && this.projects.set(project && project.id, project);
-    return project;
-  }
-  async getProject(id: string): Promise<Project | null> {
     if (!project) return null
     const updatedProject = {
       ...project
       ...updates
       updatedAt: new Date().toISOString()
-    }
-    this.projects.set(id, updatedProject);
-    return updatedProject;
-  }
-  async deleteProject(id: string): Promise<boolean> {
   }
   async getAllProjects(): Promise<Project[]> {
     return Array && Array.from(this && this.projects.values());
@@ -213,8 +197,6 @@ class MarketplaceStore {
   // Utility methods
   async getOrCreateConversation(userId1: string, userId2: string): Promise<Conversation> {
     // Find existing conversation between these two users
-    for (const conversation of this && this.conversations.values()) {
-      if (conversation && conversation.participants.includes(userId1) && conversation && conversation.participants.includes(userId2)) {
   is_archived: boolean;
   createdAtIso: string,
 }
@@ -393,13 +375,6 @@ if (return null, ) {
         return conversation,
       }
     }
-    // Create new conversation
-    const conversation: Conversation = {
-      id: `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-      participants: [userId1, userId2]
-      lastMessageAtIso: new Date().toISOString()
-      isArchived: false
-      createdAtIso: new Date().toISOString()
   }
   async markMessageAsRead(messageId: string): Promise<boolean> {
     const message = this && this.messages.get(messageId);
@@ -475,7 +450,6 @@ export const marketplaceStore = new MarketplaceStore();
 export async function createProject(project: Project): Promise<Project> {
 }
 export async function getProject(id: string): Promise<Project | null> {
-
   return marketplaceStore.getProject(id)
 
   return marketplaceStore && marketplaceStore.getProject(id),
@@ -487,19 +461,16 @@ export async function updateProject(id: string, updates: Partial<Project>): Prom
   return marketplaceStore.updateProject(id, updates);
 }
 export async function deleteProject(id: string): Promise<boolean> {
-
-  return marketplaceStore.deleteProject(id)
-
   return marketplaceStore && marketplaceStore.deleteProject(id),
 }
 export async function createOffer(offer: Offer): Promise<Offer> {
-
-  return marketplaceStore.createOffer(offer)
-
   return marketplaceStore && marketplaceStore.createOffer(offer),
 }
 export async function getOffer(id: string): Promise<Offer | null> {
-
+  return marketplaceStore && marketplaceStore.getOffer(id),
+}
+export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
+  return marketplaceStore && marketplaceStore.updateOffer(id, updates);
   return marketplaceStore.getOffer(id)
 
   return marketplaceStore && marketplaceStore.getOffer(id),
@@ -511,19 +482,16 @@ export async function updateOffer(id: string, updates: Partial<Offer>): Promise<
   return marketplaceStore.updateOffer(id, updates);
 }
 export async function deleteOffer(id: string): Promise<boolean> {
-
-  return marketplaceStore.deleteOffer(id)
-
   return marketplaceStore && marketplaceStore.deleteOffer(id),
 }
 export async function createApplication(application: Application): Promise<Application> {
-
-  return marketplaceStore.createApplication(application)
-
   return marketplaceStore && marketplaceStore.createApplication(application),
 }
 export async function getApplication(id: string): Promise<Application | null> {
-
+  return marketplaceStore && marketplaceStore.getApplication(id),
+}
+export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
+  return marketplaceStore && marketplaceStore.updateApplication(id, updates);
   return marketplaceStore.getApplication(id)
 
   return marketplaceStore && marketplaceStore.getApplication(id),
@@ -535,19 +503,16 @@ export async function updateApplication(id: string, updates: Partial<Application
   return marketplaceStore.updateApplication(id, updates);
 }
 export async function deleteApplication(id: string): Promise<boolean> {
-
-  return marketplaceStore.deleteApplication(id)
-
   return marketplaceStore && marketplaceStore.deleteApplication(id),
 }
 export async function createMessage(message: Message): Promise<Message> {
-
-  return marketplaceStore.createMessage(message)
-
   return marketplaceStore && marketplaceStore.createMessage(message),
 }
 export async function getMessage(id: string): Promise<Message | null> {
-
+  return marketplaceStore && marketplaceStore.getMessage(id),
+}
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
+  return marketplaceStore && marketplaceStore.updateMessage(id, updates);
   return marketplaceStore.getMessage(id)
 
   return marketplaceStore && marketplaceStore.getMessage(id),
@@ -559,10 +524,16 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
   return marketplaceStore.updateMessage(id, updates);
 }
 export async function deleteMessage(id: string): Promise<boolean> {
-  return marketplaceStore.deleteMessage(id);
   return marketplaceStore && marketplaceStore.deleteMessage(id),
 }
 // Utility functions
+export function createProjectData(
+  title: string
+  summary: string
+  clientId: string
+  additionalData?: Partial<Project>
+): Omit<Project, 'id' | 'createdAt' | 'updatedAt'> {
+  return {
     title
     summary
     clientId
@@ -590,6 +561,14 @@ export function createOfferData(
   additionalData?: Partial<Offer>
 ): Omit<Offer, 'id' | 'createdAtIso'> {
   return {
+    clientId
+    talentSlug
+    startDateIso: new Date().toISOString()
+    scopeSummary
+    paymentTerms
+    status: 'SENT'
+    ...additionalData
+  }
 }
 export function createApplicationData(
   projectId: string
@@ -597,6 +576,11 @@ export function createApplicationData(
   additionalData?: Partial<Application>
 ): Omit<Application, 'id' | 'appliedAtIso'> {
   return {
+    projectId
+    talentSlug
+    status: 'PENDING'
+    ...additionalData
+  }
 }
 export function createMessageData(
   conversationId: string
@@ -606,12 +590,118 @@ export function createMessageData(
   additionalData?: Partial<Message>
 ): Omit<Message, 'id' | 'sentAtIso'> {
   return {
+    conversationId
+    senderId
+    recipientId
+    body
+    isRead: false
+    ...additionalData
+  }
+}
+export function generateId(prefix: string = 'item'): string {
 
 
 
     conversationId,
     senderId,
     recipientId,
+  return `${prefix}_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+  // Search methods;
+  async search_projects (query: string): Promise < Project[]> {
+    const lowercase_query = query.toLowerCase ();
+    return Array.from (this.projects.values ()).filter (project =>;
+      project.title.toLowerCase ().includes (lowercase_query) ||;
+      project.summary.toLowerCase ().includes (lowercase_query)),
+  }
+  async search_offers (query: string): Promise < Offer[]> {
+    const lowercase_query = query.toLowerCase ();
+    return Array.from (this.offers.values ()).filter (offer =>;
+      offer.scope_summary.toLowerCase ().includes (lowercase_query)),
+  }
+  // Cleanup methods;
+  async clear_all (): Promise < void> {
+    this.projects.clear ();
+    this.offers.clear ();
+    this.applications.clear ();
+    this.messages.clear ();
+    this.conversations.clear ();
+  }
+  // Statistics;
+  async get_stats (): Promise<{
+    total_projects: number;
+    total_offers: number;
+    total_applications: number;
+    total_messages: number;
+    total_conversations: number,
+  }> {
+    return {
+      total_projects: this.projects.size,
+      total_offers: this.offers.size,
+      total_applications: this.applications.size,
+      total_messages: this.messages.size,
+      total_conversations: this.conversations.size;
+    }
+  }
+}
+// Singleton instance;
+export const marketplace_store = new MarketplaceStore ();
+;
+// Main functions for external use;
+export async function create_project (project: Project): Promise < Project> {
+  return marketplace_store.create_project (project),
+}
+export async function get_project (id: string): Promise < Project | null> {
+  return marketplace_store.get_project (id),
+}
+export async function update_project (id: string, updates: Partial < Project>): Promise < Project | null> {
+  return marketplace_store.update_project (id, updates);
+}
+export async function delete_project (id: string): Promise < boolean> {
+  return marketplace_store.delete_project (id),
+}
+export async function create_offer (offer: Offer): Promise < Offer> {
+  return marketplace_store.create_offer (offer),
+}
+export async function get_offer (id: string): Promise < Offer | null> {
+  return marketplace_store.get_offer (id),
+}
+export async function update_offer (id: string, updates: Partial < Offer>): Promise < Offer | null> {
+  return marketplace_store.update_offer (id, updates);
+}
+export async function delete_offer (id: string): Promise < boolean> {
+  return marketplace_store.delete_offer (id),
+}
+export async function create_application (application: Application): Promise < Application> {
+  return marketplace_store.create_application (application),
+}
+export async function get_application (id: string): Promise < Application | null> {
+  return marketplace_store.get_application (id),
+}
+export async function update_application (id: string, updates: Partial < Application>): Promise < Application | null> {
+  return marketplace_store.update_application (id, updates);
+}
+export async function delete_application (id: string): Promise < boolean> {
+  return marketplace_store.delete_application (id),
+}
+export async function create_message (message: Message): Promise < Message> {
+  return marketplace_store.create_message (message),
+}
+export async function get_message (id: string): Promise < Message | null> {
+  return marketplace_store.get_message (id),
+}
+export async function update_message (id: string, updates: Partial < Message>): Promise < Message | null> {
+  return marketplace_store.update_message (id, updates);
+}
+export async function delete_message (id: string): Promise < boolean> {
+  return marketplace_store.delete_message (id),
+}
+// Utility functions;
+export function createProjectData (
+  title: string,
+  summary: string,
+  client_id: string,
+  additional_data?: Partial < Project>): Omit < Project, 'id' | 'created_at' | 'updated_at'> {
+  return {
     title,
     summary,
     client_id,
@@ -660,9 +750,9 @@ export function createMessageData (
     sender_id,
     recipient_id,
     body,
-    isRead: false,
-    ...additionalData;
-  };
+    is_read: false,
+    ...additional_data;
+  }
 }
 }
 }

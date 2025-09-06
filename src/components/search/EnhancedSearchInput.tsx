@@ -1,4 +1,3 @@
-import { logInfo, logWarn } from '@/utils/productionLogger'
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
 import { Search, X } from 'lucide-react'
@@ -11,6 +10,15 @@ import { slugify } from "@/lib/slugify",
 import { debounce } from "lodash",
 import { logInfo, logWarn } from '@/utils/productionLogger',
 
+interface EnhancedSearchInputProps {
+  value: string,
+  onChange: (value: string) => void,
+  /**
+   * Optional callback when a suggestion is selected. This allows parent
+   * components to perform actions such as navigation.
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  placeholder?: string,
+  /**
    * Optional list of fallback suggestions (e.g. recent searches).
    */
   searchSuggestions?: SearchSuggestion[]
@@ -29,18 +37,96 @@ import { Input } from '@/components/ui/input'
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions'
 import { SearchSuggestion } from '@/types/search'
 export function EnhancedSearchInput({
+
+  const debounced = useDebounce(value, 200),
+
+  searchSuggestions;
+}: EnhancedSearchInputProps) {;
+
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo
+import { Search, X  } from 'lucide-react'
+import { Input } from '@/components/ui/input'
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions'
+import { SearchSuggestion } from '@/types/search'
+export function EnhancedSearchInput({
+
+  value,
+  onChange,
+  onSelectSuggestion,
+  placeholder = "Search...",
+  searchSuggestions
+}: EnhancedSearchInputProps) {
   const debouncedFetchSuggestions = useMemo(
     () =>
       debounce(async (query: string) => {
         if (!query.trim()) {
+        }
+        setLoading(true)
+        try {
+          const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {
+            signal: AbortSignal.timeout(5000) // 5 second timeout
+          })
+          if (response.ok) {
+            const data = await response.json()
+            if (Array.isArray(data)) {
+              setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions
+import React, { useState, useEffect, useRef, useMemo } from "react",;
+import { useTranslation } from "react-i18next",;
+import { Search, X } from 'lucide-react';
+import { Input } from "@/components/ui/input",;
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",;
+import { SearchSuggestion } from "@/types/search",;
+import { useDebounce } from "@/hooks/useDebounce",;
+import { useRouter } from "next/router",;
+import { slugify } from "@/lib/slugify",;
+import { debounce } from "lodash",;
+import { logInfo, logWarn } from '@/utils/productionLogger',;
+interface EnhancedSearchInputProps {;
+  value: string,;
+  onChange: (value: string) => void,;
   /**;
           return;
         }
+        set_loading (true);
+
+        try {
+          const response = await fetch (`/api / search / suggest?q=${encodeURIComponent (query)}`, {
+            signal: AbortSignal.timeout (5000) // 5 second timeout;
+          });
+          // Check condition
+if ( {) {
+  $2
+}
+            const data = await response.json ();
+            if () {) {
+  $2
+}
+              setApiSuggestions (data.slice (0, 5)), // Limit to 5 API suggestions;
+
+          setApiSuggestions([]),
+
+;
+        setLoading(true),;
+        try {;
+          const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {;
+            signal: AbortSignal.timeout(5000) // 5 second timeout;
+          }),;
+          if (response.ok) {;
+            const data = await response.json(),;
+            if (Array.isArray(data)) {;
+              setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions;
+            }
+          } else {
+            // Silently fail for search suggestions - don't show error toast
+            logWarn('Search suggestions API error:', { data: response.status })
+            setApiSuggestions([])
+          }
+        } catch (error) {
+          // Silently fail for search suggestions - don't show error toast
+          logWarn('Search suggestions fetch error:', { data: error })
+          setApiSuggestions([])
         } finally {
-          set_loading (false);
-        }
-        } else {
-          setFilteredSuggestions ([]);
+          setLoading(false)
         }
   }, []),
 
@@ -49,6 +135,27 @@ export function EnhancedSearchInput({
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
     onChange(suggestionObj.text),
+
+
+    if (onSelectSuggestion) {
+      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
+      onSelectSuggestion(suggestionObj)
+        setHighlightedIndex (-1);
+      });
+      .catch (() => setFilteredSuggestions ([]));
+    return () => controller.abort ();
+  }, [debounced, search_suggestions]);
+  // Handle clicks outside the component to close suggestions;
+  useEffect ((, ) => {
+    /**
+ * handleClickOutside - Function description
+ */
+function handleClickOutside() {
+      if () {) {
+  $2
+}
+        setIsFocused (false),
+        // setHighlightedIndex (-1), // Already handled in on_blur generally;
       if (suggestionObj.id) {
         router.push(`/marketplace/listing/${suggestionObj.id}`)
       } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
@@ -69,13 +176,26 @@ export function EnhancedSearchInput({
 if ( {) {
   $2
 }
+    if (onSelectSuggestion) {
+      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
+      onSelectSuggestion(suggestionObj)
+    } else {
+      // Provide a sensible default navigation if the parent did not supply a handler
+      if (suggestionObj.id) {
+        router.push(`/marketplace/listing/${suggestionObj.id}`)
+      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
+        router.push(suggestionObj.slug)
+      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
+        router.push(`/blog/${suggestionObj.slug}`)
+      } else {
+      }
+    }
+    setIsFocused(false)
+    inputRef.current?.blur()
+    setHighlightedIndex(-1)
   }
   const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>, ) =>: any {
     switch (e.key) {
-}
-        setIsFocused (false);
-}
-    }
 }
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if(!isFocused |filteredSuggestions.length === 0) {
@@ -92,23 +212,36 @@ if ( {) {
           setHighlightedIndex(-1)
           inputRef.current?.blur()
         } else {
-          // Prevent empty form submission;
-          e.prevent_default ();
-        }
-        break;
-      case 'Escape':;
-        e.prevent_default ();
-        setIsFocused (false);
-        setHighlightedIndex (-1);
-        setValueOnFocus (null);
-        input_ref.current?.blur ();
-        break;
-      default:;
-        // For other keys (character input), reset enterHandledPostFocus;
-        setEnterHandledPostFocus (false);
-        break;
+;
+    document.addEventListener("mousedown", handleClickOutside),;
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []),;
+  const router = useRouter(),;
+  const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {;
+    logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),;
+    onChange(suggestionObj.text),;
+    if (onSelectSuggestion) {;
+      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),;
+      onSelectSuggestion(suggestionObj);
+    } else {;
+      // Provide a sensible default navigation if the parent did not supply a handler;
+      logWarn('onSelectSuggestion callback not provided'),;
+      if (suggestionObj.id) {;
+        router.push(`/marketplace/listing/${suggestionObj.id}`);
+      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {;
+        router.push(suggestionObj.slug);
+      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {;
+        router.push(`/blog/${suggestionObj.slug}`);
+      } else {;
+        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`);
+      }
     }
-  }
+    setIsFocused(false),;
+    inputRef.current?.blur(),;
+    setHighlightedIndex(-1);
+  },;
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+    switch (e.key) {;
       case 'ArrowDown':;
         if (isFocused && filteredSuggestions.length > 0) {;
           e.preventDefault(),;
@@ -156,6 +289,23 @@ if ( {) {
 
       logWarn('onSelectSuggestion callback not provided'),
 
+  return (
+    <div
+      className="relative w-full"
+      ref={containerRef}
+      role="combobox"
+      aria-expanded={isFocused && filteredSuggestions.length > 0}
+      aria-haspopup="listbox"
+      aria-controls="autocomplete-suggestions-list" // Added aria-controls
+      onClick={() => inputRef.current?.focus()}
+    >
+      <div className="relative flex items-center w-full">
+        <Search
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
+        />
+        <Input
+
+
           type="text"
           id="enhanced-search-input"
           name="search"
@@ -173,6 +323,12 @@ if ( {) {
         searchTerm = {value,}
         onSelectSuggestion = {handleSelectSuggestion,}
         visible = {isFocused,}
+
+        highlightedIndex={highlightedIndex} // Pass highlightedIndex
+        listId="autocomplete-suggestions-list" // Pass ID for aria-controls
+      />
+    </div>
+  )
   return (<div
       className="relative w-full"
       ref={containerRef}
@@ -200,6 +356,8 @@ if ( {) {
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
+
+
           on_blur={(e) => {
             const related_target = e.related_target as HTMLElement;            if () {) {
   $2

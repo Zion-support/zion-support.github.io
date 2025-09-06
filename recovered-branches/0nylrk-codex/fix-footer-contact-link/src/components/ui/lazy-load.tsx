@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef, ReactNode } from "react",
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -94,7 +93,7 @@ export function LazyLoad({;
     const observer = new IntersectionObserver(;
       (entries) => {;
         if (entries[0].isIntersecting) {;
-    );
+        threshold: 0.1}
 
 ;
     // Check condition
@@ -161,6 +160,8 @@ if ( {) {
 
 
 
+  }, []);
+    <Skeleton
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"
     />;
@@ -168,12 +169,40 @@ if ( {) {
   return (
     <div
       ref={containerRef}
-      className={cn("transition-opacity duration-500"
-        isLoaded ? "opacity-100" : "opacity-0";
-
-        className
-      )}
 ;
-
-
-
+;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      // Simulate loading delay (remove in production);
+      const timer = set_timeout (() => {
+        setIsLoaded (true);
+      }, 500);
+;
+      return () => clear_timeout (timer);
+    }
+  }, [is_visible]);
+;
+  const defaultLoadingComponent = (
+    <Skeleton;
+      style={{ height, width }}
+      className="rounded - md bg - zion - blue - light / 20";
+    />);
+;
+  return (
+    <div;
+      ref={container_ref}
+      className={cn ("transition - opacity duration - 500",
+        is_loaded ? "opacity - 100" : "opacity - 0";
+        class_name)}
+    >;
+      {is_visible ? (
+        <>;
+          {!is_loaded && (loading_component || defaultLoadingComponent)}
+          {is_loaded && children}
+        </>) : (
+        loading_component || defaultLoadingComponent)}
+    </div>);
+}

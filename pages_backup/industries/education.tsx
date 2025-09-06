@@ -1,5 +1,3 @@
-
-
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -55,13 +53,6 @@ const benefits = [;
     title: 'Improved Learning Outcomes,',;
     description: 'Personalized learning experiences lead to better student performance.,',;
     icon: GraduationCap;
-];
-const benefits = [
-  {
-    title: 'Improved Learning Outcomes',
-    description: 'Personalized learning experiences lead to better student performance.',
-    icon: GraduationCap
-  },
   {}
 
     title: 'Enhanced Engagement,',;

@@ -1,7 +1,5 @@
 
 
-
-
 export interface SmartContractInfo {;
 
 
@@ -15,6 +13,8 @@ export interface SmartContractInfo {;
   createdAt: string;
   createdBy: string
   status: 'draft' | 'deployed' | 'executed' | 'cancelled'
+;
+export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';
 }
 }
 export interface EscrowContractDetails {
@@ -49,3 +49,4 @@ export interface DeploymentOptions {
 
 
 
+}

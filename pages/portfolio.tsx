@@ -31,7 +31,6 @@ export default function PortfolioPage() {
   ExternalLink,
   Star,
   Users,
-} from 'lucide-react';
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -155,10 +154,8 @@ function PortfolioPage() {
         <meta
           property='og:description'
           content='Explore our portfolio of innovative technology projects and solutions.'
-
-
           >
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Our Work
             </h1>
           </motion.div>
@@ -245,7 +242,6 @@ function PortfolioPage() {
                           <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2' />                          {result}
                         </li>;
 
-                  
                           {tech  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -275,7 +271,6 @@ function PortfolioPage() {
                     <span className="text-sm text-white/60">Client: {project.client}</span>
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       View Details
-
                     </button>
                   </div>
                 </div>
@@ -312,14 +307,13 @@ function PortfolioPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           >
+
+            <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Start Your Project?
             </h2>
-            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
-              Let's discuss how we can help you achieve similar results with our
-              innovative technology solutions.
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+              Let's discuss how we can help you achieve similar results with our innovative technology solutions.
             </p>
               </button>
             </div>
@@ -368,6 +362,3 @@ function PortfolioPage() {
   }
 }
 ;
-
-
-

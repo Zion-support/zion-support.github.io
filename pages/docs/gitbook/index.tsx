@@ -1,6 +1,3 @@
-import fs from 'fs',;
-import path from 'path',;
-import Link from 'next/link',;
 
 
 import fs from 'fs',;
@@ -9,6 +6,8 @@ import Link from 'next/link',;
 
 
 function list(dir: string, baseDir: string) {
+
+
   return items.map((name) => {
     const full = path.join(dir, name)
     const rel = path.relative(baseDir, full)
@@ -22,8 +21,6 @@ function list(dir: string, baseDir: string) {
     : []
 
   return { props: { sections }, revalidate: 600 }
-
-
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
@@ -80,7 +77,6 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
 }
   );
 };
-
                     {it.rel  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

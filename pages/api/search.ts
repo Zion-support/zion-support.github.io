@@ -1,11 +1,18 @@
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-export default async function handler(req, res) {
-  try {
-  }
-}
-    res.status(500).json({ ok: false, error: e?.message || 'Search failed' })
-  }
-}
+
+
+      ok: true,
+      query: q,
+      parsed,
+      keywords,
+      didYouMean,
+      counts: {
+
+
+      },
+      results
+    });
+
+  } catch (e: any) {
     res.status (500).json ({ ok: false, error: e?.message || "Search failed" });
   }
 }
@@ -32,5 +39,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }
-
-

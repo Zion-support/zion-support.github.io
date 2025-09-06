@@ -44,3 +44,4 @@ export * from "./SidebarTrigger";
 
 
 export * from "./SidebarTrigger";
+export * from "./SidebarTrigger";

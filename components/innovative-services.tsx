@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import Head from 'next/head';
 
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
@@ -91,21 +93,15 @@ import {
   ShieldCheck as ShieldCheckIcon;
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
+} from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
-
-
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
-import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-
-
-export default function InnovativeServicesPage() {;
-import {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -113,13 +109,10 @@ import {
   const [sortBy, setSortBy] = useState('innovation');
   const [showFilters, setShowFilters] = useState(false);
 
-
-
     { value: '1001-2000', label: '$1,001 - $2,000' };
     { value: '2001-3000', label: '$2,001 - $3,000' };
     { value: '3001-5000', label: '$3,001 - $5,000' };
     { value: '5001+', label: '$5,001+' }
-
 
   Check,
   Star,
@@ -206,9 +199,6 @@ import {
   Factory as FactoryIcon,
   Truck as TruckIcon,
   Microscope as MicroscopeIcon,
-
-  GraduationCap as GraduationCapIcon,;
-  ShieldCheck as ShieldCheckIcon,;
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -258,6 +248,17 @@ export default function InnovativeServicesPage() {;
     { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
 
   ];
+  }
+
+  // Price range filter;
+  if (priceRange !== 'All') {;
+    const [min, max] = priceRange;
+      .split('-');
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getInnovativeServicesByPriceRange(min, max);    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+    filteredServices = getInnovativeServicesByPriceRange(min, max);
+  }
+  // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
@@ -379,41 +380,16 @@ if ( {) {
           const bLevel = b && b.innovationLevel.split(' - ')[0];
           return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0);
         }
-
-
   };
 
   const popularServices = getPopularInnovativeServices();
   const categories = getInnovativeServiceCategories();
   return (
-
-
                   </div>;
                 </div>;
               </div>;
             </div>;
           </section>;
-
-          <section className="px-4 sm:px-6 lg:px-8 mb-12">
-            <div className="max-w-7xl mx-auto">
-              <div className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
-                <div className="flex flex-col lg:flex-row gap-6">
-                  {/* Search */}
-          {/* Filters and Search */}
-          <section className='px-4 sm:px-6 lg:px-8 mb-12'>;
-            <div className='max-w-7xl mx-auto'>;
-              <div className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10'>;
-                <div className='flex flex-col lg:flex-row gap-6'>;
-                  {/* Search */}
-                  <div className='flex-1'>;
-                    <div className='relative'>;
-                      <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
-                      <input
-                        type='text'
-                        placeholder='Search innovative services...'
-                        value={searchQuery}
-                        onChange={e => setSearchQuery(e && e.target.value)}
-                        className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                      />                  {/* Search */}
                       <input
                         type="text"
                         placeholder="Search innovative services..."
@@ -428,12 +404,6 @@ if ( {) {
 
                         <option key={category.name} value={category.name}>
 
-
-
-                          {category.name} ({category.count})
-                        </option>
-                      ))}
-                  {/* Price Range Filter */}
 
 
                     <select
@@ -456,7 +426,6 @@ if ( {) {
                           {range.label}
                         </option>
                       ))}
-                  {/* Sort Options */}
 
 
                     <select
@@ -482,6 +451,12 @@ if ( {) {
                     </select>
                   </div>
                   {/* View Mode Toggle */}
+                  <div className='flex-shrink-0'>;
+                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>;
+
+                  {/* View Mode Toggle */}
+                  <div className="flex-shrink-0">
+                    <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
 
 
                   {/* View Mode Toggle */}
@@ -501,16 +476,16 @@ if ( {) {
               </div>
             </div>
           </section>
-
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
                         </p>
 
                         {/* Description */}
-                        <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
-                          {service.description}
-                        </p>
+                        <p className='text-gray-400 text-sm mb-6 leading-relaxed'>;
+                          {service && service.description}
+                        </p>;
+
                         {/* Innovation Level */}
                         <div className='mb-4'>;
                           <div className='flex items-center space-x-2 mb-2'>;
@@ -528,9 +503,6 @@ if ( {) {
                           <div className="text-center">
                             <div className="text-lg font-bold text-green-400">{service.roi.split(' ')[0]}</div>
                             <div className="text-xs text-gray-400">average ROI</div>
-                        </div>
-                        <p className="text-gray-400 text-sm mb-6 leading-relaxed">{service && service.description}</p>;
-
                         {/* Innovation Level */}
                         <div className="mb-4">;
                           <div className="flex items-center space-x-2 mb-2">;
@@ -541,7 +513,6 @@ if ( {) {
                             {service && service.innovationLevel}
                           </div>;
                         </div>;
-
                         {/* Price and ROI */}
                         <div className='grid grid-cols-2 gap-4 mb-6'>;
                           <div className='text-center'>;
@@ -560,7 +531,6 @@ if ( {) {
                               average ROI;
                             </div>                          </div>;
                         </div>;
-
                         {/* Key Features */}                        <div className="grid grid-cols-2 gap-4 mb-6">;
                           <div className="text-center">;
                             <div className="text-2xl font-bold text-cyan-400">${service && service.price.monthly && monthly.toLocaleString()}</div>;
@@ -570,9 +540,6 @@ if ( {) {
                             <div className="text-lg font-bold text-green-400">{service && service.roi.split(' ')[0]}</div>;
                             <div className="text-xs text-gray-400">average ROI</div>;
                         </div>;
-                            )}
-
-
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -595,9 +562,6 @@ if ( {) {
                             <div className="text-white font-medium">{service.growthRate}</div>
                           </div>
                         </div>
-                          </div>;
-                        </div>;
-
                         {/* Market Info */}
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>;
                           <div>;
@@ -664,23 +628,6 @@ if ( {) {
                 </p>;
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
                   <Button
-                    href={`tel:${contactInfo && contactInfo.mobile}`}
-            </div>
-          </section>
-          {/* Call to Action */}
-          <section className='px-4 sm:px-6 lg:px-8 mb-20'>
-            <div className='max-w-4xl mx-auto text-center'>
-              <EnhancedFuturisticCard className='p-12'>
-                <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                  Ready to Lead the Future?
-                </h2>
-                <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-                  Join the revolution with our breakthrough micro SAAS services.
-                  Transform your business with quantum AI, autonomous systems
-                  and cutting-edge technology.
-                </p>
-                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                  <Button
                     variant='primary'
                     className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'>;
                     <Phone className='w-5 h-5 mr-2' />                    Call Now: {contactInfo && contactInfo.mobile}
@@ -703,9 +650,13 @@ if ( {) {
                   <Button
                     href={`tel:${contactInfo && contactInfo.mobile}`}
                     variant="primary"
-
-
-
+                    <Mail className="w-5 h-5 mr-2" />
+                    Email Us
+                  </Button>
+                </div>
+                <div className="mt-8 text-sm text-gray-400">
+                  <div>Address: {contactInfo.address}</div>
+                  <div className="mt-1">Website: {contactInfo.website}</div>
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -956,6 +907,6 @@ if ( {) {
 
   );
 
+
     </>);
-}
 }

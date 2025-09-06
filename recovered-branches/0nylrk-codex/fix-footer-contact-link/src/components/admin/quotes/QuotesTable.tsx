@@ -1,17 +1,12 @@
-
 import { formatDate } from "@/utils/dateUtils";
 interface QuotesTableProps {
 
   quotes: QuoteRequest[]
-import {formatDate} from "@/utils/dateUtils";
-interface QuotesTableProps {;
-  quotes: QuoteRequest[],;
   isArchived?: boolean;
   isLoading: boolean
   updateStatus: (id: string, status: QuoteStatus) => void
   toggleArchive: (id: string, isArchived: boolean) => void
   deleteQuote: (id: string) => void
-
 
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
@@ -33,9 +28,6 @@ import {
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 import { formatDate } from "@/utils/dateUtils",
-
-
-
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
@@ -57,16 +49,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   isLoading;
   updateStatus;
   toggleArchive;
-  deleteQuote
-  quotes,
-  isArchived = false,
-  isLoading,
-  updateStatus,
-  toggleArchive,
-  deleteQuote,
-
-
-
   onViewDetails
 }) => {
   return (
@@ -203,9 +185,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
     </div>
   )
 }
-
-
-
 
                     )}
                   </div>;

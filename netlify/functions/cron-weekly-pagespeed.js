@@ -40,16 +40,6 @@ exports.handler = async function () {
         results.push ({ url, error: e.message || String (e) });
       }
     }
-};async function psi(url, strategy = 'mobile', key) {
-  const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed')
-  endpoint.searchParams.set('url', url)
-  endpoint.searchParams.set('strategy', strategy)
-  if (key) endpoint.searchParams.set('key', key)
-  const resp = await fetch(endpoint.toString())
-  if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`)
-
-  return resp.json()
-}
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
     const key = process.env.PSI_API_KEY |''
     const pages = ['//learn/dao/certifications']
@@ -57,7 +47,4 @@ exports.handler = async function () {
     for (const p of pages) {
       const url = `${baseUrl}${p}`
       try {
-  } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  }
-}
+},

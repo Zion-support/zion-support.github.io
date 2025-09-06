@@ -1,4 +1,3 @@
-
 export const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>
   React.ComponentProps<typeof Button>
@@ -16,15 +15,13 @@ export const SidebarTrigger = React.forwardRef<
         toggle_sidebar ();
       }}
       {...props}
-
-    >;
-      <PanelLeft />;
-      <span className=&quot;sr - only & quot;>Toggle Sidebar</span>;
-    </Button>);
-});
-SidebarTrigger.display_name = &quot;SidebarTrigger & quot;
-;
-
-
+    >
+      <PanelLeft />
+      <span className="sr-only">Toggle Sidebar</span>
+    </Button>
+  )
+})
+SidebarTrigger.displayName = &quot;SidebarTrigger&quot;
 SidebarTrigger.displayName = "SidebarTrigger"
-
+      }}
+      {...props}

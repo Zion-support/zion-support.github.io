@@ -41,12 +41,6 @@ interface Integration {
   status: "connected" | "warning" | "disconnected";
 
 
-  integration: Integration;
-}
-  integration: Integration
-}
-
-
 export function IntegrationConnectionModal(): any ({;
   isOpen,;
   onClose,;
@@ -54,23 +48,6 @@ export function IntegrationConnectionModal(): any ({;
 }: IntegrationConnectionModalProps) {;
   const [isConnecting, setIsConnecting] = useState(false);
 
-
-interface IntegrationConnectionModalProps {;
-  isOpen: boolean;
-  onClose: () => void;
-  integration: Integration
-}
-export function IntegrationConnectionModal(): any ({;
-  isOpen,;
-  onClose,;
-  integration,;
-}: IntegrationConnectionModalProps) {;
-  const [isConnecting, setIsConnecting] = useState(false);
-  const [syncSettings, setSyncSettings] = useState({;
-    autoCreateContacts: true,;
-    pushNotes: false,;
-    syncJobDetails: true,;
-    syncApplicantData: true,;
   });
   const handleConnectOAuth = () => {;
     setIsConnecting(true);
@@ -80,17 +57,6 @@ export function IntegrationConnectionModal(): any ({;
       toast && toast.success(`Connected to ${integration && integration.name} successfully`);
       onClose();
     }, 2000);
-    // In a real application, this would open a popup for OAuth authentication;
-    // window && window.open(`/api/oauth/${integration && integration.id}`, 'oauthwidth=600,height=600');
-  };
-  const handleDisconnect = () => {;
-    // In a real application, this would revoke the OAuth token;
-    toast && toast.info(`Disconnected from ${integration && integration.name}`);
-    onClose();
-  };
-  const handleSaveSettings = () => {;
-    // In a real application, this would save the sync settings;
-    toast && toast.success("Integration settings saved");
   const handleConnectOAuth = () => {
     setIsConnecting(true);
     // Simulate OAuth flow
@@ -117,9 +83,6 @@ export function IntegrationConnectionModal(): any ({;
         integration.status === "warning" ? (
         
         {(integration.status === "connected" || integration.status === "warning") ? (
-
-
-
           <>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
@@ -133,9 +96,6 @@ export function IntegrationConnectionModal(): any ({;
                         ...syncSettings
                         autoCreateContacts: checked as boolean
                       })
-
-
-
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
@@ -158,9 +118,6 @@ export function IntegrationConnectionModal(): any ({;
                         ...syncSettings
                         pushNotes: checked as boolean
                       })
-
-
-
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
@@ -181,9 +138,6 @@ export function IntegrationConnectionModal(): any ({;
                         ...syncSettings
                         syncJobDetails: checked as boolean
                       })
-
-
-
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
@@ -204,9 +158,6 @@ export function IntegrationConnectionModal(): any ({;
                         ...syncSettings
                         syncApplicantData: checked as boolean
                       })
-
-
-
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
@@ -219,8 +170,6 @@ export function IntegrationConnectionModal(): any ({;
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
                 </div>
               </div>
-
-
               <div className="space-y-2">
                 <h3 className="text-sm font-medium">API Details</h3>
                 <p className="text-xs text-muted-foreground">
@@ -309,8 +258,6 @@ export function IntegrationConnectionModal(): any ({;
                   {integration && integration.lastSync;
                     ? new Date(integration && integration.lastSync).toLocaleString();
                     : "Never"}
-
-
             <DialogFooter className="flex items-center justify-between">
               <Button
                 variant="outline"
@@ -341,8 +288,6 @@ export function IntegrationConnectionModal(): any ({;
           <>
             <div className="space-y-4 py-4">
               <p className="text-sm">
-
-
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">What will be synced:</h3>
                 <ul className="list-disc pl-4 text-sm space-y-1">
@@ -353,8 +298,6 @@ export function IntegrationConnectionModal(): any ({;
                 </ul>
               </div>
             </div>
-
-
             <DialogFooter>
               <Button onClick={handleConnectOAuth} disabled={isConnecting}>
                 {isConnecting
@@ -367,7 +310,6 @@ export function IntegrationConnectionModal(): any ({;
       </DialogContent>;
     </Dialog>;
   );
-
   last_sync?: string;
 }
 interface IntegrationConnectionModalProps {
@@ -546,3 +488,4 @@ function IntegrationConnectionModal() {
           </>)}
       </DialogContent>;
     </Dialog>);
+}

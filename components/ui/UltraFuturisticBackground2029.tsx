@@ -18,7 +18,6 @@
   const energyFieldsRef = useRef<EnergyField[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
 
-
 interface EnergyField {;
   x: number,;
   y: number,;
@@ -46,7 +45,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
   color: string,
   type: 'energy' | 'data' | 'quantum' | 'neon',
   life: number,
-  max_life: number;
 }
 interface EnergyField {
   coordinate_x: number,
@@ -131,18 +129,6 @@ interface EnergyField {
         // Draw connections between nearby particles
         particlesRef.current.forEach((otherParticle, otherIndex) => {
           if (index === otherIndex) return;
-            const opacity = (1 - distance / 120) * 0.3;
-            ctx.stroke_style =;
-              particle.color +;
-              Math.floor (opacity * 255);
-                .to_string (16);
-                .pad_start (2, '0');            ctx.line_width = 0.8;
-            ctx.begin_path ();
-            ctx.move_to (particle.x, particle.y);
-            ctx.line_to (other_particle.x, other_particle.y);
-            ctx.stroke ();
-          }
-        });      });
             Math.pow(particle.y - otherParticle.y, 2)
           );
           if (distance < 120) {
@@ -211,9 +197,6 @@ if ( {) {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />;
-
-        <motion&& motion.div
           transition={{
             duration: 12
             repeat: Infinity
@@ -224,9 +207,6 @@ if ( {) {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />;
-
-        <motion&& motion.div
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45"
         />;
         <motion.div;
@@ -246,8 +226,6 @@ if ( {) {
             duration: 10
             repeat: Infinity
             ease: 'easeInOut',          }}          }}
-
-          }}
 
           }}
 
@@ -280,7 +258,6 @@ if ( {) {
   );      {/* Content */}
       <div className="relative z-10">;
         {children}
-}
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
@@ -298,3 +275,11 @@ if ( {) {
 }
       <div className='relative z-10'>{children}</div>
     </div>
+  );      {/* Content */}
+      <div className="relative z-10">
+        {children}
+      </div>
+    </div>
+  )
+}
+  );

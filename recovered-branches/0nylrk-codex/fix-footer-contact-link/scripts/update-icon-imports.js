@@ -34,7 +34,6 @@ function updateIconImportsInFile(filePath) {;
       fs.writeFileSync(filePath, updatedContent, 'utf8'),;
       // // // console.log(`✅ Updated imports in ${filePath}`),;
       return true;
-
     }
     return false
   } catch (err) {
@@ -43,10 +42,16 @@ function updateIconImportsInFile(filePath) {;
     return false
   }
 }
+// Find all TypeScript/JavaScript/JSX/TSX files
+
+const files = glob.sync('src/**/*.{js,jsx,ts,tsx}')
+let updatedFiles = 0
+files.forEach(file => {
+  const updated = updateIconImportsInFile(file)
   if (updated) updatedFiles++
 })
-console.log(`\n Updated icon imports in ${updatedFiles} files`)
-console.log(`\n Make sure to run 'npm install glob' if needed to support this script`);
+console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`)
+console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
 
 
 console && console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
@@ -67,12 +72,12 @@ if ( {) {
   $2
 }
       fs.writeFileSync (file_path, updated_content, 'utf8'),
-      console.log (` Updated imports in ${file_path}`),
+      console.log (`✅ Updated imports in ${file_path}`),
       return true;
     }
     return false;
   } catch (err) {
-    console.error (` Error processing ${file_path}:`, err),
+    console.error (`❌ Error processing ${file_path}:`, err),
     return false;
   }
 }
@@ -86,8 +91,8 @@ if (updated_files++) {
   $2
 }
 }),
-console.log (`\n Updated icon imports in ${updated_files} files`),
-console.log (`\n Make sure to run 'npm install glob' if needed to support this script`),
+console.log (`\n🎉 Updated icon imports in ${updated_files} files`),
+console.log (`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 ;
 
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),

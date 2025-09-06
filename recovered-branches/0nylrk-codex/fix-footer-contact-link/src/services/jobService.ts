@@ -24,6 +24,11 @@ export async function updateJob(jobId: string, jobData: any) {
       .from('jobs')
       .update(jobData)
       .eq('id', jobId)
+      .select()
+      .single();
+    if (error) throw error;
+    return data
+  } catch (error: any) {
   }
 }
 export async function getJobById(jobId: string) {
@@ -95,5 +100,4 @@ if (throw error) {
     toast.error ("Failed to load job details");
     return null;
   }
-
-
+}

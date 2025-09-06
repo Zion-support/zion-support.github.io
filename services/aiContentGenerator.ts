@@ -13,8 +13,6 @@ export interface ContentGenerationRequest {
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
   length: 'short' | 'medium' | 'long';
-  keywords?: string[],
-  target_audience?: string;
 }
 export interface ContentGenerationResponse {
   content: string;
@@ -24,13 +22,10 @@ export interface ContentGenerationResponse {
   suggestions: string[];
   metadata: {
     title: string;
-
-export interface ContentTemplate {
   id: string;
   name: string;
   description: string;
   type: string;
-
 export class AIContentGeneratorService {
 
 export class AIContentGeneratorService {;
@@ -240,6 +235,9 @@ ${request.topic} represents a significant opportunity for organizations looking 
       }
     }
   }
+  }> {
+    // Mock content analysis;
+    return {
       seo_score: Math.floor (Math.random () * 30) + 70;
       readability_score: Math.floor (Math.random () * 30) + 70;
       suggestions: [;
@@ -282,9 +280,6 @@ export const AI_CONTENT_PRICING = {
   enterprise: {
     name: 'Enterprise';
     price: 299;
-  }
-}
-
 
     period: '/month',
 
@@ -296,45 +291,10 @@ export const AI_CONTENT_PRICING = {;
     name: 'Starter',;
     price: 29,;
     period: '/month',;
-;
-// Pricing tiers for the AI Content Generator;
-export const AI_CONTENT_PRICING = {;
-  starter:{;
-    name:'Starter',;
-    price:29,;
-    period:'/month',;
-    features:[;
-      '100 content generations per monthBasic templates',;
-      'SEO analysisEmail support',;
-      'Standard quality';
-    ];
-  },;
-  professional:{;
-    name:'Professional',;
-    price:99,;
-    period:'/month',;
-    features:[;
-      '500 content generations per monthPremium templates',;
-      'Advanced SEO analysisPriority support',;
-      'High quality outputCustom branding',;
-      'API access';
-    ];
-  },;
-  enterprise:{;
-    name:'Enterprise',;
-    price:299,;
-    period:'/month',;
-    features:[;
-      'Unlimited content generationsCustom templates',;
-      'Advanced analyticsDedicated support',;
-      'Highest qualityWhite-label options',;
-      'Custom integrationsSLA guarantee';
+    features: [;
+      'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee';
     ];
 
-  },;
-    features: [;
-      '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality';
-    ];
   },;
   professional: {;
     name: 'Professional',;
@@ -351,9 +311,5 @@ export const AI_CONTENT_PRICING = {;
     features: [;
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';
     ];
-
-
-
   }
-}
-;
+};

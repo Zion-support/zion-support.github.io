@@ -2,9 +2,6 @@ import Head from \'next/head\'; import Link from \'next/link\'; export default f
 import React from 'react';
 interface IndexProps {
   // Add props here as needed
-
-
-
 export default function Index({ }: IndexProps) {
   return (
     <div>;

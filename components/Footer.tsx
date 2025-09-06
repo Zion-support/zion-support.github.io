@@ -19,6 +19,7 @@ import React from 'react;';
 import Link from 'next/link';
 
 export default function Footer() {
+export default function Footer() {
 export default function Footer() {;
   const currentYear = new Date().getFullYear();
   const footerLinks = {
@@ -52,14 +53,16 @@ origin/automation-improvements-final
 
 export default function Footer() {
 export default function Footer() {;
-export default function Footer() {
-export default function Footer() {;
   const currentYear = new Date().getFullYear();
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" },
       { name: "IT Services", href: "/it-services" },
       { name: "Micro SaaS", href: "/micro-saas" },
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  const footerLinks = {
+    services: [
       { name: "Blockchain", href: "/blockchain" },
       { name: "IoT Solutions", href: "/iot" },
       { name: "Cybersecurity", href: "/cybersecurity" },
@@ -137,7 +140,6 @@ export default function Footer() {;
       <div className="container mx-auto px-4 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">;
           {/* Company Info */}
-
 
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
               quantum computing, blockchain, IoT, and digital transformation services.
@@ -262,6 +264,7 @@ const Footer: React.FC = () => {
                   <br />
                   Middletown DE 19709
                 </span>
+            {/* Contact Info */}
               </div>
             </div>
           </div>
@@ -331,6 +334,7 @@ const Footer: React.FC = () => {
               ))}
             </ul>;
           </div>;
+
 
           {/* Solutions */}
           <div>;
@@ -410,7 +414,6 @@ const Footer: React.FC = () => {
                 </li>;
               ))}
             </ul>;
-
             <h3 className="text-lg font-semibold mb-4">Resources</h3>;
             <ul className="space-y-2">;
               {footerLinks && footerLinks.resources.map((link) => (;
@@ -427,6 +430,36 @@ const Footer: React.FC = () => {
           </div>;
         </div>;
       </div>;
+            {/* Social Links */}
+            <div className="flex space-x-4 mb-4 md:mb-0">
+              <a
+                href="https://linkedin.com/company/zion-tech-group"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://twitter.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a
+                href="https://facebook.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="https://instagram.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
               <Link
                 href="/privacy"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -470,7 +503,6 @@ const Footer: React.FC = () => {
                 <Instagram className="w-5 h-5" />;
               </a>;
             </div>;
-
             {/* Legal Links */}
             <div className="flex space-x-6 text-sm">;
               <Link
@@ -484,7 +516,3 @@ const Footer: React.FC = () => {
                 Terms of Service;
               </Link>;
               <Link
-    </footer>);
-}
-
-

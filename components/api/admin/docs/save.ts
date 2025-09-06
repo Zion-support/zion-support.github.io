@@ -1,11 +1,13 @@
- const ts = new Date () .toISOString () 
-const ts = new Date () .toISOString () 
- const ts = new Date () .toISOString () 
-
-
 
 const ts = new Date () .toISOString ()
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method !== 'POST') {
+    return res && res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next';
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import fs from 'fs';
+import path from 'path';
 function ensureDir(dir: string) {
   if (!fs && fs.existsSync(dir)) {
     fs && fs.mkdirSync(dir, { recursive: true })
@@ -17,9 +19,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(403).json({ error: 'Forbidden' });
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method Not Allowed' })
-  const token = req.headers['x-admin-token'] as string | undefined;
-  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-    return res.status(403).json({ error: 'Forbidden' });
   }
   try {
     ensureDir(DOCS_DIR);
@@ -55,6 +54,5 @@ function ensure_dir() {
   } catch (e) {
     res.status (500).json ({ error: 'Failed to save content' });
   }
-
   }
 }

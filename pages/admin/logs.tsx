@@ -146,7 +146,6 @@ interface LogEntry {
 }
 ;
 interface LogsPageProps {;
-interface LogsPageProps {;
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
@@ -156,8 +155,6 @@ interface LogsPageProps {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
@@ -174,14 +171,11 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   warningCount
   totalCount
   lastUpdated
-
   logs: initialLogs,
   errorCount,
   warningCount,
   totalCount,
   lastUpdated,;
-}: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
-
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
       return <XCircle className="h-4 w-4 text-red-700" />,
     default: return <Info className="h-4 w-4 text-gray-500" />
@@ -374,9 +368,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 }
   },;
   const exportLogs = () => {;
-
-
-
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
@@ -426,8 +417,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
               className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
-    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
-
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
@@ -492,20 +481,55 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
           </CardContent>
         </Card>
         <Card>
+
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Errors</CardTitle>
+            <XCircle className="h-4 w-4 text-red-500" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-red-600">{errorCount}</div>
+            <p className="text-xs text-muted-foreground">Critical & error logs</p>
+          </CardContent>
+
+        </Card>
+        <Card>
+
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Warnings</CardTitle>
+            <AlertTriangle className="h-4 w-4 text-yellow-500" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-yellow-600">{warningCount}</div>
+            <p className="text-xs text-muted-foreground">Warning logs</p>
+          </CardContent>
+
+        </Card>
+        <Card>
+
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Last Updated</CardTitle>
+            <RefreshCw className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-sm font-medium">{formatTimestamp(lastUpdated)}</div>
+            <p className="text-xs text-muted-foreground">Data freshness</p>
+          </CardContent>
+
+        </Card>
+      </div>
+      {/* Filters */}
       {/* Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
       <Card>
         <CardHeader>
           <CardTitle>Filters</CardTitle>
         </CardHeader>
         <CardContent>
               <SelectTrigger>
-                <SelectValue placeholder='All levels' />
+                <SelectValue placeholder="All levels" />
               </SelectTrigger>
               <SelectContent>
               <SelectTrigger>
@@ -513,8 +537,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
               <SelectContent>
                 <SelectItem value='all'>All Categories</SelectItem>
                 {categories.map(category => (
-
-
               <SelectTrigger>
                 <SelectValue placeholder="All categories" />
               </SelectTrigger>
@@ -621,14 +643,11 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                       <Badge variant="secondary">{log.source}</Badge>
                       {log.component && (
                         <Badge variant="outline">{log.component}</Badge>
-
-
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
                         View Context
                       </summary>
-
 
 
 
@@ -646,9 +665,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
                   {log.error && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
@@ -670,15 +686,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
               <div className="text-center text-muted-foreground py-8">
                 No logs found matching the current filters.
               </div>
-                  )}
-                </div>;
-              ));
-            ) : (;
-              <div className='text-center text-muted-foreground py-8'>                No logs found matching the current filters.;
-              </div>;
-              <div className="text-center text-muted-foreground py-8">
-                No logs found matching the current filters.
-              </div>
             )}
           </div>;
         </div>;
@@ -693,7 +700,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                         <div className="flex items - center justify - between text - xs text - gray - 500">;
                           <div>;
                             {log.session_id && <span > Session: {log.session_id}</span>}
-                            {log.user_id && <span>  User: {log.user_id}</span>}
+                            {log.user_id && <span> • User: {log.user_id}</span>}
                           </div>;
                           {log.performance && (
                             <div>{format_performance (log.performance)}</div>)}
@@ -705,7 +712,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                     </details>)}
                   <div className='flex items - center justify - between text - xs text - muted - foreground'>                    <div>;
                       Session: {log.session_id}
-                      {log.user_id && `  User: ${log.user_id}`}
+                      {log.user_id && ` • User: ${log.user_id}`}
                     </div>;
                   </div>;
                   {log.url && (
@@ -731,7 +738,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
         }
       }
     }
-    // Sort logs by timestamp (newest first)
     const totalCount = logs.length;
     return {
       props: {
@@ -755,7 +761,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
         lastUpdated: new Date().toISOString(),
       },
     };
-
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

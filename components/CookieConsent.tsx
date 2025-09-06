@@ -1,7 +1,27 @@
-export default function CookieConsent() {
+
 
 export default function CookieConsent() {;
-
+  const [isVisible, setIsVisible] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const [preferences, setPreferences] = useState({
+    necessary: true
+    analytics: false
+    marketing: false
+    functional: false
+  });
+  useEffect(() => {
+    const consent = localStorage.getItem("cookie-consent");
+    if (!consent) {
+      setIsVisible(true);
+    }
+  }, []);
+  const acceptAll = () => {
+    const allAccepted = {
+      necessary: true
+      analytics: true
+      marketing: true
+      functional: true
+    }
 
 export default function CookieConsent() {;
   const [isVisible, setIsVisible] = useState(false);
@@ -27,15 +47,15 @@ export default function CookieConsent() {;
       marketing: true,;
       functional: true,;
     };
-    }
+    setPreferences(allAccepted);
+    localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
+    setIsVisible(false);
+    setPreferences(onlyNecessary);
+    localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary));
+    setIsVisible(false);
+    return null;
   }
-  const rejectAll = () => {
-    const onlyNecessary = {
-      necessary: true
-      analytics: false
-      marketing: false
-      functional: false
-    }
+  return (
                   We use cookies to improve your browsing experience, serve;
                   personalized content, and analyze our traffic. By clicking;
                   "Accept All", you consent to our use of cookies.;
@@ -62,58 +82,6 @@ export default function CookieConsent() {;
                   checked={preferences && preferences.necessary}
                   disabled
                   className="w-4 h-4 text-blue-600 rounded"
-                <input
-                  type="checkbox"
-                  checked={preferences.analytics}
-                  onChange={(e) =>
-                    setPreferences((prev) => ({
-                      ...prev
-                      analytics: e.target.checked
-                    }))
-                  }
-                  className="w-4 h-4 text-blue-600 rounded"
-                />
-              </div>
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <div>
-                  <h4 className="font-medium text-gray-900">
-                    Marketing Cookies
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Used to track visitors across websites for advertising
-                    purposes
-                  </p>
-                </div>
-                <input
-                  type="checkbox"
-                  checked={preferences.marketing}
-                  onChange={(e) =>
-                    setPreferences((prev) => ({
-                      ...prev
-                      marketing: e.target.checked
-                    }))
-                  }
-                  className="w-4 h-4 text-blue-600 rounded"
-                />
-              </div>
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <div>
-                  <h4 className="font-medium text-gray-900">
-                    Functional Cookies
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Enable enhanced functionality and personalization
-                  </p>
-                </div>
-                <input
-                  type="checkbox"
-                  checked={preferences.functional}
-                  onChange={(e) =>
-                    setPreferences((prev) => ({
-                      ...prev
-                      functional: e.target.checked
-                    }))
-                  }
               <button
                 onClick={rejectAll}
                 className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">;

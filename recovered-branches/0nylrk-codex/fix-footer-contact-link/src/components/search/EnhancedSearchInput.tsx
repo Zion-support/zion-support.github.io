@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
@@ -17,18 +16,10 @@ interface EnhancedSearchInputProps {
   placeholder?: string;
   searchSuggestions: SearchSuggestion[];
 }
-export function EnhancedSearchInput({
-  value;
-
-  onChange
-  placeholder = "Search..."
-  searchSuggestions
-}: EnhancedSearchInputProps) {
   const [isFocused, setIsFocused] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -63,9 +54,6 @@ interface EnhancedSearchInputProps {
     setIsFocused(false)
     inputRef.current?.blur()
   }
-
-
-
 
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
@@ -113,9 +101,6 @@ export function EnhancedSearchInput({;
     function handleClickOutside(event: MouseEvent) {;
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
         setIsFocused(false);
-
-
-
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -157,8 +142,9 @@ export function EnhancedSearchInput({;
         <Input;
           ref={inputRef}
           type="text";
-
-
+        <Input
+          ref={inputRef}
+          type="text"
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}

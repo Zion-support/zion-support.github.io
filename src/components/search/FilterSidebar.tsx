@@ -32,6 +32,7 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
           ))}
         </div>
 
+
   filters: FilterGroup[];
   selected_filters: Record < string, any>;
   onFilterChange: key: string, value: string, checked: boolean void;
@@ -73,3 +74,20 @@ function FilterSidebar() {
     </>;
   )};
 '"`;
+import React from 'react',;
+interface FilterSidebarProps {;
+  className?: string,;
+  children?: React.ReactNode;
+}
+;
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
+  className,;
+  children;
+}) => {;
+  return (;
+    <div className={`filter-sidebar ${className || ''}`}>;
+      {children}
+    </div>;
+  );
+};
+export default FilterSidebar;

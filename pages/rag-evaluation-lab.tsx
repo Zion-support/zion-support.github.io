@@ -1,6 +1,3 @@
-import SEO from '../components/SEO';
-import Link from 'next/link';
-export default function RAGEvaluationLabPage() {
 
 
 class ErrorBoundary extends React.Component {
@@ -32,9 +29,6 @@ import React from 'react';
       <SEO
         title='RAG Evaluation Lab'
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
-import SEO from '../components/SEO',
-import Link from 'next/link',
-
 export default function RAGEvaluationLabPage() {
 	return (
 		<>

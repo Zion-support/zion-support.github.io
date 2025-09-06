@@ -82,9 +82,6 @@ export function DynamicListingPage(): any ({;
   const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-
-
-
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -273,10 +270,7 @@ if ( {) {
                   Category;
                 </label>;
                 <Select
-                  value={selectedCategory}
-                  onValueChange={(value: string) => {
-                    console.log("Category selected:", value);
-                    setSelectedCategory(value)
+            {description}
                   }}
                 >;
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
@@ -284,22 +278,13 @@ if ( {) {
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
                     <SelectItem value="all" className="text-white">All Categories</SelectItem>;
-
-                    {categoryFilters.map((filter) => (;
-                      <SelectItem key={filter.value} value={filter.value} className="text-white">;
-
-
                         {filter.label}
                       </SelectItem>
+                    {categoryFilters && categoryFilters.map((filter) => (;
+                      <SelectItem key={filter && filter.value} value={filter && filter.value} className="text-white">;
+                        {filter && filter.label}
+                      </SelectItem>;
                     ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="mb-6">
-                <label className="text-sm font-medium text-zion-slate-light block mb-2">
-                  Price Range
-                </label>
-                <div className="mt-6 px-2">
                   <Slider
                     defaultValue={[priceRange && priceRange.min, priceRange && priceRange.max]}
                     min={priceRange && priceRange.min}
@@ -308,15 +293,6 @@ if ( {) {
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
                     className="mb-4"
-                  />
-                  <div className="flex justify-between text-sm text-zion-slate-light">
-                    <span>${currentPriceFilter[0].toLocaleString()}</span>
-                    <span>${currentPriceFilter[1].toLocaleString()}</span>
-                  </div>
-                </div>
-              </div>
-
-
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
@@ -527,6 +503,7 @@ value={selectedCategory}
                       key={rating === null ? 'any' : rating}
                       variant="outline";
                       size="sm";
+                      }}
                       }`}
                     >;
                       {rating === null ? (;
@@ -543,19 +520,9 @@ value={selectedCategory}
                   ))}
                 </div>
               </div>
-
-
-
                       )}
                     </Button>;
                   ))}
-
-                </div>;
-              </div>;
-
-              <Button
-                variant="outline" 
-
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {;
                   console && console.log("Resetting filters");
@@ -660,13 +627,42 @@ value={selectedCategory}
                   </div>;
                 ))}
               </div>;
-                {filteredListings && filteredListings.map((listing) => (;
-                  <ProductListingCard
-                    key={listing && listing.id}
-
-                  <ProductListingCard 
-
                     key={listing.id}
+                    listing={listing}
+                    view={view}
+                    onRequestQuote={handleRequestQuote}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-20">
+                <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
+                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    setSearchQuery("");
+                    setSelectedCategory("all");
+                    setCurrentPriceFilter([priceRange.min, priceRange.max]);
+
+                    setSelectedRating(null)
+                    setSearchQuery(""),
+                    setSelectedCategory("all"),
+                    setCurrentPriceFilter([priceRange.min, priceRange.max]),
+                    setSelectedRating(null)
+
+              </div>;
+            ) : (;
+              <div className="text-center py-20">;
+                <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
+                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
+                <Button
+                  variant="outline" 
+                  onClick={() => {;
+                    setSearchQuery("");
+                    setSelectedCategory("all");
+                    setCurrentPriceFilter([priceRange && priceRange.min, priceRange && priceRange.max]);
+                    setSelectedRating(null);
                     listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
@@ -677,8 +673,11 @@ value={selectedCategory}
                 </Button>;
               </div>;
             )}
-
-
+                  on_click={() => {
+                    setSearchQuery ("");
+                    setSelectedCategory ("all");
+                    setCurrentPriceFilter ([price_range.min, price_range.max]);
+                    setSelectedRating (null);
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
                 >;

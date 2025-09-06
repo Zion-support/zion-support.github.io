@@ -1,4 +1,3 @@
-
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -19,8 +18,6 @@ import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
 import ReplyForm from "@/components/community/ReplyForm",
 import { useToast } from "@/hooks/use-toast",
-
-
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -122,12 +119,6 @@ const mockReplies: ForumReply[] = [
       </AppLayout>;
     );
   }
-
-
-  },
-
-
-
   const handleDownvote = () => {
     if (!user) {
       toast({
@@ -152,9 +143,6 @@ const mockReplies: ForumReply[] = [
     }
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 })
-    toast({
-      title: "Reply posted"
-      description: "Your reply has been added to the discussion"})
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
@@ -165,11 +153,6 @@ const mockReplies: ForumReply[] = [
       });
       return;
     }
-
-
-    // Update the replies;
-    const updatedReplies = replies && replies.map(reply => ({;
-
       ...reply;
       isAnswer: reply && reply.id === replyId;
     }));
@@ -194,9 +177,6 @@ const mockReplies: ForumReply[] = [
     toast({
       title: "Report submitted"
       description: "A moderator will review this content"})
-  const handlePinPost = () => {
-    if (!isAdminOrMod) return;
-    setPost({ ...post, isPinned: !post.isPinned })
     toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned"
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
@@ -240,8 +220,6 @@ const mockReplies: ForumReply[] = [
                   <div className="font-medium text-lg">{post.authorName}</div>
                   {post.authorRole && (
                     <Badge variant="outline" className="mt-1">
-
-
                       {post.authorRole}
                     </Badge>
                   )}
@@ -352,13 +330,8 @@ const mockReplies: ForumReply[] = [
                   </AlertDescription>
                 </Alert>
               )}
-            </div>;
+            </div>
           )}
-
-
-          
-
-
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
@@ -372,12 +345,8 @@ const mockReplies: ForumReply[] = [
               .filter(reply => !reply.isAnswer)
               .map(reply => (
                 <ReplyCard
-                  key={reply && reply.id}
+                  key={reply.id}
                   reply={reply}
-
-                  onMarkAnswer={() => handleMarkAsAnswer(reply && reply.id)}
-                  canMarkAnswer={!post && post.isAnswered && (isAuthor || isAdminOrMod)}
-                />;
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
 
                   canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}

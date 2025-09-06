@@ -1,6 +1,3 @@
-
-
-
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -10,7 +7,6 @@ export const useUploadDeliverable = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
-
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -46,18 +42,6 @@ if (return null) {
     } finally {
       setIsSubmitting (false);
     }
-
-      ),
-      
-      toast.success("Deliverable added successfully"),
-      
-      return newDeliverable
-    } catch (err: any) {
-      console.error("Error uploading deliverable:", err),
-      toast.error("Failed to upload deliverable: " + err.message),
-      return null
-    } finally {
-      setIsSubmitting(false)
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -116,7 +100,5 @@ export const useUploadDeliverable = () => {;
   return {;
     uploadDeliverable;
     isSubmitting;
-
-
   }
 };

@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -6,9 +5,6 @@ import { Globe, Server, Clock, MapPin, Check } from "lucide-react";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react",
 import { CountryPricing } from "@/data/onsiteServicePricing",
-
-
-
 interface CountryServiceCardProps {
 
   country: CountryPricing
@@ -54,12 +50,11 @@ function CountryServiceCard() {
   // Get region flag based on country name (for demo purposes);
   const getRegionEmoji = (country_name: string): string => {
     const emoji_map: Record < string, string> = {
-
-    const emojiMap: Record<string, string> = {;
       "United States": "🇺🇸";
       "United Kingdom": "🇬🇧";
       "Canada": "🇨🇦";
       "Australia": "🇦🇺";
+      "Germany": "🇩🇪",
       "France": "🇫🇷";
       "Japan": "🇯🇵";
       "China": "🇨🇳";
@@ -69,9 +64,6 @@ function CountryServiceCard() {
       "Singapore": "🇸🇬";
       "South Korea": "🇰🇷";
       "South Africa": "🇿🇦";
-
-
-
     const emojiMap: Record<string string> = {
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
@@ -165,6 +157,7 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
     }
   };
 
+        : "bg-zion-blue-dark border-zion-blue-light"
     }`}>;
       <CardHeader className="pb-2">;
         <div className="flex items-center justify-between">;
@@ -187,3 +180,4 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
 
 
 }
+;

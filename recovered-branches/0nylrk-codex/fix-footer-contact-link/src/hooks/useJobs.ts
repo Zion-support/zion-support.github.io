@@ -2,7 +2,6 @@
 
 
 
-
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {Job, JobStatus} from "@/types/jobs";
@@ -18,9 +17,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
-
-
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { Job, JobStatus } from "@/types/jobs",
@@ -82,9 +78,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
     error;
     refetch: fetch_jobs;
     updateJobStatus;
-  }
-}
-
 
     delete_job;
     create_job;
@@ -183,9 +176,5 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     createJob,;
     updateJob;
     getJobById;
-
-
-
   }
-}
-;
+};

@@ -65,8 +65,6 @@ const pricingPlans = [
       'Up to 5 trading strategies',
       'Basic reporting and analytics',
     ],
-      'Basic market analysis and insightsPortfolio tracking and monitoringRisk assessment and managementEmail supportUp to 5 trading strategiesBasic reporting and analytics'
-    ];
     popular: false,
     color: 'from-gray-500 to-gray-600'
   };
@@ -298,53 +296,48 @@ const NeuralFinanceAI: React.FC = () => {;
                 Advanced AI-powered financial analysis and trading platform using neural networks for real-time market prediction,
                 risk assessment, and automated portfolio optimization with 94% accuracy.
               </p>
-
-
-
                 <Link
-                  href='#pricing'
-                  className='bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2'
+                  href="#pricing"
+                  className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2"
                 >
                   <span>Get Started</span>
-                  <ArrowRight className='w-5 h-5' />
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
-                <button className='border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200 flex items-center justify-center space-x-2'>
-                  <Play className='w-5 h-5' />
+                <button className="border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200 flex items-center justify-center space-x-2">
+                  <Play className="w-5 h-5" />
                   <span>Watch Demo</span>
                 </button>
               </div>
-
-
                   <span>94% Market Prediction Accuracy</span>
                 </div>
-                <div className='flex items-center space-x-2'>
-                  <CheckCircle className='w-4 h-4 text-green-400' />
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
                   <span>Real-time Risk Assessment</span>
                 </div>
-                <div className='flex items-center space-x-2'>
-                  <CheckCircle className='w-4 h-4 text-green-400' />                  <span>Multi-Asset Support</span>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>Multi-Asset Support</span>
                 </div>
               </div>
             </motion.div>
             <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+
+              className="relative"
             >
-              <div className='relative bg-gradient-to-br from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-3xl p-8 backdrop-blur-sm'>
-                <div className='absolute inset-0 bg-gradient-to-br from-violet-500/10 to-purple-500/10 rounded-3xl'></div>
-                <div className='relative z-10'>
-                  <div className='grid grid-cols-2 gap-4 mb-6'>
-                    <div className='bg-gray-800/50 rounded-xl p-4 border border-gray-700/50'>
-                      <div className='text-2xl font-bold text-violet-400'>
-                        $89.5B
-                      </div>
-                      <div className='text-sm text-gray-400'>Market Size</div>
+              <div className="relative bg-gradient-to-br from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-3xl p-8 backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-purple-500/10 rounded-3xl"></div>
+                <div className="relative z-10">
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-gray-800/50 rounded-xl p-4 border border-gray-700/50">
+                      <div className="text-2xl font-bold text-violet-400">$89.5B</div>
+                      <div className="text-sm text-gray-400">Market Size</div>
                     </div>
-                    <div className='bg-gray-800/50 rounded-xl p-4 border border-gray-700/50'>
-                      <div className='text-2xl font-bold text-purple-400'>
-                        94%
-                      </div>
-                      <div className='text-sm text-gray-400'>
-                        Prediction Accuracy
-                      </div>
+                    <div className="bg-gray-800/50 rounded-xl p-4 border border-gray-700/50">
+                      <div className="text-2xl font-bold text-purple-400">94%</div>
+                      <div className="text-sm text-gray-400">Prediction Accuracy</div>
                     </div>
                   </div>
                   <div className='space-y-4'>
@@ -353,13 +346,14 @@ const NeuralFinanceAI: React.FC = () => {;
                       <span className='text-violet-400 font-semibold'>
                         Advanced
                       </span>
-
                     </div>
-                    <div className='flex items-center justify-between p-3 bg-gray-800/50 rounded-lg border border-gray-700/50'>
-                      <span className='text-gray-300'>Risk Management</span>
-                      <span className='text-purple-400 font-semibold'>
-                        Real-time
-                      </span>
+                    <div className="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg border border-gray-700/50">
+                      <span className="text-gray-300">Risk Management</span>
+                      <span className="text-purple-400 font-semibold">Real-time</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg border border-gray-700/50">
+                      <span className="text-gray-300">Trading Automation</span>
+                      <span className="text-pink-400 font-semibold">Enabled</span>
                     </div>
                   </div>
                 </div>
@@ -368,20 +362,18 @@ const NeuralFinanceAI: React.FC = () => {;
           </div>
         </div>
       </section>
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-              <span className='bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent'>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
                 Advanced Features
               </span>
             </h2>
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Leverage cutting-edge AI and neural network technology to gain
-              unprecedented insights into financial markets.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Leverage cutting-edge AI and neural network technology to gain unprecedented insights into financial markets.
             </p>
           </motion.div>
                 key={index}
@@ -389,8 +381,6 @@ const NeuralFinanceAI: React.FC = () => {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
-
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
@@ -413,14 +403,13 @@ const NeuralFinanceAI: React.FC = () => {;
 
 
           >
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-              <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Use Cases
               </span>
             </h2>
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Discover how Neural Finance AI transforms various aspects of
-              financial trading and investment management.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how Neural Finance AI transforms various aspects of financial trading and investment management.
             </p>
           </motion.div>
                 key={index}
@@ -428,8 +417,6 @@ const NeuralFinanceAI: React.FC = () => {;
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
-
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -450,16 +437,11 @@ const NeuralFinanceAI: React.FC = () => {;
   }
 }
 
-                      ))}
                     </div>;
                   </div>;
                 </div>;
               </motion && motion.div>;
             ))}
-          </div>
-        </div>
-      </section>
-      {/* Pricing Section */}
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -468,14 +450,13 @@ const NeuralFinanceAI: React.FC = () => {;
 
 
           >
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-              <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Pricing Plans
               </span>
             </h2>
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Choose the perfect plan for your trading needs. All plans include
-              our core AI-powered features.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the perfect plan for your trading needs. All plans include our core AI-powered features.
             </p>
           </motion.div>
                 key={index}
@@ -484,8 +465,6 @@ const NeuralFinanceAI: React.FC = () => {;
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-900/50 backdrop-blur-sm border rounded-2xl p-8 ${
-
-
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -667,9 +646,6 @@ const NeuralFinanceAI: React.FC = () => {;
               <p>✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure</p>
             </div>
-
-
-
           </div>
         </div>
       </section>
@@ -710,7 +686,7 @@ export default NeuralFinanceAI,
 
             <div className='text-sm text-gray-400'>;
               <p>;
-                 30-Day Free Trial   No Credit Card Required   Instant;
+                ✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant;
                 Setup;
               </p>;
               <p className='mt-2'>;
@@ -759,8 +735,6 @@ export default NeuralFinanceAI,
           </div>;
         </div>;
       </section>;
-
-
 
 
 export default NeuralFinanceAI;

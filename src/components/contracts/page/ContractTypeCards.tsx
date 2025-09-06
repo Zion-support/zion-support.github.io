@@ -1,3 +1,8 @@
+  return (
+    <div className="grid md:grid-cols-2 gap-6 mb-10">
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
             <FileText className="h-5 w-5" />
             Standard Contracts
           </CardTitle>
@@ -7,10 +12,16 @@
         </CardHeader>
         <CardContent>
           <ul className="space-y-2">
+            <li className="text-sm">✓ Legally binding templates</li>
+            <li className="text-sm">✓ Milestone-based payment terms</li>
+            <li className="text-sm">✓ IP rights and confidentiality clauses</li>
+            <li className="text-sm">✓ DocuSign integration</li>
           </ul>
         </CardContent>
         <CardFooter>
-          <Button variant="outline" onClick={onStandardClick}>
+
+
+
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
@@ -31,6 +42,9 @@
           </Button>
         </CardFooter>
       </Card>
+    </div>
+
+
 import { Button } from '@/components/ui/button';
 import {;
   Card,;
@@ -48,51 +62,11 @@ import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {;
   onStandardClick: () => void;
   onSmartClick: () => void;
-
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
-import { Button } from '@/components / ui / button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { FileText, ShieldCheck } from 'lucide-react';
-interface ContractTypeCardsProps {
-  onStandardClick: () => void;
-  onSmartClick: () => void;
-export /**
- * ContractTypeCards - Function description
- */
-function ContractTypeCards() {
-  return (
-    <div className='grid md:grid - cols - 2 gap - 6 mb - 10'>;
-      <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items - center gap - 2'>;
-            <FileText className='h - 5 w - 5' />            Standard Contracts;
-          <CardTitle className="flex items - center gap - 2">;
-            <FileText className="h - 5 w - 5" />;
-interface ContractTypeCardsProps {
-  onStandardClick: () => void,
-  onSmartClick: () => void;
-}
-export /**
- * ContractTypeCards - Function description
- */
-function ContractTypeCards() {
-  return (
-    <div className="grid md:grid - cols - 2 gap - 6 mb - 10">;
-      <Card>;
-        <CardHeader>;
-          <CardTitle className="flex items - center gap - 2">;
-            <FileText className="h - 5 w - 5" />;
             Standard Contracts;
           </CardTitle>;
           <CardDescription>;
@@ -112,3 +86,7 @@ function ContractTypeCards() {
           </Button>;
         </CardFooter>;
       </Card>;
+    </div>;
+  );
+};
+}

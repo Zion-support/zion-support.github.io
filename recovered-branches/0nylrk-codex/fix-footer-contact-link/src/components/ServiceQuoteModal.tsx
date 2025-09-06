@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -16,7 +14,6 @@ import {cn} from "@/lib/utils";
 import {ProductListing} from "@/types/listings";
 import {toast} from '@/hooks/use-toast';
 import {supabase} from "@/integrations/supabase/client";
-
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -30,8 +27,6 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
-
-
 interface ServiceQuoteModalProps {
 
   open: boolean
@@ -84,34 +79,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             end_date: end_date?.toISOString ()}
         }
       });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Show success message;
-      toast ({
-        title: "Quote Request Submitted!",
-        description: "We've sent your request to the service provider. They will contact you soon."}),
-      // Close the modal and reset form;
-      onOpenChange (false);
-      setFormData ({
-        description: '',
-        email: '',
-        budget: BUDGET_RANGES[0].value,
-        timeframe: TIMELINE_OPTIONS[0].value}),
-      setStartDate (new Date ());
-      setEndDate (undefined);
-      setCurrentStep ('details');
-    } catch (error) {
-      console.error ("Error submitting quote:", error);
-      toast ({
-        title: "Error",
-        description: "There was an error submitting your quote request. Please try again.",
-        variant: "destructive"});
-    } finally {
-      setIsSubmitting (false);
-    }
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -134,7 +101,7 @@ if (throw error) {
                 <Textarea
                   id="description"
                   name="description"
-                  value={formData && formData.description}
+                  value={formData.description}
                   onChange={handleInputChange}
                   placeholder="Describe your project needs in detail..."
                   className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none"
@@ -154,25 +121,18 @@ if (throw error) {
                   placeholder="Describe your project needs in detail..."
                   className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none"
                   required
-
-                />;
-              </div>;
-
-              <div className="space-y-2">;
-                <Label htmlFor="budget" className="text-white">Estimated Budget</Label>;
-                <Select
-                  value={formData && formData.budget} 
-
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
                 >;
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
                     <SelectValue placeholder="Select your budget range" />;
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
-
-
                         {range.label}
                       </SelectItem>
+                    {BUDGET_RANGES && BUDGET_RANGES.map((range) => (;
+                      <SelectItem key={range && range.value} value={range && range.value} className="text-white hover:bg-zion-blue-light">;
+                        {range && range.label}
+                      </SelectItem>;
                     ))}
                   </SelectContent>;
                 </Select>;
@@ -230,13 +190,10 @@ if (throw error) {
                   className="bg-zion-blue-dark border-zion-blue-light text-white"
                   required
                     <div className="flex justify-between">
-                      <span className="text-zion-slate-light">Start Date:</span>
-                      <span className="text-white">{format(startDate, "PPP")}</span>
+                      <span className="text-zion-slate-light">End Date:</span>
+                      <span className="text-white">{format(endDate, "PPP")}</span>
                     </div>
                   )}
-                </div>;
-              </div>;
-            </div>;
           )}
                 </div>;
               </div>;
@@ -285,10 +242,9 @@ if (throw error) {
                       <span className="text-white">{format(endDate, "PPP")}</span>;
           )}
 
-
-          <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">;
-            {currentStep !== 'details' && (;
-
+          <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
+            {currentStep !== 'details' && (
+          )}
               <Button
                 type="button"
                 variant="outline"

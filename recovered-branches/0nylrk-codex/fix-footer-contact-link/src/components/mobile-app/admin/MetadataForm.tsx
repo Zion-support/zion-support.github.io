@@ -41,8 +41,6 @@ import { X } from "lucide-react";
   const keywords = watch("keywords");
   const platform = watch("platform");
 
-
-
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { AppMetadataValues } from "./MetadataManager",
@@ -52,14 +50,10 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Badge } from "@/components/ui/badge",
 import { X } from "lucide-react",
-
-
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 
-
-export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { control, register, watch, setValue } = form;
@@ -90,6 +84,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   }
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
   const longDescription = watch("longDescription");
+  return (
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle>App Metadata</CardTitle>;
@@ -178,36 +173,10 @@ if ( {) {
               name="shortDescription"
                     Max {platform === "ios" ? "30" :"50"} characters;
                   </FormDescription>;
-                </FormItem>;              )}
-            />;
-            ;
-            <FormField;
-              control={control}
-              name="shortDescription";
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Short Description</FormLabel>;
                   <FormControl>;
-                      {...field}
-                    />;
-                  </FormControl>;
-                  <FormDescription>;
-            <FormField
-              control={control}
-              name="longDescription"
-                    Max {platform === "ios" ? "170" :"80"} characters;
-                  </FormDescription>;
-                </FormItem>;              )}
-            />;
-            ;
-            <FormField;
-              control={control}
-              name="longDescription";
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Long Description</FormLabel>;
-                  <FormControl>;
-                      maxLength={maxDescriptionLength}
                 </FormItem>)}
             />;
             <FormField;
@@ -225,8 +194,6 @@ if ( {) {
                     />;
                   </FormControl>;
                   <FormDescription>;
-
-
               control={control}
               name="shortDescription"
               render={({ field }) => (
@@ -262,8 +229,6 @@ if ( {) {
                 </FormItem>
               )}
             />
-            <div>
-              <FormLabel htmlFor="keywords">Keywords</FormLabel>
             />;
 
             <div>;
@@ -273,8 +238,6 @@ if ( {) {
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown={addKeyword}
                 className="mb-2"
-
-
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
               />;
@@ -285,8 +248,6 @@ if ( {) {
                     key={index}
                     className="bg-zion-purple/60 hover:bg-zion-purple">;
                     {keyword}
-
-
                       type="button"
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300";
@@ -295,8 +256,6 @@ if ( {) {
                     </button>;
                   </Badge>;
                 ))}
-
-
             <FormField
               control={control}
               name="version"
@@ -308,9 +267,6 @@ if ( {) {
 }
 
 );
-
-);
-
                     <Input 
                       placeholder="e.g., 1.0.0"
                       {...field}
@@ -318,6 +274,10 @@ if ( {) {
                   </FormControl>;
                 </FormItem>;
               )}
+                Add keywords to improve discoverability (max 100 characters;
+                total);
+              </FormDescription>;
+            </div>;
             <FormField;
               control={control}
               name="version";
@@ -336,7 +296,4 @@ if ( {) {
     </Card>);
 }
 ;
-
-
-
 };

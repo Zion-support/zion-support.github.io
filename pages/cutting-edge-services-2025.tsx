@@ -20,8 +20,6 @@ import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services
 import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 const serviceCategories = [
@@ -123,8 +121,6 @@ const serviceCategories = [;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
-
   }
 }
 ],
@@ -145,8 +141,6 @@ export default function CuttingEdgeServices2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
@@ -165,9 +159,6 @@ export default function CuttingEdgeServices2025() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of technology with our revolutionary services that combine AI consciousness
-
-              Experience the future of technology with our revolutionary services that combine AI consciousness,
 
 
               Experience the future of technology with our revolutionary services that combine AI consciousness,
@@ -179,8 +170,6 @@ export default function CuttingEdgeServices2025() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.a
                 href="/contact"
-
-
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Started Today
@@ -188,8 +177,6 @@ export default function CuttingEdgeServices2025() {
               </motion.a>
               <motion.a
                 href="tel:+13024640950"
-
-
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 <Phone className="mr-2 w-5 h-5" />
@@ -199,16 +186,12 @@ export default function CuttingEdgeServices2025() {
           </motion.div>
         </div>
       </section>
-
-
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
               Revolutionary Technology Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our comprehensive portfolio of cutting-edge services designed to transform your business 
-              Explore our comprehensive portfolio of cutting-edge services designed to transform your business
 
 
 
@@ -252,8 +235,6 @@ export default function CuttingEdgeServices2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                             </div>
                             <div className="text-sm text-gray-400">/month</div>
                           </div>
@@ -287,16 +268,12 @@ export default function CuttingEdgeServices2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                             className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 text-sm"
                           >
                             <Mail className="w-4 h-4 mr-2" />
                             Get Quote
                           </a>
                           <a
-
-
                             className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-gray-600 text-gray-300 font-semibold rounded-xl hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300 text-sm"
                           >
                             <ExternalLink className="w-4 h-4 mr-2" />
@@ -305,35 +282,6 @@ export default function CuttingEdgeServices2025() {
                         </div>
                       </div>
                     </motion.div>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-              Transparent Pricing Plans
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              and expert support.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {['StarterProfessionalEnterprise'].map((plan, index) => (
-              <motion.div
-            className="text-center mb-16";
-
-
-                  <div className="text-center mb-8">
-                    <div className="text-4xl font-bold text-cyan-400 mb-2">
-                    </div>
-                    <div className="text-gray-400">per month</div>
-                  </div>
-                  <a
-                    href="/contact"
-                    className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300"
-                  >
-                    Get Started
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </a>
-      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-        <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -648,8 +596,5 @@ export default function CuttingEdgeServices2025() {
           </motion.div>;
         </div>;
       </section>;
-}
-    </Layout>);
-}
 
 

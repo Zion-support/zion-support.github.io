@@ -151,13 +151,10 @@ export function QuoteFormSection() {
                         id={`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
-                      />
                       <label
                         htmlFor={`interest-${index}`}
                         className="ml-2 text-sm text-zion-slate-light"
                       >
-
-
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
@@ -251,14 +248,6 @@ export function QuoteFormSection() {;
                   />;
                 </div>;
               </div>;
-                  <Input;
-                    id="phone";
-                    type="tel";
-                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
-                  />;
-                </div>;
-              </div>;
-              ;
               <div className="mt-6">;
                 <label htmlFor="interest" className="block text-sm font-medium text-zion-slate-light mb-1">;
                   I'm interested in (select all that apply);

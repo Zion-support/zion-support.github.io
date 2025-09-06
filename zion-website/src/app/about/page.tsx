@@ -25,20 +25,20 @@ const values = [
     icon: AcademicCapIcon}];
 const team = [;
   {
-    name: 'Dr. Sarah Chen'
-    role: 'Chief Executive Officer'
-    bio: 'Former AI researcher at Stanford, leading Zion Tech Group\'s vision for the future of technology.'
-    image: '/images/team/sarah-chen.jpg'}
+    name: 'Dr. Sarah Chen',
+    role: 'Chief Executive Officer',
+    bio: 'Former AI researcher at Stanford, leading Zion Tech Group's vision for the future of technology.',
+    image: '/images / team / sarah - chen.jpg'},
   {
-    name: 'Dr. Marcus Rodriguez'
-    role: 'Chief Technology Officer'
-    bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.'
-    image: '/images/team/marcus-rodriguez.jpg'}
+    name: 'Dr. Marcus Rodriguez',
+    role: 'Chief Technology Officer',
+    bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.',
+    image: '/images / team / marcus - rodriguez.jpg'},
   {
-    name: 'Dr. Elena Petrov'
-    role: 'Head of Research'
-    bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.'
-    image: '/images/team/elena-petrov.jpg'}
+    name: 'Dr. Elena Petrov',
+    role: 'Head of Research',
+    bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top - tier journals.',
+    image: '/images / team / elena - petrov.jpg'},
   {
   return (
     <div className="bg-black">
@@ -47,15 +47,6 @@ const team = [;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
-              About{' '}
-export default function AboutPage() {
-  return (
-    <div className="bg-black">
-      {/* Hero section */}
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               About{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
@@ -67,28 +58,6 @@ export default function AboutPage() {
         </div>
       </div>
       {/* Mission & Vision */}
-      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Purpose</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Mission & Vision
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
-            <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
-              <div className="flex items-center gap-x-3 mb-4">
-                <RocketLaunchIcon className="h-8 w-8 text-blue-400" />
-                <h3 className="text-xl font-semibold text-white">Our Mission</h3>
-              </div>
-                the world's most complex challenges while maintaining the highest ethical standards.
-              </p>
-            </div>
-            <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
-              <div className="flex items-center gap-x-3 mb-4">
-                <LightBulbIcon className="h-8 w-8 text-purple-400" />
-                <h3 className="text-xl font-semibold text-white">Our Vision</h3>
-              </div>
                 intelligent, efficient, and sustainable world for generations to come.
               </p>
             </div>
@@ -96,19 +65,31 @@ export default function AboutPage() {
         </div>
       </div>
       {/* Company Story */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Story</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            From Research to Revolution
-          </p>
-        </div>
               accelerate their growth.
             </p>
           </div>
         </div>
       </div>
       {/* Values */}
+      <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
+        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
+          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>What Drives Us</h2>;
+          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
+            Our Core Values;
+          </p>;
+        </div>;
+        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
+          <dl className=&quot;grid max - w-xl grid - cols - 1 gap - x-8 gap - y-16 lg:max - w-none lg:grid - cols - 2&quot;>;
+            {values.map ((value) => (
+              <div key={value.name} className=&quot;flex flex - col group & quot;>;
+                <dt className=&quot;flex items - center gap - x-3 text - base font - semibold leading - 7 text - white & quot;>;
+                  <value.icon className=&quot;h - 5 w - 5 flex - none text - blue - 400 & quot; aria - hidden=&quot;true & quot; />;
+                  {value.name}
+                </dt>;
+                <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
+                  <p className=&quot;flex - auto & quot;>{value.description}</p>;
+                </dd>;
+              </div>))}
           </dl>;
         </div>;
       </div>;
@@ -165,7 +146,7 @@ export default function AboutPage() {
               Get in Touch
             </Link>
             <a href=&quot;/careers&quot; className=&quot;text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200&quot;>
-              View Careers <span aria-hidden=&quot;true&quot;></span>
+              View Careers <span aria-hidden=&quot;true&quot;>→</span>
             </Link>
           </div>
         </div>
@@ -215,7 +196,6 @@ export default function AboutPage() {
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Ready to be part of the AI revolution? Let's discuss how we can work together to 
-
             transform your organization.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">

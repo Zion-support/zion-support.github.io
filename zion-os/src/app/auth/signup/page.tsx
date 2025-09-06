@@ -26,7 +26,7 @@
           {/* Free Trial Badge */}
           <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded - full">;
             <span className="text - green - 400 text - sm font - medium">;
-               Free Trial Available;
+              🚀 Free Trial Available;
             </span>;
           </div>;
         </div>;
@@ -35,19 +35,19 @@
           <h3 className="text - sm font - semibold text - zinc - 300 mb - 3">What you'll get:</h3>;
           <ul className="space - y-2 text - sm text - zinc - 400">;
             <li className="flex items - center gap - 2">;
-              <span className="text - green - 400"></span>;
+              <span className="text - green - 400">✓</span>;
               Launch new instances in minutes;
             </li>;
             <li className="flex items - center gap - 2">;
-              <span className="text - green - 400"></span>;
+              <span className="text - green - 400">✓</span>;
               Access to marketplace templates;
             </li>;
             <li className="flex items - center gap - 2">;
-              <span className="text - green - 400"></span>;
+              <span className="text - green - 400">✓</span>;
               Governance and identity tools;
             </li>;
             <li className="flex items - center gap - 2">;
-              <span className="text - green - 400"></span>;
+              <span className="text - green - 400">✓</span>;
               Full admin dashboard access;
             </li>;
           </ul>;

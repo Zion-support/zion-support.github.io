@@ -1,4 +1,3 @@
-
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -11,9 +10,6 @@ import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestim
 import { SEO } from "@/components/SEO";
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",
 import { SEO } from "@/components/SEO",
-
-
-
 export default function EnterprisePlans() {
   return (
     <>
@@ -33,7 +29,6 @@ export default function EnterprisePlans() {
       <Footer />
     </>
   )
-}
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -95,5 +90,5 @@ import { SEO } from "@/components/SEO";
         <EnterpriseCTA />;
       </main>;
       <Footer />;
-
-
+    </>);
+}

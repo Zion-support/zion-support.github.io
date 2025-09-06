@@ -57,7 +57,7 @@ if (return) {
             repeat: Infinity
             ease: 'easeInOut',          }}          }}
 
-
+        <motion&& motion.div
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
         />;
         <motion.div;
@@ -81,10 +81,16 @@ if (return) {
           transition={{
             duration: 7,
             repeat: Infinity,
-
-
           }}
-
+      {/* Quantum Energy Particles */}
+      <div className='fixed inset-0 pointer-events-none z-20'>;
+        {[...Array(20)].map((_, i) => (;
+          <motion&& motion.div
+            ease: 'easeInOut',            ease: "easeInOut";
+          }}
+        />;
+      </div>;
+      {/* Quantum Energy Particles */}
             duration: 7,
             repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut"
@@ -108,6 +114,14 @@ if (return) {
               y: [0, -100, 0]
               opacity: [0, 1, 0]
               scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (
+      <div className='fixed inset - 0 pointer - events - none z - 20'>;
+        {[...Array (20)].map ((_, i) => (
+          <motion.div;
+            key={i}
+            className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
+            style={{
+          <motion.div
+              left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
             }}
             animate={{
@@ -115,33 +129,6 @@ if (return) {
               opacity: [0, 1, 0],
               scale: [0, 1, 0],            }}        {[...Array (20)].map ((_, i) => (
           <motion.div;
-            duration: 7,
-            repeat: Infinity,
-        />
-      </div>
-      {/* Quantum Energy Particles */}
-      <div className='fixed inset-0 pointer-events-none z-20'>
-
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w - 2 h - 2 bg - cyan - 400 rounded - full";
-            style={{
-
-              left: `${Math && Math.random() * 100}%`,
-              top: `${Math && Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -100, 0],
-              opacity: [0, 1, 0],
-scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
-          <motion&& motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-cyan-400 rounded-full"
-            style={{
-              left: `${Math && Math.random() * 100}%`,
-              top: `${Math && Math.random() * 100}%`
-
             }}
             animate={{
               y: [0, -100, 0]
@@ -157,22 +144,11 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
               repeat: Infinity,
               delay: Math && Math.random() * 2,
 
+            transition={{
               ease: 'easeInOut',            }}              ease: "easeInOut"
-
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-              ease: "easeInOut"
-
             }}
           />;
         ))}
-      </div>
-
-
-
-
-
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
@@ -183,8 +159,6 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
           />
         ))}
       </div>
-
-
 
       {/* Neural Network Connections */}
       <div className='fixed inset-0 pointer-events-none z-30'>;
@@ -220,8 +194,6 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
               animate={{
                 opacity: [0.1, 0.3, 0.1];
                 strokeDasharray: [0, 100, 0]
-
-              transition={{
                 duration: 4 + Math.random() * 2
                 repeat: Infinity
                 delay: Math.random() * 2
@@ -263,6 +235,25 @@ export default UltraAdvancedFuturisticBackgroundV2;
       <div className='relative z-40'>{children}</div>
     </div>
   );
+                duration: 4 + Math.random () * 2,
+                repeat: Infinity,
+              }}
+            />;
+          ))}
+      {/* Content */}
+      <div className='relative z-40'>{children}</div>;
+    </div>;
+  );
+export default UltraAdvancedFuturisticBackgroundV2;
+
+      <div className="relative z-40">
+        {children}
+      </div>
+    </div>
+  )
+};
+
+export default UltraAdvancedFuturisticBackgroundV2;
                 delay: Math.random () * 2,
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}

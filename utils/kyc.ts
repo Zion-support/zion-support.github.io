@@ -1,5 +1,3 @@
-
-
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;
@@ -12,6 +10,8 @@ export interface KycProfile {
 export interface KycProfile {;
 
   userId: string;
+export interface KycProfile {
+  user_id: string;
   role: KycRole;
   fullLegalName?: string;
   business_name?: string;
@@ -44,11 +44,8 @@ export interface KycProfile {;
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
     missing && missing.push('name'),
   }
-  
   if (!profile && profile.country) {
     missing && missing.push('country');
-
-export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
   const missing: string[] = [];
   if (!profile.fullLegalName && !profile.businessName) {
     missing.push('name');
@@ -56,19 +53,6 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   
   if (!profile && profile.country) {
     missing && missing.push('country');
-  }
-  
-  const missing: string[] = [];
-  if (!profile.fullLegalName && !profile.businessName) {
-    missing.push('name');
-  }
-  
-  if (!profile && profile.country) {
-    missing && missing.push('country');
-  }
-
-  if (profile.role === 'client' && !profile.dateOfBirth) {
-    missing.push('dateOfBirth');
   }
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
@@ -108,6 +92,7 @@ export interface KycDocumentMeta {;
     action: string;
     details?: any
   }>;
+}
 }
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];

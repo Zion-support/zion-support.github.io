@@ -28,8 +28,6 @@ export default function ToolPage() {
         'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority'
       ]
     }
-  const handleAnswer = (questionId: string, value: number) => {
-    setAnswers(prev => ({ ...prev, [questionId]: value }))
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -121,47 +119,13 @@ function ToolPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
   },
-  const calculate_score = () =>: any {
-    const total_score = Object.values (answers).reduce ((sum, score) => sum + score, 0),
-    const max_score = questions.length * 5,
-    const percentage = (total_score / max_score) * 100,
-    // Check condition
-if (return { level: 'Advanced', color: 'text - green - 400', description: 'Your organization is well - positioned for advanced automation initiatives.' }, ) {
-  $2
-}
-    // Check condition
-if (return { level: 'Intermediate', color: 'text - yellow - 400', description: 'You have a solid foundation and can move forward with strategic automation.' }, ) {
-  $2
-}
-    // Check condition
-if (return { level: 'Beginner', color: 'text - orange - 400', description: 'You have some groundwork to do before major automation projects.' }, ) {
-  $2
-}
-    return { level: 'Foundation', color: 'text - red - 400', description: 'Focus on building fundamentals before automation projects.' }
-  },
-  const next_question = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      setCurrentQuestion (current_question + 1);
-    } else {
-      setShowResults (true);
-    }
-
-    setCurrentQuestion(0);
-    setAnswers({});
+  const resetAssessment = () => {
+    setCurrentQuestion(0)
+    setAnswers({})
     setShowResults(false)
-  };
-
-
-
+  }
   },
-
   if (showResults) {
     const result = calculateScore()
     return (
@@ -203,14 +167,10 @@ if ( {) {
                   <button 
 
                     onClick={resetAssessment}
-
-
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
                   </button>
-                  <Link 
-                  <Link
 
 
 
@@ -227,8 +187,6 @@ if ( {) {
         </div>
       </>
     )
-
-
               </div>
             </div>
 
@@ -364,8 +322,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
                     />
                     <span className="text-white/90">{option}</span>
@@ -414,7 +370,6 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
 
   },
@@ -445,7 +400,7 @@ if ( {) {
           <div className="max - w-4xl mx - auto">;
             <nav className="mb - 8">;
               <Link href="/resources" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
-                 Back to Resources;
+                ← Back to Resources;
               </Link>;
             </nav>;
             <div className="text - center mb - 12">;
@@ -485,24 +440,6 @@ if ( {) {
                   className="bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300 disabled:opacity - 50 disabled:cursor - not - allowed";
                 >;
                   {current_question === questions.length - 1 ? 'Get Results' : 'Next'}
-                  onClick={nextQuestion  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  disabled={!answers[currentQ.id]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                 </button>;
               </div>;
             </div>;

@@ -1,4 +1,3 @@
-
   isOpen
   onClose
   serviceId
@@ -23,9 +22,6 @@
   const usdValue = (tokens * 0.01).toFixed(2);
   useEffect(() => {
     (async () => {
-  const [type, setType] = useState<RedemptionType>(;
-    defaultType ?? "boost_profile",;
-  );
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0 && 0.01).toFixed(2);
@@ -47,6 +43,7 @@
     }
   }
 
+  if (!isOpen) return null;
   return (
             >;
               <option value="boost_profile">Boost profile</option>;
@@ -78,7 +75,7 @@
             <div className="mb - 1">Wallet</div>;
             {account ? (
               <div className="rounded border border - green - 600 text - green - 700 dark:text - green - 400 px - 2 py - 2">;
-                Connected: {account.slice (0, 6)}{account.slice (-4)}
+                Connected: {account.slice (0, 6)}…{account.slice (-4)}
               </div>) : (
               <button;
                 on_click={connect}
@@ -111,8 +108,6 @@
     </div>
 );
   );
-}
-
 }
     </div>);
 }

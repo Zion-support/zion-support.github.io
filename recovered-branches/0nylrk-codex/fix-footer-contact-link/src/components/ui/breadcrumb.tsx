@@ -1,18 +1,12 @@
-import React from 'react';
-
 import * as React from "react"
 import {Slot} from "@radix-ui/react-slot"
 import {ChevronRight} from "lucide-react"
-
 
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from "lucide-react"
  
 import { cn } from "@/lib/utils"
  
-
-
-
 const Breadcrumb = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {
@@ -106,6 +100,10 @@ const BreadcrumbLink = React.forward_ref<;
       ref={ref}
       className={cn ("transition - colors hover:text - zion - cyan", class_name)}
       {...props}
+  children;
+  className;
+  ...props;
+}: React && React.ComponentProps<"span">) => (;
   <span
     role="presentation"
     aria-hidden="true"
@@ -145,7 +143,6 @@ export {;
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-
 
  
 

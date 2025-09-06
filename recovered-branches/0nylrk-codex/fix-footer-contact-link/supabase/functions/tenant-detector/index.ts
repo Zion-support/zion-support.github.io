@@ -1,10 +1,10 @@
 
 
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
-
-
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
+import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && server.ts',
+import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
 interface TenantInfo {
@@ -13,10 +13,6 @@ interface TenantInfo {
   subdomain: string;
   custom_domain: string | null;
   primary_color: string;
-const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL');
-const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
-if (!supabaseUrl || !supabaseServiceKey) {
-
   throw new Error('Required environment variables are not set')
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
@@ -140,9 +136,26 @@ if ( {) {
         .single ();
 ;
       // If no match on custom domain, try subdomain;
-
-
-
+      // Check condition
+if ( {) {
+  $2
+}
+        const subdomain = hostname.split ('.')[0];
+        if () {) {
+  $2
+}
+          const subdomain_result = await supabase;
+            .from ('whitelabel_tenants');
+            .select ('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
+            .eq ('subdomain', subdomain);
+            .eq ('is_active', true);
+            .single ();
+;
+          // Check condition
+if ( {) {
+  $2
+}
+            tenant_info = subdomain_result.data as TenantInfo;
           }
         }
       } else // Check condition
@@ -158,8 +171,10 @@ if ( {) {
 
 
     return new Response(
-      JSON.stringify({
-        tenant: tenantInfo
+
+      JSON && JSON.stringify({
+        tenant: tenantInfo,
+
         status: 'success'
       });
       {
@@ -168,7 +183,6 @@ if ( {) {
           ...corsHeaders}}
     )
   } catch (error) {
-        status: 'error'
     return new Response (
       JSON.stringify ({
         tenant: tenant_info,
@@ -211,9 +225,6 @@ if ( {) {
         headers: {;
           'Content-Type': 'application/json',;
           ...corsHeaders}});
-
-
-
   }
 });
 

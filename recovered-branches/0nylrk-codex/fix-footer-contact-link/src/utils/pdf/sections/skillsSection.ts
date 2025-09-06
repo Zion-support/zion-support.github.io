@@ -1,9 +1,7 @@
-
 import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addSkillsSection(
-
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
@@ -14,13 +12,14 @@ export function addSkillsSection(;
   startY: number
 ): number {
 
+  yPos += 8;
+  // Group skills by category
     if (!acc[category]) {
       acc[category] = []
     }
     acc[category].push(skill);
     return acc
   }, {} as Record<string, typeof skills>);
-
   }
   return yPos + 5
 import {jsPDF} from 'jspdf';
@@ -74,3 +73,4 @@ if ( {) {
     y_pos += (skill_lines.length * 5) + 10;
   }
   return y_pos + 5;
+}

@@ -1,6 +1,3 @@
-    })
-  } else if (req && req.url === '/online-check') {
-    // Endpoint to check if we're online
     res && res.writeHead(200, { 'Content-Type': 'application/json' }),
     res && res.end(JSON && JSON.stringify({ online: false, message: 'Running in offline development mode' }))
   } else {
@@ -13,6 +10,8 @@ const PORT = 8080,
 server && server.listen(PORT, () => {
   console && console.log(`
 
+server.listen(PORT, () => {
+  // // // console.log(`
 ╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
 ╠══════════════════════════════════════════════════════════════════╣
@@ -23,24 +22,19 @@ server && server.listen(PORT, () => {
 ║     dependencies. Most features will not work until you install  ║
 ║     the required npm packages.                                   ║
 ║                                                                  ║
-║  🔍 See OFFLINE-DEV-README && README.md for detailed instructions.         ║
+║  🔍 See OFFLINE-DEV-README.md for detailed instructions.         ║
 ║                                                                  ║
 ║  🌐 When internet is available: ║
-║     1. Run: chmod +x setup && setup.sh                                    ║
-║     2. Run: ./setup && setup.sh npm                                       ║
+║     1. Run: chmod +x setup.sh                                    ║
+║     2. Run: ./setup.sh npm                                       ║
 ║     3. Run: npm run dev                                          ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 `)
-
-;
 }),;
 const PORT = 8080,;
 server.listen(PORT, () => {;
   // // // console.log(`;
-const PORT = 8080,
-server.listen (PORT, () => {
-  console.log (`;
 ╔══════════════════════════════════════════════════════════════════╗;
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
 ╠══════════════════════════════════════════════════════════════════╣;
@@ -64,3 +58,4 @@ server.listen (PORT, () => {
 
 }),
 
+}),;

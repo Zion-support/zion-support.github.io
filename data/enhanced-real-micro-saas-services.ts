@@ -1,6 +1,3 @@
-name: string;
-
-
 tagline: string;
 price: string;
 period: string;
@@ -16,7 +13,7 @@ tagline: 'Generate high - quality content with AI';
 price: '$29';
 period: '/month';
 popular: true;
-icon: '';
+icon: '🤖';
 category: 'AI & Machine Learning';
 }];
 'All';
@@ -2263,3 +2260,4 @@ export const serviceCategories = [
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
 
+;

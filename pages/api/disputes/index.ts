@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
@@ -61,24 +60,6 @@ export default async function handler(
 
     }
     const id = generateCaseId();
-import type { NextApiRequest, NextApiResponse } from "next";
-import { createDispute, readAllDisputes } from "../../../utils/fsdb";
-import { parseUserFromRequest } from "../../../utils/auth";
-import { DisputeCase, DisputeReason } from "../../../types/disputes";
-import { generateCaseId } from "../../../utils/fsdb";
-export default async function handler(
-  const user = parseUserFromRequest(req);
-  if (req.method === "GET") {
-    const all = await readAllDisputes();
-    let filtered = all;
-    // Check condition
-if ( {) {
-  $2
-}
-      filtered = all.filter (
-        (d) => d.clientUserId === user.id || d.talentUserId === user.id,
-      );
-    }
       id,
       projectId: String(projectId),
       entityType,

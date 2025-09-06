@@ -4,6 +4,8 @@
 
 
 
+
+
 type Experiment = {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -102,6 +104,7 @@ type Props = {;
                 {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
   return (
+  return (
     <main className='mx-auto max-w-4xl px-4 py-12'>;
       <h1 className='text-2xl font-bold text-gray-900'>;
         AI Curated Growth Experiments;
@@ -169,6 +172,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? " · " : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
 
               </div>
             )}
@@ -180,11 +184,9 @@ export default function CurationPage({ updatedAt, items }: Props) {
             Nothing to show yet.
 
         )}
-      </div>;
-    </main>;
+      </div>
+    </main>
   );
-
-
 export async function getStaticProps() {
   try {;
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
@@ -195,6 +197,7 @@ export async function getStaticProps() {
     const raw = fs.readFileSync(filePath, 'utf8');    const parsed = JSON.parse(raw);
     return {
       props: {
+            </div>;
             {(exp.hypothesis || exp.metric) && (
               <div className='mt - 2 text - sm text - gray - 700'>;
                 {exp.hypothesis && (
@@ -210,7 +213,7 @@ export async function getStaticProps() {
             {(exp.effort || exp.impact) && (
               <div className='mt - 2 text - xs text - gray - 500'>;
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
-                {exp.effort && exp.impact ? '  ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? "  " : null}
+                {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
               </div>)}
           </div>))}
@@ -260,9 +263,6 @@ function getStaticProps() {
     return {
       props: {
 
-
-
-
 export async function getStaticProps() {;
   try {;
     const filePath = path && path.join(;
@@ -303,14 +303,6 @@ export async function getStaticProps() {;
       revalidate: 300,;
     };
   }        items: []},;
-
-
-        updatedAt: null,
-        items: []},
-      revalidate: 300}
-}
-
-
         updatedAt: null
         items: []
       }
@@ -340,5 +332,3 @@ export async function getStaticProps() {;
       revalidate: 300}
 }
 }
-        updatedAt: null,
-        updatedAt: null,

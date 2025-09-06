@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next / head';
 import {
   RefreshCw,
   Zap,
@@ -93,8 +94,6 @@ export default function AutomationPage() {;
       title: 'Smart Triggers',;
       description: 'Automated responses based on events and conditions',;
     },;
-
-
 export default function AutomationPage() {
   const features = [
     {
@@ -136,14 +135,10 @@ export default function AutomationPage() {
               </div>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-
-
-
               Automation Hub
             </h1>
-            <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
-              AI-powered workflow automation platform that streamlines your
-              business processes and increases efficiency.
+            <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+              AI-powered workflow automation platform that streamlines your business processes and increases efficiency.
             </p>
 
 
@@ -214,9 +209,6 @@ export default function AutomationPage() {
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-
-
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Transform Your Business with Automation
@@ -229,24 +221,15 @@ export default function AutomationPage() {
                       </div>
                       <span className="text-gray-300 text-lg">{benefit}</span>
                     </div>
-                  ))}
-
-              
-
-
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
                   <div className="text-center">
                     <RefreshCw className="w-24 h-24 mx-auto mb-6 text-blue-400" />
                     <h3 className="text-2xl font-bold text-white mb-4">
-
-
-
                       Smart Workflows
                     </h3>
-                    <p className='text-gray-300 mb-6'>
-                      Create intelligent automation workflows that adapt to your
-                      business needs
+                    <p className="text-gray-300 mb-6">
+                      Create intelligent automation workflows that adapt to your business needs
                     </p>
                     </div>
                   </div>
@@ -448,8 +431,6 @@ export default function AutomationPage() {
       </div>;
 
 
-    </>);
-;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

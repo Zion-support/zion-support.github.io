@@ -6,8 +6,6 @@ import type { PublicReview, ReviewsSummary } from '../../types/reviews',;
 ;
 type Props = { clientId: string },
 
-
-
 import React, { useEffect, useState } from 'react';
 
 import React, { useEffect, useState } from 'react';
@@ -20,9 +18,6 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {
   const [reviews, setReviews] = useState<PublicReview[]>([])
   useEffect(() => {
     (async () => {
-  async function handleReport(id: string) {
-    await fetch('/api/reviews/report', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ reviewId: id, reason: 'Inappropriate content' })})
 type Props = { clientId: string };
 const ClientPage: NextPage<Props> = ({ clientId }) => {;
   const [summary, setSummary] = useState<ReviewsSummary | null>(null);
@@ -34,7 +29,6 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {;
       if (res.ok) { setSummary(data.summary), setReviews(data.reviews)   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }
   }, [client_id]),
@@ -49,9 +43,6 @@ function handle_report() {
   return (
 
 
-      </section>
-    </main>
-  )
 },
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { slug } = ctx.query as { slug: string },

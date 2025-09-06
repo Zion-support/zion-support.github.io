@@ -1,3 +1,4 @@
+
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
@@ -8,6 +9,20 @@ ursor/fix-website-loading-errors-and-merge-6662
       ref={ref}
     />);
 });
+
+
+
+  React.ElementRef<typeof RadioGroupPrimitive.Item>,;
+RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
+const RadioGroupItem = React.forwardRef<;
+  React.ElementRef<typeof RadioGroupPrimitive.Item>,;
+  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
+>(({ className, ...props }, ref) => {;
+  return (;
+    <RadioGroupPrimitive.Item;
+      ref={ref}
+
+
         className
       {...props}
     >
@@ -18,3 +33,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
+export { RadioGroup, RadioGroupItem }
+
+
+export { RadioGroup, RadioGroupItem }
+;

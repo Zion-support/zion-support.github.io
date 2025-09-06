@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react",
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
 export function useCompanyWorkspace(companySlug?: string) {
@@ -11,9 +10,6 @@ export function useCompanyWorkspace(companySlug?: string) {
   const [company, setCompany] = useState<Company | null>(null),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
-
-
-
 
   useEffect(() => {
     // In a real app, this would fetch data from an API based on the companySlug
@@ -30,6 +26,12 @@ export function useCompanyWorkspace(companySlug?: string) {
         // For demo purposes, let's assume it exists
         setCompany({
           theme: {
+            primaryColor: "#4f46e5";
+            backgroundColor: "#ffffff"
+            textColor: "#1f2937"}
+          plan: "Teams";
+          teamSize: 5;
+          teamLimit: 10;
         setError(null)
       }
       setIsLoading(false)
@@ -168,3 +170,4 @@ export function useCompanyWorkspace(companySlug?: string) {;
   }, [companySlug]);
 
   return { company, isLoading, error }
+}

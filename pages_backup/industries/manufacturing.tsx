@@ -1,5 +1,3 @@
-
-
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -55,13 +53,6 @@ const benefits = [;
     title: 'Increased Efficiency,',;
     description: 'Automated processes and AI optimization improve production efficiency.,',;
     icon: Activity;
-];
-const benefits = [
-  {
-    title: 'Increased Efficiency',
-    description: 'Automated processes and AI optimization improve production efficiency.',
-    icon: Activity
-  },
   {}
 
     title: 'Reduced Downtime,',;

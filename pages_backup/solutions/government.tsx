@@ -20,8 +20,6 @@ const features = [
     description: 'Secure document storage and management systems'
   },
   {
-
-
   return (
     <Layout
       title="Government Solutions - Zion Tech Group"
@@ -208,6 +206,47 @@ const features = [
             </div>;
           </div>;
         </section>;
+                </button>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Modernizing Government
+                </h2>
+                <p className="text-xl text-gray-600 mb-8">
+                  Our government solutions help public sector organizations improve
+                  citizen services, enhance transparency, and streamline operations.
+                </p>
+                <ul className="space-y-4">
+                  {benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-gradient-to-r from-gray-700 to-blue-800 p-8 rounded-xl text-white">
+                <h3 className="text-2xl font-bold mb-6">Ready to Modernize Government?</h3>
+                <p className="text-lg mb-6">
+                  Let our government technology experts help you implement solutions
+                  that improve citizen services and government efficiency.
+                </p>
+                <button className="bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
+                  Schedule Consultation
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
+              </div>
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>

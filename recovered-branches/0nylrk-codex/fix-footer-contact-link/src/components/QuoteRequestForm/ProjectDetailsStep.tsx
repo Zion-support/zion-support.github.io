@@ -1,13 +1,9 @@
-
 import { QuoteFormData } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label",
 import { Textarea } from "@/components/ui/textarea",
-
-
-
 interface ProjectDetailsStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -78,9 +74,6 @@ export function ProjectDetailsStep({
                   }
                 })
               }
-
-
-
 import { QuoteFormData } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;
@@ -126,9 +119,6 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Input;
               id="name";
               placeholder="Your name";
-
-
-
               value={formData.contactInfo.name}
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, name: e.target.value } ;

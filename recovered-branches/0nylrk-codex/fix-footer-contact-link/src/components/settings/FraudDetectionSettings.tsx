@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Switch  } from '@/components/ui/switch';
 import { Button  } from '@/components/ui/button';
@@ -31,9 +30,6 @@ export function FraudDetectionSettings() {;
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
       await new Promise((resolve) => setTimeout(resolve, 1000));
-
-
-
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
@@ -136,7 +132,6 @@ export function FraudDetectionSettings() {;
           </div>;
         </div>;
       </CardContent>;
-
 
   )
   )

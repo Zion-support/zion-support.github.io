@@ -12,12 +12,10 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -67,12 +65,6 @@ export default function RequestToHirePage() {;
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string, message: string }>(null),;
   const [error, setError] = useState<string | null>(null);
-
-  const onSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setError(null),;
-
-    if (!form && form.name || !form && form.email || !form && form.description) {;
       setError('Please fill in name, email, and description.');
       return;    }      return;
       const data = await res.json();
@@ -84,6 +76,7 @@ export default function RequestToHirePage() {;
       setSubmitting(false)
     }
   }
+
   if (result) {;
     return (
       <div className='max-w-xl mx-auto py-12'>;
@@ -100,7 +93,7 @@ export default function RequestToHirePage() {;
   return (
     <div className='max-w-xl mx-auto'>;
       <h1 className='text-2xl font-semibold mb-4'>;
-        Request to Hire{selected ? `  ${selected && selected.name}` : ''}
+        Request to Hire{selected ? ` — ${selected && selected.name}` : ''}
       </h1>;
       <form className='space-y-4' onSubmit={onSubmit}>;
         <div>;
@@ -152,12 +145,12 @@ export default function RequestToHirePage() {;
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <button
           disabled={submitting}
-          className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting' : 'Submit Request'}      </div>;
+          className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
   }
   return (
     <div className="max-w-xl mx-auto">;
-      <h1 className="text-2xl font-semibold mb-4">Request to Hire{selected ? `  ${selected && selected.name}` : ''}</h1>;
+      <h1 className="text-2xl font-semibold mb-4">Request to Hire{selected ? ` — ${selected && selected.name}` : ''}</h1>;
       <form className="space-y-4" onSubmit={onSubmit}>;
         <div>;
           <label className="block text-sm font-medium mb-1" htmlFor="input-Your Name">Your Name</label>;
@@ -254,7 +247,7 @@ if ( {) {
   return (
     <div className='max - w-xl mx - auto'>;
       <h1 className='text - 2xl font - semibold mb - 4'>;
-        Request to Hire{selected ? `  ${selected.name}` : ''}
+        Request to Hire{selected ? ` — ${selected.name}` : ''}
       </h1>;
       <form className='space - y-4' on_submit={on_submit}>;
         <div>;
@@ -307,11 +300,11 @@ if ( {) {
         <button;
           disabled={submitting}
           className='px - 4 py - 2 rounded bg - black text - white';
-        >          {submitting ? 'Submitting' : 'Submit Request'}      </div>);
+        >          {submitting ? 'Submitting…' : 'Submit Request'}      </div>);
   }
   return (
     <div className="max - w-xl mx - auto">;
-      <h1 className="text - 2xl font - semibold mb - 4">Request to Hire{selected ? `  ${selected.name}` : ''}</h1>;
+      <h1 className="text - 2xl font - semibold mb - 4">Request to Hire{selected ? ` — ${selected.name}` : ''}</h1>;
       <form className="space - y-4" on_submit={on_submit}>;
         <div>;
           <label className="block text - sm font - medium mb - 1" html_for="input - Your Name">Your Name</label>;
@@ -335,114 +328,7 @@ if ( {) {
         </div>;
         {error && <div className="text - sm text - red - 600">{error}</div>}
         <button disabled={submitting} className="px - 4 py - 2 rounded bg - black text - white">;
-          {submitting ? 'Submitting' : 'Submit Request'}
+          {submitting ? 'Submitting…' : 'Submit Request'}
         </button>;
       </form>;
     </div>);
-
-  if (result) {
-    return (
-      <div className='max-w-xl mx-auto py-12'>
-        <h1 className='text-2xl font-semibold mb-2'>Thanks!</h1>
-        <p className='text-gray-600 mb-4'>
-          We received your request. We will notify the appropriate team.
-        </p>
-        <div className='text-sm text-gray-500'>
-          Confirmation ID: {result.id}
-        </div>
-      </div>
-    );
-  }
-  return (
-    <div className='max-w-xl mx-auto'>
-      <h1 className='text-2xl font-semibold mb-4'>
-        Request to Hire{selected ? ` — ${selected.name}` : ''}
-      </h1>
-      <form className='space-y-4' onSubmit={onSubmit}>
-        <div>
-          <label className='block text-sm font-medium mb-1'>Your Name</label>
-          <input
-            className='w-full border rounded px-3 py-2'
-            value={form.name}
-            onChange={e => setForm({ ...form, name: e.target.value })}
-          />
-        </div>
-        <div>
-          <label className='block text-sm font-medium mb-1'>Email</label>
-          <input
-            type='email'
-            className='w-full border rounded px-3 py-2'
-            value={form.email}
-            onChange={e => setForm({ ...form, email: e.target.value })}
-          />
-        </div>
-        <div>
-          <label className='block text-sm font-medium mb-1'>Budget (USD)</label>
-          <input
-            className='w-full border rounded px-3 py-2'
-            placeholder='$5,000'
-            value={form.budget}
-            onChange={e => setForm({ ...form, budget: e.target.value })}
-          />
-        </div>
-        <div>
-          <label className='block text-sm font-medium mb-1'>Timeline</label>
-          <input
-            className='w-full border rounded px-3 py-2'
-            placeholder='2-3 months'
-            value={form.timeline}
-            onChange={e => setForm({ ...form, timeline: e.target.value })}
-          />
-        </div>
-        <div>
-          <label className='block text-sm font-medium mb-1'>
-            Project Description
-          </label>
-          <textarea
-            className='w-full border rounded px-3 py-2'
-            rows={5}
-            value={form.description}
-            onChange={e => setForm({ ...form, description: e.target.value })}
-          />
-        </div>
-        {error && <div className='text-sm text-red-600'>{error}</div>}
-        <button
-          disabled={submitting}
-          className='px-4 py-2 rounded bg-black text-white'
-        >          {submitting ? 'Submitting…' : 'Submit Request'}      </div>
-    )
-  }
-  return (
-    <div className="max-w-xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-4">Request to Hire{selected ? ` — ${selected.name}` : ''}</h1>
-      <form className="space-y-4" onSubmit={onSubmit}>
-        <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="input-Your Name">Your Name</label>
-          <input className="w-full border rounded px-3 py-2" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="input-Email">Email</label>
-          <input type="email" className="w-full border rounded px-3 py-2" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="input-Budget (USD)">Budget (USD)</label>
-          <input className="w-full border rounded px-3 py-2" placeholder="$5,000" value={form.budget} onChange={(e) => setForm({ ...form, budget: e.target.value })} />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="input-Timeline">Timeline</label>
-          <input className="w-full border rounded px-3 py-2" placeholder="2-3 months" value={form.timeline} onChange={(e) => setForm({ ...form, timeline: e.target.value })} />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1" htmlFor="input-Project Description">Project Description</label>
-          <textarea className="w-full border rounded px-3 py-2" rows={5} value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} />
-        </div>
-        {error && <div className="text-sm text-red-600">{error}</div>}
-        <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
-          {submitting ? 'Submitting…' : 'Submit Request'}
-        </button>
-      </form>
-    </div>
-
-  );
-}
-

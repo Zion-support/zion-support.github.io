@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {ChatBotPanel} from "./ChatBotPanel";
@@ -8,6 +7,7 @@ import {useTheme} from "@/hooks/useTheme";
 export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
+  return (
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { ChatBotPanel } from "./ChatBotPanel",
@@ -24,10 +24,8 @@ export function SupportWidget() {
       {!isOpen && (;
         <Button
 
-
-
       {/* Fixed button in the bottom right */}
-      {!isOpen && (;
+      {!isOpen && (
         <Button
           onClick={() => setIsOpen(true)}
           size="icon";

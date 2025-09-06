@@ -97,9 +97,6 @@ export default function SecretsRotationAutomationPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
-
-return (
-  return (
     <>
       <SEO
         title="Secrets Rotation Automation"
@@ -157,4 +154,7 @@ return (
           </div>;
         </section>;
       </main>;
-
+            </a>;
+          </div>;
+        </section>;
+      </main>;

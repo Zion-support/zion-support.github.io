@@ -51,14 +51,7 @@ export function BottomNavigation() {
             <span className="text-xs mt-1">{item && item.label}</span>;
           </Link>;
         );
-
-
-
       })}
-
-    </div>;
-  );
-}
 import React from './react';
 import { Link, use_location } from './react-router-dom';
 import { Home, Search, Briefcase, MessageSquare, User } from './lucide-react';

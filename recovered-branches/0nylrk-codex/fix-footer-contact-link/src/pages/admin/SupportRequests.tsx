@@ -1,4 +1,3 @@
-
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -12,9 +11,6 @@ import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
-
-
-
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -89,6 +85,10 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-13T11:25:00Z"
     category: "profile"
   }
+  const [searchQuery, setSearchQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState<string | null>(null);
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
@@ -171,8 +171,6 @@ const MOCK_SUPPORT_REQUESTS = [;
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
       return false;
-
-
     }
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -189,7 +187,6 @@ const MOCK_SUPPORT_REQUESTS = [;
     return true
   });
   // Count by status for the summary dashboard
-
   return (
     <AppLayout>
       <SEO
@@ -426,8 +423,6 @@ const MOCK_SUPPORT_REQUESTS = [;
                               ? 'secondary'
                               : 'outline'
                           }>
-
-
                             {request.status}
                           </Badge>
                         </TableCell>
@@ -437,6 +432,18 @@ const MOCK_SUPPORT_REQUESTS = [;
                               ? 'destructive'
                               : request.priority === 'medium'
                               ? 'default'
+                              : 'outline'
+                          }>;
+                            {request && request.status}
+                          </Badge>;
+                        </TableCell>;
+                        <TableCell>;
+                          <Badgevariant={
+                            request && request.priority === 'high' 
+                              ? 'destructive' 
+                              : request && request.priority === 'medium' 
+                              ? 'default' 
+                              : 'outline'
                           }>;
                             {request && request.priority}
                           </Badge>;

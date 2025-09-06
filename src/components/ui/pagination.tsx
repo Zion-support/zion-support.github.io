@@ -1,14 +1,35 @@
+
+
+const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
+  <nav
+    {...props}
+  />
+)
+>(({ className, ...props }, ref) => (
+  <ul
+    ref={ref}
+    {...props}
+/>
+))
+>(({ className, ...props }, ref) => (
+))
 interface PaginationButtonProps
   page: number
   isActive?: boolean
 }
 const PaginationLink = ({
+
+
   ...props
 }: PaginationLinkProps) => (
   <a
     aria-current={isActive ? "page" : undefined}
     className={cn(
       buttonVariants({
+
+
+
+        variant: isActive ? "outline" : "ghost",
         variant: isActive ? "outline" : "ghost",
         size}),
       className
@@ -23,6 +44,8 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       aria-label={`Page ${page}`}
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
+
+
         className;
       {...props}
     >;
@@ -72,8 +95,3 @@ const PaginationEllipsis = ({
     <span className="sr-only">More pages</span>
   </span>
 )
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,

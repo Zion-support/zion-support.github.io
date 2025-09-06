@@ -9,7 +9,6 @@
   noindex?: boolean;
   nofollow?: boolean;
 }
-      {/* Twitter */}
       <meta name="twitter:title" content={title} />;
       <meta name="twitter:description" content={description} />;
       <meta name="twitter:image" content={fullOgImage} />;
@@ -19,19 +18,12 @@
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
-
-          __html: JSON && JSON.stringify(structuredData || defaultStructuredData)
-        }}
-      />;
-
-
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
       <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
       <link rel="preconnect" href="https://images && images.unsplash.com" />;
     </Head>;
   );
-
           __html: JSON.stringify (structured_data || defaultStructuredData);
         }}
       />;
@@ -42,9 +34,3 @@
     </Head>);
 }
 ;
-
-
-};
-
-
-export default SEOHead;

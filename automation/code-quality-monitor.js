@@ -14,12 +14,16 @@ class CodeQualityMonitor {
     fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
   }
   log(message, level = 'INFO') {
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")};
+#!/usr/bin/env node;
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)};
 ; async analyzeCodeQuality() {; try {; this.log("Starting code quality analysis...");
 ; this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString();
 ; this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {; this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null};
 ;
-
 
 
 
@@ -37,6 +41,20 @@ class CodeQualityMonitor {;
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
+  }
+  async runQualityChecks() {
+    this.log('Running code quality checks...');
+    const results = {
+      "timestamp": new Date().toISOString(),
+      "lint": { status: 'unknown', "issues": 0, "errors": 0, "warnings": 0 },
+      "typeCheck": { status: 'unknown', "errors": 0 },
+      "testCoverage": { status: 'unknown', "percentage": 0 },
+      "codeComplexity": { status: 'unknown', "score": 0 },
+      "qualityScore": 0};
+    // ESLint check
+    try {
+      execSync('yarn lint', { "stdio": 'pipe', "cwd": process.cwd() });
+      results.lint.status = 'pass';
       this.log('"ESLint": PASS');
     } catch (error) {
       results.lint.status = 'fail';
@@ -159,7 +177,6 @@ class CodeQualityMonitor {,
 
 }
 }
-
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
@@ -182,21 +199,13 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)}; async analyzeCodeQuality() {try {; this.log("Starting code quality analysis..."); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
-
 class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)}; async analyzeCodeQuality() {try {; this.log("Starting code quality analysis..."); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
+      return this.metrics
+    } catch (error) {,
+      this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),
+      return null
+    },
 
-
-const fs = require ("fs");
-const path = require ("path");
-const { exec_sync } = require ("child_process");
-;
-class CodeQualityMonitor { constructor () { this.metrics = { complexity: 0, maintainability: 0, test_coverage: 0, performance: 0, last_updated: new Date ().toISOString ()} this.log_file = path.join (__dirname, "logs", "code - quality.log")}
-; log (message) { const timestamp = new Date ().toISOString (); const log_message = `[${timestamp}] ${message}\n`; console.log (message); fs.appendFileSync (this.log_file, log_message)}
-; async analyzeCodeQuality () { try { this.log ("Starting code quality analysis...");
-; this.metrics.complexity = this.calculate_complexity (); this.metrics.maintainability = this.calculate_maintainability (); this.metrics.test_coverage = this.calculateTestCoverage (); this.metrics.performance = this.calculate_performance (); this.metrics.last_updated = new Date ().toISOString ();
-; this.save_metrics (); this.log ("Code quality analysis completed successfully"); return this.metrics} catch (error) { this.log (`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
-;
-;
 ;
 #!/usr/bin/env node,;
 const fs = require("fs"),;

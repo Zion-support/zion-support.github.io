@@ -1,3 +1,4 @@
+    }
 
   return (
     <>;
@@ -15,14 +16,30 @@
               <span className="text-zion-slate-light">{profile && profile.years_experience} years exp.</span>;
             </div>;
           )}
+        {/* Action Buttons */}
+        <div className="flex gap-2">
+          <Button
+            variant="default"
+            size="sm"
+            onClick = {handleRequestHire,}
+          <Button 
+            variant="default" 
+            size="sm" 
+        {/* Action Buttons */}
+        <div className="flex gap-2">
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
           </Button>
+            onClick = {handleViewProfile,}
+          
           <Button 
             variant="outline" 
             size="sm" 
             onClick={handleViewProfile}
+
+
+
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             View
             <ExternalLink className="h-3 w-3 ml-1" />

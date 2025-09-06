@@ -1,7 +1,8 @@
-    <div className='mt-6'>
-      <div className='relative'>
-        <div className='absolute inset-0 flex items-center'>
-          <div className='w-full border-t border-zion-blue-light' />
+  return (
+    <div className="mt-6">
+      <div className="relative">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-zion-blue-light" />
         </div>
         <div className="relative flex justify-center text-sm">
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>
@@ -65,13 +66,15 @@ function SocialLogin() {
               <path d="M12.0004 24C15.2404 24 17.9654 22.935 19.9454 21.095L16.0804 18.095C15.0054 18.82 13.6204 19.245 12.0004 19.245C8.8704 19.245 6.21537 17.135 5.2654 14.29L1.27539 17.385C3.25539 21.31 7.3104 24 12.0004 24Z" fill="#34A853" />
             </svg>
           )}
-        </Button>;
         </Button>
         <Web3Login />
       </div>
     </div>;
   );
 };
+
+        </Button>
+        <Button
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -90,6 +93,12 @@ function SocialLogin() {
       </div>
     </div>
   )
+
+          disabled={isLoading}        >;
+          <span className='sr-only'>Sign in with Twitter</span>;
+          <Twitter className='h-5 w-5' />;
+
+
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Web3Login } from "./Web3Login",;
@@ -155,4 +164,3 @@ export function SocialLogin() {;
       </div>;
     </div>;
   );
-

@@ -14,9 +14,6 @@ interface Activity {
 
   milestone: {
 
-    display_name: string
-
-
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]);
@@ -41,7 +38,8 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         setActivities(data |[])
 
       } catch (err) {
-
+        console.error('Error fetching milestone activities:', err)
+      } finally {
       }
     }
     if (projectId) {
@@ -52,8 +50,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
     switch (activity.action) {
       case 'created':
 
-    }
-  }
     if (projectId) {;
       fetchActivities();
     }
@@ -69,6 +65,9 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
       case 'status_changed':;
         return `changed status from ${activity && activity.previous_status || 'none'} to ${activity && activity.new_status}`;
       case 'updated':;
+        setIsLoading (false);
+      }
+    }
         return 'updated milestone details';
       case 'deliverable_added':;
         return 'added a deliverable';
@@ -97,6 +96,9 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   }
 
   if (activities.length === 0) {
+        return activity && activity.action.replace(/_/g, ' ');
+    }
+  }
     return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
@@ -133,7 +135,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
                 </div>;
               </div>;
             ))}
-}
     // Check condition
 if ( {) {
   $2

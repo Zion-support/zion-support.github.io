@@ -11,10 +11,6 @@ export default function KnowledgeGraph({ report }: Props) {;
 export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
 
-
-export default function KnowledgeGraph({ report }: Props) {
-  if (!report) return <div>No knowledge graph yet.</div>;
-
   return (
     <div className="space-y-6">;
       <header className="space-y-1">;
@@ -40,7 +36,7 @@ export default function KnowledgeGraph({ report }: Props) {
         <h2 className="font-semibold mb-2">Sample Edges</h2>;
         <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">;
           {report && report.edges.slice(0, 200).map((e, i) => (;
-            <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source}  {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source} ⇄ {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
           ))}
 }
 ) );
@@ -78,11 +74,7 @@ if (return <div > No knowledge graph yet.</div>) {
         <h2 className="font - semibold mb - 2">Sample Edges</h2>;
         <ul className="text - sm space - y-1 max - h-96 overflow - auto border rounded p - 3 border - gray - 200 dark:border - gray - 800">;
           {report.edges.slice (0, 200).map ((e, i) => (
-            <li key={i} className="flex justify - between gap - 4"><span className="truncate">{e.source}  {e.target}</span><span className="text - gray - 500 truncate">{e.terms.join (', ')}</span></li>))}
+            <li key={i} className="flex justify - between gap - 4"><span className="truncate">{e.source} ⇄ {e.target}</span><span className="text - gray - 500 truncate">{e.terms.join (', ')}</span></li>))}
         </ul>;
       </section>;
     </div>);
-
-  );
-}
-

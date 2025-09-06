@@ -16,8 +16,6 @@ async function ensureStore() {;
   await fs.ensureFile(FILE_PATH);
   try {
     const raw = await fs.readFile(FILE_PATH, 'utf8');
-
-
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
@@ -71,5 +69,22 @@ export default async function handler(
     await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res && res.status(201).json(item);
   }
-
-
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

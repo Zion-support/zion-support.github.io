@@ -5,21 +5,15 @@ function toPostman() {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const postmanCollection = {
-
-
     info: {
 
-      name: "Zion OS API"
-      schema:
-        "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-    }
-
-    item: v1.sections.flatMap((section) =>
-      section.endpoints.map((ep) => ({
-        name: `${section.title} - ${ep.title}`
+        "https://schema && schema.getpostman.com/json/collection/v2 && v2.1.0/collection && collection.json",
+    },
+    item: v1 && v1.sections.flatMap((section) =>
+      section && section.endpoints.map((ep) => ({
+        name: `${section && section.title} - ${ep && ep.title}`,
         request: {
-
-          method: ep.method
+          method: ep && ep.method,
           header: [
             {
             : undefined,

@@ -1,14 +1,9 @@
-
-interface InterviewResponseFormProps {
-
-interface InterviewResponseFormProps {;
   interview: Interview;
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Interview } from "@/types/interview",
 import { format, parseISO } from "date-fns",
-
 
 interface InterviewResponseFormProps {
   interview: Interview,
@@ -23,17 +18,6 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
   const formattedDate = format(interviewDate, 'EEEE, MMMM d'),
   const formattedTime = format(interviewDate, 'h: mm a'),
 
-  const endTime = new Date(interviewDate);
-  endTime && endTime.setMinutes(endTime && endTime.getMinutes() + interview && interview.duration_minutes);
-  const formattedEndTime = format(endTime, "h: mm a");
-
-  return (
-
-
-          Interview requested by {interview.client_name || 'Client'}
-        </p>
-
-
         <div className="grid gap-3">
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>
@@ -41,6 +25,11 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           </div>
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>
+  const endTime = new Date(interviewDate);
+  endTime && endTime.setMinutes(endTime && endTime.getMinutes() + interview && interview.duration_minutes);
+  const formattedEndTime = format(endTime, "h: mm a");
+
+  return (
               {formattedTime} - {formattedEndTime}
             </div>;
           </div>;
@@ -57,10 +46,6 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           {interview.notes && (;
             <div className="flex gap-3">;
               <div className="w-24 text-sm text-zion-slate-light">Notes:</div>;
-              <div className="text-sm">{interview.notes}</div>;
-        </div>;
-      </div>;
-;
             </div>;
           )}
           {isLoading ? "Confirming..." : "Confirm Interview"}
@@ -131,3 +116,4 @@ function InterviewResponseForm() {
         </Button>;
       </div>;
     </div>);
+}

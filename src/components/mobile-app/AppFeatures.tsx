@@ -1,3 +1,7 @@
+import React from "react",
+import { Brain, Clock, Award, Zap } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+
   {
     icon: <Clock className="h-10 w-10 text-zion-cyan" />,
     title: "1-Click Hiring",
@@ -16,10 +20,22 @@
 
 
 
+import React from "react",
+import { Brain, Clock, Award, Zap } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+
   {
-    icon: <Zap className="h - 10 w - 10 text - zion - cyan" />,
-    title: "Real - time Notifications",
-    description: "Get instant alerts about new job opportunities, messages, and hiring requests.";
+    icon: <Clock className="h-10 w-10 text-zion-cyan" />,
+    title: "1-Click Hiring",
+    description: "Streamlined hiring process that lets you connect with talent instantly with just one click."
+  {
+    icon: <Award className="h-10 w-10 text-zion-cyan" />,
+    title: "Resume Builder",
+    description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
+  {
+    icon: <Zap className="h-10 w-10 text-zion-cyan" />,
+    title: "Real-time Notifications",
+    description: "Get instant alerts about new job opportunities, messages, and hiring requests." 
   }
 
 
@@ -51,6 +67,7 @@ export const AppFeatures: React.FC = () => {
                 <CardDescription className="text-gray-300">{feature.description}</CardDescription>
               </CardContent>
             </Card>
+
 import React from "react",;
 import { Brain, Clock, Award, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
@@ -83,6 +100,9 @@ const features = [;
     </section>;
   );
 };
+
+"
+
 
     <section className="py - 16 bg - zion - blue">;
       <div className="container mx - auto px - 4">;

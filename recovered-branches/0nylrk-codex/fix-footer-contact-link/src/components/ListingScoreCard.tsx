@@ -1,4 +1,3 @@
-
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -8,12 +7,11 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button";
 import { StarIcon } from "lucide-react";
 interface ListingScoreCardProps {
+  title: string,
+  description: string,
 
-  title: string
-  description: string
   image?: string;
-  category: string
-
+  category: string,;
   tags?: string[];
   author?: string;
   author_image?: string;
@@ -23,7 +21,6 @@ interface ListingScoreCardProps {
   aiScore = 0;
   rating = 0;
   reviewCount = 0;
-
 interface ListingScoreCardProps {
   title: string,
   description: string,
@@ -143,6 +140,7 @@ export function ListingScoreCard({;
         </div>;
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
+
         {/* Rating */}
         {rating > 0 && (;
           <div className="flex items-center gap-1 mb-4">;
@@ -162,6 +160,7 @@ export function ListingScoreCard({;
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
 
+                      : "text-zion-slate-light"
                   )}
                 />;
               ))}

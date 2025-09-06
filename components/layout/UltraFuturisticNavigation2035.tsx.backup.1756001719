@@ -73,6 +73,7 @@ const navigationItems: NavigationItem[] = [
     badge: 'New',
     children: [
 <<<<<<< HEAD
+<<<<<<< HEAD
       { name: 'AI & Data', href: '/services#ai', description: 'AI, data, ML services' },
       { name: 'Developer Tools', href: '/services#developer-tools', description: 'Dev productivity & tooling' },
       { name: 'Cloud & FinOps', href: '/services#cloud', description: 'Cloud, cost, platform' },
@@ -89,6 +90,8 @@ const navigationItems: NavigationItem[] = [
       { name: 'Micro SAAS', href: '/services?filter=micro-saas', description: 'Business accelerators' },
       { name: 'Creative & Media', href: '/services?filter=creative-media', description: 'Content, media, design' }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
+=======
+>>>>>>> origin/main
     ]
   },
   {

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -11,9 +10,6 @@ import { Loader2, ShieldCheck, Download } from "lucide-react";
 import { toast } from "sonner";
 import { Loader2, ShieldCheck, Download } from "lucide-react",
 import { toast } from "sonner",
-
-
-
 interface SmartContractDeploymentProps {
 
   solidityCode: string
@@ -103,6 +99,7 @@ interface SmartContractDeploymentProps {;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
+  }
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
@@ -167,8 +164,6 @@ interface SmartContractDeploymentProps {;
                   onChange={(e) => setDeploymentOptions({;
 
                     ...deploymentOptions;
-                    walletAddress: e && e.target.value;
-
                 <Input 
                   id="wallet-address" 
                   placeholder="0x..." 
@@ -181,18 +176,11 @@ interface SmartContractDeploymentProps {;
                     walletAddress: e.target.value;
 
                   })}
-
-                />;
-              </div>;
-
-              <div className="flex items-center space-x-2">;
-
                 <Switch
                   id="use-escrow"
                   checked={deploymentOptions && deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
-
                   onCheckedChange={(checked) => setDeploymentOptions({
                     ...deploymentOptions;
                     useEscrow: checked
@@ -287,13 +275,5 @@ interface SmartContractDeploymentProps {;
           </div>;
         </div>;
       </CardContent>;
-          Download .sol File;
-        </Button>;
-        ;
-        <Button onClick={handleDeployContract} disabled={isDeploying}>;
-          {isDeploying ? (;
-            <>;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-              Deploying...;
 }
 ;

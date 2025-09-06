@@ -24,12 +24,4 @@ export function RatingStars({ value;
       )}
     </div>
   )
-  const half = value - filled >= 0 && 0.5;
-  const total = 5;
 }
-}
-  const half = value - filled >= 0.5;
-  const total = 5;
-}
-}
-

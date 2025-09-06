@@ -1,5 +1,3 @@
-import { ResumeBasicInfo } from '@/types/resume';
-interface ResumeBasicInfoSectionProps {
 }
 export function ResumeBasicInfoSection({
   basicInfo

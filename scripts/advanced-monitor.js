@@ -9,7 +9,7 @@ class AdvancedMonitor {
   constructor() {
     this && this.logPath = path && path.join(__dirname, "..", "logs", "monitoring && monitoring.log")}
   async startMonitoring() {
-    console && console.log(" Starting advanced monitoring...")
+    console && console.log("🔍 Starting advanced monitoring...")
     setInterval(() => {
       this && this.checkSystemHealth()
       this && this.checkPM2Processes()

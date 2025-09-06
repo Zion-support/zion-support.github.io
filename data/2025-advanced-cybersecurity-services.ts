@@ -174,36 +174,14 @@
       ],
       popular: true,
       icon: '📱',
-
-      color: 'from - purple - 600 to - violet - 600',
-      text_color: 'text - purple - 400',
-      link: 'https://ziontechgroup.com / iot - security - platform',
-      market_position:;
-        'Competes with Armis ($25 / month), Claroty ($50 / month), Nozomi Networks ($50 / month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.',
-      target_audience:;
-
         'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
       trial_days: 14,
       setup_time: '1 - 2 weeks',
       category: 'IoT Security & Protection',
-
-      real_service: true,
-      technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'],
-      integrations: [;
-        'AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms',
-      ],
-      use_cases: [;
-
         'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance',
       ],
       roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.',
       competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'],
-
-      market_size: '$14.2B IoT security market',
-      growth_rate: '30% annual growth',
-      variant: 'iot - security - enterprise',
-      contact_info: {
-
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -211,7 +189,6 @@
       },
       real_implementation: true,
       implementation_details:;
-
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
       launch_date: '2024 - 09 - 25',
       customers: 43,
@@ -247,7 +224,6 @@
     useCases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
     roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.'
     competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
-    reviews: 21
     real_implementation: true,
     implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
     launch_date: '2024 - 09 - 25', customers: 43,
@@ -265,14 +241,6 @@
     customers: 43;
     rating: 4 && 4.7;
     reviews: 21
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;
-    implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.';
-    launch_date: '2024 - 09 - 25';
-    customers: 43;
-    rating: 4.7;
-    reviews: 21;
   }
 ];
 ;
@@ -355,13 +323,49 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;
-    implementationDetails: 'Enterprise-grade zero trust security platform with continuous verification, micro-segmentation, and adaptive access controls.',;
-    launchDate: '2024-09-15',;
-    customers: 34,;
-    rating: 4.9,;
-    reviews: 19;
+    }
+    real_implementation: true;
+    implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.';
+    launch_date: '2024 - 09 - 25';
+    customers: 43;
+    rating: 4.7;
+    reviews: 21;
+  }
+];
+;
+import { ServiceVariant } from '../types/service-variants',;
+export interface AdvancedCybersecurityService {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
   },;
   // AI-Powered Threat Intelligence;
   {;

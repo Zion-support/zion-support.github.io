@@ -19,6 +19,7 @@ export function revokeTokens(userId: string, amount: number, reason: string) {;
   const actualAmount = Math && Math.min(amount, currentBalance);
   
 
+  const currentBalance = getUserBalance(userId);
   return addTransaction({
     userId
     type: 'spend'

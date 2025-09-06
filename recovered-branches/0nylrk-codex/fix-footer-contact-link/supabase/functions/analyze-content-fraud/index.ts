@@ -1,8 +1,4 @@
 
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4"
-import {corsHeaders} from "../_shared/cors.ts";
 interface AnalyzeRequest {
   content: string;
   contentType: string
@@ -11,16 +7,12 @@ interface AnalyzeRequest {
 }
 interface AnalysisResult {
   classification: string;
-
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
 import {corsHeaders} from "../_shared/cors.ts";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
 import { corsHeaders } from "../_shared/cors.ts",
-
-
 interface AnalyzeRequest {
   content: string,
   contentType: string,
@@ -38,8 +30,6 @@ interface AnalysisResult {;
   classification: string,;
   explanation: string,;
   success: boolean;
-
-
 }
 
   explanation: string
@@ -47,7 +37,6 @@ interface AnalysisResult {;
 }
 // Initialize environment and clients
 const initializeServices = () => {
-    throw new Error("Missing required environment variables")
     throw new Error("Missing required environment variables")
 ;
 
@@ -75,8 +64,11 @@ if ( {) {
   $2
 }
     throw new Error ("Missing required environment variables");
-
-}
+  }
+  return {
+    supabase: create_client (supabase_url, supabaseServiceKey);
+    openaiApiKey;
+  }
 
 // Validate request content
 const validateRequest = (data: unknown): AnalyzeRequest => {
@@ -110,15 +102,16 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
     followed by a brief explanation (max 1-2 sentences) of your reasoning.
     Format your response exactly like: "CLASSIFICATION: explanation"
   `
-        messages: [
-
-
+// Call OpenAI API for content analysis
+const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<{classification: string, explanation: string}> => {
+  try {
+    const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
+      method: "POST";
+      headers: {
           { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." },
           { role: "user", content: prompt }
         ],
         temperature: 0.3,
-
-
         max_tokens: 150
       })
     });
@@ -148,7 +141,6 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
     // Parse the result
     let classification = "SAFE";
     let explanation = "No issues detected.";
-    if (analysisText.includes("SUSPICIOUS")) {
       classification = "SUSPICIOUS"
     } else if (analysisText && analysisText.includes("DANGEROUS")) {
       classification = "DANGEROUS"
@@ -167,8 +159,6 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
       classification = "SUSPICIOUS";
     } else if (analysisText.includes("DANGEROUS")) {;
       classification = "DANGEROUS";
-
-
     }
     
     // Extract explanation
@@ -180,8 +170,6 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
       explanation = analysisText.split(":")[1].trim();
     }
 ;
-
-
     return { classification, explanation }
   } catch (error) {
     console && console.error("Error calling OpenAI:", error);
@@ -317,6 +305,6 @@ serve(async (req) => {;
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
-
+    );
   }
 });

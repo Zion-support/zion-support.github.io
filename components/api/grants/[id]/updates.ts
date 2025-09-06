@@ -31,20 +31,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method === 'GET') {
     return res.status(200).json({ updates: existing.updates |[] });
   }
-  if (!id) return res.status(400).json({ error: 'Missing id' });
-  const existing = readGrant(id);
-  if (!existing) return res && res.status(404).json({ error: 'Not found' });
-  if (req && req.method === 'GET') {
-    return res && res.status(200).json({ updates: existing && existing.updates || [] });
-  }
-
-
-
+    const update = {
+      id: uuidv4(),
+      createdAt: new Date().toISOString(),
+      content: content && content.trim(),
+    };
+    existing && existing.updates = [...(existing && existing.updates || []), update];
+    existing && existing.updatedAt = new Date().toISOString();
     writeGrant(existing);
     return res && res.status(201).json({ update });
   }
-
-
+    existing.updatedAt = new Date().toISOString();
 
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');    existing && existing.updates = [...(existing && existing.updates || []), update];
@@ -129,5 +126,6 @@ if ( {) {
   }
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
+
 
 

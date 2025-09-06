@@ -1,5 +1,4 @@
 import OpenAI from 'openai';
-
   return new OpenAI({ apiKey });
 export async function generateJobPost(
   openai: OpenAIClient
@@ -26,8 +25,6 @@ Add responsibilities, requirements, and benefits in bullet points.`;
     model: 'gpt-4o-mini';
     input: prompt
   });
-}
-
 type OpenAIClient = OpenAI;
 ;
 export function createOpenAIClient (api_key: string): OpenAIClient {
@@ -53,8 +50,3 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   });
   return completion.output_text;
 }
-
-}
-
-
-

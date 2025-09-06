@@ -6,6 +6,7 @@ origin/automation-improvements-final
 
 
 
+
   Menu
   X
   ChevronDown
@@ -29,7 +30,9 @@ origin/automation-improvements-final
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
+
 export default function Navigation() {
+export default function Navigation() {;
 export default function Navigation() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -37,19 +40,6 @@ export default function Navigation() {;
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-    {
-      name: "AI Services"
-      href: "/ai-services"
-      description: "Machine Learning, NLP, Computer Vision"
-      icon: BarChart3
-    }
-    {
-      name: "IT Services"
-      href: "/it-services"
-      description: "Cloud, DevOps, Cybersecurity"
-      icon: Shield
-    }
-    {
     {
       name: "Blockchain"
       href: "/blockchain"
@@ -74,75 +64,6 @@ export default function Navigation() {;
       href: "/startup"
       description: "Scalable startup platforms"
       icon: Zap
-    }
-    {
-    {
-      name: "Healthcare"
-      href: "/industries/healthcare"
-      description: "Medical technology solutions"
-      icon: Users
-    }
-    {
-      name: "Finance"
-      href: "/industries/finance"
-      description: "Fintech and banking solutions"
-      icon: BarChart3
-    }
-    {
-      name: "Education"
-      href: "/industries/education"
-      description: "EdTech platforms"
-      icon: Users
-    }
-  ];
-  const industries = [
-    {
-      name: "Healthcare"
-      href: "/industries/healthcare"
-      description: "Medical technology solutions"
-    }
-    {
-      name: "Finance"
-      href: "/industries/finance"
-      description: "Fintech and banking solutions"
-    }
-    {
-      name: "Education"
-      href: "/industries/education"
-      description: "EdTech platforms"
-    }
-    {
-      name: "Government"
-      href: "/industries/government"
-      description: "Public sector solutions"
-    }
-    {
-      name: "Manufacturing"
-      href: "/industries/manufacturing"
-      description: "Industrial automation"
-    }
-    {
-      name: "Retail"
-      href: "/industries/retail"
-      description: "E-commerce and retail tech"
-    }
-    {
-      name: "Real Estate"
-      href: "/industries/real-estate"
-      description: "Property technology"
-    }
-  ];
-  const resources = [
-    { name: "Blog", href: "/blog", description: "Latest insights and updates" }
-    {
-      name: "Case Studies"
-      href: "/case-studies"
-      description: "Success stories and projects"
-    }
-    {
-      name: "White Papers"
-      href: "/white-papers"
-      description: "In-depth research and analysis"
     }
     {
     {
@@ -400,6 +321,12 @@ export default function Navigation() {;
                 </AnimatePresence>;
               </div>;
 
+              <Link
+                href="/pricing"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
+                Pricing;
+              </Link>;
+            </div>;
 
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;

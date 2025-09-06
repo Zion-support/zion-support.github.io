@@ -1,4 +1,3 @@
-
 import {
   Dialog;
   DialogContent;
@@ -9,9 +8,6 @@ import { JobApplication } from "@/types/jobs";
 import { ApplicationScoreCard } from "../ApplicationScoreCard";
 import { JobApplication } from "@/types/jobs",
 import { ApplicationScoreCard } from "../ApplicationScoreCard",
-
-
-
 interface ScoreDialogProps {
 
   open: boolean
@@ -88,11 +84,7 @@ export function ScoreDialog(): any ({;
           <DialogTitle>Application Match Score</DialogTitle>;
         </DialogHeader>;
         {application && (;
-
           <ApplicationScoreCard
-
-          <ApplicationScoreCard 
-
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;

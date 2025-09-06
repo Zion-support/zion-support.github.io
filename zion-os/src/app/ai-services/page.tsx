@@ -1,4 +1,3 @@
-    <div className="min-h-screen">;
 import Link from './next / link';,
 export const metadata = {
   title: "AI Services - Zion Tech Group | Artificial Intelligence & Machine Learning Solutions",
@@ -10,18 +9,12 @@ export default /**
 function AIServicesPage() {
   return (
     <div className="min - h-screen">;
-    <div className="min-h-screen">;
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
           <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
             AI & <span className="gradient - text">Machine Learning</span>;
           </h1>;
-
-          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
-            Harness the power of artificial intelligence to automate operations,
-            enhance decision - making, and create intelligent business processes.;
-
           </p>;
         </div>;
       </section>;
@@ -100,13 +93,13 @@ function AIServicesPage() {
                 Automate complex business processes with AI - powered decision - making systems.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 300">;
-                <li> Process automation & optimization</li>;
-                <li> Intelligent workflow management</li>;
-                <li> Predictive maintenance</li>;
-                <li> Resource allocation optimization</li>;
+                <li>• Process automation & optimization</li>;
+                <li>• Intelligent workflow management</li>;
+                <li>• Predictive maintenance</li>;
+                <li>• Resource allocation optimization</li>;
               </ul>;
               <Link href="/ai - autonomous - business - operations" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* Business Intelligence */}
@@ -121,13 +114,13 @@ function AIServicesPage() {
                 Transform data into actionable insights with advanced AI analytics.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 300">;
-                <li> Predictive analytics & forecasting</li>;
-                <li> Real - time data processing</li>;
-                <li> Customer behavior analysis</li>;
-                <li> Performance optimization insights</li>;
+                <li>• Predictive analytics & forecasting</li>;
+                <li>• Real - time data processing</li>;
+                <li>• Customer behavior analysis</li>;
+                <li>• Performance optimization insights</li>;
               </ul>;
               <Link href="/ai - business - intelligence" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* Content Generation */}
@@ -142,13 +135,13 @@ function AIServicesPage() {
                 Create high - quality, engaging content at scale with AI - powered tools.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 300">;
-                <li> Automated content creation</li>;
-                <li> Multi - language support</li>;
-                <li> SEO optimization</li>;
-                <li> Brand voice consistency</li>;
+                <li>• Automated content creation</li>;
+                <li>• Multi - language support</li>;
+                <li>• SEO optimization</li>;
+                <li>• Brand voice consistency</li>;
               </ul>;
               <Link href="/ai - content - generator" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* Research Automation */}
@@ -163,13 +156,13 @@ function AIServicesPage() {
                 Accelerate research with AI - powered data analysis and insights.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 300">;
-                <li> Data mining & analysis</li>;
-                <li> Pattern recognition</li>;
-                <li> Hypothesis generation</li>;
-                <li> Research optimization</li>;
+                <li>• Data mining & analysis</li>;
+                <li>• Pattern recognition</li>;
+                <li>• Hypothesis generation</li>;
+                <li>• Research optimization</li>;
               </ul>;
               <Link href="/ai - autonomous - research - assistant" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* AI Agents */}
@@ -184,13 +177,13 @@ function AIServicesPage() {
                 Deploy intelligent AI agents to handle complex tasks and interactions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 300">;
-                <li> Virtual assistants</li>;
-                <li> Customer service bots</li>;
-                <li> Task automation</li>;
-                <li> Intelligent routing</li>;
+                <li>• Virtual assistants</li>;
+                <li>• Customer service bots</li>;
+                <li>• Task automation</li>;
+                <li>• Intelligent routing</li>;
               </ul>;
               <Link href="/ai - agents" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
             {/* AI Governance */}
@@ -205,13 +198,13 @@ function AIServicesPage() {
                 Ensure responsible AI deployment with governance frameworks.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 300">;
-                <li> Ethical AI guidelines</li>;
-                <li> Bias detection & mitigation</li>;
-                <li> Transparency & explainability</li>;
-                <li> Compliance frameworks</li>;
+                <li>• Ethical AI guidelines</li>;
+                <li>• Bias detection & mitigation</li>;
+                <li>• Transparency & explainability</li>;
+                <li>• Compliance frameworks</li>;
               </ul>;
               <Link href="/ai - governance" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-                Learn More ;
+                Learn More →;
               </Link>;
             </div>;
           </div>;

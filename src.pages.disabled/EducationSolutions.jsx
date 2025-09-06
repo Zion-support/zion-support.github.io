@@ -31,9 +31,6 @@ export default function EducationSolutions({ }: EducationSolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
 :src.pages.disabled/EducationSolutions.jsx
 }
 }
@@ -44,3 +41,12 @@ export default function EducationSolutions({ }: EducationSolutionsProps) {
 
 
 
+
+
+
+:src.pages.disabled/EducationSolutions.jsx
+}
+}
+}
+}
+}

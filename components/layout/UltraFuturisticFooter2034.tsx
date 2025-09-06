@@ -56,6 +56,7 @@ import {
   CpuIcon;} from 'lucide-react';import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield
 
+import {
   Rocket,
   Brain,
   Atom,
@@ -118,7 +119,14 @@ import {
   Heart, ShieldCheck, Users, Briefcase, BookOpen;
   Target, Microscope, Cpu, Database, Cloud, Lock;
   Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity;
-  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+const quickLinks = [;
+  { name: 'Home', href: '/', icon: Home },;
+  { name: 'Services', href: '/services', icon: Briefcase },;
+  { name: 'Solutions', href: '/solutions', icon: Target },;
+  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign },;
+  { name: 'Resources', href: '/resources', icon: BookOpen },;
+  { name: 'Case Studies', href: '/case-studies', icon: FileText },;
+  { name: 'Blog', href: '/blog', icon: MessageSquare },;
   { label: 'Happy Customers', value: '50K+', icon: Users },
   { label: 'Services Delivered', value: '200+', icon: Rocket },
   { label: 'Countries Served', value: '45+', icon: Globe },
@@ -167,15 +175,11 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
 ];
-const certifications = [;
-  'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant';
-];
 const stats = [;
   { label: 'Happy Customers', value: '50K+', icon: Users },;
   { label: 'Services Delivered', value: '200+', icon: Rocket },;
   { label: 'Countries Served', value: '45+', icon: Globe },;
   { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },];
-    <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
 
 
 export default function UltraFuturisticFooter2034() {;
@@ -183,14 +187,6 @@ export default function UltraFuturisticFooter2034() {;
   return (
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>;
       {/* Animated Background Elements */}
-
-      <div className='absolute inset-0 overflow-hidden'>;
-        <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>;
-        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>;
-      </div>;
-      <div className='relative z-10'>;
-
         {/* Main Footer Content */}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
           <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>;
@@ -201,13 +197,10 @@ export default function UltraFuturisticFooter2034() {;
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>;
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>;
       </div>;
-
-      <div className="relative z-10">;
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
             {/* Company Info */}
-
 
 export default function UltraFuturisticFooter2034() {
   return (
@@ -218,12 +211,10 @@ export default function UltraFuturisticFooter2034() {
 
 
 
-
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
-
 
               >
                 <div className='flex items-center space-x-3'>
@@ -284,7 +275,6 @@ export default function UltraFuturisticFooter2034() {
                     </p>;
                   </div>;
                 </div>;
-
                 <p className='text-gray-300 leading-relaxed'>;
                   Leading provider of cutting-edge AI, quantum computing, and;
                   emerging technology solutions. Empowering businesses with;
@@ -303,6 +293,20 @@ export default function UltraFuturisticFooter2034() {
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors'>
                     <MapPin className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.address}</span>                  </div>                    <span>{contactInfo.mobile}</span>
+                <div className="grid grid-cols-2 gap-4">
+                  {stats.map((stat, index) => (
+                    <motion.div
+                      key={stat.label}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
+                    >
+                      <stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
+                      <div className="text-lg font-bold text-white">{stat.value}</div>
+                      <div className="text-xs text-gray-400">{stat.label}</div>
+                    </motion.div>
                   ))}
                 </div>
                       <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>
@@ -313,7 +317,6 @@ export default function UltraFuturisticFooter2034() {
                 </div>
 
                 {/* Contact Info */}
-                    <span>{contactInfo.mobile}</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors">
                     <Mail className="w-4 h-4" />
@@ -382,15 +385,55 @@ export default function UltraFuturisticFooter2034() {
 
                               {service.price}
 
-
                             </span>
                           </Link>
+                      className='space-y-4'>;
+                      <div className='flex items-center space-x-2'>;
+                        <category && category.icon className='w-5 h-5 text-cyan-400' />;
+                        <h4 className='font-semibold text-white'>;
+                          {category && category.title}
+                        </h4>;
+                      </div>;
+                      <div className='space-y-2'>;
+                        {category && category.services.map(service => (;
+                          <Link
+                            key={service && service.name}
+                            href={service && service.href}
+                            className='flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200'>;
+                            <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm'>;
+                              {service && service.name}
+                            </span>;
+                            <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>                              {service && service.price}                    >;
+                      <div className="flex items-center space-x-2">;
+                        <category && category.icon className="w-5 h-5 text-cyan-400" />;
+                        <h4 className="font-semibold text-white">{category && category.title}</h4>;
+                      </div>;
+                      <div className="space-y-2">;
+                        {category && category.services.map((service) => (;
+                          <Link
+                            key={service && service.name}
+                            href={service && service.href}
+                            className="flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200">;
+                            <span className="text-gray-300 group-hover:text-cyan-400 transition-colors text-sm">;
+                              {service && service.name}
+                            </span>;
+                            <span className="text-xs text-gray-500 group-hover:text-cyan-400 transition-colors">;
+                              {service && service.price}
+                            </span>;
+                          </Link>;
+                            key={service.name}
+                            href={service.href}
+                            className="flex items - center justify - between group hover:bg - white / 5 rounded - lg p - 2 transition - all duration - 200";
+                          >;
+                            <span className="text - gray - 300 group - hover:text - cyan - 400 transition - colors text - sm">;
+                              {service.name}
+                            </span>;
+                            <span className="text - xs text - gray - 500 group - hover:text - cyan - 400 transition - colors">;
+                              {service.price}
                         ))}
                       </div>;
                     </motion && motion.div>;
                   ))}
-            {/* Quick Links & Social */}
-
 
             {/* Quick Links & Social */}
             <div className="lg:col-span-1">
@@ -400,16 +443,13 @@ export default function UltraFuturisticFooter2034() {
 
               <motion.div
 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className='space-y-8'
+            {/* Quick Links & Social */}
+            <div className='lg:col-span-1'>              <motion && motion.div            <div className="lg:col-span-1">;
+              <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
                 viewport={{ once: true }}
-
 
               >
                 {/* Quick Links */}
@@ -444,22 +484,67 @@ export default function UltraFuturisticFooter2034() {
 
                         className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'
                       >
+                        <social.icon className='w-5 h-5' />                      </Link>                      <Link
+                        key={social.name}
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110"
+                      >
+                        <social.icon className="w-5 h-5" />
+                      </Link>
                         <social.icon className='w-5 h-5' />                      </Link>
 
                       </Link>
 
                     ))}
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
 
-                  </div>;
-                </div>;
-              </motion && motion.div>;
-            </div>;
-          </div>;
-
-
-
-
-
+                <div>;
+                  <h4 className='text-lg font-semibold text-white mb-4'>;
+                    Company;
+                  </h4>;
+                  <div className='space-y-2'>;
+                    {companyLinks && companyLinks.map(link => (;
+                      <Link
+                        key={link && link.name}
+                        href={link && link.href}
+                        className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'>;
+                        <link && link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />;
+                        <span className='text-sm'>{link && link.name}</span>                      </Link>                      <Link
+                        key={link && link.name}
+                        href={link && link.href}
+                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group">;
+                        <link && link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />;
+                        <span className="text-sm">{link && link.name}</span>;
+                      </Link>;
+                    ))}
+                {/* Social Links */}
+                <div>;
+                  <h4 className='text-lg font-semibold text-white mb-4'>;
+                    Follow Us;
+                  </h4>;
+                  <div className='flex space-x-4'>;
+                    {socialLinks && socialLinks.map(social => (;
+                      <Link
+                        key={social && social.name}
+                        href={social && social.href}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'>;
+                        <social && social.icon className='w-5 h-5' />                      </Link>                      <Link
+                        key={social && social.name}
+                        href={social && social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110">;
+                        <social && social.icon className="w-5 h-5" />;
+                      </Link>;
+                    ))}
           {/* Certifications */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -471,7 +556,6 @@ export default function UltraFuturisticFooter2034() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
-
                   </span>                </motion.div>
 
                 </motion.div>
@@ -487,12 +571,6 @@ export default function UltraFuturisticFooter2034() {
         </div>
 
               ))}
-
-            </div>;
-          </motion && motion.div>;
-        </div>;
-
-
         {/* Bottom Bar */}
 
 
@@ -501,6 +579,11 @@ export default function UltraFuturisticFooter2034() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
+        <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
+            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>;
+              <div className='flex items-center space-x-6 text-sm text-gray-400'>;
+                <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>;
                 <Link
                   href='/privacy'
                   className='hover:text-cyan-400 transition-colors'>;
@@ -508,8 +591,18 @@ export default function UltraFuturisticFooter2034() {
                 </Link>;
                 <Link
                   href='/terms'
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-
+              <div className='flex items-center space-x-2 text-gray-400'>;
+                <Heart className='w-4 h-4 text-red-400' />;
+                <span className='text-sm'>Made with ❤️ for the future</span>              </div>              ;
+              <div className="flex items-center space-x-2 text-gray-400">;
+                <Heart className="w-4 h-4 text-red-400" />;
+                <span className="text-sm">Made with ❤️ for the future</span>;
             </div>;
           </div>;
         </div>;
@@ -525,7 +618,3 @@ export default function UltraFuturisticFooter2034() {;
       <span>© {new Date().getFullYear()} Zion Tech Group</span>;
     </footer>;
   )}"';
-  );
-}
-
-

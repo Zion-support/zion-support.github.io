@@ -11,9 +11,6 @@ export const useResumeProgress = (resume: Resume | null) => {;
       setProgress(0);
       return;
     }
-
-      completed += 1
-
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
 export const useResumeProgress = (resume: Resume | null) => {;
@@ -65,27 +62,10 @@ if ( {) {
     if (resume && resume.education && resume && resume.education.length > 0) {
       completed += 1
     }
-
-    // Education (1 point if at least one entry);
-    }
-
-    // Skills (1 point if at least one entry);
-    // Check condition
-if ( {) {
-  $2
-}
-
       completed += 1;
     if (resume && resume.skills && resume && resume.skills.length > 0) {
       completed += 1
     }
-
-    // Certifications (1 point if at least one entry);
-    // Check condition
-if ( {) {
-  $2
-}
-
       completed += 1;
     if (resume && resume.certifications && resume && resume.certifications.length > 0) {
       completed += 1

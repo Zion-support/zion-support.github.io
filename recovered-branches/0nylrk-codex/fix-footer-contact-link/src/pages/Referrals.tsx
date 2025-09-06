@@ -1,4 +1,3 @@
-
 import { useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useReferrals  } from '@/hooks/useReferrals';
@@ -31,6 +30,11 @@ import {Button} from '@/components / ui / button';
 import {toast} from '@/hooks / use - toast';
 import {Share, Users} from 'lucide-react';
 
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
+  const {;
+    isLoading;
+    referralCode;
 import {use_navigate} from 'react-router-dom';
 export default /**
  * ReferralsPage - Function description
@@ -41,7 +45,6 @@ function ReferralsPage() {
   const {
     is_loading;
     referral_code;
-
     referrals;
     rewards;
     stats;
@@ -65,7 +68,6 @@ import {useNavigate} from 'react-router-dom';
 export default function ReferralsPage() {;
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
-
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -102,15 +104,9 @@ export default function ReferralsPage() {
         variant: "destructive"})
       navigate("/login")
     }
-
-
   }, [isAuthenticated, navigate]),
 
   const referralLink = getReferralLink(),
-
-}
-
-
 
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -159,5 +155,6 @@ export default function ReferralsPage() {;
 
 
 }
+;
     </div>);
 }

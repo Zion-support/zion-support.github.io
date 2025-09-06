@@ -67,6 +67,33 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
+          />
+        ))}
+      </div>
+    )
+  const getInitials = (name: string,) => {
+    return name
+      .split(" ")
+      .map((n,) => n[0])
+      .join("")
+      .toUpperCase()
+      .substring(0, 2)
+  }
+  const getInitials = (name: string) => {
+    return name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase()
+      .substring(0, 2)
+  },
+  
+  return (
+    <div className="border rounded-lg p-4 bg-card">
+      <div className="flex justify-between items-start mb-3">
+        <div className="flex items-center gap-3">
+          {review.is_anonymous ? (
+            <Avatar>
               <AvatarFallback className="bg-muted">
                 <User className="h-4 w-4" />
               </AvatarFallback>
@@ -95,102 +122,59 @@ import {
   };
 
   return (
-    <div className='border rounded-lg p-4 bg-card'>;
-      <div className='flex justify-between items-start mb-3'>;
-        <div className='flex items-center gap-3'>;
-          {review && review.is_anonymous ? (;
-            <Avatar>;
-              <AvatarFallback className='bg-muted'>;
-                <User className='h-4 w-4' />              </AvatarFallback>  };
-
-  const getInitials = (name: string) => {;
-    return name;
-      .split(" ");
-      .map((n) => n[0]);
-      .join("");
-      .toUpperCase();
-      .substring(0, 2);
-  };
-
-  return (
-    <div className="border rounded-lg p-4 bg-card">;
-      <div className="flex justify-between items-start mb-3">;
-        <div className="flex items-center gap-3">;
-          {review && review.is_anonymous ? (;
-            <Avatar>;
-              <AvatarFallback className="bg-muted">;
-                <User className="h-4 w-4" />;
-              </AvatarFallback>;
-            </Avatar>;
-          ) : (;
-            <Avatar>;
-              {review && review.reviewer_profile?.avatar_url ? (;
-                <AvatarImage
-                  src={review && review.reviewer_profile.avatar_url}
-                  alt={review && review.reviewer_profile.display_name}
-                />;
-              ) : (;
-                <AvatarFallback>;
-                  {review && review.reviewer_profile?.display_name;
-                    ? getInitials(review && review.reviewer_profile.display_name);
-                    : '??'}                </AvatarFallback>;
-              )}
             </Avatar>;
           )}
+
+    <div className="border rounded-lg p-4 bg-card">
+      <div className="flex justify-between items-start mb-3">
+        <div className="flex items-center gap-3">
+    <div className="border rounded - lg p - 4 bg - card">;
+      <div className="flex justify - between items - start mb - 3">;
+        <div className="flex items - center gap - 3">;
+
           {review.is_anonymous ? (
             <Avatar>;
-              <AvatarFallback className="bg - muted">;
-                <User className="h - 4 w - 4" />;
-              </AvatarFallback>;
-            </Avatar>) : (
-            <Avatar>;
-              {review.reviewer_profile?.avatar_url ? (
+                  {review && review.reviewer_profile?.display_name ? ;
+                    getInitials(review && review.reviewer_profile.display_name) : "??"}
+
+                </AvatarFallback>
+              )}
+
+
+          <div>
+            <div className='font-medium'>
+              {review.is_anonymous
+                ? 'Anonymous'
+                : review.reviewer_profile?.display_name |'User'}
+            </div>
+            <div className='text-sm text-muted-foreground'>
+              {formatDistanceToNow(new Date(review.created_at), {
+                addSuffix: true
+              })}
+            </div>
+          </div>
+          
+          <div>
+            <div className="font-medium">
+              {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name || "User"}
+            </div>
+            <div className="text-sm text-muted-foreground">
+              {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
+            </div>;
+          </div>;
+        </div>;
+        <div className="flex">;
+          {renderStars(review.rating)}
+        </div>
+        <div className='flex'>{renderStars(review.rating)}</div>
+      </div>
+      <div className='mb-4'>
+        <p className='text-sm whitespace-pre-wrap'>{review.review_text}</p>
+      </div>
         review.would_work_again !== undefined) && (
         <div className='border - t pt - 3 mt - 3'>;
           <div className='flex flex - wrap gap - 2'>;
             {review.communication_rating && (
-              </Badge>
-            )}
-
-            {review.quality_rating && (
-              <Badge variant='outline' className='flex gap-1 items-center'>
-                Quality
-                <span className='ml-1 text-yellow-500'>
-                  {review.quality_rating}/5
-                </span>
-              </Badge>
-            )}
-
-            {review.timeliness_rating && (
-              <Badge variant='outline' className='flex gap-1 items-center'>
-                Timeliness
-                <span className='ml-1 text-yellow-500'>
-                  {review.timeliness_rating}/5
-                </span>
-              </Badge>
-            )}
-              <Badge variant='outline' className='flex gap - 1 items - center'>;
-                Communication;
-                <span className='ml - 1 text - yellow - 500'>;
-                  {review.communication_rating}/5;
-                </span>;
-              </Badge>)}
-            {review.quality_rating && (
-              <Badge variant='outline' className='flex gap - 1 items - center'>;
-                Quality;
-                <span className='ml - 1 text - yellow - 500'>;
-                  {review.quality_rating}/5;
-                </span>;
-              </Badge>)}
-            {review.timeliness_rating && (
-              <Badge variant='outline' className='flex gap - 1 items - center'>;
-                Timeliness;
-                <span className='ml - 1 text - yellow - 500'>;
-                  {review.timeliness_rating}/5;
-                </span>;
-              </Badge>)}
-
-            {review.would_work_again !== undefined && (
             </div>
             <div className="text-sm text-muted-foreground">
               {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
@@ -204,12 +188,47 @@ import {
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
+      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Communication
                 <span className="ml-1 text-yellow-500">{review.communication_rating}/5</span>
+      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
+        <div className="border - t pt - 3 mt - 3">;
+          <div className="flex flex - wrap gap - 2">;
+            {review.communication_rating && (
+              <Badge variant="outline" className="flex gap - 1 items - center">;
+                Communication;
+                <span className="ml - 1 text - yellow - 500">{review.communication_rating}/5</span>;
+              </Badge>)}
+            {review.quality_rating && (
+              <Badge variant="outline" className="flex gap - 1 items - center">;
+                Quality;
+                <span className="ml - 1 text - yellow - 500">{review.quality_rating}/5</span>;
+              </Badge>)}
+            {review.timeliness_rating && (
+              <Badge variant="outline" className="flex gap - 1 items - center">;
+                Timeliness;
+                <span className="ml - 1 text - yellow - 500">{review.timeliness_rating}/5</span>;
+              </Badge>)}
+            {review.would_work_again !== undefined && (
+              <Badge;
+
+              </Badge>
+            )}
+            {review.quality_rating && (
+              </Badge>
+            )}
+            {review.quality_rating && (
+              </Badge>
+            )}
+            {review.timeliness_rating && (
+              </Badge>
+            )}
+            {review.would_work_again !== undefined && (
+                variant={review.would_work_again ? "default" : "secondary"}
             )}
 
             {review && review.quality_rating && (;
@@ -236,6 +255,11 @@ import {
           </div>;
         </div>;
       )}
+              </Badge>
+            )}
+          </div>
+        </div>
+      )}
       <div className='mt-3 flex justify-end'>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -246,11 +270,25 @@ import {
           <DialogTrigger asChild>
             <Button variant="ghost" size="sm" className="text-muted-foreground">
               <Flag className="h-3 w-3 mr-1" />
+
+              Report
+
+
             </Button>
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
+                please provide details below.
+              </DialogDescription>
+            </DialogHeader>
+            <Textarea
+              placeholder='Why are you reporting this review?'              value={reportReason}
+              onChange={e => setReportReason(e.target.value)}
+              className='min-h-[100px]'
+              placeholder="Why are you reporting this review?"
+              value = {reportReason,}
+              onChange = {(e,) => setReportReason(e.target.value),}
                 If you believe this review violates our community guidelines, please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -259,6 +297,13 @@ import {
               placeholder="Why are you reporting this review?"
               value={reportReason}
               onChange={(e) => setReportReason(e.target.value)}
+
+
+
+
+              className="min-h-[100px]"
+            />
+            
             <DialogFooter>
               <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
                 Cancel
@@ -268,42 +313,84 @@ import {
                 disabled={!reportReason.trim() || isReporting}
               >
                 {isReporting ? "Submitting..." : "Submit Report"}
+
+
+
               </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
+      </div>;
+    </div>;
+  );
+
+              <DialogTitle > Report Review</DialogTitle>;
+              <DialogDescription>;
+                If you believe this review violates our community guidelines,
+                please provide details below.;
+              </DialogDescription>;
+            </DialogHeader>;
+            <Textarea;
+              placeholder='Why are you reporting this review?'              value={report_reason}
+              on_change={e => setReportReason (e.target.value)}
+              className='min - h-[100px]';
+              placeholder="Why are you reporting this review?";
+              value = {report_reason, }
+              on_change = {(e, ) => setReportReason (e.target.value), }
+              className="min - h-[100px]";
+            />;
+            <DialogFooter>;
+              <Button;
+                variant='outline';
+                on_click={() => setIsReportDialogOpen (false)}
+              >;
+                Cancel;
+              </Button>;
+              <Button;
+                on_click={handle_report}
+                disabled={!report_reason.trim () || is_reporting}              >;
+                {is_reporting ? 'Submitting...' : 'Submit Report'}              </Button>                {is_reporting ? "Submitting..." : "Submit Report"}
+              </Button>;
+            </DialogFooter>;
+          </DialogContent>;
+        </Dialog>;
+      </div>;
+};"
+return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {"
+  review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
+};"
+return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {"
+  review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
-  review.reviewer profile.avatar url;
+  review.reviewer profile.avatar url
 }alt= {
-  review.reviewer profile.display name;
-}/>) : (<AvatarFallback> {";
-  review.reviewer profile?.display name ? get_initials (review.reviewer profile.display name) : "??";
-}</AvatarFallback>);
-}</Avatar>) ";
-}<div> </div> <div className="text - sm text - muted - foreground"> {
+  review.reviewer profile.display name
+}/>) : (<AvatarFallback> {"
+  review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : "??"
+}</AvatarFallback>)
+}</Avatar>) "
+}<div> </div> <div className="text-sm text-muted-foreground"> {
   formatDistanceToNow (new Date (review.created at), {
-  add_suffix: true;
-}) ";
+  addSuffix: true
+}) "
 }</div> </div> </div> <div className="flex"> {
-  render_stars (review.rating) ";
-}</div> </div> <div className="mb - 4"> <p className="text - sm whitespace - pre - wrap"> {
-  review.review text;
-}</p> </div> {";
-  (review.communication rating || review.quality rating || review.timeliness rating || review.would work again !== undefined) && (<div className="border - t pt - 3 mt - 3"> <div className="flex flex - wrap gap - 2" > {";
-  review.communication rating && (<Badge variant="outline" className="flex gap - 1 items - center"> Communication <span className="ml - 1 text - yellow - 500" > {
-  review.communication rating;
-}/5</span> </Badge>) ";
-}Quality <span className="ml - 1 text - yellow - 500" > {
-  review.quality rating;
-}/5</span> </Badge>) ";
-}Timeliness <span className="ml - 1 text - yellow - 500" > {
-  review.timeliness rating;
-}/5</span> </Badge>);
+  renderStars (review.rating) "
+}</div> </div> <div className="mb-4"> <p className="text-sm whitespace-pre-wrap"> {
+  review.review text
+}</p> </div> {"
+  (review.communication rating |review.quality rating |review.timeliness rating |review.would work again !== undefined) && (<div className="border-t pt-3 mt-3"> <div className="flex flex-wrap gap-2" > {"
+  review.communication rating && (<Badge variant="outline" className="flex gap-1 items-center"> Communication <span className="ml-1 text-yellow-500" > {
+  review.communication rating
+}/5</span> </Badge>) "
+}Quality <span className="ml-1 text-yellow-500" > {
+  review.quality rating
+}/5</span> </Badge>) "
+}Timeliness <span className="ml-1 text-yellow-500" > {
+  review.timeliness rating
+}/5</span> </Badge>)
 }{
-  review.would work again !== undefined && (<Badge </Badge>);
-}</div> </div>) ";
-}<DialogTrigger as_child> <Button variant="ghost" size="sm" className="text - muted - foreground"> <Flag className="h - 3 w - 3 mr - 1" /> Report </Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle > Report Review</DialogTitle> <DialogDescription> If you believe this review violates our community guidelines, please provide details below. </DialogDescription> </DialogHeader> <Textarea Cancel </Button> <Button on_click={
-  handle_report;
+  review.would work again !== undefined && (<Badge </Badge>)
+}</div> </div>) "
+}<DialogTrigger asChild> <Button variant="ghost" size="sm" className="text-muted-foreground"> <Flag className="h-3 w-3 mr-1" /> Report </Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Report Review</DialogTitle> <DialogDescription> If you believe this review violates our community guidelines, please provide details below. </DialogDescription> </DialogHeader> <Textarea Cancel </Button> <Button onClick={
+  handleReport
 }disabled= {
-  !report_reason.trim () || is_reporting;
-}> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>);

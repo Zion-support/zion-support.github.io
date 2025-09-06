@@ -1,4 +1,3 @@
-
 import {
   Search,
   Filter,
@@ -165,11 +164,6 @@ import Link from 'next/link';
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
-
-
-
-
-
 const Services2024Page: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -245,9 +239,6 @@ const Services2024Page: React.FC = () => {;
   }
 }
   ],
-
-
-
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain,
     if (variant.includes('security')) return Shield,
@@ -269,6 +260,30 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500',
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
     return 'from-gray-500 to-slate-500'
+  },
+  return (
+
+        />;
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/services-2024' />;
+      </Head>;
+    <>
+      <Head>
+        <title>2024 Revolutionary Services - Zion Tech Group</title>
+        <meta name="description" content="Discover our revolutionary 2024 services including AI automation, quantum security, and enterprise IT solutions. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
+      </Head>
+      <UltraFuturisticBackground2034 intensity={0.8} theme='quantum' />
+      <div className='relative z-10 min-h-screen'>
+        {/* Hero Section */}
+
+        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
       <UltraFuturisticBackground2034 intensity={0.8} theme="quantum" />
       <div className="relative z-10 min-h-screen">
         {/* Hero Section */  } catch (error) {
@@ -294,9 +309,22 @@ const Services2024Page: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             >
+              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
+                <Sparkles className="w-5 h-5 text-cyan-400" />
+                <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
+              </div>
+              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+
+                  Future-Ready
+                </span>
+                <br />
+                <span className='text-white'>Solutions</span>
+              </h1>
+
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
                 <Sparkles className="w-5 h-5 text-cyan-400" />
                 <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
@@ -322,15 +350,10 @@ const Services2024Page: React.FC = () => {;
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>
                   <div className="text-gray-400">Revolutionary Services</div>
-
-
-
                 </div>
-                <div className='text-center'>
-                  <div className='text-3xl font-bold text-purple-400 mb-2'>
-                    17
-                  </div>
-                  <div className='text-gray-400'>Service Categories</div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">17</div>
+                  <div className="text-gray-400">Service Categories</div>
                 </div>
               </div>
             </motion.div>
@@ -568,7 +591,15 @@ if ( {) {
                             <span className="text-sm font-semibold text-white">{service.rating}</span>
 
                           </div>
-                          <div className='text-xs text-gray-400'>Customers</div>
+                          <div className="text-xs text-gray-400">Rating</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-sm font-semibold text-white mb-1">{service.customers}</div>
+                          <div className="text-xs text-gray-400">Customers</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-sm font-semibold text-white mb-1">{service.launchDate}</div>
+                          <div className="text-xs text-gray-400">Launched</div>
                         </div>
                       </div>
                       {/* CTA */}
@@ -642,7 +673,6 @@ if ( {) {
   }
 }
 
-
         {/* CTA Section */}
         <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
@@ -709,13 +739,6 @@ if ( {) {
                 Get started today and experience the future of technology.
               </p>
               <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join thousands of businesses already leveraging our revolutionary 2024 services.
-                Get started today and experience the future of technology.
-              </p>
-              <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <Link
                   href="/contact" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold">
                   <Zap className="w-5 h-5" />
@@ -732,8 +755,6 @@ if ( {) {
         </section>
       </div>
     </>
-  )
-}
 
 
                   className='flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold'>;
@@ -795,9 +816,6 @@ export default Services2024Page,
             </motion.div>;
           </div>;
         </section>;
-    </>),
-}
-;
 
 
 export default Services2024Page;

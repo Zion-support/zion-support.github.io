@@ -1,5 +1,3 @@
-
-
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -55,13 +53,6 @@ const benefits = [;
     title: 'Increased Sales,',;
     description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',;
     icon: ShoppingCart;
-];
-const benefits = [
-  {
-    title: 'Increased Sales',
-    description: 'Personalized experiences and optimized inventory drive higher conversion rates.',
-    icon: ShoppingCart
-  },
   {}
 
     title: 'Better Customer Experience,',;

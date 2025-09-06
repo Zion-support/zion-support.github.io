@@ -2,7 +2,6 @@
 
 
 
-
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -27,9 +26,6 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
 import { ShieldAlert } from "lucide-react",
 import { Link } from "react-router-dom",
-
-
-
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
@@ -98,23 +94,12 @@ function DisputesList() {
         return "default";
     }
               ))}
-            </TableBody>
-          </Table>
-        </div>
-      </div>
-    )
-  }
-
-
-
-              ))}
             </TableBody>;
           </Table>;
         </div>;
       </div>;
     );
   }
-  if (disputes.length === 0) {
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">;
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
@@ -163,6 +148,7 @@ function DisputesList() {
     </div>;
   );
 }
+                  {formatDistanceToNow (new Date (dispute.created_at), { add_suffix: true })}
                 </TableCell>;
                 <TableCell>;
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>;

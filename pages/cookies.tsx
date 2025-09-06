@@ -212,13 +212,12 @@ export default function CookiePolicyPage() {;
                             </button>;
                           )}
                               {example}
-                            </li>
+                            </li>;
                           ))}
-                        </ul>
-                      </div>
-                    </motion.div>
+                        </ul>;
+                      </div>;
+                    </motion && motion.div>;
                   ))}
-                  <button
                     })}
                     className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors";
                   >;
@@ -240,12 +239,12 @@ export default function CookiePolicyPage() {;
           </div>;
         </section>;
         {/* Cookie Information */}
-        <section className="py-20 bg-white">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+        <section className="py - 20 bg - white">;
+          <div className="container mx - auto px - 4">;
+            <motion.div;
+              className="text - center mb - 16";
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               </div>;
@@ -304,12 +303,12 @@ export default function CookiesPage() {
       <div className="container mx-auto px-4 py-24 text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
-          <p className="text-gray-300">We use minimal, privacyrespecting analytics. Some thirdparty embeds may set cookies. You can block nonessential cookies via your browser.</p>
+          <p className="text-gray-300">We use minimal, privacy‑respecting analytics. Some third‑party embeds may set cookies. You can block non‑essential cookies via your browser.</p>
           <ul className="list-disc list-inside text-gray-300 space-y-1">
             <li>Purpose: performance and security</li>
 <li>Purpose: performance and security</li>
-            <li>Retention: session or shortterm</li>
-            <li>Optout: browser settings and extensions</li>
+            <li>Retention: session or short‑term</li>
+            <li>Opt‑out: browser settings and extensions</li>
           </ul>
       </Layout>
     </>

@@ -8,15 +8,6 @@ interface LazyComponentProps {
   fallback?: ReactNode;
   [key: string]: unknown
 }
-  );
-}
-
-
-
-import React from 'react',;
-},
-
-
 
 import React from 'react';
 }
@@ -34,5 +25,3 @@ const LazyComponent: React.FC < LazyComponentProps> = ({
 export default LazyComponent;
 import React from 'react',
 },
-
-

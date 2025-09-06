@@ -29,7 +29,6 @@ declare module 'lovable-tagger' {import { Plugin } from 'vite';
 }
 // Badge component type fixes
 declare module '@/components/ui/badge' {
-  export const Badge: React.FC<BadgeProps>;
 
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string,
@@ -72,17 +71,11 @@ declare module 'lovable - tagger' {
 declare module '@/components / ui / badge' {
   export interface BadgeProps {
   }
-  export const Badge: React.FC<BadgeProps>;
-}
-// FeatureCard type fixes;
     key?: number | string;
   }
 }
 // ListingScoreCard type fixes;
     key?: string | number;
-  }
-}
-// ProductListingCard type fixes;
 
 
 

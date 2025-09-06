@@ -1,13 +1,9 @@
-
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
-
-
-
 export function TalentPool() {
   // Mock talent data
 
@@ -16,12 +12,6 @@ export function TalentPool() {
       case "available": return <Badge className="bg-green-500">Available</Badge>;
       case "interviewing":;
         return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
-
-      case "hired":;
-        return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>,;
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
-
     }
   }
 
@@ -66,8 +56,6 @@ function TalentPool() {
           <Button size="sm">View All</Button>;
         </div>;
       </CardHeader>;
-
-
                   <Badge key={index} variant="secondary" className="text-xs">
                     {skill}
                   </Badge>;

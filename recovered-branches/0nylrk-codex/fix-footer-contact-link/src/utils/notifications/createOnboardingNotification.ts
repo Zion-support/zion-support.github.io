@@ -1,5 +1,4 @@
 
-
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
 
@@ -69,10 +68,6 @@ export async function createOnboardingNotification({;
         break;
     }
   }
-}
-}
-
-
 import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
 /**;
@@ -149,3 +144,4 @@ export async function createOnboardingNotification({;
   });
 }
 ;
+}

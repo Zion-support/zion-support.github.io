@@ -1,7 +1,4 @@
 
-
-
-
 import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | 'message'
@@ -23,22 +20,15 @@ export type FilterType =
   | 'unread'
   | 'messages'
 
-import {Notification, as, BaseNotification} from '@/types / notifications';
-
 
 export interface NotificationContextType {;
 
+export interface NotificationContextType {
   notifications: Notification[];
   filtered_notifications: Notification[];
   unread_count: number;
   loading: boolean;
   filter: FilterType;
-  markAsRead: (id: string) => Promise<void>;
-  markAllAsRead: () => Promise<void>;
-  dismissNotification: (id: string) => Promise<void>;
-  setFilter: (filter: FilterType) => void
-
-  fetchNotifications: () => Promise<void>
   | 'system',;
 export interface NotificationContextType {;
   notifications: Notification[],;

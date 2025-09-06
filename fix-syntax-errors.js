@@ -1,6 +1,3 @@
-#!/usr/bin/env node
-
-
         }
         return match;
       },
@@ -17,7 +14,6 @@
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
-}},
 }},
 ,
 // Run all fixes,
@@ -43,3 +39,4 @@ fixAiServices(),;
 fixApiDocs(),;
 fixCareers(),;
 // // // console.log('🎉 Syntax error fixes completed'),;
+}},

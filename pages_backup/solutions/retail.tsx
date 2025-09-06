@@ -22,8 +22,6 @@
     description: 'Real-time inventory tracking and automated reordering'
   },
   {
-
-
   return (
     <Layout
       title="Retail Solutions - Zion Tech Group"
@@ -111,11 +109,6 @@
                 <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
                   Schedule Demo;
                   <ArrowRight className="w-5 h-5 ml-2" />;
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
                 </button>;
               </div>;
             </div>;

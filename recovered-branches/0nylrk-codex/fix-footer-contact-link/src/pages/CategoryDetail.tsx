@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom",
 import { Header } from "@/components/header/Header",
 import { Footer } from "@/components/Footer",
@@ -23,9 +22,6 @@ export default function CategoryDetail() {
   const navigate = useNavigate(),
   const [isLoading, setIsLoading] = useState(true),
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
-
-
-
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
@@ -272,30 +268,28 @@ if ( {) {
         }
       });
     }
-  }
-  },
-  };
-  },
-
-
-  },
-
   };
   },
 
 
   return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto px-4 py-12">
-          <div className="mb-4">
-            <Link to="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
-            </Link>
-          </div>
-          <div className="text-center mb-12">
-            <div className="flex justify-center mb-6">
-              <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
+
+;
+  return (
+    <>;
+      <Header />;
+      <div className="min - h-screen bg - zion - blue">;
+        <div className="container mx - auto px - 4 py - 12">;
+          <div className="mb - 4">;
+            <Link to="/categories" className="text - zion - cyan hover:text - zion - cyan - light transition - colors inline - flex items - center">;
+              ← Back to Categories;
+            </Link>;
+          </div>;
+          <div className="text - center mb - 12">;
+            <div className="flex justify - center mb - 6">;
+              <div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full">;
+
+  }
                 {category.icon}
               </div>;
             </div>;
@@ -307,12 +301,6 @@ if ( {) {
               ))}
             </div>;
           )}
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
             </p>;
           </div>;
           {is_loading ? (

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -19,9 +18,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
     .filter((m) => m.status === "paid")
     .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
     .toFixed(2);
-
-
-
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -29,9 +25,6 @@ import { CreditCard } from 'lucide-react',;
 interface PaymentSummaryProps {;
   milestones: Milestone[],;
   paymentTerms: string | null;
-
-
-
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {

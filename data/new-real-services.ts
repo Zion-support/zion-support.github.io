@@ -1,3 +1,31 @@
+export const newRealServices: EnhancedRealMicroSaasService[] = [
+  {
+    name: 'LLM Observability Suite',
+    tagline: 'Track latency, cost, quality and drift across all prompts',
+    price: '$199',
+    period: '/month',
+    description:;
+      'Production - grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI - compatible and open - source models.',
+    features: [;
+      'Prompt and response tracing',
+      'Cost and token analytics',
+      'Automatic PII redaction',
+      'Offline and online evals',
+      'Guardrail policy engine',
+      'Drift and performance alerts',
+      'SDKs for JS, Python, Go',
+      'Grafana and Datadog exporters',
+    ],
+    popular: true,
+    icon: '📈',
+    marketPosition:
+      'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',    features: [
+      'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
+    ];
+    popular: true;
+    icon: '📈';
+    color: 'from-cyan-600 to-blue-700';
+    textColor: 'text-cyan-400';
     targetAudience: 'AI product teams, platform engineers, data teams';
     trialDays: 21;
     setupTime: '1 day';
@@ -6,7 +34,7 @@
     technology: ['Next && Next.jsOpenTelemetryPostgreSQLClickHouse'];
     integrations: ['OpenAI-compatibleLangChainLlamaIndexDatadogGrafana'];
     useCases: ['LLM app monitoringCost controlPolicy compliance'];
-    roi: 'Cut LLM cost 2045% while improving reliability';
+    roi: 'Cut LLM cost 20–45% while improving reliability';
     competitors: ['LangfuseArizeWeights & Biases'];
     marketSize: '$5B+ AI Ops and Observability';
     growthRate: 'Rapid growth with LLM adoption';
@@ -25,7 +53,7 @@
       'Prompt and response tracing_cost and token analytics_automatic PII redaction_offline and online evals_guardrail policy engine_drift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters';
     ];
     popular: true;
-    icon: '';
+    icon: '📈';
     color: 'from - cyan - 600 to - blue - 700';
     text_color: 'text - cyan - 400';
     link: 'https://ziontechgroup.com / llm - observability - suite';
@@ -38,7 +66,7 @@
     technology: ['Next.jsOpenTelemetryPostgreSQLClickHouse'];
     integrations: ['OpenAI - compatibleLangChainLlamaIndexDatadogGrafana'];
     use_cases: ['LLM app monitoring_cost control_policy compliance'];
-    roi: 'Cut LLM cost 2045% while improving reliability';
+    roi: 'Cut LLM cost 20–45% while improving reliability';
     competitors: ['LangfuseArizeWeights & Biases'];
     market_size: '$5B+ AI Ops and Observability';
     growth_rate: 'Rapid growth with LLM adoption';
@@ -64,7 +92,7 @@
     technology: ['Next && Next.jsWorkersPostgreSQL'];
     integrations: ['HubSpotSalesforceApolloLemlist'];
     useCases: ['Outbound sequencesUpsell campaignsReactivation'];
-    roi: 'Increase replies 25x with hyper-personalization';
+    roi: 'Increase replies 2–5x with hyper-personalization';
     competitors: ['Copy && Copy.aiLavenderInstantly'];
     marketSize: '$15B Sales Engagement';
     growthRate: 'Strong growth';
@@ -81,7 +109,7 @@
       'Prospect enrichment via public sources_personalized email generation_sequence and follow - up scheduling_a / B testing and analyticsSPF / DKIM / DMARC checks_inbox rotation support';
     ];
     popular: false;
-    icon: '';
+    icon: '✉️';
     color: 'from - violet - 600 to - fuchsia - 700';
     text_color: 'text - violet - 400';
     link: 'https://ziontechgroup.com / ai - sales - email - copilot';
@@ -94,7 +122,7 @@
     technology: ['Next.jsWorkersPostgreSQL'];
     integrations: ['HubSpotSalesforceApolloLemlist'];
     use_cases: ['Outbound sequences_upsell campaigns_reactivation'];
-    roi: 'Increase replies 25x with hyper - personalization';
+    roi: 'Increase replies 2–5x with hyper - personalization';
     competitors: ['Copy.aiLavenderInstantly'];
     market_size: '$15B Sales Engagement';
     growth_rate: 'Strong growth';
@@ -114,21 +142,21 @@
     price: '$399';
     targetAudience: 'Platform teams, security engineers, compliance leads';
     trialDays: 21;
-    setupTime: '13 days';
+    setupTime: '1–3 days';
     period: '/month',
     description: 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps - friendly with automatic fix PRs and evidence collection for audits.';
     features: [;
       'Policy packs for CIS / NISTKubernetes and cloud posture_auto - remediation PRsEvidence collection and reportsSOC2 / ISO 27001 export';
     ];
     popular: true;
-    icon: '';
+    icon: '🛡️';
     color: 'from - emerald - 600 to - teal - 700';
     text_color: 'text - emerald - 400';
     link: 'https://ziontechgroup.com / security - posture - as - code';
     market_position: 'Brings policy - as - code and compliance automation into one product.',
     target_audience: 'Platform teams, security engineers, compliance leads';
     trial_days: 21;
-    setup_time: '13 days';
+    setup_time: '1–3 days';
     category: 'Cybersecurity';
     real_service: true;
     technology: ['OPAKyvernoTerraformGitHub Actions'];
@@ -162,7 +190,7 @@
       'Freshness and volume checks_schema drift detectionSLA and SLO tracking_incident routing to Slack / Teams';
     ];
     popular: false;
-    icon: '';
+    icon: '🗄️';
     color: 'from - blue - 600 to - indigo - 700';
     text_color: 'text - blue - 400';
     link: 'https://ziontechgroup.com / etl - observability - starter';
@@ -175,7 +203,7 @@
     technology: ['DebeziumAirflowdbt'];
     integrations: ['BigQuerySnowflakeRedshiftPostgres'];
     use_cases: ['Pipeline health_data qualitySLA tracking'];
-    roi: 'Reduce data incidents 3060%';
+    roi: 'Reduce data incidents 30–60%';
     competitors: ['Monte CarloBigeye'];
     market_size: '$3B Data Observability';
     growth_rate: 'Growing';
@@ -198,7 +226,7 @@
       'Global CDN edge cachingDynamic rate limitingAnomaly and abuse detectionZero-downtime deploys with shadow traffic'
     ];
     popular: true;
-    icon: '';
+    icon: '🛰️';
     color: 'from-cyan-600 to-sky-700';
     textColor: 'text-cyan-400';
     targetAudience: 'API-first startups, SaaS, marketplaces';
@@ -218,7 +246,7 @@
       'Global CDN edge caching_dynamic rate limiting_anomaly and abuse detection_zero - downtime deploys with shadow traffic';
     ];
     popular: true;
-    icon: '';
+    icon: '🛰️';
     color: 'from - cyan - 600 to - sky - 700';
     text_color: 'text - cyan - 400';
     link: 'https://ziontechgroup.com / api - performance - shield';
@@ -254,7 +282,7 @@
       'Auto-segmentation and cohortsLLM query interfaceRetention and churn signalsAnomaly alerts to Slack/Teams'
     ];
     popular: false;
-    icon: '';
+    icon: '📊';
     color: 'from-purple-600 to-indigo-700';
     textColor: 'text-purple-400';
     targetAudience: 'Product teams, founders, analysts';
@@ -277,7 +305,7 @@
       'Auto - segmentation and cohortsLLM query interface_retention and churn signals_anomaly alerts to Slack / Teams';
     ];
     popular: false;
-    icon: '';
+    icon: '📊';
     color: 'from - purple - 600 to - indigo - 700';
     text_color: 'text - purple - 400';
     link: 'https://ziontechgroup.com / ai - product - analytics';
@@ -313,7 +341,7 @@
       'Multi-channel widgetsGrounded answers with citationsSecure human handoffAnalytics and CSAT tracking'
     ];
     popular: true;
-    icon: '';
+    icon: '💬';
     color: 'from-rose-600 to-orange-700';
     textColor: 'text-rose-400';
     targetAudience: 'Support teams, SMB SaaS, marketplaces';
@@ -336,7 +364,7 @@
       'Multi - channel widgets_grounded answers with citations_secure human handoff_analytics and CSAT tracking';
     ];
     popular: true;
-    icon: '';
+    icon: '💬';
     color: 'from - rose - 600 to - orange - 700';
     text_color: 'text - rose - 400';
     link: 'https://ziontechgroup.com / ai - support - deflection';
@@ -349,7 +377,7 @@
     technology: ['RAGVector DBNext.js'];
     integrations: ['ZendeskIntercomFreshdesk'];
     use_cases: ['Self - serve support_ticket reductionCSAT improvement'];
-    roi: 'Reduce tickets 3050%';
+    roi: 'Reduce tickets 30–50%';
     competitors: ['Intercom FinAda'];
     market_size: '$10B Support Tech';
     growth_rate: 'Strong';
@@ -372,13 +400,13 @@
       'Rightsizing recommendationsAnomaly detectionSavings plan/RIs planningTag hygiene and showback'
     ];
     popular: true;
-    icon: '';
+    icon: '💸';
     color: 'from-amber-600 to-yellow-700';
     textColor: 'text-amber-400';
     marketPosition: 'Actionable savings, not just dashboards.';
     targetAudience: 'FinOps teams, platform and SRE';
     trialDays: 21;
-    setupTime: '25 days';
+    setupTime: '2–5 days';
     rating: 4.7,
     reviews: 48;
   }
@@ -393,20 +421,20 @@
       'Rightsizing recommendations_anomaly detection_savings plan / RIs planning_tag hygiene and showback';
     ];
     popular: true;
-    icon: '';
+    icon: '💸';
     color: 'from - amber - 600 to - yellow - 700';
     text_color: 'text - amber - 400';
     link: 'https://ziontechgroup.com / cloud - cost - autopilot',
     market_position: 'Actionable savings, not just dashboards.';
     target_audience: 'FinOps teams, platform and SRE';
     trial_days: 21;
-    setup_time: '25 days';
+    setup_time: '2–5 days';
     category: 'Cloud & Infrastructure';
     real_service: true;
     technology: ['AWS Cost ExplorerAzure CostGCP Billing'];
     integrations: ['AWSAzureGCP'];
     use_cases: ['Cost control_anomaly response_budgeting'];
-    roi: 'Save 1535% on cloud spend';
+    roi: 'Save 15–35% on cloud spend';
     competitors: ['CloudZeroKubecost'];
     market_size: '$6B FinOps';
     growth_rate: 'Growing';
@@ -427,21 +455,21 @@
     price: '$179';
     targetAudience: 'Developers, privacy and legal teams';
     trialDays: 14;
-    setupTime: '13 days';
+    setupTime: '1–3 days';
     period: '/month',
     description: 'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.';
     features: [;
       'Field - level encryption_tokenization APIsConsent enforcement_audit trail and reporting';
     ];
     popular: false;
-    icon: '';
+    icon: '🔏';
     color: 'from - slate - 600 to - gray - 700';
     text_color: 'text - slate - 300';
     link: 'https://ziontechgroup.com / privacy - vault';
     market_position: 'Developer - first alternative to heavy enterprise privacy suites.',
     target_audience: 'Developers, privacy and legal teams';
     trial_days: 14;
-    setup_time: '13 days';
+    setup_time: '1–3 days';
     category: 'Security & Compliance';
     real_service: true;
     technology: ['KMSHSMPostgreSQL'];
@@ -474,20 +502,20 @@
     popular: false;
     targetAudience: 'Marketplaces, fintech, e-commerce';
     trialDays: 14;
-    setupTime: '25 days';
+    setupTime: '2–5 days';
     color: 'from - pink - 600 to - rose - 700';
     text_color: 'text - pink - 400';
     link: 'https://ziontechgroup.com / ai - fraud - detection - lite';
     market_position: 'Accessible alternative to enterprise fraud stacks.',
     target_audience: 'Marketplaces, fintech, e - commerce';
     trial_days: 14;
-    setup_time: '25 days';
+    setup_time: '2–5 days';
     category: 'Financial Technology';
     real_service: true;
     technology: ['Graph DBPythonKafka'];
     integrations: ['StripeAdyenPlaid'];
     use_cases: ['Chargeback reduction_account takeover_abuse prevention'];
-    roi: 'Lower chargebacks by 3060%';
+    roi: 'Lower chargebacks by 30–60%';
     competitors: ['SiftSEON'];
     market_size: '$10B Fraud Prevention';
     growth_rate: 'High';
@@ -510,12 +538,12 @@
       'HA with automatic failoverContinuous backups and PITRSlow query insights and indexingEncryption and access controls'
     ];
     popular: true;
-    icon: '';
+    icon: '🗃️';
     color: 'from-blue-600 to-indigo-700';
     textColor: 'text-blue-400';
     targetAudience: 'Startups, SMBs, data teams';
     trialDays: 14;
-    setupTime: '12 days';
+    setupTime: '1–2 days';
     rating: 4.5,
     reviews: 8;
   }
@@ -530,14 +558,14 @@
       'HA with automatic failover_continuous backups and PITRSlow query insights and indexing_encryption and access controls';
     ];
     popular: true;
-    icon: '';
+    icon: '🗃️';
     color: 'from - blue - 600 to - indigo - 700';
     text_color: 'text - blue - 400';
     link: 'https://ziontechgroup.com / managed - postgres - ha';
     market_position: 'Hands - on SRE support at a fraction of DBaaS enterprise tiers.',
     target_audience: 'Startups, SMBs, data teams';
     trial_days: 14;
-    setup_time: '12 days';
+    setup_time: '1–2 days';
     category: 'Observability';
     real_service: true;
     technology: ['PostgreSQLPatroniWal - G'];
@@ -566,7 +594,7 @@
       'Core Web Vitals dashboardsSession replay and heatmapsError tracking and sourcemapsA/B test impact analysis'
     ];
     popular: true;
-    icon: '';
+    icon: '⚡';
     color: 'from-amber-600 to-yellow-700';
     textColor: 'text-amber-300';
     marketPosition: 'Lightweight, privacy-friendly RUM for modern teams.';
@@ -587,7 +615,7 @@
       'Core Web Vitals dashboards_session replay and heatmaps_error tracking and sourcemaps_a / B test impact analysis';
     ];
     popular: true;
-    icon: '';
+    icon: '⚡';
     color: 'from - amber - 600 to - yellow - 700';
     text_color: 'text - amber - 300';
     link: 'https://ziontechgroup.com / browser - performance - monitor',
@@ -600,7 +628,7 @@
     technology: ['JS SDKClickHouse'];
     integrations: ['PostHogSegment'];
     use_cases: ['UX improvements_conversion lift'];
-    roi: 'Lift conversion 210% by fixing performance';
+    roi: 'Lift conversion 2–10% by fixing performance';
     competitors: ['SentryNew Relic Browser'];
     market_size: '$5B APM';
     growth_rate: 'Growing';
@@ -647,7 +675,7 @@
     technology: ['Node.js_headless Chrome'];
     integrations: ['Search Console'];
     use_cases: ['Traffic growth_tech SEO'];
-    roi: 'Increase organic traffic 20100%';
+    roi: 'Increase organic traffic 20–100%';
     competitors: ['AhrefsSemrush'];
     market_size: '$6B SEO Tools';
     growth_rate: 'Stable';
@@ -718,7 +746,7 @@
       'Serverless scale_template gallery_brand - safe fonts_webhook on completion';
     ];
     popular: true;
-    icon: '';
+    icon: '📄';
     color: 'from - slate - 600 to - gray - 700';
     text_color: 'text - slate - 300';
     link: 'https://ziontechgroup.com / pdf - render - api';
@@ -746,7 +774,7 @@
       'Auto-instrumentationRED dashboardsError analyticsExporters to APMs'
     ];
     popular: false;
-    icon: '';
+    icon: '🛰️';
     color: 'from-purple-600 to-indigo-700';
     textColor: 'text-purple-300';
     targetAudience: 'Backend teams, SRE';
@@ -774,7 +802,7 @@
       'Auto - instrumentationRED dashboards_error analytics_exporters to APMs';
     ];
     popular: false;
-    icon: '';
+    icon: '🛰️';
     color: 'from - purple - 600 to - indigo - 700';
     text_color: 'text - purple - 300';
     link: 'https://ziontechgroup.com / api - observability - starter';
@@ -787,7 +815,7 @@
     technology: ['OpenTelemetryGrafana'];
     integrations: ['DatadogNew Relic'];
     use_cases: ['API reliability_performance'];
-    roi: 'Reduce MTTR by 3050%';
+    roi: 'Reduce MTTR by 30–50%';
     competitors: ['HoneycombLightstep'];
     reviews: 4
   }
@@ -882,7 +910,7 @@
     popular: true;
     targetAudience: 'Security, procurement';
     trialDays: 14;
-    setupTime: '13 days';
+    setupTime: '1–3 days';
     category: 'Security & Compliance';
     realService: true;
     technology: ['Node && Node.jsReact'];
@@ -892,7 +920,7 @@
     market_position: 'Faster and lighter than legacy GRC.',
     target_audience: 'Security, procurement';
     trial_days: 14;
-    setup_time: '13 days';
+    setup_time: '1–3 days';
     category: 'Security & Compliance';
     real_service: true;
     technology: ['Node.js_react'];
@@ -932,10 +960,6 @@
       'Inbox rotation support',
     ],
     popular: false,
-    category: 'Sales & Marketing',
-    realService: true,
-    technology: ['Next && Next.js', 'Workers', 'PostgreSQL'],
-    integrations: ['HubSpot', 'Salesforce', 'Apollo', 'Lemlist'],
     variant: 'holographic',
     contact_info: contact,
     real_implementation: true,
@@ -959,6 +983,7 @@
     features: [;
       'Policy packs for CIS / NIST',
 
+  {
       'Kubernetes and cloud posture',
       'Auto - remediation PRs',
       'Evidence collection and reports',
@@ -1046,6 +1071,7 @@
     features: [;
       'Auto - segmentation and cohorts',
 
+  {
       'LLM query interface',
       'Retention and churn signals',
       'Anomaly alerts to Slack / Teams',
@@ -1079,6 +1105,7 @@
     features: [;
       'Multi - channel widgets',
 
+  {
       'Grounded answers with citations',
       'Secure human handoff',
       'Analytics and CSAT tracking',
@@ -1086,7 +1113,7 @@
     popular: true,
     integrations: ['Zendesk', 'Intercom', 'Freshdesk'],
     use_cases: ['Self - serve support', 'Ticket reduction', 'CSAT improvement'],
-    roi: 'Reduce tickets 3050%',
+    roi: 'Reduce tickets 30–50%',
     competitors: ['Intercom Fin', 'Ada'],
     market_size: '$10B Support Tech',
     growth_rate: 'Strong',
@@ -1111,7 +1138,7 @@
     technology: ['AWS Cost Explorer', 'Azure Cost', 'GCP Billing'],
     integrations: ['AWS', 'Azure', 'GCP'],
     use_cases: ['Cost control', 'Anomaly response', 'Budgeting'],
-    roi: 'Save 1535% on cloud spend',
+    roi: 'Save 15–35% on cloud spend',
     competitors: ['CloudZero', 'Kubecost'],
     market_size: '$6B FinOps',
     growth_rate: 'Growing',
@@ -1137,6 +1164,7 @@
     features: [;
       'Field - level encryption',
 
+  {
       'Tokenization APIs',
       'Consent enforcement',
       'Audit trail and reporting',
@@ -1173,6 +1201,7 @@
     features: [;
       'Graph - based anomaly detection',
 
+  {
       'Explainability reports',
       'Risk scoring API',
       'Workflow actions and webhooks',
@@ -1183,7 +1212,7 @@
     technology: ['Graph DB', 'Python', 'Kafka'],
     integrations: ['Stripe', 'Adyen', 'Plaid'],
     use_cases: ['Chargeback reduction', 'Account takeover', 'Abuse prevention'],
-    roi: 'Lower chargebacks by 3060%',
+    roi: 'Lower chargebacks by 30–60%',
     competitors: ['Sift', 'SEON'],
     market_size: '$10B Fraud Prevention',
     growth_rate: 'High',
@@ -1234,7 +1263,7 @@
     technology: ['JS SDK', 'ClickHouse'],
     integrations: ['PostHog', 'Segment'],
     use_cases: ['UX improvements', 'Conversion lift'],
-    roi: 'Lift conversion 210% by fixing performance',
+    roi: 'Lift conversion 2–10% by fixing performance',
     competitors: ['Sentry', 'New Relic Browser'],
     market_size: '$5B APM',
     growth_rate: 'Growing',
@@ -1256,7 +1285,7 @@
     popular: false,
     integrations: ['Search Console'],
     use_cases: ['Traffic growth', 'Tech SEO'],
-    roi: 'Increase organic traffic 20100%',
+    roi: 'Increase organic traffic 20–100%',
     competitors: ['Ahrefs', 'Semrush'],
     market_size: '$6B SEO Tools',
     growth_rate: 'Stable',
@@ -1329,6 +1358,7 @@
     features: [;
       'Auto - instrumentation',
 
+  {
       'RED dashboards',
       'Error analytics',
       'Exporters to APMs',
@@ -1339,7 +1369,7 @@
     technology: ['OpenTelemetry', 'Grafana'],
     integrations: ['Datadog', 'New Relic'],
     use_cases: ['API reliability', 'Performance'],
-    roi: 'Reduce MTTR by 3050%',
+    roi: 'Reduce MTTR by 30–50%',
     competitors: ['Honeycomb', 'Lightstep'],
     market_size: '$10B Observability',
     growth_rate: 'High',
@@ -1431,14 +1461,14 @@
     features: [
       'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
     ];
-    popular: true, icon: '',
+    popular: true, icon: '📈',
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/llm-observability-suite', marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
     targetAudience: 'AI product teams, platform engineers, data teams',
     trialDays: 21, setupTime: '1 day',
     category: 'AI & Machine Learning', realService: true,
     technology: ['Next.jsOpenTelemetryPostgreSQLClickHouse'], integrations: ['OpenAI-compatibleLangChainLlamaIndexDatadogGrafana'],
-    useCases: ['LLM app monitoringCost controlPolicy compliance'], roi: 'Cut LLM cost 2045% while improving reliability',
+    useCases: ['LLM app monitoringCost controlPolicy compliance'], roi: 'Cut LLM cost 20–45% while improving reliability',
     competitors: ['LangfuseArizeWeights & Biases'], marketSize: '$5B+ AI Ops and Observability',
     growthRate: 'Rapid growth with LLM adoption', variant: 'quantum-holographic',
     contactInfo: contact, realImplementation: true,
@@ -1592,11 +1622,6 @@
 ];
 
 ];
-
-;
-
-
-
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
   mobile: '+1 302 464 0950',;

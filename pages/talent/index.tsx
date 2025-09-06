@@ -1,6 +1,4 @@
 import type { NextPage } from 'next';
-import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
-import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
 
 import Head from 'next / head';
 import {useMemo, useState} from 'react';
@@ -84,8 +82,6 @@ const TalentDirectory: NextPage = () => {
             <div className="flex items-center justify-between">
               <h3 className="font-semibold">{t.name}</h3>
               <div className="flex gap-1">
-
-
               </div>
             </div>
             <div className="text-sm opacity-80">{t.title}</div>
@@ -100,9 +96,6 @@ export default TalentDirectory;
       />;
     </div>);
 }
-;
-export default TalentDirectory;
-;
 
 export default TalentDirectory;
 

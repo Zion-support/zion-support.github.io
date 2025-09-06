@@ -1,4 +1,8 @@
 
+}let particles: Particle[] = [];
+let connections: Connection[] = [];
+// Initialize particles ctx.fill_style = colors.primary;
+ctx.font = `$ {
 }
 import React from 'react';
  const colorSchemes = {;
@@ -76,16 +80,6 @@ const EnhancedFuturisticBackground: React.FC<;
 
         
         // Create gradient for particle
-        const gradient = ctx.createRadialGradient(
-          this.x
-          this.y
-          0
-          this.x
-          this.y
-          this.size
-        );
-        gradient.addColorStop(0, this.color);
-        gradient.addColorStop(1, 'transparent');        // Create gradient for particle
         const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
         gradient.addColorStop(0, this.color);
         gradient.addColorStop(1, 'transparent');
@@ -95,6 +89,11 @@ const EnhancedFuturisticBackground: React.FC<;
         ctx.fill();
       }
       isDead() {
+        return this.life <= 0 |this.opacity < 0.01;      }
+        return this.life <= 0 || this.opacity < 0.01;      }        
+        ctx.restore()
+        return this.life <= 0 || this.opacity < 0.01;      }
+
       }
       isDead() {
 
@@ -114,7 +113,6 @@ const EnhancedFuturisticBackground: React.FC<;
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
     }
-    // Connection lines between particles
       max_life: number,
         this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
@@ -225,7 +223,7 @@ if ( {) {
     // Matrix rain effect;
     const matrix_rain = () =>: any {
       const characters =;
-        '01';      const font_size = 12;    let particles: Particle[] = [],
+        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const font_size = 12;    let particles: Particle[] = [],
     let connections: Connection[] = [],
     // Initialize particles;
     for (let index = 0, i < settings.particle_count, i++) {
@@ -234,7 +232,7 @@ if ( {) {
     // Matrix rain effect;
     const matrix_rain = () =>: any {
       const characters =;
-        '01';      const characters = '01';
+        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const font_size = 12;
       const columns = canvas.width / font_size;
       const drops: number[] = [];
@@ -264,9 +262,7 @@ if (> 0.975) {) {
           drops[i]++;
         }
       };
-
       return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
             drops[i] = 0;
           }
@@ -297,9 +293,6 @@ if (> 0.975) {) {
           const distance = Math && Math.sqrt(;
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
-          }
-        }
-      }
 
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
@@ -342,30 +335,20 @@ if (> 0.975) {) {
           ctx.lineTo(x - size, y + size);
           ctx.lineTo(x + size, y + size);
           ctx.closePath();
-          ctx.stroke();
         } else {
           // Draw square;
           ctx.stroke_rect (x - size, y - size, size * 2, size * 2);
         }
-        ctx.restore();
-      }
-      // Respect reduced motion
-      const prefersReduced = window.matchMedia(
-        '(prefers-reduced-motion: reduce)'
         }
 
         ctx && ctx.restore();
       }
-    return () => {;
-      if (animationRef && animationRef.current) {;
-        cancelAnimationFrame(animationRef && animationRef.current);
       }
       window && window.removeEventListener('resize', resizeCanvas);
     };  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);
       }
       window && window.removeEventListener('resize', resizeCanvas);
     }
-
   return (
     <div className={`relative min-h-screen ${className}`}>;
       <canvas
@@ -381,12 +364,6 @@ if (> 0.975) {) {
     </div>;
   );
 }
-export default EnhancedFuturisticBackground;
-
-export default EnhancedFuturisticBackground;
-export default EnhancedFuturisticBackground;
-export default EnhancedFuturisticBackground;
-export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 
 

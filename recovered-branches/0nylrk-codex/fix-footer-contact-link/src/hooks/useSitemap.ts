@@ -1,7 +1,3 @@
-
-import { useAuth  } from './useAuth';
-import { getAccessibleRoutes  } from '@/config/sitemap';
-
 import {useAuth} from './useAuth';
 import {getAccessibleRoutes} from '@/config/sitemap';
 import type { SitemapItem } from '@/config/sitemap';

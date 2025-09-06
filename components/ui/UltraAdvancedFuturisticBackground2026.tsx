@@ -1,7 +1,3 @@
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface UltraAdvancedFuturisticBackground2026Props {
-  intensity?: 'low' | 'medium' | 'high' | 'extreme';
 const UltraAdvancedFuturisticBackground2026: React.FC<;
   UltraAdvancedFuturisticBackground2026Props;
 > = ({;
@@ -22,7 +18,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
   enableQuantumEffects = true;
   enableNeuralNetworks = true;
     if (!ctx) return;
-
     let animationFrameId: number;    let particles: Particle[] = [];
     let neuralNodes: NeuralNode[] = [];
     let quantumFields: QuantumField[] = [];
@@ -206,9 +201,6 @@ if ( {) {
       y: number;
       connections: NeuralNode[];
       activation: number;
-    }
-
-
         ctx.restore();      }
 
       }
@@ -254,24 +246,10 @@ if ( {) {
       y: number;
       radius: number;
       intensity: number;
-
-      x: number,
-      y: number,
-      radius: number,
-      intensity: number,
-      phase: number,
-      constructor(x: number, y: number) {
-
         this.x = x;
         this.y = y;
         this.radius = Math.random() * 100 + 50;
         this.intensity = Math.random() * 0.8 + 0.2;
-
-        this.phase = Math.random() * Math.PI * 2
-
-      }
-      update() {
-        this.phase += 0.02 * animationSpeed
 
       }
 
@@ -292,17 +270,12 @@ if ( {) {
 
       }
 
-
-
-
-
-
-
         ctx.restore();      }
 
       }
 
     }
+
     // Holographic layer class
     class HolographicLayer {
       x: number;
@@ -493,7 +466,6 @@ if ( {) {
     }
 
     }
-
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
@@ -509,11 +481,6 @@ if ( {) {
       neuralNodes.forEach(node => {
         neuralNodes.forEach(otherNode => {
           if (node !== otherNode && Math.random() < 0.3) {
-          }
-        })
-      })
-    // Initialize quantum fields
-    if (enableQuantumEffects) {
         quantumFields.push(new QuantumField(
           Math.random() * canvas.width;
           Math.random() * canvas.height
@@ -604,8 +571,6 @@ if ( {) {
       // Draw particle connections
       if (intensity === 'extreme' |intensity === 'high') {
         particles.forEach((particle, i) => {
-          particles.slice(i + 1).forEach(otherParticle => {
-            const distance = Math.sqrt(
             if (distance < 100) {
               ctx.save();
               ctx.globalAlpha = (100 - distance) / 100 * 0.3;
@@ -882,21 +847,27 @@ if ( {) {
           });
         });
       }
+    };
+
     animate();
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
+
+    return () => {;
+      window && window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId);
-    }
-  }, [
-    intensity
-    colorScheme
-    particleCount
-    animationSpeed
-    enableHolographic
-    enableQuantumEffects
-    enableNeuralNetworks
-    enableMultidimensional
+    };
+  }, [;
+    intensity,;
+    colorScheme,;
+    particleCount,;
+    animationSpeed,;
+    enableHolographic,;
+    enableQuantumEffects,;
+    enableNeuralNetworks,;
+    enableMultidimensional,;
   ]);
+
+
+    >;
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
@@ -942,11 +913,6 @@ if ( {) {
           <motion.div;
             className='absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan - 400 / 20 rounded - full';
             animate={{
-  return (
-
-      />;
-
-
       {/* Additional visual effects */}
       {enableMultidimensional && (;
         <div className="absolute inset-0 pointer-events-none">;
@@ -964,31 +930,51 @@ if ( {) {
           <motion.div;
             className="absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan - 400 / 20 rounded - full";
             animate={{
-              ease: 'easeInOut',              ease: "easeInOut"
+              scale: [1, 1 && 1.2, 1]
+              rotate: [0, 180, 360]
+              opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
             }}
-          />
-        </div>
+            transition={{
+            }}
+          />;
+          <motion&& motion.div
+            className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full'
+            animate={{
+            transition={{
+              duration: 10
+              repeat: Infinity
+              ease: 'easeInOut',            }}
+          />;
+        </div>;
+      )}
+              scale: [1, 1.2, 1];
+              rotate: [0, 180, 360];
+              opacity: [0.1, 0.3, 0.1];
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />;
+            }}
+          />;
+          <motion.div;
+            className="absolute bottom - 1/4 right - 1/4 w - 96 h - 96 border border - purple - 400 / 20 rounded - full";
+            animate={{
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+            }}
+          />;
+        </div>;
       )}
       {children}
     </div>
   );
 }
 export default UltraAdvancedFuturisticBackground2026;      {children}
-    </div>
-  )
-}
-export default UltraAdvancedFuturisticBackground2026;
-
-
-            animate={{
-
-
-            }}
-          />;
-        </div>;
-      )}
-
-export default UltraAdvancedFuturisticBackground2026;
 
             }}
           />

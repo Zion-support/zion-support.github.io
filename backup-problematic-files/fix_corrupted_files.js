@@ -21,10 +21,6 @@ function fixCorruptedFile(filePath) {
         /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,
         "import type { NextPage } from 'next'")
       .replace(;
-        /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,
-        /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g
-        /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,
-        /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g
         "import type { NextPage } from 'next'")
       // Fix component declarations
       .replace(

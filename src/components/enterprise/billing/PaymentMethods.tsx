@@ -4,6 +4,12 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
+
+
+import React from "react"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 export function PaymentMethods() {
   // Mock payment methods
 
@@ -13,11 +19,17 @@ export function PaymentMethods() {
       type: 'credit_card',
       brand: 'Visa',
       last4: '4242',
+
+
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
       last4: "4242",
       expMonth: 12,
+
+
+
+
       expYear: 2025,
       isDefault: true},
     {
@@ -27,6 +39,8 @@ export function PaymentMethods() {
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
+      isDefault: false}
+  ],
 
   return (
     <Card>
@@ -96,9 +110,7 @@ export function PaymentMethods() {;
         {paymentMethods.map((method) => (
           <div 
             key={method.id}
-            className={`flex items-center justify-between p-4 rounded-lg border ${
 
-              method.isDefault ? "bg-muted border-primary" : "border-border";
             className={`flex items-center justify-between p-4 rounded-lg border ${
               method.isDefault ? "bg-muted border-primary" : "border-border"
             }`}
@@ -115,10 +127,14 @@ export function PaymentMethods() {;
                     </span>
                   )}
                 </p>
+
+
                   Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
             </div>
+
+
                 <Button size="sm" variant="ghost">Set Default</Button>
               )}
               <Button size='sm' variant='ghost' className='text-destructive'>;
@@ -131,8 +147,14 @@ export function PaymentMethods() {;
             </div>;
           </div>;
         ))}
+
         <Button className="gap-1">
 
+
+        <Button className="gap-1">
+
+      </CardContent>
+      <CardFooter>
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
@@ -146,6 +168,11 @@ export function PaymentMethods() {;
         </Button>
       </CardFooter>
     </Card>
+
+
+
+
+  )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -219,8 +246,6 @@ export function PaymentMethods() {;
         ))}
       </CardContent>;
       <CardFooter>;
-        <Button className='gap-1'>;
-          <Plus className='h-4 w-4' />          Add Payment Method        <Button className="gap-1">;
           <Plus className="h-4 w-4" />;
           Add Payment Method;
         </Button>;

@@ -3,6 +3,7 @@ import DatePicker from 'react-datepicker',;
 import { useRouter } from 'next/router',;
 type PaymentType = 'hourly' | 'fixed',
 
+
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -97,7 +98,6 @@ export default function ContractBuilderPage() {
     setError(null),
     setContract(''),
 
-
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -146,9 +146,6 @@ export default function ContractBuilderPage(req, res) {
     setLoading(true);
     setError(null);
     setContract('');
-
-
-
     try {
       const body = {;
         talentName;
@@ -257,9 +254,6 @@ export default function ContractBuilderPage(req, res) {
           <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value))} />
         </div>
         <div className="md:col-span-2 flex items-center gap-3">
-            {loading ? 'Generating…' : 'Generate contract'}
-          </button>
-          {error && <span className="text-red-600 text-sm">{error}</span>}
           <button type="submit" className="btn btn-primary" disabled={!canSubmit |loading}>
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
             {loading ? 'Generating…' : 'Generate contract'}

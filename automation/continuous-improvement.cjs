@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,8 @@
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node
 /**
  * Continuous Improvement Automation Script
@@ -32,6 +35,7 @@ const fs = require('fs');
 const path = require('path');
 class ContinuousImprovement {
   constructor() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,6 +65,8 @@ class ContinuousImprovement {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
@@ -85,6 +91,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,6 +103,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     const logMessage = `[${timestamp}] ${message}\n`;
     );
     fs.appendFileSync(this.logFile, logMessage);
@@ -136,6 +145,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   async runDependencyUpdates() {
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -147,6 +157,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
     const logMessage = `[${timestamp}] ${message}\n`;`
 console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
@@ -177,6 +189,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       this.log(`Dependency check "failed": ${error.message}`);
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -188,6 +201,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
     }
   }
   async runCodeAnalysis() {
@@ -224,6 +239,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
@@ -241,6 +257,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
   }
   async run() {
 <<<<<<< HEAD
@@ -265,6 +283,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 const improvement = new ContinuousImprovement();
@@ -283,11 +302,14 @@ module.exports = ContinuousImprovement;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 // Run the automation
 if (require.main === module) {
   const automation = new ContinuousImprovement();
   automation.run().catch(console.error);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -308,6 +330,8 @@ if (require.main === module) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
     };
   };
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -381,6 +405,7 @@ cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = ContinuousImprovement;
 =======
 <<<<<<< HEAD
@@ -433,11 +458,14 @@ module.exports = ContinuousImprovement;
   }
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
 
 const improvement = new ContinuousImprovement();
 improvement.run().catch(console.error);
 
 module.exports = ContinuousImprovement;
+<<<<<<< HEAD
 >>>>>>> origin/main
 <<<<<<< HEAD
 =======
@@ -453,3 +481,5 @@ module.exports = ContinuousImprovement;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

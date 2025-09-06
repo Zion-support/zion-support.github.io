@@ -3,20 +3,13 @@
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
-
-
  </div> </div>) ) ;
 }</div> </div>) import fs from 'fs';
 import path from 'path';
-
-</div> </div>) )
- </div> </div>) ) 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
 export async function getServerSideProps() {
-</div> </div>) ) 
- </div> </div>) ) 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
@@ -33,9 +26,6 @@ export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datanews-digest.json');
   let items: NewsItem[] = [];  let generatedAt = '';
   try {
-  } catch {}
-  return { props: { items, generatedAt } }
-}
     items = json.items || [];
     generatedAt = json.generatedAt || ''
   } catch {}
@@ -46,7 +36,7 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
   return (
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: News Digest</h1>;
-      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : ''}</div>;
+      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>;
       <div className="grid grid-cols-1 gap-4">;
         {items && items.map((n, idx) => (;
           <div key={idx} className="border rounded p-4 space-y-1">;
@@ -60,7 +50,6 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
             </div>;
           </div>;
         ))}
-      </div>
 
     </div>;
 
@@ -78,7 +67,7 @@ function NewsDigestPage() {
   return (
     <div className="space - y-6">;
       <h1 className="text - 2xl font - semibold">AI Automation: News Digest</h1>;
-      <div className="text - xs text - gray - 500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : ''}</div>;
+      <div className="text - xs text - gray - 500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
       <div className="grid grid - cols - 1 gap - 4">;
         {items.map ((n, idx) => (
           <div key={idx} className="border rounded p - 4 space - y-1">;

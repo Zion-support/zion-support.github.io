@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import {
   DropdownMenu
@@ -35,7 +34,6 @@ interface ResumeVersionSelectorProps {
   onResumeChange: (resumeId: string) => void
 }
 
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
 
 export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
 
@@ -49,9 +47,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
       setIsLoading(false);
     }
   }
-
-        setNewResumeTitle('')
-
 import { useState } from 'react',;
 import {;
   DropdownMenu,;
@@ -91,15 +86,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
     }
   };
   },
-
-
       }
       setIsLoading(false);
     }
-
-
-
-  return (
 
 
             <Button 
@@ -111,8 +100,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <Button;
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
-
-
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -123,5 +110,13 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         </DialogContent>
       </Dialog>
     </div>
-;
 
+            Save as new version;
+          </DropdownMenuItem>;
+        </DropdownMenuContent>;
+      </DropdownMenu>;
+              Save;
+            </Button>;
+          </DialogFooter>;
+        </DialogContent>;
+      </Dialog>;

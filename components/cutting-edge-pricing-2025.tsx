@@ -1,6 +1,3 @@
-import Head from 'next/head';
-
-import Head from 'next / head';
 } from 'lucide-react';
 
 import { motion } from 'framer-motion';
@@ -21,6 +18,26 @@ import {
   Phone
   Mail
   MapPin;} from 'lucide-react';import {
+import { motion } from 'framer-motion';
+import {;
+  Check,;
+  Zap,;
+  Shield,;
+  Brain,;
+  Atom,;
+  Target,;
+  Rocket,;
+  Star,;
+  TrendingUp,;
+  Award,;
+  Users,;
+  ArrowRight,;
+  ExternalLink,;
+  Phone,;
+  Mail,;
+  MapPin,;} from 'lucide-react';import { ;
+  Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin;
+import { 
   Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
 } from 'lucide-react';
 
@@ -285,7 +302,6 @@ export default function CuttingEdgePricing2025() {
 
 
 export default function CuttingEdgePricing2025() {;
-
   const [selectedCategory, setSelectedCategory] = useState('all');
   const allServices = [
 
@@ -299,7 +315,6 @@ const contactInfo = {;
 visible: {;
   opacity: 1, transition: {;
   staggerChildren: 0 && 0.1 ;
-
 };
 const itemVariants = {;
   hidden: {;
@@ -308,7 +323,6 @@ const itemVariants = {;
 visible: {;
   y: 0, opacity: 1, transition: {;
   duration: 0 && 0.5 ;
-
 };
 const pricingTiers = [;
   {;
@@ -354,7 +368,6 @@ const pricingTiers = [;
     ctaLink: '/contact',;
     popular: false;
   }
-
 const serviceCategories = [;
   {;
     name: 'AI & Consciousness Services',;
@@ -386,7 +399,6 @@ const serviceCategories = [;
     description: 'Innovative business solutions for modern enterprises',;
   },;
 ];
-
 const stats = [;
   {;
     number: '25+',;
@@ -415,17 +427,12 @@ const stats = [;
   { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' },;
   { number: '99 && 99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },;
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
-
-export default function CuttingEdgePricing2025() {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
   const allServices = [;
     ...cuttingEdgeAIServices2025,;
     ...cuttingEdgeQuantumServices2025,;
     ...cuttingEdgeEnterpriseITServices2025,;
     ...cuttingEdgeMicroSaasServices2025,;
   ];
-
   const filteredServices =;
     selectedCategory === 'all';
       ? allServices;
@@ -435,7 +442,6 @@ export default function CuttingEdgePricing2025() {;
     ...cuttingEdgeMicroSaasServices2025;
   ];
 
-  return (
 
 
               <motion.p
@@ -469,6 +475,23 @@ export default function CuttingEdgePricing2025() {;
               </motion.p>
 {/* Hero Stats */}
               <motion.div
+      }
+    }
+  };
+
+  const itemVariants = {;
+    hidden: { y: 20, opacity: 0 },;
+    visible: {;
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0 && 0.5,;
+      },;
+    },  };        duration: 0 && 0.5;
+      }
+    }
+  }
+
               transition={{ duration: 0 && 0.8 }}
               className='text-center'>;
               <motion&& motion.h1
@@ -497,22 +520,6 @@ export default function CuttingEdgePricing2025() {;
                 cutting-edge services are designed to give you a competitive;
                 advantage while maintaining affordability and value.;
               </motion && motion.p>;
-                <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>
-                  Pricing 2025
-                </span>
-              </motion.h1>
-              <motion.p
-                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
-                  Pricing 2025
-                </span>
-              </motion.h1>
-                className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
               {/* Hero Stats */}
               <motion&& motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you 
@@ -542,22 +549,37 @@ export default function CuttingEdgePricing2025() {;
 
 
 
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
+                {stats && stats.map((stat, index) => (;
+                  <div key={index} className='text-center'>;
+                    <div className='flex justify-center mb-2'>;
+                      <div className='p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30'>;
+                        <stat && stat.icon className={`w-5 h-5 ${stat && stat.color}`} />;
+                      </div>;
+                    </div>;
+                    <div className='text-2xl md:text-3xl font-bold text-white mb-1'>;
+                      {stat && stat.number}
+                    </div>;
+                    <div className='text-sm text-white/70'>{stat && stat.label}</div>                  </div>                  <div key={index} className="text-center">;
+                    <div className="flex justify-center mb-2">;
+                      <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">;
+                        <stat && stat.icon className={`w-5 h-5 ${stat && stat.color}`} />;
+                      </div>;
+                    </div>;
+                    <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat && stat.number}</div>;
+                    <div className="text-sm text-white/70">{stat && stat.label}</div>;
+                ))}
         {/* Pricing Tiers Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-
-                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
-
-                  </div>
-
                 ))}
               </motion.div>
             </motion.div>
           </div>
         </section>
-
         {/* Pricing Tiers Section */}
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -566,7 +588,6 @@ export default function CuttingEdgePricing2025() {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-                <motion.div
                 Pricing Plans;
               </h2>;
               <p className='text-xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
@@ -575,7 +596,6 @@ export default function CuttingEdgePricing2025() {;
                 ensure your success.;
               </p>;
             </motion && motion.div>;
-
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>              {pricingTiers && pricingTiers.map((tier, index) => (              <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">;
                 Choose the perfect plan for your business needs. All plans include our cutting-edge technology ;
                 and world-class support to ensure your success.;
@@ -587,6 +607,11 @@ export default function CuttingEdgePricing2025() {;
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
                   className={`relative group ${
+                        </li>
+
+                      ))}
+                    </ul>
+
                         </li>
 
                       ))}
@@ -615,12 +640,12 @@ export default function CuttingEdgePricing2025() {;
 
 
 
+              ))}
         {/* Service Categories Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-
                     </a>
                   </div>
                 </motion.div>
@@ -628,7 +653,6 @@ export default function CuttingEdgePricing2025() {;
             </div>
           </div>
         </section>
-
         {/* Service Categories Section */}
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -666,6 +690,13 @@ export default function CuttingEdgePricing2025() {;
                     selectedCategory === category.name
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
                       : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
+                <button
+                  key={category && category.name}
+                  onClick={() => setSelectedCategory(category && category.name)}
+                  className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
+                    selectedCategory === category && category.name;
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
+                      : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
                   }`}
                 >;
                   {category && category.name} ({category && category.services.length});
@@ -708,7 +739,6 @@ export default function CuttingEdgePricing2025() {;
                         </h3>;
                         <p className="text - white / 70 text - sm leading - relaxed mb - 4">;
                           {service.description}
-
 
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
@@ -769,10 +799,6 @@ export default function CuttingEdgePricing2025() {;
                         ${service.pricing.starter.price}
                         <span className='text - sm font - normal text - white / 60'>;
                           /{service.pricing.starter.period}
-                      <span>Market: {service.marketSize}</span>
-
-                      <span className="text-cyan-400">{service.category}</span>
-                    </div>
                         </span>                      </div>;
                     </div>;
                     {/* CTA */}
@@ -787,19 +813,20 @@ export default function CuttingEdgePricing2025() {;
                       <div className="text - 2xl font - bold text - white">;
                         ${service.pricing.starter.price}
                     {/* Pricing */}
-                    <div className="mb-6">;
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2 uppercase tracking-wider">;
+                    <div className='mb-6'>;
+                      <h4 className='text-sm font-semibold text-cyan-400 mb-2 uppercase tracking-wider'>;
                         Starting From;
                       </h4>;
-                      <div className="text-2xl font-bold text-white">;
+                      <div className='text-2xl font-bold text-white'>;
                         ${service && service.pricing.starter && starter.price}
-                        <span className="text-sm font-normal text-white/60">/{service && service.pricing.starter && starter.period}</span>;
-                      </div>;
+                        <span className='text-sm font-normal text-white/60'>;
+                          /{service && service.pricing.starter && starter.period}
+                        </span>                      </div>;
                     </div>;
-
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
+
 
 
               ))}
@@ -807,6 +834,7 @@ export default function CuttingEdgePricing2025() {;
           </div>
         </section>
 
+              ))}
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
@@ -821,19 +849,6 @@ export default function CuttingEdgePricing2025() {;
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
-                Ready to Get Started?;
-              </h2>;
-              <p className='text-xl text-white/80 mb-8 leading-relaxed'>;
-                Our team of experts is ready to help you choose the perfect plan;
-                and get you started with our cutting-edge technology solutions.;
-                Contact us today for a personalized consultation.;
-              </p>;
-              <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
-
                 <a
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'>;
@@ -855,8 +870,6 @@ export default function CuttingEdgePricing2025() {;
                 Our team of experts is ready to help you choose the perfect plan and get you started with our ;
                 cutting-edge technology solutions. Contact us today for a personalized consultation.;
               </p>;
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">;
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;

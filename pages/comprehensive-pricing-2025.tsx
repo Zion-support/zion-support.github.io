@@ -4,7 +4,6 @@
 } from 'lucide-react'
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
-
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -25,11 +24,8 @@ export default function ComprehensivePricingPage() {
     : allServices.filter(service => service.category === selectedCategory)
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category)
-    return categoryData?.icon |''
+    return categoryData?.icon |'🚀'
   }
-    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
-
-
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -81,11 +77,6 @@ export default function ComprehensivePricingPage(req, res) {
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId)
   },
-
-  },
-  const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId)
-  },
   return (
     <>
       <Head>
@@ -100,80 +91,65 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-    { id: 'Quantum Internet', name: 'Q - Internet', icon: '🌍' },
-    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
-  ],
-  const filtered_services = selected_category === 'all';
-    ? all_services;
-    : all_services.filter (service => service.category === selected_category),
-  const getCategoryIcon = (category: string) =>: any {
-    const category_data = categories.find (cat => cat.id === category),
-    return category_data?.icon || '🚀';
-  },
-  const calculateYearlyPrice = (monthly_price: string) =>: any {
-    const price = parse_float (monthly_price.replace ('$', '').replace (, '')),
-    return `$${(price * 12 * 0.8).to_fixed (0)}`, // 20% discount for yearly;
-  },
-  const toggleServiceExpansion = (service_id: string) =>: any {
-    setExpandedService (expanded_service === service_id ? null : service_id);
-  },
-  return (
-    <>;
-      <Head>;
-        <title > Comprehensive Pricing 2025 - Zion Tech Group</title>;
-        <meta name="description" content="Discover our revolutionary micro SAAS services pricing for 2025. AI, quantum computing, cybersecurity, and emerging technology solutions." />;
-        <meta name="keywords" content="micro SAAS pricing, AI services, quantum computing, cybersecurity, emerging technology, Zion Tech Group" />;
-        <link rel="canonical" href="https://ziontechgroup.com / comprehensive - pricing - 2025" />;
-      </Head>;
-      <div className="min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950">;
-        {/* Header */}
-        <section className="py - 20 px - 6">;
-          <div className="max - w-7xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-
-
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+                Comprehensive Pricing 2025
+              </h1>
+              <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
+                Revolutionary micro SAAS services that transform businesses with cutting-edge AI, quantum computing, and emerging technologies
+              </p>
+              {/* Billing Toggle */}
               {/* Billing Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               <div className="flex items-center justify-center gap-4 mb-12">
                 <span className="text-white/60">Monthly</span>
                 <button
-                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
-                  className={`relative w-16 h-8 rounded-full transition-all duration-300 ${
-                    billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-white/20'
-                  }`}
-            >;
-              <h1 className="text - 5xl md:text - 6xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
-                Comprehensive Pricing 2025;
-              </h1>;
-              <p className="text - xl text - white / 70 max - w-3xl mx - auto mb - 8">;
-                Revolutionary micro SAAS services that transform businesses with cutting - edge AI, quantum computing, and emerging technologies;
-              </p>;
-              {/* Billing Toggle */}
-              <div className="flex items - center justify - center gap - 4 mb - 12">;
-                <span className="text - white / 60">Monthly</span>;
-                <button;
-                  on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'yearly' : 'monthly')}
-                  className={`relative w - 16 h - 8 rounded - full transition - all duration - 300 ${
-                    billing_cycle === 'yearly' ? 'bg - blue - 600' : 'bg - white / 20';
-                  }`}
-
-
+                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className={`relative w-16 h-8 rounded-full transition-all duration-300 ${;
+                    billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-white/20';
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >
+                  <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
+                    billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
+                  }`} />
+                </button>
+                <span className="text-white/60">Yearly</span>
+                {billingCycle === 'yearly' && (
+                  <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
+                    Save 20%
+                  </span>
+                )}
+              </div>
+              {/* Stats */}
                 )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -183,8 +159,6 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
                   <div className="text-3xl font-bold text-blue-400">{allServices.length}+</div>
@@ -236,8 +210,6 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               className="flex flex-wrap justify-center gap-3"
             >
               {categories.map((category) => (
@@ -253,7 +225,6 @@ export default function ComprehensivePricingPage(req, res) {
                   <span>{category.icon}</span>;
                   {category.name}
 
-
         <section className="px-6 pb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -265,8 +236,6 @@ export default function ComprehensivePricingPage(req, res) {
                     animate={{ opacity: 1, coordinate_y: 0 }}
                     exit={{ opacity: 0, coordinate_y: -30 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-
-
                     className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
                   >
                     {/* Popular Badge */}
@@ -282,8 +251,6 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div className="text-4xl">{service.icon}</div>
@@ -294,12 +261,9 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                           </div>
                         </div>
                       </div>
-
 
 
                       <div className="space-y-2 mb-6">
@@ -308,8 +272,6 @@ export default function ComprehensivePricingPage(req, res) {
                             <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span className="line-clamp-2">{feature}</span>
                           </div>
-
-
                       <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                         <div>
                           <div className="text-lg font-bold text-blue-400">{service.rating}</div>
@@ -335,8 +297,6 @@ export default function ComprehensivePricingPage(req, res) {
                       </button>;
                       {/* CTA Button */}
                       <a;
-
-
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
@@ -362,8 +322,6 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Technology Stack</h4>
                               <div className="flex flex-wrap gap-2">
@@ -393,8 +351,6 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Use Cases</h4>
                               <div className="space-y-1">
@@ -419,8 +375,6 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">ROI & Benefits</h4>
                               <p className="text-white/70 text-sm mb-3">{service.roi}</p>
@@ -429,8 +383,6 @@ export default function ComprehensivePricingPage(req, res) {
                                   <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                                     <TrendingUp className="w-3 h-3 text-green-400" />
                                     {benefit}
-
-
                                     {benefit  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -449,15 +401,13 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                             <div className="bg-white/5 rounded-xl p-4">
                               <h4 className="text-lg font-semibold text-white mb-3">Contact Information</h4>
                               <div className="space-y-2 text-sm text-white/60">
-                                <div> {service.contactInfo.mobile}</div>
-                                <div> {service.contactInfo.email}</div>
-                                <div> {service.contactInfo.address}</div>
-                                <div> {service.contactInfo.website}</div>
+                                <div>📱 {service.contactInfo.mobile}</div>
+                                <div>✉️ {service.contactInfo.email}</div>
+                                <div>📍 {service.contactInfo.address}</div>
+                                <div>🌐 {service.contactInfo.website}</div>
                               </div>
                             </div>
                           </div>
@@ -482,8 +432,6 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               className="text-center"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
@@ -500,8 +448,6 @@ export default function ComprehensivePricingPage(req, res) {
                   >
                     Contact Sales Team
                     <ArrowRight className="w-5 h-5" />
-
-
                   <a
                     href="tel:+13024640950"
                     className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
@@ -515,8 +461,6 @@ export default function ComprehensivePricingPage(req, res) {
         </section>
       </div>
     </>
-  )
-              className="text-center";
 
 }
 
@@ -549,8 +493,5 @@ export default function ComprehensivePricingPage(req, res) {
           </div>;
         </section>;
       </div>;
-}
-    </>);
-}
 
 

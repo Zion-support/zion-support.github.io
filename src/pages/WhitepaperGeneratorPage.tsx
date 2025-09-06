@@ -9,10 +9,6 @@ const slugify = (text: string): string => {
     .replace (/-+$/, ''); // Trim - from end of text;
 }
 const WhitepaperGeneratorPage: React.FC = () => {
-  }
-  const removeDistributionItem = (id: string) =>: any {
-    setDistributionData (prev => prev.filter (item => item.id !== id));
-  }
     }
     if (
       totalPercentage < 100 &&
@@ -82,20 +78,12 @@ if ( {) {
     }
   }
   const handleDownloadPdf = async () => {
-    }
-  }
-  const handleTogglePublicStatus = async () => {
-    }
-    // Optimistically update UI, or wait for response for certainty;
-    const newPublicStatus = !currentSharedWhitepaperIsPublic;
-    // For optimistic update:;
-    // setCurrentSharedWhitepaperIsPublic (newPublicStatus);
-    try {
     setIsSharing(true)
     setError(null)
     setShareableLink(null)
     setCurrentSharedWhitepaperId(null)
     setCurrentSharedWhitepaperIsPublic(null)
+
 import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
@@ -116,7 +104,6 @@ import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',;
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
-
 import { Trash2, Download, Share2 } from 'lucide-react';
         useCases,;
         rewardsLogic,;
@@ -165,6 +152,222 @@ import { Trash2, Download, Share2 } from 'lucide-react';
         tokenSupply,
         sections,
         distributionChartData,
+        distributionBreakdown},
+      const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {
+        body: whitepaperPayload}),
+
+      if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),
+      if (!response) throw new Error('No response received from create-shared-whitepaper function'),
+      if ((response as any).error) throw new Error(`Error from create-shared-whitepaper: ${(response as any).error}`),
+      if (!(response as any).id) throw new Error('Failed to get ID for shareable link.'),
+
+      const link = `${window.location.origin}/whitepaper/view/${(response as any).id}`,
+      setShareableLink(link),
+      setCurrentSharedWhitepaperId((response as any).id),
+      setCurrentSharedWhitepaperIsPublic((response as any).is_public),
+      toast.success("Shareable link generated!")
+    } catch (e: any) {
+      logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error generating shareable link' }),
+      setError("Failed to generate shareable link: " + e.message),
+      toast.error("Failed to generate shareable link.")
+    } finally {
+      setIsSharing(false)
+    }
+  },
+
+  const handleTogglePublicStatus = async () => {
+    if (!currentSharedWhitepaperId || currentSharedWhitepaperIsPublic === null) {
+        toast.error("No shareable whitepaper selected or status is unknown."),
+        return
+    }
+    // Optimistically update UI, or wait for response for certainty
+    const newPublicStatus = !currentSharedWhitepaperIsPublic,
+
+    // For optimistic update: // setCurrentSharedWhitepaperIsPublic(newPublicStatus),
+
+    try {
+        const { data: response, error: funcError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
+            body: { whitepaperId: currentSharedWhitepaperId, isPublic: newPublicStatus }}),
+        if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),
+        if (!response) throw new Error('No response received from set-shared-whitepaper-public-status function'),
+        if ((response as any).error) throw new Error(`Error from set-shared-whitepaper-public-status: ${(response as any).error}`),
+
+        setCurrentSharedWhitepaperIsPublic((response as any).is_public), // Update with actual status from DB
+        toast.success(`Whitepaper is now ${(response as any).is_public ? 'public' : 'private'}.`)
+
+    } catch (e: any) {
+        logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error toggling public status' }),
+        setError("Failed to update public status: " + e.message),
+        toast.error("Failed to update public status."),
+        // Revert optimistic update if it failed:
+        // setCurrentSharedWhitepaperIsPublic(!newPublicStatus)
+    }
+  },
+
+  const handleSubmitToCounsel = async () => {
+    if (sections.length === 0) {
+        toast.error("Please generate and finalize the whitepaper before submitting."),
+        return
+    }
+    setIsSubmittingToCounsel(true),
+    setError(null),
+    try {
+        let linkToSubmit = shareableLink,
+        let whitepaperIdToSubmit = currentSharedWhitepaperId,
+
+        if (!linkToSubmit || !whitepaperIdToSubmit) {
+            toast.info("Generating a shareable link first to submit to counsel..."),
+            const whitepaperPayload = { tokenName, tokenSupply, sections, distributionChartData, distributionBreakdown },
+            const { data: linkResponse, error: linkFuncError } = await supabase.functions.invoke('create-shared-whitepaper', {
+                body: whitepaperPayload}),
+            if (linkFuncError) throw new Error(`Failed to create link for counsel: ${linkFuncError.message}`),
+            if (!linkResponse) throw new Error('No response received from create-shared-whitepaper function for counsel'),
+            if ((linkResponse as any).error) throw new Error(`Error from create-shared-whitepaper function: ${(linkResponse as any).error}`),
+            if (!(linkResponse as any).id) throw new Error('Failed to get ID for shareable link for counsel.'),
+
+            linkToSubmit = `${window.location.origin}/whitepaper/view/${(linkResponse as any).id}`,
+            whitepaperIdToSubmit = (linkResponse as any).id,
+            setShareableLink(linkToSubmit),
+            setCurrentSharedWhitepaperId(whitepaperIdToSubmit),
+            setCurrentSharedWhitepaperIsPublic((linkResponse as any).is_public)
+        }
+
+        // Ensure it's public before submitting, or handle as per requirements
+        if (currentSharedWhitepaperIsPublic === false) {
+            toast.info("Making whitepaper public before submitting to counsel..."),
+            const { data: statusResponse, error: statusError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
+                body: { whitepaperId: whitepaperIdToSubmit, isPublic: true }}),
+            if (statusError) throw new Error(`Failed to make whitepaper public: ${statusError.message}`),
+            if (!statusResponse) throw new Error('No response received from set-shared-whitepaper-public-status function'),
+            if ((statusResponse as any).error) throw new Error((statusResponse as any).error),
+            setCurrentSharedWhitepaperIsPublic(true)
+;
+      pdf.save(`${slugify(tokenName || 'whitepaper')}_whitepaper.pdf`);
+    } catch (e: any) {;
+      logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading PDF' }),;
+      setError("Failed to download PDF file. " + e.message);
+    } finally {;
+      setIsDownloading(false);
+    }
+  },;
+  const handleGenerateShareableLink = async () => {;
+    if (sections.length === 0) {;
+      toast.error("Please generate the whitepaper content first before creating a shareable link."),;
+      return;
+    }
+    setIsSharing(true),;
+    setError(null),;
+    setShareableLink(null),;
+    setCurrentSharedWhitepaperId(null),;
+    setCurrentSharedWhitepaperIsPublic(null),;
+    try {;
+      const whitepaperPayload = {;
+        tokenName,;
+        tokenSupply,;
+        sections,;
+        distributionChartData,;
+        distributionBreakdown},;
+      const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {;
+        body: whitepaperPayload}),;
+      if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),;
+      if (!response) throw new Error('No response received from create-shared-whitepaper function'),;
+      if ((response as any).error) throw new Error(`Error from create-shared-whitepaper: ${(response as any).error}`),;
+      if (!(response as any).id) throw new Error('Failed to get ID for shareable link.'),;
+      const link = `${window.location.origin}/whitepaper/view/${(response as any).id}`,;
+      setShareableLink(link),;
+      setCurrentSharedWhitepaperId((response as any).id),;
+      setCurrentSharedWhitepaperIsPublic((response as any).is_public),;
+      toast.success("Shareable link generated!");
+    } catch (e: any) {;
+      logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error generating shareable link' }),;
+      setError("Failed to generate shareable link: " + e.message),;
+      toast.error("Failed to generate shareable link.");
+    } finally {;
+      setIsSharing(false);
+    }
+  },;
+  const handleTogglePublicStatus = async () => {;
+    if (!currentSharedWhitepaperId || currentSharedWhitepaperIsPublic === null) {;
+        toast.error("No shareable whitepaper selected or status is unknown."),;
+        return;
+    }
+    // Optimistically update UI, or wait for response for certainty;
+    const newPublicStatus = !currentSharedWhitepaperIsPublic,;
+    // For optimistic update: // setCurrentSharedWhitepaperIsPublic(newPublicStatus),;
+    try {;
+        const { data: response, error: funcError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {;
+            body: { whitepaperId: currentSharedWhitepaperId, isPublic: newPublicStatus }}),;
+        if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),;
+        if (!response) throw new Error('No response received from set-shared-whitepaper-public-status function'),;
+        if ((response as any).error) throw new Error(`Error from set-shared-whitepaper-public-status: ${(response as any).error}`),;
+        setCurrentSharedWhitepaperIsPublic((response as any).is_public), // Update with actual status from DB;
+        toast.success(`Whitepaper is now ${(response as any).is_public ? 'public' : 'private'}.`);
+    } catch (e: any) {;
+        logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error toggling public status' }),;
+        setError("Failed to update public status: " + e.message),;
+        toast.error("Failed to update public status."),;
+        // Revert optimistic update if it failed:;
+        // setCurrentSharedWhitepaperIsPublic(!newPublicStatus);
+    }
+  },;
+  const handleSubmitToCounsel = async () => {;
+    if (sections.length === 0) {;
+        toast.error("Please generate and finalize the whitepaper before submitting."),;
+        return;
+    }
+    setIsSubmittingToCounsel(true),;
+    setError(null),;
+    try {;
+        let linkToSubmit = shareableLink,;
+        let whitepaperIdToSubmit = currentSharedWhitepaperId,;
+        if (!linkToSubmit || !whitepaperIdToSubmit) {;
+            toast.info("Generating a shareable link first to submit to counsel..."),;
+            const whitepaperPayload = { tokenName, tokenSupply, sections, distributionChartData, distributionBreakdown },;
+            const { data: linkResponse, error: linkFuncError } = await supabase.functions.invoke('create-shared-whitepaper', {;
+                body: whitepaperPayload}),;
+            if (linkFuncError) throw new Error(`Failed to create link for counsel: ${linkFuncError.message}`),;
+            if (!linkResponse) throw new Error('No response received from create-shared-whitepaper function for counsel'),;
+            if ((linkResponse as any).error) throw new Error(`Error from create-shared-whitepaper function: ${(linkResponse as any).error}`),;
+            if (!(linkResponse as any).id) throw new Error('Failed to get ID for shareable link for counsel.'),;
+            linkToSubmit = `${window.location.origin}/whitepaper/view/${(linkResponse as any).id}`,;
+            whitepaperIdToSubmit = (linkResponse as any).id,;
+            setShareableLink(linkToSubmit),;
+            setCurrentSharedWhitepaperId(whitepaperIdToSubmit),;
+            setCurrentSharedWhitepaperIsPublic((linkResponse as any).is_public);
+        }
+;
+        // Ensure it's public before submitting, or handle as per requirements;
+        if (currentSharedWhitepaperIsPublic === false) {;
+            toast.info("Making whitepaper public before submitting to counsel..."),;
+            const { data: statusResponse, error: statusError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {;
+                body: { whitepaperId: whitepaperIdToSubmit, isPublic: true }}),;
+            if (statusError) throw new Error(`Failed to make whitepaper public: ${statusError.message}`),;
+            if (!statusResponse) throw new Error('No response received from set-shared-whitepaper-public-status function'),;
+            if ((statusResponse as any).error) throw new Error((statusResponse as any).error),;
+            setCurrentSharedWhitepaperIsPublic(true);
+        }
+;
+        const { data: notifyResponse, error: notifyError } = await supabase.functions.invoke('notify-legal-team', {;
+            body: {;
+                whitepaperId: whitepaperIdToSubmit,;
+                sharableLink: linkToSubmit, // Corrected variable name;
+                tokenName: tokenName}
+        }),
+        if (notifyError) throw new Error(`Failed to notify counsel: ${notifyError.message}`),
+        if (!notifyResponse) throw new Error('No response received from notify-legal-team function'),
+        if ((notifyResponse as any).error) throw new Error(`Error from notify-legal-team: ${(notifyResponse as any).error}`),
+
+        toast.success("Whitepaper submitted to counsel successfully!")
+
+    } catch (e: any) {
+        logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error submitting to counsel' }),
+        setError("Failed to submit to counsel: " + e.message),
+        toast.error("Failed to submit to counsel: " + e.message)
+    } finally {
+        setIsSubmittingToCounsel(false)
+    }
+},
+
 
   return (
     <div className='flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100'>;
@@ -184,16 +387,139 @@ import { Trash2, Download, Share2 } from 'lucide-react';
               }
               variant='outline'
               size='sm'
-              }
-              variant='outline'
-              size='sm'
+        <form onSubmit={e => e.preventDefault()} className='space-y-6'>
+          {/* ... (Input fields remain the same) ... */}
+          <div>
+            <label htmlFor='tokenName' className='block text-sm font-medium'>
+              Token Name:
+            </label>
+            <Input
+              id='tokenName'
+              value={tokenName}
+              onChange={e => setTokenName(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor='tokenSupply' className='block text-sm font-medium'>
+              Token Supply:
+            </label>
+            <Input
+              id='tokenSupply'
+              value={tokenSupply}
+              onChange={e => setTokenSupply(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor='useCases' className='block text-sm font-medium'>
+              Use Cases:
+            </label>
+            <textarea
+              id='useCases'
+              value={useCases}
+              onChange={e => setUseCases(e.target.value)}
+              required
+              className='mt-1 block w-full border-gray-300 rounded-md shadow-sm'
+              rows={3}
+            />
+          </div>
+          <div>
+            <label htmlFor='rewardsLogic' className='block text-sm font-medium'>
+              Rewards Logic:
+            </label>
+            <textarea
+              id='rewardsLogic'
+              value={rewardsLogic}
+              onChange={e => setRewardsLogic(e.target.value)}
+              required
+              className='mt-1 block w-full border-gray-300 rounded-md shadow-sm'
+              rows={3}
+            />
+          </div>
+          {/* Token Distribution Inputs */}
+          <div className='space-y-3 p-3 border rounded-md'>
+            <h2 className='text-lg font-semibold'>Token Distribution</h2>
+            {distributionData.map(item => (
+              <div key={item.id} className='flex items-center space-x-2'>
+                <Input
+                  type='text'
+                  placeholder='Category'
+                  value={item.name}
+                  onChange={e =>
+                    handleDistributionChange(item.id, 'name', e.target.value)
+                  }
+                  className='flex-grow'
+                />
+                <Input
+                  type='number'
+                  placeholder='%'
+                  value={item.percentage}
+                  onChange={e =>
+                    handleDistributionChange(
+                      item.id
+                      'percentage'
+                      e.target.value
+                    )
+                  }
+                  className='w-24'
+                  min='0'
+                  max='100'
+                />
+                <Button
+                  variant='ghost'
+                  size='icon'
+            ))}
+            <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
+            <div>
               rows={3}
             />;
           </div>;
           <div>;
+          </div>
+          <div>
+          </div>
+          <div>
+            <label
+              htmlFor='legalDisclaimers'
+          {shareableLink && !isSharing && currentSharedWhitepaperId && (
+            <div className="mt-4 p-3 border rounded-md bg-green-50">
+              <div className="flex justify-between items-center">
+                <label className="block text-sm font-medium text-green-700">Shareable Link:</label>
+                <Button
               )}
-            </div>;
+            </div>
           )}
+
+              type='button'
+              onClick={handleSubmitToCounsel}
+              disabled={
+                isSubmittingToCounsel |isLoading |isSharing |isDownloading
+              }
+              variant='default'
+              size='lg'
+              className='w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white'            >
+              <Send className='mr-2 h-4 w-4' />
+              {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
+            </Button>
+          )}
+          {isSubmittingToCounsel && (
+            <p className='text-center text-sm text-blue-600'>
+              Submitting to counsel...
+            </p>
+          )}
+                type="button"
+                onClick={handleSubmitToCounsel}
+                disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
+                variant="default"
+                size="lg"
+                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
+            >
+                <Send className="mr-2 h-4 w-4" />
+                {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
+            </Button>;
+          )}
+           {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}
 
 
 
@@ -244,6 +570,23 @@ import { Trash2, Download, Share2 } from 'lucide-react';
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
+              type='button'
+              onClick={handleSubmitToCounsel}
+              disabled={
+                isSubmittingToCounsel |isLoading |isSharing |isDownloading
+              }
+              variant='default'
+              size='lg'
+              className='w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white'            >
+              <Send className='mr-2 h-4 w-4' />
+              {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
+            </Button>
+          )}
+          {isSubmittingToCounsel && (
+            <p className='text-center text-sm text-blue-600'>
+              Submitting to counsel...
+            </p>
+          )}
                 type="button"
                 onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
@@ -264,6 +607,7 @@ import { Trash2, Download, Share2 } from 'lucide-react';
                 key={section.id}
                 title={section.title}
                 content={section.content}
+
             ))}
           </div>
         )}
@@ -278,10 +622,19 @@ import { Trash2, Download, Share2 } from 'lucide-react';
                 </pre>;
             )}
             </div>;
+
+        )}
+      </div>
+      {/* Right Column: Preview Panel - Pass ref here */}
+
 '";
 ;
 }
 }
+
+        )}
+      </div>
+      {/* Right Column: Preview Panel - Pass ref here */}
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
         <WhitepaperPreviewPanel
             sections={sections}
@@ -292,6 +645,8 @@ import { Trash2, Download, Share2 } from 'lucide-react';
       </div>;
     </div>;
   );
+
+
 
         className='md:w - 1/2 lg:w - 3/5 xl:w - 2/3 p - 1';
       >;

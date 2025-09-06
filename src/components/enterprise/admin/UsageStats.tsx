@@ -1,3 +1,19 @@
+import {
+
+export function UsageStats() {
+
+
+  const handleSaveChanges = () => {
+    toast({
+
+  return (
+    <div className="space-y-8">
+      <div>
+        <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>
+        <p className="text-muted-foreground mb-6">
+          Configure usage limits for your team to manage your subscription resources.
+        </p>
+      </div>
         <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
@@ -28,6 +44,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+
+
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -58,6 +76,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+
+
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -88,6 +108,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+
+
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -128,6 +150,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardFooter>
         </Card>
       </div>
+
+
           </div>
           <div>
             <h3 className="font-medium">Need higher limits?</h3>
@@ -138,24 +162,21 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
         <Button>Contact Us</Button>
       </div>
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { toast } from "@/hooks/use-toast",;
 import {;
   Card,;
   CardContent,;
   CardDescription,;
   CardFooter,;
   CardHeader,;
-          Configure usage limits for your team to manage your subscription;
-          resources.;
-        </p>;
-      </div>;
             <CardDescription>;
               Set monthly limits for job postings across your organization;
             </CardDescription>;
           </CardHeader>;
-                  Monthly job posting limit;
-                </div>;
-                <Badge variant='outline'>25 / 50</Badge>;
-              </div>;
                 </div>;
               </div>;
             </div>;
@@ -165,10 +186,6 @@ import {;
               Limit the number of direct candidate contacts per month;
             </CardDescription>;
           </CardHeader>;
-                  Monthly contact credits;
-                </div>;
-                <Badge variant='outline'>178 / 500</Badge>;
-              </div>;
                 </div>;
               </div>;
             </div>;
@@ -187,18 +204,14 @@ import {;
               Set spending caps for premium features and services;
             </CardDescription>;
           </CardHeader>;
-                    <option value='75'>75% of limit</option>;
-                    <option value='80'>80% of limit</option>;
-                    <option value='90'>90% of limit</option>;
-                    <option value='95'>95% of limit</option>;
                   </select>;
                 </div>;
               </div>;
             </div>;
           </CardContent>;
           <CardFooter>;
-              Contact your account manager to discuss custom limits for your;
-              enterprise.;
-            </p>;
-          </div>;
-        </div>;
+      </div>;
+    </div>;
+  );
+}
+;

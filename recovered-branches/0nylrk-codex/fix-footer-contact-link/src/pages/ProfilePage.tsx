@@ -2,7 +2,6 @@
 
 
 
-
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -105,14 +104,13 @@ export default function ProfilePage() {;
       <SEO
 
         title={`${profileData.full_name} | Talent Profile`}
-
-        description={profileData.bio || "View the profile of this talented individual."}
-
-
       />
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+  return (
+    <>;
+      <SEO
           {/* Main Content Area */}
           <div className="col-span-12 lg:col-span-8">;
             {/* Profile Header */}
@@ -132,10 +130,6 @@ export default function ProfilePage() {;
                       <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
                     </div>;
                   )}
-
-                </div>;
-
-
                 {/* Main Info */}
                 <div className="flex-1">;
                   <div className="flex justify-between items-start">;
@@ -144,10 +138,6 @@ export default function ProfilePage() {;
                       <p className="text-zion-cyan font-medium">{profileData && profileData.professional_title}</p>;
                     </div>;
                     {/* Add Save/Unsave Button Here */}
-
-                  </div>;
-
-
                   {/* Location & Availability */}
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">;
                     {profileData && profileData.location && (;
@@ -162,7 +152,6 @@ export default function ProfilePage() {;
                         <span>{profileData && profileData.availability}</span>;
                       </div>;
                     )}
-
                   </div>;
                 </div>;
               </div>;
@@ -227,37 +216,28 @@ export default function ProfilePage() {;
                     href={profileData && profileData.github_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-zion-cyan hover:text-white transition-colors"
-                  >
-                    <Github className="h-6 w-6" />
-
-
+                    className="text-zion-cyan hover:text-white transition-colors">;
+                    <Github className="h-6 w-6" />;
+                  </a>;
                 )}
                 {profileData && profileData.twitter_link && (;
                   <a
                     href={profileData && profileData.twitter_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-zion-cyan hover:text-white transition-colors"
-                  >
-                    <Twitter className="h-6 w-6" />
-
-
+                    className="text-zion-cyan hover:text-white transition-colors">;
+                    <Twitter className="h-6 w-6" />;
+                  </a>;
                 )}
                 {profileData && profileData.linkedin_link && (;
                   <a
                     href={profileData && profileData.linkedin_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-zion-cyan hover:text-white transition-colors"
-                  >
-                    <Linkedin className="h-6 w-6" />
-
-
+                    className="text-zion-cyan hover:text-white transition-colors">;
+                    <Linkedin className="h-6 w-6" />;
+                  </a>;
                 )}
-              </div>
-            </div>
-          </div>
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
@@ -266,6 +246,7 @@ export default function ProfilePage() {;
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0
+
               }}
             />;
             {/* Placeholder for other sidebar elements */}

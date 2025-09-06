@@ -1,21 +1,13 @@
 
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 interface Milestone {
   title: string;
   description: string;
   dueDate: string
   estimatedHours: number
-
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
-
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
@@ -35,8 +27,6 @@ interface Milestone {;
   description: string,;
   dueDate: string,;
   estimatedHours: number;
-
-
 }
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -66,9 +56,6 @@ serve(async (req) => {
       paymentAmount;
       additionalClauses;
       milestones
-
-
-
 ;
   try {;
     // Get the OpenAI API key from environment variables;
@@ -93,9 +80,6 @@ serve(async (req) => {
     // Create the contract prompt for OpenAI;
     let prompt = `;
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;
-
-
-
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -120,11 +104,20 @@ serve(async (req) => {
     // Add milestone information if available
     if (milestones && milestones.length > 0) {
       prompt += `
+        `
+      });
+      prompt += `
+      Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.
+      `
+    }
+    prompt += `
+    Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.
+    `;
+    // Call OpenAI API
         model: 'gpt-4o';
         messages: [
           {
             role: 'system'
-;
         Milestone ${index + 1}: ${milestone.title}
         - Description: ${milestone.description}
         - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
@@ -173,6 +166,9 @@ if ( {) {
     }), {
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
   } catch (error) {
+      });
+      {
+        status: 500
 ;
     prompt += `;
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.;

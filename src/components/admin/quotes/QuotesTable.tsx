@@ -1,15 +1,25 @@
+  isLoading: boolean,
+  updateStatus: (id: string, status: QuoteStatus) => void,
+  toggleArchive: (id: string, isArchived: boolean) => void,
+  deleteQuote: (id: string) => void,
+  onViewDetails: (quote: QuoteRequest) => void
+}
+
+}
+export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes
   isArchived = false
   isLoading
   updateStatus
   toggleArchive
+
+
+
   quotes,
   isArchived = false,
   isLoading,
   updateStatus,
   toggleArchive,
-  onViewDetails
-},) => {
   deleteQuote,
   onViewDetails
 }) => {
@@ -54,6 +64,8 @@
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
+
+
                     {isArchived ? (
                       <>
                         <Button
@@ -66,25 +78,6 @@
                         </Button>
                         <Button
                           variant="ghost"
-  quotes;
-  isArchived = false;
-import React from "react";
-import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import { ;
-  Table;
-  TableBody, ;
-  TableCell, ;
-  TableHead, ;
-  TableHeader, ;
-  TableRow ;
-} from "@/components/ui/table";import { Button } from "@/components/ui/button";
-import { ;
-  DropdownMenu;
-  DropdownMenuContent, ;
-  DropdownMenuItem, ;
-  DropdownMenuTrigger ;
-} from "@/components/ui/dropdown-menu";import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-import {formatDate} from "@/utils/dateUtils";
                           size="icon"
                           className="text-red-500"
                           onClick={() => {
@@ -248,6 +241,26 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
+                    )}
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))
+          )}
+
+  );
+};
+'";
+
+
+        </TableBody>;
+      </Table>;
+    </div>;
+  );
+};
+
+'"
+
 
                   </div>;
                 </TableCell>;

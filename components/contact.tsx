@@ -1,7 +1,3 @@
-const [isSubmitting, setIsSubmitting] = useState (false);
- const [isSubmitting, setIsSubmitting] = useState (false);
-
-
 const [submitSuccess, setSubmitSuccess] = useState (false);
 //Get popular services for showcase const popularServices = [ ...innovativeAIServices2029 && innovativeAIServices2029.filter (s => s && s.popular);
 ...quantumSpaceInnovations2029 && quantumSpaceInnovations2029.filter (s => s && s.popular);
@@ -16,13 +12,14 @@ const [submit_success, setSubmitSuccess] = useState (false);
 setIsSubmitting (false);
 setSubmitSuccess (true);
 //Reset form after 3 seconds ];
-
-  stat.label;
 }</div> </div> <div className= {
-  `text-3xl font-bold $ {
-  stat.color
-}mb-2`
+  `text - 3xl font - bold $ {
+  stat.color;
+}mb - 2`;
 }> {
+  stat.value;
+}</div> </div> </div> </motion.div>) );
+
 }</motion.div> </div> </section> <motion.div initial= {
 }<motion && motion.div > {;
   stats && stats.map ( (stat, index) => (<motion&& motion.div key= {
@@ -66,7 +63,6 @@ setSubmitSuccess (true);
   opacity: 1, y: 0
 }transition= {
   {
-
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -226,7 +222,6 @@ setSubmitSuccess (true);
                     </div>;
                   </form>;
                 )}
-
         {/* Popular Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -235,9 +230,6 @@ setSubmitSuccess (true);
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
-
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularServices.map((service, index) => (
                 <motion.div
@@ -441,12 +433,13 @@ setSubmitSuccess (true);
                     {/* Description */}
                     <p className="text - gray - 300 leading - relaxed mb - 4 line - clamp - 3">;
                       {service.description}
+                    </p>
 
                     </p>;
 
-
-
-
+                    {/* Description */}
+                    <p className="text - gray - 300 leading - relaxed mb - 4 line - clamp - 3">;
+                      {service.description}
                     {/* Price */}
                     <div className="mb - 4">;
                       <span className={`${service.text_color} font - semibold text - lg`}>;
@@ -479,7 +472,6 @@ setSubmitSuccess (true);
                   </div>;
                 </motion && motion.div>;
               ))}
-
         {/* Why Choose Us Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -507,7 +499,6 @@ setSubmitSuccess (true);
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
   ),
 }
 

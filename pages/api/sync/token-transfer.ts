@@ -7,6 +7,7 @@ import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
@@ -57,8 +58,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
     txId: string,
     token: string,
@@ -108,7 +107,6 @@ export default async function handler(req, res) {
       .map(async (peer) => {
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
         try {
-          await axios.post (url, body, { headers, timeout: 5000 });
         } catch {}
       })
   )

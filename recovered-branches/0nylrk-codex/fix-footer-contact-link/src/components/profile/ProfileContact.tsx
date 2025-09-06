@@ -131,7 +131,6 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
             disabled={isSending}>;
             <Send className="mr-2 h-4 w-4" />;
             {isSending ? "Sending..." : "Send Message"}
-
             <Textarea;
               placeholder={`Message to ${profile_name}...`}
               value={message}

@@ -4,6 +4,3 @@ describe('Utils', () => {
     expect(true).toBe(true);
   });
 });
-
-export {};
-

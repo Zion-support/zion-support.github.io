@@ -1,4 +1,28 @@
 
+export function SelectResumeSection({
+  isLoading
+}: SelectResumeSectionProps) {
+  return (
+    <div className="space-y-2">
+      {resumeOptions.length === 0 ? (
+        <p className="text-sm text-zion-slate">No saved resumes found.</p>
+      ) : (
+        <>
+
+
+
+            >
+              <div className="flex items-center">
+                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
+                <span className="text-white">{option.title}</span>
+              </div>
+            </button>
+          ))}
+          
+
+          
+
+
           
 
           
@@ -32,6 +56,10 @@
               resume={selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
               isLoading={isLoading}
+            />;
+          )}
+        </>
+      )}
   );
 }};
 };

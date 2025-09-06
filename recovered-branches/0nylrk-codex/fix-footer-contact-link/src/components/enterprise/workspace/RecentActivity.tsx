@@ -1,12 +1,8 @@
-
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-
-
-
 export function RecentActivity() {
   // Mock activity data
 
@@ -83,6 +79,15 @@ export function RecentActivity() {;
       timestamp: "2d ago",;
       type: "comment";
     }
+      case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
+      case "candidate":;
+        return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
+      case "interview":;
+        return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;
+    }
+  }
+
+  return (
     <Card>;
       <CardHeader>;
         <CardTitle>Recent Activity</CardTitle>;
@@ -107,5 +112,6 @@ export function RecentActivity() {;
 
 
 }
+;
     </Card>);
 }

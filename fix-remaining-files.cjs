@@ -2,6 +2,7 @@ const fs = require('fs');
 <<<<<<<< HEAD:fix-remaining-files.cjs
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('🔧 Fixing remaining problematic files...');
 
 const filesToFix = [
@@ -1164,3 +1165,5 @@ console.log('Fixed remaining files');
 ;
 console.log('Fixed remaining files');
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-remaining-files.cjs
+=======
+>>>>>>> origin/main

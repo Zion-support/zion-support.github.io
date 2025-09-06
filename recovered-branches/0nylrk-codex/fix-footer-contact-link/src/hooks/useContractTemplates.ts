@@ -38,9 +38,6 @@ export function useContractTemplates() {
     }
     enabled: isAuthenticated && !!user
   });
-
-
-
 import { useState } from "react",;
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -72,9 +69,6 @@ export function useContractTemplates() {;
         .order('created_at', { ascending: false }),;
       if (error) {;
         throw error;
-
-
-
       }
       return data as ContractTemplate[]
     }
@@ -164,8 +158,6 @@ if ( {) {
           await supabase
             .from('contract_templates')
             .update({ is_default: false })
-    }
-    };
 
       template_data: ContractFormValues,
       is_default?: boolean;
@@ -174,9 +166,6 @@ if ( {) {
   $2
 }
       setIsLoading (true);
-
-    };
-
     },;
     onSuccess: () => {;
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),;
@@ -222,9 +211,6 @@ if ( {) {
       }
 
     },
-
-
-
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -241,12 +227,6 @@ if ( {) {
           .from('contract_templates')
           .delete()
           .eq('id', templateId)
-      } finally {
-        setIsLoading (false);
-      }
-    }
-
-
           .eq('user_id', user.id),
         
 
@@ -256,8 +236,6 @@ if ( {) {
       }
 
     },
-
-
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -279,12 +257,6 @@ if ( {) {
           .from('contract_templates')
           .update({ is_default: true })
           .eq('id', templateId)
-      } finally {
-        setIsLoading (false);
-      }
-    }
-
-
           .eq('user_id', user.id),
         
 
@@ -294,8 +266,6 @@ if ( {) {
       }
 
     },
-
-
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -330,22 +300,101 @@ if ( {) {
       toast ({
         title: "Failed to set default template";
         description: "There was an error setting your default contract template.",
+      } finally {
+        setIsLoading (false);
+      }
+    }
+    }: {
+      template_id: string;
+      title: string;
+      } finally {
+        setIsLoading (false);
+      }
+    }
+        if (error) throw error
+    on_success: () => {
+      query_client.invalidate_queries ({ query_key: ['contract_templates', user?.id] });
+      toast ({
+        title: "Template updated",
+        description: "Contract template has been successfully updated."});
+    }
+    on_error: (error: Error) => {
+      console.error ("Error updating template:", error);
+      toast ({
+        title: "Failed to update template";
+        description: "There was an error updating your contract template.",
         variant: "destructive"});
     }
   });
 ;
-  return {
-    templates;
-    is_loading: is_loading || isLoadingTemplates;
-    error: templates_error;
-    create_template;
-    update_template;
-    delete_template,
-    setDefaultTemplate;
-
-
-
-
+  // Delete a template;
+  const delete_template = use_mutation ({
+    mutation_fn: async (template_id: string) => {
+      if (throw new Error ("User not authenticated")) {
+  $2
+}
+      setIsLoading (true),
+      try {
+        const { error } = await supabase;
+          .from ('contract_templates');
+          .delete ();
+          .eq ('id', template_id);
+          .eq ('user_id', user.id);
+;
+        // Check condition
+if (throw error) {
+  $2
+}
+      } finally {
+        setIsLoading (false);
+      }
+    }
+        if (error) throw error
+    on_success: () => {
+      query_client.invalidate_queries ({ query_key: ['contract_templates', user?.id] });
+      toast ({
+        title: "Template deleted",
+        description: "Contract template has been successfully deleted."});
+    }
+    on_error: (error: Error) => {
+      console.error ("Error deleting template:", error);
+      toast ({
+        title: "Failed to delete template";
+        description: "There was an error deleting your contract template.",
+        variant: "destructive"});
+    }
+  });
+;
+  // Set a template as default;
+  const setDefaultTemplate = use_mutation ({
+    mutation_fn: async (template_id: string) => {
+      if (throw new Error ("User not authenticated")) {
+  $2
+}
+      setIsLoading (true),
+      try {
+        // First unset any existing default;
+        await supabase;
+          .from ('contract_templates');
+          .update ({ is_default: false });
+          .eq ('user_id', user.id);
+          .eq ('is_default', true);
+;
+        // Then set the new default;
+        const { error } = await supabase;
+          .from ('contract_templates');
+          .update ({ is_default: true });
+          .eq ('id', template_id);
+          .eq ('user_id', user.id);
+;
+        // Check condition
+if (throw error) {
+  $2
+}
+      } finally {
+        setIsLoading (false);
+      }
+    }
   }
 }
 import { useState } from "react",;

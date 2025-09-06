@@ -1,8 +1,6 @@
 
 
 
-
-
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -50,11 +48,6 @@ type LoginFormValues = z.infer<typeof loginSchema>,
   }
 
   return (
-
-    <Form {...form}>;
-      <form
-        onSubmit={form && form.handleSubmit(onSubmit)} 
-
         className="space-y-6"
         autoComplete="off" // Disable browser autofill>;
         <FormField
@@ -65,29 +58,7 @@ type LoginFormValues = z.infer<typeof loginSchema>,
                 </div>;
               </FormControl>;
               <FormMessage className="text-red-400" />;
-
-
-
           )}
-
-        />;
-        <FormField
-          control={form && form.control}
-          name="password"
-            </FormItem>;          )}
-        />;
-;
-        <FormField;
-          control={form.control}
-          name="password";
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel className="text-zion-slate-light">Password</FormLabel>;
-              <FormControl>;
-                <div className="relative">;
-            </FormItem>;
-          )}
-        />
         <FormField
           control={form && form.control}
           name="password"
@@ -98,7 +69,7 @@ type LoginFormValues = z.infer<typeof loginSchema>,
                 <div className="relative">;
                   <Input
                     type={showPassword ? "text" : "password"}
-                    placeholder=""
+                    placeholder="••••••••"
                     className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple"
                     {...field}
                     autoComplete="off" // Disable browser autofill

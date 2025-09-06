@@ -49,13 +49,11 @@ export default function VerifyStatus() {
     setError(''),
     setMessage(''),
 
-
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-
 
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
@@ -106,42 +104,13 @@ export default function VerifyStatus(req, res) {
       setError('Please enter your email address'),
       return
     }
-
-    setIsResending(true),
-    setError(''),
-    setMessage(''),
-
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
-import { AuthLayout } from '@/layout';
-
-import { supabase } from '@/integrations/supabase/client', // Import Supabase client
-import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
-export default function VerifyStatus() {
-
-  const router = useRouter()
-  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
-    if (countdown > 0) {
-      interval = setInterval(() => {
-        setCountdown(prev => prev - 1)
-      }, 1000)
-    }
-    return () => clearInterval(interval)
-      return
-    }
-    setIsResending(true)
-    setError('')
-    setMessage('')
       }
     } catch (err) {
       set_error ('Network error. Please try again.');
     } finally {
-      setIsResending(false)
+
+      setIsResending (false);
+
     }
       return
     }
@@ -216,7 +185,6 @@ export default function VerifyStatus() {
     setIsResending(true);
     setError('');
     setMessage('');
-
     try {
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
@@ -247,8 +215,6 @@ export default function VerifyStatus() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           <div className="text-center">
             <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
               <Mail className="h-6 w-6 text-blue-600" />
@@ -263,8 +229,6 @@ export default function VerifyStatus() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           {message && (
             <Alert className="border-green-500 bg-green-50 text-green-900">
               <CheckCircle className="h-4 w-4" />
@@ -286,8 +250,6 @@ export default function VerifyStatus() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email Address
@@ -296,11 +258,6 @@ export default function VerifyStatus() {
               id="email"
               type="email"
               value={email}
-              on_change={(e) => set_email (e.target.value)}
-              placeholder="Enter your email address";
-              className="w - full";
-            />;
-
               value={email  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -315,6 +272,12 @@ export default function VerifyStatus() {
               className="w-full"
             />
             {email && (
+              <p className="text-xs text-gray-500">
+                We'll check the verification status for this email address
+              </p>
+            )}
+          </div>
+          {/* Status Info */}
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -327,17 +290,28 @@ export default function VerifyStatus() {
   }
 }
           {email && (
-            <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">
-              <h3 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-2">Verification Status</h3>
-              <div className="text-sm text-slate-700 dark:text-slate-300 space-y-1">
-              </div>
+
+            <div className="bg - blue - 50 dark:bg - slate - 800 border border - blue - 200 dark:border - slate - 700 rounded - lg p - 4">;
+              <h3 className="text - sm font - medium text - slate - 900 dark:text - slate - 100 mb - 2">Verification Status</h3>;
+              <div className="text - sm text - slate - 700 dark:text - slate - 300 space - y-1">;
+                <p>• Check your email inbox for a verification link</p>;
+                <p>• Click the link in the email to verify your account</p>;
+                <p>• Return here or try logging in after verification</p>;
+              </div>;
               {lastSentTime && (
+                <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">
+                  <Clock className="h-3 w-3 mr-1" />
+                  Last email sent: {lastSentTime.toLocaleTimeString()}
+                </p>
+              )}
+            </div>
+          )}
+          {/* Action Buttons */}
+          <div className="space-y-3">
+            {/* Check Status Button */}
               disabled={!email |isCheckingStatus}
               disabled={!email || isCheckingStatus}
 
-
-
-              disabled={!email || isCheckingStatus}
 
                   Last email sent: {lastSentTime.toLocaleTimeString()  } catch (error) {
     console.error("Error:", error);
@@ -487,15 +461,11 @@ export default function VerifyStatus() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
             </p>
             <Button
-
-
               variant="ghost"
               size="sm"
               className="text-blue-600 hover:text-blue-500"
@@ -504,16 +474,12 @@ export default function VerifyStatus() {
               Go Back
             </Button>
           </div>
-
-
               variant="ghost"
               className="w-full text-sm"
             >
               Use Different Email Address
             </Button>
             <Button
-
-
               variant="ghost"
               className="w-full text-sm"
             >
@@ -524,8 +490,7 @@ export default function VerifyStatus() {
       </div>
     </AuthLayout>
   )
-}
-};
+
 
 
 };

@@ -1,5 +1,8 @@
+  } = useMessaging();
 
-import React, { useEffect, useState } from 'react';
+  const isMobile = useIsMobile();
+  const navigate = useNavigate();
+  const [activeCall, setActiveCall] = useState<string | null>(null);
 import {MessageSquare, Video} from 'lucide-react';
 import {use_messaging} from '@/context / MessagingContext';
 import {ProtectedRoute} from '@/components / ProtectedRoute';
@@ -32,27 +35,6 @@ export default function MessagingInbox() {
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
-import {Button} from '@/components / ui / button';
-import {use_navigate} from 'react-router-dom';
-export default /**
- * MessagingInbox - Function description
- */
-function MessagingInbox() {
-  const {
-    conversations;
-    active_conversation,
-    setActiveConversation,
-    markAsRead;
-    fetch_conversations;
-    is_loading;
-  } = use_messaging ();
-  const is_mobile = useIsMobile ();
-  const navigate = use_navigate ();
-  const [active_call, setActiveCall] = useState < string | null>(null);
-;
-  useEffect (() => {
-    // Fetch conversations when component mounts;
-    const load_data = async () => {
       try {
         await fetch_conversations ();
       } catch (error) {
@@ -81,14 +63,23 @@ function MessagingInbox() {
             {activeConversation && (
               <Button
                 onClick={startVideoCall}
+                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
+              >
+                <Video className="h-4 w-4" />
+                Start Call
+              </Button>
+            )}
+          </div>
+          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
+            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
+              {/* Conversations List */}
+              <Button
+                onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
                 <Video className="h-4 w-4" />;
                 Start Call;
               </Button>;
             )}
-          </div>
-          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
-            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}
               {isLoading ? (;
                 <div className="flex-1 flex items-center justify-center p-8">;
@@ -150,7 +141,8 @@ if ( {) {
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}
                   markAsRead={markAsRead}
-
-}
-;
-
+              {/* Conversation Detail */}
+              <ConversationDetailView />;
+            </div>;
+          </div>;
+        </div>;

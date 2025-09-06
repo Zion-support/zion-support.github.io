@@ -1,29 +1,34 @@
-import React from 'react';
-  const showTagline = router && router.pathname === '/';
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
+  const [loginOpen, setLoginOpen] = useState(false),
+  const isMobile = useIsMobile(),
+  const { t } = useTranslation(),
+  const { user } = useAuth(),
+  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn),
+  const router = useRouter(),
+  const showTagline = router.pathname === '/',
 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
-  const [loginOpen, setLoginOpen] = useState(false),;
-  const isMobile = useIsMobile(),;
-  const { t } = useTranslation(),;
-  const { user } = useAuth(),;
-  const isLoggedIn = useSelector((state: RootState,) => state && state.auth.isLoggedIn),;
-  const router = useRouter(),;
-  const showTagline = router && router.pathname === '/',;
-
-  // Messaging context (unread message count);
-  const { unreadCount } = useMessaging(),;
-
-  const openLoginModal = (returnToPath?: string,) => {;
-    // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu);
-    // using router && router.push with shallow:true before this function is called.;
-    // This function's main job is just to open the modal.;
-    // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.;
-    setLoginOpen(true);
-  },;
-
+  const showTagline = router.pathname === '/'
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [loginOpen, setLoginOpen] = useState(false)
+  const isMobile = useIsMobile()
+  const { t } = useTranslation()
+  const { user } = useAuth()
+  const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn)
+  const router = useRouter()
+  const showTagline = router.pathname === '/'
+  // Messaging context (unread message count)
+  const { unreadCount } = useMessaging()
+  const openLoginModal = (returnToPath?: string,) => {
+    // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)
+    // using router.push with shallow:true before this function is called.
+    // This function's main job is just to open the modal.
+    // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
+    setLoginOpen(true)
+  }
   return (
-    <>;
+    <>
       <header
+        style={{ "--nav-height": "64px" } as React.CSSProperties}
         )}
       >
         <div className="container flex h-16 items-center px-4 sm:px-6">
@@ -47,6 +52,17 @@ import React from 'react';
               ) : (
                 <Menu className="block h-6 w-6" aria-hidden="true" />
               )}
+
+
+
+                aria-label={t('auth.login')}
+                data-testid="login-link"
+                onClick={(e) => {
+                aria-label={t('auth.login')}
+                data-testid="login-link"
+                onClick={(e) => {
+                  e.preventDefault(),
+                  // For the main login link, we might not have a specific returnTo beyond current page,
                   // or we could default to dashboard.
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
 
@@ -76,6 +92,22 @@ import React from 'react';
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
 
             <MobileMenu
+            aria-hidden="true"
+          />
+          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu 
+              unreadCount = {unreadCount,}
+              onClose = {() => setMobileMenuOpen(false),}
+              openLoginModal = {openLoginModal,}
+            />
+          </div>
+        </div>
+              unreadCount={unreadCount} 
+              onClose={() => setMobileMenuOpen(false)}
+              openLoginModal={openLoginModal}
+            />;
+          </div>;
+        </div>;
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
@@ -240,22 +272,6 @@ import React from 'react';
               </h1>;
             </Link>;
           </div>;
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex ml-8 space-x-8">;
-            {navigation && navigation.map((item) => (;
-              <Link
-                key={item && item.name}
-                to={item && item.href}
-                className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">;
-                {item && item.name}
-              </Link>;
-            ))}
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex ml-8 space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
               <button
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                 onMouseEnter={() => setServicesDropdownOpen(true)}
@@ -315,6 +331,9 @@ import React from 'react';
           {/* Right side actions */}
           <div className="ml - 6 flex items - center space - x-4">;
             {/* Notifications */}
+
+}
+
                   to={item.href}
                   className="text - slate - 300 hover:text - cyan - 400 block px - 3 py - 2 text - base font - medium transition - colors duration - 200";
                   on_click={() => setMobileMenuOpen (false)}
@@ -444,4 +463,10 @@ import React from 'react';
     </>;
   );
 }
+;
+
+;
+      )}
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
 ;

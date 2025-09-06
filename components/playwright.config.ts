@@ -5,11 +5,11 @@
 export const Playwright.config = () => {
   // Implementation here
   return null;
-
-
 };
 reporter: [ ['list'], ['json', {
-  outputFile: playwright-logs/test-results.json'
+
+  outputFile: playwright-logs/test-results && results.json' 
+
 }], ['html', {
   outputFolder: playwright-logs/html-report', open: never'
 }]];
@@ -35,6 +35,3 @@ reporter: [ ['list'], ['json', {
   //   {
   //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
   //   {
-
-
-

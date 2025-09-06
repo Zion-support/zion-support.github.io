@@ -22,8 +22,6 @@ export function AddMilestoneForm({;
   projectScope = '';
   projectStartDate = '';
   projectEndDate = null;
-
-
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -70,6 +68,7 @@ export function AddMilestoneForm({;
   projectScope = '',;
   projectStartDate = '',;
   projectEndDate = null,;
+
   projectType = 'Other';
 }: AddMilestoneFormProps) {;
   const form = useForm<MilestoneFormValues>({;
@@ -89,8 +88,6 @@ export function AddMilestoneForm({;
 
   },
 
-
-
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
       title: milestone.title
@@ -98,7 +95,6 @@ export function AddMilestoneForm({;
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
-
   return (
     <div className="space-y-6">;
       {/* AI Milestone Generator */}
@@ -207,6 +203,10 @@ if ( {) {
             control={form.control}
             name="title";
             render={({ field }) => (
+                <FormControl>;
+                  <Input placeholder="Milestone title" {...field} />;
+                </FormControl>;
+                <FormMessage />;
           <FormField
             control={form && form.control}
             name="description"
@@ -230,6 +230,9 @@ if ( {) {
                     placeholder="Describe what needs to be delivered";
                     className="min - h-[100px]";
                     {...field}
+                  />;
+                </FormControl>;
+                <FormMessage />;
             <FormField
               control={form && form.control}
               name="due_date"
@@ -256,6 +259,10 @@ if ( {) {
                     <PopoverContent className="w-auto p-0" align="start">;
                       <Calendar
                         mode="single"
+                      />;
+                    </PopoverContent>;
+                  </Popover>;
+                  <FormMessage />;
             <FormField
               control={form && form.control}
               name="amount"
@@ -283,6 +290,9 @@ if ( {) {
                       step="0.01";
                       placeholder="0.00";
                       {...field}
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
               <Button
                 type="button"
                 variant="outline"
@@ -301,5 +311,3 @@ if ( {) {
           </div>;
         </form>;
       </Form>;
-    </div>;
-}

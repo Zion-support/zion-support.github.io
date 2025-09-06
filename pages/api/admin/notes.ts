@@ -72,15 +72,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } else {
       res.setHeader('Allow', 'GET, POST');
       res.status(405).end('Method Not Allowed');
-    }
-    if (!targetId || Array.isArray(targetId)) {
-      return res.status(400).json({ error: 'Invalid targetId' });
-    }
-    const notes = notesStore
-      .filter((n) => n.targetType === targetType && n.targetId === targetId)
-      .sort((a, b) => b.createdAt - a.createdAt);
-    return res.status(200).json({ notes });
-  }
 
     const authorId = String(req.headers['x-admin-user'] || 'admin');
     const { targetType, targetId, text } = req.body || {};
@@ -98,7 +89,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     notesStore.push(note);
     return res.status(200).json({ ok: true, note });
   }
-
-
 
 

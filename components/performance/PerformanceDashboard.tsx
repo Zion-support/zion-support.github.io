@@ -9,43 +9,6 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   timeToInteractive: number;
 }
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    if (typeof window !== "undefined" && "performance" in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const newMetrics: Partial<PerformanceMetrics> = {}
-        entries.forEach((entry) => {
-          if (entry.entryType === "paint") {
-            if (entry.name === "first-contentful-paint") {
-              newMetrics.firstContentfulPaint = entry.startTime;
-            }
-          } else if (entry.entryType === "largest-contentful-paint") {
-            newMetrics.largestContentfulPaint = entry.startTime;
-          } else if (entry.entryType === "layout-shift") {
-            newMetrics.cumulativeLayoutShift =
-              (newMetrics.cumulativeLayoutShift |0) + (entry as any).value;
-          }
-        });
-        if (Object.keys(newMetrics).length > 0) {
-          setMetrics(
-            (prev) => ({ ...prev, ...newMetrics }) as PerformanceMetrics
-          );
-        }
-      });
-      observer.observe({
-        entryTypes: ["paint", "largest-contentful-paint", "layout-shift"]
-      });
-      // Get load time
-      window.addEventListener("load", () => {
-        const loadTime =
-          performance.timing.loadEventEnd - performance.timing.navigationStart;
-        setMetrics((prev) => ({ ...prev, loadTime }) as PerformanceMetrics);
-      });
-      return () => observer.disconnect();
-    }
-  }, []);
     return "text-red-600";
   }
   if (!metrics) return null;
@@ -170,7 +133,7 @@ if (return null) {
         on_click={() => setIsVisible (!is_visible)}
         className="bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg hover:bg - blue - 700 transition - colors";
       >;
-         Performance;
+        📊 Performance;
       </button>;
       {is_visible && (
         <div className="absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p - 6 w - 80 border">;

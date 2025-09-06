@@ -25,8 +25,6 @@ const Button = forward_ref < HTMLButtonElement ButtonProps>(({
         {content}
       </Link>);
   }
-
-
 ;
 
 

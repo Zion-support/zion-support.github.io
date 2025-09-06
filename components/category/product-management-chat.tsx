@@ -20,7 +20,3 @@ import type { NextPage } from 'next';
   );
 };
 export default ProductManagementChat;
-
-
-export default ProductManagementChat;
-

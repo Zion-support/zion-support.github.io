@@ -25,20 +25,6 @@ export type EnhancedLayoutProps = {
       </header>;
       <main id='main' className='flex-1 container mx-auto px-4 py-6'>;
         {children}
-      </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
-      <footer>
-        <EnhancedFooter />
-      </footer>
-    </div>
-);
-}
-}
-  );
-}
-}
-  );
-
-  return (
 export type EnhancedLayoutProps = {
   children: React.ReactNode;}
 export type EnhancedLayoutProps = {
@@ -72,7 +58,6 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
 }
   );
 }
-
     <div className="min - h-screen flex flex - col">;
         <EnhancedNavigation />;
         <LanguageSwitchPrompt />;
@@ -87,12 +72,6 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
 }
 }
   );
-export type EnhancedLayoutProps = {
-  children: React.ReactNode;}
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
 }
 
 

@@ -491,8 +491,6 @@ export default function InnovativeServicesShowcase2036() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           >
 
 
@@ -544,13 +542,21 @@ export default function InnovativeServicesShowcase2036() {
           </motion.div>
         </div>
       </section>
+          >
 
 
-          >
-            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
-              Revolutionary Services
-            </h2>
-          >
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
+              Revolutionary Services;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Discover our comprehensive portfolio of innovative micro SAAS;
+              services, AI platforms, and cutting-edge technology solutions;
+              designed for the future.            </p>;
+          </motion && motion.div>;
+
+
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Revolutionary Services
             </h2>
@@ -653,12 +659,11 @@ export default function InnovativeServicesShowcase2036() {
                   onChange={(e) => setSortBy(e.target.value as any)}
                   className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
                 >
-                  <option value='name'>Sort by Name</option>
-                  <option value='price'>Sort by Price</option>
-                  <option value='rating'>Sort by Rating</option>
-                  <option value='marketSize'>Sort by Market Size</option>
+                  <option value="name">Sort by Name</option>
+                  <option value="price">Sort by Price</option>
+                  <option value="rating">Sort by Rating</option>
+                  <option value="marketSize">Sort by Market Size</option>
                 </select>
-                  >
 
 
                   <button
@@ -818,78 +823,6 @@ export default function InnovativeServicesShowcase2036() {
             }          >;
             {sorted_services.map ((service, index) => (
               <motion.div;
-            {/* Category Filters */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <div className="flex flex-wrap gap-3 justify-center">
-              {categories.map((category) => (
-                <button
-                  key={category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onClick={() => setSelectedCategory(category)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${;
-                    selectedCategory === category;
-                      ? 'bg-cyan-500 text-black border-cyan-500';
-                      : 'bg-gray-800/50 text-gray-300 border-gray-700 hover:border-cyan-400 hover:text-cyan-400';
-                  }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                >
-                  {categoryIcons[category] || <Star className="w-4 h-4" />  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  {category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </button>;
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </motion.div>;
-          {/* Services Grid */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <motion.div;
-            variants={containerVariants  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          >;
-            {sortedServices.map((service, index) => (;
-              <motion.div;
                 key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -935,8 +868,6 @@ export default function InnovativeServicesShowcase2036() {
                     <p className="text-cyan-400 font-medium mb-2">{service.tagline}</p>
                     <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
                   </div>
-                    {/* Features */}
-
 
                     {/* Features */}
                   {/* Service Details */  } catch (error) {
@@ -986,9 +917,6 @@ export default function InnovativeServicesShowcase2036() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
                     <div>
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                       <div className="grid grid-cols-1 gap-1">
@@ -1006,8 +934,6 @@ export default function InnovativeServicesShowcase2036() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                         {service.features.length > 4 && (
                           <div className="text-xs text-gray-500 mt-1">
                             +{service.features.length - 4} more features
@@ -1034,7 +960,6 @@ export default function InnovativeServicesShowcase2036() {
                         <h4 className="text-sm font-semibold text-gray-300 mb-2">Competitive Advantage:</h4>
                         <p className="text-sm text-gray-400">{service.competitiveAdvantage}</p>
                       </div>
-
                       <a
                         href={service.link  } catch (error) {
     console.error("Error:", error);
@@ -1158,8 +1083,6 @@ export default function InnovativeServicesShowcase2036() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?

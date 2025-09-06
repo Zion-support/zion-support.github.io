@@ -20,6 +20,10 @@ export type AmlCheckResult = {
 };
 
 export type AmlCheckResult = {;
+export type WatchlistMatch = {
+  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
+  name: string;
+export type AmlCheckResult = {
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checked_at: string; // ISO;
@@ -33,29 +37,11 @@ export interface AmlProvider {;
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
 
 }
+export interface AmlProvider {
+  check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult>;
+  check_business (params: { business_name: string, country: string }): Promise < AmlResult>;
+}
 class MockAmlProvider implements AmlProvider {
-  async checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult> {
-    // Mock implementation - in production, this would call a real AML service
-    const name = params.fullLegalName.toLowerCase();
-    if (name.includes('test') |name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test name detected' } }
-    }
-    return { status: 'clear' };
-  }
-
-  async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
-    // Mock implementation - in production, this would call a real AML service
-    const name = params && params.businessName.toLowerCase();
-    if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test business name detected' } };
-    }
-    return { status: 'clear' };
-  }
-}
-
-export function getAmlProvider(): AmlProvider {
-  return provider;  return new MockAmlProvider();
-}
 // AML (Anti-Money Laundering) utilities
 export interface AmlCheck {
   id: string;

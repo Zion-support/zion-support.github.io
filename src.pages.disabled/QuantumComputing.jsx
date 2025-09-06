@@ -31,9 +31,6 @@ export default function QuantumComputing({ }: QuantumComputingProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
 :src.pages.disabled/QuantumComputing.jsx
 }
 }
@@ -44,3 +41,12 @@ export default function QuantumComputing({ }: QuantumComputingProps) {
 
 
 
+
+
+
+:src.pages.disabled/QuantumComputing.jsx
+}
+}
+}
+}
+}

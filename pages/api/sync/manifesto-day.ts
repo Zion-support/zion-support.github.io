@@ -57,33 +57,6 @@ export default async function handler(req, res) {
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" }),
   const version = nextVersionFor(state, milestoneId),
   const event = {
-
-      id: milestoneId,
-      subjectId: milestoneId,
-import type { NextApiRequest, NextApiResponse } from './next';
-import {
-  read_state,
-  write_state,
-  upsert_event,
-} from '../../../utils / sync / storage';
-import { sign_payload  } from '../../../utils / sync / signature';
-import axios from './axios';
-import { v4, as, uuidv4  } from './uuid';
-import { nextVersionFor  } from '../../../utils / sync / versioning';
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (
-    return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
-}
-  const state = read_state ();
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (403).json ({ error: "Sync disabled for this instance" });
   }
   const { milestone_id, title, timestamp } = req.body as {
     milestone_id: string;
@@ -169,7 +142,3 @@ if (headers["x - zion - signature"] = sig) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
-}

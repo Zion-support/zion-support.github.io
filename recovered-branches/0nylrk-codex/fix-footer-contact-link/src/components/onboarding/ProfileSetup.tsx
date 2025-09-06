@@ -2,7 +2,6 @@
 
 
 
-
 import {useState} from "react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -12,9 +11,6 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-
-
-
 import { useState } from "react",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -50,16 +46,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       bio: ""
       headline: ""}})
   const getTypeLabel = () => {
-      case "talent":;
-        return "Talent";
-      case "client":;
-        return "Client";
-      default:;
-        return "User";
-    }
-  }
-
-
     switch (userType) {
       case "serviceProvider": return "Service Provider",
 
@@ -89,6 +75,14 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                       placeholder="Your full name"
                       className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                       {...field}
+      case "talent":;
+        return "Talent";
+      case "client":;
+        return "Client";
+      default:;
+        return "User";
+    }
+  }
           <FormField
             control={form && form.control}
             name="displayName"
@@ -106,56 +100,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                   </div>;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
-
-
-
             )}
-
-          />;
-          <FormField
-            control={form && form.control}
-            name="headline"
-              </FormItem>;            )}
-          />;
-          ;
-          <FormField;
-            control={form.control}
-            name="headline";
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>;
-                <FormControl>;
-                  <div className="relative">;
-          />;
-          <FormField
-            control={form && form.control}
-            name="bio"
-                    <Input;
-                      placeholder={`e.g., ${;
-                        userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :;
-                        userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :;
-                        "Creative Director at XYZ Studios";
-                      }`}
-                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
-                      {...field}
-                    />;
-                    <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
-                  </div>;
-                </FormControl>;
-                <FormMessage className="text-red-400" />;
-              </FormItem>;            )}
-          />;
-          ;
-          <FormField;
-            control={form.control}
-            name="bio";
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel className="text-zion-slate-light">Bio</FormLabel>;
-                <FormControl>;
-              </FormItem>;
-            )}
-          />
           <FormField
             control={form && form.control}
             name="headline"
@@ -179,6 +124,10 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                     <Input;
                       placeholder="Your full name";
                       className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
+                      }`}
+                      className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
+                      {...field}
+                    />;
           <FormField
             control={form && form.control}
             name="bio"
@@ -194,25 +143,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                     }`}
                     className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]";
                     {...field}
-}
-                  />;
-                </FormControl>;
-
-          />;
-
-          <Button
-            type="submit"
-            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;
-
-
-
-                <FormMessage className="text - red - 400" />;
-              </FormItem>)}
-          />;
-          <Button;
-            type="submit";
-            className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white";
-          >;
             Complete Profile;
           </Button>;
         </form>;
@@ -222,5 +152,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 
 
 }
+;
     </div>);
 }

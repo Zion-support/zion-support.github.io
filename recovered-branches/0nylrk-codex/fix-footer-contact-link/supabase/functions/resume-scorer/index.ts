@@ -28,7 +28,6 @@ serve(async (req) => {
   if (!openAiKey) {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
-
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
@@ -36,9 +35,6 @@ serve(async (req) => {
   if (!openAiKey) {;
     return new Response(;
       JSON.stringify({ error: "OpenAI API key is not configured" }),;
-
-
-
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
@@ -55,25 +51,54 @@ serve(async (req) => {
     const { data: application, error: appError } = await supabase
       .from("job_applications")
       .select(`
+import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
+const cors_headers = {
+  "Access - Control - Allow - Origin": "*",
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
+;
+serve (async (req) => {
+  // Handle CORS preflight requests;
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response (null, { headers: cors_headers });
+  }
+  const supabase_url = Deno.env.get ("SUPABASE_URL") || "";
+  const supabaseAnonKey = Deno.env.get ("SUPABASE_ANON_KEY") || "";
+  const openAiKey = Deno.env.get ("OPENAI_API_KEY") || "";
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response (
+      JSON.stringify ({ error: "OpenAI API key is not configured" });
+      { status: 500, headers: { ...cors_headers, "Content - Type": "application / json" } }
+    );
+  }
+  const supabase = create_client (supabase_url, supabaseAnonKey);
+;
+  try {
+    const { application_id } = await req.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error ("Application ID is required");
+    }
+    // 1. Fetch the application with job details and resume content;
+    const { data: application, error: app_error } = await supabase;
+      .from ("job_applications");
+      .select (`;
         id;
         job_id;
         talent_id;
         cover_letter;
         resume_id;
-
-
-      .single(),
-
-
-
-    if (appError) {
-      throw new Error(`Failed to fetch application: ${appError && appError.message}`)
-    }
-    if (!application) {
-      throw new Error("Application not found")
-    }
-    // 2. Fetch resume details if a resume_id is provided
-    if (application.resume_id) {
       const { data: resume, error: resumeError } = await supabase
         .from("talent_resumes")
         .select(`
@@ -91,14 +116,13 @@ serve(async (req) => {
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
         
         resumeSkills = resume && resume.resume_skills.map((skill: any) => skill && skill.name)
+          ${resume && resume.resume_skills.map((skill: any) => skill && skill.name).join(", ")}
+        `;
       }
     }
     // 3. If no resume content, use talent profile and cover letter
     if (!resumeContent) {
       resumeContent = `
-        Bio: ${application.talent_profile?.bio |""}
-        Cover Letter: ${application.cover_letter |""}
-        Skills: ${application.talent_profile?.skills?.join(", ") |""}
 
         Bio: ${application && application.talent_profile?.bio || ""}
         Cover Letter: ${application && application.cover_letter || ""}
@@ -112,7 +136,6 @@ serve(async (req) => {
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `;
       resumeSkills = application.talent_profile?.skills || []
-
     );
   }
 ;
@@ -194,9 +217,6 @@ serve(async (req) => {
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `,;
       resumeSkills = application.talent_profile?.skills || [];
-
-
-
     }
 
     // 4. Prepare job details
@@ -208,6 +228,8 @@ serve(async (req) => {
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
+    }
+    // 4. Prepare job details
         model: "gpt-4o-mini";
         messages: [
           {
@@ -332,6 +354,17 @@ serve(async (req) => {
       matchResult = JSON && JSON.parse(content);
       // Validate required fields
       if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
+                }
+                "education_match": {
+                  "score": 65;
+                  "analysis": "Candidate has relevant degree.";
+                }
+              }
+          }
+        ];
+    let matchResult;
+    try {
+      // Extract JSON from the response
         throw new Error("Invalid response format")
       }
     } catch (error) {
@@ -358,18 +391,17 @@ serve(async (req) => {
         status: 200
         headers: { ...corsHeaders, "Content-Type": "application/json" }
       }
+    )
+  } catch (error) {
+    console.error("Error in resume-scorer function:", error),
+    return new Response(
+      JSON.stringify({ error: error.message });
+      {
+        status: 200,
+        headers: { ...cors_headers, "Content - Type": "application / json" }
+      }
     );
   } catch (error) {
-
-      JSON && JSON.stringify({ error: error && error.message });
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
-
-      JSON.stringify({ error: error.message }),
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
 ;
     const aiResult = await openAIResponse.json(),;
     let matchResult,;
@@ -421,9 +453,13 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
-
+    console.error ("Error in resume - scorer function:", error);
+    return new Response (
+      JSON.stringify ({ error: error.message });
+      {
+        status: 500,
+        headers: { ...cors_headers, "Content - Type": "application / json" }
+      }
+    );
   }
 });
-
-;
-

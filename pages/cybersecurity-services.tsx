@@ -106,8 +106,6 @@ import {;
 } from 'lucide-react',;
 import Layout from '../components/layout/Layout';
 import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
-
-export default function CybersecurityServices() {
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -198,7 +196,6 @@ const benefits = [;
     title: 'Compliance Automation',;
     description: 'Automated compliance reporting and audit preparation',;
     icon: BarChart3,;
-export default function CybersecurityServices() {
     color: 'text-purple-400',;
   },];
 
@@ -213,7 +210,6 @@ export default function CybersecurityServices() {;
         <meta
           name='description'
           content='Protect your business with our advanced cybersecurity services. Zero trust security, AI threat intelligence, cloud security posture, and comprehensive protection solutions.'
-        />;
         <meta
           name='keywords'
           content='cybersecurity, zero trust security, AI threat intelligence, cloud security, DevSecOps, IoT security, Zion Tech Group'
@@ -236,8 +232,11 @@ export default function CybersecurityServices() {;
         />;
         <meta
           property='og:image'
-          content='https://ziontechgroup.com/og-image.jpg'
-        />
+
+          content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
+        />;
+
+
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />;
         <meta
@@ -250,8 +249,6 @@ export default function CybersecurityServices() {;
         />;
         <meta
           name='twitter:image'
-          content='https://ziontechgroup.com/twitter-image.jpg'
-        />
         {/* Contact Information */}
         <meta name='contact:mobile' content='+1 302 464 0950' />;
         <meta name='contact:email' content='kleber@ziontechgroup && ziontechgroup.com' />;
@@ -266,22 +263,19 @@ export default function CybersecurityServices() {;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-
-
-
           >
-            <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8'>
-              <Shield className='w-5 h-5 text-red-400' />
-              <span className='text-red-400 font-medium'>
-                Cybersecurity Services
-              </span>
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8">
+              <Shield className="w-5 h-5 text-red-400" />
+              <span className="text-red-400 font-medium">Cybersecurity Services</span>
             </div>
-
-
+            <h1 className='text-5xl md:text-7xl font-bold mb-6 neon-text text-white'>
+              <span className='bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent'>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
+              <span className="bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
                 Next-Generation
               </span>
               <br />
-              <span className='text-white'>Cybersecurity</span>
+              <span className="text-white">Cybersecurity</span>
             </h1>
 
 
@@ -306,8 +300,6 @@ export default function CybersecurityServices() {;
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
-
-
                   <span>Get Protected</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -336,7 +328,25 @@ export default function CybersecurityServices() {;
           <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
         </div>
       </section>
-
+      {/* Service Highlights */}
+      <section
+        id='services'
+        className='py-20 bg-gradient-to-b from-black to-gray-900'
+      >
+        <div className='container mx-auto px-4'>          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+      {/* Service Highlights */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="container mx-auto px-4">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -345,12 +355,6 @@ export default function CybersecurityServices() {;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Cybersecurity <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Services</span>
             </h2>
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Comprehensive security solutions that protect your digital assets
-              and ensure business continuity
-            </p>
-          </motion.div>
-              <motion.div
               <motion.div
 
               <span className='bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -529,11 +533,10 @@ export default function CybersecurityServices() {;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Our Security</span>
             </h2>
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced protection that keeps your business safe and compliant
             </p>
           </motion.div>
-              <motion.div
               <motion.div
 
 
@@ -584,18 +587,21 @@ export default function CybersecurityServices() {;
 
 
                   <span>Start Your Security Journey</span>
-                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
-
-
+              <Link
+                href='/comprehensive-services-showcase-2025'
+                className='group'
+              >
+                <button className='border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2'>
+              <Link href="/comprehensive-services-showcase-2025" className="group">
+                <button className="border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2">
                   <span>View All Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
             </div>
-
-
               <div>
                 <div className="text-3xl font-bold text-red-400 mb-2">24/7</div>
                 <div className="text-gray-300">Security Monitoring</div>
@@ -652,8 +658,6 @@ export default function CybersecurityServices() {;
               with our advanced cybersecurity solutions and stay one step ahead;
               of evolving threats.;
             </p>;
-  )
-}
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
               <Link href='/contact' className='group'>;
                 <button className='bg - gradient - to - r from - red - 500 to - pink - 600 hover:from - red - 600 hover:to - pink - 700 text - white px - 8 py - 4 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center space - x-2'>;
@@ -685,49 +689,9 @@ export default function CybersecurityServices() {;
               <div>;
                 <div className='text - 3xl font - bold text - red - 400 mb - 2'>450%</div>;
                 <div className='text - gray - 300'>ROI Improvement</div>              </div>;
-
-  )
-            className="max-w-4xl mx-auto";
-          >;
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
-              Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-              Don't wait for a breach to happen. Protect your business today with our advanced cybersecurity solutions;
-              and stay one step ahead of evolving threats.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
-              <Link href="/contact" className="group">;
-                <button className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">;
-                  <span>Start Your Security Journey</span>;
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
-                </button>;
-              </Link>;
-              <Link href="/comprehensive-services-showcase-2025" className="group">;
-                <button className="border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2">;
-                  <span>View All Services</span>;
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
-                </button>;
-              </Link>;
-            </div>;
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
-              <div>;
-                <div className="text-3xl font-bold text-red-400 mb-2">24/7</div>;
-                <div className="text-gray-300">Security Monitoring</div>;
-              </div>;
-              <div>;
-                <div className="text-3xl font-bold text-red-400 mb-2">99.99%</div>;
-                <div className="text-gray-300">Threat Detection</div>;
-              </div>;
-              <div>;
-                <div className="text-3xl font-bold text-red-400 mb-2">450%</div>;
-                <div className="text-gray-300">ROI Improvement</div>;
-              </div>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
-    </Layout>);
-;
 
 

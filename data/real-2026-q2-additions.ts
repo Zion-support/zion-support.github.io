@@ -15,16 +15,6 @@ export const real2026Q2Additions = [
     price: '$2, 500',
     period: '/month',
 
-    trial_days: 14,
-    setup_time: 'Fast',
-    market_position: 'Strong enterprise traction with compliance - led buyers',
-    roi: 'Reduce audit prep by 60% and non - compliance risk by 40%',
-    link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub',
-
-  },
-export const real2026Q2Additions = [
-  {
-
 export const real2026Q2Additions = [
   {
     id: 'ai-governance-compliance-hub'
@@ -107,28 +97,7 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
-
-    link: 'https://ziontechgroup.com / services / ai - synthetic - data - factory',
-
-  },
   {
-
-    id: 'ecommerce - returns - orchestrator',
-    name: 'E‑commerce Returns Orchestrator',
-    category: 'Developer Tools',
-    tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',
-    description:;
-      'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug - and - play with major commerce platforms.',
-    features: [;
-      'Return portal widgets and hosted flows',
-      'Policy rules engine with A / B tests',
-      'Carrier label and pickup automation',
-      'Refund / credit / store - credit workflows',
-      'Disposition tracking and warehouse notifications',
-      'Analytics: reasons, preventable returns, CX scores',
-    ],
-    use_cases: [;
-
       'DTC brands returns automation',
       'Marketplace return SLAs',
       'Reduce WISMO support',
@@ -141,34 +110,6 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Ideal for mid - market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
-
-    link: 'https://ziontechgroup.com / services / ecommerce - returns - orchestrator',
-
-  },
-  {
-
-    id: 'ai - analytics - observability - kit',
-    name: 'AI Analytics Observability Kit',
-    category: 'Observability',
-    tagline:;
-      'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',
-    description:;
-      'Drop - in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto - rollbacks.',
-    features: [;
-      'Token and cost telemetry with budgets',
-      'Hallucination detectors and blocklists',
-      'Content safety checks and policy labels',
-      'Trace viewer with spans and embeddings',
-      'Regression tests and golden prompts',
-      'Quality scorecards and SLA alerts',
-    ],
-    use_cases: [;
-      'GenAI product analytics',
-      'Model regression monitoring',
-      'Cost governance',
-    ],
-    integrations: [;
-
       'OpenAI',
       'Azure OpenAI',
       'Vertex AI',
@@ -183,28 +124,6 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Hot category with fast adoption in AI apps',
     roi: 'Cut token spend by 25% and improve response quality by 12%',
-
-    link: 'https://ziontechgroup.com / services / ai - analytics - observability - kit',
-
-  },
-  {
-
-    id: 'cloud - cost - anomaly - guard',
-    name: 'Cloud Cost Anomaly Guard',
-    category: 'Cloud & FinOps',
-    tagline:;
-      'Edge - detected anomalies, instant Slack alerts, and auto - remediation.',
-    description:;
-      'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.',
-    features: [;
-      'Real - time anomaly detection',
-      'Slack / Teams alerts and triage workflows',
-      'Automated remediation playbooks',
-      'Kubernetes cost allocation and showback',
-      'Tag hygiene and unused resource cleanup',
-    ],
-    use_cases: [;
-
       'FinOps guardrails',
       'Cost regression prevention',
       'Unit economics tracking',
@@ -217,27 +136,6 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Proven ROI for cloud - native teams',
     roi: 'Reduce cloud waste by 30% within 60 days',
-
-    link: 'https://ziontechgroup.com / services / cloud - cost - anomaly - guard',
-
-  },
-  {
-
-    id: 'secure - pdf - signing - api',
-    name: 'Secure PDF Signing API',
-    category: 'Developer Tools',
-    tagline: 'REST and SDKs for compliant e - signatures with audit trails.',
-    description:;
-      'A developer - first e - signature API with templates, bulk sends, webhooks, and long - term validation. SOC2 - ready with EU data residency.',
-    features: [;
-      'Signer authentication and KYC add - ons',
-      'Templates and merge fields',
-      'Bulk send and reminders',
-      'Webhooks and event callbacks',
-      'LTV and certificate validation',
-    ],
-    use_cases: [;
-
       'Contract workflows',
       'Internal approvals',
       'Customer onboarding',
@@ -246,32 +144,6 @@ export const real2026Q2Additions = [
     competitors: ['DocuSign API', 'HelloSign API'],
     price: '$149',
     period: '/month',
-
-    trial_days: 14,
-    setup_time: 'Fast',
-    market_position: 'SMB to mid - market developer teams',
-    roi: 'Accelerate time - to - sign by 50% and cut manual errors by 70%',
-    link: 'https://ziontechgroup.com / services / secure - pdf - signing - api',
-
-  },
-  {
-
-    id: 'status - slo - plus',
-    name: 'Status Pages + SLO Pro',
-    category: 'Quality & Monitoring',
-    tagline:;
-      'One - click status pages with SLOs, error budgets, and subscribers.',
-    description:;
-      'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.',
-    features: [;
-      'Multiple environments and components',
-      'SLOs and error budget burn tracking',
-      'Incident templates and RCAs',
-      'Subscriber notifications and webhooks',
-      'Custom domains and branding',
-    ],
-    use_cases: [;
-
       'Public trust for SaaS',
       'B2B vendor requirements',
       'Platform reliability communications',
@@ -284,30 +156,6 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Great value with SLO - first approach',
     roi: 'Improve uptime communications and reduce churn risk',
-
-    link: 'https://ziontechgroup.com / services / status - slo - plus',
-
-  },
-  {
-
-      'Third-party risk programs',
-    id: 'vendor - risk - automation - pro',
-    name: 'Vendor Risk Automation Pro',
-    category: 'Quality & Monitoring',
-    tagline:;
-      'Automate questionnaires, evidence collection, and continuous monitoring.',
-    description:;
-      'End - to - end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.',
-    features: [;
-      'Questionnaire templates and AI autofill',
-      'Evidence collection from SOC2 / SIG Lite',
-      'Continuous internet scanning and ratings',
-      'Findings, tasks, and remediation playbooks',
-      'Board - ready risk reports',
-    ],
-    use_cases: [;
-      'Third - party risk programs',
-
       'Sales security reviews',
       'Procurement diligence',
     ],
@@ -319,27 +167,6 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Sales - assisted and security - led adoption',
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
-
-    link: 'https://ziontechgroup.com / services / vendor - risk - automation - pro',
-
-  },
-  {
-
-    id: 'ai - docs - search - answers',
-    name: 'AI Docs Search & Answers',
-    category: 'Developer Tools',
-    tagline: 'Embeddings + RAG search over docs with answer extraction.',
-    description:;
-      'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop - in widget and APIs.',
-    features: [;
-      'Doc ingestion from URLs, PDFs, and repos',
-      'Embeddings index with incremental updates',
-      'RAG with citations and safety checks',
-      'Analytics: searches, deflections, gaps',
-      'Multi - tenant and SSO support',
-    ],
-    use_cases: [;
-
       'Developer portals',
       'Internal knowledge bases',
       'Customer docs',
@@ -348,15 +175,6 @@ export const real2026Q2Additions = [
     competitors: ['Algolia Answers', 'Vectara'],
     price: '$249',
     period: '/month',
-
-    trial_days: 14,
-    setup_time: 'Fast',
-    market_position: 'High adoption for self - serve docs',
-    roi: 'Reduce tickets by 30% and improve time - to - answer',
-    link: 'https://ziontechgroup.com / services / ai - docs - search - answers',
-
-  },
-  {
       'MSPs and IT providers',
       'Internal IT for SMBs',
       'BYOD governance',
@@ -392,9 +210,6 @@ export const real2026Q2Additions = [
     integrations: ['Azure ADOktaSlackServiceNow'];
     competitors: ['AteraNinjaOne'];
     price: '$4';
-  }
-];
-
     period: '/device/month';
     trialDays: 14;
     setupTime: 'Fast';
@@ -404,12 +219,6 @@ export const real2026Q2Additions = [
   }
 ];
 
-    period: '/device / month';
-    trial_days: 14;
-    setup_time: 'Fast';
-    market_position: 'Cost - effective RMM for partners and IT teams';
-    roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',
-    link: 'https://ziontechgroup.com / services / msp - remote - device - ops';
 export const real2026Q2Additions = [;
   {;
     id: 'ai-governance-compliance-hub',;
@@ -614,6 +423,21 @@ export const real2026Q2Additions = [;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
   }
 ];
+  }
+];
+
+    period: '/device/month';
+    trialDays: 14;
+    setupTime: 'Fast';
+    marketPosition: 'Cost-effective RMM for partners and IT teams';
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
+    period: '/device / month';
+    trial_days: 14;
+    setup_time: 'Fast';
+    market_position: 'Cost - effective RMM for partners and IT teams';
+    roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',
+    link: 'https://ziontechgroup.com / services / msp - remote - device - ops';
 export const real2026Q2Additions = [;
   {;
     id: 'ai-governance-compliance-hub',;

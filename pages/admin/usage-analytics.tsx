@@ -1,5 +1,3 @@
-
-
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -44,8 +42,6 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 import DatePicker from 'react-datepicker';
-
-
 }
 
 function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
@@ -140,30 +136,31 @@ function LineChart() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
 }
-export default function UsageAnalytics() {
-  const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000))
-  const [end, setEnd] = useState<Date>(new Date())
-  const [userType, setUserType] = useState<string>('all')
-  const [loading, setLoading] = useState(false)
-  const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([])
-  const [events, setEvents] = useState<Datum[]>([])
-  const [line, setLine] = useState<{ date: string, value: number }[]>([])
-  const [funnel, setFunnel] = useState<Datum[]>([])
-  const refresh = useCallback(async () => {
-    setLoading(true)
-    try {
-      const params = new URLSearchParams({ start: start.toISOString(), end: end.toISOString(), userType })
-      const res = await fetch(`/api/admin/analytics/summary?${params.toString()}`)
-      const json = await res.json()
-      setPagesMostUsed(json.pagesMostUsed |[])
-      setEvents(json.events |[])
-      setLine(json.line |[])
-      setFunnel(json.funnel |[])
-      const params = new URLSearchParams({ start: start.toISOString(), end: end.toISOString(), userType });
+        </div>;
+      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export default function UsageAnalytics(req, res) {
+  try {
+  const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000));
+  const [end, setEnd] = useState<Date>(new Date());
+  const [userType, setUserType] = useState<string>('all');
+  const [loading, setLoading] = useState(false);
+  const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([]);
+  const [events, setEvents] = useState<Datum[]>([]);
+
+
       const res = await fetch(`/api/admin/analytics/summary?${params.toString()}`);
       const json = await res.json();
       setPagesMostUsed(json.pagesMostUsed || []);
@@ -174,11 +171,11 @@ export default function UsageAnalytics() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               </ul>
             </div>
           </div>
+
+
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900 lg:col-span-2">
             <div className="font-medium mb-2">Events Over Time</div>
             <LineChart data={line} />

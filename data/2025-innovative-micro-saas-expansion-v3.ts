@@ -28,12 +28,8 @@
     mobile: string;
     email: string;
     address: string;
-
-    website: string;
-  }
   customers: number;
   rating: number;
-
   reviews: number;
     {
       id: 'ai-business-intelligence-platform'

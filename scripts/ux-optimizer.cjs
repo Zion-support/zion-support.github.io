@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:scripts/ux-optimizer.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,6 +48,8 @@ const fs = require("fs");"const path = require("path");class UXOptimizer { const
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/ux-optimizer.cjs
+=======
+>>>>>>> origin/main
 const fs = require('fs')
 const path = require('path')
         console.log('⚡ Optimizing loading performance...')
@@ -55,6 +58,7 @@ const path = require('path')
         this.improvements.push('Accessibility improvements completed')
         console.log('� Optimizing mobile experience...')
         this.improvements.push('Mobile optimization completed')
+<<<<<<< HEAD
             "recommendations"
 =======
 <<<<<<<< HEAD:scripts/ux-optimizer.cjs
@@ -92,3 +96,5 @@ console.log('✅ UX optimization completed');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/ux-optimizer.cjs
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

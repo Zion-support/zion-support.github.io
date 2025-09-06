@@ -48,9 +48,6 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
                     <div className="font-medium">{a.title}</div>
                     <div className="text-xs opacity-70 mt-1">Last updated {new Date(a.updatedAt).toLocaleDateString()}</div>
                 </Link>
-  )
-}
-
 import Link from 'next / link';
 import {read_json} from '../../utils / fs_db';
 import type { HelpArticle } from '../../utils / support';

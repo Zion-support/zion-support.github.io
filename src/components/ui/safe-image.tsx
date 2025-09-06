@@ -1,3 +1,7 @@
+import { ImageIcon } from 'lucide-react'
+interface SafeImageProps {;
+import { ImageIcon } from 'lucide-react'
+interface SafeImageProps {;
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
 
@@ -90,7 +94,6 @@ export function SafeImage({
       setHasError(true)
     } else if (!hasError) {
       setHasError(true)
-import { ImageIcon } from 'lucide-react';
 
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
@@ -113,29 +116,14 @@ import { ImageIcon } from 'lucide-react';
         style={{ width, height }}
         role="img"
         aria-label={alt}
+
       >
       </div>
     )
   }
+
     />
   ); return (
-        aria-label = {alt,}>;
-        <ImageIcon className='w-6 h-6' />      </div>;
-    );
-  }
-
-
-    />;
-  );        aria-label={alt}
-      >;
-        <ImageIcon className="w-6 h-6" />;
-      </div>;
-    );
-  }
-
-
-    />;
-  );  return (
     <Image
       src = {currentSrc,}
       alt = {alt,}
@@ -146,3 +134,19 @@ import { ImageIcon } from 'lucide-react';
       priority = {priority,}
       // Add unoptimized as fallback for problematic images
       unoptimized = {hasError,}
+}
+    />;
+  );
+    <Image;
+      src={currentSrc}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+      onError={handleError}
+      priority={priority}
+      // Add unoptimized as fallback for problematic images;
+      unoptimized={hasError}
+    />;
+  );
+} ;

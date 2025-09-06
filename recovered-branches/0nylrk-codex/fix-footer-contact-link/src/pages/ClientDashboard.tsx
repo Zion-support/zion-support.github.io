@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -34,8 +33,6 @@ import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
-function ClientDashboardContent() {;
-
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
 
@@ -52,9 +49,6 @@ function ClientDashboardContent() {;
       setSelectedJobTitle(jobs[0].title);
     }
   }, [jobs, selectedJobId]);
-
-
-
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -128,27 +122,27 @@ function ClientDashboardContent() {
           </div>
           <div>
             <div className="sticky top-4 space-y-6">
-
-
-
               {/* Active Projects Card */}
-              <ActiveProjectsCard />
+              <ActiveProjectsCard />;
+
               {/* Upcoming Interviews Card */}
-              <UpcomingInterviewsCard />
+              <UpcomingInterviewsCard />;
+
               {/* AI Talent Suggestions */}
-              <div>
-                <h2 className="text-xl font-semibold mb-4 flex items-center">
-                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />
-                  AI Talent Suggestions
-                </h2>
-                {selectedJobId ? (
-                  <SuggestedTalents jobId={selectedJobId} />
-                ) : (
-                  <div className="bg-muted/30 border rounded-lg p-6 text-center">
-                    <p className="text-muted-foreground">
-                      Select a job to see AI-matched talent suggestions
-                    </p>
-                  </div>
+              <div>;
+                <h2 className="text-xl font-semibold mb-4 flex items-center">;
+                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />;
+                  AI Talent Suggestions;
+                </h2>;
+
+                {selectedJobId ? (;
+                  <SuggestedTalents jobId={selectedJobId} />;
+                ) : (;
+                  <div className="bg-muted/30 border rounded-lg p-6 text-center">;
+                    <p className="text-muted-foreground">;
+                      Select a job to see AI-matched talent suggestions;
+                    </p>;
+                  </div>;
                 )}
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';

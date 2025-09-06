@@ -13,5 +13,3 @@ export default function Sitemap({ }: SitemapProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-

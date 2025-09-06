@@ -1,4 +1,3 @@
-
 import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
 import { GradientHeading } from "./GradientHeading",
@@ -126,11 +125,6 @@ const trustedCompanies = [
                   {company.name}
                 </div>
               ) : (
-import { GradientHeading } from "./GradientHeading",;
-import { useState } from "react",;
-
-import {GradientHeading} from "./GradientHeading";
-import {useState} from "react";
 // Real company logos for trusted partners - with more reliable image URLs;
 const trustedCompanies = [;
   {;
@@ -159,7 +153,21 @@ const trustedCompanies = [;
               )}
             </div>;
           ))}
+        </div>
+        <div className="text-center mt-10">
+          <p className="text-zion-slate-light text-sm">And many more enterprises worldwide...</p>
+        </div>
+      </div>
+    </section>
+  )
 }
+}
+                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
+                  onError={() => handleImageError(company && company.name)}
+                />;
+              )}
+            </div>;
+          ))}
 import { GradientHeading } from './GradientHeading';
 import { useState } from './react';
 // Real company logos for trusted partners - with more reliable image URLs;

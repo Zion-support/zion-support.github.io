@@ -6,7 +6,6 @@ export default async function handler(
 ) {
   const { id } = req && req.query;
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
@@ -20,16 +19,23 @@ export default async function handler(
   if (typeof id !== "string")
     return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
-  if (req.method === "POST") {
+
+
+  if (req && req.method === "POST") {
     try {
       ensureAdmin(user);
     } catch (e: any) {
-      return res.status(e.statusCode |403).json({ error: "Forbidden" });
+      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
     }
     const dispute = await getDisputeById(id);
-    if (!dispute) return res.status($1).json({ $2 });
-    const { resolutionSummary, status } = req.body |{}
+    if (!dispute) return res && res.status($1).json({ $2 });
+    const { resolutionSummary, status } = req && req.body || {};
+
     const now = new Date().toISOString();
+
+    if (status && !["Resolved", "Under Review", "Open"].includes(status)) {
+      return res && res.status(400).json({ error: "Invalid status" });
+    }
     dispute.resolutionSummary = resolutionSummary |dispute.resolutionSummary;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

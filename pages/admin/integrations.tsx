@@ -1,5 +1,3 @@
-import { useEffect, useMemo, useState  } from 'react';
-import Head from 'next/head';
 
 
   id: string;
@@ -20,8 +18,6 @@ interface ConnectionMap {;
   [key: string]: boolean,;
 
 
-
-import { useEffect, useMemo, useState } from 'react';
 import React, { useState } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
@@ -48,22 +44,6 @@ export default function AdminIntegrationsPage() {
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
-    refresh();
-  }, []);
-  async function connect(providerId: string) {
-    setLoading(true)
-    try {
-      // Open mock oauth popup
-      window.open(
-        `/api/integrations/oauth/${providerId}/start`
-        'oauth'
-        'width=500,height=700'
-      );
-      await new Promise(r => setTimeout(r, 500));
-      await fetch('/api/integrations/connect', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ providerId, syncRules })
       });
       await refresh();
     } finally {;
@@ -201,14 +181,6 @@ export default function AdminIntegrationsPage() {
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
     return (
-
-  function RulesModal() {;
-    if (!selected) return null;
-    const provider = providers && providers.find(p => p && p.id === selected)!;
-    const isCrm = provider && provider.category === 'crm';
-    return (
-
-
                         }
                       />{' '}
                       Auto;
@@ -232,8 +204,6 @@ export default function AdminIntegrationsPage() {
                 <label className='flex items-center gap-2'>;
                   <input
                     type='checkbox'
-                    }
-                  />{' '}
               <code>
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
@@ -243,22 +213,9 @@ export default function AdminIntegrationsPage() {
         </section>
 
         </section>
-        <section>
-          <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
-          <ManualOverrideForm />
-        </section>
       </main>
       <RulesModal />
     </>
-
-        <section>;
-          <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />;
-        </section>;
-      </main>;
-      <RulesModal />;
-    </>;
-
-
   );
 function ManualOverrideForm() {;
   const [jobId, setJobId] = useState('');
@@ -346,7 +303,7 @@ function ManualOverrideForm() {
   return (
     <>;
       <Head>;
-        <title > Admin Integrations  Zion</title>;
+        <title > Admin Integrations • Zion</title>;
       </Head>;
       <main className='container mx - auto px - 4 py - 8'>;
         <h1 className='text - 2xl font - semibold mb - 2'>Integrations</h1>;
@@ -372,11 +329,11 @@ function ManualOverrideForm() {
           <div className='text - sm text - gray - 600'>Polling endpoints:</div>;
           <ul className='list - disc pl - 6 text - sm mt - 2'>;
             <li>;
-              New Zion Job Posted  GET{' '}
+              New Zion Job Posted → GET{' '}
               <code>/api / integrations / zapier / jobs - posted?since = TIMESTAMP</code>;
             </li>;
             <li>;
-              Talent Matched  GET{' '}
+              Talent Matched → GET{' '}
               <code>;
                 /api / integrations / zapier / talent - matched?since = TIMESTAMP;
               </code>;

@@ -2,7 +2,6 @@
 
 
 
-
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -132,12 +131,6 @@ export const MetadataManager: React.FC = () => {
       </Tabs>
     </div>
   )
-}
-
-
-
-
-
 },
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -184,6 +177,13 @@ export type AppMetadataValues = {;
               <MetadataForm form={androidForm} />;
               <ChangelogManager platform="android" />;
             </div>;
+    } catch (error) {
+      toast.error ("Failed to save metadata");
+      console.error (error);
+    } finally {
+      setIsSaving (false);
+    }
+  }
             </div>;
           </div>;
         </TabsContent>;

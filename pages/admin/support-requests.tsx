@@ -2,10 +2,6 @@
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
-
-import { GetServerSideProps } from 'next',;
-import { useState } from 'react',;
-import { readJson } from '../../utils/fsDb',;
 export const getServerSideProps: GetServerSideProps = async () => {
   const requests = readJson<any[]>('support/requests.json', [])
   return { props: { initialRequests: requests } }
@@ -66,6 +62,7 @@ export default function SupportRequests(req, res) {
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Support Requests</h1>
       <div className="grid gap-3">
+        {requests.length === 0 && <div className="opacity-70">No requests found.</div>}
         {requests.length === 0 && <div className="opacity-70">No requests found.</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

@@ -46,22 +46,6 @@ export interface ResumeTabProps {
   selectedResumeId?: string | null;
   onSelectResume?: (resume_id: string) => void;
   onResumeSelected?: (resume: ResumeOption) => void;
-
-export function ResumeTab(): any ({;
-  selectedResumeId,;
-  onSelectResume,;
-  onResumeSelected,;
-  onApply,;
-  isSubmitting = false,;
-}: ResumeTabProps) {;
-  const handleResumeSelected = (resume: ResumeOption) => {;
-    if (onResumeSelected) {;
-      onResumeSelected(resume);
-    }
-
-    if (onSelectResume) {;
-      onSelectResume(resume && resume.id);
-
     }
   }
 
@@ -75,8 +59,6 @@ export function ResumeTab(): any ({;
           >
             {isSubmitting ? "Submitting..." : "Submit Application"}
           </Button>
-
-
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
@@ -84,8 +66,12 @@ export function ResumeTab(): any ({;
           )}
         </div>;
       )}
-
-
+    </div>
+    </div>;
+          )}
+        </div>;
+      )}
+    </div>;
   );
   on_apply?: () => Promise < void>;
   is_submitting?: boolean;

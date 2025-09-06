@@ -1,4 +1,3 @@
-
   );
 }
   )
@@ -20,14 +19,12 @@ export function ContractHeader({ onCreateClick }: ContractHeaderProps) {;
       <Button size="lg" onClick={onCreateClick}>;
         Create New Contract;
       </Button>;
+    </div>;
   );
-
+  );
 import { Button  } from '@/components / ui / button';
 interface ContractHeaderProps {
   onCreateClick: () => void;
-}
-    </div>;
-  );
 }
 export /**
  * ContractHeader - Function description
@@ -50,3 +47,4 @@ function ContractHeader() {
 }
 
 
+}

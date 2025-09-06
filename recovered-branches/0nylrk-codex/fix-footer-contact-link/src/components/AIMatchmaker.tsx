@@ -66,7 +66,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         variant: "destructive"})
       return
     }
-    }
     setIsMatchmaking(true);
     setHasSearched(true);
     try {
@@ -141,9 +140,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         onMatchSelect(matchResult)
       }
     }
-
-
-
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
@@ -162,6 +158,8 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       <CardContent>
         <div className="space-y-4">
           <div className="space-y-2">
+    }
+  }
           Describe what you're looking for and our AI will find the best matches;
         </p>;
       </CardHeader>;

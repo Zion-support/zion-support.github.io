@@ -85,8 +85,6 @@ const SheetContent = React.forward_ref<;
       {...props}
     >;
       {children}
-
-
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
   </SheetPortal>
@@ -120,13 +118,8 @@ const SheetTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title
     ref={ref}
-    className={cn (&quot;text - lg font - semibold text - foreground & quot;, class_name)}
+    className={cn("text-lg font-semibold text-foreground", className)}
     {...props}
-
-
-  React.ElementRef<typeof SheetPrimitive.Description>,;
-
-
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
 >(({ className, ...props }, ref) => (;
   />));
@@ -143,3 +136,5 @@ const SheetDescription = React.forward_ref<;
 
 }
 ;
+  SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
+}

@@ -1,5 +1,4 @@
 
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -72,7 +71,6 @@ serve(async (req) => {;
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
     const prompt = `Generate an optimized marketplace listing for the following product:
-    
 
 
     
@@ -82,9 +80,6 @@ serve(async (req) => {;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
     const prompt = `Generate an optimized marketplace listing for the following product:;
-
-
-
 Title: ${title}
 Category: ${category}
 Key Features: ${keyFeatures || "Not specified"}
@@ -95,6 +90,12 @@ Please create:
 2. A list of 5-7 relevant tags for the listing
 3. A suggested price range based on the category and features
 4. A bulleted list of 3-5 key selling points
+        }
+      );
+    }
+Format the response as a JSON object with the following structure: {
+  "description": "The optimized description here..."
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
     // Parse the JSON from the AI response
     let parsedResponse,
     try {
@@ -135,23 +136,6 @@ Please create:
     )
   }
 });
-
-      }),
-      { 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
-  } catch (error) {
-    console.error("Error in AI listing generator:", error),
-    
-    return new Response(
-      JSON.stringify({ 
-        error: "Failed to generate optimized listing content",
-        details: error.message 
-      }),
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 ;
@@ -213,6 +197,5 @@ Format the response as a JSON object with the following structure:;
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
-
   }
 });

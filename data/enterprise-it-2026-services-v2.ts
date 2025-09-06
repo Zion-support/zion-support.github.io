@@ -2,6 +2,8 @@ export interface EnterpriseIt2026ServiceV2 {
 
 export interface EnterpriseIt2026ServiceV2 {;
 
+export interface EnterpriseIt2026ServiceV2 {
+
   id: string;
   name: string;
   tagline: string;
@@ -32,9 +34,6 @@ export interface EnterpriseIt2026ServiceV2 {;
     mobile: string;
     email: string;
     address: string;
-
-    website: string;
-  }
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -56,70 +55,6 @@ export interface EnterpriseIT2026ServiceV2 {
   rating: number,
   reviews: number
 }
-    tagline: 'Never trust, always verify - comprehensive zero trust security',
-    price: '$1,199',
-    period: '/month',
-    description:
-      'Advanced zero trust network architecture platform that implements comprehensive security controls and continuous verification. Perfect for enterprises, government agencies, and organizations requiring maximum security.',
-      'Identity verification',
-      'Device trust scoring',
-      'Continuous monitoring',
-      'Micro-segmentation',
-      'Least privilege access',
-      'Real-time threat detection',
-      'Compliance frameworks',
-      'Advanced analytics',
-      'API for integration',
-      'Enterprise deployment',
-    ],
-    popular: true,
-    icon: '',
-    color: 'from-red-600 to-orange-700',
-    textColor: 'text-red-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-network-architecture',
-    marketPosition:
-      'Competitive with Palo Alto Networks ($1000+/month), Cisco ($800+/month), and Fortinet ($600+/month). Our advantage: Zero trust focus, better pricing, and comprehensive security features.',
-    targetAudience:
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Fortune 500 companies',
-    trialDays: 21,
-    setupTime: '2 weeks',
-    category: 'Cybersecurity & Networking',
-    realService: true,
-    technology: [
-      'Zero Trust',
-      'Network Security',
-      'React',
-      'Node && Node.js',
-      'PostgreSQL',
-      'AWS',
-    ],
-    integrations: [
-      'Active Directory',
-      'LDAP',
-      'SAML',
-      'OAuth',
-      'Custom identity systems',
-    ],
-    useCases: [
-      'Network security',
-      'Access control',
-      'Threat prevention',
-      'Compliance',
-      'Risk management',
-      'Security monitoring',
-    ],
-    roi: 'Average customer sees 400% ROI through enhanced security and reduced breach risks.',
-    competitors: [
-      'Palo Alto Networks',
-      'Cisco',
-      'Fortinet',
-      'Check Point',
-      'Juniper',
-    ],
-    marketSize: '$67 && 67.8B market',
-    growthRate: '220% annual growth',
-    variant: 'security-futuristic',
-    contactInfo: {
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
     launchDate: '2026-05-01'
     customers: 280
@@ -145,11 +80,8 @@ export interface EnterpriseIT2026ServiceV2 {
 
     reviews: 180
   }
-      
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
+    reviews: 180
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -158,7 +90,6 @@ export interface EnterpriseIT2026ServiceV2 {
     customers: 280;
     rating: 4.9,
     reviews: 180;
-
 ];
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
@@ -600,3 +531,5 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     reviews: 180;
   }
 ];
+  }
+;

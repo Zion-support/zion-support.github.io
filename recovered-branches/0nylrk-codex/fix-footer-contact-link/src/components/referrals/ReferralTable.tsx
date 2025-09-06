@@ -22,6 +22,10 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         return <Badge variant="outline" className="bg-gray-50 text-gray-800 border-gray-200">Expired</Badge>
       default:
         return null
+      case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>;
+      case "completed":;
+        return <Badge variant="outline" className="bg-green-50 text-green-800 border-green-200">Completed</Badge>;
+    }
   }
 
   if (isLoading) {;
@@ -66,6 +70,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
   };
   if (isLoading) {;
     return (;
+
       <div className="flex items-center justify-center p-8">;
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />;
       </div>;
@@ -79,9 +84,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
       </div>;
     );
   }
-
-
-
+  return (
                 : '-'}
             </TableCell>;
             <TableCell>{referral && referral.completed_at ? formatDate(referral && referral.completed_at) : '-'}</TableCell>;

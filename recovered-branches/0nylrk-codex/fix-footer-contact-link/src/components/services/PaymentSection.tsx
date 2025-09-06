@@ -1,4 +1,3 @@
-
 import { MapPin } from "lucide-react",
 import { PaymentButton } from "@/components/transactions/PaymentButton",
 import { CountryPricing } from "@/data/onsiteServicePricing";
@@ -10,15 +9,24 @@ import { PaymentButton  } from '@/components / transactions / PaymentButton';
 import { CountryPricing  } from '@/data / onsiteServicePricing';
 import { toast  } from '@/hooks / use - toast';
 
-
-
 interface PaymentSectionProps {
   selected_country: CountryPricing;
 }
-export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
-  // Handle successful payment
 
+  const handlePaymentInitiated = () => {
+    toast({
+      title: "Processing your request"
+      description:
+        "You'll be redirected to our secure payment portal momentarily."
+    });
+  }
 
+      title: "Processing your request",
+      description: "You'll be redirected to our secure payment portal momentarily."});
+  };
+      description: "You'll be redirected to our secure payment portal momentarily."})
+  },
+  
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -50,8 +58,6 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
         {selectedCountry.country}
       </h4>;
       <p className="text-2xl font-bold text-zion-cyan mb-6">;
-
-
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton

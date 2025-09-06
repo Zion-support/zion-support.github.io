@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -155,49 +154,49 @@ const departments = [;
   {
     name: "Leadership"
     description: "Strategic vision and company direction"
-    icon: ""
+    icon: "👑"
     count: 1
   }
   {
     name: "Technology"
     description: "Engineering and technical innovation"
-    icon: ""
+    icon: "💻"
     count: 15
   }
   {
     name: "AI & Machine Learning"
     description: "Artificial intelligence and data science"
-    icon: ""
+    icon: "🤖"
     count: 12
   }
   {
     name: "Cybersecurity"
     description: "Security and compliance solutions"
-    icon: ""
+    icon: "🛡️"
     count: 8
   }
   {
     name: "Data & Analytics"
     description: "Business intelligence and analytics"
-    icon: ""
+    icon: "📊"
     count: 10
   }
   {
     name: "Product"
     description: "Product development and design"
-    icon: ""
+    icon: "🎨"
     count: 6
   }
   {
     name: "Sales & Marketing"
     description: "Business development and growth"
-    icon: ""
+    icon: "📈"
     count: 8
   }
   {
     name: "Operations"
     description: "Project management and delivery"
-    icon: ""
+    icon: "⚙️"
     count: 5
   }
 ];
@@ -328,15 +327,17 @@ const teamMembers = [;
               className="text-xl mb-8 text-purple-100"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Our diverse team of technology professionals brings together
-              decades of experience in AI, cloud computing, cybersecurity, and
-              business transformation.
-            </motion.p>
-          </div>
-        </div>
-      </section>
+
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+              Our diverse team of technology professionals brings together;
+              decades of experience in AI, cloud computing, cybersecurity, and;
+              business transformation.;
+            </motion && motion.p>;
+          </div>;
+        </div>;
+      </section>;
+
+
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">;
         <div className="container mx-auto px-4">;
@@ -354,24 +355,28 @@ const teamMembers = [;
                 <div className="text-gray-600">{stat && stat.label}</div>;
               </motion && motion.div>;
             ))}
-          </div>
-        </div>
-      </section>
+
+          </div>;
+        </div>;
+      </section>;
+
       {/* Leadership Team */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Leadership Team
-            </h2>
-            <p className="text-xl text-gray-600">
-              Visionary leaders driving innovation and growth
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.slice(0, 3).map((member, index) => (
-              <motion.div
-                key={member.id}
+      <section className="py-16 bg-white">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">;
+              Leadership Team;
+            </h2>;
+            <p className="text-xl text-gray-600">;
+              Visionary leaders driving innovation and growth;
+            </p>;
+          </div>;
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {teamMembers && teamMembers.slice(0, 3).map((member, index) => (;
+              <motion&& motion.div
+                key={member && member.id}
+
                 className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -418,24 +423,28 @@ const teamMembers = [;
                 </div>;
               </motion && motion.div>;
             ))}
-          </div>
-        </div>
-      </section>
+
+          </div>;
+        </div>;
+      </section>;
+
       {/* All Team Members */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Expert Team
-            </h2>
-            <p className="text-xl text-gray-600">
-              Dedicated professionals across all departments
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={member.id}
+      <section className="py-16 bg-gray-50">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">;
+              Our Expert Team;
+            </h2>;
+            <p className="text-xl text-gray-600">;
+              Dedicated professionals across all departments;
+            </p>;
+          </div>;
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {teamMembers && teamMembers.map((member, index) => (;
+              <motion&& motion.div
+                key={member && member.id}
+
                 className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -483,24 +492,28 @@ const teamMembers = [;
                 </div>;
               </motion && motion.div>;
             ))}
-          </div>
-        </div>
-      </section>
+
+          </div>;
+        </div>;
+      </section>;
+
       {/* Departments */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Departments
-            </h2>
-            <p className="text-xl text-gray-600">
-              Specialized teams working together to deliver excellence
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {departments.map((dept, index) => (
-              <motion.div
-                key={dept.name}
+      <section className="py-16 bg-white">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">;
+              Our Departments;
+            </h2>;
+            <p className="text-xl text-gray-600">;
+              Specialized teams working together to deliver excellence;
+            </p>;
+          </div>;
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
+            {departments && departments.map((dept, index) => (;
+              <motion&& motion.div
+                key={dept && dept.name}
+
                 className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -513,9 +526,12 @@ const teamMembers = [;
                 </div>;
               </motion && motion.div>;
             ))}
-          </div>
-        </div>
-      </section>
+
+          </div>;
+        </div>;
+      </section>;
+
+
       {/* Join Our Team CTA */}
       <section className="py-16 bg-purple-600 text-white">;
         <div className="container mx-auto px-4 text-center">;
@@ -532,7 +548,6 @@ const teamMembers = [;
             </Link>;
             <Link
               href="/contact"
-    </Layout>
 
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors">;
 ;
@@ -703,9 +718,6 @@ export default function TeamPage() {;
         description="Meet the leadership team at Zion Tech Group."
         canonical="/team"
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-    </>;
 
 
 
@@ -734,6 +746,7 @@ export default function TeamPage() {
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
 				<h1 className="text-4xl font-bold mb-4">Our Team</h1>
+    </Layout>);
 }
 import Head from './next / head';
 import { motion  } from './framer-motion';

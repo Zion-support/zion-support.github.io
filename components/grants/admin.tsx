@@ -1,6 +1,3 @@
-export default function GrantsAdminPage() {;
-
-export default function GrantsAdminPage() {
 
 export default function GrantsAdminPage() {
   const [token, setToken] = useState('');
@@ -21,24 +18,6 @@ export default function GrantsAdminPage() {
   const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {
     await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON.stringify({ status }) })
     load()
-  const markComplete = async (milestoneId: string) => {
-    if (!selected) return;
-    await fetch(
-      `/api/grants/${selected.id}/milestones/${milestoneId}/complete`
-      { method: 'POST', headers }
-    );
-    const r = await fetch(`/api/grants/${selected.id}`).then(x => x.json());
-    setSelected(r.record);  }
-  return (
-    <EnhancedLayout>    await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`, { method: 'POST', headers });
-    const r = await fetch(`/api/grants/${selected.id}`).then((x) => x.json());
-    setSelected(r.record)
-  };
-
-  useEffect(() => {;
-    load();
-  }, []);
-
   const setStatus = async (;
     id: string,;
     status: 'Under Review' | 'Approved' | 'Rejected';
@@ -49,22 +28,15 @@ export default function GrantsAdminPage() {
       body: JSON && JSON.stringify({ status }),;
     });
     load();  };
-
   const saveMilestones = async () => {;
     if (!selected) return;
   const load = () => {;
     fetch('/api/grants?status=Submitted').then((r) => r && r.json()).then((d) => setItems(d && d.items || []));
   };
-
-  useEffect(() => {;
-    load();
-  }, []);
-
   const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {;
     await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON && JSON.stringify({ status }) }),;
     load();
   };
-
   const saveMilestones = async () => {;
     if (!selected) return;
     await fetch(`/api/grants/${selected && selected.id}/milestones`, {;
@@ -73,12 +45,10 @@ export default function GrantsAdminPage() {
       body: JSON && JSON.stringify({ milestones }),;
     });
     alert('Milestones saved');  };
-
   const markComplete = async (milestoneId: string) => {;
     if (!selected) return;    await fetch(`/api/grants/${selected && selected.id}/milestones`, { method: 'POST', headers, body: JSON && JSON.stringify({ milestones }) }),;
     alert('Milestones saved');
   };
-
   const markComplete = async (milestoneId: string) => {;
     if (!selected) return;
     await fetch(;
@@ -208,7 +178,7 @@ if (return) {
                   <div>;
                     <div className='font - medium'>{g.project_name}</div>;
                     <div className='text - xs text - gray - 600'>;
-                      {g.sector}  {g.region}  {g.program}
+                      {g.sector} • {g.region} • {g.program}
                     </div>;
                   </div>;
                   <div className='flex gap - 2'>;

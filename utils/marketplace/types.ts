@@ -1,5 +1,3 @@
-export interface Offer {
-
 
 
 
@@ -11,9 +9,6 @@ export interface Offer {;
   client_id: string;
   talent_slug: string;
   startDateIso: string;
-
-
-
 
   id: string;
   title: string;

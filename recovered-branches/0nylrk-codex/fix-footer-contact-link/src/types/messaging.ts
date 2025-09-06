@@ -1,9 +1,17 @@
   id: string;
+  sender_id: string;
+  recipient_id: string;
+  content: string;
+  created_at: string;
+  read: boolean;
+  sender_name?: string;
+  sender_avatar?: string;
+export interface Conversation {
+  id: string;
   user_id: string;
   other_user: {
     id: string;
     name: string;
-
   }
   name: string;
   avatar_url?: string;
@@ -20,5 +28,4 @@
   loadMessages: (conversationId: string) => Promise<void>;
 }
 ;
-
-
+}

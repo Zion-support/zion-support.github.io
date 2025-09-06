@@ -1,6 +1,3 @@
-
-
-
 // Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
@@ -60,6 +57,15 @@ import FraudDetection from "@/pages/admin/FraudDetection",
             <FraudDetection />;
           </ProtectedRoute>;
         }
+          <ProtectedRoute adminOnly={true}>;
+            <IntegrationsPage />;
+          </ProtectedRoute>;
+        }
+export default AdminRoutes;
+
+import { Fragment } from './react';
+import { Route, Routes } from './react-router-dom';
+import { ProtectedRoute } from '@/components / ProtectedRoute';
 // Admin Pages;
 import QuoteManager from "@/pages / admin / QuoteManager";
 import ReviewsModeration from "@/pages / admin / ReviewsModeration";
@@ -149,6 +155,7 @@ const AdminRoutes = () =>: any {
     </Routes>;
   );
 },;
-
-
+    </Routes>);
+}
+;
 export default AdminRoutes;

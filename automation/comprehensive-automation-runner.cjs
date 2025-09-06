@@ -4,14 +4,6 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 class ComprehensiveAutomationRunner {
   constructor() {
     this.projectRoot = process.cwd();
@@ -40,6 +32,7 @@ class ComprehensiveAutomationRunner {
       this.log(`❌ ${scriptName} failed: ${error.message}`, 'ERROR');
       this.results.push({ script: scriptName, success: false, error: error.message });
       return { success: false, error: error.message };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -90,10 +83,13 @@ class ComprehensiveAutomationRunner {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
     }
   }
 
   async runAllAutomations() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 this.log('🎯 Starting Comprehensive Automation Runner');
     this.log('
@@ -232,3 +228,5 @@ runner.runAllAutomations().catch(console.error);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 import { ProfileData } from "@/types/profile",
@@ -8,7 +7,6 @@ import { convertProfileToTalentProfile } from "@/utils/profileConverter";
 export function useTalentProfile(id: string | undefined) {
   const [profile, setProfile] = useState<TalentProfileType | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-
 
   const [error, setError] = useState<string | null>(null);
   const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
@@ -87,8 +85,6 @@ if ( {) {
               set_error ("Profile not found");
             }
           }
-
-
   return { profile, isLoading, error, mockProfileData }
         console.error ("Error fetching profile:", err);
         set_error ("Failed to load profile data");

@@ -1,13 +1,9 @@
-
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
-
-
-
 interface EmptyStateProps {
 
   icon: React.ReactNode
@@ -45,6 +41,7 @@ export function EmptyState({
       className={cn(
         "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 
+        className
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { Button } from "@/components/ui/button",;
@@ -96,21 +93,12 @@ export function EmptyState({;
               <Link to={action && action.href}>{action && action.text}</Link>;
             </Button>;
           ) : (;
-            <Button
-              size="lg" 
-
               className="bg-zion-purple hover:bg-zion-purple-light"
               onClick={action && action.onClick}>;
               {action && action.text}
             </Button>;
           );
         )}
-
-
-            <Button 
-              size="lg" 
-              className="bg-zion-purple hover:bg-zion-purple-light"
-
               onClick={action.onClick}
             >
               {action.text}

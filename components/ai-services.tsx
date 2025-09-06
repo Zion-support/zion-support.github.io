@@ -1,7 +1,3 @@
- export default function AIServices () {
-export default function AIServices () {
- export default function AIServices () {
-
   
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) ) 
 }</div>) ) 
@@ -11,6 +7,9 @@ export default function AIServices () {
   opacity: 0, y: 20
   opacity: 0, y: 20 
 
+
+
+ export default function AIServices() {;
 
 
 export default function AIServices () {
@@ -25,7 +24,6 @@ export default function AIServices () {
   opacity: 1, y: 0
 }transition= {
   {
-
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>
@@ -71,14 +69,12 @@ export default function AIServices () {
         <meta name="description" content="LLM apps, RAG, MLOps, and AI research enablement with transparent pricing and measurable outcomes." />;
         <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/ai-services" />;
       </Head>;
-
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
         <ServiceAds heading="Featured AI Services" subheading="Production-ready offerings with transparent pricing." items={featuredAIAds} />;
         <div className="text-center max-w-4xl mx-auto mb-12">;
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">AI Services</h1>;
           <p className="text-xl text-gray-300">From prototype to production, we build AI systems that are safe, observable, and cost-efficient.</p>;
         </div>;
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">;
           {tracks && tracks.map((t) => (;
             <div key={t && t.title} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">;
@@ -88,7 +84,6 @@ export default function AIServices () {
             </div>;
           ))}
         </div>;
-
         <div className="max-w-6xl mx-auto mb-20">;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
             {packages && packages.map((p) => (;
@@ -285,4 +280,3 @@ function AIServices() {
       </div>;
     </>),
 }
-

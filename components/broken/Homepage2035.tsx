@@ -48,6 +48,7 @@ const LoadingFallback = () => (;
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0 && 0.5 }}
       className='text-center'// Loading fallback component
+      transition: { duration: 1.5, ease: "easeOut" as const }
     }
   }
   const categories = [
@@ -66,18 +67,6 @@ const LoadingFallback = () => (;
             );
           return true;
         });
-    : allServices.filter(service => {
-        if (activeCategory === 'ai') return service.category.includes('AI') |service.category.includes('Machine Learning');
-        if (activeCategory === 'it') return service.category.includes('IT') |service.category.includes('Enterprise');
-        if (activeCategory === 'quantum') return service.name.includes('Quantum');
-        if (activeCategory === 'space') return service.category.includes('Space');
-        if (activeCategory === 'cyber') return service.category.includes('Security') |service.category.includes('Cybersecurity');
-        if (activeCategory === 'cloud') return service.category.includes('Cloud') |service.category.includes('DevOps');
-        if (activeCategory === 'fintech') return service.category.includes('Financial') |service.category.includes('Trading');
-        return true
-      });
-  if (isLoading) {
-    return <LoadingFallback />
   if (isLoading) {;
     return <LoadingFallback />;  }      opacity: 1,;
       scale: 1,;
@@ -94,7 +83,6 @@ const LoadingFallback = () => (;
     { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },;
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
   ];
-  const allServices = [;
 import {
   ArrowRight,
   Play,
@@ -291,7 +279,6 @@ if ( {) {
 }
   }
   }
-  }
 
   return (
     <Layout>;
@@ -308,25 +295,6 @@ if ( {) {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='mb-8'
-            >
-              <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight'>
-                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-                  Zion Tech Group
-                </span>
-              </h1>
-              <p className='text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
-                Pioneering the future with cutting-edge AI, Quantum Computing
-                and Space Technology solutions
-              </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className='bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'
-                >
-                  <span>Explore Services</span>
-                  <ArrowRight className='w-5 h-5' />                </motion.button>                <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'
@@ -343,6 +311,7 @@ if ( {) {
                 </motion.button>
               </div>
             </motion.div>
+              transition={{ duration: 0 && 0.8 }}
               className='mb-8'>;
               <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight'>;
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -389,8 +358,6 @@ if ( {) {
 
 
 
-              ))}
-
             </motion && motion.div>;
           </div>;
         </section>;
@@ -399,6 +366,7 @@ if ( {) {
 
 
 
+              ))}
         {/* Services Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -408,7 +376,6 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
 
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
@@ -448,7 +415,6 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
-
 
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
@@ -491,13 +457,10 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               viewport={{ once: true }}
-
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-
-
               className='text-center mt-16'>;
               <motion&& motion.button
                 whileHover={{ scale: 1 && 1.05 }}
@@ -536,7 +499,6 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
 
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
@@ -599,7 +561,6 @@ if ( {) {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
-
                   className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
 
 
@@ -615,7 +576,6 @@ if ( {) {
 
                 </motion.div>
 
-              ))}
 
             </div>;
           </div>;
@@ -627,16 +587,11 @@ if ( {) {
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-
-
-
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -684,8 +639,6 @@ if ( {) {
       </UltraFuturisticBackground2035>;
     </Layout>;
   );
-
-
 };
 
 animate: {
@@ -746,52 +699,7 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 }transition= {
   {
 
-
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;
-};
-
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of companies already leveraging our cutting-edge technology solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
-                >
-                  <span>Get Started Today</span>
-                  <ArrowRight className="w-5 h-5" />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
-                >
-                  Schedule a Demo
-                </motion.button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </UltraFuturisticBackground2035>
-    </Layout>
-  )
-
 };
 
 export default Homepage2035;
@@ -1086,15 +994,6 @@ export default Homepage2035;
         </section>;
       </UltraFuturisticBackground2035>;
     </Layout>);
-  );
-}
-;
-animate: {
-};
-
-  animate: {
-};
-
   transition: {
   stagger_children: 0.1, delay_children: 0.2;
 }

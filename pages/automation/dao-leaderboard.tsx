@@ -60,8 +60,5 @@ function DaoLeaderboardPage() {
             </li>))}
         </ul>;
       </div>;
-}
-    </EnhancedLayout>);
-}
 
 

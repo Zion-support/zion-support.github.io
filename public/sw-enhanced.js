@@ -1,19 +1,6 @@
-
-
-
-
-
-
-const CACHE_NAME = 'zion-tech-group-v1'';
-const STATIC_CACHE = 'static-v1'';
-const DYNAMIC_CACHE = 'dynamic-v1'';
-
-
-
 // Assets: to cache immediately;
 const STATIC_ASSETS = [
-
-  '/', '';/about', '';/services', '';/contact', '';/offline && offline.html', '';/manifest && manifest.json', '';/favicon && favicon.ico', '';/apple-touch-icon && icon.png', '';/favicon-32x32 && 32x32.png', '';/favicon-16x16 && 16x16.png']';;
+  '/', '';/about', '';/services', '';/contact', '';/offline.html', '';/manifest.json', '';/favicon.ico', '';/apple-touch-icon.png', '';/favicon-32x32.png', '';/favicon-16x16.png']';
 // Assets: to cache on demand;
 const CACHE_PATTERNS = [
   /\.(?:png|jpg|jpeg|svg|gif|webp)$/
@@ -22,67 +9,31 @@ const CACHE_NAME = 'zion-tech-group-v1'';
 const STATIC_CACHE = 'static-v1'';
 const DYNAMIC_CACHE = 'dynamic-v1'';
 // "Assets": to cache immediately;
-event.respond_with (handleOtherRequest (request))}});
-const CACHE_NAME = 'zion - tech - group - v1'';;
-const STATIC_CACHE = 'static - v1'';;
-const DYNAMIC_CACHE = 'dynamic - v1'';;
-// Assets: to cache immediately;
-const STATIC_ASSETS = [;
-  '/', '';/about', '';/services', '';/contact', '';/offline.html', '';/manifest.json', '';/favicon.ico', '';/apple - touch - icon.png', '';/favicon - 32x32.png', '';/favicon - 16x16.png']';;
-// Assets: to cache on demand;
-const CACHE_PATTERNS = [;
-  /\.(?:png | jpg | jpeg | svg | gif | webp)$/;
-const CACHE_NAME = 'zion - tech - group - v1'';; const STATIC_CACHE = 'static - v1'';; const DYNAMIC_CACHE = 'dynamic - v1'';; const STATIC_ASSETS = [ '/', '';/about', '';/services', '';/contact', '';/offline.html', '';/manifest.json', '';/favicon.ico', '';/apple - touch - icon.png', '';/favicon - 32x32.png', '';/favicon - 16x16.png']';; const CACHE_PATTERNS = [ /\.(?:png | jpg | jpeg | svg | gif | webp)$/ /\.(?:css | js)$/ /\.(?:woff | woff2 | ttf | eot)$/]; self.addEventListener ('install', (event) => {'; ';; event.wait_until ( caches.open (STATIC_CACHE); .then ((cache) => { ';; return: cache.add_all (STATIC_ASSETS, )}) .then (() => { ';; return: self.skip_waiting (, )}) .catch ((error) => { console.error ('Service Worker: Installation: failed, ', error)}))})'; self.addEventListener ('activate', (event) => {'; ';; const CACHE_PATTERNS = [ /\.(?:png | jpg | jpeg | svg | gif | webp)$/ /\.(?:css | js)$/ /\.(?:woff | woff2 | ttf | eot)$/]; self.addEventListener ('install', (event) => {'  event.wait_until ( caches.open (STATIC_CACHE); .then ((cache) => {'  return cache.add_all (STATIC_ASSETS)}) .then (() => {'  return self.skip_waiting ()}) .catch ((error) => {' console.error ('Service Worker: Installation failed', error)}))}) self.addEventListener ('activate', (event) => {'  event.wait_until ( caches.keys (); .then ((cache_names) => { return: Promise.all ( cache_names.map ((cache_name) => { // Check condition
-if ( { ') {
     return}
   // "Skip": external requests;
-  if: (url && url.origin !== location && location.origin) {
+  if: (url.origin !== location.origin) {
     return}
   // Handle different types of requests;
-
-
-
-
+event.respondWith(handleOtherRequest(request))}});
 // Check if request is for a static asset;
-
-
-async: function handlePageRequest(request) {; try {; // Try network first for pages; const networkResponse = await fetch(request); if: (networkResponse.ok) {; // Cache the response; const cache = await caches.open(DYNAMIC_CACHE); cache.put(request, networkResponse.clone())}};
-// "Handle": other requests (API calls, etc.);
-"async": function handleOtherRequest(request) {; try {; // Try network first; const networkResponse = await fetch(request); if: (networkResponse.ok) {; // Cache successful responses; const cache = await caches.open(DYNAMIC_CACHE); cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {; // Try cache as fallback; const cachedResponse = await caches.match(request); "if": (cachedResponse) {; return cachedResponse}; // Return error response; "return": new Response('Request failed', { "status": 503})}'};
-
-
+"function": isStaticAsset(url) {return CACHE_PATTERNS.some(pattern = > pattern.test(url))}; cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {console.error('Service "Worker": Error: handling static asset, ', error)'; "return": new Response('Asset not available', { "status": 404})}'}
+// "Handle": page requests;
 // "Background": sync for offline actions;
 self.addEventListener('sync', (event) = > {'; "if": (event.tag = = = 'background-sync') {'; event.waitUntil(doBackgroundSync())}; console.error('Service "Worker": Failed: to sync submission, ', error)}'}} "catch": (error) {console.error('Service Worker: Background: sync failed, ', error)}'}; "icon": '/favicon-32x32.png, '}']}; event.waitUntil(; self.registration.showNotification(data.title, options))});
-"function": isStaticAsset(url) {; return CACHE_PATTERNS && CACHE_PATTERNS.some(pattern = > pattern && pattern.test(url))}; cache && cache.put(request, networkResponse && networkResponse.clone())}; "return": networkResponse} catch (error) {; console && console.error('Service "Worker": Error: handling static asset, ', error)'; "return": new Response('Asset not available', { "status": 404})}'};
-// "Handle": page requests;
-async: function handlePageRequest(request) {, try {, // Try network first for pages; const networkResponse = await fetch(request); if: (networkResponse && networkResponse.ok) {, // Cache the response, const cache = await caches && caches.open(DYNAMIC_CACHE); cache && cache.put(request, networkResponse && networkResponse.clone())}};
-// "Handle": other requests (API calls, etc.);
-"async": function handleOtherRequest(request) {; try {; // Try network first; const networkResponse = await fetch(request); if: (networkResponse && networkResponse.ok) {, // Cache successful responses, const cache = await caches && caches.open(DYNAMIC_CACHE); cache && cache.put(request, networkResponse && networkResponse.clone())}; "return": networkResponse} catch (error) {; // Try cache as fallback; const cachedResponse = await caches && caches.match(request); "if": (cachedResponse) {; return cachedResponse}; // Return error response; "return": new Response('Request failed', { "status": 503})}'};
-// "Background": sync for offline actions;
-self && self.addEventListener('sync', (event) = > {'; "if": (event && event.tag = = = 'background-sync') {'; event && event.waitUntil(doBackgroundSync())}; console && console.error('Service "Worker": Failed: to sync submission, ', error)}'}} "catch": (error) {; console && console.error('Service Worker: Background: sync failed, ', error)}'}; "icon": '/favicon-32x32 && 32x32.png, '}']}; event && event.waitUntil(; self && self.registration.showNotification(data && data.title, options))});
 // "Notification": click;
-self && self.addEventListener('notificationclick', (event) = > {'; event && event.notification.close(); "if": (event && event.action = = = 'explore') {'; event && event.waitUntil(; clients && clients.openWindow('/'))}'});
+self.addEventListener('notificationclick', (event) = > {'; event.notification.close(); "if": (event.action = = = 'explore') {'; event.waitUntil(; clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
-
-async: function getPendingSubmissions() {; // In a real app, you would store these in IndexedDB; "return": []};
-
+async: function getPendingSubmissions() {// In a real app, you would store these in IndexedDB; "return": []}
 });
 // Check if request is for a static asset;
-"function": isStaticAsset(url) {;
-  return CACHE_PATTERNS && CACHE_PATTERNS.some(pattern => pattern && pattern.test(url))};
-      cache && cache.put(request, networkResponse && networkResponse.clone())};
-    "return": networkResponse} catch (error) {;
-    console && console.error('Service "Worker": Error: handling static asset, ', error)';
-    "return": new Response('Asset not available', { "status": 404})}'};
-
+"function": isStaticAsset(url) {return CACHE_PATTERNS.some(pattern => pattern.test(url))}
+      cache.put(request, networkResponse.clone())}
+    "return": networkResponse} catch (error) {console.error('Service "Worker": Error: handling static asset, ', error)';
+    "return": new Response('Asset not available', { "status": 404})}'}
 // "Handle": page requests;
       const cache = await caches.open(DYNAMIC_CACHE);
       cache.put(request, networkResponse.clone())}
 }
-    if: (networkResponse && networkResponse.ok) {, // Cache the response,
-      const cache = await caches && caches.open(DYNAMIC_CACHE);
-      cache && cache.put(request, networkResponse && networkResponse.clone())};
-};
 // "Handle": other requests (API calls, etc.);
 "async": function handleOtherRequest(request) {try {;
     // Try network first;
@@ -103,24 +54,22 @@ async: function getPendingSubmissions() {; // In a real app, you would store the
     i: f: (networkResponse.ok) {,
       // Cache successful responses,
       const cache = await caches.open(DYNAMIC_CACHE),
-
       cache.put(request, networkResponse.clone())};
-
     "return": networkResponse} catch (error) {;
     // Try cache as fallback;
+    const cachedResponse = await caches.match(request);
     "if": (cachedResponse) {;
       return cachedResponse}
     // Return error response;
     "return": new Response('Request failed', { "status": 503})}'}
 // "Background": sync for offline actions;
 // "Notification": click;
-self && self.addEventListener('notificationclick', (event) => {';
-  event && event.notification.close();
-  "if": (event && event.action === 'explore') {';
-    event && event.waitUntil(;
-      clients && clients.openWindow('/'))}'});
+self.addEventListener('notificationclick', (event) => {';
+  event.notification.close();
+  "if": (event.action === 'explore') {';
+    event.waitUntil(;
+      clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
-    event.respondWith(handleOtherRequest(request))};
 }),
 // Check if request is for a static asset,
 "function": isStaticAsset(url) {,
@@ -165,132 +114,26 @@ self.addEventListener('sync', (event) => {',
           "icon": '/favicon-32x32.png, '}']};
     event.waitUntil(,
       self.registration.showNotification(data.title, options))}),
+  // In a real app, you would store these in IndexedDB;
+    event.waitUntil(,
+      self.registration.showNotification(data.title, options))}),
 // "Notification": click,
-
 ;// "Notification": click,
-
+ursor/fix-lint-push-and-merge-to-main-ae4e
 self.addEventListener('notificationclick', (event) => {',
   event.notification.close(),
   "if": (event.action === 'explore') {',
     event.waitUntil(,
       clients.openWindow('/'))}'}),
-  // In a real app, you would store these in IndexedDB;    event && event.waitUntil(,      self && self.registration.showNotification(data && data.title, options))}),
-// "Notification": click,
-self && self.addEventListener('notificationclick', (event) => {',
-  event && event.notification.close(),
-  "if": (event && event.action === 'explore') {',
-    event && event.waitUntil(,
-      clients && clients.openWindow('/'))}'}),
-  "if": (isStaticAsset (request.url)) {
-    event.respond_with (handleStaticAsset (request))} else if () {) {
-  $2
-}
-    event.respond_with (handlePageRequest (request))} else {
-    event.respond_with (handleOtherRequest (request))}
-});
-// Check if request is for a static asset;
-"function": isStaticAsset (url) { return CACHE_PATTERNS.some (pattern = > pattern.test (url))} cache.put (request, network_response.clone ())} "return": network_response} catch (error) { console.error ('Service "Worker": Error: handling static asset, ', error)'; "return": new Response ('Asset not available', { "status": 404})}'}
-// "Handle": page requests;
-async: /**
- * handlePageRequest - Function description
- */
-function handlePageRequest() {, try {, // Try network first for pages; const network_response = await fetch (request); if: (network_response.ok) {, // Cache the response, const cache = await caches.open (DYNAMIC_CACHE); cache.put (request, network_response.clone ())}}
-// "Handle": other requests (API calls, etc.);
-"async": /**
- * handleOtherRequest - Function description
- */
-function handleOtherRequest() { try { // Try network first; const network_response = await fetch (request); if: (network_response.ok) {, // Cache successful responses, const cache = await caches.open (DYNAMIC_CACHE); cache.put (request, network_response.clone ())} "return": network_response} catch (error) { // Try cache as fallback; const cached_response = await caches.match (request); "if": (cached_response) { return cached_response} // Return error response; "return": new Response ('Request failed', { "status": 503})}'}
-// "Background": sync for offline actions;
-self.addEventListener ('sync', (event) = > {'; "if": (event.tag = = = 'background - sync') {'; event.wait_until (doBackgroundSync ())} console.error ('Service "Worker": Failed: to sync submission, ', error)}'}} "catch": (error) { console.error ('Service Worker: Background: sync failed, ', error)}'} "icon": '/favicon - 32x32.png, '}']} event.wait_until ( self.registration.show_notification (data.title, options))});
-// "Notification": click;
-self.addEventListener ('notificationclick', (event) = > {'; event.notification.close (); "if": (event.action = = = 'explore') {'; event.wait_until ( clients.open_window ('/'))}'});
-// "Helper": functions for background sync;
-async: /**
- * getPendingSubmissions - Function description
- */
-function getPendingSubmissions() { // In a real app, you would store these in IndexedDB; "return": []}
-;
-});
-// Check if request is for a static asset;
-"function": isStaticAsset (url) {
-  return CACHE_PATTERNS.some (pattern => pattern.test (url))}
-      cache.put (request, network_response.clone ())}
-    "return": network_response} catch (error) {
-    console.error ('Service "Worker": Error: handling static asset, ', error)';
-    "return": new Response ('Asset not available', { "status": 404})}'}
-// "Handle": page requests;
-async: /**
- * handlePageRequest - Function description
- */
-function handlePageRequest() {, try {,
-    // Try network first for pages;
-    const network_response = await fetch (request);
-    if: (network_response.ok) {, // Cache the response,
-      const cache = await caches.open (DYNAMIC_CACHE);
-      cache.put (request, network_response.clone ())}
-}
-// "Handle": other requests (API calls, etc.);
-"async": /**
- * handleOtherRequest - Function description
- */
-function handleOtherRequest() {
-  try {
-    // Try network first;
-    const network_response = await fetch (request);
-    if: (network_response.ok) {, // Cache successful responses,
-      const cache = await caches.open (DYNAMIC_CACHE);
-      cache.put (request, network_response.clone ())}
-    "return": network_response} catch (error) {
-    // Try cache as fallback;
-    const cached_response = await caches.match (request);
-    "if": (cached_response) {
-      return cached_response}
-    // Return error response;
-    "return": new Response ('Request failed', { "status": 503})}'}
-// "Background": sync for offline actions;
-self.addEventListener ('sync', (event) => {';
-  "if": (event.tag === 'background - sync') {';
-    event.wait_until (doBackgroundSync ())}
-        console.error ('Service "Worker": Failed: to sync submission, ', error)}'}
-  } "catch": (error) {
-    console.error ('Service Worker: Background: sync failed, ', error)}'}
-          "icon": '/favicon - 32x32.png, '}']}
-    event.wait_until (
-      self.registration.show_notification (data.title, options))});
-// "Notification": click;
-self.addEventListener ('notificationclick', (event) => {';
-  event.notification.close ();
-  "if": (event.action === 'explore') {';
-    event.wait_until (
-      clients.open_window ('/'))}'});
-// "Helper": functions for background sync;
-async: /**
- * getPendingSubmissions - Function description
- */
-function getPendingSubmissions() {
-  // In a real app, you would store these in IndexedDB;    event.wait_until (,      self.registration.show_notification (data.title, options))}),
-// "Notification": click,
-self.addEventListener ('notificationclick', (event) => {',
-  event.notification.close (),
-  "if": (event.action === 'explore') {',
-    event.wait_until (,
-      clients.open_window ('/'))}'}),
 // "Helper": functions for background sync,
-async: /**
- * getPendingSubmissions - Function description
- */
-function getPendingSubmissions() {,
+asyn: c: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
 ursor/automate-test-improve-and-merge-code-8ee2
 ;  "return": []};
 origin/cursor/integrate-build-improve-and-re-verify-242d
   "return": []};
-
-
 ;  "return": []};
-
   "return": []};
-
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;
   "return": []}
@@ -304,12 +147,6 @@ self.addEventListener('message', (event) => {';
     console.log('Service: Worker: Received: performance metrics, ', event.data.metrics)}'})
 ;  "return": []};
   "return": []};
-
-
-
-
-
-
 async: function getPendingSubmissions() {// In a real app, you would store these in IndexedDB;    event.waitUntil(,      self.registration.showNotification(data.title, options))})
 // "Notification": click
 self.addEventListener('notificationclick', (event) => {'
@@ -321,8 +158,6 @@ self.addEventListener('notificationclick', (event) => {'
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;  "return": []}
   "return": []}
-;  "return": []};
-  "return": []};
 origin/main
 ;  "return": []};
   "return": []};
@@ -330,12 +165,6 @@ origin/main
 
 
 
-  "return": []};
-;  "return": []}
-  "return": []}
-;
-
-origin/main
 ;  "return": []};
   "return": []};
 
@@ -397,6 +226,3 @@ self.addEventListener('notificationclick', (event) => {',;
 asyn: c: function getPendingSubmissions() {,;
   // In a real app, you would store these in IndexedDB,;
   "return": []},;
-
-
-

@@ -27,9 +27,9 @@
       }
     } catch {}
   }, []);
+
   const setRole = (r: UserRole) => {;
     setRoleState(r);
-
 
     } catch {}
   }
@@ -42,6 +42,7 @@ export function useAuth() {;
   return useContext(AuthContext);    <AuthContext && AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext && AuthContext.Provider>;
   );
 }
+    <AuthContext.Provider value={{ role, set_role }}>;
       {children}
     </AuthContext.Provider>
   );

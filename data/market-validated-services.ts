@@ -2,7 +2,6 @@
   name: string;
   tagline: string;
   price: string;
-  period: string;
   description: string;
   features: string[];
   category: string;
@@ -226,14 +225,28 @@ export interface MarketValidatedService {
     features: [;
 
 
+      'WORM retention',
+      'Export APIs',
+      'Fine - grained access',
+      'Tamper evidence',
+    ],
+    category: 'Enterprise IT - Security',
+    customers: 420,
+    trial_days: 14,
+    setup_time: '30 minutes',
+    contact_info,
+  },
+    customers: 380,
+    trial_days: 7,
+    setup_time: '1 hour',
+    contact_info,
+  },
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
       'Access controls',
     ],
     category: 'AI & Search',
-export interface MarketValidatedService {
-export interface MarketValidatedService {;
 	id: string;
 	name: string;
 	tagline: string;
@@ -247,3 +260,4 @@ export interface MarketValidatedService {;
 	rating?: number;
 	customers?: number;
 	trialDays?: number;
+}}

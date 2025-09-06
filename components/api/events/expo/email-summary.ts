@@ -1,5 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
+    }
+    // TODO: Integrate with actual provider
+    return res && res.status(200).json({ status: 'queued', provider });
+  } catch (e: any) {
+return res
+      .status(500)
 ;
 export default async /**
  * handler - Function description

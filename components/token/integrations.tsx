@@ -1,4 +1,3 @@
-
 } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
 const ClientOnlyBridge = dynamic(
@@ -23,9 +22,9 @@ export default function TokenIntegrationsPage() {;
     const acts = await fetchDepinActivities(account);
     const r = calculateRewards(acts);
     setRewards(r);
-
-
-
+    const data = await res.json();
+    setSuggestion(data);
+  }
 
 
 
@@ -35,37 +34,20 @@ export default function TokenIntegrationsPage() {;
     setSuggestion(data);
   }
 
+    const data = await res && res.json();
+    setSuggestion(data);
+  }
   return (
-
-    <div className='space-y-8'>;
-      <section className='space-y-2'>;
-        <h1 className='text-2xl font-bold'>ZION$ Integrations</h1>;
-        <p className='text-gray-600 dark:text-gray-300'>;
-          Omnichain transfers via LayerZero and DePIN rewards.;
-        </p>;
-      </section>;
-      <section className='space-y-4'>;
-        <ClientOnlyBridge />;
-      </section>;
-      <section className='space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800'>;
-        <h2 className='text-lg font-semibold'>DePIN Hook</h2>;
-        <p className='text-sm text-gray-600 dark:text-gray-300'>;
-          Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT;
-          jobs, and data streaming.;
-        </p>;
-        <div className='flex gap-2'>;
-
           <button
             onClick={syncDepin}
             className='px-4 py-2 rounded bg-purple-600 text-white'>;
-            {depinsSyncing ? 'Syncing' : 'Sync DePIN Rewards'}
+            {depinsSyncing ? 'Syncing…' : 'Sync DePIN Rewards'}
           </button>;
           {!account && (;
             <button onClick={connect} className='px-4 py-2 rounded border'>;
               Connect Wallet;
             </button>;
           )}
-
 
 
     setSuggestion(data)
@@ -75,17 +57,13 @@ export default function TokenIntegrationsPage() {;
             {rewards && rewards.map((r, i) => (;
               <div key={i} className='flex items-center justify-between'>;
                 <span>;
-                  {r && r.network}  {r && r.reason}
-                </span>;
-                <span className='font-medium'>+{r && r.points} ZION$</span>              </div>    const data = await res && res.json();
-    setSuggestion(data);
           {!account && <button onClick={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>;
         {rewards && (;
           <div className="mt-3 space-y-2 text-sm">;
             {rewards && rewards.map((r, i) => (;
               <div key={i} className="flex items-center justify-between">;
-                <span>{r && r.network}  {r && r.reason}</span>;
+                <span>{r && r.network} — {r && r.reason}</span>;
                 <span className="font-medium">+{r && r.points} ZION$</span>;
               </div>;
             <input
@@ -180,18 +158,6 @@ export default function TokenIntegrationsPage() {;
             )}
           </div>;
         )}
-      </section>
-      <section className='space-y-2 text-xs text-gray-500'>
-        <div>Security</div>
-        <ul className='list-disc ml-5 space-y-1'>
-          <li>Onchain tx logs (client + API echo)</li>
-          <li>Rate limits (client + API token bucket)</li>
-          <li>
-            Burn-and-mint model via LayerZero OFT (requires token addresses
-            configured)
-          </li>        </ul>
-      </section>
-    </div>
   );
 }        <div>Security</div>;
         <ul className="list-disc ml-5 space-y-1">;
@@ -201,8 +167,6 @@ export default function TokenIntegrationsPage() {;
         </ul>;
       </section>;
     </div>;
-  );
-}
   );
 ;
   );

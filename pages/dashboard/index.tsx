@@ -21,8 +21,6 @@ const Dashboard: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
         />
       </section>
       <section>
@@ -64,6 +62,3 @@ const Dashboard: NextPage = () => {
   );
 },;
 export default Dashboard;
-
-
-

@@ -11,8 +11,6 @@ import { readState, writeState } from "../../../utils/sync/storage",;
 import { Peer } from "../../../utils/sync/types",;
 import { v4 as uuidv4 } from "uuid",;
 
-
-
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { Peer } from "../../../utils/sync/types",;

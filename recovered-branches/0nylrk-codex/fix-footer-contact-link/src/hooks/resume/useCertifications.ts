@@ -1,11 +1,9 @@
-
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Certification  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useCertifications() {
-
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Certification} from '@/types/resume';
@@ -20,9 +18,6 @@ export function useCertifications() {;
     if (!user) {
       setError('You must be logged in to add certifications')
       return false
-
-
-
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Certification } from '@/types/resume',;
@@ -36,9 +31,6 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to add certifications'),;
       return false;
-
-
-
     }
     
     setIsLoading(true),
@@ -53,12 +45,6 @@ export function useCertifications() {;
       return handleResumeError(e, 'Could not add certification')
     } finally {
       setIsLoading(false)
-    }
-    setIsLoading(true);
-    setError(null);
-
-
-
 ;
     setIsLoading(true),;
     setError(null),;
@@ -86,9 +72,6 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to update certifications'),;
       return false;
-
-
-
     }
     
     setIsLoading(true),
@@ -103,12 +86,6 @@ export function useCertifications() {;
       return handleResumeError(e, 'Could not update certification')
     } finally {
       setIsLoading(false)
-    }
-    setIsLoading(true);
-    setError(null);
-
-
-
 ;
     setIsLoading(true),;
     setError(null),;
@@ -136,9 +113,6 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to delete certifications'),;
       return false;
-
-
-
     }
     
     setIsLoading(true),
@@ -153,9 +127,6 @@ export function useCertifications() {;
       return handleResumeError(e, 'Could not delete certification')
     } finally {
       setIsLoading(false)
-
-
-
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Certification} from '@/types / resume';
@@ -174,11 +145,8 @@ function use_certifications() {
 if ( {) {
   $2
 }
-
-
-
   }
 }
+    setIsLoading (true);
+    set_error (null);
 ;
-  }
-}

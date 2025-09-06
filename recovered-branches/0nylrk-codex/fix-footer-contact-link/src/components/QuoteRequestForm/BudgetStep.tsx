@@ -46,7 +46,6 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
   },
   };
   },
-
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
@@ -101,8 +100,6 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
               <p className="text-sm text-zion-slate-light">I have a min and max</p>
             </div>
           </div>
-
-
           {formData.budget.type === "fixed" && (
             <div className="mt-6">
               <Label className="text-zion-slate-light mb-4 block">
@@ -146,6 +143,9 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
               <p className="text-sm text-zion-slate-light">I have a min and max</p>;
             </div>;
           </div>;
+        }
+      });
+    }
               <Slider
                 defaultValue={[formData && formData.budget.amount]}
                 max={50000}
@@ -182,18 +182,10 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                   step={500}
 
 
-
-                      }
-                    });
-                  }}
-
-
                   Maximum Budget: {formatCurrency(formData.budget.maxAmount || 0)}
                 </Label>;
                 <Slider;
                   defaultValue={[formData.budget.maxAmount || formData.budget.amount + 5000]}
-
-
                   min={formData.budget.amount}
                   className="py-4";
                 />;
@@ -210,6 +202,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                 <Slider
                   defaultValue={[formData && formData.budget.maxAmount || formData && formData.budget.amount + 5000]}
                   min={formData && formData.budget.amount}
+                  onValueChange={(value) => {;
+                    const newAmount = value[0];
+                      }
+                    });
+                  }}
                   max={100000}
                   step={500}
                   onValueChange={(value) => updateFormData({;

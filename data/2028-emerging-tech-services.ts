@@ -34,9 +34,6 @@ export interface EmergingTechService2028 {;
     mobile: string,;
     email: string,;
 
-
-
-
     address: string;
   }
 export const emergingTech2028Services: EmergingTechService2028[] = [
@@ -94,12 +91,6 @@ export const emergingTech2028Services: EmergingTechService2028[] = [;
 }
 export const emergingTech2028Services: EmergingTechService2028[] = [
   {
-    id: '2028-emerging-tech-service'
-    name: '2028 Emerging Tech Service Platform'
-    tagline: 'Emerging tech services for 2028'
-    price: '$299/month'
-    description:
-      'Advanced platform showcasing emerging technology services and innovations for 2028.'
     features: [
       "Emerging tech services";
       "Innovation platform";

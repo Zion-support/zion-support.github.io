@@ -1,15 +1,3 @@
-const EnhancedHeader: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services', dropdown: [;
       { name: 'AI Solutions', href: '/services / ai - services', description: 'Cutting - edge AI services' },
@@ -31,18 +19,6 @@ const EnhancedHeader: React.FC = () => {
     { icon: 'Mail', text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: 'MapPin', text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
-  }
-  const closeMobileMenu = () => {
-    setIsOpen(false);
-    setActiveDropdown(null);
-  }
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      // Handle search logic here
-      // console.log('Searching for:', searchQuery);
-    }
-  }
   return (
     <header className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
       is_scrolled ? 'bg - white / 95 backdrop - blur - md shadow - lg' : 'bg - transparent';
@@ -64,58 +40,6 @@ const EnhancedHeader: React.FC = () => {
                   </button>) : (
                   <Link href={item.href} className="text - gray - 700 hover:text - blue - 600 transition - colors">;
                     {item.name}
-                {/* Dropdown Menu */}
-                <AnimatePresence>
-                  {item.dropdown && activeDropdown === item.name && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2"
-                    >
-                      {item.dropdown.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.name}
-                          href={dropdownItem.href}
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
-                        >
-                          <div className="font-medium">{dropdownItem.name}</div>
-                          {dropdownItem.description && (
-                            <div className="text-sm text-gray-500">{dropdownItem.description}</div>
-                          )}
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
-          </nav>
-          {/* Search and Actions */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search..."
-                className="w-64 px-4 py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-            </form>
-            <div className="flex items-center space-x-2">
-              <button className="p-2 text-gray-700 hover:text-blue-600 transition-colors">
-                <User className="w-5 h-5" />
-              </button>
-              <button className="p-2 text-gray-700 hover:text-blue-600 transition-colors">
-                <ShoppingCart className="w-5 h-5" />
-              </button>
-              <button className="p-2 text-gray-700 hover:text-blue-600 transition-colors">
-                <Bell className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-          {/* Mobile Menu Button */}
         {/* Mobile Menu */}
         <AnimatePresence>;
           {is_open && (

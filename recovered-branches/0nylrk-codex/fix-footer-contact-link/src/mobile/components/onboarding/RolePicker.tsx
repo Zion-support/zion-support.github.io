@@ -2,7 +2,6 @@
 
 
 
-
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -15,8 +14,6 @@ import { Briefcase, Users, Check } from './lucide-react';
 ;
 type UserRole = "talent" | "client" | null;
 ;
-
-
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -57,6 +54,9 @@ export function RolePicker({ onSelect }: RolePickerProps) {
       <h2 className="text-xl font-medium">What brings you to Zion?</h2>;
       <p className="text-muted-foreground">Choose how you want to use our platform</p>;
       <div className="space-y-3 mt-6">;
+interface RolePickerProps {
+  on_select: (role: UserRole) => void;
+}
         <Card
           className={`cursor-pointer transition-all ${
             selectedRole === 'talent'
@@ -115,9 +115,7 @@ export function RolePicker({ onSelect } RolePickerProps) {;
 
 
         <Card
-
-        <Card 
-
+        <Card
           className={`cursor-pointer transition-all ${
             selectedRole === 'client'
               ? "border-primary bg-primary/5"
@@ -130,10 +128,20 @@ export function RolePicker({ onSelect } RolePickerProps) {;
               :"border-border hover:border-primary/40";
           }`}
           onClick={() => handleSelect('client')}
-          }`}
-          onClick={() => handleSelect('client')}
+        >;
+          <CardContent className="p-5">;
+            <div className="flex items-center">;
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">;
+                <Users className="h-6 w-6 text-primary" />;
+              </div>;
+              <div className="flex-1">;
+                <h3 className="font-medium">I'm hiring</h3>;
+                <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>;
+              </div>;
+              {selectedRole === 'client' && (;
+                <Check className="h-5 w-5 text-primary" />;
+              )}
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-;

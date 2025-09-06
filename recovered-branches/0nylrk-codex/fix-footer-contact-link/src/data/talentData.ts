@@ -1,7 +1,8 @@
-import { TalentProfile } from '@/types/talent';
-
+      {
+      },
+    ],
+  },
   {
-
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
     location: 'Washington, DC',
     skills: [;
@@ -142,6 +143,13 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
     profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200",
     bio: "AI specialist with over 8 years of experience in computer vision and natural language processing. I've designed and implemented machine learning solutions for Fortune 500 companies across healthcare, finance, and retail sectors.";
+    key_projects: [
+      {
+        title: 'AI-Assisted Radiology Platform'
+        description:
+          'Developed a deep learning system for detecting abnormalities in chest X-rays with 97% sensitivity, reducing radiologist workload by 35% and improving early detection rates.'
+      }
+      {
     location: "Boston, MA";
     skills: ["Machine Learning", "TensorFlow", "Python", "Computer Vision", "NLP", "Data Science", "PyTorch", "Deep Learning"];
     hourly_rate: 150, years_experience: 8,
@@ -154,8 +162,9 @@ export const TALENT_PROFILES: TalentProfile[] = [
       }
     ]
   }
-
-
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.',
+      },
+    ],
+  },
+];
 ;
-
-

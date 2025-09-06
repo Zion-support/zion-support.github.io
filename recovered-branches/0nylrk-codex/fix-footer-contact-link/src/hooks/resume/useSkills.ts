@@ -1,11 +1,9 @@
-
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Skill  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useSkills() {
-
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Skill} from '@/types/resume';
@@ -20,9 +18,6 @@ export function useSkills() {;
     if (!user) {
       setError('You must be logged in to add skills')
       return false
-
-
-
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Skill } from '@/types/resume',;
@@ -36,9 +31,6 @@ export function useSkills() {;
     if (!user) {;
       setError('You must be logged in to add skills'),;
       return false;
-
-
-
     }
     
     setIsLoading(true),
@@ -53,12 +45,6 @@ export function useSkills() {;
       return handleResumeError(e, 'Could not add skill')
     } finally {
       setIsLoading(false)
-    }
-    setIsLoading(true);
-    setError(null);
-
-
-
 ;
     setIsLoading(true),;
     setError(null),;
@@ -84,9 +70,6 @@ export function useSkills() {;
     if (!user) {;
       setError('You must be logged in to delete skills'),;
       return false;
-
-
-
     }
     
     setIsLoading(true),
@@ -101,9 +84,6 @@ export function useSkills() {;
       return handleResumeError(e, 'Could not delete skill')
     } finally {
       setIsLoading(false)
-
-
-
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Skill} from '@/types / resume';
@@ -122,11 +102,8 @@ function use_skills() {
 if ( {) {
   $2
 }
-
-
-
   }
 }
+    setIsLoading (true);
+    set_error (null);
 ;
-  }
-}

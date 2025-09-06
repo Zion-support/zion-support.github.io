@@ -1,5 +1,3 @@
-import React from "react";
-
 
 // Extend the Toast component props with common toast options
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;

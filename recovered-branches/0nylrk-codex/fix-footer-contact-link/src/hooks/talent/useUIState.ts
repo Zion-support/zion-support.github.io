@@ -1,5 +1,4 @@
 
-
 import {useState} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
@@ -54,9 +53,6 @@ export function useUIState() {;
     setIsHireModalOpen,;
     selectedTalent,;
     setSelectedTalent,;
-
-
-
     expandedSections;
     toggleSection;
 

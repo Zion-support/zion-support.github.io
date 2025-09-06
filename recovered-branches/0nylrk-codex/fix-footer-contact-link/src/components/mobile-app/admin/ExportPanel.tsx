@@ -1,4 +1,3 @@
-
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -7,9 +6,6 @@ import { AppPlatform, AppMetadataValues } from "./MetadataManager";
 import { toast } from "sonner";
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner",
-
-
-
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -161,8 +157,6 @@ if ( {) {
       </CardContent>
     </Card>
   )
-}
-
 
 
         content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
@@ -180,6 +174,7 @@ interface ExportPanelProps {;
   platform: AppPlatform,;
   metadata: AppMetadataValues;
 }
+  }
                 CSV;
               </Button>;
             </div>;

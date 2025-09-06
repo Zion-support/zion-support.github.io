@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -21,13 +20,9 @@ import { basicInfoSchema, BasicInfoFormData } from "./schema",
 import { PersonalInfoFields } from "./PersonalInfoFields";
 import { ContactFields } from "./ContactFields";
 export interface BasicInfoFormProps {
-
   resumeId?: string;
 
   initialData?: Partial<BasicInfoFormData>;
-
-  onSave: (data: BasicInfoFormData) => void,;
-
   skills?: string[];
   yearsExperience?: number;
 import { PersonalInfoFields } from "./PersonalInfoFields",
@@ -134,9 +129,6 @@ export function BasicInfoForm({;
     }
 
 
-
-  };
-
   }, [initialData, form]),;
 
   const handleSubmit = (data: BasicInfoFormData) => {;
@@ -146,17 +138,18 @@ export function BasicInfoForm({;
     }
 
   },
-
-
-
+        }
+      });
+    }
+  }, [initialData, form]);
+    }
+  }
 
   return (
-
             <RateOptimizationSection
               control={form && form.control}
               setValue={form && form.setValue}
               skills={skills}
-
               location={form.getValues("location")}
               rateType="hourly"
             />

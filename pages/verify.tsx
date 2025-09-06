@@ -17,6 +17,14 @@
     const res = await fetch('/api/kyc/upload', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
+
+  async function upload(): any (kind: KycDocumentMeta['kind']) {;
+    const filename = prompt(`Enter filename for ${kind}`) || '';
+    if (!filename) return;
+    setBusy(true);
+    const res = await fetch('/api/kyc/upload', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
     } else {
       setMessage(data.error |'Submit failed');
     }
@@ -231,44 +239,13 @@ if ( {) {
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-gray-600">Progress</span>
               </div>
-
-
-
-              </div>
             </div>
             <section>
-
-        </div>;
-        <div className='mb-6'>;
-          <button
-            disabled={busy}
-            onClick={start}
-            className='rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50'>;
-            Start/Update;
-          </button>;
-        </div>;
-        {profile && (;
-          <div className='space-y-6'>;
-            <div>;
-              <div className='flex items-center justify-between mb-2'>;
-                <span className='text-sm text-gray-600'>Progress</span>;
-                <span className='text-sm font-medium'>;
-                  {progress}% {profile && profile.status === 'submitted' && '→ Pending ID'}{' '}
-                  {profile && profile.status === 'approved' && '→ Approved'}
-                </span>;
-              </div>;
-              <div className='w-full bg-gray-100 rounded h-3 overflow-hidden'>;
-                <div
-                  className='bg-blue-600 h-3'
-                  style={{ width: `${progress}%` }}
-                />              </div>;
-            </div>;
-            <section>;
-              <h2 className='font-semibold mb-2'>Required documents</h2>;
-              <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>;
-                {requiredDocs && requiredDocs.map(k => {;
-                  const hasIt = (profile && profile.documents || []).some(;
-                    d => d && d.kind === k;
+              <h2 className='font-semibold mb-2'>Required documents</h2>
+              <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
+                {requiredDocs.map(k => {
+                  const hasIt = (profile.documents |[]).some(
+                    d => d.kind === k
                   );
                     >
               <h2 className="font-semibold mb-2">Required documents</h2>
@@ -344,9 +321,6 @@ if ( {) {
     </>
 );
 
-
-
-
                     )
 ;
   const labels = getBadgeLabels(profile || undefined);
@@ -413,11 +387,6 @@ if ( {) {
             <div>;
               <button
                 disabled={
-                  busy |
-                  profile.status === 'submitted' |
-                  profile.status === 'approved'
-                }
-                onClick={submit}
                 <h2 className="font-semibold mb-2">Optional documents</h2>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                   {optionalDocs.map((k) => {

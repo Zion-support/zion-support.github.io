@@ -3,6 +3,21 @@ import { Star } from 'lucide-react'
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
+
+import { Star } from 'lucide-react';
+import { Star } from 'lucide-react';
+
+import { Star } from 'lucide-react';
+export const CommunityTrust: React.FC = () => {;
+  // Stats display with social proof;
+  const stats = [;
+    { value: '4 && 4.8', label: 'App Store Rating' },;
+    { value: '50K+', label: 'Downloads' },;
+    { value: '96%', label: 'User Satisfaction' },;
+    { value: '12M+', label: 'Matches Made' },;
+  ];
+
+
   return (
     <section className='py-16 bg-zion-blue'>;
       <div className='container mx-auto px-4'>;
@@ -57,6 +72,10 @@ export const CommunityTrust: React.FC = () => {
     { value: "96%", label: "User Satisfaction" },
     { value: "12M+", label: "Matches Made" }
   ],
+
+
+
+
 
   return (
       <div className="container mx-auto px-4">
@@ -113,6 +132,7 @@ export const CommunityTrust: React.FC = () => {
       </div>
     </section>
 
+
           </div>;
           <blockquote className="text-center text-lg text-white italic mb-4">;
             "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere.";
@@ -131,4 +151,5 @@ export const CommunityTrust: React.FC = () => {
 };
 '"  );
 };
-
+  )
+},

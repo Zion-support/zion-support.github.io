@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useCallback } from 'react';
   Zap
   Clock
   TrendingUp
@@ -18,9 +17,9 @@ import React, { useEffect, useState, useCallback } from 'react';
 
 
 } from 'lucide-react';
+
 interface PerformanceMetrics {;
   loadTime: number;
-
   Zap,
   Clock,
   TrendingUp,
@@ -42,8 +41,6 @@ interface PerformanceMetrics {
   largestContentfulPaint: number
   cumulativeLayoutShift: number
   firstInputDelay: number
-
-  timeToInteractive: number
 //Add responsive sizes if not present // Check condition
 if ( {) {
   $2
@@ -105,43 +102,15 @@ if ( {) {
       setIsOptimizing (false);
     }
   }, []);
-    setIsOptimizing(true);
-    setOptimizationStatus('Optimizing images...');
-
-    try {;
           font-display: swap;        }          font-family: 'Orbitron',;
           font-display: swap;
         }
       `;
       document && document.head.appendChild(style);
-
-      setOptimizationStatus('Font optimization complete');
     } catch (error) {
       setOptimizationStatus ('Font optimization failed');
       console.error ('Font optimization error:', error);
     } finally {
-    setIsOptimizing(true);
-    setOptimizationStatus('Optimizing code...');
-    try {
-      // Add resource hints for critical resources
-      const preloadLinks = [
-        {
-          rel: 'preload'
-          href: '/fonts/inter-var.woff2'
-          as: 'font'
-          type: 'font/woff2'
-          crossorigin: 'anonymous'
-        }
-        {
-          rel: 'preload'
-          href: '/fonts/jetbrains-mono-var.woff2'
-          as: 'font'
-          type: 'font/woff2'
-          crossorigin: 'anonymous'
-        },      ];        { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
-        { rel: 'preload', href: '/fonts/jetbrains-mono-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
-      ];
-      preloadLinks.forEach(linkAttrs => {
       ];
 
       preloadLinks && preloadLinks.forEach(linkAttrs => {;
@@ -191,7 +160,6 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
         console && console.log('Performance monitoring not fully supported');
 '      }';
       // Resource hints for better performance;
-          } else {
       const addResourceHint = (href: string, as: string, type?: string) => {;
         const link = document && document.createElement('link');
         Object && Object.entries(linkAttrs).forEach(([key, value]) => {;
@@ -201,26 +169,19 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
             (link as any)[key] = value;
           }
         });
-  }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
-  // Initialize performance monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Measure initial performance
-      window.addEventListener('load', measurePerformance);
-      // Monitor for performance issues
-      const observer = new PerformanceObserver(list => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            const lcp = entry.startTime;
-            if (lcp > 2500) {
-              // LCP should be under 2.5s
-              console.warn('LCP is too slow:', lcp);            }
-          }
-        }
             }
           }
         }
       });
+      return () => {
+        window.removeEventListener('load', measurePerformance);
+        observer.disconnect();
+      };    }
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      return () => {
+        window.removeEventListener('load', measurePerformance);
+        observer.disconnect()
+      }
   const getPerformanceScore = (): number => {
     let score = 100;
 
@@ -251,7 +212,6 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -309,11 +269,10 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
         <button
 
 
-        <button
-
 
       {/* Optimization Controls */}
 
+        <button
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -325,14 +284,14 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
         <h4 className='text-sm font-semibold text-white/80 mb-3'>;
           Performance Tips;
         </h4>;
-        <ul className='text-xs text-white/60 space-y-1'>          <li> Use WebP images for better compression</li>      <div className="mt-6 pt-4 border-t border-white/10">;
+        <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt-6 pt-4 border-t border-white/10">;
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>;
         <ul className="text-xs text-white/60 space-y-1">;
-          <li> Use WebP images for better compression</li>;
-          <li> Implement lazy loading for images</li>;
-          <li> Minimize CSS and JavaScript bundles</li>;
-          <li> Use CDN for static assets</li>;
-          <li> Enable gzip compression</li>;
+          <li>• Use WebP images for better compression</li>;
+          <li>• Implement lazy loading for images</li>;
+          <li>• Minimize CSS and JavaScript bundles</li>;
+          <li>• Use CDN for static assets</li>;
+          <li>• Enable gzip compression</li>;
         </ul>;
       </div>;
     </div>;
@@ -382,7 +341,6 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
       </div>
     </div>
 
-interface PerformanceMetrics {;
   }, [measure_performance]);
 ;
   const getPerformanceScore = (): number => {
@@ -569,14 +527,14 @@ if (return 'D') {
         <h4 className='text - sm font - semibold text - white / 80 mb - 3'>;
           Performance Tips;
         </h4>;
-        <ul className='text - xs text - white / 60 space - y-1'>          <li> Use WebP images for better compression</li>      <div className="mt - 6 pt - 4 border - t border - white / 10">;
+        <ul className='text - xs text - white / 60 space - y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt - 6 pt - 4 border - t border - white / 10">;
         <h4 className="text - sm font - semibold text - white / 80 mb - 3">Performance Tips</h4>;
         <ul className="text - xs text - white / 60 space - y-1">;
-          <li> Use WebP images for better compression</li>;
-          <li> Implement lazy loading for images</li>;
-          <li> Minimize CSS and JavaScript bundles</li>;
-          <li> Use CDN for static assets</li>;
-          <li> Enable gzip compression</li>;
+          <li>• Use WebP images for better compression</li>;
+          <li>• Implement lazy loading for images</li>;
+          <li>• Minimize CSS and JavaScript bundles</li>;
+          <li>• Use CDN for static assets</li>;
+          <li>• Enable gzip compression</li>;
         </ul>;
       </div>;
     </div>);
@@ -637,42 +595,11 @@ interface PerformanceOptimizerProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enable_reporting?: boolean;
 }
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' |!('performance' in window)) return;
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paint = performance.getEntriesByType('paint');
-    // Core Web Vitals
-    const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime |0;
-    const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime |0;
-    const ttfb = navigation.responseStart - navigation.requestStart;
-    // Memory usage (if available)
-    const memory = (performance as any).memory ? {
-      used: (performance as any).memory.usedJSHeapSize
-      total: (performance as any).memory.totalJSHeapSize
-      limit: (performance as any).memory.jsHeapSizeLimit
-    } : undefined;
-    const newMetrics: PerformanceMetrics = {
-      fcp
-      lcp
-      fid: 0, // First Input Delay - would need user interaction to measure
-      cls: 0, // Cumulative Layout Shift - would need observer
-      ttfb
-      memory
-    }
-    setMetrics(newMetrics);
-    if (onMetricsUpdate) {
-      onMetricsUpdate(newMetrics);
-    }
-    if (enableReporting && process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', newMetrics);
-    }
-  }, [onMetricsUpdate, enableReporting]);
       measureWebVitals();
     } else {;
       window && window.addEventListener('load', measureWebVitals);
     }
-;
+export default PerformanceOptimizer;
   );
 
 

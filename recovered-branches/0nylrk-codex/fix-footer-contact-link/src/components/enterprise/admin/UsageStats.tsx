@@ -1,12 +1,10 @@
 
-
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
-
   Card,
   CardContent,
   CardDescription,
@@ -73,10 +71,6 @@ export function UsageStats() {;
             </div>
           </CardContent>
           <CardFooter>
-
-        
-
-
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -102,10 +96,6 @@ export function UsageStats() {;
             </div>
           </CardContent>
           <CardFooter>
-
-        
-
-
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -146,8 +136,6 @@ export function UsageStats() {;
           </CardFooter>
         </Card>
       </div>
-
-
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -163,11 +151,6 @@ export function UsageStats() {;
         <Button>Contact Us</Button>
       </div>
     </div>
-  );
-}
-
-
-
   )
 import React from "react",;
 import { Slider } from "@/components/ui/slider",;
@@ -196,6 +179,13 @@ export function UsageStats() {;
       <div>;
         <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>;
         <p className="text-muted-foreground mb-6">;
+    });
+  }
+
+          Configure usage limits for your team to manage your subscription;
+          resources.;
+        </p>;
+      </div>;
             <CardDescription>;
               Set monthly limits for job postings across your organization;
             </CardDescription>;
@@ -250,12 +240,7 @@ export function UsageStats() {;
             </p>;
           </div>;
         </div>;
-
-
-
-
   );
-        <Button > Contact Us</Button>;
-      </div>;
-    </div>);
+}
+;
 }

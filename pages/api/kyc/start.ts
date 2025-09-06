@@ -37,7 +37,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessName
     businessRegistrationNumber
   } = req.body as {
-
     role,
     fullLegalName,
     business_name,

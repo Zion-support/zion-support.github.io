@@ -1,6 +1,5 @@
 
 
-
 export function TokenDisplay() {;
 
 
@@ -116,3 +115,4 @@ function TokenDisplay() {
                 View Wallet;
               </Button>;
             </div>;
+}

@@ -1,4 +1,3 @@
-
 const defaultContext: MessagingContextType = {
   messages: [],
   conversations: [],
@@ -13,7 +12,6 @@ const defaultContext: MessagingContextType = {
   fetchConversations: async () => {},
   loadMessages: async () => {}
 };
-
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -33,9 +31,6 @@ const defaultContext: MessagingContextType = {;
   fetchConversations: async () => {},;
   loadMessages: async () => {}
 },
-
-
-
 
 const defaultContext: MessagingContextType = {
   messages: []
@@ -106,10 +101,13 @@ function MessagingProvider() {
   const { user } = use_auth ();
 ;
 
+  const context = useContext(MessagingContext) as MessagingContextType;
+  if (context === undefined) {;
+    throw new Error('useMessaging must be used within a MessagingProvider');
+  }
+  return context;
+}
   const {
-
-// Provider component;
-export function MessagingProvider(): any ({ children }: { children: ReactNode }) {;
 
 
 
@@ -176,8 +174,6 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
       setUnreadCount(0);
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
-  // Create context value with all the methods and states
-  const contextValue: MessagingContextType = {
     fetch_conversations;
     load_messages;
   } = useMessagingOperations (user);
@@ -222,21 +218,9 @@ if ( {) {
     markAsRead;
     setActiveConversation;
 
-      {children}
-
-    </MessagingContext && MessagingContext.Provider>;
-  );
-}
-
-    fetchConversations,;
-    loadMessages;
-  };
   return (
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
       {children}
-    </MessagingContext && MessagingContext.Provider>;
-  );
-}
     fetch_conversations,
     load_messages;
   }

@@ -41,11 +41,14 @@ export default function ComposePage(req, res) {
       ? { type: 'invite', jobId, jobTitle, talentId, talentName }
       : type === 'apply';
         ? { type: 'application', jobId, jobTitle }
-        : { type: 'general' };
-  const onSend = async () => {;
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message && message.trim() && !file && !linkUrl) return;
     setSending(true);
+
+    let attachmentBase64: string | undefined,
+    if (file) {
+      const buff = await file.arrayBuffer();
+      const base64 = Buffer.from(buff).toString('base64');
       const mime = file.type || 'application/octet-stream';
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
       attachmentBase64 = `data:${mime},base64,${base64}`;
@@ -57,10 +60,6 @@ export default function ComposePage(req, res) {
       const mime = file.type || 'application/octet-stream';
       attachmentBase64 = `data:${mime},base64,${base64}`
     }
-
-
-      const mime = file.type || 'application/octet-stream';
-      const mime = file.type || 'application/octet-stream';
 
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
@@ -142,18 +141,6 @@ if (return null) {
       ? `Invite ${recipient_name || talent_name || 'Talent'}`;
       : type === 'apply';
         ? `Apply to ${job_title || 'Job'}`;
-import { useRouter } from 'next/router';
-import { useCurrentUser } from '../../hooks/useCurrentUser';
-export default function ComposePage(req, res) {
-  try {
-  const router = useRouter();
-  const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
-  const { user, loading } = useCurrentUser();
-
-  const [message, setMessage] = React.useState('');
-  const [linkUrl, setLinkUrl] = React.useState('');
-  const [file, setFile] = React.useState<File | null>(null);
-  const [sending, setSending] = React.useState(false);
         : 'New Message';
   const context =;
     type === 'invite';
@@ -193,19 +180,15 @@ export default function ComposePage(req, res) {
             <h1 className='text - xl font - semibold'>{header_title}</h1>;
             <p className='text - sm text - gray - 500'>;
               {type === 'invite' && job_title;
-                ? `Hi ${talent_name || recipient_name || ''}, Id like to invite you to discuss a project: ${job_title}`;
+                ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                 : null}
-            </p>
-          </div>
-          <div className="p-4 space-y-3">
-            <textarea
               value={message}
               on_change={e => set_message (e.target.value)}
               rows={6}
               className='w - full border rounded - lg p - 2 focus:outline - none focus:ring - 2 focus:ring - indigo - 500';
               placeholder={
                 type === 'invite' && job_title;
-                  ? `Hi ${talent_name || recipient_name || ''}, Id like to invite you to discuss a project: ${job_title}`;
+                  ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                   : 'Write your message...';
 
 

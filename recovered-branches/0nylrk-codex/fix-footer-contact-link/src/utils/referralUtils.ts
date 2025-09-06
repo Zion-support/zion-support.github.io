@@ -11,6 +11,15 @@ import {format} from 'date-fns';
 export function formatDate(date: Date | string | undefined): string {
 
   if (!date) return '-'
+  try {
+    // Check condition
+if ( {) {
+  $2
+}
+      return format (new Date (date), 'MMM d, yyyy');
+    }
+    return format (date, 'MMM d, yyyy');
+  } catch (e) {
   if (refCode) {
     localStorage && localStorage.setItem('referral_code', refCode);
     // Remove it from URL to keep it clean
@@ -27,17 +36,38 @@ export function formatDate(date: Date | string | undefined): string {
 
 
 
-  }
-  return localStorage.getItem('referral_code')
-}
-
 /**
  * Track referral when a user signs up
+* Stores referral code in local_storage when detected in URL;
+*/;
+export function checkUrlForReferralCode (): string | null {
+  // Check condition
+if (return null) {
+  $2
+}
+  const url = new URL (window.location.href);
+  const ref_code = url.search_params.get ('ref');
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    local_storage.set_item ('referral_code', ref_code);
+    // Remove it from URL to keep it clean;
+    url.search_params.delete ('ref');
+    window.history.replace_state ({}, document.title, url.to_string ());
+    return ref_code;
+  }
+  return local_storage.get_item ('referral_code');
+}
+/**;
+* Track referral when a user signs up;
+*/;
+export async /**
+ * track_referral - Function description
  */
 function track_referral() {
   try {
-    const refCode = localStorage.getItem('referral_code');
-    if (!refCode) return
     // Call API to record the referral
     const response = await fetch('/api/track-referral', {
       method: 'POST'
@@ -69,9 +99,7 @@ export async function trackReferral(userId: string, email: string) {;
     if (response.ok) {;
       // Clear the stored referral code;
       localStorage.removeItem('referral_code');
-
-
-
+      localStorage && localStorage.removeItem('referral_code')
     }
   } catch (error) {
     console && console.error('Error tracking referral:', error)

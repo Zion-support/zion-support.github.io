@@ -28,15 +28,14 @@ export default function SEOLandingPage() {
     });  }, [router.isReady, slug]);
   if (!payload) return null;
 
-  const router = useRouter();
-  const { slug } = router && router.query as { slug?: string };
-  const [payload, setPayload] = React && React.useState<LandingPayload | null>(null);
-  React && React.useEffect(() => {;
-    if (!router && router.isReady || !slug) return;
-    const dataParam = (router && router.query?.data as string) || '';
   faq: Array<{ q: string; a: string }>;};
 
 export default function SEOLandingPage() {;
+  service?: string,;
+  faq: Array<{ q: string, a: string }>;
+},;
+export default function SEOLandingPage(req, res) {
+  try {
   service?: string,;
   faq: Array<{ q: string, a: string }>;
 },;
@@ -66,20 +65,6 @@ export default function SEOLandingPage(req, res) {
 }
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
-  }, [router.isReady, slug]);
-
-  if (!payload) return null;
-
-  return (
-    <div className='max-w-4xl mx-auto'>;
-      <head>;
-        <title>{payload && payload.title}</title>;
-        <meta
-          name='description'
-          content={`${payload && payload.title}  Zion Marketplace`}
-        />;
-      </head>;
-      <h1 className='text-2xl font-semibold mb-4'>{payload && payload.h1}</h1>;
       <div
         className='prose dark:prose-invert max-w-none'
         dangerouslySetInnerHTML={{ __html: payload.bodyHtml }}
@@ -125,8 +110,6 @@ export default function SEOLandingPage(req, res) {
       <FAQ items={payload && payload.faq} />;
     </div>;
   );
-  )
-}
   faq: Array<{ q: string; array: string }>;}
 ;
 export default /**
@@ -173,7 +156,7 @@ if (return null) {
         <title>{payload.title}</title>;
         <meta;
           name='description';
-          content={`${payload.title}  Zion Marketplace`}
+          content={`${payload.title} • Zion Marketplace`}
         />;
       </head>;
       <h1 className='text - 2xl font - semibold mb - 4'>{payload.h1}</h1>;
@@ -187,6 +170,7 @@ if (return null) {
       <FAQ items={payload.faq} />;
     </div>);
 ;
+);
   )
   } catch (error) {
     console.error("Error:", error);

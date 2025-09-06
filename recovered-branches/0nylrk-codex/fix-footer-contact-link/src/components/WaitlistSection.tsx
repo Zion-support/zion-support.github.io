@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -23,8 +21,6 @@ import { useToast } from "@/hooks/use-toast";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast",
 import { Checkbox } from "@/components/ui/checkbox",
-
-
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
   const [name, setName] = useState(""),
@@ -32,8 +28,6 @@ export function WaitlistSection() {
   const [agreeTerms, setAgreeTerms] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { toast } = useToast(),
-
-
 
     
     setIsSubmitting(true),
@@ -53,6 +47,7 @@ export function WaitlistSection() {
         variant: "destructive"
         title: "Something went wrong"
         description: "Please try again later."})
+
     } finally {
       setIsSubmitting (false);
     }
@@ -176,5 +171,6 @@ export function WaitlistSection() {;
 
 
 }
+;
     </section>);
 }

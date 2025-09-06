@@ -34,7 +34,4 @@ if ( {) {
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-  } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  }
-}
+},

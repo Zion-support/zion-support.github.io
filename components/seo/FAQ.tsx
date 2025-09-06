@@ -55,8 +55,3 @@ if (return null) {
             <div className="font - medium">{it.q}</div>;
             <div className="mt - 1 text - sm text - gray - 700 dark:text - gray - 300">;
               {it.a}
-          </div>
-        ))}
-      </div>
-    </div>
-

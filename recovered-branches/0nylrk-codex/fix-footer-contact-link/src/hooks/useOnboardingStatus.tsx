@@ -1,12 +1,8 @@
-
 import { useState, useEffect } from "react",
 import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "./useAuth",
 import { supabase } from "@/integrations/supabase/client",
-
-
-
 interface OnboardingStatus {
 
   profileCompleted: boolean
@@ -44,8 +40,6 @@ export function useOnboardingStatus() {
           .from('user_onboarding')
           .select('*')
           .eq('user_id', user.id)
-
-
         }
         if (data) {
           setStatus({
@@ -62,6 +56,9 @@ export function useOnboardingStatus() {
         const { data, error } = await supabase;
           .from('user_onboarding');
           .select('*');
+      } catch (err) {;
+        console && console.error("Error in onboarding status hook:", err);
+      }
 import { useState, useEffect } from './react';
 import { use_auth } from './use_auth';
 import { supabase } from '@/integrations / supabase / client';

@@ -1,29 +1,12 @@
-
-import React, { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 
 import { toast } from "sonner";
 import { Check, Copy, ExternalLink } from "lucide-react";
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-    toast.success("API key copied to clipboard");
-  };
-
-
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { Check, Copy, ExternalLink } from "lucide-react";
-export function ZapierIntegration() {;
-  const [copied, setCopied] = useState(false);
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
-  const handleCopyApiKey = () => {;
-    navigator && navigator.clipboard.writeText(apiKey);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
 export function ZapierIntegration() {;
   const [copied, setCopied] = useState(false);
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
@@ -49,8 +32,6 @@ export function ZapierIntegration() {
     toast.success("API key copied to clipboard")
   },
   
-
-
   return (
     <div className="space-y-6">
       <div className="grid md:grid-cols-3 gap-6">
@@ -63,24 +44,10 @@ export function ZapierIntegration() {
           </CardHeader>
           <CardContent>
             <p className="text-sm text-muted-foreground mb-4">
-
-            
-
-
             <div className="space-y-4">
               <div className="space-y-2">
                 <label className="text-sm font-medium">Your Zion API Key</label>
                 <div className="flex gap-2">
-                Active;
-              </Badge>;
-            </div>;
-          </CardHeader>;
-          <CardContent>;
-
-
-        
-
-
         <Card>
           <CardHeader>
             <h3 className="text-lg font-semibold">Popular Zaps</h3>
@@ -113,37 +80,23 @@ export function ZapierIntegration() {
           </CardFooter>
         </Card>
       </div>
-
-
       <Card>
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
         </CardHeader>
         <CardContent>
           <p className="text-sm text-muted-foreground mb-4">
-
-          
-
-
           <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Job Posted</h4>
               <p className="text-xs text-muted-foreground mb-3">
                 Triggers when a new job is published on your account.
               </p>
-
-            
-
-
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
                 Triggers when a talent applies to your job.
               </p>
-
-            
-
-
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
               <p className="text-xs text-muted-foreground mb-3">
@@ -203,15 +156,16 @@ export function ZapierIntegration() {;
                     value={api_key}
                     read_only;
                     className="font - mono text - sm";
+                Active;
+              </Badge>;
+            </div>;
+          </CardHeader>;
+          <CardContent>;
+                  <Input
+                    value={apiKey}
+                    readOnly
+                    className="font-mono text-sm"
                   />;
-                  <Button;
-                    size="sm";
-                    variant="outline";
-                    on_click={handleCopyApiKey}
-                  >;
-                    {copied ? (
-                      <Check className="h - 4 w - 4" />) : (
-                      <Copy className="h - 4 w - 4" />)}
                   </Button>;
                 </div>;
               </div>;
@@ -233,9 +187,6 @@ export function ZapierIntegration() {;
                 Set Up Trigger;
               </Button>;
             </div>;
-
-
-
   );
-    </div>);
 }
+;

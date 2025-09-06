@@ -1,29 +1,17 @@
 interface JobMatchCardProps {
-import { useState } from 'react';
-import {;
-  Card,;
-  CardContent,;
-  CardHeader,;
-  CardTitle,;
-  CardDescription,;
-  CardFooter,;
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
-import { format } from 'date-fns';
-import { JobMatch } from '@/types/jobs';
-interface JobMatchCardProps {;
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
+
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
   
   if (!job) return null,
   
+
+
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">
       <CardHeader className="p-4 pb-2">
@@ -77,21 +65,22 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
       <CardHeader className="p-4 pb-2">;
         <div className="flex justify-between items-start">;
           <div>;
-            <CardTitle className="text-lg">{job.title}</CardTitle>;
+            <CardTitle className='text-lg'>{job && job.title}</CardTitle>;
             <CardDescription>;
-                <Badge key={i} variant='secondary' className='text-xs'>                  {skill}
-                </Badge>;
-              ))}
                   +{match.matched_skills.length - 5}
                 </Badge>
               )}
-            </div>;
-          </div>;
+            </div>
+          </div>
         )}
+
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>
           <div className='flex items-center text-sm'>
             <DollarSign className='h-4 w-4 mr-1 text-muted-foreground' />$
             {job.budget.min} - ${job.budget.max}
+
+
+
           </div>
           <div className='flex items-center text-sm'>
             <Calendar className='h-4 w-4 mr-1 text-muted-foreground' />
@@ -146,6 +135,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             >
               Apply Now
             </Button>
+
+
             <Button 
               variant="outline" 
               className="flex-1"
@@ -157,6 +148,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         )}
       </CardFooter>;
     </Card>;
+  );
 
 
 import { useState } from 'react';

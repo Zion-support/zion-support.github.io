@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -18,6 +19,8 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -84,6 +87,7 @@ class ImprovedMasterAutomationOrchestrator {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -104,6 +108,8 @@ class ImprovedMasterAutomationOrchestrator {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -163,6 +169,7 @@ const { execSync, spawn } = require('child_process')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -180,6 +187,8 @@ const { execSync, spawn } = require('child_process')
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
       };
       return this.results.buildTest;
     }
@@ -236,6 +245,7 @@ module.exports = ImprovedMasterAutomationOrchestrator;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -256,6 +266,8 @@ module.exports = ImprovedMasterAutomationOrchestrator;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
     this.log('\n AUTOMATION REPORT', 'PHASE')
     this.log('=')
     console.log('\n� Phase Results:')
@@ -264,8 +276,8 @@ module.exports = ImprovedMasterAutomationOrchestrator;
       this.log('� All automation phases completed successfully!', 'SUCCESS')
       this.log('⚠  Some automation phases failed. Check the report above.', 'WARNING')
     this.log(' Starting Improved Master Automation Orchestrator', 'PHASE')
-<<<<<<< HEAD
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -302,3 +314,5 @@ module.exports = ImprovedMasterAutomationOrchestrator;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

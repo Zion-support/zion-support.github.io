@@ -183,7 +183,7 @@ export default function EnhancedFooter() {
               {' '}
               <p className="text-gray-400">
                 {' '}
-                 {currentYear} Zion Tech Group. All rights reserved.{' '}
+                © {currentYear} Zion Tech Group. All rights reserved.{' '}
               </p>{' '}
               <div className="flex space-x-6">
                 {' '}

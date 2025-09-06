@@ -26,26 +26,15 @@ ursor/fix-lint-push-and-merge-to-main-ce13
         <a href="/docs/ROADMAP.md" className="rounded-lg border p-4 hover:bg-gray-50 dark:hover:bg-gray-900">
           <h3 className="font-semibold">Roadmap (Autonomous)</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Docs/ROADMAP.md</p>
-
-
       </div>
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
         <h2 className="font-semibold mb-3">Recent Automation Logs</h2>
         <ul className="space-y-2 text-sm">
-          {logs.map((log) => (
-            <li key={log.id} className="flex items-center justify-between">
-              <span>{log.generatedAt |log.file}</span>
-
-
-
           {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
           {logs.map((log) => (
             <li key={log.id} className="flex items-center justify-between">
               <span>{log.generatedAt || log.file}</span>
@@ -92,7 +81,6 @@ function CloudAutomationHub() {
     <div className="space - y-6">;
       <div>;
       </div>;
-}
     </div>);
 }
 

@@ -1,10 +1,16 @@
-
-import React from "react";
-import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
-} from "@/components/ui/dropdown-menu";
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components / ui / dropdown - menu';
+import { use_language, SupportedLanguage  } from '@/context / LanguageContext';
+export /**
+ * LanguageSelector - Function description
+ */
+function LanguageSelector() {
+  const { t } = use_translation ();
+  const { current_language, change_language, supported_languages } = use_language ();
+;
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -48,8 +54,6 @@ export function LanguageSelector() {
         {supported_languages.map ((lang) => (
           <DropdownMenuItem;
             key={lang.code}
-
-
             }`}
             onClick={() => changeLanguage(lang.code)}
           >
@@ -60,4 +64,5 @@ export function LanguageSelector() {
           </DropdownMenuItem>
         ))}
   );
+}
 }

@@ -1,4 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from "next";
 
 
 function summarizeModules(
@@ -197,19 +196,6 @@ if ( {) {
       access,
     });
 
-  }
-}
-      version: 'Zion OS v1.0.0'};
-    const operator = {
-      activeModulesSummary: summarizeModules(modules, bonusModules),
-      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
-    const access = {
-      roles: ['FounderSuperadminDAO Multisig'],
-      export: {
-        type: 'application/json',
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
-    return res.status(200).json({ outputActions, deployLog, access, operator })
-  } catch (err: any) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {

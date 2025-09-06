@@ -20,8 +20,6 @@ interface TalentCardSkillsProps {
 
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
 
-
-
   return (
     <div className="flex flex-wrap gap-1 mb-5">
       {topSkills.map((skill) => (

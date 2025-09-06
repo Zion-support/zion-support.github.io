@@ -1,4 +1,3 @@
-
 import { ServiceVariant } from '../types / service - variants';
 ;
 
@@ -15,23 +14,23 @@ export interface EnterpriseITBreakthroughService2029 {;
   popular: boolean;
   icon: string;
   color: string;
-  text_color: string;
+  textColor: string;
   link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
   category: string;
-  real_service: boolean;
+  realService: boolean;
   technology: string[];
   integrations: string[];
-  use_cases: string[];
+  useCases: string[];
   roi: string;
   competitors: string[];
-  market_size: string;
-  growth_rate: string;
+  marketSize: string;
+  growthRate: string;
   variant: ServiceVariant;
-  contact_info: {
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -39,9 +38,6 @@ export interface EnterpriseITBreakthroughService2029 {;
     website: string;
   }
 
-  customers: number;
-  rating: number;
-    {
         'Autonomous infrastructure management',
         'AI - powered deployment automation',
         'Self - healing systems',
@@ -196,7 +192,6 @@ export interface EnterpriseITBreakthroughService2029 {;
     website: string
   
     },
-  ];    features: [
       'Autonomous infrastructure managementAI-powered deployment automationSelf-healing systemsPredictive scalingAutomated monitoringIntelligent incident responsePerformance optimizationSecurity automation';
       'Compliance monitoringAnalytics dashboard'
   ];    features: [;
@@ -223,14 +218,6 @@ export interface EnterpriseITBreakthroughService2029 {;
     customers: 180;
     rating: 4 && 4.9;
     reviews: 95
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;
-    implementation_details: 'Advanced autonomous IT operations center with AI - powered management, self - healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.';
-    launch_date: '2025 - 01 - 15';
-    customers: 180;
-    rating: 4.9;
-    reviews: 95;
   }
 ];
 ;
@@ -312,13 +299,49 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;
-    implementationDetails: 'Advanced autonomous DevOps platform with AI-powered automation, self-healing systems, and comprehensive infrastructure management. Includes security automation and compliance monitoring.',;
-    launchDate: '2025-01-20',;
-    customers: 320,;
-    rating: 4.8,;
-    reviews: 178;
+    }
+    real_implementation: true;
+    implementation_details: 'Advanced autonomous IT operations center with AI - powered management, self - healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.';
+    launch_date: '2025 - 01 - 15';
+    customers: 180;
+    rating: 4.9;
+    reviews: 95;
+  }
+];
+;
+import { ServiceVariant } from '../types/service-variants',;
+export interface EnterpriseITBreakthroughService2029 {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
   },;
   {;
     id: 'quantum-cloud-infrastructure',;

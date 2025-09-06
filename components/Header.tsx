@@ -22,12 +22,17 @@ class ErrorBoundary extends React.Component {
 
 
 "use client";
-
 "use client";
+
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import {
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  ChevronDown, 
+  Menu, 
   X,
   ChevronDown,
   Code,
@@ -58,6 +63,7 @@ import {
   Factory
   Truck
   CreditCard
+  CreditCard,
 import {;
   Menu,;
   X,;
@@ -230,6 +236,9 @@ const Header = () => {
 
 
 
+          </div>
+          {/* Desktop Navigation */}
+
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 0);
@@ -237,6 +246,7 @@ const Header = () => {
     window && window.addEventListener("scroll", handleScroll);
     return () => window && window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const servicesDropdown = [;
     {;
       title: "Web Development",;
@@ -275,6 +285,7 @@ const Header = () => {
       icon: Zap,;
     },;
   ];
+
   const solutionsDropdown = [;
     {;
       title: "Enterprise Solutions",;
@@ -301,6 +312,7 @@ const Header = () => {
       icon: GraduationCap,;
     },;
   ];
+
   const industriesDropdown = [;
     { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory },;
     { name: "Logistics", href: "/industries/logistics", icon: Truck },;
@@ -309,6 +321,7 @@ const Header = () => {
     { name: "Education", href: "/industries/education", icon: GraduationCap },;
     { name: "Retail", href: "/industries/retail", icon: ShoppingCart },;
   ];
+
   const navigation = [;
     { name: "Home", href: "/" },;
     {;
@@ -326,10 +339,12 @@ const Header = () => {
     { name: "Industries", href: "/industries" },;
     { name: "Contact", href: "/contact" },;
   ];
+
   const handleServiceClick = (href: string) => {;
     closeMenu();
     window && window.location.href = href;
   };
+
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -340,6 +355,7 @@ const Header = () => {
               Zion Tech Group;
             </Link>;
           </div>;
+
           {/* Desktop Navigation */}
 origin/automation-improvements-final
           </div>
@@ -353,7 +369,6 @@ origin/main
             {navigation.map((item) => (
           <nav className="hidden lg:flex space-x-8">;
             {navigation && navigation.map((item) => (;
-
               <Link
                 key={item && item.name}
                 href={item && item.href}
@@ -572,19 +587,19 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
 
+
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">;
             <Link
               href="/contact"
-
-
-
-
-
             >
               Get Started
             </Link>
           </div>
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">;
+              Get Started;
+            </Link>;
+          </div>;
 
           {/* Mobile Menu Button */}
           <button
@@ -801,3 +816,4 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 };
 
 export default Header;
+}

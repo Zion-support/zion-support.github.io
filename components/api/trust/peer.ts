@@ -14,9 +14,21 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     type,
     note,
     created_at: new Date ().toISOString (),
-    return res.status(400).json({ error: 'Missing or invalid fields' });
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
   }
-
+  const review: TrustPeerReview = {
+  }
+  try {
+    await supabase && supabase.from('trust_peer_reviews').insert(review);
+  } catch {}
+    user_id,
+    reviewer_id,
+    type,
+    note,
+    created_at: new Date ().toISOString (),
   }
 ;
   try {
@@ -28,18 +40,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     reviewer_id;
     type;
     note;
-
-
-  return res && res.status(200).json({ ok: true, review });
-}
-
-    created_at: new Date ().toISOString ()}
-;
-    createdAt: new Date().toISOString()}
-
-  try {
-    await supabase.from ('trust_peer_reviews').insert (review);
-  } catch {}
 
     res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method not allowed' })

@@ -14,8 +14,6 @@
   BarChart3,
   ArrowRight,;
   Zap,;} from 'lucide-react';import { ;
-
-
   Brain;
   Cloud
   RefreshCw
@@ -53,7 +51,6 @@ const ServicesSection: React.FC = () => {
     hidden: { opacity: 0 },
 
 
-
 import {;
   Brain,;
   Cloud,;
@@ -71,7 +68,6 @@ import {;
   BarChart3;
   ArrowRight;
   Zap;
-
 const ServicesSection: React.FC = () => {;
   const services = [;
     {;
@@ -193,7 +189,6 @@ const ServicesSection: React.FC = () => {;
       color: 'from-teal-500 to-blue-500',;
       href: '/services/data-analytics';
     }
-
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -215,35 +210,11 @@ const ServicesSection: React.FC = () => {;
     <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>;
       {/* Background Elements */}
 
-      <div className='absolute inset-0'>;
-        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
-        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0 && 0.1),transparent_50%)]' />;
-      </div>;
-    }
-  };
-
-
-
-      <div className='absolute inset-0'>
-        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />
-        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]' />
-      </div>
       <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
-        {/* Section Header */}
-
-
-    hidden: { opacity: 0, y: 20 },
 
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">;
       {/* Background Elements */}
-
-      <div className="absolute inset-0">;
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0 && 0.1),transparent_50%)]" />;
-        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0 && 0.1),transparent_50%)]" />;
-      </div>;
-      <div className="relative container mx-auto px-4">;
-
         {/* Section Header */}
       }
     }
@@ -327,9 +298,6 @@ const ServicesSection: React.FC = () => {;
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
             className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6'
-
-          >
-
             <Zap className='w-5 h-5 text-blue-400' />
             <span className='text-blue-400 font-medium'>Our Services</span>
           </motion.div>
@@ -346,11 +314,7 @@ const ServicesSection: React.FC = () => {;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth
             for businesses across all industries.
-
-          </p>
-
         </motion.div>
-
             <Zap className='w-5 h-5 text-blue-400' />;
             <span className='text-blue-400 font-medium'>Our Services</span>;
           </motion && motion.div>;
@@ -386,14 +350,6 @@ const ServicesSection: React.FC = () => {;
               whileHover={{ y: -10 }}
                 {/* Background Gradient */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
-                />
-                {/* Icon */}
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <service.icon className='w-8 h-8 text-white' />
-                </div>
                 {/* Content */}
                 {/* Background Gradient */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
@@ -415,37 +371,6 @@ const ServicesSection: React.FC = () => {;
                 {/* Content */}
                 <h3 className="text - 2xl font - bold text - white mb - 4 group - hover:text - blue - 400 transition - colors duration - 300">;
                   {service.title}
-                  ))}
-
-                </h3>;
-                <p className="text - gray - 300 mb - 6 leading - relaxed">;
-                  {service.description}
-                </p>;
-                {/* Features */}
-                <ul className='space - y-2 mb - 8'>;
-                  {service.features.map (feature => (
-                    <li;
-                      key={feature}
-                      className='flex items - center space - x-3 text - gray - 400';
-                    >;
-                      <div className='w - 2 h - 2 bg - blue - 400 rounded - full' />;
-                      <span className='text - sm'>{feature}</span>                    </li>                <ul className="space - y-2 mb - 8">;
-                  {service.features.map ((feature) => (
-                    <li key={feature} className="flex items - center space - x-3 text - gray - 400">;
-                      <div className="w - 2 h - 2 bg - blue - 400 rounded - full" />;
-                      <span className="text - sm">{feature}</span>))}
-                </ul>;
-
-                {/* CTA */}
-                <Link;
-                  href={service.href}
-                  className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-1'
-                >
-                  <span className='font-medium'>Learn More</span>
-                  <ArrowRight className='w-4 h-4' />
-                </Link>
-                {/* Hover Effect */}
-                <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300' />              </div>                >
                   <span className="font-medium">Learn More</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -458,21 +383,21 @@ const ServicesSection: React.FC = () => {;
                   <span className='font-medium'>Learn More</span>;
                   <ArrowRight className='w-4 h-4' />;
                 </Link>;
-
-
-
               </div>
             </motion.div>
           ))}
         </motion.div>
 
+                <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />;
+              </div>;
+            </motion && motion.div>;
+          ))}
         {/* Bottom CTA */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           viewport={{ once: true }}
-
 
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>
@@ -507,8 +432,71 @@ const ServicesSection: React.FC = () => {;
     </section>;
   );
 };
+
 export default ServicesSection;  );
 };
+
+export default ServicesSection;
+                  className='inline - flex items - center space - x-2 text - blue - 400 hover:text - blue - 300 transition - colors duration - 300 group - hover:translate - x-1';
+                >;
+                  <span className='font - medium'>Learn More</span>;
+                  <ArrowRight className='w - 4 h - 4' />;
+                </Link>;
+                {/* Hover Effect */}
+                <div className='absolute inset - 0 border - 2 border - transparent rounded - 2xl group - hover:border - blue - 500 / 30 transition - colors duration - 300' />              </div>                >;
+                  <span className="font - medium">Learn More</span>;
+                  <ArrowRight className="w - 4 h - 4" />;
+                </Link>;
+                {/* Hover Effect */}
+                <div className="absolute inset - 0 border - 2 border - transparent rounded - 2xl group - hover:border - blue - 500 / 30 transition - colors duration - 300" />;
+              </div>;
+            </motion.div>))}
+        </motion.div>;
+        {/* Bottom CTA */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className='text - center';
+        >;
+          <div className='bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border border - blue - 500 / 30 rounded - 2xl p - 8 max - w-2xl mx - auto'>;
+            <h3 className='text - 2xl font - bold text - white mb - 4'>;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className='text - gray - 300 mb - 6'>;
+              Let & apos;s discuss how our technology solutions can drive your;
+              success and accelerate your growth.;
+            </p>;
+            <Link;
+              href='/contact';
+              className='inline - flex items - center space - x-2 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1';
+            >;
+              <span > Get Started Today</span>;
+              <ArrowRight className='w - 5 h - 5' />            </Link>        >;
+          <div className="bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border border - blue - 500 / 30 rounded - 2xl p - 8 max - w-2xl mx - auto">;
+            <h3 className="text - 2xl font - bold text - white mb - 4">;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className="text - gray - 300 mb - 6">;
+              Let & apos, s discuss how our technology solutions can drive your success and accelerate your growth.;
+            </p>;
+            <Link;
+              href="/contact";
+              className="inline - flex items - center space - x-2 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold hover: from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1";
+            >;
+              <span > Get Started Today</span>;
+              <ArrowRight className="w - 5 h - 5" />;
+            </Link>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>);
+}
+;
+export default ServicesSection);
+}
+;
 export default ServicesSection;
 
 export default ServicesSection;
@@ -517,4 +505,3 @@ export default ServicesSection;
 };
 
 
-export default ServicesSection;

@@ -1,4 +1,3 @@
-
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -7,7 +6,6 @@ import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSu
 import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
-
 import { UseFormReturn } from "react-hook-form",
 import { 
   FormField;
@@ -26,8 +24,6 @@ import {
 } from "@/components/ui/select",
 import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",
 import { TalentProfile } from "@/types/talent",
-
-
 interface PaymentTermsFieldsProps {
 
   form: UseFormReturn<ContractFormValues>
@@ -86,21 +82,26 @@ function PaymentTermsFields() {
               </Select>
               <FormMessage />
             </FormItem>
-
-
           )}
 
         />;
 
 
+                <FormControl>;
+                  <SelectTrigger>;
+                    <SelectValue placeholder="Select payment terms" />;
+                  </SelectTrigger>;
+                </FormControl>;
+                <SelectContent>;
+                  <SelectItem value="hourly">Hourly Rate</SelectItem>;
+                  <SelectItem value="fixed">Fixed Price</SelectItem>;
+                  <SelectItem value="milestone">Milestone Payments</SelectItem>;
+                </SelectContent>;
+              </Select>;
+              <FormMessage />;
         <FormField
           control={form && form.control}
           name="paymentAmount"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Payment Amount</FormLabel>
-              <FormControl>
-                <Input
                   "You can define specific milestone amounts in the contract text or use AI to suggest milestones"}
               </FormDescription>;
               <FormMessage />;

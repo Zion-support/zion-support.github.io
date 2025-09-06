@@ -1,7 +1,4 @@
 
-
-
-
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -15,9 +12,6 @@ import {Textarea} from "@/components/ui/textarea";
 import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
-
-
-
 import { useState } from "react",
 import { z } from "zod",
 import { useForm } from "react-hook-form",
@@ -31,9 +25,6 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
-
-
-
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
@@ -112,9 +103,6 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 export function PartnerRegistrationForm() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();
-export function PartnerRegistrationForm() {;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const { user } = useAuth(),;
   const form = useForm<PartnerFormValues>({;
     resolver: zodResolver(partnerFormSchema),;
     defaultValues: {;
@@ -132,28 +120,14 @@ export function PartnerRegistrationForm() {;
     const { data: existingPartner } = await supabase;
       .from('partner_profiles');
       .select('id');
-      .eq('user_id', user.id);
-      .single(),;
     if (existingPartner) {;
       toast({;
         title: "Already registered",;
         description: "You have already registered as a partner.",;
         variant: "destructive"}),;
-    return false;
-  };
-  async function onSubmit(): any (data: PartnerFormValues) {;
-      setIsSubmitting(false),;
+      setIsSubmitting(false);
       return true;
     }
-    return false;
-  },;
-  async function onSubmit(data: PartnerFormValues) {;
-    if (!user) {;
-      toast({;
-        title: "Authentication required",;
-        description: "You must be logged in to register as a partner.",;
-        variant: "destructive"}),;
-      return;
     }
     setIsSubmitting(true);
     try {;
@@ -170,7 +144,6 @@ export function PartnerRegistrationForm() {;
         .from('partner_profiles');
         .insert([;
           {;
-
           }
         ]);
         .select();
@@ -186,6 +159,21 @@ export function PartnerRegistrationForm() {;
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)
+    }
+  }
+  return (
+    <Card className="bg-zion-blue-dark border-zion-blue-light">;
+      <CardHeader>;
+        <CardTitle>Partner Registration</CardTitle>;
+        <CardDescription>Register to become a Zion AI partner and start earning rewards</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
+            <div className="space-y-4">;
+              <FormField
+                control={form && form.control}
+                name="name"
         ]);
         .select(),;
       if (error) throw error,;
@@ -247,8 +235,6 @@ if ( {) {
           <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
             <div className="space - y-4">;
               <FormField;
-
-
                 control={form.control}
                 name="name";
                 render={({ field }) => (
@@ -361,6 +347,13 @@ if ( {) {
                 control={form.control}
                 name="niche";
                 render={({ field }) => (
+                    <FormControl>;
+                      <Input placeholder="AI development, machine learning, tech tutorials, etc." {...field} />;
+                    </FormControl>;
+                    <FormDescription>;
+                      What topics do you focus on in your content?;
+                    </FormDescription>;
+                    <FormMessage />;
                 <FormField
                   control={form && form.control}
                   name="audience_size"
@@ -375,6 +368,12 @@ if ( {) {
                   control={form.control}
                   name="audience_size";
                   render={({ field }) => (
+                        <FormControl>;
+                          <SelectTrigger>;
+                            <SelectValue placeholder="Select audience size" />;
+                          </SelectTrigger>;
+                        </FormControl>;
+                        <SelectContent>;
                 <FormField
                   control={form && form.control}
                   name="payout_method"
@@ -409,50 +408,18 @@ if ( {) {
                         </SelectContent>;
                       </Select>;
                       <FormMessage />;
-
-                />;
-              </div>;
-
-
               <FormField
                 control={form && form.control}
                 name="bio"
-
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Bio</FormLabel>;
-                    <FormControl>;
-                      <Textarea
-                        placeholder="Tell us about yourself and how you plan to promote Zion AI"
-                        rows={4} 
-                        {...field} 
-                    </FormItem>)}
-                />;
-              </div>;
-              <FormField;
-                control={form.control}
-                name="bio";
-                render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Bio</FormLabel>;
-                    <FormControl>;
-                      <Textarea;
-                        placeholder="Tell us about yourself and how you plan to promote Zion AI";
-                        rows={4}
-                        {...field}
-
                       />;
                     </FormControl>;
                     <FormDescription>;
                       Limit: 500 characters;
                     </FormDescription>;
                     <FormMessage />;
-
-
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : "Submit Application"}
-
                   </FormItem>)}
               />;
             </div>;
@@ -476,3 +443,4 @@ if ( {) {
 }
 
 
+}

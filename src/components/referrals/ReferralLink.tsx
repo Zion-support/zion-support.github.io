@@ -44,39 +44,62 @@ export function ReferralLink(): any ({;
     setTimeout(() => setCopied(false), 2000);
   };
   return (
+  return (
+    <Card className="mt-6">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <Link className="h-5 w-5" />
+          Your Referral Link
+        </CardTitle>
+        <CardDescription>
+          Share this link with others to earn rewards when they join and complete onboarding
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="flex flex-col space-y-3">
+          <div className="flex space-x-2">
+            <Input
+              value={referralLink}
+              readOnly
+              className="font-mono text-sm"
+            />
+            <Button variant="outline" size="icon" onClick={handleCopy} aria-label="Copy referral link">
+              <Copy className="h-4 w-4" />
+              <span className="sr-only">Copy</span>
+            </Button>
+          </div>
+            <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
+            <p className="text-sm text-green-600 dark:text-green-500">
   const handleCopy = () => {
     onCopy()
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
-        <div className='flex flex - col space - y-3'>;
-          <div className='flex space - x-2'>;
-            <Input;
-              value = {referral_link, }
-              read_only;
-              className='font - mono text - sm';
-            />;
-            <Button;
-              variant='outline';
-              size='icon';
-              on_click={handle_copy}
-              aria - label='Copy referral link';
-            >;
-              <Copy className='h - 4 w - 4' />;
-              <span className='sr - only'>Copy</span>;
-            </Button>;
-          </div>;
+    <Card className="mt-6">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <Link className="h-5 w-5" />
+          Your Referral Link
+        </CardTitle>
+        <CardDescription>
+          Share this link with others to earn rewards when they join and complete onboarding
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="flex flex-col space-y-3">
+          <div className="flex space-x-2">
+            <Input
+              value={referralLink}
+              readOnly
+              className="font-mono text-sm"
+            />
+            <Button variant="outline" size="icon" onClick={handleCopy} aria-label="Copy referral link">
+              <Copy className="h-4 w-4" />
+              <span className="sr-only">Copy</span>
+            </Button>
+          </div>
           {copied && (
-            <p className='text - sm text - green - 600 dark:text - green - 500'>              Copied to clipboard!;
-            <p className="text - sm text - green - 600 dark:text - green - 500">;
-  const handle_copy = () =>: any {
-    on_copy ();
-    set_copied (true);
-    set_timeout (() => set_copied (false), 2000);
-  }
-          {copied && (;
-            <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
-            <p className="text-sm text-green-600 dark:text-green-500">;
-
+          
+          {copied && (
             <p className="text-sm text-green-600 dark:text-green-500">
               Copied to clipboard!
             </p>
@@ -120,9 +143,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
     <Card className="mt - 6">;
       <CardHeader>;
-        <CardTitle className="flex items - center gap - 2">;
-          <Link className="h - 5 w - 5" />;
-
+        <CardTitle className="flex items-center gap-2">;
+          <Link className="h-5 w-5" />;
           Your Referral Link;
         </CardTitle>;
         <CardDescription>;
@@ -130,14 +152,3 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
-
-
-            <Input
-              value={referralLink}
-              readOnly
-              className="font-mono text-sm"
-
-
-          )}
-        </div>
-      </CardContent>

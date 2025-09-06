@@ -43,23 +43,6 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
   try {
     if (!fs.existsSync(LOG_FILE)) return [];
     const raw = fs.readFileSync(LOG_FILE, 'utf8');
-    const lines = raw.split('\n').filter(Boolean);
-    const start = startIso ? new Date(startIso) : null;
-    const end = endIso ? new Date(endIso) : null;
-    const rows: EventRow[] = [];
-    for (const line of lines) {
-      try {
-        const obj = JSON.parse(line);
-        if (!obj.at) continue;
-        const t = new Date(obj.at);
-        if (start && t < start) continue;
-        if (end && t > end) continue;
-        rows.push(obj);
-    }
-    return rows;
-
-
-      } catch {}
     }
     return rows;
 

@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react',
-origin/automation-improvements-final
 
 
 
@@ -28,11 +26,12 @@ class ErrorBoundary extends React.Component {
 
 
 import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react',
+import Head from 'next/head';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-import {
   Search,
   Filter,
   ArrowRight,
@@ -179,10 +178,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
 export default function SearchPage() {
-export default function SearchPage() {;
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-export default function SearchPage() {;
 
 
 
@@ -697,12 +692,6 @@ export default function SearchPage(req, res) {
 }
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-6">
               <div className="flex-1 max-w-2xl">
-              <div className="max-w-2xl mx-auto">;
-                <div className="relative">;
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-
-
-
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 
@@ -1094,7 +1083,6 @@ function SearchPage() {
                     </button>
                   ))}
                 </div>
-
                   ))}                </div>
 ursor/fix-lint-push-and-merge-to-main-ae4e
                   ))}
@@ -1384,8 +1372,6 @@ origin/automation-improvements-final
                           <span className="mx-2 text-gray-300">•</span>
                           <span className="text-sm text-gray-500">{result.type}</span>
                         </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">
-                          <Link
 
                   >;
                     {category.name} ({category.count});
@@ -1655,9 +1641,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
   );
 
-
-
-
             </AnimatePresence>
           )}
 
@@ -1707,9 +1690,4 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 )
-}
-    </Layout>);
-}  );
-}
-);
 }

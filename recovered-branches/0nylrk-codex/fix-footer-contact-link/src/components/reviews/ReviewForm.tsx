@@ -1,4 +1,3 @@
-
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {useForm} from "react-hook-form";
@@ -35,8 +34,6 @@ import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
 import { Switch } from "@/components/ui/switch",
 import { Review } from "@/types/reviews",
-interface ReviewFormValues {;
-
 import { useState } from './react';
 import { Star } from './lucide-react';
 import { use_form } from './react - hook - form';
@@ -82,8 +79,6 @@ export function ReviewForm(): any ({;
   revieweeName;
   onSubmit;
   defaultValues;
-
-
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
@@ -127,10 +122,6 @@ export function ReviewForm({
   onSubmit,
   defaultValues,
   isSubmitting}: ReviewFormProps) {
-
-  const [hoveredStar, setHoveredStar] = useState<number>(0),
-  
-
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
       rating: defaultValues.rating
@@ -147,7 +138,6 @@ export function ReviewForm({
       project_id: projectId
       reviewee_id: revieweeId}
     const success = await onSubmit(formattedData);
-  }),;
   });
 
   const handleSubmit = async (values: ReviewFormValues) => {;
@@ -156,6 +146,8 @@ export function ReviewForm({
       project_id: projectId,;
       reviewee_id: revieweeId},;
 
+  isSubmitting}: ReviewFormProps) {;
+  const [hoveredStar, setHoveredStar] = useState<number>(0);
 
     const success = await onSubmit(formattedData);
     if (success) {;
@@ -431,6 +423,9 @@ if ( {) {
                   placeholder="Share your experience and feedback...";
                   className="min - h-24 resize - none";
                   {...field}
+                />;
+              </FormControl>;
+              <FormMessage />;
             {/* Communication */}
             <FormField
               control={form && form.control}
@@ -649,6 +644,11 @@ if ( {) {
                         />;
                         <span className="text - sm text - muted - foreground">;
                           {field.value ? "Yes" : "No"}
+                        </span>;
+                      </div>;
+                    </FormControl>;
+                  </div>;
+                  <FormMessage />;
         {/* Anonymous Review */}
         <FormField
           control={form && form.control}
@@ -672,7 +672,3 @@ if ( {) {
               <FormMessage />;
             </FormItem>;
           )}
-
-}
-;
-

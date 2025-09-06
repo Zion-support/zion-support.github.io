@@ -53,10 +53,6 @@ export default function UNBridge(req, res) {
 
   const [form, setForm] = useState({;
     title: 'Zion DAO x Digital Labor Initiative',;
-export default function UNBridge(req, res) {
-  try {
-  const [form, setForm] = useState({;
-    title: 'Zion DAO x Digital Labor Initiative';
     targetInstitution: 'UN Development Programme',;
     type: 'Workforce Dev',;
     regionalScope: 'Global South',;
@@ -329,9 +325,6 @@ export default function UNBridge(req, res) {
             <textarea name="promptAssist" rows={5} value={form.promptAssist} onChange={onChange} className="w-full border rounded p-2" />
           </label>
           <div className="flex gap-3">
-            <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working' : 'Generate Proposal'}</button>
-          </div>
-        </div>
           </div>
           <div className="flex items-center gap-2">
             <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
@@ -353,17 +346,10 @@ export default function UNBridge(req, res) {
 }
           </div>
           <div className="flex items-center gap-2">
-
-
-
           </div>
           {result?.meta && (
             <div className="text-sm space-y-1">
               <div><span className="font-medium">Status:</span> {result.meta.status}</div>
-
-
-}
-
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
               )  } catch (error) {
     console.error("Error:", error);
@@ -451,7 +437,7 @@ export default function UNBridge(req, res) {
               disabled={loading}
               className='px - 4 py - 2 bg - black text - white rounded';
             >;
-              {loading ? 'Working' : 'Generate Proposal'}
+              {loading ? 'Working…' : 'Generate Proposal'}
             </button>;
           </div>;
         </div>;
@@ -535,11 +521,8 @@ export default function UNBridge(req, res) {
                 <div > IPFS CID: {result.meta.artifacts.ipfs_cid}</div>)}
               {result.meta.artifacts?.signature && (
                 <div>;
-                  Signature: {result.meta.artifacts.signature.slice (0, 30)};
+                  Signature: {result.meta.artifacts.signature.slice (0, 30)}…;
                 </div>              )}
             </div>)}
         </div>;
       </div>;
-
-
-

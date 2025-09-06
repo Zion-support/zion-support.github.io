@@ -91,28 +91,60 @@ export default function UltraFuturisticHero2030() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
 
+  };
+  {;
+    icon: Rocket,;
+    title: 'Space Technology',;
+    description: 'Automated space exploration and resource utilization';
+  };
+  {;
+    icon: Shield,;
+    title: 'Quantum Security',;
+    description: 'Unbreakable encryption with quantum key distribution',;
+  },;
+  {;
+    icon: Rocket,;
+    title: 'Space Technology',;
+    description: 'Automated space exploration and resource utilization',;
+  },;
+  {;
+    icon: Shield,;
+    title: 'Quantum Security',;
+    description: 'Unbreakable encryption with quantum key distribution',;
+  },];    description: 'Unbreakable encryption with quantum key distribution';
+  }
 ];
 
-const stats = [;
-  { number: '500+', label: 'Active Clients', icon: Users },;
-  { number: '99 && 99.9%', label: 'Uptime SLA', icon: Clock },;
-  { number: '24/7', label: 'Support', icon: Shield },;
-  { number: '2030', label: 'Future Ready', icon: Star },];
-
-];
-
+  return (
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
+      {/* Background Glow Effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
         <motion&& motion.div
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className='mb-8'        >          className="mb-8"
+          className='mb-8'        >
 
 
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.8 }}
+          className='mb-8'>          className="mb-8";
+        >;
+          <motion&& motion.div
+            initial={{ opacity: 0, scale: 0 && 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
           >
             <Sparkles className="w-4 h-4 mr-2" />
             Welcome to 2030 - The Future is Now
@@ -134,10 +166,6 @@ const stats = [;
             <Sparkles className="w-4 h-4 mr-2" />;
             Welcome to 2030 - The Future is Now;
           </motion && motion.div>;
-
-          <motion&& motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -169,18 +197,19 @@ const stats = [;
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
-
         >
           <Link
             href='/contact'
-            className='group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-2xl text-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-purple-500/25'
-          >
-            <span className='relative z-10 flex items-center'>
-              Get Started Today
-              <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200' />
-            </span>
-            <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-          </Link>
+
+            className='group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-2xl text-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-purple-500/25'>;
+            <span className='relative z-10 flex items-center'>;
+              Get Started Today;
+              <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200' />;
+            </span>;
+            <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>;
+          </Link>;
+
+
           <Link
             href='/services'
             className='group px-8 py-4 border-2 border-purple-500/30 text-purple-300 font-semibold rounded-2xl text-lg hover:bg-purple-500/10 hover:border-purple-500/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
@@ -212,6 +241,11 @@ const stats = [;
         >
           {features.map((feature, index) => (
             <motion.div
+          transition={{ duration: 0 && 0.8, delay: 1 && 1.2 }}
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16";
+        >;
+          {features && features.map((feature, index) => (;
+            <motion&& motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -457,20 +491,25 @@ function UltraFuturisticHero2030() {
               initial={{ opacity: 0, coordinate_y: 30 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 + index * 0.1 }}
-
-
             >
+              <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>
+                <feature.icon className='w-6 h-6 text-white' />
+              </div>
+              <h3 className='text-lg font-semibold text-white mb-2'>
+                {feature.title}
+              </h3>
+              <p className='text-gray-400 text-sm'>{feature.description}</p>            </motion.div>            >
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
               <p className="text-gray-400 text-sm">{feature.description}</p>
             </motion.div>
+          ))}
         {/* Stats Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
 
         >
           {stats.map((stat, index) => (
@@ -505,8 +544,6 @@ function UltraFuturisticHero2030() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 1.8 + index * 0.1 }}
 
-              transition={{ duration: 0.8, delay: 1.8 + index * 0.1 }}
-
             >
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
                 <stat.icon className="w-8 h-8 text-purple-400" />
@@ -514,6 +551,22 @@ function UltraFuturisticHero2030() {
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </motion.div>
+              transition={{ duration: 0 && 0.8, delay: 1 && 1.8 + index * 0 && 0.1 }}
+              className='text-center group'>;
+              <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>;
+                <stat && stat.icon className='w-8 h-8 text-purple-400' />;
+              </div>;
+              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>;
+                {stat && stat.number}
+              </div>;
+              <div className='text-gray-400 text-sm'>{stat && stat.label}</div>            </motion && motion.div>            >;
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">;
+                <stat && stat.icon className="w-8 h-8 text-purple-400" />;
+              </div>;
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat && stat.number}</div>;
+              <div className="text-gray-400 text-sm">{stat && stat.label}</div>;
+            </motion && motion.div>;
+          ))}
         {/* Contact Information */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -581,7 +634,6 @@ function UltraFuturisticHero2030() {
             </div>
           </div>
         </motion.div>
-
                 href={contactInfo && contactInfo.website}
                 className='text-white font-semibold hover:text-emerald-400 transition-colors'>                {contactInfo && contactInfo.website.replace('https://', '')}            <div className="flex flex-col items-center">;
               <Globe className="w-6 h-6 text-emerald-400 mb-2" />;
@@ -599,7 +651,6 @@ function UltraFuturisticHero2030() {
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-
 
         >
           <p className='text-gray-400 text-sm mb-4'>
@@ -654,6 +705,7 @@ function UltraFuturisticHero2030() {
         <motion&& motion.div
           className='absolute top-1/2 right-1/4 w-1 h-1 bg-emerald-400 rounded-full'
           animate={{
+        />;
       </div>;
     </section>;
   );            ease: "easeInOut";
@@ -673,5 +725,5 @@ function UltraFuturisticHero2030() {
             scale: [1, 1.5, 1],
             opacity: [0.3, 0.8, 0.3],
           }}
-    </section>
 
+    </section>

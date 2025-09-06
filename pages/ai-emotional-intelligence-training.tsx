@@ -12,7 +12,6 @@
 			industries={["Customer Support", "Sales", "HR & L&D", "Leadership"]}
 
 
-
 			pricePerMonthUSD={799  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -48,5 +47,3 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-

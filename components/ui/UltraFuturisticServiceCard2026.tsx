@@ -1,97 +1,17 @@
+import React from 'react';
+    monthly?: number;
+    yearly?: number;
+    currency?: string;
+  period?: string;
+  pricing?: any;
+  features: string[],;
+  popular?: boolean;
+  competitors?: string[];
+  targetMarket?: string;
+  useCases?: string[];
     switch (variant) {
       case 'ai':;
         return {
-
-  integration?: string[];
-  benefits?: string[];
-}
-interface ServiceCardProps {;
-  service: Service,;
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
-}
-const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {;
-  const getVariantStyles = () => {;
-    switch (variant) {;
-      case 'ai':;
-        return {;
-          gradient: 'from-purple-600 via-pink-600 to-purple-700',;
-          borderColor: 'border-purple-400/30',;
-          textColor: 'text-purple-400',;
-          iconBg: 'bg-purple-500/20',;
-          iconBorder: 'border-purple-400/30';
-        };
-      case 'quantum':;
-        return {;
-          gradient: 'from-cyan-600 via-blue-600 to-cyan-700',;
-          borderColor: 'border-cyan-400/30',;
-          textColor: 'text-cyan-400',;
-          iconBg: 'bg-cyan-500/20',;
-          iconBorder: 'border-cyan-400/30';
-        };
-      case 'space':;
-        return {;
-          gradient: 'from-indigo-600 via-purple-600 to-indigo-700',;
-          borderColor: 'border-indigo-400/30',;
-          textColor: 'text-indigo-400',;
-          iconBg: 'bg-indigo-500/20',;
-          iconBorder: 'border-indigo-400/30';
-        };
-      case 'cybersecurity':;
-        return {;
-          gradient: 'from-red-600 via-orange-600 to-red-700',;
-          borderColor: 'border-red-400/30',;
-          textColor: 'text-red-400',;
-          iconBg: 'bg-red-500/20',;
-          iconBorder: 'border-red-400/30';
-        };
-      case 'enterprise':;
-        return {;
-          gradient: 'from-indigo-600 via-purple-600 to-indigo-700',;
-          borderColor: 'border-indigo-400/30',;
-          textColor: 'text-indigo-400',;
-          iconBg: 'bg-indigo-500/20',;
-          iconBorder: 'border-indigo-400/30';
-        };
-      case 'automation':;
-        return {;
-          gradient: 'from-green-600 via-emerald-600 to-green-700',;
-          borderColor: 'border-green-400/30',;
-          textColor: 'text-green-400',;
-          iconBg: 'bg-green-500/20',;
-          iconBorder: 'border-green-400/30';
-        };
-      case 'it':;
-        return {;
-          gradient: 'from-blue-600 via-indigo-600 to-blue-700',;
-          borderColor: 'border-blue-400/30',;
-          textColor: 'text-blue-400',;
-          iconBg: 'bg-blue-500/20',;
-          iconBorder: 'border-blue-400/30';
-        };
-      case 'emerging':;
-        return {;
-          gradient: 'from-yellow-600 via-orange-600 to-yellow-700',;
-          borderColor: 'border-yellow-400/30',;
-          textColor: 'text-yellow-400',;
-          iconBg: 'bg-yellow-500/20',;
-          iconBorder: 'border-yellow-400/30';
-        };
-      case 'premium':;
-        return {;
-          gradient: 'from-amber-600 via-yellow-600 to-amber-700',;
-          borderColor: 'border-amber-400/30',;
-          textColor: 'text-amber-400',;
-          iconBg: 'bg-amber-500/20',;
-          iconBorder: 'border-amber-400/30';
-        };
-      default:;
-        return {;
-          gradient: 'from-gray-600 via-gray-700 to-gray-800',;
-          borderColor: 'border-gray-400/30',;
-          textColor: 'text-gray-400',;
-          iconBg: 'bg-gray-500/20',;
-          iconBorder: 'border-gray-400/30';
-
         }
     }
   }
@@ -255,8 +175,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <span>{feature}</span>;
             </motion && motion.div>;
           ))}
-
-
         {/* Enhanced Market Information */}
         {service.marketPrice && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -268,6 +186,9 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <div className="text-xs text-gray-500">
                 Competes with: {service.competitors.slice(0, 2).join()}
               </div>
+            )}
+          </div>
+        )}
         {/* Benefits Section */}
         {service && service.benefits && (;
           <div className="border-t border-white/10 pt-4 mb-6 relative z-10">;
@@ -295,14 +216,15 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Get Started
           </motion.button>
         </div>
-
-
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
     </motion.div>
-  )
-});
+
+  );
+};
+
+
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 
@@ -330,6 +252,9 @@ UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = '
 
 export default UltraFuturisticServiceCard2026;
 export default UltraFuturisticServiceCard2026;
+UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
+export default UltraFuturisticServiceCard2026;
+
           </div>;
           <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - gray - 100 transition - colors">;
             {service.name}

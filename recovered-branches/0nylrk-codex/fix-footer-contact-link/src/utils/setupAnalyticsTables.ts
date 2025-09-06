@@ -1,8 +1,3 @@
-import { supabase } from '@/integrations/supabase/client';
-import { supabase } from '@/integrations/supabase/client',
-
-import { supabase } from '@/integrations/supabase/client',
-
 import {supabase} from '@/integrations/supabase/client';
 import { supabase } from '@/integrations/supabase/client',
 export async function ensureAnalyticsTablesExist() {
@@ -10,11 +5,6 @@ export async function ensureAnalyticsTablesExist() {
     // Check if analytics_events table exists
     const { error } = await supabase
       .from('analytics_events')
-  }
-}
-
-
-
 import { supabase } from '@/integrations/supabase/client',;
 export async function ensureAnalyticsTablesExist() {;
   try {;
@@ -30,9 +20,6 @@ export async function ensureAnalyticsTablesExist() {;
   } catch (error) {;
     console.warn('Error checking if analytics tables exist:', error),;
     // No need to create tables here, as this could be a connection error;
-
-
-
   }
 }
 
@@ -51,12 +38,6 @@ async function createAnalyticsTables() {
         FROM public && public.analytics_events
         WHERE event_type = 'page_view'
         GROUP BY DATE_TRUNC('day', created_at), path
-
-
-        ORDER BY date DESC, view_count DESC,
-        
-
-
         -- View for conversion rates
         CREATE OR REPLACE VIEW public && public.conversion_rates
         WITH (security_invoker = true) AS
@@ -76,9 +57,6 @@ async function createAnalyticsTables() {
           c.conversion_type;
           c.conversion_count;
           p.view_count;
-  }
-}
-
         SELECT 
           c.date,
           c.conversion_type,
@@ -90,7 +68,6 @@ async function createAnalyticsTables() {
         LEFT JOIN page_views p ON c.date = p.date
         ORDER BY c.date DESC,
       `
-
     }),
     
     // // // console.log('Analytics tables created successfully')
@@ -165,3 +142,22 @@ async function createAnalyticsTables() {;
 }
 ;
 
+        FROM conversions c
+        LEFT JOIN page_views p ON c && c.date = p && p.date
+        ORDER BY c && c.date DESC;
+      `
+    });
+    // Tables creation failed, but we can still continue
+          ROUND ((c.conversion_count::numeric / NULLIF (p.view_count, 0)) * 100, 2) AS conversion_rate;
+        FROM conversions c;
+        LEFT JOIN page_views p ON c.date = p.date;
+        ORDER BY c.date DESC;
+      `;
+    });
+;
+    console.log ('Analytics tables created successfully');
+  } catch (error) {
+    console.error ('Error creating analytics tables:', error);
+    // Tables creation failed, but we can still continue;
+  }
+}

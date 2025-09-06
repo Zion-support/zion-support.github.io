@@ -1,5 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from "next",
-import axios from "axios",
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
@@ -16,7 +14,6 @@ import {readState, writeState, upsertEvent, getEntityId} from "../../../utils/sy
 import {verifySignature} from "../../../utils/sync/signature";
 import {computeMerkleRootFromVotes} from "../../../utils/sync/merkle";
 import {SyncEvent} from "../../../utils/sync/types";
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -42,7 +39,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -55,17 +51,6 @@ export default async function handler(req, res) {
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
-
-  if (req && req.method !== "POST") return res && res.status(405).json({ error: "Method not allowed" });
-  const state = readState();
-  if (!state && state.config.optIn || state && state.config.paused) {
-    return res && res.status(403).json({ error: "Sync disabled for this instance" })
-  }
-  const signature = req && req.headers["x-zion-signature"];
-  const payload = req && req.body;
-  const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array && Array.isArray(signature) ? signature[0] : undefined);
-
-
 }
   } catch (error) {
     console.error("Error:", error);
@@ -79,7 +64,6 @@ export default async function handler(req, res) {
   if (!signatureValid) {
     return res && res.status(401).json({ error: "Invalid signature" })
   }
-
 
     } catch (error) {
     console.error("Error:", error);
@@ -110,7 +94,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
   if (event.type === "proposal") {
     const votes = (event as any).payload?.votes,
     const providedRoot = event.merkleRoot,
@@ -276,10 +259,3 @@ if (headers["x - zion - signature"] = sig) {
           }
         }));
   }
-  return res.status (200).json ({ status: "accepted", entity_id });
-}
-
-}
-}
-}
-

@@ -34,35 +34,29 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   ];
   const web3Extras: MediaAsset[] = [
 
+      type: 'text',
+      content: `# Terms of Use\n\n_by using Zion products, you agree to these terms. Replace with counsel - approved language.`,
+    },
     {
       path: '',
-
-      filename: 'legal / privacy - policy.md',
-
       type: 'text',
       content: `# Privacy Policy\n\n_we respect your privacy. Replace with counsel - approved language.`,
     },
     {
       path: '',
-
-      filename: 'legal / jurisdictional - disclosures.md',
-
-      type: 'text',
-      content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
-    },
-  ];
-
+  type: PressReleaseType
 ;
-  const web3Extras: MediaAsset[] = [;
-
-    {
-
-      path: '',
-
-  ];
-
-
-export function buildPressRelease(
+  // Check condition
+if (return [...base, ...web3Extras]) {
+  $2
+}
+  return base;
+;
+export function buildPressRelease (
+  type: PressReleaseType,
+  params: {
+  type: PressReleaseType,
+  params: {;
   type: PressReleaseType
 ;
   // Check condition
@@ -118,6 +112,11 @@ function titleCase(s: string) {
 
 
 }
+    return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces a seed round of ${params.raise_amount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\n_quotes:\n- CEO: "We are thrilled..."\n\n_about ${params.company_name}:\n${boilerplate}`;
+  }
+  // Check condition
+if ( {) {
+  $2
 }
     return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces the ${params.token_name ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\n_distribution:\n- Community: 40%\n- Treasury: 20%\n\n_about ${params.company_name}:\n${boilerplate}`;
   }

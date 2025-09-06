@@ -1,6 +1,3 @@
-
-
-
   type: AnalyticsEventType,;
 
   path?: string;
@@ -8,7 +5,7 @@
   elementId?: string;
   timestamp: number
   userId?: string | null;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, any>
 }
 
 
@@ -21,14 +18,11 @@ export interface AnalyticsContextType {;
   events: AnalyticsEvent[]
   clearEvents: () => void
 }
-
-
-
-
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
 import { useLocation } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
+
 // Analytics event types;
 export type AnalyticsEventType =;
   | 'page_view';
@@ -43,29 +37,13 @@ export type AnalyticsEventType =;
   | 'payment_initiated';
   | 'payment_completed';
   | 'signup';
-import {useLocation} from 'react-router-dom';
-import {useAuth} from '@/hooks/useAuth';
-import {supabase} from '@/integrations/supabase/client';
-
-import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
-import { useLocation } from 'react-router-dom',;
-import { useAuth } from '@/hooks/useAuth',;
-import { supabase } from '@/integrations/supabase/client',;
-;
-// Analytics event types;
-export type AnalyticsEventType = ;
-  | 'page_view';
-  | 'button_click';
-  | 'form_submit';
-  | 'form_error';
-  | 'search';
-  | 'filter';
-  | 'conversion';
-  | 'listing_view';
-  | 'listing_contact';
-  | 'payment_initiated';
-  | 'payment_completed';
-  | 'signup';
+export interface AnalyticsEvent {
+  type: AnalyticsEventType
+  path?: string;
+  component?: string;
+  userId?: string | null;
+  metadata?: Record<string, any>;
+}
   pageViews: number,;
   lastEvent: AnalyticsEvent | null,;
   events: AnalyticsEvent[],;
@@ -194,9 +172,6 @@ function AnalyticsProvider() {
         metadata: metadata;
       }]);
 
-
-
-
       }}
     >
       {children}
@@ -211,6 +186,19 @@ export const useAnalytics = (): AnalyticsContextType => {
 
       }}
     >
+    } catch (error) {
+      console.error ('Error logging analytics event:', error);
+    }
+  return (
+    <AnalyticsContext&& AnalyticsContext.Provider
+      value={{
+        trackEvent
+        trackConversion
+        pageViews
+        lastEvent
+        events
+        clearEvents
+      }}>;
       {children}
     </AnalyticsContext && AnalyticsContext.Provider>;
   );
@@ -230,57 +218,11 @@ export const useAnalytics = (): AnalyticsContextType => {;
   // Cast is used here because the context default is undefined until provided
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.
   return context as AnalyticsContextType
-
-
 ;
 export const useAnalytics = (): AnalyticsContextType => {;
   const context = useContext(AnalyticsContext);
   if (!context) {;
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
-
-};
-  }
-;
-  // Function to track conversion events;
-  const track_conversion = (conversion_type: string, value?: number, metadata: Record < string, any> = {}) =>: any {
-    track_event ('conversion', {
-      conversion_type,
-      value,
-      ...metadata;
-    });
-  }
-;
-  // Clear events (for development or testing);
-  const clear_events = () =>: any {
-    set_events ([]);
-    setLastEvent (null);
-  }
-;
-  return (
-    <AnalyticsContext.Provider;
-      value={{
-        track_event;
-        track_conversion;
-        page_views;
-        last_event;
-        events;
-        clear_events;
-      }}
-    >;
-      {children}
-    </AnalyticsContext.Provider>);
-}
-export const use_analytics = (): AnalyticsContextType => {
-  const context = useContext (AnalyticsContext);
-  // Check condition
-if ( {) {
-  $2
-}
-    throw new Error ('use_analytics must be used within an AnalyticsProvider');
-  }
-  // Cast is used here because the context default is undefined until provided;
-  // by `AnalyticsProvider`. The runtime check above ensures it's defined.;
-  return context as AnalyticsContextType;
 
 };

@@ -299,14 +299,6 @@ function Revolutionary2026ServicesPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
-                  Ready to Experience the Future?
-                </h3>
-                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                  Join thousands of forward-thinking companies already using our revolutionary services
-                  to gain competitive advantages and accelerate innovation.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
                     href="tel:+13024640950"
                     className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2"
                   >

@@ -27,8 +27,6 @@ const cachePath = path && path.join(process && process.cwd(), "data", "dao", "me
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
-
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
 ;
@@ -55,8 +53,7 @@ export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
-;
-export default async function handler(req, res) {
+
 
 
 ;
@@ -86,6 +83,7 @@ export default async function handler(req, res) {
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
+
 
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
         )
@@ -198,9 +196,6 @@ if ( {) {
     write_json (cache_path, result);
     return res.status (200).json (result);
   } catch (e: any) {
-  }
-}
-}
   }
 }
 }

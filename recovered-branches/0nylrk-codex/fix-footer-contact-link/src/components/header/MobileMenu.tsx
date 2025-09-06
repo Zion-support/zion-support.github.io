@@ -1,4 +1,3 @@
-
 import {Link} from "react-router-dom";
 import {useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle} from "lucide-react";
@@ -6,6 +5,10 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 export interface MobileMenuProps {;
+  unreadCount?: number;
+  onClose: () => void;
+}
+
 export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
   const { user } = useAuth();
@@ -65,10 +68,19 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       authRequired: true
     }
           <Link
+            key={item.name}
+            to={item.href}
+            className={cn(
+              item.matches(location.pathname)
+                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
+                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+            )}
+  );
+  return (
+          <Link
             key={item && item.name}
             to={item && item.href}
             className={cn(
-              item.matches(location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
             )}

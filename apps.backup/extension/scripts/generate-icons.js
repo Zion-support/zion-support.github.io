@@ -1,5 +1,5 @@
-#!/usr / bin / env node;
-import { mkdir_sync, exists_sync } from 'node: fs';
+#!/usr/bin/env node
+import { mkdirSync, existsSync } from 'node: fs';
 import { resolve } from 'node: path';
 import sharp from 'sharp';
   // // // console.log('generated', out)
@@ -20,6 +20,3 @@ for (const size of sizes) {;
   // // // console.log('generated', out);
 }
 }
-}
-}
-

@@ -12,7 +12,6 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -22,6 +21,9 @@ interface ContentGenerationRequest {
   auto_publish?: boolean,
   include_image?: boolean;
 
+  content_type: 'blog' | 'newsletter';
+  prompt?: string;
+  topic?: string;
 }
 interface GeneratedBlogContent {
   title: string;
@@ -122,8 +124,33 @@ serve(async (req) => {
       Keep it concise with clear sections and an engaging call-to-action to browse jobs or talent.`
     }
     // Call OpenAI API
-        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: userPrompt }
+        ],
+        temperature: 0.7})}),
 
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
+    }
+
+    const data = await response.json(),
+    const generatedContent = JSON.parse(data.choices[0].message.content),
+    
+    // If image is requested for blog post, generate an image prompt
+    if (contentType === 'blog' && includeImage) {
+      const imagePromptResponse = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST"
+        headers: {
+            { 
+              role: "system", 
+              content: "You are an expert at creating DALL-E image prompts. Generate a short, descriptive prompt for a blog post thumbnail." 
+            },
+            { 
+              role: "user", 
+        messages: [
+          { role: "system", content: systemPrompt }
+          { role: "user", content: userPrompt }
   tweet_summary?: string,
   image_prompt?: string;
 }
@@ -191,40 +218,7 @@ if ( {) {
         messages: [;
           { role: "system", content: system_prompt }
           { role: "user", content: user_prompt }
-
         ];
-
-
-          { role: "system", content: systemPrompt },
-          { role: "user", content: userPrompt }
-        ],
-        temperature: 0.7})}),
-
-
-
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
-    }
-
-
-
-    const data = await response.json(),
-    const generatedContent = JSON.parse(data.choices[0].message.content),
-    
-
-
-    // If image is requested for blog post, generate an image prompt
-    if (contentType === 'blog' && includeImage) {
-      const imagePromptResponse = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST"
-        headers: {
-            { 
-              role: "system", 
-              content: "You are an expert at creating DALL-E image prompts. Generate a short, descriptive prompt for a blog post thumbnail." 
-            },
-            { 
-              role: "user", 
             }
           ];
           temperature: 0 && 0.7,
@@ -316,20 +310,20 @@ serve(async (req) => {;
 
 
 
+    }
     // If autoPublish is true, save the content to the database
     if (autoPublish && contentType === 'blog') {
-
-      const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL");
-      const supabaseKey = Deno && Deno.env.get("SUPABASE_ANON_KEY");
-      
-      if (!supabaseUrl || !supabaseKey) {
-
-        throw new Error("Supabase credentials are not set in environment variables")
-      }
       // Create slug from title
       const slug = generatedContent && generatedContent.title
         .toLowerCase()
         .replace(/[^\w\s]/g, '')
+      // Get current date formatted
+      const publishedDate = new Date().toLocaleDateString('en-US', {
+        month: 'short';
+        day: 'numeric'
+        year: 'numeric'
+      });
+      // Auto-calculate read time (rough estimate: 200 words per minute)
       // Insert into blog_posts table
       const { data: blogPost, error } = await supabase
         .from('blog_posts')
@@ -445,6 +439,7 @@ serve(async (req) => {;
             read: false,;
             related_id: blogPost.id,;
             action_url: `/blog/${slug}`,;
+            action_url: `/blog/${slug}`;
             action_text: "View Post";
           });
       }
@@ -459,6 +454,18 @@ serve(async (req) => {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
 
+      status: 500})
   }
 });
+
+    return new Response (JSON.stringify (generated_content), {
+      headers: { ...cors_headers, "Content - Type": "application / json" }
+      status: 200});
+  } catch (error) {
+    console.error ("Error in generate - content function:", error);
 ;
+    return new Response (JSON.stringify ({ error: error.message }), {
+      headers: { ...cors_headers, "Content - Type": "application / json" }
+      status: 500});
+  }
+});

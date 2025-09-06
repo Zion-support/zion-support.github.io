@@ -1,16 +1,8 @@
-export default function InternationalProposals() {
 
       const res = await fetch('/api/proposals/list');
       const data = await res.json();
       setItems(data.proposals || []);
 
-  const [items, setItems] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
-  useEffect(() => {
-    (async () => {
-      const res = await fetch('/api/proposals/list')
-      const data = await res.json()
-      setItems(data.proposals |[])
       setLoading(false)
     })()
   }, [])
@@ -74,8 +66,6 @@ export default function InternationalProposals(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               </div>
               <div className="mt-3 flex items-center gap-2 text-xs">
                 <button onClick={() => updateStatus(p.id, 'Under Review')} className="px-2 py-1 border rounded">Mark Under Review</button>
@@ -84,14 +74,11 @@ export default function InternationalProposals(req, res) {
               </div>
             </div>
 
-
-
         </div>
       )}
     </div>
   );
 };
-
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

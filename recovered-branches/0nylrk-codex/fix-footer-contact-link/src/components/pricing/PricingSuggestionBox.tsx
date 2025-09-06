@@ -1,4 +1,3 @@
-
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
@@ -8,9 +7,6 @@ import { Loader2, Info, ThumbsUp } from "lucide-react";
 import { PricingSuggestion } from "@/services/pricingSuggestionService";
 import { Loader2, Info, ThumbsUp } from "lucide-react",
 import { PricingSuggestion } from "@/services/pricingSuggestionService",
-
-
-
 interface PricingSuggestionBoxProps {
 
   suggestion: PricingSuggestion | null
@@ -68,6 +64,7 @@ interface PricingSuggestionBoxProps {;
   rateType: "hourly" | "fixed";
 }
 
+    return (
       <Card className="border border-dashed border-muted">;
         <CardContent className="flex items-center justify-center p-6">;
           <div className="text-center">;
@@ -140,7 +137,6 @@ interface PricingSuggestionBoxProps {;
     </Card>
   )
 
-
 };
 
 },
@@ -175,4 +171,3 @@ interface PricingSuggestionBoxProps {;
             </Tooltip>;
           </TooltipProvider>;
         </div>;
-

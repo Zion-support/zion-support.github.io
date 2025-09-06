@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -84,12 +83,6 @@ export function MilestoneCard(): any ({ ;
   onReject;
 }: MilestoneCardProps) {;
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
-
-
-  function getStatusBadgeColor() {;
-    switch (status) {;
-      case 'completed':;
-
         return 'bg-green-500';
       case 'in_progress':;
         return 'bg-blue-500';
@@ -125,9 +118,9 @@ export function MilestoneCard(): any ({ ;
       default: return 'bg-gray-500';
     }
   }
-
-
-
+  
+    }
+  }
   return (
     <Card>;
       <CardHeader className="pb-2">;
@@ -143,7 +136,6 @@ export function MilestoneCard(): any ({ ;
               size="sm"
             />;
           )}
-}
 
 
 

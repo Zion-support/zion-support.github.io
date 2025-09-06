@@ -31,9 +31,6 @@ export default function Partners({ }: PartnersProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
 :src.pages.disabled/Partners.jsx
 }
 }
@@ -44,3 +41,12 @@ export default function Partners({ }: PartnersProps) {
 
 
 
+
+
+
+:src.pages.disabled/Partners.jsx
+}
+}
+}
+}
+}

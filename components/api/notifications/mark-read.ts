@@ -8,16 +8,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (match) return decodeURIComponent(match && match.split('=')[1]);
   return 'demo-user-1'
 }
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
-
   try {
     const userId = getUserId(req);
-
-    const { id } = req && req.body as { id?: string };
-    if (!id) return res && res.status(400).json({ error: 'Missing id' });
-
-
     const { error } = await supabase
       .from('notifications')
       .update({ read_status: true })
@@ -31,6 +23,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   }
     return res && res.status(200).json({ ok: true })
   } catch (e) {
+}
 import { supabase } from '../../../utils / supabase / client';
 ;
 function getUserId (req: NextApiRequest): string {
@@ -88,8 +81,4 @@ function handler() {
     return res.status (200).json ({ ok: true });
   } catch (e) {
     return res.status (500).json ({ error: 'Unexpected error' });
-}
-
-  }
-
 }

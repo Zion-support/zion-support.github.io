@@ -53,6 +53,7 @@ try {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -83,6 +84,8 @@ try {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node
 // Minimal pre-build health check to unblock CI builds.
 // Extensible: add real checks as needed.
@@ -93,6 +96,7 @@ try {
 	console.warn('[pre-build] Non-fatal issue:', err?.message || err);
 	process.exit(0);
 }
+<<<<<<< HEAD
 >>>>>>> origin/chore/resolve-conflicts-1756215853
 <<<<<<< HEAD
 =======
@@ -119,3 +123,5 @@ try {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

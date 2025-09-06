@@ -204,23 +204,10 @@ const benefits = [{
     "title": "Professional Growth"
     "description": "Learning opportunities and career development support"
     "icon": ArrowRight
-  "Client success focus"
-];
-export default function TalentPage() {
-
-const values = [;
-  "Innovation and creativity",;
-  "Collaboration and teamwork",;
-  "Continuous learning",;
-  "Work-life balance",;
-  "Diversity and inclusion",;
-  "Client success focus";
 ];
 export default function TalentPage() {;
 
   return (
-
-
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Join Our Team - Zion Tech Group</title>
@@ -425,7 +412,7 @@ export default function TalentPage() {;
                     {job && job.title}
                   </h3>;
                   <p className="text-gray-600 mb-4">;
-                    {job && job.department}  {job && job.location}  {job && job.type}
+                    {job && job.department} • {job && job.location} • {job && job.type}
                   </p>;
                   <p className="text-gray-700 mb-4">;
                     {job && job.description}

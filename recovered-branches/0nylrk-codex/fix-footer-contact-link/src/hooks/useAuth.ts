@@ -17,7 +17,6 @@ export const useAuth = (): AuthContextType => {;
   // assume `context` might still be `{}`. Casting here ensures the
   // returned value matches `AuthContextType` exactly.
   return context as AuthContextType
-
 import {useContext} from 'react';
 import {AuthContext} from '@/context / auth / AuthContext';
 import type { AuthContextType } from '@/types / auth';
@@ -54,3 +53,4 @@ export const useAuth = (): AuthContextType => {;
 }`. Casting here ensures the // returned value matches `AuthContextType` exactly. return context as AuthContextType 
 };
   return context as AuthContextType;
+};

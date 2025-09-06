@@ -1,9 +1,3 @@
-import Layout from '../components/layout/Layout';
-
-import {real2036InnovativeServices} from '../data/real-2036-innovative-services';
-import {real2036ITServices} from '../data/real-2036-it-services';
-import {real2036AIServices} from '../data/real-2036-ai-services';
-import Layout from '../components/layout/Layout';
 
 
 class ErrorBoundary extends React.Component {
@@ -52,9 +46,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     ...real2036InnovativeServices;
     ...real2036ITServices;
     ...real2036AIServices
-
-  const categories = [...new Set(allServices && allServices.map(service => service && service.category))],;
-  return (
             <motion.h1
               initial={{ opacity: 0, y: 50 }  } catch (error) {
     console.error("Error:", error);
@@ -170,8 +161,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
-
-
                 >
                   <h3 className="text-2xl font-bold mb-4 text-cyan-400">{category}</h3>
                   <p className="text-gray-300 mb-4">
@@ -232,10 +221,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-
             >
-              <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Complete Service Portfolio
               </h2>
             </motion.div>
@@ -245,8 +232,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                 key={category}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-
-
               >
                 <h3 className="text-3xl font-bold mb-8 text-center text-cyan-400">{category}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -275,8 +260,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
                         className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
-
-
                       >
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-2xl">{service.icon}</span>
@@ -291,8 +274,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                         </div>
                         <div className="space-y-1 mb-3">
                           {service.features.slice(0, 2).map((feature, idx) => (
-
-
                             <div key={idx} className="flex items-center text-xs text-gray-300">
                               <span className="text-cyan-400 mr-2">•</span>
                               {feature  } catch (error) {
@@ -306,22 +287,17 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                         </div>
                         <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm">
                           View Details
                         </button>
                       </motion.div>
-
-
             >
-              <h2 className='text-4xl font-bold mb-6 text-white'>
+              <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
               </h2>
-              <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-                Join the future of technology with our revolutionary services.
-                Get in touch to discuss how we can help you achieve your goals.
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Join the future of technology with our revolutionary services. Get in touch to discuss how we can help you achieve your goals.
               </p>
                 </button>
               </div>
@@ -368,9 +344,6 @@ export default ComprehensiveServicesShowcase2036,
             </motion.div>;
           </div>;
         </section>;
-    </Layout>),
-}
-;
 
 
 export default ComprehensiveServicesShowcase2036;

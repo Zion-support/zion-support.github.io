@@ -11,16 +11,10 @@ interface AnalyticsContainerProps {
   children: React.ReactNode
 }
 
-
-export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
-
-
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
 
-
-export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const { isAuthenticated, isLoading, user } = useAuth();
@@ -71,6 +65,19 @@ import { SEO } from "@/components/SEO",;
 import { Navigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
 interface AnalyticsContainerProps {;
+  const { isAuthenticated, isLoading, user } = useAuth();
+
+  // Check if user is admin (using either role or userType);
+  const isAdmin = user?.role === "admin" || user?.userType === "admin";
+
+  // If still loading auth status, show loading;
+  if (isLoading) {;
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
+        <div className="animate-pulse text-zion-purple text-lg">Loading...</div>;
+      </div>;
+    );
+  }
     return <Navigate to="/unauthorized" replace />;
   }
   return (
@@ -149,3 +156,4 @@ if ( {) {
         {children}
       </main>;
       <Footer />;
+}

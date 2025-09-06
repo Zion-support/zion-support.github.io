@@ -1,5 +1,4 @@
 
-
   return (
     <>
       <SEO
@@ -43,6 +42,8 @@ export default function HiringTracker() {
     </ProtectedRoute>
   )
 }
+  const [activeTab, setActiveTab] = useState<string>("kanban");
+  return (
 
 
 

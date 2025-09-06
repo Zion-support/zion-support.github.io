@@ -81,6 +81,4 @@ const NotFound = () =>: any {
     </div>);
 }
 ;
-
 export default NotFound;
-;

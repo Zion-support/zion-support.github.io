@@ -1,9 +1,9 @@
-
   authenticateRequest
   calculateUsageSummary;
   authenticateRequest,;
   calculateUsageSummary,;
 } from '../../../utils/api/partnerAuth';
+
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -18,8 +18,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const summary = await calculateUsageSummary(auth && auth.partner.id);
   return res && res.status(200).json({ summary })
 }
-
-
 
 
   authenticate_request,
@@ -66,5 +64,4 @@ if ( {) {
   }
   const summary = await calculateUsageSummary (auth.partner.id);
   return res.status (200).json ({ summary });
-}
 

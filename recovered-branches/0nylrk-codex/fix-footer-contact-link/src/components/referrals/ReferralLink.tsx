@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,13 +8,11 @@ import {
   CardHeader
   CardTitle
 } from "@/components/ui/card";
-
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Input} from "@/components/ui/input";
 import {Copy, Facebook, Link, Share, Twitter} from "lucide-react";
-
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -110,12 +107,14 @@ export function ReferralLink(): any ({ referralLink, onCopy, onShare }: Referral
         <div className="flex flex-col space-y-3">;
           <div className="flex space-x-2">;
             <Input
+              value={referralLink}
+              readOnly
+              className="font-mono text-sm"
               LinkedIn;
             </Button>;
           </div>;
         </div>;
       </CardFooter>;
-
 
   )
   )

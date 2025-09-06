@@ -9,6 +9,7 @@ export default function ServicesPage() {; return (; <Layout; title = "Our Servic
 ;        {/* Why Choose Us */};
 
 
+];
   };
 ],
 ,
@@ -46,6 +47,7 @@ export default function ServicesPage() {,
             </div>,
           </div>,
         </section>,
+        {/* Why Choose Us */};
 }
 ];
 ;

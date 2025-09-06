@@ -1,20 +1,66 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 backup-problematic-files/
+=======
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+temp_exclude/
+temp_*/
+temp-backup/
+*.config.js
+*.config.cjs
+*.config.mjs
+fix-*.js
+fix-*.cjs
+*-fix*.cjs
+*-fix*.js
+advanced-*.cjs
+aggressive-*.cjs
+aggressive-*.js
+app-improvement-*.cjs
+analyze-*.cjs
+code-quality-*.js
+automation/
+automation_backup/
+>>>>>>> origin/main
 backup/
-cache/
-clean-build/
-temp_conflicts/
-temp_broken_files/
+lib_backup/
+data_backup/
+styles_backup/
+api-backup/
 temp_backup/
-zion-os/
-zion-ai-assistant/
-test-*.js
-test-*.cjs
-ultimate-*.js
-ultimate-*.cjs
-tools/
+corrupted_files_backup_2/
+ai-optimization-backups/
+optimization-reports/
+test-generation-reports/
+test-reports/
+test-results/
+security-reports/
+pages.__backup/
+pages-disabled/
+pages.disabled_auto/
+zion_academy/
+pm2-automation/
+scripts/
+*.report.json
+test_build/
+tests.disabled/
+pages.disabled/
+src.disabled/
+components.disabled/
+hooks.disabled/
+types.disabled/
+contracts.disabled/
+solutions.disabled/
+zion-os.disabled/
+src_backup_temp/
 tests/
+<<<<<<< HEAD
 **/backup-problematic-files/**
 **/backup/**
 **/temp_*/**
@@ -84,6 +130,8 @@ solutions.disabled/
 zion-os.disabled/
 src_backup_temp/
 tests/
+=======
+>>>>>>> origin/main
 supabase/
 *.test.js
 *.test.ts
@@ -181,6 +229,7 @@ broken_files_backup/
 build-verification.js
 check-syntax.js
 clean-conflicts.js
+<<<<<<< HEAD
 commit-and-push.js
 >>>>>>> origin/main
 =======
@@ -201,3 +250,6 @@ tests/
 **/tools/**
 **/tests/**
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+commit-and-push.js
+>>>>>>> origin/main

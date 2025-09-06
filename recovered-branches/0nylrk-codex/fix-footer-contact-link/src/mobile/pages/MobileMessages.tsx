@@ -1,4 +1,3 @@
-
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -6,9 +5,6 @@ import { MobileConversationList } from "../components/messaging/MobileConversati
 import { MobileChatView } from "../components/messaging/MobileChatView";
 import { MobileConversationList } from "../components/messaging/MobileConversationList",
 import { MobileChatView } from "../components/messaging/MobileChatView",
-
-
-
 // Mock data for demonstration
 
 const mockConversations = [
@@ -201,6 +197,14 @@ const mockMessages: Message[] = [;
     status: "read"},;
   {;
     id: "4",;
+  return (
+    <div className="min-h-screen flex flex-col">;
+      {activeConversation ? (;
+        <MobileChatView;
+          contact={{;
+            id: currentContact?.id || "";
+            name: currentContact?.name || "";
+            status: "Online";
 
     id: "4",
     content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",
@@ -231,4 +235,3 @@ const mockMessages: Message[] = [;
           messages={messages}
           on_back={handle_back}
           onSendMessage={handleSendMessage}
-}

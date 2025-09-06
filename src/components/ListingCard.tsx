@@ -15,10 +15,13 @@
   tags,;
   author,;
   className,;
+      {images && images.length > 0 && images[0] && (
+        <div className="h-48 w-full overflow-hidden relative">
           <Image
             src={images[0]}
             alt={title}
-            className='object-cover transition-transform duration-300 group-hover:scale-105'
+
+
         </div>
       )}
       <div className="flex flex-col p-4 flex-grow">
@@ -27,26 +30,20 @@
             {category}
           </Badge>
         </div>
-              <Image
-                src={author && author.avatarUrl}
-                alt={author && author.name}
-                width={32}
-                height={32}
-                className='rounded-full mr-2'
-                loading='lazy'
-              />;
-            ) : (;
-              <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />;
-            )}
-            <span className='text-sm text-zion-slate-light'>{author && author.name}</span>          </div>        {author && (;
-          <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">;
-            {author && author.avatarUrl ? (;
-              <Image src={author && author.avatarUrl} alt={author && author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />;
-            ) : (;
-              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />;
-            )}
-            <span className="text-sm text-zion-slate-light">{author && author.name}</span>;
-          </div>;
+
+
+
+          <div className="flex flex-wrap gap-2 mb-4">
+            {tags.map((tag, i) => (
+              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+                {tag}
+
+
+            ))}
+          </div>
+        )}
+
+        
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -54,3 +51,13 @@
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
+
+
+
+            <span className="text-sm text-zion-slate-light">{author.name}</span>
+          </div>
+        )}
+      </div>;
+    </Link>;
+  );
+}

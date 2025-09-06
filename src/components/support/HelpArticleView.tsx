@@ -1,3 +1,7 @@
+interface HelpArticleViewProps {
+  articleId: string
+}
+export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {

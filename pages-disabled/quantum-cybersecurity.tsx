@@ -5,14 +5,11 @@ import { Shield, Lock, Eye, AlertTriangle, Zap, Cpu;
  } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-export default function QuantumCybersecurityPage() {
-
       icon: Shield
       title: "Quantum-Resistant Encryption"
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
       color: "from-blue-500 to-cyan-500"
     }
-
       icon: Shield,
       title: "Quantum-Resistant Encryption",
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
@@ -50,6 +47,47 @@ export default function QuantumCybersecurityPage() {
     }
   ];
   const benefits = [
+export default function QuantumCybersecurityPage() {;
+  const features = [;
+    {;
+      icon: Shield,;
+      title: "Quantum-Resistant Encryption",;
+      description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",;
+      color: "from-blue-500 to-cyan-500";
+    };
+    {;
+      icon: Lock,;
+      title: "Zero-Trust Architecture",;
+      description: "Verify every user and device before granting access to any resource.",;
+      color: "from-purple-500 to-pink-500";
+    };
+    {;
+      icon: Eye,;
+      title: "AI-Powered Threat Detection",;
+      description: "Machine learning algorithms that identify and respond to threats in real-time.",;
+      color: "from-green-500 to-emerald-500";
+    };
+    {;
+      icon: AlertTriangle,;
+      title: "Advanced Threat Intelligence",;
+      description: "Real-time monitoring and analysis of global cyber threats and vulnerabilities.",;
+      color: "from-red-500 to-orange-500";
+    };
+    {;
+      icon: Zap,;
+      title: "Automated Incident Response",;
+      description: "Instant response and mitigation of security incidents with minimal human intervention.",;
+      color: "from-yellow-500 to-orange-500";
+    };
+    {;
+      icon: Cpu,;
+      title: "Secure Cloud Infrastructure",;
+      description: "Enterprise-grade security for cloud deployments with end-to-end encryption.",;
+      color: "from-indigo-500 to-purple-500";
+    }
+  ];
+
+  const benefits = [;
     "Protect against quantum computing attacks with future-proof encryption";
     "Reduce security incidents by 90% with AI-powered threat detection";
 import Head from 'next / head';
@@ -107,7 +145,6 @@ function QuantumCybersecurityPage() {
     "Scalable security that grows with your business";
     "Expert security team available around the clock";
   ];
-        "Quantum-resistant encryption";
 ;
   const threats = [;
     {
@@ -178,9 +215,6 @@ function QuantumCybersecurityPage() {
         "On - premise deployment";
         "Custom training programs";
         "SLA guarantees";
-        "Executive reporting";
-      ],
-      popular: false;
     }
   ];
 ;
@@ -212,16 +246,12 @@ function QuantumCybersecurityPage() {
               </a>;
               <a
                 href="#demo"
-
       {/* Features */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -265,9 +295,6 @@ function QuantumCybersecurityPage() {
                     <span className="text-slate-700">{benefit}</span>;
                   </motion && motion.div>;
                 ))}
-
-
-
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -300,9 +327,6 @@ function QuantumCybersecurityPage() {
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {threats.map((threat, index) => (
               <motion.div
@@ -326,9 +350,6 @@ function QuantumCybersecurityPage() {
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -342,9 +363,6 @@ function QuantumCybersecurityPage() {
               <h3 className="text-xl font-bold text-white mb-2">SOC 2 Type II</h3>
               <p className="text-white/70 text-sm">Service Organization Control compliance for security, availability, and confidentiality</p>
             </motion.div>
-
-
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -357,9 +375,6 @@ function QuantumCybersecurityPage() {
               <h3 className="text-xl font-bold text-white mb-2">GDPR</h3>
               <p className="text-white/70 text-sm">General Data Protection Regulation compliance for EU data privacy</p>
             </motion.div>
-
-
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -372,9 +387,6 @@ function QuantumCybersecurityPage() {
               <h3 className="text-xl font-bold text-white mb-2">ISO 27001</h3>
               <p className="text-white/70 text-sm">Information security management system certification</p>
             </motion.div>
-
-
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -396,9 +408,6 @@ function QuantumCybersecurityPage() {
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
@@ -468,10 +477,6 @@ function QuantumCybersecurityPage() {
                 </a>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
 
 
 
@@ -512,6 +517,3 @@ function QuantumCybersecurityPage() {
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
-}
-
-

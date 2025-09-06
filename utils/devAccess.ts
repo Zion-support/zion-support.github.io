@@ -1,4 +1,3 @@
-  isAuthenticated: boolean;
 export interface DevIdentity {
 
 export interface DevIdentity {;
@@ -6,27 +5,16 @@ export interface DevIdentity {;
 
 
   roles: DevRole[];
-  user_id?: string;
+  userId?: string;
 }
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
-      stdio: ['ignore', 'pipe', 'ignore'],
+      stdio: ['ignore', 'pipe', 'ignore']
     })
       .toString()
       .trim();
-export function getGitStatus (): { connected: boolean; branch?: string } {
-  try {
-    const git_dir = path.join (process.cwd (), '.git');
-    if () return { connected: false }) {
-  $2
-}
-    const branch = exec_sync ('git rev - parse --abbrev - ref HEAD', {
-      stdio: ['ignore', 'pipe', 'ignore'],
-    });
-      .to_string ();
-      .trim ();
     return { connected: true, branch }
   } catch {
-    return { connected: false };
+    return { connected: false }
   }
 }
 
@@ -52,16 +40,16 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 }
 
 export function requireRoles(
-  req: ApiRequest,
-  res: ApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
   allowed: DevRole[]
 ): DevIdentity | undefined {;
   const identity = getDevIdentity(req);
-  if (!identity && identity.isAuthenticated) {
-    res && res.status(401).json({ error: 'Unauthorized' });
+  if (!identity.isAuthenticated) {
+    res.status(401).json({ error: 'Unauthorized' });
     return undefined;
   }
-  const hasRole = identity && identity.roles.some(r => allowed && allowed.includes(r));
+  const hasRole = identity.roles.some(r => allowed.includes(r));
   if (!hasRole) {
     res && res.status(403).json({ error: 'Forbidden' });
     return undefined;

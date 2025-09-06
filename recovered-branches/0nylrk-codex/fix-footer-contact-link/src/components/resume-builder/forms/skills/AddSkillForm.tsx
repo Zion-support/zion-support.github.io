@@ -5,8 +5,6 @@ import { Label  } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Skill  } from '@/types/resume';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
-
-
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
@@ -40,9 +38,6 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
     setSkillCategory(enhancedCategory)
   }
   };
-import React from 'react';
-import {useState} from 'react';
-
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -50,31 +45,20 @@ import { Label } from '@/components/ui/label',;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',;
 import { Skill } from '@/types/resume',;
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',;
-import React from 'react';
-import {useState} from 'react';
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Label} from '@/components/ui/label';
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
-import {Skill} from '@/types/resume';
-import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
 interface AddSkillFormProps {;
   resumeId: string,;
   onAddSkill: (skill: Skill) => Promise<boolean>;
 }
-
+;
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
     const newSkill: Skill = {;
-      name: skillName && skillName.trim(),;
+      name: skillName.trim(),;
       category: skillCategory || 'Other',;
       proficiency: proficiency},;
     if (success) {;
       setSkillName('');
       setProficiency(3);
     }
-
-
-
   
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
@@ -101,7 +85,6 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
             </SelectContent>;
           </Select>;
         </div>;
-
 }
 
 },
@@ -114,8 +97,3 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
           </div>;
         </div>;
       </div>;
-
-    </form>);
-}
-;
-

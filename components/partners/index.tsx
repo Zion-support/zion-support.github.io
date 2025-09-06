@@ -16,8 +16,6 @@ export default function Partners() {
     useCaseType: "Education Partnership"}),
   const [loading, setLoading] = useState(false);
 
-
-
     name: ''
     entityType: ''
     pocName: ''
@@ -28,7 +26,6 @@ export default function Partners() {
     pocName: ""
     pocEmail: ""
     useCaseType: "Education Partnership"})
-
   const [loading, setLoading] = useState(false);
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -39,27 +36,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
 import { useState } from 'react';
 import Head from 'next/head';
-
 export default function Partners() {;
   const [form, setForm] = useState({;
     name: '',;
@@ -73,7 +59,6 @@ export default function Partners() {;
     pocEmail: "",;
     useCaseType: "Education Partnership"}),;
   const [loading, setLoading] = useState(false);
-
   async function submit(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
     setLoading(true);
@@ -203,6 +188,8 @@ export default function Partners() {;
     </div>;
   );
 }
+        )}
+  );
 }
     <div className="min - h-screen bg - gray - 50 text - gray - 900">;
       <Head>;

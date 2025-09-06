@@ -202,7 +202,6 @@
     competitors: ['AWS S3Azure BlobGoogle Cloud Storage'], marketSize: '$80B cloud storage market',
     growthRate: '65% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
-    
     },
     realImplementation: true, implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',
     launchDate: '2026-05-01', customers: 40,
@@ -219,8 +218,6 @@
     launchDate: '2026-05-01';
     customers: 40;
 
-  }
-];
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV4 {;
   id: string,;
@@ -617,6 +614,3 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
     reviews: 32;
   }
 ];
-
-;
-

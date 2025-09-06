@@ -1,8 +1,9 @@
 interface File extends Blob {
   name: string;
+  lastModified: number;
+}
   last_modified: number;
 }
-
 interface Blob {
   size: number;
   type: string;
@@ -26,15 +27,6 @@ interface URLSearchParams {
   to_string (): string;
 }
 type BodyInit = string | Blob | ArrayBuffer | FormData | URLSearchParams;
-type RequestCache = 'default' | 'no - store' | 'reload' | 'no - cache' | 'force - cache' | 'only - if - cached';
-type RequestCredentials = 'omit' | 'same - origin' | 'include';
-interface Headers {
-  append (name: string, value: string): void;
-  delete (name: string): void;
-  get (name: string): string | null;
-  has (name: string): boolean;
-  set (name: string, value: string): void;
-}
 interface RequestInit {
   body?: BodyInit | null;
   cache?: RequestCache;
@@ -46,14 +38,9 @@ interface RequestInit {
   mode?: RequestMode;
   redirect?: RequestRedirect;
   referrer?: string;
-  referrer_policy?: ReferrerPolicy;
   signal?: AbortSignal | null;
   window?: any;
   timeout?: number;
-}
-interface AbortController {
-  signal: AbortSignal;
-  abort (): void;
 }
 interface AbortSignal extends EventTarget {
   aborted: boolean;
@@ -119,8 +106,6 @@ export class ApiClient {
     });
   }
 }
-export const apiClient = new ApiClient();
-
 // Define AbortSignal if not available
 interface AbortSignal extends EventTarget {
   aborted: boolean;
@@ -140,7 +125,6 @@ interface ApiResponse < T = unknown> {
 interface RequestOptions extends RequestInit {
   timeout?: number;
 }
-// Add global type definitions for Node.js environment;
 declare global {
   interface RequestInit {
     timeout?: number;
@@ -148,45 +132,35 @@ declare global {
 }
 class ApiClient {
   private baseURL: string;
-    }
-    try {
       return {
 
         success: true
         data
-      const response = await fetch (url, {
-        ...options,
-        signal: controller.signal,
-        headers: {
-...this.default_headers,
-          ...options.headers,
-        },
-      });
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json ();
-      return {
-        success: true,
-        data,
       }
     } catch (error) {
       return {
 
 
 
-
 export type { ApiResponse, RequestOptions };
 export type { ApiResponse, RequestOptions };
 export type { ApiResponse, RequestOptions };
 
+    });
+  }
+  async put<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
+      headers: {
+        'Content-Type': 'application/json'
+        ...options?.headers
+      }
 
-export type { ApiResponse, RequestOptions }
-
+    });
+  }
+  async delete<T = unknown>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this && this.request<T>(endpoint, { ...options, method: 'DELETE' });
+  }
+}
+export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions }
         error: error instanceof Error ? error.message : 'Unknown error occurred',
       }

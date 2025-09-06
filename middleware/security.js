@@ -1,6 +1,3 @@
-
-
-
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
@@ -12,8 +9,6 @@ export function securityMiddleware(request) {;
 
   const response = NextResponse.next();
   const response = NextResponse && NextResponse.next();
-
-export function securityMiddleware(request) {;
   const response = NextResponse.next();
   // Add security headers
   const headers = getSecurityHeaders();
@@ -42,12 +37,15 @@ export function securityHeaders(req, res, next) {
     'X-XSS-Protection': '1; mode=block',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+
+  return response;// Security headers middleware
+export function securityHeaders(req, res, next) {
+  Object.entries({
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
-    res && res.setHeader(key, value);
+    res.setHeader(key, value);
   });
   next();
-}
 }
 
 }
@@ -72,4 +70,7 @@ function security_headers() {
   });
 ;
   next ();
+}
+}
+
 }

@@ -1,4 +1,3 @@
-
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -18,18 +17,16 @@ interface Conversation {
   id: string
   name: string
   avatar?: string;
-  lastMessage: string
-  timestamp: string
-  unreadCount: number
-
-  isTyping?: boolean
+  lastMessage: string,;
+  timestamp: string,;
+  unreadCount: number,;
+  isTyping?: boolean;
 }
-interface MobileConversationListProps {
 
-  conversations: Conversation[]
+interface MobileConversationListProps {;
+  conversations: Conversation[],;
 
   activeConversation?: string;
-
 interface Conversation {
   id: string,
   name: string,
@@ -44,6 +41,9 @@ interface Conversation {
 export function MobileConversationList({
 
 export function MobileConversationList(): any ({;
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void;
+}
   conversations;
   activeConversation;
 import React from "react",;
@@ -77,14 +77,9 @@ export function MobileConversationList({
   onSelectConversation;
 }: MobileConversationListProps) {;
   return (
-
-    <div className="space-y-4">
-      <div className="px-4 mb-2">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input
-            placeholder="Search messages..."
-            className="pl-9"
+          <div
+            key={conversation.id}
+            className={cn(
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}

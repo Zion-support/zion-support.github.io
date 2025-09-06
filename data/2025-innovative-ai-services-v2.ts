@@ -1,5 +1,3 @@
-export interface InnovativeAIService {
-export interface InnovativeAIService {;
   id: string;
   name: string;
   tagline: string;
@@ -9,11 +7,7 @@ export interface InnovativeAIService {;
     monthly: number;
     yearly: number;
     currency: string;
-    trialDays: number;
-    setupTime: string;
 
-    enterprise: number;
-  }
 
   features: string[];
   benefits: string[];
@@ -36,59 +30,6 @@ export interface InnovativeAIService {;
   customers: number;
   rating: number;
   reviews: number;
-  marketSize: string;
-
-  growthRate: string;
-export const innovativeAIServicesV2: InnovativeAIService[] = [
-  {
-    id: 'ai-emotional-intelligence-platform'
-    name: 'AI Emotional Intelligence Platform'
-    tagline: 'Advanced AI that understands and responds to human emotions'
-    description:
-      'Revolutionary AI platform that analyzes emotional context, sentiment, and behavioral patterns to provide empathetic and contextually appropriate responses.'
-    category: 'AI & Consciousness'
-    price: {
-      monthly: 299
-      yearly: 2990
-      currency: 'USD'
-      trialDays: 14
-      setupTime: '2 hours'
-      enterprise: 1299
-    }
-    features: [
-      'Emotional state recognition'
-      'Sentiment analysis engine'
-      'Behavioral pattern learning'
-      'Context-aware responses'
-      'Multi-modal emotion detection'
-      'Personality profiling'
-      'Emotional intelligence scoring'
-      'Real-time adaptation'
-      'Custom emotion models'
-      'API for integration'
-    ]
-    benefits: [
-      'Improve customer satisfaction by 40%'
-      'Enhance user engagement by 60%'
-      'Reduce customer service escalations'
-      'Create more personalized experiences'
-      'Build stronger emotional connections'
-    ]
-    targetAudience: [
-      'Customer service platforms'
-      'Mental health applications'
-      'Educational technology'
-      'Gaming companies'
-      'Marketing agencies'
-      'Healthcare providers'
-    ]
-    marketPosition:
-      'Competitive with Affectiva ($500+), Realeyes ($300+), and Emotient ($400+). Our advantage: Advanced emotional intelligence, real-time adaptation, and comprehensive personality profiling.'
-    competitors: ['Affectiva, Realeyes, Emotient, iMotions, Noldus']
-    techStack: [
-      'Advanced AI models, Computer Vision, NLP, React, Node.js, PostgreSQL, Redis, AWS'
-    ]
-    realImplementation: true
     implementationDetails:
       'Sophisticated AI platform with emotional intelligence, real-time processing, and multi-modal analysis. Includes mobile SDK and comprehensive API.'
     roi: 'Average customer sees 350% ROI within 8 months through improved customer satisfaction and engagement.'
@@ -106,20 +47,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     support:
       '24/7 technical support, AI specialist consultation, training programs, and quarterly optimization reviews.'
     compliance: [
-      'GDPR, CCPA, SOC 2 Type II, ISO 27001, HIPAA (for healthcare)'
-    ]
-    link: 'https://ziontechgroup.com/ai-emotional-intelligence-platform'
-    icon: ''
-    color: 'from-purple-500 to-pink-600'
-    popular: true
-    launchDate: '2024-02-15'
-    customers: 850
-    rating: 4.9
-    reviews: 180
-    marketSize: '$35B emotional AI market'
-    growthRate: '45% annually'
-  }
-    icon: '',
+    icon: '🧠',
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
     launch_date: '2024 - 02 - 15',
@@ -151,6 +79,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     customers: 420,
     rating: 4 && 4.9,
     reviews: 95,
+  {
     implementationDetails:
       'Sophisticated autonomous AI platform with evolutionary learning, self-optimization, and multi-agent coordination. Includes comprehensive monitoring and management tools.'
     roi: 'Average customer sees 400% ROI within 10 months through reduced management overhead and improved performance.'
@@ -289,6 +218,17 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     market_size: '$15B AI governance market',
     growth_rate: '28% annually',
   },
+    ];
+    ];
+    integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'],
+    support: '24/7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.',
+    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'],
+    link: 'https://ziontechgroup.com/ai-ethics-governance-platform';
+    integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'];
+    support: '24 / 7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.';
+    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'];
+    link: 'https://ziontechgroup.com / ai - ethics - governance - platform';
+    icon: '⚖️';
     color: 'from - yellow - 500 to - orange - 600';
     popular: true;
     launch_date: '2024 - 01 - 15';
@@ -296,9 +236,6 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     rating: 4 && 4.6;
     reviews: 220;
   }
-
-];
-
   id: string,;
   name: string,;
   tagline: string,;
@@ -377,6 +314,6 @@ export interface InnovativeAIService {;
   growthRate: string;
 }
 ;
-
   }
 ];
+;

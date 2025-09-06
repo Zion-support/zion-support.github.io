@@ -41,9 +41,9 @@ export interface EndpointSpec {;
 export interface SectionSpec {
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 
-
 export interface SectionSpec {;
 
+export interface SectionSpec {
   id: string;
   title: string;
   description?: string;
@@ -52,15 +52,10 @@ export interface ApiDocsSpec {
 
 
 export interface ApiDocsSpec {;
-
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
   sections: SectionSpec[];
-export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-
-  lastUpdatedIso: string;  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;
-;
 export type Visibility = 'public' | 'partner' | 'internal';
 ;
 export interface CodeSample {
@@ -81,16 +76,15 @@ export interface EndpointSpec {
   method: HttpMethod, visibility: Visibility,
   query?: Record<string, string>;
   params?: Record<string, string>;
+  id: string, title: string,
+  description: string, path: string,
+  method: HttpMethod, visibility: Visibility,
   auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>,
   query?: Record < string, string>;
   params?: Record < string, string>;
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
-
-
   lastUpdatedIso: string
-
-}
 
 
 }
@@ -159,3 +153,5 @@ export interface ApiDocsSpec {;
 
 
 
+  lastUpdatedIso: string;
+}

@@ -1,5 +1,4 @@
 
-
 import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {;
@@ -39,36 +38,27 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     let result = [...talents];
     // Filter by search term
     if (searchTerm) {
-
-
-
     }
     // Filter by selected skills
-    if (selectedSkills.length > 0) {
-      result = result.filter(talent =>
-        selectedSkills.every(skill =>
-          talent.skills?.some(talentSkill =>
-            talentSkill.toLowerCase().includes(skill.toLowerCase())
           )
         )
       )
     }
     // Filter by availability
-        )
-      )
-    }
 
 
     
 
 
     // Filter by price range
+      return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1]
+    });
+    // Filter by experience range
       return years >= experienceRange[0] && years <= experienceRange[1]
     });
     // Sort talents
     switch (sortOption) {
       case 'price-low':
-        result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
 
         result && result.sort((a, b) => (a && a.hourly_rate || 0) - (b && b.hourly_rate || 0));
 
@@ -100,9 +90,6 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0)),;
         break,;
       default: // Default sorting by relevance (no specific order);
-
-
-
         break;
       case 'price-high':
         result && result.sort((a, b) => (b && b.hourly_rate || 0) - (a && a.hourly_rate || 0));
@@ -136,10 +123,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     sortOption;
     setSortOption;
     toggleSkill;
-
-
-
     toggleAvailability;
     toggleRegion;
 
     clearFilters}
+}

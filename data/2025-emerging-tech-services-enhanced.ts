@@ -2,6 +2,8 @@ export interface EmergingTechService {
 
 export interface EmergingTechService {;
 
+export interface EmergingTechService {
+
   id: string;
   name: string;
   tagline: string;
@@ -32,9 +34,6 @@ export interface EmergingTechService {;
     mobile: string;
     email: string;
     address: string;
-
-    website: string;
-  }
       'Virtual experiences, Gaming, Education, Social interaction, Entertainment',
     ],
     roi: 'Metaverse companies report 1000x improvement in graphics quality and 500% increase in user engagement.',
@@ -471,7 +470,6 @@ export interface EmergingTechService2025 {
     marketSize: '$35.5B quantum metaverse market', growthRate: '85% annual growth',
     variant: 'quantum-metaverse-enterprise',
     contactInfo: {
-    
     },
     realImplementation: true, implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.',
     launchDate: '2024-04-30', customers: 18,
@@ -488,8 +486,6 @@ export interface EmergingTechService2025 {
     launchDate: '2024-04-30';
     customers: 18;
 
-  }
-];
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechService2025 {;
   id: string,;
@@ -1150,6 +1146,3 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     reviews: 11;
   }
 ];
-
-;
-

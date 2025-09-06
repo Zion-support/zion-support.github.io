@@ -1,5 +1,3 @@
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
 import Link from './next / link';,
 export const metadata = {
   title: "Quantum Neural Network Platform - Zion Tech Group",
@@ -12,8 +10,6 @@ function QuantumNeuralNetworkPlatformPage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
         {/* Hero Section */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
@@ -169,10 +165,10 @@ function QuantumNeuralNetworkPlatformPage() {
                 with quantum precision.;
               </p>;
               <ul className="text - sm text - gray - 400 space - y-1">;
-                <li> Molecular dynamics simulation</li>;
-                <li> Protein folding prediction</li>;
-                <li> Drug - target interaction modeling</li>;
-                <li> Toxicity prediction</li>;
+                <li>• Molecular dynamics simulation</li>;
+                <li>• Protein folding prediction</li>;
+                <li>• Drug - target interaction modeling</li>;
+                <li>• Toxicity prediction</li>;
               </ul>;
             </div>;
             {/* Financial Modeling */}
@@ -183,10 +179,10 @@ function QuantumNeuralNetworkPlatformPage() {
                 financial algorithms.;
               </p>;
               <ul className="text - sm text - gray - 400 space - y-1">;
-                <li> Risk assessment and management</li>;
-                <li> Portfolio optimization</li>;
-                <li> Market prediction models</li>;
-                <li> Fraud detection</li>;
+                <li>• Risk assessment and management</li>;
+                <li>• Portfolio optimization</li>;
+                <li>• Market prediction models</li>;
+                <li>• Fraud detection</li>;
               </ul>;
             </div>;
             {/* Climate Prediction */}
@@ -197,10 +193,10 @@ function QuantumNeuralNetworkPlatformPage() {
                 quantum computational power.;
               </p>;
               <ul className="text - sm text - gray - 400 space - y-1">;
-                <li> Weather pattern modeling</li>;
-                <li> Climate change prediction</li>;
-                <li> Atmospheric dynamics</li>;
-                <li> Ocean current modeling</li>;
+                <li>• Weather pattern modeling</li>;
+                <li>• Climate change prediction</li>;
+                <li>• Atmospheric dynamics</li>;
+                <li>• Ocean current modeling</li>;
               </ul>;
             </div>;
             {/* Logistics Optimization */}
@@ -211,10 +207,10 @@ function QuantumNeuralNetworkPlatformPage() {
                 that scale to enterprise levels.;
               </p>;
               <ul className="text - sm text - gray - 400 space - y-1">;
-                <li> Route optimization</li>;
-                <li> Supply chain management</li>;
-                <li> Resource allocation</li>;
-                <li> Demand forecasting</li>;
+                <li>• Route optimization</li>;
+                <li>• Supply chain management</li>;
+                <li>• Resource allocation</li>;
+                <li>• Demand forecasting</li>;
               </ul>;
             </div>;
           </div>;
@@ -252,10 +248,10 @@ function QuantumNeuralNetworkPlatformPage() {
                 <p className="text - gray - 400 mb - 4">Perfect for researchers and students</p>;
                 <div className="text - 3xl font - bold mb - 6">$99 < span className="text - lg text - gray - 400">/month</span></div>;
                 <ul className="text - left space - y-2 text - sm text - gray - 300 mb - 6">;
-                  <li> 10 qubit simulator access</li>;
-                  <li> Basic quantum circuits</li>;
-                  <li> Community support</li>;
-                  <li> 100 API calls / month</li>;
+                  <li>• 10 qubit simulator access</li>;
+                  <li>• Basic quantum circuits</li>;
+                  <li>• Community support</li>;
+                  <li>• 100 API calls / month</li>;
                 </ul>;
                 <Link href="/contact" className="btn - primary w - full">;
                   Get Started;
@@ -269,11 +265,11 @@ function QuantumNeuralNetworkPlatformPage() {
                 <p className="text - gray - 400 mb - 4">For businesses and research teams</p>;
                 <div className="text - 3xl font - bold mb - 6">$499 < span className="text - lg text - gray - 400">/month</span></div>;
                 <ul className="text - left space - y-2 text - sm text - gray - 300 mb - 6">;
-                  <li> 50 qubit simulator access</li>;
-                  <li> Advanced quantum algorithms</li>;
-                  <li> Priority support</li>;
-                  <li> 1000 API calls / month</li>;
-                  <li> Real quantum hardware access</li>;
+                  <li>• 50 qubit simulator access</li>;
+                  <li>• Advanced quantum algorithms</li>;
+                  <li>• Priority support</li>;
+                  <li>• 1000 API calls / month</li>;
+                  <li>• Real quantum hardware access</li>;
                 </ul>;
                 <Link href="/contact" className="btn - primary w - full">;
                   Get Started;
@@ -287,12 +283,12 @@ function QuantumNeuralNetworkPlatformPage() {
                 <p className="text - gray - 400 mb - 4">Custom solutions for large organizations</p>;
                 <div className="text - 3xl font - bold mb - 6">Custom</div>;
                 <ul className="text - left space - y-2 text - sm text - gray - 300 mb - 6">;
-                  <li> Unlimited qubit access</li>;
-                  <li> Custom quantum algorithms</li>;
-                  <li> Dedicated support team</li>;
-                  <li> Unlimited API access</li>;
-                  <li> On - premise deployment</li>;
-                  <li> Custom integrations</li>;
+                  <li>• Unlimited qubit access</li>;
+                  <li>• Custom quantum algorithms</li>;
+                  <li>• Dedicated support team</li>;
+                  <li>• Unlimited API access</li>;
+                  <li>• On - premise deployment</li>;
+                  <li>• Custom integrations</li>;
                 </ul>;
                 <Link href="/contact" className="btn - primary w - full">;
                   Contact Sales;

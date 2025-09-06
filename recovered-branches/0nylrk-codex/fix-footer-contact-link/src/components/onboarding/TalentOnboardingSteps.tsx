@@ -9,10 +9,16 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function TalentOnboardingSteps() {
-
   const { user } = useAuth();
 
   const onboardingStatus = useOnboardingStatus();
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react",
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
+
+export function TalentOnboardingSteps() {
+  const { user } = useAuth(),
+  const onboardingStatus = useOnboardingStatus(),
+  
   const steps: OnboardingStep[] = [
     {
       id: "profile"
@@ -48,19 +54,16 @@ export function TalentOnboardingSteps() {;
     {;
       id: "profile",;
       label: "Complete your profile",;
-      completed: onboardingStatus && onboardingStatus.profileCompleted,;
       link: "/profile",;
       action: "Update"},;
     {;
       id: "skills",;
       label: "Add your top skills",;
-      completed: onboardingStatus && onboardingStatus.skillsAdded,;
       link: "/profile/skills",;
       action: "Add Skills"},;
     {;
       id: "availability",;
       label: "Set your availability",;
-      completed: onboardingStatus && onboardingStatus.availabilitySet,;
       link: "/profile/availability",;
       action: "Set"},;
     {;
@@ -71,6 +74,8 @@ export function TalentOnboardingSteps() {;
 
 
 }
+
+  const { user } = useAuth();
 
 import React from './react';
 import { use_auth  } from '@/hooks / use_auth';

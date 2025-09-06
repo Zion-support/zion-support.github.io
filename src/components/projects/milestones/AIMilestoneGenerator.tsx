@@ -12,13 +12,6 @@ interface AIMilestoneGeneratorProps {;
       endDate
       projectType
     }
-    await generate_milestones (input);
-    // Initially select all milestones;
-    const initial_selection: Record < number, boolean> = {}
-    generated_milestones.for_each ((_, index: number) => {
-      initial_selection[index] = true;
-    });
-    setSelectedMilestones (initial_selection);
   }
   const handleAddToProject = () =>: any {
     const selectedMilestonesList = generated_milestones.filter (
@@ -113,10 +106,19 @@ export function AIMilestoneGenerator({;
       return dateString;
     }
 
+
+
+
+  return (
+          disabled={isGenerating || !scope || !startDate || !projectType}        >
+
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
+
+
+
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -228,6 +230,7 @@ export function AIMilestoneGenerator({;
                     </div>
                     <Button
 
+
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
@@ -235,6 +238,14 @@ export function AIMilestoneGenerator({;
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
+                      variant="ghost"
+                      size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation(),
+                        handleAddSingleMilestone(milestone)
+                      }}
+                      className="mr-2"
+                    >
                       <Plus className="h-4 w-4" />
                     </Button>
                   </div>
@@ -255,3 +266,7 @@ export function AIMilestoneGenerator({;
           </CardContent>;
         </Card>;
       )}
+    </div>;
+  );
+}
+;

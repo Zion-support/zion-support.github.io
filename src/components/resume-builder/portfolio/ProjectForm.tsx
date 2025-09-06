@@ -1,9 +1,3 @@
-      let success = false;
-      // Check condition
-if ( {) {
-  $2
-}
-        success = await update_project (project.id, project_data);
       } else {
         const project_id = await add_project (project_data);
         success = !!project_id;
@@ -12,6 +6,8 @@ if ( {) {
     } catch (error) {
       logErrorToProduction ('Error saving project:', { data: error });
     } finally {
+
+
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -97,45 +93,12 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     } finally {;
       setIsLoading(false);
     }
-          name='description'
-          render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel>Project Description</FormLabel>;
-              <FormControl>;
-                <Textarea
-                  placeholder='Describe what the project does and your role in it...'
-                  className='min-h-[100px]'
-      setIsLoading (false);
-    }
-  }
+
+
+
   return (
-    <Form {...form}>;
-      <form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
-        <FormField;
-          control={form.control}
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormLabel>Project Description</FormLabel>
-              <FormControl>
-                <Textarea 
-                  placeholder="Describe what the project does and your role in it..."
-                  className="min-h-[100px]"
-                  {...field} 
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-          name='title'
-            <FormItem>
-              <FormLabel>Project Title</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder='E.g., AI Chatbot, E-commerce Website'
-                  {...field}                />
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
           name='description'
@@ -145,7 +108,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <Textarea
                   placeholder='Describe what the project does and your role in it...'
                   className='min-h-[100px]'
-                  {...field}
             <FormItem>;
               <FormLabel > Project Title</FormLabel>;
               <FormControl>;
@@ -186,10 +148,12 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         <FormField;
           control={form.control}
           name='technologies';
+
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
+
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -206,11 +170,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                   placeholder="Describe what the project does and your role in it..."
                   className="min-h-[100px]"
                   {...field} 
+
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
+
           render={({ field }: { field: any }) => (
             <FormItem>;
               <FormLabel > Technologies Used</FormLabel>;
@@ -235,6 +201,25 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <FormControl>;
                   <Input
                     placeholder='https://github && github.com/yourusername/project'
+          render={({ field }: { field: any }) => (
+            <FormItem>
+              <FormLabel>Technologies Used</FormLabel>
+              <FormControl>
+                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+            name='github_url'
+            render={({ field }: { field: any }) => (              <FormItem>
+                <FormLabel className='flex items-center gap-2'>
+                  <Github className='h-4 w-4' />
+            name="github_url"
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormLabel className="flex items-center gap-2">
+                  <Github className="h-4 w-4" />
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -289,6 +274,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormMessage />
             </FormItem>
           )}
+
             Cancel
           </Button>
           <Button type="submit" disabled={isLoading}>

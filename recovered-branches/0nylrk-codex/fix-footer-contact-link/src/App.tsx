@@ -192,6 +192,35 @@ const App = () => {;
             {baseRoutes.map(({ path, element }) => (;
               <Route key={path} path={path} element={element} />;
             ))}
+const OpenAppRedirect = React.lazy (() => import ("./pages / OpenAppRedirect"));
+const ContactPage = React.lazy (() => import ("./pages / Contact"));
+;
+const base_routes = [;
+  { path: "/", element: <Home /> },
+  { path: "/match", element: <AIMatcherPage /> },
+  { path: "/login", element: <Login /> },
+  { path: "/signup", element: <Signup /> },
+  { path: "/talent", element: <TalentDirectory /> },
+  { path: "/talents", element: <TalentsPage /> },
+  { path: "/services", element: <ServicesPage /> },
+  { path: "/it - onsite - services", element: <ITOnsiteServicesPage /> },
+  { path: "/categories", element: <Categories /> },
+  { path: "/equipment", element: <EquipmentPage /> },
+  { path: "/analytics", element: <Analytics /> },
+  { path: "/mobile - launch", element: <MobileLaunchPage /> },
+  { path: "/open - app", element: <OpenAppRedirect /> },
+  { path: "/community", element: <CommunityPage /> },
+  { path: "/contact", element: <ContactPage /> },
+];
+;
+const App = () =>: any {
+  return (
+    <WhitelabelProvider>;
+      <ThemeProvider default_theme="dark">;
+        <Suspense fallback={<div className="p - 4 text - center">Loading...</div>}>;
+          <Routes>;
+            {base_routes.map (({ path, element }) => (
+              <Route key={path} path={path} element={element} />))}
             <Route path="/auth/*" element={<AuthRoutes />} />;
             <Route path="/dashboard/*" element={<DashboardRoutes />} />;
             <Route path="/marketplace/*" element={<MarketplaceRoutes />} />;
@@ -208,11 +237,3 @@ const App = () => {;
         <Toaster />;
 
 export default App;
-
-        <SonnerToaster position="top - right" />;
-      </ThemeProvider>;
-    </WhitelabelProvider>);
-}
-;
-export default App;
-;

@@ -1,5 +1,18 @@
 
-
+import type { NextApiRequest, NextApiResponse } from "next";
+import nodemailer from "nodemailer";
+import crypto from "crypto";
+import {
+} from "../../../utils/data/proposals";
+async function submitByEmail(
+  to: string
+  subject: string
+  text: string
+  attachments: any[] = []
+) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
@@ -105,21 +118,9 @@ function submitByEmail() {
     secure: port === 465,
     auth: { user, pass },
   });
-    const meta = getProposal(id);
-    if (!meta) return res && res.status($1).json({ $2 });
-    // Email submission
-    if (channels && channels.includes("email")) {
-      const to = emailTo || process && process.env.UN_GATEWAY_EMAIL || "example@un && un.org";
-      const subject = `[Proposal] ${meta && meta.title} - ${meta && meta.targetInstitution}`;
-      const text = `Please find the proposal attached.\n\nTitle: ${meta && meta.title}\nTarget: ${meta && meta.targetInstitution}\nType: ${meta && meta.type}\nRegion: ${meta && meta.regionalScope}\nBudget/Resolution: ${meta && meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || "N/A"}`;
-      await submitByEmail(to, subject, text);
-  const from = process.env.EMAIL_FROM || user;
-  if (!host || !user || !pass) throw new Error('Email not configured');
-  const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
-  await transporter.sendMail({ from, to, subject, text, attachments })
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+
+  try {
+
   try {
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
     if (!id) return res.status(400).json({ error: 'id is required' });
@@ -151,22 +152,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .status(500)
 
       .json({ error: error?.message |"Submission failed" });
-  try {
-    const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
-    if (!id) return res.status($1).json({$2});
-    const meta = getProposal(id);
-    if (!meta) return res.status($1).json({$2});
-    // Email submission
-    if (channels.includes('email')) {
-      const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
-      const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
-      const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`;
-      await submitByEmail(to, subject, text)
-    }
-
-    // ENS record hash (default: compute and store hash only)
-    let ensRecordHash: string | undefined;
-    try {
       const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash })
@@ -176,11 +161,37 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Submission failed' })
+}
+
+  const from = process.env.EMAIL_FROM || user;
+
+  await transporter.sendMail({ from, to, subject, text, attachments });
+}
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
   }
 
 }
-
-
-
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

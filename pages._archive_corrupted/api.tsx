@@ -132,6 +132,14 @@ const "API": NextPage = () => {;
                 <p className=\"text-gray-600\">{feature && feature.description}</p>;
               </div>;
             ))}
+        <section className=\"py-16 bg-gray-50\">
+          <div className=\"max-w-4xl mx-auto px-6 text-center\">
+            <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">Need Help with Integration?</h2>
+            <p className=\"text-gray-600 text-xl mb-8\">
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Need Help with Integration?</h2>
+            <p className="text-gray-600 text-xl mb-8">
               Our team is here to help you integrate our APIs into your applications.
             </p>
             <Link href=\"/contact\" className=\"px-8 py-3 bg-blue-600 text-white rounded-lg \"hover\": b g-blue-700 transition-colors inline-flex items-center\">

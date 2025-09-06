@@ -32,9 +32,6 @@
   Code,
   Database,;
   Cloud,;
-import Button from '../ui/Button';
-
-interface Service {
 import {;
   Star,;
   Users,;
@@ -53,7 +50,6 @@ import {;
   Database,;
   Cloud,;
 import Button from '../ui/Button';
-
 interface Service {;
   id: string;
   name: string;
@@ -81,16 +77,6 @@ interface Service {;
   market_size: string;
   growth_rate: string;
   variant: string;
-    mobile: string;
-    email: string;
-    address: string;
-
-    website: string;
-  }
-  customers: number;
-  rating: number;
-
-  reviews: number;
   title: string;
   subtitle: string;
   show_filters?: boolean;
@@ -135,16 +121,14 @@ interface Service {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('popular');
-
   const categories = [;
-    { id: 'all', name: 'All Services', icon: '' },;
-    { id: 'ai', name: 'AI & ML', icon: '' },;
-    { id: 'quantum', name: 'Quantum', icon: '' },;
-    { id: 'blockchain', name: 'Blockchain', icon: '' },;
-    { id: 'enterprise', name: 'Enterprise', icon: '' },;
-    { id: 'emerging', name: 'Emerging Tech', icon: '' },  ];    { id: 'emerging', name: 'Emerging Tech', icon: '' }
+    { id: 'all', name: 'All Services', icon: '🚀' },;
+    { id: 'ai', name: 'AI & ML', icon: '🧠' },;
+    { id: 'quantum', name: 'Quantum', icon: '⚛️' },;
+    { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },;
+    { id: 'enterprise', name: 'Enterprise', icon: '🏢' },;
+    { id: 'emerging', name: 'Emerging Tech', icon: '🌟' },  ];    { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
   ];
-
   const priceRanges = [;
     { id: 'all', name: 'All Prices' },;
     { id: 'low', name: 'Under $1K/month' },;
@@ -152,7 +136,6 @@ interface Service {;
     { id: 'high', name: '$5K - $20K/month' },;
     { id: 'premium', name: '$20K+/month' },  ];    { id: 'premium', name: '$20K+/month' }
   ];
-
   const sortOptions = [;
     { id: 'popular', name: 'Most Popular' },;
     { id: 'rating', name: 'Highest Rated' },;
@@ -160,7 +143,6 @@ interface Service {;
     { id: 'price-low', name: 'Price Low to High' },;
     { id: 'price-high', name: 'Price High to Low' },;
   ];
-
   const filteredServices = useMemo(() => {;
     let filtered = services && services.filter(service => {;
       const matchesCategory =;
@@ -183,7 +165,6 @@ interface Service {;
             service && service.category.includes('Autonomous') ||;
             service && service.category.includes('Space') ||;
             service && service.category.includes('Biotech')));
-
       const matchesPrice =;
         selectedPriceRange === 'all' ||;
         (selectedPriceRange === 'low' &&;
@@ -196,9 +177,6 @@ interface Service {;
           parseFloat(service && service.price.replace(/[$]/g, '')) < 20000) ||;
         (selectedPriceRange === 'premium' &&;
           parseFloat(service && service.price.replace(/[$]/g, '')) >= 20000);
-
-      return matchesCategory && matchesPrice;    });  ];
-
   const filteredServices = useMemo(() => {;
     const filtered = services && services.filter(service => {;
       const matchesCategory = selectedCategory === 'all' || ;
@@ -207,16 +185,11 @@ interface Service {;
                              (selectedCategory === 'blockchain' && (service && service.category.includes('Blockchain') || service && service.category.includes('DeFi') || service && service.category.includes('NFT'))) ||;
                              (selectedCategory === 'enterprise' && (service && service.category.includes('Enterprise') || service && service.category.includes('IT'))) ||;
                              (selectedCategory === 'emerging' && (service && service.category.includes('Neural') || service && service.category.includes('Autonomous') || service && service.category.includes('Space') || service && service.category.includes('Biotech')));
-
       const matchesPrice = selectedPriceRange === 'all' ||;
                           (selectedPriceRange === 'low' && parseFloat(service && service.price.replace(/[$]/g, '')) < 1000) ||;
                           (selectedPriceRange === 'medium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 1000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 5000) ||;
                           (selectedPriceRange === 'high' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 20000) ||;
                           (selectedPriceRange === 'premium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 20000);
-
-      return matchesCategory && matchesPrice;
-    });
-
     // Sort services;
     switch (sortBy) {;
       case 'popular':;
@@ -426,6 +399,7 @@ interface Service {;
             {subtitle}
           </motion.p>
 
+            {subtitle}
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -467,21 +441,21 @@ interface Service {;
           </motion.div>
         </div>
 
+            ))}
         {/* Filters */}
         {showFilters && (;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
-
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                 {/* Category Filter */}
-                <div>;
-                  <label className='block text-sm font-medium text-gray-300 mb-3'>;
-                    Category;
-                  </label>;
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Category
+                  </label>
                   <select
                     value={selectedCategory}
                 {/* Category Filter */}
@@ -492,33 +466,93 @@ interface Service {;
                         {category.icon} {category.name}
                       </option>
                     ))}
+                  </select>
+                </div>
 
                   </select>;
                 </div>;
 
 
                 {/* Price Range Filter */}
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Price Range
+                  </label>
+                  <select
+                    value={selectedPriceRange}
+                    onChange={e => setSelectedPriceRange(e.target.value)}
+                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                  >
+                    {priceRanges.map(range => (                      <option key={range.id} value={range.id}>                  <select
+                    value={selectedPriceRange}
+                    onChange={(e) => setSelectedPriceRange(e.target.value)}
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  >
+                    {priceRanges.map((range) => (
+                      <option key={range.id} value={range.id}>
+                    {priceRanges.map(range => (                      <option key={range.id} value={range.id}>
 
 
                         {range.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
 
                   </select>;
                 </div>;
 
 
-
-
-
                 {/* Sort Options */}
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Sort By
+                  </label>
+                  <select
+                    value={sortBy}
+                    onChange={e => setSortBy(e.target.value)}
+                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                  >
+                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  >
+                    {sortOptions.map((option) => (
+                      <option key={option.id} value={option.id}>
+                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>
 
 
                         {option.name}
                       </option>
                     ))}
-
-                      </option>))}
-                  </select>;
-                </div>;
+                {/* Price Range Filter */}
+                <div>;
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>;
+                    Price Range;
+                  </label>;
+                  <select
+                    value={selectedPriceRange}
+                    onChange={e => setSelectedPriceRange(e && e.target.value)}
+                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
+                  >;
+                    {priceRanges && priceRanges.map(range => (                      <option key={range && range.id} value={range && range.id}>                  <select
+                    value={selectedPriceRange}
+                    onChange={(e) => setSelectedPriceRange(e && e.target.value)}
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                  >;
+                    {priceRanges && priceRanges.map((range) => (;
+                      <option key={range && range.id} value={range && range.id}>;
+                        {range && range.name}
+                      </option>;
+                    value={selectedPriceRange}
+                    on_change={(e) => setSelectedPriceRange (e.target.value)}
+                    className="w - full bg - gray - 800 / 50 border border - gray - 600 rounded - lg px - 4 py - 2 text - white focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent";
+                  >;
+                    {price_ranges.map ((range) => (
+                      <option key={range.id} value={range.id}>;
+                        {range.name}
+                    ))}
                 {/* Sort Options */}
                 <div>;
                   <label className='block text-sm font-medium text-gray-300 mb-3'>;
@@ -534,7 +568,6 @@ interface Service {;
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-
 
         >
           <AnimatePresence>
@@ -555,16 +588,10 @@ interface Service {;
                 initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                 whileInView={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-
-
               >
                 <div className='relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full'>
                   {/* Popular Badge */}
                   {service.popular && (
-                    </div>
-                  )}
-
-
                     <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
 
                       ⭐ Most Popular
@@ -577,8 +604,6 @@ interface Service {;
                         </div>;
                         <div className='text - sm text - gray - 400'>;
                           {service.period}
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     </h3>;
                     <p className='text - gray - 300 text - sm leading - relaxed'>                      {service.tagline}                      </div>;
                     </div>;
@@ -614,7 +639,7 @@ interface Service {;
                         <li
                           key={idx}
                           className='text-sm text-gray-400 flex items-start'>;
-                          <span className='text-cyan-400 mr-2'></span>                          {feature}                      Key Features;
+                          <span className='text-cyan-400 mr-2'>•</span>                          {feature}                      Key Features;
                     </h4>;
                     <ul className="space-y-2">;
                       {service && service.features.slice(0, 4).map((feature, idx) => (;
@@ -639,8 +664,6 @@ interface Service {;
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
-
-
                     <div>
                       <div className='text-lg font-bold text-white'>
                         {service.rating}
@@ -660,6 +683,9 @@ interface Service {;
                       <div className='text-xs text-gray-400'>Trial Days</div>                    </div>
                   </div>
                   {/* ROI Highlight */}                    <div>
+                          {feature}
+                        </li>;
+                      ))}
                       <div className="text-lg font-bold text-white">{service.rating}</div>
                       <div className="text-xs text-gray-400">Rating</div>
                     </div>
@@ -680,13 +706,14 @@ interface Service {;
                     </div>
                   </div>
                   {/* Market Position */}
+
+                  <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
+
+                    <div className="text-sm text-cyan-400 font-semibold mb-2">📊 Market Position</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
                       {service.marketPosition}
                     </div>
                   </div>
-                    </ul>;
-                  </div>;
-
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>;
                     <div>;
@@ -707,7 +734,6 @@ interface Service {;
                       </div>;
                       <div className='text-xs text-gray-400'>Trial Days</div>                    </div>;
                   </div>;
-
                   {/* ROI Highlight */}                    <div>;
                       <div className="text-lg font-bold text-white">{service && service.rating}</div>;
                       <div className="text-xs text-gray-400">Rating</div>;
@@ -721,26 +747,24 @@ interface Service {;
                       <div className="text-xs text-gray-400">Trial Days</div>;
                     </div>;
                   </div>;
-
                   {/* ROI Highlight */}
                   <div className='mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20'>;
                     <div className='text-sm text-green-400 font-semibold mb-1'>;
-                       ROI Promise;
+                      🚀 ROI Promise;
                     </div>;
                     <div className='text-xs text-gray-300 leading-relaxed'>                      {service && service.roi}                  <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">;
-                    <div className="text-sm text-green-400 font-semibold mb-1"> ROI Promise</div>;
+                    <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>;
                     <div className="text-xs text-gray-300 leading-relaxed">;
                       {service && service.roi}
                     </div>;
                   </div>;
-
                   {/* Market Position */}
                   <div className='mb-6 p-4 bg-gray-800/30 rounded-lg'>;
                     <div className='text-sm text-cyan-400 font-semibold mb-2'>;
-                       Market Position;
+                      📊 Market Position;
                     </div>;
                     <div className='text-xs text-gray-300 leading-relaxed'>                      {service && service.marketPosition}                  <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">;
-                    <div className="text-sm text-cyan-400 font-semibold mb-2"> Market Position</div>;
+                    <div className="text-sm text-cyan-400 font-semibold mb-2">📊 Market Position</div>;
                     <div className="text-xs text-gray-300 leading-relaxed">;
                       {service && service.marketPosition}
                     </div>;
@@ -762,17 +786,12 @@ interface Service {;
                   {/* Contact Info */}                    <Button
                       href={service && service.link}
                   <div className="mt-auto">
+                  {/* Contact Info */}                    <Button
+                      href={service && service.link}
+                  <div className="mt-auto">
                     <Button
                       href={service.link}
                       variant="primary"
-
-                      className="w-full group-hover:bg-cyan-500 transition-colors">;
-                      Get Started;
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />;
-                    </Button>;
-                  </div>;
-
-
                   {/* Contact Info */}
                   <div className='mt-4 text-center'>;
                     <div className='text-xs text-gray-500'>;
@@ -794,9 +813,6 @@ interface Service {;
                   </div>;
                 </div>;
               </motion && motion.div>;
-
-            ))}
-
           </AnimatePresence>;
         </motion && motion.div>;
 
@@ -805,17 +821,6 @@ interface Service {;
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          <div className='bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20'>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Ready to Transform Your Business?
-            </h3>
-            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
-              Join thousands of companies already achieving breakthrough results
-              with our cutting-edge AI, quantum, and blockchain solutions. Get
-              started today and see the future of business technology.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-
               <Button
                 href='/contact'
                 variant='primary'
@@ -833,30 +838,30 @@ interface Service {;
             </div>;
             <div className='mt-6 text-sm text-gray-400'>;
               <p>;
-                 Call us:{' '}
+                📞 Call us:{' '}
                 <span className='text-cyan-400'>+1 302 464 0950</span>;
               </p>;
               <p>;
-                 Email:{' '}
+                📧 Email:{' '}
                 <span className='text-cyan-400'>kleber@ziontechgroup && ziontechgroup.com</span>;
               </p>;
               <p>;
-                 Visit:{' '}
+                🌐 Visit:{' '}
                 <span className='text-cyan-400'>https://ziontechgroup && ziontechgroup.com</span>;
               </p>            </div>            <div className="mt-6 text-sm text-gray-400">;
-              <p> Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>;
-              <p> Email: <span className="text-cyan-400">kleber@ziontechgroup && ziontechgroup.com</span></p>;
-              <p> Visit: <span className="text-cyan-400">https://ziontechgroup && ziontechgroup.com</span></p>;
+              <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>;
+              <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup && ziontechgroup.com</span></p>;
+              <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup && ziontechgroup.com</span></p>;
           </div>;
         </motion && motion.div>;
       </div>;
     </section>;
   );
 };
+
 export default EnhancedServiceShowcase;  );
 };
 export default EnhancedServiceShowcase;
-
                     </p>;
                   </div>;
                   {/* Features */}
@@ -871,12 +876,12 @@ export default EnhancedServiceShowcase;
                           key={idx}
                           className='text - sm text - gray - 400 flex items - start';
                         >;
-                          <span className='text - cyan - 400 mr - 2'></span>                          {feature}                      Key Features;
+                          <span className='text - cyan - 400 mr - 2'>•</span>                          {feature}                      Key Features;
                     </h4>;
                     <ul className="space - y-2">;
                       {service.features.slice (0, 4).map ((feature, idx) => (
                         <li key={idx} className="text - sm text - gray - 400 flex items - start">;
-                          <span className="text - cyan - 400 mr - 2"></span>;
+                          <span className="text - cyan - 400 mr - 2">•</span>;
                           {feature}
                         </li>))}
                     </ul>;
@@ -917,10 +922,10 @@ export default EnhancedServiceShowcase;
                   {/* ROI Highlight */}
                   <div className='mb - 6 p - 4 bg - gradient - to - r from - green - 900 / 20 to - blue - 900 / 20 rounded - lg border border - green - 500 / 20'>;
                     <div className='text - sm text - green - 400 font - semibold mb - 1'>;
-                       ROI Promise;
+                      🚀 ROI Promise;
                     </div>;
                     <div className='text - xs text - gray - 300 leading - relaxed'>                      {service.roi}                  <div className="mb - 6 p - 4 bg - gradient - to - r from - green - 900 / 20 to - blue - 900 / 20 rounded - lg border border - green - 500 / 20">;
-                    <div className="text - sm text - green - 400 font - semibold mb - 1"> ROI Promise</div>;
+                    <div className="text - sm text - green - 400 font - semibold mb - 1">🚀 ROI Promise</div>;
                     <div className="text - xs text - gray - 300 leading - relaxed">;
                       {service.roi}
                     </div>;
@@ -928,10 +933,10 @@ export default EnhancedServiceShowcase;
                   {/* Market Position */}
                   <div className='mb - 6 p - 4 bg - gray - 800 / 30 rounded - lg'>;
                     <div className='text - sm text - cyan - 400 font - semibold mb - 2'>;
-                       Market Position;
+                      📊 Market Position;
                     </div>;
                     <div className='text - xs text - gray - 300 leading - relaxed'>                      {service.market_position}                  <div className="mb - 6 p - 4 bg - gray - 800 / 30 rounded - lg">;
-                    <div className="text - sm text - cyan - 400 font - semibold mb - 2"> Market Position</div>;
+                    <div className="text - sm text - cyan - 400 font - semibold mb - 2">📊 Market Position</div>;
                     <div className="text - xs text - gray - 300 leading - relaxed">;
                       {service.market_position}
                     </div>;
@@ -1013,20 +1018,20 @@ export default EnhancedServiceShowcase;
             </div>;
             <div className='mt - 6 text - sm text - gray - 400'>;
               <p>;
-                 Call us:{' '}
+                📞 Call us:{' '}
                 <span className='text - cyan - 400'>+1 302 464 0950</span>;
               </p>;
               <p>;
-                 Email:{' '}
+                📧 Email:{' '}
                 <span className='text - cyan - 400'>kleber@ziontechgroup.com</span>;
               </p>;
               <p>;
-                 Visit:{' '}
+                🌐 Visit:{' '}
                 <span className='text - cyan - 400'>https://ziontechgroup.com</span>;
               </p>            </div>            <div className="mt - 6 text - sm text - gray - 400">;
-              <p> Call us: <span className="text - cyan - 400">+1 302 464 0950</span></p>;
-              <p> Email: <span className="text - cyan - 400">kleber@ziontechgroup.com</span></p>;
-              <p> Visit: <span className="text - cyan - 400">https://ziontechgroup.com</span></p>;
+              <p>📞 Call us: <span className="text - cyan - 400">+1 302 464 0950</span></p>;
+              <p>📧 Email: <span className="text - cyan - 400">kleber@ziontechgroup.com</span></p>;
+              <p>🌐 Visit: <span className="text - cyan - 400">https://ziontechgroup.com</span></p>;
           </div>;
         </motion.div>;
       </div>;
@@ -1042,11 +1047,3 @@ export default EnhancedServiceShowcase;
 };
 
 
-
-}
-}
-}
-}
-}
-}
-export default EnhancedServiceShowcase;

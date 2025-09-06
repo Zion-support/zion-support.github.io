@@ -23,3 +23,8 @@ export interface ModerationFlag {;
   target_id: string;
   target_type: 'post' | 'comment' | 'user';
   status: ModerationStatus;
+}
+  created_at: string;
+  updated_at: string;
+  admin_notes?: string,
+}

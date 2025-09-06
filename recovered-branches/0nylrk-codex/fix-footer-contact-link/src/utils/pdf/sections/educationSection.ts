@@ -1,4 +1,3 @@
-
 import { jsPDF  } from 'jspdf';
 import { Education  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
@@ -14,56 +13,13 @@ export function addEducationSection(;
   colors: PdfThemeColors;
   startY: number
 ): number {
-  if (education && education.length === 0) return startY;
-  
 
   let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
-
-if (education && education.length === 0) return startY;
-  let yPos = startY;
-  // Check if we need to add a new page
-  if (yPos > 250) {
-    doc && doc.addPage(),
-    yPos = 20
-  }
-  doc && doc.setFontSize(16);
-  doc && doc.setTextColor(colors && colors.heading);
-  doc && doc.text('Education', 20, yPos);
-  yPos += 8;
-  doc && doc.setDrawColor(colors && colors.accent);
-  doc && doc.line(20, yPos, 60, yPos);
   yPos += 8;
   // Sort education by date (newest first)
   const sortedEducation = [...education].sort((a, b) => {
-    if (a && a.is_current && !b && b.is_current) return -1;
-    if (!a && a.is_current && b && b.is_current) return 1;
-    const dateA = a && a.start_date instanceof Date ? a && a.start_date : new Date(a && a.start_date);
-    const dateB = b && b.start_date instanceof Date ? b && b.start_date : new Date(b && b.start_date);
-    return dateB && dateB.getTime() - dateA && dateA.getTime()
-
-  if (education.length === 0) return startY;
-  let yPos = startY;
-  // Check if we need to add a new page
-  if (yPos > 250) {
-    doc.addPage()
-    yPos = 20
-  }
-  doc.setFontSize(16);
-  doc.setTextColor(colors.heading);
-  doc.text('Education', 20, yPos);
-  yPos += 8;
-  doc.setDrawColor(colors.accent);
-  doc.line(20, yPos, 60, yPos);
-  yPos += 8;
-  // Sort education by date (newest first)
-  const sortedEducation = [...education].sort((a, b) => {
-    if (a.is_current && !b.is_current) return -1;
-    if (!a.is_current && b.is_current) return 1;
-    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
-    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
-    return dateB.getTime() - dateA.getTime()
   });
   for (const edu of sortedEducation) {
     // Check if we need to add a new page
@@ -228,3 +184,4 @@ if ( {) {
     }
   }
   return y_pos + 5;
+}

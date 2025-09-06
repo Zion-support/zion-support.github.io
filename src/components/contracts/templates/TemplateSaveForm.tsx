@@ -108,43 +108,12 @@ if ( {) {
 }
       return;
     }
-    set_saving (true);
-    try {
-      // Check condition
-if ( {) {
-  $2
-}
-        await update_template.mutate_async ({
-          template_id: edit_template.id,
-          title: values.title,
-          template_data: edit_template.template_data,
-          is_default: values.is_default,
-        });
-      } else // Check condition
-if ( {) {
-  $2
-}
-        await create_template.mutate_async ({
-          title: values.title,
-          template_data: current_values,
-          is_default: values.is_default,
-        });
-      }
-      on_complete ();
-    } finally {
-      set_saving (false);
-    }
-  }
-  return (
-    <Form {...form}>;
-    }
-  },
-  
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
+
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder="Enter template name" />
@@ -168,15 +137,12 @@ if ( {) {
               <FormMessage />;
             </FormItem>;
           )}
-        
-        <div className="flex gap-2 justify-end">
-          <Button type="button" variant="outline" onClick={onCancel}>
+
+
             Cancel
-          <Button type='submit' disabled={saving}>
+          </Button>
+          <Button type="submit" disabled={saving}>
             {saving ? (
-              <>;
-                <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
-                Saving...;
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
@@ -186,25 +152,9 @@ if ( {) {
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
+
+              `${editTemplate ? "Update" : "Save"} Template`
             )}
           </Button>;
         </div>;
       </form>;
-
-  // Check condition
-if ( {) {
-  $2
-}
-  await update_template.mutate_async ({
-  <FormItem> <FormLabel > Template Name</FormLabel> <FormControl> <Input {
-  ...field ";
-}placeholder="Enter template name" />;
-}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
-}/> <> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : (`$ {";
-  edit_template ? "Update" : "Save";
-}Template`);
-}</Button> </div> </form> </Form>);
-}"}
-}"
-  );
-}

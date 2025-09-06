@@ -2,14 +2,13 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {useState} from "react";
 export function NewsletterForm() {;
-import { Button } from "@/components/ui/button",
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true);
-
-
-
 export function NewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -40,14 +39,6 @@ export function NewsletterForm() {
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setEmail(e.target.value)
-            }
-            required
-          />
-          <Button
-            type="submit"
-            disabled={isSubmitting}
           <Input
             type="email"
             placeholder="Enter your email"
@@ -66,10 +57,6 @@ export function NewsletterForm() {
           </Button>;
         </form>;
       )}
-
-    </div>;
-
-  );
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
 import { useState  } from './react';
@@ -122,11 +109,8 @@ function NewsletterForm() {
           >;
             {is_submitting ? "Subscribing..." : "Subscribe"}
           </Button>;
-
-        </form>;
-
-
       )}
     </div>
   );
+}
 }

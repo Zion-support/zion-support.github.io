@@ -1,6 +1,5 @@
 
 
-
 export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
 
 
@@ -66,3 +65,6 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
     severity;
   }
 };
+    severity;
+  }
+}

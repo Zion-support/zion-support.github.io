@@ -1,6 +1,3 @@
-
-
-
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -18,28 +15,15 @@ import {BulkAddSkillsProps} from './types';
         }
       }
     } catch (err: any) {
-
-
-        }
-      }
-    } catch (err: any) {;
-      setError(err && err.message || 'Failed to categorize skills');
-    }
-  }
-  },
   };
   },
-
   return (
-
-    <div className="bg-muted/40 p-6 rounded-lg">;
-      <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>;
-      <div className="space-y-4">;
-        <div className="space-y-2">;
-          <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>;
-
+    <div className="bg-muted/40 p-6 rounded-lg">
+      <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
+      <div className="space-y-4">
+        <div className="space-y-2">
+          <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
           <Textarea
-
           <Textarea 
 
             className="min-h-24"
@@ -50,10 +34,8 @@ import {BulkAddSkillsProps} from './types';
         <Button 
 
           onClick={handleCategorizeSkills}
-
+          disabled={isEnhancing |!bulkSkills.trim()}
           disabled={isEnhancing || !bulkSkills.trim()}
-
-
           className="gap-2"
         >
           {isEnhancing ? (
@@ -105,6 +87,13 @@ import {BulkAddSkillsProps} from './types';
 
 
 };
+    }
+  }
+  return (
+          <Textarea
+            className="min-h-24"
+            placeholder="Python, React, TypeScript, Project Management, Communication..."
+            value={bulkSkills}
       set_error (err.message || 'Failed to categorize skills');
     }
   }

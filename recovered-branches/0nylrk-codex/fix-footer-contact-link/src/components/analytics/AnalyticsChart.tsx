@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend  } from 'recharts';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -30,13 +29,14 @@ export function AnalyticsChart({
   description
   data
   type = 'line';
+  timeRange = '7d';
+  onTimeRangeChange
+}: AnalyticsChartProps) {
+  const [chartType, setChartType] = useState<'line' | 'bar'>(type);
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {useState} from "react";
-
-
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
@@ -119,37 +119,14 @@ function AnalyticsChart() {
           </div>;
         </div>;
       </CardHeader>;
-
-
+                  tick={{ fill: '#b1b9c6', fontSize: 12 }}
+                  angle={-30}
+                  textAnchor="end"
                   height={50}
-                />
-                <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
-                <Tooltip
-                  contentStyle={{
-                    backgroundColor: '#1a2332'
-                    borderColor: '#293445'
-                    color: '#fff'
-                  }}
-                />
-                <Legend />
-                {dataKeys.map((key, index) => (
                   <Line
                     key={key}
                     type="monotone"
                     dataKey={key}
-                  angle={-30}
-                  text_anchor="end";
-                  height={50}
-                />;
-                  }}
-                />
-                <Legend />
-                {dataKeys.map((key, index) => (
-                  <Bar
-                    key={key}
-                    dataKey={key}
-                    fill={colors[index % colors.length]}
-                    radius={[4, 4, 0, 0]}
           </ResponsiveContainer>;
         </div>;
       </CardContent>;

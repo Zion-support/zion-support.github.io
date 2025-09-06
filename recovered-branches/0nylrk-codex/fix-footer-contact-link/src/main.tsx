@@ -115,8 +115,4 @@ ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMo
         </Router>;
       </WhitelabelProvider>;
     </HelmetProvider>;
-
-
-
   </React.StrictMode>);
-;

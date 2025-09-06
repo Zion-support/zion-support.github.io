@@ -28,34 +28,6 @@ interface SEOHeadProps {;
       <meta
         name="robots"
         content={noIndex ? "noindex,nofollow" : "index,follow"}
-      {/* Canonical URL */}
-      <link rel="canonical" href={fullCanonicalUrl} />
-      {/* Open Graph Meta Tags */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={fullCanonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      {/* Additional Meta Tags */}
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      {/* PWA Manifest */}
-      <link rel="manifest" href="/manifest.json" />
-      {/* Favicon */}
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
       <link
@@ -158,5 +130,3 @@ interface SEOHeadProps {;
           }),
         }}
       />;
-}
-export default SEOHead;

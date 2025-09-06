@@ -3,6 +3,22 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken |token === superToken;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  }
+
+  const byModule: Record<string, number> = {};
+  const byType: Record<string, number> = {};
+  
+
+  return res && res.status(200).json({
+    entries: entries && entries.slice(-200),
+    byModule,
+    byType,
+    total: entries && entries.length,
+  });  for (const e of entries) {
+    byModule[e && e.module] = (byModule[e && e.module] || 0) + 1;
+    byType[String(e && e.type)] = (byType[String(e && e.type)] || 0) + 1
+  }
+
   return res && res.status(200).json({ entries: entries && entries.slice(-200), byModule, byType, total: entries && entries.length });
 }
 import { read_logs } from '@/utils / zion_brain';
@@ -74,6 +90,10 @@ return res.status (200).json ({ entries: entries.slice (-200), by_module, by_typ
 }
   const byType: Record<string, number> = {};
 }
+
+
+  const byModule: Record<string, number> = {};
+
 
 
   const byModule: Record<string, number> = {};

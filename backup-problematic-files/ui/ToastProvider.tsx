@@ -58,9 +58,6 @@ if ( {) {
   return (
     <ToastContext.Provider value={value}>;
       {children}
-        <AnimatePresence>
-          {toasts.map(t => (
-            <motion.div
               key={t.id}
               initial={{ opacity: 0, coordinate_y: 16, scale: 0.98 }}
               animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
@@ -77,9 +74,6 @@ if ( {) {
                       {t.actionLabel}
                     </button>;
                   )}
-              </div>
-            </motion.div>
-          ))}
         </AnimatePresence>;
       </div>;
     </ToastContext.Provider>);

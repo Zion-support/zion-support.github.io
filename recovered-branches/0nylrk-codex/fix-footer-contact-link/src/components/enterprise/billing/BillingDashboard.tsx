@@ -1,10 +1,3 @@
-
-import React from "react",
-import { BillingHeader } from "./BillingHeader",
-import { CurrentSubscription } from "./CurrentSubscription",
-import { PaymentMethods } from "./PaymentMethods",
-
-
       <Tabs defaultValue="subscription" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="subscription">Subscription</TabsTrigger>
@@ -21,8 +14,6 @@ import { PaymentMethods } from "./PaymentMethods",
         <TabsContent value="invoices" className="space-y-8">
           <InvoiceHistory />
         </TabsContent>
-
-
         <TabsContent value="usage" className="space-y-8">
           <UsageOverview />
         </TabsContent>
@@ -52,10 +43,4 @@ export function BillingDashboard() {;
           <TabsTrigger value="invoices">Invoice History</TabsTrigger>;
           <TabsTrigger value="usage">Usage Overview</TabsTrigger>;
         </TabsList>;
-
-        <TabsContent value="usage" className="space-y-8">;
-          <UsageOverview />;
-        </TabsContent>;
-      </Tabs>;
-
-
+}

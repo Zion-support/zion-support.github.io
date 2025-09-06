@@ -9,15 +9,8 @@
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
 export default function QuantumInternetSecurityPage() {
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/quantum-internet-security-platform')
-
 export default function QuantumInternetSecurityPage() {
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -39,7 +32,6 @@ export default function QuantumInternetSecurityPage() {;
     </UltraAdvancedFuturisticBackground>
 
   );
-;
 }
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -129,7 +121,6 @@ export default function QuantumInternetSecurityPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
-
 
 }
 

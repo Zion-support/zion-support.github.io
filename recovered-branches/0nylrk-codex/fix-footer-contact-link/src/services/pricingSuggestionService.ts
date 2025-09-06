@@ -1,4 +1,3 @@
-
 export interface PricingSuggestion {
 export interface PricingSuggestion {;
   minRate: number;
@@ -23,9 +22,6 @@ export interface ClientBudgetParams {
   job_title: string;
   category: string;
   timeline?: string;
-
-  scope?: string
-
 export interface TalentRateParams {
 
 export interface TalentRateParams {;
@@ -97,8 +93,6 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       max_rate = 50;
       confidence = "Low";
     }
-
-
     
 
 
@@ -112,8 +106,9 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
     } else if (lowercaseTitle && lowercaseTitle.includes("junior")) {
       minRate -= 10;
       maxRate -= 15;
-
-
+    }
+    // Generate explanation
+    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`;
 ;
     // Adjust based on job title keywords;
     const lowercaseTitle = jobTitle.toLowerCase(),;
@@ -124,13 +119,24 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       minRate -= 10,;
       maxRate -= 15,;
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;
-
-
-
+    // Adjust based on job title keywords;
+    const lowercase_title = job_title.toLowerCase ();
+    if (|| lowercase_title.includes ("lead")) {) {
+  $2
+}
+      min_rate += 20;
+      max_rate += 30;
+    } else if () {) {
+  $2
+}
+      min_rate -= 10;
+      max_rate -= 15;
+      min_rate = Math.max (min_rate, 15), // Ensure minimum doesn't go too low;
     }
-    // Generate explanation;
-    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${job_title}", we recommend a budget range of $${min_rate}-$${max_rate}/hour. This aligns with current market trends for similar projects.`;
-;
+    
+    // Generate explanation
+    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,
+    
     return {
       min_rate;
       max_rate;
@@ -209,9 +215,6 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
         locationFactor = 1.2;
       } else if (lowCostLocations.some(loc => lowercaseLocation.includes(loc))) {;
         locationFactor = 0.8;
-
-
-
       }
     }
     
@@ -229,8 +232,11 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     let explanation = `Based on ${yearsExperience} years of experience`,;
     if (hasInDemandSkills) {;
       explanation += ` and your in-demand skills (${skills.join()})`;
-
-
+    }
+    // Generate explanation
+    let explanation = `Based on ${yearsExperience} years of experience`;
+    if (hasInDemandSkills) {
+      explanation += ` and your in-demand skills (${skills && skills.join()})`
     }
     if (location) {
       explanation += `, considering market rates in ${location}`
@@ -326,7 +332,7 @@ if ( {) {
 
     }
   } catch (error) {
-    console && console.error("Error generating rate suggestion:", error);
+    console.error("Error generating rate suggestion:", error),
     return {
       explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages."
     }
@@ -357,8 +363,6 @@ if ( {) {
     }
   }
 }
-    console.error("Error tracking pricing suggestion:", error),
-    return false
 ;
 // Function to save pricing analytics data;
 export async function trackPricingSuggestion(data: {;
@@ -383,6 +387,13 @@ export async function trackPricingSuggestion(data: {;
 
   }
 }
+// Function to save pricing analytics data;
+export async /**
+ * trackPricingSuggestion - Function description
+ */
+function trackPricingSuggestion() {
+  try {
+    // In a real implementation, this would save to the database;
+    // For now, we'll just log it;
+    console.log ("Tracking pricing suggestion:", data);
 ;
-  }
-}

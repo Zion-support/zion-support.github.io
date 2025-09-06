@@ -1,14 +1,8 @@
-
-
-
 import {GradientHeading} from "@/components/GradientHeading";
 import {Clock, Map, DollarSign} from "lucide-react";
 
 import { GradientHeading } from "@/components/GradientHeading",
 import { Clock, Map, DollarSign } from "lucide-react",
-
-
-
 
 export function PageHero() {
   return (
@@ -55,15 +49,11 @@ export function PageHero() {
         </div>
       </div>
     </div>
-  )
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Clock, Map, DollarSign } from "lucide-react";
 
 import {GradientHeading} from "@/components/GradientHeading";
 import {Clock, Map, DollarSign} from "lucide-react";
 
 export function PageHero() {;
-  return (;
     <div className="text-center mb-12">;
       <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>;
       <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
@@ -103,5 +93,3 @@ export function PageHero() {;
 
 }
 ;
-
-

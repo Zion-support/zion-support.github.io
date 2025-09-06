@@ -1,13 +1,8 @@
-    let modified = false;
 
 
     // Fix import statements missing semicolons;
 
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
-
-    const matches = content && content.match(importRegex);
-
-
     if (matches) {
       matches && matches.forEach((match) => {
         if (!match && match.trim().endsWith(";")) {

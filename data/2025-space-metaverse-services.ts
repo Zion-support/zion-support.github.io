@@ -12,120 +12,13 @@ export interface SpaceMetaverseService {;
     trialDays: number;
     setupTime: string;
 
-    enterprise: string;
-  }
 
-  features: string[];
-  benefits: string[];
-  target_audience: string[];
-  market_position: string;
-  competitors: string[];
-  tech_stack: string[];
-  real_implementation: boolean;
-  implementation_details: string;
-  roi: string;
-  use_cases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launch_date: string;
-  customers: number;
-  rating: number;
+  {
 
-  reviews: number;
-export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
-  {
-    id: 'ai-powered-space-resource-intelligence'
-    name: 'AI-Powered Space Resource Intelligence Platform'
-    tagline: 'Discover and optimize space resources with AI-driven analytics'
-    description:
-      'Revolutionary platform that uses AI to analyze space data, identify valuable resources, and optimize space exploration and mining operations for maximum efficiency.'
-    category: 'Space Technology & Resource Intelligence'
-    price: {
-      monthly: 799
-      yearly: 7990
-      currency: 'USD'
-      trialDays: 30
-      setupTime: '2-4 weeks'
-      enterprise: 'Custom pricing'
-    }
-    features: [
-      'AI-powered resource detection'
-      'Multi-spectral data analysis'
-      '3D mapping and visualization'
-      'Resource optimization algorithms'
-      'Real-time satellite data processing'
-      'Predictive resource modeling'
-      'Mining operation planning'
-      'Cost-benefit analysis'
-      'Regulatory compliance monitoring'
-      'API for space agencies'
-    ]
-    benefits: [
-      'Increase resource discovery by 300%'
-      'Reduce exploration costs by 50%'
-      'Optimize mining operations'
-      'Improve space mission planning'
-      'Enable sustainable space development'
-    ]
-    targetAudience: [
-      'Space agencies'
-      'Private space companies'
-      'Mining corporations'
-      'Research institutions'
-      'Government agencies'
-      'Space tourism companies'
-    ]
-    marketPosition:
-      'Leading AI-powered space resource platform. Competes with Planetary Resources (acquired), Deep Space Industries (acquired), and traditional space agencies. Our advantage: AI intelligence and comprehensive resource analysis.'
-    competitors: [
-      'Traditional space agencies, Private space companies, Research institutions'
-    ]
-    techStack: [
-      'OpenAI GPT-4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis'
-    ]
-    realImplementation: true
-    implementationDetails:
-      'Production-ready space resource platform with AI models, satellite data integration, and comprehensive analytics. Includes 3D visualization and planning tools.'
-    roi: 'Space organizations achieve 500% ROI through improved resource discovery and optimized operations.'
-    useCases: [
-      'Asteroid mining planning'
-      'Lunar resource exploration'
-      'Mars mission planning'
-      'Satellite constellation optimization'
-      'Space tourism route planning'
-      'Resource extraction planning'
-    ]
-    integrations: [
-      'NASA APIs, ESA data, SpaceX data, Custom space agency systems'
-    ]
-    support:
-      'Space technology experts, implementation consulting, custom development, and dedicated success manager.'
-    compliance: [
-      'International space law, Government regulations, Industry standards'
-    ]
-    link: 'https://ziontechgroup.com/ai-powered-space-resource-intelligence'
-    icon: ''
-    color: 'from-blue-500 to-indigo-600'
-    popular: true
-    launchDate: '2024-02-01'
-    customers: 180
-    rating: 4.9
-    reviews: 120
-  }
-    icon: '',
-    color: 'from - blue - 500 to - indigo - 600',
-    popular: true,
-    launch_date: '2024 - 02 - 01',
-    customers: 180,
-    rating: 4 && 4.9,
-    reviews: 120,
-  },
-  {
+      'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms',
+    ],
+    realImplementation: true,
+
     implementationDetails:
       'Production-ready metaverse platform with comprehensive development tools, 3D engine, and blockchain integration. Includes mobile SDK and developer portal.'
     roi: 'Developers achieve 400% ROI through reduced development costs and increased monetization opportunities.'
@@ -288,6 +181,9 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     popular: true;
     launch_date: '2024 - 01 - 20';
     customers: 1800;
+    rating: 4.7,
+    reviews: 1400;
+  }
 ;
   }
 ];
@@ -552,6 +448,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     launchDate: '2024-01-20',;
     customers: 1800,;
     rating: 4.7,;
+    reviews: 1400;
+    rating: 4.7,
     reviews: 1400;
   }
 ];

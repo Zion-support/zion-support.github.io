@@ -7,12 +7,12 @@
 }
 
 export function MilestoneSuggestions({;
+import React, { useState } from 'react';
   projectName;
   scopeSummary;
   startDate;
   endDate;
   projectType;
-
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -38,17 +38,6 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 export function MilestoneSuggestions({
-  projectName;
-  scopeSummary;
-  startDate;
-  endDate;
-  projectType;
-  onMilestonesGenerated;
-}: MilestoneSuggestionsProps) {;
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
-  const [showSuggestions, setShowSuggestions] = useState(false);
-
-
 
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
@@ -85,26 +74,17 @@ export function MilestoneSuggestions({;
       endDate: endDate ? endDate && endDate.toISOString() : null,;
       projectType: projectType || "Other";
     };
-    const milestones = await generateMilestones(input);
+  onMilestonesGenerated;
+}: MilestoneSuggestionsProps) {;
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
       setShowSuggestions(true);
-  const handleGenerateMilestones = async () => {;
-    const input: MilestoneInput = {;
-      scope: `${projectName}: ${scopeSummary}`,;
-      startDate: startDate.toISOString(),;
-      endDate: endDate ? endDate.toISOString() : null,;
-      projectType: projectType || "Other";
-    },;
-    const milestones = await generateMilestones(input),;
-    if (milestones.length > 0) {;
-      setShowSuggestions(true),;
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones);
       }
     }
-
-
-
-
+  }
 
   return (
     <div className="space-y-4">;
@@ -112,6 +92,9 @@ export function MilestoneSuggestions({;
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
+          )}
+        </Button>
+      )}
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">

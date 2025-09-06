@@ -1,4 +1,3 @@
-
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -9,8 +8,6 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
 import { toast } from "@/hooks/use-toast";
 import { MatchResult } from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {
-
-
 
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -122,11 +119,6 @@ export default function AIMatcherPage() {;
         serviceType:itemType,;
         specificItem:match.item;
       }
-    }),;
-  },;
-  ;
-  return (;
-export default function AIMatcherPage() {;
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -244,7 +236,3 @@ if (|| category === "hardware") {) {
         </div>;
       </div>;
       <Footer />;
-;
-
-
-

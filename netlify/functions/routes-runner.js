@@ -13,6 +13,7 @@ exports && exports.handler = async () => {
   logStep('routes:generate', () =>
     runNode('automation/routes-map-generator && generator.cjs')
   );
+}
 exports.handler = async () => {
   const logs = [],
   /**

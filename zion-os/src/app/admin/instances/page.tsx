@@ -3,7 +3,7 @@
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
         <div className="text - center mb - 12">;
-          <h1 className="text - 4xl font - bold mb - 4"> Manage Your Instances</h1>;
+          <h1 className="text - 4xl font - bold mb - 4">📊 Manage Your Instances</h1>;
           <p className="text - xl text - white / 70 max - w-2xl mx - auto">;
             Monitor and manage your deployed digital economies, track performance, and access configuration settings.;
           </p>;
@@ -11,7 +11,7 @@
         {/* Error State */}
         {error && (
           <div className="mb - 8 p - 6 bg - red - 900 / 20 border border - red - 500 / 20 rounded - xl text - center">;
-            <div className="text - red - 400 mb - 2"> Database Connection Error</div>;
+            <div className="text - red - 400 mb - 2">⚠️ Database Connection Error</div>;
             <p className="text - white / 70 mb - 4">{error}</p>;
             <p className="text - sm text - white / 50">;
               Please ensure your database is properly configured and the DATABASE_URL environment variable is set.;
@@ -53,27 +53,27 @@
                 </div>;
                 <div className="space - y-3 mb - 4">;
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
-                    <span className="w - 4 h - 4"></span>;
+                    <span className="w - 4 h - 4">🌐</span>;
                     <span className="truncate">;
                     </span>;
                   </div>;
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
-                    <span className="w - 4 h - 4"></span>;
+                    <span className="w - 4 h - 4">🗳️</span>;
                     <span > Governance: {getGovernanceLabel (inst.governance_type)}</span>;
                   </div>;
                   {inst.region && (
                     <div className="flex items - center gap - 2 text - sm text - white / 70">;
-                      <span className="w - 4 h - 4"></span>;
+                      <span className="w - 4 h - 4">📍</span>;
                       <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
                   <div className="flex items-center gap-2 text-sm text-white/70">;
-                    <span className="w-4 h-4"></span>;
+                    <span className="w-4 h-4">🔧</span>;
                     <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;
                   </div>;
                 </div>;
                 <div className="flex items - center justify - between text - xs text - white / 60">;
                   <div className="flex items - center gap - 4">;
-                    <span> {inst._count.deployments} deployments</span>;
-                    <span> {inst._count.features} features</span>;
+                    <span>🚀 {inst._count.deployments} deployments</span>;
+                    <span>⚡ {inst._count.features} features</span>;
                   </div>;
                   <span className="text - white / 40">;
                     {new Date (inst.created_at).toLocaleDateString ()}
@@ -97,14 +97,14 @@
         {instances.length === 0 && !error && (
           <div className="text - center py - 16">;
             <div className="w - 24 h - 24 mx - auto mb - 6 bg - white / 5 rounded - full flex items - center justify - center">;
-              <span className="text - 4xl"></span>;
+              <span className="text - 4xl">🚀</span>;
             </div>;
             <h3 className="text - 2xl font - semibold mb - 4">No Instances Yet</h3>;
             <p className="text - white / 70 mb - 8 max - w-md mx - auto">;
               You haven't deployed any digital economies yet. Start building your first instance to get started.;
             </p>;
             <a href="/multiverse / launch" className="btn - primary">;
-               Launch Your First Economy;
+              🚀 Launch Your First Economy;
             </a>;
           </div>)}
       </div>;
@@ -136,7 +136,7 @@
       {/* Instances Grid */}
       {instances.length === 0 ? (
         <div className="card text - center py - 12">;
-          <div className="text - 6xl mb - 4"></div>;
+          <div className="text - 6xl mb - 4">🚀</div>;
           <h2 className="text - 2xl font - semibold mb - 2">No Instances Yet</h2>;
           <p className="text - white / 70 mb - 6">;
             Get started by launching your first digital economy instance;
@@ -171,12 +171,12 @@
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
                 </div>;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
-                  <span></span>;
+                  <span>🏛️</span>;
                   <span > Governance: {inst.governance_type}</span>;
                 </div>;
                 {inst.region && (
                   <div className="flex items - center space - x-2 text - sm text - white / 70">;
-                    <span></span>;
+                    <span>📍</span>;
                     <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
                 <div className="flex items-center space-x-2 text-sm text-white/70">;
                   <span>💎</span>;
@@ -216,10 +216,10 @@
         <h2 className="text - 2xl font - semibold mb - 4">Quick Actions</h2>;
         <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
           <a href="/multiverse / launch" className="btn - primary">;
-             Launch New Instance;
+            🚀 Launch New Instance;
           </a>;
           <a href="/admin / os - deploy" className="btn - secondary">;
-             Advanced Deployment;
+            ⚙️ Advanced Deployment;
           </a>;
         </div>;
       </div>;
@@ -237,7 +237,7 @@
               Monitor and manage your deployed AI autonomous systems and their performance.;
             </p>;
             <Link href="/admin / ai - systems" className="text - blue - 400 hover:text - blue - 300 font - medium">;
-              Manage Systems ;
+              Manage Systems →;
             </Link>;
           </div>;
           <div className="bg - gradient - to - br from - green - 900 / 20 to - blue - 900 / 20 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -251,7 +251,7 @@
               Access and manage your quantum computing resources and algorithms.;
             </p>;
             <Link href="/admin / quantum" className="text - green - 400 hover:text - green - 300 font - medium">;
-              Quantum Dashboard ;
+              Quantum Dashboard →;
             </Link>;
           </div>;
           <div className="bg - gradient - to - br from - purple - 900 / 20 to - pink - 900 / 20 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -265,7 +265,7 @@
               Access research tools and development environments for AI consciousness evolution.;
             </p>;
             <Link href="/admin / research" className="text - purple - 400 hover:text - purple - 300 font - medium">;
-              Research Tools ;
+              Research Tools →;
             </Link>;
           </div>;
           <div className="bg - gradient - to - br from - orange - 900 / 20 to - red - 900 / 20 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -279,7 +279,7 @@
               Monitor security protocols and ensure compliance with AI governance frameworks.;
             </p>;
             <Link href="/admin / security" className="text - orange - 400 hover:text - orange - 300 font - medium">;
-              Security Dashboard ;
+              Security Dashboard →;
             </Link>;
           </div>;
           <div className="bg - gradient - to - br from - cyan - 900 / 20 to - blue - 900 / 20 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -293,7 +293,7 @@
               Access comprehensive business analytics and performance metrics.;
             </p>;
             <Link href="/admin / analytics" className="text - cyan - 400 hover:text - cyan - 300 font - medium">;
-              Analytics Dashboard ;
+              Analytics Dashboard →;
             </Link>;
           </div>;
           <div className="bg - gradient - to - br from - indigo - 900 / 20 to - purple - 900 / 20 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -308,7 +308,7 @@
               Configure system parameters and customize your AI platform settings.;
             </p>;
             <Link href="/admin / settings" className="text - indigo - 400 hover:text - indigo - 300 font - medium">;
-              System Settings ;
+              System Settings →;
             </Link>;
           </div>;
         </div>;

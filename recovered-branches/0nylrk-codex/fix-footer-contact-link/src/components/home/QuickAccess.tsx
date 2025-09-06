@@ -1,5 +1,3 @@
-
-
 import React from "react",
 import { Link } from "react-router-dom",
 import { 
@@ -50,56 +48,6 @@ export function QuickAccess() {
       description: "Connect with tech professionals"
       icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />
       link: "/community"
-import React from './react';
-import { Link } from './react-router-dom';
-import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from './lucide-react';
-;
-export /**
- * QuickAccess - Function description
- */
-function QuickAccess() {
-  const quick_links = [;
-    {
-      title: "AI Matcher",
-      description: "Find the perfect match for your project needs",
-      icon: <Search className="h - 6 w - 6 text - zion - cyan" />,
-      link: "/match";
-    }
-    {
-      title: "Talent Directory",
-      description: "Browse verified tech specialists",
-      icon: <Users className="h - 6 w - 6 text - zion - purple" />,
-      link: "/talent";
-    }
-    {
-      title: "Service Marketplace",
-      description: "Discover professional services",
-      icon: <Briefcase className="h - 6 w - 6 text - zion - cyan" />,
-      link: "/services";
-    }
-    {
-      title: "Equipment Catalog",
-      description: "Find specialized hardware",
-      icon: <Settings className="h - 6 w - 6 text - zion - purple" />,
-      link: "/equipment";
-    }
-    {
-      title: "Community",
-      description: "Connect with tech professionals",
-      icon: <MessageSquare className="h - 6 w - 6 text - zion - cyan" />,
-      link: "/community";
-    }
-    {
-      title: "Mobile App",
-      description: "Zion on the go",
-      icon: <Smartphone className="h - 6 w - 6 text - zion - purple" />,
-      link: "/mobile - launch";
-    }
-  ];
-;
-  return (
-
-
 import React from "react",;
 import { Link } from "react-router-dom",;
 import {;
@@ -188,6 +136,54 @@ export function QuickAccess() {;
     </section>;
   );
 }
+import React from './react';
+import { Link } from './react-router-dom';
+import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from './lucide-react';
+;
+export /**
+ * QuickAccess - Function description
+ */
+function QuickAccess() {
+  const quick_links = [;
+    {
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs",
+      icon: <Search className="h - 6 w - 6 text - zion - cyan" />,
+      link: "/match";
+    }
+    {
+      title: "Talent Directory",
+      description: "Browse verified tech specialists",
+      icon: <Users className="h - 6 w - 6 text - zion - purple" />,
+      link: "/talent";
+    }
+    {
+      title: "Service Marketplace",
+      description: "Discover professional services",
+      icon: <Briefcase className="h - 6 w - 6 text - zion - cyan" />,
+      link: "/services";
+    }
+    {
+      title: "Equipment Catalog",
+      description: "Find specialized hardware",
+      icon: <Settings className="h - 6 w - 6 text - zion - purple" />,
+      link: "/equipment";
+    }
+    {
+      title: "Community",
+      description: "Connect with tech professionals",
+      icon: <MessageSquare className="h - 6 w - 6 text - zion - cyan" />,
+      link: "/community";
+    }
+    {
+      title: "Mobile App",
+      description: "Zion on the go",
+      icon: <Smartphone className="h - 6 w - 6 text - zion - purple" />,
+      link: "/mobile - launch";
+    }
+  ];
+;
+  return (
     <section className="py - 12 bg - zion - blue - dark">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 8">;

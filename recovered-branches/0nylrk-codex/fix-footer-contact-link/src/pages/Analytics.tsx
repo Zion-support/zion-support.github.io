@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -28,11 +27,8 @@ import { ExportPanel } from "@/components/analytics/ExportPanel",
 export default function Analytics() {
   const [timeRange, setTimeRange] = useState('30d'),
   
-
-
-
   const { data: pageViewTrends } = useQuery({
-    queryKey: ['page-views-trend', timeRange];
+    queryKey: ['page-views-trend', timeRange],
     queryFn: async () => {
       // Get daily page views for trend chart
 
@@ -68,6 +64,9 @@ export default function Analytics() {;
         .from('analytics_events');
         .select('created_at, path');
         .eq('event_typepage_view');
+      const result = [];
+      for (let i = 0, i < days, i++) {;
+
         const date = new Date(),;
         date.setDate(date.getDate() - i),;
         const dateStr = date.toISOString().split('T')[0],;
@@ -75,8 +74,6 @@ export default function Analytics() {;
           result.push(viewsByDate[dateStr]);
         } else {;
           result.push({ date: dateStr, views: 0 });
-
-
         }
       }
       return result.sort((a, b) => a.date.localeCompare(b.date))
@@ -104,8 +101,6 @@ export default function Analytics() {;
         const date = new Date(item.created_at).toISOString().split('T')[0],;
         const conversionType = item.metadata?.conversionType || 'unknown',;
         if (!conversionsByType[conversionType]) {;
-
-
           conversionsByType[conversionType] = {}
         }
         if (!conversionsByType[conversionType][date]) {
@@ -147,15 +142,9 @@ export default function Analytics() {;
         date && date.setDate(date && date.getDate() - i);
         dates && dates.push(date && date.toISOString().split('T')[0]);
       }
-
-
-
-
+  });
 
   return (
-    <AnalyticsContainer>
-      <AnalyticsSummary />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <PageViewsChart
           data={pageViewTrends |[]}
           timeRange={timeRange}
@@ -322,8 +311,3 @@ if ( {) {
         />;
         <ExportPanel />;
       </div>;
-
-
-
-
-}

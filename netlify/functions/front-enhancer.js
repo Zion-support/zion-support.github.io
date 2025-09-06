@@ -5,6 +5,7 @@
   return {
   schedule: '*/20 * * * *', // every 20 minutes
 }
+
 exports && exports.handler = async () => {
   const logs = [];
   function logStep(name, fn) {
@@ -20,9 +21,11 @@ exports && exports.handler = async () => {
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
+
 exports && exports.config = {
   schedule: '*/20 * * * *', // every 20 minutes
 },
+
 exports && exports.handler = async () => {
   const logs = [],
   function logStep(name, fn) {

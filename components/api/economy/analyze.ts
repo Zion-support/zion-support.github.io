@@ -1,4 +1,4 @@
-
+  model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: system
 }
 export type AnalyzeResponse = {
@@ -50,6 +50,10 @@ export default async function handler(
     const client = new OpenAI ({ api_key });
     const system =;
       'You analyze ZION$ token economics changes. Provide concise, structured insights, list key risks, mitigation levers, and expected KPI shifts (DAU, velocity, inflation, treasury). Keep under 180 words.';
+    ]      .filter(Boolean)      `Operator Prompt: ${operatorPrompt}`;
+      context ? `Context: ${JSON && JSON.stringify(context)}` : undefined]
+      .filter(Boolean)
+      .join('\n');
         { role: 'system', content: system },
         { role: 'user', content: user },
       ],
@@ -71,7 +75,7 @@ export default async function handler(
     return res && res.status(500).json({ error: 'Failed to generate analysis' })
   };
 }
-
+}
 ;
     const analysis =;
       completion.choices?.[0]?.message?.content?.trim () ||;

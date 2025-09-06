@@ -1,12 +1,9 @@
-
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-
-
 
 export function ApiWebhooks() {
   // Sample webhook event payload
@@ -164,12 +161,10 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
       // // // console.log('New application received:', data.application_id),
       // Process the new application...
     default:
-      console.log('Unknown event type:', event_type)
+      // // // console.log('Unknown event type:', event_type)
   }
   // Always return a 200 response quickly
   res.status(200).send('Webhook received')
-  return (
-
 
 ;
 // Webhook endpoint with signature verification;
@@ -320,95 +315,35 @@ app.listen(3000, () => {;
 }
 
 ;
+  "event_type": "talent_hired";
+  const quoteReceivedPayload = `{
+    "status": "offer_accepted",;
+    "created_at": "2023-06-12T09:15:22Z";
+  }
+}`;
+
+  const quoteReceivedPayload = `{;
+  "event_type": "quote_received";
+  "event_type": "message_received";
+  "created_at": "2023-06-18T14: 22:15Z";
+  "data": {;
+    "message_id": "msg-123";
+    "conversation_id": "conv-456";
+    "sender_id": "user-789";
+    "content": "Hi, I'd like to discuss the project details.";
+    "created_at": "2023-06-18T14:22:15Z";
+  }
+}`;
+  switch (event_type) {
+    case 'new_application':;
+      console.log ('New application received:', data.application_id);
+      // Process the new application...;
+      break;
+}),`;
+  return (
+}
+export default ApiWebhooks;
+
 
 
 export default ApiWebhooks;
-
-;
-    case 'talent_hired':;
-      console.log ('Talent hired:', data.talent_id);
-      // Update your system...;
-      break;
-;
-    case 'quote_received':;
-      console.log ('New quote received:', data.quote_id);
-      // Process the quote...;
-      break;
-;
-    case 'message_received':;
-      console.log ('New message received:', data.message_id);
-      // Process the message...;
-      break;
-;
-    default:;
-      console.log ('Unknown event type:', event_type);
-  }
-  // Always return a 200 response quickly;
-  res.status (200).send ('Webhook received');
-});
-;
-app.listen (3000, () => {
-  console.log ('Webhook server listening on port 3000');
-}), `;
-;
-  return (
-    <ApiDocsLayout>;
-      <div className="max - w-3xl prose prose - invert">;
-        <h1 > Webhooks</h1>;
-        <p>;
-          Webhooks allow your application to receive real - time notifications when events occur in the Zion AI Marketplace.;
-          Instead of constantly polling our API for updates, webhooks push data to your server whenever relevant events happen.;
-        </p>;
-        <h2 > Supported Events</h2>;
-        <p > You can subscribe to the following webhook events:</p>;
-        <div className="overflow - x-auto mb - 6">;
-          <table className="w - full border - collapse">;
-            <thead>;
-              <tr className="border - b border - zinc - 800">;
-                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Event Type</th>;
-                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Description</th>;
-              </tr>;
-            </thead>;
-            <tbody>;
-              <tr className="border - b border - zinc - 800">;
-                <td className="py - 2 px - 4 text - white font - mono">new_application</td>;
-                <td className="py - 2 px - 4 text - zinc - 300">Triggered when a talent applies to one of your job postings</td>;
-              </tr>;
-              <tr className="border - b border - zinc - 800">;
-                <td className="py - 2 px - 4 text - white font - mono">talent_hired</td>;
-                <td className="py - 2 px - 4 text - zinc - 300">Triggered when a talent is hired for a project</td>;
-              </tr>;
-              <tr className="border - b border - zinc - 800">;
-                <td className="py - 2 px - 4 text - white font - mono">quote_received</td>;
-                <td className="py - 2 px - 4 text - zinc - 300">Triggered when you receive a quote request</td>;
-              </tr>;
-              <tr>;
-                <td className="py - 2 px - 4 text - white font - mono">message_received</td>;
-                <td className="py - 2 px - 4 text - zinc - 300">Triggered when you receive a new message</td>;
-              </tr>;
-            </tbody>;
-          </table>;
-        </div>;
-          <TabsList>;
-            <TabsTrigger value="new_application">New Application</TabsTrigger>;
-            <TabsTrigger value="talent_hired">Talent Hired</TabsTrigger>;
-            <TabsTrigger value="quote_received">Quote Received</TabsTrigger>;
-            <TabsTrigger value="message_received">Message Received</TabsTrigger>;
-          </TabsList>;
-          <TabsContent value="new_application">;
-            <CodeBlock code={newApplicationPayload} language="json" showLineNumbers={true} />;
-          </TabsContent>;
-          <TabsContent value="talent_hired">;
-            <CodeBlock code={newHirePayload} language="json" showLineNumbers={true} />;
-          </TabsContent>;
-          <TabsContent value="quote_received">;
-            <CodeBlock code={quoteReceivedPayload} language="json" showLineNumbers={true} />;
-          </TabsContent>;
-          <TabsContent value="message_received">;
-            <CodeBlock code={messageReceivedPayload} language="json" showLineNumbers={true} />;
-          </TabsContent>;
-        </Tabs>;
-        <p>;
-          To ensure webhook requests are genuinely from Zion, you should verify the signature included in each request.;
-          We include two HTTP headers with each webhook request:;
-        </p>;

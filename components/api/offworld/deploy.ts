@@ -3,6 +3,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     // Ensure export
     const outDir = path && path.resolve(process && process.cwd(), 'out');
     try {
+    } catch (e) {
+      // attempt minimal static export
+      try {
+        execSync('next build && next export', { stdio: 'inherit' })
+    }
+      return res
+        .status(500)
+        .json({ error: 'Export failed, no out/ directory found' });      return res && res.status(500).json({ error: 'Export failed, no out/ directory found' });
+    }
+    const { cid, provider } = await addDirectory(outDir);
     return res.status(500).json({ error: error?.message |'Unknown error' });
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }    return res.status(200).json({ cid, provider })
@@ -14,8 +24,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |'Unknown error' })
-    if (!cid) return res && res.status(500).json({ error: 'IPFS upload failed' });
-
     return res && res.status(200).json({ cid, provider });
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' });
@@ -85,11 +93,11 @@ function handler() {
   } catch (error: any) {
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
+}
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+  }
 
 }
 }
   }
 }
-
-    return res.status(500).json({ error: error?.message || 'Unknown error' });
-

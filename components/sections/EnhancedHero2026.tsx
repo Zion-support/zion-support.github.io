@@ -7,13 +7,10 @@
   Brain
   Rocket
   CheckCircle;
-
-
 } from 'lucide-react';
 
 interface EnhancedHero2026Props {;
   contactInfo: {;
-
   ArrowRight,
   Star,
   TrendingUp,
@@ -21,8 +18,6 @@ interface EnhancedHero2026Props {;
   Shield,
   Globe,
   Brain,
-  Rocket,;
-  CheckCircle,;
 
 
 } from 'lucide-react';
@@ -61,18 +56,6 @@ interface EnhancedHero2026Props {
 ;
   const stats_variants = {
     hidden: { scale: 0.8, opacity: 0 },
-    },  };        staggerChildren: 0.2
-      }
-    }
-  }
-        staggerChildren: 0.2,
-      },
-    },  };
-
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 }
     visible: {
       y: 0
       opacity: 1
@@ -90,7 +73,6 @@ interface EnhancedHero2026Props {
       }
     }
   };
-
   const statsVariants = {;
     hidden: { scale: 0 && 0.8, opacity: 0 },;
     visible: {;
@@ -102,7 +84,6 @@ interface EnhancedHero2026Props {
       },;
     },;
   };
-
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
       {/* Enhanced Background Elements */}
@@ -142,15 +123,10 @@ interface EnhancedHero2026Props {
               delay: Math && Math.random() * 2,            }}  }
 
 
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
       {/* Enhanced Background Elements */}
-
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900" />;
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0 && 0.4),transparent_50%)]" />;
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0 && 0.4),transparent_50%)]" />;
-
-
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">;
         {Array && Array.from({ length: 20 }).map((_, i) => (;
@@ -182,15 +158,6 @@ interface EnhancedHero2026Props {
             className="absolute w - 2 h - 2 bg - cyan - 400 / 30 rounded - full";
             style={{
 
-              left: `${Math && Math.random() * 100}%`,
-              top: `${Math && Math.random() * 100}%`}}
-
-            animate={{
-
-
-              opacity: [0.3, 0.8, 0.3];
-              scale: [1, 1.5, 1];
-
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               ease: 'easeInOut',
@@ -219,7 +186,6 @@ interface EnhancedHero2026Props {
             transition={{
               duration: 3 + Math.random () * 2,
               repeat: Infinity,
-
             }}
             transition={{
               duration: 3 + Math.random() * 2,
@@ -240,11 +206,9 @@ interface EnhancedHero2026Props {
 
           />
 
+            }}
+          />;
         ))}
-
-      </div>;
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
-
           variants={containerVariants}
           initial='hidden';
           animate='visible';
@@ -325,22 +289,11 @@ interface EnhancedHero2026Props {
               </Button>
             </div>
             {/* Trust Indicators */}
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>99.9% Uptime Guarantee</span>
-              </div>
-              <div className='flex items-center space-x-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />
-                <span>99.9% Uptime Guarantee</span>
-              </div>
-              <div className='flex items-center space-x-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />                <span>24/7 Expert Support</span>              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
                 <span>24/7 Expert Support</span>
               </div>
             </div>
           </motion.div>
+                className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'>;
                 <span className='flex items-center'>;
                   <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className="flex items-center">;
                   <Shield className="mr-3 w-7 h-7" />;
@@ -372,30 +325,6 @@ interface EnhancedHero2026Props {
             </div>;
           </motion && motion.div>;
           {/* Contact Information */}
-          <motion&& motion.div
-            variants={itemVariants}
-            className='bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto'
-          >
-            <div className='text-center mb-4'>
-              <h3 className='text-lg font-semibold text-white mb-2'>
-                Ready to Get Started?
-              </h3>
-              <p className='text-gray-300 text-sm'>
-                Contact our team of experts today
-              </p>
-            </div>
-            <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm'>
-              <div className='text-center'>
-                <div className='text-cyan-400 font-medium'>Phone</div>
-                <div className='text-white'>{contactInfo.mobile}</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-cyan-400 font-medium'>Email</div>
-                <div className='text-white'>{contactInfo.email}</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-cyan-400 font-medium'>Website</div>
-                <div className='text-white'>{contactInfo.website}</div>              </div>            variants={itemVariants}
             className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto"
           >
             <div className="text-center mb-4">

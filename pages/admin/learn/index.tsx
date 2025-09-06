@@ -4,15 +4,21 @@ export default function AdminLearn() {
   const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
   const [message, setMessage] = useState(''),
 
+
 import { useEffect, useState } from 'react';
 export default function AdminLearn() {
-  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' })
-  const [message, setMessage] = useState('')
+
+  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
+  const [message, setMessage] = useState('');
+
+
   async function saveCourse() {
     setMessage('')
     const resp = await fetch('/api/admin/learn/course', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
+
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+
       body: JSON.stringify(form)
     })
     const data = await resp.json()
@@ -26,7 +32,6 @@ export default function AdminLearn() {
     const data = await resp.json(),
     if (data.ok) setMessage('Saved'),
     else setMessage('Error: ' + (data.error || 'unknown'))
-
 import { useEffect, useState } from 'react';
 export default function AdminLearn(req, res) {
   try {
@@ -69,7 +74,6 @@ export default function AdminLearn(req, res) {
         <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={form.isFree} onChange={(e) => setForm({ ...form, isFree: e.target.checked })} /> Free</label>
       </div>
       <button onClick={saveCourse} className="px-4 py-2 bg-blue-600 text-white rounded">Save Course</button>
-
 
     </div>
   );

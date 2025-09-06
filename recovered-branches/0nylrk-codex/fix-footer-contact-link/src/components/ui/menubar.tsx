@@ -47,24 +47,17 @@ const MenubarSubTrigger = React.forwardRef<;
 >(({ class_name, inset, children, ...props }, ref) => (
   <MenubarPrimitive.SubTrigger;
     ref={ref}
-
-
       &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;,
       inset && &quot;pl-8&quot;,
 
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
-
-
-
       className
     )}
     {...props}
   >;
     {children}
-
-
   </MenubarPrimitive.SubTrigger>
 ))
 MenubarSubTrigger.displayName = MenubarPrimitive.SubTrigger.displayName
@@ -122,17 +115,12 @@ const MenubarItem = React.forwardRef<;
 >(({ class_name, inset, ...props }, ref) => (
   <MenubarPrimitive.Item;
     ref={ref}
-
-
       &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
       inset && &quot;pl-8&quot;,
 
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
-
-
-
       className
     )}
     {...props}
@@ -179,6 +167,13 @@ className={cn (
       class_name)}
     checked={checked}
     {...props}
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <MenubarPrimitive.ItemIndicator>;
+        <Check className=&quot;h - 4 w - 4&quot; />;
+      </MenubarPrimitive.ItemIndicator>;
+    </span>;
+    {children}
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <MenubarPrimitive.RadioItem;
@@ -200,17 +195,6 @@ className={cn (
 
       className
     )}
-  </MenubarPrimitive.CheckboxItem>));
-MenubarCheckboxItem.display_name = MenubarPrimitive.CheckboxItem.display_name;
-const MenubarRadioItem = React.forward_ref<;
-  React.ElementRef < typeof MenubarPrimitive.RadioItem>,
-  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.RadioItem>;
->(({ class_name, children, ...props }, ref) => (
-  <MenubarPrimitive.RadioItem;
-    ref={ref}
-className={cn (
-      &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
-      class_name)}
     {...props}
   >;
     <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
@@ -219,34 +203,16 @@ className={cn (
       </MenubarPrimitive.ItemIndicator>;
     </span>;
     {children}
-
-  </MenubarPrimitive.RadioItem>));
-MenubarRadioItem.display_name = MenubarPrimitive.RadioItem.display_name;
-const MenubarLabel = React.forward_ref<;
-  React.ElementRef < typeof MenubarPrimitive.Label>,
-  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Label> & {
-    inset?: boolean;
-
-
-  React.ElementRef<typeof MenubarPrimitive.Label>,;
-  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {;
-    inset?: boolean;
-
   }
 >(({ class_name, inset, ...props }, ref) => (
   <MenubarPrimitive.Label;
     ref={ref}
-
-
       &quot;px-2 py-1.5 text-sm font-semibold&quot;,
       inset && &quot;pl-8&quot;,
 
     className={cn(
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
-
-
-
       className
     )}
     {...props}
@@ -269,13 +235,11 @@ const MenubarSeparator = React.forward_ref<;
 >(({ class_name, ...props }, ref) => (
   <MenubarPrimitive.Separator;
     ref={ref}
+    className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
+    {...props}
       {...props}
     />);
 }
-
-MenubarShortcut.displayname = &quot;MenubarShortcut & quot;
-;
-
 MenubarShortcut.displayname = "MenubarShortcut"
 
 
@@ -295,9 +259,8 @@ export {
   MenubarSubTrigger,
   MenubarGroup,
   MenubarSub,
-;
-;
 
 
 ;
 
+  MenubarShortcut}

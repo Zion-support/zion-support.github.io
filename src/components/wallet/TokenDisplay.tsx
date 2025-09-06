@@ -1,4 +1,12 @@
 
+import React from "react",
+import { BadgeDollarSign } from 'lucide-react'
+import { useWallet } from "@/hooks/useWallet",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import Skeleton from "@/components/ui/skeleton",
+export function TokenDisplay() {
+  const { wallet, loading } = useWallet(),
 
 
 
@@ -20,10 +28,16 @@
               Use your tokens to boost visibility, access premium features, or
               convert to credits.
             </p>
+
+
               <Button variant="outline" size="sm">
               </Button>
             </div>
           </div>
+
+
+
+
 import React from "react",;
 import { BadgeDollarSign } from 'lucide-react';
 import { useWallet } from "@/hooks/useWallet",;
@@ -38,3 +52,7 @@ export function TokenDisplay() {;
                 View Wallet;
               </Button>;
             </div>;
+        )}
+      </CardContent>;
+    </Card>;
+  );

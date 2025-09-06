@@ -4,13 +4,24 @@ import React, { useState } from "react",
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Search } from 'lucide-react'
+
+import {
+ getDocsSearchPath,
+ docsSearchSuggestions
+interface ApiDocsLayoutProps {
+  children: React.ReactNode
+}
+
+
   const router = useRouter()
   const currentPath = router.pathname
   const [searchValue, setSearchValue] = useState("")
   const navigationItems = [
+
   const router = useRouter(),
   const currentPath = router.pathname,
   const [searchValue, setSearchValue] = useState(""),
+
 
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
@@ -19,6 +30,10 @@ import { Search } from 'lucide-react'
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
 
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
+    { title: "Webhooks", path: "/developers/docs/webhooks" },;
+    { title: "Sample Code", path: "/docs/sample-code" },;
+    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }];
+  const handleSelectSuggestion = (suggestion: SearchSuggestion) => {;
     const path = getDocsSearchPath(suggestion.text);    if (path) {
       router.push(path)
       setSearchValue("")
@@ -30,6 +45,8 @@ import { Search } from 'lucide-react'
       router.push(path)
       setSearchValue("")
     }
+
+
       <Link href="/developers/docs" className="flex items-center mb-8">
        <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">
         <span className="text-white font-bold">Z</span>
@@ -39,15 +56,32 @@ import { Search } from 'lucide-react'
       <div className="mb-6">
        <form onSubmit={handleSubmit} className="relative">
         <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
+
+
+         placeholder="Search documentation"
+        />
+       </form>
+      </div>
+      <nav role="navigation" aria-label="Main" className="flex flex-col space-y-1">
+       {navigationItems.map((item) => (
         <Link
-         key={item && item.path}
-         href={item && item.path}
+         key={item.path}
+         href={item.path}
          className={cn(
            ? "bg-zion-purple/20 text-zion-cyan"
            : "text-zinc-400 hover: text-white hover:bg-zinc-900"
          )}>;
          {item && item.title}
         </Link>;
+
+         {item.title}
+        </Link>
+       ))}
+      </nav>
+     </div>
+     {/* Main content */}
+     <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">
+      {children}
 }
 }
 /* Sidebar */ "
@@ -170,3 +204,9 @@ if ( {) {
 }</div> </div>) 
 }export default ApiDocsLayout;
 "export default ApiDocsLayout;
+     </div>;
+    </div>;
+  );
+}
+;
+export default ApiDocsLayout;

@@ -1,11 +1,9 @@
-
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [isUnderDispute, setIsUnderDispute] = useState(false);
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
   const [disputeId, setDisputeId] = useState<string | null>(null),
-
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
@@ -93,13 +91,15 @@ if ( {) {
           setDisputeStatus (data[0].status as any);
           setDisputeId (data[0].id);
         } else {
+          setIsUnderDispute (false);
+          setDisputeStatus (null);
+          setDisputeId (null);
         }
       } catch (err) {
-        console && console.error("Error checking dispute status:", err);
-        setIsUnderDispute(false);
-        setDisputeStatus(null);
-        setDisputeId(null)
       } finally {
+        setIsLoading (false);
+      }
+    }
     isLoading
 
     isLoading 
@@ -119,22 +119,12 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
         setIsLoading(false),;
         return;
       }
+
 ;
     check_dispute ();
   }, [project_id, milestone_id]);
 ;
-;
-      try {;
-        setIsLoading(true),;
-        let query = supabase;
-          .from("disputes");
-          .select("id, status");
-          .eq("project_id", projectId),;
-        // If milestone ID is provided, filter by that too;
-        if (milestoneId) {;
-          query = query.eq("milestone_id", milestoneId);
-        }
-;
+
         // Order by status priority: open, under_review, resolved, closed;
         query = query.order("status", { ascending: true }),;
         const { data, error } = await query,;
@@ -165,9 +155,6 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
     disputeStatus;
     disputeId;
     isLoading;
-
-
-
   }
 }
 

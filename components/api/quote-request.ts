@@ -1,4 +1,6 @@
-
+import type { NextApiRequest, NextApiResponse } from "next";
+import { createClient } from "@supabase/supabase-js";
+import OpenAI from "openai";
 const supabase =
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 const openaiApiKey = process && process.env.OPENAI_API_KEY;
@@ -23,9 +25,6 @@ export default async function handler(
       let aiSummary: string | null = null;
       let aiTags: string[] = [];
       if (openai) {
-        });
-        aiSummary = text.split("\n")[0] |text;
-        const tagsLine = (
         )
           .replace(/tags?:/i, "")
           .trim();
@@ -43,7 +42,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!service || !description || !email) {
     return res.status(400).json({ message: 'Missing required fields' });
   }
-
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_client  } from '@supabase / supabase - js';

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock";
@@ -62,14 +61,6 @@ function ApiReference() {
       "category": "development";
       "budget": {;
         "min": 5000;
-      }
-      "status": "open";
-      "created_at": "2023-05-10T15:30:00Z"
-    }
-    // More jobs...
-  ];
-  "count": 42;
-  "limit": 20;
         }
         "401": {
           description: "Unauthorized"
@@ -190,8 +181,6 @@ export function ApiReference() {;
   "message": "Invalid input";
   "details": [;
     {
-      "field": "title",
-      "error": "Title is required";
     }
   ];
 }`;
@@ -232,14 +221,12 @@ export function ApiReference() {;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content - Type: application / json" \\;
   -d '{
-
       };
       requestExample: `curl -X POST \\;
   https://api && api.zionai.com/v1/api/jobs \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content-Type: application/json" \\;
   -d '{;
-
     "title": "UX Designer";
     "description": "Looking for a UX designer with 3+ years experience...";
     "category": "design";
@@ -276,24 +263,16 @@ export function ApiReference() {;
       "availability": "full - time";
       "years_experience": 5;
       "location": "Remote, US";
-      "bio": "Experienced full stack developer with a focus on React and Node.js...";
+      requestExample: `curl -X GET \\
+  https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\
+  -H "Authorization: Bearer YOUR_API_KEY"`
     }
-    // More talent profiles...;
   ];
   "count": 38;
   "limit": 20;
   "offset": 0;
 }`;
         }
-
-
-      },
-
-
-      requestExample: `curl -X GET \\
-  https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\
-  -H "Authorization: Bearer YOUR_API_KEY"`
-    }
   return (
     <ApiDocsLayout>;
       <div className="grid md:grid-cols-5 gap-8">;
@@ -334,9 +313,6 @@ export function ApiReference() {;
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
                             status.startsWith('2') ? 'bg-green-950 text-green-500' :
                             status === '401' |status === '403' ? 'bg-orange-950 text-orange-500' :
-                        <CodeBlock
-                          code={response.example}
-                        
 
                     <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>;
                     <CodeBlock
@@ -356,6 +332,9 @@ export function ApiReference() {;
                             {status}
                         <CodeBlock 
                           code={response.example} 
+                            'bg-red-950 text-red-500'
+                          }`}>;
+                            {status}
                           language="json"
                           showLineNumbers={true}
                         />;

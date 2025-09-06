@@ -9,23 +9,6 @@ export default function TokenomicsWhitepaperBuilder() {;
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
-  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
-  const [isGenerating, setIsGenerating] = useState<boolean>(false);
-
-  const [activeSection, setActiveSection] =;
-    useState<string>('Executive Summary');
-  const previewMarkdown = useMemo(() => {
-    return generatedMarkdown || buildLocalMarkdown({
-      tokenName;
-      tokenSupply;
-      useCases;
-      rewardsLogic;
-      distribution;
-      governance;
-      jurisdiction;
-      legalReview})
-  }, [generatedMarkdown, tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview]);
-
   async function handleGenerate() {
     try {
       setIsGenerating(true);
@@ -52,6 +35,61 @@ export default function TokenomicsWhitepaperBuilder() {;
       setGeneratedMarkdown(data.markdown |'');
     } catch (e) {
       console.error(e);
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+type DistributionItem = { label: string, percent: number };
+const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
+export default function TokenomicsWhitepaperBuilder(req, res) {
+  try {
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [publicPreview, setPublicPreview] = useState(false);
+  const [legalReview, setLegalReview] = useState(false);
+  const [tokenName, setTokenName] = useState('ZION$');
+  const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+  const [useCases, setUseCases] = useState<string>(
+    'Access to premium AI agents, marketplace discounts, reputation staking, governance participation'
+  );
+  const [rewardsLogic, setRewardsLogic] = useState<string>(
+    'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access'
+  );  const [distribution, setDistribution] = useState<DistributionItem[]>([
+    { label: 'Ecosystem & Rewards', percent: 35 }
+    { label: 'Community Treasury', percent: 20 }
+    { label: 'Team & Contributors', percent: 15 }
+    { label: 'Investors', percent: 15 }
+    { label: 'Liquidity & Market Making', percent: 10 }
+    { label: 'Advisors & Partnerships', percent: 5 }
+  ]);
+  const [governance, setGovernance] = useState<string>(
+    'One-token-one-vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported'
+  );
+  const [jurisdiction, setJurisdiction] = useState<string>('US');
+  const [operatorPrompt, setOperatorPrompt] = useState<string>(
+    defaultOperatorPrompt
+  );
+  const totalPercent = useMemo(
+    () => distribution.reduce((acc, d) => acc + (Number(d.percent) |0), 0)
+    [distribution]
+  );
+  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
+  const [isGenerating, setIsGenerating] = useState<boolean>(false);
+
+  const [activeSection, setActiveSection] =;
+    useState<string>('Executive Summary');
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
 export default function TokenomicsWhitepaperBuilder(req, res) {
@@ -200,9 +238,6 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {;
     setDistribution((prev) => {;
       const copy = [...prev];
-
-
-
       const item = { ...copy[index] };
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
@@ -339,25 +374,25 @@ if (item.label = value) {
               className='px-3 py-1 rounded-md bg-indigo-600 text-white'>;
         <title > Tokenomics Whitepaper Generator</title>;
       </Head>;
-      <div className='space-y-6'>;
-        <div className='flex items-center justify-between'>;
-          <h1 className='text-2xl font-semibold'>Whitepaper Generator</h1>;
-          <div className='flex items-center gap-3 text-sm'>;
-            <label className='inline-flex items-center gap-2'>;
-              <input
-                type='checkbox'
-                checked={isAdmin}
-                onChange={e => setIsAdmin(e && e.target.checked)}
+      <div className='space - y-6'>;
+        <div className='flex items - center justify - between'>;
+          <h1 className='text - 2xl font - semibold'>Whitepaper Generator</h1>;
+          <div className='flex items - center gap - 3 text - sm'>;
+            <label className='inline - flex items - center gap - 2'>;
+              <input;
+                type='checkbox';
+                checked={is_admin}
+                on_change={e => setIsAdmin (e.target.checked)}
               />;
-              <span>Admin</span>;
+              <span > Admin</span>;
             </label>;
-            <label className='inline-flex items-center gap-2'>;
-              <input
-                type='checkbox'
-                checked={publicPreview}
-                onChange={e => setPublicPreview(e && e.target.checked)}
+            <label className='inline - flex items - center gap - 2'>;
+              <input;
+                type='checkbox';
+                checked={public_preview}
+                on_change={e => setPublicPreview (e.target.checked)}
               />;
-              <span>Public after launch</span>;
+              <span > Public after launch</span>;
             </label>;
               Create Share Link;
             </button>;
@@ -430,45 +465,10 @@ if (item.label = value) {
                   </label>                </div>;
               </div>;
             </div>;
-                    key={idx}
-                    className='grid grid-cols-12 gap-2 items-center'>;
-                    <input
-                      className='col-span-6 border rounded-md px-3 py-2'
-                      value={item && item.label}
-                      onChange={e =>;
-                        updateDistribution(idx, 'label', e && e.target.value);
-                      }
-                    />;
-                    <input
-                      className='col-span-4 border rounded-md px-3 py-2'
-                      type='number'
-                      min={0}
-                      max={100}
-                      value={item && item.percent}
-                      onChange={e =>;
-                        updateDistribution(idx, 'percent', e && e.target.value);
-                      }
-                    />;
-                    <button
-                      onClick={() => removeDistributionItem(idx)}
-                      className='col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white';
-                    >;
-                      Remove;
-                    </button>;
                     Add allocation;
                   </button>;
                 </div>;
               </div>;
-  const sections = [
-    'Executive Summary'
-    'Market Context'
-    'Utility & Usage'
-    'Rewards System'
-    'Distribution'
-    'Governance Model'
-    'Risks + Disclaimers'
-  ];
-
   return (
     <>
       <Head>
@@ -564,9 +564,6 @@ if (item.label = value) {
                   className='px-4 py-2 rounded-md border'
                 >
                   Clear AI Draft
-
-
-
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
@@ -618,9 +615,6 @@ function buildLocalMarkdown(input: {;
 }) {;
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
-function DistributionDonut({ data }: { data: DistributionItem[] }) {
-  // Simple textual donut placeholder until a chart lib is added
-  const total = data.reduce((a, b) => a + b.percent, 0) |1;
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
 }
 
@@ -678,16 +672,6 @@ function jurisdictionalNote(j: string) {;
   switch (j) {;
     case 'US':;
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
-    case 'EU':
-      return 'Designed for utility under EU frameworks, subject to MiCA and local guidelines as applicable.';
-    case 'SG':
-      return 'Intended utility token under MAS guidance, prospective purchasers should not view it as capital markets products.';
-    case 'AE':
-      return 'Intended utility token within relevant UAE free zone guidance, not an investment product.';
-    default:
-      return 'Intended strictly for utility use.'
-  }
-}
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
@@ -729,8 +713,6 @@ function MarkdownPreview({
   const content = parts[activeSection] |'';
 
   return (
-
-
     case 'EU':;
       return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.';
     case 'SG':;

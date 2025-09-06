@@ -5,7 +5,8 @@ import PageShareButtons from '@/components/blog/PageShareButtons';
 import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
 
-type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] }
+
+
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
 type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] },;
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
@@ -69,8 +70,6 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
           </Link>;
         </div>;
       </div>;
-
-
   const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
   return { props: { topic, posts } }
 }
@@ -94,9 +93,6 @@ export default TopicPage;      </Head>;
             title={`${topic} - Zion Blog`}
             url={typeof window === 'undefined' ? `https://zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}
             description={`Articles about ${topic}`}
-            onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
-          />
-        </div>
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const topic = String(ctx.params?.topic |'');
@@ -109,13 +105,9 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
 
-};
-
-
   const topic = String(ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }
 }
 export default TopicPage;
-
 

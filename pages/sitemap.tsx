@@ -13,50 +13,6 @@ import {
   BarChart3, 
   Settings, 
   Globe, 
-
-
-
-
-const sitemapData = [;
-  {;
-    category: 'Main Pages',;
-    pages: [;
-      { name: 'Home', url: '/', icon: Home },;
-      { name: 'About', url: '/about', icon: Users },;
-      { name: 'Contact', url: '/contact', icon: Globe },;
-      { name: 'Services', url: '/services', icon: Settings }
-    ];
-  },;
-  {;
-    category: 'Services',;
-    pages: [;
-      { name: 'AI Services', url: '/ai-services', icon: Brain },;
-      { name: 'IT Services', url: '/it-services', icon: Network },;
-      { name: 'Micro SaaS', url: '/micro-saas', icon: Target },;
-      { name: 'Cloud Services', url: '/services/cloud', icon: Cloud },;
-      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: Shield },;
-      { name: 'Data Analytics', url: '/services/data-analytics', icon: BarChart3 }
-    ];
-  },;
-  {;
-    category: 'Solutions',;
-    pages: [;
-      { name: 'Cloud Migration', url: '/solutions/cloud-migration', icon: Cloud },;
-      { name: 'Digital Transformation', url: '/solutions/digital-transformation', icon: Settings },;
-      { name: 'Custom Solutions', url: '/solutions/custom', icon: Target }
-    ];
-  },;
-  {;
-    category: 'Resources',;
-    pages: [;
-      { name: 'Documentation', url: '/docs', icon: Globe },;
-      { name: 'API Documentation', url: '/api-docs', icon: Settings },;
-      { name: 'Guides', url: '/guides', icon: Globe },;
-
-import React from 'react';
-import Head from 'next / head';
-import Link from 'next / link';
-import { motion } from 'framer-motion';
 import {
   Home,
   Brain,
@@ -110,7 +66,6 @@ const sitemap_data = [;
     ];
   }
 ];
-
 
 
 
@@ -294,149 +249,152 @@ export default function SitemapPage() {
   ArrowRight,
   ExternalLink,
   ChevronRight,
-  Globe,
-  Building,
 } from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
-export default function SitemapPage() {
-  const mainPages = [
+import SmartHeader from '../components / SmartHeader';
+import SmartFooter from '../components / SmartFooter';
+export default /**
+ * SitemapPage - Function description
+ */
+function SitemapPage() {
+  const main_pages = [;
     {
+      href: '/',
+      label: '🏠 Home',
+      description:;
+        'Main landing page with company overview and featured services',
+    },
+
     {
       href: '/about'
-      label: ' About Us'
+      label: '👥 About Us'
       description: 'Company story, mission, values, and team information'
     }
     {
       href: '/services'
-      label: ' Services'
       description: 'Complete catalog of AI and technology services'
     }
     {
       href: '/explore'
-      label: ' Explore'
-      description: 'Browse services by category and technology area'
-    }
-    {
       href: '/contact',
       label: '📧 Contact',
       description: 'Get in touch and start your project',
     },;
   ];
+
+;
+  const service_categories = [;
     {
-      href: '/category/ai'
-      label: ' AI & Machine Learning'
-      description: 'Artificial intelligence and machine learning solutions'
-    }
+      href: '/category / ai',
+      label: '🧠 AI & Machine Learning',
+      description: 'Artificial intelligence and machine learning solutions',
+    },
     {
-      href: '/category/quantum'
-      label: ' Quantum Computing'
-      description: 'Quantum computing and quantum AI applications'
-    }
+      href: '/category / quantum',
+      label: '⚛️ Quantum Computing',
+      description: 'Quantum computing and quantum AI applications',
+    },
     {
-      href: '/category/cybersecurity'
-      label: ' Cybersecurity'
-      description: 'Quantum-resistant security and threat detection'
-    }
+      href: '/category / cybersecurity',
+      label: '🛡️ Cybersecurity',
+      description: 'Quantum - resistant security and threat detection',
+    },
     {
-      href: '/category/cloud'
-      label: ' Cloud & DevOps'
-      description: 'Cloud infrastructure and DevOps automation'
-    }
+      href: '/category / cloud',
+      label: '☁️ Cloud & DevOps',
+      description: 'Cloud infrastructure and DevOps automation',
+    },
     {
-      href: '/category/edge'
-      label: ' Edge Computing'
-      description: 'Edge computing orchestration and IoT management'
-    }
+      href: '/category / edge',
+      label: '🌐 Edge Computing',
+      description: 'Edge computing orchestration and IoT management',
+    },
     {
-      href: '/category/space'
-      label: ' Space Technology'
-      description: 'Space exploration and resource optimization'
-    }
+      href: '/category / space',
+      label: '🚀 Space Technology',
+      description: 'Space exploration and resource optimization',
+    },
     {
-      href: '/category/biotech'
-      label: ' Biotechnology'
-      description: 'Neural interfaces and biomedical innovations'
-    }
+      href: '/category / biotech',
+      label: '🧬 Biotechnology',
+      description: 'Neural interfaces and biomedical innovations',
+    },
     {
-      href: '/category/blockchain'
-      label: ' Blockchain'
-      description: 'AI-powered blockchain governance and DeFi'
-    }
+      href: '/category / blockchain',
+      label: '⛓️ Blockchain',
+      description: 'AI - powered blockchain governance and DeFi',
+    },
     {
-      href: '/category/automation'
-      label: ' Automation'
-      description: 'Business process automation and AI agents'
-    }
+      href: '/category / automation',
+      label: '⚡ Automation',
+      description: 'Business process automation and AI agents',
+    },
     {
-      href: '/category/fintech'
-      label: ' Financial Technology'
-      description: 'Quantum financial trading and AI analytics'
-    }
+      href: '/category / fintech',
+      label: '💰 Financial Technology',
+      description: 'Quantum financial trading and AI analytics',
+    },
   ];
-  const featuredServices = [
+;
+  const featured_services = [;
     {
-      href: '/ai-business-intelligence'
-      label: 'AI Business Intelligence'
-      category: 'AI & ML'
-    }
+      href: '/ai - business - intelligence',
+      label: 'AI Business Intelligence',
+      category: 'AI & ML',
+    },
     {
-      href: '/quantum-cybersecurity'
-      label: 'Quantum Cybersecurity'
-      category: 'Cybersecurity'
-    }
+      href: '/quantum - cybersecurity',
+      label: 'Quantum Cybersecurity',
+      category: 'Cybersecurity',
+    },
     {
-      href: '/edge-computing-orchestration'
-      label: 'Edge Computing Orchestration'
-      category: 'Edge Computing'
-    }
+      href: '/edge - computing - orchestration',
+      label: 'Edge Computing Orchestration',
+      category: 'Edge Computing',
+    },
     {
-      href: '/space-technology'
-      label: 'Space Technology Innovation'
-      category: 'Space Technology'
-    }
+      href: '/space - technology',
+      label: 'Space Technology Innovation',
+      category: 'Space Technology',
+    },
     {
-      href: '/neural-interface'
-      label: 'Neural Interface Development'
-      category: 'Biotechnology'
-    }
+      href: '/neural - interface',
+      label: 'Neural Interface Development',
+      category: 'Biotechnology',
+    },
     {
-      href: '/autonomous-devops'
-      label: 'Autonomous DevOps'
-      category: 'Cloud & DevOps'
-    }
+      href: '/autonomous - devops',
+      label: 'Autonomous DevOps',
+      category: 'Cloud & DevOps',
+    },
     {
-      href: '/ai-customer-experience'
-      label: 'AI Customer Experience'
-      category: 'AI & ML'
-    }
+      href: '/ai - customer - experience',
+      label: 'AI Customer Experience',
+      category: 'AI & ML',
+    },
     {
-      href: '/quantum-neural-networks'
-      label: 'Quantum Neural Networks'
-      category: 'Quantum Computing'
-    }
+      href: '/quantum - neural - networks',
+      label: 'Quantum Neural Networks',
+      category: 'Quantum Computing',
+    },
   ];
+;
+  const resources = [;
+
     {
       href: '/reports'
-      label: ' Reports'
+      label: '📊 Reports'
       description: 'Latest technology reports and insights'
     }
     {
       href: '/newsroom'
-      label: ' Newsroom'
       description: 'Company updates and industry news'
     }
     {
       href: '/automation'
-      label: ' Automations'
       description: 'Automation tools and solutions'
     }
     {
       href: '/search'
-      label: ' Search'
-      description: 'Search across all services and content'
-    }
-  ];
     {
       href: 'https://docs.ziontechgroup.com'
       label: 'Documentation'
@@ -764,11 +722,6 @@ export default function SitemapPage() {;
               </a>;
               <a
                 href='/search'
-      {/* Main Pages */}
-      <section id='main-pages' className='py-20 px-6'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-
-
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
@@ -1641,6 +1594,8 @@ export default function SitemapPage() {;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
   );
 ursor/integrate-build-improve-and-re-verify-8f7d
+
+  )
 
   )
 }animate= {

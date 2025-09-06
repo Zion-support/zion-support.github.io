@@ -2,10 +2,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 =======
 >>>>>>> origin/main
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
@@ -42,14 +45,21 @@
 =======
 origin/automation-improvements-final
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
+>>>>>>> origin/main
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> origin/main
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -71,6 +81,10 @@ origin/automation-improvements-final
     "es6": true,
     "jest": true
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+    "es6": true,
+    "jest": true
+>>>>>>> origin/main
 =======
     "es6": true,
     "jest": true
@@ -87,6 +101,7 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
@@ -112,10 +127,20 @@ origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 >>>>>>> origin/main
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+>>>>>>> origin/main
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,10 +170,16 @@ origin/automation-improvements-final
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "warn"
 >>>>>>> origin/main
+=======
+    "react/no-unescaped-entities": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn"
+>>>>>>> origin/main
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
     "no-undef": "error",
     "react/no-unescaped-entities": "off"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -177,6 +208,15 @@ origin/automation-improvements-final
 =======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+>>>>>>> origin/main
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> origin/main
   },
   "ignorePatterns": [
@@ -253,6 +293,7 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     "pages.disabled_auto/"
 
@@ -267,6 +308,8 @@ origin/automation-improvements-final
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+=======
+>>>>>>> origin/main
     "pages.disabled_auto/",
     "zion_academy/",
     "pm2-automation/",
@@ -391,6 +434,7 @@ origin/automation-improvements-final
     "automated-merge-conflict-resolver.cjs",
     "automation/**",
     "backup-problematic-files/**"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -537,6 +581,16 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
+>>>>>>> origin/main
+=======
+    "pages.disabled_auto/"
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> origin/main
   ]
 }

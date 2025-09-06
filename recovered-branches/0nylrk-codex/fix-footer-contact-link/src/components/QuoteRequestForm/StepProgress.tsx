@@ -1,6 +1,3 @@
-
-
-
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 }
@@ -124,7 +121,6 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
             </div>;
           );
         })}
-
 }
 import { QuoteRequestSteps } from '../QuoteRequestForm';
 import { CheckIcon } from '@/components / icons';

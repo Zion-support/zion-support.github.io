@@ -65,8 +65,6 @@ import {
 } from 'lucide-react';
 
 
-
-
       icon: <Database className="w-8 h-8" />,
       color: 'from-cyan-500 to-blue-500',
       content: [
@@ -146,10 +144,9 @@ import {
   Users
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
-
-export default function PrivacyPage() {
-export default function PrivacyPage() {;
   return (
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -162,7 +159,6 @@ export default function PrivacyPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
@@ -736,15 +732,10 @@ const PrivacyPage: React.FC = () => {
                   <li>Payment information</li>
                 </ul>
 
-
-
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
-                <h3 className="text-xl font-semibold mb-4">
-                  Usage Information
-                </h3>
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -817,7 +808,6 @@ const PrivacyPage: React.FC = () => {
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
-
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -839,7 +829,6 @@ const PrivacyPage: React.FC = () => {
 
 <p className="text-sm text-gray-600 mt-8">
                 <p className="text-sm text-gray-600 mt-8">
-<p className="text-sm text-gray-600 mt-8">
                   Last updated: January 2024
                 </p>
               </div>
@@ -918,7 +907,6 @@ function PrivacyPage() {
 };
 
 export default PrivacyPage;
-
 
 
 

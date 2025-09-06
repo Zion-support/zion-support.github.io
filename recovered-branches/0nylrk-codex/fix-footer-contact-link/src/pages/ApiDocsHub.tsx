@@ -1,13 +1,9 @@
-
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-
-
-
 export function ApiDocsHub() {
 
   const sections = [
@@ -102,13 +98,11 @@ export function ApiDocsHub() {
           <p className="text-zinc-400 mb-6">
             To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
           </p>
-
-
-
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
+
 export function ApiDocsHub() {;
   const sections = [;
     {;
@@ -139,6 +133,16 @@ export function ApiDocsHub() {;
       description: "Understanding API errors and rate limiting",;
       icon: AlertCircle,;
       path: "/developers/docs/errors",;
+      icon: Zap,
+      path: "/developers / docs / samples",
+      color: "from - yellow - 500 to - orange - 500"},
+    {
+      title: "Error Codes & Rate Limits",
+      description: "Understanding API errors and rate limiting",
+      icon: AlertCircle,
+      path: "/developers / docs / errors",
+      color: "from - red - 500 to - rose - 500"}],
+  return (
     <ApiDocsLayout>;
       <div className="max-w-4xl">;
         <h1 className="text-4xl font-bold text-white mb-6">Zion AI Marketplace API</h1>;

@@ -1,4 +1,4 @@
-
+interface MilestoneActivitiesProps {
   project_id: string;
 }
 export /**

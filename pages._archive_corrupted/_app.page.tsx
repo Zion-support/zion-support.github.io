@@ -21,8 +21,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
-
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
@@ -79,7 +77,7 @@ function ZionApp(): any ({ Component, pageProps }: AppProps) {;
               </ul>;
             </div>;
           </div>;
-          <div className="text-center text-xs text-gray-500 py-4"> {new Date().getFullYear()} Zion Tech Group</div>;
+          <div className="text-center text-xs text-gray-500 py-4">© {new Date().getFullYear()} Zion Tech Group</div>;
         </footer>;
       </div>;
     </>;

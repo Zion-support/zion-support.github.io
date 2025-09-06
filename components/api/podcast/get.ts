@@ -17,6 +17,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(200).json({ episode });  const episode = episodes.find((e) => e.id === id);
   if (!episode) return res.status(404).json({ error: 'Not found' });
 
+;
+const EPISODES_PATH = path.join (
+  process.cwd (),
+  'data',
+  'podcast',
+  'episodes.json');
+/**
+ * ensure_storage - Function description
+ */
+function ensure_storage() {
+  const dir = path.dirname (EPISODES_PATH);
+  if () fs.mkdir_sync (dir, { recursive: true })) {
+  $2
 }
   if ()) {
   $2
@@ -54,5 +67,3 @@ function handler() {
   $2
 }
   return res.status (200).json ({ episode });
-
-}

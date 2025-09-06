@@ -12,118 +12,16 @@ export interface CybersecurityQuantumService {;
     trialDays: number;
     setupTime: string;
 
-    enterprise: string;
-  }
 
-  features: string[];
-  benefits: string[];
-  target_audience: string[];
-  market_position: string;
-  competitors: string[];
-  tech_stack: string[];
-  real_implementation: boolean;
-  implementation_details: string;
-  roi: string;
-  use_cases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launch_date: string;
-  customers: number;
-  rating: number;
-
-  reviews: number;
-export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   {
-    id: 'quantum-resistant-encryption-platform'
-    name: 'Quantum-Resistant Encryption Platform'
-    tagline: 'Future-proof security with post-quantum cryptography'
-    description:
-      'Revolutionary encryption platform that implements quantum-resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.'
-    category: 'Quantum Security & Cryptography'
-    price: {
-      monthly: 499
-      yearly: 4990
-      currency: 'USD'
-      trialDays: 30
-      setupTime: '1-2 weeks'
-      enterprise: 'Custom pricing'
-    }
-    features: [
-      'Post-quantum cryptography algorithms'
-      'Hybrid classical-quantum encryption'
-      'Real-time threat assessment'
-      'Automated key rotation'
-      'Multi-layer security architecture'
-      'Zero-trust implementation'
-      'Advanced key management'
-      'Compliance monitoring'
-      'API for integration'
-      'Mobile SDK support'
-    ]
-    benefits: [
-      'Future-proof against quantum attacks'
-      'Reduce security breach risks by 99.9%'
-      'Ensure long-term data protection'
-      'Meet regulatory compliance requirements'
-      'Protect against emerging threats'
-    ]
-    targetAudience: [
-      'Financial institutions'
-      'Government agencies'
-      'Healthcare organizations'
-      'Defense contractors'
-      'Technology companies'
-      'Critical infrastructure'
-    ]
-    marketPosition:
-      'Leading quantum-resistant encryption platform. Competes with RSA ($1000-5000/user), Thales ($500-2000/user), and Entrust ($200-1000/user). Our advantage: Quantum-resistant algorithms and hybrid security.'
-    competitors: ['RSA, Thales, Entrust, Gemalto, Utimaco']
+
+      'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.',
+    competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
     techStack: [
-      'NIST PQC algorithms, Lattice-based cryptography, React, Node.js, PostgreSQL, Redis'
-    ]
-    realImplementation: true
-    implementationDetails:
-      'Production-ready quantum-resistant encryption platform with enterprise-grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.'
-    roi: 'Organizations achieve 500% ROI through reduced security risks and compliance cost savings.'
-    useCases: [
-      'Data encryption at rest'
-      'Secure communications'
-      'Digital signatures'
-      'Key management'
-      'Compliance monitoring'
-      'Threat detection'
-    ]
-    integrations: [
-      'Active Directory, LDAP, SAML, OAuth, Custom enterprise systems'
-    ]
-    support:
-      '24/7 technical support, security consulting, custom development, and dedicated security manager.'
-    compliance: [
-      'SOC 2 Type II, ISO 27001, FIPS 140-2, Common Criteria, FedRAMP'
-    ]
-    link: 'https://ziontechgroup.com/quantum-resistant-encryption-platform'
-    icon: ''
-    color: 'from-red-500 to-orange-600'
-    popular: true
-    launchDate: '2024-01-15'
-    customers: 650
-    rating: 4.9
-    reviews: 480
-  }
-    icon: '',
-    color: 'from - red - 500 to - orange - 600',
-    popular: true,
-    launch_date: '2024 - 01 - 15',
-    customers: 650,
-    rating: 4 && 4.9,
-    reviews: 480,
-  },
-  {
+      'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',
+    ],
+    realImplementation: true,
+
     implementationDetails:
       'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.'
     roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.'
@@ -288,6 +186,9 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     popular: true;
     launch_date: '2024 - 02 - 15';
     customers: 2500;
+    rating: 4.8,
+    reviews: 1900;
+  }
 ;
   }
 ];
@@ -552,6 +453,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launchDate: '2024-02-15',;
     customers: 2500,;
     rating: 4.8,;
+    reviews: 1900;
+    rating: 4.8,
     reviews: 1900;
   }
 ];

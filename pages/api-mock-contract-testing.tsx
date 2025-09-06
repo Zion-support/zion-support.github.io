@@ -149,11 +149,11 @@ export default function ApiMockContractTestingPage(req, res) {
     },  ];
 ;
   return (
-        />;
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/api-mock-contract-testing'
-        />
+    <Layout>
+      <Head>
+        <title>API Mock & Contract Testing | Zion Tech Group</title>
+        <meta name="description" content="OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals." />
+        <link rel="canonical" href="https://ziontechgroup.com/api-mock-contract-testing" />
       </Head>
       <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
         <ServiceAds
@@ -202,15 +202,11 @@ export default function ApiMockContractTestingPage(req, res) {
             </div>
             <div className="text-center">
 
-
             </div>
           </div>
         </div>
       </div>
     </Layout>
-
-
-}
 
           </div>;
 

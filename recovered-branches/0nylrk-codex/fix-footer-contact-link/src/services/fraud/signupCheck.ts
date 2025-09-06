@@ -1,16 +1,10 @@
 
-export const checkSignupPatterns = async (
-
 
 export const checkSignupPatterns = async (;
-
+export const checkSignupPatterns = async (
   email: string;
   ip_address?: string): Promise < SignupCheckResult> => {
   const reasons: string[] = [];
-  // Check email against suspicious patterns
-  const emailCheck = analyzeEmail(email)
-  if (emailCheck.isSuspicious) {
-    reasons.push(...emailCheck.reasons)
   }
   // If IP address is provided, check for rapid signups from same IP
   if (ipAddress) {
@@ -52,9 +46,7 @@ export const checkSignupPatterns = async (;
         .order('created_at', { ascending: false }),;
       if (!error && recentSignups && recentSignups.length >= 3) {;
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`);
-
-
-
+        reasons && reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
       }
     } catch (error) {
       console && console.error('Error checking signup patterns:', error)

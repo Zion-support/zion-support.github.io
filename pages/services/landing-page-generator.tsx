@@ -19,6 +19,13 @@ const LandingPageGenerator: NextPage = () => {
 export default LandingPageGenerator,
 },
 
+},
+export default LandingPageGenerator,
+
+},
+export default LandingPageGenerator,
+},
+
 export default LandingPageGenerator,;
 export default LandingPageGenerator,
 

@@ -35,7 +35,6 @@ export interface UserDetails {;
   avatar_url?: string;
   headline?: string;
   role?: string;
-
 }
 export interface UserDetails {;
   id?: string,;
@@ -107,8 +106,6 @@ export interface AuthContextType {
   sign_up?: (email: string, password: string, user_data?: Partial < UserDetails>) => Promise<{ error: any }>;
 
 }
-
-export interface UserDetails {;
-
 }
 ;
+}

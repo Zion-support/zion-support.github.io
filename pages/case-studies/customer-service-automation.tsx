@@ -2,15 +2,13 @@
             <Link href="/" className="text-white/60 hover:text-white transition-colors">
               Home
             </Link>
-            <span className="text-white/60 mx-2"></span>
+            <span className="text-white/60 mx-2">→</span>
             <Link href="/case-studies" className="text-white/60 hover:text-white transition-colors">
               Case Studies
             </Link>
-            <span className="text-white/60 mx-2"></span>
+            <span className="text-white/60 mx-2">→</span>
             <span className="text-white">Intelligent Customer Service Automation</span>
           </nav>
-
-
           <header className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30 mb-6">
               Financial Services Industry
@@ -22,9 +20,6 @@
               How a Financial Services Provider achieved 80% reduction in response time with AI-powered chatbots and automated ticket routing
             </p>
           </header>
-            {/* Company Overview */}
-
-
           {/* Case Study Content */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -36,16 +31,11 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">Financial Services Provider</h3>
                 <p className="text-white/90 text-lg mb-4">
-                  A leading financial services company serving millions of customers with banking
-
-                  A leading financial services company serving millions of customers with banking,
 
 
                   A leading financial services company serving millions of customers with banking,
@@ -75,8 +65,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -106,15 +94,11 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">AI-Powered Customer Service Platform</h3>
                 <p className="text-white/90 text-lg mb-6">
-                  We implemented a comprehensive customer service automation platform that combines 
-                  We implemented a comprehensive customer service automation platform that combines
 
 
 
@@ -125,8 +109,6 @@
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-green-400 mb-3">Intelligent Chatbots</h4>
                     <p className="text-white/80">
-                      AI-powered chatbots handle 70% of customer inquiries automatically with 
-                      AI-powered chatbots handle 70% of customer inquiries automatically with
 
 
 
@@ -149,7 +131,6 @@
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-green-400 mb-3">24/7 Support</h4>
                     <p className="text-white/80">
-
                       to human agents when needed.
                     </p>
                   </div>
@@ -161,8 +142,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -217,8 +196,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -461,8 +438,6 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -503,8 +478,6 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             <section className="text-center">
               <div className="bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-2xl p-8 border border-green-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Customer Service?</h2>
@@ -524,8 +497,6 @@ export default function CaseStudyPage(req, res) {
                   >
                     Get Started
                   </Link>
-                  <Link 
-                  <Link
 
 
 

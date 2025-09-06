@@ -180,17 +180,14 @@ export default function QuantumCybersecurityServices() {
   }
 }
 
-
-
             >
-              <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
-                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
                   Quantum Security Solutions
                 </span>
               </h2>
-              <p className='text-xl text-gray-300 max-w-4xl mx-auto'>
-                Protect your digital assets with the most advanced security
-                technology available, powered by quantum computing and AI.
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                Protect your digital assets with the most advanced security technology available, powered by quantum computing and AI.
               </p>
             </motion.div>
                 <motion.div
@@ -260,7 +257,6 @@ export default function QuantumCybersecurityServices() {
             </div>;
           </div>;
         </section>;
-
         {/* Why Quantum Security Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
@@ -284,16 +280,13 @@ export default function QuantumCybersecurityServices() {
                 </span>
               </h2>
             </motion.div>
-
-
               >
-                <h3 className='text-2xl font-bold text-white mb-4'>
-                  The Quantum Threat
-                </h3>
-                <p className='text-gray-300 mb-4'>
-                  Quantum computers will eventually break current encryption
-                  standards, making traditional security obsolete.
+                <h3 className="text-2xl font-bold text-white mb-4">The Quantum Threat</h3>
+                <p className="text-gray-300 mb-4">
+                  Quantum computers will eventually break current encryption standards, making traditional security obsolete.
                 </p>
+                <ul className="text-gray-400 space-y-2">
+                  <li>• RSA encryption will be vulnerable</li>
                   <li>• Current SSL/TLS certificates at risk</li>
                   <li>• Blockchain security compromised</li>
                   <li>• Financial systems exposed</li>
@@ -304,16 +297,16 @@ export default function QuantumCybersecurityServices() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
-
-
               >
-                <h3 className='text-2xl font-bold text-white mb-4'>
-                  Our Quantum Solution
-                </h3>
-                <p className='text-gray-300 mb-4'>
-                  We provide quantum-resistant security that protects against
-                  both current and future threats.
+                <h3 className="text-2xl font-bold text-white mb-4">Our Quantum Solution</h3>
+                <p className="text-gray-300 mb-4">
+                  We provide quantum-resistant security that protects against both current and future threats.
                 </p>
+                <ul className="text-gray-400 space-y-2">
+                  <li>• Post-quantum cryptography</li>
+                  <li>• Quantum key distribution</li>
+                  <li>• AI-enhanced threat detection</li>
+                  <li>• Future-proof security architecture</li>
                 </ul>
               </motion.div>
             </div>
@@ -330,9 +323,6 @@ export default function QuantumCybersecurityServices() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-
-
-
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -340,57 +330,16 @@ export default function QuantumCybersecurityServices() {
                 </span>
               </h2>
             </motion.div>
-              <motion.div
-                className='text-center'>;
-                <div className='text-6xl mb-4'></div>;
-                <h3 className='text-xl font-semibold text-white mb-2'>;
-                  Zero Trust Architecture;
-                </h3>;
-                <p className='text-gray-400 text-sm'>;
-                  Never trust, always verify approach to security.;
-                </p>              </motion && motion.div>;
-
-              <motion&& motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
-                className='text-center'
-              >
-                <div className='text-6xl mb-4'></div>
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  Continuous Monitoring
-                </h3>
-                <p className='text-gray-400 text-sm'>
-                  24/7 threat detection and response.
-                </p>              </motion.div>
-              <motion.div
-                className='text-center'>;
-                <div className='text-6xl mb-4'></div>;
-                <h3 className='text-xl font-semibold text-white mb-2'>;
-                  Continuous Monitoring;
-                </h3>;
-                <p className='text-gray-400 text-sm'>;
-                  24/7 threat detection and response.;
-                </p>              </motion && motion.div>;
-
-              <motion&& motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
                 viewport={{ once: true }}
-                className='text-center'
-              >
-                <div className='text-6xl mb-4'></div>
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  AI Automation
-                </h3>
-                <p className='text-gray-400 text-sm'>
-                  Automated threat response and incident resolution.
-                </p>              </motion.div>
-              <motion.div
                 className='text-center'>;
-                <div className='text-6xl mb-4'></div>;
+                <div className='text-6xl mb-4'>🤖</div>;
                 <h3 className='text-xl font-semibold text-white mb-2'>;
                   AI Automation;
                 </h3>;
@@ -434,25 +383,6 @@ export default function QuantumCybersecurityServices() {
 
 
             >
-
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className='text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6'>;
-                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>;
-                  Secure Your Future Today;
-                </span>;
-              </h2>;
-              <p className='text-xl text-gray-300 mb-8'>;
-                Don't wait for quantum computers to break your security. Contact;
-                us now to implement quantum-resistant protection.;
-              </p>;
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>;
-                <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>;
-                  <div className='text-3xl mb-4'>📱</div>;
-                  <h3 className='text-xl font-semibold text-white mb-2'>;
-                    Phone;
-                  </h3>;
-
                   <a
                     href='tel:+13024640950'
                     className='text-indigo-400 hover:text-indigo-300 transition-colors'>;
@@ -751,6 +681,8 @@ export default function QuantumCybersecurityServices() {
       </UltraFuturisticBackground2026>;
     </>;
   );
+
+
   )
 }
               <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
@@ -776,5 +708,3 @@ export default function QuantumCybersecurityServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-

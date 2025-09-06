@@ -23,11 +23,6 @@ Context about Zion AI Marketplace:
 
   };
 }
-
-
-
-  }
-
 ;
     const prepared_messages = [;
       { role: 'system' as const, content: SYSTEM_PROMPT },

@@ -1,10 +1,8 @@
-
 export function ApiGettingStarted() {
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY"`,;
 const quickStartJs = `import axios from 'axios';
-import React from "react",
 export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
@@ -17,18 +15,16 @@ const quickStartJs = `import axios from 'axios';
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
   const quickStartJs = `import axios from 'axios',
-const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
-
-  -H "Authorization: Bearer YOUR_API_KEY"`,
-
-  const quickStartJs = `import axios from 'axios',
-  -H "Authorization: Bearer YOUR_API_KEY"`,
-
-  const quickStartJs = `import axios from 'axios',
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {
     Authorization: \`Bearer \${API_KEY}\`;
   }
+});
+console.log(response.data),`;
+}),
+
+// // // console.log(response.data),`,
+
   return (
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
@@ -84,13 +80,8 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
       </div>
     </ApiDocsLayout>
   )
-            Download Postman Collection;
-          </a>;
-        </div>;
-      </div>;
+});
 }
-
-;
 
 
 export default ApiGettingStarted;

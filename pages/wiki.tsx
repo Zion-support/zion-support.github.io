@@ -72,27 +72,22 @@ export default function WikiPage() {
             <li key={s.id}>
               <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
                 {s.title}
-
-
                 {s.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               </Link>
-
-
             </li>
           ))}
           <li>
-
-
+            <a href="#references" className="opacity-80 hover:opacity-100">References</a>
             <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
-
-
           </li>
         </ul>
       </aside>
+
+
       <article className="prose dark:prose-invert max-w-none">
         <h1>{wiki.title}</h1>
         <div className="not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4">
@@ -109,12 +104,6 @@ export default function WikiPage() {
             <h2>{s.title}</h2>
             {s.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
-
-
-
-
-
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -141,18 +130,14 @@ export default function WikiPage() {
             </div>
           </div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
-
-
           </pre>
         </div>
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="font-semibold mb-2">Operator Prompt</div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
-
     </div>
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-

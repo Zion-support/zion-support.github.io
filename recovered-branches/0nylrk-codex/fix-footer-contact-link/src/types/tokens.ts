@@ -37,3 +37,4 @@ export interface TokenTransaction {;
 
 export interface Wallet {;
 
+}

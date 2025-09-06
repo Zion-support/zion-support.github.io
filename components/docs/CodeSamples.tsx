@@ -43,10 +43,13 @@ interface Props {
 
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
 
+const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
+
   { key: 'curl', label: 'cURL' }
   { key: 'javascript', label: 'JavaScript' }
   { key: 'python', label: 'Python' }]
 export default function CodeSamples({ samples }: Props) {
+
 interface Props {;
   samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
 
@@ -62,9 +65,8 @@ const tabs: Array<{;
 export default function CodeSamples(): any ({ samples }: Props) {;
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map(s => [s && s.language, s && s.code]));
+
   return (
-
-
   const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s && s.language, s && s.code]));
 
@@ -108,8 +110,6 @@ export default function CodeSamples(): any ({ samples }: Props) {;
             {t && t.label}
           </button>;
         ))}
-
-
       </div>
       <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">
         <code>{sampleMap[active] || ''}</code>
@@ -168,18 +168,3 @@ function CodeSamples() {
         <code>{sample_map[active] || ''}</code>;
       </pre>;
     </div>);
-            key={t.key}
-            className={_`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
-            onClick={_() => setActive(t.key)}
-          >
-            {_t.label}
-          </button>
-        ))}
-      </div>
-      <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm&quot;>
-        <code>{sampleMap[active] || ''}</code>
-      </pre>
-    </div>
-  )
-
-}

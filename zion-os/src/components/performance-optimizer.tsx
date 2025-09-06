@@ -17,6 +17,15 @@ interface ErrorBoundaryProps {
   children: ReactNode,
   fallback?: ReactNode;
 }
+// Error boundary for better error handling;
+interface ErrorBoundaryState {
+  has_error: boolean,
+  error?: Error;
+}
+interface ErrorBoundaryProps {
+  children: ReactNode,
+  fallback?: ReactNode;
+}
 export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryState> {
   constructor (props: ErrorBoundaryProps) {
     super (props),

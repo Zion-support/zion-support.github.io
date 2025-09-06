@@ -1,4 +1,3 @@
-
   if (props.collapsible === &quot;none&quot;) {
     return (
       <div
@@ -53,8 +52,6 @@ if ( {) {
 }
     return (
   }
-    <div;
-      ref={ref}
 ;
   return (;
     <div;
@@ -68,6 +65,20 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       data-side={props.side}
     >;
       {/* This is what handles the sidebar gap on desktop */}
+<div
+        className={cn(
+          "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear&quot;
+          &quot;group-data-[collapsible=offcanvas]:w-0&quot;
+          &quot;group-data-[side=right]:rotate-180&quot;
+          props.variant === &quot;floating&quot; |props.variant === &quot;inset&quot;
+            ? &quot;group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]&quot;
+            : &quot;group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
+          "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear",
+          "group-data-[collapsible=offcanvas]:w-0",
+          "group-data-[side=right]:rotate-180",
+          props.variant === "floating" || props.variant === "inset"
+            ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]"
+            : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
         )}
       />
       <div
@@ -79,31 +90,11 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           className="flex h - full w - full flex - col bg - sidebar group - data-[variant = floating]:rounded - lg group - data-[variant = floating]:border group - data-[variant = floating]:shadow & quot;
         >;
           {props.children}
-
-
-Sidebar.displayName = "Sidebar"
-
-export const SidebarRail = React.forwardRef<
-
-
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
-        </div>;
-      </div>;
-    </div>);
-});
-Sidebar.display_name = &quot;Sidebar & quot;
-;
-export const SidebarRail = React.forward_ref<;
-  HTMLButtonElement,
-  React.ComponentProps<&quot;button & quot;>;
->((props, ref) => {
-  const { toggle_sidebar } = use_sidebar ();
   return (
     <button;
       ref={ref}
-
-
         "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
         "[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize",
         "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize",
@@ -116,8 +107,6 @@ export const SidebarRail = React.forward_ref<;
     />
   )
 })
-
-
 >((props, ref) => {
   return (
     <main

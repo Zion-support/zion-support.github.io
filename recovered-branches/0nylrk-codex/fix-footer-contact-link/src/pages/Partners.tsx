@@ -1,4 +1,3 @@
-
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -25,7 +24,6 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 export default function Partners() {
-
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
 
@@ -170,12 +168,9 @@ export default function Partners() {;
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
-
-
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (
-
       <div className="container max-w-6xl py-10">;
         <div className="text-center mb-8">;
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>;
@@ -306,12 +301,6 @@ export default function Partners() {;
             variant="outline" 
 
             className="text-zion-cyan border-zion-cyan"
-
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="text-zion-cyan border-zion-cyan"
-
             onClick={() => navigate('/login')}
           >;
             Partner Login;

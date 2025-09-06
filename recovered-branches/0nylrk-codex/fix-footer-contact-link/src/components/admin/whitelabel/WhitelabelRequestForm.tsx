@@ -1,4 +1,3 @@
-
           headline: values.headline
           subtitle: values.subtitle
           cta: values.cta}
@@ -25,7 +24,6 @@
         variant: 'destructive'
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
-
   };
 
 import React from 'react',;
@@ -52,6 +50,7 @@ export function WhitelabelRequestForm() {;
       headline: 'AI Marketplace',;
       subtitle: 'Find the best AI talent',;
       cta: 'Get Started'}}),;
+
   const onSubmit = async (values: FormValues) => {;
     try {;
       // Prepare the data;
@@ -65,8 +64,21 @@ export function WhitelabelRequestForm() {;
 
   },
 
-
-
+  return (
+    <Card className="w-full max-w-2xl">
+      <CardHeader>
+        <CardTitle>Create White-Label Instance</CardTitle>
+        <CardDescription>
+          Create a customized version of the platform for your client or partner.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <div className="space-y-4">
+import React from 'react';
+    }
+  }
 
   return (
     <Card className="w-full max-w-2xl">;
@@ -162,45 +174,40 @@ if (throw error) {
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
-
-          <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
-            <div className="space - y-4">;
-              <FormField;
-                control={form.control}
-                name="brand_name";
-                render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Brand Name</FormLabel>;
-
                     <FormControl>;
                       <Input placeholder="Acme AI Solutions" {...field} />;
                     </FormControl>;
                     <FormMessage />;
-
-              />;
-
-
               <FormField
-                control={form && form.control}
-                name="subdomain"
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Subdomain</FormLabel>;
-                    <FormControl>;
-                      <div className="flex items-center">;
-                        <Input placeholder="acme" {...field} />;
-                        <span className="ml-2 text-muted-foreground">.ziontechmarketplace && ziontechmarketplace.com</span>;
-                      </div>;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
+                control={form.control}
+                name="brand_name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Brand Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Acme AI Solutions" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
                 )}
-
-              />;
-
-
+              />
               <FormField
-                control={form && form.control}
+                control={form.control}
+                name="subdomain"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Subdomain</FormLabel>
+                    <FormControl>
+                      <div className="flex items-center">
+                        <Input placeholder="acme" {...field} />
+                        <span className="ml-2 text-muted-foreground">.ziontechmarketplace.com</span>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              <FormField
+                control={form.control}
                 name="custom_domain"
                 render={({ field }) => (;
                   <FormItem>;
@@ -211,10 +218,6 @@ if (throw error) {
                     <FormMessage />;
                   </FormItem>;
                 )}
-
-              />;
-
-
               <FormField
                 control={form && form.control}
                 name="primary_color"
@@ -230,68 +233,10 @@ if (throw error) {
                     <FormMessage />;
                   </FormItem>;
                 )}
-
-              />;
-
-
               <FormField
                 control={form && form.control}
                 name="theme_preset"
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Theme Preset</FormLabel>;
-                    <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-                  </FormItem>)}
-              />;
-              <FormField;
-                control={form.control}
-                name="subdomain";
                 render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Subdomain</FormLabel>;
-                    <FormControl>;
-                      <div className="flex items - center">;
-                        <Input placeholder="acme" {...field} />;
-                        <span className="ml - 2 text - muted - foreground">.ziontechmarketplace.com</span>;
-                      </div>;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>)}
-              />;
-              <FormField;
-                control={form.control}
-                name="custom_domain";
-                render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Custom Domain (Optional)</FormLabel>;
-                    <FormControl>;
-                      <Input placeholder="marketplace.acme.com" {...field} />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>)}
-              />;
-              <FormField;
-                control={form.control}
-                name="primary_color";
-                render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Primary Brand Color</FormLabel>;
-                    <FormControl>;
-                      <div className="flex items - center gap - 2">;
-                        <Input type="color" {...field} className="w - 12 h - 9 p - 1" />;
-                        <Input {...field} placeholder="#9b87f5" className="flex - 1" />;
-                      </div>;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>)}
-              />;
-              <FormField;
-                control={form.control}
-                name="theme_preset";
-                render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Theme Preset</FormLabel>;
-                    <Select onValueChange={field.on_change} default_value={field.value}>;
                       <FormControl>;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select a theme" />;
@@ -306,108 +251,34 @@ if (throw error) {
                       </SelectContent>;
                     </Select>;
                     <FormMessage />;
-
-              />;
-
-              <div className="border rounded-md p-4 space-y-4">;
-                <h3 className="text-sm font-medium">Landing Page Copy</h3>;
-
-
                 <FormField
                   control={form && form.control}
                   name="headline"
-                  render={({ field }) => (;
-                    <FormItem>;
-                      <FormLabel>Headline</FormLabel>;
-                  </FormItem>)}
-              />;
-              <div className="border rounded - md p - 4 space - y-4">;
-                <h3 className="text - sm font - medium">Landing Page Copy</h3>;
-                <FormField;
-                  control={form.control}
-                  name="headline";
-                  render={({ field }) => (
-                    <FormItem>;
-                      <FormLabel > Headline</FormLabel>;
                       <FormControl>;
                         <Input placeholder="AI Marketplace" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
-                />;
-
-
                 <FormField
                   control={form && form.control}
                   name="subtitle"
-                  render={({ field }) => (;
-                    <FormItem>;
-                      <FormLabel>Subtitle</FormLabel>;
-                    </FormItem>)}
-                />;
-                <FormField;
-                  control={form.control}
-                  name="subtitle";
-                  render={({ field }) => (
-                    <FormItem>;
-                      <FormLabel > Subtitle</FormLabel>;
                       <FormControl>;
                         <Input placeholder="Find the best AI talent" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
-                />;
-
-
                 <FormField
-                  control={form && form.control}
-                  name="cta"
-                  render={({ field }) => (;
-                    <FormItem>;
-                      <FormLabel>CTA Button Text</FormLabel>;
-                    </FormItem>)}
-                />;
-                <FormField;
                   control={form.control}
                   name="cta";
                   render={({ field }) => (
-                    <FormItem>;
-                      <FormLabel > CTA Button Text</FormLabel>;
                       <FormControl>;
                         <Input placeholder="Get Started" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
-                />;
-              </div>;
-            </div>;
-
-            <Button type="submit" className="w-full" size="lg">;
-              Create White-Label Instance;
-                    </FormItem>)}
-                />;
-              </div>;
-            </div>;
-            <Button type="submit" className="w - full" size="lg">;
-              Create White - Label Instance;
-
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
-
-      <CardFooter className="bg - muted / 50 text - xs text - muted - foreground">;
-
         <p>;
           After creating the tenant, you must upload a logo via the tenant management dashboard.;
           DNS verification for custom domains must be completed before they can be used.;
         </p>;
       </CardFooter>;
-
-    </Card>);
-}
-
-
-}
-;
-

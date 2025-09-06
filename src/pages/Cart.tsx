@@ -73,7 +73,6 @@ export default function CartPage() {
     )
   }
 
-
 }
 export default /**
  * CartPage - Function description

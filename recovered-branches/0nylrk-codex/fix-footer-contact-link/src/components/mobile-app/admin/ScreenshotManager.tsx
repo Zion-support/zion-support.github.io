@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -73,7 +72,6 @@ interface ScreenshotManagerProps {
   platform: AppPlatform;
 }
 type Screenshot = {
-
   
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
@@ -141,9 +139,6 @@ type Screenshot = {
     }
   },
   
-
-  
-
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -210,6 +205,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       <CardContent>;
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
+            isDragging
+              ? "border-zion-cyan bg-zion-cyan/10"
               : "border-zion-purple/30"
           }`}
           onDragOver={handleDragOver}
@@ -235,8 +232,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               </button>;
             </div>;
           ))}
-}
-
 
 
 

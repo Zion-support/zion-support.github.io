@@ -156,8 +156,6 @@ interface Listing {;
   reviewCount?: number,;
   price?: number | null,;
   createdAt: string;
-
-
 }
 ;
 
@@ -233,6 +231,18 @@ export function CategoryListingPage({;
       }
     });
   return (;
+  subcategory?: string;
+  image?: string;
+  tags?: string[];
+  author?: string;
+  author_image?: string;
+  ai_score?: number;
+  rating?: number;
+  review_count?: number;
+  price?: number | null;
+      }
+    });
+  return (
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -245,8 +255,6 @@ export function CategoryListingPage({;
 
 
               {description}
-            </p>
-          </div>
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
@@ -302,12 +310,16 @@ export function CategoryListingPage({;
               </Select>;
             </div>;
           </div>;
-
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {processedListings.map((listing) => (
                 <ListingScoreCard
+          {/* Results Count */}
+          <div className="mb-6">;
+            <p className="text-zion-slate-light">;
+              Showing {processedListings && processedListings.length} results;
+              {searchQuery && ` for "${searchQuery}"`}
                   key={listing.id}
                   title={listing.title}
                   description={listing.description}
@@ -325,8 +337,19 @@ export function CategoryListingPage({;
                 Clear all filters
               </Button>
             </div>
+                }}
 
-
+                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+              >
+                Clear all filters
+              </Button>
+            </div>
+                }}
+                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+              >;
+                Clear all filters;
+              </Button>;
+            </div>;
           )}
         </div>;
       </div>;

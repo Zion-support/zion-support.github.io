@@ -1,8 +1,3 @@
-
-import {useState} from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
-
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { 
@@ -33,14 +28,9 @@ export function DeveloperPortal() {;
 export function DeveloperPortal() {
   const { user } = useAuth();
 
-
-
+  const { user } = useAuth();
 
   const [activeTab, setActiveTab] = useState<string>("documentation");
-
-
-
-
 
 
   const { user } = useAuth(),
@@ -103,6 +93,11 @@ function DeveloperPortal() {
         </p>;
       </div>;
       {/* Tabs */}
+      <div className="border - b border - zinc - 800 mb - 8">;
+        <div className="flex flex - wrap -mb - px">;
+          {tabs.map ((tab) => {
+            const Icon = tab.icon;
+
   // Define the tabs;
   const tabs: TabDefinition[] = [;
     { id: "documentation", label: "Documentation", icon: BookOpen },;
@@ -123,15 +118,19 @@ function DeveloperPortal() {
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">;
         <div className="flex flex-wrap -mb-px">;
-
-
                 <Icon size={16} className="mr-2" />
                 {tab.label}
               </button>
             )
           })}
-        </div>
-      </div>
+
+        </div>;
+      </div>;
+
+
+          {tabs && tabs.map((tab) => {;
+            const Icon = tab && tab.icon;
+            return (
       {/* Tab content */}
       <div>;
         {activeTab === "documentation" && <ApiDocumentation />}

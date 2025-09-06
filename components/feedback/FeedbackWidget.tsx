@@ -12,12 +12,10 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -47,22 +45,19 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const effectiveResponseId = useMemo(
     () => responseId |uuidv4()
     [responseId]
+  const [rating, setRating] = useState<null | 'up' | 'down'>(null);
+  const [comment, setComment] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
+  const effectiveResponseId = useMemo(;
+    () => responseId || uuidv4(),;
+    [responseId];
   );
   const submit = async () => {;
     if (!rating) {;
       setError('Please choose 👍 or 👎');
-
-      return;    }  const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]);
-  const submit = async () => {;
-    if (!rating) {;
-
-      setError('Please choose 👍 or 👎');
-      return;      return;
-      return
-    }
-    setError(null);
-    setSubmitting(true);
           aiModel})});
       if (!res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true)
@@ -93,13 +88,15 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       ) : (
         <div className='space-y-3'>
           <div className='flex items-center gap-2'>
+      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>;
+      {submitted ? (;
+        <div className='text-sm text-emerald-700 dark:text-emerald-300'>;
+          Thanks for your feedback!;
+        </div>;
+      ) : (;
+        <div className='space-y-3'>;
+          <div className='flex items-center gap-2'>;
             <button
-              type='button'              onClick={() => setRating(rating === 'up' ? null : 'up')}      {submitted ? (
-        <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>
-      ) : (
-        <div className="space-y-3">
-          <div className="flex items-center gap-2">
-
             <button
               type="button"
               onClick={() => setRating(rating === 'up' ? null : 'up')}
@@ -109,7 +106,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}
               aria-pressed={rating === 'down'}
             >;
-              <span></span>;
+              <span>👎</span>;
               <span>No</span>;
             </button>;
           </div>;
@@ -118,8 +115,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
           </div>;
         </div>;
       )}
-}
-    </div>
 ;
 export type FeedbackWidgetProps = {
   response_id?: string;

@@ -1,6 +1,5 @@
-  if (typeof window === 'undefined' |!('performance' in window)) {
-  if (typeof window === 'undefined' || !('performance' in window)) {;
 
+import { PerformanceMetrics } from '../types';
 ;
 export const measure_performance = (): PerformanceMetrics | null => {
   if () {) {
@@ -36,8 +35,6 @@ export const measure_performance = (): PerformanceMetrics | null => {
 export const getPerformanceScore = (metrics: PerformanceMetrics): {
   overall: 'good' | 'needs - improvement' | 'poor';
   scores: {
-}
-export const getPerformanceScore = (metrics: PerformanceMetrics): {
 
 };
 
@@ -52,28 +49,13 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   }
 } => {
   const thresholds = {
-    loadTime: { good: 2000, needsImprovement: 4000 },
-    firstContentfulPaint: { good: 1000, needsImprovement: 2000 },
-    largestContentfulPaint: { good: 1500, needsImprovement: 3000 },
-    cumulativeLayoutShift: { good: 0.05, needsImprovement: 0.1 },
-    firstInputDelay: { good: 50, needsImprovement: 100 }
-  };
-
-  const getScore = (value: number, threshold: { good: number; needsImprovement: number }, reverse = false) => {
+export const getPerformanceScore = (metrics: PerformanceMetrics): {
+  overall: 'good' | 'needs - improvement' | 'poor';
+  scores: {
     const compareValue = reverse ? threshold.good / value : value / threshold.good;
     if (compareValue <= 1) return 'good';
     if (compareValue <= (reverse ? threshold.needsImprovement / threshold.good : threshold.needsImprovement / threshold.good)) return 'needs-improvement';
     return 'poor';
-  const scores = {
-    loadTime: getScore(metrics.loadTime, thresholds.loadTime),
-    firstContentfulPaint: getScore(metrics.firstContentfulPaint, thresholds.firstContentfulPaint),
-    largestContentfulPaint: getScore(metrics.largestContentfulPaint, thresholds.largestContentfulPaint),
-    cumulativeLayoutShift: getScore(metrics.cumulativeLayoutShift, thresholds.cumulativeLayoutShift, true),
-    firstInputDelay: getScore(metrics.firstInputDelay, thresholds.firstInputDelay)
-  };
-
-  const poorCount = Object.values(scores).filter(score => score === 'poor').length;
-  const needsImprovementCount = Object.values(scores).filter(score => score === 'needs-improvement').length;
   let overall: 'good' | 'needs-improvement' | 'poor';
   if (poorCount > 0) {
     fcp: 'good' | 'needs - improvement' | 'poor';
@@ -140,7 +122,6 @@ if ( {) {
   return { overall, scores }
 }
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
-export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
   console.group(`🚀 ${label}`);
   if (metrics.fcp !== undefined) console.log('First Contentful Paint:', `${metrics.fcp.toFixed(2)}ms`);
   if (metrics.lcp !== undefined) console.log('Largest Contentful Paint:', `${metrics.lcp.toFixed(2)}ms`);
@@ -154,12 +135,6 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 }; export const getPerformanceScore = (metrics: PerformanceMetrics): { overall: 'good' | 'needs-improvement' | 'poor', scores: { loadTime: 'good' | 'needs-improvement' | 'poor', firstContentfulPaint: 'good' | 'needs-improvement' | 'poor', largestContentfulPaint: 'good' | 'needs-improvement' | 'poor', cumulativeLayoutShift: 'good' | 'needs-improvement' | 'poor',
     firstInputDelay: 'good' | 'needs-improvement' | 'poor'}} = > { const thresholds = { loadTime: { good: 2000, needsImprovement: 4000 } firstContentfulPaint: { good: 1000, needsImprovement: 2000 } largestContentfulPaint: { good: 1500, needsImprovement: 3000 } cumulativeLayoutShift: { good: 0 && 0.05, needsImprovement: 0 && 0.1 } firstInputDelay: { good: 50, needsImprovement: 100 } }; const getScore = (value: number, threshold: { good: number,
     needsImprovement: number }, reverse = false) = > { const compareValue = reverse ? threshold && threshold.good / value: value / threshold && threshold.good, if (compareValue < = 1) return 'good', if (compareValue < = (reverse ? threshold && threshold.needsImprovement / threshold && threshold.good: threshold && threshold.needsImprovement / threshold && threshold.good)) return 'needs-improvement'; return 'poor'}; const scores = { loadTime: getScore(metrics && metrics.loadTime, thresholds && thresholds.loadTime) firstContentfulPaint: getScore(metrics && metrics.firstContentfulPaint, thresholds && thresholds.firstContentfulPaint) largestContentfulPaint: getScore(metrics && metrics.largestContentfulPaint, thresholds && thresholds.largestContentfulPaint) cumulativeLayoutShift: getScore(metrics && metrics.cumulativeLayoutShift, thresholds && thresholds.cumulativeLayoutShift, true) firstInputDelay: getScore(metrics && metrics.firstInputDelay, thresholds && thresholds.firstInputDelay) }; const poorCount = Object && Object.values(scores).filter(score = > score = = = 'poor').length; const needsImprovementCount = Object && Object.values(scores).filter(score = > score = = = 'needs-improvement').length; let overall: 'good' | 'needs-improvement' | 'poor'; if (poorCount > 0) { overall = 'poor'} else if (needsImprovementCount > 0) { overall = 'needs-improvement'} else { overall = 'good'} return { overall, scores }}; export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') = > { console && console.group(`🚀 ${label}`); console && console.log('Load Time: ', `${metrics && metrics.loadTime.toFixed(2)}ms`); console && console.log('First Contentful Paint: ', `${metrics && metrics.firstContentfulPaint.toFixed(2)}ms`); console && console.log('Largest Contentful Paint: ', `${metrics && metrics.largestContentfulPaint.toFixed(2)}ms`); console && console.log('Cumulative Layout Shift: ', metrics && metrics.cumulativeLayoutShift.toFixed(4)); console && console.log('First Input Delay: ', `${metrics && metrics.firstInputDelay.toFixed(2)}ms`); console && console.groupEnd()};
-
-
-
-
-
-};
   return { overall, scores }
 }
 };

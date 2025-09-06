@@ -1,10 +1,3 @@
-
-import { useEffect, useState  } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { supabase  } from '@/integrations/supabase/client';
-import {useEffect, useState} from 'react';
-import {useAuth} from '@/hooks/useAuth';
-import {supabase} from '@/integrations/supabase/client';
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 export function useWallet() {;
   const { user } = useAuth();
@@ -267,9 +260,6 @@ export function useWallet() {;
     loading,;
     error,;
     fetchWallet,;
-
-
-
     fetchTransactions;
     earnTokens;
 
@@ -278,3 +268,4 @@ export function useWallet() {;
     fetch_transactions;
     earn_tokens;
     spend_tokens}
+}

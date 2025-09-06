@@ -1,3 +1,34 @@
+export function ApiDocsHub() {
+  const sections = [
+    {
+      title: "Getting Started",
+      description: "Learn how to authenticate and make your first API request",
+      icon: BookOpen,
+      path: "/developers/docs/getting-started",
+      color: "from-blue-500 to-cyan-500"},
+    {
+      title: "API Reference",
+      description: "Detailed documentation for all available endpoints",
+      icon: Code,
+      path: "/developers/docs/reference",
+      color: "from-purple-500 to-pink-500"},
+    {
+      title: "Webhooks",
+      description: "Subscribe to events and receive real-time updates",
+      icon: Webhook,
+      path: "/developers/docs/webhooks",
+      color: "from-green-500 to-emerald-500"},
+    {
+      title: "Sample Code",
+      description: "Examples in JavaScript, Python, and Node.js",
+      icon: Zap,
+      path: "/docs/sample-code",
+      color: "from-yellow-500 to-orange-500"},
+    {
+      title: "Error Codes & Rate Limits",
+      description: "Understanding API errors and rate limiting",
+      icon: AlertCircle,
+  return (
     <ApiDocsLayout>
       <div className="max-w-4xl">
         <h1 className="text-4xl font-bold text-white mb-6">Zion AI Marketplace API</h1>
@@ -208,6 +239,7 @@ export function ApiDocsHub() {
           <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
           <p className="text-zinc-400 mb-6">
             To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
+
           </p>
           <Link
             href="/developers/portal"
@@ -218,6 +250,8 @@ export function ApiDocsHub() {
           </Link>
         </div>
       </div>
+        </div>;
+
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react';
@@ -285,3 +319,4 @@ export function ApiDocsHub() {;
       </div>;
     </ApiDocsLayout>;
   );
+export default ApiDocsHub;

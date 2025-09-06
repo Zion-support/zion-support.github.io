@@ -1,4 +1,3 @@
-
 import {formatDistanceToNow} from "date-fns";
 import {ThumbsUp, ThumbsDown, CheckCircle} from "@/components/icons";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
@@ -18,16 +17,11 @@ import { cn } from "@/lib/utils";
 interface ReplyCardProps {
 
   reply: ForumReply
-interface ReplyCardProps {;
-  reply: ForumReply,;
 
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   className?: string;
 }
-
-
-
 
 interface ReplyCardProps {
   reply: ForumReply,
@@ -52,11 +46,10 @@ interface ReplyCardProps {
           <div className="flex items-center">;
             <span className="font-medium">;
               <Badge variant="outline" className="ml-2 text-xs">;
-
-
-
                 {reply.authorRole}
               </Badge>
+                {reply && reply.authorRole}
+              </Badge>;
             )}
             {reply && reply.isAnswer && (;
               <Badge className="ml-2 bg-green-500 text-white">;

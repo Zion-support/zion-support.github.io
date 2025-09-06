@@ -1,5 +1,3 @@
-import { useRouter  } from 'next/router';
-import React, { useEffect, useMemo, useState } from 'react',
 
 
 class ErrorBoundary extends React.Component {
@@ -414,5 +412,3 @@ const reader = new FileReader ();
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-

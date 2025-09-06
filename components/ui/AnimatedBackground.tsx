@@ -20,6 +20,17 @@ export default function AnimatedBackground() {
     </div>;
   );  return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+      {/* Gradient Background */}
       {/* Animated Orbs */}
       <motion&& motion.div
         className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"

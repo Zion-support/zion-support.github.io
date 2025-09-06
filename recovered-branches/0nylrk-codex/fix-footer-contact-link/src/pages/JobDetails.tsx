@@ -1,4 +1,3 @@
-
 import { ApplyToJobModal  } from '@/components/messaging/job-application';
 import { SEO  } from '@/components/SEO';
 import { useWhitelabel  } from '@/context/WhitelabelContext';
@@ -30,8 +29,6 @@ export default function JobDetails() {;
 
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
-
-
 import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
 import { Header } from '@/components/Header',
@@ -57,13 +54,28 @@ export default function JobDetails() {
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+      </div>
+    )
+  }
+    return (
+      <>
+        <Header />
+        <div className="container mx-auto px-4 py-16 text-center">
+          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
+          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
+          <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>
+        </div>
+        <Footer />
+      </>
+    )
+  }
   const handleApplySuccess = async (appliedJobId: string) => {
     toast.success("Application submitted successfully!")
     setIsApplyModalOpen(false)
   }
-  const formatBudget = (budget: any) => {
-    if (!budget) return "Not specified"
-    return `$${budget.min} - $${budget.max}`
   return (
     <>
       <SEO
@@ -78,7 +90,7 @@ export default function JobDetails() {
             size="sm"
             onClick={() => navigate('/jobs')}
           >
-             Back to Jobs
+            ← Back to Jobs
           </Button>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -160,18 +172,10 @@ export default function JobDetails() {;
       return;
     }
 ;
-  const handleApply = () => {;
-    if (!isAuthenticated) {;
-      toast && toast.error("Please log in to apply for this job");
-      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
-      return;
-    }
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
       toast && toast.error("Only job seekers can apply for jobs");
       return;
     }
-    setIsApplyModalOpen(true);
-  };
   const handleApplySuccess = async (appliedJobId: string) => {;
     toast && toast.success("Application submitted successfully!"),;
     setIsApplyModalOpen(false);
@@ -180,7 +184,6 @@ export default function JobDetails() {;
     if (!budget) return "Not specified",;
     return `$${budget && budget.min} - $${budget && budget.max}`;
   };
-  const isOwnJob = user?.id === job && job.client_id;
   return (
     <>;
       <SEO
@@ -207,28 +210,6 @@ export default function JobDetails() {;
                 <div>;
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
                   <div className="whitespace-pre-wrap">;
-                      <Badge key={i} variant="secondary">;
-
-
-
-                        {skill}
-                      </Badge>;
-                    ))}
-
-                  </div>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </div>;
-
-          <div>;
-            <Card>;
-              <CardContent className="pt-6 space-y-4">;
-                <div className="flex items-start">;
-                  <DollarSign className="mt-1 h-5 w-5 text-muted-foreground" />;
-                  <div className="ml-3">;
-                    <p className="text-sm text-muted-foreground">Budget</p>;
-                    <p className="font-medium">{formatBudget(job && job.budget)}</p>;
                   </div>;
                 </div>;
 
@@ -257,7 +238,6 @@ export default function JobDetails() {;
 
                   <Button 
                     className="w-full mt-4" 
-
                     onClick={handleApply}
                     disabled={isOwnJob}>;
                     Apply Now;

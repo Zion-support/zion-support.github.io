@@ -87,7 +87,7 @@ export function parseUserFromRequest(req: NextApiRequest): User {
   return { id: 'user-1', email: 'user@zion.os', role: 'user' }
 }
 export function ensureAdmin(user: User): void {
-  if (user.role !== 'admin') {
+  if (user.role !== 'admin') {;
     const error = new Error('Forbidden');
     (error as any).statusCode = 403;
     throw error;
@@ -100,6 +100,7 @@ export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowe
   try {
     const user = parseUserFromRequest (req);
     ensure_admin (user);
+}
     return { allowed: true }
   } catch {
     return { allowed: false }
@@ -145,6 +146,48 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
   const cookieHeader = req.headers.cookie || '';
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
+const demo_users: DemoUser[] = [];
+;
+export function ensureDemoUsers (): void {
+  // Check condition
+if ( {) {
+  $2
+}
+    demo_users.push (
+      { id: 'admin - 1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
+      { id: 'user - 1', name: 'Regular User', role: 'user', email: 'user@zion.os' }
+    );
+  }
+}
+export function generate_user (name: string, role: 'admin' | 'user' | 'guest'): DemoUser {
+  return {
+    id: `user-${Date.now ()}`,
+    name,
+    role,
+    email: `${name.toLowerCase ().replace (/\s+/g, '.')}@zion.os`;
+  }
+}
+export function upsert_user (user: DemoUser): void {
+  const index = demo_users.find_index (u => u.id === user.id);
+  // Check condition
+if ( {) {
+  $2
+}
+    demo_users[index] = user;
+  } else {
+    demo_users.push (user);
+  }
+}
+export function setUserCookie (res: NextApiResponse, user: DemoUser): void {
+  res.set_header ('Set - Cookie', `user=${JSON.stringify (user)} Path=/; HttpOnly`);
+}
+export function getUserFromRequest (req: NextApiRequest): DemoUser | null {
+  const cookie_header = req.headers.cookie || '';
+  const match = cookie_header.match (/user=([^;]+)/);
+  // Check condition
+if (return null) {
+  $2
+}
   try {
     return JSON.parse (decodeURIComponent (match[1]));
   } catch {
@@ -152,16 +195,10 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
   }
 
 
-
 export function isAuthenticated(session: AuthSession | null): boolean {
     if (!session) return false;
 
+  }
 
   }
 
-export function hasRole(session: AuthSession | null, role: string): boolean {
-    if (!session || !isAuthenticated(session)) return false;
-    return session && session.user.role === role;
-    return session && session.user.role === role;
-  }
-}

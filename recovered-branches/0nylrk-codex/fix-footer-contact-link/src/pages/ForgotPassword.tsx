@@ -1,4 +1,3 @@
-
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -28,9 +27,6 @@ import {
   FormMessage} from "@/components/ui/form",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-
-
-
 // Form validation schema
 
 const forgotPasswordSchema = z.object({
@@ -109,6 +105,9 @@ export default function ForgotPassword() {
                     We've sent a password reset link to your email address.;
                   </p>;
                   <div className="mt-6">;
+                    <Link
+                      to="/login"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
                       Back to login;
                     </Link>;
                   </div>;

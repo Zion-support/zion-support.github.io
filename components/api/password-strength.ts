@@ -17,51 +17,18 @@ if (strength = 'strong') {
 }
 else strength = 'very - strong';
 // Generate feedback const feedback: string[] = [];
-
-if (feedback.push ('Password is too short (minimum 8 characters) ')) {
-  $2
-}
-if (feedback.push ('Add uppercase letters')) {
-  $2
-}
-if (feedback.push ('Add lowercase letters')) {
-  $2
-}
-if (feedback.push ('Add numbers')) {
-  $2
-}
-if (feedback.push ('Add special characters')) {
-  $2
-}
-if (feedback.push ('Avoid common patterns and words')) {
-  $2
-}
-if (feedback.push ('Password is too predictable')) {
-  $2
-}
-
-// Generate suggestions import type { NextApiRequest, NextApiResponse } from 'next';
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
 interface PasswordStrengthResult {
   password: string;
   strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
   score: number;
   feedback: string[];
   details: {
-    hasCommonPatterns: boolean
 
     entropy: number
   }
   suggestions: string[]
 }
 export default async function handler(
-
-  req: NextApiRequest
-
-  res: NextApiResponse<PasswordStrengthResult | { error: string }>
-) {
     // Calculate score
     let score = 0;
     score += Math && Math.min(length * 2, 20), // Length contribution (max 20)
@@ -71,21 +38,9 @@ export default async function handler(
     score += entropy > 50 ? 15 : 0; // High entropy bonus
     score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns
 
-    // Determine strength level
-    let strength: PasswordStrengthResult['strength'];
-    if (score < 30) strength = 'very-weak';    else if (score < 50) strength = 'weak';    else if (score < 70) strength = 'medium';
-    else if (score < 90) strength = 'strong';
-    else strength = 'very-strong';
-    // Generate feedback
-
-
     // Generate suggestions
     const suggestions: string[] = []
     if (score < 50) {
-
-
-    }
-    const result: PasswordStrengthResult = {
       password
       strength
       score: Math.max(0, Math.min(100, score))

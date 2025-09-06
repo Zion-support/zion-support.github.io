@@ -1,4 +1,3 @@
-
 }
 
 
@@ -17,9 +16,6 @@ import { Certification } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface CertificationsSectionProps {;
   certifications: Certification[];
-
-
-
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
@@ -42,6 +38,9 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
                   {cert.expiration_date && ` - ${formatDate(cert.expiration_date)}`}
                 </span>
                 </span>;
+interface CertificationsSectionProps {
+  certifications: Certification[];
+}
               )}
             </div>;
             <p className="text-sm">{cert.issuing_organization}</p>;

@@ -42,6 +42,18 @@
       gradient: &quot;bg - gradient - to - r from - green - 600 to - emerald - 600 & quot;
     },
     {
+      icon: &quot;🏪&quot;,
+      title: &quot;Complete Marketplace & quot;,
+      description: &quot;Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.&quot;,
+      features: [;
+        &quot;Job & Talent Marketplace & quot;,
+        &quot;Token System + Rewards & quot;,
+        &quot;On - chain Contract Builder & quot;,
+        &quot;Multi - currency Support & quot;
+      ],
+      gradient: &quot;bg - gradient - to - r from - green - 600 to - emerald - 600 & quot;
+    },
+    {
       icon: &quot;🗳️&quot;,
       title: &quot;Governance & DAO & quot;,
       description: &quot;Flexible governance from admin control to full DAO systems with dual governance options.&quot;,
@@ -148,6 +160,14 @@
     }
   ],
   return (
+              <br />
+              <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
+            </h1>
+
+
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+
+
               <br />
               <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
             </h1>
@@ -348,14 +368,3 @@
         </div>;
       </section>;
     </div>);
-              Ready to Build the Future?
-            </h2>
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
-            </p>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Stats Section */}

@@ -2,6 +2,7 @@ import { useRouter  } from 'next/router';
 import { useEffect, useState } from 'react';
 export default function WhitepaperPreview() {
 
+
 import {useRouter} from 'next/router';
 import {useEffect, useState} from 'react';
 
@@ -15,6 +16,10 @@ export default function WhitepaperPreview() {
   const { id } = router.query,
   const [markdown, setMarkdown] = useState<string>(''),
   const [notFound, setNotFound] = useState(false),
+  const router = useRouter();
+  const { id } = router.query;
+  const [markdown, setMarkdown] = useState<string>('');
+  const [notFound, setNotFound] = useState(false);
 
   const router = useRouter();
   const { id } = router.query;

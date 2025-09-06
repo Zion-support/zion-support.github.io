@@ -1,54 +1,5 @@
 import {
   {
-    name: 'AI Research Assistant'
-    description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.'
-    icon: LightBulbIcon
-    features: [
-      'Natural Language ProcessingMulti-modal LearningReal-time CollaborationAdvanced Analytics'
-    ]
-    href: '/solutions/ai-autonomous-research'}
-  {
-    name: 'Quantum Neural Networks'
-    description: 'Breakthrough quantum computing technology for next-generation AI applications.'
-    icon: CpuChipIcon
-    features: [
-      'Quantum SupremacyNeural Architecture SearchHybrid Classical-QuantumScalable Architecture'
-    ]
-    href: '/solutions/quantum-neural-networks'}
-  {
-    name: 'Autonomous Business Operations'
-    description: 'Self-optimizing business processes that adapt and improve automatically.'
-    icon: RocketLaunchIcon
-    features: [
-      'Process AutomationPredictive AnalyticsContinuous OptimizationReal-time Monitoring'
-    ]
-    href: '/solutions/autonomous-business'}
-  {
-    name: 'IT Asset Management'
-    description: 'Intelligent asset tracking and optimization for modern enterprise infrastructure.'
-    icon: ShieldCheckIcon
-    features: [
-      'Asset DiscoveryLifecycle ManagementSecurity ComplianceCost Optimization'
-    ]
-    href: '/solutions/it-asset-management'}]
-const industryApplications = [
-  {
-    name: 'Healthcare'
-    description: 'AI-powered diagnostics, drug discovery, and patient care optimization.'
-    icon: UserGroupIcon
-    useCases: ['Medical Imaging AnalysisDrug DiscoveryPatient Risk AssessmentClinical Decision Support']}
-  {
-    name: 'Finance'
-    description: 'Intelligent trading, risk assessment, and fraud detection systems.'
-    icon: ChartBarIcon
-    useCases: ['Algorithmic TradingCredit Risk AnalysisFraud DetectionPortfolio Optimization']}
-  {
-    name: 'Manufacturing'
-    description: 'Predictive maintenance, quality control, and supply chain optimization.'
-    icon: CogIcon
-    useCases: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationProduction Planning']}
-  {
-  {
     step: '01'
     title: 'Discovery & Assessment'
     description: 'We analyze your current systems, identify opportunities, and develop a comprehensive AI strategy.'
@@ -109,8 +60,6 @@ const industryApplications = [
                 </div>;
                 <a;
                   href={solution.href}
-
-
                 >
                   Learn more <span aria-hidden="true">→</span>
                 </Link>
@@ -168,20 +117,6 @@ const industryApplications = [
                         <div className=&quot;h - 1.5 w - 1.5 bg - blue - 400 rounded - full & quot;></div>;
                         <span className=&quot;text - sm text - gray - 400 & quot;>{use_case}</span>;
                       </div>))}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Transforming Every Sector
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our AI solutions are designed to adapt and excel across diverse industries, 
-            delivering measurable results and competitive advantages.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-            {industryApplications.map((industry) => (
                   </div>;
                 </dd>;
               </div>))}
@@ -297,7 +232,7 @@ const industryApplications = [
               Get Started
             </Link>
             <a href=&quot;/services&quot; className=&quot;text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200&quot;>
-              View Services <span aria-hidden=&quot;true&quot;></span>
+              View Services <span aria-hidden=&quot;true&quot;>→</span>
             </Link>
           </div>
         </div>
@@ -312,7 +247,6 @@ const industryApplications = [
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Let's discuss how our AI solutions can accelerate your growth and give you a 
-
             competitive edge in your industry.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">

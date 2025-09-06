@@ -1,12 +1,8 @@
-
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card",
 import { Check } from "lucide-react",
-
-
-
 export function FeatureHighlights() {
 
   const highlightsData = [
@@ -73,31 +69,23 @@ function FeatureHighlights() {
         "Professional development resources and community support"
       ]
     },
+        "Create a professional profile showcasing your skills and experience";
+        "Get matched with relevant projects that fit your expertise";
+        "Secure payment processing with on - time disbursements";
+        "Build your reputation through client reviews and ratings";
+        "White-labeled talent portal with your company branding";
+        "Dedicated account management and priority support";
+        "Custom talent pools and preferred provider networks";
+        "Advanced analytics and reporting capabilities";
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",
         "Custom talent pools and preferred provider networks",
         "Advanced analytics and reporting capabilities",
         "API access for seamless integration with your HR systems",
-        "Access to enterprise clients and high - value projects",
-        "Professional development resources and community support";
-      ];
     }
-    {
-      title: "For Enterprise Clients",
-      features: [;
-        "White - labeled talent portal with your company branding";
-        "Dedicated account management and priority support";
-        "Custom talent pools and preferred provider networks";
-        "Advanced analytics and reporting capabilities";
-        "API access for seamless integration with your HR systems",
-        "Customizable workflow and approval processes";
-      ];
-    }
-  ];
-;
+  ],
+
   return (
-
-
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from "lucide-react",;
@@ -146,21 +134,11 @@ export function FeatureHighlights() {;
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed;
           </p>;
         </div>;
-
-
-
                   ))}
                 </ul>;
               </CardContent>;
             </Card>;
           ))}
-
-        </div>;
-      </div>;
-    </section>;
-  );
-}
-
     <section className="py - 16 bg - zion - blue">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 12">;

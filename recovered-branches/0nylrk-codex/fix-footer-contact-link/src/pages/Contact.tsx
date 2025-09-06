@@ -43,16 +43,11 @@ export default function Contact() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
 
-
-
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-
-
     message: ""
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -110,9 +105,6 @@ export default function Contact() {
         title: "Chat Error"
         description: "There was an error communicating with our AI assistant. Please try again."
         variant: "destructive"
-      });
-      return Promise && Promise.resolve();
-    }
 
 import { useState } from './react';
 import { Header } from '@/components / Header';
@@ -226,28 +218,12 @@ if ( {) {
 ;
   const offices = [;
 
+      });
+      return Promise && Promise.resolve();
+    }
     {
       name: "Headquarters"
       address: "123 Tech Avenue, San Francisco, CA 94105";
-
-  };
-
-  const offices = [;
-    {;
-      name: "Headquarters",;
-      address: "123 Tech Avenue, San Francisco, CA 94105";
-      phone: "+1 302 464 0950",;
-      email: "commercial@ziontechgroup && ziontechgroup.com";
-    };
-    {;
-      name: "East Coast Office",;
-      address: "456 Innovation Street, New York, NY 10001";
-      phone: "+1 302 464 0950", ;
-      email: "commercial@ziontechgroup && ziontechgroup.com";
-
-    }
-  ];
-
   },
 
   const offices = [
@@ -265,38 +241,7 @@ if ( {) {
     }
   ],
 
-
   return (
-
-    <AppLayout>;
-      <SEO
-        title="Contact Zion - Get in Touch" 
-        description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform." 
-        keywords="contact Zion, AI marketplace support, tech platform contact"
-        canonical="https://app && app.ziontechgroup.com/contact"
-      />;
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="text-center mb-16">;
-            <GradientHeading>Contact Us</GradientHeading>;
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-              Have questions or want to learn more? We'd love to hear from you.;
-            </p>;
-          </div>;
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">;
-            <div>;
-              <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>;
-              <p className="text-zion-slate-light text-lg mb-8">;
-                Whether you have a question about our platform, pricing, or anything else, ;
-                our team is ready to answer all your questions.;
-              </p>;
-
-              <form onSubmit={handleSubmit} className="space-y-6">;
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
-                  <div>;
-                    <label htmlFor="name" className="block text-white mb-2">Your Name</label>;
-
                     <Input
                       id="name"
                       name="name"
@@ -737,6 +682,9 @@ export default function Contact() {;
                   <Button;
                     on_click={() => setIsChatOpen (true)}
                     className="w - full mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  disabled={isSubmitting}>;
+                  {isSubmitting ? "Sending..." : "Send Message"}
                   >;
                     Chat With Our AI Assistant;
                   </Button>;
@@ -751,21 +699,11 @@ export default function Contact() {;
           </div>;
         </div>;
       </main>;
-
-
-
       {/* Chat Assistant Modal */}
       {isChatOpen && (;
         <ChatAssistant
           isOpen={isChatOpen}
           onClose={() => setIsChatOpen(false)}
-
-          recipient={{;
-            id: 'ai-assistant',;
-            name: 'AI Assistant',;
-            avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
-            role: 'Support Bot';
-
           }}
           onSendMessage={handleSendMessage}
         />;
@@ -784,4 +722,3 @@ export default function Contact() {;
           onSendMessage={handleSendMessage}
         />)}
     </AppLayout>);
-;

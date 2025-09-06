@@ -1,4 +1,3 @@
-
 export default function FuturisticHero() {
 
 export default function FuturisticHero() {
@@ -51,7 +50,7 @@ function FuturisticHero() {
 
         <div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>;
           <p className='text - sm text - gray - 700 dark:text - gray - 300'>;
-            Talent marketplace  Project accelerators  Secure contracts ;
+            Talent marketplace • Project accelerators • Secure contracts •;
             Integrated AI toolchain          </p > export default /**
  * FuturisticHero - Function description
  */
@@ -72,10 +71,9 @@ function FuturisticHero() {
         </div>;
         <div className="mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow">;
           <p className="text - sm text - gray - 700 dark:text - gray - 300">;
-            Talent marketplace  Project accelerators  Secure contracts  Integrated AI toolchain;
+            Talent marketplace • Project accelerators • Secure contracts • Integrated AI toolchain;
           </p>;
         </div>;
       </div>;
     </section>);
 }
-

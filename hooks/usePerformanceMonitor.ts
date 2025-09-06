@@ -1,8 +1,5 @@
 ;
 interface PerformanceMetrics {
-export function usePerformanceMonitor() {
-
-export function usePerformanceMonitor() {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -14,9 +11,6 @@ export function usePerformanceMonitor() {;
   }
     setIsSupported(true);
     const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
 
       const entries = list && list.getEntries();
       
@@ -24,30 +18,13 @@ export function usePerformanceMonitor() {;
         if (entry && entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming;
           setMetrics(prev => ({
-            ...prev
-            loadTime: navEntry.loadEventEnd - navEntry.loadEventStart
+            ...prev,
+            loadTime: navEntry && navEntry.loadEventEnd - navEntry && navEntry.loadEventStart,
           }));
         }
-            }));
-          }
-        }
-        if (entry.entryType === 'largest-contentful-paint') {
-          const lcpEntry = entry as PerformanceEntry;
-          setMetrics(prev => ({
-            ...prev
-            largestContentfulPaint: lcpEntry.startTime
-          }));
-        }
-        if (entry.entryType === 'first-input') {
-          const fidEntry = entry as PerformanceEventTiming;
-          setMetrics(prev => ({
-            ...prev
-            firstInputDelay: fidEntry.processingStart - fidEntry.startTime
-          }));
-        }
-        if (entry.entryType === 'layout-shift') {
-          const clsEntry = entry as PerformanceEntry & { value: number }
-          setMetrics(prev => ({
+          const paintEntry = entry as PerformancePaintTiming;
+          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,

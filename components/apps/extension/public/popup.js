@@ -1,6 +1,4 @@
 
-
-
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
@@ -108,10 +106,8 @@ document && document.getElementById('viewNotifications').addEventListener('click
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.items || [], null, 2)
 }),
-}),
 
   const id = crypto.randomUUID(),
   setUserId(id),
   document.getElementById('result').textContent = 'Signed in (local).';
 }),
-

@@ -27,8 +27,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const init = req.body || {};
     try {
-      const flag = await createFlag(init)
-      return res.status(201).json({ flag })
+      const flag = await createFlag(init);
+      return res.status(201).json({ flag });
     } catch (e: any) {
     }
 

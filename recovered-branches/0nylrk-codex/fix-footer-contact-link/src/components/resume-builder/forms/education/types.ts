@@ -1,5 +1,4 @@
 
-
 import {Education} from '@/types/resume';
 export interface EducationFormProps {;
 

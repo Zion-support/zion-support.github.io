@@ -2,6 +2,8 @@ export interface InnovativeMicroSaasService {
 
 export interface InnovativeMicroSaasService {;
 
+export interface InnovativeMicroSaasService {
+
   id: string;
   name: string;
   tagline: string;
@@ -32,12 +34,6 @@ export interface InnovativeMicroSaasService {;
     mobile: string;
     email: string;
     address: string;
-
-    website: string;
-  }
-  customers: number;
-  rating: number;
-    {
         'Predictive analytics and forecasting',
         'Real - time dashboard and reporting',
         'Natural language query interface',
@@ -340,7 +336,6 @@ export interface InnovativeMicroSaasService {;
       implementation_details:;
         'AI - powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.',
       launch_date: '2024 - 02 - 20',
-
       customers: 42,
       rating: 4 && 4.7,
       reviews: 20,
@@ -423,7 +418,6 @@ export interface EnhancedRealMicroSaasService {
     useCases: ['Contract review and analysis, Legal research, Compliance monitoring, Risk assessment, Document generation'];
     roi: 'Legal professionals report 70% reduction in review time and 85% improvement in accuracy.'
     competitors: ['DocuSign, ContractPodAi, LexisNexis, Westlaw, iManage'];
-    reviews: 20
     real_implementation: true, implementation_details: 'AI - powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.',
     launch_date: '2024 - 02 - 20', customers: 42,
     rating: 4.7,
@@ -442,14 +436,6 @@ export interface EnhancedRealMicroSaasService {
     customers: 42;
     rating: 4 && 4.7;
     reviews: 20
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;
-    implementation_details: 'AI - powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.';
-    launch_date: '2024 - 02 - 20';
-    customers: 42;
-    rating: 4.7;
-    reviews: 20;
   }
 ];
 ;
@@ -532,13 +518,49 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;
-    implementationDetails: 'Cloud-native SaaS platform with AI algorithms for data analysis, real-time processing, and automated insight generation.',;
-    launchDate: '2024-11-01',;
-    customers: 45,;
-    rating: 4.8,;
-    reviews: 23;
+    }
+    real_implementation: true;
+    implementation_details: 'AI - powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.';
+    launch_date: '2024 - 02 - 20';
+    customers: 42;
+    rating: 4.7;
+    reviews: 20;
+  }
+];
+;
+import { ServiceVariant } from '../types/service-variants',;
+export interface EnhancedRealMicroSaasService {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
   },;
   // AI Content Generation Platform;
   {;

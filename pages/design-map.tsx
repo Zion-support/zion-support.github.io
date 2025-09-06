@@ -107,14 +107,10 @@ export default function DesignMapPage(req, res) {
             title="Mobile Layouts"
             sections={designMap.products.mobile}
           />
-
-
             <a href="/api/design-map" className="px-3 py-2 rounded bg-gray-900 text-white text-sm">JSON</a>
             <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</a>
             <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</a>
             <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</a>
-
-
             <a href="/api/design-map" className="px-3 py-2 rounded bg-gray-900 text-white text-sm">JSON</Link>
             <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</Link>
             <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</Link>
@@ -145,15 +141,12 @@ export default function DesignMapPage(req, res) {
         </div>
       </section>
     </>
-}
               {isLoading ? 'Generating…' : 'GPT Wireframe Suggestion'}
               {isLoading ? 'Generating…' : 'GPT Wireframe Suggestion'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             </button>
           </div>
           {suggestion && (
@@ -175,14 +168,10 @@ export default function DesignMapPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
             </pre>)}
         </div>;
       </section>;
     </>);
-
-
 }
 function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string }[] }[] }) {
   return (
@@ -229,8 +218,6 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}
 }
 }
 

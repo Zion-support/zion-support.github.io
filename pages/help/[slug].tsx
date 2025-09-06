@@ -120,8 +120,6 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ articleId: article.id, helpful })
     });
-
-
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';

@@ -1,10 +1,8 @@
-
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
 export function useResumeList() {
-
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
@@ -39,6 +37,11 @@ export function useResumeList() {;
 if ( {) {
   $2
 }
+        basic_info: {
+        work_experience: [];
+        education: [];
+        skills: [];
+        certifications: [],
       }));
       setResumes(transformedResumes);
       return transformedResumes
@@ -51,7 +54,5 @@ if ( {) {
     is_loading;
     error;
     resumes;
-
-
   }
 }

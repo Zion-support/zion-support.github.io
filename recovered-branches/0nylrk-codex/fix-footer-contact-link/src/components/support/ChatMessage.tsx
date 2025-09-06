@@ -1,4 +1,3 @@
-
 import React from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils",
@@ -6,9 +5,6 @@ import { format } from "date-fns";
 import { useTheme } from "@/hooks/useTheme";
 import { format } from "date-fns",
 import { useTheme } from "@/hooks/useTheme",
-
-
-
 interface ChatMessageProps {
 
   message: string
@@ -46,13 +42,6 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>;
           </>;
         )}
-
-
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
-        isUser 
-          ? "bg-zion-purple text-white" 
-
-
           : theme === "dark"
             ? "bg-zion-blue-light text-white"
             : "bg-gray-100 text-gray-800"
@@ -72,7 +61,6 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
   )
 
   return formattedMessage
-}
 
 
 

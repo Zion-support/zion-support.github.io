@@ -62,38 +62,13 @@ export async function POST(request: NextRequest) {;
     console.error("Onboarding completion error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
+      {
+        message: 'Onboarding completed successfully'
+        user: {
+      { error: 'Internal server error' },
       { status: 500 }
     );
   }
-
-
-    // Mock user update - replace with actual database operation
-    const updatedUser = {
-      id: userId,
-      name: 'John Doe',
-      email: 'john@example.com',
-      role: 'user',
-      onboardingCompleted: true,
-      preferences
-    };
-    return NextResponse.json({
-      message: "Onboarding completed successfully",
-      user: {
-        id: updatedUser.id,
-        name: updatedUser.name,
-        email: updatedUser.email,
-        role: updatedUser.role,
-        onboardingCompleted: updatedUser.onboardingCompleted
-      }
-      { status: 200 }
-    );
-  } catch (error) {
-    console.error('Onboarding completion error:', error);
-    return NextResponse.json(
-      { status: 500 }
-    );
-  }
-}
       { status: 500 }
     );
   }

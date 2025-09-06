@@ -204,9 +204,6 @@ import Link from 'next/link';
   }
 }
   }),
-
-
-
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', '')),
     if (numPrice < 300) return 'Under $300',
@@ -310,6 +307,7 @@ import Link from 'next/link';
                 </div>
                 <div className='text-gray-400'>Real Services</div>
               </div>
+            </div>
             {/* Contact CTA */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
               <Link
@@ -500,8 +498,6 @@ import Link from 'next/link';
                           <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                           <span className='text - white font - semibold'>;
                             {service.rating}
-
-
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2 inline" />
@@ -697,6 +693,21 @@ import Link from 'next/link';
 }
                   className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300"
                 >
+                  {contactInfo.website}
+                </a>
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </>
+);
+                href={`mailto:${contactInfo && contactInfo.email}`}
+                className='flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300'>;
+                <Mail className='w-5 h-5 mr-2' />;
+                {contactInfo && contactInfo.email}
+              </a>;
+            </div>;
 
                 <a
                   href={`tel:${contactInfo.mobile}`}

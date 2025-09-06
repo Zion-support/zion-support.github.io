@@ -3,26 +3,13 @@ function resolveConflicts() {
   try {
     // Get list of conflicted files
     const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-    // For each conflicted file, accept the incoming changes (from the PR)
-    conflictedFiles.forEach(file => {
-      if (fs.existsSync(file)) {
-        console.log(`Resolving conflicts in ${file}...`);
-        // Read the file content
-        let content = fs.readFileSync(file, 'utf8');
-([\s\S]*?)
-        
-
-        // Write the resolved content back
-        fs.writeFileSync(file, content);
-        // Add the file to staging
-        execSync(`git add "${file}"`, { stdio: 'inherit' });
       }
     });
     // Handle deleted files (modify/delete conflicts)
     const deletedFiles = execSync('git ls-files --deleted', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
     return true;
   } catch (error) {
-    console && console.error(' Error resolving conflicts:', error && error.message);
+    console && console.error('❌ Error resolving conflicts:', error && error.message);
     return false;
   }
 }
@@ -31,7 +18,7 @@ function mergePR(prBranch) {
   try {
     // Try to merge
     execSync(`git merge origin/${prBranch} --no-ff`, { stdio: 'pipe' });
-    console && console.log(` Successfully merged ${prBranch}`);
+    console && console.log(`✅ Successfully merged ${prBranch}`);
     return true;
   } catch (error) {
     // Resolve conflicts
@@ -39,20 +26,20 @@ function mergePR(prBranch) {
       // Commit the merge
       try {
         execSync('git commit -m "Resolve merge conflicts and merge PR"', { stdio: 'inherit' });
-        console && console.log(` Successfully resolved conflicts and merged ${prBranch}`);
+        console && console.log(`✅ Successfully resolved conflicts and merged ${prBranch}`);
         return true;
       } catch (commitError) {
-        console && console.error(` Failed to commit merge for ${prBranch}:`, commitError && commitError.message);
+        console && console.error(`❌ Failed to commit merge for ${prBranch}:`, commitError && commitError.message);
         return false;
       }
     } else {
-      console && console.error(` Failed to resolve conflicts for ${prBranch}`);
+      console && console.error(`❌ Failed to resolve conflicts for ${prBranch}`);
 #!/usr / bin / env node;
 import {exec_sync} from 'child_process';
 import fs from 'fs';
 import path from 'path';
 ;
-console.log (' Starting automatic merge conflict resolution...');
+console.log ('🔧 Starting automatic merge conflict resolution...');
 ;
 // Function to resolve conflicts by accepting the incoming changes;
 /**
@@ -76,101 +63,6 @@ function resolve_conflicts() {
         // Read the file content;
         let content = fs.readFileSync (file, 'utf8');
 ;
-;
-        // Write the resolved content back;
-        fs.writeFileSync (file, content);
-;
-        // Add the file to staging;
-        exec_sync (`git add "${file}"`, { stdio: 'inherit' });
-;
-        console.log (` Resolved conflicts in ${file}`);
-      }
-    });
-;
-    // Handle deleted files (modify / delete conflicts);
-    const deleted_files = exec_sync ('git ls - files --deleted', { encoding: 'utf8' }).trim ().split ('\n').filter (Boolean);
-;
-    deleted_files.for_each (file => {
-      console.log (`Handling deleted file: ${file}`);
-      // Remove from index to accept the deletion;
-      exec_sync (`git rm "${file}"`, { stdio: 'inherit' });
-    });
-;
-    console.log (' All conflicts resolved!');
-    return true;
-  } catch (error) {
-    console.error (' Error resolving conflicts:', error.message);
-    return false;
-  }
-}
-// Function to merge a PR;
-/**
- * mergePR - Function description
- */
-function mergePR() {
-  try {
-    console.log (`\n Attempting to merge ${pr_branch}...`);
-;
-    // Try to merge;
-    exec_sync (`git merge origin/${pr_branch} --no - ff`, { stdio: 'pipe' });
-    console.log (` Successfully merged ${pr_branch}`);
-    return true;
-  } catch (error) {
-    console.log (`  Merge conflicts detected in ${pr_branch}`);
-;
-    // Resolve conflicts;
-    if () {) {
-  $2
-}
-      // Commit the merge;
-      try {
-        exec_sync ('git commit -m "Resolve merge conflicts and merge PR"', { stdio: 'inherit' });
-        console.log (` Successfully resolved conflicts and merged ${pr_branch}`);
-        return true;
-      } catch (commit_error) {
-        console.error (` Failed to commit merge for ${pr_branch}:`, commit_error.message);
-        return false;
-      }
-    } else {
-      console.error (` Failed to resolve conflicts for ${pr_branch}`);
-      return false;
-    }
-  }
-}
-  for (const branch of prBranches) {
-    try {
-      // Fetch the latest changes
-      execSync('git fetch origin', { stdio: 'inherit' });
-      // Check if branch exists
-// Main execution;
-async /**
- * main - Function description
- */
-function main() {
-  const pr_branches = [;
-    'cursor / fix - lint - push - and - merge - to - main - 8bf8',
-    'cursor / fix - lint - push - and - merge - to - main - 592f',
-    'cursor / fix - lint - push - and - merge - to - main - 1370';
-  ];
-;
-  console.log (' Starting PR merge process...');
-;
-  for (const branch of pr_branches) {
-    try {
-      // Fetch the latest changes;
-      exec_sync ('git fetch origin', { stdio: 'inherit' });
-;
-      // Check if branch exists;
-      try {
-        exec_sync (`git show - ref --verify --quiet refs / remotes / origin/${branch}`, { stdio: 'pipe' });
-      } catch {
-        continue;
-      }
-      // Attempt to merge
-      const success = mergePR(branch);
-      if (success) {
-        console && console.log(` Successfully processed ${branch}`);
-      } else {
         try {
           exec_sync ('git merge --abort', { stdio: 'pipe' });
         } catch (abort_error) {
@@ -185,11 +77,11 @@ function main() {
 }
     }
   }
-  console.log ('\n PR merge process completed!');
+  console.log ('\n🎉 PR merge process completed!');
 ;
   // Show final status;
   try {
-    console.log ('\n Final git status: '),
+    console.log ('\n📊 Final git status: '),
     exec_sync ('git status --short', { stdio: 'inherit' });
   } catch (error) {
     console.error ('Error getting git status:', error.message);

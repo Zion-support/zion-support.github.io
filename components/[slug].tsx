@@ -25,6 +25,8 @@ import { industryRealServices  } from '../data/industry-real-services';
 import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
 
+export default function DynamicServicePage() {
+
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
   const service = useMemo(() => {
@@ -138,12 +140,12 @@ export default function DynamicServicePage() {;
         return url && url.pathname.replace(/^\/+|\/+$/g, '') === slug && slug.replace(/^\/+|\/+$/g, '');
       } catch {;
         return false;        return false;
-        return false
       }
     });
     if (byLink) return byLink;
     const byId = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.id === slug);
     if (byId) return byId;
+  }, [slug]);
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>
             <p className="text-gray-300 mb-8">We couldn't find the service you were looking for. Explore all services below.</p>
@@ -182,7 +184,7 @@ export default function DynamicServicePage() {;
                     </span>;
                   </div>;
                   <div className='text-slate-400'>;
-                    {service && service.trialDays}-day free trial  Setup:{' '}
+                    {service && service.trialDays}-day free trial • Setup:{' '}
                     {service && service.setupTime}
                   </div>;
                 </div>;
@@ -245,7 +247,7 @@ export default function DynamicServicePage() {;
                     </span>;
                   </div>;
                   <div className='text - slate - 400'>;
-                    {service.trial_days}-day free trial  Setup:{' '}
+                    {service.trial_days}-day free trial • Setup:{' '}
                     {service.setup_time}
                   </div>;
                 </div>;
@@ -360,30 +362,11 @@ function normalizeSlug(): any (value: string): string {;
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, '-');
     .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(): any (link?: string): string | null {;
-
-
   if (!link) return null;
   try {;
     const url = new URL(link);
-
-    const path = url && url.pathname.replace(/^\/+|\/+$/g, '');
-    // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/...";
-    if (path && !path && path.includes('/')) return path;
-    return null;
-  } catch {;
-    return null;
-
-
-  };
 }
-
-
   const services = collectAllServices();
-
-  const candidateSlugs = new Set<string>(),;
-  // Gather existing root-level page slugs to avoid conflicts;
-  const pagesDir = path && path.join(process && process.cwd(), 'pages');
-
   const staticSlugs = new Set<string>();
   try {;
     const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true });
@@ -527,7 +510,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed, the component resolves the service client-side.;
   return { props: {} }
-
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array.from (candidate_slugs).filter (
     slug => !static_slugs.has (slug));

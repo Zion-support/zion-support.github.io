@@ -1,4 +1,3 @@
-
 interface SlackCommand {
   text: string;
 }
@@ -37,12 +36,13 @@ class MockApp {
   command(commandName: string, handler: Function) {
 
 
+interface SafeConsole {
+  log: (message: string) => void;
+}
     return this
   }
   async start(port?: number): Promise<void> {
     // Safely log without direct console reference
-    const safeConsole = typeof globalThis !== 'undefined' ? globalThis && globalThis.console : undefined;
-    if (safeConsole && safeConsole.log) {
 
 
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
@@ -108,22 +108,19 @@ class MockApp {;
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
     if (safeConsole && safeConsole.log) {;
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
-
-
-
     }
     return Promise.resolve()
   }
 }
-
-
+      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port |3000}!`)
+    }
+    return Promise && Promise.resolve()
+  }
+}
 // Create a mock app instance
 const app = new MockApp();
 async function askZionGPT(prompt: string): Promise<string> {
   // Safely log without direct console reference
-  }
-}),;
-;
   }
   return `AI response to: ${prompt}`
 }
@@ -137,11 +134,6 @@ async function askZionGPT(prompt: string): Promise<string> {
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
   await ack();
   const [action, ...args] = command.text.split(/\s+/);
-
-app && app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
-  await ack();
-  const [action, ...args] = command && command.text.split(/\s+/);
-
 // Declare available globals;
 declare const global_this: {
   console?: SafeConsole;
@@ -149,7 +141,6 @@ declare const global_this: {
     env: {
       PORT?: string,
       [key: string]: string | undefined;
-    }
     }
   }
 }
@@ -217,12 +208,6 @@ app.command ('/zion', async ({ command, ack, respond }: { command: SlackCommand,
           '`/zion track - project [name]` - project status\n' +;
           '`/zion help` - show this list');
   }
-
-  const env = typeof globalThis !== 'undefined' && globalThis && globalThis.process ? 
-    globalThis && globalThis.process.env : {};
-  const port = env && env.PORT ? Number(env && env.PORT) : 3000;
-  await app && app.start(port)
-
 })();
 export default app;
 
@@ -231,5 +216,17 @@ export default app;
 (async () => {;
   // Get PORT from environment or use default;
 
+})();
+export default app;
 
+;
+// Mock startup with safer environment access;
+(async () => {
+  // Get PORT from environment or use default;
+  const env = typeof global_this !== 'undefined' && global_this.process ?;
+    global_this.process.env : {}
+  const port = env.PORT ? Number (env.PORT) : 3000;
+  await app.start (port);
+})();
+;
 export default app;

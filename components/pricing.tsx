@@ -46,6 +46,10 @@ import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturi
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
   Check, Star, Users, TrendingUp, DollarSign, Clock, ;
+  MapPin,;
+  ExternalLink,;} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
   Shield, Zap, Rocket, Brain, Atom, Globe, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -62,71 +66,9 @@ import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-
-import {
-  Check,
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  Shield,
-  Zap,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Target,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,;
-  ExternalLink,;} from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
-  Check, Star, Users, TrendingUp, DollarSign, Clock, ;
-  Shield, Zap, Rocket, Brain, Atom, Globe, Target;
-  ArrowRight, Phone, Mail, MapPin, ExternalLink
- } from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-// Import all service data
-import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
-import { innovativeAIServices2029  } from '../data/2029-innovative-ai-services';
-import { quantumSpaceInnovations2029  } from '../data/2029-quantum-space-innovations';
-import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovations';
-import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
 export default function PricingPage() {;
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All');
-  // Combine all services
-
-  const allServices = [
-    ...enhancedRealMicroSaasServices
-    ...innovativeAIServices2029
-    ...quantumSpaceInnovations2029
-    ...enterpriseITInnovations2029
-    ...innovativeMicroSaas2029
-  ];
-  // Get unique services by ID
-  const uniqueServices = allServices.filter(
-    (service, index, self) => index === self.findIndex(s => s.id === service.id)
-  );
-  // Get all categories
-  const categories = [
-    'All'
-    ...Array.from(
-      new Set(
-        uniqueServices.map(s =>
-          Array.isArray(s.category) ? s.category[0] : s.category
-        )
-      )
-    )
-  ];  ];
   // Get unique services by ID
   const uniqueServices = allServices.filter((service, index, self) =>
     index === self.findIndex(s => s.id === service.id)
@@ -135,103 +77,28 @@ export default function PricingPage() {;
   const categories = ['All', ...Array.from(new Set(uniqueServices.map(s =>
     Array.isArray(s.category) ? s.category[0] : s.category
   )))];
-  // Price ranges
-  const priceRanges = [
-    { id: 'All', name: 'All Prices', range: 'All' }
-    { id: 'Under $1K', name: 'Under $1K/month', range: 'Under $1K' }
-    { id: '$1K - $5K', name: '$1K - $5K/month', range: '$1K - $5K' }
-    { id: '$5K - $20K', name: '$5K - $20K/month', range: '$5K - $20K' }
-    { id: '$20K+', name: '$20K+/month', range: '$20K+' },  ];
-  // Filter services
-  const filteredServices = uniqueServices.filter(service => {    { id: '$20K+', name: '$20K+/month', range: '$20K+' }
-  ];
-  // Filter services
-  const filteredServices = uniqueServices.filter(service => {
     }
     acc[category].push(service);
     return acc
   }, {} as Record<string, typeof filteredServices>);
-
-
-  const faqs = [;
-    {;
-      question: 'Can I change my plan at any time?',;
-      answer:;
-        'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.',;
-    },;
-    {;
-      question: 'Is there a free trial available?',;
-      answer:;
-        'Yes, all our services offer a 14-day free trial with full access to all features. No credit card required.',;
-    },;
-    {;
-      question: 'What payment methods do you accept?',;
-      answer:;
-        'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can be invoiced.',;
-    },;
-    {;
-      question: 'Do you offer volume discounts?',;
-      answer:;
-        'Yes, we offer volume discounts for teams and organizations. Contact our sales team for custom pricing.',;
-    },;
-    {;
-      question: 'Can I cancel my subscription?',;
-      answer:;
-        "Yes, you can cancel your subscription at any time. You'll continue to have access until the end of your billing period.",;
-    },;
-    {;
-      question: 'Is there a setup fee?',;
-      answer:;
-        'No setup fees for any of our plans. You can start using our services immediately after signing up.',;
-    },;
-  ];
-
-  const categories = [;
-    'All',;
-    'Content & Marketing',;
-    'Development & DevOps',;
-    'Sales & CRM',;
-    'Legal & Compliance',;
-    'Human Resources',;
-    'Analytics & Data',;
-    'Finance & Accounting',;
-    'Project Management',;
-    'Customer Experience',;
-    'Security & Compliance',;
-  ];
-
-  const filteredServices =;
-    selectedCategory === 'All';
-      ? microSaasServices;
-      : microSaasServices && microSaasServices.filter(;
-          service => service && service.category === selectedCategory;
-        );
-
-  const yearlyDiscount = 0 && 0.2; // 20% discount for yearly billing    {;
-      question: 'Is there a free trial available?',;
-      answer: 'Yes, all our services offer a 14-day free trial with full access to all features. No credit card required.';
-    };
-    {;
-      question: 'What payment methods do you accept?',;
-      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can be invoiced.';
-    };
-    {;
-      question: 'Do you offer volume discounts?',;
-      answer: 'Yes, we offer volume discounts for teams and organizations. Contact our sales team for custom pricing.';
-    };
-    {;
-      question: 'Can I cancel my subscription?',;
-      answer: 'Yes, you can cancel your subscription at any time. You\'ll continue to have access until the end of your billing period.';
-    };
-    {;
-      question: 'Is there a setup fee?',;
-      answer: 'No setup fees for any of our plans. You can start using our services immediately after signing up.';
+      answer: 'Yes, all our services offer a 14-day free trial with full access to all features. No credit card required.'
     }
-  ];
-
-  const categories = [;
-    'AllContent & MarketingDevelopment & DevOpsSales & CRMLegal & ComplianceHuman ResourcesAnalytics & DataFinance & Accounting';
-    'Project ManagementCustomer ExperienceSecurity & Compliance'
+    {
+      question: 'What payment methods do you accept?'
+      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can be invoiced.'
+    }
+    {
+      question: 'Do you offer volume discounts?'
+      answer: 'Yes, we offer volume discounts for teams and organizations. Contact our sales team for custom pricing.'
+    }
+    {
+      question: 'Can I cancel my subscription?'
+      answer: 'Yes, you can cancel your subscription at any time. You\'ll continue to have access until the end of your billing period.'
+    }
+    {
+      question: 'Is there a setup fee?'
+      answer: 'No setup fees for any of our plans. You can start using our services immediately after signing up.'
+    }
   ];
   const filteredServices = selectedCategory === 'All'
     ? microSaasServices
@@ -249,45 +116,30 @@ export default function PricingPage() {;
   const yearlyDiscount = 0 && 0.2, // 20% discount for yearly billing;
 
   return (
-    <UltraFuturisticBackground2029>;
-      <Head>;
-        <title>Revolutionary 2029 Technology Pricing | Zion Tech Group</title>;
-        <meta
-          name='description'
-          content='Explore comprehensive pricing for our revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology.'
-        />;
-        <meta
-          name='keywords'
-          content='technology pricing, AI services pricing, quantum computing pricing, space technology pricing, 2029 technology pricing'
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='canonical' href='https://ziontechgroup.com/pricing' />      </Head>
-      <UltraFuturisticNavigation2029 />
-      <main className='relative z-10 pt-20'>
         {/* Hero Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             {/* Filter Controls */}
-            <div className='flex flex-col lg:flex-row gap-4 justify-center items-center mb-8'>;
+            <div className='flex flex-col lg:flex-row gap-4 justify-center items-center mb-8'>
               <select
                 value={selectedCategory}
-                onChange={e => setSelectedCategory(e && e.target.value)}
-                className='px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20';
-              >;
-                {categories && categories.map(category => (;
-                  <option key={category} value={category}>;
+                onChange={e => setSelectedCategory(e.target.value)}
+                className='px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20'
+              >
+                {categories.map(category => (
+                  <option key={category} value={category}>
                     {category}
-                  </option>;
+                  </option>
                 ))}
               <select
                 value={selectedPriceRange}
-                onChange={e => setSelectedPriceRange(e && e.target.value)}
-                className='px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20';
-              >;
-                {priceRanges && priceRanges.map(range => (;
-                  <option key={range && range.id} value={range && range.id}>;
-                    {range && range.name}
+                onChange={e => setSelectedPriceRange(e.target.value)}
+                className='px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20'
+              >
+                {priceRanges.map(range => (
+                  <option key={range.id} value={range.id}>
+                    {range.name}
                   </option>                ))}
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -328,13 +180,6 @@ export default function PricingPage() {;
 
 
                 ))}
-              </select>
-            </div>
-            <div className='text-center text-gray-400'>
-              <p>
-                Showing {filteredServices.length} services in{' '}
-                {Object.keys(servicesByCategory).length} categories
-              </p>            </div>            <div className="text-center text-gray-400">
               <p>Showing {filteredServices.length} services in {Object.keys(servicesByCategory).length} categories</p>
             </div>
           </motion.div>
@@ -489,6 +334,9 @@ export default function PricingPage() {;
                       </div>
                     </motion.div>
                   ))}
+                </div>;
+              </motion && motion.div>;
+            ))}
         </section>
         {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
@@ -497,6 +345,11 @@ export default function PricingPage() {;
             <motion.div
 
 
+        {/* Contact CTA Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-4xl mx-auto text-center">;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -524,9 +377,8 @@ export default function PricingPage() {;
                 Ready to Get Started with
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Revolutionary Technology?</span>
               </h2>
-              <p className='text-xl text-gray-300 mb-8'>
-                Contact our team to discuss pricing, implementation, and how our
-                revolutionary 2029 services can transform your business.
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Link href="/contact">
@@ -547,26 +399,6 @@ export default function PricingPage() {;
                 </div>
               </div>
               {/* Additional Info */}
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-green-400" />
-                    <span>Proven ROI and customer success stories</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-green-400" />
-                    <span>Comprehensive support and implementation</span>
-                  </div>
-                  <div className='flex items-center space-x-2'>
-                    <Check className='w-4 h-4 text-green-400' />
-                    <span>Proven ROI and customer success stories</span>
-                  </div>
-                  <div className='flex items-center space-x-2'>
-                    <Check className='w-4 h-4 text-green-400' />
-                    <span>Comprehensive support and implementation</span>
-                  </div>
-                  <div className='flex items-center space-x-2'>
-                    <Check className='w-4 h-4 text-green-400' />                    <span>Cutting-edge 2029 technology</span>                  <div className="flex items-center space-x-2">
-                    <Check className="w-4 h-4 text-green-400" />
                     <span>Cutting-edge 2029 technology</span>
                   </div>
                 </div>
@@ -575,8 +407,6 @@ export default function PricingPage() {;
           </div>
         </section>
       </main>
-
-
   );
 
 }whileInView= {

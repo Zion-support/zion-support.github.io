@@ -41,8 +41,6 @@ const AdminReviewsPage: NextPage = () => {;
 
 
     if (res.ok) refresh()
-
-
   }
 }
     } catch (error) {
@@ -76,8 +74,8 @@ const AdminReviewsPage: NextPage = () => {;
         <div className="space-y-4">
           {pending.map((r) => (
             <div key={r.id} className="border rounded p-3">
-              <div className="text-sm text-gray-600 mb-1">Project: {r.projectId}  To: {r.toRole} {r.toId}</div>
-              <div className="font-medium">{r.rating}  {r.text}</div>
+              <div className="text-sm text-gray-600 mb-1">Project: {r.projectId} • To: {r.toRole} {r.toId}</div>
+              <div className="font-medium">{r.rating}★ — {r.text}</div>
               <div className="mt-2 flex gap-2">
                 <button className="enhanced-button enhanced-button-primary" onClick={() => moderate('approve', r.id)}>Approve</button>
                 <button className="enhanced-button enhanced-button-secondary" onClick={() => moderate('remove', r.id)}>Remove</button>
@@ -93,6 +91,13 @@ const AdminReviewsPage: NextPage = () => {;
       </section>
     </main>
   )
+
+},
+export default AdminReviewsPage,
+},
+
+},
+export default AdminReviewsPage,
 
 },
 export default AdminReviewsPage,

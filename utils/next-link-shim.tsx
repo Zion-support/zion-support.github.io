@@ -6,6 +6,11 @@
 };
 };
 };
+import React from 'react';
+type Href = string | { pathname?: string; href?: string };
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: Href;
+  children: React.ReactNode;
 };
 };
   return (;
@@ -14,9 +19,6 @@
 };
 };
 };
-import React from 'react';
-// Define HTMLAnchorElement if not available
-interface HTMLElement {
 
 
 class ErrorBoundary extends React.Component {
@@ -72,6 +74,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 };
 }
+}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 };
 };
   return (;
@@ -80,8 +83,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 };
 };
 };
+import React from 'react';
+  className: string;
+  id: string;
+  innerHTML: string;
+  textContent: string | null;
+  style: { [key: string]: string }
 }
-function resolveHref(href: Href): string {
+  tagName: 'A';
+  href: string;
+  target: string;
+}
   if (typeof href === 'string') return href;
   return href?.pathname |(href as { href?: string })?.href |'#';
 }
@@ -98,7 +110,6 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
 
     });
   }
-
 import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -145,13 +156,22 @@ import React from 'react'; type Href = string | { pathname?: string; href?: stri
 }
 
 
+}
+
+
 
 }
 
 }
 
-}
-
+;
+// Define HTMLAnchorElement if not available;
+interface HTMLElement {
+  class_name: string;
+  id: string;
+  innerHTML: string;
+  text_content: string | null;
+  style: { [key: string]: string }
 }
 interface HTMLAnchorElement extends HTMLElement {
   tag_name: 'A';

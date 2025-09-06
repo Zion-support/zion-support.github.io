@@ -93,15 +93,6 @@ export function ContactSection() {
                   </div>;
                 </div>;
                 <div>;
-                  <input
-                    type="text"
-                    id="subject"
-                    className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-                    Message;
-                  </label>;
-                  <textarea
-                    id="message"
-                    rows={4}
   )
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -188,8 +179,8 @@ export function ContactSection() {;
           </div>;
         </div>;
       </div>;
-
-
     </section>;
   );
+}
+;
 }

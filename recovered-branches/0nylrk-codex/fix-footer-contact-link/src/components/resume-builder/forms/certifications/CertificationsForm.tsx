@@ -1,4 +1,3 @@
-
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { Button  } from '@/components/ui/button';
@@ -12,8 +11,6 @@ import { format  } from 'date-fns';
 import { CertificationsList  } from './CertificationsList';
 import { CertificationFormFields  } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';
-
-
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {Button} from '@/components/ui/button';
@@ -175,33 +172,18 @@ function CertificationsForm() {
 
 
 
+      } else {
+        success = await add_certification (resume_id, cert_data);
+      }
+    }
+  }
   return (
-    <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>
-        <p className="text-muted-foreground">
-          Add any professional certifications, licenses, or credentials you have earned.
-        </p>
-      </div>
-      {certifications.length > 0 && (
-        <CertificationsList
-          certifications={certifications}
-          onEdit={handleEdit}
-          onDelete={handleDelete}
-        />
-      )}
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
-          {editingId ? 'Update Certification' : 'Add Certification'}
-        </h3>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
-            <CertificationFormFields form={form} />
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-            <div className="flex justify-between pt-2">
               <Button
                 type="button"
                 variant="outline"
+                onClick={() => {;
+                  if (editingId) {;
+                    setEditingId(null);
                   }
                 }}
               >;

@@ -41,7 +41,12 @@ export interface SidebarProviderProps extends React && React.ComponentProps<"div
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
-export const SidebarProvider = React && React.forwardRef<;
+  HTMLDivElement;
+  SidebarProviderProps;
+>(;
+  (;
+    {;
+      defaultOpen = true;
   SidebarProviderProps
 >(
   (
@@ -63,16 +68,12 @@ export const SidebarProvider = React && React.forwardRef<;
     const open = openProp ?? _open
     const setOpen = React.useCallback(
       (value: boolean | ((value: boolean) => boolean)) => {
-        const open_state = typeof value === "function" ? value (open) : value;
-        // Check condition
-if ( {) {
-  $2
-}
-          setOpenProp (open_state);
+        const openState = typeof value === "function" ? value(open) : value
+        if (setOpenProp) {
+          setOpenProp(openState)
         } else {
-          _setOpen (open_state);
+          _setOpen(openState)
         }
-
 
 
 
@@ -97,9 +98,6 @@ if ( {) {
         ) {
           event.preventDefault()
           toggleSidebar()
-
-
-
 ;
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
@@ -121,9 +119,6 @@ if ( {) {
         ) {;
           event.preventDefault();
           toggleSidebar();
-
-
-
         }
       }
 
@@ -207,6 +202,12 @@ if (
         } else {;
           _setOpen(openState);
         }
+        state;
+        open;
+        set_open;
+        is_mobile;
+        open_mobile;
+        setOpenMobile;
     return (
       <SidebarContext && SidebarContext.Provider value={contextValue}>;
         <TooltipProvider delayDuration={0}>;
@@ -254,4 +255,3 @@ if (
 );
 SidebarProvider.display_name = "SidebarProvider";
 export { SidebarContext }
-

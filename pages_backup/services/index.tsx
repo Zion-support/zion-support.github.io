@@ -152,7 +152,6 @@ const ServicesIndex: NextPage = () => {
         'Custom Reporting Solutions'
       ],
       pricing: 'Starting at $1,800/month',
-      icon: '',
       link: '/services/data-analytics'
   const microSaasServices = [
     {

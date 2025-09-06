@@ -15,6 +15,29 @@
       "success": false,
 
 
+      "errors": [],
+      "warnings": []
+    },
+    "securityAudit": {
+      "success": true,
+
+      "duration": 1683,
+
+      "errors": [],
+      "warnings": []
+    },
+    "buildOptimization": {
+      "success": true,
+
+      "duration": 6198,
+
+      "errors": [],
+      "warnings": []
+    },
+    "seoOptimization": {
+      "success": true,
+
+      "duration": 46,
       "duration": 5840,
       "errors": [
         "spawnSync /bin/sh ENOBUFS",
@@ -39,6 +62,15 @@
       "success": false,
 
 
+      "errors": [],
+      "warnings": []
+    },
+    "performanceOptimization": {
+      "success": true,
+
+      "duration": 7154,
+
+      "errors": [],
       "duration": 585,
       "errors": [
         "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
@@ -56,6 +88,11 @@
     "deployment": {
       "success": true,
 
+
+      "errors": [],
+      "warnings": []
+    }
+  }
 
       "duration": 1619,
       "errors": [],

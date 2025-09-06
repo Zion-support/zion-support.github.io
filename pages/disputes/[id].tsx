@@ -131,9 +131,6 @@ export default function DisputeDetailPage(req, res) {
             <div className="p-3 border rounded">
               <div className="font-medium text-gray-500">Project</div>
               <div className="mt-1">{dispute.projectId}</div>
-
-
-
             </div>
             <div className="p-3 border rounded">
               <div className="font-medium text-gray-500">Client</div>
@@ -144,8 +141,6 @@ export default function DisputeDetailPage(req, res) {
               <div className="mt-1">{dispute.talentUserId}</div>
             </div>
           </div>
-
-
           </div>
 
           {activeTab === 'Overview' && (
@@ -172,15 +167,11 @@ export default function DisputeDetailPage(req, res) {
                       <div className="text-sm">{m.authorRole} messaged</div>
                     </li>
 
-
                     <li className="mb-6 ml-4">
                       <div className="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white" />
                       <time className="text-xs text-gray-500">{new Date(dispute.resolvedAt).toLocaleString()}</time>
                       <div className="text-sm">Case resolved</div>
                     </li>
-
-
-
 
           {activeTab === 'Messages' && (
             <div className="space-y-4">
@@ -200,23 +191,6 @@ export default function DisputeDetailPage(req, res) {
                   </ul>;
                 )}
 
-              </div>
-              {user.role !== 'guest' && (
-                      <li key={m.id} className="text-sm">
-                        <div className="text-gray-500 text-xs">{m.authorRole} • {new Date(m.createdAt).toLocaleString()}</div>
-                        <div className="whitespace-pre-wrap">{m.body}</div>
-                      </li>
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </ul>;
-                )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
               </div>
               {user.role !== 'guest' && (
                 <div className="flex gap-2">
@@ -242,7 +216,7 @@ export default function DisputeDetailPage(req, res) {
                       <div className='text-sm'>;
                         <div className='font-medium'>{a && a.fileName}</div>;
                         <div className='text-xs text-gray-500'>;
-                          {a && a.mimeType}  {(a && a.fileSize / 1024).toFixed(1)} KB;
+                          {a && a.mimeType} • {(a && a.fileSize / 1024).toFixed(1)} KB;
                         </div>;
                       </div>;
                       <a
@@ -321,9 +295,6 @@ export default function DisputeDetailPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
           {activeTab === 'Admin Notes' && (
             <div className="space-y-4">
               {user.role !== 'admin' ? (

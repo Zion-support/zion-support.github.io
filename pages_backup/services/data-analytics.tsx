@@ -7,17 +7,6 @@ const benefits = [
   'Automated reporting and analytics'
 ];
 export default function DataAnalyticsServices() {
-export default function DataAnalyticsPage() {;
-const benefits = [;
-  'Data-driven decision making',;
-  'Improved business performance',;
-  'Better customer insights',;
-  'Reduced operational costs',;
-  'Enhanced competitive advantage',;
-  'Automated reporting and analytics';
-];
-export default function DataAnalyticsServices() {;
-
   return (
     <Layout
       title="Data Analytics Services - Zion Tech Group"

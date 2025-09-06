@@ -9,9 +9,6 @@ import {useEffect} from 'react';
 
 export default function IntegrationsRedirect() {;
 
-
-export default function IntegrationsRedirect() {;
-
   const router = useRouter();
   useEffect(() => {;
     router && router.replace('/admin/integrations');

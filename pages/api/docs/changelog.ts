@@ -8,23 +8,10 @@
       res.status(500).json({ error: e?.message |"Failed to read changelog" });
     }
     return;
-
   }
 
   if (req.method === 'POST') {
     try {
-      const body =
-        typeof req && req.body === "string" ? JSON && JSON.parse(req && req.body) : req && req.body;
-      const payload = { content: body?.content || "" };
-      fs && fs.mkdirSync(path && path.dirname(filePath), { recursive: true });
-      fs && fs.writeFileSync(filePath, JSON && JSON.stringify(payload, null, 2));
-      res && res.status(200).json({ ok: true });
-    } catch (e: any) {
-      res
-        .status(500)
-        .json({ error: e?.message || "Failed to write changelog" });
-    }
-  }
 
     } catch (e: any) {
       res
@@ -85,7 +72,3 @@ if ( {) {
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
-
-
-
-

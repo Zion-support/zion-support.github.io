@@ -8,8 +8,6 @@ export default function Quiz({ questions, onComplete }: Props) {;
     0
   );
   function submit() {
-
-
     setSubmitted(true);
     onComplete(score);
   }
@@ -25,7 +23,6 @@ export default function Quiz({ questions, onComplete }: Props) {;
               <label key={i} className='flex items-center gap-2'>;
                 <input
   function submit() {
-    setSubmitted(true);
   function submit() {
 
     setSubmitted(true)

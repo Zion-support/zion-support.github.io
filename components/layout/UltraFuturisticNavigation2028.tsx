@@ -58,6 +58,7 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
+import {
   Menu,
   X,
   ChevronDown,
@@ -108,19 +109,12 @@ import {
   Mountain,
   Code,
   Wrench,
-  Smartphone,;
-  BarChart3,;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, ;
 
   Smartphone,;
   BarChart3,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
-
-
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -137,11 +131,8 @@ import {
     ];
   };
 
-
     ];
   };
-
-
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket }
@@ -151,25 +142,42 @@ const companyLinks = [
     icon: Star
   }
   {
-    name: ' 2028 Pricing'
-    href: '/revolutionary-2028-pricing'
-    icon: DollarSign
-  },  { name: ' Case Studies', href: '/case-studies', icon: Briefcase }
-  { name: ' Blog & Resources', href: '/blog', icon: BookOpen }
-  { name: ' About Us', href: '/about', icon: Users }
-  { name: ' Contact', href: '/contact', icon: MessageCircle }
-  { name: ' Support', href: '/support', icon: ShieldCheck },];  { name: ' Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star }
-  { name: ' 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign }
-  { name: ' Case Studies', href: '/case-studies', icon: Briefcase }
-  { name: ' Blog & Resources', href: '/blog', icon: BookOpen }
-  { name: ' About Us', href: '/about', icon: Users }
-  { name: ' Contact', href: '/contact', icon: MessageCircle }
-  { name: ' Support', href: '/support', icon: ShieldCheck },  { name: ' Support', href: '/support', icon: ShieldCheck }
-  { name: ' Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: ' About Us', href: '/about', icon: Users },
-  { name: ' Contact', href: '/contact', icon: MessageCircle },
-  { name: ' Support', href: '/support', icon: ShieldCheck }
-];
+    services: [;
+      {;
+        name: 'Carbon Footprint Tracking',;
+        href: '/carbon-footprint-tracking',;
+        description: 'Monitor environmental impact',;
+        price: '$1,499/month',;
+      },;
+      {;
+        name: 'Renewable Energy Management',;
+        href: '/renewable-energy-management',;
+        description: 'Optimize green energy',;
+        price: '$2,999/month',;
+      },;
+      {;
+        name: 'Waste Management AI',;
+        href: '/waste-management-ai',;
+        description: 'Intelligent waste optimization',;
+        price: '$1,999/month',;
+      },;
+      {;
+        name: 'Sustainable Supply Chain',;
+        href: '/sustainable-supply-chain',;
+        description: 'Green supply chain solutions',;
+        price: '$3,999/month',;
+      },;
+    ],;
+  },];      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/month' };
+    title: '🌍 Sustainability & Green Tech',
+    icon: Leaf,
+    color: 'from - emerald - 600 to - green - 600',
+    description: 'Environmental solutions',
+      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/month' };
+      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/month' };
+      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
+    ];
+  }
   { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
   { name: '🎯 About Us', href: '/about', icon: Users },
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },
@@ -195,11 +203,6 @@ const companyLinks = [;
   { name: '📱 Mobile Apps', href: '/mobile', icon: Smartphone },
   { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud },
   { name: '🔐 Security Center', href: '/security', icon: Shield },
-
-
-
-
-
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -207,7 +210,6 @@ const companyLinks = [;
   const closeMenu = () => setIsOpen(false);
     setActiveCategory(null);
   };
-
   const filteredServices = serviceCategories && serviceCategories.flatMap(category =>;
     category && category.services.filter(;
       service =>;
@@ -215,10 +217,6 @@ const companyLinks = [;
         service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())    );
   );
   return (
-
-    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  }
-
-
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
 
@@ -232,10 +230,6 @@ const companyLinks = [;
   );
 
   return (
-
-    <nav className="relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30">
-      {/* Top Contact Bar */}
-
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10 text-xs text-purple-200">
@@ -270,7 +264,6 @@ const companyLinks = [;
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-
           {/* Logo */}
           <div className='flex items-center'>;
             <Link href='/' className='flex items-center space-x-3 group'>;
@@ -333,10 +326,26 @@ const companyLinks = [;
                         <div className="space-y-2">;
                           {category && category.services.slice(0, 2).map((service) => (;
                             <Link
-
-
                             </Link>
                           ))}
+                        </div>;
+                      </div>;
+                    ))}
+                  </div>;
+                  <div className='mt-6 pt-6 border-t border-purple-500/20'>;
+                    <div className='flex items-center justify-between'>;
+                      <p className='text-purple-300'>;
+                        Explore all our cutting-edge services;
+                      </p>;
+                      <Link
+                        href='/services'
+                        className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                  <div className="mt-6 pt-6 border-t border-purple-500/20">;
+                    <div className="flex items-center justify-between">;
+                      <p className="text-purple-300">Explore all our cutting-edge services</p>;
+                      <Link
+                        href="/services"
+                        className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
+                        View All Services
                       </Link>;
                     </div>;
                   </div>;
@@ -377,8 +386,6 @@ const companyLinks = [;
               Get Started;
             </Link>;
           </div>;
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
             <button
               onClick={toggleMenu}
               className='text-purple-200 hover:text-white transition-colors p-2'>;
@@ -395,10 +402,6 @@ const companyLinks = [;
         </div>;
       </div>;
 
-
-
-
-
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -406,7 +409,6 @@ const companyLinks = [;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-
 
           >
             <div className='px-4 py-6 space-y-6'>
@@ -437,25 +439,46 @@ const companyLinks = [;
                         </Link>
 
                       ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-                      ))}
                     </div>;
                   </div>;
                 ))}
               {/* Mobile Company Links */}
+              <div className='space-y-4'>
+                <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>
+                  Company
+                </h3>
+                <div className='grid grid-cols-2 gap-4'>
+                  {companyLinks.map(link => (                    <Link
+                      key={link.name}
+                      href={link.href}
+                      onClick={closeMenu}              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-white border-b border-purple-500/30 pb-2">
+                  Company
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {companyLinks.map((link) => (
+                      key={link.name}
+                      href={link.href}
+                      onClick={closeMenu}
+                      className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
+                    >
+                      <link.icon className='w-5 h-5 text-purple-400' />
+                      <span className='text-purple-200'>
+                        {link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}
+                      </span>                    </Link>                      className="flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
+                    >
+                      <link.icon className="w-5 h-5 text-purple-400" />
+                      <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
+                  ))}
+                </div>
+              </div>
+              {/* Mobile CTA */}
+              <div className='pt-4 border-t border-purple-500/30'>
 
 
                   ))}
-
-                </div>;
-              </div>;
-
-
               {/* Mobile CTA */}
-
+              <div className='pt-4 border-t border-purple-500/30'>;
                 <Link
                   href='/contact'
                   onClick={closeMenu}
@@ -463,19 +486,6 @@ const companyLinks = [;
                   href="/contact"
                   onClick={closeMenu}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">;
-                <Link
-                  href="/contact"
-                  onClick={closeMenu}
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-
-        )}
-
       </AnimatePresence>;
 
 
@@ -517,12 +527,44 @@ const companyLinks = [;
 
 
                 </Link>
+      {/* Search Results Dropdown */}
+      {searchQuery && filteredServices && filteredServices.length > 0 && (;
+        <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>;
+          <div className='p-4'>;
+            <div className='space-y-2'>;
+              {filteredServices && filteredServices.slice(0, 8).map(service => (;
+                <Link
+                  key={service && service.name}
+                  href={service && service.href}
+                  className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'>;
+                  <div className='flex items-center justify-between'>;
+                    <div>;
+                      <h4 className='text-sm font-medium text-white'>;
+                        {service && service.name}
+                      </h4>;
+                      <p className='text-xs text-purple-300'>;
+                        {service && service.description}
+                      </p>;
+                    </div>;
+                    <span className='text-xs text-purple-400 font-medium'>;
+                      {service && service.price}
+                    </span>                  </div>                <Link
+                  key={service && service.name}
+                  href={service && service.href}
+                  className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors">;
+                  <div className="flex items-center justify-between">;
+                    <div>;
+                      <h4 className="text-sm font-medium text-white">{service && service.name}</h4>;
+                      <p className="text-xs text-purple-300">{service && service.description}</p>;
+                    </div>;
+                    <span className="text-xs text-purple-400 font-medium">{service && service.price}</span>;
+                  </div>;
+                </Link>;
               ))}
             </div>;
           </div>;
         </div>;
       )}
-}
 }
   );
 }

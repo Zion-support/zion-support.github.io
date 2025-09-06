@@ -1,9 +1,4 @@
 
-'use client';
-'use client';
-;
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 
 import {;
@@ -27,6 +22,10 @@ import {
   Phone,
   MapPin,
   Send,
+  CheckCircle,
+  AlertCircle,
+  CheckCircle,
+  AlertCircle,
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const ContactForm: React.FC = () => {;
@@ -42,52 +41,10 @@ const ContactForm: React.FC = () => {;
   const [submitStatus, setSubmitStatus] = useState<;
     'idle' | 'success' | 'error';
   >('idle');
-} from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: ''
-    email: ''
-    company: ''
-    phone: ''
-    service: ''
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    'idle' | 'success' | 'error'
-  >('idle');
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    setFormData({
-      ...formData
-      [e.target.name]: e.target.value
-
-  const handleChange = (;
-    e: React && React.ChangeEvent<;
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
-    >;
-  ) => {;
-    setFormData({;
-      ...formData,;
-      [e && e.target.name]: e && e.target.value,;
-    });  };  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
       ...formData;
       [e && e.target.name]: e && e.target.value;
     });
   };
-
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setIsSubmitting(true);
-
     // Simulate API call;
     try {;
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -161,13 +118,6 @@ const ContactForm: React.FC = () => {
       title: 'Email Us'
       content: 'contact@ziontechgroup.com'
       href: 'mailto:contact@ziontechgroup.com'
-    };
-    {
-      icon: Phone,
-      title: 'Call Us',
-      content: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
-
 
         >
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
@@ -194,13 +144,13 @@ const ContactForm: React.FC = () => {
           </p>
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-          {/* Contact Information */}
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}
 
           {/* Contact Information */}
 
           <motion.div
+          <motion&& motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -214,7 +164,6 @@ const ContactForm: React.FC = () => {
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
 
-
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <info.icon className="w-6 h-6 text-white" />
@@ -227,14 +176,73 @@ const ContactForm: React.FC = () => {
                   </div>
                 </motion.a>
               ))}
+            </div>
+
+                  className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group'>;
+                  <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300'>;
+                    <info && info.icon className='w-6 h-6 text-white' />;
+                  </div>;
+                  <div>;
+                    <h4 className='text-lg font-semibold text-white mb-1'>;
+                      {info && info.title}
+                    </h4>;
+                    <p className='text-gray-300 group-hover:text-blue-400 transition-colors duration-300'>                      {info && info.content}                >;
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">;
+                    <info && info.icon className="w-6 h-6 text-white" />;
+                  </div>;
+                  <div>;
+                    <h4 className="text-lg font-semibold text-white mb-1">{info && info.title}</h4>;
+                    <p className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300">;
+                      {info && info.content}
+                    </p>;
+                  </div>;
+                </motion && motion.a>;
+              ))}
             {/* Additional Info */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
               viewport={{ once: true }}
-
-
+              className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
+              <h4 className='text-lg font-semibold text-white mb-3'>;
+                Why Choose Zion Tech?;
+              </h4>;
+              <ul className='space-y-2 text-gray-300'>            >;
+              <h4 className="text-lg font-semibold text-white mb-3">Why Choose Zion Tech?</h4>;
+              <ul className="space-y-2 text-gray-300">;
+                <li className="flex items-center space-x-2">;
+                  <CheckCircle className="w-5 h-5 text-green-400" />;
+                  <span>Expert team with 10+ years experience</span>;
+                </li>;
+                <li className="flex items-center space-x-2">;
+                  <CheckCircle className="w-5 h-5 text-green-400" />;
+                  <span>Proven track record of successful projects</span>;
+                </li>;
+                <li className="flex items-center space-x-2">;
+                  <CheckCircle className="w-5 h-5 text-green-400" />;
+                  <span>24/7 support and maintenance</span>;
+                </li>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />;
+                  <span>Expert team with 10+ years experience</span>;
+                </li>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />;
+                  <span>Proven track record of successful projects</span>;
+                </li>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />;
+                  <span>24/7 support and maintenance</span>;
+                </li>;
+                <li className='flex items-center space-x-2'>;
+                  <CheckCircle className='w-5 h-5 text-green-400' />                  <span>Competitive pricing and flexible solutions</span>                <li className="flex items-center space-x-2">;
+                  <CheckCircle className="w-5 h-5 text-green-400" />;
+                  <span>Competitive pricing and flexible solutions</span>;
+                </li>;
+              </ul>;
+            </motion && motion.div>;
+          </motion && motion.div>;
 
           {/* Contact Form */}
           <motion&& motion.div
@@ -243,32 +251,59 @@ const ContactForm: React.FC = () => {
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
 
-
           >
             {submitStatus === 'success' ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
+                <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
+                <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
+                <p className="text-gray-300 mb-6">
+                  Thank you for reaching out. Our team will get back to you within 24 hours.
+                </p>
+                <button
+                  onClick={() => setSubmitStatus('idle')}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                >
+                  Send Another Message
+                </button>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-white font-medium mb-2" htmlFor="input-
+                      Full Name *
+                    ">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
+                      placeholder="Enter your full name"
+                    />
+              <form onSubmit={handleSubmit} className='space-y-6'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                  <div>
+                    <label
+                      htmlFor='name'
+                      className='block text-white font-medium mb-2'
+                    >
+                      Full Name *
+                    </label>
                     <input
                       type='text'
                       id='name'
                       name='name'
-                      onChange={handleChange}
-                      required
-                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
-                      placeholder='Enter your full name'                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor='email'
                     <input
                       type='email'
                       id='email'
                       name='email'
-                      onChange={handleChange}
-                      required
-                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
-                      placeholder='Enter your email'                    />
                   </div>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
@@ -276,11 +311,6 @@ const ContactForm: React.FC = () => {
                     />
                   </div>
                 </div>
-                      placeholder='Enter your email'                    />;
-                  </div>;
-                </div>;
-
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors";
                       placeholder="Enter your email";
                     />;
                   </div>;
@@ -335,8 +365,6 @@ const ContactForm: React.FC = () => {
             )}
 
 export default ContactForm;
-
-
                 <div>;
                   <label;
                     html_for='service';

@@ -33,8 +33,6 @@ export default function NewJobPage() {
       notify('Job posted! Invite talent to get responses.success')
     }, 800)
   },
-
-
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -48,7 +46,6 @@ export default function NewJobPage() {
             <textarea className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" rows={5} placeholder="Job description" />
             <EnhancedButton type="submit" variant="primary">Publish</EnhancedButton>
           </form>
-
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

@@ -1,10 +1,8 @@
-
 import { jsPDF  } from 'jspdf';
 import { Certification  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
 export function addCertificationsSection(
-
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
@@ -16,6 +14,9 @@ export function addCertificationsSection(;
   startY: number
 ): number {
 
+  let yPos = startY;
+  // Check if we need to add a new page
+  if (yPos > 250) {
   yPos += 8;
   for (const cert of certifications) {
     // Check if we need to add a new page
@@ -23,8 +24,8 @@ export function addCertificationsSection(;
       doc && doc.addPage();
       yPos = 20
     }
-
     }
     yPos += 16
   }
   return yPos
+}

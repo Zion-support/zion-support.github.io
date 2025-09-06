@@ -1,6 +1,3 @@
-export type Infobox = {founder: string;
-  launchYear: string;
-  token: string;
 export type Infobox = {;
   founder: string,;
   launchYear: string,;
@@ -20,7 +17,6 @@ export type WikiContent = {;
 },;
 export type DocsContent = {;
   productOverview: WikiSection,;
-
 export type Infobox = {
   founder: string;
   launchYear: string;
@@ -42,7 +38,6 @@ export type WikiContent = {
 | Founder | ${wiki.infobox.founder} |;
 | Launch Year | ${wiki.infobox.launch_year} |;
 | Token | ${wiki.infobox.token} |;
-
   developerApi: WikiSection,;
   governanceGuide: WikiSection,;
   tokenomics: WikiSection,;
@@ -56,8 +51,6 @@ export function generateZionWiki(): WikiContent {;
   const infobox: Infobox = {;
     founder: 'Zion Holdings';
     launchYear: '2025';
-
-
     token: 'ZION$',;
     protocolType: 'Decentralized AI marketplace & governance protocol'},;
   const sections: WikiSection[] = [;
@@ -254,8 +247,6 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
 ;
 export function slugify(input: string): string {;
   return input;

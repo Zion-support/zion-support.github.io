@@ -17,7 +17,6 @@ function toSlug(name: string): string {;
   // Schedule launch stream (/summit);
   ensureDir(eventsDir),;
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -159,6 +158,10 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     );
     assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" });
     writeTextFile(;
+    logs;
+    summary;
+    version}
+}
       changelogPath,;
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
     ),;
@@ -195,10 +198,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   }
 }
 ;
-
-  // Schedule launch stream (/summit);
-  ensureDir(eventsDir);
-  const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
   writeTextFile(;
     summitEventPath;
     JSON.stringify(;
@@ -219,7 +218,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
         activate: [;
           "/about";
           "/manifesto";
-
           "/constitution",;
           "/partners",;
           "/academy",;
@@ -285,8 +283,4 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}
-
-
 }

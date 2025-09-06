@@ -15,3 +15,5 @@ export * from './useNotificationOperations';
 
 export * from './useNotificationOperations';
 ;
+export * from './types';
+export * from './NotificationContext';

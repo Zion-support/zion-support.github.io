@@ -22,11 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-import Link from 'next/link';
-import MainLayout from '../components/layout/MainLayout';
-import Link from 'next / link';
-import MainLayout from '../components / layout / MainLayout';
-import { motion } from 'framer-motion';
   Eye
   Ear
   Hand
@@ -61,14 +56,75 @@ import { motion } from 'framer-motion';
 } from 'lucide-react';
 const accessibility_features = [;
   {
+
+import {;
+  Eye, ;
+  Ear, ;
+  Hand, ;
+  Brain, ;
+  CheckCircle, ;
+  AlertTriangle,;
+  Globe,;
+  Users,;
+  Shield,;
+  Zap,;
+  FileText,;
+  Settings;
+} from 'lucide-react';
+const accessibilityFeatures = [;
+  {;
+    title: "Visual Accessibility",;
+    description: "Features to support users with visual impairments",;
+    icon: Eye,;
+    features: [;
+      "High contrast color schemes",;
+      "Scalable text and interface elements",;
+      "Screen reader compatibility",;
+      "Alternative text for images",;
+      "Keyboard navigation support";
+    ];
+  },;
+  {;
+    title: "Auditory Accessibility",;
+    description: "Support for users with hearing impairments",;
+    icon: Ear,;
+    features: [;
+      "Video captions and transcripts",;
+      "Visual indicators for audio cues",;
+      "Text-based communication options",;
+      "Volume controls and audio descriptions",;
+      "Sign language support where applicable";
+    ];
+  },;
+  {;
+    title: "Motor Accessibility",;
+    description: "Features for users with motor impairments",;
+    icon: Hand,;
+    features: [;
+      "Keyboard-only navigation",;
+      "Voice control compatibility",;
+      "Large click targets",;
+      "Customizable interaction timing",;
+      "Switch control support";
+    ];
+  },;
+  {;
+    title: "Cognitive Accessibility",;
+    description: "Support for users with cognitive differences",;
+    icon: Brain,;
+    features: [;
+      "Clear and simple language",;
+      "Consistent navigation patterns",;
+      "Error prevention and recovery",;
+      "Progress indicators",;
+      "Customizable interface complexity";
+    ];
   }
 ];
 
 
 
-
 export default function AccessibilityPage() {
-
 interface AccessibilityProps {
   className?: string;
 }
@@ -84,8 +140,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-
-
             </motion.div>
           </div>
         </section>
@@ -295,7 +349,7 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
                 </h2>;
                 <div className="prose prose-lg max-w-none">;
                   <p className="text-gray-600 mb-6">;
-                    At Zion Tech Group, we believe that technology should be accessible to everyone. Our commitment to accessibility goes beyond compliance  it's about creating inclusive digital experiences that empower all users.;
+                    At Zion Tech Group, we believe that technology should be accessible to everyone. Our commitment to accessibility goes beyond compliance – it's about creating inclusive digital experiences that empower all users.;
                   </p>;
                   <p className="text-gray-600 mb-6">;
                     We continuously work to improve our products and services, incorporating feedback from users with disabilities and staying up-to-date with the latest accessibility standards and best practices.;

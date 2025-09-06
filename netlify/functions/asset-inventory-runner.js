@@ -1,3 +1,4 @@
+}
 exports.handler = async () => {
   const logs = [],
   /**

@@ -5,23 +5,10 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
-    return this.props.children;
-  }
-}
   buttonLabel?: string;
   title?: string;
   defaultPrompt: string;
@@ -49,22 +36,6 @@ class ErrorBoundary extends React.Component {
   const [loading, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-    } catch {}
-
-
-
-  const onOpen = useCallback(() => {
-    setIsOpen(true);
-    setOutput("");
-    setIsEditing(false);
-
-
-  }, []);
-  const onClose = useCallback(() => setIsOpen(false), []);
-
-
-
   return (
     <>;
       <button
@@ -76,8 +47,6 @@ class ErrorBoundary extends React.Component {
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">
               <h3 className="text-base font-semibold">{title}</h3>
-      </button>;
-
       {isOpen && (;
         <div className="fixed inset-0 z-50 flex items-center justify-center">;
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />;
@@ -99,13 +68,13 @@ class ErrorBoundary extends React.Component {
                   onClick={callOperator}
                   disabled={loading}
                   className="rounded-md bg-blue-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60">;
-                  {loading ? "Generating" : "Generate"}
+                  {loading ? "Generating…" : "Generate"}
                 </button>;
                 <button
                   onClick={callOperator}
                   disabled={loading}
                   className="rounded-md border px-3 py-1 && 1.5 text-sm">;
-                  {loading ? "" : "Regenerate"}
+                  {loading ? "…" : "Regenerate"}
                 </button>;
                 <button
                   onClick={() => setIsEditing((v) => !v)}

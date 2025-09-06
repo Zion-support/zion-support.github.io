@@ -1,23 +1,9 @@
-return (<UltraAdvancedFuturisticBackground> <Head> <title> {
- return (<UltraAdvancedFuturisticBackground> <Head> <title> {
 
-
-  service.name 
-}- Zion Tech Group</title>) ) 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
-
-
-import React from 'react';
-
 import Head from 'next/head';
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
-export default function IncidentAutomationSuitePage() {
-
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
-export default function IncidentAutomationSuitePage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/incident-automation-suite'));
   if (!service) return null;
 
   return (
@@ -47,7 +33,7 @@ export default function IncidentAutomationSuitePage() {;
               <div className="flex items-end justify-between mb-3">;
                 <div>;
                   <div className="text-3xl font-bold text-white">{service && service.price}<span className="text-slate-400 text-base">{service && service.period}</span></div>;
-                  <div className="text-slate-400">{service && service.trialDays}-day free trial  Setup: {service && service.setupTime}</div>;
+                  <div className="text-slate-400">{service && service.trialDays}-day free trial • Setup: {service && service.setupTime}</div>;
                 </div>;
               </div>;
               <Link href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>;
@@ -98,7 +84,7 @@ if (return null) {
               <div className="flex items - end justify - between mb - 3">;
                 <div>;
                   <div className="text - 3xl font - bold text - white">{service.price}<span className="text - slate - 400 text - base">{service.period}</span></div>;
-                  <div className="text - slate - 400">{service.trial_days}-day free trial  Setup: {service.setup_time}</div>;
+                  <div className="text - slate - 400">{service.trial_days}-day free trial • Setup: {service.setup_time}</div>;
                 </div>;
               </div>;
               <Link href="/contact" variant="quantum" size="lg" className="w - full">Start Trial < ArrowRight className="w - 5 h - 5 ml - 2" /></Button>;
@@ -112,5 +98,6 @@ if (return null) {
         </div>;
       </div>;
 
-
-
+    </UltraAdvancedFuturisticBackground>);
+}
+;

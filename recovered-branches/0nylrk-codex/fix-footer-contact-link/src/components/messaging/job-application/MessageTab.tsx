@@ -1,4 +1,30 @@
 
+import React from 'react',
+import { Textarea } from "@/components/ui/textarea",
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+export interface MessageTabProps {
+  message: string;
+  setMessage: (message: string) => void;
+  proposalLink: string;
+  setProposalLink: (link: string) => void
+}
+export function MessageTab({
+  message
+  setMessage
+  proposalLink
+  setProposalLink
+}: MessageTabProps) {
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+export interface MessageTabProps {
+  message: string,
+  setMessage: (message: string) => void,
+  proposalLink: string,
+  setProposalLink: (link: string) => void
+}
+
+export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {
   return (
     <div className="space-y-4">;
       <div>;
@@ -8,7 +34,6 @@
         <Textarea
           id="message"
           value={message}
-
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
         <Input
@@ -90,3 +115,4 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
 }
 
 
+}

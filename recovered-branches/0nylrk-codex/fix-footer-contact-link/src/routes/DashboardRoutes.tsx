@@ -1,4 +1,3 @@
-
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -226,34 +225,12 @@ import Referrals from "@/pages/Referrals",;
 import DeveloperPortal from "@/pages/DeveloperPortal",;
 import WalletPage from "@/pages/Wallet",;
 import ContractBuilder from "@/pages/ContractBuilder",;
-
-
-
 const DashboardRoutes = () => {
 const DashboardRoutes = () => {;
   return (
     <Routes>;
       {/* Dashboard Routes */}
       <Route
-
-        path="/dashboard" 
-        element={
-          <ProtectedRoute>;
-            <Dashboard />;
-          </ProtectedRoute>;
-        } ;
-      />;
-      <Route
-        path="/client-dashboard" 
-        element={
-          <ProtectedRoute>;
-            <ClientDashboard />;
-          </ProtectedRoute>;
-        } ;
-      />;
-      <Route
-        path="/talent-dashboard" 
-
         element={
           <ProtectedRoute>;
             <TalentDashboard />;

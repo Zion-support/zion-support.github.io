@@ -1,4 +1,3 @@
-
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import React from "react",
@@ -46,6 +45,11 @@ export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCar
       .join('');
       .toUpperCase();
 }
+import React from './react';
+import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
+interface TalentCardAvatarProps {
+  profile_picture?: string;
+  full_name: string;
 }
 export /**
  * TalentCardAvatar - Function description

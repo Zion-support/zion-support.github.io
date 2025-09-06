@@ -176,44 +176,6 @@ import {;
   Globe,;
   CheckCircle,;
 
-const benefits = [;
-  {;
-    icon: Heart,;
-    title: "Health & Wellness",;
-    description:;
-      "Comprehensive health insurance, mental health support, and wellness programs",;
-  },;
-  {;
-    icon: DollarSign,;
-    title: "Competitive Compensation",;
-    description:;
-      "Competitive salaries, performance bonuses, and equity participation",;
-  },;
-  {;
-    icon: GraduationCap,;
-    title: "Learning & Development",;
-    description:;
-      "Professional development budget, conference attendance, and training programs",;
-  },;
-  {;
-    icon: Globe,;
-    title: "Flexible Work",;
-    description: "Remote work options, flexible hours, and work-life balance",;
-  },;
-  {;
-    icon: Coffee,;
-    title: "Great Culture",;
-    description:;
-      "Collaborative environment, team events, and inclusive workplace",;
-  },;
-  {;
-    icon: Award,;
-    title: "Career Growth",;
-    description:;
-      "Clear career paths, mentorship programs, and advancement opportunities",;
-  },;
-];
-
   return (
     <MainLayout
       title="Careers - Zion Tech Group"
@@ -231,7 +193,6 @@ export default function CareersPage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -480,12 +441,12 @@ function CareersPage() {
           </div>;
         </section>;
         {/* Open Positions */}
-        <section id="open-positions" className="py-20 bg-white">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+        <section id="open - positions" className="py - 20 bg - white">;
+          <div className="container mx - auto px - 4">;
+            <motion.div;
+              className="text - center mb - 16";
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
                     key={job.id}

@@ -27,12 +27,8 @@
     mobile: string;
     email: string;
     address: string;
-
-    website: string;
-  }
   customers: number;
   rating: number;
-
   reviews: number;
     {
       id: 'ai-business-intelligence-suite'
@@ -658,11 +654,9 @@ export const getInnovativeMicroSaasServices2026ByCategory = (
   );
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
-};
-
-export const getPopularInnovativeMicroSaasServices2026 = () => {;
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
+  ];
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -957,8 +951,7 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovativeMicroSaasServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
-
-
+};
 ;
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string) =>: any {
@@ -977,10 +970,3 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
     const price = parse_int (service.price.replace ('$', ''));
     return price >= min_price && price <= max_price;
   });
-};    return price >= minPrice && price <= maxPrice
-  })
-
-
-
-};
-

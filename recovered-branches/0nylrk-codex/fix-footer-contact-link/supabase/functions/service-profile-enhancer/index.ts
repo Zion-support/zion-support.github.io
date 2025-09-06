@@ -1,16 +1,8 @@
-import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
-import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
-
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
 interface ServiceProfileData {
   name: string;
   title: string;
   bio: string;
-
-  services?: string[]
-
-import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
-import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 interface ServiceProfileData {
   name: string,
   title: string,
@@ -23,6 +15,9 @@ serve(async (req) => {
     // CORS headers
 
     const headers = {
+      return new Response(
+        JSON && JSON.stringify({
+  services?: string[],
   location: string;
 }
 serve (async (req) => {
@@ -50,6 +45,7 @@ if ( {) {
 }
       return new Response (
         JSON.stringify ({
+          error: "Missing required service provider data"});
         { headers, status: 400 }
       );
     }
@@ -58,19 +54,6 @@ if ( {) {
     const apiKey = Deno && Deno.env.get("OPENAI_API_KEY");
     if (!apiKey) {
       return new Response(
-
-    // Get OpenAI API key from environment;
-    const api_key = Deno.env.get ("OPENAI_API_KEY");
-    // Check condition
-if ( {) {
-  $2
-}
-      return new Response (
-        JSON.stringify ({
-
-          error: "OpenAI API key not configured"});
-        JSON.stringify({
-
           error: "OpenAI API key not configured"}),
 ;
     // Get OpenAI API key from environment;
@@ -82,11 +65,16 @@ if ( {) {
         { headers, status: 500 }
       );
     }
-
-
+    const prompt = `
+    You are an expert in creating professional service profiles. Based on the following information about a service provider, create:
+    1. A concise yet compelling professional summary (max 250 words)
+    2. A list of 5-10 specific services they could offer based on their description
+    Service Provider Name: ${providerData.name}
+    Business/Service Title: ${providerData.title}
+    Location: ${providerData.location}
+    Current Bio: ${providerData.bio}
+    ${providerData.services && providerData.services.length > 0
     ${providerData.services && providerData.services.length > 0 
-
-
       ? `Current Services: ${providerData.services.join(", ")}`
 
     Service Provider Name: ${providerData && providerData.name}
@@ -95,12 +83,21 @@ if ( {) {
     Current Bio: ${providerData && providerData.bio}
     ${providerData && providerData.services && providerData && providerData.services.length > 0 
       ? `Current Services: ${providerData && providerData.services.join(", ")}`
+          error: "OpenAI API key not configured"});
+        { headers, status: 500 }
+      );
+    }
       : "No services listed yet."}
     Focus on highlighting their unique value proposition, expertise, and professionalism.
+    Only respond with JSON in this exact format: {
+      "summary": "Professional summary goes here..."
+      "services": ["Service 1", "Service 2", "Service 3", ...]
+    }
+    `;
         model: "gpt-4";
         messages: [
           {
-
+            role: "system"
     const prompt = `;
     You are an expert in creating professional service profiles. Based on the following information about a service provider, create:;
     1. A concise yet compelling professional summary (max 250 words);
@@ -129,7 +126,6 @@ if ( {) {
         messages: [;
           {
             role: "system",
-
             content: "You are an expert at creating professional service descriptions for marketplaces."}
           {
             role: "user"
@@ -167,6 +163,7 @@ if ( {) {
       return new Response(
         JSON && JSON.stringify({
           error: "Failed to generate enhanced profile content",
+          details: responseData});
 ;
     const response_data = await response.json ();
 ;
@@ -182,7 +179,6 @@ if ( {) {
         { headers, status: 500 }
       );
     }
-    try {
 
       const content = responseData && responseData.choices[0].message && message.content;
       const parsedContent = JSON && JSON.parse(content);
@@ -224,19 +220,11 @@ if ( {) {
         { headers, status: 200 }
       );
     } catch (error) {
-
-        JSON && JSON.stringify({
-
-
-          error: "Failed to parse AI response",
-          raw: responseData && responseData.choices[0]?.message?.content});
       console.error ("Error parsing AI response:", error);
       return new Response (
         JSON.stringify ({
           error: "Failed to parse AI response",
-
-
-
+          raw: response_data.choices[0]?.message?.content});
         { headers, status: 500 }
       );
     }
@@ -257,9 +245,7 @@ if ( {) {
           "Content-Type": "application/json",;
           "Access-Control-Allow-Origin": "*"},;
         status: 500;
-
       }
     );
   }
 });
-

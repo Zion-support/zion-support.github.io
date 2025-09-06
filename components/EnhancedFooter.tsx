@@ -41,6 +41,43 @@ import {;
   Linkedin,;
   Twitter,;
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+import React from 'react';
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next/link';
+import {;
+  Brain,;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Globe,;
+  Github,;
+  Linkedin,;
+  Twitter,;
+} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear(),;
@@ -59,35 +96,6 @@ const EnhancedFooter: React.FC = () => {;
         },;
       ],;
     },    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
-      ]
-    }
-    {
-      title: 'Company'
-      links: [
-        { name: 'About Us', href: '/about' }
-        { name: 'Our Work', href: '/portfolio' }
-        { name: 'Blog & Insights', href: '/blog' }
-        { name: 'Careers', href: '/careers' }
-        { name: 'Contact', href: '/contact' }
-      ]
-    },    {        { name: 'Contact', href: '/contact' }
-      ]
-    }
-    {
-      title: 'Resources'
-      links: [
-        { name: 'Documentation', href: '/docs' }
-        { name: 'API Reference', href: '/api' }
-        { name: 'Support Center', href: '/support' }
-        { name: 'Privacy Policy', href: '/privacy' }
-        { name: 'Terms of Service', href: '/terms' }
-      ]
-    },  ];
-  const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },        { name: 'Terms of Service', href: '/terms' }
-      ]
-    }
-  ];
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
     {
@@ -129,20 +137,6 @@ const EnhancedFooter: React.FC = () => {;
         {/* Main Footer Content */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12'>;
           {/* Company Info */}
-          <div className='lg:col-span-2'>
-            <div className='flex items-center space-x-3 mb-6'>
-              <div className='w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center'>
-                <Brain className='w-6 h-6 text-white' />
-              </div>
-              <span className='text-xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
-                Zion Tech Group
-              </span>
-            </div>
-            <p className='text-white/70 mb-6 max-w-md'>
-              Leading-edge technology solutions and autonomous innovation
-              platform. Empowering businesses with cutting-edge AI, quantum
-              computing, and digital transformation.
-            </p>
             {/* Contact Info */}
             <div className='space-y-3'>;
               <div className='flex items-center space-x-3 text-white/70'>;
@@ -166,15 +160,19 @@ import {
   MapPin,
   Globe,
   Github,
+
+                      href={link.href}
+                      className="text - white / 70 hover: text - white transition - colors duration - 200";
+                    >;
+                      {link.name}
+                ))}
+              </ul>;
+            </div>;
+          ))}
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
             {/* Copyright */}
-
-            <div className='text-white/60 text-sm'>              © {currentYear} Zion Tech Group. All rights reserved.;
-            </div>;
-
-
             {/* Social Links */}
             <div className='flex items-center space-x-4'>;
               {socialLinks && socialLinks.map(social => (        <div className="pt-8 border-t border-white/10">;
@@ -196,6 +194,9 @@ import {
       </div>
     </footer>
 
+
+  const scrollToTop = () => {";
+    window && window.scrollTo({ top: 0, behavior: "smooth" });
                     </Link>;
                   </li>))}
               </ul>;
@@ -335,9 +336,6 @@ digital age.;
               {footer_links.services.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-                  </Link>;
-                </li>;
-              ))}
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
@@ -351,9 +349,6 @@ digital age.;
               {footer_links.solutions.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-                  </Link>;
-                </li>;
-              ))}
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
@@ -367,9 +362,6 @@ digital age.;
               {footer_links.company.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-                  </Link>;
-                </li>;
-              ))}
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
@@ -461,9 +453,6 @@ company updates.;
         className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50
         aria-label="Scroll to top">";
         <ArrowUp className="w-5 h-5"  />;
-
-export default EnhancedFooter;
-export default EnhancedFooter;
 
       </button>,;
     </footer>,;

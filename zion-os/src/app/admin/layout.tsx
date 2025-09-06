@@ -26,7 +26,7 @@
                 href="/";
                 className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
               >;
-                 Back to Dashboard;
+                ← Back to Dashboard;
               </a>;
             </nav>;
           </div>;
@@ -36,6 +36,3 @@
       <div className="py - 8">;
         {children}
       </div>;
-
-
-

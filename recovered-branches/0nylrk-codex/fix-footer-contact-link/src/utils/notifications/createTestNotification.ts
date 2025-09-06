@@ -1,5 +1,4 @@
 
-
 import {NotificationType} from './types';
 import {createNotification} from './createNotification';
 
@@ -42,9 +41,6 @@ function createTestNotification() {
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
   }
-}
-
-
 import { NotificationType } from './types',;
 import { createNotification } from './createNotification',;
 /**;
@@ -76,9 +72,5 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
-
-
-
 }
 ;
-}

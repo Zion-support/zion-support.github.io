@@ -3,6 +3,7 @@ exports.config = {
 }
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+
 exports && exports.config = {
   schedule: '*/30 * * * *',
     logs.push(`exit=${res.status |0}`);

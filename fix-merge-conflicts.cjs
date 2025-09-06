@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 =======
 >>>>>>> origin/main
@@ -84,10 +85,14 @@ function fixMergeConflicts(filePath) {
     const fixedLines = [];
     let inConflict = false;
     let keepContent = false;
+=======
+
+>>>>>>> origin/main
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
+<<<<<<< HEAD
       if (line.includes('<<<<<<<')) {
         inConflict = true;
         keepContent = false;
@@ -161,10 +166,13 @@ export {};`;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/main
     return false;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
@@ -230,10 +238,13 @@ function fixFilesInDirectory(dirPath) {
       if (fixMergeConflicts(fullPath)) {
         fixedCount++;
 >>>>>>> origin/main
+=======
+>>>>>>> origin/main
       }
     }
   }
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   scanDirectory(dir);
@@ -320,4 +331,6 @@ for (const file of problematicFiles) {
 }
 
 console.log('Merge conflict fix completed.');
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main

@@ -121,9 +121,6 @@ import { Milestone } from '../../../utils/types/milestones';
   const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
-
-
-
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
@@ -139,14 +136,10 @@ import { Milestone } from '../../../utils/types/milestones';
     const res = await updateMilestoneStatus(projectId as string, milestoneId, {
       status
     });
-
       <div className="max-w-5xl mx-auto px-4 py-8">
         <div className="mb-6">
           <h1 className="text-2xl font-bold">Milestones</h1>
           <p className="text-sm text-gray-600">Project: {projectId as string}</p>
-
-
-
         </div>
 
         {role !== 'talent' && (
@@ -157,6 +150,8 @@ import { Milestone } from '../../../utils/types/milestones';
             </div>
             <MilestoneForm onSubmit={handleCreate} />
           </div>
+        )}
+        {loading && <div>Loading milestones...</div>}
   }, [project_id]);
 
 
@@ -257,13 +252,6 @@ if (return, ) {
             ))}
           </div>
         )}
-}
-;
-        {loading && <div>Loading milestones...</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
 }
 }
@@ -305,6 +293,3 @@ if (return, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-

@@ -38,9 +38,7 @@ import {;
 } from "lucide-react";
   Clock
 } from 'lucide-react';
-
-
-
+origin/automation-improvements-final
 
   ArrowRight
   Users
@@ -99,9 +97,6 @@ const benefits = [;
     description: 'Stay updated with the latest trends and developments in technology.',
     icon: TrendingUp
   }
-      "Stay updated with the latest trends and developments in technology."
-    icon: TrendingUp
-  }
     content:
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable."
     rating: 5
@@ -143,7 +138,6 @@ export default function NewsletterPage() {
 ];
 
 
-
 export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
 
@@ -156,17 +150,6 @@ export default function NewsletterPage() {;
     setIsLoading(false);
   }
   return (
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-    <Layout>;
-      <Head>;
-        <title>Newsletter - Zion Tech Group</title>;
-        <meta
-          name="description"
-          content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
-        />;
-      </Head>;
-      <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -583,8 +566,6 @@ function NewsletterPage() {
                   className="bg-gray-50 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-
-
                     ))}
                   </div>;
                   <p className="text-gray-600 mb-4 italic">;

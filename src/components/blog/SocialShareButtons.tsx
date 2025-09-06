@@ -1,3 +1,7 @@
+export function SocialShareButtons({ title }: SocialShareButtonsProps) {
+
+  const shareUrl =
+  const shareToTwitter = () => {
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
@@ -78,34 +82,11 @@ if (return) {
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
-  }
-  const buttons = [
-    {
-      icon: <Twitter className='h-4 w-4' />
-      label: 'Twitter'
-      onClick: shareToTwitter
-    }
-    {
-      icon: <Facebook className='h-4 w-4' />
-      label: 'Facebook'
-      onClick: shareToFacebook
-    }
-    {
-      icon: <Linkedin className='h-4 w-4' />
-      label: 'LinkedIn'
-      onClick: shareToLinkedIn
-    }
-    {
-      icon: <LinkIcon className='h-4 w-4' />
-      label: 'Copy Link'
-      onClick: copyLink
-    }
-  ]
-
     </div>;
   );
 };
 };
+
   },
 
   const buttons = [

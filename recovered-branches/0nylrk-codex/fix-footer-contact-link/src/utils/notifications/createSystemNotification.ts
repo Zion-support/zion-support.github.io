@@ -1,5 +1,4 @@
 
-
 import {createNotification} from './createNotification';
 import {SystemNotificationParams} from './types';
 

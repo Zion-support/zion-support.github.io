@@ -187,12 +187,6 @@ interface TemplateListProps {
               Use This Template;
             </Button>;
           </CardContent>;
-        </Card>;
-      ))}
-      <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
-        <AlertDialogContent>;
-          <AlertDialogHeader>;
-            <AlertDialogTitle>Delete Template</AlertDialogTitle>;
             <AlertDialogDescription>;
               Are you sure you want to delete this template? This action cannot be undone.;
             </AlertDialogDescription>;

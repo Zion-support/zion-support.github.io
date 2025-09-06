@@ -31,9 +31,6 @@ export default function Testimonials({ }: TestimonialsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
 :src.pages.disabled/Testimonials.jsx
 }
 }
@@ -44,3 +41,12 @@ export default function Testimonials({ }: TestimonialsProps) {
 
 
 
+
+
+
+:src.pages.disabled/Testimonials.jsx
+}
+}
+}
+}
+}

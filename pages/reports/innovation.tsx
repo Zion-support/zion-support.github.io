@@ -1,39 +1,36 @@
 import React from 'react';
 
-
 import Head from 'next / head';
 import Link from 'next / link';
 ;
 
-
-
 const InnovationPage: React.FC = () => {
   const innovation_areas = [;
     {
-
-      category: 'AI Automation',
-      innovations: [;
-        { name: 'Content Generation', status: 'active', impact: 'high', description: 'Automated content creation and optimization' },
-        { name: 'SEO Automation', status: 'active', impact: 'high', description: 'Intelligent search engine optimization' },
-        { name: 'Performance Monitoring', status: 'active', impact: 'medium', description: 'Real - time system health tracking' },
-        { name: 'Deployment Automation', status: 'active', impact: 'high', description: 'Zero - downtime deployments' }
-      ];
-    },
-    {
-      category: 'Cloud Infrastructure'
+      category: 'AI Automation'
       innovations: [
-        { name: 'Multi-Region Redundancy', status: 'active', impact: 'high', description: 'Geographic failover systems' }
-        { name: 'Auto-Scaling', status: 'active', impact: 'medium', description: 'Dynamic resource allocation' }
-        { name: 'Load Balancing', status: 'active', impact: 'high', description: 'Intelligent traffic distribution' }
-        { name: 'Disaster Recovery', status: 'active', impact: 'critical', description: 'Automated backup and recovery' }
+        { name: 'Content Generation', status: 'active', impact: 'high', description: 'Automated content creation and optimization' }
+        { name: 'SEO Automation', status: 'active', impact: 'high', description: 'Intelligent search engine optimization' }
+        { name: 'Performance Monitoring', status: 'active', impact: 'medium', description: 'Real-time system health tracking' }
+        { name: 'Deployment Automation', status: 'active', impact: 'high', description: 'Zero-downtime deployments' }
       ]
     }
     {
-      category: 'Development Practices'
-      innovations: [
-        { name: 'Continuous Integration', status: 'active', impact: 'high', description: 'Automated testing and deployment' }
-        { name: 'Code Quality Gates', status: 'active', impact: 'medium', description: 'Automated code review and standards' }
-        { name: 'Performance Budgets', status: 'active', impact: 'high', description: 'Automated performance monitoring' }
+      category: 'Cloud Infrastructure',
+      innovations: [;
+        { name: 'Multi - Region Redundancy', status: 'active', impact: 'high', description: 'Geographic failover systems' },
+        { name: 'Auto - Scaling', status: 'active', impact: 'medium', description: 'Dynamic resource allocation' },
+        { name: 'Load Balancing', status: 'active', impact: 'high', description: 'Intelligent traffic distribution' },
+        { name: 'Disaster Recovery', status: 'active', impact: 'critical', description: 'Automated backup and recovery' }
+      ];
+    },
+    {
+      category: 'Development Practices',
+      innovations: [;
+        { name: 'Continuous Integration', status: 'active', impact: 'high', description: 'Automated testing and deployment' },
+        { name: 'Code Quality Gates', status: 'active', impact: 'medium', description: 'Automated code review and standards' },
+        { name: 'Performance Budgets', status: 'active', impact: 'high', description: 'Automated performance monitoring' },
+
         { name: 'Security Scanning', status: 'active', impact: 'critical', description: 'Automated vulnerability detection' }
       ];
     }
@@ -49,7 +46,6 @@ const InnovationPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
       ]
     },
     {
@@ -64,8 +60,6 @@ const InnovationPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
       ]
     },
     {
@@ -215,9 +209,6 @@ const InnovationPage: React.FC = () => {
   }
 }
   };
-
-
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
       <Head>
@@ -226,11 +217,9 @@ const InnovationPage: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
-
-
         <div className="mb-8">
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-             Back to Home
+            ← Back to Home
           </Link>
           <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Innovation Reports
@@ -239,8 +228,6 @@ const InnovationPage: React.FC = () => {
             Exploring the cutting edge of AI automation and technological advancement
           </p>
         </div>
-
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-purple-400">Active Innovations</h3>
@@ -258,8 +245,6 @@ const InnovationPage: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Quantum integration</p>
           </div>
         </div>
-
-
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Innovation Areas</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -373,11 +358,9 @@ const InnovationPage: React.FC = () => {
           <h2 className="text-2xl font-bold mb-6 text-white">Innovation Metrics</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
             <div className="text-center">
-              <div className="text-6xl font-bold text-purple-400 mb-4"></div>
+              <div className="text-6xl font-bold text-purple-400 mb-4">🚀</div>
               <h3 className="text-xl font-semibold mb-2 text-white">Innovation Pipeline</h3>
               <p className="text-gray-300 mb-6">
-                Our continuous innovation pipeline ensures we stay ahead of technological trends 
-                Our continuous innovation pipeline ensures we stay ahead of technological trends
 
 
 
@@ -420,8 +403,6 @@ const InnovationPage: React.FC = () => {
           >
             All Reports
           </Link>
-          <Link 
-          <Link
 
 
 
@@ -431,8 +412,6 @@ const InnovationPage: React.FC = () => {
           >
             Performance
           </Link>
-          <Link 
-          <Link
 
 
 
@@ -446,7 +425,6 @@ const InnovationPage: React.FC = () => {
       </div>
     </div>
   );
-
 ;
 
 

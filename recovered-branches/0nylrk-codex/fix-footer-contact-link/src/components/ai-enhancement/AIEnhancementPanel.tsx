@@ -1,14 +1,7 @@
-  onClose?: () => void;
-  showInstructions?: boolean;
-  initialContent?: string;
-}
 
 
 
-export function AIEnhancementPanel({;
-
-export function AIEnhancementPanel(): any ({;
-
+import React, { useState } from 'react';
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
@@ -68,12 +61,12 @@ export function AIEnhancementPanel({;
   const [generatedContent, setGeneratedContent] = useState<string>(''),;
   const [copied, setCopied] = useState(false),;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
+
   const handleGenerate = async () => {;
     const result = await enhanceContent(options);
     if (result) {;
       setGeneratedContent(result);
     }
-
 
 
 
@@ -89,7 +82,6 @@ export function AIEnhancementPanel({;
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
-
   return (
     <Card className="w-full max-w-2xl mx-auto">;
       <CardHeader>;
@@ -157,6 +149,13 @@ export function AIEnhancementPanel({;
           <div className="space-y-2 mt-4">;
             <div className="flex justify-between items-center">;
               <label className="text-sm font-medium">Generated content</label>;
+        {/* Generate button */}
+        <Button
+                onClick={handleCopy}
+                className="h-8">;
+                {copied ? (;
+                  <><Check className="h-4 w-4 mr-1" /> Copied</>;
+                ) : (;
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>;
                 )}
               </Button>;

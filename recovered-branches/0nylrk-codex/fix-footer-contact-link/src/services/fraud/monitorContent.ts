@@ -1,6 +1,5 @@
 
 
-
 export const monitorContent = async (;
 
 
@@ -11,9 +10,6 @@ export const monitorContent = async (;
   content: string
 ): Promise<void> => {
   const analysis = analyzeContent(content);
-
-
-
 // Content monitoring functionality;
 import { FraudFlag, FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -38,11 +34,11 @@ export const monitorContent = async (;
       r.includes('bypass');
     )) {;
       severity = 'dangerous';
-
-
-
     }
     
+    )) {
+      severity = 'dangerous'
+    }
     await flagContent(
       userId;
       userEmail;
@@ -119,9 +115,6 @@ if (||) {
       severity;
       analysis.reasons.join ();
       undefined // IP address would be added in a real implementation);
-
-
-
 ;
     // If this is a 'dangerous' flag, automatically hide content;
     // This would be implemented in a real system with appropriate flags;

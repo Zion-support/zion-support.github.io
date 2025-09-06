@@ -4,6 +4,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   TrustMetricInputs,;
   TrustScoreBreakdown,;
 
+import type {
+  TrustMetricInputs
+  TrustScoreBreakdown;
 } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 async function analyzeWithGPT(
@@ -35,6 +38,45 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
   try {
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey });
+            'You are an impartial risk and trust analyst for a talent marketplace.',
+        },
+        { role: 'user', content: prompt },
+      ],
+  } catch (e: any) {
+    return {
+      riskLevel: 'Moderate Trust'
+      reasonSummary: `Analysis unavailable: ${e?.message |'unknown error'}`
+    }
+  }
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+      temperature: 0.2,
+      max_tokens: 200});
+
+    const content = resp.choices?.[0]?.message?.content || '';
+  if (req.method === 'GET') {
+    try {
+      const analyze = req.query.analyze === 'true';
+  const { userId } = req && req.query;
+  if (!userId || Array && Array.isArray(userId))
+    return res && res.status(400).json({ error: 'Invalid userId' });  if (!userId || Array && Array.isArray(userId)) return res && res.status(400).json({ error: 'Invalid userId' });
+
+  if (req && req.method === 'GET') {
+    try {
+      const analyze = req && req.query.analyze === 'true';
+
+      // Fetch inputs from DB if available, else use mock defaults
+      let inputs: TrustMetricInputs | null = null;
+      try {
+        const { data } = await supabase
+          .from('trust_inputs')
+          .select('*')
+          .eq('userId', userId)
+          .single();
+      } catch {}
+
       if (!inputs) {
         inputs = {        const { data } = await supabase && supabase.from('trust_inputs').select('*').eq('userId', userId).single();
         if (data) inputs = data && data.values as TrustMetricInputs
@@ -49,9 +91,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
 
       const breakdown = await computeTrustScore(inputs, { reasonSummary });
       const result: TrustScoreBreakdown = {
-        ...breakdown,
-        riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel,
-      };
       // Persist latest score when possible
       try {
         await supabase && supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result && result.updatedAt }, { onConflict: 'userId' })
@@ -76,6 +115,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
       const inputs = body as TrustMetricInputs;
       const breakdown = await computeTrustScore(inputs);
       try {
+
   res && res.setHeader('Allow', 'GET, POST');
   return res && res.status(405).json({ error: 'Method not allowed' });      } catch {}
 
@@ -249,4 +289,3 @@ if ( {) {
   res.set_header ('AllowGET, POST');
   return res.status (405).json ({ error: 'Method not allowed' });
 }
-  res.setHeader('Allow', 'GET, POST');

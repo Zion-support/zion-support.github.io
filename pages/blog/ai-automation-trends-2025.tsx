@@ -20,7 +20,6 @@ import React from 'react',
           AI Automation Trends 2025: The Future of Autonomous Systems | Zion;
           Tech Group;
         </title>;
-        />;
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'>;
                 ← Back to Blog;
               </Link>;

@@ -109,6 +109,7 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
+import {
   Menu,
   X,
   ChevronDown,
@@ -210,19 +211,12 @@ import {
   Twitter,
   Facebook,
   Instagram,
-  Youtube,;
-  Github,;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, ;
 
   Youtube,;
   Github,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
-
-
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -268,6 +262,23 @@ import {
     ];
   }
 
+    title: '🏙️ Enterprise IT Solutions',
+    icon: CpuIcon,
+    color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
+    description: 'Autonomous enterprise infrastructure',
+    title: '🛒 Business Automation',
+    icon: ShoppingCart,
+    color: 'from - teal - 600 via - emerald - 600 to - green - 600',
+    description: 'Streamline business operations',
+    title: '🤖 Robotics & Automation',
+    icon: RocketIcon,
+    color: 'from - green - 600 via - yellow - 600 to - orange - 600',
+    description: 'Intelligent automation solutions',
+    title: '🔬 Research & Development',
+    icon: MicroscopeIcon,
+    color: 'from - orange - 600 via - red - 600 to - pink - 600',
+    description: 'Breakthrough research solutions',
+
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -277,6 +288,8 @@ const quickLinks = [
   { name: 'Case Studies', href: '/case-studies', icon: FileText }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+    ];
+  }
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'Solutions', href: '/solutions', icon: Target },
@@ -320,7 +333,6 @@ const quickLinks = [;
   { name: 'Blog', href: '/blog', icon: MessageCircle },;
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-
 const companyLinks = [;
   { name: 'About Us', href: '/about', icon: Users },;
   { name: 'Careers', href: '/careers', icon: Briefcase },;
@@ -329,7 +341,6 @@ const companyLinks = [;
   { name: 'Support', href: '/support', icon: LifeBuoy },;
   { name: 'Status', href: '/status', icon: Activity },;
 ];
-
 const socialLinks = [;
   {;
     name: 'LinkedIn',;
@@ -349,7 +360,6 @@ const socialLinks = [;
   },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },;
 ];
-
 const certifications = [;
   'ISO 27001 Certified',;
   'SOC 2 Type II Compliant',;
@@ -359,7 +369,6 @@ const certifications = [;
   'FedRAMP Authorized',;
   'Quantum Security Certified',;
   'AI Ethics Compliant',];];
-
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },;
   { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
@@ -367,16 +376,10 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
 ];
-
-const certifications = [;
-  'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant';
-];
-
 export default function UltraFuturisticNavigation2034() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 50);
@@ -384,9 +387,6 @@ export default function UltraFuturisticNavigation2034() {;
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const toggleDropdown = (category: string) => {;
-    setActiveDropdown(activeDropdown === category ? null : category);
   };
 
   const closeDropdown = () => {;
@@ -394,14 +394,6 @@ export default function UltraFuturisticNavigation2034() {;
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const toggleDropdown = (category: string) => {;
-    setActiveDropdown(activeDropdown === category ? null : category);
-  };
-
-  const closeDropdown = () => {;
-    setActiveDropdown(null);
-  };
 
   return (
     <>;
@@ -423,6 +415,19 @@ export default function UltraFuturisticNavigation2034() {;
               </span>
             </div>
           </div>                {contactInfo.mobile}
+      <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-2">
+              <Phone className="w-4 h-4 text-cyan-400" />
+              <span className="hover:text-cyan-400 transition-colors">
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
+          <div className='flex items-center space-x-6'>
+            <div className='flex items-center space-x-2'>
+              <Phone className='w-4 h-4 text-cyan-400' />
+              <span className='hover:text-cyan-400 transition-colors'>
+                {contactInfo.mobile}
               </span>
             </div>
             <div className="flex items-center space-x-2">
@@ -503,18 +508,9 @@ export default function UltraFuturisticNavigation2034() {;
       </div>;
 
       {/* Main Navigation */}
-
-        }`}>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='flex items-center justify-between h-20'>            {/* Logo */}      <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' 
           : 'bg-transparent'
-
-
-
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -560,7 +556,6 @@ export default function UltraFuturisticNavigation2034() {;
                   Future Technology Solutions;
                 </p>              </div>;
             </motion && motion.div>;
-
             {/* Desktop Navigation */}            >;
               <div className="relative">;
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">;
@@ -575,13 +570,6 @@ export default function UltraFuturisticNavigation2034() {;
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>;
               </div>;
             </motion && motion.div>;
-                <Link
-                  key={link && link.name}
-                  href={link && link.href}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-                  {link && link.name}
-                </Link>;
-              ))}
                   {link.name}
                 </Link>
               ))}
@@ -590,6 +578,7 @@ export default function UltraFuturisticNavigation2034() {;
                   {link.name}
                 </Link>
               ))}
+              
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
@@ -813,27 +802,31 @@ function UltraFuturisticNavigation2034() {
                 </Link>))}
               {/* Services Dropdown */}
               <div className='relative group'>;
-                <button className='flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'>;
-                  <span>Services</span>;
-                  <ChevronDown className='w-4 h-4' />;
+                <button className='flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium'>;
+                  <span > Services</span>;
+                  <ChevronDown className='w - 4 h - 4' />;
                 </button>;
-                <div className='absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>;
-                  <div className='grid grid-cols-2 gap-4'>;
-                    {serviceCategories && serviceCategories.slice(0, 4).map(category => (;
-                      <div
-                        key={category && category.title}
-                        className='p-3 rounded-lg hover:bg-cyan-500/10 transition-colors'>;
-                        <div className='flex items-center space-x-2 mb-2'>;
-                          <category && category.icon className='w-5 h-5 text-cyan-400' />;
-                          <h3 className='text-sm font-semibold text-white'>;
-                            {category && category.title.split(' ')[0]}
+                <div className='absolute top - full left - 0 w - 96 bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl p - 4 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0'>;
+                  <div className='grid grid - cols - 2 gap - 4'>;
+                    {service_categories.slice (0, 4).map (category => (
+                      <div;
+                        key={category.title}
+                        className='p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - colors';
+                      >;
+                        <div className='flex items - center space - x-2 mb - 2'>;
+                          <category.icon className='w - 5 h - 5 text - cyan - 400' />;
+                          <h3 className='text - sm font - semibold text - white'>;
+                            {category.title.split (' ')[0]}
                           </h3>;
                         </div>;
-                        <p className='text-xs text-gray-400 mb-2'>;
-                          {category && category.description}
+                        <p className='text - xs text - gray - 400 mb - 2'>;
+                          {category.description}
                         </p>;
-
-
+                        <div className='space - y-1'>;
+                          {category.services.slice (0, 2).map (service => (
+                            <Link;
+                              key={service.name}
+                              href={service.href}
                               className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}
               <div className="relative group">;
                 <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
@@ -858,11 +851,6 @@ function UltraFuturisticNavigation2034() {
                               className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
                             >;
                               {service.name}
-
-
-                            >
-                              {service.name}
-                            </Link>
                           ))}
                         </div>;
                       </div>;
@@ -872,9 +860,6 @@ function UltraFuturisticNavigation2034() {
                       className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
                       View All Services;
                       <ArrowRight className='w-4 h-4 ml-2' />                    </Link>                    <Link
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-cyan-500/20">
-                    <Link
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
               >
                 Get Started
@@ -884,8 +869,6 @@ function UltraFuturisticNavigation2034() {
                 Get Started;
               </Link>;
             </div>;
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className='text-gray-300 hover:text-cyan-400 transition-colors';
@@ -903,10 +886,6 @@ function UltraFuturisticNavigation2034() {
             </div>;
           </div>;
         </div>;
-
-
-
-
 
         {/* Mobile Menu */}
         <AnimatePresence>;
@@ -930,70 +909,17 @@ function UltraFuturisticNavigation2034() {
               transition={{ duration: 0.3 }}
               className='lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20';
             >;
-              <div className="px-4 py-6 space-y-4">;
-                {quickLinks && quickLinks.map((link) => (;
-                    key={link && link.name}
-                    href={link && link.href}
-                    onClick={() => setIsOpen(false)}
-                    className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium";
-                  >;
-                    {link && link.name}
-                  </Link>;
-                ))}
-                {/* Mobile Services Accordion */}
-                {serviceCategories && serviceCategories.map(category => (;
-                  <div
-                    key={category && category.title}
-                    className='border-b border-cyan-500/20 pb-4'>;
-                    <button
-                      onClick={() => toggleDropdown(category && category.title)}
-                      className='flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium';
-                    >;
-                      <span>{category && category.title}</span>;
-                      <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === category && category.title ? 'rotate-180' : ''
-                        }`}
-                      />                    </button>                {/* Mobile Services Accordion */}
-                {serviceCategories && serviceCategories.map((category) => (;
-                  <div key={category && category.title} className="border-b border-cyan-500/20 pb-4">;
-                    <button
-                      onClick={() => toggleDropdown(category && category.title)}
-                      className="flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium";
-                    >;
-                      <span>{category && category.title}</span>;
-                      <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === category && category.title ? 'rotate-180' : ''
-                      }`} />;
-                    </button>;
-                    <AnimatePresence>;
-                      {activeDropdown === category && category.title && (;
-                        <motion&& motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0 && 0.2 }}
-                          className='mt-3 ml-4 space-y-2'>;
-                          {category && category.services.map(service => (                            <Link
-                              key={service && service.name}
-                              href={service && service.href}
-                              onClick={() => setIsOpen(false)}
-                              className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                            >                          className="mt-3 ml-4 space-y-2";
-                        >;
-                          {category && category.services.map((service) => (;
-                            <Link
-                              key={service && service.name}
-                              href={service && service.href}
-                              onClick={() => setIsOpen(false)}
-                              className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                              className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors";
-                            >;
-                              {service && service.name}
-                            </Link>;
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
 
+                          ))}
+                        </motion && motion.div>;
+                      )}
+                    </AnimatePresence>;
+                  </div>;
+                ))}
                 <Link
                   href='/contact'
                   onClick={() => setIsOpen(false)}
@@ -1032,24 +958,9 @@ function UltraFuturisticNavigation2034() {
                   Get Started;
                 </Link>;
               </div>;
-                <Link
-                  href='/contact'
-                  onClick={() => setIsOpen(false)}
-                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link
-                  href="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </motion.div>
-
-          )}
     </>
         </AnimatePresence>;
       </nav>;
-
 
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>;

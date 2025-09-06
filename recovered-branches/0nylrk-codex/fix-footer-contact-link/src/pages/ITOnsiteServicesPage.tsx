@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -15,6 +14,12 @@ import {ServiceProcessSteps} from "@/components/services/PageSections/ServicePro
 import {ServiceIncludes} from "@/components/services/PageSections/ServiceIncludes";
 import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {;
+  const [searchParams] = useSearchParams();
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  
+  // Check for success parameter in URL
+  const success = searchParams.get("success");
 import { useState, useEffect } from "react",
 import { useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -44,11 +49,6 @@ export default function ITOnsiteServicesPage() {
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
   const [searchQuery, setSearchQuery] = useState("");
 
-
-
-  
-  
-
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -74,12 +74,16 @@ export default function ITOnsiteServicesPage() {
     <AppLayout>;
       <section className="py-16 bg-zion-blue">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-
-
-
           {/* Hero Section with Features */}
-          <PageHero />
+
+          <PageHero />;
+
           {/* Country Selection Tabs */}
+          <div className="mb-12">
+            <CountryTabs
+            <CountryTabs 
+          {/* Hero Section with Features */}
+            <CountryTabs
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
@@ -173,6 +177,3 @@ if (return 1) {
       <QuoteFormSection />;
     </AppLayout>);
 }
-
-}
-

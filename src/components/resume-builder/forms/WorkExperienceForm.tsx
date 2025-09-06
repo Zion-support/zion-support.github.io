@@ -1,11 +1,15 @@
-      // Check condition
-if ( {) {
-  $2
-}
-        success = await updateWorkExperience (editing_id, experience_data);
-      } else {
-        success = await addWorkExperience (resume_id, experience_data);
+      if (success) {
+        form.reset({
+          company_name: ''
+          role_title: ''
+          start_date: format(new Date(), 'yyyy-MM-dd')
+          is_current: false
+          description: ''
+          location: ''
+        })
+        setEditingId(null)
       }
+    } catch (err: any) {
       setError(err.message || 'An error occurred');
     };
   };
@@ -22,12 +26,7 @@ if ( {) {
           : undefined
     })
   }
-  const handle_delete = async (id: string, ) => {
-    if () {) {
-  $2
-}
-      await deleteWorkExperience (id);
-    }
+  return (
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -200,15 +199,165 @@ export function WorkExperienceForm(): any ({;
                         : (work.end_date ? (typeof work.end_date === 'string' 
                           ? work.end_date 
                           : format(work.end_date, 'MMM yyyy')) : '')}
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-xl font-semibold mb-2">Work Experience</h2>
+        <p className="text-muted-foreground">
+          Add your work history to showcase your professional experience.
+        </p>
+      </div>
+      {workExperiences.length > 0 && (
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
                   </div>
                   <div className="flex gap-2">
+                    </Button>
+                  </div>
+                </div>
+                {work.description && (
+                )}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
+          {editingId ? 'Update Experience' : 'Add Experience'}
+        </h3>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                    <FormLabel>Company Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Google, Microsoft, etc." {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+                    <FormLabel>Job Title</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+                render={({ field }: { field: any }) => (
+                  <FormItem>
+                    <FormLabel>Start Date</FormLabel>
+                    <FormControl>
+                      <Input 
+                        type="date" 
+                        {...field} 
+                        value={field.value || ''}
+                      />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>;
+                )}
+              />
+
+              <div className="space-y-4">
+                <FormField
+                  control={form.control}
+                  name="is_current"
+                  render={({ field }: { field: any }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel>I currently work here</FormLabel>
+                      </div>
+                    </FormItem>
+                  )}
+                    render={({ field }: { field: any }) => (
+                      <FormItem>
+                        <FormLabel>End Date</FormLabel>
+                        <FormControl>
+                          <Input 
+                            type="date" 
+                            {...field} 
+                            value={field.value || ''} 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                )}
+              render={({ field }: { field: any }) => (
+                <FormItem>
+                  <FormLabel>Location (Optional)</FormLabel>
+                  <FormControl>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />;
+            <FormField;
+              control={form.control}
+              name="description"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+                  <FormLabel className="flex justify-between">
+                    <span>Job Description</span>
+                    <AIEnhancementButton
+                      currentContent={field.value || ''}
+                      enhancementType="work-description"
+                      context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
+                      onEnhanced={handleEnhanceDescription}
+                    />
+                  </FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Describe your responsibilities and accomplishments..."
+                      className="min-h-[100px]"
+                      {...field}
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+            />
+
+            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+
+            <div className="flex justify-between pt-2">
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => {
+                  if (editingId) {
                     form.reset({
                       company_name: '',
                       role_title: '',
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
+                  } else {
+                    onBack()
+                  }
+                }}
+              >
+                {editingId ? 'Cancel' : 'Back'}
+              </Button>
+
+
+                  {editingId ? 'Update' : 'Add'} Experience
+                </Button>
+                {!editingId && workExperiences.length > 0 && (
+                  <Button type="button" onClick={onComplete}>
+                    Next
+                  </Button>
+                )}
+              </div>;
+            </div>;
+          </form>;
+        </Form>;
+      </div>;
+}
+;

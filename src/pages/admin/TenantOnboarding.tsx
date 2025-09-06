@@ -1,3 +1,4 @@
+  const [formData, setFormData] = useState({
 
     brand_name: ""
     subdomain: ""
@@ -9,6 +10,13 @@
     custom_domain: ""
 
     is_co_branded: true
+  })
+  // Check if user has admin role
+  const isAdmin = user?.role === "admin";
+      };
+  );
+};
+
   }),
   
   // Check if user has admin role

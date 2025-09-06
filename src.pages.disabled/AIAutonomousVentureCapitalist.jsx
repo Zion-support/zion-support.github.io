@@ -31,9 +31,6 @@ export default function AIAutonomousVentureCapitalist({ }: AIAutonomousVentureCa
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
 :src.pages.disabled/AIAutonomousVentureCapitalist.jsx
 }
 }
@@ -44,3 +41,12 @@ export default function AIAutonomousVentureCapitalist({ }: AIAutonomousVentureCa
 
 
 
+
+
+
+:src.pages.disabled/AIAutonomousVentureCapitalist.jsx
+}
+}
+}
+}
+}

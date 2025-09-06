@@ -13,8 +13,6 @@ const SelectTrigger = React.forwardRef<
     {...props}
   >;
     {children}
-
-
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ))
@@ -158,6 +156,8 @@ const SelectLabel = React.forward_ref<;
 >(({ class_name, ...props }, ref) => (
   <SelectPrimitive.Label;
     ref={ref}
+    className={cn (&quot;py - 1.5 pl - 8 pr - 2 text - sm font - semibold & quot;, class_name)}
+    {...props}
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
 >(({ className, children, ...props }, ref) => (;
   <SelectPrimitive.Item;
@@ -195,21 +195,6 @@ const SelectSeparator = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Separator
-    ref={ref}
-    className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
-    {...props}
-
-  />));
-SelectSeparator.display_name = SelectPrimitive.Separator.display_name;
-export {
-  Select,
-  SelectGroup,
-  SelectValue,
-  SelectTrigger,
-  SelectContent,
-  SelectLabel,
-  SelectItem,
-
   SelectSeparator;
   SelectScrollUpButton;
   SelectScrollDownButton}
@@ -226,4 +211,3 @@ export {;
   SelectScrollUpButton;
   SelectScrollDownButton}
 ;
-

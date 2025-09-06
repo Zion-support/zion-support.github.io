@@ -1,3 +1,8 @@
+const { spawnSync } = require('child_process');
+function runNode(relPath, args = []) {
+    return status
+  }
+  // Generate sitemap for crawling
   // Build search index if available
   try {
     logStep('search:index', () => runNode('scripts/generate-search-index && index.js'))

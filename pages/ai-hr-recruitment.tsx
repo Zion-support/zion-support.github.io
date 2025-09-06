@@ -8,12 +8,6 @@ import {
   ArrowRight
   Star
   Users;
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function AIHRRecruitmentPage() {
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/ai-hr-recruitment')
   );  if (!service) return null;
 
   return (
@@ -60,7 +54,7 @@ export default function AIHRRecruitmentPage() {
                     <span>{service && service.period}</span>;
                   </div>;
                   <div className='text-slate-400'>;
-                    {service && service.trialDays}-day free trial  Setup:{' '}
+                    {service && service.trialDays}-day free trial • Setup:{' '}
                     {service && service.setupTime}
                   </div>;
                 </div>;
@@ -179,8 +173,8 @@ if (return null) {
           </div>;
         </div>;
           </p>;
-          <div className="flex justify-center gap-4">;
-            <a href="/contact" className="bg-teal-600 text-white px-6 py-3 rounded-lg hover: bg-teal-700">;
+          <div className="flex justify - center gap - 4">;
+            <a href="/contact" className="bg - teal - 600 text - white px - 6 py - 3 rounded - lg hover: bg - teal - 700">;
               Get Started;
             </a>;
               Learn More;
@@ -242,5 +236,7 @@ export default function AIHRRecruitmentPage() {
     </Layout>
   )
 }
+
+
 
 

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -21,6 +22,8 @@
 =======
 <<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -82,6 +85,7 @@ class PerformanceOptimizer {
           error: error.message 
         });
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,9 +99,9 @@ class PerformanceOptimizer {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node
-
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
@@ -159,6 +163,7 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -166,10 +171,11 @@ class PerformanceOptimizer {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-
 function log(message, type = 'INFO') {
   const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
   console.log(`${icons[type] || ''} ${message}`);
@@ -189,13 +195,12 @@ function findFiles(dir, exts) {
       results.push(...findFiles(p, exts));
     } else if (exts.includes(path.extname(entry).toLowerCase())) {
       results.push(p);
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
   }
   return results;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -280,6 +285,8 @@ function ensureNextConfigFlags(rootDir, report) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
 });
       log(`Found ${optimizations.length} optimization opportunities in next.config.js`, 'WARNING');
     } else {}
@@ -411,15 +418,18 @@ if (require.main === module) {}
   const optimizer = new PerformanceOptimizer();
   optimizer.optimize().then(success => {})
     process.exit(success ? 0 : 1);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
 #!/usr/bin/env node
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (updated !== original) {
         fs.writeFileSync(file, updated);
@@ -504,6 +514,8 @@ class PerformanceOptimizer {
       };
     }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
   }
 
   async optimizeImages() {
@@ -516,6 +528,7 @@ class PerformanceOptimizer {
         const imageFiles = fs.readdirSync(imagesDir).filter(file => 
           /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
         );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -556,6 +569,8 @@ class PerformanceOptimizer {
         this.log(`📝 ${optimization.description}`);
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
         
         this.results.imageOptimization = {
           success: true,
@@ -809,6 +824,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
       this.log(`Fatal error: ${error.message}`, 'ERROR');
     } finally {
       this.generateReport();
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
@@ -1060,6 +1076,10 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+    }
+
+>>>>>>> origin/main
     const report = {
       timestamp: new Date().toISOString(),
       totalOptimizations: optimizations.length,
@@ -1075,6 +1095,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
     this.log(`📊 Performance optimization completed! Report saved to: ${reportPath}`);
     this.log(`📈 Performance Score: ${report.performanceScore}% (${successfulOptimizations}/${optimizations.length} optimizations successful)`);
     
+<<<<<<< HEAD
 <<<<<<< HEAD
     return report;
   }
@@ -1116,6 +1137,8 @@ optimizer.optimizePerformance().catch(console.error);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 // Run the performance optimizer
 if (require.main === module) {
     const optimizer = new PerformanceOptimizer(),
@@ -1123,37 +1146,8 @@ if (require.main === module) {
   }
 
 module.exports = PerformanceOptimizer;
-<<<<<<< HEAD
-console.log('⚡ Zion Tech Group - Performance Optimizer');
-console.log('');
-const performanceReport = {
-    timestamp: new Date().toISOString(),
-    optimizations: [],
-    recommendations: [],
-    metrics: {}
-};
-function analyzeBundleSize() {
-    console.log('\n📦 Analyzing bundle size...');
-    try {
-        if (fs.existsSync('.next')) {
-            const stats = execSync('du -sh .next', { encoding: 'utf8' });
-            const size = stats.trim().split('\t')[0];
-            performanceReport.metrics.bundleSize = size;
-            console.log(`✅ Bundle size: ${size}`);
-            if (size.includes('M') && parseInt(size) > 50) {
-                performanceReport.recommendations.push({
-                    type: 'bundle_size',
-                    message: 'Bundle size is large, consider code splitting',
-                    priority: 'high'
-                });
-            }
-        } else {
-            console.log('⚠️  No build found, run npm run build first');
-        }
-    } catch (error) {
-        console.log(`❌ Error analyzing bundle: ${error.message}`);
-=======
 
+<<<<<<< HEAD
       if (updated !== original) {
         fs.writeFileSync(file, updated);
         report.modifiedFiles.push(file);
@@ -1185,6 +1179,8 @@ function analyzeBundleSize() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 function main() {
   const root = process.cwd();
   const timestamp = Date.now();
@@ -1215,6 +1211,7 @@ function main() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1233,6 +1230,8 @@ try {
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
 function generateOptimizationRecommendations() {
     console.log('\n💡 Generating optimization recommendations...');
     // Image optimization
@@ -1269,6 +1268,7 @@ console.log(`High Priority: ${performanceReport.recommendations.filter(r => r.pr
 console.log(`Medium Priority: ${performanceReport.recommendations.filter(r => r.priority === 'medium').length}`);
 console.log(`\n📄 Report saved to: ${reportPath}`);
 process.exit(0);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -1284,6 +1284,11 @@ optimizer.optimizePerformance().catch(console.error);
 <<<<<<< HEAD
 =======
 =======
+=======
+// Run performance optimization
+const optimizer = new PerformanceOptimizer();
+optimizer.optimizePerformance().catch(console.error);
+>>>>>>> origin/main
 
 try {
   main();
@@ -1291,11 +1296,9 @@ try {
   log(`Performance optimizer failed: ${e.message}`, 'ERROR');
   process.exit(1);
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+}
 optimizer.optimizePerformance().catch(console.error);
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 <<<<<<< HEAD
 =======
@@ -1307,3 +1310,5 @@ optimizer.optimizePerformance().catch(console.error);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

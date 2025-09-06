@@ -1,3 +1,10 @@
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode
+}
+export interface Testimonial {
+  name: string;
   role?: string;
   text: string;
   avatar?: string
@@ -31,10 +38,53 @@ export interface Testimonial {
   avatar?: string
 }
 interface ServiceLandingTemplateProps {
+import React from "react",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import Image from "next/image",;
+export interface Benefit {;
+  title: string,;
+  description: string,;
+  icon?: React.ReactNode;
+}
+import React from "react",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import Image from "next/image",;
+export interface Benefit {;
+  title: string,;
+  description: string,;
+  icon?: React.ReactNode;
+}
+;
+export interface Testimonial {;
+  name: string,;
+  role?: string,;
+  text: string,;
+  avatar?: string;
+}
+;
+interface ServiceLandingTemplateProps {;
+  title: string,;
+  subtitle: string,;
+  heroImage?: string,;
+  description: string,;
+  benefits: Benefit[],;
+  testimonials: Testimonial[],;
+  ctaText: string,;
+  ctaLink: string;
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
-
+  title,
+  subtitle,
+  heroImage,
+  description,
+  benefits,
+  testimonials,
+  ctaText,
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -44,6 +94,9 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </GradientHeading>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
+
+
+
             {description}
 
     <div className="min - h-screen bg - white">;
@@ -58,7 +111,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </p>;
         </div>;
       </section>;
-              ))}
             </div>;
           </div>;
         </section>;
@@ -66,12 +118,23 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
               ))}
             </div>;
           </div>;
-        </section>;
-      )}
           <a
             href={ctaLink}
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
             {ctaText}
+
+          </a>;
+        </div>;
+      </section>;
+    </div>;
+  );
+
+            {description}
+          </p>
+        </div>
+      </section>
+
+      <section className="py-16 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-white text-center mb-8">
             Benefits

@@ -1,4 +1,3 @@
-export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
   companyId: string;
   number: string;
   amountUsd: number;
@@ -59,8 +58,6 @@ export interface CompanyRecord {
   id: string,
   name: string,
   slug: string, // e.g. acme;
-
-
   logoUrl?: string,;
   brandColor?: string,;
   plan: CompanyPlan,;
@@ -71,7 +68,6 @@ export interface CompanyRecord {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-
-
+  activity: CompanyActivityEvent[];
+  invoices: InvoiceRecord[];
 }

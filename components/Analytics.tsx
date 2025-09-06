@@ -1,54 +1,3 @@
-      });
-      // Track page views
-      const trackPageView = () => {
-        gtag('event', 'page_view', {
-          page_title: document.title
-          page_location: window.location.href
-          page_path: window.location.pathname
-        });
-      }
-      // Track page view on load
-      trackPageView();
-      // Track page view on route change (for SPA behavior)
-      const handleRouteChange = () => {
-        trackPageView();
-      }
-      // Listen for popstate events (back/forward navigation)
-      window.addEventListener('popstate', handleRouteChange);
-      // Cleanup
-      return () => {
-        window.removeEventListener('popstate', handleRouteChange);
-      }
-    }
-  }, [trackingId]);
-  // Track custom events
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
-    }
-  }
-  // Track button clicks
-  const trackButtonClick = (buttonName: string, location?: string) => {
-    trackEvent('button_click', {
-      button_name: buttonName
-      location: location |window.location.pathname
-    });
-  }
-  // Track form submissions
-  const trackFormSubmission = (formName: string) => {
-    trackEvent('form_submit', {
-      form_name: formName
-      page_location: window.location.href
-    });
-  }
-  // Track external link clicks
-  const trackExternalLink = (url: string, linkText: string) => {
-    trackEvent('external_link_click', {
-      link_url: url
-      link_text: linkText
-      page_location: window.location.href
-    });
-    (window as any).trackEvent = trackEvent;
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
   useEffect (() => {
     // Google Analytics 4;
@@ -151,7 +100,6 @@ if ( {) {
   }
   return (
     <Head>;
-                      });
           __html: `
             // Performance monitoring
             if ('performance' in window) {
@@ -170,4 +118,3 @@ if ( {) {
                         value: Math && Math.round(loadTime),
                       })
                     }
-export default Analytics;

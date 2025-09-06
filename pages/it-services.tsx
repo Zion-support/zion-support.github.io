@@ -1,7 +1,3 @@
-import Link from 'next/link',
-import React from 'react';
-
-
 import Head from 'next/head';
 
 import Link from 'next/link';
@@ -45,8 +41,6 @@ import { motion } from 'framer-motion';
   Brain
   DollarSign
   Rocket
-
-
   Server,
   Shield,
   Cloud,
@@ -83,17 +77,6 @@ import { motion } from 'framer-motion';
   Brain,
   DollarSign,
   Rocket;
-} from 'lucide-react';
-const itServices = [{
-    title: 'Cloud Infrastructure Management'
-    description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.'
-    icon: Cloud
-    features: ['Multi-cloud Strategy', 'Cost Optimization', 'Auto-scaling', 'Disaster Recovery']
-    pricing: '$6,000 - $30,000/project'
-    category: 'Cloud'
-    popular: true
-  }
-  {
 } from 'lucide-react';
 const it_services = [{
     title: 'Cloud Infrastructure Management',
@@ -1695,47 +1678,47 @@ function ITServicesPage() {
                   </Head>;
       {/* Hero Section */}
                   </div>;
-                  <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">;
+                  <div className="absolute top - 40 right - 10 w - 72 h - 72 bg - emerald - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse animation - delay - 2000">;
                   </div>;
                   </div>;
-                  <div className="container mx-auto px-4 relative z-10">;
-                  <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            className="text-center">;
-<div className="flex items-center justify-center mb-6">;
-                  <Server className="h-16 w-16 text-green-400 mr-4" />;
-                  <h1 className="text-4xl md:text-6xl font-bold">;
+                  <div className="container mx - auto px - 4 relative z - 10">;
+                  <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text - center";
+          >;
+<div className="flex items - center justify - center mb - 6">;
+                  <Server className="h - 16 w - 16 text - green - 400 mr - 4" />;
+                  <h1 className="text - 4xl md:text - 6xl font - bold">;
                 IT{' '}
       {/* Services Grid */}
-      <section className="py-20 bg-gray-50">;
-                  <div className="container mx-auto px-4">;
-                  <motion&& motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">;
+      <section className="py - 20 bg - gray - 50">;
+                  <div className="container mx - auto px - 4">;
+                  <motion.div;
+            className="text - center mb - 16";
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >;
+<h2 className="text - 3xl sm:text - 4xl md:text - 5xl font - bold text - gray - 900 mb - 4">;
               Our IT Solutions;
             </h2>;
-                  <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">;
-              End-to-end IT services designed to optimize your infrastructure and ensure business continuity.;
+                  <p className="text - lg sm:text - xl text - gray - 600 max - w-4xl mx - auto leading - relaxed">;
+              End - to - end IT services designed to optimize your infrastructure and ensure business continuity.;
             </p>;
-                  </motion && motion.div>;
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {itServices && itServices.map((service, index) => {;
-              const IconComponent = service && service.icon;
+                  </motion.div>;
+                  <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+            {it_services.map ((service, index) => {
+              const IconComponent = service.icon;
               return (
-                <motion&& motion.div
+                <motion.div;
                   key={index}
 import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
-
-
 import { 
   Server, 
   Shield, 
@@ -1828,13 +1811,14 @@ import {
   ShoppingCart
   BookOpen
   Rocket
-  Rocket,;
-
-
-
-  Rocket,;
   Laptop;
 } from 'lucide-react';
+
+  Laptop
+} from 'lucide-react'
+import Layout from '../components/Layout'
+
+
 const itServices = [
   {
     title: 'Cloud Infrastructure Management'
@@ -1852,10 +1836,6 @@ import Layout from '../components / Layout';
 ;
 const it_services = [;
   {
-
-
-
-
     category: 'Security',
     popular: true,
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection'],
@@ -1869,8 +1849,6 @@ const it_services = [;
     popular: true
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection']
     marketPrice: '$4,000/month'
-    link: '/contact'
-    link: '/contact'
     pricing: '$1, 500 - $8, 000 / month',
     category: 'Security',
     popular: true,
@@ -2152,9 +2130,6 @@ export default function ITServices(req, res) {
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
                   </div>
-
-
-
           {/* Technology Stack Section */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
@@ -2354,8 +2329,6 @@ origin/automation-improvements-final
                     Zero-trust architecture and advanced threat protection
                   </p>
                 </div>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
 
                         d='M9 12l2 2 4-4m5 && 4m5.618-4 && 4.016A11.955 11 && 11.955 0 0112 2 && 2.944a11.955 11 && 11.955 0 01-8 && 8.618 3 && 3.04A12.02 12 && 12.02 0 003 9c0 5 && 5.591 3 && 3.824 10 && 10.29 9 11 && 11.622 5 && 5.176-1 && 1.332 9-6 && 6.03 9-11 && 11.622 0-1 && 1.042-.133-2 && 2.052-.382-3 && 3.016z'
                       />;
@@ -2402,8 +2375,6 @@ origin/automation-improvements-final
                     CI/CD pipelines and infrastructure automation
                   </p>
                 </div>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>
 
                       />;
                     </svg>;
@@ -2466,8 +2437,6 @@ origin/automation-improvements-final
                 technology solutions can modernize your infrastructure and
                 accelerate your digital transformation.
               </p>
-              <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
 
                         d='M13 && M13.828 10 && 10.172a4 4 0 00-5 && 5.656 0l-4 4a4 4 0 105 && 105.656 5 && 5.656l1.102-1 && 1.101m-.758-4 && 4.899a4 4 0 005 && 005.656 0l4-4a4 4 0 00-5 && 5.656-5 && 5.656l-1 && 1.1 1 && 1.1'
                       />;
@@ -2514,6 +2483,17 @@ origin/automation-improvements-final
                   Call {contact && contact.phone}
                 </a>;
                 <a
+
+                  href={`mailto:${contact && contact.email}`}
+                  className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'>;
+                  Email Us;
+                </a>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
         {/* Services Grid */}
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -2528,28 +2508,6 @@ origin/automation-improvements-final
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
-                          {feature}
-whileHover={{ y: -5 }} ">
-                  <div className="flex items-center justify-between mb-4">
-                  <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
-                  <IconComponent className="w-10 h-10" />
-                  </div>
-                  <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">
-                      {service.category}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="mb-4">
-<h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
-                  <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-<CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
@@ -2821,10 +2779,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             <div className="max-w-4xl mx-auto">
               <h1 
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-
-              >
-                IT Services
-              </h1>
                 100+ Comprehensive IT Solutions
               </p>
               <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -3234,16 +3188,6 @@ function ITServices() {
                         ))}
                       </ul>
                     </div>
-
-
-                    <div className='flex items-center justify-between mb-4'>;
-                      <span className='text-2xl font-bold text-green-400'>;
-                        {service && service.price}
-                      </span>;
-                      <span className='text-xs text-slate-500 capitalize'>;
-                        {service && service.category.replace('-', ' ')}
-                      </span>;
-                    </div>;
 
                 ))}
               </div>

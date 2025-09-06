@@ -28,9 +28,6 @@
     mobile: string;
     email: string;
     address: string;
-
-    website: string;
-  }
   customers: number;
   rating: number;
   reviews: number;
@@ -127,51 +124,6 @@ export interface SpecializedEmergingTechService {;
     rating: 4.8, reviews: 34
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
-import { ServiceVariant } from '../types/service-variants',;
-export interface SpecializedEmergingTechService {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number,;
-  benefits: string[],;
-  capabilities: string[],;
-  marketAdvantage: string;
-}
-;
 const contact = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;

@@ -1,5 +1,4 @@
 
-
 export default function ServicesAdvertisingPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -9,7 +8,6 @@ export default function ServicesAdvertisingPage() {
   const benefits = [
     '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling'
     'Flexible deployment: SaaS or self-hosted options'
-  ],
 
   ],
 				{/* New: Core micro SaaS and AI additions */  } catch (error) {
@@ -27,10 +25,8 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>
 					<p className="text-slate-300">Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $20$80/mo</li>
+						<li>Typical SMB budget: $20–$80/mo</li>
 						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
-
-
 					</ul>
 				</section>
   const pricingRefs = [
@@ -38,15 +34,12 @@ export default function ServicesAdvertisingPage() {
       title: 'AI Platforms'
       links: [
 
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Document Summarizer</h2>
 					<p className="text-slate-300">Concise summaries with citations for PDFs, docs, and URLs with export options.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $10$30/mo + usage</li>
+						<li>Typical budget: $10–$30/mo + usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
-
-
 					</ul>
 				</section>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -93,8 +86,6 @@ export default function ServicesAdvertisingPage() {
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2 mb-3">{o.name}</div>
                   <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
-
-
             </div>
           </section>
           <section>
@@ -114,47 +105,39 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">Browser Automation Cloud</h2>
 					<p className="text-slate-300">Scale Playwright/Puppeteer jobs with proxy pools, recorder-to-code and webhooks.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $40$200/mo</li>
+						<li>Typical budget: $40–$200/mo</li>
 						<li>References: {ext('https://apify.com/pricing')}, {ext('https://www.browserless.io/pricing')}</li>
-
-
 					</ul>
 				</section>
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">API Performance Testing</h2>
 					<p className="text-slate-300">Load, latency and regression testing with CI gates and dashboards.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $30$150/mo</li>
+						<li>Typical budget: $30–$150/mo</li>
 						<li>References: {ext('https://k6.io/pricing')}, {ext('https://jmeter.apache.org/')}</li>
-
-
 					</ul>
 				</section>
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Email Deliverability Monitor</h2>
 					<p className="text-slate-300">DMARC/SPF/DKIM health, blocklists, and inbox placement with alerts.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $15$60/mo</li>
+						<li>Typical budget: $15–$60/mo</li>
 						<li>References: {ext('https://dmarc.org/overview/')}, {ext('https://postmarkapp.com/support/category/dmarc')}</li>
-
-
 					</ul>
 				</section>
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Podcast Transcription & Insights</h2>
 					<p className="text-slate-300">Transcripts, chapters, show notes, and SEO-ready blog pages.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $10$60/mo + usage</li>
+						<li>Typical budget: $10–$60/mo + usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.descript.com/pricing')}</li>
-
-
 					</ul>
 				</section>
 				<section id="ai-evaluation-orchestrator" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Evaluation Orchestrator</h2>
 					<p className="text-slate-300">Automate LLM evals, regression tests, red-teaming, and leaderboards across OpenAI, Anthropic, Groq, and more.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $50$400/mo + API usage</li>
+						<li>Typical SMB budget: $50–$400/mo + API usage</li>
 						<li>References: {ext('https://openai.com/pricing')}, {ext('https://www.anthropic.com/pricing')}, {ext('https://openrouter.ai/models')}</li>
 					</ul>
 				</section>
@@ -162,7 +145,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">Vector Search Starter</h2>
 					<p className="text-slate-300">Production RAG starter with Pinecone/Weaviate/Elastic, eval harness, and observability.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $50$1,000/mo</li>
+						<li>Typical SMB budget: $50–$1,000/mo</li>
 						<li>References: {ext('https://www.pinecone.io/pricing/')}, {ext('https://console.weaviate.cloud/pricing')}, {ext('https://www.elastic.co/pricing')}</li>
 					</ul>
 				</section>
@@ -170,7 +153,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">Managed Postgres HA</h2>
 					<p className="text-slate-300">SRE-backed high availability Postgres with PITR backups, failover, and tuning.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $1,200$5,000/mo</li>
+						<li>Typical SMB budget: $1,200–$5,000/mo</li>
 						<li>References: {ext('https://cloud.google.com/sql/pricing')}, {ext('https://aws.amazon.com/rds/postgresql/pricing/')}</li>
 					</ul>
 				</section>
@@ -178,7 +161,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">AI Guardrails & Safety</h2>
 					<p className="text-slate-300">Policy engine, PII detection, jailbreak protection, and audit logs for LLM apps.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $0$500/mo</li>
+						<li>Typical SMB budget: $0–$500/mo</li>
 						<li>References: {ext('https://platform.openai.com/docs/guides/safety-best-practices')}, {ext('https://github.com/guardrails-ai/guardrails')}</li>
 					</ul>
 				</section>
@@ -186,7 +169,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">Identity & SSO/SCIM</h2>
 					<p className="text-slate-300">Enterprise SSO and user lifecycle with Okta/Auth0/WorkOS.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $100$1,500/mo</li>
+						<li>Typical SMB budget: $100–$1,500/mo</li>
 						<li>References: {ext('https://auth0.com/pricing')}, {ext('https://workos.com/pricing')}, {ext('https://www.okta.com/pricing/')}</li>
 					</ul>
 				</section>
@@ -194,7 +177,7 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">API Observability Starter</h2>
 					<p className="text-slate-300">Distributed tracing, golden signals dashboards, opinionated SLOs and alerting. Go live in under 60 minutes.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $99$350/mo</li>
+						<li>Typical SMB budget: $99–$350/mo</li>
 						<li>References: {ext('https://www.honeycomb.io/pricing/')}, {ext('https://www.datadoghq.com/pricing/')}, {ext('https://newrelic.com/pricing')}</li>
 					</ul>
 				</section>
@@ -228,8 +211,6 @@ export default function ServicesAdvertisingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             </div>
           </section>
           <section>
@@ -348,8 +329,6 @@ export default function ServicesAdvertisingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             </div>
             <div className="text-center mt-6">
               <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
@@ -360,8 +339,6 @@ export default function ServicesAdvertisingPage() {
             <div className="flex flex-wrap items-center justify-center gap-3">
               {anchors.map((a) => (
                 <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
-
-
             </div>
           </section>
           <section>
@@ -377,8 +354,6 @@ export default function ServicesAdvertisingPage() {
               <a href={`https://maps.google.com/?q=${encodeURIComponent(contact.address)}`} target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-emerald-500/40 flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-emerald-400" />
                 <span className="text-gray-200 text-sm">{contact.address}</span>
-
-
             </div>
           </section>
           <section>
@@ -397,8 +372,6 @@ export default function ServicesAdvertisingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>

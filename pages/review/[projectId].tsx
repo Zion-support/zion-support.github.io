@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import type { NextPage, GetServerSideProps } from "next";
 import ReviewForm from "../../components/reviews/ReviewForm";
@@ -158,8 +157,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const valid = expectedFromId === fromId;
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any;
 };
-
-
-
 export default ReviewSubmitPage;
-;

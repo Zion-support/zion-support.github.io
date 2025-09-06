@@ -8,7 +8,6 @@ export default function CaseStudyResourcePage() {
 
 
 
-
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -307,8 +306,6 @@ export default function CaseStudyResourcePage(req, res) {
               <p className="text-xl text-white/80 mb-8">
                 The case study resource you're looking for doesn't exist.
               </p>
-              <Link 
-              <Link
 
 
 
@@ -316,7 +313,7 @@ export default function CaseStudyResourcePage(req, res) {
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
-                 Back to Resources
+                ← Back to Resources
               </Link>
             </div>
           </main>
@@ -337,14 +334,12 @@ export default function CaseStudyResourcePage(req, res) {
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
               <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                 Back to Resources
+                ← Back to Resources
               </Link>
             </nav>
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-
-
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -471,8 +466,5 @@ if ( {) {
             </div>;
           </div>;
         </main>;
-}
-    </>);
-}
 
 

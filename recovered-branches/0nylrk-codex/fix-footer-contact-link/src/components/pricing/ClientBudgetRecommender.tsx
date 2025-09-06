@@ -1,10 +1,8 @@
-
 import {Button} from "@/components/ui/button";
 import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
-
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { 
@@ -26,12 +24,9 @@ interface ClientBudgetRecommenderProps {
   category;
   timeline;
   scope;
-
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();
-
-      const result = await getClientBudgetSuggestion(params);
 
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
@@ -73,8 +68,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   const generateSuggestion = async () => {;
     if (!jobTitle || !category) {;
       return;
-
-
     }
 
     setIsLoading(true),
@@ -93,11 +86,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       console.error("Error generating budget suggestion:", error)
     } finally {
       setIsLoading(false)
-  }
-  };
-
-  };
-
 ;
     setIsLoading(true),;
     try {;
@@ -115,17 +103,36 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       setIsLoading(false);
     }
   },;
+  const handleApplySuggestion = () => {;
+    if (suggestion) {;
+      onSuggestionApplied(suggestion && suggestion.minRate, suggestion && suggestion.maxRate);
 
+      // Track this suggestion application;
+      if (user) {;
+        trackPricingSuggestion({;
+          userId: user && user.id,;
+          suggestionType: 'client',;
+          suggestedMin: suggestion && suggestion.minRate,;
+          suggestedMax: suggestion && suggestion.maxRate,;
+          accepted: true;
+        });
+      }
+    }
 
-  return (
-    <div className="space-y-4">;
-      <div>;
-        {!suggestion && !isLoading ? (;
   },
 
 
 
 
+      setSuggestion(result);
+    } catch (error) {;
+      console && console.error("Error generating budget suggestion:", error);
+    } finally {;
+      setIsLoading(false);
+    }
+      }
+    }
+  }
   return (
     <div className="space-y-4">;
       <div>;

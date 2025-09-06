@@ -143,7 +143,6 @@ export default function CloudMonitoringPage() {
     },  ];      icon: <Shield className="w-6 h-6 text-red-400" />
       metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
     }
-  ];
       icon: <Activity className='w-8 h-8 text-white' />,
   ];
 
@@ -152,8 +151,6 @@ export default function CloudMonitoringPage() {
 export default function CloudMonitoringPage() {
   const features = [
     {
-      metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
-    }
   ];
   const pricingPlans = [
     {
@@ -292,21 +289,6 @@ export default function CloudMonitoringPage() {
               and insights;
             </p>;
           </div>;
-                </p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Monitoring Capabilities */}
-      <section className='py-24 bg-black relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-
-              Comprehensive Monitoring
-
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Monitor every aspect of your infrastructure with detailed metrics and insights
@@ -321,9 +303,6 @@ export default function CloudMonitoringPage() {
               Monitor every aspect of your infrastructure with detailed metrics and insights;
             </p>;
           </div>;
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {monitoringCapabilities && monitoringCapabilities.map((capability, index) => (;
               <Card
                 key={index}
                           {metric}
@@ -334,9 +313,6 @@ export default function CloudMonitoringPage() {
                 </div>;
               </Card>;
             ))}
-
-
-
       {/* Use Cases Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -373,11 +349,22 @@ export default function CloudMonitoringPage() {
               Trusted by teams across industries for reliable infrastructure monitoring;
             </p>;
           </div>;
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {useCases && useCases.map((useCase, index) => (;
               <Card
                 key={index}
+                className="group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300">;
+                <div className="flex items-start space-x-4">;
+                  <div className="text-4xl">{useCase && useCase.icon}</div>;
+                  <div className="flex-1">;
+                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-green-400 transition-colors duration-300">;
+                      {useCase && useCase.title}
+                    </h3>;
+                    <p className="text-gray-400 mb-4 leading-relaxed">;
+                      {useCase && useCase.description}
+                    </p>;
+                    <div className="grid grid-cols-2 gap-2">;
+                      {useCase && useCase.benefits.map((benefit, benefitIndex) => (;
+                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">;
+                          <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
                           {benefit}
                         </div>
                       ))}
@@ -390,31 +377,16 @@ export default function CloudMonitoringPage() {
         </div>
       </section>
 
-
-
-
       {/* Pricing Section */}
-      <section id='pricing' className='py-24 bg-black relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Simple, Transparent Pricing
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your monitoring needs
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-black relative overflow-hidden">
+
+      <section id="pricing" className="py-24 bg-black relative overflow-hidden">
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-            {pricingPlans.map((plan, index) => (
-          </div>;
-        </div>;
-      </section>;
-
       {/* Pricing Section */}
       <section id='pricing' className='py-24 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -425,7 +397,6 @@ export default function CloudMonitoringPage() {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your monitoring needs;
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-black relative overflow-hidden">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
@@ -435,17 +406,8 @@ export default function CloudMonitoringPage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
             </p>;
           </div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricingPlans && pricingPlans.map((plan, index) => (;
               <Card
                 key={index}
-                    </span>;
-                  </div>;
-                )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                      Most Popular;
-                    </span>;
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
@@ -477,9 +439,6 @@ export default function CloudMonitoringPage() {
                       {feature}
                     </li>;
                   ))}
-                </ul>;
-
-
                 <Button
                   href='/contact'
                   className={`w-full ${plan && plan.buttonColor} text-white`}
@@ -508,20 +467,11 @@ export default function CloudMonitoringPage() {
                 </Button>
               </Card>
             ))}
-
-
-
       {/* Integrations Section */}
-      <section className='py-24 bg-gray-900 relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Seamless Integrations
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Connect with your favorite tools and platforms
-            </p>
-          </div>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>      <section className="py-24 bg-gray-900 relative overflow-hidden">
+
+      <section className="py-24 bg-gray-900 relative overflow-hidden">
+
+            ))}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -579,21 +529,12 @@ export default function CloudMonitoringPage() {
       </section>
 
             ))}
-
-          </div>;
-        </div>;
-      </section>;
-
-
       {/* CTA Section */}
-
-
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-
 
             Ready to Monitor Your Infrastructure?
           </h2>
@@ -602,14 +543,21 @@ export default function CloudMonitoringPage() {
             critical infrastructure.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+      <section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>;
+            Ready to Monitor Your Infrastructure?;
+          </h2>;
+          <p className='text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
+            Join thousands of DevOps teams who trust us to monitor their;
+            critical infrastructure.;
+          </p>;
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
             <Button
               href='/contact'
               variant='secondary'
               size='lg'
-              className='bg-white text-green-600 hover:bg-gray-100 shadow-2xl'>;
-              Start Free Trial;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
             <Button
               href='#demo'
               variant='outline'
@@ -633,23 +581,9 @@ export default function CloudMonitoringPage() {
           </div>;
         </div>;
       </section>;
-
-
 }
+
   );
-}
-}
-
 }
     </>);
-              className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
-            >
-              <Play className="w-5 h-5 mr-2" />
-              Watch Demo
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-  );
 }

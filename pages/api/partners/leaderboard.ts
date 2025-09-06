@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -20,7 +19,6 @@ export default async function handler(
     if (usingPlaceholder) {
       return res.status(200).json({
         leaders: [
-
 
 
       });

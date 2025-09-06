@@ -1,4 +1,3 @@
-
 import React from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -6,9 +5,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Search, Filter } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { Search, Filter } from "lucide-react",
-
-
-
 
 interface FraudFiltersProps {
 
@@ -71,7 +67,6 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
   severity_filter;
   setSeverityFilter;
   contentTypeFilter;
-
   resetFilters}) => {
   setContentTypeFilter,;
   resetFilters}) => {;
@@ -135,9 +130,6 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
       </Button>
     </div>
   )
-}
-
-};
 
           onChange={(e) => setSearchQuery(e && e.target.value)}
 
@@ -193,4 +185,3 @@ interface FraudFiltersProps {;
           <SelectItem value="review">Reviews</SelectItem>;
         </SelectContent>;
       </Select>;
-

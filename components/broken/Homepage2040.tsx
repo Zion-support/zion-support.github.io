@@ -1,11 +1,4 @@
-//Enhanced animation variants for better performance const containerVariants = {
-  hidden: {
-  opacity: 0 
 
-
-
-
-  opacity: 0 
 
 import React from 'react';
 
@@ -20,9 +13,6 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-
-
-
 };
 visible: {
   opacity: 1, transition: {
@@ -98,10 +88,6 @@ const Homepage2040: React.FC = () => {
       }
     }
   }
-      }
-    }
-  }
-      color: "from-green-500 to-emerald-600"
     }
   ];
   return (
@@ -152,7 +138,7 @@ const Homepage2040: React.FC = () => {
       hover_color: "group - hover:text - cyan - 300";
     }
     {
-      number: "",
+      number: "∞",
       label: "Future Possibilities",
       description: "Unlimited potential",
       icon: InfinityIcon,
@@ -253,10 +239,13 @@ const Homepage2040: React.FC = () => {
                   }}
                 />;
               ))}
-            </div>
-          </div>
-          <div className="text-center max-w-6xl mx-auto relative z-10">
-            <motion.div
+
+            </div>;
+          </div>;
+
+          <div className="text-center max-w-6xl mx-auto relative z-10">;
+            <motion&& motion.div
+
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -287,11 +276,6 @@ const Homepage2040: React.FC = () => {
               >
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
               </motion.p>
-              {/* Enhanced CTA Section */}
-              <motion.div
-
-
-
               
               {/* Enhanced CTA Section */}
               <motion.div 
@@ -360,30 +344,33 @@ const Homepage2040: React.FC = () => {
               {/* Enhanced Trust Indicators */}
               <motion&& motion.div
                 variants={itemVariants}
-                className="flex flex-wrap justify-center gap-8 text-sm text-gray-400"
-              >
-                <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-green-400" />
-                  <span>SOC 2 Type II Certified</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Globe className="w-5 h-5 text-blue-400" />
-                  <span>Global Infrastructure</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Users className="w-5 h-5 text-purple-400" />
-                  <span>10,000+ Happy Customers</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Star className="w-5 h-5 text-yellow-400" />
-                  <span>4.9/5 Rating</span>
-                </div>
+
+                className="flex flex-wrap justify-center gap-8 text-sm text-gray-400">;
+                <div className="flex items-center gap-2">;
+                  <ShieldCheck className="w-5 h-5 text-green-400" />;
+                  <span>SOC 2 Type II Certified</span>;
+                </div>;
+                <div className="flex items-center gap-2">;
+                  <Globe className="w-5 h-5 text-blue-400" />;
+                  <span>Global Infrastructure</span>;
+                </div>;
+                <div className="flex items-center gap-2">;
+                  <Users className="w-5 h-5 text-purple-400" />;
+                  <span>10,000+ Happy Customers</span>;
+                </div>;
+                <div className="flex items-center gap-2">;
+                  <Star className="w-5 h-5 text-yellow-400" />;
+                  <span>4 && 4.9/5 Rating</span>;
+                </div>;
+
                 {/* SVG Pattern Background */}
-                <div className="absolute inset-0 bg-gray-800/20"></div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
+                <div className="absolute inset-0 bg-gray-800/20"></div>;
+              </motion && motion.div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
         {/* Enhanced Stats Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
@@ -416,22 +403,6 @@ const Homepage2040: React.FC = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <motion.h2
-                variants={itemVariants}
-                className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent"
-              >
-                Revolutionary Service Categories
-              </motion.h2>
-              <motion.p
-                variants={itemVariants}
-                className="text-xl text-gray-300 max-w-3xl mx-auto"
-              >
-                Explore our cutting-edge technology solutions across multiple domains
-              </motion.p>
-            </motion.div>
-            <motion.div
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -461,22 +432,6 @@ const Homepage2040: React.FC = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <motion.h2
-                variants={itemVariants}
-                className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent"
-              >
-                Featured Revolutionary Services
-              </motion.h2>
-              <motion.p
-                variants={itemVariants}
-                className="text-xl text-gray-300 max-w-3xl mx-auto"
-              >
-                Discover our most popular and innovative technology solutions
-              </motion.p>
-            </motion.div>
-            <motion.div
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -494,34 +449,10 @@ const Homepage2040: React.FC = () => {
                         Popular;
                       </div>;
                     )}
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
-                  <p className="text-gray-400 mb-4">{service.tagline}</p>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="text-3xl font-bold text-cyan-400">
-                      ${service.price.monthly}
-                      <span className="text-lg text-gray-400">/month</span>
-                    </div>
-                    <div className="text-sm text-gray-400">
-                      {service.rating}  ({service.reviews})
-                    </div>
-                  </div>
-                  <div className="space-y-3 mb-6">
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-3 text-gray-300">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                        <span className="text-sm">{feature}</span>
-                      </div>
                       {/* Service Price */}
                       <div className="mb - 6">;
                         <span className="text - 2xl font - bold text - cyan - 400">;
                           {service.price}
-                      {/* CTA Button */}
-                      <Link
-
-
-
-
 
                       {/* CTA Button */}
                       <Link 
@@ -563,7 +494,6 @@ const Homepage2040: React.FC = () => {
                   </Link>;
                 </motion && motion.div>;
               ))}
-
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -615,7 +545,6 @@ const Homepage2040: React.FC = () => {
     </Layout>
   )
 }
-export default Homepage2040;
 
 
 export default Homepage2040;

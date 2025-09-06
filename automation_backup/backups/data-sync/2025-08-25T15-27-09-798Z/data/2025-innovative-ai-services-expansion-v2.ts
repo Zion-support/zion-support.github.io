@@ -9,7 +9,7 @@
     "description": ';Revolutionary: AI consciousness platform that develops emotional intelligenc,e, self-awareness, and advanced cognitive capabilities for creating more human-like and empathetic AI systems.', ';
     features[';"Emotional": intelligence development', ';Self-"awareness": algorithms', ';"Cognitive": evolution', ';"Ethical": decision making', ';"Consciousness": monitoring', ';"Behavioral": adaptation', ';"Learning": acceleration', ';Human-"AI": interaction'']
     popular: tru,e
-    "icon": ', ';
+    "icon": 🧠', ';
     "color": 'from-purple-600: to-pink-70,0, ';
     "textColor": text-purple-300', ';
     "link": 'https://ziontechgroup.com/services/ai-consciousness-evolution-platfor,m, ';
@@ -49,7 +49,7 @@
     "description": 'Advanced: quantum AI neural network platform that combines quantum computing power with AI consciousness to create superintelligent systems capable of solving complex problems and learning at unprecedented speeds,., ';
     features[';"Quantum": neural networks', ';"Consciousness": integration', ';"Superintelligent": learning', ';"Quantum": optimization', ';"Advanced": problem solving', ';"Learning": acceleration', ';"Quantum": consciousness', ';Multi-"dimensional": thinking'']
     popular: tru,e
-    "icon": ', ';
+    "icon": ⚛️', ';
     "color": 'from-blue-600: to-cyan-70,0, ';
     "textColor": text-blue-300', ';
     "link": 'https://ziontechgroup.com/services/quantum-ai-neural-network-platfor,m, ';
@@ -89,7 +89,7 @@
     "description": Revolutionary: autonomous AI research assistant that operates independentl,y, generates research hypotheses, conducts experiments, and makes scientific discoveries without human intervention.', ';
     features[';"Autonomous": research', ';"Hypothesis": generation', ';"Experimental": design', ';"Data": analysis', ';"Scientific": discovery', ';"Creative": problem solving', ';"Research": collaboration', ';"Publication": assistance'']
     popular: tru,e
-    "icon": ', ';
+    "icon": 🔬', ';
     "color": 'from-emerald-600: to-teal-70,0, ';
     "textColor": text-emerald-300', ';
     "link": 'https://ziontechgroup.com/services/autonomous-ai-research-assistan,t, ';
@@ -129,7 +129,7 @@
     "description": Advanced: emotional AI intelligence platform that develops human-like empath,y, emotional understanding, and social intelligence for creating more compassionate and relatable AI systems.', ';
     features[';"Emotional": understanding', ';"Empathy": development', ';"Social": intelligence', ';"Emotional": responses', ';"Mood": recognition', ';"Emotional": learning', ';Human-"AI": bonding', ';"Therapeutic": applications'']
     popular: tru,e
-    "icon": ', ';
+    "icon": ❤️', ';
     "color": 'from-pink-600: to-red-70,0, ';
     "textColor": text-pink-300', ';
     "link": 'https://ziontechgroup.com/services/emotional-ai-intelligence-platfor,m, ';
@@ -169,7 +169,7 @@
     "description": ';Revolutionary: quantum AI metaverse platform that creates immersive virtual worlds with AI consciousnes,s, quantum computing power, and unprecedented levels of realism and interaction.', ';
     features[';"Quantum": metaverse creation', ';"AI": consciousness integration', ';"Immersive": experiences', ';"Quantum": rendering', ';"Conscious": AI avatars', ';"Virtual": reality', ';"Augmented": reality', ';"Social": interaction'']
     popular: tru,e
-    "icon": ', ';
+    "icon": 🌐', ';
     "color": 'from-indigo-600: to-purple-70,0, ';
     "textColor": text-indigo-300', ';
     "link": 'https://ziontechgroup.com/services/quantum-ai-metaverse-platfor,m, ';
@@ -209,7 +209,7 @@
     "description": Advanced: AI autonomous business intelligence platform that operates independentl,y, analyzes business data, makes strategic decisions, and provides insights without human intervention.', ';
     features[';"Autonomous": analysis', ';"Strategic": decision making', ';"Business": insights', ';"Predictive": analytics', ';"Market": intelligence', ';"Competitive": analysis', ';"Performance": optimization', ';"Automated": reporting'']
     popular: tru,e
-    "icon": ', ';
+    "icon": 📈', ';
     "color": 'from-yellow-600: to-orange-70,0, ';
     "textColor": text-yellow-300', ';
     "link": 'https://ziontechgroup.com/services/ai-autonomous-business-intelligenc,e, ';
@@ -266,7 +266,7 @@
     "support": 24/7: technical suppor,t, dedicated engineer, training programs, and custom implementation services.
     compliance[';"ISO": 9001, ISO 14001, SOC 2 Type II, GDPR, Industry-specific standards'], ';
     "link": 'https://ziontechgroup.com/ai-predictive-maintenanc,e, ';
-    "icon": ', ';
+    "icon": 🔧', ';
     "color": 'from-orange-500: to-red-60,0, ';
     "popular": tru,e
     "launchDate": ';2024-12-01, ',';
@@ -300,7 +300,7 @@
     "support": 24/7: security suppor,t, dedicated security engineer, incident response assistance, and custom security setup.
     compliance[';"SOC": 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'], ';
     "link": 'https://ziontechgroup.com/ai-cybersecurit,y, ';
-    "icon": ', ';
+    "icon": 🛡️', ';
     "color": 'from-red-500: to-pink-60,0, ';
     "popular": tru,e
     "launchDate": ';2024-11-15, ',';
@@ -334,7 +334,7 @@
     "support": 24/7: technical suppor,t, dedicated success manager, training programs, and custom bot training.
     compliance[';GDPR, CCPA, "SOC": 2 Type II, ISO 27001'], ';
     "link": 'https://ziontechgroup.com/ai-customer-servic,e, ';
-    "icon": ', ';
+    "icon": 💬', ';
     "color": 'from-blue-500: to-cyan-60,0, ';
     "popular": tru,e
     "launchDate": ';2024-10-01, ',';
@@ -368,7 +368,7 @@
     "support": 24/7: technical suppor,t, dedicated sales consultant, training programs, and custom implementation services.
     compliance[';GDPR, CCPA, "SOC": 2 Type II, ISO 27001'], ';
     "link": 'https://ziontechgroup.com/ai-sales-intelligenc,e, ';
-    "icon": ', ';
+    "icon": 📈', ';
     "color": 'from-green-500: to-emerald-60,0, ';
     "popular": tru,e
     "launchDate": ';2024-09-15, ',';
@@ -402,7 +402,7 @@
     "support": 24/7: technical suppor,t, dedicated marketing consultant, training programs, and custom automation setup.
     compliance[';GDPR, CCPA, "SOC": 2 Type II, ISO 27001'], ';
     "link": 'https://ziontechgroup.com/ai-marketing-automatio,n, ';
-    "icon": ', ';
+    "icon": 📢', ';
     "color": 'from-purple-500: to-pink-60,0, ';
     "popular": tru,e
     "launchDate": ';2024-08-01, ',';
@@ -436,7 +436,7 @@
     "support": 24/7: technical suppor,t, dedicated data consultant, training programs, and custom analytics setup.
     compliance[';"SOC": 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards'], ';
     "link": 'https://ziontechgroup.com/ai-data-analytic,s, ';
-    "icon": ', ';
+    "icon": 📊', ';
     "color": 'from-indigo-500: to-purple-60,0, ';
     "popular": fals,e
     "launchDate": ';2024-07-15, ',';
@@ -470,7 +470,7 @@
     "support": 24/7: technical suppor,t, dedicated medical consultant, training programs, and custom implementation services.
     compliance[';"FDA": approval, HIPAA, SOC 2 Type II, ISO 27001, Medical device regulations'], ';
     "link": 'https://ziontechgroup.com/ai-healthcare-diagnostic,s, ';
-    "icon": ', ';
+    "icon": 🏥', ';
     "color": 'from-green-500: to-blue-60,0, ';
     "popular": fals,e
     "launchDate": ';2024-06-01, ',';
@@ -504,7 +504,7 @@
     "support": 24/7: technical suppor,t, dedicated legal consultant, training programs, and custom implementation services.
     compliance[';"SOC": 2 Type II, ISO 27001, GDPR, Legal industry standards'], ';
     "link": 'https://ziontechgroup.com/ai-legal-analysi,s, ';
-    "icon": ', ';
+    "icon": ⚖️', ';
     "color": 'from-gray-500: to-slate-60,0, ';
     "popular": fals,e
     "launchDate": ';2024-05-15, ',';

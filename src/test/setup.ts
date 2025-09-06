@@ -67,7 +67,6 @@ if (
     ) {
       return;
     }
-    originalWarn.call(console, ...args)
   }
 })
 afterAll(() => {

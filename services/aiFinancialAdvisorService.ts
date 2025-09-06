@@ -8,46 +8,26 @@ export interface InvestmentPortfolio {;
 
   riskTolerance: 'conservative' | 'moderate' | 'aggressive'
 
-  investmentHorizon: number, // in years
-  targetReturn: number;
   assets: PortfolioAsset[];
   last_rebalanced: Date;
   performance: PortfolioPerformance;
-
-export interface PortfolioAsset {
+}
   id: string;
   symbol: string;
   name: string;
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
   quantity: number;
-  totalReturn: number;
-  annualizedReturn: number;
-export interface PortfolioPerformance {
-  total_return: number;
-  annualized_return: number;
   volatility: number;
   sharpe_ratio: number;
   max_drawdown: number;
   beta: number;
   alpha: number;
-export interface InvestmentRecommendation {
   id: string;
   user_id: string;
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
   asset: {
     symbol: string;
     name: string;
-    type: string,
-    current_price: number;
-  }
-  confidence: number;
-  reasoning: string[];
-  expected_return: number;
-  risk_level: 'low' | 'medium' | 'high',
-  time_horizon: number, // in months;
-  alternatives: string[];
-  created_at: Date,
-  expires_at: Date;
 }
 export interface FinancialGoal {
   id: string;
@@ -58,74 +38,20 @@ export interface FinancialGoal {
   target_date: Date;
   priority: 'low' | 'medium' | 'high';
   category: 'retirement' | 'education' | 'home' | 'emergency' | 'vacation' | 'business' | 'other';
-  monthly_contribution: number;
-  expected_return: number;
-  risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
-  progress: number, // percentage;
-  created_at: Date,
-  updated_at: Date;
 export interface MarketAnalysis {
   id: string;
   market: string;
-
-  analysis: string,
-  key_metrics: Record < string, number>;
-
-}
-export interface MarketAnalysis {
-  id: string;
-  market: string;
-  analysis: string,
-  key_metrics: Record < string, number>;
-
-
-export interface FinancialGoal {;
-  id: string;
-  user_id: string;
-  name: string;
-  target_amount: number;
-  current_amount: number;
-  target_date: Date;
-  priority: 'low' | 'medium' | 'high';
-  category: 'retirement' | 'education' | 'home' | 'emergency' | 'vacation' | 'business' | 'other';
-  id: string;
-  market: string;
-
-  analysis: string
-  keyMetrics: Record<string, number>;
-
   trends: string[];
   risks: string[];
   opportunities: string[];
   recommendations: string[];
   confidence: number;
-  last_updated: Date,
-  next_update: Date;
 }
 export interface FinancialPlan {
   id: string;
   user_id: string;
   name: string;
   summary: string;
-  goals: FinancialGoal[],
-  investment_strategy: {
-    asset_allocation: Record < string, number>;
-    rebalancing_frequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually',
-    risk_management: string[];
-  }
-  cash_flow: {
-    monthly_income: number;
-    monthly_expenses: number;
-    savings_rate: number,
-    emergency_fund: number;
-
-
-export interface FinancialPlan {;
-  id: string;
-  user_id: string;
-  name: string;
-  summary: string;
-
   }
   insurance: {
     life: boolean;
@@ -166,7 +92,6 @@ export interface FinancialRequest {
     portfolio?: InvestmentPortfolio;
     recommendations?: InvestmentRecommendation[];
     plan?: FinancialPlan;
-
 export class AIFinancialAdvisorService {
 
 export class AIFinancialAdvisorService {;
@@ -348,6 +273,9 @@ if ( {) {
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
+    strategies: string[];
+    estimated_savings: number;
+    implementation: string[];
     } catch (error) {
       console && console.error('Error getting tax optimization strategies:', error);
       throw error
@@ -383,9 +311,6 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
   performance: PortfolioPerformance,;
   createdAt: Date,;
   updatedAt: Date;
-
-export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
-
     risks: string[],
     deadlines: Record < string, Date>;
   }> {
@@ -440,7 +365,4 @@ if ( {) {
     }
   }
 }
-
-export interface InvestmentPortfolio {;
-
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');

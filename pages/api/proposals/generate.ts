@@ -27,7 +27,6 @@
     return res
       .status(500)
       .json({ error: error?.message |"Failed to generate proposal" });
-
   try {
     const {
       targetInstitution,
@@ -72,5 +71,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 }
+      supporting_multiverses,
+      content_markdown,
+      language,
+    });
+;
+    return res.status (200).json ({ meta, markdown: content_markdown });
+  } catch (error: any) {
+    return res;
+      .status (500);
+      .json ({ error: error?.message || "Failed to generate proposal" });
+  }
+}
 
+import type { NextApiRequest, NextApiResponse } from 'next';
 
+  }
+}

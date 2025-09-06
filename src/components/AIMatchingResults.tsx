@@ -2,12 +2,6 @@ interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
-  isLoading?: boolean
-  projectDescription?: string
-interface AIMatchingResultsProps {
-
-  matches: MatchResultItem[]
-  onSelectMatch?: (match: MatchResultItem) => void
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;interface AIMatchingResultsProps {
@@ -17,6 +11,22 @@ interface AIMatchingResultsProps {
   projectDescription?: string
 
   serviceType?: string
+}
+  const categories = {
+    all: matches,
+    talent: matches.filter (match =>;
+      match.category.toLowerCase ().includes ('talent')),
+    services: matches.filter (match =>;
+      match.category.toLowerCase ().includes ('service')),
+    equipment: matches.filter (match =>;
+      match.category.toLowerCase ().includes ('equipment')),
+
+  }
+  // Get the icon for a category;
+  const getCategoryIcon = (category: string) =>: any {
+    const lower_category = category.toLowerCase ();
+    if () return User) {
+  $2
 }
     if () return Monitor) {
   $2
@@ -59,6 +69,16 @@ if ( {) {
                               </AvatarFallback>;
                             )}
 
+                                  </div>;
+                                </div>;
+                              )}
+
+
+
+
+
+
+
                                   </div>
                                 </div>
                               )}
@@ -67,11 +87,19 @@ if ( {) {
                         </div>;
                       </div>;
                     </div>;
+
+
+
+            )}
+          </TabsContent>
+        ))}
 }
       </Tabs>;
     </div>;
   );
 }
+
+
 
                   </Card>);
               })) : (

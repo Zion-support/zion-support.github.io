@@ -38,9 +38,6 @@ import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
   type: "jobs" | "talents";
 }
-
-
-
   
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
@@ -99,6 +96,10 @@ interface BrowseFiltersProps {
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
+interface BrowseFiltersProps {
+  type: "jobs" | "talents";
+}
+                        className="my-4"
                       />;
                       <div className="flex justify-between text-xs text-muted-foreground">;
                         <span>0+ years</span>;
@@ -117,29 +118,6 @@ interface BrowseFiltersProps {
                     </SelectContent>;
                   </Select>;
                 </div>;
-                <div className="space-y-2">;
-                  <Label>Salary Range</Label>;
-                  <div className="flex gap-4 items-center">;
-                    <Input placeholder="Min" type="number" className="w-full" />;
-                    <span>to</span>;
-                    <Input placeholder="Max" type="number" className="w-full" />;
-                  </div>;
-                </div>;
-                <div className="space-y-2">;
-                  <Label>Skills</Label>;
-                  <div className="grid grid-cols-2 gap-2">;
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>;
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">React</Badge>;
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Python</Badge>;
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Figma</Badge>;
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">UI/UX</Badge>;
-                <div className="flex items-center justify-between">;
-                  <Label>Only show verified profiles</Label>;
-                  <Switch />;
-                </div>;
-              </div>;
-          <Select>;
-            <SelectTrigger className="w-[120px] h-8">;
               <SelectValue placeholder="Sort By" />;
             </SelectTrigger>;
             <SelectContent>;

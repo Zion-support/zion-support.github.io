@@ -1,4 +1,3 @@
-
 interface TranslatableJobFormProps {
 
   onSubmit: (formData: any) => void
@@ -175,8 +174,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         break
       }
     }
-
-
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -279,24 +276,14 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         break;
 
 
-
-
-      }
-    }
-
-
       const { translations, error } = await translateContent(content, 'job', sourceLanguage),
       
-
-
       if (error) {
         toast({
           title: t('translation.translation_failed')
           description: error
           variant: "destructive"})
         return
-
-
       }
       if (field === 'title') {
         setTitle(translations)
@@ -321,8 +308,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     const promises = [];
     if (!title.en && !title.es && !title.pt && !title.ar) return;
     if (!description.en && !description.es && !description.pt && !description.ar) return;
-
-
     }
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
@@ -335,9 +320,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     if (promises.length) {
       await Promise.all(promises)
     }
-  }
-
-  },
 
 
   },
@@ -420,6 +402,8 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         <div className="space-y-2">;
           <div className="flex justify-between items-center">;
             <label htmlFor="title" className="text-lg font-medium">;
+      }
+    }
             <Button
               type="button"
               size="sm"
@@ -456,6 +440,7 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     </form>;
   );
 }
+      <div className="pt - 4">;
         <Button;
           type="submit";
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan";

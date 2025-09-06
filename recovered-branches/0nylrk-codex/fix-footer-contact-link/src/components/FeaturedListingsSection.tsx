@@ -1,19 +1,13 @@
-
 import { ProductListingCard } from "@/components/ProductListingCard",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
-interface FeaturedListingsSectionProps {
-  showTitle?: boolean
-}
 import { ProductListingCard } from '@/components / ProductListingCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
 import { Link } from './react-router-dom';
-
-
 
 interface FeaturedListingsSectionProps {
   show_title?: boolean;
@@ -117,13 +111,6 @@ function FeaturedListingsSection() {
     }];
 ;
   return (
-
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-          {featuredListings && featuredListings.map((listing) => (;
-
-            <ProductListingCard
-              key={listing && listing.id}
     <section id="featured" className="py - 12 px - 4 bg - zion - blue - dark">;
       <div className="container mx - auto">;
         {show_title && (
@@ -158,6 +145,7 @@ function FeaturedListingsSection() {
   )
 }
 
+              view="grid"
               onRequestQuote={() => {}}
 
 
@@ -176,6 +164,7 @@ function FeaturedListingsSection() {
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white px - 8 py - 6";
             as_child;
           >;
+              onRequestQuote={() => {}}
             <Link to="/marketplace">View All Listings</Link>;
           </Button>;
         </div>;
@@ -185,5 +174,6 @@ function FeaturedListingsSection() {
 
 
 }
+;
     </section>);
 }

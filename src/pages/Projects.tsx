@@ -7,6 +7,7 @@ import { Clock, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
+
 import React from "react",
 import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
@@ -14,6 +15,14 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import Link from "next/link",
+
+
+import { Clock, Briefcase } from 'lucide-react'
+
+import React from 'react'
+import { useProjects } from '@/hooks/useProjects'
+import { SEO } from '@/components/SEO'
+import {
   Card
   CardContent
   CardDescription
@@ -28,7 +37,46 @@ import Link from 'next/link'
 import { Clock, Briefcase } from 'lucide-react'
 function ProjectsContent() { const { projects, isLoading  } = useProjects()
 function ProjectsContent() {
+
         {isLoading ? (
         ) : projects.length === 0 ? (
           <p>You don't have any projects yet.</p>
         ) : (
+          <div className="grid gap-6">
+            {projects.map((project) => (
+
+          <div className="grid gap-6">
+            {projects.map((project) => (
+          <div className="grid gap-6">
+            {projects.map((project) => (
+              <Card key={project.id}>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Briefcase className="h-5 w-5 text-primary" />
+                    <span>{project.job?.title || "Project"}</span>
+                  </CardTitle>
+                  <CardDescription className="flex items-center gap-2 mt-1">
+                    <Badge variant="outline">{project.status}</Badge>
+                    <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                      <Clock className="h-3 w-3" />
+                      Started {new Date(project.start_date).toLocaleDateString()}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                    {project.job?.description || "Project details"}
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button asChild variant="outline" className="w-full">
+            ))}
+          </div>
+        )}
+      </main>;
+    </>;
+  );
+}
+;
+export default function Projects() {;
+  return <ProjectsContent />;
+};
+}

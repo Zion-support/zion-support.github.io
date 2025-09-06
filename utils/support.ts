@@ -54,12 +54,9 @@ export function searchArticles(articles: HelpArticle[], query: string): HelpArti
     article && article.tags.some(tag => tag && tag.toLowerCase().includes(queryLower))
   );
 }
-}
   // Add support functionality here;
   log_event: (event: any) => null,
   get_articles: () => [],
-export const logSupportEventToOperator = (event: any) => {
-  // Add support event logging functionality here;
-  return null;
+}
 }
 }

@@ -1,5 +1,3 @@
-export interface SpecializedITSolution2026 {
-export interface SpecializedITSolution2026 {;
   id: string;
   name: string;
   tagline: string;
@@ -26,6 +24,25 @@ export interface SpecializedITSolution2026 {;
   marketSize: string;
   growthRate: string;
   contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+  text_color: string;
+  link: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
+  category: string;
+  real_service: boolean;
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
+  roi: string;
+  competitors: string[];
+  market_size: string;
+  growth_rate: string;
+  contact_info: {
     mobile: string;
     email: string;
     address: string;
@@ -77,6 +94,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 };    return price >= minPrice && price <= maxPrice
 
   })
+}
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
@@ -290,12 +308,8 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     launchDate: '2024-05-25', customers: 67,
     rating: 4.4,
     reviews: 33
+    website: string;
   }
-];
-export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxPrice: number) => {
-  return specializedITSolutions2026.filter(solution => {
-    const price = parseInt(solution.price.replace('$', ''));
-    return price >= minPrice && price <= maxPrice
 
   })
 };

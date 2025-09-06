@@ -57,11 +57,6 @@ export interface RegionFilterProps extends FilterComponentProps {
   selected_regions: string[],
   toggle_region: (region: string) => void;
 
-  expanded: boolean;
-
-  toggleSection: () => void
-
-  isMobileFilterOpen?: boolean
 }
 export interface ExperienceFilterProps extends FilterComponentProps {
 
@@ -164,4 +159,6 @@ export interface SortFilterProps {;
   setSortOption: (option: string) => void;
 }
 ;
-;
+}
+export interface SearchFilterProps {
+}

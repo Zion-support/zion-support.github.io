@@ -6,9 +6,6 @@ import { Award } from "lucide-react",
 interface TalentCardBadgesProps {
   featured: boolean | undefined;
 }
-interface TalentCardBadgesProps {
-  featured: boolean | undefined;
-}
 
 export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
   if (!featured) return null;
@@ -71,6 +68,7 @@ if (return null) {
       </Badge>;
     </div>);
 }
+
   )
   )
 import React from "react",;

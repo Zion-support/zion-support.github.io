@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {useParams, Link, useNavigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
@@ -27,9 +26,6 @@ export default function BlogPost() {;
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState(false);
-
-
-
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts",
 export default function BlogPost() {
@@ -117,33 +113,6 @@ export default function BlogPost() {;
   }, [slug, navigate]),;
   if (!post) {;
     return (;
-  ;
-  useEffect(() => {;
-    // Find the current post by slug;
-    const currentPost = BLOG_POSTS.find(p => p.slug === slug),;
-    ;
-    if (currentPost) {;
-      setPost(currentPost),;
-      ;
-      // Find related posts (same category, excluding current post);
-      const related = BLOG_POSTS.filter(p => ;
-        p.id !== currentPost.id && ;
-        (p.category === currentPost.category || ;
-         p.tags.some(tag => currentPost.tags.includes(tag)));
-      ).slice(0, 3),;
-      ;
-      setRelatedPosts(related),;
-    } else {;
-      // Post not found;
-      navigate("/blog", { replace:true }),;
-    }
-    ;
-    // Scroll to top when post changes;
-    window.scrollTo(0, 0),;
-  }, [slug, navigate]),;
-  ;
-  if (!post) {;
-    return (;
       <AppLayout>;
         <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">;
           <div className="animate-pulse">Loading article...</div>;
@@ -151,9 +120,6 @@ export default function BlogPost() {;
       </AppLayout>;
     );
   }
-
-
-
   
   return (
     <AppLayout>
@@ -209,19 +175,24 @@ export default function BlogPost() {;
                         <span>LinkedIn</span>;
                       </a>;
                     </div>;
-
-
-
                   )}
-                </div>
-              </div>
-            </div>
-          </div>
+
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+
           {/* Featured image */}
+          <div className="mb-12 max-w-5xl mx-auto">
+            <div className="aspect-[21/9] rounded-lg overflow-hidden">
               <img
-                src={post.featuredImage}
-                alt={post.title}
+                src={post && post.featuredImage} 
+                alt={post && post.title}
+
                 className="object-cover w-full h-full"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
               <img 
                 src={post.featuredImage} 
                 alt={post.title}
@@ -238,24 +209,12 @@ export default function BlogPost() {;
                 onError={(e) => {;
                   const target = e.target as HTMLImageElement;
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
-
+                  )}
+                className="object-cover w-full h-full"
+                onError={(e) => {;
+                  const target = e && e.target as HTMLImageElement;
+                  target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
                 }}
-              />
-            </div>
-          </div>
-          {/* Article content */}
-          <div className="max-w-4xl mx-auto">
-            <div
-              className="prose prose-lg prose-invert max-w-none"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2 mt-12">
-              {post.tags.map(tag => (
-                <span
-                  key={tag}
-                  className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
-                >
                   #{tag}
                 </span>;
               ))}
@@ -267,9 +226,6 @@ export default function BlogPost() {;
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost && relatedPost.title}</h4>;
                       </div>;
                     </Link>;
-
-
-
                   ))}
                 </div>;
               </div>;

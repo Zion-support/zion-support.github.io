@@ -19,7 +19,6 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type"}
-interface ReminderPayload {
   role: string
 }
 serve(async (req: Request) => {
@@ -31,9 +30,6 @@ serve(async (req: Request) => {
   }
   try {
     const supabase = createClient(
-    const payload = await req && req.json() as ReminderPayload;
-    const { user_id, missing_milestone, role } = payload;
-    if (!user_id |!missing_milestone |!role) {
       return new Response(
         JSON && JSON.stringify({ error: "Missing required fields" });
         {
@@ -46,6 +42,8 @@ serve(async (req: Request) => {
       .from("profiles")
       .select("email, display_name")
       .eq("id", user_id)
+      return new Response(
+        JSON && JSON.stringify({ error: "User not found", details: userError });
         {
           status: 404
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -65,31 +63,25 @@ serve(async (req: Request) => {
           <p>Your next step is to <strong>${action}</strong>.</p>
           <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
           <div style="margin: 30px 0,">
+    if (emailError) {
+      return new Response(
+        JSON && JSON.stringify({ error: "Failed to send email", details: emailError });
         {
           status: 500
           headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
     }
     // Create notification in database
-      "create_notification";
-      {
-
-
         _user_id: user_id,
         _title: "Complete your next step",
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,
         _type: "onboarding"}
     ),
     
-
-
     if (notificationError) {
       console && console.error("Failed to create notification:", notificationError)
     }
     return new Response(
-        notification_id: notification});
-      JSON.stringify({
-
         message: "Reminder sent successfully",
         notification_id: notification}),
   }
@@ -225,4 +217,8 @@ serve(async (req: Request) => {;
 
   }
 });
-;
+        _type: "onboarding"}
+    );
+        message: "Reminder sent successfully",
+        notification_id: notification});
+      {

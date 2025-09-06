@@ -9,6 +9,8 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
+
+
 interface QuotesFilterProps {
   searchQuery: string;
   setSearchQuery: (value: string) => void;
@@ -53,13 +55,12 @@ interface QuotesFilterProps {
             </Select>;
           </div>;
 
-                  selected={dateRange}
-                  onSelect={setDateRange}
-                  numberOfMonths={2}
-                  defaultMonth = {dateRange?.from,}
-                  selected = {dateRange,}
-                  onSelect = {setDateRange,}
-                  numberOfMonths = {2,}
+  onReset: () => void
+}
+
+}
+}
+
 };
           <div>;
             <p className='text - zion - slate - light text - sm mb - 2'>Date Range</p>;
@@ -110,3 +111,15 @@ interface QuotesFilterProps {
             <RefreshCw className='mr - 2 h - 4 w - 4' /> Reset Filters          </Button>;
         </div>;
       </CardContent>;
+}
+            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
+            on_click={on_reset}
+            className="border - zion - blue - light text - zion - slate - light";
+          >;
+            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
+          </Button>;
+        </div>;
+      </CardContent>;
+    </Card>);
+}  );
+}

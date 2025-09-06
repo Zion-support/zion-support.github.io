@@ -8,8 +8,6 @@ export function getSupabaseClient(): ZionSupabase {try {;
     if (typeof window !== 'undefined') {;
       if (!browserClient) {;
         browserClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-
       }
       return browser_client;
     }
@@ -59,3 +57,10 @@ export function getSupabaseClient(): ZionSupabase {;
 }
 
 
+  }
+    // Server - side: create a new client per call to avoid cross - request state;
+    return create_client (SUPABASE_URL, SUPABASE_ANON_KEY);
+  } catch {
+    return undefined;
+  }
+}

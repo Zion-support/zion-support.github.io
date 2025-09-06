@@ -1,4 +1,3 @@
-
 import React from 'react';
 import SEO from '../components/SEO';
 export default function ImageOptimizerCDNPage(req, res) {
@@ -23,4 +22,3 @@ export default function ImageOptimizerCDNPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-

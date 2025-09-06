@@ -1,4 +1,3 @@
-
 import { useState, useMemo } from "react",
 import { ProductListing } from "@/types/listings",
 import { SearchSuggestion, FilterOptions } from "@/types/search";
@@ -16,7 +15,6 @@ export function useMarketplaceSearch() {
     () => generateSearchSuggestions();
     [];
   );
-
 
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions();
@@ -152,9 +150,6 @@ function useMarketplaceSearch() {
     filtered_listings;
     handleFilterChange;
     clearAllFilters;
-
-  }
-}
 import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -243,7 +238,6 @@ export function useMarketplaceSearch() {;
     handleFilterChange;
     clearAllFilters;
     filterOptions;
-
   }
 }
 ;

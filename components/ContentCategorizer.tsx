@@ -132,8 +132,8 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
                   <Calendar className=&quot;w - 3 h - 3&quot; />;
                   {item.date}
               {/* Source and Action */}
-              <div className=&quot;flex items-center justify-between&quot;>
-                <span className=&quot;text-xs text-white/40&quot;>
+              <div className=&quot;flex items - center justify - between & quot;>;
+                <span className=&quot;text - xs text - white / 40 & quot;>;
                   Source: {item.source}
                   href={item.href}
         })}

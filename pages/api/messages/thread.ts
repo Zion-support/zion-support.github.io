@@ -1,4 +1,6 @@
 
+
+
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
 import {
@@ -67,9 +69,23 @@ if ( {) {
       body,
       link_url,
       attachmentBase64,
-      attachmentName,
+
+      attachment_name,
+
       context,
     });
+  } else {
+    res && res.status(405).json({ error: "Method not allowed" });
+  }
+
+}
+
+    res.status (200).json ({ conversation, message });
+  } else {
+    res.status (405).json ({ error: "Method not allowed" });
+  }
+}
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -88,4 +104,3 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-

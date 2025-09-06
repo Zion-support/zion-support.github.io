@@ -15,13 +15,10 @@ export type ForumCategory =;
   | 'ai - tools';
   | 'feedback';
   | 'announcements';
+export interface ForumCategoryInfo {
   id: ForumCategory;
   name: string;
   description: string;
-
-  admin_only: boolean,
-  icon: string;
-
 }
   id: ForumCategory;
   name: string;
@@ -32,6 +29,7 @@ export type ForumCategory =;
 export interface ForumPost {
 
 export interface ForumPost {;
+export interface ForumPost {
   id: string;
   title: string;
   content: string;
@@ -54,6 +52,8 @@ export interface ForumPost {;
 export interface ForumReply {
 
 export interface ForumReply {;
+}
+export interface ForumReply {
   id: string;
   post_id: string;
   parentReplyId?: string;
@@ -103,6 +103,13 @@ export interface UserBadge {;
 
 export interface CommunityUser {;
 
+}
+export interface Badge {
+  id: string;
+  name: string;
+  description: string;
+}
+export interface CommunityUser {
   id: string;
   name: string;
   avatar?: string;
@@ -111,4 +118,4 @@ export interface CommunityUser {;
   post_count: number;
   reply_count: number;
   badges: Badge[];
-
+}

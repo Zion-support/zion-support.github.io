@@ -31,9 +31,6 @@ export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
 :src.pages.disabled/ProductsAdminPage.jsx
 }
 }
@@ -44,3 +41,12 @@ export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
 
 
 
+
+
+
+:src.pages.disabled/ProductsAdminPage.jsx
+}
+}
+}
+}
+}

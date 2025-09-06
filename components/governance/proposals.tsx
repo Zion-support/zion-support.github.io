@@ -44,3 +44,6 @@ export async function getStaticProps() {;
 }
 
 }
+    return { props: { data: { updated_at: null, proposals: [] } } }
+  }
+}

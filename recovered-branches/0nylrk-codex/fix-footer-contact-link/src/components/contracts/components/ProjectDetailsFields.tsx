@@ -18,25 +18,32 @@ import { Button } from "@/components/ui/button";
 
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+} from "@/components/ui/popover";
+
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
-export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (
+    <>;
+      <FormField
+        control={form && form.control}
+        name="projectName"
+        render={({ field }) => (
+        control={form.control}
+          <FormItem>;
+            <FormLabel > Project Name</FormLabel>;
             <FormControl>;
               <Input placeholder="AI Website Development" {...field} />;
             </FormControl>;
             <FormMessage />;
-
-      />;
-
-
       <FormField
         control={form && form.control}
-
-      />;
-      <FormField;
-
-        control={form.control}
         name="scopeSummary"
         render={({ field }) => (;
           <FormItem>;
@@ -86,6 +93,8 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                   <Calendar
                     mode="single"
           control={form.control}
+        <FormField
+          control={form && form.control}
           name="endDate"
           render={({ field }) => (;
             <FormItem className="flex flex-col">;
@@ -188,17 +197,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 Leave empty if the end date is flexible;
               </FormDescription>;
               <FormMessage />;
-
-
-
-
         />;
       </div>;
     </>;
-
-
-
-
   );
             </FormItem>)}
         />;

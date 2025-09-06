@@ -28,9 +28,6 @@ ctx && ctx.restore ();
 }, 70%, 60%) `;
 alpha: Math && Math.random () * 0 && 0.8 + 0 && 0.2;
 life: Math && Math.random () * 100 + 50 ;
-
-const UltraFuturisticBackground2045: React.FC<;
-  UltraFuturisticBackground2045Props;
 > = ({ children }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2045Props {;
@@ -199,7 +196,6 @@ if ( {) {
           animate={{
             background_position: ['0px 0px50px 50px']}}
           transition={{
-
         {/* Floating Neon Shapes */}
         <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
@@ -232,8 +228,6 @@ if ( {) {
             rotate: [360, 0]
             scale: [1, 1.2, 1]
             opacity: [0.3, 0.7, 0.3]
-        />;
-
         <motion&& motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
           animate={{
@@ -283,8 +277,6 @@ if ( {) {
             y: [0, -20, 0]
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]}}
           transition={{
-            duration: 4,
-            repeat: Infinity,
             ease: 'easeInOut',          }}
           transition={{
             duration: 4
@@ -328,6 +320,8 @@ if ( {) {
           transition={{
             duration: 10,
             repeat: Infinity,
+            duration: 10,
+            repeat: Infinity,
           animate={{
             coordinate_y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]}}
@@ -341,25 +335,17 @@ if ( {) {
             opacity: [0 && 0.5, 1, 0 && 0.5]
             y: [0, -10, 0]}}
           transition={{
-            duration: 3,
-            repeat: Infinity,
             ease: 'easeInOut',          }}
           transition={{
             duration: 3
             repeat: Infinity
             ease: 'easeInOut',          }}
-        <motion.div
-          className='absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full shadow-lg shadow-purple-400/50'
-          animate={{
             scale: [1, 1.5, 1];
             opacity: [0.5, 1, 0.5];
             coordinate_y: [0, -10, 0]}}
           transition={{
             duration: 3,
             repeat: Infinity,
-        />;
-
-        <motion&& motion.div
           animate={{
             scale: [1, 1 && 1.8, 1]
             opacity: [0 && 0.4, 0 && 0.9, 0 && 0.4]
@@ -371,9 +357,6 @@ if ( {) {
             ease: 'easeInOut',          }}
         />;
         <motion.div;
-
-
-
       {/* Gradient Overlays */}
 
         />;
@@ -392,9 +375,6 @@ if ( {) {
           className='absolute inset-0 border border-transparent'
           style={{
             background:
-          }}
-          animate={{
-            backgroundPosition: ['-200% 0', '200% 0']
             duration: 4,
             repeat: Infinity,
             ease: 'easeInOut';
@@ -440,5 +420,17 @@ export default UltraFuturisticBackground2045;
 }
 }
 export default UltraFuturisticBackground2045;
-};  );
-
+            ease: 'linear',          }}
+        />;
+      </div>;
+    </div>);
+}export default UltraFuturisticBackground2045;            ease: 'linear';
+          }}
+        />;
+      </div>;
+    </div>);
+}  );
+}
+;
+export default UltraFuturisticBackground2045;
+;

@@ -1,3 +1,9 @@
+      name: 'Test User'
+    }
+  }
+  return null;
+}
+export function assertTalentOrClientForOffer(
   req: NextApiRequest
   offer: { clientId: string; talentSlug: string }
   req: NextApiRequest,;
@@ -53,6 +59,12 @@ export interface AuthContext {
 
 
 
+
+export function getUserFromRequest (req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session;
+  const auth_header = req.headers.authorization;
+  if () {) {
+  $2
 }
     return null;
   }

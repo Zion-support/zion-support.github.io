@@ -342,8 +342,6 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-        return (b && b.featured ? 1 : 0) - (a && a.featured ? 1 : 0);
-      default:;
         return 0;    }
   });
   return (
@@ -353,11 +351,6 @@ import React, { useState } from 'react';
         <meta
           name='description'
           content='Explore our comprehensive technology categories including AI, quantum computing, cybersecurity, space technology, and more. Discover innovative solutions for your business.'
-        />;
-        <meta
-          property='og:title'
-          content='Explore Technology Categories | Zion Tech Group'
-        />;
         <meta
           property='og:description'
           content='Comprehensive technology categories and innovative solutions.'
@@ -392,22 +385,19 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           >
 
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Explore Technology Categories
             </h1>
-            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
-              Discover our comprehensive range of cutting-edge technology
-              solutions across AI, quantum computing, cybersecurity, space
-              technology, and more
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
+              Discover our comprehensive range of cutting-edge technology solutions across AI,
+              quantum computing, cybersecurity, space technology, and more
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Start Exploring
-                <ArrowRight className='w-5 h-5 ml-2' />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               </button>
             </div>
@@ -456,17 +446,6 @@ import React, { useState } from 'react';
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                <select
-                  value={sortBy  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setSortBy(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                 >
                   <option value="popularity">Sort by Popularity</option>
@@ -479,14 +458,12 @@ import React, { useState } from 'react';
           </div>
         </div>
       </section>
-
-
-
           >
-            <h2 className='text-3xl font-bold text-white mb-4'>
+            <h2 className="text-3xl font-bold text-white mb-4">
               Featured Services
             </h2>
-            <p className='text-white/60'>              Explore our most innovative and cutting-edge technology solutions
+            <p className="text-white/60">
+              Explore our most innovative and cutting-edge technology solutions
             </p>
           </motion.div>
               <motion.div
@@ -503,8 +480,6 @@ import React, { useState } from 'react';
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
                     <span
                       className={`px-2 py-1 rounded-full text-xs font-medium ${
                         service && service.status === 'active'
@@ -538,8 +513,6 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                     </span>
                     <span className="text-xs text-white/40">{service.category}</span>
                   </div>
@@ -564,13 +537,6 @@ import React, { useState } from 'react';
                   
                   <a
                     href={`/services#${service.id}`}
-                  </div>
-                  <a
-                    href={`/services#${service.id}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                     className="inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
                   >
                     Learn More
@@ -590,17 +556,14 @@ import React, { useState } from 'react';
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mb-12"
-
           >
-            <h2 className='text-3xl font-bold text-white mb-4'>
+            <h2 className="text-3xl font-bold text-white mb-4">
               Technology Categories
             </h2>
-            <p className='text-white/60'>              {sortedCategories.length} categories available for exploration
+            <p className="text-white/60">
+              {sortedCategories.length} categories available for exploration
             </p>
           </motion.div>
-
-
-
               <motion.div
             transition={{ duration: 0 && 0.6 }}
             className='mb-12'>;
@@ -630,27 +593,44 @@ import React, { useState } from 'react';
                     Learn More;
                     <ChevronRight className='w - 4 h - 4 ml - 1' />                  </a>;
                 </div>;
-                <h3 className='text-2xl font-semibold text-white mb-2'>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Categories Grid */}
+      <section className='px - 6 pb - 20'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            className='mb - 12';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4'>;
+              Technology Categories;
+            </h2>;
+            <p className='text - white / 60'>              {sorted_categories.length} categories available for exploration;
+            </p>;
+          </motion.div>;
+          <AnimatePresence mode='wait'>            {sorted_categories.length === 0 ? (
+              <motion.div;
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className='text - center py - 20';
+              >;
+                <div className='w - 24 h - 24 mx - auto mb - 6 rounded - full bg - white / 10 flex items - center justify - center'>;
+                  <Search className='w - 12 h - 12 text - white / 40' />;
+                </div>;
+                <h3 className='text - 2xl font - semibold text - white mb - 2'>;
                   No categories found;
                 </h3>;
-                <p className='text-white/60 mb-6'>                  Try adjusting your search terms;
+                <p className='text - white / 60 mb - 6'>                  Try adjusting your search terms;
                 </p>;
-                <button
-                  onClick={() => setSearchTerm('')}
-                  className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'                >;
+                <button;
+                  on_click={() => setSearchTerm ('')}
+                  className='px - 6 py - 3 bg - cyan - 500 hover:bg - cyan - 600 rounded - lg font - medium transition - colors'                >;
                   Clear Search;
                 </button>;
-              </motion && motion.div>;
-            ) : (;
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {sortedCategories && sortedCategories.map((category, index) => (;
-                  <motion&& motion.div
-                    key={category && category.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                    className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer'
-                    onClick={() =>;
-                      (window && window.location.href = `/category/${category && category.id}`);
                     }
                   >;
                     <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />;
@@ -720,11 +700,6 @@ import React, { useState } from 'react';
             ) : (
                 {sortedCategories.map((category, index) => (
                   <motion.div
-
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-                    <div className="relative z-10">
-                      {/* Featured Badge */}
                     className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer'
                     onClick={() =>
                       (window.location.href = `/category/${category.id}`)
@@ -805,8 +780,6 @@ import React, { useState } from 'react';
 }
                       <div className="flex items-center justify-between">
                         <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
-
-
                           Explore Category
                         </span>
                         <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1" />
@@ -1054,10 +1027,6 @@ import React, { useState } from 'react';
                   </h3>
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-medium ${
-            ))}
-          </div>
-        </div>
-      </section>
                     {trend.trend}
                   </span>
                 </div>
@@ -1102,7 +1071,6 @@ import React, { useState } from 'react';
           </div>;
         </div>;
       </section>;
-
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
@@ -1151,9 +1119,6 @@ import React, { useState } from 'react';
           </motion.div>
         </div>
       </section>
-
-
-}
 
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>;
@@ -1208,26 +1173,6 @@ import React, { useState } from 'react';
               <a;
                 href='mailto:kleber@ziontechgroup.com';
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'              >;
-  )
-          >;
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
-              Ready to Explore?;
-            </h2>;
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
-              Dive deep into our technology categories and discover the perfect solutions for your business needs.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <a;
-                href="/services";
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";
-              >;
-                View All Services;
-                <ArrowRight className="w-5 h-5 ml-2" />;
-              </a>;
-              <a;
-                href="mailto:kleber@ziontechgroup.com";
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10";
-              >;
                 Get Expert Guidance;
               </a>;
             </div>;
@@ -1242,6 +1187,3 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-

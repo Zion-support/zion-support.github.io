@@ -7,11 +7,17 @@ export interface MarketTrend {;
   growthRate: number;
   relatedKeywords: string[];
 
-  marketOpportunity: 'high' | 'medium' | 'low'
+  search_volume: number;
+  trend_direction: 'rising' | 'falling' | 'stable';
+  growth_rate: number;
+  related_keywords: string[];
+  market_opportunity: 'high' | 'medium' | 'low',
+  timestamp: Date;
 
-  timestamp: Date
+export interface MarketTrend {
+  id: string;
+  keyword: string;
 }
-export interface CompetitorAnalysis {
   id: string;
   competitor_name: string;
   website: string;
@@ -20,41 +26,25 @@ export interface CompetitorAnalysis {
   weaknesses: string[];
   opportunities: string[];
   threats: string[];
-  pricing_strategy: string,
-  feature_comparison: Record < string, boolean>;
-  socialMediaPresence: Record < string, number>;
-  last_updated: Date;
 }
 export interface MarketSegment {
   id: string;
   name: string;
   size: number;
-  growth_rate: number,
-  demographics: Record < string, any>;
-  psychographics: Record < string, any>;
-  buying_behavior: Record < string, any>;
-  pain_points: string[],
-  solutions: string[];
 }
 export interface MarketReport {
   id: string;
   title: string;
   industry: string;
   summary: string;
-export interface MarketResearchRequest {
   industry: string;
   target_market: string;
   research_type: 'trends' | 'competitors' | 'segments' | 'comprehensive';
   timeframe: '7d' | '30d' | '90d' | '1y';
-
-export interface MarketResearchResponse {
   success: boolean;
   data: {
     trends?: MarketTrend[];
     competitors?: CompetitorAnalysis[];
-
-export class AIMarketResearchService {
-
 export class AIMarketResearchService {;
   private apiKey: string;
 
@@ -65,40 +55,6 @@ export class AIMarketResearchService {;
   }
   async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
     try {
-
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
-    this && this.apiKey = apiKey,
-    this && this.baseUrl = baseUrl
-  }
-  async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
-    try {
-      const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`;
-          'Content-Type': 'application/json'};
-        body: JSON && JSON.stringify(request)});
-      if (!response && response.ok) {
-        throw new Error(`HTTP error! status: ${response && response.status}`)
-      }
-      const data = await response && response.json();
-      return data && data.trends || []
-    } catch (error) {
-      console && console.error('Error analyzing market trends:', error);
-  }
-  async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
-    try {
-      const response = await fetch(`${this.baseUrl}/api/market-research/trends`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify(request)});
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json();
-      return data.trends |[]
     } catch (error) {
       console && console.error('Error analyzing market trends:', error);
       throw error
@@ -215,9 +171,6 @@ export interface MarketResearchResponse {;
     trends?: MarketTrend[],;
     competitors?: CompetitorAnalysis[],;
     segments?: MarketSegment[],;
-
-export const aiMarketResearchService = new AIMarketResearchService(process && process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
-
     segments?: MarketSegment[],
     report?: MarketReport;
   }
@@ -387,7 +340,4 @@ if ( {) {
 }
 export const aiMarketResearchService = new AIMarketResearchService (process.env.MARKET_RESEARCH_API_KEY || 'demo - key');
 ;
-
-export interface MarketTrend {;
-
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');

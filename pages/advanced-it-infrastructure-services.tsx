@@ -32,9 +32,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-import Layout from '../components/layout/Layout';
-
-import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -43,26 +40,6 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 }
 const heroStats = [
-  {
-    label: 'Infrastructure Projects'
-    value: '150+'
-    icon: <Server className='w-5 h-5' />
-  }
-  {
-    label: 'Enterprise Clients'
-    value: '300+'
-    icon: <Building className='w-5 h-5' />
-  }
-  {
-    label: 'Uptime Guarantee'
-    value: '99.99%'
-    icon: <Award className='w-5 h-5' />
-  }
-  {
-    label: 'Cost Reduction'
-    value: '60%'
-    icon: <TrendingUp className='w-5 h-5' />
-  },];
 const serviceCategories = [
   {
     title: 'Quantum Cloud Computing',
@@ -111,39 +88,6 @@ const heroFeatures = [
     icon: Atom
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
   }
-const serviceCategories = [
-  {
-    title: 'Zero Trust Security'
-    description:
-      'Continuous verification and monitoring that provides comprehensive protection against modern threats.'
-    icon: Shield
-    gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
-  },];
-const testimonials = [
-  {
-    name: 'Dr. Jennifer Martinez'
-    role: 'CTO, QuantumTech Industries'
-    company: 'QuantumTech Industries'
-    content:
-      "Zion Tech Group's quantum cloud infrastructure has revolutionized our research capabilities. We've achieved computational breakthroughs that were previously impossible."
-    rating: 5
-    avatar: ''
-  },  {
-    name: 'Robert Thompson'
-    role: 'Infrastructure Director, EdgeNet Solutions'
-    company: 'EdgeNet Solutions'
-    content:
-      'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.'
-    rating: 5
-    avatar: ''
-  },  {
-    name: 'Lisa Chang'
-    role: 'Security CISO, SecureCorp International'
-    company: 'SecureCorp International'
-    content:
-      'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.'
-    rating: 5
-  {
   };
   {
     name: 'Lisa Chang',
@@ -345,16 +289,20 @@ export default function AdvancedITInfrastructureServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           >
+
+            <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
               Advanced IT Infrastructure Services
             </h1>
+            <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
+              Revolutionary infrastructure solutions with quantum computing
+              edge computing, and AI-powered automation for the future
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
             </p>
-            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats.map((stat, index) => (
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {heroStats.map((stat, index) => (
                 <motion.div
-
-
             transition={{ duration: 0 && 0.8 }}>;
             <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6'>;
               Advanced IT Infrastructure Services;
@@ -370,7 +318,7 @@ export default function AdvancedITInfrastructureServices() {
     content:;
       'Their zero - trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
     rating: 5,
-    avatar: '',
+    avatar: '👩‍🔒',
   }, ];
 ;
 export default /**
@@ -434,20 +382,6 @@ function AdvancedITInfrastructureServices() {
                   <span className="text-blue-400 font-semibold">{stat.value}</span>
                   <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
-                >
-                  {stat.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  <span className="text-blue-400 font-semibold">{stat.value}</span>
-                  <span className="text-gray-300 text-sm">{stat.label}</span>
-                </motion.div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
@@ -462,7 +396,6 @@ function AdvancedITInfrastructureServices() {
           </motion.div>
         </div>
 
-
       {/* Features Section */}
 
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
@@ -474,13 +407,11 @@ function AdvancedITInfrastructureServices() {
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our IT Infrastructure Services?
             </h2>
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our infrastructure services combine cutting-edge technology with
-              intelligent automation to deliver unprecedented performance and
-              reliability
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our infrastructure services combine cutting-edge technology with intelligent automation to deliver unprecedented performance and reliability
             </p>
           </motion.div>
                 key={index}
@@ -488,8 +419,6 @@ function AdvancedITInfrastructureServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
-
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -710,8 +639,6 @@ function AdvancedITInfrastructureServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -829,8 +756,6 @@ function AdvancedITInfrastructureServices() {
               Join hundreds of organizations that have already revolutionized their IT infrastructure with our advanced services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
-
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -864,8 +789,6 @@ function AdvancedITInfrastructureServices() {
   );
 
 
-  )
-}
                       className='relative group';
                     >;
                       <div className={`${service.color} p - 1 rounded - xl`}>;

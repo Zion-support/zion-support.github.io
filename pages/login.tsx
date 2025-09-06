@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-import {
 
 import {;
   Mail,;
@@ -185,9 +184,7 @@ import {;
 } from "lucide-react";
   DizzyFace2
 } from 'lucide-react';
-
-
-
+origin/automation-improvements-final
 
   Mail
   Lock
@@ -389,19 +386,6 @@ import {;
 origin/automation-improvements-final
       ...prev
       [name]: value
-
-
-export default function LoginPage() {
-  const [formData, setFormData] = useState({
-
-    email: "",
-    password: "",;
-
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
@@ -431,7 +415,6 @@ export default function LoginPage() {
     } catch (err) {
       setError('Login failed. Please try again.');
     } finally {
-    } finally {
     } finally {;
       setIsLoading(false);
     }
@@ -453,8 +436,6 @@ export default function LoginPage() {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-
-
               <Link
                 href="/contact"
 
@@ -587,8 +568,6 @@ export default function LoginPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
-
-
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;

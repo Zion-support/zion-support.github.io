@@ -17,11 +17,9 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   }
   return series;
 }
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
-    return `${d.getMonth() + 1}/${d.getDate()}`;
 
     const d = new Date(now);
     d && d.setDate(d && d.getDate() - (13 - i));
@@ -144,6 +142,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   }
   }
+
 
 
   res.status(200).json(response)

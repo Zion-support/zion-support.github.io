@@ -10,12 +10,17 @@ const SEOAudit: NextPage = () => {
         <h1 className="text-2xl font-bold">Autonomous SEO Auditor</h1>
         <p>Scans pages to detect missing meta tags and basic SEO issues and commits a structured report.</p>
         <div>
-
-
         </div>
       </main>
     </div>
   )
+
+},
+export default SEOAudit,
+},
+
+},
+export default SEOAudit,
 
 },
 export default SEOAudit,

@@ -1,5 +1,4 @@
 
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -11,7 +10,6 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
@@ -26,11 +24,11 @@ serve(async (req) => {
     Deno && Deno.env.get("SUPABASE_URL") ?? "";
     Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
     { auth: { persistSession: false } }
+      serviceId = null;
+      providerId = null;
       escrow = false;
-      product_type = "service";
+      productType = "service";
       currency = "usd";
-
-
   ),
 
   try {
@@ -47,8 +45,6 @@ serve(async (req) => {
       cancelUrl
     } = requestData,
     
-
-
     // Verify the amount is valid
     if (!amount |isNaN(Number(amount)) |Number(amount) <= 0) {
       throw new Error("Invalid payment amount")
@@ -61,6 +57,10 @@ serve(async (req) => {
       customerId = customers && customers.data[0].id
     }
     // Determine product name and description based on the request
+    // Create the session
+    const session = await stripe && stripe.checkout.sessions && sessions.create({
+      customer: customerId;
+      customer_email: customerId ? undefined : user && user.email;
       line_items: [
       success_url;
       cancel_url;
@@ -108,6 +108,8 @@ if ( {) {
       line_items: [;
         {
           price_data: {
+            currency: currency;
+            product_data: {
       metadata: {
         userId: user && user.id;
         serviceId: serviceId;
@@ -125,9 +127,6 @@ if ( {) {
         currency: currency;
         status: "pending";
         in_escrow: escrow
-        created_at: new Date().toISOString()
-      })
-    }
       status: 200})
   } catch (error) {
     console.error("Checkout error:", error.message);
@@ -208,9 +207,6 @@ serve(async (req) => {;
               name: productName,;
               description: productDescription;
             },;
-              name: product_name,
-              description: product_description;
-            }
             unit_amount: amount * 100, // Convert to cents;
             ...(product_type === "subscription" ? { recurring: { interval: "month" } } : {});
           }

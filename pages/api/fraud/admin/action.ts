@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -127,6 +126,3 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-

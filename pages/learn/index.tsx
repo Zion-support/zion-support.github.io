@@ -82,8 +82,6 @@ export default function LearnMarketplace(req, res) {
         <div>Loading...</div>
       ) : (
 
-}
-
     <div className='space-y-6'>;
       <div className='flex items-end justify-between gap-4'>;
         <div>;
@@ -112,7 +110,7 @@ export default function LearnMarketplace(req, res) {
         <div>;
           <h1 className='text - 2xl font - semibold'>Zion Academy</h1>;
           <div className='text - gray - 500 text - sm'>;
-            Courses  Certifications  Career Boost;
+            Courses • Certifications • Career Boost;
           </div>        </div>;
       </div>;
       <FilterBar {...filters} on_change={set_filters} />;

@@ -38,22 +38,6 @@ export default function QuantumSecureCommunication() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
     website: 'https://ziontechgroup.com'
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
-  DollarSign, Shield, Mail, MapPin, Rocket, Lock,
-  Brain, Database, TrendingUp as TrendingUpIcon, Users,
-
-  Target, BarChart, PieChart, Activity, Eye, Key
-export default function QuantumSecureCommunication() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
   }
   },
   const features = [
@@ -70,8 +54,6 @@ export default function QuantumSecureCommunication() {
     'Quantum ComputingPost-Quantum CryptographyReactNode.jsWebRTCWebAssemblyDockerKubernetes'
   ]
 
-    <UltraAdvancedFuturisticBackground
-      intensity="high"
       colorScheme="quantum-fusion"
       particleCount={500}
       animationSpeed={2.0}
@@ -134,7 +116,6 @@ export default function QuantumSecureCommunication() {
           <link rel="canonical" href="https://ziontechgroup.com/quantum-secure-communication" />
         </Head>
         <UltraAdvancedNavigation />
-
                 className="mb-8"
               >
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden">
@@ -143,9 +124,6 @@ export default function QuantumSecureCommunication() {
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500 rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -173,12 +151,6 @@ export default function QuantumSecureCommunication() {
               >
                 Quantum-Secure Communication
               </motion.h1>
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
               <motion.p
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -200,15 +172,10 @@ export default function QuantumSecureCommunication() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-
-
                 className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
               >
                 Unbreakable encryption for the <span className="text-purple-400 font-bold">quantum era</span>
               </motion.p>
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
@@ -280,10 +247,6 @@ export default function QuantumSecureCommunication() {
                     href="/contact" 
                   <Button
                     href="/contact"
-
-
-
-
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
                   >
@@ -299,8 +262,6 @@ export default function QuantumSecureCommunication() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
-
-
                 className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
               >
                 <div className="text-center p-4">
@@ -355,8 +316,6 @@ export default function QuantumSecureCommunication() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -406,8 +365,6 @@ export default function QuantumSecureCommunication() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                   className="group bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -435,8 +392,6 @@ export default function QuantumSecureCommunication() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -456,8 +411,6 @@ export default function QuantumSecureCommunication() {
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
-
                   className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -465,25 +418,6 @@ export default function QuantumSecureCommunication() {
                       <Shield className="w-5 h-5 text-white" />
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-                  Use Cases
-                </span>
-              </h2>
-              <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
-                Discover how quantum-secure communication protects your most sensitive communications
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
         {/* Technology & Integrations */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-7xl mx - auto">;
@@ -511,8 +445,6 @@ export default function QuantumSecureCommunication() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -527,8 +459,6 @@ export default function QuantumSecureCommunication() {
                       whileInView={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
-
-
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
@@ -557,8 +487,6 @@ export default function QuantumSecureCommunication() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -573,8 +501,6 @@ export default function QuantumSecureCommunication() {
                       whileInView={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
-
-
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
@@ -600,8 +526,6 @@ export default function QuantumSecureCommunication() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -630,14 +554,10 @@ export default function QuantumSecureCommunication() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantage</h3>
                 <p className="text-gray-300 mb-6">
-                  Competitive with Signal (Free), Wickr ($4.99/user/month), and Wire ($5.83/user/month). 
-                  Competitive with Signal (Free), Wickr ($4.99/user/month), and Wire ($5.83/user/month).
 
 
 
@@ -680,8 +600,6 @@ export default function QuantumSecureCommunication() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Return on Investment</h3>
@@ -759,8 +677,6 @@ export default function QuantumSecureCommunication() {
                     href="/contact" 
                   <Button
                     href="/contact"
-
-
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div

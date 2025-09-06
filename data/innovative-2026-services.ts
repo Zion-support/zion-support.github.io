@@ -216,19 +216,6 @@ export const innovative2026Services: Innovative2026Service[] = [;
     growthRate: '250% annual growth'
     variant: 'ai-futuristic'
     contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Advanced prediction platform with quantum AI algorithms, real-time processing, and comprehensive analytics capabilities.'
-    launchDate: '2026-01-20'
-    customers: 300
-    rating: 4.9
-    reviews: 156
-  }
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-platform'
@@ -239,22 +226,6 @@ export const innovative2026Services: Innovative2026Service[] = [;
     description:
       'Next-generation internet security platform using quantum encryption to provide unbreakable protection for data transmission, storage, and communication.'
     features: [
-      'Quantum key distribution'
-      'Unbreakable encryption'
-      'Real-time threat detection'
-      'Advanced firewall protection'
-      'Secure communication channels'
-      'Compliance certifications'
-      '24/7 monitoring'
-      'Custom security policies'
-      'Integration APIs'
-      'Comprehensive reporting'
-    ]
-    popular: true
-    icon: '🔒'
-    color: 'from-red-500 to-pink-600'
-    textColor: 'text-red-400'
-    link: 'https://ziontechgroup.com/quantum-internet-security-platform'
     marketPosition:
       'Leading quantum internet security platform. Competes with traditional cybersecurity solutions.'
     targetAudience:
@@ -295,19 +266,6 @@ export const innovative2026Services: Innovative2026Service[] = [;
     growthRate: '350% annual growth'
     variant: 'quantum-futuristic'
     contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Advanced quantum security platform with real-time monitoring, threat detection, and comprehensive protection capabilities.'
-    launchDate: '2026-02-15'
-    customers: 120
-    rating: 4.9
-    reviews: 78
-  }
   // AI Emotional Intelligence Platform
   {
     id: 'ai-emotional-intelligence-platform'
@@ -318,22 +276,6 @@ export const innovative2026Services: Innovative2026Service[] = [;
     description:
       'Advanced AI platform that understands, analyzes, and responds to human emotions, enabling better human-AI interactions and emotional intelligence applications.'
     features: [
-      'Real-time emotion detection'
-      'Multi-modal emotion analysis'
-      'Emotional response generation'
-      'Sentiment analysis'
-      'Emotional intelligence training'
-      'Custom emotion models'
-      'API integration capabilities'
-      'Advanced analytics'
-      'Compliance features'
-      '24/7 support'
-    ]
-    popular: true
-    icon: '❤️'
-    color: 'from-pink-500 to-rose-600'
-    textColor: 'text-pink-400'
-    link: 'https://ziontechgroup.com/ai-emotional-intelligence-platform'
     marketPosition:
       'Leading emotional intelligence AI platform. Competes with sentiment analysis and AI interaction tools.'
     targetAudience:
@@ -374,66 +316,6 @@ export const innovative2026Services: Innovative2026Service[] = [;
     growthRate: '280% annual growth'
     variant: 'ai-futuristic'
     contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Advanced emotional intelligence platform with real-time emotion detection, analysis, and response generation capabilities.';
-    launchDate: '2026-01-25';
-    customers: 450;
-    rating: 4.8
-
-    reviews: 234
-import { ServiceVariant } from '../types/service-variants',;
-export interface Innovative2026Service {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
 ;
 export const innovative2026Services: Innovative2026Service[] = [;
   // AI Consciousness & Neural Interface Services;
@@ -471,6 +353,12 @@ export const innovative2026Services: Innovative2026Service[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+
+export const innovative2026Services: Innovative2026Service[] = [
+  // AI Consciousness & Neural Interface Services
+  {
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    reviews: 234
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -656,4 +544,4 @@ export const innovative2026Services: Innovative2026Service[] = [;
     rating: 4.8;
     reviews: 234;
   }
-];
+;

@@ -1,4 +1,3 @@
-
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {Header} from "@/components/Header";
@@ -88,9 +87,6 @@ interface EquipmentDetails {
   price: number,;
   currency: string,;
   rating?: number;
-
-
-
 }
 
 // Sample data - in a real app this would come from an API
@@ -142,6 +138,10 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       { name: "Dynamics", value: "Compressor/Gate on all channels" }
       { name: "Effects", value: "8 stereo effects processors" }
       { name: "Recording", value: "64-channel USB interface" }
+      "Multiple assist tools: false color, waveform, vectorscope";
+      "Anamorphic de-squeeze options";
+      "Custom 3D LUT support";
+    ];
       { name: "Weight", value: "32 lbs" }
     ];
     features: [;
@@ -240,25 +240,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "iOS and Android remote control app";
       "Configurable user layers";
       "8 DCA groups and 6 mute groups";
-
-      "Integrated WiFi for wireless control";
-    ],;
-    warranty: "3 years manufacturer warranty",;
-    returnPolicy: "21-day return policy for items in original condition";
-  }
-};
-
-export default function EquipmentDetail() {;
-  const { equipmentId } = useParams() as { equipmentId?: string };
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
-  const [isAdding, setIsAdding] = useState(false);
-
-  // In a real app, this would fetch from an API;
-  const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined;
-
-  if (!equipment) {;
-
     return (
       <>;
         <Header />;
@@ -302,24 +283,6 @@ if ( {) {
           </div>;
         </div>;
         <Footer />;
-      </>;
-    );
-  }
-  const handleAddToCart = () => {
-    setIsAdding(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsAdding(false);
-      toast({
-        title: "Added to cart"
-        description: `${quantity}x ${equipment.name} added to your cart.`})
-    }, 800)
-  }
-  const handleBuyNow = () => {
-    setIsAdding(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsAdding(false);
 
   return (
     <>;
@@ -396,9 +359,6 @@ if ( {) {
                 </Tabs>;
               </div>;
             </div>;
-
-
-
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
@@ -565,6 +525,11 @@ if ( {) {
                     Add to Cart;
                   </Button>;
                 </div>;
+                {/* Additional Info */}
+                <div className="space-y-4 border-t border-zion-blue-light pt-4">;
+                  {/* Shipping */}
+                  {/* Warranty */}
+                  {equipment && equipment.warranty && (;
                     <div className="flex gap-3 text-zion-slate-light">;
                       <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
                       <div>;

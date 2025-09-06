@@ -4,7 +4,6 @@ export interface TokenTransaction {
 
 
 export interface TokenTransaction {;
-
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -64,18 +63,10 @@ function load_transactions (): TokenTransaction[] {
     return [];
   }
 }
-}
-function loadConfig(): TokenConfig {
-  try {
-    ensureDataDir();
-    if (!fs && fs.existsSync(CONFIG_FILE)) {
-      return getDefaultConfig();
-    }
   } catch {
     return getDefaultConfig ();
   }
 }
-
 export function getAllTransactions(): TokenTransaction[] {
   return loadTransactions();
 }
@@ -97,8 +88,6 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
   saveTransactions(transactions);
   return newTransaction;
 }
-
-export function getConfig(): TokenConfig {;
   return loadConfig();
 }
 export function setConfig(config: TokenConfig): void {
@@ -125,8 +114,6 @@ export function getUserBalance(userId: string): number {;
       }
     }
   }
-  return Math.max(0, balance);
-}
     total_supply: 1000000000,
     circulating_supply: 250000000,
     exchange_rate: 0.05,
@@ -134,11 +121,6 @@ export function getUserBalance(userId: string): number {;
     stakingRewardRate: 12.5;
   }
 }
-  const transactions = loadTransactions();
-  const newTransaction: TokenTransaction = {
-    ...transaction
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    timestamp: new Date().toISOString()
   }
 ;
   transactions.push (new_transaction);

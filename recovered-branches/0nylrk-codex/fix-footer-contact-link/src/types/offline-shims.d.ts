@@ -42,6 +42,30 @@
   // Generic definition to allow usage like forward_ref < HTMLDivElement, Props>();
   export function forward_ref < T, P = {}>(
     render: (props: P, ref: Ref < T>) => ReactElement | null): any;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+declare module 'react' {
+  const React: any;
   export const Fragment: any;
   export const StrictMode: any;
   export const clone_element: any;
@@ -85,7 +109,6 @@ declare module 'react/jsx-runtime' {;
   export const jsxs: any,
   export const Fragment: any;
 };
-
 declare module 'react' {;
   const React: any,;
   export default React,;
@@ -186,3 +209,4 @@ declare module 'react/jsx-runtime' {;
   export const jsx: any,;
   export const jsxs: any;
   export const Fragment: any;
+}

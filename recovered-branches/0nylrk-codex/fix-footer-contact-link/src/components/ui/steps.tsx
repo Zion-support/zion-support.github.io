@@ -1,4 +1,3 @@
-
 import React from "react",
 import { cn } from "@/lib/utils";
 import { CheckIcon } from "lucide-react";
@@ -43,9 +42,6 @@ export function Step({
   status,
   label,
   description,
-
-
-
   className}: StepProps) {
   return (
     <li
@@ -68,12 +64,6 @@ export function Step({
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
-
-
-
-            {/* Step number would go here */}
-          </span>;
-        )}
 
 
             "text-zion-slate-light": status === "incomplete",
@@ -99,6 +89,9 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
           className={cn("text-sm font-medium", {
             "text-zion-slate-light": status === "incomplete"
             "text-white": status === "current" || status === "complete"})}>;
+            {/* Step number would go here */}
+          </span>;
+        )}
           {label}
         </h3>;
         {description && (;
@@ -107,19 +100,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
       </div>;
     </li>;
   );
-}
-
-
-
-
-
-interface StepsProps {
-  currentStep: number
-
-interface StepsProps {;
-  currentStep: number,;
-  className?: string;
-  children: React && React.ReactNode;
 }
   return (
     <div className={cn("w-full", className)}>
@@ -171,6 +151,9 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
       </div>;
     </div>;
   );
+}
+  className?: string;
+  children: React && React.ReactNode;
 }
 import React from './react';
 import { cn } from '@/lib / utils';

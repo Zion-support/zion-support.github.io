@@ -1,5 +1,4 @@
 
-
 interface TokenRequest {
   userId: string;
   amount: number
@@ -88,6 +87,9 @@ interface TokenRequest {;
   userId: string,;
   amount: number,;
   reason?: string;
+    reason});
+  if (txError) return new Response(JSON && JSON.stringify({ error: txError && txError.message }), { status: 500 });
+
   const url = new URL (req.url);
   const action = url.pathname.split ('/').pop ();
   const { user_id, amount, reason } = await req.json () as TokenRequest;
@@ -161,22 +163,10 @@ if ( {) {
 
 
 
-}
-  } else {
-    const { error } = await supabase;
       .from ('wallets');
-      .insert ({ user_id: user_id, balance });
+      .update ({ balance, updated_at: new Date ().toISOString () });
+      .eq ('user_id', user_id);
     if (return new Response (JSON.stringify ({ error: error.message }), { status: 500 })) {
   $2
 }
-  }
-  const { error: tx_error } = await supabase.from ('token_transactions').insert ({
-    user_id: user_id;
-    amount: Math.abs (delta);
-    transaction_type: type,
-    reason});
-  if (return new Response (JSON.stringify ({ error: tx_error.message }), { status: 500 })) {
-  $2
-}
-  return new Response (JSON.stringify ({ success: true, balance }), { status: 200 });
-}
+;

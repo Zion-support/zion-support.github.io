@@ -1,14 +1,7 @@
 
-export default function EpisodePage() {
-export default function EpisodePage() {;
+
 
 export default function EpisodePage() {
-  const router = useRouter();
-  const { id } = router.query as { id?: string };
-  const [episode, setEpisode] = useState<any>(null);
-
-export default function EpisodePage() {
-
 
 export default function EpisodePage() {
 
@@ -26,7 +19,7 @@ export default function EpisodePage() {;
     (async () => {;
       const res = await fetch('/api/podcast/get?id=' + id);
   }, [id]);
-  if (!episode) return <div>Loading</div>;
+  if (!episode) return <div>Loading…</div>;
 
   return (
       <div>
@@ -66,14 +59,14 @@ if (return) {
   }, [id]);
 ;
   // Check condition
-if (return <div > Loading</div>) {
+if (return <div > Loading…</div>) {
   $2
 }
   return (
     <div className='space - y-4'>;
       <h1 className='text - 2xl font - bold'>{episode.title}</h1>;
       <p className='text - sm text - gray - 600'>;
-        Guest: {episode.invitee?.name} {' '}
+        Guest: {episode.invitee?.name} ·{' '}
         {new Date (episode.created_at).toLocaleString ()}
       </p>;
       {episode.audio?.mp3Url && (

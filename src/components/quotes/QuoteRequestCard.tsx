@@ -1,3 +1,4 @@
+
 import React from "react"
 import {format} from "date-fns"
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card"
@@ -12,110 +13,46 @@ type QuoteRequestCardProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 }
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
+  quote,
+  onViewDetails,
+  quote,
+  onViewDetails,
   onMarkAsResponded,
   onToggleArchive
-},) => {
+}) => {
   // Format date for display
-  const formatDate = (dateString: string,) => {
+  const formatDate = (dateString: string) => {
     try {
-      return format (new Date (date_string), 'PP');
+      return format(new Date(dateString), 'PP')
     } catch (e) {
+      return dateString
+    }
+
+
+  return (
+    <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
+      <CardHeader className="pb-2">
+        <div className="flex justify-between items-start">
+          <div>
+            <CardTitle className="text-white">{quote.project_name}</CardTitle>
+            <CardDescription className="text-zion-slate-light">
+              {formatDate(quote.created_at)}
+            </CardDescription>
+          </div>
+          <QuoteStatusBadge status={quote.status} />
+        </div>
+      </CardHeader>
+      <CardContent>
+        <div className="text-sm text-zion-slate-light mb-3">
+          <span className="text-white font-medium">From: </span>
+          {quote.requester_name}
+        </div>
+
+
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
         </div>
-        <div className="flex justify-between items-center mt-4">
-            variant="outline"
-            size="sm"
-            onClick = {() => onViewDetails(quote),}
-            className="flex items-center gap-1"
-          >
-            <Eye className="h-4 w-4" />
-            View Details
-          </Button>
-          <div className="flex items-center">
-              <Button
-                variant="ghost"
-                size="sm"
-  );
-};
-"};
-};
-import React from "react",;
-import { format } from "date-fns",;
-import {;
-  Card,;
-  CardContent,;
-  CardHeader,;
-  CardTitle,;
-  CardDescription;
-} from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react';
-import type { QuoteRequest } from "@/types/quotes",;
-type QuoteRequestCardProps = {;
-  quote: QuoteRequest,;
-  onViewDetails: (quote: QuoteRequest) => void,;
-  onMarkAsResponded?: (id: string) => void,;
-  onToggleArchive: (id: string, isArchived: boolean) => void;
-},;
-export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
-  quote,;
-  onViewDetails,;
-  onMarkAsResponded,;
-  onToggleArchive;
-}) => {;
-  // Format date for display;
-  const formatDate = (dateString: string) => {;
-    try {;
-      return format(new Date(dateString), 'PP');
-    } catch (e) {;
-      return dateString;
-    }
-  };
-  return (;
-    <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
-      <CardHeader className="pb-2">;
-        <div className="flex justify-between items-start">;
-          <div>;
-            <CardTitle className="text-white">{quote && quote.project_name}</CardTitle>;
-            <CardDescription className="text-zion-slate-light">;
-              {formatDate(quote && quote.created_at)}
-            </CardDescription>;
-          </div>;
-          <QuoteStatusBadge status={quote && quote.status} />;
-        </div>;
-      </CardHeader>;
-      <CardContent>;
-        <div className="text-sm text-zion-slate-light mb-3">;
-          <span className="text-white font-medium">From: </span>;
-          {quote && quote.requester_name}
-        </div>;
-
-        <p className="text-white line-clamp-3 mb-4">{quote && quote.project_summary}</p>;
-
-        <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;
-          <CalendarIcon className="h-4 w-4" />;
-          <span>Timeline: {quote && quote.timeline}</span>;
-        </div>;
-
-        <div className="flex justify-between items-center mt-4">;
-          <Button
-            variant="outline"
-            size="sm"
-            onClick = {() => onViewDetails(quote),}
-
-            className="flex items-center gap-1";
-          >;
-            <Eye className="h-4 w-4" />;
-            View Details;
-          </Button>;
-
-          <div className="flex items-center">;
-            {quote && quote.status !== 'responded' && onMarkAsResponded && (;
-
-        
         <div className="flex justify-between items-center mt-4">
           <Button
             variant="outline"
@@ -126,7 +63,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
             <Eye className="h-4 w-4" />
             View Details
           </Button>
-          
+
           <div className="flex items-center">
             {quote.status !== 'responded' && onMarkAsResponded && (
               <Button
@@ -139,7 +76,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 Mark Responded
               </Button>
             )}
-            
             <Button
               variant="ghost"
               size="sm"
@@ -257,6 +193,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     </Card>;
   );
 };
+
       return date_string;
     }
   }

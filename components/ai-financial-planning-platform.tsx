@@ -236,16 +236,6 @@ function AIFinancialPlanningPlatform() {
                 Get personalized plans, portfolio optimization, and risk;
                 management that drives financial success.;
               </p>;
-                Our AI platform combines advanced financial modeling with;
-                machine learning to deliver comprehensive financial planning and;
-                wealth management solutions.;
-              </p>;
-
-
-                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group'
-
-
-
                 >
                   <div className='w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
                     <div className='text-yellow-400'>{feature.icon}</div>
@@ -260,6 +250,9 @@ function AIFinancialPlanningPlatform() {
                 </motion.div>
 
               ))}
+            </div>
+          </div>
+        </section>
 
             </div>;
           </div>;
@@ -269,18 +262,22 @@ function AIFinancialPlanningPlatform() {
 
 
 
+              transition={{ duration: 0 && 0.8 }}
+              className='text-center mb-16'>;
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+                Powerful Financial Planning Features;
+              </h2>;
+              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
+                Our AI platform combines advanced financial modeling with;
+                machine learning to deliver comprehensive financial planning and;
+                wealth management solutions.;
+              </p>;
+              ))}
         {/* Benefits Section */}
         <section className='py-20 bg-black'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-              transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-
-
-
-            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -292,17 +289,6 @@ function AIFinancialPlanningPlatform() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Transform Your Financial Future
-              </h2>
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-                Experience dramatic improvements in financial planning
-                efficiency, investment returns, and goal achievement with our
-                AI-powered financial planning platform.
-              </p>
-            </motion.div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>              {benefits.map((benefit, index) => (            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Financial Future
               </h2>
@@ -325,7 +311,6 @@ function AIFinancialPlanningPlatform() {
                 AI-powered financial planning platform.;
               </p>;
             </motion && motion.div>;
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>              {benefits && benefits.map((benefit, index) => (            >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 Transform Your Financial Future;
@@ -335,18 +320,9 @@ function AIFinancialPlanningPlatform() {
                 goal achievement with our AI-powered financial planning platform.;
               </p>;
             </motion && motion.div>;
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-              {benefits && benefits.map((benefit, index) => (;
-                <motion&& motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                >
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-yellow-400" />
-                    <span className="text-white font-medium text-sm">{benefit}</span>
-              ))}
 
             </div>;
           </div>;
@@ -361,9 +337,6 @@ function AIFinancialPlanningPlatform() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-
-            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -375,17 +348,6 @@ function AIFinancialPlanningPlatform() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Comprehensive Financial Planning Solutions
-              </h2>
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-                From retirement planning to investment management, our platform
-                provides AI-powered solutions for every aspect of your financial
-                life.
-              </p>
-            </motion.div>
-            <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6'>              {useCases.map((useCase, index) => (            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Comprehensive Financial Planning Solutions
               </h2>
@@ -424,31 +386,12 @@ function AIFinancialPlanningPlatform() {
                   <span className="text-white font-medium text-sm">{useCase}</span>
                 </motion.div>
               ))}
-
-            </div>;
-          </div>;
-        </section>;
-
-
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>;
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion && motion.div        <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group text-center'
-
-                >
-                  <div className='w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>
-                    <Calculator className='w-6 h-6 text-yellow-400' />
-                  </div>
-                  <span className='text-white font-medium text-sm'>
-                    {useCase}
-                  </span>                </motion.div>                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Calculator className="w-6 h-6 text-yellow-400" />
-                  </div>
-                  <span className="text-white font-medium text-sm">{useCase}</span>
-                </motion.div>
               ))}
             </div>
           </div>
@@ -469,10 +412,6 @@ function AIFinancialPlanningPlatform() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Financial Planning?
-
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of individuals that have already revolutionized their financial planning
@@ -574,5 +513,4 @@ function AIFinancialPlanningPlatform() {
         </section>;
       </div>;
     </>);
-}
 }

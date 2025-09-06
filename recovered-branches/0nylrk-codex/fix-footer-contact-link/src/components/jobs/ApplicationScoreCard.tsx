@@ -1,4 +1,3 @@
-
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -9,9 +8,6 @@ import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
-
-
-
 interface ApplicationScoreCardProps {
 
   application: JobApplication
@@ -76,7 +72,6 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
       case "Strongly Recommended": return "bg-green-100 text-green-800";
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800";
-
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -177,6 +172,9 @@ function ApplicationScoreCard() {
 ;
       // Call the trigger_resume_scoring function;
       const { error } = await supabase.rpc (
+        'trigger_resume_scoring';
+        { application_id: application && application.id }
+      );
   },;
   // Trigger the scoring process;
   const handleScore = async () => {;
@@ -189,9 +187,6 @@ function ApplicationScoreCard() {
       ),
       
       if (error) throw error,
-
-
-
       
       toast.success("Resume scoring has been initiated"),
       
@@ -203,9 +198,6 @@ function ApplicationScoreCard() {
           .from("job_applications")
           .select("*")
           .eq("id", application.id)
-          setIsScoring(false);
-          return toast && toast.error("Failed to check scoring status");
-        }
   }
   };
 
@@ -261,12 +253,14 @@ function ApplicationScoreCard() {
 
 
 
+
       setTimeout(checkScore, 3000);
     } catch (error: any) {;
       setIsScoring(false),;
       toast && toast.error(`Failed to score resume: ${error && error.message}`);
     }
   }
+
   // Render the score result or button to score;
   return (
     <Card className="overflow-hidden">;
@@ -295,44 +289,13 @@ function ApplicationScoreCard() {
                     )}
                       </div>;
                     )}
-                    
-                    {application.match_breakdown.experience_match && (
-                      <div>
-                        <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
-                        <p>{application.match_breakdown.experience_match.analysis}</p>
-                      </div>
-                    )}
-
-
-                      </div>;
-                    )}
-                    {application && application.match_breakdown.experience_match && (;
-                      <div>;
-                        <p className="font-medium">Experience Match: {application && application.match_breakdown.experience_match && experience_match.score}/100</p>;
-                        <p>{application && application.match_breakdown.experience_match && experience_match.analysis}</p>;
-                      </div>;
-                    )}
-                    {application && application.match_breakdown.education_match && (;
-                      <div>;
-                        <p className="font-medium">Education Match: {application && application.match_breakdown.education_match && education_match.score}/100</p>;
-                        <p>{application && application.match_breakdown.education_match && education_match.analysis}</p>;
-                      </div>;
                     )}
                     )}
 
                   </div>;
                 </details>;
               </div>;
-
             )}
-          </div>
-        ) : (
-          <div className="text-center py-4">
-            <p className="text-muted-foreground mb-4">
-              Analyze how well this resume matches your job requirements.
-            </p>
-            <Button
-              onClick={handleScore}
               disabled={isScoring}
               className="w-full">;
               {isScoring ? (;
@@ -347,4 +310,9 @@ function ApplicationScoreCard() {
           </div>;
         )}
 }
+      </CardContent>;
+    </Card>;
+  );
+}
+;
 ;

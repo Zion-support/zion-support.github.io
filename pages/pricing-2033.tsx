@@ -4,7 +4,6 @@
 } from 'lucide-react'
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
-
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -120,8 +119,6 @@ function Pricing2033Page() {
       features: ['AI-powered analyticsPredictive insightsAutomated reporting']
       savings: 'Save 50% vs. competitors'
     }
-
-
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -305,15 +302,11 @@ export default function Pricing2033Page(req, res) {
         <link rel="canonical" href="https://ziontechgroup.com/pricing-2033" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-
-
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center">
               <motion.div
-
-
                 transition={{ duration: 0.6 }} className="mb-6">
                 <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
                   <Crown className="w-4 h-4" />
@@ -321,8 +314,6 @@ export default function Pricing2033Page(req, res) {
                 </div>
               </motion.div>
               <motion.h1
-
-
                 transition={{ duration: 0.6, delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Revolutionary Technology
@@ -350,8 +341,6 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                 transition={{ duration: 0.6, delay: 0.3 }} className="flex items-center justify-center space-x-4 mb-8">
                 <span className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                   Monthly
@@ -361,55 +350,22 @@ export default function Pricing2033Page(req, res) {
                   <div
                     className={`w-6 h-6 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full transition-transform duration-200 ${
                       billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-0'
-                    }`}
-
-                  />;
-                </button>;
-                <span className={`text - sm ${billing_cycle === 'yearly' ? 'text - white' : 'text - gray - 400'}`}>;
-                  Yearly;
-                  <span className="ml - 2 px - 2 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full">;
-                    Save 20%;
-                  </span>;
-                </span>;
-              </motion.div>;
-            </div>;
-          </div>;
-        </div>;
-
-        {/* Pricing Tiers */}
-
-
         {/* Pricing Tiers */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <motion.div
-                  key={tier.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`relative ${
-                    tier.popular ? 'scale - 105' : '';
-                  }`}
-                >;
-                  {tier.popular && (
-
-
-
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
                   <div className={`relative bg-gray-900/50 border border-purple-500/30 rounded-2xl p-8 h-full backdrop-blur-sm ${
                     tier.popular ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25' : ''
                   }`}>
@@ -422,8 +378,6 @@ export default function Pricing2033Page(req, res) {
                       </div>
                       {tier.savings && (
                         <div className="text-green-400 text-sm font-medium">{tier.savings}</div>
-
-
                     </div>
                     <ul className="space-y-4 mb-8">
                       {tier.features.map((feature, idx) => (
@@ -470,8 +424,6 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -501,8 +453,6 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
@@ -542,8 +492,6 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -573,8 +521,6 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
@@ -587,8 +533,6 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                       </div>
                     </div>
                     <div className="text-right ml-4">
@@ -628,8 +572,6 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -638,8 +580,6 @@ export default function Pricing2033Page(req, res) {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join the future of technology with our revolutionary AI, quantum computing, and cutting-edge solutions. 
-                Join the future of technology with our revolutionary AI, quantum computing, and cutting-edge solutions.
 
 
 
@@ -651,16 +591,12 @@ export default function Pricing2033Page(req, res) {
                   href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg hover:shadow-purple-500/25">
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
-
-
                 <a
                   href={`tel:${contactInfo.mobile}`} className="px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200">
                   <Phone className="w-5 h-5 mr-2 inline" />
                   Call Now
                 </a>
               </div>
-
-
               <div className="mt-12 pt-8 border-t border-purple-500/20">
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300">
                   <div className="flex items-center space-x-2">

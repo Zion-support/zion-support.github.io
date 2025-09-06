@@ -30,8 +30,6 @@ if (typeof window !== 'undefined') {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}
-
-
+    integrations: [];
+    enabled: Boolean (process.env.NEXT_PUBLIC_SENTRY_DSN)});
 }

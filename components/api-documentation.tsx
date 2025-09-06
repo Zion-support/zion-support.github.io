@@ -25,7 +25,6 @@ export default function APIDocumentation() {;
         <ul className='list-disc list-inside text-slate-300 space-y-2'>;
           <li>;
             <a className='text-cyan-400' href='/api-docs'>;
-import {
   Code,
   Database,
   Shield,
@@ -36,6 +35,14 @@ import {
   CheckCircle,
   ArrowRight,
   BarChart3,
+              API Reference;
+            </a>;
+          </li>;
+          <li>;
+              API Documentation Generator;
+            </a>;
+          </li>;
+          <li>;
               Developer Docs;
             </a>;
           </li>;
@@ -78,7 +85,3 @@ export default function APIDocumentation() {
   </div>;
   </div>),
 }
-
-	),
-}
-

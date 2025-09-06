@@ -1,9 +1,3 @@
-export type Json =;
-  | string;
-  | number;
-  | boolean;
-  | null;
-
 export type Database = {
   public: {
     Tables: {
@@ -116,6 +110,18 @@ export type Database = {
             referenced_columns: ["user_id"];
           }];
       }
+          api_key_id: string | null;
+          created_at: string;
+          endpoint: string;
+          id: string;
+          ip_address: string | null;
+          method: string;
+          response_time_ms: number | null;
+          status_code: number;
+          user_agent: string | null;
+          user_id: string | null;
+        }
+        Insert: {
           api_key_id?: string | null;
           created_at?: string;
           endpoint: string;
@@ -149,22 +155,10 @@ export type Database = {
             referencedColumns: ["id"]
           }
           },
-
-
-
         }
         Relationships: [;
           {
-
-            foreignKeyName: "api_logs_api_key_id_fkey";
-            columns: ["api_key_id"];
-            isOneToOne: false;
-            referenced_relation: "api_keys";
-            referenced_columns: ["id"];
           }
-
-            referencedColumns: ["id"]
-
           {
             foreignKeyName: "api_logs_user_id_fkey";
             columns: ["user_id"];
@@ -885,17 +879,9 @@ export type Database = {
         }
         Relationships: [;
           {
-
-            foreignKeyName: "project_milestones_created_by_fkey";
-            columns: ["created_by"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-
           }
 
           },
-
           {
             foreignKeyName: "project_milestones_project_id_fkey";
             columns: ["project_id"];
@@ -960,6 +946,7 @@ export type Database = {
             referencedRelation: "jobs"
             referencedColumns: ["id"]
           }
+          }
           {
             foreignKeyName: "projects_talent_id_fkey";
             columns: ["talent_id"];
@@ -1020,11 +1007,6 @@ export type Database = {
             referenced_columns: ["id"];
           }];
       }
-
-
-      referral_codes: {;
-        Row: {;
-
           code: string;
           created_at: string;
           id: string;
@@ -1043,9 +1025,6 @@ export type Database = {
           id?: string;
           updated_at?: string;
           user_id?: string;
-
-
-
         }
         Relationships: [;
           {
@@ -1176,9 +1155,6 @@ export type Database = {
             referenced_columns: ["user_id"];
           }];
       }
-      reminder_logs: {;
-        Row: {;
-
           clicked_at: string | null;
           email_body: string;
           email_subject: string;
@@ -1206,9 +1182,6 @@ export type Database = {
           reminder_type?: string;
           sent_at?: string | null;
           user_id?: string;
-
-
-
         }
         Relationships: [;
           {
@@ -1805,9 +1778,6 @@ export type Database = {
           days_since_login: number;
           onboarding_status: Json;
         }[];
-
-
-
       }
       complete_referral: {
         Args: { _referred_id: string, _user_type: string }
@@ -1823,8 +1793,8 @@ export type Database = {
         }
         Returns: string;
       }
-
-
+        Args: Record < PropertyKey, never>;
+        Returns: undefined;
       }
       flag_suspicious_content: {
         Args: {
@@ -1853,8 +1823,11 @@ export type Database = {
       }
       get_api_key_user_id: {
         Args: { key_prefix: string, provided_key: string }
-
-
+        Returns: string;
+      }
+      get_current_tenant_id: {
+        Args: Record < PropertyKey, never>;
+        Returns: string;
       }
       get_event_distribution: {
         Args: { days_back?: number }
@@ -1864,42 +1837,8 @@ export type Database = {
         Args: { api_key: string }
         Returns: string;
       }
-      }
-      trigger_resume_scoring: {
-        Args: { application_id: string }
-        Returns: undefined
-      }
-      update_onboarding_milestone: {
-        Args: { _user_id: string, _milestone: string, _status: boolean }
-        Returns: undefined
-      }
-      verify_api_key: {
-        Args: { provided_key: string, stored_hash: string }
-        Returns: boolean
-      }
-    }
-    Enums: {
-      api_key_scope:
-        | "jobs:read"
-        | "jobs:write"
-        | "talent:read"
-        | "quotes:write"
-        | "webhooks:manage"
-      fraud_severity: "safe" | "suspicious" | "dangerous"
-      quote_request_status:
-        | "new"
-        | "in_review"
-        | "accepted"
-        | "responded"
-        | "closed"
-        | "archived"
-      referral_status: "pending" | "completed" | "expired"
-    }
-    CompositeTypes: {
-      [_ in never]: never
-    }
-  }
-}
+        Args: Record < PropertyKey, never>;
+        Returns: number;
       }
       trigger_resume_scoring: {
         Args: { application_id: string }
@@ -1936,8 +1875,6 @@ export type Database = {
     }
   }
 }
-
-
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -1961,7 +1898,6 @@ export type Database = {
     : never
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
-
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -2002,7 +1938,6 @@ export type TablesInsert<
     : never
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
-
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -2188,6 +2123,20 @@ export type TablesUpdate<;
 export type Enums<;
   DefaultSchemaEnumNameOrOptions extends;
     | keyof DefaultSchema["Enums"];
+    | { schema: keyof Database }
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+    schema: keyof Database;
+  }
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
+    : never = never;
+> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+    | { schema: keyof Database }
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    schema: keyof Database;
+  }
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
+    : never = never;
+> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
 export const Constants = {
   public: {
     Enums: {
@@ -2212,3 +2161,4 @@ export const Constants = {
 
       api_key_scope: [
 
+;

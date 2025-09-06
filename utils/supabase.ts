@@ -2,15 +2,6 @@
 export const supabase = {
   // Add supabase functionality here;
   auth: {
-      })
-    })
-    insert: (data: any) => ({
-      select: (columns: string) => ({
-        single: () => null
-      })
-    })
-  })
-}
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -27,6 +18,7 @@ export const supabase = {
       });
     });
   });
-
+}
   });
 };
+}

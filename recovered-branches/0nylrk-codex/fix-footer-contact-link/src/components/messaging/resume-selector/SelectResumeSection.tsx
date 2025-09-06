@@ -6,11 +6,11 @@
 }
 
 export function SelectResumeSection({;
+import React from 'react';
   resumeOptions;
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
-
 import React from 'react',;
 import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;
@@ -50,4 +50,3 @@ export function SelectResumeSection({
           )}
         </>;
       )}
-}

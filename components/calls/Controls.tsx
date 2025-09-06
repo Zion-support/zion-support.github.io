@@ -1,8 +1,8 @@
 
+type Props = {;
+  room: Room | null;
+  onLeave: () => void;
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
-
-export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
-
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);
@@ -28,10 +28,14 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     setMicEnabled(enabled);  };    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);
   };
+
   const toggleCam = async () => {;
     if (!room) return;
+    const enabled = await room && room.localParticipant.setCameraEnabled(!camEnabled);
+    setCamEnabled(enabled);  };    setCamEnabled(enabled);
+  };
 
-
+  const toggleScreenShare = async () => {;
     if (!room) return;
     try {;
       const enabled =;
@@ -83,6 +87,8 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     } catch (e) {;
       console && console.warn('Screen share failed', e);
   };
+
+  return (
 
         className='px-4 py-2 rounded bg-red-600 text-white'>;
         Leave;
@@ -175,6 +181,3 @@ if (return) {
       </button>;
     </div>);
 }
-
-
-

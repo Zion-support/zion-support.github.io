@@ -96,10 +96,6 @@ export default function DemosPage() {;
                 href='#demos'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
-                style={{ animationDelay: '0 && 0.2s' }}>;
-                Start Testing;
-                <Play className='w-5 h-5 ml-2' />;
-              </Button>;
               <Button
                 href='/micro-saas'
                 variant='outline'
@@ -109,48 +105,49 @@ export default function DemosPage() {;
                 href="#demos"
                 size="lg"
                 className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
-                style={{ animationDelay: '0 && 0.2s' }}>;
-                Start Testing;
-                <Play className="w-5 h-5 ml-2" />;
-              </Button>;
               <Button
                 href="/micro-saas"
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-
               Each demo showcases a different micro SaaS service with full;
               functionality;
             </p>;
           </div>;
               <button
-
-
-
-
-
-                key={demo.id}
-                onClick={() => setActiveDemo(demo.id)}
-                className={`p-4 rounded-lg border transition-all duration-300 text-left group ${
-                  activeDemo === demo.id
-                    ? 'border-blue-500 bg-blue-500/10'
-                    : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80'
+                key={demo && demo.id}
+                onClick={() => setActiveDemo(demo && demo.id)}
+                className={`p-4 rounded-lg border transition-all duration-300 text-left group ${;
+                  activeDemo === demo && demo.id;
+                    ? 'border-blue-500 bg-blue-500/10';
+                    : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80';
                 }`}
               >;
                 <div
-
-              <button
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4'>;
-            {demos.map (demo => (              <button              Choose a Service to Test;
-            </h2>;
-            <p className="text - lg text - gray - 400 max - w-2xl mx - auto">;
-              Each demo showcases a different micro SaaS service with full functionality;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4">;
-            {demos.map ((demo) => (
-              <button;
-
+                  className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo && demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>;
+                  {demo && demo.icon}
+                </div>;
+                <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>;
+                  {demo && demo.title}
+                </h3>;
+                <p className='text-sm text-gray-400 leading-relaxed'>;
+                  {demo && demo.description}
+                </p>;
+                {activeDemo === demo && demo.id && (;
+                  <div className='mt-3 flex items-center text-blue-400 text-sm'>;
+                    <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo                  {demo && demo.icon}
+                </div>;
+                <h3 className="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">;
+                  {demo && demo.title}
+                </h3>;
+                <p className="text-sm text-gray-400 leading-relaxed">;
+                  {demo && demo.description}
+                </p>;
+                {activeDemo === demo && demo.id && (;
+                  <div className="mt-3 flex items-center text-blue-400 text-sm">;
+                    <CheckCircle className="w-4 h-4 mr-2" />;
+                    Active Demo;
+                  </div>;
                 key={demo.id}
                 on_click={() => setActiveDemo (demo.id)}
                 className={`p - 4 rounded - lg border transition - all duration - 300 text - left group ${
@@ -158,14 +155,6 @@ export default function DemosPage() {;
                     ? 'border - blue - 500 bg - blue - 500 / 10';
                     : 'border - gray - 700 bg - gray - 800 / 50 hover:border - gray - 600 hover:bg - gray - 800 / 80';
                 }`}
-              >
-                  {demo.icon}
-                </div>;
-                <h3 className='font - semibold text - white mb - 2 group - hover:text - blue - 400 transition - colors duration - 300'>;
-                  {demo.title}
-                </h3>;
-                <p className='text - sm text - gray - 400 leading - relaxed'>;
-                  {demo.description}
                   {demo.icon}
                 </div>
                 <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>
@@ -179,6 +168,19 @@ export default function DemosPage() {;
                 )}
               </button>;
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Active Demo */}
+      <section className='py-16 bg-black relative overflow-hidden'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
+          <div className='text-center mb-12'>;
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>;
+              <Play className='w-4 h-4 mr-2' />;
+              Live Demo;
+            </div>;
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>;
       {/* Active Demo */}
       <section className='py-16 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -204,80 +206,6 @@ export default function DemosPage() {;
             </h2>;
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">;
               {activeDemoData?.description}
-
-
-
-
-      {/* Active Demo */}
-      <section className="py-16 bg-black relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4">
-              <Play className="w-4 h-4 mr-2" />
-              Live Demo
-                </p>
-                {activeDemo === demo.id && (
-                  <div className="mt-3 flex items-center text-blue-400 text-sm">
-                    <CheckCircle className="w-4 h-4 mr-2" />
-                    Active Demo
-                    <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo
-
-                    Active Demo
-
-                  </div>
-                )}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Active Demo */}
-      <section className='py-16 bg-black relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-12'>
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>
-              <Play className='w-4 h-4 mr-2' />
-              Live Demo
-            </div>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
-              {activeDemoData?.title}
-            </h2>;
-            <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
-            </p>
-          </div>
-          <div className='animate-fade-in'>{activeDemoData?.component}</div>        </div>
-      </section>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                </p>;
-                {active_demo === demo.id && (
-                  <div className="mt - 3 flex items - center text - blue - 400 text - sm">;
-                    <CheckCircle className="w - 4 h - 4 mr - 2" />;
-                    Active Demo;
-                  </div>)}
-              </button>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Active Demo */}
-      <section className='py - 16 bg - black relative overflow - hidden'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10'>;
-          <div className='text - center mb - 12'>;
-            <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - blue - 500 / 10 border border - blue - 500 / 20 text - blue - 400 text - sm font - medium mb - 4'>;
-              <Play className='w - 4 h - 4 mr - 2' />;
-              Live Demo;
-            </div>;
-            <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 4'>;
-              {activeDemoData?.title}
-            </h2>;
-            <p className='text - lg text - gray - 400 max - w-2xl mx - auto'>              {activeDemoData?.description}
-            </p>;
-          </div>;
-          <div className='animate - fade - in'>{activeDemoData?.component}</div>        </div>;
-      </section>;
-      {/* Features */}              Live Demo;
-            </div>;
-            <h2 className="text - 3xl sm:text - 4xl font - bold text - white mb - 4">;
               {activeDemoData?.title}
             </h2>;
             <p className="text - lg text - gray - 400 max - w-2xl mx - auto">;
@@ -377,7 +305,6 @@ export default function DemosPage() {;
         </div>
       </section>
           </div>;
-
           <div className='animate-fade-in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">;
             {activeDemoData?.component}
           </div>;
@@ -429,11 +356,7 @@ export default function DemosPage() {;
           </div>;
         </div>;
       </section>;
-
-
-  );
-}
-    </>);
 }
 
   );
+}

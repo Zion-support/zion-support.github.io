@@ -73,12 +73,6 @@
     reviews: 6,
   },
   {
-    price: {
-      monthly: 3999
-      yearly: 39990
-      'Comply with future regulations',
-      'Enable quantum - safe communications',
-    ],
     color: 'from - cyan - 500 to - blue - 600',
     popular: true,
     launch_date: '2025 - 03 - 10',
@@ -119,31 +113,27 @@
     reviews: 67,
   },
   {
-      monthly: 2999
-      yearly: 29990
-      currency: 'USD'
-      trialDays: 45
-      setupTime: '2 weeks'
-    }
-    features: [
-      'Quantum key distribution'
-      'Quantum entanglement networks'
-      'Secure communication protocols'
-      'Network infrastructure'
-      'Performance monitoring'
-      'Security validation'
-      'Integration APIs'
-      'Commercial deployment'
-      'Research collaboration'
-      'Regulatory compliance'
-    ]
-    benefits: [
-      'Unbreakable communication security'
-      'Future-proof against quantum attacks'
-      'Enable quantum applications'
-      'Reduce security risks by 99.9%'
-      'Comply with future regulations'
-    ]
+    price: {
+      monthly: 2999,
+      yearly: 29990,
+      currency: 'USD',
+      trial_days: 45,
+      setup_time: '2 weeks',
+    },
+    features: [;
+      'Quantum key distribution',
+      'Quantum entanglement networks',
+      'Secure communication protocols',
+      'Network infrastructure',
+      'Performance monitoring',
+      'Security validation',
+      'Integration APIs',
+      'Commercial deployment',
+      'Research collaboration',
+      'Regulatory compliance',
+    ],
+    benefits: [;
+
       'Unbreakable communication security',
       'Future - proof against quantum attacks',
       'Enable quantum applications',
@@ -266,9 +256,6 @@
     customers: 150,
     rating: 4 && 4.8,
     reviews: 89,
-];
-  return emergingTechServices2025.filter(service => service.popular);
-}
   return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
 };
 
@@ -286,7 +273,6 @@ export const getEmergingTechServicesByPriceRange = (
 const contact = {mobile: "+1 302 464 0950"
   email: "kleber@ziontechgroup.com"
   address: "364 E Main St STE 1008 Middletown DE 19709";
-
   website: "https://ziontechgroup.com";
   id: string, name: string,
   tagline: string, description: string,
@@ -328,7 +314,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Expert quantum computing consultation"
       "Training and educational resources" ]
     popular: true
-    icon: ""
+    icon: "⚛️"
     color: "from-purple-600 to-pink-700"
     textColor: "text-purple-300"
     link: "https://ziontechgroup.com/services/quantum-computing-as-a-service"
@@ -372,7 +358,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Mobile and web applications"
       "API and SDK for developers" ]
     popular: true
-    icon: ""
+    icon: "🔗"
     color: "from-blue-600 to-cyan-700"
     textColor: "text-blue-300"
     link: "https://ziontechgroup.com/services/enterprise-blockchain-platform"
@@ -416,7 +402,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Real-time data streaming and alerts"
       "Custom analytics and reporting tools" ]
     popular: true
-    icon: ""
+    icon: "🛰️"
     color: "from-indigo-600 to-purple-700"
     textColor: "text-indigo-300"
     link: "https://ziontechgroup.com/services/space-data-analytics-platform"
@@ -460,7 +446,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "API access for third-party integrations"
       "Scalable cloud infrastructure" ]
     popular: true
-    icon: ""
+    icon: "🌐"
     color: "from-green-600 to-blue-700"
     textColor: "text-green-300"
     link: "https://ziontechgroup.com/services/enterprise-iot-platform"
@@ -504,7 +490,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Mobile and web applications"
       "Custom content development services" ]
     popular: true
-    icon: ""
+    icon: "🥽"
     color: "from-pink-600 to-purple-700"
     textColor: "text-pink-300"
     link: "https://ziontechgroup.com/services/enterprise-ar-vr-platform"
@@ -548,7 +534,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Custom robotics and drone development"
       "Training and simulation environments" ]
     popular: true
-    icon: ""
+    icon: "🤖"
     color: "from-gray-600 to-blue-700"
     textColor: "text-gray-300"
     link: "https://ziontechgroup.com/services/autonomous-systems-platform"
@@ -592,7 +578,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Research collaboration and data sharing"
       "Regulatory compliance and documentation" ]
     popular: true
-    icon: ""
+    icon: "🧬"
     color: "from-green-600 to-blue-700"
     textColor: "text-green-300"
     link: "https://ziontechgroup.com/services/synthetic-biology-platform"
@@ -636,7 +622,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Energy trading and market optimization"
       "Sustainability reporting and compliance" ]
     popular: true
-    icon: ""
+    icon: "⚡"
     color: "from-yellow-600 to-green-700"
     textColor: "text-yellow-300"
     link: "https://ziontechgroup.com/services/smart-energy-management-platform"
@@ -680,7 +666,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Analytics and performance reporting"
       "API access for third-party applications" ]
     popular: true
-    icon: ""
+    icon: "🚗"
     color: "from-blue-600 to-green-700"
     textColor: "text-blue-300"
     link: "https://ziontechgroup.com/services/intelligent-transportation-platform"
@@ -724,7 +710,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Real-time security monitoring and alerts"
       "Expert cybersecurity consultation" ]
     popular: true
-    icon: ""
+    icon: "🔐"
     color: "from-red-600 to-purple-700"
     textColor: "text-red-300"
     link: "https://ziontechgroup.com/services/quantum-cybersecurity-platform"
@@ -1599,9 +1585,6 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     return price >= minPrice && price <= maxPrice;
   });
 };
-
-};
-
     return price >= min_price && price <= max_price;
   });
 }

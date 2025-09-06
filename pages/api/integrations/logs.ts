@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -10,9 +9,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState();
   const logs = providerId
-    ? state && state.logs.filter((l) => l && l.providerId === providerId)
-    : state && state.logs;
-  res && res.status(200).json({ logs });
+
 }
     ? state.logs.filter((l) => l.providerId === providerId)
     : state.logs;
@@ -21,6 +18,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+
+}
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state  } from '../../../lib / integrations / file_store';

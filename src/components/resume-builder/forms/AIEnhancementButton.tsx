@@ -1,4 +1,17 @@
 export function AIEnhancementButton({
+  currentContent,
+  enhancementType,
+  context,
+  onEnhanced,
+  buttonText = "Enhance with AI",
+  className
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useResumeEnhancer(),
+  const [error, setError] = useState<string | null>(null),
+  
+  const handleEnhance = async () => {
+    if (!currentContent || currentContent.trim().length < 10) {
+      setError('Please enter at least some basic content before enhancing'),
       return
     }
     setError(null)
@@ -39,10 +52,24 @@ if (.length < 10) {) {
       on_enhanced (enhanced_content);
     }
 
+  return (
+    <Button
+      type="button"
+      variant="ghost"
+      size="sm"
+      className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
     >
       {isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
+  );      onClick={handleEnhance}
+      disabled={isEnhancing}
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-3 w-3 animate-spin" />
+      ) : (
+}
+
     <Button;
       type="button";
       variant="ghost";
@@ -64,6 +91,10 @@ if (.length < 10) {) {
       <span className="text - xs">{button_text}</span>;
     </Button>);
 }
+        <Sparkles className="h-3 w-3" />
+      )}
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+  )
 }
 ;
-

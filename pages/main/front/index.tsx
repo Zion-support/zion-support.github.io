@@ -7,8 +7,6 @@ export default function FrontLanding() {
 
 
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>
-export default function FrontLanding() {
-  return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
         <title>Zion — Autonomous Cloud Automations</title>
@@ -32,8 +30,6 @@ export default function FrontLanding() {
             <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</Link></Link>
             <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</Link></Link>
             <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</Link></Link>
-
-
           </div>
           <div className='hidden gap-6 md:flex'>
             <Link href='/'>
@@ -50,7 +46,6 @@ export default function FrontLanding() {
             </Link>          </div>
         </nav>
       </header>
-
       {/* Hero */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -93,28 +88,6 @@ export default function FrontLanding() {
                   key={k}
                   initial={{ opacity: 0, y: 6 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                  className='glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left'
-                >
-                  <div className='text-lg font-bold text-white'>{k}</div>
-                  <div className='text-xs text-white/70'>{v}</div>                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Features */}
-        <section className='mx-auto max-w-7xl px-6 pb-14'>
-          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
-            Features
-          </h2>
-          <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
-            {[
-              {
-              ].map(([k, v]) => (                <motion.div
-                  key={k}
-                  initial={{ opacity: 0, coordinate_y: 6 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
                   viewport={{ once: true }}
 
 
@@ -577,16 +550,6 @@ export default function FrontLanding(req, res) {
                 <h3 className="text-lg font-semibold">{f.title}</h3>
                 <p className="mt-1 text-sm text-white/75">{f.desc}</p>
               </motion.article>
-            ))}
-          </div>
-        </section>
-        {/* Capabilities */}
-        <section className='mx-auto max-w-7xl px-6 pb-14'>
-          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
-            Capabilities
-          </h2>
-          <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-3'>
-            {[
                 key={c.title}
           </div>;
         </section>;
@@ -597,7 +560,7 @@ export default function FrontLanding(req, res) {
                 title: 'Content & SEO',
                 desc: 'Curates content, updates promotions, and tunes metadata for reach.',
               },
-            ].map(c => (              <motion.article
+            ].map (c => (              <motion.article;
                 key={c.title}
                 initial={{ opacity: 0, coordinate_y: 8 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -696,14 +659,14 @@ export default function FrontLanding(req, res) {
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            <Link href="/services/ai-seo-auditor"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">AI SEO Auditor  automate SEO improvements</span></a></Link>
-            <Link href="/services/customer-support-chatbot"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Customer Support Chatbot  reduce response time</span></a></Link>
-            <Link href="/services/landing-page-generator"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Landing Page Generator  launch pages instantly</span></a></Link>
-            <Link href="/services/price-intelligence-service"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Price Intelligence  marketaware pricing</span></a></Link>
-            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Status  live agents & reports</span></a></Link>
-            <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom  latest autonomous updates</span></a></Link>
-            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health  audits & insights</span></a></Link>
-            <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact  discuss your usecase</span></a></Link>
+            <Link href="/services/ai-seo-auditor"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">AI SEO Auditor — automate SEO improvements</span></a></Link>
+            <Link href="/services/customer-support-chatbot"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Customer Support Chatbot — reduce response time</span></a></Link>
+            <Link href="/services/landing-page-generator"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Landing Page Generator — launch pages instantly</span></a></Link>
+            <Link href="/services/price-intelligence-service"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Price Intelligence — market‑aware pricing</span></a></Link>
+            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Status — live agents & reports</span></a></Link>
+            <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>
+            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>
+            <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact — discuss your use‑case</span></a></Link>
           </div>
         </section>
       </main>

@@ -8,14 +8,6 @@ import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-
-
-  return (
-    <Layout
-      title="Cloud Solutions - Zion Tech Group"
-
-  
-
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -36,8 +28,6 @@ import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'l
             </motion.div>
           </div>
         </section>
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
 
             <h2 className="text-3xl md: text-4xl font-bold mb-6">", Ready to Move to the Cloud?,;

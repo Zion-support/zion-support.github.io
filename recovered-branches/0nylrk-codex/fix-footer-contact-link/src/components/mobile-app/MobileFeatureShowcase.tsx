@@ -22,8 +22,6 @@ export const MobileFeatureShowcase: React.FC = () => {
     {
       icon: <Users className="h-8 w-8 text-zion-cyan" />,
       title: "Hire from Anywhere",
-
-
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
     }
     },
@@ -43,16 +41,12 @@ export const MobileFeatureShowcase: React.FC = () => {
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />
       title: "Biometric Security"
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
-    }
   ],
 
 }
 
 
   return (
-
-
-
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",;
 export const MobileFeatureShowcase: React.FC = () => {;

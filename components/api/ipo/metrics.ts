@@ -9,6 +9,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     { label: 'CAC / LTV ratio', value: '1:5.6', trend: 0.4 }];
   res.status (200).json (data);
 }
-
-}
-

@@ -1,4 +1,3 @@
-export default function Placeholder() {
 
 
 
@@ -19,6 +18,8 @@ export default function Placeholder() {
         </Link>
       </div>
   );export default function Placeholder() {
+export default function Placeholder() {;
+export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>;
       <Head>;
@@ -49,12 +50,6 @@ export default function Placeholder() {
       </div>;
     </main>;
   );
-}
-
-}
-
-}
-
 import Head from 'next / head';
 import Link from 'next / link';
 export default /**
@@ -93,8 +88,3 @@ function Placeholder() {
       </div>;
     </main>);
 }
-
-}
-
-
-

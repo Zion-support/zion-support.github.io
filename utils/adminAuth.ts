@@ -1,10 +1,11 @@
-  userId: string;
 export interface Session {
 
 export interface Session {;
   userId: string;
 
 
+export interface Session {
+  user_id: string;
   email: string;
   role: 'admin' | 'user' | 'guest';
 }
@@ -15,8 +16,7 @@ export interface Session {;
 
 
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
-  
-  return internalAgents.some(agent => userAgentString.toLowerCase().includes(agent));
+  return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
 
 export const isAdmin = () => {
@@ -163,8 +163,7 @@ export function isInternalAgentRequest (req: NextApiRequest): boolean {
 export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
-
-
-
 };
 
+}
+;

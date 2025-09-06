@@ -9,19 +9,12 @@ import { SearchSuggestion, FilterOptions } from "@/types/search";
 
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
-
-
   {
-
-    id: 'ai - equipment - 3',
-    title: 'AI Workstation Supercomputer',
-    description:;
-      'High - performance computing rig optimized for AI model training and deep learning applications. Features NVIDIA A100 GPUs, terabytes of storage, and pre - installed ML frameworks.',
-    category: 'Equipment',
-    price: 12999,
-    currency: '$',
-    tags: ['Hardware', 'Deep Learning', 'GPU'],
-    author: {
+    location: 'North America',
+    availability: '4 - 6 Weeks',
+    ai_score: 92,
+  },
+  {
     featured: true,
     location: 'Global',
     availability: '2 - 3 Weeks',
@@ -287,6 +280,74 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
     createdAt: "2023-12-15T09:45:00.000Z";
     rating: 4.9;
+    location: 'Global',
+    availability: 'Immediate',
+    ai_score: 88,
+  },
+  {
+    location: 'North America',
+    availability: '1 - 2 Weeks',
+    ai_score: 90,
+  },
+  {
+    featured: true,
+    location: 'Global',
+    availability: 'Immediate',
+    ai_score: 94,
+  },
+  {
+    location: 'Europe',
+    availability: '3 - 4 Weeks',
+    ai_score: 91,
+  },
+  {
+    location: 'Global',
+    availability: '1 - 2 Weeks',
+    ai_score: 89,
+  },
+  {
+    featured: true,
+    location: 'Global',
+    availability: 'Immediate',
+    ai_score: 97,
+  },
+  {
+    location: 'North America',
+    availability: '4 - 6 Weeks',
+    ai_score: 96,
+  },
+  {
+    location: 'Global',
+    availability: 'Immediate',
+    ai_score: 88,
+  },
+  {
+    featured: true,
+    location: 'Asia',
+    availability: '3 - 4 Weeks',
+    ai_score: 93,
+  },
+  // Adding equipment listings so they're available in marketplace too
+  {
+    id: 'equipment-1'
+    title: 'High-Performance AI Workstation'
+    description:
+      'Professional-grade workstation optimized for machine learning and AI model training with NVIDIA RTX GPUs.'
+    category: 'Workstations'
+    price: 4999
+    currency: '$'
+    tags: ['GPU', 'Machine Learning', 'Workstation']
+    author: {
+      name: 'TechGear Solutions'
+      id: 'techgear'
+      avatarUrl:
+    featured: true,
+    location: 'Global',
+    availability: '1 - 2 Weeks',
+  },
+  {
+    reviewCount: 18;
+    featured: true;
     availability: "2-4 Weeks"
   }
 ];
@@ -310,15 +371,10 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Server rack',
     'GPU cluster',
     'Edge computing',
-
-
   ];
   // Convert strings to SearchSuggestion objects
-
-  return suggestions && suggestions.map(text => ({
-    text,
-
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
+  }));};  ];
   // Convert strings to SearchSuggestion objects
   return suggestions && suggestions.map(text => ({
     text;
@@ -333,16 +389,57 @@ export const generateFilterOptions = (): FilterOptions => {
   ].sort();
   const locations = [
     ...new Set(
+      MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.location).filter(Boolean)
+    ),
+  ].sort();
+  const availability = [
+    ...new Set(
+      MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.availability).filter(Boolean)
+    ),
+  ].sort();
+
+    productTypes: productTypes && productTypes.map(type => ({
+      label: type,
+      value: type,
+    })),
+    locations: locations && locations.map(location => ({
+      label: location,
+      value: location,
+    })),
+    availabilityOptions: availability && availability.map(item => ({
+      label: item,
+      value: item,
+    })),
+    ratingOptions: [1, 2, 3, 4, 5], // Add rating options
+  };
+};
+
+export const MAX_PRICE = Math && Math.max(
+  ...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0)
+);
+export const MIN_PRICE = Math && Math.min(
+  ...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0)
+);
+  return {
+  productTypes: productTypes && productTypes.map (type => ({
+  label: type, value: type 
+}) );
+locations: locations && locations.map (location => ({
+  label: location, value: location 
+}) );
+availabilityOptions: availability && availability.map (item => ({
+  label: item, value: item 
+
 }) );
 ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 
-  }));};
 
 };export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 
+};
 
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
@@ -356,6 +453,11 @@ export const generateFilterOptions = (): FilterOptions => {
 
 
 
+  const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort();
+  const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort();
+  const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort();
+  
+  return {
     productTypes: productTypes.map(type => ({
       label: type,
       value: type
@@ -675,6 +777,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
     location: "North America",;
     availability: "2-4 Weeks";
 
+export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
     id: 'equipment - 2',
     title: 'Enterprise GPU Server Rack',
     description:;
@@ -793,8 +897,4 @@ rating_options: [1, 2, 3, 4, 5] // Add rating options;
 }export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
-
-    })),
-
-
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));

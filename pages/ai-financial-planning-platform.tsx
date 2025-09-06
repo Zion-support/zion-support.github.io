@@ -1,4 +1,3 @@
-
 			pricePerMonthUSD={349}
 			implementationWeeks="1-2 weeks"
 			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
@@ -23,7 +22,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 
 			implementationWeeks="1-2 weeks"
 			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
@@ -57,5 +55,3 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-

@@ -1,4 +1,3 @@
-import {
 
 
 } from 'lucide-react';
@@ -144,28 +143,6 @@ function Revolutionary2025Pricing() {
   const allRevolutionaryServices = [;
     ...revolutionaryAI2025Services,
     ...revolutionaryITInfrastructure2025Services,
-} from 'lucide-react';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { revolutionaryAI2025Services  } from '../data/revolutionary-2025-ai-services';
-import { revolutionaryITInfrastructure2025Services  } from '../data/revolutionary-2025-it-infrastructure';
-import { revolutionary2025MicroSaasServices  } from '../data/revolutionary-2025-micro-saas';
-export default function Revolutionary2025Pricing() {
-
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
-    'monthly';
-  );  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',  }
-  // Combine all revolutionary services
-  const allRevolutionaryServices = [
-    ...revolutionaryAI2025Services
-    ...revolutionaryITInfrastructure2025Services
-    ...revolutionary2025MicroSaasServices,  ];
     {
       id: 'all'
       name: 'All Services'
@@ -297,17 +274,6 @@ export default function Revolutionary2025Pricing() {
         if (selectedCategory === 'saas') return service.category.includes('AI') || service.category.includes('Virtual') || service.category.includes('Creative');
         return true
       });
-  // Calculate pricing with billing cycle
-  const getPrice = (service: any) => {
-    const basePrice = parseInt(service.price.replace('$', '').replace(',', ''));
-    if (billingCycle === 'yearly') {
-      return Math.floor(basePrice * 0.8); // 20% discount for yearly
-    }
-  };
-
-
-
-
   // Pricing tiers for comparison
   const pricingTiers = [
     {
@@ -388,34 +354,6 @@ export default function Revolutionary2025Pricing() {
     averageROI: '500%'
     timeToValue: '< 30 days'
     globalReach: '150+ countries',  }
-          <meta
-            name='description'
-            content="Explore competitive pricing for Zion Tech Group's revolutionary 2025 services. AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950"
-          />;
-          <meta
-            name='keywords'
-            content='AI pricing, quantum computing pricing, zero trust security pricing, edge computing pricing, 5G pricing, neuromorphic computing pricing, AI branding pricing, holographic events pricing'
-          />;
-          <meta name='author' content='Zion Tech Group' />;
-          <meta name='robots' content='index, follow' />;
-          <meta
-            property='og:title'
-            content='Revolutionary 2025 Pricing - Zion Tech Group'
-          />;
-          <meta
-            property='og:description'
-            content='Competitive pricing for cutting-edge AI, quantum computing, and IT infrastructure services. Contact: +1 302 464 0950'
-          />;
-          <meta
-            property='og:url'
-            content='https://ziontechgroup && ziontechgroup.com/revolutionary-2025-pricing'
-          />;
-          <meta property='og:type' content='website' />;
-          <link
-            rel='canonical'
-
-            href='https://ziontechgroup && ziontechgroup.com/revolutionary-2025-pricing'
-          />        </Head>;
 
         'Access to 25+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
       ];
@@ -594,12 +532,6 @@ if ( {) {
         <UltraAdvancedNavigation />
 
         {/* Hero Section */}
-        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
-          <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-
-
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 Revolutionary 2025 Pricing
@@ -653,15 +585,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                   />
                 </button>
-                <span className='text-gray-400'>Yearly (Save 20%)</span>
+                <span className="text-gray-400">Yearly (Save 20%)</span>
               </div>
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
               <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12'>
               {/* Market Analysis */  } catch (error) {
     console.error("Error:", error);
@@ -672,16 +599,6 @@ if ( {) {
 
 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  animate={{ opacity: 1, scale: 1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                   transition={{ duration: 0.6, delay: 0.1 }} className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30">
                   <div className="text-2xl font-bold text-blue-400">{marketAnalysis.totalMarketSize}</div>
                   <div className="text-xs text-gray-400">Market Size</div>
@@ -737,17 +654,26 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-
-
                 Choose Your Transformation Plan
               </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Start with our starter plan and scale up as you grow. All plans
-                include our revolutionary AI and quantum computing services.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Start with our starter plan and scale up as you grow. All plans include 
+                our revolutionary AI and quantum computing services.
               </p>
             </motion.div>
-
-
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>              {pricingTiers.map((tier, index) => (
+                <motion.div
+                  key={tier.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className={`relative ${
+                    tier.popular
+                      ? 'scale-105 border-2 border-blue-500'                      : 'border border-gray-700'
+                  } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {pricingTiers.map((tier, index) => (
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Choose Your Transformation Plan;
@@ -808,6 +734,11 @@ if ( {) {
                   </ul>;
 
                   <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200'>                    {tier && tier.cta}
+                    {tier.cta  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </button>;
                 </motion && motion.div>;
               ))}
@@ -988,19 +919,48 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                       </span>
-                      <span className='text-gray-400'>{service.period}</span>
+                      <span className="text-gray-400">{service.period}</span>
                     </div>
                   </div>
-                      ))  } catch (error) {
+                  {/* Key Features */}
+                  <div className='mb-4'>
+                    <h4 className='text-sm font-semibold text-gray-300 mb-2'>
+                      Key Features:
+                    </h4>
+                    <div className='grid grid-cols-1 gap-1'>
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <div
+                          key={idx}
+                          className='flex items-center gap-2 text-sm text-gray-400'
+                        >
+                          <div className='w-1.5 h-1.5 bg-blue-500 rounded-full'></div>                          {feature}
+                        </div>
+                      ))}
+                  {/* Key Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
+                    <div className="grid grid-cols-1 gap-1">
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
+                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
 
+                          {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </div>;
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       {service.features.length > 3 && (
                         <div className="text-xs text-gray-500 mt-1">
                           +{service.features.length - 3} more features
@@ -1017,9 +977,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  <div className="mb-4 p-3 bg-gray-800/50 rounded-lg">
-                    <h4 className="text-xs font-semibold text-gray-300 mb-1">Market Position:</h4>
-                    <p className="text-xs text-gray-400 line-clamp-2">{service.marketPosition}</p>
                   </div>
                     </div>;
                   </div>;
@@ -1035,15 +992,6 @@ if ( {) {
                   </div>;
 
                   {/* Actions */}
-                  <div className='flex items-center gap-3'>;
-                    <button className='flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'>;
-                      <ExternalLink className='w-4 h-4 mr-2' />;
-                      Learn More;
-                    </button>;
-                    <button className='border-blue-500 text-blue-400 hover:bg-blue-500/20'>;
-                      <Phone className='w-4 h-4' />                    </button>;
-                  </div>;
-
 
                       Learn More
                     </button>
@@ -1084,10 +1032,24 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             >
+
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our team to discuss your specific needs and get a custom quote. 
+                We offer flexible pricing and payment options to fit your budget.
               </p>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
+                <div className='bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30'>
+                  <Phone className='w-8 h-8 text-blue-400 mx-auto mb-3' />
+                  <h3 className='text-lg font-semibold text-white mb-2'>
+                    Call Us
+                  </h3>
+                  <p className='text-blue-400 font-mono'>
+                    {contactInfo.mobile}
+                  </p>
                 </div>
                 <div className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30'>
                   <Mail className='w-8 h-8 text-green-400 mx-auto mb-3' />
@@ -1121,9 +1083,6 @@ if ( {) {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
-
-
-}
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -1248,40 +1207,6 @@ if ( {) {
                 </button>;
                 <button className='border - blue - 500 text - blue - 400 hover:bg - blue - 500 / 20'>;
                   <BookOpen className='w - 5 h - 5 mr - 2' />                  Download Pricing Guide;
-  )
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-                Ready to Get Started?;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Contact our team to discuss your specific needs and get a custom quote.;
-                We offer flexible pricing and payment options to fit your budget.;
-              </p>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
-                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30">;
-                  <Phone className="w-8 h-8 text-blue-400 mx-auto mb-3" />;
-                  <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>;
-                  <p className="text-blue-400 font-mono">{contactInfo.mobile}</p>;
-                </div>;
-                <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30">;
-                  <Mail className="w-8 h-8 text-green-400 mx-auto mb-3" />;
-                  <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>;
-                  <p className="text-green-400">{contactInfo.email}</p>;
-                </div>;
-                <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30">;
-                  <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-3" />;
-                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>;
-                  <p className="text-purple-400 text-sm">{contactInfo.address}</p>;
-                </div>;
-              </div>;
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">;
-                  <Phone className="w-5 h-5 mr-2" />;
-                  Get Custom Quote;
-                </button>;
-                <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">;
-                  <BookOpen className="w-5 h-5 mr-2" />;
-                  Download Pricing Guide;
                 </button>;
               </div>;
             </motion.div>;
@@ -1295,6 +1220,3 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-

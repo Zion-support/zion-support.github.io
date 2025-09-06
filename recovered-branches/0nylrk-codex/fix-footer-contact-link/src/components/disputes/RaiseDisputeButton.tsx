@@ -1,10 +1,8 @@
-
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
 import {DisputeForm} from "./DisputeForm";
 import {useNavigate} from "react-router-dom";
 import {ShieldAlert} from "lucide-react";
-
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { 
@@ -26,7 +24,6 @@ interface RaiseDisputeButtonProps {
   size?: "default" | "sm" | "lg" | "icon";
   className?: string;
 }
-
 interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
@@ -93,27 +90,27 @@ export function RaiseDisputeButton({ ;
   variant = "outline", ;
   size,;
   className ;
-} RaiseDisputeButtonProps) {;
-  const [isDialogOpen, setIsDialogOpen] = useState(false),;
-  const navigate = useNavigate(),;
-  ;
-  const handleDisputeCreated = (disputeId:string) => {;
-    setIsDialogOpen(false),;
-    navigate(`/dashboard/disputes/${disputeId}`),;
-  },;
-  ;
-  return (;
-    <>;
-      <Button ;
-        variant={variant} ;
-        size={size} ;
-        className={className} ;
 }: RaiseDisputeButtonProps) {;
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleDisputeCreated = (disputeId: string) => {;
+    setIsDialogOpen(false),;
+    navigate(`/dashboard/disputes/${disputeId}`);
+  };
+
+  return (
+    <>;
+      <Button
+        variant={variant} 
+        size={size} 
+        className={className} 
         onClick={() => setIsDialogOpen(true)}
       >;
         <ShieldAlert className="h-4 w-4 mr-2" />;
         Raise Dispute;
       </Button>;
+
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
         <DialogContent className="sm:max-w-[550px]">;
           <DialogHeader>;
@@ -126,9 +123,7 @@ export function RaiseDisputeButton({ ;
 
           
           <DisputeForm 
-          <DisputeForm 
-
-
+          <DisputeForm
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}

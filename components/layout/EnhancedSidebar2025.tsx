@@ -1,7 +1,6 @@
 ] 
  ] 
 
-
 }];
 ];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
   section.badge
@@ -67,19 +66,10 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' }
     ]
   }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
   };
@@ -475,6 +465,7 @@ const sidebar_items: SidebarItem[] = [;
     } else {
       new_expanded.add (title);
     }
+  );
   return (
     <motion&& motion.aside
       initial={{ x: -300, opacity: 0 }}
@@ -776,6 +767,7 @@ const supportLinks = [
             <AnimatePresence>
               {expandedSections.has(section.title) && (
                 <motion.div
+
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
@@ -1341,9 +1333,6 @@ category?: string;
           { name: "Space Resource Management", href: "/space-resource-management" },";
           { name: "Interplanetary Communication", href: "/interplanetary-communication" }
         ];
-        icon: Sparkles,";
-        description: "Future technologies and innovations",";
-          { name: "Brain-Computer Interface", href: "/brain-computer-interface" } { name: "Autonomous Vehicle AI", href: "/autonomous-vehicle-ai" } { name: "Advanced Robotics", href: "/advanced-robotics" } { name: "Biotechnology Platform", href: "/biotechnology-platform" }
 const sidebar_sections = [];
 },
       {
@@ -1467,12 +1456,6 @@ const contact_info = {";
 ";
   {";
 ";
-    icon: Zap,";
-    color: "from-cyan-500 to-blue-600"
-    items: [
-name: "AI & Consciousness",";
-        href: "/ai-services"
-        icon: Brain,";
           { name: "AI Consciousness Evolution", href: "/ai-consciousness-evolution" } { name: "AI Autonomous Ecosystem", href: "/ai-autonomous-ecosystem" } { name: "AI Ethics & Governance", href: "/ai-ethics-governance" } { name: "AI Creativity Studio", href: "/ai-creativity-studio" } { name: "AI Education Platform", href: "/ai-education-platform" } { name: "AI Healthcare Diagnostics", href: "/ai-healthcare-diagnostics" } { name: "AI Financial Intelligence", href: "/ai-financial-intelligence" } { name: "AI Sustainability Platform", href: "/ai-sustainability-platform" } { name: "AI Emotional Intelligence", href: "/ai-emotional-intelligence-platform" } { name: "AI Legal Contract Analyzer", href: "/ai-legal-contract-analyzer" }
         nam,";
     e: "AI & Consciousness" {,";
@@ -1489,66 +1472,6 @@ href: "/ai-services", icon: Brain,";
           { name: "AI Sustainability Platform", href: "/ai-sustainability-platform" },";
           { name: "AI Emotional Intelligence", href: "/ai-emotional-intelligence-platform" },";
           { name: "AI Legal Contract Analyzer", href: "/ai-legal-contract-analyzer" }
-    href: '/biotechnology-platform' }'        ]';
-    ];
-}
-  {";
-    title: "Comp & Resources"
-    icon: Users,";
-    color: "from-green-500 to-emerald-600"
-    items[;
-      {;
-    title: 'Comp & Resources'
-    title: '    icon: Users, color: 'from-green-500 to-emerald-600','    items['      {;
-        name: 'About Us'
-    href: '/about'
-    href: '        icon: Users, description: 'Learn about Zion Tech Group','        subItems['          { name: 'Our Mission'
-    href: '/mission' },'          { name: 'Leadership Team'
-    href: '/leadership' },'          { name: 'Comp History'
-    href: '/history' },'          { name: 'Careers'
-    href: '/careers' }'        ]'      }, {name: 'Resources'
-    name: '        href: '/resources'
-    icon: BookOpen,'        description: 'Educational content and documentation', subItems['          { name: 'Documentation'
-    href: '/docs' }, { name: 'API Reference'
-    href: '/api-docs' }, { name: 'Blog & News'
-    href: '/blog' }, { name: 'Case Studies'
-    href: '/case-studies' }, { name: 'Whitepapers'
-    href: '/whitepapers' }, { name: 'Webinars'
-    href: '/webinars' }'        ]'      }, {name: 'Support'
-    name: '        href: '/support'
-    icon: HelpCircle,'        description: 'Get help and support', subItems['          { name: 'Contact Support'
-    href: '/contact-support' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs', href: '/training;
-  onClose: ()               => voi,d}
-export: default function EnhancedSidebar2025(...args[]: any):  {const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-}
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-}
-      newExpanded.delete(sectionTitle)} else: {newExpanded.add(sectionTitle)}
-    setExpandedSections(newExpanded)}
-  const filteredServices = sidebarSections.flatMap(section =>;
-    section.items.flatMap(item: =>
-      item.subItems?.filter(child: =>
-  isOpen: boolean
-onClose: ()               => void}
-export default function EnhancedSidebar2025(...args[]: any):  {export default function EnhancedSidebar2025(...args[]: any):  {;
-}
-  const [expanded_items, setExpandedItems] = useState < Set < string>>(new Set ());
-}
-      newExpanded && newExpanded.delete(sectionTitle)} else: {;      newExpanded && newExpanded.add(sectionTitle)}
-
-    setExpandedSections(newExpanded)}
-
-  const filteredServices = sidebarSections && sidebarSections.flatMap(section =>;
-    section && section.items.flatMap(item: =>,;
-      item && item.subItems?.filter(child: =>,;
-  isOpen: boolean,;
-onClose: ()               => void}
-
-export default function EnhancedSidebar2025(): any (...args[]: any):  {;
-export default function EnhancedSidebar2025(): any (...args[]: any):  {;
-
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-}
       new_expanded.delete (section_title)} else: {      new_expanded.add (section_title)}
     setExpandedSections (new_expanded)}
   const filtered_services = sidebar_sections.flat_map (section =>;
@@ -1585,21 +1508,6 @@ function EnhancedSidebar2025() {
       ) |[];
     );
 }
-    );
-      newExpanded.delete(itemName)} else: {
-      newExpanded.delete(itemName)} else {const toggleSection = (sectionTitle: string) => {
-    const newExpanded = new Set(expandedSections)
-    if (newExpanded.has(sectionTitle)) {;
-      newExpanded.delete(sectionTitle)} else {const toggleItem = (itemName: string) => {
-    const newExpanded = new Set(expandedItems)
-    if (newExpanded.has(itemName)) {;
-  )
-      newExpanded.delete(itemName)} else {newExpanded.add(itemName)}
-    setExpandedItems(newExpanded)}
-  useEffect(() => {
-    if: (isOpen) {"
-      document.body.style.overflow = "hidden"} else {";
-";
     <>;
       {/* comment */}
       <AnimatePresence>;
@@ -1711,9 +1619,6 @@ initial="{{" coordinate_x: "-100%" }}"        animate="{{" coordinate_x: is_open
   { type "spring", damping: 25, "  stiffness: 200 "}}";
 className="{"fixed" left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - r border - gray - 800 / 50 z - 50 overflow - y-auto"}";
         {/* comment */}";
-  onClos,    e: () => void}
-          {/* Contact Bar */}";
-          <div className="space-y-3">"            <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>              <Phone className="w-4 h-4 text-cyan-400" />              <span className="text-sm" text-gray-300">{contactInfo && contactInfo.mobile}</span>"            </div>            <div className="flex" items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">"              <Mail className="w-4" h-4 text-cyan-400 />"              <span className="text-sm text-gray-300>{contactInfo && contactInfo.email}</span>            </div>"          </div>";
         <div className="sticky" top - 0 bg - black / 80 backdrop - blur - xl border - b border - gray - 800 / 50 p - 6>"          <div className="flex items - center justify - between mb - 6>            <div className="flex items - center gap - 3">              <div class_name = relative">"                <div className="w - 12" h - 12 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl flex items - center justify - center>"                  <Zap className="w - 6 h - 6 text - white       />                </div>"                <div className="absolute -inset - 1 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl blur opacity - 20></div>              </div>"              <div>;
                 <h2 className="text - xl" font - bold bg - gradient - to - r from - white to - cyan - 300 bg - clip - text text - transparent>"                  Zion Tech Group"                </h2>";
                 <p className="text - gray - 400" text - sm > Revolutionary Technology</p>"              </div>"            </div>";
@@ -1746,7 +1651,6 @@ className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r
                 className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"                <div className="flex items-center gap-3>                  <div className={`w-8 h-8 bg-gradient-to-r ${section && section.color} rounded-lg flex items-center justify-center`}>"                    <section && section.icon className="w-4 h-4 text-white />                  </div>"                  <span className="text-white font-semibold>{section && section.title}</span>                </div>"                <ChevronDownclassName={w-4 h-4 text-gray-400 transition-transform duration-300 ${`
                     expandedSections && expandedSections.has(section && section.title) ? 'rotate-180' : 
 '                  }`}'                />              </button><AnimatePresence>;
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 initial={{ coordinate_x: '-100%' }}'        animate={{ coordinate_x: is_open ? 0 : '-100%' }}'        transition = {';
   { type: 'spring',
     damping: 25, '  stiffness: 200 '}}
@@ -1795,11 +1699,6 @@ const EnhancedSidebar2025: React.FC < EnhancedSidebar2025Props> = ({ is_open, on
           <div: className="flex" items-center justify-between mb-6>";";
             <div: className="flex items-center gap-3>,";
               <div: className="relative">,";
-                  <Zap: className = "w-6" h-6 text-white />",";
-                <div: className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20></div>
-      <motion.div
-initial="{{" x: "-100%" }}
-        animate="{{" x: isOpen ? 0 : "-100%" }}
         {/* comment */}";
         <div className="sticky top - 0 bg - black / 80 backdrop - blur - xl border - b border - gray - 800 / 50 p - 6">";
           <div className="flex" items - center justify - between mb - 6>";
@@ -1838,9 +1737,6 @@ initial="{{" x: "-100%" }}
         initial="{{" coordinate_x: -320 }}";
         animate="{{" coordinate_x: is_open ? 0 : -320 }}";
         transition="{{" type spring", stiffness: 300, damping: 30 }}";
-            <button: onClick="{onClose}
-              className="lg: hidden: p-2 hover:bg-gray-800/50: rounded-lg transition-colors duration-200,"
-                <p className="text-gray-400 text-sm">Revolutionary Technology</p>;
         className="fixed top - 0 left - 0 h - full w - 80 bg - white shadow - xl z - 50 lg: translate - x-0 lg:static lg:shadow - none";
           <div className="flex" items - center justify - between p - 6 border - b border - gray - 200">";
             <div className="flex items - center>";
@@ -1879,9 +1775,6 @@ initial="{{" x: "-100%" }}
                 <div key="{section && section.title}" className="mb-6>";
                     onClick="{()" => toggleSection(section && section.title)}";
                     className="w-full" flex items-center justify-between px-4 py-3 text-left rounded-lg transition-colors hover: bg-gray-100;
-                      <ChevronDown className="w-4 h-4       />;
-                    ) : (";
-                      <ChevronRight className="w-4" h-4"  />;
           <div className="flex - 1" overflow - y-auto p - 4">;
             <div className="space - y-6">";
                 <div key="{section_index}">";
@@ -1944,15 +1837,6 @@ initial="{{" x: "-100%" }}
             </div>;
           </div>;
                 </div>;
-}"}
-";
-                    expandedSections && expandedSections.has(section && section.title) ? "rotate-180" : ;
-}"}
-                  <motion.div: initial = {{ opacity:  ,0
-  height: 0: }}
-                    animate = {{ opacity: 1
-  height: 'auto' ;
-}}
                     transition={{ duration: 0.3 }}
 className="space - y-2 ml - 6"                    {section.items.map ((item, item_index) => (
                       <div key={item_index} className="space - y-2>                        <button"                          on_click={() => toggle_item (item.name)}
@@ -1960,13 +1844,6 @@ className="space - y-2 ml - 6"                    {section.items.map ((item, ite
                               <p className="text - gray - 500 text - xs>{item.description}</p>                            </div>"                          </div>;
                           {item.sub_items && item.sub_items.length > 0 && (
                             <ChevronRight;
-'                              }`}'                            />`                          )}</button>;
-                        {/* comment */}
-                        {/* comment */}
-                            {expandedItems.has(item.name) && (;
-";
-                                className = "space-y-1: ml-6 {item && item.subItems.map((subItem, subIndex) => (";
-                                  <Link: key="{subIndex}
                                             ? "bg-blue-50 text-blue-700";
                                             : "text-gray-600 hover: bg-gray-50",                    {section && section.items.map((item, itemIndex) => (";
                       <div key="{itemIndex}" className="space-y-2>";
@@ -1978,31 +1855,6 @@ className="space - y-2 ml - 6"                    {section.items.map ((item, ite
                         {section.items.map ((item) => (";
                           <div key="{item.name}">";
                               href="{item.href}"";
-                                  ? "bg-blue-50 text-blue-700 border-l-4 border-blue-600""";
-                                  : "text-gray-700 hover: bg-gray-50"";
-                            >`";
-                              <item.icon className="w-5" h-5 mr-3 />"";
-                              <div className="flex-1>"
-                                <div className="font-medium">{item.name}</div>;
-                                {item.description && (";
-                                  <div className="text - sm" text - gray - 500">{item.description}</div>;
-                              {item.children && (";
-                                  onClick="{(e)" => {e.preventDefault();";
-                                    toggleItem(item.name)}}"";
-                                  className = "p-1" hover: bg-gray-200 rounded";
-                                  {expandedItems.includes(item.name) ? ("";
-                              className="{`flex" items-center px-4 py-3 rounded-lg transition-colors ${isActive(item.href)";
-                                  ? "bg-blue-100 text-blue-700 font-medium"";
-                                  : "text-gray-700 hover:bg-gray-100"";
-                              <item.icon className="w-5 h-5 mr-3 />"
-                              <span className=flex-1">{item.name}</span>;
-                              {item.badge && (";
-                                <span className="{`px-2" py-1 text-xs rounded-full ${";
-                                  item.isNew ? "bg-green-100 text-green-800" :";
-                                  item.isHot ? "bg-red-100 text-red-800" :";
-                                  item.isPremium ? "bg-purple-100 text-purple-800" :";
-                                  "bg-gray-100 text-gray-800">;
-}`}>;
                         {/* Sub-items: */}
                         {/* Sub-items */}
                             {expandedItems && expandedItems.has(item && item.name) && (;
@@ -2013,11 +1865,6 @@ className="space - y-2 ml - 6"                    {section.items.map ((item, ite
                               <div className="ml - 4 mt - 1 space - y-1>;
                                 {item.children.map ((child) => (";
                                     key="{child.name}
-                                        ? "bg-blue-50 text-blue-600 font-medium;
-                                        : "text-gray-600 hover: bg-gray-50;
-                                    className="flex" items-center gap-2 p-2 hover:bg-gray-800/20 rounded-lg transition-all duration-300 group;
-                                    className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group
-";
                                     className="{"block" px - 4 py - 2 text - sm rounded - lg transition - colors ${
                                       is_active (child.href)";
                                         ? "bg - blue - 50 text - blue - 600 font - medium;
@@ -2041,11 +1888,6 @@ className="space - y-2 ml - 6"                    {section.items.map ((item, ite
           {/* comment */}";
 <div className="pt - 6" border - t border - gray - 800 / 50">"            <h4 className="text - sm" font - semibold text - gray - 400 mb - 3 uppercase tracking - wider > Quick Stats</h4>"            <div className="grid grid - cols - 2 gap - 3>              <div className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30">                <div className="text - lg" font - bold text - cyan - 400">500+</div>"                <div className="text - xs" text - gray - 400 > Services</div>"              </div>"              <div className="text - center" p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30>"                <div className="text - lg font - bold text - purple - 400 > 1000+</div>                <div className="text - xs text - gray - 400">Clients</div>              </div>            </div>";
           {/* comment */}";
-                <div: className = "text-lg" font-bold text-purple-400">1000+</div>",";
-                <div: className="text-xs" text-gray-400>Clients</div>"
-          {/* comment */}";
-            <div: className="p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30>,"
-              <h4: className = "text-sm font-semibold text-white mb-2">Ready to Transform?</h4>,";
                 Get: in touch to discuss your revolutionary technology needs.;
             </nav>;
           {/* comment */}
@@ -2065,7 +1907,7 @@ className="p-2" text-gray-400 hover: text-blue-600 transition-colors
     r: text-gray-600 transition-colors";
                 <Mail className="w-5 h-5"  />";
             <p className="mt-2" text-xs text-gray-500>;
-               2025 Zion Tech Group. All rights reserved.";
+              © 2025 Zion Tech Group. All rights reserved.";
                 href="mailto:kleber@ziontechgroup && ziontechgroup.com;
                 className="p-2" text-gray-400 hover:text-gray-600 transition-colors";
             <p className="text-center text-xs text-gray-500 mt-2">;
@@ -2104,18 +1946,10 @@ className="p - 2" text - gray - 400 hover: text - blue - 600 transition - colors
     r: text - gray - 600 transition - colors";
                 <Mail className="w - 5 h - 5"  />";
             <p className="mt - 2" text - xs text - gray - 500>;
-               2025 Zion Tech Group. All rights reserved.";
+              © 2025 Zion Tech Group. All rights reserved.";
                 href="mailto:kleber@ziontechgroup.com;
                 className="p - 2" text - gray - 400 hover:text - gray - 600 transition - colors";
             <p className="text - center text - xs text - gray - 500 mt - 2">;
-          {/* comment */}";
-          <div className="pt - 6" border - t border - gray - 800 / 50>"            <div className="p - 4 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 rounded - lg border border - cyan - 500 / 30>              <h4 className="text - sm font - semibold text - white mb - 2">Ready to Transform?</h4>              <p className="text - gray - 300" text - xs mb - 3">"                Get in touch to discuss your revolutionary technology needs.              </p>;
-";
-                          <div className="flex items-center gap-3">";
-                            <item && item.icon className="w-4" h-4 text-gray-400 group-hover: text-cyan-400 transition-colors duration-200 />;
-                            <div>";
-                              <span className="text-gray-300 group-hover:text-white transition-colors duration-200 text-sm font-medium">
-                                {item.name}
                               </span>";
                               <p className="text-gray-500" text-xs>{item && item.description}</p>;
                             </div>;
@@ -2159,13 +1993,6 @@ className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded
           {/* Quick Stats */}
 <div className="pt - 6 border - t border - gray - 800 / 50>            <h4 className="text - sm font - semibold text - gray - 400 mb - 3 uppercase tracking - wider">Quick Stats</h4>"            <div className="grid grid - cols - 2 gap - 3>              <div className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30">"                <div className="text - lg font - bold text - cyan - 400 > 500+</div>                <div className="text - xs text - gray - 400">Services</div>"              </div>"              <div className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30>                <div className="text - lg font - bold text - purple - 400">1000+</div>"                <div className="text - xs text - gray - 400 > Clients</div>              </div>"            </div>;
           </div>;
-          {/* Contact CTA */}
-          <div className="pt-6 border-t border-gray-800/50>            <div className="p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30">"              <h4 className="text-sm font-semibold text-white mb-2>Ready to Transform?</h4>              <p className="text-gray-300 text-xs mb-3">"                Get in touch to discuss your revolutionary technology needs."              </p>;
-              <Link
-                href="/contact""                onClick={onClose}"                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"                Contact Us
-                <ChevronRight className="w-4 h-4 />              </Link>"            </div>;
-          </div>;
-        </div>;
 }
               </p>";
               <Link href=/contact"">;
@@ -2184,8 +2011,6 @@ export default EnhancedSidebar2025, "),          <div className="pt - 6" border 
               <p className="text - gray - 300 text - xs mb - 3">;
                 Get in touch to discuss your revolutionary technology needs.";
                 href=/contact";";
-                <ChevronRight className="w-4 h-4" />,";
-                className="inline-flex" items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105";
                 class_name = "inline - flex: items - center gap - 2 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover: from - cyan - 600: hover:to - purple - 700: text - white text - sm font - semibold rounded - lg transition - all duration - 300 transform hover:scale - 105,
                 Contact: Us",
                 <ChevronRight className="w - 4 h - 4" />, ";
@@ -2204,4 +2029,3 @@ Contact Us";
       </motion && motion.div>;
     </>;
 ";
-

@@ -1,4 +1,3 @@
-
 interface ApplicationsTableProps {
 
   applications: JobApplication[]
@@ -96,19 +95,11 @@ export function ApplicationsTable({
                   ) : (;
                     <span className="text-muted-foreground text-sm">Not scored</span>;
                   )}
-
-                </TableCell>;
-                <TableCell className="text-right">;
-                  <div className="flex items-center justify-end gap-2">;
-                    <ClickableBadge
-                      variant="outline" 
-
                       className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700"
                       onClick={() => handleHireClick(application)}
                     >;
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;
                     </ClickableBadge>;
-
                         <img;
                           src={application.talent_profile.profile_picture_url}
                           alt={application.talent_profile.full_name || "Candidate"}
@@ -132,12 +123,6 @@ export function ApplicationsTable({
                     />;
                   </div>;
                 </TableCell>;
-
-          </TableBody>;
-        </Table>;
-      </div>;
-
-
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         isOpen={hireModalOpen}

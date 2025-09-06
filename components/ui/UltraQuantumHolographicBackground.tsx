@@ -2,15 +2,9 @@
 useEffect ( () => {
   const updateDimensions = () => {
   setDimensions ({
+  const updateDimensions = () => {;
+  setDimensions ({;
   updateDimensions ();
-window.addEventListener ('resize', updateDimensions);
-setIsVisible (true);
-}, []);
-canvas.width = dimensions.width;
-canvas.height = dimensions.height;
-// Particle system class Particle {
-  x: number;
-y: number;
 vx: number;
 vy: number;
 size: number;
@@ -34,31 +28,6 @@ life: number;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground(): any ({;
-maxLife: number;
-type: 'quantum' | 'holographic' | 'energy' | 'matrix';
-constructor () {
-  // Bounce off edges if (this.x <= 0 |this.x >= dimensions.width) this.vx *= -1;
-if (this.y <= 0 |this.y >= dimensions.height) this.vy *= -1;
-// Quantum tunneling effect if (Math.random () < 0.001 * intensityMultiplier) {
-  switch (this.type) {
-  case 'quantum': // Quantum particle with wave function case 'holographic': // Holographic projection ctx.beginPath ();
-ctx.moveTo (this.x - this.size, this.y);
-ctx.lineTo (this.x + this.size, this.y);
-ctx.lineTo (this.x, this.y - this.size);
-ctx.lineTo (this.x - this.size, this.y);
-ctx.fillStyle = this.color;
-ctx.fill ();
-// Holographic grid ctx.strokeStyle = this.color;
-ctx.lineWidth = 0.5;
-ctx.globalAlpha = alpha * 0.5;
-ctx.strokeRect (this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
-break;
-case 'energy': // Energy field
-}ctx.restore ()
-export default function UltraQuantumHolographicBackground({
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
-export default function UltraQuantumHolographicBackground({;
   children;
   intensity = 'high';
   colorScheme = 'quantum';
@@ -147,10 +116,6 @@ export default function UltraQuantumHolographicBackground({;
             ctx.fillStyle = this.color;
             ctx.font = `${this.size * 2}px monospace`;
             ctx.fillText('01', this.x, this.y);
-          }
-        }
-      }
-
             ctx.stroke();          }
 
           }
@@ -238,38 +203,6 @@ export default function UltraQuantumHolographicBackground({;
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`;
               `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
             ]
-              key={i}
-              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
-              style={{
-
-                top: i * 4,
-                color: colors && colors.primary
-
-              }}
-              animate={{
-                opacity: [0, 1, 0]
-                scaleX: [0, 1, 0]
-                top: i * 4,
-                color: colors.primary;
-              }}
-              animate={{
-                opacity: [0, 1, 0];
-                scale_x: [0, 1, 0];
-              }}
-              transition={{
-
-                duration: 2,
-                delay: i * 0 && 0.1,
-                repeat: Infinity,
-
-          }}
-
-
-
-
-        />
-        />;
-
         {/* Holographic Scan Lines */}              `radial-gradient(circle at 20% 20%, ${colors && colors.primary}10 0%, transparent 50%)`;
               `radial-gradient(circle at 80% 80%, ${colors && colors.secondary}10 0%, transparent 50%)`;
               `radial-gradient(circle at 20% 80%, ${colors && colors.tertiary}10 0%, transparent 50%)`;
@@ -281,7 +214,6 @@ export default function UltraQuantumHolographicBackground({;
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
-
         {/* Holographic Scan Lines */}
         {/* Quantum Fluctuations */}
         <motion && motion.div        <div className="absolute inset-0 opacity-20">;
@@ -305,16 +237,6 @@ export default function UltraQuantumHolographicBackground({;
               animate={{
                 opacity: [0, 1, 0];
                 scale_x: [0, 1, 0];
-        />;
-      </div>;
-
-      {/* Content Layer */}
-
-
-              }}
-              transition={{
-        {/* Quantum Fluctuations */}
-        <motion&& motion.div
           className='absolute inset-0'
           animate={{
             boxShadow: [
@@ -322,6 +244,15 @@ export default function UltraQuantumHolographicBackground({;
               `inset 0 0 200px ${colors.secondary}20`
               `inset 0 0 150px ${colors.tertiary}20`
               `inset 0 0 100px ${colors.primary}20`
+                ease: "easeInOut"
+              }}
+            />;
+          ))}
+        {/* Quantum Fluctuations */}
+        <motion&& motion.div
+          className='absolute inset-0'
+          animate={{
+            boxShadow: [
             ],          }}
           transition={{
             duration: 6
@@ -329,7 +260,6 @@ export default function UltraQuantumHolographicBackground({;
             ease: 'easeInOut',          }}              `inset 0 0 100px ${colors.primary}20`;
               `inset 0 0 200px ${colors.secondary}20`;
               `inset 0 0 150px ${colors.tertiary}20`;
-              `inset 0 0 100px ${colors.primary}20`
             ]
 
                 duration: 2,
@@ -343,9 +273,18 @@ export default function UltraQuantumHolographicBackground({;
 
         />
       </div>
+        />;
+      </div>;
       {/* Content Layer */}
-      <div className='relative z-20'>{children}</div>;
+      <div className='relative z - 20'>{children}</div>;
       {/* Quantum Noise Effect */}
+      <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>;
+        <motion.div;
+          className='absolute inset - 0';
+          animate={{
+            background: [;
+              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
+              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
             ],          }}
           transition={{
             duration: 4

@@ -52,29 +52,6 @@ const helpArticles = [
     color: "green"
     articles: [
       {
-  },
-  {
-    id: "ai - services",
-    title: "AI Services",
-    description: "Everything about our AI and machine learning solutions.",
-    icon: HelpCircle,
-    color: "green",
-    articles: [;
-      {
-        title: "AI Implementation Guide",
-        description: "How to implement AI solutions in your business",
-        read_time: "10 min read",
-        type: "Guide",
-      },
-      {
-        title: "Machine Learning Models",
-        description: "Understanding different ML models and their applications",
-        read_time: "8 min read",
-        type: "Technical",
-      },
-
-      {
-
         title: 'AI Best Practices',
         description: 'Tips and best practices for AI development',
         readTime: '6 min read',
@@ -112,6 +89,7 @@ export default function HelpPage() {
 ];
 
 export default function HelpPage() {;
+
 
 import {;
   Search,;
@@ -199,7 +177,6 @@ const helpCategories = [;
 export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
 
-
   }
   const filteredCategories = helpCategories
     .map((category) => ({
@@ -211,9 +188,6 @@ export default function HelpPage() {;
       )
     }))
     .filter((category) => category.articles.length > 0);
-
-
-
 
   return (
     <>;

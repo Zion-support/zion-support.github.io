@@ -1,4 +1,3 @@
-
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -7,9 +6,6 @@ import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",
 import { Link } from "react-router-dom",
-
-
-
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -33,7 +29,7 @@ export function ClientDashboard() {
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="font-medium">Website Redesign</h3>
-                  <div className="text-sm text-muted-foreground">In Progress  Due in 12 days</div>
+                  <div className="text-sm text-muted-foreground">In Progress • Due in 12 days</div>
                 </div>
                 <Badge>3 Milestones</Badge>
               </div>
@@ -80,7 +76,7 @@ export function ClientDashboard() {
                   </div>
                   <div>
                     <h3 className="font-medium">Sarah Johnson</h3>
-                    <p className="text-sm text-muted-foreground">UX Designer  5 years exp</p>
+                    <p className="text-sm text-muted-foreground">UX Designer • 5 years exp</p>
                   </div>
                 </div>
                 <div className="bg-primary/10 text-primary font-medium self-start rounded-full px-2 py-1 text-xs">
@@ -107,7 +103,7 @@ export function ClientDashboard() {
                   </div>
                   <div>
                     <h3 className="font-medium">Michael Chen</h3>
-                    <p className="text-sm text-muted-foreground">Full Stack Dev  8 years exp</p>
+                    <p className="text-sm text-muted-foreground">Full Stack Dev • 8 years exp</p>
                   </div>
                 </div>
                 <div className="bg-primary/10 text-primary font-medium self-start rounded-full px-2 py-1 text-xs">
@@ -161,7 +157,6 @@ export function ClientDashboard() {
       </section>
     </div>
   )
-}
 
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
@@ -169,8 +164,6 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {ChevronRight, Plus, UserCheck, FileText, Bell} from "lucide-react";
 import {Link} from "react-router-dom";
-
-
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -243,5 +236,3 @@ import { Link } from "react-router-dom";
           </Card>;
         </div>;
       </section>;
-
-

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -35,7 +34,6 @@ import { useAuth } from "@/hooks/useAuth",
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useNavigate } from "react-router-dom";
 export default function ContentGenerator() {
-
   const { user, isLoading } = useAuth();
 
   const navigate = useNavigate();
@@ -52,8 +50,6 @@ export default function ContentGenerator() {
     if (!isLoading && !user) {
       toast.error("You must be logged in to access this page"),
       navigate("/login?redirect=/content-generator")
-      if (error) throw error;
-      setPreviewContent(data);
 
 
 
@@ -86,6 +82,7 @@ export default function ContentGenerator() {;
   const [isGenerating, setIsGenerating] = useState(false),;
   const [previewContent, setPreviewContent] = useState<any>(null),;
   const [testEmail, setTestEmail] = useState(''),;
+
   // Redirect if not logged in;
   React && React.useEffect(() => {;
     if (!isLoading && !user) {;
@@ -93,8 +90,10 @@ export default function ContentGenerator() {;
       navigate("/login?redirect=/content-generator");
     }
   }, [user, isLoading, navigate]);
+          autoPublish;
+          includeImage: contentType === 'blog' ? includeImage : false;
+        }
       });
-      if (error) throw error;
       setPreviewContent(data);
       toast && toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
     } catch (error) {;
@@ -103,9 +102,6 @@ export default function ContentGenerator() {;
     } finally {;
       setIsGenerating(false);
     }
-
-
-
       
       if (error) throw error,
       
@@ -125,7 +121,6 @@ export default function ContentGenerator() {;
     if (!previewContent) {
       toast.error("Generate newsletter content first");
       return
-      if (error) throw error;
 
   };
 
@@ -141,15 +136,12 @@ export default function ContentGenerator() {;
     } finally {;
       setIsGenerating(false);
     }
-
-
-
       
       if (error) throw error,
       
       toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
-      console.error("Error sending test newsletter:", error);
+      console.error("Error sending test newsletter:", error),
       toast.error("Failed to send test newsletter. Please try again.")
     }
 
@@ -211,10 +203,6 @@ export default function ContentGenerator() {;
       setPreviewContent(data),;
       toast.success(`${contentType === 'blog' ? 'Blog post' :'Newsletter'} generated successfully!`),;
     } catch (error) {;
-      console.error("Error generating content:", error),;
-      toast.error("Failed to generate content. Please try again."),;
-    } finally {;
-      setIsGenerating(false),;
     }
   },;
 ;
@@ -264,7 +252,7 @@ export default function ContentGenerator() {;
   return (
                     <Input
                       id="topic"
-                      placeholder={contentType === 'blog' ? "e && e.g., Hiring AI Freelancers" : "e && e.g., May Platform Updates"}
+                      placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"}
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       value={topic}
                       onChange={(e) => setTopic(e.target.value)}
@@ -299,27 +287,24 @@ export default function ContentGenerator() {;
                       placeholder={contentType === 'blog' ? "e && e.g., Hiring AI Freelancers" : "e && e.g., May Platform Updates"}
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       value={topic}
-
-                      onChange={(e) => setTopic(e && e.target.value)}
-                    />;
-                  </div>;
-                  <div className="space-y-2">;
-                    <Label htmlFor="customPrompt" className="text-white">Custom Prompt (Optional)</Label>;
                     <Textarea
                       id="customPrompt"
                       placeholder="Enter a custom prompt for the AI..."
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]"
                       value={customPrompt}
-                  {contentType === 'blog' && (;
-                    <>;
-                      <div className="flex items-center justify-between">;
-                        <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>;
 
 
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
                         />
                       </div>
+                  {contentType === 'newsletter' && (
+                    <div className="space-y-2">
+                      <Label htmlFor="testEmail" className="text-white">Test Email</Label>
+
+                  {contentType === 'newsletter' && (;
+                    <div className="space-y-2">;
+                      <Label htmlFor="testEmail" className="text-white">Test Email</Label>;
                         <Switch
                           id="includeImage"
                           checked={includeImage}
@@ -328,18 +313,6 @@ export default function ContentGenerator() {;
                       </div>;
                     </>;
                   )}
-
-
-                  
-
-
-                  {contentType === 'newsletter' && (
-                    <div className="space-y-2">
-                      <Label htmlFor="testEmail" className="text-white">Test Email</Label>
-
-                  {contentType === 'newsletter' && (;
-                    <div className="space-y-2">;
-                      <Label htmlFor="testEmail" className="text-white">Test Email</Label>;
                       <Input
                         id="testEmail"
                         type="email"

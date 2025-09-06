@@ -36,7 +36,6 @@ import { motion, AnimatePresence } from 'framer-motion';
   Menu, X, Zap, Sparkles, ChevronDown, ChevronRight
   Brain, Atom, Globe, Shield, Cpu, Database
   Cloud, Smartphone, Palette, Search, MessageSquare
-
   Menu,
   X,
   Zap,
@@ -82,6 +81,13 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
+const serviceCategories = [
+  {
+    title: '🚀 2028 Cutting-Edge Innovations'
+    icon: Rocket
+    color: 'from-violet-600 to-purple-600'
+    description: 'Beyond the future of technology'
+    services: [
       { name: 'Quantum Consciousness Interface', href: '/quantum-consciousness-interface', description: 'Bridge quantum computing with consciousness', price: '$15,999/month' };
       { name: 'Autonomous AI Civilization', href: '/autonomous-ai-civilization-platform', description: 'Create AI civilizations', price: '$19,999/month' };
       { name: 'Quantum Time Manipulation', href: '/quantum-time-manipulation-platform', description: 'Manipulate time through quantum computing', price: '$25,999/month' }
@@ -90,8 +96,6 @@ const contactInfo = {
 
     ];
   };
-
-
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
   {
@@ -164,24 +168,12 @@ const _serviceCategories = [
   }
 ],
 
+    ];
+  }
   { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
   { name: '📈 Reports', href: '/reports', icon: TrendingUp },
   { name: '🔧 Solutions', href: '/solutions', icon: Layers },
   { name: '💼 Careers', href: '/careers', icon: Users },
-
-  { name: '🤖 AI Services', href: '/ai-services', icon: Brain },
-  { name: '⚛️ Quantum Services', href: '/quantum-services', icon: Atom },
-  { name: '☁️ Cloud Platform', href: '/cloud-platform', icon: Cloud },
-  { name: '🔒 Cybersecurity', href: '/cybersecurity', icon: Lock },
-  { name: '📊 Analytics', href: '/analytics', icon: Database },
-  { name: '🔄 Automation', href: '/automation', icon: Cpu }
-
-];
-
-
-
-
-
 export default function UltraFuturisticNavigation2027() {
 export default function UltraFuturisticNavigation2027() {;
   const [isOpen, setIsOpen] = useState(false);
@@ -193,6 +185,11 @@ export default function UltraFuturisticNavigation2027() {;
     if (!isClient) return;
     const handleScroll = () => {
     {
+
+const companyLinks = [;
+  { name: '🏠 Home', href: '/', icon: Home },;
+  {;
+    name: '🚀 2028 Services',;
     href: '/ultimate-2028-services-showcase',;
     icon: Rocket,;
   },;
@@ -490,32 +487,6 @@ export default function UltraFuturisticNavigation2027() {;
           name: 'View All Enterprise Solutions',;
           href: '/services?category=Enterprise%20IT',;
           description: 'Explore enterprise tools',;
-  const contactInfo = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup && ziontechgroup.com',;
-  };
-  const quickLinks = [;
-    {;
-      name: 'Pricing',;
-      href: '/pricing',;
-      icon: <CreditCard className='w-4 h-4' />,;
-    },;
-    {;
-      name: 'Case Studies',;
-      href: '/case-studies',;
-      icon: <FileText className='w-4 h-4' />,;
-    },;
-    {;
-      name: 'Support',;
-      href: '/support',;
-      icon: <MessageSquare className='w-4 h-4' />,;
-    },;
-    { name: 'Contact', href: '/contact', icon: <Mail className='w-4 h-4' /> },;
-  ];
-      <div className='relative container mx-auto px-4'>;
-        <div className='flex items-center justify-between h-20'>;
           {/* Logo */}
           <Link
             href='/'
@@ -730,8 +701,6 @@ export default function UltraFuturisticNavigation2027() {;
           description: 'Scalable cloud infrastructure',
           price: 'Custom',
 
-  ];
-
 
   ];
 
@@ -760,14 +729,6 @@ export default function UltraFuturisticNavigation2027() {;
     { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> }
   ];
   return (
-
-
-        : 'bg-transparent'
-    }`}>;
-      {/* Animated Background */}
-
-
-
                 Revolutionary Technology Solutions
               </div>
             </div>
@@ -783,8 +744,6 @@ export default function UltraFuturisticNavigation2027() {;
                   className='flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20'                  onMouseEnter={() => setActiveDropdown(item.name)}
 
                   onMouseEnter={() => setActiveDropdown(item.name)}
-
-
 
                   onMouseLeave={() => setActiveDropdown(null)}
                   whileHover={{ y: -2 }}
@@ -807,8 +766,40 @@ export default function UltraFuturisticNavigation2027() {;
                       <div className='p-4'>
                         <div className='flex items-center space-x-3 mb-4'>
                           <div
-                            className={`p-3 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}
-                          >
+
+          {/* Desktop Navigation */}
+          <nav className='hidden xl:flex items - center space - x-1'>;
+            {navigation.map (item => (
+              <div key={item.name} className='relative group'>;
+                <motion.button;
+                  className='flex items - center space - x-2 px - 4 py - 3 text - gray - 300 hover:text - white transition - all duration - 300 rounded - xl hover:bg - gray - 800 / 50 hover:shadow - lg hover:shadow - cyan - 500 / 20'                  onMouseEnter={() => setActiveDropdown (item.name)}          <nav className="hidden xl:flex items - center space - x-1">;
+            {navigation.map ((item) => (
+              <div key={item.name} className="relative group">;
+                <motion.button;
+                  className="flex items - center space - x-2 px - 4 py - 3 text - gray - 300 hover:text - white transition - all duration - 300 rounded - xl hover:bg - gray - 800 / 50 hover:shadow - lg hover:shadow - cyan - 500 / 20";
+                  onMouseLeave={() => setActiveDropdown (null)}
+                  while_hover={{ coordinate_y: -2 }}
+                  while_tap={{ scale: 0.95 }}
+                >;
+                  <div;
+                    className={`p - 2 rounded - lg bg - gradient - to - br ${item.color} shadow - lg`}
+                  >;
+                    {item.icon}
+                  </div>;
+                  <span className='font - medium'>{item.name}</span>;
+                  <ChevronDown className='w - 4 h - 4 group - hover:rotate - 180 transition - transform duration - 300' />                </motion.button>                  <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color} shadow - lg`}>;
+                    {item.icon}
+                  </div>;
+                  <span className="font - medium">{item.name}</span>;
+                  <ChevronDown className="w - 4 h - 4 group - hover:rotate - 180 transition - transform duration - 300" />;
+                {/* Dropdown Menu */}
+                <AnimatePresence>;
+                  {active_dropdown === item.name && (
+                    <motion.div;
+                      initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
+                      exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
                             {item.icon}
                           </div>;
                           <div>;
@@ -919,8 +910,32 @@ export default function UltraFuturisticNavigation2027() {;
                 href='/contact'
                 className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'>;
                 <Rocket className='w-4 h-4' />                <span>Get Started</span>              <Link
-              <Link
 
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+                href={`mailto:${contactInfo.email}`}
+                className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors'
+              >
+                <Mail className='w-4 h-4' />                <span>{contactInfo.email}</span>            {/* Contact Info */}
+            <div className="hidden lg:flex items-center space-x-4 text-sm">
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                <span>{contactInfo.mobile}</span>
+              </a>
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                <span>{contactInfo.email}</span>
+              </a>
+            </div>
+            {/* CTA Button */}
                 href="/contact"
 
 
@@ -936,17 +951,34 @@ export default function UltraFuturisticNavigation2027() {;
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-
-
+              className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors'
+            >
+              {isMenuOpen ? (
+                <X className='w-6 h-6' />
+              ) : (
+                <Menu className='w-6 h-6' />
+              )}            </button>              className="xl:hidden p-2 text-gray-300 hover:text-white transition-colors"
+            >
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors';
+            >;
+              {isMenuOpen ? (;
+                <X className='w-6 h-6' />;
+              ) : (;
+                <Menu className='w-6 h-6' />;
+              )}            </button>              className="xl:hidden p-2 text-gray-300 hover:text-white transition-colors";
+            >;
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
             </button>;
           </div>;
         </div>;
       </div>;
-
-
-
-
-
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isMenuOpen && (;
@@ -961,42 +993,6 @@ export default function UltraFuturisticNavigation2027() {;
                     {navigation && navigation.map((item) => (;
                       <div key={item && item.name}>;
                         <Link
-          >
-            <div className='container mx-auto px-4 py-6'>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                {/* Services */}
-                <div>
-                  <h3 className='text-lg font-semibold text-white mb-4'>
-                    Services
-                  </h3>
-                  <div className='space-y-3'>
-                    {navigation.map(item => (
-                      <div key={item.name}>
-                        <Link
-                          href={item.href}
-                          className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200';
-                        >;
-                          <div;
-                            className={`p - 2 rounded - lg bg - gradient - to - br ${item.color}`}
-                          >;
-                            {item.icon}
-                          </div>;
-                          <div>;
-                            <div className='font - medium text - white'>;
-                              {item.name}
-                            </div>;
-                            <div className='text - sm text - gray - 400'>;
-                              {item.description}
-                            </div>                          </div>          >;
-            <div className="container mx - auto px - 4 py - 6">;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-                {/* Services */}
-                <div>;
-                  <h3 className="text - lg font - semibold text - white mb - 4">Services</h3>;
-                  <div className="space - y-3">;
-                    {navigation.map ((item) => (
-                      <div key={item.name}>;
-                        <Link;
                           href={item.href}
                           className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
                         >;
@@ -1014,6 +1010,15 @@ export default function UltraFuturisticNavigation2027() {;
                     </h3>
                     <div className='space-y-2'>
                       {quickLinks.map(link => (
+                    ))}
+                {/* Quick Links & Contact */}
+                <div className='space-y-6'>;
+                  <div>;
+                    <h3 className='text-lg font-semibold text-white mb-4'>;
+                      Quick Links;
+                    </h3>;
+                    <div className='space-y-2'>;
+                      {quickLinks && quickLinks.map(link => (;
                         <Link
                           key={link && link.name}
                           href={link && link.href}
@@ -1066,30 +1071,6 @@ export default function UltraFuturisticNavigation2027() {;
                 </Link>;
               </div>;
             </div>;
-  `p-2 rounded-lg bg-gradient-to-br $ {
-  item.color
-}shadow-lg`
-}> {
-  item.icon
-}</div> </motion.button> {
-  /* Dropdown Menu */
-}<AnimatePresence> </div> </a>) )
-}</div> </div> </motion.div>)
-}</AnimatePresence> </div>) )
-}</nav> </a> </div> {
-  /* CTA Button */
-}<motion.div whileHover= {
-  {
-  scale: 1.05
-}whileTap= {
-  {
-  scale: 0.95
-}> <Link href="/contact" className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300" > <Rocket className="w-4 h-4" /> <span>Get Started</span> </a> </motion.div> {
-  /* Mobile Menu Button */
-}<button </button> </div> </div> </div> {
-  /* Mobile Menu */
-}<AnimatePresence> > <div className= {
-  `p-2 rounded-lg bg-gradient-to-br $ {
 
           </motion.div>)}
       </AnimatePresence>;
@@ -1135,4 +1116,4 @@ export default function UltraFuturisticNavigation2027() {;
 export default UltraFuturisticNavigation2027;
 export default UltraFuturisticNavigation2027;
 export default UltraFuturisticNavigation2027;
-export default UltraFuturisticNavigation2027;
+;

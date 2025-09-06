@@ -54,8 +54,6 @@ export default function DaoMetrics(req, res) {
   }, []),
   if (loading) return <div>Loading...</div>,
   if (!data) return <div>Error loading data</div>,
-
-
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -116,8 +114,6 @@ export default function DaoMetrics(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>

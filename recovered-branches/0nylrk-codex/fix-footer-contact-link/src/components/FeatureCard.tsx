@@ -23,8 +23,6 @@ export function FeatureCard(): any ({;
 
     <div
       className={cn(
-
-
 interface FeatureCardProps {
   title: string,
   description: string,
@@ -77,8 +75,6 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>;
         <p className="text-zion-slate-light">{description}</p>;
       </div>;
-  );
-
 import { cn  } from '@/lib / utils';
 import React from './react';
 interface FeatureCardProps {
@@ -105,8 +101,4 @@ function FeatureCard() {
         <p className="text - zion - slate - light">{description}</p>;
       </div>;
     </div>);
-
 }
-}
-
-

@@ -2,7 +2,6 @@
 
 
 
-
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 import { supabase } from "@/integrations/supabase/client",
@@ -53,7 +52,6 @@ export async function createNotification({
   try {
     // Call the create_notification database function
 
-
         body: { user_id: userId, notification_id: notificationId }
       })
     }
@@ -65,7 +63,6 @@ export async function createNotification({
     console.error('Error creating notification:', error),;
   } catch (error) {;
     console.error('Error creating notification:', error),;
-
     return { success: false, error }
   }
 }
@@ -127,11 +124,10 @@ export async function createHireRequestNotifications({;
       success: talentNotification.success && adminNotification.success,;
       talentNotification,;
       adminNotification;
-
+      adminNotification
     }
   }
   return {
-    success: talentNotification.success
     talentNotification
   }
 }
@@ -165,6 +161,49 @@ export async function createOnboardingNotification({;
     console.error ('Error creating notification:', error);
     return { success: false, error }
   }
+        title = 'Complete your profile';
+        message = 'Complete your profile to get discovered by clients';
+        action_url = '/profile';
+        action_text = 'Complete Profile';
+        break;
+      case 'skills_added':;
+        title = 'Add your skills';
+        message = 'Add your skills to get better job matches';
+        action_url = '/profile / skills';
+        action_text = 'Add Skills';
+        break;
+      case 'availability_set':;
+        title = 'Set your availability';
+        message = 'Set your availability to help clients know when you can work';
+        action_url = '/profile / settings';
+        action_text = 'Set Availability';
+        break;
+    }
+  } else {
+    switch (missing_milestone) {
+      case 'job_posted':;
+        title = 'Post your first job';
+        message = 'Post your first job to start finding talent';
+        action_url = '/post - job';
+        action_text = 'Post Job';
+        break;
+      case 'match_viewed':;
+        title = 'View your AI matches';
+        message = 'Check out your AI - matched talent suggestions';
+        action_url = '/client - dashboard';
+        action_text = 'View Matches';
+        break;
+      case 'talent_invited':;
+        title = 'Invite talent';
+        message = 'Invite talent to speed up your hiring process';
+        action_url = '/talent';
+        action_text = 'Find Talent';
+        break;
+    }
+  }
+ */
+function createTestNotification() {
+  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
   }
@@ -186,7 +225,6 @@ export async function createOnboardingNotification({;
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
   }
-}
 
 
 
@@ -272,8 +310,6 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
-
-
-
 }
 ;
+}

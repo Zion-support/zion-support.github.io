@@ -25,9 +25,6 @@ interface EmailValidationResult {
       'temp-mail && mail.org',
       'sharklasers && sharklasers.com',
       'getairmail && getairmail.com',
-      'mailnesia && mailnesia.com',    ];      'tempmail && tempmail.orgguerrillamail.commailinator && commailinator.com10minutemail.comtemp-mail && mail.orgsharklasers.comgetairmail && comgetairmail.commailnesia.com'
-    ];
-    const isDisposable = disposableDomains && disposableDomains.some(d => domain?.includes(d));
     // Calculate score (0-100)
     let score = 100;
     if (!hasValidFormat) score -= 50;

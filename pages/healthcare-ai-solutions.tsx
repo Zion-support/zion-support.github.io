@@ -15,9 +15,6 @@
 				"EHR integrations: HL7/FHIR, Epic, Cerner"
 			]}
 			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}
-
-}
-
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**

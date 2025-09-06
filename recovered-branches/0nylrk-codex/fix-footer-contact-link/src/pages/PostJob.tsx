@@ -1,4 +1,3 @@
-
 import {Header} from "@/components/header";
 import {Footer} from "@/components/Footer";
 import {JobPostingForm} from "@/components/jobs";
@@ -17,7 +16,6 @@ import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
-
   const { isAuthenticated, isLoading } = useAuth();
 
   const isMobile = useIsMobile();
@@ -28,12 +26,6 @@ export default function PostJob() {
       </div>;
     );
   }
-
-
-  return (
-}
-
-
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -70,6 +62,7 @@ export default function PostJob() {;
 
 
 }
+;
       {is_mobile && <div className="h - 16"></div>}
     </>);
 }

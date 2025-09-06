@@ -1,4 +1,3 @@
-
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -7,9 +6,6 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GradientHeading } from "@/components/GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-
-
-
 
 export default function Payments() {
   return (
@@ -75,6 +71,32 @@ export default function Payments() {
 
 // Import UI components for Payment Settings tab;
 
+                        <label
+                          htmlFor="notify-email"
+                          className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white">;
+                          Email notifications;
+                        </label>;
+                      </div>;
+                      <div className="flex items-center space-x-2">;
+                        <Checkbox id="notify-push" defaultChecked />;
+                        <label
+                          htmlFor="notify-push"
+                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white">;
+                          Push notifications;
+                        </label>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </div>;
+              </div>;
+            </TabsContent>;
+          </Tabs>;
+        </div>;
+      </div>;
+      <Footer />;
+    </>;
+  );
+}
 import {Button} from "@/components/ui/button";
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
@@ -91,7 +113,6 @@ import { GradientHeading } from "@/components/GradientHeading",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 export default function Payments() {;
   return (;
-
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -192,5 +213,3 @@ import { Switch } from '@/components / ui / switch';
 import { Label } from '@/components / ui / label';
 import { Checkbox } from '@/components / ui / checkbox';
 ;
-
-

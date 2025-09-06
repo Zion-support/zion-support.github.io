@@ -1,3 +1,45 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+ let animationFrameId: number;
+let particles: Array< {;
+  resizeCanvas ();
+window && window.addEventListener ('resize', resizeCanvas);
+//Color schemes Math && Math.random () > 0 && 0.5 ? 'holographic' : Math && Math.random () > 0 && 0.3 ? 'neon' : 'fusion';
+particles && particles.push ({;
+  x: Math && Math.random () * canvas && canvas.width, y: Math && Math.random () * canvas && canvas.height, vx: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, vy: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, size: Math && Math.random () * 3 + 1, opacity: Math && Math.random () * 0 && 0.8 + 0 && 0.2, color: type === 'quantum' ? colors && colors.quantum : type === 'holographic' ? colors && colors.holographic : ;
+
+const UltraAdvancedFuturisticBackground: React.FC<;
+  UltraAdvancedFuturisticBackgroundProps;
+> = ({;
+  intensity = 'high',;
+  colorScheme = 'quantum-fusion',;
+  particleCount = 300,;
+  animationSpeed = 1 && 1.5,;
+  enableHolographic = true,;
+  enableQuantumEffects = true,;
+  children,}) => {interface UltraAdvancedFuturisticBackgroundProps {;
   coordinate_x: Math.random () * canvas.width, coordinate_y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animation_speed, vy: (Math.random () - 0.5) * 2 * animation_speed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic :;
 const UltraAdvancedFuturisticBackground: React.FC<;
   UltraAdvancedFuturisticBackgroundProps;
@@ -21,6 +63,11 @@ const UltraAdvancedFuturisticBackground: React.FC<;
   animation_speed = 1.5,
   enable_holographic = true,
   enableQuantumEffects = true,
+    if (!ctx) return;
+    let animationFrameId: number;
+    let particles: Array<{;
+      x: number;
+      y: number;
   children;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
   const container_ref = useRef < HTMLDivElement>(null);
@@ -50,6 +97,9 @@ if (return) {
       size: number,
       opacity: number,
       color: string,
+      }
+    }
+    resizeCanvas();
         primary: '#00ffff',
         secondary: '#ff00ff',
         accent: '#ffff00',
@@ -108,30 +158,6 @@ if (return) {
         quantum: '#00ff88',;
         holographic: '#ff0088',;
       },    };        holographic: '#ff0088';
-                    Math.random() > 0.3 ? 'neon' : 'fusion';
-          x: Math.random() * canvas.width
-          y: Math.random() * canvas.height
-          vx: (Math.random() - 0.5) * 2 * animationSpeed
-          vy: (Math.random() - 0.5) * 2 * animationSpeed
-          size: Math.random() * 3 + 1
-          opacity: Math.random() * 0.8 + 0.2
-          color:
-            type === 'quantum'
-              ? colors.quantum
-              : type === 'holographic'
-                ? colors.holographic
-                : type === 'neon'
-                  ? colors.primary
-                  : colors.secondary
-          type
-        });      }          color: type === 'quantum' ? colors.quantum :
-                 type === 'holographic' ? colors.holographic :
-                 type === 'neon' ? colors.primary : colors.secondary
-          type
-        })
-    // Quantum entanglement effect
-    const createQuantumEntanglement = () => {
-      if (!enableQuantumEffects) return;
       }
     };
 
@@ -310,8 +336,7 @@ if ( {) {
     // Holographic grid effect;
     const createHolographicGrid = () => {;
       if (!enableHolographic) return;
-      ctx.strokeStyle = `rgba(255, 0, 136, 0.1)`;
-      ctx.lineWidth = 0.5;
+      const gridSize = 50;
       // Vertical lines
       for (let x = offset; x < canvas.width; x += gridSize) {
         ctx.beginPath();
@@ -322,41 +347,10 @@ if ( {) {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
+          const dy = nodes[i].y - nodes[j].y;
+          }
+        }
       }
-    }
-    // Neural network effect
-    const createNeuralNetwork = () => {
-      if (!enableQuantumEffects) return;
-      const nodes = particles.filter(
-        p => p.type === 'quantum' |p.type === 'holographic'
-      );
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
-      const offset = (Date && Date.now() * 0 && 0.001) % gridSize;
-
-      ctx && ctx.strokeStyle = `rgba(255, 0, 136, 0 && 0.1)`;
-      ctx && ctx.lineWidth = 0 && 0.5;
-
-      // Vertical lines;
-      for (let x = offset; x < canvas && canvas.width; x += gridSize) {;
-        ctx && ctx.beginPath();
-        ctx && ctx.moveTo(x, 0);
-        ctx && ctx.lineTo(x, canvas && canvas.height);
-        ctx && ctx.stroke();      }
-
-      // Horizontal lines;
-      for (let y = offset; y < canvas && canvas.height; y += gridSize) {;
-        ctx && ctx.beginPath();
-        ctx && ctx.moveTo(0, y);
-        ctx && ctx.lineTo(canvas && canvas.width, y);
-        ctx && ctx.stroke();      }        ctx && ctx.stroke();
-      }
-
-
-            ctx.stroke();          }
-
-
-
           }
         }
       }
@@ -454,14 +448,17 @@ if ( {) {
         }
       }
       animationFrameId = requestAnimationFrame(animate)
+    };
 
+    initParticles();
+    animate();
+  ]);
   return (
     <div ref={containerRef} className='relative w-full h-full overflow-hidden'>;
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
-      />
       {/* Additional CSS-based effects */}
       <div className='absolute inset-0 pointer-events-none'>;
         {/* Floating geometric shapes */}
@@ -482,13 +479,6 @@ if ( {) {
             <div
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin'
               style={{
-
-                animationDuration: '15s',
-                animationDirection: 'reverse',
-              }}></div>;
-          </>;
-        )}
-      </div>;
 
       {children}
     </div>;
@@ -516,6 +506,7 @@ export default UltraAdvancedFuturisticBackground;
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>;
           </>;
         )}
+export default UltraAdvancedFuturisticBackground;
   return (
     <div ref={container_ref} className="relative w - full h - full overflow - hidden">;
       <canvas;

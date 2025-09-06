@@ -8,8 +8,6 @@ import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 export function ConversationDetailView() {
-
-
 import {format} from 'date-fns';
 import {MessageSquare} from 'lucide-react';
 import {useMessaging} from '@/context/MessagingContext';
@@ -66,6 +64,7 @@ import {format} from 'date-fns';
 
 
 import {format} from 'date - fns';
+import React, { useState, useEffect, useRef } from 'react';
 import {MessageSquare} from 'lucide-react';
 import {use_messaging} from '@/context / MessagingContext';
 import {Button} from '@/components / ui / button';
@@ -84,6 +83,19 @@ import {DateDivider} from './DateDivider';
     scrollToBottom()
   }, [activeMessages]),
 
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  },
+  
+  const handleSendMessage = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    if (!messageText.trim() || !activeConversation) return,
+    
+    await sendMessage(activeConversation.id, messageText),
+    setMessageText('')
+  },
+  
+  if (!activeConversation) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">;
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />;
@@ -94,10 +106,6 @@ import {DateDivider} from './DateDivider';
       </div>;
     );
   }
-
-
-  
-
 
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
@@ -113,10 +121,6 @@ import {DateDivider} from './DateDivider';
       })
     }
   });
-
-
-
-
 ;
 
   // Group messages by date;
@@ -131,9 +135,6 @@ import {DateDivider} from './DateDivider';
     }
 
   }),
-
-
-
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
@@ -146,6 +147,9 @@ import {DateDivider} from './DateDivider';
           </div>
         </div>
       </div>
+  return (
+    <div className="flex-1 flex flex-col h-full">;
+      {/* Header */}
             </div>;
           </div>;
         </div>;
@@ -200,7 +204,6 @@ import {DateDivider} from './DateDivider';
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea
             value={messageText}
-}
 
             onChange={(e) => setMessageText(e && e.target.value)}
 
@@ -219,5 +222,6 @@ import {DateDivider} from './DateDivider';
 
 
 }
+;
     </div>);
 }

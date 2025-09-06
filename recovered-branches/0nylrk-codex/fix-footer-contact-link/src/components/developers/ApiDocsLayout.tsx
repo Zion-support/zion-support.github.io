@@ -1,4 +1,3 @@
-
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Search } from "lucide-react",
@@ -9,13 +8,6 @@ import { cn } from "@/lib/utils",
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
-
-
-interface ApiDocsLayoutProps {
-  children: React.ReactNode
-}
-
-
 
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
@@ -86,6 +78,9 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
           <ul className="space-y-1">;
             {navigationItems && navigationItems.map((item) => (;
               <li key={item && item.path}>;
+  return (
+    <div className="flex min-h-screen bg-zinc-950">;
+      {/* Sidebar */}
                 <Link
                   to={item && item.path}
                   className={cn(
@@ -98,12 +93,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
                 </Link>;
               </li>;
             ))}
-
-          </ul>;
-        </nav>;
-      </div>;
-
-
       {/* Main content */}
       <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">;
         {children}
@@ -111,8 +100,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
     </div>;
   );
 }
-
-;
 
 
 export default ApiDocsLayout;

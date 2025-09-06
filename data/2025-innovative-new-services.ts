@@ -2,6 +2,8 @@ export interface InnovativeNewService2025 {
 
 export interface InnovativeNewService2025 {;
 
+export interface InnovativeNewService2025 {
+
   id: string;
   name: string;
   tagline: string;
@@ -32,9 +34,6 @@ export interface InnovativeNewService2025 {;
     mobile: string;
     email: string;
     address: string;
-
-    website: string;
-  }
       'Algorithmic trading, Risk management, Portfolio optimization, Market analysis, Compliance monitoring',
     ],
     roi: 'Financial institutions report 800% ROI through improved trading performance and reduced risk exposure.',
@@ -200,7 +199,6 @@ export interface InnovativeNewService {
     marketSize: '$32.1B financial technology market', growthRate: '22% annual growth',
     variant: 'quantum-financial-enterprise',
     contactInfo: {
-    
     },
     realImplementation: true, implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.',
     launchDate: '2025-01-08', customers: 12,
@@ -217,8 +215,6 @@ export interface InnovativeNewService {
     launchDate: '2025-01-08';
     customers: 12;
 
-  }
-];
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeNewService {;
   id: string,;
@@ -483,6 +479,3 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     reviews: 6;
   }
 ];
-
-;
-

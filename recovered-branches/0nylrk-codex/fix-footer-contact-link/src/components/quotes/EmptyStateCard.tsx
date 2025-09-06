@@ -1,7 +1,3 @@
-
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card";
-import { MessageSquare, ArchiveIcon } from "lucide-react";
 type EmptyStateCardProps = {;
   type: 'active' | 'archived';
 };
@@ -78,7 +74,6 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
           ) : (;
             <ArchiveIcon className="h-8 w-8 text-white" />;
           )}
-
         </div>;
         <h3 className="text-xl font-medium text-white mb-2">;
           {isActive ? 'No hire requests yet' : 'No archived requests'}

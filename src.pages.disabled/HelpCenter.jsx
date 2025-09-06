@@ -31,9 +31,6 @@ export default function HelpCenter({ }: HelpCenterProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
 :src.pages.disabled/HelpCenter.jsx
 }
 }
@@ -44,3 +41,12 @@ export default function HelpCenter({ }: HelpCenterProps) {
 
 
 
+
+
+
+:src.pages.disabled/HelpCenter.jsx
+}
+}
+}
+}
+}

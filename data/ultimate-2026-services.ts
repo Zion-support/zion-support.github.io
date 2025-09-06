@@ -1,5 +1,3 @@
-export interface Ultimate2026Service {
-export interface Ultimate2026Service {;
   id: string;
   name: string;
   tagline: string;
@@ -8,7 +6,6 @@ export interface Ultimate2026Service {;
   features: string[];
   link: string;
   category: string;
-  realImplementation: boolean;
   contactInfo: {
     mobile: string;
     email: string;
@@ -66,21 +63,6 @@ export const ultimate2026Services: Ultimate2026Service[] = [
   realImplementation: boolean,
   contactInfo: {
     features: [
-      "Ultimate platform";
-      "All technologies";
-      "Maximum capabilities";
-      "Premium features";
-      "24/7 support"
-    ];
-    link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-    features: [
       "Ultimate platform",
       "All technologies",
       "Maximum capabilities",
@@ -94,6 +76,7 @@ export const ultimate2026Services: Ultimate2026Service[] = [
     }
   }
 ];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

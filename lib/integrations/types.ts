@@ -1,7 +1,5 @@
 
 export type IntegrationCategory = 'crm' | 'ats';
-
-export type IntegrationCategory = 'crm' | 'ats';
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type IntegrationProviderId =;
@@ -35,19 +33,15 @@ export interface IntegrationProviderMeta {
 
 ;
 export interface IntegrationProviderMeta {
-  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
-  icon?: string
-}
+  id: IntegrationProviderId, name: string,
+  category: IntegrationCategory, description?: string,  oauth_scopes?: string[];
+  icon?: string;
 export interface SyncRules {
   // CRM rules;
   autoCreateContacts?: boolean;
   pushNotesMode?: 'auto' | 'manual';
   // ATS rules;
   autoSyncApplicants?: boolean;
-  providerId: IntegrationProviderId;
-  status: SyncStatus;  accessToken?: string;  refreshToken?: string;
-
-
   expiresAt?: number;
   connectedAt?: number;
   syncRules?: SyncRules;
@@ -61,7 +55,6 @@ export interface ManualOverride {
   job_id: string;
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
-export interface ZapierEvent {
 
 export interface ManualOverride {;
   jobId: string;

@@ -1,4 +1,3 @@
-
             href="/services"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
@@ -15,14 +14,6 @@
             title="Micro SaaS"
             href="/services/micro-saas"
             description="End-to-end product engineering with billing, auth, analytics and growth."
-          />
-          <Card
-            title="Business Automation"
-            href="/services/automation-tools"
-            description="Intelligent automation tools that streamline operations and boost productivity by 300%."
-            icon="⚡"
-          />
-          <Card
           />
         </div>
       </section>

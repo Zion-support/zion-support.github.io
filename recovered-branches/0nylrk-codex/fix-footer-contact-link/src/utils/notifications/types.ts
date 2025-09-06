@@ -1,4 +1,3 @@
-
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 ;
 
@@ -34,7 +33,6 @@ export interface HireRequestNotificationParams {;
   projectSummary?: string
   hireRequestId: string
 }
-
   related_id?: string | null;
   send_email?: boolean;
   action_url?: string | null,
@@ -73,7 +71,15 @@ export interface SystemNotificationParams {;
   userId: string;
   title: string;
   message: string;
-  actionUrl?: string | null;
-  actionText?: string | null
 
-
+export interface CreateNotificationParams {
+  user_id: string;
+  title: string;
+  message: string;
+  type: NotificationType;
+}
+export interface SystemNotificationParams {
+  user_id: string;
+  title: string;
+  message: string;
+}

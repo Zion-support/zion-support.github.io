@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 const client = process && process.env.OPENAI_API_KEY
@@ -23,6 +22,7 @@ export default async function handler(
     governance,
     jurisdiction,
 
+
   const distLines = Array && Array.isArray(distribution)
     ? distribution && distribution.map((d: any) => `- ${d && d.label}: ${d && d.percent}%`).join("\n")
     : "";
@@ -36,20 +36,8 @@ export default async function handler(
       } as any);
       const content = (completion as any)?.output_text || "";
     } else {
-      markdown = fallbackMarkdown({
-        tokenName
-        tokenSupply
-        useCases
-        rewardsLogic
-        distribution
-        governance
-        jurisdiction
-        legalReview
-      });
+      markdown = fallbackMarkdown({ tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview })
     }
-  } catch (e: any) {
-    console && console.error("generation_error", e?.message || e);
-    res && res.status(500).json({ error: "Generation failed" });
   }
 }
 function fallbackMarkdown(input: any): string {
@@ -92,11 +80,6 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
-
-
-  return `# ${input?.tokenName || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ""}.\n\n## Rewards System\n${input?.rewardsLogic || ""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
-
       markdown = content.trim ();
     } else {
       markdown = fallback_markdown ({
@@ -124,8 +107,4 @@ function fallback_markdown (input: any): string {
     : "";
   return `# ${input?.token_name || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.token_name || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI - native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.use_cases || ""}.\n\n## Rewards System\n${input?.rewards_logic || ""}.\n\n## Distribution\n${dist_lines}\n\n_total Supply: ${input?.token_supply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\n_not financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
 }
-}
-
-
-
 }

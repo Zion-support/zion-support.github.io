@@ -13,6 +13,7 @@ exports && exports.handler = async () => {
   logStep('components:generate-docs', () =>
     runNode('automation/component-props-docs && docs.cjs')
   );
+}
 exports.handler = async () => {
   const logs = [],
   /**

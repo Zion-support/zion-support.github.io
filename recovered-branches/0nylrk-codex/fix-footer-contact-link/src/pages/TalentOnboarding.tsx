@@ -1,4 +1,3 @@
-
 import React from "react";
 import {TalentOnboardingForm} from "@/components/profile/TalentOnboardingForm";
 import {Header} from "@/components/Header";
@@ -29,6 +28,8 @@ export default function TalentOnboarding() {
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
     return <Navigate to="/login" replace />
+  }
+  return (
   }
   return (
               Showcase your skills to top clients and employers. Create a professional profile;

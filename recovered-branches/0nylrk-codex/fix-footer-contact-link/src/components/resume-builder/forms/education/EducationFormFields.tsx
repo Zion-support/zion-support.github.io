@@ -1,4 +1,3 @@
-
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
@@ -18,8 +17,6 @@ import { Form;
 import { useState  } from 'react';
 import { EducationFormFieldsProps  } from './types';
 import { Education } from '@/types/resume';
-
-
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -73,7 +70,6 @@ export function EducationFormFields({
       setError(err.message |'An error occurred')
     } finally {
       setIsLoading(false)
-
   };
 
 import { useForm } from 'react-hook-form',;
@@ -96,7 +92,6 @@ import {;
 import { useState } from 'react',;
 import { EducationFormFieldsProps } from './types',;
 import { Education } from '@/types/resume',;
-;
 // Define schema for form validation;
 const educationSchema = z.object({;
   institution:z.string().min(1, 'Institution is required'),;
@@ -140,9 +135,19 @@ export function EducationFormFields({ ;
     }
 
   },
-
-
-
+import {z} from 'zod';
+import {format} from 'date - fns';
+import {Loader2} from 'lucide-react';
+import {Button} from '@/components / ui / button';
+import {Textarea} from '@/components / ui / textarea';
+import {Input} from '@/components / ui / input';
+import {Checkbox} from '@/components / ui / checkbox';
+import {Alert, AlertDescription} from '@/components / ui / alert';
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
+import {useState} from 'react';
+import {EducationFormFieldsProps} from './types';
+    }
+  }
 
   return (
     <Form {...form}>;
@@ -155,10 +160,6 @@ export function EducationFormFields({ ;
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
-
-          />;
-
-
           <FormField
             control={form && form.control}
             name="degree"
@@ -171,11 +172,6 @@ export function EducationFormFields({ ;
                 <FormMessage />;
               </FormItem>;
             )}
-
-          />;
-        </div>;
-
-
         <FormField
           control={form && form.control}
           name="field_of_study"
@@ -207,20 +203,9 @@ export function EducationFormFields({ ;
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />;
               </FormControl>;
               <FormMessage />;
-
-        />;
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
           <FormField
             control={form && form.control}
             name="start_date"
-
-
-                  <Input 
-                    type="date" 
-
-
                     {...field}
                     value={field.value |''}
                   />
@@ -256,9 +241,10 @@ export function EducationFormFields({ ;
                   </div>;
                 </FormItem>;
               )}
-          control={form.control}
-          name="location";
-          render={({ field }) => (
+              <FormControl>;
+                <Input placeholder="Cambridge, MA" {...field} />;
+              </FormControl>;
+              <FormMessage />;
         <FormField
           control={form && form.control}
           name="description"
@@ -282,12 +268,11 @@ export function EducationFormFields({ ;
                   placeholder="Notable achievements, courses, activities...";
                   className="min - h-[100px]";
                   {...field}
+                />;
+              </FormControl>;
+              <FormMessage />;
           <Button
             type="button"
             variant="outline"
             onClick={onCancel}>;
             {isEditing ? 'Cancel' : 'Back'}
-
-}
-;
-

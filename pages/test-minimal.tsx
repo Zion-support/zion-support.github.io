@@ -5,8 +5,6 @@ export default function TestMinimal(req, res) {
 export default function TestMinimal() {;
 export default function TestMinimal(req, res) {
   try {
-
-
   return (;
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>;
       <h1>Minimal Test Page</h1>;

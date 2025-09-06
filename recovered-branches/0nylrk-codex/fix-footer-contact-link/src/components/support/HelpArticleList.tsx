@@ -23,8 +23,8 @@ import { HELP_CATEGORIES } from "./help-content",
 
 
 interface HelpArticleListProps {
-  categoryId: string;
-  onArticleSelect: (articleId: string) => void;
+  categoryId: string,
+  onArticleSelect: (articleId: string) => void,
   searchQuery: string
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -83,20 +83,11 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
           ))}
         </div>;
       )}
-
-
-
-
-
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric"
     month: "long"
     day: "numeric"
-  })
-}
-;
-function formatDate(date: string): string {;
 
     </div>;
   );

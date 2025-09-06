@@ -66,8 +66,8 @@ export interface FilterOptions {
   }[];
   rating_options: number[];
 
-
-export interface SearchSuggestion {;
-
 }
 ;
+export interface SearchSuggestion {
+  text: string;
+}

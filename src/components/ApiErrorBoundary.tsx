@@ -1,26 +1,13 @@
-      return (
+      }
 
-      // Reset error state after a brief delay;
-      this.retryTimeoutId = set_timeout ((, ) => {
-        this.set_state ({
-          has_error: false,
-          error: null,
-          error_info: null,
-          is_retrying: false,
-        });
-      }, 500);
-    } catch (retry_error) {
-      logErrorToProduction ('Retry failed:', { data: retry_error });
-      Sentry.capture_exception (retry_error);
-      this.set_state ({ is_retrying: false });
-    }
-  }
-                <AlertTitle>;
-                  {isNetworkError;
-                    ? 'Connection Problem';
-                    : 'Something went wrong'}
-                </AlertTitle>;
-              </div>;
+      return (
+        <div className="flex min-h-screen items-center justify-center p-4">
+          <div className="w-full max-w-md space-y-4">
+            <Alert variant="destructive">
+              <div className="flex items-center gap-2">
+                {isNetworkError ? (
+                  <WifiOff className="h-4 w-4" />
+                ) : (
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -50,59 +37,13 @@
                     Try Again
                   </>
                 )}
+
+
                 Reload Page
             </div>
             {!this.state.isOnline && (
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>
                 <WifiOff className='h-4 w-4' />
-                <span>Offline</span>
-              </div>
-            )}
-  }
-  return { handleApiError }
-}
-  return { handleApiError }
-              </Button>;
-
-              <Button
-                variant='outline'
-                onClick={() => window && window.location.reload()}
-                className='w-full'              >;
-                Reload Page;
-              </Button>;
-            </div>;
-
-            {!this && this.state.isOnline && (;
-              <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
-                <WifiOff className='h-4 w-4' />;
-                <span>Offline</span>;
-              </div>;
-            )}
-
-            {process && process.env.NODE_ENV === 'development' && this && this.state.error && (;
-              <details className='mt-4 rounded border p-2 text-xs'>;
-                <summary className='cursor-pointer font-medium'>;
-                  Debug Info (Development Only);
-                </summary>;
-                <pre className='mt-2 whitespace-pre-wrap break-all'>;
-                  {this && this.state.error && error.toString()}
-                  {this && this.state.errorInfo?.componentStack}
-                </pre>;
-              </details>;
-            )}
-                variant='outline'
-                onClick={() => window.location.reload()}
-                className='w-full'              >
-                variant="outline"
-                onClick={() => window.location.reload()}
-                className="w-full"
-              >
-                Reload Page
-              </Button>
-            </div>
-            {!this.state.isOnline && (
-              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                <WifiOff className="h-4 w-4" />
                 <span>Offline</span>
               </div>
             )}
@@ -116,10 +57,16 @@
                 </pre>
               </details>
             )}
+
+}, ;
+  return { handleApiError };
+
           </div>;
         </div>;
       );
     }
+
+
 
 
 },
@@ -127,3 +74,4 @@
 },
 
 
+};

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, PenTool as Pen, Star } from 'lucide-react';
@@ -448,3 +449,5 @@ Transform your content creation process with AI-powered generation that saves ti
   );
 }
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-5f6f
+=======
+>>>>>>> origin/main

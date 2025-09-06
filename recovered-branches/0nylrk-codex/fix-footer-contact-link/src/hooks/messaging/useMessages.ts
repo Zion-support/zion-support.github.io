@@ -1,9 +1,7 @@
-
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
-
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Message, Conversation} from '@/types/messaging';
@@ -22,6 +20,10 @@ type UserWithProfile = UserProfile | UserDetails | null;
   set_conversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
   setUnreadCount: (updater: (prev: number) => number) => void;
   setIsLoading: (loading: boolean) => void;
+    } finally {
+      setIsLoading (false);
+    }
+  }
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
@@ -63,9 +65,6 @@ export function useMessages(;
       ),;
       if (unreadMessages.length > 0) {;
         await markAsRead(conversationId);
-
-
-
       }
     } catch (error) {
       console.error('Error fetching messages:', error)
@@ -101,9 +100,6 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {
         setActiveMessages(prev => [...prev, data as Message])
       }
-
-
-
   },;
   /**;
    * Send a message to an existing conversation;
@@ -134,9 +130,6 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {;
         setActiveMessages(prev => [...prev, data as Message]);
       }
-
-
-
       
       // Update conversations list
       await fetchConversations(),
@@ -146,6 +139,10 @@ export function useMessages(;
     } catch (error) {
       console.error('Error sending message:', error),
       toast({
+        title: "Failed to send message";
+        description: "Please try again later"
+        variant: "destructive"
+      })
     }
   }
   /**
@@ -170,12 +167,13 @@ export function useMessages(;
         prev && prev.map(msg => 
           msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
 
+        .eq('recipient_id', user && user.id)
+        .eq('read', false);
+      if (error) throw error;
+      // Update active messages to show they've been read
         )
       );
       // Update conversations to reflect read messages
-      setConversations(prev =>
-        prev.map(conv =>
-          conv.id === conversationId
             ? { ...conv, unread_count: 0 }
             : conv
         )
@@ -192,7 +190,6 @@ export function useMessages(;
   return {
     loadMessages;
     sendMessage;
-  }
 ;
   /**;
   * Send a message to an existing conversation;
@@ -247,8 +244,6 @@ if ( {) {
         variant: "destructive";
       });
     }
-
-
   }
 ;
   /**;
@@ -304,3 +299,4 @@ if (throw error) {
     send_message;
     markAsRead;
   }
+}

@@ -15,22 +15,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')
     return res.status(400).json({ error: 'Invalid email' });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const list: string[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   if (!list.includes(email)) list.push(email);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
-
-  if (req.method !== 'POST') return res.status(405).end();
-  ensure();
-  const { email } = req.body || {};
-  if (!email || typeof email !== 'string') return res.status(400).json({ error: 'Invalid email' });
-
-
-  res.status(200).json({ ok: true });  if (!email || typeof email !== 'string') return res.status(400).json({ error: 'Invalid email' });
 
   const list: string[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   if (!list.includes(email)) list.push(email);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
 
+;
+const DATA_DIR = path.resolve (process.cwd (), 'data', 'newsletter');const FILE_PATH = path.resolve (DATA_DIR, 'subscribers.json');
+;
+/**
+ * ensure - Function description
+ */
+function ensure() {
+  if () fs.mkdir_sync (DATA_DIR, { recursive: true })) {
+  $2
 }
   if ()) {
   $2
@@ -79,5 +81,3 @@ function handler() {
 }
   fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8');
   res.status (200).json ({ ok: true });
-
-}

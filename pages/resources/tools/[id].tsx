@@ -8,7 +8,6 @@ export default function ToolResourcePage() {
 
 
 
-
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -311,8 +310,6 @@ export default function ToolResourcePage(req, res) {
               <p className="text-xl text-white/80 mb-8">
                 The tool resource you're looking for doesn't exist.
               </p>
-              <Link 
-              <Link
 
 
 
@@ -320,7 +317,7 @@ export default function ToolResourcePage(req, res) {
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
-                 Back to Resources
+                ← Back to Resources
               </Link>
             </div>
           </main>
@@ -351,8 +348,6 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
@@ -483,10 +478,10 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                   </ul>
                 </div>
+
+
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
                   <div className="space-y-3">
@@ -502,8 +497,6 @@ export default function ToolResourcePage(req, res) {
                 </div>
               </div>
             </div>
-              <Link 
-              <Link
 
 
 
@@ -518,7 +511,6 @@ export default function ToolResourcePage(req, res) {
         </main>
       </div>
     </>
-  )
 
 }
 
@@ -776,8 +768,5 @@ if ( {) {
             </div>;
           </div>;
         </main>;
-}
-    </>);
-}
 
 

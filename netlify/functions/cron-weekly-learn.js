@@ -72,11 +72,9 @@ exports.handler = async function () {
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly && weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
-
-
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
   } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 };      }
       topBadges: Object.values(users).reduce((map, u) => {
@@ -109,12 +107,7 @@ exports.handler = async function () {
     // Check condition
 if ( {) {
   $2
-
-
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-
-},
-

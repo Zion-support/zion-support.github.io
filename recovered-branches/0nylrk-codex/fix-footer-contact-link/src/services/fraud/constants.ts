@@ -1,5 +1,3 @@
-
-export const suspiciousPhrases = [;
 // Common constants used across fraud detection modules;
 // Phrases that might indicate fraud;
 export const suspicious_phrases = [;
@@ -30,11 +28,6 @@ export const suspiciousPhrases = [
   "deal outside"
   "deal outside";
 ];
-],
-
-// Email domains often used for throwaway accounts
-export const suspiciousEmailDomains = [;
-
   "tempmail";
   "throwaway";
   "fakeemail";
@@ -72,5 +65,5 @@ export const suspiciousEmailDomains = [;
   "mailinator",;
   "guerrillamail",;
   "10minutemail";
-
+  "10minutemail";
 ];

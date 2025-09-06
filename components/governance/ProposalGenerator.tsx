@@ -11,12 +11,10 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -24,29 +22,37 @@ import React, { useState } from 'react';
 
 
 
-
 export type ProposalForm = {;
 
 
 
 export type ProposalForm = {;
   targetInstitution: string;
-  targetInstitution: string;
+;
+export type ProposalForm = {
+  target_institution: string;
   type: ProposalType;
   regionalScope: string;
   budgetOrGoals: string;
   supportingMultiverses: string;
   language?: string;
-  customPrompt?: string;};export type ProposalForm = {
-;
-export type ProposalForm = {
-  target_institution: string;
-  type: ProposalType;
   targetInstitution: string,
   type: ProposalType,
   regionalScope: string,
   budgetOrGoals: string,
   supportingMultiverses: string,;
+  language?: string;
+  customPrompt?: string
+}
+export default function ProposalGenerator() {
+  const [form, setForm] = useState<ProposalForm>({
+    targetInstitution: 'UNDP'
+    type: 'Workforce Dev'
+    regionalScope: 'Global'
+    budgetOrGoals: ''
+    supportingMultiverses: ''
+    language: 'English'
+    customPrompt:
 
 
   language?: string;
@@ -107,21 +113,18 @@ export default function ProposalGenerator() {;
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-      });
-      const data = await res.json();
       setStatusMessage('Exported. Files saved.')
     } catch (e) {
       console.error(e);
       setStatusMessage('Export failed')
     }
-
-
       setStatusMessage('Export failed');    }
 
     }
 
   }
 
+  }
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
@@ -158,7 +161,6 @@ export default function ProposalGenerator() {;
       setStatusMessage('Export failed');
     }
   }
-
   async function handleSubmitBridge() {;
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {;
@@ -300,18 +302,52 @@ export default function ProposalGenerator() {;
           <div className='flex gap-2'>;
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
-              onClick={handleGenerate}
-              disabled={isGenerating}
-            >
-              {isGenerating ? 'Generating...' : 'Generate Draft'}
-            </button>
+            <textarea
+              className="w-full border rounded px-3 py-2 min-h-[80px]"
+              value={form && form.budgetOrGoals}
+              onChange={(e) => handleChange('budgetOrGoals', e && e.target.value)}
+              placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc.";
+            />;
+          </div>;
+          <div>;
+            <label className="block text-sm font-medium" htmlFor="input-Supporting multiverse(s)">Supporting multiverse(s)</label>;
+            <input
+              className="w-full border rounded px-3 py-2"
+              value={form && form.supportingMultiverses}
+              onChange={(e) => handleChange('supportingMultiverses', e && e.target.value)}
+              placeholder="Eg. Zion && Zion.ai, Zion && Zion.ID, Zion && Zion.Work";
+            />;
+          </div>;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+            <div>;
+              <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>;
+              <input
+                className="w-full border rounded px-3 py-2"
+                value={form && form.language}
+                onChange={(e) => handleChange('language', e && e.target.value)}
+                placeholder="English / French / Spanish / Arabic / ...";
+              />;
+            </div>;
+            <div>;
+              <label className="block text-sm font-medium" htmlFor="input-GPT Prompt Assist">GPT Prompt Assist</label>;
+              <textarea
+                className="w-full border rounded px-3 py-2 min-h-[80px]"
+                value={form && form.customPrompt}
+                onChange={(e) => handleChange('customPrompt', e && e.target.value)}
+              />;
+            </div>;
+          </div>;
+          <div className="flex gap-2">;
             <button
-              className='px-4 py-2 bg-emerald-600 text-white rounded'              onClick={handleExport}              className="px-4 py-2 bg-emerald-600 text-white rounded"
+              onClick={handleGenerate}
+              disabled={isGenerating}>;
+              {isGenerating ? 'Generating...' : 'Generate Draft'}
+            </button>;
+            <button
               onClick={handleExport}
-              disabled={!draftMarkdown}
-            >
-              Export (PDF/JSON/MD)
-            </button>
+              disabled={!draftMarkdown}>;
+              Export (PDF/JSON/MD);
+            </button>;
             <button
 
               onClick={handleGenerate}
@@ -328,13 +364,63 @@ export default function ProposalGenerator() {;
             <button
 
 
+              disabled={!draftMarkdown}>;
+              Submit Bridge;
+            </button>;
+          </div>;
+          {statusMessage && (;
+            <p className='text-sm text-gray-600'>{statusMessage}</p>;
+          )}
+          {exportLinks && (;
+            <div className='text-sm space-y-1'>;
+              {exportLinks && exportLinks.pdfUrl && (;
+                <div>;
+                  <a
+                    className='text-blue-600 underline'
+                    href={exportLinks && exportLinks.pdfUrl}
+                    target='_blank'
+                    rel='noreferrer'>;
+                    PDF;
+                  </a>                </div>;
+              )}
+              {exportLinks && exportLinks.mdUrl && (;
+                <div>          {exportLinks && (;
+            <div className="text-sm space-y-1">;
+              {exportLinks && exportLinks.pdfUrl && (;
+                <div>;
+                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>;
+                </div>;
+              )}
+              {exportLinks && exportLinks.mdUrl && (;
+                <div>;
+                  <a
+                    className='text-blue-600 underline'
+                    href={exportLinks && exportLinks.mdUrl}
+                    target='_blank'
+                    rel='noreferrer'>;
+                    Markdown;
+                  </a>                </div>;
+              )}
+              {exportLinks && exportLinks.jsonUrl && (;
+                <div>                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>;
+                </div>;
+              )}
+              {exportLinks && exportLinks.jsonUrl && (;
+                <div>;
+                  <a
+                    className='text-blue-600 underline'
+                    href={exportLinks && exportLinks.jsonUrl}
+                    target='_blank'
+                    rel='noreferrer'>;
+                    JSON;
+                  </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>;
+                </div>;
               )}
             </div>;
           )}
-
-        </div>
-        <div className="space-y-2">
-          <label className="block text-sm font-medium" htmlFor="input-Draft (Markdown)">Draft (Markdown)</label>
+        </div>;
+        <div className='space-y-2'>;
+          <label className='block text-sm font-medium'>Draft (Markdown)</label>;
           <textarea
             className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
             value={draftMarkdown}

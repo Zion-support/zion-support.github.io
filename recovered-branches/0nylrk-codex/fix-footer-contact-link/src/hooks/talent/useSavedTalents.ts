@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
@@ -171,47 +170,16 @@ if (throw talent_error) {
       } finally {
         setIsLoading(false)
       }
-      toast({
-
-
-        title: "Authentication required",
-        description: "Please log in to save talents to your favorites",
-
-
         variant: "destructive"
-;
-    fetchSavedTalents ();
-  }, [is_authenticated, user_details.id]);
-;
-  // Toggle save talent;
-  const toggleSaveTalent = async (talent: TalentProfile) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: "Authentication required";
-        description: "Please log in to save talents to your favorites",
-        variant: "destructive";
-      });
-      return;
+      }),
+      return
     }
-
-
-
-    
-    const isSaved = savedTalentIds && savedTalentIds.includes(talent && talent.id);
-    
-
-
-
     try {
       if (isSaved) {
         // Remove from saved_talents
         const { error } = await supabase
           .from('saved_talents')
           .delete()
-          .eq('user_id', userDetails.id)
           .eq('user_id', userDetails && userDetails.id)
           .eq('talent_id', talent && talent.id);
         if (error) throw error;
@@ -225,18 +193,19 @@ if ( {) {
         const { error } = await supabase
           .from('saved_talents')
           .insert({
-        toast({
-          title: "Added to favorites",
-          description: `${talent && talent.full_name} has been added to your favorites`})
+        if (error) throw error;
+        setSavedTalents(prev => [...prev, talent]);
       }
     } catch (error) {
       toast({
+        title: "Error";
+        description: "There was a problem updating your favorites. Please try again."
+        variant: "destructive"
+      })
     }
   }
   // Check if talent is saved
   const isTalentSaved = (talentId: string) => {
-    return savedTalentIds.includes(talentId)
-  }
 
     return savedTalentIds && savedTalentIds.includes(talentId)
   };
@@ -272,8 +241,6 @@ if ( {) {
       }),;
       return;
     }
-  }
-    const is_saved = savedTalentIds.includes (talent.id);
 ;
     try {
       // Check condition
@@ -337,7 +304,5 @@ if (throw error) {
     is_loading;
     toggleSaveTalent;
     isTalentSaved;
-
-
   }
 }

@@ -2,7 +2,6 @@
 
 
 
-
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -89,12 +88,6 @@ const REWARD_OPTIONS: RewardOption[] = [
                       size="sm"
                       variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}
                       disabled={!wallet |wallet.balance < option.cost}
-                      onClick={() => handleRedeem(option)}
-                    >;
-                      Redeem <ArrowRight className="ml-1 h-3 w-3" />;
-                    </Button>;
-                  </div>;
-                </div>;
               ))}
             </div>
             <div className="flex justify-between">
@@ -108,9 +101,6 @@ const REWARD_OPTIONS: RewardOption[] = [
       </CardContent>
     </Card>
   )
-}
-
-
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -123,6 +113,7 @@ import {;
   DialogHeader,;
   DialogTitle,;
   DialogTrigger} from "@/components/ui/dialog",;
+
 type RewardOption = {;
   id: string,;
   title: string,;
@@ -169,14 +160,13 @@ const REWARD_OPTIONS: RewardOption[] = [;
               </DialogDescription>;
             </DialogHeader>;
             <div className="space-y-4 py-4">;
+                      onClick={() => handleRedeem(option)}
+                    >;
+                      Redeem <ArrowRight className="ml-1 h-3 w-3" />;
+                    </Button>;
                   </div>;
                 </div>;
               ))}
-            </div>;
-            <div className="flex justify-between">;
-              <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>;
-              <Button variant="ghost" size="sm">;
-                Learn More <ExternalLink className="ml-1 h-3 w-3" />;
               </Button>;
             </div>;
           </DialogContent>;
@@ -187,5 +177,6 @@ const REWARD_OPTIONS: RewardOption[] = [;
 
 
 }
+;
     </Card>);
 }

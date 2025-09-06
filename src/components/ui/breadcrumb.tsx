@@ -1,9 +1,3 @@
-    ref={ref}
-    aria-label='breadcrumb'
-    className={cn(
-      'inline-flex items-center gap-1 text-sm text-zion-slate-light',      className
-    )}
-    {...props}
 
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
@@ -40,14 +34,20 @@ const Breadcrumb = React.forwardRef<
 })
 BreadcrumbLink.displayName = "BreadcrumbLink"
  
-}: React.ComponentProps<"li">) => (
-  <li
-    role="presentation"
-    aria-hidden="true"
-    className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
-    {...props}
+
+
+const BreadcrumbSeparator = ({
+  children
+  className
+  ...props
   >
     {children |<ChevronRight className='h-4 w-4' />}
+  </li>
+)
+
+
+  >
+    {children || <ChevronRight className="h-4 w-4" />}
   </li>
 )
     {...props}
@@ -93,6 +93,16 @@ const BreadcrumbEllipsis = ({;
     role="presentation"
     aria-hidden="true"
     className={cn("flex h-9 w-9 items-center justify-center", className)}
+BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
+ 
+const BreadcrumbEllipsis = ({
+  className
+  ...props
+export {
+  Breadcrumb
+  BreadcrumbList
+  BreadcrumbItem
+  BreadcrumbLink
     {...props}>;
     &#8230,;
   </span>;

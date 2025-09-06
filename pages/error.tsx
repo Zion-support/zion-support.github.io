@@ -1,5 +1,3 @@
-
-
             </div>
             <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
             <p className=&quot;text-sm text-muted-foreground&quot;>
@@ -12,13 +10,11 @@
                 This could be due to:
               </p>
               <ul className=&quot;text-sm text-muted-foreground space-y-1 text-left&quot;>
-                <li> Invalid email or password</li>
-                <li> Account not verified</li>
-                <li> Network connectivity issues</li>
-                <li> Temporary service unavailability</li>
+                <li>• Invalid email or password</li>
+                <li>• Account not verified</li>
+                <li>• Network connectivity issues</li>
+                <li>• Temporary service unavailability</li>
               </ul>
-
-
                     Try Again
                   </Link>
                 </Button>
@@ -28,8 +24,6 @@
                   </Link>
                 </Button>
               </div>
-
-
               </div>
             </div>
           </CardContent>
@@ -97,9 +91,6 @@ function ErrorPage() {
     </>);
 
 }
-
-}
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

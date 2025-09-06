@@ -5,8 +5,6 @@ const STEPS = [
   { key: 'skills', label: 'Skills added' }
   { key: 'availability', label: 'Availability set' }
   { key: 'match', label: 'First match received' }
-
-
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -28,7 +26,6 @@ export default function TalentDashboard() {
     availability: false,
     match: false,;
   });
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent');
@@ -39,11 +36,6 @@ export default function TalentDashboard() {
   useEffect(() => {
 
 
-import { useEffect, useState } from 'react';
-const STEPS = [;
-  { key: 'profile', label: 'Profile completed' },;
-  { key: 'skills', label: 'Skills added' },;
-  { key: 'availability', label: 'Availability set' },;
 export default function TalentDashboard() {;
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
     profile: false,;
@@ -171,10 +163,6 @@ const STEPS = [;
 }
 
 
-
-
-}
-
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -187,6 +175,12 @@ const STEPS = [;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+        </ul>;
+      </EnhancedCard>;
+    </div>;
+  );
+
+
   )
 }
 import EnhancedCard from '../../components / ui / EnhancedCard';
@@ -261,7 +255,7 @@ function TalentDashboard() {
                 <span;
                   className={`inline - flex h - 5 w - 5 items - center justify - center rounded - full border ${completed[s.key] ? 'bg - emerald - 500 text - white border - emerald - 500' : 'border - gray - 300 dark:border - gray - 700'}`}
                 >;
-                  {completed[s.key] ? '' : ''}
+                  {completed[s.key] ? '✓' : ''}
                 </span>;
                 <span className='text - sm'>{s.label}</span>;
               </div>;

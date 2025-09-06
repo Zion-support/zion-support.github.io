@@ -34,16 +34,13 @@ console.log ('🔍 Debugging Next.js project structure...'),
 
 
 console.log('🔍 Debugging Next.js project structure...'),;
-
 // Check if we're in a valid Next.js project;
-console.log ('📁 Current directory:', process.cwd ()),
-console.log ('📄 Package.json exists:', fs.exists_sync ('package.json')),
-console.log ('📄 Next.config.js exists:', fs.exists_sync ('next.config.js')),
-console.log ('📁 Pages directory exists:', fs.exists_sync ('pages')),
-console.log ('📁 Components directory exists:', fs.exists_sync ('components')),
+console.log('📁 Current directory:', process.cwd()),;
+console.log('📄 Package.json exists:', fs.existsSync('package.json')),;
+console.log('📄 Next.config.js exists:', fs.existsSync('next.config.js')),;
+console.log('📁 Pages directory exists:', fs.existsSync('pages')),;
+console.log('📁 Components directory exists:', fs.existsSync('components')),;
 // Check package.json;
-
-if (fs.existsSync('package.json')) {;
   const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),;
   const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
 
@@ -107,6 +104,3 @@ function getAllFiles(dir, extensions) {;
 }
 ;
 console.log('✅ Debug completed'),;
-
-
-

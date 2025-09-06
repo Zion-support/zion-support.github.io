@@ -4,15 +4,6 @@ interface Props {
   children: ReactNode,  fallback?: ReactNode;
 }
 interface State {
-  error?: Error;
-}
-class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false
-  }
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
-  }
       }
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">;

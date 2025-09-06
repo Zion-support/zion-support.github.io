@@ -1,11 +1,9 @@
-
 import { useState, useCallback  } from 'react';
 import { PortfolioProject  } from '@/types/resume';
 import { supabase  } from '@/integrations/supabase/client';
 import { useAuth  } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 export function usePortfolio() {
-
 import {useState, useCallback} from 'react';
 import {PortfolioProject} from '@/types/resume';
 import {supabase} from '@/integrations/supabase/client';
@@ -91,9 +89,6 @@ if (throw error) {
     
     setIsLoading(true),
     setError(null),
-
-
-
     
     try {
       const { data, error } = await supabase
@@ -114,14 +109,15 @@ if (throw error) {
         description: "Your project has been added to your portfolio"
       });
       await fetchProjects();
+      return data && data.id
     } catch (e: any) {
       console && console.error('Error adding portfolio project:', e);
       setError(e && e.message);
       toast({
-      });
-      return null;
+        variant: "destructive"
+      }),
+      return null
     } finally {
-
       setIsLoading(false)
     }
     setIsLoading(true);
@@ -170,9 +166,6 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to update a portfolio project'),;
       return false;
-
-
-
     }
     
     setIsLoading(true),
@@ -187,10 +180,20 @@ if (throw error) {
           technologies: project.technologies;
           image_url: project.image_url;
           github_url: project.github_url;
+      toast({
+        title: "Project updated"
+        description: "Your portfolio project has been updated"
       });
-      return false;
+      await fetchProjects();
+      return true
+    } catch (e: any) {
+      console && console.error('Error updating portfolio project:', e);
+      setError(e && e.message);
+      toast({
+        variant: "destructive"
+      }),
+      return false
     } finally {
-
       setIsLoading(false)
     }
     setIsLoading(true);
@@ -238,9 +241,6 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to delete a portfolio project'),;
       return false;
-
-
-
     }
     
     setIsLoading(true),
@@ -260,6 +260,11 @@ if (throw error) {
       console && console.error('Error deleting portfolio project:', e);
       setError(e && e.message);
       toast({
+        variant: "destructive"
+      }),
+      return false
+    } finally {
+      setIsLoading(false)
     }
     setIsLoading (true);
     set_error (null);
@@ -296,9 +301,6 @@ if (throw error) {
     is_loading;
     error;
     projects;
-  }
-}
-
 ;
 export function usePortfolio() {;
   const { user } = useAuth(),;

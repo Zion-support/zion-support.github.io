@@ -68,6 +68,7 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
   }
   return milestones;
 }
+  const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared / types.js';,
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,
 async function callOpenAI (input: MilestoneSuggestionInput): Promise < SuggestedMilestoneItem[] | null> {

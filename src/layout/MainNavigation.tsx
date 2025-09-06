@@ -2,6 +2,26 @@ interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
   className?: string
+}
+interface MainNavigationProps {
+  isAdmin?: boolean
+  unreadCount?: number
+  className?: string
+export function MainNavigation({
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Add state
+  const { user } = useAuth()
+  const isAuthenticated = !!user
+  const [loginOpen, setLoginOpen] = useState(false)
+  const { count } = useFavorites()
+  const { items } = useCart()
+  const cartCount = items.length
+  const router = useRouter(); // Changed from useLocation
+  const { t } = useTranslation()
+  const handleCartClick = (e: React.MouseEvent,) => {
+    if (!isAuthenticated) {
+      e.preventDefault()
+      setLoginOpen(true)
+      return;
     }
     setIsMobileMenuOpen (false);
   }
@@ -11,6 +31,57 @@ interface MainNavigationProps {
       href: '/'
       matches: (path: string) => path === '/',    }
     {
+  ]
+  const links = baseLinks.map(link => ({
+    ...link
+    name: t(`nav.${link.key}`)
+  }))
+  // Add authenticated-only links
+  if (isAuthenticated) {
+    links.push({
+      key: 'dashboard'
+      name: t('nav.dashboard')
+      href: '/dashboard'
+      matches: (path: string) =>
+        path === '/dashboard' |
+        path === '/client-dashboard' |
+        path === '/talent-dashboard'
+    }) }
+  // Add admin-only links
+  if (isAdmin) {
+    links.push({
+      key: 'analytics'
+      name: t('nav.analytics')
+      href: '/analytics'
+      matches: (path: string) => path.startsWith('/analytics')
+    }) }
+  return (
+    <>
+      <button
+        className='navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary' // Added ml-auto and mr-4 for positioning
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        aria-expanded={isMobileMenuOpen}
+        aria-controls='main-navbar-collapse'
+        aria-label='Toggle navigation'      >
+        <span className='navbar-toggler-icon'></span>
+      </button>
+      <nav
+        className={cn('navbar', className)}
+        role='navigation'
+        aria-label='Main navigation'      >
+import Link from "next/link",;
+import { useRouter } from "next/router",;
+import { useState } from "react",;
+import { cn } from "@/lib/utils",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useTranslation } from "react-i18next",;
+import { useFavorites } from "@/hooks/useFavorites",;
+import { useCart } from "@/context/CartContext",;
+import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react';
+import { LanguageSelector } from '@/components/header/LanguageSelector',;
+import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',;
+import { MiniCartPreview } from '@/components/cart/MiniCartPreview',;
+import { LoginModal } from '@/components/auth/LoginModal',;
 interface MainNavigationProps {;
   isAdmin?: boolean,;
   unreadCount?: number,;
@@ -21,20 +92,52 @@ interface MainNavigationProps {;
       key: 'home',;
       href: '/',;
       href: '/analytics',;
-      matches: (path: string) => path && path.startsWith('/analytics'),;
-    });  }
-
-
+      matches: (path: string) => path.startsWith('/analytics');
+    });
+  }
+  
   return (
     <>;
       <button
         className='navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary' // Added ml-auto and mr-4 for positioning
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-expanded={isMobileMenuOpen}
+        className={cn('navbar', className)}
+        role='navigation'
+        aria-label='Main navigation'>;
+
+
+        <div
+          id="main-navbar-collapse"
+          className={cn(
+        <div
+          id="main-navbar-collapse"
+          className={cn(
+          <ul className='navbar-nav flex flex-col md:flex-row md:items-center md:gap-1'>
+            {' '}
+            {/* Added navbar-nav and flex direction classes */}
+            {links.map(link => (
+              <li key={link.name} className='nav-item'>
+                <Link
+          <ul className="navbar-nav flex flex-col md:flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */}
+            {links.map((link) => (
+              <li key={link.name} className="nav-item">
+                <Link 
+                  href={link.href}
+                  aria-label={link.name}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
                     link.matches(router.pathname)
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}                >
+
+
+
+                  {link.name}
+                </Link>
+              </li>
+            ))}
             )}
             {/* Wallet link */}
             {isAuthenticated && (;
@@ -66,18 +169,20 @@ interface MainNavigationProps {;
                     href="/cart"
                     aria-label={t('nav.cart')}
                     onClick={handleCartClick}
+                  >
+                    <ShoppingCart className="w-4 h-4 mr-1" />
+                    {t('nav.cartCart')}
+                    {cartCount > 0 && (
 }`};
 ;
                           {link.name}'`;
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
+
                         {activeDropdown === link.key && (;"
                           <div className="ml-4 mt-2 space-y-1">
                             {link.children.map((child: unknown (
                               <Link
                                 key={child.key}
-                                to={child.href}`;
-                                className={`block px - 4 py - 2 text - sm text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors ${is_active (child) ? 'text - zion - cyan bg - zion - cyan / 10' : ''`;
-}`}
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link)
                             ? 'bg-zion-cyan text-white''
                             : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
@@ -91,6 +196,9 @@ interface MainNavigationProps {;
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                         {cartCount}
                       </span>;
+
+
+
                     )}
                 </HoverCardTrigger>
                 <HoverCardContent>
@@ -106,3 +214,6 @@ interface MainNavigationProps {;
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
+  )
+}
+;

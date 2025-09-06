@@ -1,8 +1,3 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-
-
 import { 
   Newspaper;
   Calendar, 
@@ -135,9 +130,6 @@ const NewsPage: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
   ],
   const latestNews = [
     {
@@ -222,7 +214,6 @@ export default function NewsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -245,8 +236,6 @@ export default function NewsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               className="text-center"
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
@@ -473,8 +462,6 @@ import EnhancedFooter from '../components/EnhancedFooter';
 } from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
-
-
 export default function NewsPage() {
   const newsItems = [
     {
@@ -636,7 +623,6 @@ export default function NewsPage() {
   const [selectedCategory, setSelectedCategory] = React.useState("All"),
   const filteredNews = selectedCategory === "All"
     ? newsItems
-
     : newsItems.filter(item => item.category === selectedCategory),
   const featuredNews = newsItems.filter(item => item.featured),
   return (
@@ -656,8 +642,6 @@ export default function NewsPage() {
             initial={{ opacity: 0, coordinate_y: 30 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
-
-
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -672,7 +656,6 @@ export default function NewsPage() {
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover the latest developments in AI, quantum computing, and technology 
-
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -701,8 +684,6 @@ export default function NewsPage() {
           </motion.div>
         </div>
       </section>
-
-
       {featuredNews.length > 0 && (
         <section className="py-16 px-6">
           <div className="max-w-7xl mx-auto">
@@ -896,7 +877,6 @@ const NewsPage: React.FC = () => {;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
 
-
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-4">Featured News</h2>
@@ -910,8 +890,6 @@ const NewsPage: React.FC = () => {;
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
-
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
                 >
                   <div className="p-8">
@@ -950,8 +928,6 @@ const NewsPage: React.FC = () => {;
                     </button>
                   </div>
                 </motion.div>
-
-
       <section className="py-8 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
@@ -1034,8 +1010,6 @@ const NewsPage: React.FC = () => {;
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-
-
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="p-6">
@@ -1068,8 +1042,6 @@ const NewsPage: React.FC = () => {;
                   </button>
                 </div>
               </motion.div>
-
-
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -1083,8 +1055,6 @@ const NewsPage: React.FC = () => {;
                     >
                       Read More
                       <ArrowRight className="w-4 h-4" />
-
-
                   </div>
                 </motion.div>
               ))}
@@ -1097,8 +1067,6 @@ const NewsPage: React.FC = () => {;
       </section>
           <div className="max-w-7xl mx-auto">
             <motion.div
-
-
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">Latest News</h2>
@@ -1113,8 +1081,6 @@ const NewsPage: React.FC = () => {;
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 * index }}
-
-
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="flex items-center gap-4 mb-4">
@@ -1131,8 +1097,6 @@ const NewsPage: React.FC = () => {;
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-
-
                     </div>
                   </div>
                   <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2">
@@ -1140,20 +1104,6 @@ const NewsPage: React.FC = () => {;
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </motion.article>
-        {/* Newsletter Signup */}
-              <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6">;
-                Stay Updated;
-              </h2>;
-              <p className="text - xl text - gray - 400 max - w-2xl mx - auto mb - 8">;
-                Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing.;
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gray - 800 / 30">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-
-
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1167,8 +1117,6 @@ const NewsPage: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Stay Updated
               </h2>
@@ -1216,8 +1164,6 @@ const NewsPage: React.FC = () => {;
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
-
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-2 mb-3">
@@ -1257,8 +1203,6 @@ const NewsPage: React.FC = () => {;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
-
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -1276,8 +1220,6 @@ const NewsPage: React.FC = () => {;
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
-
                   className="text-center group cursor-pointer"
                 >
                   <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">
@@ -1351,8 +1293,6 @@ const NewsPage: React.FC = () => {;
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
-
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-2 mb-3">
@@ -1390,16 +1330,6 @@ const NewsPage: React.FC = () => {;
                     </div>
                   </div>
                 </motion.article>
-        {/* Media Contact */}
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-
-
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1413,8 +1343,6 @@ const NewsPage: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1443,9 +1371,6 @@ const NewsPage: React.FC = () => {;
                 Media Inquiries
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                For press inquiries, media interviews, or additional information
-
-                For press inquiries, media interviews, or additional information,
 
 
                 For press inquiries, media interviews, or additional information,
@@ -1461,8 +1386,6 @@ const NewsPage: React.FC = () => {;
                 >
                   Contact Media Team
                   <Mic className="ml-2 w-5 h-5" />
-
-
                 <a
                   href="/press"
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
@@ -1475,22 +1398,11 @@ const NewsPage: React.FC = () => {;
         </section>
       </div>
       {/* CTA Section */}
-      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-
-
       {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -1534,8 +1446,6 @@ const NewsPage: React.FC = () => {;
                 Explore Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link 
-              <Link
 
 
 
@@ -1563,9 +1473,6 @@ const NewsPage: React.FC = () => {;
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-
-
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Get in Touch
@@ -1664,8 +1571,6 @@ const NewsPage: React.FC = () => {;
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
-
                   className="flex gap-6 p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -1708,16 +1613,12 @@ const NewsPage: React.FC = () => {;
                     </div>
                   </div>
                 </motion.div>
-
-
                 className="text-center py-12"
               >
                 <p className="text-gray-400 text-lg">
                   No news articles match your current filters. Try adjusting your search or category selection.
                 </p>
               </motion.div>
-
-
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -1735,8 +1636,6 @@ const NewsPage: React.FC = () => {;
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-
-
                     </span>
                     <a
                       href="/contact"
@@ -1746,8 +1645,6 @@ const NewsPage: React.FC = () => {;
                     </a>
                   </div>
                 </motion.div>
-
-
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -1821,9 +1718,6 @@ const NewsPage: React.FC = () => {;
       </div>;
     </Layout>);
 }
-
-
-
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -1888,7 +1782,6 @@ const NewsPage: React.FC = () => {;
       <EnhancedFooter />
     </div>
   )
-}
 };
 ;
 }
@@ -1944,6 +1837,3 @@ const NewsPage: React.FC = () => {;
 }
 
 ;
-
-
-

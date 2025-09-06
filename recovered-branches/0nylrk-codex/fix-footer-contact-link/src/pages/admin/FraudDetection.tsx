@@ -9,6 +9,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { FraudFlag, FraudStats } from "@/types/fraud";
 // Import refactored components
 
+import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@/components/admin/fraud-detection";
+import { supabase } from "@/integrations/supabase/client",
+import { FraudFlag, FraudStats } from "@/types/fraud",
 
 
 // Import refactored components
@@ -52,8 +55,6 @@ import {
     } finally {
       setIsLoading(false)
     }
-
-
     }
     // Apply status filter
     if (statusFilter) {
@@ -160,8 +161,6 @@ import {
             <Button;
               onClick={fetchFraudFlags} ;
               className="bg-zion-purple hover:bg-zion-purple-light";
-
-
               disabled={isLoading}
             >
               Refresh Data
@@ -177,8 +176,6 @@ import {
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>
             <TabsTrigger value="actioned">Actioned</TabsTrigger>
           </TabsList>
-
-
           <TabsContent value="all" className="mt-6">
 
       toast({;
@@ -418,6 +415,8 @@ if (throw error) {
         {/* Stats Cards */}
         <FraudStatsCards stats={stats} />;
         <Tabs default_value="all" className="mb - 8">;
+        .eq("id", flagId);
+      if (error) throw error;
           <TabsList>;
             <TabsTrigger value="all">All Flags</TabsTrigger>;
             <TabsTrigger value="pending">Pending Review</TabsTrigger>;

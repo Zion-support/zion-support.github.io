@@ -7,15 +7,15 @@ export default async function handler(
     "[NFT Claim] address:"
     address
     "signature:"
-    signature.slice(0, 18) + ""
+    signature.slice(0, 18) + "…"
   );
   return res.status(200).json({ ok: true });
   // In production: verify signature, mint or issue POAP
-  console.log(
-    "[NFT Claim] address:"
-    address
-    "signature:"
-    signature.slice(0, 18) + ""
+  console && console.log(
+    "[NFT Claim] address:",
+    address,
+    "signature:",
+    signature && signature.slice(0, 18) + "…",
   );
 import type { NextApiRequest, NextApiResponse } from './next';
 ;
@@ -37,7 +37,7 @@ function handler() {
     "[NFT Claim] address:",
     address,
     "signature:",
-    signature.slice (0, 18) + "",
+    signature.slice (0, 18) + "…",
   );
   return res.status (200).json ({ ok: true });
   const { address, signature } = req.body || {}
@@ -50,8 +50,6 @@ function handler() {
     "[NFT Claim] address:",
     address,
     "signature:",
-    signature.slice (0, 18) + "",
+    signature.slice (0, 18) + "…",
   );
   return res.status (200).json ({ ok: true });
-}
-

@@ -1,5 +1,3 @@
-
-
 type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',
@@ -30,12 +28,6 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   unreadCount;
   statusFilter;
   setStatusFilter;
-export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
-  unreadCount;
-  statusFilter;
-  setStatusFilter;
-  archiveFilter
-  setArchiveFilter
 }) => {
 type RequestsHeaderProps = {;
   unreadCount: number,;
@@ -54,12 +46,6 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   setArchiveFilter;
 }) => {;
   return (
-
-
-        <Select 
-          value={archiveFilter} 
-
-
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
         >
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">
@@ -74,10 +60,6 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
       </div>
     </div>
   )
-
-
-};
-
 },
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;

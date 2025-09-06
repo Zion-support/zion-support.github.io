@@ -16,33 +16,6 @@ export default function DocsPage() {
     {
       title: 'AI Services Docs'
       links: [
-        { name: 'AI Guardrails', href: '/ai-guardrails' }
-        { name: 'AI Evals', href: '/ai-evals' }
-        { name: 'Agentic RAG', href: '/agentic-rag' }
-      ]
-    },    {        { name: 'Agentic RAG', href: '/agentic-rag' }]
-    }
-    {
-      title: 'IT & Platform Docs'
-      links: [
-        { name: 'API Observability', href: '/api-observability' }
-        { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' }
-        { name: 'Status Pages & SLO', href: '/status-pages-slo' }
-      ]
-    }
-  ];        { name: 'Status Pages & SLO', href: '/status-pages-slo' }]
-    }];
-  const external = [
-    { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' }
-    { name: 'Anthropic pricing', url: 'https://www.anthropic.com/pricing' }
-    { name: 'Pinecone pricing', url: 'https://www.pinecone.io/pricing/' }
-    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }
-  ];    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }]
-  const quickLinks = [
-    {
-      title: 'API Status'
-      description: 'Check service availability and performance'
-      icon: <CheckCircle className='w-6 h-6' />
       color: 'text-green-400'
     }
     {
@@ -79,8 +52,6 @@ export default function DocsPage() {;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
-  });
-
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Beginner': return 'bg-green-500/20 text-green-400';
@@ -119,7 +90,6 @@ export default function DocsPage() {;
     },;
   ];        { name: 'Status Pages & SLO', href: '/status-pages-slo' }];
     }];
-
   const external = [;
     { name: 'OpenAI API pricing', url: 'https://openai && openai.com/api/pricing' },;
     { name: 'Anthropic pricing', url: 'https://www && www.anthropic.com/pricing' },;
@@ -155,7 +125,6 @@ export default function DocsPage() {;
       color: 'text-yellow-400',;
     },;
   ];
-
   const filteredDocs = documentationItems && documentationItems.filter(doc => {;
     const matchesSearch =;
       doc && doc.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
@@ -163,16 +132,11 @@ export default function DocsPage() {;
     const matchesCategory =;
       selectedCategory === 'all' || doc && doc.category === selectedCategory;
     return matchesSearch && matchesCategory;  });
-
   const getDifficultyColor = (difficulty: string) => {;
     switch (difficulty) {    const matchesSearch = doc && doc.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          doc && doc.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || doc && doc.category === selectedCategory;
     return matchesSearch && matchesCategory;
-
-  const getDifficultyColor = (difficulty: string) => {;
-    switch (difficulty) {;
-      case 'Beginner':;
         return 'bg-green-500/20 text-green-400';
       case 'Intermediate':;
         return 'bg-yellow-500/20 text-yellow-400';
@@ -181,39 +145,28 @@ export default function DocsPage() {;
       default:;
         return 'bg-gray-500/20 text-gray-400';    }      case 'Beginner': return 'bg-green-500/20 text-green-400';
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
-  }
-  };
-
-  };
-
-
-
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric'
-      month: 'short'
+
+      year: 'numeric',
+      month: 'short',
+
       day: 'numeric'
     });  };      day: 'numeric'
     })
+  }
+
+  };
+  const formatDate = (dateString: string) => {;
+    return new Date(dateString).toLocaleDateString('en-US', {;
+      year: 'numeric',;
+      month: 'short',;
+      day: 'numeric',;
+    });  };      day: 'numeric';
+    });
+  };
 
   return (
-
-        />;
-        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/docs' />;
-      </Head>;
-      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
-        <div className='max-w-6xl mx-auto space-y-10'>;
-          <div className='text-center'>;
-            <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-              Documentation;
-            </h1>;
-            <p className='text-slate-300 mt-4'>;
-              Quick links, references, and integration guides for our services.;
-            </p>;
-          </div>;
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
-            {sections && sections.map(s => (;
-
               <Card
                 key={s && s.title}
                 className='p-6 bg-black/40 border border-gray-700/50'>;
@@ -270,8 +223,6 @@ export default function DocsPage() {;
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
-  );
-}
                       </a>                    </li>      </Head>;
       <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-6xl mx - auto space - y-10">;

@@ -11,67 +11,10 @@ interface SearchModalProps {
   on_close: () => void;
 }
   {
-    title: "AI Services"
-    description: "Machine learning, computer vision, NLP, and AI solutions"
-    url: "/ai-services"
-    category: "Services"
-  }
-  {
-    title: "IT Services"
-    description: "Cloud infrastructure, cybersecurity, and IT solutions"
-    url: "/it-services"
-    category: "Services"
-  }
-  {
-    title: "Micro SaaS"
-    description: "Custom micro SaaS platforms and automation tools"
-    url: "/micro-saas"
-    category: "Services"
-  }
-  {
-  {
     title: "Cybersecurity"
     description: "Security audits, penetration testing, and compliance"
     url: "/cybersecurity"
     category: "Services"
-  }
-  {
-  {
-    title: "Digital Transformation"
-    description: "Complete digital transformation solutions"
-    url: "/digital-transformation"
-    category: "Solutions"
-  }
-  {
-    title: "Enterprise Solutions"
-    description: "Large-scale enterprise technology solutions"
-    url: "/enterprise-solutions"
-    category: "Solutions"
-  }
-  {
-    title: "Startup Solutions"
-    description: "Technology solutions for startups and SMBs"
-    url: "/startup-solutions"
-    category: "Solutions"
-  }
-  // Industries
-  {
-    title: "Healthcare"
-    description: "Technology solutions for healthcare industry"
-    url: "/industries/healthcare"
-    category: "Industries"
-  }
-  {
-    title: "Finance"
-    description: "Financial technology and fintech solutions"
-    url: "/industries/finance"
-    category: "Industries"
-  }
-  {
-    title: "Education"
-    description: "Educational technology and e-learning solutions"
-    url: "/industries/education"
-    category: "Industries"
   }
   {
   {
@@ -106,6 +49,7 @@ interface SearchModalProps {
   }
 ];
 
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
 interface SearchModalProps {;
   isOpen: boolean;
@@ -225,7 +169,6 @@ const searchData: SearchResult[] = [;
     category: "Company",;
   },;
 ];
-
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
