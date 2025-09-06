@@ -1,246 +1,306 @@
-export const metadata = { 
-  title: 'AI Document Processor | Zion Tech Group',
-  description: 'Intelligent document processing with OCR, data extraction, and automated workflows. Process invoices, contracts, and forms with 99% accuracy.'
+import Link from "next/link";
+
+export const metadata = {
+  title: "AI Document Processor | Zion Tech Group",
+  description: "Intelligent document processing with OCR, data extraction, and automated workflows. Transform unstructured documents into actionable data.",
 };
 
 export default function AIDocumentProcessorPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            AI Document Processor
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Intelligent document processing with OCR, data extraction, and automated workflows. 
-            Process invoices, contracts, and forms with 99% accuracy.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <FeatureCard
-            icon="📄"
-            title="Smart OCR Engine"
-            description="Advanced optical character recognition with 99%+ accuracy"
-            features={["Multi-language support", "Handwriting recognition", "Table extraction", "Image enhancement"]}
-          />
-          <FeatureCard
-            icon="🧠"
-            title="AI Data Extraction"
-            description="Intelligent extraction of structured data from unstructured documents"
-            features={["Invoice processing", "Contract analysis", "Form data extraction", "Custom field mapping"]}
-          />
-          <FeatureCard
-            icon="⚡"
-            title="Automated Workflows"
-            description="Set up automated document processing pipelines"
-            features={["Batch processing", "Auto-routing", "Approval workflows", "Integration APIs"]}
-          />
-          <FeatureCard
-            icon="🔍"
-            title="Document Classification"
-            description="Automatically categorize and organize documents"
-            features={["Document type detection", "Content categorization", "Duplicate detection", "Version control"]}
-          />
-          <FeatureCard
-            icon="📊"
-            title="Analytics & Reporting"
-            description="Comprehensive insights into document processing performance"
-            features={["Processing metrics", "Error tracking", "Cost analysis", "Custom reports"]}
-          />
-          <FeatureCard
-            icon="🔒"
-            title="Enterprise Security"
-            description="Bank-level security for sensitive document processing"
-            features={["End-to-end encryption", "Access controls", "Audit trails", "Compliance tools"]}
-          />
-        </div>
-
-        <DocumentTypesSection />
-        <PricingSection />
-        <ContactSection />
+    <div className="animate-fade-in">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          AI Document Processor
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Intelligent document processing with OCR, data extraction, and automated workflows. 
+          Transform unstructured documents into actionable data with 99% accuracy.
+        </p>
       </div>
-    </div>
-  );
-}
 
-function FeatureCard({ icon, title, description, features }: { icon: string; title: string; description: string; features: string[] }) {
-  return (
-    <div className="bg-gradient-to-br from-orange-600 to-red-600 p-8 rounded-2xl hover:transform hover:scale-105 transition-all duration-300">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
-      <p className="text-orange-100 mb-6">{description}</p>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-orange-100">
-            <svg className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-            {feature}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function DocumentTypesSection() {
-  const documentTypes = [
-    {
-      title: "Invoices & Receipts",
-      description: "Extract vendor, amount, date, and line items automatically",
-      icon: "🧾",
-      accuracy: "99.2%"
-    },
-    {
-      title: "Contracts & Agreements",
-      description: "Identify key terms, dates, parties, and obligations",
-      icon: "📋",
-      accuracy: "98.7%"
-    },
-    {
-      title: "Forms & Applications",
-      description: "Process structured forms with high accuracy",
-      icon: "📝",
-      accuracy: "99.5%"
-    },
-    {
-      title: "Medical Records",
-      description: "HIPAA-compliant processing of medical documents",
-      icon: "🏥",
-      accuracy: "97.8%"
-    },
-    {
-      title: "Legal Documents",
-      description: "Extract case numbers, dates, and legal entities",
-      icon: "⚖️",
-      accuracy: "98.9%"
-    },
-    {
-      title: "Financial Statements",
-      description: "Process balance sheets, P&L, and financial reports",
-      icon: "💰",
-      accuracy: "99.1%"
-    }
-  ];
-
-  return (
-    <div className="bg-white rounded-2xl p-8 mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Supported Document Types</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {documentTypes.map((docType, index) => (
-          <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-            <div className="flex items-center justify-between mb-4">
-              <div className="text-3xl">{docType.icon}</div>
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
-                {docType.accuracy} accuracy
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">{docType.title}</h3>
-            <p className="text-gray-600">{docType.description}</p>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
+          <div className="space-y-6">
+            <FeatureItem
+              icon="📄"
+              title="Multi-Format OCR"
+              description="Extract text from PDFs, images, scanned documents, and handwritten notes with 99% accuracy"
+            />
+            <FeatureItem
+              icon="🤖"
+              title="Intelligent Data Extraction"
+              description="AI-powered extraction of structured data from invoices, contracts, forms, and receipts"
+            />
+            <FeatureItem
+              icon="🔄"
+              title="Automated Workflows"
+              description="Create custom processing pipelines with validation, approval, and integration workflows"
+            />
+            <FeatureItem
+              icon="📊"
+              title="Data Validation"
+              description="Built-in validation rules and data quality checks to ensure accuracy and completeness"
+            />
+            <FeatureItem
+              icon="🔍"
+              title="Smart Classification"
+              description="Automatically categorize and tag documents based on content and context"
+            />
+            <FeatureItem
+              icon="🔗"
+              title="API Integration"
+              description="Seamless integration with existing systems via REST APIs and webhooks"
+            />
           </div>
-        ))}
+        </div>
+
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing</h2>
+          <div className="space-y-6">
+            <PricingCard
+              title="Starter"
+              price="$39"
+              period="per month"
+              description="Perfect for small businesses and individuals"
+              features={[
+                "Up to 1,000 pages/month",
+                "Basic OCR",
+                "Standard data extraction",
+                "Email support",
+                "Basic integrations"
+              ]}
+              popular={false}
+            />
+            <PricingCard
+              title="Professional"
+              price="$99"
+              period="per month"
+              description="Ideal for growing businesses and departments"
+              features={[
+                "Up to 10,000 pages/month",
+                "Advanced OCR",
+                "Custom data extraction",
+                "Priority support",
+                "Advanced integrations",
+                "Workflow automation"
+              ]}
+              popular={true}
+            />
+            <PricingCard
+              title="Enterprise"
+              price="$299"
+              period="per month"
+              description="For large organizations with high-volume needs"
+              features={[
+                "Unlimited pages",
+                "Custom AI models",
+                "On-premise deployment",
+                "24/7 support",
+                "Custom integrations",
+                "Advanced security"
+              ]}
+              popular={false}
+            />
+          </div>
+        </div>
       </div>
+
+      <div className="bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-xl p-8 mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Document Types We Process</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <DocumentTypeCard icon="🧾" name="Invoices" />
+          <DocumentTypeCard icon="📋" name="Contracts" />
+          <DocumentTypeCard icon="📝" name="Forms" />
+          <DocumentTypeCard icon="🧾" name="Receipts" />
+          <DocumentTypeCard icon="📄" name="Legal Docs" />
+          <DocumentTypeCard icon="📊" name="Reports" />
+          <DocumentTypeCard icon="🆔" name="ID Cards" />
+          <DocumentTypeCard icon="📜" name="Certificates" />
+        </div>
+      </div>
+
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Industry Solutions</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <IndustryCard
+            icon="🏥"
+            title="Healthcare"
+            description="Process medical records, insurance claims, and patient forms with HIPAA compliance"
+          />
+          <IndustryCard
+            icon="🏦"
+            title="Financial Services"
+            description="Extract data from bank statements, loan applications, and financial reports"
+          />
+          <IndustryCard
+            icon="⚖️"
+            title="Legal"
+            description="Process contracts, case files, and legal documents with high accuracy"
+          />
+          <IndustryCard
+            icon="🏢"
+            title="Real Estate"
+            description="Handle property documents, lease agreements, and transaction records"
+          />
+          <IndustryCard
+            icon="🚚"
+            title="Logistics"
+            description="Process shipping documents, delivery receipts, and inventory records"
+          />
+          <IndustryCard
+            icon="🎓"
+            title="Education"
+            description="Extract data from student records, transcripts, and academic documents"
+          />
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-8 mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Our AI Document Processor?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="text-center">
+            <div className="text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">90% Time Savings</h3>
+            <p className="text-gray-600">Reduce manual data entry time by 90% with automated document processing</p>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl mb-4">🎯</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">99% Accuracy</h3>
+            <p className="text-gray-600">Industry-leading accuracy with AI-powered validation and quality checks</p>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl mb-4">🔒</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Enterprise Security</h3>
+            <p className="text-gray-600">SOC 2 compliant with end-to-end encryption and secure data handling</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Integration Partners</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <IntegrationCard name="Salesforce" icon="☁️" />
+          <IntegrationCard name="Microsoft 365" icon="📊" />
+          <IntegrationCard name="Google Workspace" icon="🔍" />
+          <IntegrationCard name="QuickBooks" icon="💰" />
+          <IntegrationCard name="Zapier" icon="⚡" />
+          <IntegrationCard name="Slack" icon="💬" />
+          <IntegrationCard name="HubSpot" icon="🎯" />
+          <IntegrationCard name="Custom APIs" icon="🔌" />
+        </div>
+      </div>
+
+      <CTA />
     </div>
   );
 }
 
-function PricingSection() {
+function FeatureItem({ icon, title, description }: { icon: string; title: string; description: string }) {
   return (
-    <div className="bg-white rounded-2xl p-8 mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Pricing Plans</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <PricingCard
-          name="Starter"
-          price="$199"
-          period="month"
-          description="Perfect for small businesses processing documents"
-          features={["Up to 1,000 pages/month", "Basic OCR", "5 document types", "Email support", "API access"]}
-          popular={false}
-        />
-        <PricingCard
-          name="Professional"
-          price="$499"
-          period="month"
-          description="Advanced features for growing businesses"
-          features={["Up to 10,000 pages/month", "AI extraction", "All document types", "Priority support", "Custom workflows", "Advanced analytics"]}
-          popular={true}
-        />
-        <PricingCard
-          name="Enterprise"
-          price="Custom"
-          period=""
-          description="Full-scale solution for large organizations"
-          features={["Unlimited pages", "Custom AI models", "White-label solution", "24/7 support", "Dedicated account manager", "On-premise option"]}
-          popular={false}
-        />
+    <div className="flex items-start space-x-4">
+      <div className="text-2xl">{icon}</div>
+      <div>
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+        <p className="text-gray-600">{description}</p>
       </div>
     </div>
   );
 }
 
-function PricingCard({ name, price, period, description, features, popular }: { 
-  name: string; price: string; period: string; description: string; features: string[]; popular: boolean 
+function PricingCard({ title, price, period, description, features, popular }: {
+  title: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
 }) {
   return (
-    <div className={`relative border-2 rounded-xl p-8 ${popular ? 'border-orange-500 bg-orange-50' : 'border-gray-200'}`}>
+    <div className={`border rounded-xl p-6 ${popular ? 'border-purple-500 bg-purple-50' : 'border-gray-200 bg-white'}`}>
       {popular && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+        <div className="bg-purple-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+          Most Popular
         </div>
       )}
-      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="mb-6">
-        <span className="text-4xl font-bold text-gray-900">{price}</span>
-        {period && <span className="text-gray-600">/{period}</span>}
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+      <div className="mb-4">
+        <span className="text-3xl font-bold text-gray-900">{price}</span>
+        <span className="text-gray-600 ml-2">{period}</span>
       </div>
-      <ul className="space-y-3 mb-8">
+      <p className="text-gray-600 mb-6">{description}</p>
+      <ul className="space-y-3">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
-            <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
+            <span className="text-purple-500 mr-3">✓</span>
             <span className="text-gray-700">{feature}</span>
           </li>
         ))}
       </ul>
-      <a
-        href="tel:+13024640950"
-        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-          popular 
-            ? 'bg-orange-600 text-white hover:bg-orange-700' 
-            : 'bg-gray-900 text-white hover:bg-gray-800'
-        }`}
-      >
-        Get Started
-      </a>
+      <button className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
+        popular 
+          ? 'bg-purple-600 text-white hover:bg-purple-700' 
+          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+      }`}>
+        Start Free Trial
+      </button>
     </div>
   );
 }
 
-function ContactSection() {
+function DocumentTypeCard({ icon, name }: { icon: string; name: string }) {
   return (
-    <div className="bg-gradient-to-r from-orange-600 to-red-600 p-8 rounded-2xl text-center">
-      <h2 className="text-3xl font-bold text-white mb-4">Ready to Automate Document Processing?</h2>
-      <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
-        Contact our document processing experts to discuss your specific needs and get a custom solution.
+    <div className="text-center p-4 border border-gray-200 rounded-lg hover:border-purple-300 transition-colors">
+      <div className="text-3xl mb-2">{icon}</div>
+      <div className="text-sm font-medium text-gray-700">{name}</div>
+    </div>
+  );
+}
+
+function IndustryCard({ icon, title, description }: { icon: string; title: string; description: string }) {
+  return (
+    <div className="text-center p-6 border border-gray-200 rounded-lg hover:border-purple-300 transition-colors">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function IntegrationCard({ name, icon }: { name: string; icon: string }) {
+  return (
+    <div className="text-center p-4 border border-gray-200 rounded-lg hover:border-purple-300 transition-colors">
+      <div className="text-3xl mb-2">{icon}</div>
+      <div className="text-sm font-medium text-gray-700">{name}</div>
+    </div>
+  );
+}
+
+function CTA() {
+  return (
+    <div className="bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-xl p-8 text-center">
+      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        Ready to Automate Your Document Processing?
+      </h3>
+      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+        Start your free trial today and see how AI can transform your document workflows. 
+        Process your first 100 documents for free.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="tel:+13024640950"
-          className="bg-white text-orange-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 font-semibold text-lg"
+          className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
         >
           Call +1 302 464 0950
         </a>
         <a
           href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-orange-600 transition-all duration-300 transform hover:scale-105 font-semibold text-lg"
+          className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
         >
           Email Us
         </a>
       </div>
-      <div className="mt-6 text-sm text-orange-100">
+      <div className="mt-4 text-sm text-gray-500">
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
       </div>
