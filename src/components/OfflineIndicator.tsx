@@ -1,28 +1,15 @@
 import { useState, useEffect } from 'react';
-<<<<<<< HEAD
 
 
 
 
 
-import { Alert, AlertDescription } from '@/components/ui/alert'
-export const OfflineIndicator = () => {
 
-  const [isOnline, setIsOnline] = useState(true)
-  const [showOfflineAlert, setShowOfflineAlert] = useState(false)
-  useEffect((,) => {
-    const updateOnlineStatus = () => {
-      const online = navigator.onLine
-      setIsOnline(online)
-
-
-
-
-import { Alert, AlertDescription } from '@/components/ui/alert'
-export const OfflineIndicator = () => {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
 import { WifiOff, Wifi } from 'lucide-react'
+
 
 
 
@@ -40,15 +27,8 @@ export const OfflineIndicator = () => {
       
 
 
-=======
-
-import { WifiOff, Wifi } from 'lucide-react'
 
 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       if (!online) {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
@@ -97,40 +77,9 @@ export const OfflineIndicator = () => {;
         // Show brief "back online" message then hide;
         setTimeout(() => setShowOfflineAlert(false), 3000);      }        setTimeout((,) => setShowOfflineAlert(false), 3000);
         setTimeout(() => setShowOfflineAlert(false), 3000);
-<<<<<<< HEAD
 
 
 
-
-
-  }, [showOfflineAlert]),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
-
-
-      }
-    };
-
-    // Set initial status;
-    updateOnlineStatus();
-
-    // Listen for online/offline events;
-    window && window.addEventListener('online', updateOnlineStatus);
-    window && window.addEventListener('offline', updateOnlineStatus);
-
-
-
-    }
-  }, [showOfflineAlert]);
-  // Check condition
-if (return null) {
-  $2
-}
-  return (
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   if (!showOfflineAlert) return null;
 
@@ -163,8 +112,7 @@ if (return null) {
       </Alert>;
     </div>;
   );
-<<<<<<< HEAD
-=======
+
 
 
 };
@@ -184,4 +132,5 @@ if (return null) {
     </div>);
 } }
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

@@ -1,41 +1,31 @@
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
+
 import {;
   Card,;
   CardHeader,;
   CardTitle,;
   CardDescription,;
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 } from "@/components/ui/card";
 
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
-<<<<<<< HEAD
 
 
-
-
-
-import React from "react",
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",
-import { FraudStats } from "@/types/fraud",
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface FraudStatsCardsProps {;
   stats: FraudStats;
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface FraudStatsCardsProps {
   stats: FraudStats
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -51,14 +41,15 @@ interface FraudStatsCardsProps {
       
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -71,14 +62,15 @@ interface FraudStatsCardsProps {
       
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -93,14 +85,15 @@ interface FraudStatsCardsProps {
       
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -115,14 +108,15 @@ interface FraudStatsCardsProps {
       
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">
@@ -134,14 +128,15 @@ interface FraudStatsCardsProps {
       
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">
@@ -150,24 +145,8 @@ interface FraudStatsCardsProps {
           <CardDescription>False Positives</CardDescription>
         </CardHeader>
       </Card>
-<<<<<<< HEAD
 
 
-  )
-},
-import React from "react",;
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
-import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",;
-import { FraudStats } from "@/types/fraud",;
-interface FraudStatsCardsProps {;
-  stats: FraudStats;
-}
-;
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
@@ -240,17 +219,16 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
 };
 
 export default FraudStatsCards;
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

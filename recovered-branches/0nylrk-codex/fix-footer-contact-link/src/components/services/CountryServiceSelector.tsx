@@ -1,30 +1,27 @@
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { CountrySelector } from "./CountrySelector",
 import { PaymentSection } from "./PaymentSection",
 import { ServiceDetails } from "./ServiceDetails",
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void;
   selectedCountry?: CountryPricing | null
@@ -43,20 +40,17 @@ export function CountryServiceSelector({
         
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
     </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {CountrySelector} from "./CountrySelector";
@@ -85,14 +79,11 @@ export function CountryServiceSelector(): any ({ onCountryChange, selectedCountr
 }
 
 
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  )
-}
-;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

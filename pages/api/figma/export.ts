@@ -1,23 +1,14 @@
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import JSZip from "jszip";
-import {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 } from "../../../utils/design-map";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import JSZip from './jszip';
@@ -33,21 +24,15 @@ export default async /**
  */
 function handler() {
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   try {
 
     const kit = (req && req.query.kit as string) || "tailwind";
 
     const kind = (
-<<<<<<< HEAD
 
-      ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
-    ) as UIKitKind;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   try {;
@@ -91,6 +76,8 @@ function handler() {
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -119,8 +106,7 @@ export default async function handler(req, res) {
     zip && zip.file("map && map.json", JSON && JSON.stringify(map, null, 2));
     zip && zip.file("tokens && tokens.json", JSON && JSON.stringify(tokens, null, 2));
 
-<<<<<<< HEAD
-=======
+
     // README
     zip.file(
       "README.md",
@@ -138,36 +124,8 @@ export default async function handler(req, res) {
     res.status(500).json({ error: e?.message || "Export failed" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-    const map = { design: 'map' };
-    const tokens = { colors: {}, typography: {} };
-    res.status(200).json({
-      map,
-      tokens,
-      message: 'Design export completed'
-    });
-  } catch (e: unknown) {
-    res.status(500).json({
-      error: e?.message || 'Export failed'
-    });
-import JSZip from 'jszip';
-import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../../utils/design-map';
-export default async function handler(req, res) {
-  try {
-    const kit = (req.query.kit as string) || 'tailwind';
-    const kind = (['tailwindchakrareact'].includes(kit) ? kit : 'tailwind') as UIKitKind;
 
-    const zip = new JSZip();
-    const map = getZionDesignMap();
-    const tokens = await buildTokenSet();
-    // Core files
-    zip.file("map.json", JSON.stringify(map, null, 2));
-    zip.file("tokens.json", JSON.stringify(tokens, null, 2));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     // UIKit folder
     const uikit = buildUIKit(kind);
@@ -212,6 +170,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+
   }
 }
   }
@@ -219,8 +178,8 @@ export default async function handler(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

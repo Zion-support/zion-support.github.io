@@ -36,21 +36,18 @@ type DocsContent = {
   title: string;
   sections: Section[];
 }
-<<<<<<< HEAD
-
-type PageProps = {
-  docs: DocsContent;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 };
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
   const raw = fs.readFileSync(contentPath, 'utf8');
   const docs = JSON.parse(raw) as DocsContent;
@@ -67,38 +64,13 @@ export default function ApiDocsPage({ docs }: PageProps) {
           <h2 className='text-2xl font-semibold'>{section.title}</h2>          {section.html && (
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
 
-  const raw = fs.readFileSync(contentPath, 'utf8');
-  const docs = JSON.parse(raw) as DocsContent;
 
-  return { props: { docs } }
-
-export default function ApiDocsPage({ docs }: PageProps) {
-  return (
-    <DocsLayout title={docs.title} nav={docs.sections.map((s) => ({ id: s.id, title: s.title }))}>
-      {docs.sections.map((section) => (
-<section key={section.id} id={section.id} className="scroll-mt-24">
-          <h2 className="text-2xl font-semibold">{section.title}</h2>
-          {section.html && (
-            <div dangerouslySetInnerHTML={{ __html: section.html }} />
-          )}
-          {section.code && section.code.length > 0 && (
-            <div className='space-y-4 mt-4'>
-              {section.code.map((c, idx) => (
-                <CodeBlock key={idx} language={c.language}>
-                  {c.content}
-                </CodeBlock>              ))}            <div className="space-y-4 mt-4">
-              {section.code.map((c, idx) => (
-                <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))}
             </div>;
           )}
         </section>;
       ))}
+
 
     </DocsLayout>
 );
@@ -110,6 +82,8 @@ export default function ApiDocsPage({ docs }: PageProps) {
     </DocsLayout>
   );
 }
+
+
 
 
 ;
@@ -152,35 +126,28 @@ function ApiDocsPage() {
         </section>))}
     </DocsLayout>);
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               ))}
             </div>
           )}
         </section>
       ))}
 
-<<<<<<< HEAD
-    </DocsLayout>
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-}
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+

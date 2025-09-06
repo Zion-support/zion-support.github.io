@@ -1,31 +1,8 @@
 
 
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -40,68 +17,31 @@ import z from "zod";
 import {ChatAssistant} from "@/components/ChatAssistant";
 import {Mail, MessageSquare, MapPin, Phone} from "lucide-react";
 import {AppLayout} from "@/layout/AppLayout";
-<<<<<<< HEAD
-
-import { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card } from "@/components/ui/card",
-import { toast } from "@/components/ui/use-toast",
-import z from "zod",
-import { ChatAssistant } from "@/components/ChatAssistant",
-import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
-import { AppLayout } from "@/layout/AppLayout";
-import { Mail, MessageSquare, MapPin, Phone } from "lucide-react",
-import { AppLayout } from "@/layout/AppLayout",
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default function Contact() {
   const [formData, setFormData] = useState({
-=======
-export default function Contact() {;
-  const [formData, setFormData] = useState({;
-    name: "",;
-    email: "",;
-    subject: "",;
-    message: "";
 
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-<<<<<<< HEAD
-
-    message: "";
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     message: ""
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -195,10 +135,9 @@ export default function Contact() {
         variant: "destructive"
 
 
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   return (
 
     <AppLayout>;
@@ -291,13 +230,10 @@ export default function Contact() {
                 <Button
                   type="submit" 
 
-=======
 
-                <Button 
-                  type="submit" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
@@ -676,15 +612,17 @@ export default function Contact() {;
       </main>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Chat Assistant Modal */}
       {isChatOpen && (;
         <ChatAssistant

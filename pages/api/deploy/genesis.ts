@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 function summarizeModules(
@@ -37,6 +35,17 @@ export default async function handler(
 ) {
   if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
+
+
+
+function missionParagraph(region: string, instanceName: string, modules: Record<string, boolean>, bonus: Record<string, boolean>) {
+  const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length;
+  return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' })
 
 
   }
@@ -129,23 +138,12 @@ export default async function handler(
       access,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
-<<<<<<< HEAD
-=======
-  } catch (err: any) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
   } catch (err: any) {
-<<<<<<< HEAD
 
-=======
-    return res.status(500).json({ error: err.message || 'Internal error' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  }
-}
-    return res.status (500).json ({ error: err.message || "Internal error" });
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     return res.status(500).json({ error: err.message |"Internal error" });
     return res.status(500).json({ error: err.message || "Internal error" });
 
@@ -168,10 +166,25 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+
   }
 }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+    const operator = {
+      activeModulesSummary: summarizeModules(modules, bonusModules),
+      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
+
+    const access = {
+      roles: ['FounderSuperadminDAO Multisig'],
+      export: {
+        type: 'application/json',
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+
+    return res.status(200).json({ outputActions, deployLog, access, operator })
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message || 'Internal error' })
+
   }
 }
   try {
@@ -382,7 +395,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ outputActions, deployLog, access, operator })
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
   } catch (error) {
@@ -390,6 +402,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
   } catch (error) {
     console.error("Error:", error);
@@ -404,10 +417,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
@@ -416,5 +427,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

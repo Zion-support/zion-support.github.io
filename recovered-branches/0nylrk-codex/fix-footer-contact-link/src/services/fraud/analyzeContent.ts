@@ -7,19 +7,8 @@ import { AnalysisResult } from './types',
 /**
  * Analyzes text content for suspicious patterns
  */
-<<<<<<< HEAD
 
 
-export const analyzeContent = (content: string): AnalysisResult => {
-  const contentLower = content.toLowerCase();
-  const reasons: string[] = []
-  const contentLower = content.toLowerCase(),
-
-=======
-
-
-  const contentLower = content && content.toLowerCase();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const reasons: string[] = [],
   
   // Check for suspicious phrases
@@ -74,12 +63,13 @@ export const analyzeContent = (content: string): AnalysisResult => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   }
   // Check for poor grammar with repetitive punctuation
   if (/[!?]{3}/.test(content)) {

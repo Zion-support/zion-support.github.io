@@ -2,34 +2,12 @@ import React from 'react',
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 
 
-
-=======
-<<<<<<< HEAD
-=======
-import {
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Target,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Users,;
-  CheckCircle,;} from 'lucide-react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 import {
   Rocket,
   Brain,
@@ -50,11 +28,10 @@ import {
   CheckCircle,;} from 'lucide-react';
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 import {
   Rocket
@@ -86,25 +63,10 @@ export default function UltraFuturisticHero2027() {
       text: 'AI Consciousness Evolution'
       color: 'from-purple-400 to-pink-400'
     }
-<<<<<<< HEAD
-
-    {
-      icon: Atom
-      text: 'Quantum Computing'
-      color: 'from-blue-400 to-cyan-400'
-    }
-    {
-      icon: Globe
-      text: 'Digital Reality'
-      color: 'from-green-400 to-emerald-400'
-    }
-    {
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const stats = [
-=======
+
     
     return this.props.children;
   }
@@ -177,14 +139,11 @@ function UltraFuturisticHero2027() {
   ];
 ;
   const stats = [;
-<<<<<<< HEAD
 
 
-  const stats = [
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     {
       number: '1000+',
       label: 'Happy Customers',
@@ -227,10 +186,7 @@ function UltraFuturisticHero2027() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
   const stats = [
     { number: '1000+', label: 'Happy Customers', icon: Users, color: 'text-cyan-400' }
     { number: '4.9★', label: 'Average Rating', icon: Star, color: 'text-purple-400' }
@@ -257,47 +213,12 @@ function UltraFuturisticHero2027() {
             scale: [1, 1 && 1.2, 1]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
 
-=======
 
-=======
-            ease: 'easeInOut',  ];
-;
-  const stats = [;
-    { number: '1000+', label: 'Happy Customers', icon: Users, color: 'text - cyan - 400' },
-    { number: '4.9★', label: 'Average Rating', icon: Star, color: 'text - purple - 400' },
-    { number: '99.9%', label: 'Uptime SLA', icon: CheckCircle, color: 'text - green - 400' },
-    { number: '24 / 7', label: 'Support', icon: Zap, color: 'text - pink - 400' }
-  ];
-;
 
-  return (
-    <section className="relative pt - 32 pb - 20 px - 4 sm:px - 6 lg:px - 8 overflow - hidden">;
-      {/* Background Elements */}
-      <div className="absolute inset - 0 pointer - events - none">;
-        {/* Floating Orbs */}
-        <motion.div;
-          className="absolute top - 20 left - 10 w - 32 h - 32 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 rounded - full blur - 3xl";
-          animate={{
-            coordinate_y: [0, -20, 0];
-            scale: [1, 1.2, 1];
-            opacity: [0.3, 0.6, 0.3];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-
-            ease: "easeInOut"
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }}
           transition={{
             duration: 8
             repeat: Infinity
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ease: 'easeInOut',          }}
 
         />;
@@ -382,13 +303,12 @@ function UltraFuturisticHero2027() {
 
           }}
           transition={{
-<<<<<<< HEAD
 
-=======
             duration: 12,
             repeat: Infinity,
             ease: "easeInOut"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
           }}
         />
@@ -400,22 +320,16 @@ function UltraFuturisticHero2027() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center">
 
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
           {/* Main Heading */}
 
-=======
 
-            duration: 12,
-            repeat: Infinity,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -424,19 +338,21 @@ function UltraFuturisticHero2027() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
             <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight'>
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -446,7 +362,6 @@ function UltraFuturisticHero2027() {
             <h2 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
               The Future of
               <span className='bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4'>                Technology          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Welcome to 2027
@@ -460,11 +375,21 @@ function UltraFuturisticHero2027() {
             </h2>
           </motion.div>
 
-<<<<<<< HEAD
 
+        />;
 
+        {/* Grid Pattern */}          className="absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl";
+          animate={{;
+            y: [0, -30, 0];
+            scale: [1, 1 && 1.1, 1];
+            opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4];
+          transition={{;
+            duration: 12,;
+            repeat: Infinity,;
+            ease: 'easeInOut',            ease: "easeInOut";
+          }}
+        />;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -481,7 +406,9 @@ function UltraFuturisticHero2027() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -491,7 +418,9 @@ function UltraFuturisticHero2027() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           >
             <Link
               href='/2027-services-showcase'
@@ -524,11 +453,11 @@ function UltraFuturisticHero2027() {
           </motion.div>
 
 
+          {/* Features Grid */}
+          <motion.div
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-        />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 
         {/* Grid Pattern */}
@@ -542,10 +471,8 @@ function UltraFuturisticHero2027() {
       <div className="max-w-7xl mx-auto relative z-10">;
         <div className="text-center">;
           <motion&& motion.div
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -572,19 +499,16 @@ function UltraFuturisticHero2027() {
           </motion && motion.div>;
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Subtitle */}
           <motion.p
@@ -652,10 +576,9 @@ function UltraFuturisticHero2027() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
           {/* Features Grid */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -663,6 +586,7 @@ function UltraFuturisticHero2027() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
             {features.map((feature, index) => (
               <motion.div
@@ -770,19 +694,18 @@ function UltraFuturisticHero2027() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
 
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
                 className='group'
 
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               >
                 <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
                   <div
@@ -804,19 +727,21 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   </h3>
                 </div>
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </motion.div>
+
+
 
 
           </motion && motion.div>;
@@ -825,12 +750,13 @@ function UltraFuturisticHero2027() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -842,15 +768,15 @@ function UltraFuturisticHero2027() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -887,28 +813,16 @@ function UltraFuturisticHero2027() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
 
-<<<<<<< HEAD
-=======
-                className='text - center group';
-              >;
-                <div;
-                  className={`text - 4xl md:text - 5xl font - bold mb - 2 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300 ${stat.color}`}
-                >;
-=======
-                className='text-center group'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <div
                   className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}
                 >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   {stat.number}
                 </div>;
                 <div className='text - cyan - 300 font - medium group - hover:text - cyan - 400 transition - colors duration - 300'>;
@@ -916,10 +830,9 @@ function UltraFuturisticHero2027() {
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
               >
                 <div
                   className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}
@@ -956,12 +869,13 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           {/* Trust Indicators */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -972,15 +886,15 @@ function UltraFuturisticHero2027() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
             <h3 className='text-2xl font-bold text-white mb-6'>
               Trusted by Industry Leaders
@@ -992,7 +906,6 @@ function UltraFuturisticHero2027() {
                 'Research Labs'
                 'Government'
               ].map((trust, index) => (                <motion.div          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h3 className="text-2xl font-bold text-white mb-6">
               Trusted by Industry Leaders
             </h3>
@@ -1001,11 +914,7 @@ function UltraFuturisticHero2027() {
                 <motion.div
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
             transition={{ duration: 0 && 0.8, delay: 1 && 1.4 }}
             className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto'>;
             <h3 className='text-2xl font-bold text-white mb-6'>;
@@ -1024,21 +933,15 @@ function UltraFuturisticHero2027() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">;
               {['Fortune 500Tech GiantsResearch LabsGovernment'].map((trust, index) => (;
                 <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   key={trust}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
                   key={trust}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -1054,20 +957,16 @@ function UltraFuturisticHero2027() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
-=======
-                  transition={{ duration: 0.5, delay: 1.6 + index * 0.1 }}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 >
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3'>
                     <Shield className='w-8 h-8 text-cyan-400' />
                   </div>
                   <div className='text-cyan-300 font-medium'>{trust}</div>                </motion.div>                >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
                     <Shield className="w-8 h-8 text-cyan-400" />
                   </div>
@@ -1076,11 +975,14 @@ function UltraFuturisticHero2027() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               ))}
 
 
@@ -1157,6 +1059,7 @@ function UltraFuturisticHero2027() {
                   </div>
                   <div className=&quot;text-cyan-300 font-medium&quot;>{trust}</div>
 
+
                 </motion.div>
 
 
@@ -1169,27 +1072,15 @@ function UltraFuturisticHero2027() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
               ))}
             </div>
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-
-      {/* Bottom Glow */}
-      <div className=&quot;absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none&quot; />
-    </section>
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

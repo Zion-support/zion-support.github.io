@@ -11,10 +11,8 @@ export function CartDrawer() {;
 import { ShoppingCart } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export function CartDrawer() {
 
   const { isAuthenticated } = useAuth();
@@ -56,16 +54,7 @@ export function CartDrawer() {;
       <Link href="/cart" aria-label="Cart" className="relative p-1" onClick={handleClick}>
         <ShoppingCart className="h-5 w-5 text-foreground hover:text-primary" />
         {count > 0 && (
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-
-
-
-;
-=======
 
 
 ;
@@ -103,4 +92,5 @@ export function CartDrawer() {;
     </>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

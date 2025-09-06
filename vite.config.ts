@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 
 
-
-
-
-
-=======
-import { defineConfig } from 'vite';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
 
@@ -31,14 +23,7 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@types': path.resolve(__dirname, './src/types'),
       '@styles': path.resolve(__dirname, './src/styles'),
-<<<<<<< HEAD
 
-
-
-      '@assets': path.resolve(__dirname, './src/assets'),
-    },
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
-=======
       '@assets': path.resolve(__dirname, './src/assets')
     }
   },
@@ -52,8 +37,9 @@ export default defineConfig({
       /src\/components\/video\//,
       /src\/components\/DynamicListingPage\.tsx$/,
     ],
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   },
+
 
 
 
@@ -64,6 +50,18 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
+
+          'react-vendor': ['react', 'react-dom'],
+        },
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {;
+          const name = assetInfo.name || '';
+
+
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
+          if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
+          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
 
           'react-vendor': ['react', 'react-dom'],
           'ui-vendor': [
@@ -107,13 +105,10 @@ export default defineConfig({
           if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
 
           return 'assets/[name]-[hash].[ext]';
-<<<<<<< HEAD
+
         },
       },
-=======
-        }
-      }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     },
     terserOptions: {
       compress: {
@@ -131,35 +126,8 @@ export default defineConfig({
       mangle: {
         safari10: true,
         properties: {
-          regex: /^_/,
-        },
-      },
-    },
 
-
-
-    chunkSizeWarningLimit: 1000,
-    reportCompressedSize: false,
-    emptyOutDir: true,
-    assetsInlineLimit: 4096,
-
-
-
-
-
-  },
-  optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      'framer-motion',
-      'lucide-react',
-
-
-      'clsx',
-      'tailwind-merge'
-
+          regex: /^_/
 
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -206,12 +174,73 @@ export default defineConfig({
 });
 
 >>>>>>> origin/automation-improvements-final
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 
 
 
 
 
+
+=======
+=======
+
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 2,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+      },
+      mangle: {
+        safari10: true,
+        properties: {
+          regex: /^_/,
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: false,
+    emptyOutDir: true,
+    assetsInlineLimit: 4096,
+  },
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'framer-motion',
+      'lucide-react',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-alert-dialog',
+      '@radix-ui/react-avatar',
+      '@radix-ui/react-checkbox',
+      '@radix-ui/react-collapsible',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-hover-card',
+      '@radix-ui/react-label',
+      '@radix-ui/react-menubar',
+      '@radix-ui/react-navigation-menu',
+      '@radix-ui/react-popover',
+      '@radix-ui/react-progress',
+      '@radix-ui/react-radio-group',
+      '@radix-ui/react-scroll-area',
+      '@radix-ui/react-select',
+      '@radix-ui/react-separator',
+      '@radix-ui/react-slider',
+      '@radix-ui/react-slot',
+      '@radix-ui/react-switch',
+      '@radix-ui/react-tabs',
+      '@radix-ui/react-toast',
+      '@radix-ui/react-toggle',
+      '@radix-ui/react-tooltip',
+=======
 
     ],
     exclude: ['@radix-ui/react-icons'],
@@ -228,6 +257,7 @@ export default defineConfig({
     host: true, 
     open: true 
   },
+
 
 
   server: {
@@ -260,18 +290,4 @@ export default defineConfig({
       } else {
         return { relative: true };
       }
-<<<<<<< HEAD
-    },
-  },
 
-
-
-});
-
-
-
-=======
-    }
-  }
-});
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

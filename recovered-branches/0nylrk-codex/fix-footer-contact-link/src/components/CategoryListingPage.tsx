@@ -1,12 +1,8 @@
 
 
-<<<<<<< HEAD
-=======
 
 
 
-import React from 'react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -17,111 +13,8 @@ import {Input} from "@/components/ui/input";
 import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
 import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
 
-<<<<<<< HEAD
-import { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { GradientHeading } from "@/components/GradientHeading",
-import { ListingScoreCard } from "@/components/ListingScoreCard",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react";
-// Example listing type
-interface Listing {
-
-  id: string
-  title: string
-  description: string
-  category: string
-
-  subcategory?: string;
-  image?: string;
-  tags?: string[];
-  author?: string;
-  authorImage?: string;
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  price?: number | null;
-  createdAt: string
-}
-interface CategoryListingPageProps {
-
-  title: string
-  description: string
-  listings: Listing[]
-  sortOptions?: { label: string, value: string }[]
-  filterOptions?: { label: string, value: string }[]
-}
-export function CategoryListingPage({
-  title
-  description;
-  listings: initialListings
-  sortOptions = [
-    { label: 'Newest First', value: 'newest' }
-    { label: 'Oldest First', value: 'oldest' }
-    { label: 'Highest Rating', value: 'rating-high' }
-    { label: 'Highest AI Match', value: 'ai-match' }
-    { label: 'A-Z', value: 'a-z' }
-    { label: 'Z-A', value: 'z-a' }]
-  filterOptions = [
-    { label: 'All', value: 'all' }
-    { label: 'Highly Rated', value: 'high-rating' }
-    { label: 'Best AI Match', value: 'best-match' }]
-}: CategoryListingPageProps) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedSort, setSelectedSort] = useState(sortOptions[0].value);
-  const [selectedFilter, setSelectedFilter] = useState(filterOptions[0].value);
-  // Process listings based on filters and search
-  const processedListings = initialListings
-    .filter(listing => {
-      // Apply search filter
-      const matchesSearch =
-        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
-        (listing.tags && listing.tags.some(tag =>
-          tag.toLowerCase().includes(searchQuery.toLowerCase())
-        ));
-      // Apply category filters
-      if (selectedFilter === 'all') return matchesSearch;
-      if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating |0) >= 4;
-      if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore |0) >= 85;
-      return matchesSearch
-    })
-    .sort((a, b) => {
-      // Apply sorting
-      switch (selectedSort) {
-        case 'newest':
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-        case 'oldest':
-          return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
-        case 'rating-high':
-          return (b.rating |0) - (a.rating |0);
-        case 'ai-match':
-          return (b.aiScore |0) - (a.aiScore |0);
-        case 'a-z':
-          return a.title.localeCompare(b.title);
-        case 'z-a':
-          return b.title.localeCompare(a.title);
-        default: return 0
-      }
-    });
-  return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-zion-blue py-12 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <GradientHeading>{title}</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Example listing type;
 interface Listing {;
   id: string,;
@@ -129,25 +22,8 @@ interface Listing {;
   description: string,;
   category: string,;
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-import { useState } from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { GradientHeading } from '@/components / GradientHeading';
-import { ListingScoreCard } from '@/components / ListingScoreCard';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
-// Example listing type;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-// Example listing type
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 interface Listing {
   id: string,
   title: string,
@@ -155,109 +31,10 @@ interface Listing {
   category: string,
 
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-  subcategory?: string,
-  image?: string,
-  tags?: string[],
-  author?: string,
-  authorImage?: string,
-  aiScore?: number,
-  rating?: number,
-  reviewCount?: number,
-  price?: number | null,
-  createdAt: string
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-}
-;
-
-interface CategoryListingPageProps {;
-  title: string,;
-  description: string,;
-  listings: Listing[],;
-  sortOptions?: { label: string, value: string }[],;
-  filterOptions?: { label: string, value: string }[];
-}
-
-
-<<<<<<< HEAD
-;
-export function CategoryListingPage({;
-  title,;
-  description,;
-  listings: initialListings,;
-  sortOptions = [;
-    { label: 'Newest First', value: 'newest' },;
-    { label: 'Oldest First', value: 'oldest' },;
-    { label: 'Highest Rating', value: 'rating-high' },;
-    { label: 'Highest AI Match', value: 'ai-match' },;
-    { label: 'A-Z', value: 'a-z' },;
-    { label: 'Z-A', value: 'z-a' }],;
-  filterOptions = [;
-    { label: 'All', value: 'all' },;
-    { label: 'Highly Rated', value: 'high-rating' },;
-    { label: 'Best AI Match', value: 'best-match' }];
-}: CategoryListingPageProps) {;
-  const [searchQuery, setSearchQuery] = useState(""),;
-  const [selectedSort, setSelectedSort] = useState(sortOptions[0].value),;
-  const [selectedFilter, setSelectedFilter] = useState(filterOptions[0].value),;
-  // Process listings based on filters and search;
-  const processedListings = initialListings;
-    .filter(listing => {;
-      // Apply search filter;
-      const matchesSearch =;
-        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        (listing.tags && listing.tags.some(tag =>;
-          tag.toLowerCase().includes(searchQuery.toLowerCase());
-        )),;
-      // Apply category filters;
-      if (selectedFilter === 'all') return matchesSearch,;
-      if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4,;
-      if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore || 0) >= 85,;
-      return matchesSearch;
-    });
-    .sort((a, b) => {;
-      // Apply sorting;
-      switch (selectedSort) {;
-        case 'newest':;
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),;
-        case 'oldest':;
-          return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),;
-        case 'rating-high':;
-          return (b.rating || 0) - (a.rating || 0),;
-        case 'ai-match':;
-          return (b.aiScore || 0) - (a.aiScore || 0),;
-        case 'a-z':;
-          return a.title.localeCompare(b.title),;
-        case 'z-a':;
-          return b.title.localeCompare(a.title),;
-        default: return 0;
-      }
-    });
-  return (;
-    <>;
-      <Header />;
-      <div className="min-h-screen bg-zion-blue py-12 px-4">;
-        <div className="container mx-auto">;
-          <div className="text-center mb-12">;
-            <GradientHeading>{title}</GradientHeading>;
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {description}
 
             </p>;
@@ -274,24 +51,17 @@ export function CategoryListingPage({;
                   placeholder="Search listings..."
                   value={searchQuery}
 
-<<<<<<< HEAD
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
-                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
-                />
-              </div>
-              <Select value={selectedSort} onValueChange={setSelectedSort}>
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
-                  <div className="flex items-center">
-                    {selectedSort === 'a-z' ? (
-                      <ArrowDownAZ className="mr-2 h-4 w-4" />
-                    ) : selectedSort === 'z-a' ? (
-                      <ArrowUpZA className="mr-2 h-4 w-4" />
-=======
-                  onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e && e.target.value)}
-                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
-                />;
-              </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
+              <Select value={selectedSort} onValueChange={setSelectedSort}>;
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
+                  <div className="flex items-center">;
+                    {selectedSort === 'a-z' ? (;
+                      <ArrowDownAZ className="mr-2 h-4 w-4" />;
+                    ) : selectedSort === 'z-a' ? (;
+                      <ArrowUpZA className="mr-2 h-4 w-4" />;
 
                     ) : null}
                     <span>
@@ -337,13 +107,13 @@ export function CategoryListingPage({;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -401,14 +171,15 @@ export function CategoryListingPage({;
             </div>
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           )}
         </div>;
       </div>;

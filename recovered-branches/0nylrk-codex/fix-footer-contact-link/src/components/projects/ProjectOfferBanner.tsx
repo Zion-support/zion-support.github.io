@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Bell, Calendar, X} from "lucide-react";
@@ -12,24 +9,8 @@ import {Card, CardContent} from "@/components/ui/card";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ProjectOfferBanner() {;
-<<<<<<< HEAD
 
-  const navigate = useNavigate();
-  const { projects, isLoading } = useProjects();
-  const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
 
-import { useEffect, useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { Bell, Calendar, X } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { useProjects } from "@/hooks/useProjects";
-import { Project } from "@/types/projects";
-export function ProjectOfferBanner() {
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
@@ -48,30 +29,9 @@ export function ProjectOfferBanner() {
       const offers = projects.filter(p => p.status === 'offer_sent');
       setPendingOffers(offers)
 
-<<<<<<< HEAD
-    }
-  }, [projects, isLoading]);
-  const handleDismiss = (projectId: string, e: React.MouseEvent) => {
-    e.stopPropagation();
-    setDismissed(prev => {
-      const updated = new Set(prev);
-      updated.add(projectId)
-      return updated
-    })
-  }
-  const handleViewOffer = (projectId: string) => {
-    navigate(`/project/${projectId}`)
-  }
-  if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
-
-    return null
 
 
-=======
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Bell, Calendar, X } from "lucide-react",;
@@ -106,11 +66,11 @@ export function ProjectOfferBanner() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   }
   
   return (

@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {BriefcaseIcon, Clock} from "lucide-react";
@@ -13,22 +10,8 @@ import {Badge} from "@/components/ui/badge";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ActiveProjectsCard() {;
-<<<<<<< HEAD
 
-  const { projects, isLoading } = useProjects();
-  const [activeProjects, setActiveProjects] = useState<Project[]>([]);
 
-import { useEffect, useState } from "react",
-import { Link } from "react-router-dom",
-import { BriefcaseIcon, Clock } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { useProjects } from "@/hooks/useProjects";
-import { Project } from "@/types/projects";
-export function ActiveProjectsCard() {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const { projects, isLoading } = useProjects();
 
@@ -102,15 +85,17 @@ export function ActiveProjectsCard() {;
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             ))}
           </div>;
         </CardContent>;

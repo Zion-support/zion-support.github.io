@@ -1,51 +1,19 @@
 
-<<<<<<< HEAD
-import React from 'react',
-import React from 'react';
 
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Brain, BarChart3, TrendingUp, Users, Target, Zap;
-  Shield, Database, Globe, ArrowRight, CheckCircle, Star
- } from 'lucide-react';
-=======
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default function AIBusinessIntelligencePage() {
 
   const features = [
@@ -481,7 +449,7 @@ const AIBusinessIntelligence: React.FC = () => {;
       period: '',;
       description: 'Full-scale solution for large organizations',;
       features: [;
-<<<<<<< HEAD
+
         "Everything in Professional",;
         "Custom AI models",;
         "Dedicated support team",;
@@ -510,48 +478,8 @@ const AIBusinessIntelligence: React.FC = () => {;
       </Head>;
       <EnhancedNavigation />;
 
-      {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-        <div className="max-w-7xl mx-auto px-6">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="text-center"
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-        'Everything in Professional',;
-        'Custom AI models',;
-        'Dedicated support team',;
-        'Unlimited users',;
-        'On-premise deployment',;
-        'Custom training',;
-        'SLA guarantees',;
-      ],;
-      popular: false,;
-    },;
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       icon: Brain,
       title: 'Predictive Analytics',
       description:;
@@ -692,6 +620,7 @@ const AIBusinessIntelligence: React.FC = () => {
       <EnhancedNavigation />;
 
 
+
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
@@ -722,7 +651,9 @@ const AIBusinessIntelligence: React.FC = () => {
                 href='#demo'
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
@@ -803,7 +734,6 @@ const AIBusinessIntelligence: React.FC = () => {
                 key={plan && plan.plan}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -813,6 +743,7 @@ const AIBusinessIntelligence: React.FC = () => {
                 </ul>
 
                   ))}
+
 
       </section>
       {/* Features */  } catch (error) {
@@ -1152,11 +1083,10 @@ const AIBusinessIntelligence: React.FC = () => {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 </ul>
 
                 <a
@@ -1186,61 +1116,11 @@ const AIBusinessIntelligence: React.FC = () => {
         </div>;
       </section>;
 
-<<<<<<< HEAD
-      {/* CTA */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;
-        <div className="max-w-4xl mx-auto px-6 text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-      {/* CTA */}
-      <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>;
-        <div className='max-w-4xl mx-auto px-6 text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.6 }}>;
-            <h2 className='text-4xl font-bold text-white mb-6'>;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className='text-xl text-blue-100 mb-8'>;
-              Join hundreds of businesses already using AI to drive growth and;
-              efficiency.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <a
-                href='/contact'
-                className='bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'>;
-                Start Free Trial;
-              </a>;
-              <a
-                href='/contact'
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -1266,33 +1146,15 @@ const AIBusinessIntelligence: React.FC = () => {
       </section>
       <EnhancedFooter />
     </>
-<<<<<<< HEAD
 
-);
 
-=======
 
-                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
-                Schedule Demo;
-              </a>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-      <EnhancedFooter />;
-    </>;
-  );
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }
 }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -1301,69 +1163,10 @@ const AIBusinessIntelligence: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  )
-}
-
-                    </span>;
-                  </div>;
-                  <p className='text - slate - 600'>{plan.description}</p>;
-                </div>;
-                <ul className='space - y-4 mb - 8'>;
-                  {plan.features.map (feature => (
-                    <li key={feature} className='flex items - center space - x-3'>;
-                      <CheckCircle className='w - 5 h - 5 text - green - 500 flex - shrink - 0' />;
-                      <span className='text - slate - 700'>{feature}</span>                    </li>))}
-                </ul>;
-                <a;
-                  href='/contact';
-                  className='block w - full bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 text - white text - center py - 3 rounded - xl font - medium transition - all duration - 200 transform hover:scale - 105'                >;
-                  Get Started;
-                </a>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA */}
-      <section className='py - 20 bg - gradient - to - r from - blue - 600 to - cyan - 600'>;
-        <div className='max - w-4xl mx - auto px - 6 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-          >;
-            <h2 className='text - 4xl font - bold text - white mb - 6'>;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className='text - xl text - blue - 100 mb - 8'>;
-              Join hundreds of businesses already using AI to drive growth and;
-              efficiency.;
-            </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-              <a;
-                href='/contact';
-                className='bg - white text - blue - 600 hover:bg - blue - 50 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200 transform hover:scale - 105'              >;
-                Start Free Trial;
-              </a>;
-              <a;
-                href='/contact';
-                className='border border - white / 20 text - white hover:bg - white / 10 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200'              >;
-                Schedule Demo;
-              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      <EnhancedFooter />;
-    </>);
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

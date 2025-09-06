@@ -1,29 +1,16 @@
 
 
-<<<<<<< HEAD
-
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { Navigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth",
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
-=======
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
@@ -33,11 +20,14 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
 
 
 
+
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const { isAuthenticated, isLoading, user } = useAuth();
@@ -152,15 +142,6 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
     </div>);
 
 }
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-}
-;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

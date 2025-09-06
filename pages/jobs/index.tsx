@@ -1,39 +1,8 @@
 
 
-<<<<<<< HEAD
-import Link from 'next/link',
-import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
-import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import { useEffect, useState  } from 'react';
-import InteractiveSearch from '../../components/ui/InteractiveSearch';
-export default function JobsListPage() {
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const t = setTimeout(() => setLoading(false), 500);
-    return () => clearTimeout(t);
-  }, []);
-  const jobs = [
 
-=======
-=======
-import Link from 'next / link';
-import EnhancedMarketplaceCard from '../../components / ui / EnhancedMarketplaceCard';
-import EnhancedLoading from '../../components / ui / EnhancedLoading';
-import {useEffect, useState} from 'react';
-import InteractiveSearch from '../../components / ui / InteractiveSearch';
-export default /**
- * JobsListPage - Function description
- */
-function JobsListPage() {
-  const [loading, set_loading] = useState (true);
-  useEffect (() => {
-    const t = set_timeout (() => set_loading (false), 500);
-    return () => clear_timeout (t);
-  }, []);
-;
-  const jobs = [;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     {
       slug: 'senior - ai - engineer',
       title: 'Senior AI Engineer',
@@ -48,10 +17,8 @@ function JobsListPage() {
     },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 ;
   return (
 
@@ -64,10 +31,8 @@ export default function JobsListPage() {
   const jobs = [
     { slug: 'senior-ai-engineer', title: 'Senior AI Engineer', subtitle: 'Remote • Contract', description: 'Build and optimize LLM-powered features in production.' },
     { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }],
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <div className="space-y-4">
       <InteractiveSearch placeholder="Search jobs, keywords, or companies..." />
@@ -81,7 +46,7 @@ export default function JobsListPage() {
                 <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
               </a>
             </Link>
-<<<<<<< HEAD
+
           ))}
         </div>
       )}
@@ -89,26 +54,9 @@ export default function JobsListPage() {
 
 
 
-);
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-}
-
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
-
-=======
-=======
-
-
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -130,9 +78,10 @@ export default function JobsListPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

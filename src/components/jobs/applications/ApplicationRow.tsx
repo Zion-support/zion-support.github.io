@@ -4,17 +4,8 @@ interface ApplicationRowProps {
   onViewApplication: (application_id: string) => Promise < void>;
   onStatusChange: (
 
-<<<<<<< HEAD
 
 
-}
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function ApplicationRow({
 
   application
@@ -24,14 +15,8 @@ export function ApplicationRow({
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
-<<<<<<< HEAD
 
 
-  const talentName = application.talent_profile?.full_name |'Unknown'
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import { formatDistanceToNow } from 'date-fns';
@@ -75,19 +60,16 @@ export function ApplicationRow(): any ({;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 
-<<<<<<< HEAD
 
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   return (
     <TableRow key={application.id}>
       <TableCell>
@@ -112,11 +94,8 @@ export function ApplicationRow(): any ({;
               />
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ) : (
               <User className="h-5 w-5 text-gray-400" />
             )}
@@ -161,11 +140,8 @@ export function ApplicationRow(): any ({;
           <BarChart className="h-4 w-4 mr-1" />
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <ScoreBadge application={application} />
         </Button>
       </TableCell>
@@ -368,8 +344,7 @@ export function ApplicationRow({;
     </TableRow>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
         {application.resume ? (
           <Button variant='ghost' size='sm' as_child>;
@@ -394,4 +369,5 @@ export function ApplicationRow({;
     </TableRow>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

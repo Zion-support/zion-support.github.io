@@ -1,32 +1,14 @@
 
-<<<<<<< HEAD
 
-=======
-import {jsPDF} from 'jspdf';
-import {WorkExperience} from '@/types / resume';
-import {PdfThemeColors} from '../theme_config';
-import {format_date} from '../formatters';
-export function addWorkExperienceSection (
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addWorkExperienceSection(;
-<<<<<<< HEAD
 
 
-  doc: jsPDF;
-  workExperience: WorkExperience[];
-  colors: PdfThemeColors;
-  startY: number
-): number {
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   doc: jsPDF;
@@ -164,15 +146,17 @@ export function addWorkExperienceSection(;
       yPos += 20;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
   }
   return yPos + 5

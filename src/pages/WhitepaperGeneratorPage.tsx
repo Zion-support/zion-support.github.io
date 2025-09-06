@@ -569,10 +569,9 @@ import { Input } from '@/components/ui/input';
     setCurrentSharedWhitepaperId(null)
     setCurrentSharedWhitepaperIsPublic(null)
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
@@ -581,10 +580,10 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Trash2, Download, Share2 } from 'lucide-react'
 import { Send } from 'lucide-react', // Added Send icon
-<<<<<<< HEAD
-=======
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { toast } from "sonner",
 import { logErrorToProduction } from '@/utils/productionLogger',
 interface WhitepaperSection {
@@ -929,12 +928,12 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     setShareableLink(null),
     setCurrentSharedWhitepaperId(null),
     setCurrentSharedWhitepaperIsPublic(null),
-<<<<<<< HEAD
-=======
+
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     try {
       const whitepaperPayload = {
         tokenName,
@@ -1002,17 +1001,9 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               title='Generate Shareable Link'
             >
               <Share2 className='h-4 w-4' />{' '}
-<<<<<<< HEAD
-=======
 
-              <span className='ml-1 hidden sm:inline'>Share</span>;
-            </Button>;
-          </div>;
-        </div>;
 
-        <form onSubmit={e => e && e.preventDefault()} className='space-y-6'>;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* ... (Input fields remain the same) ... */}
           <div>
             <label htmlFor='tokenName' className='block text-sm font-medium'>
@@ -1165,8 +1156,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 <Button
                   variant='ghost'
                   size='icon'
-<<<<<<< HEAD
-=======
+
                   onClick={() => removeDistributionItem(item.id)}
                   aria-label='Remove'
                 >
@@ -1204,7 +1194,8 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             ))}
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
             <div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               )}
             </div>
           )}
@@ -1215,7 +1206,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
-<<<<<<< HEAD
+
               type='button'
               onClick={handleSubmitToCounsel}
               disabled={
@@ -1238,42 +1229,12 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
-              type='button'
-              onClick={handleSubmitToCounsel}
-              disabled={
-                isSubmittingToCounsel |isLoading |isSharing |isDownloading
-              }
-              variant='default'
-              size='lg'
-              className='w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white'            >
-              <Send className='mr-2 h-4 w-4' />
-              {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
-            </Button>
-          )}
-          {isSubmittingToCounsel && (
-            <p className='text-center text-sm text-blue-600'>
-              Submitting to counsel...
-            </p>
-          )}
-                type="button"
-                onClick={handleSubmitToCounsel}
-                disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
-                variant="default"
-                size="lg"
-                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
-            >
-                <Send className="mr-2 h-4 w-4" />
-                {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
-            </Button>;
-          )}
-           {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
         </form>
         </form>;
@@ -1348,11 +1309,8 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             {sections.map((section) => (
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <WhitepaperSectionEditor
                 key={section.id}
                 title={section.title}
@@ -1363,10 +1321,9 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 onContentChange={(newContent) => handleSectionContentChange(section.id, newContent)}
               />;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             ))}
           </div>
         )}
@@ -1396,48 +1353,25 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             )}
             </div>;
 
+
+
+
         )}
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 '";
 ;
 }
 }
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-      <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
-        <WhitepaperPreviewPanel
-            sections={sections}
-            distributionChartData={distributionChartData}
-            tokenName={tokenName}
-            tokenSupply={tokenSupply}
-        />;
-      </div>;
-    </div>;
-  );
-},;
-export default WhitepaperGeneratorPage;
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

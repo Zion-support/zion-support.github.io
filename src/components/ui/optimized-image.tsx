@@ -61,43 +61,8 @@ export const OptimizedImage: React.FC < OptimizedImageProps> = ({
   object_position = 'center',
   ...props;
 }) => {
-<<<<<<< HEAD
 
 
-  const [isLoading, setIsLoading] = useState(true)
-  const [hasError, setHasError] = useState(false)
-  const [isInView, setIsInView] = useState(!lazy |priority)
-  const [currentSrc, setCurrentSrc] = useState(src)
-  const [retries, setRetries] = useState(0)
-  const [loadProgress, setLoadProgress] = useState(0)
-  const imgRef = useRef<HTMLImageElement>(null)
-  const observerRef = useRef<IntersectionObserver>()
-  const [metrics, setMetrics] = useState<ImageMetrics | null>(null)
-  const loadStartTime = useRef<number>(0)
-  // Intersection Observer for lazy loading
-  useEffect(() => {
-    if (!lazy |priority |isInView) return
-    observerRef.current = new IntersectionObserver(
-
-=======
-  const [is_loading, setIsLoading] = useState (true);
-  const [has_error, setHasError] = useState (false);
-  const [isInView, setIsInView] = useState (!lazy || priority);
-  const [current_src, setCurrentSrc] = useState (src);
-  const [retries, set_retries] = useState (0);
-  const [load_progress, setLoadProgress] = useState (0);
-  const img_ref = useRef < HTMLImageElement>(null);
-  const observer_ref = useRef < IntersectionObserver>();
-  const [metrics, set_metrics] = useState < ImageMetrics | null>(null);
-  const loadStartTime = useRef < number>(0);
-  // Intersection Observer for lazy loading;
-  useEffect (() => {
-    // Check condition
-if (return) {
-  $2
-}
-    observer_ref.current = new IntersectionObserver (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       entries => {
         const [entry] = entries;        // Check condition
@@ -112,12 +77,8 @@ if ( {) {
     observerRef.current = new IntersectionObserver(;
       entries => {;
 
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         const [entry] = entries;        if (entry && entry.isIntersecting) {
           setIsInView(true)
           observerRef.current?.disconnect()
@@ -138,24 +99,8 @@ if ( {) {
     }
 
 
-<<<<<<< HEAD
-  }, [lazy, priority, isInView])
-  // Start load time tracking
-  useEffect(() => {
-    loadStartTime.current = performance.now()
-  }, [src])
-  // Monitor image performance
-  useEffect((,) => {
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      const observer = new PerformanceObserver(list => {
-        const entries = list.getEntries()
-        entries.forEach(entry => {          if (entry.name === src && entry.entryType === 'resource') {
-            const resourceEntry = entry as PerformanceResourceTiming
-            const fileSize =
-              resourceEntry.transferSize |resourceEntry.encodedBodySize |0
-            const loadTime =
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             const fileSize = null;
               resourceEntry.transferSize || resourceEntry.encodedBodySize || 0
             const loadTime = null;
@@ -287,12 +232,8 @@ if ( {) {
   }
 
 
-<<<<<<< HEAD
-  // Simulate loading progress for demo purposes
-  useEffect(() => {
-    if (!isLoading |!showLoadingProgress) return
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     if (!isLoading || !showLoadingProgress) return;
 
 
@@ -320,10 +261,8 @@ if ( {) {
     if (placeholder === 'color') {
               />
       )
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   loading?: 'lazy' | 'eager';
   style?: React && React.CSSProperties;
@@ -533,12 +472,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
           style={{ backgroundColor: placeholderColor }}
         />;
       );
-<<<<<<< HEAD
-=======
+
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
 
     if (placeholder === 'color') {;
@@ -555,16 +494,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
       </div>
     )
   }
-<<<<<<< HEAD
-=======
-  // Container styles;
-  const container_style: React.CSSProperties = {
-    aspect_ratio:;
-      aspect_ratio || (width && height ? `${width}/${height}` : undefined),
-    width: width ? `${width}px` : undefined,
-    height: height ? `${height}px` : undefined,
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   }
       >;
       <AnimatePresence>;
@@ -578,11 +510,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   const containerStyle: React.CSSProperties = {
     aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
     width: width ? `${width}px` : undefined,
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Placeholder */}
 
       <div className={placeholderClassName}>;
@@ -608,25 +537,18 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
 
-<<<<<<< HEAD
 
 
-=======
-            transition={{ duration: 0.3 }}
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             className="absolute inset-0"
           >
             {generatePlaceholder()}
 ;
-<<<<<<< HEAD
-=======
+
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             {/* Loading progress */}
             {showLoadingProgress && isLoading && loadProgress > 0 && (
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">
@@ -649,11 +571,11 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
             animate={{ opacity: 1 }}
             className='absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400'
             className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
-<<<<<<< HEAD
-=======
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
             <AlertTriangle className="h-8 w-8 mb-2" />
             <span className="text-sm">Failed to load image</span>
@@ -697,11 +619,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
             transition={{ duration: 0.3 }}
           />
         )}
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   opacity: 0 
 
 
@@ -726,42 +645,26 @@ interface ImageGalleryProps {;
 
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
   columns = 3,
   aspectRatio = '16/9',
   className,
-<<<<<<< HEAD
 
 
-  onImageClick,
-}) => {
-  const [loadedCount, setLoadedCount] = useState(0)
-  const handleImageLoad = () => {
-    setLoadedCount(prev => prev + 1)
-  }
-  onImageClick
-}) => {
-  const [loadedCount, setLoadedCount] = useState(0),
-
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className={cn('space-y-4', className)}>
       <div className="flex justify-between items-center">
@@ -802,44 +705,9 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
           >
             <div className="relative">
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              <OptimizedImage
-                src={image.src}
-                alt={image.alt}
-                aspectRatio={aspectRatio}
-                className='rounded-lg group-hover:scale-105 transition-transform duration-300'
-                onLoad={handleImageLoad}                priority={index < 3} // Prioritize first 3 images
-              />
-              {image.caption && (
-                <div className='absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>
-                  <p className='text-sm'>{image.caption}</p>
-                className="rounded-lg group-hover:scale-105 transition-transform duration-300"
-                onLoad={handleImageLoad}
-                priority={index < 3} // Prioritize first 3 images
-              />
-              
-              {image.caption && (
-                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">
-                  <p className="text-sm">{image.caption}</p>
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </div>
               />;
 
@@ -853,34 +721,8 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
         ))}
 
 
-<<<<<<< HEAD
-      </div>
-    </div>
-  )
-}
-//Gallery component with optimized loading </span> </div> <div className= {
-  `grid gap-4`
-}style= {
-  {
-  gridTemplateColumns: `repeat ($ {
-  columns
-}, 1fr) `
-export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
-  src
-  alt
-  size = 'md'
-  fallback
-  className
-}) => {  const sizeClasses = {
-    sm: 'h-8 w-8'
-    md: 'h-10 w-10'
-    lg: 'h-12 w-12'
-    xl: 'h-16 w-16'
-  }
-  const initials =
-    fallback |
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   const initials = null;
     fallback ||
 
@@ -946,30 +788,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
         <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold">
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-
-
-          {initials}
-
-
-        </div>
-      )}
-    </div>
-  )
-}
-}
-}
-
-=======
-
-          {initials}
-        </div>
-      )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 },;

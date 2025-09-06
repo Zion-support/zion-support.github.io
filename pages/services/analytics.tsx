@@ -1,52 +1,21 @@
 
-<<<<<<< HEAD
-import React from 'react',
-import React from 'react';
 
-import Head from 'next/head';
-=======
-import React from 'react';
-import Head from 'next / head';
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { motion } from 'framer-motion';
 
 import {
 
-<<<<<<< HEAD
 
-  BarChart3
-  Database
-  Zap
-  Shield
-  Rocket
-  Cpu
-  ArrowRight
-  CheckCircle
-  Star
-  Users
-  Clock
-  TrendingUp;
-=======
-  BarChart3,
-  Database,
-  Zap,
-  Shield,
-  Rocket,
-  Cpu,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Clock,
-  TrendingUp,
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
-export default function AnalyticsServicesPage() {
-  const services = [
+
+import EnhancedNavigation from '../../components / EnhancedNavigation';
+import EnhancedFooter from '../../components / EnhancedFooter';
+export default /**
+ * AnalyticsServicesPage - Function description
+ */
+function AnalyticsServicesPage() {
+  const services = [;
 
     {
       title: 'Big Data Processing'
@@ -110,24 +79,11 @@ export default function AnalyticsServicesPage() {
 
 
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import {
-  BarChart3, Database, Zap, Shield, Rocket, Cpu,
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react',
-import EnhancedNavigation from '../../components/EnhancedNavigation',
-import EnhancedFooter from '../../components/EnhancedFooter',
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default function AnalyticsServicesPage() {
   const services = [
-=======
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   BarChart3,
   Database,
   Zap,
@@ -138,7 +94,7 @@ export default function AnalyticsServicesPage() {
   CheckCircle,
   Star,
   Users,
-<<<<<<< HEAD
+
   Clock,
   TrendingUp,
 } from 'lucide-react';
@@ -155,6 +111,7 @@ function AnalyticsServicesPage() {
       description: "Scalable data processing and analytics platforms",
       features: ["Data Pipeline Engineering", "Real-time Processing", "Batch Processing", "Data Quality"],
       price: "From $8,000",
+
 
       icon: Database,
       color: "from-indigo-500 to-purple-500"
@@ -229,46 +186,11 @@ function AnalyticsServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
-<<<<<<< HEAD
-            transition={{ duration: 0.8 }}
-            className='mb-8'
-        <meta name="description" content="Advanced data analytics solutions from Zion Tech Group. Big data processing, business intelligence, predictive analytics, and data strategy services." />
-        <meta property="og:title" content="Data Analytics Services - Zion Tech Group" />
-        <meta property="og:description" content="Advanced data analytics solutions for data-driven decision making." />
-        <link rel="canonical" href="https://ziontechgroup.com/services/analytics" />
-      </Head>
-      <EnhancedNavigation />
-      {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="relative pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="mb-8"
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-6">
               Data Analytics
@@ -291,10 +213,13 @@ function AnalyticsServicesPage() {
               Transform raw data into actionable insights that drive business growth
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Data Consultation
@@ -302,6 +227,8 @@ function AnalyticsServicesPage() {
           </motion.div>
         </div>
       </section>
+
+
 
             transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
@@ -325,30 +252,8 @@ function AnalyticsServicesPage() {
               decisions and gain competitive advantages.;
             </p>;
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-            className="mb-12"
-          >
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              From big data processing to predictive analytics, we help businesses harness the power 
-=======
-            className='mb-12'
-          >
-            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
-              From big data processing to predictive analytics, we help
-              businesses harness the power of their data to make informed
-              decisions and gain competitive advantages.
-=======
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Transform raw data into actionable insights that drive business growth
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             </p>
           </motion.div>
           <motion.div
@@ -372,6 +277,7 @@ function AnalyticsServicesPage() {
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From big data processing to predictive analytics, we help businesses harness the power
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
               of their data to make informed decisions and gain competitive advantages.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -383,7 +289,9 @@ function AnalyticsServicesPage() {
       </section>
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-purple-400" />
@@ -408,7 +316,6 @@ function AnalyticsServicesPage() {
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -421,9 +328,7 @@ function AnalyticsServicesPage() {
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
       {/* Services Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -435,7 +340,7 @@ function AnalyticsServicesPage() {
             viewport={{ once: true }}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
             <h2 className="text-4xl font-bold text-white mb-6">Data Analytics Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -455,62 +360,11 @@ function AnalyticsServicesPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
-<<<<<<< HEAD
-                key={service.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300"
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-            className='text-center mb-16'>;
-            <h2 className='text-4xl font-bold text-white mb-6'>;
-              Data Analytics Services;
-            </h2>;
-            <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
-              Comprehensive analytics solutions designed to unlock the value of;
-              your data;
-            </p>;
-          </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services && services.map((service, index) => (;
-              <motion&& motion.div
-                key={service && service.title}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
@@ -548,14 +402,15 @@ function AnalyticsServicesPage() {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 </ul>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-purple-400">{service.price}</span>
@@ -590,11 +445,7 @@ function AnalyticsServicesPage() {
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -617,8 +468,10 @@ function AnalyticsServicesPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -644,74 +497,19 @@ function AnalyticsServicesPage() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 }</div> </div> </section> <motion.div initial= {
-<<<<<<< HEAD
-=======
-=======
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-            <h2 className='text-4xl font-bold text-white mb-6'>;
-              Ready to Unlock Your Data's Potential?;
-            </h2>;
-            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
-              Let's discuss how our data analytics solutions can transform your;
-              business insights and drive data-driven decision making.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <button className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
-                Data Assessment;
-              </button>;
-              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                View Demos;
-              </button>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-      <EnhancedFooter />;
-    </div>;
-  ),;
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
-}</div> </div> </section> <motion&& motion.div initial= {
-=======
-      <EnhancedFooter />
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-)
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion.div> Get Started </button> </div> </motion.div>) )
-=======
-),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-  {
-  opacity: 0, y: 30
-}whileInView= {
-  {
-  opacity: 1, y: 0
-}transition= {
-  {
-
-  duration: 0 && 0.8 
-
-}viewport= {
-  {
-
-  once: true
-}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Unlock Your Data's Potential? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making. </p> Data Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Demos </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 
 
-  )
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

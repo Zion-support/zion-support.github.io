@@ -5,10 +5,8 @@ interface IntegrationCardProps {
   status?: 'connected' | 'disconnected' | 'pending'
   href?: string
   onConnect?: () => void
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 import React from 'react';
@@ -31,15 +29,15 @@ import {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 export function IntegrationCard({
   title,
   description,
@@ -127,10 +125,8 @@ interface IntegrationCardProps {;
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 
 export function IntegrationCard(): any ({;
@@ -225,14 +221,14 @@ export function IntegrationCards() {
   );
 }
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
@@ -251,11 +247,8 @@ export function IntegrationCards() {
         icon={<Briefcase className="h-5 w-5" />}
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />
     </div>
@@ -280,23 +273,14 @@ export function IntegrationCards() {
 }
 
 
+
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       />;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
   );
 }
@@ -467,4 +451,5 @@ function IntegrationCards() {
     </div>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

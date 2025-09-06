@@ -1,6 +1,38 @@
 
 
 
+  Lock,
+  Shield,
+  Eye,
+  EyeOff,
+  Copy,
+  RefreshCw,
+  CheckCircle,
+  XCircle,
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+
 
   AlertTriangle,;
   ArrowRight,;
@@ -9,14 +41,13 @@
 
 
 
+
 export default function PasswordCheckerPage() {;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [strength, setStrength] = useState(0);
@@ -59,6 +90,7 @@ export default function PasswordCheckerPage() {;
     setStrength(score);
     // Set strength text and color
     if (score >= 90) {
+
 
   const analyzePassword = (pass: string) => {;
     const newChecks = {;
@@ -242,6 +274,7 @@ if (
 
 
 
+
     });
     set_suggestions ([]);  }
 ;
@@ -271,10 +304,14 @@ if (
 
 
 
+
+
     // Fill the rest randomly
     for (let i = 4, i < length, i++) {
       result += charset[Math.floor(Math.random() * charset.length)]
     }
+
+
 
     // Shuffle the password
     result = result.split('').sort(() => Math.random() - 0.5).join('');
@@ -304,19 +341,6 @@ if (
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  return (_<>
-      <Head>
-        <title>Password Strength Checker - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords.&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;Password Strength Checker - Zion Tech Group&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Advanced password strength analyzer with security recommendations." />
-      </Head>
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 
@@ -324,7 +348,9 @@ if (
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -453,6 +479,8 @@ if (
             </p>
           </div>
 
+
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Input Form */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
@@ -463,18 +491,15 @@ if (
               <div className="space-y-6">
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 {/* Generate Password */}
                 <div>;
                   <Button
@@ -490,19 +515,19 @@ if (
 
 
 
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Generated Password Display */}
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 {/* Generated Password Display */}
                 {generatedPassword && (
                   <div className="p-4 bg-gray-700 rounded-lg border border-gray-600">
@@ -510,6 +535,8 @@ if (
                       <span className="text-sm text-gray-300">Generated Password:</span>
                       <Button
                         onClick={() => copyToClipboard(generatedPassword)}
+
+
 
                         variant='outline'
                         size='sm'
@@ -520,20 +547,18 @@ if (
                       </Button>
                     </div>
 
+
                       {generatedPassword}
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}
 
                       {generatedPassword}
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                     </div>
                   </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -582,61 +607,24 @@ if (
                 <div className='space-y-6'>;
 
 
-                  {/* Strength Score */}
-                  <div>;
-                    <div className='flex items-center justify-between mb-2'>;
-                      <span className='text-sm text-gray-300'>;
-                        Password Strength:;
-                      </span>                      <span className={`text-lg font-bold ${strengthColor}`}>;
-                        {strengthText} ({strength}/100);
-                      </span>;
-                    </div>;
-                    <div className='w-full bg-gray-700 rounded-full h-3'>;
-                      <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}                <div className="space-y-6">;
-                  {/* Strength Score */}
-
-                      <span className={`text-lg font-bold ${strengthColor}`}>
-                        {strengthText} ({strength}/100)
-                      </span>
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-3">
-<<<<<<< HEAD
-
-=======
-=======
-                <div className='space-y-6'>
-                  {/* Strength Score */}
-                  <div>
-                    <div className='flex items-center justify-between mb-2'>
-                      <span className='text-sm text-gray-300'>
-                        Password Strength:
-                      </span>                      <span className={`text-lg font-bold ${strengthColor}`}>
-                        {strengthText} ({strength}/100)
-                      </span>
-                    </div>
-
-
-
-=======
-
-                      <div 
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
 
 
 
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         style={{ width: `${strength}%` }}
                       />
                     </div>
                   </div>
+
+
 
 
                   <div>;
@@ -658,12 +646,13 @@ if (
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   {/* Security Checks */}
                   <div>
                     <h4 className='text-lg font-semibold text-white mb-3'>
@@ -684,12 +673,13 @@ if (
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
@@ -702,6 +692,8 @@ if (
                   </div>
 
 
+
+
                     </div>;
                   </div>;
 
@@ -709,12 +701,13 @@ if (
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   {/* Suggestions */}
                   {suggestions.length > 0 && (
                     <div>
@@ -740,10 +733,8 @@ if (
 
                           </div>
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                         ))}
                       </div>
@@ -766,8 +757,8 @@ if (
         </div>
       </section>
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         ))}
@@ -783,14 +774,14 @@ if (
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       {/* Features */}
 
       <section className="py-20 bg-gray-800">
@@ -1241,13 +1232,11 @@ if (
             Ready to Secure Your Passwords?
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           </h2>
           <p className='text-xl text-indigo-100 mb-8'>
             Join thousands of users who trust our password strength checker to
@@ -1266,21 +1255,7 @@ if (
               href='/pricing'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
 
-              className='border-white text-white hover:bg-white hover:text-indigo-600'            >              href="/pricing"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-indigo-600"
-              View Pricing
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               View Pricing;
             </Button>;
@@ -1289,20 +1264,15 @@ if (
       </section>;
 
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

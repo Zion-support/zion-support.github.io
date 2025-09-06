@@ -17,37 +17,8 @@ export default function AITalentMatchingPage() {;
     }
 
 
-<<<<<<< HEAD
-    {
-      icon: Users
-      title: "Verified Professionals"
-      description: "All candidates are pre-screened and verified for quality"
-    }
-    {
-      icon: TrendingUp
-      title: "Success Tracking"
-      description: "Monitor performance and success rates of placements"
-    }
-  ]
-  const features = [
-    "Machine learning-based candidate matching"
-    "Comprehensive skill assessment tools"
-    "Real-time market analysis"
-    "Automated interview scheduling"
-    "Performance analytics dashboard"
-    "Custom matching criteria"
-  ]
-  const stats = [
-    { label: "Successful Placements", value: "95%" }
-    { label: "Client Satisfaction", value: "98%" }
-    { label: "Time to Hire", value: "50% faster" }
-  ]
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Bot, Users, TrendingUp } from 'lucide-react'
@@ -57,11 +28,8 @@ export default function AITalentMatchingPage() {
     {
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className="h-8 w-8" />},
@@ -183,6 +151,8 @@ export default function AITalentMatchingPage() {;
       subtitle="Find the perfect experts for your projects with intelligent matching.";
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=AI+Talent+Matching";
       description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
+
+
 
       benefits={benefits}
       features={features}

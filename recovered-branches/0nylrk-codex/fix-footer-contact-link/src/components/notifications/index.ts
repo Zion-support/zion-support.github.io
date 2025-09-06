@@ -9,19 +9,10 @@ export const Index = () => {
   return null;
 };
 
-<<<<<<< HEAD
 
 
-export * from './NotificationItem',;
-export * from './NotificationList',;
-export * from './NotificationFilter',;
-export * from './NotificationHeader',;
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export * from './NotificationFooter';
-=======
+
 
 export * from './NotificationFooter';
 

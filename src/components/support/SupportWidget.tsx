@@ -88,53 +88,11 @@ export function SupportWidget() {;
             <div className="flex items-center">
               <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />
               <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 Zion Support
               </h3>
             </div>
             <div className="flex items-center gap-2">
-<<<<<<< HEAD
 
 
-              <Button
-
-
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8 rounded-full"
-                onClick={() => router.push('/help')}
-                aria-label="Help center"
-              >
-                <Info className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8 rounded-full"
-                onClick={() => setIsOpen(false)}
-                aria-label="Close support"
-              >
-                <X className="h-5 w-5" />
-              </Button>
-            </div>
-          </div>
-          
-          <ChatBotPanel />
-        </div>
-      )}
-    </>;
-  );
-
-}
-;
-
-
-=======
-              <Button
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,27 +1,5 @@
-<<<<<<< HEAD
 
 
-import { useState } from 'react'
-import EnhancedCard from '../../components/ui/EnhancedCard'
-import EnhancedButton from '../../components/ui/EnhancedButton'
-import EnhancedLoading from '../../components/ui/EnhancedLoading'
-import { useToast } from '../../components/ui/NotificationSystem'
-export default function NewJobPage() {
-  const { notify } = useToast()
-  const [loading, setLoading] = useState(false),
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    setLoading(true),
-    setTimeout(() => {
-      setLoading(false),
-      notify('Job posted! Invite talent to get responses.success')
-    }, 800)
-  },
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -55,9 +33,10 @@ export default function NewJobPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

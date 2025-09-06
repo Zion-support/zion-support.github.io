@@ -103,6 +103,7 @@ const reasonsToChoose = [;
     icon: LightBulbIcon},
   {
 
+
     name: 'Global Support',
     description: '24 / 7 support and maintenance services across multiple time zones.',
     icon: GlobeAltIcon}];
@@ -178,66 +179,11 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </div>
               </div>
             ))}
-<<<<<<< HEAD
-=======
-=======
-              <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
-                AI Services;
-              </span>;
-            </h1>;
-            <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-              From strategy to implementation, our comprehensive AI services help you navigate;
-              the complexities of artificial intelligence and achieve transformative results.;
-            </p>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Professional Services */}
-      <div className=&quot;mx - auto max - w-7xl px - 6 sm:px - 6 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Our Services</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Comprehensive AI Solutions;
-          </p>;
-          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            We offer end - to - end AI services designed to accelerate your digital transformation;
-            and drive measurable business outcomes.;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 2&quot;>;
-            {professional_services.map ((service) => (
-              <div key={service.name} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale - 105 & quot;>;
-                <div className=&quot;flex items - center gap - x-3 mb - 4&quot;>;
-                  <service.icon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
-                  <h3 className=&quot;text - xl font - semibold text - white & quot;>{service.name}</h3>;
-                </div>;
-                <p className=&quot;text - gray - 300 mb - 6&quot;>{service.description}</p>;
-                <div className=&quot;space - y-3 mb - 6&quot;>;
-                  {service.features.map ((feature) => (
-                    <div key={feature} className=&quot;flex items - center gap - 2&quot;>;
-                      <div className=&quot;h - 2 w - 2 bg - blue - 400 rounded - full & quot;></div>;
-                      <span className=&quot;text - sm text - gray - 300 & quot;>{feature}</span>;
-                    </div>))}
-                </div>;
-                <div className=&quot;flex items - center justify - between & quot;>;
-                  <span className=&quot;text - sm text - blue - 400 font - medium & quot;>Duration: {service.duration}</span>;
-                  <a;
-                    href=&quot;/contact & quot;
-                    className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
-                  >;
-                    Learn more <span aria - hidden=&quot;true & quot;>→</span>;
-                  </Link>;
-                </div>;
-              </div>))}
-=======
-    name: 'Global Support'
-    description: '24/7 support and maintenance services across multiple time zones.'
-    icon: GlobeAltIcon}]
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   return (
     <div className="bg-black">
+
 
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -250,12 +196,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
               </span>
             </h1>
 
-<<<<<<< HEAD
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              From strategy to implementation, our comprehensive AI services help you navigate
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               the complexities of artificial intelligence and achieve transformative results.
             </p>
           </div>
@@ -269,12 +211,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
             Comprehensive AI Solutions
           </p>
 
-<<<<<<< HEAD
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            We offer end-to-end AI services designed to accelerate your digital transformation
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             and drive measurable business outcomes.
           </p>
         </div>
@@ -306,29 +244,13 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </div>
               </div>
             ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>;
         </div>;
       </div>;
       {/* Service Process */}
 
-<<<<<<< HEAD
-=======
 
 
-=======
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
-
-            How We Deliver Results
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our proven methodology ensures successful project delivery and maximum value 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             from your AI investment.
           </p>
@@ -350,95 +272,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </div>
               </div>
             ))}
-=======
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Our Process</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            How We Deliver Results;
-          </p>;
-          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            Our proven methodology ensures successful project delivery and maximum value;
-            from your AI investment.;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 5&quot;>;
-            {service_process.map ((step, index) => (
-              <div key={step.step} className=&quot;relative & quot;>;
-                {index < service_process.length - 1 && (
-                  <div className=&quot;hidden lg:block absolute top - 8 left - 8 w - full h - 0.5 bg - gray - 700 & quot;></div>)}
-                <div className=&quot;bg - white / 5 p - 6 rounded - 2xl backdrop - blur - sm text - center hover:bg - white / 10 transition - all duration - 300 hover:scale - 105 & quot;>;
-                  <div className=&quot;mx - auto flex h - 16 w - 16 items - center justify - center rounded - full bg - blue - 600 / 20 mb - 4&quot;>;
-                    <step.icon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
-                  </div>;
-                  <div className=&quot;text - sm font - semibold text - blue - 400 mb - 2&quot;>{step.step}</div>;
-                  <h3 className=&quot;text - lg font - semibold text - white mb - 2&quot;>{step.title}</h3>;
-                  <p className=&quot;text - sm text - gray - 300 & quot;>{step.description}</p>;
-                </div>;
-              </div>))}
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Process</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
 
-
-            How We Deliver Results
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our proven methodology ensures successful project delivery and maximum value 
-
-            from your AI investment.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5">
-            {serviceProcess.map((step, index) => (
-              <div key={step.step} className="relative">
-                {index < serviceProcess.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700"></div>
-                )}
-                <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm text-center hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-600/20 mb-4">
-                    <step.icon className="h-8 w-8 text-blue-400" />
-                  </div>
-                  <div className="text-sm font-semibold text-blue-400 mb-2">{step.step}</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-sm text-gray-300">{step.description}</p>
-                </div>
-              </div>
-            ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-          </div>;
-        </div>;
-      </div>;
-      {/* Why Choose Us */}
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Why Choose Us</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Why Choose Us</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
-            The Zion Tech Group Advantage
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Discover what sets us apart and why leading organizations choose us for their AI transformation.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-            {reasonsToChoose.map((reason) => (
-              <div key={reason.name} className="flex flex-col group">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                  <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {reason.name}
                 </dt>;
                 <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
@@ -446,45 +280,9 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </dd>;
               </div>))}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            The Zion Tech Group Advantage
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Discover what sets us apart and why leading organizations choose us for their AI transformation.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-            {reasonsToChoose.map((reason) => (
-              <div key={reason.name} className="flex flex-col group">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                  <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {reason.name}
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">{reason.description}</p>
-                </dd>
-              </div>
-            ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-          </dl>;
-        </div>;
-      </div>;
-      {/* CTA section */}
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
-          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

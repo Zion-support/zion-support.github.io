@@ -1,34 +1,18 @@
 
 
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { useParams, Link } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { formatDistanceToNow } from "date-fns",
-import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community",
-import PostCard from "@/components/community/PostCard",
-import UserBadges from "@/components/community/UserBadges";
-import ReputationDisplay from "@/components/community/ReputationDisplay";
-import UserBadges from "@/components/community/UserBadges",
-import ReputationDisplay from "@/components/community/ReputationDisplay",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 // Mock user data
 
 const mockUser: CommunityUser = {
@@ -229,19 +213,12 @@ export default function CommunityProfilePage() {
         </div>
       </AppLayout>
     )
-<<<<<<< HEAD
-
-  }
-  return (
-    <AppLayout>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 import { useState, useEffect } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -399,15 +376,17 @@ export default function CommunityProfilePage() {;
       <SEO;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
@@ -452,133 +431,8 @@ export default function CommunityProfilePage() {;
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
                 )}
 
-<<<<<<< HEAD
-
-=======
-=======
-                    ))}
-                  </div>
-                ) : (
-                  <Card>
-                    <CardContent className="p-6 text-center">
-                      <p className="text-muted-foreground">This user hasn't created any posts yet.</p>
-                    </CardContent>
-                  </Card>
-                )}
-              </TabsContent>
-              <TabsContent value="activity" className="mt-6">
-                <h2 className="text-xl font-bold mb-4">Recent Activity</h2>
-                <Card>
-                  <CardContent className="p-6">
-                    <ul className="space-y-4">
-                      <li className="flex items-start gap-4">
-                        <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
-                        </div>
-                        <div>
-                          <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover:underline">Looking for feedback on my automated testing approach</Link></p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-4">
-                        <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-08T09:15:00Z"), { addSuffix: true })}
-                        </div>
-                        <div>
-                          <p>Earned badge <span className="font-medium">Top Contributor</span></p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-4">
-                        <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-05T16:40:00Z"), { addSuffix: true })}
-                        </div>
-                        <div>
-                          <p>Replied to <Link to="/community/post/7" className="text-zion-purple hover:underline">Comparing different vector embedding models</Link></p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-4">
-                        <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-01T12:00:00Z"), { addSuffix: true })}
-                        </div>
-                        <div>
-                          <p>Created post <Link to="/community/post/1" className="text-zion-purple hover:underline">Best practices for AI model fine-tuning</Link></p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-4">
-                        <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
-                        </div>
-                        <div>
-                          <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>
-                        </div>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-            </Tabs>
-          </div>
-        </div>
-      </div>
-    </AppLayout>
-  )
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                {user.isModerator && (;
-                  <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
-                )}
-
-              </CardHeader>;
-
-              <CardContent className="space-y-6">;
-                <div>;
-                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Reputation</h3>;
-                  <ReputationDisplay reputation={user && user.reputation} size="lg" />;
-                </div>;
-
-                <div>;
-                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Badges</h3>;
-                  <UserBadges badges={user && user.badges} />;
-                </div>;
-
-                <div className="grid grid-cols-2 gap-4">;
-                  <Card>;
-                    <CardContent className="p-4 text-center">;
-                      <div className="text-2xl font-bold">{user && user.postCount}</div>;
-                      <p className="text-sm text-muted-foreground">Posts</p>;
-                    </CardContent>;
-                  </Card>;
-                  <Card>;
-                    <CardContent className="p-4 text-center">;
-                      <div className="text-2xl font-bold">{user && user.replyCount}</div>;
-                      <p className="text-sm text-muted-foreground">Replies</p>;
-                    </CardContent>;
-                  </Card>;
-                </div>;
-
-                <div className="text-sm text-muted-foreground">;
-                  <p>Member since April 2025</p>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </div>;
-
-          <div className="md:col-span-2">;
-            <Tabs defaultValue="posts">;
-              <TabsList>;
-                <TabsTrigger value="posts">Posts</TabsTrigger>;
-                <TabsTrigger value="activity">Recent Activity</TabsTrigger>;
-              </TabsList>;
-
-              <TabsContent value="posts" className="mt-6">;
-                <h2 className="text-xl font-bold mb-4">Posts by {user && user.name}</h2>;
-
-                {posts && posts.length > 0 ? (;
-                  <div className="space-y-4">;
-                    {posts && posts.map((post) => (;
-                      <PostCard key={post && post.id} post={post} />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     ))}
                   </div>;
                 ) : (;
@@ -641,8 +495,7 @@ export default function CommunityProfilePage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 ;
-<<<<<<< HEAD
-=======
+
 export default /**
  * CommunityProfilePage - Function description
  */
@@ -836,11 +689,8 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </AppLayout>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

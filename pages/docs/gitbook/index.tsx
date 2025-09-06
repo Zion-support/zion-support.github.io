@@ -1,14 +1,16 @@
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
+
 import fs from 'fs',;
 import path from 'path',;
 import Link from 'next/link',;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 function list(dir: string, baseDir: string) {
 
 
@@ -18,16 +20,8 @@ function list(dir: string, baseDir: string) {
     const stat = fs.statSync(full)
     return { name, rel, isDir: stat.isDirectory() }
   })
-<<<<<<< HEAD
-
-}
-export async function getStaticProps() {
-  const base = path.join(process.cwd(), 'docs/gitbook')
-
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const sections = fs.existsSync(base)
     ? list(base, base).map((entry) => ({
         title: entry.name
@@ -35,16 +29,9 @@ export async function getStaticProps() {
     : []
 
   return { props: { sections }, revalidate: 600 }
-<<<<<<< HEAD
 
 
 
-=======
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
@@ -60,13 +47,12 @@ function list(dir: string, baseDir: string) {;
   }
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
   });
   } catch (error) {
@@ -106,18 +92,8 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
                 <li key={it.rel}>
                   <a className="underline" href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`} target="_blank" rel="noreferrer">
                     {it.rel}
-<<<<<<< HEAD
 
 
-
-                  </a>
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </li>
               ))}
             </ul>
@@ -128,25 +104,18 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
 
-=======
-=======
-  );
-};
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                     {it.rel  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </Link>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 </li>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -173,8 +142,8 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+

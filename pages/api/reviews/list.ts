@@ -1,37 +1,6 @@
 
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readReviews, readProjects } from "../../../utils/dataStore";
-import type { PublicReview, ReviewsSummary } from "../../../types/reviews";
-import { TALENT_PROFILES } from "../../../data/talent";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== "GET") {
-    return res.status(405).json({ error: "Method not allowed" });
-import type { NextApiRequest, NextApiResponse } from 'next';
 
 
-import { readReviews, readProjects } from '../../../utils/dataStore';
-import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
-import { TALENT_PROFILES } from '../../../data/talent';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-
-
-
-
-    const { targetType, targetId } = req.query as {
-      targetType?: string;
-      targetId?: string;
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
 
       return res.status(400).json({ error: "Missing targetType or targetId" });
@@ -42,7 +11,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (targetType !== 'talent' && targetType !== 'client') {
       return res.status(400).json({ error: 'Invalid targetType' })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
     const all = await readReviews();
@@ -89,7 +57,48 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         if (r && r.anonymous) authorName = "Anonymous";
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+        return {
+          ...r
+          authorName
+        }
+      });
+    const totalReviews = publicReviews && publicReviews.length;
+    const averageRating = totalReviews
+
+
+        ) / 10
+      : 0;
+    const projects = await readProjects();
+    const totalCompletedProjects = projects && projects.filter(
+      (p) =>
+
+  } catch (error: any) {
+    return res
+      .status(500)
+      .json({ error: "Internal server error", details: error?.message });
+          ...r,
+          authorName}
+      });
+;
+    const total_reviews = public_reviews.length;
+    const average_rating = total_reviews;
+      ? Math.round (
+          (public_reviews.reduce ((sum, r) => sum + r.rating, 0) / total_reviews) *;
+            10,
+        ) / 10;
+      : 0;
+;
+    const projects = await read_projects ();
+    const totalCompletedProjects = projects.filter (
+      (p) =>;
+        p.status === "Completed" &&;
+        ((target_type === "talent" && p.talent_slug === target_id) ||;
+          (target_type === "client" && p.client_id === target_id)),
+    ).length;
+;
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
     const summary: ReviewsSummary = {
       average_rating,
       total_reviews,
@@ -99,7 +108,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (error: any) {
-<<<<<<< HEAD
+
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
 
 
@@ -141,123 +150,10 @@ export default async function handler(req, res) {
   }
 }
 
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    if (targetType !== 'talent' && targetType !== 'client') {;
-      return res.status(400).json({ error: 'Invalid targetType' });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    const all = await readReviews();
-    // Include reviews where both sides have submitted and both are approved and not removed;
-    const filtered = all.filter((r) => {;
-      if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-      .map((r) => {;
-        let authorName = r.fromId;
-        if (r.fromRole === 'talent') {;
-          const t = TALENT_PROFILES.find((tp) => tp.slug === r.fromId);
-          authorName = t ? t.name : r.fromId;
-          } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        if (r.anonymous) authorName = 'Anonymous';
-        return {;
-          ...r,;
-          authorName  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      }),;
-    const totalReviews = publicReviews.length;
-    const averageRating = totalReviews;
-      ? Math.round((publicReviews.reduce((sum, r) => sum + r.rating, 0) / totalReviews) * 10) / 10;
-      : 0,;
-    const projects = await readProjects();
-    const totalCompletedProjects = projects.filter((p) => p.status === 'Completed' && (;
-      (targetType === 'talent' && p.talentSlug === targetId) ||;
-      (targetType === 'client' && p.clientId === targetId);
-    )).length;
-    const summary: ReviewsSummary = {;
-      averageRating;
-      totalReviews;
-      totalCompletedProjects;
-      mostRecent: publicReviews.slice(0, 5)};
-    return res.status(200).json({ summary, reviews: publicReviews });
-  } catch (error) {
-    return res.status(500).json({ error: 'Internal server error', details: error?.message });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 }
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

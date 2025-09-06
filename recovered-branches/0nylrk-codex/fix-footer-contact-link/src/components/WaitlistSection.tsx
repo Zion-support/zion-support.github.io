@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -19,28 +16,10 @@ export function WaitlistSection() {;
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-<<<<<<< HEAD
-
-
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { useToast } from "@/hooks/use-toast";
-import { Checkbox } from "@/components/ui/checkbox";
-import { useToast } from "@/hooks/use-toast",
-import { Checkbox } from "@/components/ui/checkbox",
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
   const [name, setName] = useState(""),
@@ -175,11 +154,8 @@ if ( {) {
   };
 
 
-<<<<<<< HEAD
-=======
-  },
-  
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
@@ -257,7 +233,9 @@ if ( {) {
               disabled={isSubmitting} 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -267,51 +245,8 @@ if ( {) {
       </div>
     </section>
   )
-<<<<<<< HEAD
-=======
-
-                className="text-sm text-zion-slate font-normal">;
-                I agree to receive updates about Zion and understand I can unsubscribe anytime.;
-              </Label>;
-            </div>;
-
-            <Button
-              type="submit" 
-              disabled={isSubmitting} 
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-              {isSubmitting ? "Processing..." : "Complete Registration"}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-import { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
-import { useToast } from "@/hooks/use-toast",;
-import { Checkbox } from "@/components/ui/checkbox",;
-export function WaitlistSection() {;
-  const [email, setEmail] = useState(""),;
-  const [name, setName] = useState(""),;
-  const [role, setRole] = useState(""),;
-  const [agreeTerms, setAgreeTerms] = useState(false),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const { toast } = useToast(),;
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    if (!email || !name || !role || !agreeTerms) {;
-      toast({;
-        variant: "destructive",;
-        title: "Missing information",;
-        description: "Please fill all fields and agree to the terms."}),;
-      return;
-    }
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   return (
     <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow - hidden">;
@@ -385,19 +320,16 @@ export function WaitlistSection() {;
           </form>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-    </section>;
-  );
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 ;

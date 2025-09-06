@@ -6,6 +6,7 @@ import { TrendingUp, TrendingDown, DollarSign, Target;
  } from 'lucide-react';
 import Link from 'next/link';
 
+
 export default function MarketPricing() {;
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
 
@@ -23,12 +24,10 @@ pricingAnalysis: {
   lowEnd: '$0.005 per 1K tokens', midRange: '$0.015 per 1K tokens', highEnd: '$0.025 per 1K tokens', ourPosition: 'Mid-range with premium features'   'ai-consciousness': {
   marketSize: '$45.2B', growthRate: '+28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   ];
 
   const marketData = {
@@ -144,12 +143,7 @@ pricingAnalysis: {
         midRange: '$750 per user/month'
 
 
-<<<<<<< HEAD
-      {/* Competitive Analysis Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2 
-=======
+
   };
 
 
@@ -331,18 +325,7 @@ pricingAnalysis: {
           </motion && motion.div>;
         </div>;
       </section>;
-=======
 
-
-=======
-
-
-      {/* Competitive Analysis Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-7xl mx-auto">;
-          <motion&& motion.h2 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -683,12 +666,7 @@ pricingAnalysis: {
                 key={tier.label}
 
 
-<<<<<<< HEAD
-      {/* Market Trends Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2 
-=======
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.5 }}
@@ -722,18 +700,7 @@ pricingAnalysis: {
           </motion && motion.div>;
         </div>;
       </section>;
-=======
 
-
-=======
-
-
-      {/* Market Trends Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-7xl mx-auto">;
-          <motion&& motion.h2 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -787,6 +754,8 @@ pricingAnalysis: {
       </section>
 
 
+
+
               </ul>;
             </motion && motion.div>;
           </div>;
@@ -797,12 +766,13 @@ pricingAnalysis: {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -863,36 +833,8 @@ pricingAnalysis: {
   marketSize: '$1.2T', growthRate: '+12.3%', growthTrend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {
   ];
 pricingAnalysis: {
-<<<<<<< HEAD
 
-  lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages'
-}
-}
-}
-export default MarketPricing;export default MarketPricing;
 
-};
-
-  lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
-
-};
-
-};
-
-};
-export default MarketPricing;export default MarketPricing;
-
-}
-}
-}
-}
-}
-}
-}
-};
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
@@ -929,15 +871,11 @@ export default MarketPricing;export default MarketPricing;
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

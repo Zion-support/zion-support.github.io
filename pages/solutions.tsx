@@ -1,8 +1,6 @@
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import React from 'react';
 import Layout from '../components/layout/Layout';
@@ -16,15 +14,8 @@ import {
   Video, Headphones, Code, Database, Network, Server
   Monitor, Smartphone, Camera, Gamepad2, Palette
   Music, Film, BookOpenCheck, Building, MessageCircle
-<<<<<<< HEAD
 
-=======
-  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
-} from 'lucide-react'
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import React from 'react',;
 import Layout from '../components/layout/Layout',;
@@ -38,6 +29,9 @@ import {
   Video, Headphones, Code, Database, Network, Server, 
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
+
+
+
 
 
 
@@ -45,28 +39,8 @@ import {
 import React from 'react',
 import Layout from '../components / layout / Layout',
 import SEO from '../components / SEO',
-<<<<<<< HEAD
-=======
-=======
-=======
-import React from 'react',;
-import Layout from '../components/layout/Layout',;
-import SEO from '../components/SEO',;
-import { motion } from 'framer-motion',;
-import { 
-  Target, Brain, Rocket, Shield, Zap, Atom, Cpu, 
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
-  Lightbulb, Search, Grid, List, TrendingUp, 
-  User, ShoppingCart, Bell, HelpCircle, FileText, 
-  Video, Headphones, Code, Database, Network, Server, 
-  Monitor, Smartphone, Camera, Gamepad2, Palette, 
-  Music, Film, BookOpenCheck, Building, MessageCircle, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React from 'react',
-import Layout from '../components/layout/Layout',
-import SEO from '../components/SEO',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { motion } from 'framer-motion',
 import {
@@ -77,36 +51,22 @@ import {
   Video, Headphones, Code, Database, Network, Server,
   Monitor, Smartphone, Camera, Gamepad2, Palette,
   Music, Film, BookOpenCheck, Building, MessageCircle,
-<<<<<<< HEAD
 
 
-  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
-} from 'lucide-react'
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
 } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
 
-<<<<<<< HEAD
 
-const Solutions: NextPage = () => {
-  const industrySolutions = [
-    {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 const Solutions: NextPage = () => {
   const industry_solutions = [;
     {
@@ -296,11 +256,10 @@ const Solutions: NextPage = () => {
       popular: false,
       icon: <BookOpenCheck className="w-8 h-8" />
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   ],
   const solutionCapabilities = [
     {
@@ -334,10 +293,10 @@ const Solutions: NextPage = () => {
       icon: <BarChart3 className="w-6 h-6" />
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   ],
   const caseStudies = [
     {
@@ -374,10 +333,10 @@ const Solutions: NextPage = () => {
       technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   ],
   return (
     <UltraAdvancedFuturisticBackground>
@@ -394,12 +353,11 @@ const Solutions: NextPage = () => {
 }
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
@@ -427,25 +385,8 @@ const Solutions: NextPage = () => {
                 Tailored technology solutions designed for your industry's unique challenges and opportunities
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-
-                <a
-                  href="/contact"
-                <a 
-                  href="/contact" 
-
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Started
-                </a>
 
 
-                </Link>
-                <a
-                  href="/contact"
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -454,14 +395,14 @@ const Solutions: NextPage = () => {
 
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -508,14 +449,15 @@ const Solutions: NextPage = () => {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -560,12 +502,11 @@ const Solutions: NextPage = () => {
 }
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
@@ -579,12 +520,13 @@ const Solutions: NextPage = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
@@ -640,14 +582,15 @@ const Solutions: NextPage = () => {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -732,12 +675,11 @@ const Solutions: NextPage = () => {
 }
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
                     <p className="text-gray-300 mb-4">{solution.description}</p>
@@ -751,12 +693,13 @@ const Solutions: NextPage = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       <span className="text-lg text-gray-400">/{solution.period}</span>
                     </div>
                   </div>
@@ -764,22 +707,9 @@ const Solutions: NextPage = () => {
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
-
-                        {feature}
-                      </li>
-                    ))}
 
 
-=======
 
-
-                  </ul>
-                  <a 
-                    href="/contact" 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -797,12 +727,13 @@ const Solutions: NextPage = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
                   >
                     Get Started
@@ -842,12 +773,11 @@ const Solutions: NextPage = () => {
 }
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -880,25 +810,8 @@ const Solutions: NextPage = () => {
                 Partner with us to build industry-specific solutions that drive your business forward
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-
-                <a
-                  href="/contact"
-                <a 
-                  href="/contact" 
-
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Your Transformation
-                </a>
 
 
-                </Link>
-                <a
-                  href="/contact"
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -907,14 +820,14 @@ const Solutions: NextPage = () => {
 
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -928,15 +841,8 @@ const Solutions: NextPage = () => {
   )
 }
 export default Solutions;
-<<<<<<< HEAD
 
 
-},
-
-export default Solutions,
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >;
               <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - orange - 400 to - red - 500 bg - clip - text text - transparent">;
                 Ready for Industry Transformation?;
@@ -962,27 +868,19 @@ export default Solutions,
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
 
-    </UltraAdvancedFuturisticBackground>;
-  );
-},;
-export default Solutions;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
     </UltraAdvancedFuturisticBackground>);
 },
 export default Solutions,
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-},
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

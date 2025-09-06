@@ -15,10 +15,10 @@ import {usePortfolio} from '@/hooks/usePortfolio';
 import {useAuth} from '@/hooks/useAuth';
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 // Define schema for form validation
 
 const projectSchema = z.object({
@@ -28,16 +28,8 @@ const projectSchema = z.object({
   image_url: z.string().optional()
   github_url: z
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
-<<<<<<< HEAD
 
 
-}
-
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
-=======
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState} from 'react';
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
@@ -60,18 +52,18 @@ interface ProjectFormProps {;
 
 export function ProjectForm(): any ({ project, onSuccess, onCancel }: ProjectFormProps) {;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
 
-<<<<<<< HEAD
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
@@ -196,22 +188,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
         onSuccess();
         form && form.reset();
-<<<<<<< HEAD
-=======
-=======
-;
-      if (success) {;
-        onSuccess();
-        form.reset();
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       }
     } catch (error) {;
       console && console.error('Error saving project:', error);
@@ -220,138 +201,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     }
 
 
+  };
+  },
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-  
-  return (
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
-        <FormField
-          control={form && form.control}
-          name="title"
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Project Title</FormLabel>;
-              <FormControl>;
-                <Input placeholder="E && E.g., AI Chatbot, E-commerce Website" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-
-        />;
-
-
-        <FormField
-          control={form && form.control}
-          name="description"
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Project Description</FormLabel>;
-              <FormControl>;
-                <Textarea
-                  placeholder="Describe what the project does and your role in it..."
-                  className="min-h-[100px]"
-                  {...field} 
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />;
-
-
-        <FormField
-          control={form && form.control}
-          name="technologies"
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Technologies Used</FormLabel>;
-              <FormControl>;
-                <Input placeholder="React, Node && Node.js, MongoDB, etc. (comma separated)" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-
-        />;
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
-          <FormField
-            control={form && form.control}
-            name="github_url"
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel className="flex items-center gap-2">;
-                  <Github className="h-4 w-4" />;
-                  GitHub URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input placeholder="https://github && github.com/yourusername/project" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
-            )}
-
-          />;
-
-
-          <FormField
-            control={form && form.control}
-            name="demo_url"
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel className="flex items-center gap-2">;
-                  <Link className="h-4 w-4" />;
-                  Demo URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input placeholder="https://your-project-demo && demo.com" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
-            )}
-
-          />;
-        </div>;
-
-
-        <FormField
-          control={form && form.control}
-          name="image_url"
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel className="flex items-center gap-2">;
-                <FileImage className="h-4 w-4" />;
-                Screenshot URL;
-              </FormLabel>;
-              <FormControl>;
-                <Input placeholder="https://example && example.com/screenshot && screenshot.jpg" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />
-        {/* Future file upload field would go here */}
-        
-        <div className="flex justify-end space-x-2 pt-4">
-          <Button type="button" variant="outline" onClick={onCancel}>
-            Cancel
-          </Button>
-          <Button type="submit" disabled={isLoading}>
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-            {isEditing ? 'Update' : 'Add'} Project
-          </Button>
-        </div>
-      </form>
-    </Form>
-  )
-}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import {PortfolioProject} from '@/types / resume';
 import {use_portfolio} from '@/hooks / use_portfolio';

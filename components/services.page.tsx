@@ -1,13 +1,7 @@
 
 import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
-<<<<<<< HEAD
-=======
-export default function ServicesPage() {;
 
-=======
 
-import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -50,12 +44,8 @@ import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
   );
 }
 import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function ServicesPage() {
   return (
     <EnhancedLayout>
@@ -83,15 +73,12 @@ export default function ServicesPage() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-<<<<<<< HEAD
-=======
-  );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

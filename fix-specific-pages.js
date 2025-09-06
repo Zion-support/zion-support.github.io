@@ -1,95 +1,9 @@
 
 
-<<<<<<< HEAD
-      if (parts.length > 1) {
-        // Take the content after the conflict resolution
-        backupContent = parts[1].split('>>>>>>>')[0]
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-// List of specific pages that were identified as corrupted;
-const corruptedPages = [;
-  'pages/403.tsxpages/ProductsList.tsxpages/faq.tsxpages/order-success.tsxpages/thank-you.tsxpages/gpt-library.tsxpages/order-confirmation/[orderId].tsxpages/governance/zgp-library.tsx';
-  'pages/governance/create.tsxpages/governance/my-votes.tsxpages/governance/[proposalId].tsx';
-],;
-// Function to find the best backup file for a given page;
-function findBestBackup(pagePath) {;
-  const dir = path.dirname(pagePath);
-  const baseName = path.basename(pagePath, path.extname(pagePath)),;
-  const ext = path.extname(pagePath);
-  // Look for backup files;
-  const backupPattern = new RegExp(`^${baseName}\\.tsx\\.backup\\.\\d+$`);
-  const files = fs.readdirSync(dir).filter(file => backupPattern.test(file));
-  if (files.length === 0) return null,;
-  // Sort by timestamp (newest first) and find the first valid one;
-  files.sort((a, b) => {;
-    const timestampA = parseInt(a.match(/\.backup\.(\d+)$/)[1]);
-    const timestampB = parseInt(b.match(/\.backup\.(\d+)$/)[1]);
-    return timestampB - timestampA;
-  }),;
-  for (const backupFile of files) {;
-    const backupPath = path.join(dir, backupFile);
-    try {;
-      const content = fs.readFileSync(backupPath, 'utf8'),;
-      // Check if this backup has proper content;
-      if (content.includes('export default') &&;
-          (content.includes('function') || content.includes('const') || content.includes('class')) &&;
-          content.includes('return') &&;
-          content.length > 100) {;
-        return backupPath;
-      }
-    } catch (error) {
-      // // // console.log(`Error reading backup ${backupPath}:`, error.message)
-    } catch (error) {;
-      // // // console.log(`Error reading backup ${backupPath}:`, error.message);
-    }
-  }
-;
-  return null;
-}
-;
-// Function to restore a corrupted page;
-function restorePage(pagePath) {;
-  try {;
-    const currentContent = fs.readFileSync(pagePath, 'utf8'),;
-    // Check if the page is corrupted;
-    const isCorrupted = !currentContent.includes('export default') ||;
-                        currentContent.length < 100 ||;
-                        !currentContent.includes('return');
-    if (!isCorrupted) {;
-      return { restored: false, reason: 'Page is not corrupted' }
-    }
-;
-    // Find backup;
-    const backupPath = findBestBackup(pagePath);
-    if (!backupPath) {;
-      return { restored: false, reason: 'No valid backup found' }
-    }
-;
-    // Read backup content;
-    let backupContent = fs.readFileSync(backupPath, 'utf8'),;
-    // Handle merge conflicts by taking the content after the conflict markers;
-    if (backupContent.includes('')) {;
-      const parts = backupContent.split('');
-      if (parts.length > 1) {;
-        // Take the content after the conflict resolution;
-        backupContent = parts[1].split('>>>>>>>')[0];
 
 
-
-'),
-
-
-      if (parts.length > 1) {
-        // Take the content after the conflict resolution
-        backupContent = parts[1].split('>>>>>>>')[0]
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 '),
 
 
@@ -97,12 +11,10 @@ function restorePage(pagePath) {;
         // Take the content after the conflict resolution
         backupContent = parts[1].split('>>>>>>>')[0]
 
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       }
     }
     // Clean up the content
@@ -116,11 +28,10 @@ function restorePage(pagePath) {;
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
     // Create a backup of the current corrupted file
 
     const timestamp = Date.now()
@@ -147,15 +58,17 @@ function restorePage(pagePath) {;
       corruptedBackup: corruptedBackupPath;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
@@ -163,12 +76,10 @@ function restorePage(pagePath) {;
 }
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 // Function to fix specific corrupted pages
 function fixSpecificPages() {
   const results = {
@@ -179,19 +90,11 @@ function fixSpecificPages() {
     details: []
 
 
-<<<<<<< HEAD
 
-  }
-  console.log('🚀 Starting targeted page restoration...')
-  console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`)
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  },
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   for (const pagePath of corruptedPages) {
     if (!fs.existsSync(pagePath)) {
       console.log(`⚠️  Page not found: ${pagePath}`)
@@ -214,20 +117,13 @@ function fixSpecificPages() {
     }
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-    // // // console.log(`\n🔍 Checking: ${pagePath}`),
-=======
-    
-    console.log(`\n🔍 Checking: ${pagePath}`),
-=======
+
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const result = restorePage(pagePath),
     if (result.restored) {
       results.restored++
@@ -235,50 +131,28 @@ function fixSpecificPages() {
       console.log(`   Used backup: ${result.backupUsed}`)
       console.log(`   Corrupted backup: ${result.corruptedBackup}`)
     } else {
-<<<<<<< HEAD
 
 
-
-      results.failed++
-      console.log(`❌ Failed: ${pagePath}`)
-
-
-      console.log(`   Reason: ${result.reason}`)
-    }
-    results.details.push({
-      file: pagePath
-      ...result
-    })
-  }
-  // Generate summary
-
-
-  return results
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
       results.failed++,
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 // Run the restoration if this script is executed directly
 if ({
   fixSpecificPages()
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
-<<<<<<< HEAD
-=======
+
       console.log (`⚠️  Page not found: ${page_path}`),
       results.failed++,
       results.details.push ({
@@ -327,26 +201,12 @@ if ( {) {
 }
   fixSpecificPages ();
 }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-;
-module.exports = {;
-  restorePage,;
-  fixSpecificPages,;
-  findBestBackup;
-};
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 module.exports = {
@@ -357,14 +217,15 @@ module.exports = {
 
 };
 
+
 main
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

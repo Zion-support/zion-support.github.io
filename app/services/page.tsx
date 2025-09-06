@@ -1,20 +1,10 @@
 
 
+
 import Link from 'next/link';
 
 export const metadata = {
-<<<<<<< HEAD
 
-  title: 'Services | Zion Tech Group',
-  description: 'Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.',
-
-
-
-=======
-  title: "Services | Zion Tech Group",
-  description:
-    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
->>>>>>> cursor/expand-services-advertise-and-build-project-2140
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
 
@@ -29,10 +19,12 @@ export default function ServicesOverviewPage() {
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 
           Product engineering and AI-first consulting to deliver measurable
+
           outcomes for your business.
 
         </p>
       </div>
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
@@ -42,11 +34,13 @@ export default function ServicesOverviewPage() {
           bullets={[
 
 
+
             "AI-powered tools",
             "Billing & subscriptions", 
 
             "Growth analytics",
             "Market validation"
+
 
           ]}
           icon="🚀"
@@ -83,7 +77,7 @@ export default function ServicesOverviewPage() {
           icon="⚙️"
         />
         <ServiceCard
-<<<<<<< HEAD
+
           href="/services/blockchain"
 
           title="Blockchain Services"
@@ -106,20 +100,7 @@ export default function ServicesOverviewPage() {
           ]}
           icon="🔒"
 
-=======
-          href="/services/automation-tools"
-          title="Business Automation"
-          description="Intelligent automation tools that streamline operations and boost productivity"
-          bullets={["Workflow automation", "Document processing", "Customer service bots"]}
-          icon="⚡"
-        />
-        <ServiceCard
-          href="/services/ai-copilots"
-          title="AI Copilots"
-          description="Intelligent assistants that enhance productivity and automate complex tasks"
-          bullets={["Code development", "Customer support", "Sales & marketing"]}
-          icon="🧠"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         />
         <ServiceCard
           href="/services/data-analytics"
@@ -136,6 +117,7 @@ export default function ServicesOverviewPage() {
           bullets={["AWS/Azure/GCP", "Zero-downtime migration", "Cost optimization"]}
           icon="☁️"
         />
+
         <ServiceCard
           href="/services/ai-content-generation"
           title="AI Content Generation"
@@ -303,11 +285,13 @@ function ServiceCard({
 
 
 
+
   icon: string;
 }) {
   return (
     <Link
       href={href}
+
 
 
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
@@ -344,6 +328,7 @@ function StatCard({
       <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
       <div className="text-sm text-gray-600">{description}</div>
     </div>
+
   );
 }
 
@@ -380,6 +365,8 @@ function CTA() {
       </div>
     </div>
   );
+
+
 
 
 

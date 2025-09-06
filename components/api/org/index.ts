@@ -3,25 +3,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-<<<<<<< HEAD
 
 
-=======
-=======
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' })
-
-  }
-=======
-
-  };
-  const data = readOrgData();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {
     if (!v) return undefined;

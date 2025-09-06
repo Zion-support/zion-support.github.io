@@ -1,29 +1,4 @@
-<<<<<<< HEAD
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import { readJson, writeJson } from '../../../utils/fsDb';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  const { account, amount, type, serviceId } = req.body as { account?: string, amount?: number, type?: string, serviceId?: string }
-  if (!account |!amount |amount <= 0 |!type) return res.status(400).json({ error: 'Invalid input' })
-  const redemptions = readJson<any[]>('tokens/redemptions.json', [])
-  const id = `rdm_${Math.random().toString(36).slice(2)}_${Date.now()}`
-  const record = { id, account, amount, type, serviceId: serviceId ?? null, createdAt: Date.now() }
-  redemptions.push(record)
-  writeJson('tokens/redemptions.json', redemptions)
-  // If premium support: create a support request to prioritize
-  if (type === 'premium_support') {
-    const reqs = readJson<any[]>('support/requests.json', [])
-    const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`
-    reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() })
-
-    writeJson('support/requests.json', reqs)
-  }
-
-
-  return res.status(200).json({ ok: true, id })
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -53,26 +28,14 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-=======
 
-
-    writeJson('support/requests.json', reqs)
-  }
-  return res.status(200).json({ ok: true, id })
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
   const { account, amount, type, service_id } = req.body as { account?: string, amount?: number, type?: string, service_id?: string },
   if (return res.status (400).json ({ error: 'Invalid input' }), ) {
   $2
@@ -95,10 +58,8 @@ if ( {) {
   return res.status (200).json ({ ok: true, id });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

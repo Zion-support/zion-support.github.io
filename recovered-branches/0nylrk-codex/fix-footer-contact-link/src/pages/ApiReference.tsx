@@ -1,17 +1,6 @@
 
-<<<<<<< HEAD
 
 
-import React, { useState } from "react",
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-export function ApiReference() {
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
-import { CodeBlock } from "@/components/developers/CodeBlock",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export function ApiReference() {
@@ -207,82 +196,8 @@ export function ApiReference() {;
         "201": {
           description: "Job created successfully"
           example: `{
-<<<<<<< HEAD
-
-  "id": "job-456",
-  "title": "UX Designer",
-  "description": "Looking for a UX designer with 3+ years experience...",
-  "category": "design",
-  "budget": {
-    "min": 3000;
-    "max": 5000
-    "currency": "USD"
-  }
-  "status": "open";
-  "created_at": "2023-05-15T10:12:00Z"
-}`
-        }
-    "min": 3000,
-    "max": 5000,
-    "currency": "USD"
-  },
-  "status": "open",
-  "created_at": "2023-05-15T10:12:00Z"
-}`
-        },
-        "400": {
-          description: "Bad request"
-          example: `{
-  "error": "validation_error",
-  "message": "Invalid input",
-  "details": [
-    {
-      "field": "title"
-      "error": "Title is required"
-
-    }
-  ]
-}`
-        }
 
 
-      }
-      "field": "title",
-      "error": "Title is required"
-
-
-import React, { useState } from "react",;
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
-import { CodeBlock } from "@/components/developers/CodeBlock",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-export function ApiReference() {;
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),;
-  // Sample endpoint data;
-  const endpoints = [;
-    {;
-      id: "get-jobs",;
-      method: "GET",;
-      path: "/api/jobs",;
-      description: "Retrieve a list of job postings with optional filtering",;
-      parameters: [;
-        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" },;
-        { name: "category", type: "string", description: "Filter by job category" },;
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },;
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],;
-      responses: {;
-        "200": {;
-          description: "A list of jobs",;
-          example: `{;
-  "jobs": [;
-    {;
-      "id": "job-123",;
-      "title": "Senior React Developer",;
-      "description": "We're looking for an experienced React developer...",;
-      "category": "development",;
-      "budget": {;
-        "min": 5000,;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         "max": 10000,;
         "currency": "USD";
@@ -381,13 +296,7 @@ export function ApiReference() {;
 }`;
         }
 
-<<<<<<< HEAD
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
   "id": "job-456",
   "title": "UX Designer",
   "description": "Looking for a UX designer with 3+ years experience...",
@@ -413,7 +322,7 @@ export function ApiReference() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -669,29 +578,14 @@ export function ApiReference() {;
                             status.startsWith('2') ? 'bg-green-950 text-green-500' :
                             status === '401' |status === '403' ? 'bg-orange-950 text-orange-500' :
 
+
                             'bg-red-950 text-red-500'
                           }`}>
                             {status}
-<<<<<<< HEAD
-                          </span>
-                          <span className="text-white">{response.description}</span>
-                        </div>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-                        <CodeBlock
-                          code={response && response.example} 
 
-=======
 
-                        
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         <CodeBlock 
                           code={response.example} 
                           language="json"
@@ -717,10 +611,7 @@ export function ApiReference() {;
 
 export default ApiReference;
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 =======
             </div>) : (
             <div className="p - 8 border border - zinc - 800 rounded - lg text - center">;
@@ -730,7 +621,7 @@ export default ApiReference;
       </div>;
     </ApiDocsLayout>);
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default ApiReference;
 
 ;

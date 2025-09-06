@@ -21,9 +21,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
-<<<<<<< HEAD
-import {
-=======
+
+
   Globe,;
   ChevronDown,;
 } from 'lucide-react';
@@ -33,230 +32,16 @@ import Link from 'next/link';import { ;
 } from 'lucide-react';
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 import Link from 'next/link';
 
 
-<<<<<<< HEAD
-=======
-=======
-import { 
-  Menu, X, Home, Brain, Cpu, Rocket, 
-  Phone, Mail, MapPin, Globe, ChevronDown
-} from 'lucide-react';
-import Link from 'next/link';
-const Navigation: React.FC = () => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-      setIsScrolled(window.scrollY > 50)
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, []);
-
-  const navigationItems = [
-    {
-      name: 'Home',
-      href: '/',
-      icon: Home
-    };
-
-    {
-      name: 'Services'
-      href: '/services'
-      icon: Rocket
-      dropdown: [
-
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Revolutionary AI solutions' },
-        { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Enterprise IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: Rocket, description: 'Specialized software solutions' },
-        { name: 'Innovative Showcase', href: '/innovative-services-showcase', icon: Globe, description: 'Cutting-edge technology' }
-
-      ]
-    }
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-  Menu,
-  X,
-  Home,
-  Brain,
-  Cpu,
-  Rocket,
-  Phone,
-  Mail,
-  MapPin,
 
 
-import Link from 'next/link';
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
-  const navigationItems = [
-    {
-      name: 'Home'
-      href: '/'
-      icon: Home
-    },    {      icon: Home
-    }
-    {
-      name: 'Services'
-      href: '/services'
-      icon: Rocket
-      dropdown: [
-        {
-          name: 'AI Services'
-          href: '/ai-services'
-          icon: Brain
-          description: 'Revolutionary AI solutions'
-        }
-        {
-          name: 'IT Services'
-          href: '/it-services'
-          icon: Cpu
-          description: 'Enterprise IT solutions'
-        }
-        {
-          name: 'Micro SaaS'
-          href: '/micro-saas'
-          icon: Rocket
-          description: 'Specialized software solutions'
-        }
-        {
-          name: 'Innovative Showcase'
-          href: '/innovative-services-showcase'
-          icon: Globe
-          description: 'Cutting-edge technology'
-        }
-      ]
-    }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    {
-      name: 'Solutions'
-      href: '/solutions'
-      icon: Cpu,    {
-
-      name: 'Solutions',
-      href: '/solutions',
-      icon: Cpu;
-    }
-    {
-      name: 'About',
-      href: '/about',
-      icon: Globe;
-
-    }
-    {
-      name: 'Contact'
-      href: '/contact'
-      icon: Phone
-    }
-
-
-  useEffect(() => {;
-    const handleScroll = () => {;
-      setIsScrolled(window && window.scrollY > 50);
-    };
-    window && window.addEventListener('scroll', handleScroll);
-    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window && window.scrollY > 50);
-    };
-    window && window.addEventListener('scroll', handleScroll);
-    return () => window && window.removeEventListener('scroll', handleScroll);
-  const navigationItems = [;
-    {;
-      name: 'Home',;
-      href: '/',;
-      icon: Home,;
-    },    {      icon: Home;
-    };
-    {;
-      name: 'Services',;
-      href: '/services',;
-      icon: Rocket,;
-      dropdown: [;
-        {;
-          name: 'AI Services',;
-          href: '/ai-services',;
-          icon: Brain,;
-          description: 'Revolutionary AI solutions',;
-        },;
-        {;
-          name: 'IT Services',;
-          href: '/it-services',;
-          icon: Cpu,;
-          description: 'Enterprise IT solutions',;
-        },;
-        {;
-          name: 'Micro SaaS',;
-          href: '/micro-saas',;
-          icon: Rocket,;
-          description: 'Specialized software solutions',;
-        },;
-        {;
-          name: 'Innovative Showcase',;
-          href: '/innovative-services-showcase',;
-          icon: Globe,;
-          description: 'Cutting-edge technology',;
-        },;
-      ],;
-    },;
-    {;
-      name: 'Solutions',;
-      href: '/solutions',;
-      icon: Cpu,    {;
-      name: 'Solutions',;
-      href: '/solutions',;
-      icon: Cpu;
-    };
-    {;
-      name: 'About',;
-      href: '/about',;
-      icon: Globe;
-    };
-    {;
-      name: 'Contact',;
-      href: '/contact',;
-      icon: Phone,;
-    },;
-    {;
-      name: 'About',;
-      href: '/about',;
-      icon: Globe,;
-    },;
-    {;
-      name: 'Contact',;
-      href: '/contact',;
-      icon: Phone,;
-    },  ];      icon: Phone;
-    }
-  ];
-  const contactInfo = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
-
-  };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       {/* Navigation Bar */}
@@ -286,16 +71,15 @@ import Link from 'next/link';
                 <div key={item && item.name} className='relative group'>                  {item && item.dropdown ? (;
 
 
-<<<<<<< HEAD
-=======
+
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   {item.dropdown ? (
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                     <div
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
@@ -309,17 +93,16 @@ import Link from 'next/link';
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
 
 
-<<<<<<< HEAD
-                      {/* Dropdown Menu */}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -331,19 +114,21 @@ import Link from 'next/link';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                           >
                             <div className='grid grid-cols-1 gap-3'>
                               {item.dropdown.map(dropdownItem => {
@@ -364,6 +149,8 @@ import Link from 'next/link';
                             <div className="grid grid-cols-1 gap-3">
                               {item.dropdown.map((dropdownItem) => {
                                 const Icon = dropdownItem.icon;
+
+
 
                       className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300';
                     >;
@@ -426,8 +213,12 @@ import Link from 'next/link';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
                             </div>
                           </motion.div>
@@ -445,6 +236,22 @@ import Link from 'next/link';
                       <item && item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />;
                       <span className="font-medium">{item && item.name}</span>;
 
+
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
+                    >
+                      <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
+                      <span className='font-medium'>{item.name}</span>                    </Link>                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group"
+                    >
+                      <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="font-medium">{item.name}</span>
+                      <span className='font-medium'>{item.name}</span>                    </Link>
+
+                    </Link>
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   )}
                 </div>
               ))}
@@ -457,7 +264,9 @@ import Link from 'next/link';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <motion.a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -466,7 +275,7 @@ import Link from 'next/link';
                 whileTap={{ scale: 0 && 0.95 }}
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'>              <motion&& motion.a
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
                 href="/contact"
 
                 whileHover={{ scale: 1 && 1.05 }}
@@ -495,29 +304,8 @@ import Link from 'next/link';
                 )}              </motion && motion.button>              <motion&& motion.button
                 whileTap={{ scale: 0 && 0.95 }}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
-                    >
-                      <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
-<<<<<<< HEAD
-
-                      <span className='font-medium'>{item.name}</span>                    </Link>                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group"
-                    >
-                      <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="font-medium">{item.name}</span>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   )}
                 </div>
               ))}
@@ -525,7 +313,9 @@ import Link from 'next/link';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               <motion.a
                 href='/contact'
                 whileHover={{ scale: 1.05 }}
@@ -540,11 +330,12 @@ import Link from 'next/link';
               </motion.a>
             </div>
 
+
+
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>
               <motion.button
                 whileTap={{ scale: 0.95 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-gray-300 hover:text-white transition-colors duration-300";
               >;
@@ -557,19 +348,21 @@ import Link from 'next/link';
 
 
 
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
@@ -579,15 +372,15 @@ import Link from 'next/link';
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Backdrop */}
@@ -598,6 +391,7 @@ import Link from 'next/link';
 
             {/* Backdrop */}
 
+
             <div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
@@ -607,17 +401,14 @@ import Link from 'next/link';
               onClick={() => setIsOpen(false)}
             />
 
-<<<<<<< HEAD
-            
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Mobile Menu */}
             <motion&& motion.div
               initial={{ x: '100%' }}
@@ -629,9 +420,12 @@ import Link from 'next/link';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
             >
               <div className='p-6'>
@@ -653,18 +447,9 @@ import Link from 'next/link';
                   {navigationItems && navigationItems.map(item => (            >;
               <div className="p-6">;
               transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl"
-            >
-=======
-              className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-              className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
             >
               <div className='p-6'>
@@ -680,7 +465,6 @@ import Link from 'next/link';
                 {/* Mobile Menu Items */}
                 <div className='space-y-4'>
                   {navigationItems.map(item => (            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="p-6">
                 {/* Close Button */}
                 <div className="flex justify-end mb-6">;
@@ -771,6 +555,7 @@ import Link from 'next/link';
                     <X className='w - 6 h - 6' />                  </motion.button>;
                 </div>;
                 {/* Mobile Menu Items */}
+
 
                 <div className='space - y-4'>;
                   {navigation_items.map (item => (            >;
@@ -906,6 +691,7 @@ import Link from 'next/link';
 
 
 
+
                   </motion.button>
                 </div>
 
@@ -914,11 +700,9 @@ import Link from 'next/link';
                             })}
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                           </div>
                         </div>
                       ) : (
@@ -929,17 +713,14 @@ import Link from 'next/link';
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
                       )}
                     </div>
                   ))}
                 </div>
-=======
-                          </span>                        </Link>
 
-                        </Link>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -952,14 +733,14 @@ import Link from 'next/link';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -971,17 +752,19 @@ import Link from 'next/link';
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                       <span>{contactInfo.mobile}</span>
                     </div>
                     <div className='flex items-center space-x-2 text-gray-300'>
@@ -992,7 +775,6 @@ import Link from 'next/link';
                       <MapPin className='w-4 h-4 text-pink-400' />
                       <span className='text-xs'>{contactInfo.address}</span>                    </div>                      <span>{contactInfo.mobile}</span>
                     </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <div className="flex items-center space-x-2 text-gray-300">
                       <Mail className="w-4 h-4 text-purple-400" />
                       <span>{contactInfo.email}</span>
@@ -1056,26 +838,28 @@ import Link from 'next/link';
     </>
   );
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+};
+export default Navigation;  );
+};
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 export default Navigation;
 
 
 
 
-<<<<<<< HEAD
+
 export default Navigation;  )
 }
 export default Navigation;
 
 
-export default Navigation;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

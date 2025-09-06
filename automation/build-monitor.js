@@ -486,7 +486,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require('fs);
 const path = require('path'),
   const { execSync } = require(child_process');
@@ -670,8 +669,6 @@ class BuildMonitor {
 if (require.main === module) {
   const monitor = new BuildMonitor(),
   monitor.run().catch(console.error)}
-<<<<<<< HEAD
-=======
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d

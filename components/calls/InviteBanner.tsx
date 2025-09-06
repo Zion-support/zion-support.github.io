@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 type Props = {
   message: string;
   onJoin?: () => void;
@@ -24,8 +22,8 @@ export default function InviteBanner({
 
   message: string
   message: string,;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
   onJoin?: () => void;
@@ -54,12 +52,13 @@ export default function InviteBanner(): any ({ message, onJoin, canJoin = true }
     </div>
   );
 
+
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

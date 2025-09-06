@@ -18,11 +18,8 @@ export const InstallPrompt: React.FC = () => {
     // Do not show prompt if already installed (standalone mode)
 
 
-<<<<<<< HEAD
-    if (isDismissed |hasShown |window.matchMedia('(display-mode: standalone)').matches) {
-      return
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
       return;
 

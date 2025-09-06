@@ -1,23 +1,6 @@
-<<<<<<< HEAD
 
 
-  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
-  name: string;
-  score: number; // 0-1 match confidence
-  referenceId?: string;
-  detailsUrl?: string;
 
-
-=======
-
-
-  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
-  name: string;
-
-  score: number; // 0 - 1 match confidence;
-  reference_id?: string;
-  details_url?: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;
 
@@ -26,31 +9,23 @@ export type AmlCheckResult = {
 
 export type AmlCheckResult = {;
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checked_at: string; // ISO;
   provider: 'mock' | 'remote';
 
-<<<<<<< HEAD
-}
-export interface AmlProvider {
-};
-export interface AmlProvider {;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-};
-export interface AmlProvider {;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>;
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
 
@@ -80,13 +55,7 @@ class MockAmlProvider implements AmlProvider {
 
 
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 // Singleton instance
 export const amlManager = new AmlManager();
 // Utility functions
@@ -142,6 +111,8 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ();
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

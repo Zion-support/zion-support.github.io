@@ -10,18 +10,8 @@ interface SeverityIndicatorProps {
   showIcon?: boolean,
   showText?: boolean,
   size?: "sm" | "md" | "lg",
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   className?: string
 }
 
@@ -31,14 +21,8 @@ export function SeverityIndicator({
   showText = true, 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           "text-green-500"
         )} />;
 ;
@@ -66,14 +50,8 @@ export function SeverityIndicator ({
     <div className={cn("flex items-center gap-1", className)}>
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>

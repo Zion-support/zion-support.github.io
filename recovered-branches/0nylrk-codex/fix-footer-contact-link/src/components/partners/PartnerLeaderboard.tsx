@@ -1,17 +1,6 @@
 
-<<<<<<< HEAD
 
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge";
-import { Crown, Medal, Trophy } from "lucide-react";
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Badge } from '@/components / ui / badge';
-import { Crown, Medal, Trophy } from './lucide-react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface LeaderboardEntry {
 
@@ -26,7 +15,10 @@ import { Crown, Medal, Trophy } from "lucide-react",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
 interface LeaderboardEntry {
@@ -47,34 +39,24 @@ export function PartnerLeaderboard() {
       rank: 1
       name: "AI Tech Guru"
       avatar: "", // URL would be here
-<<<<<<< HEAD
-
-      referrals: 178
-      earnings: 4500
 
 
-      badges: ["gold", "trending"]
-    }
-    },
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       referrals: 178,
       earnings: 4500,
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
     {
 
       id: "2"
@@ -114,37 +96,8 @@ export function PartnerLeaderboard() {
 
 
 
-<<<<<<< HEAD
-      badges: ["newcomer"]
-
-    }
-  ];
-  // Function to render rank badge
 
 
-  return (
-    <div className="space-y-6">
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Crown className="h-5 w-5 text-yellow-500" />
-            Top Partners
-          </CardTitle>
-          <CardDescription>This month's top-performing partners</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {leaderboard.length > 0 ? (
-              leaderboard.map(entry => (
-                <div
-                  key={entry.id}
-                  className={`flex items-center justify-between p-3 rounded-md ${
-                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
-                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 interface LeaderboardEntry {;
@@ -299,26 +252,17 @@ function PartnerLeaderboard() {
           <CardDescription > This month's top - performing partners</CardDescription>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-
-          <div className="space-y-4">;
-            {leaderboard.length > 0 ? (;
-              leaderboard.map(entry => (;
-                <div;
-                  key={entry.id} ;
-                  className={`flex items-center justify-between p-3 rounded-md ${;
-                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :;
-                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
           <div className="space - y-4">;
             {leaderboard.length > 0 ? (
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -407,12 +351,11 @@ function PartnerLeaderboard() {
                         </Badge>;
                       )}
 
-<<<<<<< HEAD
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
                     </div>;
                   </div>;
                 </div>;
@@ -429,7 +372,9 @@ function PartnerLeaderboard() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             )}
           </div>
         </CardContent>

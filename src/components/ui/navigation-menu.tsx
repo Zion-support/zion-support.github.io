@@ -3,11 +3,9 @@ import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
 import { cva } from "class-variance-authority"
 import { ChevronDown } from 'lucide-react'
 
-<<<<<<< HEAD
+
 import { cn } from "@/lib/utils"
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -38,21 +36,9 @@ const NavigationMenu = React && React.forwardRef<;
     {...props}
   >
     {children}
-<<<<<<< HEAD
-=======
 
-    <NavigationMenuViewport />;
-  </NavigationMenuPrimitive && NavigationMenuPrimitive.Root>;
-));
-NavigationMenu && NavigationMenu.displayName = NavigationMenuPrimitive && NavigationMenuPrimitive.Root.displayName;
 
-const NavigationMenuList = React && React.forwardRef<;
-  React && React.ElementRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.List>,;
-  React && React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitiv</typeof>e && e.List>;
->(({ className, ...props }, ref) => (;
-  <NavigationMenuPrimitive&& NavigationMenuPrimitive.List
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     ref={ref}
     className={cn(
       'group flex flex-1 list-none items-center justify-center space-x-1'
@@ -75,23 +61,20 @@ const NavigationMenuList = React.forwardRef<;
       className
     )}
     {...props}
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 
-<<<<<<< HEAD
-=======
+
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const navigationMenuTriggerStyle = cva(
   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
 )
@@ -122,21 +105,23 @@ const NavigationMenuTrigger = React && React.forwardRef<;
   >
     {children}{" "}
     <ChevronDown
+
       className='relative top-[1px] ml-1 h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180 pointer-events-none'
       aria-hidden='true'
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const NavigationMenuContent = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
@@ -159,22 +144,20 @@ const NavigationMenuContent = React && React.forwardRef<;
       className
     )}
     {...props}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
 
 const NavigationMenuLink = NavigationMenuPrimitive.Link
 
-<<<<<<< HEAD
-=======
+
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
@@ -218,12 +201,12 @@ const NavigationMenuIndicator = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator>;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.Indicator;
-<<<<<<< HEAD
-=======
+
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     ref={ref}
     className={cn(
       "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
@@ -279,13 +262,13 @@ NavigationMenuIndicator && NavigationMenuIndicator.displayName =;
 
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 export {
   navigationMenuTriggerStyle,
   NavigationMenu,

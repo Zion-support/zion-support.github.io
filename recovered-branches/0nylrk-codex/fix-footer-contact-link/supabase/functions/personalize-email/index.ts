@@ -1,31 +1,19 @@
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 
 
-<<<<<<< HEAD
-=======
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
@@ -171,27 +159,13 @@ serve(async (req) => {
       }
     }
 
+
     // Apply the generated content to the template or return it directly
     return new Response(JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
   } catch (error) {
-<<<<<<< HEAD
-    console.error("Error in personalize-email function:", error),
-    return new Response(JSON.stringify({ error: error.message }), {
-      status: 500
-      headers: { ...corsHeaders, "Content-Type": "application/json" }})
 
 
-=======
-    console.error ("Error in personalize - email function:", error);
-    return new Response (JSON.stringify ({ error: error.message }), {
-      status: 500,
-      headers: { ...cors_headers, "Content - Type": "application / json" }});
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
@@ -293,14 +267,16 @@ serve(async (req) => {;
       headers: { ...corsHeaders, "Content-Type": "application/json" }});
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 });

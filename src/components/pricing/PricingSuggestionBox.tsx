@@ -52,12 +52,15 @@ interface PricingSuggestionBoxProps {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion;
   isLoading;
@@ -78,10 +81,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   isLoading,
   onApplySuggestion,
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     return (
       <Card className="border border-dashed border-muted">
         <CardContent className="flex items-center justify-center p-6">
@@ -301,11 +303,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         </p>
       </CardContent>
     </Card>
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   )
 
 
@@ -314,75 +315,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 "  );
 };
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-},
-;
-  const confidenceColor = {;
-    High: "bg-green-100 text-green-800",;
-    Medium: "bg-yellow-100 text-yellow-800",;
-    Low: "bg-red-100 text-red-800"}[suggestion.confidence];
-  return (;
-    <Card className="border-2 border-dashed border-muted-foreground/20">;
-      <CardContent className="p-5 space-y-4">;
-        <div className="flex items-center justify-between">;
-          <h4 className="font-semibold">AI Suggested Price</h4>;
-          <Badge variant="outline" className={confidenceColor}>;
-            {suggestion.confidence} confidence;
-          </Badge>;
-        </div>;
-        <div className="bg-muted/50 rounded-md p-3 text-center">;
-          <span className="text-2xl font-bold">;
-            ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
-          </span>;
-          <span className="text-sm text-muted-foreground ml-1">;
-            {rateType === "hourly" ? "/hour" : " total"}
-          </span>;
-        </div>;
-        <div className="flex items-start space-x-2 text-sm text-muted-foreground">;
-          <Info className="h-4 w-4 flex-shrink-0 mt-1" />;
-          <p>{suggestion.explanation}</p>;
-        </div>;
-        <div className="flex items-center justify-between">;
-          <TooltipProvider>;
-            <Tooltip>;
-              <TooltipTrigger asChild>;
-                <Button;
-                  variant="default";
-                  onClick={onApplySuggestion}
-
-                  className="w-full";
-                >;
-                  <ThumbsUp className="h-4 w-4 mr-2" /> Apply Suggestion;
-                </Button>;
-              </TooltipTrigger>;
-              <TooltipContent>;
-                <p>Apply this suggestion to your pricing field</p>;
-              </TooltipContent>;
-            </Tooltip>;
-          </TooltipProvider>;
-        </div>;
-        <p className="text-xs text-center text-muted-foreground pt-2">;
-          Based on market data & trends. You can adjust as needed.;
-        </p>;
-      </CardContent>;
-    </Card>;
-  );
-};
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

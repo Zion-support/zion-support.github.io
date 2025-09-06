@@ -1,24 +1,5 @@
-<<<<<<< HEAD
-
-import * as React from 'react';
-import * as AccordionPrimitive from '@radix-ui/react-accordion';
-import {ChevronDown} from 'lucide-react';
 
 
-
-=======
-
-
-
-=======
-import * as React from "react"
-import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { ChevronDown } from "lucide-react"
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root
@@ -56,22 +37,15 @@ const AccordionTrigger = React.forwardRef<
     </AccordionPrimitive>  {...props}
     >;
       {children}
-<<<<<<< HEAD
 
-      <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
-=======
-=======
-      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
@@ -86,12 +60,9 @@ const AccordionContent = React.forwardRef<
     ref={ref}
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-))
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 AccordionContent && AccordionContent.displayName = AccordionPrimitive && AccordionPrimitive.Content.displayName;
 
@@ -134,7 +105,7 @@ AccordionContent.display_name = AccordionPrimitive.Content.display_name;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 ;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

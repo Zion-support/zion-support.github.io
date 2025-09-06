@@ -1,9 +1,9 @@
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
 
@@ -79,6 +79,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       room: String(roomName),
       canPublish: audioOnly ? false : true,
 
+
       canPublishData: true,
       canSubscribe: true
     });
@@ -90,6 +91,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       url: LIVEKIT_HOST
     });
   } catch (err: any) {
+
 
 ;
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || "";
@@ -127,6 +129,7 @@ if ( {) {
       name: name ? String (name) : String (identity),
       ttl: 60 * 60, // 1 hour;
 
+
     }),;
     at.addGrant({;
       roomJoin: true,;
@@ -143,6 +146,7 @@ if ( {) {
     console.error('Token error', err);
     return res.status(500).json({ error: 'Failed to create token' });
   }
+
 
     });
 
@@ -174,6 +178,8 @@ if ( {) {
 
 
 
+
+
     const token = await at && at.toJwt();
 
     return res && res.status(200).json({
@@ -182,8 +188,13 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
 
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -192,20 +203,13 @@ if ( {) {
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  }
 
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
     console.error ("Token error", err);
     return res.status (500).json ({ error: "Failed to create token" });
 
-=======
+
   if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method not allowed" });
@@ -242,50 +246,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Token error", err);
     return res.status(500).json({ error: "Failed to create token" });
 
-<<<<<<< HEAD
-=======
-    at.addGrant({
-      roomJoin: true,
-      room: String(roomName),
-      canPublish: audioOnly ? false : true,
-      canPublishData: true,
-      canSubscribe: true
-    });
-
-    const token = await at.toJwt();
-
-    return res.status(200).json({
-      token,
-      url: LIVEKIT_HOST
-    });
-  } catch (err: any) {
-<<<<<<< HEAD
-=======
-    console.error("Token error", err);
-    return res.status(500).json({ error: "Failed to create token" });
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { AccessToken } from 'livekit-server-sdk';
-const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
-const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '';
-const LIVEKIT_HOST = process.env.LIVEKIT_HOST || '';
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  }
-}
 
   } catch (error) {
     console.error("Error:", error);
@@ -295,4 +255,6 @@ export default async function handler(req, res) {
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

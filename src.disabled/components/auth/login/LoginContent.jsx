@@ -13,14 +13,8 @@ export default function LoginContent({ }: LoginContentProps) {
   );
 
 
-<<<<<<< HEAD
 
-:src.disabled/components/auth/login/LoginContent.jsx
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
@@ -30,5 +24,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

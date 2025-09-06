@@ -115,21 +115,16 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
         />
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       ) : (
         <User className="h-4 w-4" />
       )}
     </AvatarPrimitive>
   )
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 // Sub - component for avatar to handle its own error state;
 const ApplicationAvatar = ({ application }: { application: JobApplication }, ) =>: any {
   const [avatar_error, setAvatarError] = useState (false),
@@ -270,7 +265,10 @@ export function ApplicationsTable({
 
 
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
   applications,
   processingId,
   onViewApplication,
@@ -283,6 +281,7 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
+
 
 
   const [hireModalOpen, setHireModalOpen] = useState(false)
@@ -301,6 +300,7 @@ export function ApplicationsTable({
 
 
 
+
 },
 
 export function ApplicationsTable({ 
@@ -314,11 +314,14 @@ export function ApplicationsTable({
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
@@ -337,10 +340,8 @@ export function ApplicationsTable({
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <>
       <div className="rounded-md border">
@@ -359,119 +360,8 @@ export function ApplicationsTable({
             {applications.map((application) => (
               <TableRow key={application.id}>
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                <TableCell>
-                  <div className="flex items-center gap-3">
-                    <ApplicationAvatar application={application} /> {/* Use sub-component */}
-                    <div>
-                      <div className='font-medium'>
-                        {application.talent_profile?.full_name |'Candidate'}
-                      </div>
-                      <div className='text-xs text-muted-foreground mt-0.5'>
-                        {application.talent_profile?.professional_title |
-                          'Applicant'}
-                      <div className="font-medium">
-                        {application.talent_profile?.full_name || "Candidate"}
-                      </div>
-                      <div className="text-xs text-muted-foreground mt-0.5">
-                        {application.talent_profile?.professional_title || "Applicant"}
-                      </div>
-                    </div>
-                  </div>
-                </TableCell>
-                <TableCell className="hidden md:table-cell">
-                  {format(new Date(application.created_at), "PP")}
-                </TableCell>
-                <TableCell className="hidden md:table-cell">
-                  <StatusBadge status={application.status} />
-                </TableCell>
-                <TableCell className='hidden lg:table-cell'>
-                  {application.match_score !== undefined &&
-                  application.match_score !== null ? (
-                    <ClickableBadge
-                      variant='outline'
-                      className='cursor-pointer'
-                      onClick={() => onViewScore(application)}                    >
-                <TableCell className="hidden lg:table-cell">
-                  {application.match_score !== undefined && application.match_score !== null ? (
-                    <ClickableBadge 
-                      variant="outline"
-                      className="cursor-pointer"
-                      onClick={() => onViewScore(application)}
-                    >
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                      {application.match_score}%
-                    </ClickableBadge>
-                  ) : (
-                    <span className="text-muted-foreground text-sm">Not scored</span>
-                  )}
-                </TableCell>
-<<<<<<< HEAD
-
-
-                <TableCell className='text-right'>
-                  <div className='flex items-center justify-end gap-2'>
-                    <ClickableBadge
-                      variant='outline'
-                      className='cursor-pointer bg-green-50 hover:bg-green-100 text-green-700'
-                      onClick={() => handleHireClick(application)}                    >
-                      <Briefcase className='h-3 w-3 mr-1' /> Hire
-                    </ClickableBadge>
-                    <ApplicationActions
-                      application = {application,}
-                      processingId = {processingId,}
-                      onViewApplication = {onViewApplication,}
-                      onStatusChange = {onStatusChange,}
-                    />
-                  </div>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </div>
-      <HireConfirmationModal
-        isOpen = {hireModalOpen,}
-        onClose = {() => setHireModalOpen(false),}
-        application = {selectedApplication |undefined,}
-        onConfirm = {handleHireConfirmed,}
-      />
-    </>
-  )
-  /* Using Renamed AvatarPrimitive */
-}{
-  application.talent profile?.profile picture url && !avatarError ? (<Image src= {
-  application.talent profile.profile picture url
-}alt= {
-  talentName
-}width= {
-  32
-}//for h-8 w-8 height= {
-  32 "
-}//for h-8 w-8 className="rounded-full object-cover" onError= {
-  () => setAvatarError (true)
-}priority= {
-  false "
-}h-4 w-4"/>)
-}</AvatarPrimitive>)
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }h-4 w-4"/>) ;
 }</AvatarPrimitive>) ;

@@ -2,134 +2,9 @@ import React, { useState } from 'react',
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-
-import {
-  Star
-  Zap
-  Shield
-  Users
-  Globe
-  ArrowRight
-  ExternalLink
-  TrendingUp
-  Clock
-  Target
-  Building
-  Rocket
-  Award
-  DollarSign
-  ChartBar
-  Lock
-  Cpu
-  Database
-  Cloud
-  Smartphone
-  Palette
-  Search
-  MessageSquare
-  FileText
-  Calendar
-  CreditCard
-  BarChart3
-  Settings
-  Code
-  BookOpen
-  Activity
-  Play
-  Mail
-  Phone
-  MapPin
-  Filter
-  Grid
-  List
-  ChevronDown
-  ChevronUp
-  Sparkles
-  FlaskConical
-  Dna
-  Car
-  Leaf
-  Factory
-  Truck
-  Microscope
-  GraduationCap
-  ShieldCheck
-  Brain
-  Atom
-  Globe2
-  Bot
-  ChevronRight
-  Crown
-  Infinity
-  Check
-  X
-  AlertTriangle
-  Info
-  Zap as ZapIcon
-  Shield as ShieldIcon
-  Users as UsersIcon
-  Globe as GlobeIcon
-  Cpu as CpuIcon
-  Database as DatabaseIcon
-  Cloud as CloudIcon
-  Smartphone as SmartphoneIcon
-  Palette as PaletteIcon
-  Search as SearchIcon
-  MessageSquare as MessageSquareIcon
-  FileText as FileTextIcon
-  Calendar as CalendarIcon
-  CreditCard as CreditCardIcon
-  BarChart3 as BarChart3Icon
-  Settings as SettingsIcon
-  Code as CodeIcon
-  BookOpen as BookIcon
-  Activity as ActivityIcon
-  Database as DatabaseIcon2
-  Play as PlayIcon
-  Mail as MailIcon
-  Phone as PhoneIcon
-  MapPin as MapPinIcon
-  Filter as FilterIcon
-  Grid as GridIcon
-  List as ListIcon
-  ChevronDown as ChevronDownIcon
-  ChevronUp as ChevronUpIcon
-  Sparkles as SparklesIcon
-  FlaskConical as FlaskConicalIcon
-  Dna as DnaIcon
-  Car as CarIcon
-  Leaf as LeafIcon
-  Factory as FactoryIcon
-  Truck as TruckIcon
-  Microscope as MicroscopeIcon
-  GraduationCap as GraduationCapIcon
-  ShieldCheck as ShieldCheckIcon
-  Brain as BrainIcon
-  Atom as AtomIcon
-  Globe2 as Globe2Icon
-  Bot as BotIcon
-  ChevronRight as ChevronRightIcon
-  Eye
-  Heart
-  Share2
-  Download
-  Bookmark
-  ThumbsUp
-  MessageCircle
-  Share
-  Users as UsersIcon2
-  Target as TargetIcon
-  Zap as ZapIcon2;
-
-=======
 
 
-} from 'lucide-react';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Star,
   Zap,
   Shield,
@@ -245,10 +120,12 @@ import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolo
   Share,
   Users as UsersIcon2,
 
+
   Target as TargetIcon,;
   Zap as ZapIcon2,;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components / ui / UltraQuantumHolographicBackground';
 import UltraAdvancedNavigation from '../components / layout / UltraAdvancedNavigation';
@@ -302,11 +179,9 @@ function Revolutionary2025Pricing() {
       count: revolutionary2025MicroSaasServices.length
     }
   ];
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 export default function Revolutionary2025Pricing() {;
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(;
@@ -365,9 +240,10 @@ export default function Revolutionary2025Pricing() {;
           if (selectedCategory === 'saas');
             return (
 
+
     return basePrice;  }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
 
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
@@ -410,45 +286,20 @@ export default function Revolutionary2025Pricing() {
         if (selectedCategory === 'saas') return service.category.includes('AI') || service.category.includes('Virtual') || service.category.includes('Creative');
         return true
       });
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   // Calculate pricing with billing cycle
   const getPrice = (service: any) => {
     const basePrice = parseInt(service.price.replace('$', '').replace(, ''));
     if (billingCycle === 'yearly') {
       return Math.floor(basePrice * 0.8), // 20% discount for yearly
     }
-<<<<<<< HEAD
-    return basePrice
 
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-<<<<<<< HEAD
-    return basePrice
-};
-=======
-<<<<<<< HEAD
-    return basePrice;  }
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-=======
-    return basePrice;  };
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   // Pricing tiers for comparison
   const pricingTiers = [
     {
@@ -530,48 +381,12 @@ import { motion } from 'framer-motion';
     timeToValue: '< 30 days'
     globalReach: '150+ countries',  }
 
-<<<<<<< HEAD
-=======
+
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <div className="min-h-screen">
         <Head>
-<<<<<<< HEAD
-          <title>
-            Revolutionary 2025 Pricing - Zion Tech Group | Competitive AI & IT
-            Solutions
-          </title>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-          <meta
-            name='description'
-            content="Explore competitive pricing for Zion Tech Group's revolutionary 2025 services. AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950"
-          />;
-          <meta
-            name='keywords'
-            content='AI pricing, quantum computing pricing, zero trust security pricing, edge computing pricing, 5G pricing, neuromorphic computing pricing, AI branding pricing, holographic events pricing'
-          />;
-          <meta name='author' content='Zion Tech Group' />;
-          <meta name='robots' content='index, follow' />;
-          <meta
-            property='og:title'
-            content='Revolutionary 2025 Pricing - Zion Tech Group'
-          />;
-          <meta
-            property='og:description'
-            content='Competitive pricing for cutting-edge AI, quantum computing, and IT infrastructure services. Contact: +1 302 464 0950'
-          />;
-          <meta
-            property='og:url'
-            content='https://ziontechgroup && ziontechgroup.com/revolutionary-2025-pricing'
-          />;
-          <meta property='og:type' content='website' />;
-          <link
-            rel='canonical'
 
-            href='https://ziontechgroup && ziontechgroup.com/revolutionary-2025-pricing'
-          />        </Head>;
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         'Access to 25+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
       ];
       icon: <Sparkles className="w-8 h-8" />,
@@ -677,7 +492,6 @@ import { motion } from 'framer-motion';
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2025-pricing" />
         </Head>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
         <UltraAdvancedNavigation />
 
@@ -707,14 +521,15 @@ import { motion } from 'framer-motion';
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 Revolutionary 2025 Pricing
@@ -770,14 +585,15 @@ import { motion } from 'framer-motion';
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   />
                 </button>
                 <span className="text-gray-400">Yearly (Save 20%)</span>
@@ -792,10 +608,13 @@ import { motion } from 'framer-motion';
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -856,42 +675,11 @@ import { motion } from 'framer-motion';
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 
-<<<<<<< HEAD
-              className='text-center mb-16'
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-        {/* Pricing Tiers */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }} className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 Choose Your Transformation Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -907,57 +695,16 @@ import { motion } from 'framer-motion';
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   viewport={{ once: true }}
                   className={`relative ${
-<<<<<<< HEAD
+
                     tier.popular
                       ? 'scale-105 border-2 border-blue-500'                      : 'border border-gray-700'
                   } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
 
-                <motion.div
-                  key={tier.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.6, delay: index * 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className={`relative ${;
-                    tier.popular;
-                      ? 'scale-105 border-2 border-blue-500';
-                      : 'border border-gray-700';
-                  } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1033,18 +780,14 @@ import { motion } from 'framer-motion';
 }
                   </div>
                   <ul className="space-y-4 mb-8">
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
@@ -1132,13 +875,11 @@ import { motion } from 'framer-motion';
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 Individual Service Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1162,6 +903,7 @@ import { motion } from 'framer-motion';
                   viewport={{ once: true }}
                   className='group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105'>;
                   {/* Service Header */}
+
 
                   <div className='flex items-start justify-between mb-4'>
                     <div className='flex items-center gap-3'>
@@ -1253,8 +995,11 @@ import { motion } from 'framer-motion';
                       <div className="text-3xl">{service.icon}</div>
 
 
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                           {service.name}
@@ -1304,14 +1049,15 @@ import { motion } from 'framer-motion';
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       </span>
                       <span className="text-gray-400">{service.period}</span>
                     </div>
@@ -1362,14 +1108,15 @@ import { motion } from 'framer-motion';
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       {service.features.length > 3 && (
                         <div className="text-xs text-gray-500 mt-1">
                           +{service.features.length - 3} more features
@@ -1409,10 +1156,7 @@ import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
                   {/* Market Position */}
                   <div className='mb-4 p-3 bg-gray-800/50 rounded-lg'>;
                     <h4 className='text-xs font-semibold text-gray-300 mb-1'>;
@@ -1425,58 +1169,12 @@ import { motion } from 'framer-motion';
 
                   {/* Actions */}
 
-=======
-                  <div className="flex items-center gap-3">
-                    <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                      <ExternalLink className="w-4 h-4 mr-2" />
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                      Learn More
-                    </button>
-                    <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
-                      <Phone className="w-4 h-4" />
-                    </button>
-                  </div>
-                  {/* Hover Effects */}
-                  <div className='absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Contact Section */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-                  {/* Hover Effects */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                </motion.div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-            </div>;
-          </div>;
-        </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1499,8 +1197,10 @@ import { motion } from 'framer-motion';
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             >
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1565,15 +1265,17 @@ import { motion } from 'framer-motion';
                   <Phone className="w-5 h-5 mr-2" />
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   Get Custom Quote
                 </button>
                 <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
@@ -1587,133 +1289,18 @@ import { motion } from 'framer-motion';
         </section>
       </div>
     </UltraQuantumHolographicBackground>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
 
-  )
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-
-                Ready to Get Started?;
-              </h2>;
-              <p className='text-xl text-gray-300 mb-8'>;
-
-                Contact our team to discuss your specific needs and get a custom;
-                quote. We offer flexible pricing and payment options to fit your;
-                budget.;
-              </p>;
 
 
-<<<<<<< HEAD
-=======
-=======
-  )
-}
-              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8'>;
-                <div className='bg - gradient - to - br from - blue - 600 / 20 to - purple - 600 / 20 backdrop - blur - sm rounded - 2xl p - 6 border border - blue - 500 / 30'>;
-                  <Phone className='w - 8 h - 8 text - blue - 400 mx - auto mb - 3' />;
-                  <h3 className='text - lg font - semibold text - white mb - 2'>;
-                    Call Us;
-                  </h3>;
-                  <p className='text - blue - 400 font - mono'>;
-                    {contact_info.mobile}
-                  </p>;
-                </div>;
-                <div className='bg - gradient - to - br from - green - 600 / 20 to - emerald - 600 / 20 backdrop - blur - sm rounded - 2xl p - 6 border border - green - 500 / 30'>;
-                  <Mail className='w - 8 h - 8 text - green - 400 mx - auto mb - 3' />;
-                  <h3 className='text - lg font - semibold text - white mb - 2'>;
-                    Email Us;
-                  </h3>;
-                  <p className='text - green - 400'>{contact_info.email}</p>;
-                </div>;
-                <div className='bg - gradient - to - br from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - sm rounded - 2xl p - 6 border border - purple - 500 / 30'>;
-                  <MapPin className='w - 8 h - 8 text - purple - 400 mx - auto mb - 3' />;
-                  <h3 className='text - lg font - semibold text - white mb - 2'>;
-                    Visit Us;
-                  </h3>;
-                  <p className='text - purple - 400 text - sm'>;
-                    {contact_info.address}
-                  </p>;
-                </div>;
-              </div>;
-              <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-                <button className='bg - gradient - to - r from - blue - 600 to - purple - 600 hover:from - blue - 700 hover:to - purple - 700'>;
-                  <Phone className='w - 5 h - 5 mr - 2' />;
-                  Get Custom Quote;
-                </button>;
-                <button className='border - blue - 500 text - blue - 400 hover:bg - blue - 500 / 20'>;
-                  <BookOpen className='w - 5 h - 5 mr - 2' />                  Download Pricing Guide;
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-  )
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-                Ready to Get Started?;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Contact our team to discuss your specific needs and get a custom quote.;
-                We offer flexible pricing and payment options to fit your budget.;
-              </p>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
-                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30">;
-                  <Phone className="w-8 h-8 text-blue-400 mx-auto mb-3" />;
-                  <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>;
-                  <p className="text-blue-400 font-mono">{contactInfo.mobile}</p>;
-                </div>;
-                <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30">;
-                  <Mail className="w-8 h-8 text-green-400 mx-auto mb-3" />;
-                  <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>;
-                  <p className="text-green-400">{contactInfo.email}</p>;
-                </div>;
-                <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30">;
-                  <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-3" />;
-                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>;
-                  <p className="text-purple-400 text-sm">{contactInfo.address}</p>;
-                </div>;
-              </div>;
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">;
-                  <Phone className="w-5 h-5 mr-2" />;
-                  Get Custom Quote;
-                </button>;
-                <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">;
-                  <BookOpen className="w-5 h-5 mr-2" />;
-                  Download Pricing Guide;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                </button>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-
-    </UltraQuantumHolographicBackground>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

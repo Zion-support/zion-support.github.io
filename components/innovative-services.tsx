@@ -1,8 +1,7 @@
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,53 +26,13 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Head from 'next/head';
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
 
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
-import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
-import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
-import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 
 
-} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-
-
-
-export default function InnovativeServicesPage() {;
-<<<<<<< HEAD
-
-=======
-=======
-import {
-<<<<<<< HEAD
-  innovativeMicroSaasServices
-  getInnovativeServicesByCategory
-  getPopularInnovativeServices
-  getInnovativeServicesByPriceRange
-  getInnovativeServiceCategories;
-} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-
-export default function InnovativeServicesPage() {
-=======
-  innovativeMicroSaasServices,
-  getInnovativeServicesByCategory,
-  getPopularInnovativeServices,
-  getInnovativeServicesByPriceRange,;
-  getInnovativeServiceCategories,;
-} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-export default function InnovativeServicesPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -179,7 +138,9 @@ export default function InnovativeServicesPage() {;
   ShieldCheck as ShieldCheckIcon,;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -189,6 +150,7 @@ import QuantumHolographicBackground from '../components/ui/QuantumHolographicBac
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import {
 
+
   innovativeMicroSaasServices
   getInnovativeServicesByCategory
   getPopularInnovativeServices
@@ -196,12 +158,9 @@ import {
   getInnovativeServiceCategories;
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
-<<<<<<< HEAD
-export default function InnovativeServicesPage() {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -340,7 +299,6 @@ if ( {) {
 
           // Innovation level sorting
           const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           const aLevel = a.innovationLevel.split(' - ')[0];
           const bLevel = b.innovationLevel.split(' - ')[0];
           return (innovationOrder[aLevel as keyof typeof innovationOrder] |0) - (innovationOrder[bLevel as keyof typeof innovationOrder] |0)
@@ -414,36 +372,14 @@ if ( {) {
           </section>;
 
 
-                  <div className="flex-1">
-                    <div className="relative">
-                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                      <input
-                        type="text"
-                        placeholder="Search innovative services..."
-                        value={searchQuery}
 
 
-                  {/* Category Filter */}
-
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-                      {categories.map(category => (                        <option key={category.name} value={category.name}>
-
-                        <option key={category.name} value={category.name}>
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                           {category.name} ({category.count})
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
                     </select>
                   </div>
@@ -453,8 +389,8 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                     <select
                       value={priceRange}
@@ -479,13 +415,13 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                           {range.label}
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
                     </select>
                   </div>
@@ -495,8 +431,8 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                     <select
                       value={sortBy}
@@ -521,13 +457,13 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                           {option.value}
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
                     </select>
                   </div>
@@ -537,26 +473,11 @@ if ( {) {
                   {/* View Mode Toggle */}
                   <div className="flex-shrink-0">
                     <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
-<<<<<<< HEAD
-=======
-=======
-                    </select>
-                  </div>
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-<<<<<<< HEAD
-=======
-
-                  {/* View Mode Toggle */}
-                  <div className='flex-shrink-0'>
-                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${;
@@ -582,23 +503,20 @@ if ( {) {
                         <List className="w-5 h-5" />
 
 
-<<<<<<< HEAD
-                      </button>
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
+
 
 >;
                         <List className="w-5 h-5" />;
@@ -731,17 +649,18 @@ if ( {) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
+
                             </div>
                           )}
                         </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
@@ -749,15 +668,16 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
@@ -838,15 +758,15 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -861,7 +781,6 @@ if ( {) {
                         </div>
                         {/* CTA Buttons */}
                         <div className='flex space-x-3'>                          <div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             <div className="text-gray-400">Market Size</div>
                             <div className="text-white font-medium">{service.marketSize}</div>
                           </div>
@@ -920,6 +839,16 @@ if ( {) {
                     </QuantumHolographicCard>;
 
 
+
+                        {/* Contact Info */}
+                        <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">
+                          <div>Contact: {contactInfo.mobile} | {contactInfo.email}</div>
+                          <div className="mt-1">{contactInfo.website}</div>
+                        </div>
+                      </div>
+                    </QuantumHolographicCard>
+
+
                   ))}
 </div>;
               )}
@@ -928,7 +857,10 @@ if ( {) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='max-w-4xl mx-auto text-center'>
@@ -937,7 +869,10 @@ if ( {) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   Ready to Lead the Future?
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -946,32 +881,8 @@ if ( {) {
                   and cutting-edge technology.
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-<<<<<<< HEAD
-=======
-=======
-            </div>;
-          </section>;
-          {/* Call to Action */}
-          <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
-            <div className='max-w-4xl mx-auto text-center'>;
-              <EnhancedFuturisticCard className='p-12'>;
-                <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-                  Ready to Lead the Future?;
-                </h2>;
-                <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
-                  Join the revolution with our breakthrough micro SAAS services.;
-                  Transform your business with quantum AI, autonomous systems,;
-                  and cutting-edge technology.;
-                </p>;
-                <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-                  <Button
-                    href={`tel:${contactInfo && contactInfo.mobile}`}
-=======
-            </div>
-          </section>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='max-w-4xl mx-auto text-center'>
@@ -980,7 +891,9 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                   Ready to Lead the Future?
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -991,7 +904,6 @@ if ( {) {
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <Button
                     href={`tel:${contactInfo.mobile}`}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     variant='primary'
                     className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'>;
                     <Phone className='w-5 h-5 mr-2' />                    Call Now: {contactInfo && contactInfo.mobile}
@@ -1050,15 +962,17 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -1068,39 +982,19 @@ if ( {) {
     </>
 
 
-<<<<<<< HEAD
-=======
-                </div>;
-              </EnhancedFuturisticCard>;
-            </div>;
-          </section>;
-        </div>;
-      </QuantumHolographicBackground>;
 
-  );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 }
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    </>);
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

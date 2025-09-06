@@ -1,12 +1,9 @@
 public_url;
 }= supabase.storage.from ('resumes') .getPublicUrl (file_name);
 return public_url;
-<<<<<<< HEAD
 
 
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import {
   Form
   FormControl
@@ -57,6 +54,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Separator } from "@/components/ui/separator"
 import { toast } from "@/components/ui/use-toast"
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from 'lucide-react'
+
 
 // Define the form schema with validation
 
@@ -119,10 +117,12 @@ import { useAuth } from "@/hooks/useAuth",
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
+
 
 
         fullName: user?.displayName |''
@@ -172,6 +172,7 @@ import { useAuth } from "@/hooks/useAuth",
     if (!file) return
 
 
+
         availabilityType: "",
         timezone: "",
         hourlyRate: "",
@@ -196,15 +197,18 @@ import { useAuth } from "@/hooks/useAuth",
     
 
 
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
+
 
 
     }
@@ -245,8 +249,8 @@ const form = useForm<TalentFormValues> ({
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 }
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'}

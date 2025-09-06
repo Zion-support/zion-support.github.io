@@ -12,18 +12,8 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface QuotesFilterProps {
   searchQuery: string;
   setSearchQuery: (value: string) => void;
@@ -333,17 +323,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             <RefreshCw className='mr - 2 h - 4 w - 4' /> Reset Filters          </Button>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD
 
 
-    </Card>;
-  );
-};  )
-
-
-=======
-    </Card>);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
             <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
             on_click={on_reset}

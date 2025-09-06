@@ -1,25 +1,8 @@
 
-<<<<<<< HEAD
-
-
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Leaf, Server, Cloud } from "lucide-react",
-import { Link } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-import { Link } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function GreenIT() {
 
   const greenITSolutions = [
@@ -139,17 +122,9 @@ export default function GreenIT() {
       </main>
     </AppLayout>
   )
-<<<<<<< HEAD
 
 
 
-=======
-
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -275,19 +250,16 @@ export default function GreenIT() {;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-
-    </AppLayout>;
-  );
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 ;

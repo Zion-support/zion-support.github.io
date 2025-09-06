@@ -1,25 +1,11 @@
 
 
 
-<<<<<<< HEAD
-=======
-=======
-import React, { useEffect } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import SignupForm from '@/components/auth/SignupForm',;
-import { AuthButtons } from '@/components/AuthButtons',;
-import { fireEvent } from '@/lib/analytics',;
-import { logInfo } from '@/utils/productionLogger',;
-import { useRouter } from 'next/router',;
-const RegisterPage = () => {
-  const router = useRouter(),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
+
   const handleSuccess = ({ email, emailVerificationRequired }: {
     email: string,
     emailVerificationRequired: boolean
@@ -29,10 +15,8 @@ const RegisterPage = () => {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -71,17 +55,13 @@ if ( {) {
   $2
 }
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
       router.push ('/auth / login?registration_success = true');
 
     }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   },
   return (
     <>
@@ -123,12 +103,11 @@ if ( {) {
 }
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               Create your account
@@ -143,12 +122,13 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               <Link
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
@@ -166,14 +146,15 @@ if ( {) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -211,14 +192,15 @@ if ( {) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
                 Privacy Policy
               </Link>
@@ -230,98 +212,27 @@ if ( {) {
   )
 }
 export default RegisterPage;
-<<<<<<< HEAD
 
 
-},
-
-export default RegisterPage,
-            />;
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">;
-              Create your account;
-            </h2>;
-            <p className="mt-2 text-center text-sm text-gray-600">;
-              Or{' '  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <Link;
-                href="/auth/login";
-                className="font-medium text-blue-600 hover:text-blue-500 underline";
-              >;
-                sign in if you already have an account;
-              </Link>;
-            </p>;
-          </div>;
-          <SignupForm onSuccess={handleSuccess} />;
-          {/* Social signup options */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <div className="mt-6">;
-            <div className="relative">;
-              <div className="absolute inset-0 flex items-center">;
-                <div className="w-full border-t border-gray-300" />;
-              </div>;
-              <div className="relative flex justify-center text-sm">;
-                <span className="px-2 bg-gray-50 text-gray-500">Or continue with</span>;
-              </div>;
-            </div>;
-            <AuthButtons providers={["google", "github"]} />;
-          </div>;
-          <div className="text-center mt-4">;
-            <p className="text-xs text-gray-500">;
-              By creating an account, you agree to our{' '  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <Link href="/legal/terms" className="text-blue-600 hover:text-blue-500">;
-                Terms of Service;
-              </Link>{' '  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              and{' '  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">;
-
-=======
-              <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 Privacy Policy;
               </Link>;
             </p>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
-    </>;
-  );
-},;
-export default RegisterPage;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
     </>);
 },
 export default RegisterPage,
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-},
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

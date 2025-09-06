@@ -1,121 +1,14 @@
 
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { store } from '[^']*';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req.method === "GET") {
-
-    const companies = store.listCompanies();
-    return res.status(200).json(companies);
-  }
-  if (req.method === "POST") {
-    const { name, slug, logoUrl, brandColor, plan } = req.body |{}
-    const created = store.createCompany({
-      name
-      slug
-      logoUrl
-      brandColor
-      plan
-    });
-    return res.status(201).json(created);
-
-  }
-  res.setHeader("Allow", "GET,POST");
-  return res.status(405).end("Method Not Allowed");
 
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ companies: [] });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { store } from '../../../utils/data/enterpriseStore';
-export default function handler(req, res) {
-  try {
-  if (req.method === 'GET') {
-    const { slug } = req.query;
-    if (!slug || typeof slug !== 'string') {;
-      return res.status(400).json({ error: 'slug required' });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    const company = store.getCompanyBySlug(slug);
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  if (req.method === 'GET') {
-    const { name, slug, logoUrl, brandColor, plan } = req.body || {};
-    const created = store.createCompany({ name, slug, logoUrl, brandColor, plan });
-    return res.status(201).json(created);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  return res.status(405).json({ error: 'method_not_allowed' });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-}
-    return res.status (201).json (created);
-  }
-  res.set_header ("Allow", "GET, POST");
-  return res.status (405).end ("Method Not Allowed");
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

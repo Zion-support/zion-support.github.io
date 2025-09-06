@@ -6,6 +6,8 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
 
 
 
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe;
@@ -19,7 +21,6 @@ const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const company = null;
   ];
   const resources = null;
@@ -94,6 +95,8 @@ export default function EnhancedFooter() {
   const services = [
 
 
+
+
     { name: 'AI Services', href: '/ai-services' }
     { name: 'IT Services', href: '/it-services' }
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' }
@@ -101,39 +104,15 @@ export default function EnhancedFooter() {
     { name: 'Security', href: '/security' }
     { name: 'Case Studies', href: '/case-studies' }
 
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
+    { name: 'Micro SaaS', href: '/micro-saas' },;
+    { name: 'Security', href: '/security' },;
+    { name: 'Case Studies', href: '/case-studies' },;
 
 
-
-
-  ];
-  const company = [
-    { name: 'About Us', href: '/about' }
-    { name: 'Our Team', href: '/team' }
-    { name: 'Careers', href: '/careers' }
-    { name: 'News', href: '/news' }
-    { name: 'Partners', href: '/partners' }
-  ];
-  const resources = [
-    { name: 'Blog', href: '/blog' }
-    { name: 'Documentation', href: '/docs' }
-    { name: 'Support', href: '/support' }
-    { name: 'FAQ', href: '/faq' }
-  ];
-  const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin }
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github }
-  ];
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   return (
     <footer className;
                   return (
@@ -182,10 +161,7 @@ export default function EnhancedFooter() {
             <div className="flex space-x-4">
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 const companyLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
@@ -386,66 +362,8 @@ function EnhancedFooter() {
               <div className="flex items-center space-x-2">;
                 <MapPin className="h-4 w-4 text-gray-400" />;
                 <span className="text-gray-300">New York, NY</span>;
-=======
-          <div className="space - y-4">;
-            <h3 className="text - lg font - semibold">Contact</h3>;
-            <div className="space - y-2">;
-              <div className="flex items - center space - x-2">;
-                <Mail className="h - 4 w - 4 text - gray - 400" />;
-                <span className="text - gray - 300">info@ziontechgroup.com</span>;
-              </div>;
-              <div className="flex items - center space - x-2">;
-                <Phone className="h - 4 w - 4 text - gray - 400" />;
-                <span className="text - gray - 300">+1 (555) 123 - 4567</span>;
-              </div>;
-              <div className="flex items - center space - x-2">;
-                <MapPin className="h - 4 w - 4 text - gray - 400" />;
-                <span className="text - gray - 300">New York, NY</span>;
 
-              </div>;
-            </div>;
-          </div>;
-        </div>;
 
-        <div className="border - t border - gray - 800 mt - 8 pt - 8">;
-          <div className="flex flex - col md:flex - row justify - between items - center">;
-<p className="text - gray - 400 text - sm">;
-              © {current_year} Zion Tech Group. All rights reserved.;
-            </p>;
-            <div className="flex space - x-6 mt - 4 md:mt - 0">;
-              <Link;
-                href="/privacy";
-                className="text - gray - 400 hover:text - white text - sm transition - colors";
-              >;
-                Privacy Policy;
-              </Link>;
-              <Link;
-                href="/terms";
-                className="text - gray - 400 hover:text - white text - sm transition - colors";
-              >;
 
-                Terms of Service;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-=======
-
-=======
-    </footer>);
-}
-;
-export default EnhancedFooter;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-};
-
-export default EnhancedFooter;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -1,14 +1,11 @@
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-import React,{ useState,useEffect,createContext,useContext } from \'react\'; import { motion,AnimatePresence } from \'framer-motion\'; import { Eye,EyeOff,Volume2,VolumeX,Keyboard,Accessibility,X import { Button } from \'../ui/button\'; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error(\'useAccessibility must be used within an AccessibilityProvider\'); return context}; import { Eye,EyeOff,Volume2,VolumeX,Keyboard,Accessibility,X } from \'lucide-react\'; import { Button } from \"../ui/button\"; const AccessibilityContext = createContext(null); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error(\'useAccessibility must be used within an AccessibilityProvider\')}; return context}}}
-const React,{ useState,useEffect,createContext,useContext } from "react"; import { motion,AnimatePresence } from "framer-motion"; import { Eye,EyeOff,Volume2,VolumeX,Keyboard,Accessibility,X import { Button } from "./ui/button"; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error("useAccessibility must be used within an AccessibilityProvider"); return context}; import { Eye,EyeOff,Volume2,VolumeX,Keyboard,Accessibility,X } from "lucide-react"; import { Button } from "./ui/button"; const AccessibilityContext = createContext(null); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error("useAccessibility must be used within an AccessibilityProvider")}; return context}}}'"'"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/src/components/disabled/Accessibility.jsx
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import _React,{ useState,useEffect,createContext,useContext } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { Eye,EyeOff,Volume2,VolumeX,Keyboard,Accessibility,X import { Button } from '../ui/button'; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider'); return context}; import { Eye,EyeOff,Volume2,VolumeX,Keyboard,Accessibility,X } from 'lucide-react'; import { Button } from "../ui/button"; const AccessibilityContext = createContext(null); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider')}; return context}}}

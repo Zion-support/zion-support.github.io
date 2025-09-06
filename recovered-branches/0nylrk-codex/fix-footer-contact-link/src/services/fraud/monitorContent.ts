@@ -1,23 +1,15 @@
 
-<<<<<<< HEAD
-
-// Content monitoring functionality
-import { FraudFlag, FraudSeverity  } from '@/types/fraud';
-import { analyzeContent  } from './analyzeContent';
-import { flagContent } from './flagContent';
-/**
- * Create a monitoring system helper to easily monitor any content
- */
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 export const monitorContent = async (;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -41,10 +33,8 @@ export const monitorContent = async (;
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 // Content monitoring functionality;
 import { FraudFlag, FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -72,11 +62,11 @@ export const monitorContent = async (;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     }
     
     await flagContent(
@@ -96,40 +86,20 @@ export const monitorContent = async (;
     if (severity === 'dangerous') {
       console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
-<<<<<<< HEAD
 
 
-;
-    await flagContent(;
-      userId,;
-      userEmail,;
-      contentType,;
-      contentId,;
-      content,;
-      severity,;
-      analysis.reasons.join(),;
-      undefined // IP address would be added in a real implementation;
-    ),;
-    // If this is a 'dangerous' flag, automatically hide content;
-    // This would be implemented in a real system with appropriate flags;
-    if (severity === 'dangerous') {;
-      // // // console.log('Auto-hiding dangerous content:', contentId);
-      // Code to hide content would go here;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
   }
 };
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
     }
   }
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+

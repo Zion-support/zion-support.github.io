@@ -1,31 +1,22 @@
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
-<<<<<<< HEAD
-=======
-=======
-import type { NextPage } from './next';
-import Head from './next / head';
-import { useState  } from './react';
-import EnhancedButton from "../../components / ui / EnhancedButton";
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const steps = ["Account", "Profile", "Preferences", "Preview"];
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useState } from 'react',
@@ -33,13 +24,12 @@ import EnhancedButton from '../../components/ui/EnhancedButton',
 const steps = ['AccountProfilePreferencesPreview'],
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0),
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1)),
@@ -50,22 +40,19 @@ const Onboarding: NextPage = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       </div>
 
-<<<<<<< HEAD
-=======
+
       <div className="flex items-center gap-2 text-sm flex-wrap">
         {steps.map((label, i) => (
 
       </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       <div className="flex gap-2">
         <EnhancedButton variant="secondary" onClick={prev} disabled={step === 0}>Back</EnhancedButton>
         <EnhancedButton onClick={next} disabled={step === steps.length - 1}>{step === steps.length - 1 ? 'Done' : 'Next'}</EnhancedButton>
       </div>
     </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [step, set_step] = useState (0);
 ;
@@ -110,25 +97,23 @@ const Onboarding: NextPage = () => {
       </div>;
     </div>);
 
+
+
 }
 ;
 export default Onboarding;
 
 
-<<<<<<< HEAD
-=======
-=======
-  )
-},
-export default Onboarding,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

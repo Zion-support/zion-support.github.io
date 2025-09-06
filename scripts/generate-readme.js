@@ -2,14 +2,10 @@
 
 
 
-<<<<<<< HEAD
-=======
-=======
 
-=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 #!/usr/bin/env node;
 
 
@@ -118,12 +114,8 @@ function generateReadme() {;
       // // // console.log('⚠️  README.md already exists and appears substantial. Skipping generation.'),;
       return,;
 
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 #!/usr/bin/env node
 
 /**
@@ -230,24 +222,20 @@ function generateReadme() {
       return
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
   }
 
   fs.writeFileSync(outputPath, README_TEMPLATE),
 
 
-<<<<<<< HEAD
-  // // // console.log(`✅ README generated at: ${outputPath}`)
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 #!/usr/bin/env node;
 /**;
  * Generate README;
@@ -462,12 +450,14 @@ module.exports = { generateReadme }
 module.exports = { generateReadme },;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

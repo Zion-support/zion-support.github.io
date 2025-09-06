@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
@@ -14,28 +11,10 @@ export function Web3Login() {;
   const { loginWithWeb3 } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
-<<<<<<< HEAD
-
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
-import { Wallet } from "@/components/icons";
-import { toast } from "sonner";
-import { Wallet } from "@/components/icons",
-import { toast } from "sonner",
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  const handleWeb3Login = async () => {;
-    try {;
-      setIsLoading(true);
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
@@ -106,11 +85,8 @@ export function Web3Login() {
         </>
 
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -163,16 +139,18 @@ export function Web3Login() {;
         </>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       )}
 
     </Button>;

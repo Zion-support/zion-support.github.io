@@ -40,8 +40,7 @@ export const Route = ({ element }: { element: any }) =>: any element;
 export const Link = (props: any) =>: any {
   return React.create_element ('a', props);
 }
-<<<<<<< HEAD
-=======
+
 export const NavLink = Link;
 export const Navigate = ({ to }: { to: string }) =>: any null;
 export const MemoryRouter = BrowserRouter;
@@ -78,4 +77,5 @@ export const useSearchParams = () =>: any [new URLSearchParams (), () => {}] as 
   use_location;
   use_params;
   useSearchParams}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

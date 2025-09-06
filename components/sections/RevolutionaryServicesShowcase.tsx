@@ -122,15 +122,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}
-<<<<<<< HEAD
-
-        <motion.div
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <motion&& motion.div
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
@@ -146,11 +143,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -196,16 +190,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         </motion.div>
         {/* Category Filter */}
 
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
+
             </span>;
             <br />;
             <span className="text-white">Services</span>;
@@ -217,7 +208,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         </motion && motion.div>;
         {/* Category Filter */}
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -230,7 +224,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                 setActiveCategory(category.id);
                 setVisibleServices(12)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${;
                 activeCategory === category && category.id;
@@ -247,19 +240,22 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               </span>
             </button>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
         </motion.div>
+
+
 
 
         </motion && motion.div>;
@@ -268,12 +264,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Services Grid */}
         <motion&& motion.div
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -288,139 +285,16 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               key={service && service.id}
               variants={itemVariants}
               className='group relative cursor-pointer'
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               style={{ perspective: '1000px' }}
             >
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
-<<<<<<< HEAD
-              style={{ perspective: '1000px' }}>;
-              <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
-              <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                {/* Background Effects */}
 
-                <div className='absolute inset-0 rounded-2xl overflow-hidden'>;
-                  <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>;
-                  <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>                </div>;
-
-
-                {/* Popular Badge */}
-                {service && service.popular && (;
-                  <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
-                    <Star className='w-3 h-3 inline mr-1' />                    POPULAR              style={{ perspective: '1000px' }}
-            >;
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75"></div>;
-              <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full">;
-            >
-              {category.name}
-              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
-        stagger_children: 0.1,
-      },
-    },  }        stagger_children: 0.1;
-      }
-    }
-  }
-;
-  const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 },
-    visible: {
-      opacity: 1,
-      coordinate_y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  }
-;
-  return (
-    <section className='relative z - 10 py - 20 px - 4 sm:px - 6 lg:px - 8'>;
-      <div className='max - w-7xl mx - auto'>;
-        {/* Header */}
-        <motion.div;
-          className='text - center mb - 16'          initial={{ opacity: 0, coordinate_y: 30 }}  }
-;
-  return (
-    <section className="relative z - 10 py - 20 px - 4 sm:px - 6 lg:px - 8">;
-      <div className="max - w-7xl mx - auto">;
-        {/* Header */}
-        <motion.div;
-          className="text - center mb - 16";
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >;
-          <h2 className='text - 5xl md:text - 6xl font - bold text - white mb - 6'>;
-            <span className='bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent'>;
-              Revolutionary 2025;
-            </span>;
-            <br />;
-            <span className='text - white'>Services</span>;
-          </h2>;
-          <p className='text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed'>;
-            Experience the future with our cutting - edge AI, quantum computing,
-            and emerging technology solutions. Transform your business with;
-            services that were once science fiction.          </p>;
-        </motion.div>;
-        {/* Category Filter */}
-        <motion.div;
-          className='flex flex - wrap justify - center gap - 4 mb - 12'          initial={{ opacity: 0, coordinate_y: 20 }}              Revolutionary 2025;
-            </span>;
-            <br />;
-            <span className="text - white">Services</span>;
-          </h2>;
-          <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed">;
-            Experience the future with our cutting - edge AI, quantum computing, and emerging technology solutions.;
-            Transform your business with services that were once science fiction.;
-          </p>;
-        </motion.div>;
-        {/* Category Filter */}
-        <motion.div;
-          className='flex flex - wrap justify - center gap - 4 mb - 12'        <motion.div;
-          className="flex flex - wrap justify - center gap - 4 mb - 12";
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >;
-          {categories.map (category => (            <button;
-              key={category.id}
-              on_click={() => {
-                setActiveCategory (category.id);
-                setVisibleServices (12);              }}          {categories.map ((category) => (
-            <button;
-              key={category.id}
-              on_click={() => {
-                setActiveCategory (category.id);
-                setVisibleServices (12);                setVisibleServices (12);
-              }}
-              className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 ${
-                active_category === category.id;
-                  ? 'bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white shadow - lg shadow - cyan - 500 / 25';
-                  : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50 border border - gray - 600 / 50';
-              }`}
-            >;
-              {category.name}
-              <span className='ml - 2 px - 2 py - 1 bg - white / 20 rounded - full text - xs'>                {category.count}              <span className="ml - 2 px - 2 py - 1 bg - white / 20 rounded - full text - xs">;
-                {category.count}
-              </span>;
-            </button>))}
-        </motion.div>;
-        {/* Services Grid */}
-
-              className='group relative cursor-pointer'
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               style={{ perspective: '1000px' }}
             >
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75"></div>
@@ -440,8 +314,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                   </div>
                 )}
 
-<<<<<<< HEAD
-=======
+
                 {/* Popular Badge */}
                 {service && service.popular && (;
                   <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
@@ -450,12 +323,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                     POPULAR;
                   </div>;
                 )}
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                {/* Service Header */}
 
 
 
@@ -464,60 +332,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
-=======
-        <motion.div;
-          className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12';
-          variants={container_variants}
-          initial='hidden';
-          whileInView='visible'          viewport={{ once: true }}          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12";
-          variants={container_variants}
-          initial="hidden";
-          whileInView="visible";
-        >;
-          {filtered_services.slice (0, visible_services).map ((service, index) => (
-            <motion.div;
-              key={service.id}
-              variants={item_variants}
-              className='group relative cursor - pointer';
-              style={{ perspective: '1000px' }}
-            >;
-              <div className='absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75'></div>;
-              <div className='relative bg - black / 80 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6 overflow - hidden h - full'>;
-                {/* Background Effects */}
-                <div className='absolute inset - 0 rounded - 2xl overflow - hidden'>;
-                  <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500'></div>;
-                  <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700'></div>                </div>;
-                {/* Popular Badge */}
-                {service.popular && (
-                  <div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300'>;
-                    <Star className='w - 3 h - 3 inline mr - 1' />                    POPULAR              style={{ perspective: '1000px' }}
-            >;
-              <div className="absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75"></div>;
-              <div className="relative bg - black / 80 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6 overflow - hidden h - full">;
-                {/* Background Effects */}
-                <div className="absolute inset - 0 rounded - 2xl overflow - hidden">;
-                  <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500"></div>;
-                  <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700"></div>;
-                </div>;
-                {/* Popular Badge */}
-                {service.popular && (
-                  <div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300'>;
-                    <Star className='w - 3 h - 3 inline mr - 1' />                  <div className="absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300">;
-                    <Star className="w - 3 h - 3 inline mr - 1" />;
-                    POPULAR;
-                  </div>)}
-                {/* Service Header */}
-                <div className='relative z - 10'>;
-                  <div className='flex items - start justify - between mb - 4'>;
-                    <div className='flex items - center space - x-3'>;
-                      <div className='text - 4xl'>{service.icon}</div>;
-                      <div>;
-                        <h3 className='text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 {/* Service Header */}
                 <div className='relative z-10'>
                   <div className='flex items-start justify-between mb-4'>
@@ -526,14 +342,15 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           {service.name}
                         </h3>;
                         <p className='text - gray - 400 text - sm'>;
@@ -813,41 +630,17 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
         </motion && motion.div>;
         {/* Load More Button */}
-<<<<<<< HEAD
 
-        {visibleServices < filteredServices.length && (
-          <motion.div
-=======
-        {visibleServices < filteredServices && filteredServices.length && (;
-          <motion&& motion.div
-            className='text-center'            initial={{ opacity: 0 }}          <motion && motion.div 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             className="text-center"
-<<<<<<< HEAD
-
-=======
-=======
-
-            className='text-center'            initial={{ opacity: 0 }}          <motion.div 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-            className="text-center"
-
-        {/* Load More Button */}
-        {visibleServices < filteredServices.length && (
-          <motion.div
-            className='text-center'            initial={{ opacity: 0 }}
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}
@@ -859,15 +652,15 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             >
               Load More Revolutionary Services
             </button>
@@ -877,22 +670,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         <motion.div
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
-<<<<<<< HEAD
 
 
-        {/* Call to Action */}
-        <motion.div
-
-          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div 
-          className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
-          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
@@ -961,27 +743,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-};
-export default RevolutionaryServicesShowcase;  );
 
 
 
-};
-
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-export default RevolutionaryServicesShowcase;
 
 export default RevolutionaryServicesShowcase;
 
-export default RevolutionaryServicesShowcase;
 
 
 
@@ -994,8 +761,8 @@ export default RevolutionaryServicesShowcase;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

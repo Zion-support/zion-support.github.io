@@ -2,24 +2,18 @@ const { wallet, loading } = useWallet();
   return (
 
 
-<<<<<<< HEAD
-export function TokenDisplay() {
 
 
-
-
-
-
-
-
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -48,38 +42,23 @@ export function TokenDisplay() {
             <div className='mt-2'>
               <Button variant='outline' size='sm'>                View Wallet            <div className="mt-2">
             <div className="mt-2">
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <Button variant="outline" size="sm">
                 View Wallet
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 import React from "react",;
 import { BadgeDollarSign } from 'lucide-react';
 import { useWallet } from "@/hooks/useWallet",;

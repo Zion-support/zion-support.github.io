@@ -12,20 +12,15 @@ import { CreditCard, Plus, Trash } from 'lucide-react'
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export function PaymentMethods() {
   // Mock payment methods
 
   const paymentMethods = [
     {
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       id: 'pm-1',
       type: 'credit_card',
       brand: 'Visa',
@@ -144,10 +139,8 @@ export function PaymentMethods() {;
                 <p className="font-medium">
                   {method.brand} •••• {method.last4}
                   {method.isDefault && (
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                       Default
                     </span>
                   )}
@@ -181,11 +174,18 @@ export function PaymentMethods() {;
           </div>
         ))}
 
+      </CardContent>
+      <CardFooter>
+
+
+
         <Button className="gap-1">
 
 
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
         <Button className="gap-1">
 
           <Plus className="h-4 w-4" />
@@ -205,12 +205,12 @@ export function PaymentMethods() {;
 
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -293,8 +293,7 @@ export function PaymentMethods() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
   );
 }
@@ -405,4 +404,5 @@ function PaymentMethods() {
     </Card>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

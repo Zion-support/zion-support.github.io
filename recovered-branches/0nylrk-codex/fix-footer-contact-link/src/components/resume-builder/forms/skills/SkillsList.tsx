@@ -1,48 +1,30 @@
 
-<<<<<<< HEAD
-=======
-import { useState, useEffect  } from './react';
-import { Skill  } from '@/types / resume';
-import { SkillCategory  } from './SkillCategory';
-interface SkillsListProps {
-  skills: Skill[];
-  onDeleteSkill: (id: string, category: string) => Promise < void>;
-
-}
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
-  const [skillsByCategory, setSkillsByCategory] = useState<;
-    Record < string, Skill[]>;
-  >({});
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
+
+
 interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise<void>
 }
 
-<<<<<<< HEAD
 
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
-  const [skillsByCategory, setSkillsByCategory] = useState<
-    Record<string, Skill[]>
-  >({});
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
   
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   useEffect(() => {
     // Group skills by category
     const grouped = skills.reduce(
@@ -54,23 +36,9 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
         }
         acc[category].push (skill);
         return acc;
-<<<<<<< HEAD
-
-      }
-      {} as Record<string, Skill[]>
-    );
-    setSkillsByCategory(grouped);
-  }, [skills]);
-  if (Object.keys(skillsByCategory).length === 0) {
 
 
-=======
 
-
-    return null
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState, useEffect } from 'react',;
 import { Skill } from '@/types/resume',;
 import { SkillCategory } from './SkillCategory',;
@@ -98,11 +66,11 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   }
   
   return (
@@ -117,20 +85,11 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
             onDelete={onDeleteSkill}
           />
         ))}
-<<<<<<< HEAD
-
-      </div>
-    </div>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
 
@@ -168,17 +127,6 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
       </div>;
     </div>;
   );
-=======
-
-  )
-
-=======
-      </div>;
-    </div>;
-  );
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

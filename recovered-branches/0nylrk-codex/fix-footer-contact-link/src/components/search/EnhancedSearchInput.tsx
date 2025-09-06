@@ -2,32 +2,15 @@
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
 import {SearchSuggestion} from "@/types/search";
-<<<<<<< HEAD
 
-import React, { useState, useEffect, useRef } from "react",
-import { Search, X } from "lucide-react",
-import { Input } from "@/components/ui/input",
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
-import { SearchSuggestion } from "@/types/search";
-interface EnhancedSearchInputProps {
 
-  value: string
-  onChange: (value: string) => void
-
-=======
-interface EnhancedSearchInputProps {;
-  value: string,;
-  onChange: (value: string) => void,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   placeholder?: string;
   searchSuggestions: SearchSuggestion[];
@@ -45,15 +28,10 @@ export function EnhancedSearchInput(): any ({ ;
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
 
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
-import { SearchSuggestion } from "@/types/search",
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -80,33 +58,9 @@ export function EnhancedSearchInput({
       // Show recent searches when input is empty
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
       return
-<<<<<<< HEAD
-
-    }
-    const filtered = searchSuggestions.filter(suggestion =>
-      suggestion.text.toLowerCase().includes(value.toLowerCase())
-    );
-    // Sort suggestions to prioritize those that start with the search term
-    filtered.sort((a, b) => {
-      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
-      const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
-      return aStartsWith - bStartsWith
-    });
-    setFilteredSuggestions(filtered.slice(0, 8)), // Limit to 8 suggestions
-  }, [value, searchSuggestions]);
-  // Handle clicks outside the component to close suggestions
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        setIsFocused(false)
-
-
-=======
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
@@ -156,11 +110,11 @@ export function EnhancedSearchInput({;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       }
     }
     
@@ -204,14 +158,15 @@ export function EnhancedSearchInput({;
           type="text";
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}

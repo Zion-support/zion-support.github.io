@@ -1,12 +1,10 @@
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -18,10 +16,8 @@ import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -37,11 +33,10 @@ import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
@@ -52,103 +47,8 @@ export function MobileResumeBuilder() {
   
   const renderStepContent = () => {
     switch (currentStep) {
-<<<<<<< HEAD
-
-      case "basics": return <BasicsStep />,
-      case "experience":
-        return <ExperienceStep />,
-      case "education":
-        return <EducationStep />,
-      case "skills":
-        return <SkillsStep />,
-      default:
-        return <BasicsStep />
-    }
-  }
-  },
-  
-  return (
-    <div className="space-y-6 px-4 pb-24">
-      <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
-        <Button
-          variant={currentStep === "basics" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("basics")}
-        >
-          Basics
-        </Button>
-        <Button
-          variant={currentStep === "experience" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("experience")}
-        >
-          Experience
-        </Button>
-        <Button
-          variant={currentStep === "education" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("education")}
-        >
-          Education
-        </Button>
-        <Button
-          variant={currentStep === "skills" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("skills")}
-        >
-          Skills
-        </Button>
-      </div>
-      {renderStepContent()}
-      <Button className="w-full flex gap-2" size="lg">
-        <Zap className="h-5 w-5" /> Enhance with AI
-      </Button>
-      <Button variant="default" className="w-full" size="lg">
-        Save & Preview
-      </Button>
-    </div>
-  )
-}
-function BasicsStep() {
-  return (
-    <Card>
-      <CardContent className="p-4 space-y-4">
-        <div className="space-y-2">
-          <Label htmlFor="title">Resume Title</Label>
-          <Input id="title" placeholder="e.g. Senior Frontend Developer" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="fullName">Full Name</Label>
-          <Input id="fullName" placeholder="Your full name" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="email">Email Address</Label>
-          <Input id="email" type="email" placeholder="you@example.com" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="phone">Phone Number</Label>
-          <Input id="phone" placeholder="Your phone number" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="location">Location</Label>
-          <Input id="location" placeholder="City, Country" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="summary">Professional Summary</Label>
-
-            rows={4}
-          />
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
 
 
-=======
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
 
@@ -255,18 +155,19 @@ function BasicsStep() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
 
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
 
@@ -702,62 +603,11 @@ function SkillsStep() {;
                 <Select
                   value={skill && skill.proficiency}
                   onValueChange={(value) => updateSkill(skill && skill.id, "proficiency", value)}
-<<<<<<< HEAD
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-;
-  const add_skill = () =>: any {
-    const new_id = (skills.length + 1).to_string ();
-    set_skills ([...skills, { id: new_id, name: "", proficiency: "beginner" }]);
-  }
-;
-  const remove_skill = (id: string) =>: any {
-    set_skills (skills.filter (skill => skill.id !== id));
-  }
-;
-  const update_skill = (id: string, field: string, value: string) =>: any {
-    set_skills (skills.map (skill =>;
-      skill.id === id ? { ...skill, [field]: value } : skill));
-  }
-;
-  return (
-    <div className="space - y-4">;
-      <Card>;
-        <CardContent className="p - 4">;
-          <div className="space - y-4">;
-            {skills.map ((skill) => (
-              <div key={skill.id} className="flex items - center gap - 2">;
-                <Input;
-                  placeholder="Skill (e.g. JavaScript, Figma)";
-                  value={skill.name}
-                  on_change={(e) => update_skill (skill.id, "name", e.target.value)}
-                  className="flex - 1";
-                />;
-                <Select;
-                  value={skill.proficiency}
-                  onValueChange={(value) => update_skill (skill.id, "proficiency", value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                >;
-                  <SelectTrigger className="w-[130px]">;
-                    <SelectValue placeholder="Level" />;
-                  </SelectTrigger>;
-                  <SelectContent>;
-                    <SelectItem value="beginner">Beginner</SelectItem>;
-                    <SelectItem value="intermediate">Intermediate</SelectItem>;
-                    <SelectItem value="advanced">Advanced</SelectItem>;
-                    <SelectItem value="expert">Expert</SelectItem>;
-                  </SelectContent>;
-                </Select>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 )}
               </div>;
             ))}
@@ -794,17 +644,14 @@ function SkillsStep() {;
   )
 }
 
-}
-<<<<<<< HEAD
-;
-;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

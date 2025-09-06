@@ -1,32 +1,15 @@
 
-<<<<<<< HEAD
-import { NewsletterForm } from "@/components/NewsletterForm",
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-import { Link } from "react-router-dom";
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
-import { Link } from "react-router-dom",
 
-import { NewsletterForm } from "@/components/NewsletterForm";
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-import { Link } from "react-router-dom";
-=======
 
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
-import { Link } from "react-router-dom",
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
 
-<<<<<<< HEAD
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export function Footer() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -141,8 +124,7 @@ export function Footer() {
 
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
 
-<<<<<<< HEAD
-=======
+
                   Green IT;
                 </Link>;
               </li>;
@@ -264,7 +246,7 @@ export function Footer() {
     </footer>
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     </footer>;
   );
 }

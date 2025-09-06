@@ -12,11 +12,8 @@ interface AIMatchingResultsProps {
 
   serviceType?: string
 }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
@@ -45,11 +42,8 @@ export /**
 function AIMatchingResults() {
   const [active_tab, setActiveTab] = useState ('all');
   // Group matches by category;
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const categories = {
     all: matches,
     talent: matches.filter (match =>;
@@ -321,6 +315,8 @@ if ( {) {
                                 alt={match.title}
 
 
+
+
                               />) : (
                               <AvatarFallback className='bg - zion - purple / 20'>;
                                 <CategoryIcon className='h - 6 w - 6 text - zion - purple' />;
@@ -366,11 +362,8 @@ if ( {) {
                                       ? '/hour';
 
                                       : ''}
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                                   </div>;
                                 </div>;
                               )}
@@ -381,19 +374,17 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
                                   </div>
                                 </div>
                               )}
@@ -464,31 +455,15 @@ if ( {) {
                         </div>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             )}
           </TabsContent>;
         ))}
 
 
-<<<<<<< HEAD
-      </Tabs>
-    </div>
-  )
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 };
 ;
 
@@ -498,14 +473,8 @@ if ( {) {
     </div>;
   );
 }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

@@ -1,17 +1,7 @@
 import React from 'react';
 import * as React from 'react';
-<<<<<<< HEAD
 
 
-
-import {cn} from '@/lib/utils';
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
@@ -19,21 +9,12 @@ import { cn } from "@/lib/utils"
 
 
 
-<<<<<<< HEAD
-
-import {cn} from '@/lib/utils';
-import * as React from "react"
-
-import { cn } from "@/lib/utils"
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const Card = React.forwardRef<
   HTMLDivElement
@@ -150,27 +131,12 @@ export {
 ))
 CardFooter.displayName = "CardFooter"
 
-<<<<<<< HEAD
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
-;
 
-export {
-  Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardDescription,
-  CardContent,;
-};
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
-;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

@@ -30,17 +30,17 @@ import {
 } from "./ui/table";
 
 
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
@@ -104,45 +104,24 @@ import {
             
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
             </Button>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
-    </section>
 
-  )
-import { GradientHeading } from "./GradientHeading",;
-import { Button } from "./ui/button",;
-import { CheckCircle2 } from "lucide-react",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;
 
-=======
-
-import { GradientHeading } from "./GradientHeading";
-import { Button } from "./ui/button";
-import { CheckCircle2 } from "lucide-react";
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-} from "./ui/table";
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function ComparisonSection() {;
   return (
     <section className="py-20 bg-zion-blue-dark">;

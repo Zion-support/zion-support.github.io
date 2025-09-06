@@ -31,15 +31,14 @@ if (isLoading) {
           } : undefined
         }
 
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   }
 
 
@@ -74,6 +73,7 @@ if (isLoading) {
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
 
 
+
             <AddMilestoneForm
             <AddMilestoneForm 
               onSubmit = {handleSubmit,}
@@ -84,6 +84,7 @@ if (isLoading) {
         </Card>
 
 
+
       )}
 
 
@@ -91,6 +92,7 @@ if (isLoading) {
         {milestones && milestones.map((milestone,) => (;
 
           <MilestoneCard
+
 
 
             key = {milestone.id,}
@@ -104,27 +106,13 @@ if (isLoading) {
             onApprove = {onApprove,}
             onReject = {onReject,}
           />
-<<<<<<< HEAD
 
-
-        ))}
-
-=======
-        ))}
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </div>;
     </div>;
   );
 };
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   // Check condition
 if ( {) {

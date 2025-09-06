@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import {useRouter} from 'next/router';
 import {useEffect, useState} from 'react';
@@ -9,11 +7,8 @@ import {useEffect, useState} from 'react';
 export default function WhitepaperPreview() {;
 
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { useRouter } from 'next/router',
 import { useEffect, useState } from 'react',
 export default function WhitepaperPreview() {
@@ -21,37 +16,8 @@ export default function WhitepaperPreview() {
   const { id } = router.query,
   const [markdown, setMarkdown] = useState<string>(''),
   const [notFound, setNotFound] = useState(false),
-<<<<<<< HEAD
-
-  useEffect(() => {
-    if (!id || Array.isArray(id)) return,
-    // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query)
-    // In a production app, this would fetch from a real DB.
-    fetch(`/api/whitepaper/get?id=${id}`)
-      .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then((d) => setMarkdown(d.markdown || ''))
-      .catch(() => setNotFound(true))
-  }, [id]),
-  if (notFound) return <div className="container mx-auto px-4 py-6">Preview not available or expired.</div>,
-  if (!markdown) return <div className="container mx-auto px-4 py-6">Loading…</div>,
-  return (
-    <div className="container mx-auto px-4 py-6">
-      <h1 className="text-xl font-semibold mb-4">Whitepaper Preview</h1>
-      <pre className="whitespace-pre-wrap text-sm leading-6">{markdown}</pre>
-    </div>
-  )
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-export default function WhitepaperPreview(req, res) {
-  try {
-  const router = useRouter();
-  const { id } = router.query;
-  const [markdown, setMarkdown] = useState<string>('');
-  const [notFound, setNotFound] = useState(false);
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const { id } = router.query;
   const [markdown, setMarkdown] = useState<string>('');
@@ -60,25 +26,17 @@ export default function WhitepaperPreview(req, res) {
 
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   useEffect(() => {
     if (!id |Array.isArray(id)) return;
     // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query)
     // In a production app, this would fetch from a real DB.
     fetch(`/api/whitepaper/get?id=${id}`)
 
-<<<<<<< HEAD
 
-  return (
-    <div className='container mx-auto px-4 py-6'>
-      <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>
-      <pre className='whitespace-pre-wrap text-sm leading-6'>{markdown}</pre>
-    </div>
-);
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   useEffect(() => {;
     if (!id || Array && Array.isArray(id)) return;
@@ -122,13 +80,15 @@ if (
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

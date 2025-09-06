@@ -50,12 +50,8 @@ export const defaultSEO = {
     },
   ],
 }
-<<<<<<< HEAD
 
 
-=======
-export default defaultSEO;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export default defaultSEO;

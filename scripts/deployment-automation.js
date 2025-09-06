@@ -82,12 +82,6 @@ class DeploymentAutomation {;
 
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    for (const check of checks) {
-      try {'
-        console.log(`  ✓ Checking ${check.name}...`);"
-=======
     ...`);"
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -277,12 +271,6 @@ Make sure to set the following environment variable
 
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-### Health "Check":;";After deployment, verify the application is "running":;";curl "http"://"localhost":3000/api/health;";";";    fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md', instructions)';    this.deploymentSteps.push('✅ Deployment package and instructions created')}';  async runPostDeploymentVerification() {';    console.log('🔍 Running post-deployment verification...')';    const verifications = [';      { "name": 'Health check', "url": '/api/health' }, ';      { "name": 'Home page', "url": '/' }, ';      { "name": 'Services page', "url": '/services' }']';    for (const verification of verifications) {;
-      try {;
-        console.log(`  ✓ Verifying ${verification.name}...`);";        // In a real implementation, you would make HTTP requests to verify endpoints;
-=======
 ### Health "Check":;";After deployment, verify the application is "running":;";curl "http"://"localhost":3000/api/health;";";";    fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md', instructions)';    this.deploymentSteps.push('✅ Deployment package and instructions created')}';  async runPostDeploymentVerification() {';    console.log('🔍 Running post-deployment verification...')';    const verifications = [';      { "name": 'Health check', "url": '/api/health' }, ';      { "name": 'Home page', "url": '/' }, ';      { "name": 'Services page', "url": '/services' }']';    ...`);";        // In a real implementation, you would make HTTP requests to verify endpoints;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -299,12 +287,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     ];
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    for (const verification of verifications) {
-      try {'
-        console.log(`  ✓ Verifying ${verification.name}...`);
 =======
     ...`);
 origin/cursor/integrate-build-improve-and-re-verify-c7b5

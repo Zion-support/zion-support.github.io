@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -15,11 +13,11 @@ interface SmartContractBuilderProps {
 
   onDeploy?: (contractContent: string) => void
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 import {useState} from "react";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
@@ -32,28 +30,12 @@ import {TemplateManager} from "./templates/TemplateManager";
 import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from "@/types/smart-contracts";
 import {useSmartContracts} from "@/hooks/useSmartContracts";
 import {toast} from "sonner";
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-interface SmartContractBuilderProps {
 
-  isOpen: boolean
-  onClose: () => void
-  talent: TalentProfile
-  clientName: string
-  onContractGenerated?: (contractContent: string) => void
 
-  onDeploy?: (contractContent: string) => void
-=======
-interface SmartContractBuilderProps {;
-  isOpen: boolean,;
-  onClose: () => void,;
-  talent: TalentProfile,;
-  clientName: string,;
-  onContractGenerated?: (contractContent: string) => void,;
-  onDeploy?: (contractContent: string) => void;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
+
+
 
 
 
@@ -65,27 +47,9 @@ export function SmartContractBuilder({;
   talent;
   clientName;
   onContractGenerated;
-<<<<<<< HEAD
-
-
-export function SmartContractBuilder({
-  isOpen,
-  onClose,
-  talent,
-  clientName,
-  onContractGenerated,
-
-=======
-  onDeploy;
-}: SmartContractBuilderProps) {;
-  const [activeTab, setActiveTab] = useState<string>("form");
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null);
-
-}
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   onDeploy
 }: SmartContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
@@ -190,31 +154,9 @@ export function SmartContractBuilder({
         toast.error ("Failed to deploy smart contract");
       }
     } catch (error) {
-<<<<<<< HEAD
-
-      console.error("Error deploying contract:", error);
-      setDeployStatus('error');
-      toast.error("Failed to deploy smart contract")
-    }
-  }
-  // Modified to match the expected interface
-  const handleFormSubmit = (contract: string) => {
-    // This should be a function that takes a string (contract content)
-    // Since we need to adapt the interface, we'll implement the simplest solution that works
-    if (onContractGenerated) {
-      onContractGenerated(contract)
-    }
-    setGeneratedContract(contract);
-    setActiveTab("preview")
 
 
-=======
 
-
-  };
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       console.error("Error deploying contract:", error),
       setDeployStatus('error'),
       toast.error("Failed to deploy smart contract")
@@ -311,12 +253,13 @@ export function SmartContractBuilder({;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -340,10 +283,8 @@ export function SmartContractBuilder({;
             </div>
           </div>
           <TabsContent value="form" className="pt-4">
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     } catch (error) {;
       console && console.error("Error generating contract:", error);
@@ -380,18 +321,11 @@ export function SmartContractBuilder({;
     if (onContractGenerated) {;
       onContractGenerated(contract);
     }
-<<<<<<< HEAD
-=======
-    setGeneratedContract(contract);
-    setActiveTab("preview");
-  };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
+
             <div className="flex gap-2">;
               <Button
                 variant="outline" 
@@ -400,54 +334,8 @@ export function SmartContractBuilder({;
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
-=======
-;
-  // Modified to match the expected interface;
-  const handleFormSubmit = (contract: string) =>: any {
-    // This should be a function that takes a string (contract content);
-    // Since we need to adapt the interface, we'll implement the simplest solution that works;
-    // Check condition
-if ( {) {
-  $2
-}
-      onContractGenerated (contract);
-    }
-    setGeneratedContract (contract);
-    setActiveTab ("preview");
-  }
-;
-  return (
-    <Dialog open={is_open} onOpenChange={on_close}>;
-      <DialogContent className="max - w-4xl max - h-[90vh] overflow - y-auto">;
-        <Tabs value={active_tab} onValueChange={setActiveTab} className="mt - 4">;
-          <div className="flex justify - between items - center">;
-            <TabsList className="grid grid - cols - 2">;
-              <TabsTrigger value="form">Contract Details</TabsTrigger>;
-              <TabsTrigger value="preview" disabled={!generated_contract}>Preview</TabsTrigger>;
-            </TabsList>;
-            <div className="flex gap - 2">;
-              <Button;
-                variant="outline";
-                size="sm";
-                on_click={() => setTemplateManagerOpen (true)}
-                className="flex gap - 1";
-              >;
-                <Save className="h - 4 w - 4" />;
 
-                Templates;
-              </Button>;
-            </div>;
-          </div>;
 
-          <TabsContent value="form" className="pt - 4">;
-            <ContractForm;
-
-=======
-
-            <ContractForm 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               talent={talent}
               client_name={client_name}
               initial_values={form_values}

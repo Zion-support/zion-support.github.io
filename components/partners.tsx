@@ -1,12 +1,9 @@
 
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,19 +26,15 @@ import React from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 export default function PartnersPage() {
 
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 export default function PartnersPage() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -71,11 +64,13 @@ export default function PartnersPage() {
 
           Partner with us:{' '}
 
+
           <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
             kleber@ziontechgroup && ziontechgroup.com;
           </a>;
         </div>;
       </div>;
+
 
     </div>;
   );	return (

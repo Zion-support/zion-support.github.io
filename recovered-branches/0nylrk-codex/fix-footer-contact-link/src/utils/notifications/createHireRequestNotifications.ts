@@ -1,10 +1,6 @@
 
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {createNotification} from './createNotification';
 import {HireRequestNotificationParams} from './types';
 /**
@@ -14,18 +10,12 @@ export async function createHireRequestNotifications({;
   talentId;
   adminId;
   requesterName;
-<<<<<<< HEAD
-import { createNotification } from './createNotification',
-import { HireRequestNotificationParams } from './types',
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 /**
  * Creates a hire request notification for admin and talent
  */
@@ -119,12 +109,11 @@ export async function createHireRequestNotifications({
       adminNotification
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     }
   }
   return {

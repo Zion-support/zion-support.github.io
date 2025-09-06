@@ -136,34 +136,13 @@ export function AIEnhancementPanel(): any ({;
   ) => {
     setOptions({
 
-<<<<<<< HEAD
-
-      ...options
-      [field]: e.target.value
-      ...options,
-      [field]: e.target.value,
-    })
-  }
-  const handleApply = () => {
-    onApply(generatedContent)
-    if (onClose) onClose()
-  }
-  const handleCopy = () => {
-    navigator.clipboard.writeText(generatedContent)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-      ...options,
-      [field]: e.target.value})
-  },
-=======
-      ...options,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
-<<<<<<< HEAD
+
+
+
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent),
     setCopied(true),
@@ -171,8 +150,7 @@ export function AIEnhancementPanel(): any ({;
   },
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
@@ -217,38 +195,8 @@ export function AIEnhancementPanel(): any ({;
           />;
         </div>;
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-        {/* Instructions input (optional) */}
-        {showInstructions && (;
-          <div className='space-y-2'>;
-            <label className='text-sm font-medium'>;
-              Special instructions (optional);
-            </label>;
-            <Input
-
-              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
-              value={options.instructions}
-<<<<<<< HEAD
-
-
-              onChange={e => handleInputChange(e, 'instructions')}            />
-          </div>
-        )}
-        {/* Generate button */}
-        <Button
-          onClick={handleGenerate}
-          className='w-full'
-          disabled={isEnhancing |(!options.content && !options.context)}        >
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           disabled={isEnhancing || (!options.content && !options.context)}        >
 
@@ -263,20 +211,8 @@ export function AIEnhancementPanel(): any ({;
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
         >
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {isEnhancing ? (
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
@@ -324,11 +260,8 @@ export function AIEnhancementPanel(): any ({;
               >
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
@@ -346,28 +279,15 @@ export function AIEnhancementPanel(): any ({;
               />
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>
           </div>
         )}
       </CardContent>
       
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {generatedContent && (
         <CardFooter className='flex justify-between'>
           {onClose && (
@@ -383,16 +303,6 @@ export function AIEnhancementPanel(): any ({;
               Cancel;
             </Button>;
           )}
-<<<<<<< HEAD
-
-
-          <Button onClick={handleApply}>Apply to Form</Button>
-        </CardFooter>
-      )}
-    </Card>
-  )
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }
@@ -492,14 +402,13 @@ export function AIEnhancementPanel(): any ({;
   );
 };
 
+
+
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;

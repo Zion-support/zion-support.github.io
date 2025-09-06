@@ -1,28 +1,18 @@
 
 
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import type { UserProfile } from "@/types/auth";
-import { toast } from "@/hooks/use-toast";
-import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
-import { cleanupAuthState } from "@/utils/authUtils";
-import type { UserProfile } from "@/types/auth",
-import { toast } from "@/hooks/use-toast",
-import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils",
-import { cleanupAuthState } from "@/utils/authUtils",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export function useAuthOperations(
 
   setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,
@@ -115,12 +105,11 @@ export function useAuthOperations(
           title: "Error during signup",
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           description: error.message});
         return { data: null, error: error.message }
 
@@ -285,21 +274,11 @@ if ( {) {
           title: "Failed to update profile",
           description: error.message});
 
-<<<<<<< HEAD
-        return { error: error.message };
-        return { error: error.message }
-
-      }
-      // Optimistically update the local user state
-      setUser((prevUser) => {
-        if (prevUser) {
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           return { ...prevUser, ...profileData }
         }
         return prevUser
@@ -352,51 +331,10 @@ if ( {) {
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
-<<<<<<< HEAD
-
-
-        return prevUser;
-      }),;
-      toast({;
-        title: "Profile updated!",;
-        description: "Your profile has been successfully updated."}),;
-      return { error: null }
-    } catch (error) {;
-      console.error("Profile update failed:", error),;
-      toast({;
-        variant: "destructive",;
-        title: "Profile update failed",;
-        description: "There was an issue updating your profile. Please try again."}),;
-      return { error: "Failed to update profile." }
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
-  const loginWithGoogle = async () => {;
-    setIsLoading(true),;
-    try {;
-      const { data, error } = await supabase.auth.signInWithOAuth({;
-        provider: "google"}),;
-      if (error) {;
-        toast({;
-          variant: "destructive",;
-          title: "Oh no! Something went wrong.",;
-          description: error.message});
-      }
-    } finally {;
-      setIsLoading(false);
-    }
-  },
 
 
 
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const loginWithFacebook = async () => {
     setIsLoading (true);
     try {
@@ -415,15 +353,16 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error.message})
 
-<<<<<<< HEAD
+
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       }
     } finally {
       setIsLoading (false);
@@ -431,42 +370,18 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
-=======
-          title: "Oh no! Something went wrong.",
-          description: error && error.message})
 
-=======
-      const { data, error } = await supabase.auth.signInWithOAuth ({
-        provider: "twitter"});
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          variant: "destructive";
-          title: "Oh no! Something went wrong.",
-          description: error.message});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  },
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   };
   },
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const loginWithTwitter = async () => {
     setIsLoading(true),
     try {
@@ -485,28 +400,26 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error.message})
 
-<<<<<<< HEAD
+
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       }
     } finally {
       setIsLoading (false);
     }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const loginWithWeb3 = async () => {
     setIsLoading (true);
@@ -600,12 +513,13 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
     loginWithFacebook;
     loginWithTwitter;
 

@@ -30,6 +30,7 @@ interface CertificationsListProps {;
 
 
 
+
 export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
   if (certifications && certifications.length === 0) {;
 
@@ -70,34 +71,15 @@ interface CertificationsListProps {
               </div>
               <div className="flex gap-2">
                 <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => onEdit(cert)}
-                  aria-label="Edit certification"
-                >
-                  <Edit className="h-4 w-4" />
-                </Button>
-                <Button
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   variant='ghost'
                   size='icon'
                   onClick={() => onEdit(cert)}
 
                   className='text-primary hover:underline'>              <p className="text-xs mt-2">;
                 <a
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   href = {cert && cert.credential_url,}
 
                   variant="ghost"
@@ -130,8 +112,7 @@ interface CertificationsListProps {
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
 export /**
  * CertificationsList - Function description
@@ -232,4 +213,5 @@ if ( {) {
     </div>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

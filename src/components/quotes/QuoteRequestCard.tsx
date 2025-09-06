@@ -12,14 +12,8 @@ type QuoteRequestCardProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 }
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
-<<<<<<< HEAD
 
 
-  quote
-  onViewDetails
-  onMarkAsResponded
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   quote,
@@ -28,11 +22,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   onViewDetails,
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   onMarkAsResponded,
   onToggleArchive
 },) => {
@@ -67,18 +58,8 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
   }
   },
 
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -101,18 +82,8 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
         
         <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
         
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
@@ -123,11 +94,8 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
         
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="flex justify-between items-center mt-4">
           <Button
             variant="outline"
@@ -140,64 +108,10 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
           </Button>
           
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-          <div className="flex items-center">
-            {quote.status !== 'responded' && onMarkAsResponded && (
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => onMarkAsResponded(quote.id)}
-                className="flex items-center gap-1"
-              >
-                <MessageSquare className="h-4 w-4" />
-                Mark Responded
-              </Button>
-            )}
-            
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => onToggleArchive(quote.id, !quote.is_archived)}
-              className="flex items-center gap-1"
-            >
-              {quote.is_archived ? (
-                <RefreshCw className="h-4 w-4" />
-              ) : (
-                <ArchiveIcon className="h-4 w-4" />
-<<<<<<< HEAD
-
-
-              )}
-            </Button>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-"}
-}
-
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-  );
-};
-"};
-};
-
-<<<<<<< HEAD
-
-
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   );
 };
 "};
@@ -205,8 +119,6 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",;
 import { format } from "date-fns",;
 import {;
@@ -313,14 +225,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     </Card>;
   );
 };
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       return date_string;
     }

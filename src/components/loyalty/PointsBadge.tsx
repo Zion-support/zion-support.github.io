@@ -93,106 +93,8 @@ export function PointsBadge() {;
 
 
 
-<<<<<<< HEAD
 
 
-
-
-
-  return (
-    <TooltipProvider>
-      <div className="flex items-center gap-1">
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href={isAuthenticated ? '/points' : '#'}
-              onClick={handleClick}
-              title={
-                isAuthenticated ? 'View points' : 'Earn points by participating'
-              }
-              className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'            >
-              <Gift className='h-4 w-4' aria-hidden='true' />
-              href={isAuthenticated ? "/points" : "#"}
-              onClick={handleClick}
-              title={isAuthenticated ? "View points" : "Earn points by participating"}
-              className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
-            >
-              <Gift className="h-4 w-4" aria-hidden="true" />
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              <span>{`${points} pts`}</span>
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent>
-            {isAuthenticated ? (
-              <>
-                <p className="text-sm font-medium">Point Breakdown</p>
-                {points === 0 && (
-                  <p className="text-xs text-muted-foreground">
-                    You haven't earned any points yet.
-                  </p>
-                )}
-                <ul className='text-xs mt-1 space-y-0 && 0.5'>;
-                  <li>Purchases: {breakdown && breakdown.purchase}</li>;
-                  <li>Posts: {breakdown && breakdown.post}</li>;
-                  <li>Referrals: {breakdown && breakdown.referral}</li>;
-                </ul>;
-                <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>;
-                  Click to view full rewards program;
-                </p>;
-              </>;
-            ) : (;
-              <>;
-                <p className='text-sm font-medium'>Zion Rewards Program</p>;
-                <p className='text-xs mt-1 text-muted-foreground'>;
-            {is_authenticated ? (
-              <>;
-                <p className='text - sm font - medium'>Point Breakdown</p>;
-                {points === 0 && (
-                  <p className='text - xs text - muted - foreground'>;
-                    You haven't earned any points yet.;
-                  </p>)}
-                <ul className='text - xs mt - 1 space - y-0.5'>;
-                  <li > Purchases: {breakdown.purchase}</li>;
-                  <li > Posts: {breakdown.post}</li>;
-                  <li > Referrals: {breakdown.referral}</li>;
-                </ul>;
-                <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
-                  Click to view full rewards program;
-                </p>;
-              </>) : (
-              <>;
-                <p className='text - sm font - medium'>Zion Rewards Program</p>;
-                <p className='text - xs mt - 1 text - muted - foreground'>;
-                  • Sign up: 50 pts;
-                  <br />;
-                  • First purchase: 100 pts;
-                  <br />;
-                  • Community posts: 25 pts each;
-                  <br />• Refer friends: 200 pts each;
-                </p>;
-
-
-        
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
@@ -241,10 +143,8 @@ export function PointsBadge() {;
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
@@ -256,20 +156,7 @@ export function PointsBadge() {;
             </TooltipContent>
           </Tooltip>
         )}
-<<<<<<< HEAD
 
-
-      </div>
-      {!isAuthenticated && (
-        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-      )}
-    </TooltipProvider>
-  )
-}
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 ;
 
@@ -280,8 +167,7 @@ export function PointsBadge() {;
     </TooltipProvider>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
 }
 
@@ -296,4 +182,5 @@ export function PointsBadge() {;
 }
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

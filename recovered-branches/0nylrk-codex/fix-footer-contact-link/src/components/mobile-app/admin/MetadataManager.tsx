@@ -1,12 +1,10 @@
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -30,42 +28,14 @@ export type AppPlatform = "ios" | "android",
 
 
 
-<<<<<<< HEAD
-=======
 
-export type AppMetadataValues = {
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   appTitle: string,
   shortDescription: string,
   longDescription: string,
   keywords: string[],
   version: string,
-<<<<<<< HEAD
 
-  platform: AppPlatform;
-};
-
-  platform: AppPlatform
-}
-const defaultValues: AppMetadataValues = {
-  appTitle: "Zion AI Marketplace"
-  shortDescription: "Hire top AI talent or find global IT jobs on the go."
-  longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.";
-  keywords: ["AI freelancer", "tech jobs", "hire developers", "IT marketplace", "artificial intelligence jobs"];
-  version: "1.0.0"
-  platform: "ios"
-}
-export const MetadataManager: React.FC = () => {
-  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
-  const [isSaving, setIsSaving] = useState(false);
-  // Separate form instances for each platform
-  const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } })
-  const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } })
-  const currentForm = currentPlatform === "ios" ? iosForm : androidForm;
-},
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 const defaultValues: AppMetadataValues = {
@@ -125,17 +95,10 @@ export const MetadataManager: React.FC = () => {
             </TabsTrigger>
           </TabsList>
 
-<<<<<<< HEAD
-          <Button
-          <Button 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-          <Button 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
           >
@@ -173,10 +136,8 @@ export const MetadataManager: React.FC = () => {
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 },
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -285,18 +246,15 @@ export const MetadataManager: React.FC = () => {;
           </div>;
         </TabsContent>;
       </Tabs>;
-<<<<<<< HEAD
-
-    </div>;
-  );
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 };

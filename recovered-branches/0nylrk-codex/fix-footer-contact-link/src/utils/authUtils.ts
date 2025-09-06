@@ -1,27 +1,26 @@
 
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-import type { UserDetails } from "@/types/auth";
-=======
+
+
 import type { UserDetails } from "@/types/auth";
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
@@ -42,25 +41,9 @@ export const cleanupAuthState = () => {
   });
   // Remove from sessionStorage if in use
 
-<<<<<<< HEAD
-  Object.keys(sessionStorage |{}).forEach((key) => {
-    if (key.startsWith('supabase.auth.') |key.includes('sb-')) {
-      sessionStorage.removeItem(key)
 
 
-=======
-  Object && Object.keys(sessionStorage || {}).forEach((key) => {
-    if (key && key.startsWith('supabase && supabase.auth.') || key && key.includes('sb-')) {
-      sessionStorage && sessionStorage.removeItem(key)
 
-    }
-  })
-}
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { supabase } from "@/integrations/supabase/client",;
 import type { UserDetails } from "@/types/auth",;
 /**;
@@ -82,13 +65,12 @@ export const cleanupAuthState = () => {;
       sessionStorage.removeItem(key);
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
   })
 },
@@ -141,60 +123,8 @@ export const checkNewRegistration = async (user: UserDetails) => {
 
             user_type: user.user_type || "unknown",
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
-<<<<<<< HEAD
-
-=======
-=======
-          user_id: user.id,
-          campaign_type: "welcome_series",
-          template_name: "welcome_email",
-          template_data: {
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-            user_id: user.id,
-            email_type: "welcome_series",
-            user_type: user.userType || "unknown",
-            display_name: user.displayName || user.email?.split("@")[0] || "User"
-  });
-},;
-/**;
- * Utility function to check new user registration and schedule welcome emails;
- */;
-export const checkNewRegistration = async (user: UserDetails) => {;
-  try {;
-    // Check if user has received welcome email already;
-    const { data: existingCampaign } = await supabase;
-      .from("email_campaigns");
-      .select("id");
-      .eq("user_id", user.id);
-      .eq("campaign_type", "welcome_series");
-      .maybeSingle(),;
-    // If no welcome email sent yet, schedule one;
-    if (!existingCampaign) {;
-      // Create a scheduled job for the welcome email;
-      await supabase;
-        .from("scheduled_jobs");
-        .insert({;
-          job_type: "send_retention_email",;
-          scheduled_for: new Date().toISOString(),;
-          status: "pending",;
-          payload: {;
-            user_id: user.id,;
-            email_type: "welcome_series",;
-            user_type: user.userType || "unknown",;
-            display_name: user.displayName || user.email?.split("@")[0] || "User";
-
-          }
-        });
-;
-      // Create entry in email_campaigns table;
-      await supabase;
-        .from ("email_campaigns");
-        .insert ({
-          user_id: user.id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           campaign_type: "welcome_series";
           template_name: "welcome_email";
           template_data: {
@@ -215,14 +145,16 @@ export const checkNewRegistration = async (user: UserDetails) => {;
     console.error("Error checking or scheduling welcome email:", error);
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 };

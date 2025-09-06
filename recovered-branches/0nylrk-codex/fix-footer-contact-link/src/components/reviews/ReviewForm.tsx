@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {useForm} from "react-hook-form";
@@ -14,56 +11,10 @@ import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
 import {Switch} from "@/components/ui/switch";
 import {Review} from "@/types/reviews";
 
-<<<<<<< HEAD
-
-import { useState } from "react",
-import { Star } from "lucide-react",
-import { useForm } from "react-hook-form",
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
-import {
-  RadioGroup;
-  RadioGroupItem} from "@/components/ui/radio-group",
-import { Switch } from "@/components/ui/switch";
-import { Review } from "@/types/reviews";
-import { Switch } from "@/components/ui/switch",
-import { Review } from "@/types/reviews",
-
-interface ReviewFormValues {;
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-import { useState } from './react';
-import { Star } from './lucide-react';
-import { use_form } from './react - hook - form';
-import { Button } from '@/components / ui / button';
-import { Textarea } from '@/components / ui / textarea';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';
-import { Switch } from '@/components / ui / switch';
-import { Review } from '@/types / reviews';
-interface ReviewFormValues {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   rating?: number;
   review_text?: string;
   communication_rating?: number;
@@ -73,11 +24,8 @@ interface ReviewFormValues {
   is_anonymous?: boolean;
 }
 
-=======
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -100,17 +48,14 @@ interface ReviewFormProps {;
   defaultValues?: Review;
   isSubmitting: boolean;
 }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export function ReviewForm(): any ({;
 
-<<<<<<< HEAD
-=======
+
   projectId;
   revieweeId;
   revieweeName;
@@ -118,118 +63,7 @@ export function ReviewForm(): any ({;
   defaultValues;
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import { useState } from "react",;
-import { Star } from "lucide-react",;
-import { useForm } from "react-hook-form",;
-import { Button } from "@/components/ui/button",;
-import { Textarea } from "@/components/ui/textarea",;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from "@/components/ui/form",;
-import {;
-  RadioGroup,;
-  RadioGroupItem} from "@/components/ui/radio-group",;
-import { Switch } from "@/components/ui/switch",;
-import { Review } from "@/types/reviews",;
-interface ReviewFormValues {;
-  rating?: number,;
-  review_text?: string,;
-  communication_rating?: number,;
-  quality_rating?: number,;
-  timeliness_rating?: number,;
-  would_work_again?: boolean,;
-  is_anonymous?: boolean;
-}
-;
-interface ReviewFormProps {;
-  projectId: string,;
-  revieweeId: string,;
-  revieweeName: string,;
-  onSubmit: (data: any) => Promise<boolean>,;
-  defaultValues?: Review,;
-  isSubmitting: boolean;
-}
 
-export function ReviewForm({
-  projectId,
-  revieweeId,
-  revieweeName,
-  onSubmit,
-  defaultValues,
-  isSubmitting}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number>(0);
-
-  const [hoveredStar, setHoveredStar] = useState<number>(0),
-  
-  const form = useForm<ReviewFormValues>({
-    defaultValues: defaultValues ? {
-      rating: defaultValues.rating
-      review_text: defaultValues.review_text
-      communication_rating: defaultValues.communication_rating
-      quality_rating: defaultValues.quality_rating
-      timeliness_rating: defaultValues.timeliness_rating
-      would_work_again: defaultValues.would_work_again
-      is_anonymous: defaultValues.is_anonymous} : {
-      rating: 0
-      review_text: ""
-      communication_rating: undefined
-      quality_rating: undefined
-      timeliness_rating: undefined
-      would_work_again: undefined
-      is_anonymous: false}
-<<<<<<< HEAD
-
-
-  });
-  const handleSubmit = async (values: ReviewFormValues) => {
-    const formattedData = {
-      ...values
-      project_id: projectId
-      reviewee_id: revieweeId}
-    const success = await onSubmit(formattedData);
-    if (success) {
-      form.reset()
-    }
-  }
-  const watchRating = form.watch("rating");
-
-
-=======
-  });
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-  const handleSubmit = async (values: ReviewFormValues) => {;
-    const formattedData = {;
-      ...values,;
-      project_id: projectId,;
-      reviewee_id: revieweeId},;
-
-
-    const success = await onSubmit(formattedData);
-    if (success) {;
-      form && form.reset();
-    }
-
-  },
-  
-  const watchRating = form.watch("rating"),
-  
-  return (
-<<<<<<< HEAD
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Main Rating */}
         <FormField
           control={form && form.control}
@@ -269,29 +103,22 @@ export function ReviewForm({
               </div>;
             </FormItem>;
           )}
-<<<<<<< HEAD
 
-  },;
-  const watchRating = form.watch("rating"),;
-  return (;
-    <Form {...form}>;
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         />;
 
 
 
 
-<<<<<<< HEAD
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         {/* Review Text */}
         <FormField
           control={form && form.control}
@@ -325,12 +152,13 @@ export function ReviewForm({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Communication */}
             <FormField
               control={form && form.control}

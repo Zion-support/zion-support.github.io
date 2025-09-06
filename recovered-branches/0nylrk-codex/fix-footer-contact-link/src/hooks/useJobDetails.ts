@@ -1,17 +1,16 @@
 
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export function useJobDetails(jobId: string | undefined) {;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const [job, setJob] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -56,11 +55,8 @@ export function useJobDetails(jobId: string | undefined) {;
 
 
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export function useJobDetails(jobId: string | undefined) {;
@@ -107,13 +103,15 @@ export function useJobDetails(jobId: string | undefined) {;
 ;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default useJobDetails;

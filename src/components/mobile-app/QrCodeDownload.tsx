@@ -10,41 +10,15 @@ export const QrCodeDownload: React.FC = () => {
               />
               
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              <div className="flex gap-2 items-center text-sm text-gray-400">
-                <span className="block h-1 w-1 rounded-full bg-zion-purple"></span>
-                <span>Compatible with iOS 14+ and Android 8.0+</span>
-              </div>
-            </div>
-            
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <div className="flex-shrink-0">
               <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-xl shadow-lg">
                 <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                   <QrCode className="w-full h-full p-4" />
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   // App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
@@ -93,11 +67,8 @@ export const QrCodeDownload: React.FC = () => {
 };
 import React from "react";
 import { QrCode } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons";
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const QrCodeDownload: React.FC = () => {;
   // App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
@@ -141,14 +112,8 @@ export const QrCodeDownload: React.FC = () => {;
     </section>;
   );
 };
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 "
 

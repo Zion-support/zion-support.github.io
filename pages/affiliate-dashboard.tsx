@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 
-import { useEffect, useMemo, useState } from 'react';
-import { useEffect, useMemo, useState } from 'react',;
-;
 
-function getRefCode(): string {
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   useEffect(() => {
@@ -31,32 +23,25 @@ function getRefCode(): string {
     } catch (e: any) {
       setMsg(e?.message |'Error')
     }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 function getRefCode(): string {;
   if (typeof window === 'undefined') return '',;
   return localStorage.getItem('ref_code') || '';
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
-<<<<<<< HEAD
-  }
-  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
 
 
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   }
 }
 ;
@@ -149,14 +134,15 @@ export default function AffiliateDashboard(req, res) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       </div>
     </div>
   )
@@ -168,121 +154,18 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-2xl font-semibold">{value}</div>
     </div>
 
-<<<<<<< HEAD
-
-  )
-=======
-=======
-}
-
-=======
-import { useEffect, useMemo, useState } from 'react',
-;
-function getRefCode (): string {
-  // Check condition
-if (return '', ) {
-  $2
-}
-  return local_storage.get_item ('ref_code') || '';
-}
-export default /**
- * AffiliateDashboard - Function description
- */
-function AffiliateDashboard() {
-  const [code, set_code] = useState < string>(''),
-  const [metrics, set_metrics] = useState < any>(null),
-  const [amount, set_amount] = useState < string>(''),
-  const [msg, set_msg] = useState < string>(''),
-  useEffect (() => {
-    const c = getRefCode (),
-    set_code (c);
-  }, []),
-  useEffect (() => {
-    // Check condition
-if (return, ) {
-  $2
-}
-    (async () => {
-      try {
-        const res = await fetch (`/api / partners / metrics?code=${encodeURIComponent (code)}`),
-        const json = await res.json (),
-        set_metrics (json);
-      } catch {}
-    })();
-  }, [code]),
-  async /**
- * request_payout - Function description
- */
-function request_payout() {
-    set_msg (''),
-    try {
-      const res = await fetch ('/api / partners / request - payout', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ code, amount: amount ? Number (amount) : undefined })}),
-      const json = await res.json (),
-      if (throw new Error (json.error || 'Failed'), ) {
-  $2
-}
-      set_msg ('Payout requested');
-    } catch (e: any) {
-      set_msg (e?.message || 'Error');
-    }
-  }
-  const export_url = useMemo (() => (code ? `/api / partners / export?code=${encodeURIComponent (code)}` : '#'), [code]),
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="space - y-4">;
-        <h1 className="text - 2xl font - semibold">Affiliate Dashboard</h1>;
-        <p className="text - gray - 600 dark: text - gray - 300">No referral code found. Visit your referral link first or register on the Partners page.</p>;
-      </div>);
-  }
-  return (
-    <div className="space - y-6">;
-      <h1 className="text - 2xl font - semibold">Affiliate Dashboard</h1>;
-      <div className="grid sm:grid - cols - 2 lg:grid - cols - 4 gap - 4">;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-;
-  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
-  if (!code) {;
-    return (;
-      <div className="space-y-4">;
-        <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>;
-        <p className="text-gray-600 dark: text-gray-300">No referral code found. Visit your referral link first or register on the Partners page.</p>;
-      </div>;
-    );
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-
-}
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-}
-;
-  return (;
-    <div className="space-y-6">;
-      <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>;
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
         <Stat label="Total Visits" value={metrics?.total_visits ?? '-'} />;
         <Stat label="Total Signups" value={metrics?.total_signups ?? '-'} />;
         <Stat label="Profile Completions" value={metrics?.total_profile_completions ?? '-'} />;
         <Stat label="Job Creations" value={metrics?.total_job_creations ?? '-'} />;
       </div>;
-<<<<<<< HEAD
+
       <div className="p - 4 rounded border border - gray - 200 dark:border - gray - 800">;
         <div className="flex items - center justify - between">;
           <div>;
@@ -313,9 +196,7 @@ function Stat() {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

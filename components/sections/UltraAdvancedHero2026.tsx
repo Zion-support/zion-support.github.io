@@ -1,11 +1,5 @@
 
-<<<<<<< HEAD
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +21,9 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
@@ -54,6 +50,7 @@ import {motion} from 'framer-motion';
 import Link from 'next / link';
 import {
 
+
   ArrowRight
   Star
   TrendingUp
@@ -68,6 +65,8 @@ import {
   MapPin;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   ArrowRight,
   Star,
   TrendingUp,
@@ -190,6 +189,8 @@ export default function UltraAdvancedHero2026() {;
           </motion.div>
 
 
+
+
             className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30'>;
             <Sparkles className='w-5 h-5 text-purple-400' />;
             <span className='text-purple-300 text-sm font-medium'>;
@@ -201,12 +202,13 @@ export default function UltraAdvancedHero2026() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           {/* Main Heading */}
           <motion&& motion.h1
             variants={itemVariants}
@@ -218,6 +220,8 @@ export default function UltraAdvancedHero2026() {;
             <br />
             <span className='text-white'>is Now</span>
           </motion.h1>
+
+
 
 
             className='text-5xl md:text-7xl lg:text-8xl font-black leading-tight'>;
@@ -232,12 +236,13 @@ export default function UltraAdvancedHero2026() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           {/* Subheading */}
           <motion&& motion.p
             variants={itemVariants}
@@ -252,6 +257,8 @@ export default function UltraAdvancedHero2026() {;
           </motion.p>
 
 
+
+
             with our revolutionary solutions.;
           </motion && motion.p>;
 
@@ -259,12 +266,13 @@ export default function UltraAdvancedHero2026() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           {/* Service Statistics */}
           <motion&& motion.div
             variants={itemVariants}
@@ -487,17 +495,15 @@ export default function UltraAdvancedHero2026() {;
           </motion && motion.div>;
 
 
-<<<<<<< HEAD
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
@@ -551,15 +557,12 @@ export default function UltraAdvancedHero2026() {;
               <ArrowRight className="w-6 h-6 ml-3" />
             </Link>
 
-<<<<<<< HEAD
+            <Link
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-            <Link 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
@@ -569,19 +572,12 @@ export default function UltraAdvancedHero2026() {;
 
 
 
-<<<<<<< HEAD
-              Get Started Today
-            </Link>
-          </motion.div>
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Get Started Today
             </Link>
@@ -590,11 +586,12 @@ export default function UltraAdvancedHero2026() {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           {/* Contact Information */}
 
           <motion.div 
@@ -633,6 +630,8 @@ export default function UltraAdvancedHero2026() {;
               </div>
             </div>
           </motion.div>
+
+
 
 
             className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto'>;
@@ -709,12 +708,13 @@ export default function UltraAdvancedHero2026() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           {/* Trust Indicators */}
 
           <motion.div 
@@ -737,6 +737,7 @@ export default function UltraAdvancedHero2026() {;
           </motion.div>
         </motion.div>
       </div>
+
 
 className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400'>;
             <div className='flex items-center space-x-2'>;
@@ -1000,6 +1001,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
         </motion.div>;
       </div>;
 
+
       {/* Floating Elements */}
       <div className='absolute inset - 0 pointer - events - none'>;
         <motion.div;
@@ -1209,12 +1211,13 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
+
+
+
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

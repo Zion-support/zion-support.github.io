@@ -8,49 +8,12 @@ import { useEffect, useState } from 'react';
       try {
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-  id: string,
-  target_type: string,
-  target_id: string,
-  text: string,
-  author_id: string,
-  created_at: number;
-},
-export default /**
- * AdminNotesConsole - Function description
- */
-function AdminNotesConsole() {
-  const [is_admin, setIsAdmin] = useState (true),
-  const [notes, set_notes] = useState < Note[]>([]),
-  const [loading, set_loading] = useState (false),
-  useEffect (() => {
-    async /**
- * load - Function description
- */
-function load() {
-      set_loading (true),
-      try {
-        const res = await fetch ('/api / admin / notes - all', { headers: { 'X - Admin': is_admin ? 'true' : 'false' } }),
-        // Check condition
-if (return, ) {
-  $2
-}
-        const data = await res.json (),
-        set_notes (data.notes || []);
-      } finally {
-        set_loading (false);
-      }
-    }
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 type Note = {
   id: string;
   targetType: string;
@@ -109,38 +72,14 @@ export default function AdminNotesConsole(req, res) {
             </div>
 
 
-<<<<<<< HEAD
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
-}
-        </div>;
-      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-    if (load ()) {
-  $2
-}
+
   }, [is_admin]),
   return (
     <div className="space - y-4">;
@@ -187,27 +126,7 @@ export default function AdminNotesConsole(req, res) {
             <div key={n.id} className=&quot;rounded border p-3 text-sm&quot;>
               <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
               <div className=&quot;font-medium mb-1&quot;>{n.targetType} • {n.targetId}</div>
-=======
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } })
-        if (!res.ok) return
-        const data = await res.json()
-        setNotes(data.notes |[])
-      } finally {
-        setLoading(false)
-      }
-    }
-    if (isAdmin) load()
-  }, [isAdmin])
 
-=======
-=======
-<<<<<<< HEAD
-import { useEffect, useState } from 'react',;
-;
-=======
-import { useEffect, useState } from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Note = {
   id: string;
   targetType: string;
@@ -237,9 +156,7 @@ export default function AdminNotesConsole(req, res) {
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

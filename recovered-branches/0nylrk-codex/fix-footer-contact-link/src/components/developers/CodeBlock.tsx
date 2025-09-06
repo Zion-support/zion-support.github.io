@@ -1,14 +1,7 @@
 
-<<<<<<< HEAD
 
 
-=======
-import {useState} from 'react';
-import {Check, Copy} from 'lucide-react';
-import {cn} from "@/lib/utils";
-interface CodeBlockProps {;
-  code: string,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   language?: string;
   showLineNumbers?: boolean;
@@ -27,21 +20,9 @@ export function CodeBlock(): any ({ ;
   const [copied, setCopied] = useState(false);
 
 
-<<<<<<< HEAD
-=======
-
-import {useState} from 'react';
-import {Check, Copy} from 'lucide-react';
-import {cn} from "@/lib/utils";
-
-=======
-import { useState } from 'react',
-import { Check, Copy } from 'lucide-react',
-import { cn } from "@/lib/utils",
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface CodeBlockProps {
   code: string,
   language?: string,
@@ -125,15 +106,17 @@ export function CodeBlock({;
               <div key={i} className="h-6 leading-6">;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 {i + 1}
               </div>;
             ))}
@@ -157,19 +140,31 @@ export function CodeBlock({;
 }
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-=======
-;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default CodeBlock;
 
+
+=======
+import {useState} from 'react';
+import {Check, Copy} from 'lucide-react';
+import { cn } from '@/lib / utils';
+interface CodeBlockProps {
+  code: string,
+  language?: string;
+  showLineNumbers?: boolean;
+  class_name?: string;
+}
+export /**
+ * CodeBlock - Function description
+ */
+function CodeBlock() {
+  const [copied, set_copied] = useState (false);
 
 ;
   const handleCopyClick = async () => {

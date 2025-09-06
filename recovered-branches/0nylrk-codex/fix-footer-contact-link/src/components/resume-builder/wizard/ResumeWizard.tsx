@@ -1,14 +1,12 @@
 
-<<<<<<< HEAD
-=======
-=======
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 import {useState, useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {use_resume} from '@/hooks / use_resume';
@@ -29,16 +27,10 @@ import {ResumeStepContent} from './ResumeStepContent';
 import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 import {RESUME_STEPS} from './constants';
-<<<<<<< HEAD
-
-export function ResumeWizard() {;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const { user } = useAuth();
   const { ;
     isLoading;
@@ -55,40 +47,9 @@ export function ResumeWizard() {;
   // Use the extracted hook for progress calculation
 
 
-<<<<<<< HEAD
-  const progress = useResumeProgress(resume);
-  useEffect(() => {
-    if (user) {
-      fetchResume()
-    }
-  }, [user, fetchResume]);
-  const handleCreateNewResume = async (title: string) => {
-    const resumeId = await createResume({ title: title.trim() })
-    if (resumeId) {
-      await fetchResume(resumeId);
-      setShowNewResumeForm(false)
-    }
-  }
-  const nextStep = () => {
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
-    if (currentIndex < RESUME_STEPS.length - 1) {
-      setActiveTab(RESUME_STEPS[currentIndex + 1].id)
-    }
-  }
-  const prevStep = () => {
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
-    if (currentIndex > 0) {
-      setActiveTab(RESUME_STEPS[currentIndex - 1].id)
-    }
 
 
-=======
-=======
 
-  };
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useResume } from '@/hooks/useResume',;
@@ -151,7 +112,8 @@ export function ResumeWizard() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
   },
 
   },
@@ -185,21 +147,16 @@ export function ResumeWizard() {;
       </Alert>
     )
 
-<<<<<<< HEAD
-  }
-  if (!resume && !showNewResumeForm) {
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
   if (showNewResumeForm) {
 

@@ -28,12 +28,7 @@ import {
   Globe,
   Smartphone,;
   Zap,;
-<<<<<<< HEAD
 
-
-} from 'lucide-react';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export default function SEOAnalyzerToolPage() {
@@ -337,6 +332,8 @@ export default function SEOAnalyzerToolPage() {
       ],
       popular: false,
 
+
+
     {
       category: 'Content SEO'
       factors: [
@@ -418,7 +415,6 @@ export default function SEOAnalyzerToolPage() {
         'Custom integrations'
       ]
       popular: false
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },  ];
 ;
   const handleAnalyzeSEO = async () => {
@@ -502,6 +498,8 @@ export default function SEOAnalyzerToolPage() {
             difficulty: 'high'
           }
         ]
+
+
 
 
   const handleAnalyzeSEO = async () => {;
@@ -707,6 +705,24 @@ export default function SEOAnalyzerToolPage() {
             <Button
 
 
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button
+              href="#pricing"
+              variant="outline"
+              size="lg"
+              className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white shadow-2xl"
+            >
+              View Pricing
+            </Button>
+            <Button
+href="/contact"
+              variant="outline"
+              size="lg"
+              className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
+            >
+
+
               Schedule Demo
 
             </Button>;
@@ -818,81 +834,17 @@ export default function SEOAnalyzerToolPage() {
         </div>;
       </section>;
 
-      {/* Features Section */}
-      <section className='section - padding bg - gradient - cursor - accent'>;
-        <div className='container - cursor'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
-              Powerful SEO Features;
-            </h2>;
-            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
 
-              Our SEO analyzer provides comprehensive insights and tools to help;
-              you dominate search rankings.;
-            </p>;
-          </div>;
-
-      <section className="section-padding bg-gradient-cursor-accent">
-        <div className="container-cursor">
-          <div className="text-center mb-20">
-            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
-              Powerful SEO Features
-
-            </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Our SEO analyzer provides comprehensive insights and tools to help you dominate search rankings.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
-                    />;
-                  </div>;
-                  <div className='flex-1'>;
-                    <h3 className='text-2xl font-bold mb-4 text-white'>;
-                      {feature && feature.title}
-                    </h3>;
-                    <p className='text-gray-400 leading-relaxed'>                      {feature && feature.description}              Powerful SEO Features;
-            </h2>;
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-              Our SEO analyzer provides comprehensive insights and tools to help you dominate search rankings.;
-            </p>;
-          </div>;
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {features && features.map((feature, index) => (;
-              <Card
-                key={index}
-                className="card-hover group border-gradient-green"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start space-x-6">
-                  <div className="relative">
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
-                      {feature.icon}
-                    </div>
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-4 text-white">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      {feature.description}
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
                     </p>
                   </div>
                 </div>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
@@ -900,7 +852,10 @@ export default function SEOAnalyzerToolPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* SEO Factors Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -909,7 +864,10 @@ export default function SEOAnalyzerToolPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               Comprehensive SEO Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -921,7 +879,9 @@ export default function SEOAnalyzerToolPage() {
             {seoFactors.map((category, index) => (
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
                     </p>
                   </div>
@@ -934,7 +894,9 @@ export default function SEOAnalyzerToolPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       {/* SEO Factors Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -943,14 +905,13 @@ export default function SEOAnalyzerToolPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               Comprehensive SEO Analysis
 
             </h2>
@@ -973,6 +934,7 @@ export default function SEOAnalyzerToolPage() {
                 key={index}
                 className="card-hover border-gradient-green"
 
+
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center mb-6">
@@ -983,6 +945,7 @@ export default function SEOAnalyzerToolPage() {
                   {category.factors.map((factor, factorIndex) => (
                     <li key={factorIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+
 
                       {factor}
                     </li>
@@ -996,7 +959,10 @@ export default function SEOAnalyzerToolPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Demo Analysis Results */}
       {analysisResults && (
 
@@ -1059,22 +1025,12 @@ export default function SEOAnalyzerToolPage() {
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-=======
-=======
-          </div>
-        </div>
-      </section>
+
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Demo Analysis Results */}
       {analysis_results && (
         <section className='section - padding bg - gradient - cursor - accent'>;
@@ -1146,7 +1102,6 @@ export default function SEOAnalyzerToolPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Overall Score */}
               <Card className="border-gradient-green text-center">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Overall SEO Score</h3>;
@@ -1206,57 +1161,25 @@ export default function SEOAnalyzerToolPage() {
                         <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />;
                       )}
 
-                      <div>;
-                        <span className='text-gray-300'>{issue && issue.message}</span>;
-                        <div className='text-xs text-gray-500 mt-1'>;
-                          Priority: {issue && issue.priority}
-                        </div>                      </div>                  {analysisResults && analysisResults.issues.map((issue, index) => (;
-                    <div key={index} className="flex items-start space-x-3">;
-                      {issue && issue.type === 'error' ? (;
-                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />;
-                      ) : issue && issue.type === 'warning' ? (;
-                        <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />;
-                      ) : (;
-                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
-                      )}
-                      <div>;
-                        <span className="text-gray-300">{issue && issue.message}</span>;
-                        <div className="text-xs text-gray-500 mt-1">Priority: {issue && issue.priority}</div>;
-                      </div>;
-                    </div>;
+
+              {/* Issues */}
+              <Card className="border-gradient-green">
+                <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>
+                <div className="space-y-3">
+                  {analysisResults.issues.map((issue, index) => (
 
 
-                    <div key={index} className="flex items-start space-x-3">
-                      {issue.type === 'error' ? (
-                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
-                      ) : issue.type === 'warning' ? (
-                        <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
-                      ) : (
-                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
-                      )}
-                      <div>
-                        <span className="text-gray-300">{issue.message}</span>
-                        <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
-                      </div>
-
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-                      </div>
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                     </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
                 </div>
               </Card>
             </div>
+
+
 
 
                 </div>;
@@ -1265,7 +1188,10 @@ export default function SEOAnalyzerToolPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Recommendations and Keywords */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
               <Card className='border-gradient-green'>;
@@ -1285,22 +1211,12 @@ export default function SEOAnalyzerToolPage() {
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
                       <span className="text-gray-300">{rec}</span>;
 
-<<<<<<< HEAD
-=======
-=======
-                </div>
-              </Card>
-            </div>
+
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Recommendations and Keywords */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <Card className="border-gradient-green">
@@ -1312,7 +1228,6 @@ export default function SEOAnalyzerToolPage() {
                       <span className="text-gray-300">{rec}</span>
                     </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </div>;
@@ -1357,9 +1272,7 @@ export default function SEOAnalyzerToolPage() {
                     </div>;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>
                 <div className="space-y-4">
@@ -1377,13 +1290,13 @@ export default function SEOAnalyzerToolPage() {
                           'bg-red-500/20 text-red-400'
                         }`}>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                         </span>
                       </div>
                     </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
+
 
 <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
               {/* Overall Score */}
@@ -1590,14 +1503,14 @@ export default function SEOAnalyzerToolPage() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1607,13 +1520,14 @@ export default function SEOAnalyzerToolPage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
             </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the SEO analysis plan that best fits your business needs and goals.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
+
+
 
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -1668,8 +1582,7 @@ export default function SEOAnalyzerToolPage() {
                       {plan.price}
 
 
-<<<<<<< HEAD
-=======
+
                 className={`card-hover border-gradient-green ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -1700,28 +1613,8 @@ export default function SEOAnalyzerToolPage() {
                   </div>;
                   <p className='text-gray-400'>{plan && plan.description}</p>;
                 </div>;
-                <ul className='space-y-4 mb-8'>;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'>;
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
-                  <p className="text-gray-400">{plan && plan.description}</p>;
-                </div>;
-                <ul className="space-y-4 mb-8">;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">;
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
-
-                      {feature}
-                    </li>;
-=======
 
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -1737,43 +1630,12 @@ export default function SEOAnalyzerToolPage() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    </li>
-                  ))}
-                </ul>
 
-                <Button
-                  href="/contact"
-                  size="lg"
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
-
-                </Button>
-
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1784,11 +1646,11 @@ export default function SEOAnalyzerToolPage() {
       {/* CTA Section */}
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1797,15 +1659,14 @@ export default function SEOAnalyzerToolPage() {
 
             Ready to Improve Your SEO Rankings?
 
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           </h2>
           <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our SEO analyzer to improve their
@@ -1824,21 +1685,7 @@ export default function SEOAnalyzerToolPage() {
               href='/contact'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
 
-              className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'            >              href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
-              Schedule Demo
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               Schedule Demo;
             </Button>;
@@ -1847,20 +1694,15 @@ export default function SEOAnalyzerToolPage() {
       </section>;
 
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -1,27 +1,11 @@
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-import {Trophy} from "lucide-react";
-import {Progress} from "@/components/ui/progress";
-=======
-import { Trophy } from "lucide-react",
-import { Progress } from "@/components/ui/progress",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface ReputationDisplayProps {
 
   reputation: number
@@ -90,18 +74,8 @@ export const ReputationDisplay = ({
 export default ReputationDisplay;
 
 
-<<<<<<< HEAD
-},
 
 
-export default ReputationDisplay,
-import { Trophy } from "lucide-react",;
-import { Progress } from "@/components/ui/progress",;
-
-=======
-import {Trophy} from "lucide-react";
-import {Progress} from "@/components/ui/progress";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ReputationDisplayProps {;
   reputation: number,;
   size?: 'sm' | 'md' | 'lg';
@@ -151,17 +125,13 @@ export const ReputationDisplay = ({ ;
 };
 
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-
-},
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default ReputationDisplay;

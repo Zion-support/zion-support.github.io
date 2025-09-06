@@ -1,29 +1,8 @@
 
 
 
-<<<<<<< HEAD
-=======
-
-// Define form schema
-
-const talentProfileSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters long"),
-  title: z.string().min(5, "Professional title is required"),
-  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
-  location: z.string().min(2, "Location is required"),
-  skills: z.string().min(2, "Enter at least one skill"),
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-
-    message: "Hourly rate must be a number"}),
-  availability: z.enum(["available", "limited", "unavailable"]),
-  enhancedProfile: z.boolean().default(true)}),
-
-type TalentFormValues = z.infer<typeof talentProfileSchema>,
-
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface CategorizedSkills {
   programming: string[]
   devops: string[]
@@ -31,7 +10,9 @@ interface CategorizedSkills {
   softSkills: string[]
   other: string[]
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -49,52 +30,11 @@ import {toast} from "@/components/ui/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
-<<<<<<< HEAD
-
-import React, { useState } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Switch } from "@/components/ui/switch",
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import {
-  Form;
-  FormControl;
-  FormDescription;
-  FormField;
-  FormItem;
-  FormLabel;
-import { Badge } from "@/components/ui/badge",
-import { Separator } from "@/components/ui/separator",
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react",
-import { toast } from "@/components/ui/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { useAuth } from "@/hooks/useAuth";
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { useAuth } from "@/hooks/useAuth",
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 // Define form schema
+
 
 
 const talentProfileSchema = z.object({
@@ -173,11 +113,11 @@ interface CategorizedSkills {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 }
 interface EnhancedProfile {
   summary: string
@@ -227,8 +167,7 @@ export function TalentRegistrationForm() {
 
 
 
-<<<<<<< HEAD
-=======
+
   },
 
   // Handle removing skill tags
@@ -245,36 +184,7 @@ export function TalentRegistrationForm() {
 
   };
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-;
-export function TalentRegistrationForm() {;
-  // Remove the useToast() hook since we're importing the toast function directly;
-  const { user } = useAuth(),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const [skillTags, setSkillTags] = useState<string[]>([]),;
-  const [isGenerating, setIsGenerating] = useState(false),;
-  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),;
-  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),;
 
-  // Initialize form with default values;
-  const form = useForm<TalentFormValues>({;
-    resolver: zodResolver(talentProfileSchema),;
-    defaultValues: {;
-      name: user?.displayName || "",;
-      title: "",;
-      bio: "",;
-      location: "",;
-      skills: "",;
-      hourlyRate: "",;
-      availability: "available",;
-      enhancedProfile: true}}),;
-
-  // Handle adding skill tags;
-  const handleAddSkill = () => {;
-    const skillInput = form && form.getValues("skills");
-    if (skillInput && !skillTags && skillTags.includes(skillInput)) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setSkillTags([...skillTags, skillInput]);
       form && form.setValue("skills", "");
     }
@@ -302,15 +212,12 @@ export function TalentRegistrationForm() {;
       reader.readAsDataURL(file);
     }
   },
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -325,46 +232,9 @@ export function TalentRegistrationForm() {;
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
     }
-<<<<<<< HEAD
-
-    try {
-      setIsGenerating(true);
-      // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
-        body: {
-          talentData: {
-            name: formData.name
-            title: formData.title
-            bio: formData.bio
-            skills: skillTags
-            location: formData.location
-          }
-        }
-      });
-      if (error) {
-        throw new Error(error.message)
 
 
-=======
-  };
 
-  // Handle avatar upload;
-  const handleAvatarUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const file = e && e.target.files?.[0];
-    if (file) {;
-      const reader = new FileReader(),;
-      reader && reader.onloadend = () => {;
-        setUploadedAvatar(reader && reader.result as string);
-      };
-      reader && reader.readAsDataURL(file);
-    }
-  };
-
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   },;
 
   // Generate enhanced profile with AI;
@@ -398,11 +268,11 @@ export function TalentRegistrationForm() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -492,31 +362,13 @@ function TalentRegistrationForm() {
       setSkillTags ([...skill_tags, skill_input]);
       form.set_value ("skills", "");
     }
-<<<<<<< HEAD
-
-  },;
-  // Apply generated content to form;
-  const applyGeneratedContent = () => {;
-    if (generatedContent) {;
-      form.setValue("bio", generatedContent.summary),;
-      // Extract all skills from categorized skills and properly type cast them;
-      const allCategorizedSkills = generatedContent.categorizedSkills,;
-      const newSkills: string[] = [],;
-      // Safely extract and flatten skills from each category;
-      Object.values(allCategorizedSkills).forEach(categorySkills => {;
-        if (Array.isArray(categorySkills)) {;
-          categorySkills.forEach(skill => {;
-            if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {;
-              newSkills.push(skill);
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             }
           });
         }
@@ -535,20 +387,9 @@ function TalentRegistrationForm() {
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
       case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
-<<<<<<< HEAD
-
-      case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500'
-      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
-    }
 
 
-=======
 
-
-  };
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }),;
       if (newSkills.length > 0) {;
         setSkillTags([...skillTags, ...newSkills]);
@@ -568,15 +409,13 @@ function TalentRegistrationForm() {
   },
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
@@ -781,11 +620,7 @@ if ( {) {
                     aiSkills && aiSkills.push(skill);
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
             Object.values(categorizedSkills).forEach(categorySkills => {;
               if (Array.isArray(categorySkills)) {;
                 categorySkills.forEach(skill => {;
@@ -793,8 +628,10 @@ if ( {) {
                     aiSkills.push(skill);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   }
                 });
               }
@@ -805,14 +642,12 @@ if ( {) {
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
@@ -824,15 +659,17 @@ if ( {) {
           finalSummary = "";
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         }
       } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
@@ -962,15 +799,17 @@ if ( {) {
             <CardContent className="space-y-8">;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;

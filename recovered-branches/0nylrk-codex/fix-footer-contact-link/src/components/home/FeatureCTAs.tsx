@@ -1,22 +1,18 @@
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock} from "lucide-react";
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import React from './react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -30,10 +26,8 @@ export /**
  */
 function FeatureCTAs() {
   const features = [;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     {
       title: "AI Talent Matching",
       description: "Our AI - powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
@@ -55,49 +49,14 @@ function FeatureCTAs() {
     {
       title: "Services Marketplace"
       description: "Discover professional tech and AI services for your business needs, from development to consulting.";
-<<<<<<< HEAD
 
-      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />
-      link: "/services"
-      badge: "New"
-      details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
-    }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import React from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Link } from "react-router-dom",
-import { 
-  ArrowRight,
-  Users, 
-  Zap, 
-  Settings, 
-  Search, 
-  MessageSquare, 
-  Smartphone, 
-  Calendar,
-  BookOpen,
-  Code,
-  Building,
-  Clock
-} from "lucide-react",
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export function FeatureCTAs() {
   const features = [
@@ -395,12 +354,11 @@ export function FeatureCTAs() {;
                   {feature.badge && (
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
                       {feature.badge}
                     </Badge>

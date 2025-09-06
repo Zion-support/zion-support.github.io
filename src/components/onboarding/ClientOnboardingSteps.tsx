@@ -8,16 +8,10 @@ export /**
 function ClientOnboardingSteps() {
   const onboarding_status = useOnboardingStatus ();
   const steps: OnboardingStep[] = [;
-<<<<<<< HEAD
 
 
-import React from "react",
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     {
       id: 'post - job',
       label: 'Post your first job',
@@ -42,6 +36,7 @@ import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
   ];
   return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client - dashboard",
       action: "Check Dashboard"}],
+
 
 
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
@@ -78,15 +73,7 @@ export function ClientOnboardingSteps() {;
       action: "Check Dashboard"}];
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-export function ClientOnboardingSteps() {
-  const onboardingStatus = useOnboardingStatus(),
-  
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const steps: OnboardingStep[] = [

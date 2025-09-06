@@ -3,12 +3,8 @@ import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import {
 
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Card
   CardContent
   CardDescription
@@ -40,10 +36,8 @@ import {;
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -170,10 +164,8 @@ if (return) {
     } finally {;
 
       setRedeeming(false);
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -220,11 +212,10 @@ if (return) {
       points: '100 pts',
       action: 'Browse Marketplace',
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
       icon: <Users className='h-5 w-5' />
       title: 'Sign Up & Profile Setup'
       description: 'Complete your profile and verify your email'
@@ -311,10 +302,8 @@ if (return) {
       category: 'Discount'
     }
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const earningOpportunities = [;
     {;
@@ -343,14 +332,9 @@ if (return) {
       description: 'Invite friends to join Zion marketplace',;
       points: '200 pts per referral',;
       action: 'Share Referral Link',;
-<<<<<<< HEAD
-      icon: <Users className="h-5 w-5" />,
-      title: "Sign Up & Profile Setup",
-      description: "Complete your profile and verify your email",
-      points: "50 pts",
-      action: isAuthenticated ? "✓ Completed" : "Get Started"
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
     },
     {
       icon: <ShoppingBag className="h-5 w-5" />,
@@ -364,9 +348,10 @@ if (return) {
 
 
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     },  ];
 
   const upcomingRewards = [
@@ -410,6 +395,7 @@ if (return) {
     {
 
 
+
       icon: <ShoppingBag className="h-5 w-5" />,
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
@@ -437,6 +423,7 @@ if (return) {
       title: "Refer Friends",
 
 
+
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",
       action: "Share Referral Link"
@@ -445,7 +432,9 @@ if (return) {
 
 
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -453,46 +442,9 @@ if (return) {
     return (
 
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
-<<<<<<< HEAD
 
 
-    {
-      id: 'premium1',
-      title: 'Premium Features (1 month)',
-      cost: 1000,
-      category: 'Subscription',
-    },
-    {
-      id: 'swag',
-      title: 'Zion Swag Pack',
-      cost: 1500,
-      category: 'Merchandise',
-    },
-    {
-      id: 'coupon25',
-      title: '$25 Off Coupon',
-      cost: 2000,
-      category: 'Discount',
-    },
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },
-  ],;
-  const upcomingRewards = [;
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },;
-    { id: 'premium1', title: 'Premium Features (1 month)', cost: 1000, category: 'Subscription' },;
-    { id: 'swag', title: 'Zion Swag Pack', cost: 1500, category: 'Merchandise' },;
-    { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' };
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
-  ],
 
-
-=======
-    { id: 'premium1', title: 'Premium Features (1 month)', cost: 1000, category: 'Subscription' },
-    { id: 'swag', title: 'Zion Swag Pack', cost: 1500, category: 'Merchandise' },
-    { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' },
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
-  ];
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   if (!isAuthenticated) {
     return (
@@ -507,20 +459,8 @@ if (return) {
             <p className="text-xl text-muted-foreground mb-6">
               Earn points for every action you take and redeem them for exclusive rewards!
             </p>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <Button onClick={() => setLoginOpen(true)} size="lg">
               Join Now to Start Earning
             </Button>
@@ -532,35 +472,15 @@ if (return) {
                   <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div className="grid md:grid-cols-2 gap-8 mb-12">
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <TrendingUp className="h-5 w-5" />
                   How to Earn Points
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </CardTitle>
                 <CardDescription>
                   Multiple ways to accumulate rewards
@@ -592,21 +512,16 @@ if (return) {
                       <h4 className="font-medium">{opportunity.title}</h4>
                       <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                     </div>
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
                     <Badge variant="secondary">{opportunity.points}</Badge>
                   </div>
                 ))}
@@ -638,20 +553,8 @@ if (return) {
                       <h4 className="font-medium">{reward.title}</h4>
                       <p className="text-sm text-muted-foreground">{reward.category}</p>
                     </div>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     <Badge variant="outline">{reward.cost}</Badge>
                   </div>
                 ))}
@@ -673,20 +576,8 @@ if (return) {
                 Create Account
               </Button>
             </CardContent>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </Card>
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
@@ -871,14 +762,8 @@ if (return) {
   return (
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <p className="text-sm text-muted-foreground mt-2">
             You haven't earned any points yet. Complete the tasks below to start
             earning and redeem rewards.
@@ -895,20 +780,8 @@ if (return) {
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
               Keep Earning
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </CardTitle>
             <CardDescription>
               More ways to boost your point balance
@@ -940,21 +813,16 @@ if (return) {
                   <h4 className="font-medium">{opportunity.title}</h4>
                   <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                 </div>
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
                 <div className="text-right">
                   <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
                   <p className="text-xs text-muted-foreground">{opportunity.action}</p>
@@ -1114,24 +982,9 @@ if (return) {
                 <div>
                   <h4 className="font-medium">{reward.title}</h4>
                   <p className="text-sm text-muted-foreground">{reward.category}</p>
-<<<<<<< HEAD
 
 
-                </div>
-                <div className="text-right space-y-1">
-                  <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
-                  {balance >= reward.cost ? (
-                    <Button
-                      size='sm'
-                      onClick={() => handleRedeem(reward)}
 
-
-=======
-
-                    <Button;
-                      size='sm';
-                      on_click={() => handle_redeem (reward)}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       disabled={redeeming}
                     >                      {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
@@ -1157,20 +1010,8 @@ if (return) {
 
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
                       {redeeming ? 'Processing...' : 'Redeem'}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ))}
           </CardContent>
         </Card>
@@ -1200,80 +1041,24 @@ if (return) {
           ) : (
             <ScrollArea className="h-64">
               <div className="space-y-2 mt-2">
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-
-                {ledger.map(entry => (
-                  <div key={entry.id} className="flex items-center justify-between py-2 border-b">
-                    <div>
-                      <p className='font-medium capitalize'>
-                        {entry.reason |'adjustment'}
-                      </p>
-                      <p className='text-xs text-muted-foreground'>
-                        {formatDistanceToNow(new Date(entry.created_at), {
-                          addSuffix: true
-                        })}
-                      </p>
-                    </div>
-                    <Badge
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      variant='outline'
-                      className={
-                        entry.delta >= 0
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-red-100 text-red-800'
-                      }                      variant="outline"
-                      className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
-                    >
-                      {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge>
-                  </div>
-                      <p className="font-medium capitalize">{entry.reason || 'adjustment'}</p>
-                      <p className="text-xs text-muted-foreground">
-                        {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
-                      </p>
-                    </div>
-                    <Badge
-                      variant="outline"
-                      className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
-
-
-=======
-                      variant='outline'
-                      className={
-
-
-                        entry && entry.delta>= 0;
-                          ? 'bg-green-100 text-green-800';
-                          : 'bg-red-100 text-red-800';
-                      }                      variant="outline";
-                      className = {entry && entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     >;
                       {entry.delta >= 0 ? '+' : ''}
                       {entry.delta} pts;
                     </Badge>;
                   </div>;
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
                 ))}
               </div>;
             </ScrollArea>;
@@ -1288,20 +1073,8 @@ if (return) {
           <h3 className="text-2xl font-bold mb-2">Full Rewards System Coming Soon</h3>
           <p className="text-muted-foreground mb-4">
             We're finalizing the redemption system. Keep earning points - they'll be ready to spend soon!
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </p>
           <div className="flex gap-4 justify-center">
             <Button variant="outline" asChild>
@@ -1310,18 +1083,8 @@ if (return) {
             <Button variant='outline' asChild>
               <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
             <Button variant="outline" asChild>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <Link href="/community">Join Community</Link>
             </Button>
           </div>
@@ -1444,10 +1207,10 @@ if (return) {
 }
 
 ;
-<<<<<<< HEAD
-=======
+
 
   )
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

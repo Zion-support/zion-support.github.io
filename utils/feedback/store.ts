@@ -1,37 +1,30 @@
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
-export interface FeedbackRecord {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   id: string;
   type: string;
   message: string;
   rating: number;
-<<<<<<< HEAD
+
 
   metadata: Record<string, any>;
   createdAt: string;
   ip: string;
 }
 const feedbackData: FeedbackRecord[] = [];
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'runtime');
 const DB_PATH = path && path.join(DATA_DIR, 'feedback && feedback.json');
 
@@ -49,38 +42,6 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items }, null, 2), 'utf-8');
   return rec;
 
-=======
 
-export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {;
-  feedbackData.push(feedback);
-  console.log('Feedback saved:', feedback.id);
-}
-
-export function writeAll(rows: any[]): void {;
-  console.log('Writing feedback rows:', rows.length);
-  // Implementation would write to database or file
-}
-
-export function getAllFeedback(): FeedbackRecord[] {;
-  return [...feedbackData];
-=======
-  metadata: Record < string, any>;
-  created_at: string;
-  ip: string;
-}
-const feedback_data: FeedbackRecord[] = [];
-;
-export async function saveFeedbackFallback (feedback: FeedbackRecord): Promise < void> {
-  feedback_data.push (feedback);
-  console.log ('Feedback saved:', feedback.id);
-}
-export function write_all (rows: any[]): void {
-  console.log ('Writing feedback rows:', rows.length);
-  // Implementation would write to database or file;
-}
-export function getAllFeedback (): FeedbackRecord[] {
-  return [...feedback_data];
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

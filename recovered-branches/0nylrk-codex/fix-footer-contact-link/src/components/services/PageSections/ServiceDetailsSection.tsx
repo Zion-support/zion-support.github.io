@@ -1,27 +1,11 @@
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-import {CountryPricing} from "@/data/onsiteServicePricing";
-import {CountryServiceSelector} from "../CountryServiceSelector";
-=======
-import { CountryPricing } from "@/data/onsiteServicePricing",
-import { CountryServiceSelector } from "../CountryServiceSelector",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null;
   setSelectedCountry: (country: CountryPricing | null) => void
@@ -68,8 +52,7 @@ function ServiceDetailsSection() {
 import {CountryPricing} from "@/data/onsiteServicePricing";
 import {CountryServiceSelector} from "../CountryServiceSelector";
 
-<<<<<<< HEAD
-=======
+
 import { CountryPricing } from "@/data/onsiteServicePricing",;
 import { CountryServiceSelector } from "../CountryServiceSelector",;
 
@@ -105,20 +88,6 @@ export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCoun
           </p>;
         </div>)}
     </div>);
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-      )}
-    </div>
-  )
-
-}
-<<<<<<< HEAD
-
-;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/feature/merge-conflicts-and-improvements

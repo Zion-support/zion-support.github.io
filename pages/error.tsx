@@ -10,7 +10,7 @@ export default function ErrorPage() {
         <title>Authentication Error - Zion Tech Marketplace</title>;
         <meta name=&quot;description&quot; content=&quot;Authentication error page&quot; />
       </Head>
-<<<<<<< HEAD
+
       <div className=&quot;min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4&quot;>
         <Card className=&quot;w-full max-w-md&quot;>
           <CardHeader className=&quot;space-y-1 text-center&quot;>
@@ -21,26 +21,11 @@ export default function ErrorPage() {
         <meta name="description" content="Authentication error page" />
       </Head>
 
-      <div className=&quot;min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4&quot;>
-        <Card className=&quot;w-full max-w-md&quot;>
-          <CardHeader className=&quot;space-y-1 text-center&quot;>
-            <div className=&quot;mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20&quot;>
-              <AlertTriangle className=&quot;h-6 w-6 text-red-600 dark:text-red-400&quot; />
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4">
-        <Card className="w-full max-w-md">
-          <CardHeader className="space-y-1 text-center">
-            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">
-              <AlertTriangle className="h-6 w-6 text-red-600 dark:text-red-400" />
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             </div>
             <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
             <p className=&quot;text-sm text-muted-foreground&quot;>
@@ -66,14 +51,15 @@ export default function ErrorPage() {
                   <Link href="/auth/login">
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                     Try Again
                   </Link>
                 </Button>
@@ -89,14 +75,15 @@ export default function ErrorPage() {
                 Need help? <Link href="/contact" className="hover:text-primary">Contact Support</Link>
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               </div>
             </div>
           </CardContent>
@@ -106,16 +93,8 @@ export default function ErrorPage() {
   )
 
 
-<<<<<<< HEAD
 
-=======
-}
-=======
 
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -126,8 +105,8 @@ export default function ErrorPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+

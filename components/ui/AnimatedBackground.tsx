@@ -9,7 +9,6 @@ import React from 'react';
 export default function AnimatedBackground() {
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div
         className='absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]'
         style={{
@@ -40,7 +39,6 @@ export default function AnimatedBackground() {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Gradient Background */}
 
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800" />;

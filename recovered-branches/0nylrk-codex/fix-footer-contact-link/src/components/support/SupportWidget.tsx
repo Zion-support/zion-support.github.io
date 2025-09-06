@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {ChatBotPanel} from "./ChatBotPanel";
@@ -16,57 +13,16 @@ export function SupportWidget() {;
 
 
   return (
-<<<<<<< HEAD
 
-    <>
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { ChatBotPanel } from "./ChatBotPanel",
-import { MessageSquare, Info, X } from "lucide-react",
-import { cn } from "@/lib/utils";
-import { useTheme } from "@/hooks/useTheme";
-export function SupportWidget() {
-  const [isOpen, setIsOpen] = useState(false);
-  const { theme } = useTheme();
-  return (
-    <>
-
-=======
-    <>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button
 
-<<<<<<< HEAD
-
-import { cn } from "@/lib/utils",
-import { useTheme } from "@/hooks/useTheme",
-export function SupportWidget() {
-  const [isOpen, setIsOpen] = useState(false),
-  const { theme } = useTheme(),
-  
-  return (
-    <>
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { ChatBotPanel } from "./ChatBotPanel",;
-import { MessageSquare, Info, X } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { useTheme } from "@/hooks/useTheme",;
-export function SupportWidget() {;
-  const [isOpen, setIsOpen] = useState(false),;
-  const { theme } = useTheme();
-  return (;
-    <>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button

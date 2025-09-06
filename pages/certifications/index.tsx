@@ -1,18 +1,5 @@
-<<<<<<< HEAD
 
 
-import { useEffect, useState } from 'react',
-import CertificatePreview from '../../components/learn/CertificatePreview'
-export default function Certifications() {
-  const [leaderboard, setLeaderboard] = useState<any[]>([]),
-  useEffect(() => {
-    fetch('/api/learn/leaderboard').then(r => r.json()).then(d => setLeaderboard(d.leaderboard || []))
-  }, []),
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-6">
       <div>
@@ -36,10 +23,9 @@ export default function Certifications() {
 
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
       <div>;
         <div className='font-medium mb-2'>Leaderboard (Top Learners)</div>;
         <ol className='list-decimal pl-6 space-y-1 text-sm'>;
@@ -47,11 +33,8 @@ export default function Certifications() {
             <li key={u && u.userId}>;
               {u && u.name} — {u && u.points} pts;
             </li>          ))}
-=======
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
         <ol className="list-decimal pl-6 space-y-1 text-sm">
           {leaderboard.map((u) => (
@@ -70,21 +53,12 @@ export default function Certifications() {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
-=======
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

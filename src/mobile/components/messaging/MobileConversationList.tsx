@@ -120,40 +120,8 @@ function MobileConversationList() {
             <div className='flex items-center gap-3 py-3 cursor-pointer'>
               <Avatar>
                 <AvatarImage
-<<<<<<< HEAD
 
 
-                  src={conversation.avatar}
-                  alt={conversation.name}
-                />                <AvatarFallback>
-                  {conversation.name.charAt(0).toUpperCase()}
-                </AvatarFallback>
-              </Avatar>                <AvatarImage src={conversation.avatar} alt={conversation.name} />
-      
-      <div className="px-4 pb-4 space-y-2">
-        <div className="flex space-x-2">
-          <Badge variant="secondary" className="rounded-full px-3">All</Badge>
-          <Badge variant="outline" className="rounded-full px-3">Unread</Badge>
-          <Badge variant="outline" className="rounded-full px-3">Interviews</Badge>
-          <Badge variant="outline" className="rounded-full px-3">Projects</Badge>
-        </div>
-      </div>
-      
-      <div className="space-y-2 pb-24">
-        {conversations.map((conversation) => (
-          <div
-            key={conversation.id}
-            className={cn(
-              "px-4",
-              activeConversation === conversation.id && "bg-primary/5"
-            )}
-            onClick={() => onSelectConversation(conversation.id)}
-          >
-            <div className="flex items-center gap-3 py-3 cursor-pointer">
-              <Avatar>
-                <AvatarImage src={conversation.avatar} alt={conversation.name} />
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                 <AvatarFallback>
@@ -204,20 +172,8 @@ function MobileConversationList() {
                     {conversation.isTyping 
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </p>
                   {conversation.unreadCount > 0 && (
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
@@ -226,18 +182,8 @@ function MobileConversationList() {
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   )}
                 </div>
               </div>
@@ -258,8 +204,7 @@ function MobileConversationList() {
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
       <div className='space - y-2 pb - 24'>;
         {conversations.map (conversation => (
@@ -307,4 +252,5 @@ function MobileConversationList() {
     </div>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

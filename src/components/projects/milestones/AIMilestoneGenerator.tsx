@@ -7,29 +7,8 @@ interface AIMilestoneGeneratorProps {;
 
 
 
-<<<<<<< HEAD
-  scope
-  startDate
-  endDate
-  projectType
-  onAddMilestones
-  onAddMilestone
-}: AIMilestoneGeneratorProps) {
-  const {
-    generateMilestones
-    generatedMilestones
-    isGenerating
-    clearGeneratedMilestones
-  } = useMilestoneGenerator()
-  const [selectedMilestones, setSelectedMilestones] = useState<
-    Record<string, boolean>
-  >({})
-  const handleGenerateMilestones = async () => {
-    if (!scope |!startDate |!projectType) {
-      return
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     if (!scope || !startDate || !projectType) {
       return;
 
@@ -127,16 +106,12 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
 
 
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -214,21 +189,10 @@ export function AIMilestoneGenerator({;
 
   },
 
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
+
 
 
     <div className="space-y-4">
@@ -238,12 +202,7 @@ export function AIMilestoneGenerator({;
           AI Milestone Generator
         </h3>
         <Button
-<<<<<<< HEAD
-          variant='outline'
-          onClick={handleGenerateMilestones}
-          disabled={isGenerating |!scope |!startDate |!projectType}        >
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           disabled={isGenerating || !scope || !startDate || !projectType}        >
@@ -252,20 +211,8 @@ export function AIMilestoneGenerator({;
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -410,30 +357,16 @@ export function AIMilestoneGenerator({;
                             <Sparkles className="w-3 h-3 mr-1" />
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
-<<<<<<< HEAD
 
 
-                      variant='ghost'
-                      size='sm'
-                      onClick={e => {
-                        e.stopPropagation()
-                        handleAddSingleMilestone(milestone) }}
-                      className='mr-2'
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                       variant="ghost"
@@ -445,24 +378,8 @@ export function AIMilestoneGenerator({;
                       className="mr-2"
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                      variant="ghost"
-                      size="sm"
-                      onClick={(e) => {
-                        e.stopPropagation(),
-                        handleAddSingleMilestone(milestone)
-                      }}
-                      className="mr-2"
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     >
                       <Plus className="h-4 w-4" />
                     </Button>
@@ -510,15 +427,7 @@ export function AIMilestoneGenerator({;
           </CardContent>;
         </Card>;
       )}
-<<<<<<< HEAD
 
-
-    </div>
-  )
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     </div>;
   );

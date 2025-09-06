@@ -20,7 +20,6 @@ export default function VerifyPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null);
   const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>([]);
   const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>([]);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [fullLegalName, setFullLegalName] = useState('');
   const [businessName, setBusinessName] = useState('');
   const [businessReg, setBusinessReg] = useState('');
@@ -108,38 +107,7 @@ export default function VerifyPage() {
       setOptionalDocs(data && data.optionalDocuments);
 
 
-  async function upload(): any (kind: KycDocumentMeta['kind']) {;
-    const filename = prompt(`Enter filename for ${kind}`) || '';
-    if (!filename) return;
-    setBusy(true);
-    const res = await fetch('/api/kyc/upload', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-<<<<<<< HEAD
 
-      body: JSON.stringify({ userId })}),;
-    const data = await res.json();
-    if (data.ok) {;
-      setProfile(data.profile);
-      setMessage('Submitted. AML check performed.');
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    setBusy(false);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const labels = getBadgeLabels(profile || undefined),
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return (
     <>
       <Head>
@@ -158,10 +126,10 @@ export default function VerifyPage() {
 
       body: JSON && JSON.stringify({ userId, kind, filename }),;
     });
-=======
+
       body: JSON && JSON.stringify({ userId, kind, filename }),;
     });
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const data = await res && res.json();
     if (data && data.ok) {;
@@ -218,12 +186,20 @@ export default function VerifyPage() {
               onChange={e => setRole(e && e.target.value as KycRole)}
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+            >;
+              <option value='client'>Client</option>;
+              <option value='talent'>Talent</option>;
+              <option value='enterprise'>Enterprise</option>;
+            </select>;
+          </div>;
+
+          )}
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {labels.length > 0 && (
           <div className="mb-4">
             <VerifiedBadge labels={labels} />
@@ -292,7 +268,6 @@ export default function VerifyPage() {
                 <input className="mt-1 w-full border rounded px-3 py-2" value={businessReg} onChange={(e) => setBusinessReg(e.target.value)} />
               </div>
             </>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
         </div>
 
@@ -311,15 +286,17 @@ export default function VerifyPage() {
                 <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
@@ -391,20 +368,9 @@ export default function VerifyPage() {
                         </div>
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
-<<<<<<< HEAD
-
-                    );                  })}
-                </div>
-              </section>
-            )}
-
-
-=======
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     )
 ;
   const labels = getBadgeLabels(profile || undefined);
@@ -484,69 +450,11 @@ export default function VerifyPage() {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-            <section>;
-              <h2 className="font-semibold mb-2">Required documents</h2>;
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-2">;
-                {requiredDocs.map((k) => {;
-                  const hasIt = (profile.documents || []).some((d) => d.kind === k);
-                  return (;
-                    <div key={k} className="flex items-center justify-between border rounded p-3">;
-                      <div>;
-                        <div className="text-sm font-medium">{k}</div>;
-                        <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Missing'}</div>;
-                      </div>;
-                      <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>;
-                    </div>;
-                  );
-                })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>;
-            </section>;
-            {optionalDocs.length > 0 && (;
-              <section>;
-                <h2 className="font-semibold mb-2">Optional documents</h2>;
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-2">;
-                  {optionalDocs.map((k) => {;
-                    const hasIt = (profile.documents || []).some((d) => d.kind === k);
-                    return (;
-                      <div key={k} className="flex items-center justify-between border rounded p-3">;
-                        <div>;
-                          <div className="text-sm font-medium">{k}</div>;
-                          <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>;
-                        </div>;
-                        <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>;
-                      </div>;
-                    );
-                  })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </div>;
-              </section>;
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-            <div>
-              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
-            </div>
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {message && <div className="text-sm text-blue-700">{message}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -569,9 +477,10 @@ export default function VerifyPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

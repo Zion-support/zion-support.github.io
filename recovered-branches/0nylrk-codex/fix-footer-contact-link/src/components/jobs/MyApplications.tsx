@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -16,42 +13,8 @@ import {ApplicationStatus} from "@/types/jobs";
 export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications();
 
-<<<<<<< HEAD
 
-import { useState } from "react",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Loader2, MessageSquare, ExternalLink } from "lucide-react",
-import { formatDistanceToNow } from "date-fns",
-import { Link } from "react-router-dom";
-import { ApplicationStatus } from "@/types/jobs";
-export function MyApplications() {
-  const { applications, isLoading, error } = useJobApplications();
-=======
-  const getStatusBadge = (status: ApplicationStatus) => {;
-    switch (status) {;
 
-=======
-import { useState } from './react';
-import { useJobApplications } from '@/hooks / useJobApplications';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Loader2, MessageSquare, ExternalLink } from './lucide-react';
-import { formatDistanceToNow } from './date - fns';
-import { Link } from './react-router-dom';
-import { ApplicationStatus } from '@/types / jobs';
-export /**
- * MyApplications - Function description
- */
-function MyApplications() {
-  const { applications, is_loading, error } = useJobApplications ();
-;
-  const getStatusBadge = (status: ApplicationStatus) =>: any {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import { Link } from "react-router-dom",
@@ -81,7 +44,7 @@ export function MyApplications() {
   },
   
   if (isLoading) {
-<<<<<<< HEAD
+
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -110,76 +73,11 @@ export function MyApplications() {
     )
   }
 
-  return (
-    <div className="grid gap-4 md:grid-cols-2">
-      {applications.map((application) => (
-        <Card key={application.id}>
-          <CardHeader className="pb-2">
-            <div className="flex justify-between items-start">
-              <CardTitle className="text-lg">
-                {application.job?.title |"Unknown Job"}
-              </CardTitle>
-              {getStatusBadge(application.status)}
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
-            </p>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-3">
-              {application.cover_letter && (
-                <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
-
-
-=======
-=======
-      case "rejected":;
-        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,;
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
-    }
-  };
-
-  if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    return (
-      <div className="flex justify-center items-center p-8">;
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-      </div>;
-    );
-  }
-
-
-  if (error) {;
-
-    return (
-      <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">;
-        <p>{error}</p>;
-      </div>;
-    );
-  }
-
-
-  if (applications && applications.length === 0) {;
-
-    return (
-      <Card className="bg-muted/30">;
-        <CardContent className="pt-6 text-center">;
-          <p className="text-muted-foreground">;
-            You haven't submitted any applications yet.;
-          </p>;
-          <Button className="mt-4" asChild>;
-            <Link to="/jobs">Browse Jobs</Link>;
-          </Button>;
-        </CardContent>;
-      </Card>;
-    );
-  }
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -261,11 +159,11 @@ export function MyApplications() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                   {application.cover_letter}
                 </p>
               )}
@@ -281,10 +179,8 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   return (
@@ -324,18 +220,9 @@ export function MyApplications() {;
                 <Button
                   variant="default" 
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
-                <Button 
-                  variant="default" 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   size="sm"
                   className="text-xs"
                   asChild>;

@@ -1,27 +1,5 @@
 
-<<<<<<< HEAD
-
-export { AuthContext } from './AuthContext';
-export { AuthProvider } from './AuthProvider';
 
 
-export { AuthContext } from './AuthContext',;
-export { AuthProvider } from './AuthProvider',;
-=======
-;
-// Re - export the context type for convenience;
-export type { AuthContextType } from '@/types / auth';
-;
-
-=======
-
-
-
-
-=======
-export { AuthContext } from './AuthContext',;
-export { AuthProvider } from './AuthProvider',;
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Re-export the context type for convenience;
 export type { AuthContextType } from '@/types/auth';

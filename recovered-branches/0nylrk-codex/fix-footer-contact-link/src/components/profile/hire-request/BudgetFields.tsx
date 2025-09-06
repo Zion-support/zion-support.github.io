@@ -33,16 +33,14 @@ import { FormValues } from "./useHireRequestForm",;
 interface BudgetFieldsProps {;
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
-<<<<<<< HEAD
 
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 }
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
 
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
   return (
@@ -93,14 +91,12 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
       />
     </>
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -175,6 +171,8 @@ function BudgetFields() {
           </FormItem>;
         )}
 
+
+
       />;
 
 
@@ -227,14 +225,11 @@ function BudgetFields() {
 }
 
 
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  )
-}
-;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

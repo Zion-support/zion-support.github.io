@@ -1,31 +1,18 @@
 
 
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Search, Filter } from "lucide-react",
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -248,14 +235,15 @@ export default function SupportRequests() {;
       return false;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
     }
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -360,22 +348,17 @@ export default function SupportRequests() {;
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
-<<<<<<< HEAD
-
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10"
-                />
-              </div>
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -387,17 +370,10 @@ export default function SupportRequests() {;
                 </SelectContent>
               </Select>
 
-<<<<<<< HEAD
-              <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
-              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -409,17 +385,10 @@ export default function SupportRequests() {;
                 </SelectContent>
               </Select>
 
-<<<<<<< HEAD
-              <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
-              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -630,12 +599,11 @@ export default function SupportRequests() {;
                           }>;
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                             {request.status}
                           </Badge>
                         </TableCell>

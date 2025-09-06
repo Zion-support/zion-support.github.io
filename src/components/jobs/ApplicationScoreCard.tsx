@@ -41,18 +41,8 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   }
   // Trigger the scoring process
@@ -83,14 +73,8 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           .eq("id", application.id)
           .single()
         if (error) {
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface ApplicationScoreCardProps {;
   application: JobApplication,;
@@ -181,13 +165,6 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
           toast.success("Resume scoring completed"),
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),
 
-<<<<<<< HEAD
-=======
-        }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-          return;
-          return
 
 
         }
@@ -210,59 +187,8 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
         } else {
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
-<<<<<<< HEAD
 
 
-        }
-      },
-      
-      setTimeout(checkScore, 3000)
-      
-    } catch (error: any) {
-      setIsScoring(false),
-      toast.error(`Failed to score resume: ${error.message}`)
-      ),;
-      if (error) throw error,;
-      toast.success("Resume scoring has been initiated"),;
-      // Poll for results every 3 seconds for up to 30 seconds;
-      let attempts = 0,;
-      const maxAttempts = 10,;
-      const checkScore = async () => {;
-        attempts++,;
-        const { data, error } = await supabase;
-          .from("job_applications");
-          .select("*");
-          .eq("id", application.id);
-          .single(),;
-        if (error) {;
-          setIsScoring(false),;
-          toast.error("Failed to check scoring status"),;
-          return;
-        }
-;
-        if (data.scored_at) {;
-          setIsScoring(false),;
-          toast.success("Resume scoring completed"),;
-          if (onScoreUpdated) onScoreUpdated(data as JobApplication),;
-          return;
-        }
-;
-        if (attempts < maxAttempts) {;
-          setTimeout(checkScore, 3000);
-        } else {;
-          setIsScoring(false),;
-          toast.info("Scoring is taking longer than expected. Check back later.");
-        }
-      },;
-      setTimeout(checkScore, 3000);
-    } catch (error: any) {;
-      setIsScoring(false);
-      toast.error(`Failed to score resume: ${error.message}`);
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   },
 
@@ -353,11 +279,8 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                         )}
 
 
-<<<<<<< HEAD
-                      </div>
-                    )}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                       </div>;
                       </div>;
 
@@ -540,13 +463,8 @@ if ( {) {
                         {application.match_breakdown.certifications_match.missing && (
 
 
-<<<<<<< HEAD
-                          <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
-                        )}
-                      </div>
-                    )}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                       </div>;
                       </div>;
 
@@ -590,17 +508,8 @@ if ( {) {
                 </details>;
               </div>;
             )}
-<<<<<<< HEAD
 
 
-          </div>
-        ) : (
-          <div className="text-center py-4">
-            <p className="text-muted-foreground mb-4">
-              Analyze how well this resume matches your job requirements.
-            </p>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             <Button
@@ -619,58 +528,15 @@ if ( {) {
               onClick={handleScore} 
               disabled={isScoring}
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-            <Button 
-              onClick = {handleScore,}
-              disabled = {isScoring,}
-              onClick={handleScore} 
-              disabled={isScoring}
-
-              className="w-full"
-            >
-              {isScoring ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Scoring Resume...
-                </>
-              ) : (
-                "Score Resume"
-              )}
-            </Button>;
-          </div>;
-        )}
-<<<<<<< HEAD
-
-
-      </CardContent>
-    </Card>;
-  );
-};
-}
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </CardContent>;
     </Card>;
   );
 }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                           <p > Missing certs: {application.match_breakdown.certifications_match.missing.join (", ")}</p>)}
                       </div>)}

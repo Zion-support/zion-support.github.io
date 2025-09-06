@@ -27,32 +27,20 @@ const PopoverContent = React.forwardRef<
   </PopoverPrimitive.Portal>;
 ));
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import * as React from &quot;react & quot;
 import * as PopoverPrimitive from &quot;@radix - ui / react - popover & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 ;
 
-<<<<<<< HEAD
-=======
-=======
-export { Popover, PopoverTrigger, PopoverContent };
-=======
-export { Popover, PopoverTrigger, PopoverContent }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const Popover = PopoverPrimitive.Root;
 const PopoverTrigger = PopoverPrimitive.Trigger;
 const PopoverContent = React.forward_ref<;
@@ -72,11 +60,10 @@ const PopoverContent = React.forward_ref<;
   </PopoverPrimitive.Portal>));
 PopoverContent.display_name = PopoverPrimitive.Content.display_name;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
+
 export { Popover, PopoverTrigger, PopoverContent }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-export { Popover, PopoverTrigger, PopoverContent }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

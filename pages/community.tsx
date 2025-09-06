@@ -34,114 +34,8 @@ export default function CommunityPage() {
               or email{' '}
               <a
                 className='text-purple-400'
-<<<<<<< HEAD
 
-                href='mailto: kleber@ziontechgroup.com'
-              >
-                kleber@ziontechgroup.com
-              </a>
-              .
-            </p>
-          </div>
-          <div className='p-6 rounded-2xl bg-white/5 border border-white/10'>
-            <h2 className='text-white text-xl font-semibold mb-2'>Follow Us</h2>
-            <ul className='text-slate-300 space-y-1'>
-              <li>
-                <a
-                  className='text-cyan-400'
-                  href='https://linkedin.com/company/ziontechgroup'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  className='text-cyan-400'
-                  href='https://github.com/Zion-Holdings'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  className='text-cyan-400'
-                  href='https://instagram.com/ziontechgroup'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  className='text-cyan-400'
-                  href='https://youtube.com/@ziontechgroup'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  YouTube
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>;
-  );
 
-import React from 'react',
-import Head from 'next/head',
-
-=======
-<<<<<<< HEAD
-                href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
-                kleber@ziontechgroup && ziontechgroup.com;
-import Head from 'next / head';
-export default /**
- * CommunityPage - Function description
- */
-function CommunityPage() {
-  return (
-    <div className='min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8'>;
-      <Head>;
-        <title > Community | Zion Tech Group</title>;
-        <meta;
-          name='description';
-          content='Community forum and resources for Zion Tech Group users';
-        />;
-        <link rel='canonical' href='https://ziontechgroup.com / community' />;
-        <meta;
-          name='description';
-          content='Join the Zion Tech Group community and stay updated.';
-        />;
-      </Head>;
-      <div className='max - w-5xl mx - auto space - y-8'>;
-        <h1 className='text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
-          Community;
-        </h1>;
-        <p className='text - slate - 300'>;
-          Join our community. Ask questions, share solutions, and learn best;
-          practices.;
-        </p>;
-        <div className='grid md:grid - cols - 2 gap - 6'>;
-          <div className='p - 6 rounded - 2xl bg - white / 5 border border - white / 10'>;
-            <h2 className='text - white text - xl font - semibold mb - 2'>Get Help</h2>;
-            <p className='text - slate - 300'>;
-              Visit the{' '}
-              <a className='text - cyan - 400 underline' href='/support'>;
-                Support Center;
-              </a>{' '}
-              or email{' '}
-              <a;
-                className='text - purple - 400';
-                href='mailto: kleber@ziontechgroup.com';
-              >;
-                kleber@ziontechgroup.com;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </a>;
               .;
             </p>;
@@ -190,22 +84,11 @@ function CommunityPage() {
                   rel='noopener noreferrer'>;
 
 
-<<<<<<< HEAD
-=======
-=======
 
-}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React from 'react',
-import Head from 'next/head',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default function CommunityPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -236,10 +119,8 @@ export default function CommunityPage() {
 			</div>
 		</div>
 	)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 }
 
     </div>);
@@ -247,12 +128,12 @@ export default function CommunityPage() {
 
 
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

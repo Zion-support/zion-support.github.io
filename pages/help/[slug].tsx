@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 
 
-import type { HelpArticle } from '../../utils/support';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -17,18 +14,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
-<<<<<<< HEAD
 
-    paths: articles.map(a => ({ params: { slug: a.slug } }))
-    fallback: false
-  }
-}
-export const getStaticProps: GetStaticProps = async ctx => {
-=======
-    paths: articles.map((a) => ({ params: { slug: a.slug } })),
-    fallback: false}
-};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
   const slug = ctx.params?.slug as string;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
@@ -38,6 +27,11 @@ export const getStaticProps: GetStaticProps = async ctx => {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {
+
+  const [voted, setVoted] = useState<null | boolean>(null);
+  async function vote(helpful: boolean) {
+    await fetch('/api/support/feedback', {
+
 
 
     paths: articles.map(a => ({ params: { slug: a.slug } })),
@@ -52,11 +46,9 @@ export const getStaticProps: GetStaticProps = async ctx => {;
   const article = articles && articles.find(a => a && a.slug === slug) || null;
   return { props: { article } };};
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
             className='enhanced-button enhanced-button-secondary';
     paths: articles.map (array => ({ params: { slug: a.slug } })),
@@ -116,16 +108,7 @@ function vote() {
       </div>;
 
 
-=======
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ articleId: article.id, helpful })});
-    setVoted(helpful)
-  }
-=======
-export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
@@ -133,20 +116,10 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ articleId: article.id, helpful })
     });
-<<<<<<< HEAD
 
-    setVoted(helpful);
 
-  }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -199,9 +172,9 @@ export default function HelpArticlePage(req, res) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
@@ -209,66 +182,23 @@ export default function HelpArticlePage(req, res) {
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ articleId: article.id, helpful })
     });
-<<<<<<< HEAD
-    setVoted(helpful);
 
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { GetStaticPaths, GetStaticProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
-import type { HelpArticle } from '../../utils/support';
-export const getStaticPaths: GetStaticPaths = async () => {;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []),;
-  return {;
-    paths: articles.map((a) => ({ params: { slug: a.slug } })),;
-    fallback: false  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-},;
-export const getStaticProps: GetStaticProps = async (ctx) => {;
-  const slug = ctx.params?.slug as string;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []),;
-  const article = articles.find((a) => a.slug === slug) || null;
-  return { props: { article }   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-};
-export default function HelpArticlePage(req, res) {
-  try {
-  const [voted, setVoted] = useState<null | boolean>(null);
-  async function vote(helpful: boolean) {;
-    await fetch('/api/support/feedback', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' };
-      body: JSON.stringify({ articleId: article.id, helpful })});
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
     setVoted(helpful);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   return (
     <article className="prose dark:prose-invert max-w-none">
       <h1>{article.title}</h1>
@@ -283,37 +213,15 @@ export default function HelpArticlePage(req, res) {
       </div>
     </article>
 
-<<<<<<< HEAD
-);
-
-  )
-}
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
 
 
-}
-
-=======
-
-  )
-}
-
-    </article>);
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

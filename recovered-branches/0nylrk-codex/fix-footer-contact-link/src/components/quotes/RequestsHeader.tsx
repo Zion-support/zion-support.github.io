@@ -20,13 +20,11 @@ import {
 } from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes",
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',
@@ -35,28 +33,8 @@ type RequestsHeaderProps = {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
 },
 
-<<<<<<< HEAD
-
-type RequestsHeaderProps = {
-  unreadCount: number
-  statusFilter: QuoteStatus | 'all'
-  setStatusFilter: (value: QuoteStatus | 'all') => void
-  archiveFilter: 'active' | 'archived' | 'all'
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
-}
-
-  setArchiveFilter
-
-}) => {
-
-export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
-  unreadCount;
-  statusFilter;
-  setStatusFilter;
 
 
-export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   unreadCount;
@@ -102,46 +80,11 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
           </SelectContent>
         </Select>
 
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   setArchiveFilter
-=======
-import React from './react';
-import { Badge } from '@/components / ui / badge';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import type { QuoteStatus } from "@/types / quotes";
-type RequestsHeaderProps = {
-  unread_count: number,
-  status_filter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
-  archive_filter: 'active' | 'archived' | 'all',
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
-}
-;
-export const RequestsHeader: React.FC < RequestsHeaderProps> = ({
-  unread_count;
-  status_filter;
-  setStatusFilter;
-  archive_filter,
-  setArchiveFilter;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}) => {
-=======
-type RequestsHeaderProps = {;
-  unreadCount: number,;
-  statusFilter: QuoteStatus | 'all',;
-  setStatusFilter: (value: QuoteStatus | 'all') => void,;
-  archiveFilter: 'active' | 'archived' | 'all',;
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
-};
 
-export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
-  unreadCount;
-  statusFilter;
-  setStatusFilter;
+}) => {
+
   archiveFilter,;
   setArchiveFilter;
 }) => {;
@@ -154,13 +97,12 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
           value={archiveFilter} 
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
         >
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">
@@ -177,13 +119,9 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   )
 
 
-<<<<<<< HEAD
 
-=======
-};
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 },
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
@@ -266,13 +204,14 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
 ;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
+
+
+
 export default RequestsHeader;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -18,7 +18,9 @@ return (
           onEdit={handleEdit}
 
 
+
           onDelete={handleDelete}        />
+
 
 
       )}
@@ -33,10 +35,8 @@ return (
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       )}
 
       <div className="bg-muted/40 p-6 rounded-lg">
@@ -46,20 +46,8 @@ return (
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <CertificationFormFields form={form} />
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
@@ -70,19 +58,8 @@ return (
                 onClick={() => {
                   if (editingId) {
 
-<<<<<<< HEAD
 
-                    setEditingId(null)
-                    form.reset({
-                      name: ''
-                      issuing_organization: ''
-                      issue_date: ''
-                      expiration_date: ''
-                      credential_id: ''
-                      credential_url: ''
-                    })
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     setEditingId(null),
                     setEditingId(null),
@@ -96,23 +73,8 @@ return (
                       credential_id: '',
 
 
-<<<<<<< HEAD
 
 
-                    setEditingId(null),
-                    setEditingId(null),
-                    form.reset({
-                      name: '',
-                      issuing_organization: '',
-                      issue_date: '',
-                      expiration_date: '',
-                      credential_id: '',
-                      credential_url: ''})
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   } else {
                     onBack()
 
@@ -172,18 +134,8 @@ return (
                 </Button>
 
                 <Button type="button" onClick={onComplete}>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   Next
                 </Button>
               </div>

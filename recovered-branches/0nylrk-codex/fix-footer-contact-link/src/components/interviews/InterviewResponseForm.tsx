@@ -24,22 +24,10 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Interview } from "@/types/interview";
 import { format, parseISO } from "date-fns";
-<<<<<<< HEAD
-
-
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Interview } from "@/types/interview",
-import { format, parseISO } from "date-fns",
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface InterviewResponseFormProps {
   interview: Interview,
   onConfirm: () => Promise<void>,
@@ -78,17 +66,15 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           Interview requested by {interview.client_name || 'Client'}
         </p>
 
-<<<<<<< HEAD
-        
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         <div className="grid gap-3">
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>
@@ -200,15 +186,6 @@ function InterviewResponseForm() {
     </div>);
 
 }
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-}
-;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -20,32 +20,8 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
 
 
-
-export default function InteractiveSearch({
-  placeholder = 'Search talent, skills, or jobs...'
-}: {
-  placeholder = 'Search talent, skills, or jobs...',
-}: {;
-
-  placeholder?: string;
-}) {
-  const [value, setValue] = useState('');
-    >
-      <input
-        value={value}
-        onChange={e => setValue(e.target.value)}
-        placeholder={placeholder}
-        className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'      />
-      {value && (
-        <button
-          onClick={() => setValue('')}
-          className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'        >  const [value, setValue] = useState('');
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   placeholder?: string;
 }) {;
@@ -153,53 +129,14 @@ function InteractiveSearch() {
         </button>;
       </div>;
     </form>;
-<<<<<<< HEAD
 
 
   );
 }}
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  );
-}}
-
-=======
-        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-      {value && (
-        <button
-          onClick={() => setValue('')}
-          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
-      />
-      {_value && (_<button
-          onClick={() => setValue('')}
-          className=&quot;absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300&quot;
-
-        >
-          ✕
-        </button>
-      )}
-    </motion.div>
-=======
-    </motion.div>
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-  );
-}}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
-
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

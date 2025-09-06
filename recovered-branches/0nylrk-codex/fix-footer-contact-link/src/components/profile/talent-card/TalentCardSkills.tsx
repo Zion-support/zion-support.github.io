@@ -1,26 +1,12 @@
 
-<<<<<<< HEAD
-
-import React from "react";
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-import {Badge} from "@/components/ui/badge";
-=======
-import React from "react",
-import { Badge } from "@/components/ui/badge",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 interface TalentCardSkillsProps {
   skills: string[] | undefined;
 }
@@ -30,18 +16,15 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
   const topSkills = skills.slice(0, 4) || [];
   // Get top skills (limit to 4)
 
-<<<<<<< HEAD
-  const topSkills = skills.slice(0, 4) |[];
-  const topSkills = skills.slice(0, 4) || [],
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   return (
     <div className="flex flex-wrap gap-1 mb-5">
@@ -56,14 +39,15 @@ import {Badge} from "@/components/ui/badge";
         >
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           {skill}
         </Badge>;
       ))}

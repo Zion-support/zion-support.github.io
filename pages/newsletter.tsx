@@ -31,20 +31,9 @@ origin/automation-improvements-final
   Award,
 
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 } from "lucide-react";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Clock,
-=======
-  Clock,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 } from "lucide-react";
   Clock
 } from 'lucide-react';
@@ -164,23 +153,10 @@ export default function NewsletterPage() {
     rating: 5
   }
 ];
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-export default function NewsletterPage() {
-  const [email, setEmail] = useState('');
-origin/automation-improvements-final
-export default function NewsletterPage() {;
-  const [email, setEmail] = useState("");
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
@@ -217,40 +193,28 @@ origin/automation-improvements-final
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl font-bold mb-6">
-                Stay Ahead with Our Newsletter
-              </h1>
-              <p className="text-xl mb-8 text-blue-100">
-                Get exclusive insights, industry trends, and early access to new
-                features delivered directly to your inbox.
-              </p>
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
               
+
 
 origin/automation-improvements-final
 
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -558,8 +522,7 @@ origin/automation-improvements-final
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
+
             </div>;
           </div>;
         </section>;
@@ -577,16 +540,8 @@ origin/automation-improvements-final
               </p>
               
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">

@@ -1,28 +1,15 @@
 
-<<<<<<< HEAD
-
-import React, { useState } from 'react';
-import { useParams  } from 'react-router-dom';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-import { MessageSquare, FileText, Video, Calendar, Users, Settings, X  } from 'lucide-react';
-import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
-import { toast  } from 'sonner';
-export default function ProjectRoom() {
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
   const { projectId } = useParams() as { projectId: string },;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
@@ -79,11 +66,11 @@ export default function ProjectRoom() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   
   const startVideoCall = () => {
     setIsInCall(true),
@@ -129,46 +116,10 @@ export default function ProjectRoom() {;
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-<<<<<<< HEAD
-
-
-  ]),;
-  const startVideoCall = () => {;
-    setIsInCall(true),;
-    toast.success("Video call started", {;
-      description: "Others can join with the project room link";
-    }),;
-    // Switch to video tab if not already there;
-    if (activeTab !== 'video') {;
-      setActiveTab('video');
-    }
-  },;
-  const endVideoCall = () => {;
-    setIsInCall(false),;
-    toast.info("Video call ended", {;
-      description: "Call duration and participants will be logged";
-    });
-  },;
-  const simulateUserJoining = () => {;
-    // This is just for demo purposes - in a real app, this would be handled by the video call service;
-    const mockUsers = [;
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ],;
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
-    if (!callParticipants.find(p => p.id === randomUser.id)) {;
-      setCallParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser.name} joined the call`);
-    }
-  },
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   return (
     <>;
@@ -337,6 +288,8 @@ export default function ProjectRoom() {;
   )
 }
 
+
+
       setActiveTab ('video');
     }
   }
@@ -361,23 +314,18 @@ export default function ProjectRoom() {;
     if () {) {
   $2
 
-}
-<<<<<<< HEAD
-
-=======
       setCallParticipants (prev => [...prev, random_user]);
       toast (`${random_user.name} joined the call`);
     }
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 ;
 
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
           <TabsContent value="video" className="space - y-4">;
             <Card>;
               <CardHeader>;
@@ -462,9 +410,5 @@ export default function ProjectRoom() {;
     </>);
 }
 
-=======
 
-}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

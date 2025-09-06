@@ -1,85 +1,18 @@
 import React from 'react',
 import React from 'react';
 import Link from 'next/link';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
 import {
 
-<<<<<<< HEAD
-  Phone
-  Mail
-  MapPin
-  Globe
-  Zap
-  Brain
-  Atom
-  Rocket
-  Shield
-  Cpu
-  Target
-  Microscope
-  Users
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  ArrowRight
-  Heart
-  Star
-  Award
-  CheckCircle
-  Home
-  Briefcase
-  BookOpen
-  MessageCircle
-  DollarSign
-  TrendingUp
-  Target as TargetIcon
-  Users as UsersIcon
-  Briefcase as BriefcaseIcon
-  BookOpen as BookOpenIcon
-  MessageCircle as MessageCircleIcon
-  Star as StarIcon;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
 
-=======
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Link from 'next / link';
-import { motion } from 'framer-motion';
 
-=======
-import {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   Phone,
   Mail,
   MapPin,
@@ -116,15 +49,14 @@ import {
   BookOpen as BookOpenIcon,
 
 
+
   MessageCircle as MessageCircleIcon,;
   Star as StarIcon,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
@@ -534,14 +466,13 @@ const contactInfo = {;
       staggerChildren: 0.1
     }
 
+
   },}
 const itemVariants = {
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
@@ -826,195 +757,17 @@ const itemVariants = {;
 export default function UltraFuturisticFooter2032() {;
   return (
 
-<<<<<<< HEAD
-=======
-
-  };
-};
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const itemVariants = {
   hidden: { opacity: 0, y: 20 }
   visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
 }
 export default function UltraFuturisticFooter2032() {
-<<<<<<< HEAD
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-};
-const itemVariants = {;
-  hidden: { opacity: 0, y: 20 },;
-  visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
-};
-export default function UltraFuturisticFooter2032() {;
-  return (
-
-      <div className='absolute inset-0'>;
-        <div className='absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl'></div>;
-        <div className='absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
-        <div className='absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>;
-      </div>;
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10'>;
-        <motion&& motion.div
-
-          variants={footerVariants}
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true }}
-          className='space-y-16'>;
-          {/* Main Footer Content */}
-          <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>;
-            {/* Company Info */}
-
-            <motion && motion.div variants={itemVariants} className='lg:col-span-1'>;
-              <div className='flex items-center space-x-3 mb-6'>;
-                <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/30'>;
-                  <Rocket className='w-7 h-7 text-white' />;
-                </div>;
-                <div>;
-                  <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                    Zion Tech Group;
-                  </h3>;
-                  <p className='text-sm text-cyan-300 font-medium'>;
-;
-const social_links = [;
-  {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com / company / ziontechgroup',
-    icon: Linkedin,
-  },
-  { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter },
-  {
-    name: 'Facebook',
-    href: 'https://facebook.com / ziontechgroup',
-    icon: Facebook,
-  },
-  {
-    name: 'Instagram',
-    href: 'https://instagram.com / ziontechgroup',
-    icon: Instagram,
-  },
-  { name: 'YouTube', href: 'https://youtube.com / ziontechgroup', icon: Youtube },
-  { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github }, ];];
-;
-const social_links = [;
-  { name: 'LinkedIn', href: 'https://linkedin.com / company / ziontechgroup', icon: Linkedin },
-  { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter },
-  { name: 'Facebook', href: 'https://facebook.com / ziontechgroup', icon: Facebook },
-  { name: 'Instagram', href: 'https://instagram.com / ziontechgroup', icon: Instagram },
-  { name: 'YouTube', href: 'https://youtube.com / ziontechgroup', icon: Youtube },
-  { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github }
-];
-;
-const footer_variants = {
-  hidden: { opacity: 0, coordinate_y: 50 },
-  visible: {
-    opacity: 1,
-    coordinate_y: 0,
-    transition: {
-      duration: 0.8,
-      stagger_children: 0.1,
-    },
-  }, }
-;
-const item_variants = {
-  hidden: { opacity: 0, coordinate_y: 20 },
-  visible: { opacity: 1, coordinate_y: 0 }, }
-;
-export default /**
- * UltraFuturisticFooter2032 - Function description
- */
-function UltraFuturisticFooter2032() {
-  return (
-    <footer className='relative bg - gradient - to - b from - black via - gray - 900 to - black border - t border - cyan - 500 / 30 overflow - hidden'>      stagger_children: 0.1;
-    }
-  }
-}
-;
-const item_variants = {
-  hidden: { opacity: 0, coordinate_y: 20 },
-  visible: { opacity: 1, coordinate_y: 0 },  visible: { opacity: 1, coordinate_y: 0 }
-}
-;
-export default /**
- * UltraFuturisticFooter2032 - Function description
- */
-function UltraFuturisticFooter2032() {
-  return (
-    <footer className='relative bg - gradient - to - b from - black via - gray - 900 to - black border - t border - cyan - 500 / 30 overflow - hidden'>;
-      {/* Animated Background Elements */}
-      <div className='absolute inset - 0'>;
-        <div className='absolute top - 0 left - 0 w - 96 h - 96 bg - cyan - 500 / 5 rounded - full blur - 3xl'></div>;
-        <div className='absolute top - 0 right - 0 w - 96 h - 96 bg - purple - 500 / 5 rounded - full blur - 3xl'></div>;
-        <div className='absolute bottom - 0 left - 1/4 w - 96 h - 96 bg - pink - 500 / 5 rounded - full blur - 3xl'></div>;
-      </div>;
-      <div className='relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 pt - 20 pb - 10'>;
-        <motion.div;
-          variants={footer_variants}
-          initial='hidden';
-          whileInView='visible';
-          viewport={{ once: true }}
-          className='space - y-16';
-        >;
-          {/* Main Footer Content */}
-          <div className='grid grid - cols - 1 lg:grid - cols - 4 gap - 12'>;
-            {/* Company Info */}
-            <motion.div variants={item_variants} className='lg:col - span - 1'>;
-              <div className='flex items - center space - x-3 mb - 6'>;
-                <div className='w - 12 h - 12 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 rounded - xl flex items - center justify - center shadow - lg shadow - cyan - 500 / 30'>;
-                  <Rocket className='w - 7 h - 7 text - white' />;
-                </div>;
-                <div>;
-                  <h3 className='text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
-                    Zion Tech Group;
-                  </h3>;
-                  <p className='text - sm text - cyan - 300 font - medium'>;
-
-                    2032 Future Technology;
-                  </p>;
-                </div>;
-              </div>;
-
-    <footer className="relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden">
-      {/* Animated Background Elements */}
-
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
-      </div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
-        <motion.div
-                    className='hover:text-cyan-300 transition-colors'>                    {contactInfo && contactInfo.website}      {/* Animated Background Elements */}
-      <div className="absolute inset-0">;
-        <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>;
-        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>;
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>;
-      </div>;
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">;
-        <motion&& motion.div
-          variants={footerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="space-y-16">;
-          {/* Main Footer Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
-            {/* Company Info */}
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </a>
                 </div>
               </div>
@@ -1037,6 +790,7 @@ function UltraFuturisticFooter2032() {
                 Empowering businesses with cutting-edge solutions for tomorrow's challenges.;
               </p>;
               {/* Contact Information */}
+
 
               <div className="space-y-3">;
                 <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">;
@@ -1073,12 +827,10 @@ function UltraFuturisticFooter2032() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
                 Our Revolutionary Services
               </h3>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -1109,51 +861,19 @@ function UltraFuturisticFooter2032() {
                         </li>;
 
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {serviceCategories.map((category, index) => (
-                  <div key={index} className="space-y-4">
-                    <h4 className="text-lg font-medium text-white">{category.title}</h4>
-                    <ul className="space-y-2">
-                      {category.services.map((service, serviceIndex) => (
-                        <li key={serviceIndex}>
-                          <Link
-                            href={service.href}
-                            className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform"
-                          >
-                            {service.name}
-                          </Link>
-                        </li>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                      ))}
-                    </ul>;
-                  </div>;
-                ))}
-              </div>
-            </motion.div>
-<<<<<<< HEAD
-            {/* Quick Links & Company Info */}
-            <motion.div variants={itemVariants} className='lg:col-span-1'>
-              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-            {/* Quick Links & Company Info */}
-            <motion.div variants={itemVariants} className='lg:col-span-1'>
-              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 Quick Access
               </h3>
 
+
                 Quick Access
               </h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+                Quick Access
+              </h3>
               {/* Quick Links */}
               <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>
@@ -1168,6 +888,7 @@ function UltraFuturisticFooter2032() {
               </h3>;
 
               {/* Quick Links */}
+
 
               <div className="mb - 8">;
                 <h4 className="text - lg font - medium text - white mb - 4">Quick Links</h4>;
@@ -1184,6 +905,8 @@ function UltraFuturisticFooter2032() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+
               {/* Company Info */}
               <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
@@ -1198,8 +921,9 @@ function UltraFuturisticFooter2032() {
 
 
 
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -1240,7 +964,7 @@ function UltraFuturisticFooter2032() {
 
                 </ul>;
               </div>;
-<<<<<<< HEAD
+
 
 
 
@@ -1280,35 +1004,11 @@ function UltraFuturisticFooter2032() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
-=======
-              <div className="mb-8">
-                <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>
-                <ul className="space-y-2">
-                  {quickLinks.map((link, index) => (
-                    <li key={index}>
-                      <Link
-                        href={link.href}
-                        className='flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group'
-                      >
-                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />                        className="flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group"
-                      >
-                        <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                        <span>{link.name}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               {/* Social Links */}
               <div>;
                 <h4 className='text-lg font-medium text-white mb-4'>;
@@ -1333,12 +1033,38 @@ function UltraFuturisticFooter2032() {
                       <social && social.icon className="w-5 h-5" />;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+              {/* Social Links */}
+              <div>
+                <h4 className="text-lg font-medium text-white mb-4">Follow Us</h4>
+                <div className="flex space-x-4">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20'
+                    >
+                      <social.icon className='w-5 h-5' />                    </a>                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20"
+                    >
+                      <social.icon className="w-5 h-5" />
+
+
+                    </a>
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   ))}
                 </div>
               </div>
             </motion.div>
           </div>
+
+
 
 
                 </div>;
@@ -1348,7 +1074,10 @@ function UltraFuturisticFooter2032() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           {/* Newsletter Signup */}
           <motion.div
             variants={itemVariants}
@@ -1356,6 +1085,7 @@ function UltraFuturisticFooter2032() {
           >
             <div className='text-center'>
               <h3 className='text-2xl font-bold text-white mb-4'>
+
 
 
                 Stay Ahead with Future Technology
@@ -1367,6 +1097,7 @@ function UltraFuturisticFooter2032() {
               </p>
               <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
 
+
                 <input
                   type='email'
                   placeholder='Enter your email address'
@@ -1377,7 +1108,9 @@ function UltraFuturisticFooter2032() {
               <h3 className="text-2xl font-bold text-white mb-4">
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                   ))}
                 </div>
               </div>
@@ -1386,7 +1119,9 @@ function UltraFuturisticFooter2032() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           {/* Newsletter Signup */}
           <motion.div
             variants={itemVariants}
@@ -1397,14 +1132,13 @@ function UltraFuturisticFooter2032() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 Stay Ahead with Future Technology
 
               </h3>
@@ -1421,7 +1155,6 @@ function UltraFuturisticFooter2032() {
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <input
                   type="email"
                   placeholder="Enter your email address"
@@ -1481,14 +1214,7 @@ function UltraFuturisticFooter2032() {
 
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-=======
           onClick={() => window && window.scrollTo({ top: 0, behavior: 'smooth' })}
         >;
           <ArrowRight className="w-6 h-6 transform rotate-[-90deg]" />;
@@ -1496,40 +1222,8 @@ function UltraFuturisticFooter2032() {
       </div>;
     </footer>;
   );
-=======
 
-  );
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
-  );
-}
-          </motion.div>;
-        </motion.div>;
-      </div>;
-      {/* Floating Action Button */}
-      <div className='fixed bottom - 8 right - 8 z - 50'>;
-        <motion.button;
-          while_hover={{ scale: 1.1 }}
-          while_tap={{ scale: 0.9 }}
-          className='w - 14 h - 14 bg - gradient - to - r from - cyan - 500 to - purple - 500 rounded - full shadow - 2xl shadow - cyan - 500 / 30 hover:shadow - cyan - 500 / 50 transition - all duration - 300 flex items - center justify - center text - white';
-          on_click={() => window.scroll_to ({ top: 0, behavior: 'smooth' })}
-        >;
-          <ArrowRight className='w - 6 h - 6 transform rotate-[-90deg]' />        </motion.button>;
-      </div>;
-    </footer>);
-}        <motion.button;
-          while_hover={{ scale: 1.1 }}
-          while_tap={{ scale: 0.9 }}
-          className="w - 14 h - 14 bg - gradient - to - r from - cyan - 500 to - purple - 500 rounded - full shadow - 2xl shadow - cyan - 500 / 30 hover:shadow - cyan - 500 / 50 transition - all duration - 300 flex items - center justify - center text - white";
-          on_click={() => window.scroll_to ({ top: 0, behavior: 'smooth' })}
-        >;
-          <ArrowRight className="w - 6 h - 6 transform rotate-[-90deg]" />;
-        </motion.button>;
-      </div>;
-    </footer>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -18,8 +14,8 @@ interface LazySectionProps {
   direction?: 'up' | 'down' | 'left' | 'right'
 }
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   switch (direction) {
   case 'up':
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -29,10 +25,10 @@ export const LazySection: React.FC<LazySectionProps> = ({
   className = ''
   threshold = 0.1
   delay = 0
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   direction = 'up'
 }) => {
+
 
   children,
   className = '',
@@ -41,13 +37,14 @@ export const LazySection: React.FC<LazySectionProps> = ({
   direction = 'up',
 }) => {;
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {
@@ -158,20 +155,3 @@ export default LazySection;      case 'down':;
         return { opacity: 1, y: 0 }
     }
   }
-<<<<<<< HEAD
-  return (
-    <motion&& motion.div
-      ref={ref}
-      initial={getInitialPosition()}
-      animate={isInView ? getAnimatePosition() : getInitialPosition()}
-      transition={{ duration: 0 && 0.8, delay, ease: "easeOut" }}
-      className={className}>;
-      {children}
-
-    </motion && motion.div>;
-  );
-};
-
-
-export default LazySection;
-

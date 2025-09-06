@@ -1,19 +1,17 @@
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Conversation, ConversationContextData} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -157,23 +155,9 @@ export function useConversations(
           .select('id')
           .single();
         if (createError) throw createError;
-<<<<<<< HEAD
 
 
 
-
-
-=======
-
-        
-        conversationId = newConversation && newConversation.id
-
-      }
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Conversation, ConversationContextData } from '@/types/messaging',;
@@ -309,13 +293,12 @@ export function useConversations(;
         conversationId = newConversation.id;
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       }
       
       // Send the initial message
@@ -360,41 +343,11 @@ export function useConversations(;
       })
 
 
-<<<<<<< HEAD
-;
-      // Send the initial message;
-      await supabase;
-        .from('messages');
-        .insert({;
-          conversation_id: conversationId,;
-          sender_id: user.id,;
-          recipient_id: recipientId,;
-          content: initialMessage,;
-          created_at: new Date().toISOString(),;
-          read: false;
-        }),;
-      // Update conversations list;
-      await fetchConversations(),;
-      // Return the conversation ID;
-      return conversationId;
-    } catch (error) {;
-      console.error('Error creating conversation:', error),;
-      toast({;
-        title: "Failed to create conversation",;
-        description: "Please try again later",;
-        variant: "destructive";
-      });
-    }
-  };
-  return {;
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     fetchConversations;
 
     createConversation}

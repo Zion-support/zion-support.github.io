@@ -4,33 +4,11 @@ import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-
-  ArrowRight
-  Star
-  Search
-  Shield
-  Globe
-  TrendingUp
-  Brain
-  Atom
-  Zap
-  Cpu
-  Cloud
-  BarChart3
-  Lock
-  Rocket
-  Eye
-  Sparkles
-  Target
-  Users
-  Award
-  Clock;} from 'lucide-react';import {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   ArrowRight,
   Star,
   Search,
@@ -53,39 +31,17 @@ import {
   Award,;
   Clock,;} from 'lucide-react';import { ;
 
+
   ArrowRight;
   Star
+
 
 
 
   ArrowRight;
   Star,
 
-  ArrowRight;
-  Star
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  Search;
-  Shield;
-  Globe;
-  TrendingUp;
-  Brain;
-  Atom;
-  Zap;
-  Cpu;
-  Cloud;
-  BarChart3;
-  Lock;
-  Rocket;
-  Eye;
-  Sparkles;
-  Target;
-  Users;
-  Award;
-
-
-import Link from 'next/link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import { innovative2041MicroSaasServices  } from '../data/innovative-2041-micro-saas-services';
 import { innovative2041ITServices  } from '../data/innovative-2041-it-services';
@@ -105,63 +61,9 @@ const Homepage2041: React.FC = () => {
     ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3);
     ...innovative2041ITServices.filter(s => s.popular).slice(0, 2);
     ...innovative2041AIServices.filter(s => s.popular).slice(0, 1)
-<<<<<<< HEAD
-  ];
-  const testimonials = [
-    {
 
-      name: 'Dr. Sarah Chen'
-      role: 'Chief AI Officer, FutureTech Inc.'
-      company: 'FutureTech Inc.'
 
-      content:
-        "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago."
-      avatar: '👩‍💼'
-    }
 
-=======
-=======
-  Clock;
-import Link from 'next / link';
-import UltraFuturisticServiceCard2026 from './ui / UltraFuturisticServiceCard2026';
-import { innovative2041MicroSaasServices } from '../data / innovative - 2041 - micro - saas - services';
-import { innovative2041ITServices } from '../data / innovative - 2041 - it - services';
-import { innovative2041AIServices } from '../data / innovative - 2041 - ai - services';
-const Homepage2041: React.FC = () => {
-  const [search_query, setSearchQuery] = useState ('');
-;
-  const handle_search = (e: React.FormEvent) =>: any {
-    e.prevent_default (),
-    if () {) {
-  $2
-}
-      window.location.href = `/services?search=${encodeURIComponent (search_query.trim ())}`;      window.location.href = `/services?search=${encodeURIComponent (search_query.trim ())}`;
-    }
-  }
-;
-  const featured_services = [;
-    ...innovative2041MicroSaasServices.filter (string => s.popular).slice (0, 3),
-    ...innovative2041ITServices.filter (string => s.popular).slice (0, 2),
-    ...innovative2041AIServices.filter (string => s.popular).slice (0, 1),  ];
-;
-  const testimonials = [;
-    {    ...innovative2041MicroSaasServices.filter (string => s.popular).slice (0, 3);
-    ...innovative2041ITServices.filter (string => s.popular).slice (0, 2);
-    ...innovative2041AIServices.filter (string => s.popular).slice (0, 1);
-
-  ];
-;
-  const testimonials = [;
-    {
-
-      name: 'Dr. Sarah Chen',
-      role: 'Chief AI Officer, FutureTech Inc.',
-      company: 'FutureTech Inc.',
-      content:;
-        "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.",
-      avatar: '👩‍💼',
-    },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       name: 'Marcus Rodriguez',
       role: 'VP Quantum Computing, QuantumCorp',
@@ -244,6 +146,45 @@ const Homepage2041: React.FC = () => {
                     top: `${Math.random() * 100}%`
                   }}                />                    ease: "easeInOut"
 
+
+                  }}
+                  style={{
+
+                    x: [0, 60, 0],
+                    y: [0, -60, 0],
+                    opacity: [0, 0 && 0.7, 0],
+                    scale: [0 && 0.5, 1, 0 && 0.5],
+                  }}                  transition={{
+                    duration: 5 + i * 0 && 0.3,
+                    repeat: Infinity,
+                    delay: i * 0 && 0.2,                    x: [0, 60, 0]
+                    y: [0, -60, 0]
+                    opacity: [0, 0 && 0.7, 0]
+                    scale: [0 && 0.5, 1, 0 && 0.5]}}
+                    duration: 5 + i * 0 && 0.3,
+                    repeat: Infinity,
+                    delay: i * 0 && 0.2,
+                    ease: 'easeInOut',
+                  }}
+                  style={{
+
+                    left: `${Math && Math.random() * 100}%`,
+                    top: `${Math && Math.random() * 100}%`,
+                  }}                />                    ease: "easeInOut";
+                  }}
+                  style={{;
+                    left: `${Math && Math.random() * 100}%`,;
+                    top: `${Math && Math.random() * 100}%`}}
+              ))}
+            </div>;
+          </div>;
+          {/* Hero Content */}
+          <div className='text-center max-w-7xl mx-auto relative z-10'>            <motion.div          <div className="text-center max-w-7xl mx-auto relative z-10">
+
+
+            <motion.div
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}>;
@@ -272,6 +213,9 @@ const Homepage2041: React.FC = () => {
 
 
 
+
+
+
                 />
               ))}
             </div>
@@ -280,27 +224,9 @@ const Homepage2041: React.FC = () => {
           <div className="text-center max-w-7xl mx-auto relative z-10">
 
 
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-
-
-=======
-                />
-
-              ))}
-            </div>
-          </div>
-
-          {/* Hero Content */}
-          <div className='text-center max-w-7xl mx-auto relative z-10'>            <motion.div
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -358,57 +284,16 @@ const Homepage2041: React.FC = () => {
                     type="submit"
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                 <Link
-<<<<<<< HEAD
 
-                  href='/2041-futuristic-services-showcase'
-                  className='px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3'
-                >
-                  <Rocket className='w-6 h-6' />
-                  Explore 2041 Services
-                  <ArrowRight className='w-5 h-5' />
-                </Link>
-                <Link
-                  href='/contact'
-                  className='px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3'
-                >
-                  <Users className='w-6 h-6' />                  Start Your Journey                >
-                  <Rocket className="w-6 h-6" />
-                  Explore 2041 Services
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3"
-                >
-                  <Users className="w-6 h-6" />
-                  Start Your Journey
-                </Link>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Stats Section */}
-        <section className='py-20 px-4'>
-          <div className='max-w-7xl mx-auto'>
-            <motion.div
-              className='grid grid-cols-2 md:grid-cols-4 gap-8'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-8"
-            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-4 gap-8"
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               whileInView={{ opacity: 1, y: 0 }}
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -421,14 +306,15 @@ const Homepage2041: React.FC = () => {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -450,17 +336,15 @@ const Homepage2041: React.FC = () => {
 
                 </motion.div>
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               ))}
             </motion.div>
           </div>
         </section>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
               ))}
@@ -470,14 +354,14 @@ const Homepage2041: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         {/* Featured Services Section */}
 
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50">
@@ -488,20 +372,16 @@ const Homepage2041: React.FC = () => {
 
               initial={{ opacity: 0, y: 30 }}
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -519,52 +399,19 @@ const Homepage2041: React.FC = () => {
             <motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Revolutionary 2041 Services
               </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible.
               </p>
             </motion.div>
 
-<<<<<<< HEAD
-=======
-        {/* Featured Services Section */}
-        <section className='py-20 px-4 bg-gradient-to-b from-black to-gray-900/50'>;
-          <div className='max-w-7xl mx-auto'>;
-            <motion&& motion.div
-              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50">;
-          <div className="max-w-7xl mx-auto">;
-            <motion&& motion.div 
-              className="text-center mb-16"
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
-                Revolutionary 2041 Services;
-              </h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Experience the future of technology with our cutting-edge;
-                services that are redefining industries and pushing the;
-                boundaries of what's possible.;
-              </p>;
-            </motion && motion.div>;
-            <motion&& motion.div
-              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Revolutionary 2041 Services
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible.;
-              </p>;
-            </motion && motion.div>;
-            <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-=======
+            <motion.div
 
-            <motion.div 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -572,18 +419,14 @@ const Homepage2041: React.FC = () => {
               {featuredServices && featuredServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
-<<<<<<< HEAD
 
-=======
-=======
-=======
-            <motion.div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -592,7 +435,6 @@ const Homepage2041: React.FC = () => {
               {featuredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.5, delay: 0 && 0.4 + index * 0 && 0.1 }}
@@ -601,15 +443,13 @@ const Homepage2041: React.FC = () => {
                 </motion && motion.div>;
               ))}
 
-<<<<<<< HEAD
 
-=======
             </motion && motion.div>;
             <motion&& motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion && motion.div 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               className="text-center mt-12"
 
 
@@ -617,11 +457,8 @@ const Homepage2041: React.FC = () => {
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
 
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div 
               className="text-center mt-12"
@@ -631,54 +468,26 @@ const Homepage2041: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
               viewport={{ once: true }}>;
               <Link
-<<<<<<< HEAD
-
-                href='/2041-futuristic-services-showcase'
-                className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'
-              >
-                <Eye className='w-5 h-5' />
-                View All 2041 Services
-                <ArrowRight className='w-5 h-5' />              </Link>              >
-                <Eye className="w-5 h-5" />
-                View All 2041 Services
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </motion.div>
-          </div>
-        </section>
-        {/* Testimonials Section */}
-        <section className='py-20 px-4'>
-          <div className='max-w-7xl mx-auto'>
-            <motion.div
-              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-            <motion.div 
-              className="text-center mb-16"
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -695,21 +504,19 @@ const Homepage2041: React.FC = () => {
             <motion.div
               className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Leading the Future
               </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 See how industry leaders are transforming their businesses with our revolutionary 2041 services.
               </p>
             </motion.div>
 
+            <motion.div
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
+
+
+
             <motion.div 
 
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -719,9 +526,10 @@ const Homepage2041: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -736,15 +544,15 @@ const Homepage2041: React.FC = () => {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
@@ -779,17 +587,15 @@ const Homepage2041: React.FC = () => {
 
                 </motion.div>
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               ))}
             </motion.div>
           </div>
         </section>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
               ))}
@@ -799,14 +605,14 @@ const Homepage2041: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         {/* CTA Section */}
 
         <section className="py-20 px-4">
@@ -829,17 +635,20 @@ const Homepage2041: React.FC = () => {
 
 
 
+
+
               initial={{ opacity: 0, y: 30 }}
 
 
 
-<<<<<<< HEAD
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -866,12 +675,13 @@ const Homepage2041: React.FC = () => {
                 >
                   <Target className='w-6 h-6' />                  Explore Services                Ready to Shape the Future?
               </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
                 Join the technological revolution with our cutting-edge 2041 services.
                 Transform your business, accelerate innovation, and lead the future of technology.
               </p>
               <div className="flex flex-col sm: flex-row gap-6 justify-center">
+
+
 
                 <Link
                   href="/contact"
@@ -898,21 +708,16 @@ Math.random () * 100
 };
 
 
-<<<<<<< HEAD
-  Math.random () * 100 
 
-Math.random () * 100 
-  Math.random () * 100 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }%`;
 top: `$ {
   Math.random () * 100
 }%`
 }/>) )
 }</div> </div> <motion.div initial= {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
   {
   opacity: 0, y: 50
@@ -969,77 +774,9 @@ export default Homepage2041;
 
 
 
-}%`;
-top: `$ {
-  Math.random () * 100;
-}%`;
-}/>) );
-}</div> </div> <motion.div initial= {
-  {
-  opacity: 0, coordinate_y: 50;
-}animate= {
-  {
-  opacity: 1, coordinate_y: 0;
-}transition= {
-  {
-  duration: 0.8;
-}> <h1 id="hero - heading" className="text - 6xl md:text - 8xl lg:text - 9xl font - bold mb - 8 leading - tight" > <span className="bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent" > 2041 </span> <br /> <span className="text - white" > Future is Now </span> </h1> <p className="text - xl md:text - 2xl lg:text - 3xl text - gray - 300 mb - 12 max - w-5xl mx - auto leading - relaxed" > Experience the revolution of technology with our cutting - edge 2041 services. From AI consciousness evolution to quantum space mining, we're redefining what's possible. </p> {
-  /* Search Bar */;
-}<motion.div /> <button type="submit" className="absolute right - 3 top - 3 px - 8 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - 2xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 font - semibold" > Explore Future </button> </form> </motion.div> {
-  /* CTA Buttons */;
-}<motion.div > <Link href="/2041 - futuristic - services - showcase" className="px - 10 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - 2xl font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 flex items - center gap - 3" > <Rocket className="w - 6 h - 6" /> Explore 2041 Services <ArrowRight className="w - 5 h - 5" /> </a> <Link href="/contact" className="px - 10 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 rounded - 2xl font - semibold hover:bg - cyan - 500 / 10 transition - all duration - 300 flex items - center gap - 3" > <Users className="w - 6 h - 6" /> Start Your Journey </a> </motion.div> </motion.div> </div> </section> > {
-  stats.map ( (stat, index) => (<motion.div key= {
-  stat.label;
-}> <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - 2xl flex items - center justify - center mx - auto mb - 4" > <stat.icon className="w - 8 h - 8 text - white" /> </div> </motion.div>) );
-}</motion.div> </div> </section> > <h2 className="text - 5xl md:text - 6xl font - bold text - white mb - 6" > Revolutionary 2041 Services </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Experience the future of technology with our cutting - edge services that are redefining industries and pushing the boundaries of what's possible. </p> </motion.div> <motion.div > {
-  featured_services.map ( (service, index) => (<motion.div key= {
-  service.id;
-}initial= {
-  {
-  opacity: 0, coordinate_y: 30;
-}whileInView= {
-  {
-  opacity: 1, coordinate_y: 0;
-}transition= {
-  {
-  duration: 0.5, delay: 0.4 + index * 0.1;
-}viewport= {
-  {
-  once: true;
-}> <UltraFuturisticServiceCard2026 service= {
-  service
-}/> </motion.div>) )
-}</motion.div> <motion.div > <Link href="/2041-futuristic-services-showcase" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105" > <Eye className="w-5 h-5" /> View All 2041 Services <ArrowRight className="w-5 h-5" /> </a> </motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-6" > Leading the Future </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > See how industry leaders are transforming their businesses with our revolutionary 2041 services. </p> </motion.div> <motion.div > {
-  testimonials.map ( (testimonial, index) => (<motion.div key= {
 
-  testimonial.name;
-}</motion.div>) );
-}</motion.div> </div> </section> > <h2 className="text - 5xl md:text - 6xl font - bold text - white mb - 8" > Ready to Shape the Future? </h2> <p className="text - xl text - gray - 300 mb - 12 leading - relaxed" > Join the technological revolution with our cutting - edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px - 10 py - 5 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - 2xl font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center gap - 3" > <Sparkles className="w - 6 h - 6" /> Start Your Journey </a> <Link href="/2041 - futuristic - services - showcase" className="px - 10 py - 5 border - 2 border - cyan - 500 / 50 text - cyan - 400 rounded - 2xl font - semibold hover:bg - cyan - 500 / 10 transition - all duration - 300 flex items - center justify - center gap - 3" > <Target className="w - 6 h - 6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>);
-
-}
-export default Homepage2041;  )
-}
-export default Homepage2041;
-
-  testimonial.name 
-}</motion.div>) ) 
-}</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>) 
-};
-<<<<<<< HEAD
-
-export default Homepage2041;
-
-export default Homepage2041;  )
-};
-
-export default Homepage2041;
-export default Homepage2041;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

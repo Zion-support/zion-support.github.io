@@ -7,24 +7,8 @@ export default function AISolutionsPage() {
   const aiSolutions = [
     {
 
-<<<<<<< HEAD
-      id: 'machine-learning'
-      title: 'Machine Learning Solutions'
-      description:
-        'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.'
-      features: [
-=======
-      id: 'machine-learning',
-      title: 'Machine Learning Solutions',
-      description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
-    features: ['Predictive AnalyticsPattern RecognitionAnomaly DetectionRecommendation Systems'],
-      icon: '🧠',
-      category: 'Core AI',
 
-      complexity: 'Advanced'
-    }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         'Predictive Analytics',
         'Pattern Recognition',
@@ -35,13 +19,14 @@ export default function AISolutionsPage() {
       complexity: 'Advanced';
     };
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     {
       id: 'natural-language-processing'
       title: 'Natural Language Processing'
@@ -336,13 +321,7 @@ export default function AISolutionsPage() {;
     'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas';
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-                          {feature}
-                        </li>
-                      ))}
 
-=======
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -446,23 +425,7 @@ export default function AISolutionsPage() {;
                       {solution && solution.features.map((feature, featureIndex) => (;
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
                           <span className="text-cyan-400 mr-2">•</span>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                    </ul>
 
-                    <Link
-                      href={`/services#${solution.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
-                    >
-                      Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      Learn More <span className="ml-1">→</span>
-                    </Link>
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {feature}
                         </li>;
                       ))}
@@ -481,18 +444,15 @@ export default function AISolutionsPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
               </div>
             </div>
@@ -500,11 +460,12 @@ export default function AISolutionsPage() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </div>;
             </div>;
 
@@ -512,11 +473,8 @@ export default function AISolutionsPage() {;
             {/* Industry Use Cases */}
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Industry Use Cases */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -526,14 +484,14 @@ export default function AISolutionsPage() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 {useCases.map((useCase, index) => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
@@ -566,6 +524,8 @@ export default function AISolutionsPage() {;
             </div>
 
 
+
+
               </div>;
             </div>;
 
@@ -573,15 +533,14 @@ export default function AISolutionsPage() {;
             {/* Technologies */}
 
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             {/* Technologies */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -608,18 +567,21 @@ export default function AISolutionsPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       {tech}
                     </span>;
                   ))}
                 </div>
               </div>
             </div>
+
+
 
 
                 </div>;
@@ -630,12 +592,13 @@ export default function AISolutionsPage() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Success Stories */}
 
 
@@ -657,9 +620,22 @@ export default function AISolutionsPage() {;
 
                   >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     Read Case Study →
 
+
+
+                  </Link>;
+                </div>;
+              </div>;
+            </div>;
+
+
+                <Link
+                  href="/contact"
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
+                >
+                  Start Your AI Journey
+                </Link>
 
                 <Link
                   href="/automation-insights"
@@ -676,30 +652,22 @@ export default function AISolutionsPage() {;
     </>
 
 
-<<<<<<< HEAD
+                  Explore Insights;
+                </Link>;
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </div>;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-}
-    </>);
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-}
-    </>);
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+}
+    </>);
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 class ErrorBoundary extends React.Component {
@@ -29,11 +27,12 @@ class ErrorBoundary extends React.Component {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 import React from "react";
 import Layout from "../components/Layout";
 import React from 'react';
@@ -42,30 +41,11 @@ import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 origin/automation-improvements-final
 
-<<<<<<< HEAD
-=======
-=======
 
 
-
-import React from 'react';
-
-import Layout from '../components/Layout';
-
-import Layout from '../components/Layout';
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import Head from 'next/head';
-import { useState } from 'react';
-import { ContactInfo } from '../types';
-
-
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -140,10 +120,8 @@ origin/automation-improvements-final
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
 import React from 'react';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import Head from 'next/head';
 import Link from 'next/link';
 origin/main
@@ -578,15 +556,13 @@ const ContactPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
+
     </Layout>;
     </>
   );
@@ -594,13 +570,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 }
-=======
 
-  );
-
-}
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

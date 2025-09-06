@@ -1,11 +1,9 @@
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import {Link} from "react-router-dom";
 import {GradientHeading} from "./GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -28,18 +26,36 @@ import {
 } from "lucide-react",
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 export function FeaturesGuideSection() {
   const features = [
     {
 
-<<<<<<< HEAD
 
+      id: "ai-matcher",
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
+      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
+
+
+        "Connect with matched talents or services directly"
+      ]
+      link: "/match"
+      buttonText: "Try AI Matcher"
+
+
+export function FeaturesGuideSection() {;
+  const features = [;
+    {;
+      id: "ai-matcher",;
+      title: "AI Matcher",;
+      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",;
+      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,;
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       instructions: [;
         "Navigate to the AI Matcher page from the homepage or marketplace";
         "Fill in your project requirements and specifications";
@@ -53,13 +69,7 @@ export function FeaturesGuideSection() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-      id: "ai-matcher",
-      title: "AI Matcher",
-      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
-      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         "Connect with matched talents or services directly"
       ]
@@ -229,18 +239,7 @@ export function FeaturesGuideSection() {
           <GradientHeading > Your Complete Guide to Zion</GradientHeading>;
           <p className="text - zion - slate - light text - xl mt - 4 max - w-3xl mx - auto">;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-                {feature.title}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
-            {features.slice(4).map(feature => (
-              <TabsTrigger
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 import { Link } from "react-router-dom",;
 import { GradientHeading } from "./GradientHeading",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -387,8 +386,10 @@ export function FeaturesGuideSection() {;
           <TabsList className="grid grid - cols - 2 md:grid - cols - 4 gap - 2 bg - zion - blue rounded - lg p - 1 mb - 8">;
             {features.slice (0, 4).map (feature => (
               <TabsTrigger;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 key={feature.id}
                 value={feature.id}
 
@@ -490,17 +491,9 @@ export function FeaturesGuideSection() {;
       </div>
     </section>
   )
-<<<<<<< HEAD
 
 
 
-=======
-
-};
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </Tabs>;
 
         <div className="mt-12 text-center">;
@@ -518,24 +511,11 @@ export function FeaturesGuideSection() {;
         </div>;
       </div>;
 
-<<<<<<< HEAD
-    </section>;
-  );
-
-}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-    </section>);
 
-}
-=======
 
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

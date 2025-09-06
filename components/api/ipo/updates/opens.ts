@@ -1,26 +1,5 @@
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-
-  const id = String(req.query.id |"");
-  const updates = readJsonFile("updates.json", [] as any[]);
-  const u = updates.find((x: any) => x.id === id);
-  if (!u) return res.status(404).json({ error: "Not found" });
-  res.status(200).json({ opens: u.opens |0 });
-  res.status(200).json({ opens: u.opens |0 });
-}
 
 
-
-  if (!u) return res.status(404).json({ error: 'Not found' });
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   if (!requireSuperadminApi(req, res)) return;
@@ -34,15 +13,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
-<<<<<<< HEAD
 
-=======
   if (!u) return res.status(404).json({ error: 'Not found' });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-<<<<<<< HEAD
+
 
 
 
@@ -51,7 +28,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+

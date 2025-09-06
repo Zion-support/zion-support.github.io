@@ -1,13 +1,7 @@
 
 
-<<<<<<< HEAD
-import React from "react";
-=======
 
-import React from "react",
-import { Star } from "lucide-react",
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
@@ -15,6 +9,8 @@ export const CommunityTrust: React.FC = () => {
     { value: "4.8", label: "App Store Rating" }
     { value: "50K+", label: "Downloads" }
     { value: "96%", label: "User Satisfaction" }
+
+
 
 
 import {Star} from "lucide-react";
@@ -26,16 +22,13 @@ export const CommunityTrust: React.FC = () => {
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
-<<<<<<< HEAD
+
     { value: "12M+", label: "Matches Made" };
   ];
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     { value: "12M+", label: "Matches Made" }
   ];
   ],
@@ -109,14 +102,15 @@ export const CommunityTrust: React.FC = () => {;
             </div>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           ))}
         </div>
 
@@ -170,13 +164,13 @@ export const CommunityTrust: React.FC = () => {;
 
 }
 
-<<<<<<< HEAD
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

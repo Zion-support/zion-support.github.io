@@ -5,10 +5,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   Phone,
   Mail,
   MapPin,
@@ -36,10 +34,10 @@ import { motion } from 'framer-motion';
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle
@@ -435,6 +433,7 @@ const socialLinks = [;
   { name: 'GitHub', href: 'https://github && github.com/ziontechgroup', icon: Github },;
 ];
 
+
 const certifications = [;
   'ISO 27001 Certified',;
   'SOC 2 Type II Compliant',;
@@ -562,27 +561,9 @@ function UltraFuturisticFooter2030() {
 ];
 export default function UltraFuturisticFooter2030() {
   return (
-<<<<<<< HEAD
 
-
-
-
-
-                    {contactInfo.website.replace('https://', '')}
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-<<<<<<< HEAD
-    <footer className="bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden">
-=======
-<<<<<<< HEAD
-    <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       {/* Animated Background */}
 
       <div className="absolute inset-0">
@@ -606,11 +587,54 @@ export default function UltraFuturisticFooter2030() {
           <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>;
         </div>;
       </div>;
+
       <div className="relative z-10">;
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {/* Company Info */}
+
+            <div className="space-y-6">
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    Zion Tech Group
+                  </h3>
+                  <p className="text-sm text-gray-400">2030 Future Technology</p>
+                </div>
+              </div>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Pioneering the future with cutting-edge AI, quantum computing, and emerging technologies.
+                Transforming businesses through innovative solutions and intelligent automation.
+              </p>
+              {/* Contact Info */}
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <Phone className="w-4 h-4 text-purple-400" />
+                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-purple-400 transition-colors">
+                    {contactInfo.mobile}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <Mail className="w-4 h-4 text-purple-400" />
+                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
+                    {contactInfo.email}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <MapPin className="w-4 h-4 text-purple-400" />
+                  <span>{contactInfo.address}</span>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <Globe className="w-4 h-4 text-purple-400" />
+                  <a href={contactInfo.website} className="hover:text-purple-400 transition-colors">
+                    {contactInfo.website.replace('https://', '')}
+
+
+
 
 
 
@@ -618,6 +642,8 @@ export default function UltraFuturisticFooter2030() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   </a>
                 </div>
               </div>
@@ -640,6 +666,7 @@ export default function UltraFuturisticFooter2030() {
                 Transforming businesses through innovative solutions and intelligent automation.;
               </p>;
               {/* Contact Info */}
+
 
               <div className="space-y-3">;
                 <div className="flex items-center space-x-3 text-sm text-gray-300">;
@@ -762,12 +789,10 @@ export default function UltraFuturisticFooter2030() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
                 <span>Our Services</span>
               </h4>
               <div className='grid grid-cols-1 gap-4'>
@@ -797,6 +822,14 @@ export default function UltraFuturisticFooter2030() {
                         </Link>;
 
 
+
+            {/* Service Categories */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
+                <Rocket className="w-5 h-5 text-purple-400" />
+                <span>Our Services</span>
+              </h4>
+
               <div className="grid grid-cols-1 gap-4">
                 {serviceCategories.slice(0, 3).map((category, index) => (
                   <div key={index} className="space-y-2">
@@ -811,13 +844,14 @@ export default function UltraFuturisticFooter2030() {
                           {service.name}
                         </Link>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
                     </div>;
                   </div>;
                 ))}
               </div>
             </div>
+
+
 
 
               </div>;
@@ -827,12 +861,13 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Quick Links */}
 
 
@@ -856,17 +891,34 @@ export default function UltraFuturisticFooter2030() {
                   </Link>;
 
 
+
+              <div className="space-y-2">
+                <h5 className="text-sm font-medium text-cyan-300">Company</h5>
+                {companyInfo.map((link, index) => (
+                  <Link
+                    key={index}
+                    href={link.href}
+                    className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+
+
                 ))}
               </div>
             </div>
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Social & Certifications */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Users className='w-5 h-5 text-green-400' />
+
 
 
 
@@ -875,6 +927,10 @@ export default function UltraFuturisticFooter2030() {
               </h4>
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+                <span>Connect & Trust</span>
+              </h4>
+
             {/* Social & Certifications */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -882,10 +938,11 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 <span>Connect & Trust</span>
               </h4>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {/* Social Links */}
               <div className='space-y-3'>;
                 <h5 className='text-sm font-medium text-green-300'>;
@@ -916,119 +973,8 @@ export default function UltraFuturisticFooter2030() {
                     >;
                       <social && social.icon className="w-5 h-5" />;
 
-<<<<<<< HEAD
-=======
-=======
-            <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
-                <Users className="w-5 h-5 text-green-400" />
-                <span>Connect & Trust</span>
-              </h4>
-            {/* Service Categories */}
-            <div className='space - y-6'>;
-              <h4 className='text - lg font - semibold text - white flex items - center space - x-2'>;
-                <Rocket className='w - 5 h - 5 text - purple - 400' />;
-                <span > Our Services</span>;
-              </h4>;
-              <div className='grid grid - cols - 1 gap - 4'>;
-                {service_categories.slice (0, 3).map ((category, index) => (
-                  <div key={index} className='space - y-2'>;
-                    <h5 className='text - sm font - medium text - purple - 300'>;
-                      {category.title}
-                    </h5>;
-                    <div className='space - y-1'>                      {category.services.map ((service, service_index) => (
-                        <Link;
-                          key={service_index}
-                          href={service.href}
-                          className='block text - xs text - gray - 400 hover:text - purple - 300 transition - colors'                        >                <span > Our Services</span>;
-              </h4>;
-              <div className="grid grid - cols - 1 gap - 4">;
-                {service_categories.slice (0, 3).map ((category, index) => (
-                  <div key={index} className="space - y-2">;
-                    <h5 className="text - sm font - medium text - purple - 300">{category.title}</h5>;
-                    <div className="space - y-1">;
-                      {category.services.map ((service, service_index) => (
-                        <Link;
-                          key={service_index}
-                          href={service.href}
-                          className='block text - xs text - gray - 400 hover:text - purple - 300 transition - colors'                          className="block text - xs text - gray - 400 hover:text - purple - 300 transition - colors";
-                        >;
-                          {service.name}
-                        </Link>))}
-                    </div>;
-                  </div>))}
-              </div>;
-            </div>;
-            {/* Quick Links */}
-            <div className='space - y-6'>;
-              <h4 className='text - lg font - semibold text - white flex items - center space - x-2'>;
-                <Target className='w - 5 h - 5 text - cyan - 400' />;
-                <span > Quick Links</span>;
-              </h4>;
-              <div className='space - y-2'>                {quick_links.map ((link, index) => (
-                  <Link;
-                    key={index}
-                    href={link.href}
-                    className='block text - sm text - gray - 400 hover:text - cyan - 300 transition - colors flex items - center space - x-2 group';
-                  >;
-                    <ArrowRight className='w - 3 h - 3 group - hover:translate - x-1 transition - transform' />                    <span>{link.name}</span>            <div className="space - y-6">;
-              <h4 className="text - lg font - semibold text - white flex items - center space - x-2">;
-                <Target className="w - 5 h - 5 text - cyan - 400" />;
-                <span > Quick Links</span>;
-              </h4>;
-              <div className="space - y-2">;
-                  <Link;
-                    key={index}
-                    href={link.href}
-                    className='block text - sm text - gray - 400 hover:text - cyan - 300 transition - colors flex items - center space - x-2 group';
-                  >;
-                    <ArrowRight className='w - 3 h - 3 group - hover:translate - x-1 transition - transform' />                    className="block text - sm text - gray - 400 hover:text - cyan - 300 transition - colors flex items - center space - x-2 group";
-                  >;
-                    <ArrowRight className="w - 3 h - 3 group - hover:translate - x-1 transition - transform" />;
-                    <span>{link.name}</span>;
-                  </Link>))}
-              </div>;
-              <div className='space - y-2'>;
-                <h5 className='text - sm font - medium text - cyan - 300'>Company</h5>                {company_info.map ((link, index) => (
-                  <Link;
-                    key={index}
-                    href={link.href}
-                    className='block text - xs text - gray - 400 hover:text - cyan - 300 transition - colors'                  >              <div className="space - y-2">;
-                <h5 className="text - sm font - medium text - cyan - 300">Company</h5>;
-                {company_info.map ((link, index) => (
-                  <Link;
-                    key={index}
-                    href={link.href}
-                    className='block text - xs text - gray - 400 hover:text - cyan - 300 transition - colors'                    className="block text - xs text - gray - 400 hover:text - cyan - 300 transition - colors";
-                  >;
-                    {link.name}
-                  </Link>))}
-              </div>;
-            </div>;
-            {/* Social & Certifications */}
-            <div className='space - y-6'>;
-              <h4 className='text - lg font - semibold text - white flex items - center space - x-2'>;
-                <Users className='w - 5 h - 5 text - green - 400' />;
-                <span > Connect & Trust</span>;
-              </h4>;
-              {/* Social Links */}
-              <div className='space - y-3'>;
-                <h5 className='text - sm font - medium text - green - 300'>;
-                  Follow Us;
-                </h5>;
-                <div className='flex flex - wrap gap - 2'>                  {social_links.map ((social, index) => (
-                    <a;
-=======
-              <div className="space-y-3">
-                <h5 className="text-sm font-medium text-green-300">Follow Us</h5>
-                <div className="flex flex-wrap gap-2">
-                  {socialLinks.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.href}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               {/* Certifications */}
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
@@ -1036,13 +982,14 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                   <span>Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2'>
                   {certifications.map((cert, index) => (
                     <div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       key={index}
                       href={social.href}                <span > Connect & Trust</span>;
               </h4>;
@@ -1061,8 +1008,9 @@ export default function UltraFuturisticFooter2030() {
 
                     </a>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
+
+
 
 
                 </div>;
@@ -1073,6 +1021,8 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+
+
               {/* Certifications */}
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
@@ -1080,7 +1030,9 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                   <span>Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2'>
@@ -1099,10 +1051,9 @@ export default function UltraFuturisticFooter2030() {
                     </div>;
 
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
                   ))}
                 </div>
               </div>
@@ -1113,7 +1064,10 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 
                       target='_blank';
                       rel='noopener noreferrer';
@@ -1154,11 +1108,8 @@ export default function UltraFuturisticFooter2030() {
         </div>;
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Bottom Bar */}
         <div className='border-t border-purple-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -1266,28 +1217,17 @@ export default function UltraFuturisticFooter2030() {
       </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
   );
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-}
-
-=======
-    </footer>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

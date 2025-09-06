@@ -1,16 +1,6 @@
 
-<<<<<<< HEAD
 
 
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { ProductListingCard } from '@/components / ProductListingCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
@@ -23,10 +13,10 @@ interface FeaturedListingsSectionProps {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 interface FeaturedListingsSectionProps {
   show_title?: boolean;
 }
@@ -265,9 +255,8 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
 
               listing={listing}
               view="grid";
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               view="grid"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onRequestQuote={() => {}}
@@ -288,30 +277,22 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
 
 
 
+
               view="grid"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onRequestQuote={() => {}}
 
 
-=======
-=======
-            <ProductListingCard
-              key={listing.id}
-              listing={listing}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              view="grid"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onRequestQuote={() => {}}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
         </div>;
 
         <div className="mt-10 text-center">;
@@ -323,19 +304,16 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-    </section>;
-  );
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 ;

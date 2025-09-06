@@ -1,11 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
 
-import { computeTrustScore } from '../../../utils/trust/compute';
-import type {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
@@ -96,7 +92,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
         riskLevel: riskLevelOverride || breakdown.riskLevel};
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       // Persist latest score when possible
       try {
         await supabase && supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result && result.updatedAt }, { onConflict: 'userId' })
@@ -141,19 +136,14 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
+
     return { riskLevel: level, reasonSummary: content.trim() }
   } catch (e: any) {
     return { riskLevel: 'Moderate Trust', reasonSummary: `Analysis unavailable: ${e?.message || 'unknown error'}` }
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  res.setHeader('Allow', 'GET, POST');
 
-  return res.status(405).json({ error: 'Method not allowed' });
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -1,34 +1,7 @@
 
-<<<<<<< HEAD
-
-import React from 'react';
-import { ScrollArea  } from '@/components/ui/scroll-area';
-import { Skeleton  } from '@/components/ui/skeleton';
-import { Button  } from '@/components/ui/button';
-import { NotificationItem  } from './NotificationItem';
-import { Notification } from '@/context/notifications';
-interface NotificationListProps {
 
 
-=======
 
-
-  loading: boolean,
-  error: string | null,
-  notifications: Notification[],
-  onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>,
-  onRetry: () => void
-}
-
-export const NotificationList: React.FC<NotificationListProps> = ({;
-  loading;
-  error;
-  notifications;
-  onMarkAsRead;
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
@@ -109,26 +82,19 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         ));
       )}
 
-<<<<<<< HEAD
-    </ScrollArea>
-  )
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
     </ScrollArea>;
   );
 
-=======
-=======
-    </ScrollArea>;
-  );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 };

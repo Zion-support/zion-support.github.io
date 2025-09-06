@@ -1,16 +1,15 @@
 
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 import {createNotification} from './createNotification';
 import {SystemNotificationParams} from './types';
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 /**
  * Creates a system notification for a user
  */
@@ -34,19 +33,9 @@ export async function createSystemNotification({
 
     actionText
   })
-<<<<<<< HEAD
 
 
 
-=======
-
-import {create_notification} from './create_notification';
-import {SystemNotificationParams} from './types';
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { createNotification } from './createNotification',;
 import { SystemNotificationParams } from './types',;
 
@@ -69,11 +58,10 @@ function createSystemNotification() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 }
 ;

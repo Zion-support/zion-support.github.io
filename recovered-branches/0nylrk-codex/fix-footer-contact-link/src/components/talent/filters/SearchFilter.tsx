@@ -1,30 +1,19 @@
 
-<<<<<<< HEAD
 
 
-import { Input } from "@/components/ui/input",
-import { SearchIcon } from "lucide-react";
-import { SearchFilterProps } from "@/types/filters";
-import { SearchIcon } from "lucide-react",
-import { SearchFilterProps } from "@/types/filters",
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
+
 import {Input} from "@/components/ui/input";
 import {SearchIcon} from "lucide-react";
 import {SearchFilterProps} from "@/types/filters";
 export function SearchFilter(): any ({ searchTerm, setSearchTerm }: SearchFilterProps) {;
 
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -35,75 +24,22 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           type="text"
           placeholder="Search talents..."
           value={searchTerm}
-<<<<<<< HEAD
 
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light"
-        />
-      </div>
-    </div>
-  );
-}
-  )
 
-import { Input } from "@/components/ui/input",;
-import { SearchIcon } from "lucide-react",;
-import { SearchFilterProps } from "@/types/filters";
-export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {;
-  return (;
-    <div className="mb-6">;
-      <div className="relative">;
-        <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
-        <Input;
-          type="text";
-          placeholder="Search talents...";
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-
-=======
-
-          onChange={(e) => setSearchTerm(e && e.target.value)}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
         />;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 
-=======
-}
 
-=======
-import { Input  } from '@/components / ui / input';
-import { SearchIcon  } from './lucide-react';
-import { SearchFilterProps  } from '@/types / filters';
-export /**
- * SearchFilter - Function description
- */
-function SearchFilter() {
-  return (
-    <div className="mb - 6">;
-      <div className="relative">;
-        <SearchIcon className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate - light" />;
-        <Input;
-          type="text";
-          placeholder="Search talents...";
-          value={search_term}
-          on_change={(e) => setSearchTerm (e.target.value)}
-          className="pl - 10 bg - zion - blue border - zion - blue - light text - white placeholder - zion - slate - light";
-        />;
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

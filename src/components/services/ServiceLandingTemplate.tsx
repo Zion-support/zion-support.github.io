@@ -3,18 +3,9 @@ name: string;
   text: string;
   avatar?: string
 }
-<<<<<<< HEAD
 
 
-interface ServiceLandingTemplateProps {
 
-
-=======
-
-
-interface ServiceLandingTemplateProps {;
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   title: string;
   subtitle: string;
   heroImage?: string;
@@ -66,7 +57,7 @@ export interface Benefit {;
   icon?: React.ReactNode;
 }
 export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
-<<<<<<< HEAD
+
 
 
 export interface Benefit {
@@ -76,47 +67,11 @@ export interface Benefit {
 
 
 
-import React from "react",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
-import Image from "next/image",;
-export interface Benefit {;
-  title: string,;
-  description: string,;
-  icon?: React.ReactNode;
-}
-;
-export interface Testimonial {;
-  name: string,;
-  role?: string,;
-  text: string,;
-  avatar?: string;
-}
-;
-interface ServiceLandingTemplateProps {;
-  title: string,;
-  subtitle: string,;
-  heroImage?: string,;
-  description: string,;
-  benefits: Benefit[],;
-  testimonials: Testimonial[],;
-  ctaText: string,;
-  ctaLink: string;
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
 
 
-export interface Benefit {
-  title: string;
-  description: string;
-  icon?: React.ReactNode
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
@@ -144,15 +99,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           </p>
   testimonials,
   ctaText,
-<<<<<<< HEAD
 
 
-  ctaLink}) => {
-  ctaLink,
-}) => {
-  ctaLink}) => {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -182,20 +130,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
       <section className="py-12 px-4">
         <div className="container mx-auto text-center">
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {description}
 
     <div className="min - h-screen bg - white">;
@@ -340,19 +276,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
           >
             {ctaText}
-<<<<<<< HEAD
 
 
-          </a>
-        </div>
-      </section>
-    </div>
-  )
-}
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           </a>;
         </div>;
@@ -436,8 +361,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
       </section>
     </div>
   )
-<<<<<<< HEAD
-=======
+
 
                   </div>;
                   <div className="text - gray - 600">{stat.label}</div>;
@@ -465,4 +389,5 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 }
 
 },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

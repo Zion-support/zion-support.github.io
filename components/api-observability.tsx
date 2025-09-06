@@ -1,10 +1,10 @@
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   service.name 
 }- Zion Tech Group</title>) ) 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
@@ -18,22 +18,12 @@ import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 
-<<<<<<< HEAD
-export default function ApiObservabilityPage() {
 
-export default function ApiObservabilityPage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/api-observability'));
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
 
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
-=======
-import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
-export default function ApiObservabilityPage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/api-observability'));
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   if (!service) return null;
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -128,21 +118,11 @@ if (return null) {
       </div>;
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
-=======
 
 
-    </UltraAdvancedFuturisticBackground>);
-}
-;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

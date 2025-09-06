@@ -6,18 +6,8 @@
     icon: "FileText"
   }
   },
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   {
     id: "announcements"
     name: "Announcements"
@@ -67,43 +57,9 @@ export const ForumCategories = () => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-          <Link key={category.id} href={`/community/category/${category.id}`}>
-            <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
-              <CardHeader className="flex flex-row items-center gap-4">
-                <div className="p-2 bg-zion-purple/10 rounded-full">
-                  <Icon className="h-6 w-6 text-zion-purple" />
-                </div>
-                <CardTitle className="text-xl">{category.name}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">{category.description}</CardDescription>
-              </CardContent>
-            </Card>
-          </Link>
-        )
-<<<<<<< HEAD
-
-
-      })}
-    </div>
-  )
-}
-export default ForumCategories
-"
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
-export default ForumCategories
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
 export default ForumCategories;
@@ -192,14 +148,8 @@ export const ForumCategories = () => {;
 };
 
 export default ForumCategories;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default ForumCategories;
 

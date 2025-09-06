@@ -1,36 +1,11 @@
 
 
 
-<<<<<<< HEAD
-=======
-=======
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react',;
-import Button from '../components/ui/Button',;
-import Card from '../components/ui/Card',;
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',;
-import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services',;
-import { nextGenerationAIServices } from '../data/next-generation-ai-services',;
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',;
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',;
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',;
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2',;
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2',;
-import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3',;
-import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3',;
-import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3',;
-export default function PricingEnhanced2026Page() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
+
   const popularServices = getPopularServices(),
   
   // Combine all services for comprehensive pricing
@@ -45,10 +20,8 @@ export default function PricingEnhanced2026Page() {
     ...innovative2026AIServicesV3,
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -232,13 +205,11 @@ export default function PricingEnhanced2026Page(req, res) {
   }
 }
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   ],
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
@@ -411,24 +382,23 @@ export default function PricingEnhanced2026Page(req, res) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
           {/* Twitter */}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           <meta name="twitter:card" content="summary_large_image" />;
           <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />;
           <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />;
@@ -442,14 +412,11 @@ export default function PricingEnhanced2026Page(req, res) {
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
 
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
@@ -486,12 +453,13 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             className="max-w-7xl mx-auto text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
@@ -499,14 +467,10 @@ export default function PricingEnhanced2026Page(req, res) {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
 
-<<<<<<< HEAD
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
 
               Achieve remarkable ROI with transparent, competitive pricing.
@@ -526,7 +490,9 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
               <button
@@ -541,10 +507,7 @@ export default function PricingEnhanced2026Page(req, res) {
                   }`}
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
             {/* Contact Information */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -552,8 +515,10 @@ export default function PricingEnhanced2026Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -581,14 +546,15 @@ export default function PricingEnhanced2026Page(req, res) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -618,13 +584,13 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   className="relative"
                 >
                   <UltraFuturisticCard
@@ -641,6 +607,7 @@ export default function PricingEnhanced2026Page(req, res) {
                   >
                     {tier.popular && (
 
+
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                           Most Popular
@@ -649,30 +616,22 @@ export default function PricingEnhanced2026Page(req, res) {
                     )}
 
 
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="relative"
                 >
                   <UltraFuturisticCard
-=======
-                  className="relative";
-                >;
-                  <UltraFuturisticCard;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
                     variant={tier.variant}
                     className={`h - full ${tier.popular ? 'ring - 2 ring - cyan - 500 ring - opacity - 50' : ''}`}
                   >;
                     {tier.popular && (
 
 
-=======
 
-                    
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -681,12 +640,13 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
@@ -708,14 +668,15 @@ export default function PricingEnhanced2026Page(req, res) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       </div>
                       <ul className="text-left space-y-3 mb-8">
                         {tier.features.map((feature, idx) => (
@@ -805,14 +766,15 @@ export default function PricingEnhanced2026Page(req, res) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -825,92 +787,12 @@ export default function PricingEnhanced2026Page(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCategories.map((category, index) => (
                 <motion.div
-<<<<<<< HEAD
-
-                  key={category.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                >
-                  <UltraFuturisticCard variant="quantum-advanced" className="h-full">
-                    <div className="p-6">
-                      <div className="flex items-center mb-4">
-                        <div className={`p-3 rounded-full bg-gradient-to-r ${category.color} mr-4`}>
-                          <category.icon className="w-6 h-6 text-white" />
-                        </div>
-                        <h3 className="text-xl font-bold text-white">{category.name}</h3>
-                      </div>
-                      <p className="text-gray-400 mb-4">{category.description}</p>
-                      <div className="mb-4">
-                        <span className="text-2xl font-bold text-cyan-400">{category.avgPrice}</span>
-                        <div className="text-sm text-green-400">{category.savings}</div>
-                      </div>
-                      <ul className="space-y-2 mb-4">
-                        {category.services.map((service, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-300">
-                            <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {service}
-                          </li>
-                        ))}
-                            {service  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          </li>;
-                        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-              className="text - center mb - 12";
-            >;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
-                Service Categories & Pricing;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Explore our comprehensive service categories with transparent pricing and competitive advantages;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-              {service_categories.map ((category, index) => (
-                <motion.div;
-                  key={category.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                       </ul>
 
 
@@ -926,14 +808,15 @@ export default function PricingEnhanced2026Page(req, res) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       >
                         View Services
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -991,14 +874,15 @@ export default function PricingEnhanced2026Page(req, res) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -1011,90 +895,12 @@ export default function PricingEnhanced2026Page(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {featuredServices.map((service, index) => (
                 <motion.div
-<<<<<<< HEAD
-
-                  key={service.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                >
-                  <UltraFuturisticCard variant="holographic" className="h-full">
-                    <div className="p-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="text-4xl">{service.icon}</div>
-                        <div className="text-right">
-                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                          <div className="text-sm text-gray-400">Starting price</div>
-                        </div>
-                      </div>
-                      <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                      <p className="text-gray-400 mb-4">{service.description}</p>
-                      <ul className="space-y-2 mb-4">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-300">
-                            <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                            {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          </li>;
-                        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-              className="text - center mb - 12";
-            >;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
-                Featured Services;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Discover our most popular and innovative services that are transforming businesses worldwide;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-              {featured_services.map ((service, index) => (
-                <motion.div;
-                  key={service.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                       </ul>
 
 
@@ -1111,14 +917,15 @@ export default function PricingEnhanced2026Page(req, res) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                         >
                           Learn More
                           <ArrowRight className="w-4 h-4 ml-1" />
@@ -1193,14 +1000,15 @@ export default function PricingEnhanced2026Page(req, res) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1221,14 +1029,15 @@ export default function PricingEnhanced2026Page(req, res) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
@@ -1244,14 +1053,15 @@ export default function PricingEnhanced2026Page(req, res) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
@@ -1267,68 +1077,13 @@ export default function PricingEnhanced2026Page(req, res) {
       </div>
     </UltraFuturisticBackground>
 
-<<<<<<< HEAD
-
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-}
-
-}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-}
-
-=======
-              className="bg - gradient - to - r from - cyan - 900 / 50 via - purple - 900 / 50 to - pink - 900 / 50 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 30 text - center";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
-                Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Button;
-                  variant="primary";
-                  size="lg";
-                  on_click={() => window.open (`mailto:${contact_info.email}?subject = Business Transformation Consultation`, '_blank')}
-                >;
-                  <Mail className="w - 5 h - 5 mr - 2" />;
-                  Schedule Consultation;
-                </Button>;
-                <Button;
-                  variant="secondary";
-                  size="lg";
-                  on_click={() => window.open (`tel:${contact_info.mobile}`, '_blank')}
-                >;
-                  <Phone className="w - 5 h - 5 mr - 2" />;
-                  Call Now;
-                </Button>;
-              </div>;
-              <div className="mt - 8 text - sm text - gray - 400">;
-                <p > Contact: {contact_info.mobile} | {contact_info.email}</p>;
-                <p>{contact_info.address}</p>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </div>;
-    </UltraFuturisticBackground>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

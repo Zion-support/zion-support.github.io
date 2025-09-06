@@ -373,10 +373,9 @@ const navigationItems = [
     ]
   }
 ];
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 const navigationItems = [;
   {;
@@ -593,22 +592,9 @@ const quickLinks = [;
   { title: "API Docs", href: "/api-docs", icon: Code },;
 
 ];
-<<<<<<< HEAD
-
-=======
-export default function Navigation() {;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-export default function Navigation() {
 
 export default function Navigation() {;
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 

@@ -1,86 +1,13 @@
 
-<<<<<<< HEAD
-
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
-import { useNavigate } from "react-router-dom";
-import { TalentProfile } from "@/types/talent";
-export interface TalentCardProps {
 
 
-  isAuthenticated: boolean
-}
-export function TalentCard({
-
-
-=======
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
 import {useNavigate} from "react-router-dom";
 import {TalentProfile} from "@/types/talent";
-<<<<<<< HEAD
-
-  talent;
-  onViewProfile;
-  onRequestHire;
-  isSaved;
-  onToggleSave;
-  isAuthenticated
-}: TalentCardProps) {
-
-  const navigate = useNavigate();
-  const handleViewProfile = () => {
-    // Navigate directly to the talent profile
-    navigate(`/talent/${talent.id}`);
-    // Also call the onViewProfile callback if provided
-    if (onViewProfile) {
-      onViewProfile(talent.id)
-    }
-  }
-  const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation()
-    if (onRequestHire) {
-      onRequestHire(talent)
-    }
-  }
-  const handleToggleSave = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation()
-    if (onToggleSave) {
-      onToggleSave(talent.id, !isSaved)
-    }
 
 
-  }
-  // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) |[];
-import { useNavigate } from "react-router-dom",
-import { TalentProfile } from "@/types/talent",
-export interface TalentCardProps {
-  talent: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire: (talent: TalentProfile) => void,
-  isSaved: boolean,
-  onToggleSave: (id: string, isSaved: boolean) => void,
-  isAuthenticated: boolean
-
-
-import { Button } from "@/components/ui/button",;
-import { Card } from "@/components/ui/card",;
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
-import { useNavigate } from "react-router-dom",;
-import { TalentProfile } from "@/types/talent",;
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export interface TalentCardProps {;
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -126,17 +53,11 @@ export function TalentCard(): any ({;
     if (onToggleSave) {;
       onToggleSave(talent && talent.id, !isSaved);
     }
-<<<<<<< HEAD
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  };
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
   return (
@@ -188,12 +109,13 @@ export function TalentCard(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
@@ -282,15 +204,17 @@ export function TalentCard(): any ({;
               <div className="text-zion-slate-light">Rate not specified</div>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             )}
 
           </div>;

@@ -1,22 +1,7 @@
 
-<<<<<<< HEAD
 
 
 
-=======
-import { GradientHeading } from './GradientHeading';
-import { Check, Handshake, Search, Send } from './lucide-react';
-const steps = [;
-=======
-
-=======
-import { GradientHeading } from "./GradientHeading",
-import { Check, Handshake, Search, Send } from "lucide-react",
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const steps = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
@@ -53,10 +38,7 @@ export function HowItWorksSection() {;
   return (
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 import { GradientHeading } from "./GradientHeading",;
 import { Check, Handshake, Search, Send } from "lucide-react",;
 const steps = [;
@@ -101,7 +83,7 @@ export function HowItWorksSection() {;
                   index % 2 === 0 ? "md:flex-row-reverse" : "";
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -130,31 +112,16 @@ export function HowItWorksSection() {;
                 </div>;
               </div>;
             ))}
-<<<<<<< HEAD
 
-          </div>
-        </div>
-      </div>
-    </section>
-  )
 
-=======
-
-          </div>;
-        </div>;
-      </div>;
-    </section>;
-  );
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 };
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

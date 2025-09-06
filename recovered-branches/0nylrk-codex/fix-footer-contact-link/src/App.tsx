@@ -1,31 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import React, { Suspense } from "react";
@@ -34,71 +8,8 @@ import "./App ;
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 
-<<<<<<< HEAD
-
-=======
-import {;
-  AuthRoutes,;
-  DashboardRoutes,;
-  MarketplaceRoutes,;
-  TalentRoutes,;
-  AdminRoutes,;
-  MobileAppRoutes,;
-  ContentRoutes,;
-  ErrorRoutes,;
-  EnterpriseRoutes,;
-  CommunityRoutes,;
-  DeveloperRoutes,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-} from "./routes";
-const Home = React && React.lazy(() => import("./pages/Home"));
-const AIMatcherPage = React && React.lazy(() => import("./pages/AIMatcher"));
-const TalentDirectory = React && React.lazy(() => import("./pages/TalentDirectory"));
-const TalentsPage = React && React.lazy(() => import("./pages/TalentsPage"));
-const ServicesPage = React && React.lazy(() => import("./pages/ServicesPage"));
-const EquipmentPage = React && React.lazy(() => import("./pages/EquipmentPage"));
-const Analytics = React && React.lazy(() => import("./pages/Analytics"));
-const MobileLaunchPage = React && React.lazy(() => import("./pages/MobileLaunchPage"));
-const CommunityPage = React && React.lazy(() => import("./pages/CommunityPage"));
-const Categories = React && React.lazy(() => import("./pages/Categories"));
-const Login = React && React.lazy(() => import("./pages/Login"));
-const Signup = React && React.lazy(() => import("./pages/Signup"));
-const ITOnsiteServicesPage = React && React.lazy(;
-  () => import("./pages/ITOnsiteServicesPage"),;
-);
-const OpenAppRedirect = React && React.lazy(() => import("./pages/OpenAppRedirect"));
-const ContactPage = React && React.lazy(() => import("./pages/Contact"));
-
-const baseRoutes = [;
-  { path: "/", element: <Home /> },;
-  { path: "/match", element: <AIMatcherPage /> },;
-  { path: "/login", element: <Login /> },;
-  { path: "/signup", element: <Signup /> },;
-  { path: "/talent", element: <TalentDirectory /> },;
-  { path: "/talents", element: <TalentsPage /> },;
-  { path: "/services", element: <ServicesPage /> },;
-  { path: "/it-onsite-services", element: <ITOnsiteServicesPage /> },;
-  { path: "/categories", element: <Categories /> },;
-  { path: "/equipment", element: <EquipmentPage /> },;
-  { path: "/analytics", element: <Analytics /> },;
-  { path: "/mobile-launch", element: <MobileLaunchPage /> },;
-  { path: "/open-app", element: <OpenAppRedirect /> },;
-  { path: "/community", element: <CommunityPage /> },;
-  { path: "/contact", element: <ContactPage /> },;
-];
-<<<<<<< HEAD
 
 
-import React, { Suspense } from 'react',
-import { Routes, Route } from 'react-router-dom',
-import './App.css',
-import { ThemeProvider } from "./components/ThemeProvider",
-import { WhitelabelProvider } from "./context/WhitelabelContext",
-import { Toaster } from "./components/ui/toaster",
-import { Toaster as SonnerToaster } from "./components/ui/sonner",
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const App = () => {;
 
@@ -110,10 +21,7 @@ const App = () => {;
             {baseRoutes && baseRoutes.map(({ path, element }) => (;
               <Route key={path} path={path} element={element} />;
             ))}
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 =======
 import React, { Suspense } from './react';
 import { Routes, Route  } from './react-router-dom';
@@ -122,7 +30,7 @@ import { ThemeProvider  } from './components / ThemeProvider';
 import { WhitelabelProvider  } from './context / WhitelabelContext';
 import { Toaster  } from './components / ui / toaster';
 import { Toaster, as, SonnerToaster  } from './components / ui / sonner';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -222,12 +130,8 @@ export default App;
 },
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export default App;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 export default App;

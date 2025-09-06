@@ -31,21 +31,14 @@ import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
 
 
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Sparkles } from 'lucide-react'
 import { Star } from 'lucide-react';
 
 interface AIListingFormProps {
   onSubmit: (formData: {
-<<<<<<< HEAD
+
     title: string;
     category: string;
     keyFeatures: string;
@@ -66,56 +59,14 @@ interface AIListingFormProps {
     keyFeatures?: string
     targetAudience?: string
   };    title: string,
-=======
-    title: string,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     category: string,
     keyFeatures: string,
     targetAudience: string
   }) => void;
   isLoading: boolean,
-<<<<<<< HEAD
 
 
-    title?: string
-    category?: string
-    keyFeatures?: string
-    targetAudience?: string
-  }
-export function AIListingForm({
-  onSubmit,
-  isLoading,
-  initialValues = {},
-}: AIListingFormProps) {
-  const { toast } = useToast()
-  const [title, setTitle] = useState(initialValues.title || '')
-  const [category, setCategory] = useState(initialValues.category || '')
-  const [keyFeatures, setKeyFeatures] = useState(
-    initialValues.keyFeatures || ''
-  )
-  const [targetAudience, setTargetAudience] = useState(
-    initialValues.targetAudience || ''
-  )
-  const handleSubmit = () => {
-    if (!title || !category) {
-      toast({
-        title: 'Missing required fields',
-        description: 'Please provide at least a title and category.',
-        variant: 'destructive',  const [title, setTitle] = useState(initialValues.title || "")
-  const [category, setCategory] = useState(initialValues.category || "")
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "")
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "")
-  const handleSubmit = () => {
-    if (!title || !category) {
-      toast({
-        title: 'Missing required fields',
-        description: 'Please provide at least a title and category.',
-        variant: 'destructive',
-      return;
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   initialValues?: {
     title?: string;
     category?: string;
@@ -124,7 +75,7 @@ export function AIListingForm({
   }
 }
 
-<<<<<<< HEAD
+
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
   const { toast } = useToast(),
   const [title, setTitle] = useState(initialValues.title || ""),
@@ -133,33 +84,17 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
 
 
-=======
 
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) { const { toast  } = useToast(),
-  const [ title, setTitle ] = useState(initialValues.title || ""),
-  const [ category, setCategory ] = useState(initialValues.category || ""),
-  const [ keyFeatures, setKeyFeatures ] = useState(initialValues.keyFeatures || ""),
-  const [ targetAudience, setTargetAudience ] = useState(initialValues.targetAudience || ""),
-
-
-  const handleSubmit = () => {
-    if (!title || !category) {
-      toast({
-        title: "Missing required fields",
-        description: "Please provide at least a title and category.",
-        variant: "destructive"
-      });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       return
     }
 
     onSubmit({
-<<<<<<< HEAD
-=======
+
       title;
       category;
       keyFeatures;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       targetAudience
     })
   };
@@ -168,19 +103,17 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   return (
     <div className="space-y-4">
         />
-<<<<<<< HEAD
-=======
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       </div>
       <div className="space-y-2">
         <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
         <Input
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Enter your product or service title"
@@ -369,10 +302,8 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           placeholder="e.g. Developers, Marketers, Startups";
           className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         />;
       </div>;
       <Button;
@@ -417,11 +348,11 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
             Generate Optimized Content;
           </>;
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) 
 }</Button> </div>) 
 }'";
@@ -430,14 +361,13 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 }
 }
 
+
+
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <Sparkles className="h-4 w-4 mr-2" />
             Generate Optimized Content
           </>

@@ -1,24 +1,18 @@
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
-<<<<<<< HEAD
 
 
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 interface FraudTabContentProps {
   tab_value: string;
 export const FraudTabContent: React.FC < FraudTabContentProps> = ({
   tab_value,
 }) => {
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         <div className='bg - amber - 50 dark:bg - amber - 950 / 20 p - 8 rounded - lg text - center'>;
           <AlertTriangle className='mx - auto h - 12 w - 12 text - amber - 500 mb - 4' />;
@@ -56,11 +50,8 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab will show fraud flags that are still pending admin review.
           </p>
         </div>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     case 'dangerous':
       return (
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">
@@ -73,12 +64,12 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       )
       ),
     
-<<<<<<< HEAD
-=======
+
 
     case 'actioned':
       return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         <div className='bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text - center'>;
           <AlertCircle className='mx - auto h - 12 w - 12 text - red - 500 mb - 4' />;
           <h3 className='text - xl font - medium mb - 4'>Dangerous Flags</h3>;
@@ -91,25 +82,18 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       return (
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
       return null;
   };
 };
 }
 
-<<<<<<< HEAD
-=======
-      ),
-    
-    default:
-      return null
-import React from "react",;
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 
@@ -152,11 +136,13 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({;
 
     default:;
       return null;
+
   }
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 }
 
 

@@ -1,24 +1,15 @@
 
-<<<<<<< HEAD
 
 
-  id?: string;
-  title: string;
 
-}
-
-export interface WorkExperience {
-
-export interface WorkExperience {;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
   headline?: string,
   summary?: string;
 
 }
 export interface WorkExperience {
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   id?: string;
   company_name: string;
   role_title: string;
@@ -31,13 +22,10 @@ export interface WorkExperience {
   location?: string;
 
 }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-export interface Education {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   id?: string;
   institution: string;
   degree: string;
@@ -51,13 +39,10 @@ export interface Education {
   location?: string;
 
 }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-export interface Skill {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   id?: string;
   name: string;
   proficiency?: number;
@@ -66,13 +51,10 @@ export interface Skill {
   years_experience?: number;
 
 }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-export interface Certification {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   id?: string;
   name: string;
   issuing_organization: string;
@@ -83,13 +65,10 @@ export interface Certification {
   credential_url?: string;
 
 }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-export interface PortfolioProject {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   id?: string;
   title: string;
   description?: string;
@@ -101,13 +80,10 @@ export interface PortfolioProject {
   pdf_url?: string;
 
 }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-export interface Resume {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   id?: string;
   user_id?: string;
   basic_info: ResumeBasicInfo;
@@ -116,26 +92,15 @@ export interface Resume {
   skills: Skill[];
   certifications: Certification[];
 
-<<<<<<< HEAD
+
   portfolio_projects?: PortfolioProject[]
 
   is_active: boolean
 }
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  portfolio_projects?: PortfolioProject[],
-  is_active: boolean;
-
-}
-=======
 
 
-export interface ResumeBasicInfo {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

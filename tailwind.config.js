@@ -6,8 +6,10 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
 
 
+
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Added for Next.js app directory compatibility
+
 
 
   ],
@@ -23,38 +25,7 @@ module.exports = {
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-          800: '#1e40af',
-          900: '#1e3a8a',
-        },
-        secondary: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-        },
-        accent: {
-          50: '#fdf4ff',
-          100: '#fae8ff',
-          200: '#f5d0fe',
-          300: '#f0abfc',
-          400: '#e879f9',
-          500: '#d946ef',
-          600: '#c026d3',
-          700: '#a21caf',
-          800: '#86198f',
-          900: '#701a75',
-        },
 
       },
       animation: {
@@ -102,11 +73,10 @@ module.exports = {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['Fira Code', 'monospace'],
       },
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
@@ -135,17 +105,10 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-<<<<<<< HEAD
+
 
 
     require('@tailwindcss/aspect-ratio')
   ]
 };
 
-
-
-=======
-    require('@tailwindcss/aspect-ratio'),
-  ],
-};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

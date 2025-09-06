@@ -1,30 +1,17 @@
 
-<<<<<<< HEAD
 
 
-import React, { useState } from "react",
-import { MapPin } from "lucide-react";
-import { TalentCardSkills } from "./TalentCardSkills";
-import { MapPin } from "lucide-react",
-import { TalentCardSkills } from "./TalentCardSkills",
-=======
-import React, { useState } from './react';
-import { MapPin  } from './lucide-react';
-import { TalentCardSkills  } from './TalentCardSkills';
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
@@ -33,33 +20,20 @@ interface TalentCardContentProps {
 }
 
 
-<<<<<<< HEAD
-export function TalentCardContent({
-  summary
-  bio
-  timezone
-  skills
-}: TalentCardContentProps) {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
 import React, { useState } from "react";
 import {MapPin} from "lucide-react";
 import {TalentCardSkills} from "./TalentCardSkills";
-=======
 
-export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {;
-  const [isHovering, setIsHovering] = useState(false);
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const [isHovering, setIsHovering] = useState(false);
   return (
     <div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React, { useState } from "react",;
 import { MapPin } from "lucide-react",;
 import { TalentCardSkills } from "./TalentCardSkills",;
@@ -80,16 +54,18 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
     <div>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Location */}
       {timezone && (;
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;
@@ -115,18 +91,10 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
       >
         <p className="text-zion-slate mb-4">
           {summary || bio}
-<<<<<<< HEAD
-
-        </p>;
-      </div>;
-        </p>
-      </div>
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       {/* Skills */}
       <TalentCardSkills skills={skills} />
     </div>

@@ -1,29 +1,6 @@
 
-<<<<<<< HEAD
 
 
-interface EducationSectionProps {
-  education: Education[]
-}
-export function EducationSection({ education }: EducationSectionProps) {
-  // Sort education by date (newest first)
-
-
-  const sortedEducation = [...education].sort((a, b) => {
-  const sortedEducation = [...education].sort((a, b) => {;
-
-
-=======
-import {Education} from '@/types / resume';
-import {format} from 'date - fns';
-
-=======
-
-
-import {Education} from '@/types/resume';
-import {format} from 'date-fns';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface EducationSectionProps {
   education: Education[];
@@ -32,13 +9,12 @@ interface EducationSectionProps {
   const sortedEducation = [...education].sort((a, b) => {;
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
@@ -49,50 +25,16 @@ interface EducationSectionProps {
     if (!date) return ''
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
-<<<<<<< HEAD
 
-    }
-    return format(date, 'MMM yyyy')
-  }
-  if (sortedEducation.length === 0) return null;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import { Education } from '@/types/resume',;
-import { format } from 'date-fns',;
-interface EducationSectionProps {;
-  education: Education[];
-}
-;
-export function EducationSection({ education }: EducationSectionProps) {;
-  // Sort education by date (newest first);
-  const sortedEducation = [...education].sort((a, b) => {;
-    if (a.is_current && !b.is_current) return -1,;
-    if (!a.is_current && b.is_current) return 1,;
-    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date),;
-    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
-    return dateB.getTime() - dateA.getTime();
-  }),;
-  const formatDate = (date: Date | string | undefined) => {;
-    if (!date) return '',;
-    if (typeof date === 'string') {;
-      return format(new Date(date), 'MMM yyyy');
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     }
     return format(date, 'MMM yyyy')
   },

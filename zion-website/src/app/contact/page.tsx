@@ -7,13 +7,11 @@ import {
 } from '@heroicons/react/24/outline'
 import React from 'react';
 
-<<<<<<< HEAD
+
 const contactMethods = [
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const contactMethods = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
     name: 'Email'
     description: 'Get in touch with our team'
@@ -67,6 +65,7 @@ const faqs = [;
     answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
   {
 
+
     question: 'What security measures do you have?'
     answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
 
@@ -74,6 +73,7 @@ export default function ContactPage() {;
   return (;
     <div className=&quot;bg-black&quot;>
 export default function ContactPage() {
+
 
   return (
     <div className="bg-black">
@@ -83,8 +83,7 @@ export default function ContactPage() {
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               Get in{' '}
-<<<<<<< HEAD
-=======
+
 
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -96,134 +95,8 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-=======
-              <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
-                Touch;
-              </span>;
-            </h1>;
-            <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-              Ready to transform your business with AI? Let's discuss how our cutting - edge;
-              technology can accelerate your growth and innovation.;
-            </p>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Contact methods */}
-      <div className=&quot;mx - auto max - w-7xl px - 6 sm:px - 6 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Contact Us</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Multiple ways to reach us;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <dl className=&quot;grid max - w-xl grid - cols - 1 gap - x-8 gap - y-16 lg:max - w-none lg:grid - cols - 3&quot;>;
-            {contact_methods.map ((method) => (
-              <div key={method.name} className=&quot;flex flex - col group & quot;>;
-                <dt className=&quot;flex items - center gap - x-3 text - base font - semibold leading - 7 text - white & quot;>;
-                  <method.icon className=&quot;h - 5 w - 5 flex - none text - blue - 400 & quot; aria - hidden=&quot;true & quot; />;
-                  {method.name}
-
-                </dt>
-
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">{method.description}</p>
-                  <p className="mt-6">
-                    <a 
-                      href={method.href} 
-                      className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
 
 
-                    >
-                      {method.value} <span aria-hidden=&quot;true&quot;>→</span>
-                    </Link>
-                  </p>
-                </dd>
-              </div>
-            ))}
-=======
-                </dt>;
-                <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
-                  <p className=&quot;flex - auto & quot;>{method.description}</p>;
-                  <p className=&quot;mt - 6&quot;>;
-                    <a;
-                      href={method.href}
-                      className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
-                    >;
-                      {method.value} <span aria - hidden=&quot;true & quot;>→</span>;
-                    </Link>;
-                  </p>;
-                </dd>;
-              </div>))}
-=======
-    question: 'What security measures do you have?'
-    answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-export default function ContactPage() {;
-  return (;
-    <div className=&quot;bg-black&quot;>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default function ContactPage() {
-  return (
-    <div className="bg-black">
-
-      {/* Hero section */}
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Get in{' '}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                Touch
-              </span>
-            </h1>
-<<<<<<< HEAD
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              Ready to transform your business with AI? Let's discuss how our cutting-edge
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Ready to transform your business with AI? Let's discuss how our cutting-edge 
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              technology can accelerate your growth and innovation.
-            </p>
-          </div>
-        </div>
-      </div>
-<<<<<<< HEAD
-
-=======
-      {/* Contact methods */}
-      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Contact Us</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Multiple ways to reach us
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            {contactMethods.map((method) => (
-              <div key={method.name} className="flex flex-col group">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                  <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {method.name}
-                </dt>
-
-                    >
-                      {method.value} <span aria-hidden="true">→</span>
-                    </Link>
-                  </p>
-                </dd>
-              </div>
-            ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </dl>;
         </div>;
       </div>;
@@ -361,192 +234,14 @@ export default function ContactPage() {
                   <p className=&quot;flex items - center gap - 2&quot;>;
                     <ClockIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            Let's start a conversation
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
-          <form className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-              <div>
-                <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-white">
-                  First name
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="first-name"
-                    id="first-name"
-                    autoComplete="given-name"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-white">
-                  Last name
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="last-name"
-                    id="last-name"
-                    autoComplete="family-name"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="email" className="block text-sm font-semibold leading-6 text-white">
-                  Email
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    autoComplete="email"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="company" className="block text-sm font-semibold leading-6 text-white">
-                  Company
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="company"
-                    id="company"
-                    autoComplete="organization"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white">
-                  Message
-                </label>
-                <div className="mt-2.5">
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows={4}
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
-                    defaultValue={''}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="mt-8 flex justify-end">
-              <button
-                type="submit"
-                className="rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
-              >
-                Send message
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-      {/* Office locations */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Global Presence</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Visit our offices worldwide
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-            {officeLocations.map((office) => (
-              <div key={office.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center gap-x-3 mb-4">
-                  <MapPinIcon className="h-8 w-8 text-blue-400" />
-                  <h3 className="text-xl font-semibold text-white">{office.name}</h3>
-                </div>
-                <div className="space-y-3 text-gray-300">
-                  <p className="flex items-start gap-2">
-                    <MapPinIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    {office.address}
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <PhoneIcon className="h-5 w-5 text-blue-400" />
-                    {office.phone}
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <EnvelopeIcon className="h-5 w-5 text-blue-400" />
-                    {office.email}
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <ClockIcon className="h-5 w-5 text-blue-400" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                    {office.hours}
-                  </p>;
-                </div>;
-              </div>))}
-          </div>;
-        </div>;
-      </div>;
-      {/* FAQ */}
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Frequently Asked</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
-
-            Common questions
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
-          <dl className="space-y-8">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
-                <dt className="text-lg font-semibold leading-7 text-white mb-4">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {faq.question}
                 </dt>;
                 <dd className=&quot;text - base leading - 7 text - gray - 300 & quot;>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            Common questions
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
-          <dl className="space-y-8">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
-                <dt className="text-lg font-semibold leading-7 text-white mb-4">
-                  {faq.question}
-                </dt>
-                <dd className="text-base leading-7 text-gray-300">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                  {faq.answer}
-                </dd>;
-              </div>))}
-          </dl>;
-        </div>;
-      </div>;
-      {/* CTA section */}
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
-          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

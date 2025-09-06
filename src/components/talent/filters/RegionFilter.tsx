@@ -7,11 +7,8 @@ return (
       >
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <span>Region</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -20,11 +17,13 @@ return (
         )}
 
 
+
       </button>
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       {expanded && (
         <div className="mt-4 space-y-2">
           {REGION_OPTIONS.map(region => (
@@ -34,14 +33,12 @@ return (
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
 
+  { id: "North America", label: "North America" },
+  { id: "Europe", label: "Europe" },
+  { id: "Asia", label: "Asia" },
+  { id: "South America", label: "South America" },
+  { id: "Australia", label: "Australia" },
 
-            <div key={region.id} className="flex items-center">
-import { Checkbox } from "@/components/ui/checkbox"
-import { RegionFilterProps } from "@/types/filters"
-const REGION_OPTIONS = [
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from '@/components / ui / checkbox';
 import { RegionFilterProps } from '@/types / filters';
@@ -105,21 +102,16 @@ const REGION_OPTIONS = [;
   { id: "Asia", label: "Asia" },;
   { id: "South America", label: "South America" },;
   { id: "Australia", label: "Australia" },;
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   { id: "Africa", label: "Africa" }
 ]
 
@@ -237,23 +229,8 @@ function RegionFilter() {
 }className="flex w - full items - center justify - between text - white font - medium" > <span > Region</span>) : (<ChevronDown className="h - 4 w - 4 text - zion - slate - light" />);
 }</button> {
   REGION OPTIONS.map (region => (<div key= {
-<<<<<<< HEAD
 
 
-  region.id "
-}className="flex items-center" > <Checkbox > {
-  region.label
-}</label> </div>) )
-}</div>)
-}</div>)
-=======
-  region.id ";
-}className="flex items - center" > <Checkbox > {
-  region.label;
-}</label> </div>) );
-}</div>);
-}</div>);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }"}
 
   region.label 
@@ -261,12 +238,6 @@ function RegionFilter() {
 }</div>) ;
 }</div>) ;
 }"};
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;

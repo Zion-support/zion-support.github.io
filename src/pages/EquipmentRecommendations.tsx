@@ -92,13 +92,8 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
 
   if (!isAuthenticated) {;
     return (
-<<<<<<< HEAD
 
 
-      <Dialog open>
-        <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           <DialogHeader>
@@ -113,18 +108,8 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
               Sign In
             </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
           </Button>
         </DialogContent>
@@ -143,14 +128,8 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
   return (
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         ))}
 
       </div>;

@@ -1,32 +1,7 @@
 
-<<<<<<< HEAD
 
 
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -40,35 +15,10 @@ import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 export default function TalentDirectory() {;
   const navigate = useNavigate();
-<<<<<<< HEAD
-
-import React, { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { TalentGrid } from "@/components/talent/TalentGrid",
-import { FilterSidebar } from "@/components/talent/FilterSidebar",
-import { TalentResults } from "@/components/talent/TalentResults",
-import { useTalentDirectory } from "@/hooks/useTalentDirectory",
-import { SORT_OPTIONS } from "@/data/sortOptions",
-import { X } from "lucide-react",
-import { Button } from "@/components/ui/button";
-import { TalentProfile } from "@/types/talent";
-export default function TalentDirectory() {
-import { Button } from "@/components/ui/button",
-import { TalentProfile } from "@/types/talent",
-export default function TalentDirectory() {
-  const navigate = useNavigate(),
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-  // Use our custom hook to manage state;
-  const {;
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   const navigate = useNavigate();
   // Use our custom hook to manage state
@@ -161,8 +111,7 @@ export default function TalentDirectory() {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
+
   const handleRequestHire = (talent: TalentProfile) => {;
     setSelectedTalent(talent),;
     setIsHireModalOpen(true);
@@ -242,10 +191,8 @@ export default function TalentDirectory() {
             </div>;
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">;
               <Button
@@ -260,12 +207,13 @@ export default function TalentDirectory() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Results */}
             <TalentResults;
               filtered_talents={filtered_talents}
@@ -294,14 +242,12 @@ export default function TalentDirectory() {
                 priceRange,;
                 setPriceRange,;
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 experienceRange;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 setExperienceRange;

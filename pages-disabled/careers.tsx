@@ -39,20 +39,10 @@ function CareersPage() {
 
     {
 
-<<<<<<< HEAD
-      title: "Senior AI Engineer"
-      department: "AI & Machine Learning"
-      title: "Senior AI Engineer",
-      department: "AI & Machine Learning",;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-      title: "Senior AI Engineer",
-      department: "AI & Machine Learning",;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       location: "San Francisco, CA / Remote";
 
 export default function CareersPage() {;
@@ -111,15 +101,7 @@ export default function CareersPage() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-=======
       {/* Benefits Section */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -156,19 +138,9 @@ export default function CareersPage() {;
           </div>;
         </div>;
       </section>;
-=======
-          </div>
-        </div>
-      </section>
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -196,106 +168,17 @@ export default function CareersPage() {;
 
 
 
-<<<<<<< HEAD
-=======
-                      </ul>;
-                    </div>;
-                    <div className="mb-4">;
-                      <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>;
-                      <div className="flex flex-wrap gap-2">;
-                        {position && position.benefits.map((benefit) => (;
-                          <span key={benefit} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">;
-
-                            {benefit}
-                          </span>;
-                        ))}
-
-                      </div>;
-                    </div>;
-                  </div>;
-                  <div className="lg:flex-shrink-0">;
-                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">;
-      icon: Rocket,
-      color: "from - orange - 500 to - red - 500";
-    }
-  ];
-;
-  return (
-    <UltraAdvancedFuturisticBackground>;
-      <div className="min - h-screen">;
-        <Head>;
-          <title > Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>;
-          <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting - edge projects." />;
-        </Head>;
-      <EnhancedNavigation />;
-      {/* Hero Section */}
-      <section className="relative pt - 32 pb - 20 px - 6">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb - 8";
-          >;
-            <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6">;
-              Join Our Team;
-            </h1>;
-            <p className="text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed">;
-              Build the future of technology with cutting - edge AI, quantum computing, and cybersecurity solutions;
-            </p>;
-          </motion.div>;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb - 12";
-          >;
-            <p className="text - lg text - white / 70 max - w-2xl mx - auto mb - 8">;
-              Work alongside world - class engineers and researchers to solve the most complex;
-              technological challenges and shape the future of computing.;
-            </p>;
-            <button className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto">;
-              View Open Positions;
-              <ArrowRight className="w - 5 h - 5" />;
-            </button>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Benefits Section */}
-      <section className="py - 20 px - 6">;
-        <div className="max - w-7xl mx - auto">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-=======
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lg:flex-shrink-0">
-                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
-                      Apply Now
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

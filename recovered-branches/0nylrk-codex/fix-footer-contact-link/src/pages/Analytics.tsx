@@ -1,32 +1,7 @@
 
-<<<<<<< HEAD
 
 
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -40,30 +15,9 @@ import {ExportPanel} from "@/components/analytics/ExportPanel";
 export default function Analytics() {;
   const [timeRange, setTimeRange] = useState('30d');
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",
-import { AnalyticsSummary } from "@/components/analytics/AnalyticsSummary",
-import { PageViewsTable } from "@/components/analytics/PageViewsTable",
-import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats",
-import { PageViewsChart } from "@/components/analytics/PageViewsChart",
-import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart";
-import { ExportPanel } from "@/components/analytics/ExportPanel";
-export default function Analytics() {
-  const [timeRange, setTimeRange] = useState('30d');
-import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart",
-import { ExportPanel } from "@/components/analytics/ExportPanel",
-export default function Analytics() {
-  const [timeRange, setTimeRange] = useState('30d'),
-  
-
-=======
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const { data: pageViewTrends } = useQuery({
     queryKey: ['page-views-trend', timeRange],
     queryFn: async () => {
@@ -166,14 +120,15 @@ export default function Analytics() {;
           result.push({ date: dateStr, views: 0 });
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         }
       }
       return result.sort((a, b) => a.date.localeCompare(b.date))
@@ -220,14 +175,15 @@ export default function Analytics() {;
         if (!conversionsByType[conversionType]) {;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           conversionsByType[conversionType] = {}
         }
         if (!conversionsByType[conversionType][date]) {
@@ -236,11 +192,10 @@ export default function Analytics() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
         conversionsByType[conversionType][date]++
       });
       // Get all dates in range
@@ -293,12 +248,13 @@ export default function Analytics() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
   return (
 
@@ -319,30 +275,14 @@ export default function Analytics() {;
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <ConversionAnalysisChart
-<<<<<<< HEAD
-
-          data={conversionData |[]}
-          timeRange={timeRange}
-          onTimeRangeChange={setTimeRange}
-
-        />
-        <ExportPanel />
-      </div>
-    </AnalyticsContainer>
-  )
 
 
-}
-        <ConversionAnalysisChart 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           data={conversionData || []} 
           timeRange={timeRange}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
+
           onTimeRangeChange={setTimeRange}
         />;
         <ExportPanel />;
@@ -351,6 +291,8 @@ export default function Analytics() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 ;

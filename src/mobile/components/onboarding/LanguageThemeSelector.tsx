@@ -21,7 +21,7 @@ key={language.code}
 
 
               onClick={() => setSelectedLanguage(language.code)}
-<<<<<<< HEAD
+
             >
               <CardContent className="p-3 flex items-center justify-between">
                 <div className="flex items-center">
@@ -46,9 +46,7 @@ key={language.code}
               theme === 'light'
                 ? 'border-primary bg-primary/5'
                 : 'border-border hover:border-primary/40'
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >;
               <CardContent className="p-3 flex items-center justify-between">;
                 <div className="flex items-center">;
@@ -122,20 +120,8 @@ key={language.code}
               theme === 'light' 
                 ? "border-primary bg-primary/5" 
                 : "border-border hover:border-primary/40"
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             }`}
             onClick={() => setTheme('light')}
           >
@@ -154,51 +140,8 @@ key={language.code}
             </CardContent>
           </Card>
 
-<<<<<<< HEAD
-
-          <Card
-            className={`flex-1 cursor-pointer transition-all ${
-              theme === 'dark'
-                ? 'border-primary bg-primary/5'
-                : 'border-border hover:border-primary/40'
-            }`}
-            onClick = {() => setTheme('dark'),}
-          >
-            <CardContent className='p-3 flex flex-col items-center justify-center'>
-              <Moon className='h-8 w-8 mb-2' />
-              <span>Dark</span>
-              {theme === 'dark' && (
-                <Check className='h-4 w-4 text-primary mt-2' />              )}              )}
-            </CardContent>
-          </Card>
-                <Check className="h-4 w-4 text-primary mt-2" />
-              )}
-            </CardContent>
-          </Card>
-          <Card
-            className={`flex-1 cursor-pointer transition-all ${
-              theme === 'dark'
-                ? "border-primary bg-primary/5"
-
-          <Card 
-            className={`flex-1 cursor-pointer transition-all ${
 
 
-          
-          <Card 
-            className={`flex-1 cursor-pointer transition-all ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-          <Card 
-            className={`flex-1 cursor-pointer transition-all ${
-
-          
-          <Card 
-            className={`flex-1 cursor-pointer transition-all ${
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -210,14 +153,8 @@ key={language.code}
 
 
               )}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       </div>;
@@ -298,8 +235,7 @@ function LanguageThemeSelector() {
             </Card>))}
         </div>;
       </div>;
-<<<<<<< HEAD
-=======
+
       <div className='space - y-2'>;
         <h2 className='text - xl font - medium'>Choose theme</h2>;
         <p className='text - muted - foreground'>;
@@ -362,4 +298,5 @@ function LanguageThemeSelector() {
     </div>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

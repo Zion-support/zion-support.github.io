@@ -17,26 +17,15 @@ interface AIEnhancementPanelProps {;
   showInstructions?: boolean;
   initialContent?: string;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export function AIEnhancementPanel(): any ({;
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
 
 
-export function AIEnhancementPanel({;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   title;
   defaultOptions;
   onApply;
@@ -53,52 +42,8 @@ export function AIEnhancementPanel({;
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
 
-<<<<<<< HEAD
 
-=======
-=======
-    const result = await enhanceContent(options);
-    if (result) {
-      setGeneratedContent(result)
-    }
 
-  };
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import React, { useState } from 'react',;
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
-import { Textarea } from '@/components/ui/textarea',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
-import { Sparkles, Loader2, Copy, Check } from '@/components/icons',;
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
-interface AIEnhancementPanelProps {;
-  title: string,;
-  defaultOptions: AIEnhancementOptions,;
-  onApply: (content: string) => void,;
-  onClose?: () => void,;
-  showInstructions?: boolean,;
-  initialContent?: string;
-}
-;
-export function AIEnhancementPanel({;
-  title,;
-  defaultOptions,;
-  onApply,;
-  onClose,;
-  showInstructions = true,;
-  initialContent = '';
-}: AIEnhancementPanelProps) {;
-  const [options, setOptions] = useState<AIEnhancementOptions>({;
-    ...defaultOptions,;
-    content: initialContent || defaultOptions.content}),;
-  const [generatedContent, setGeneratedContent] = useState<string>(''),;
-  const [copied, setCopied] = useState(false),;
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
-
-  const handleGenerate = async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const result = await enhanceContent(options);
     if (result) {;
       setGeneratedContent(result);
@@ -107,15 +52,13 @@ export function AIEnhancementPanel({;
   },
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions

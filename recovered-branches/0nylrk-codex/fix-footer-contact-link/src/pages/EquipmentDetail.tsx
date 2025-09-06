@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {Header} from "@/components/Header";
@@ -14,97 +11,8 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {ShoppingCart, Star, Truck, Shield, RotateCcw, Clock} from "lucide-react";
 import {toast} from "@/hooks/use-toast";
-<<<<<<< HEAD
 
-interface EquipmentSpecification {
-  name: string,
-  value: string
-}
 
-interface EquipmentDetails {
-  id: string,
-  name: string,
-  description: string,
-  brand: string,
-  category: string,
-  subcategory?: string;
-  images: string[],
-  price: number,
-  currency: string,
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean,
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[],
-  features: string[],
-  warranty?: string;
-  returnPolicy?: string
-
-import { useState } from "react",
-import { useParams } from "react-router-dom",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-interface EquipmentSpecification {
-
-  name: string
-
-  value: string
-}
-interface EquipmentDetails {
-
-  id: string
-  name: string
-  description: string
-  brand: string
-  category: string
-  subcategory?: string;
-  images: string[]
-  price: number
-  currency: string
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[]
-  features: string[]
-
-  warranty?: string;
-  returnPolicy?: string
-}
-// Sample data - in a real app this would come from an API
-const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
-  "pro-camera-x1000": {
-
-    id: "pro-camera-x1000"
-    name: "Pro Camera X1000"
-    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.";
-    brand: "CineTech"
-    category: "Equipment"
-    subcategory: "Cameras"
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",
-import { toast } from "@/hooks/use-toast",
-interface EquipmentSpecification {
-  name: string,
-  value: string
-import { useState } from "react",;
-import { useParams } from "react-router-dom",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",;
-import { toast } from "@/hooks/use-toast",;
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface EquipmentSpecification {;
   name: string,;
   value: string;
@@ -117,8 +25,7 @@ interface EquipmentDetails {;
   brand: string,;
   category: string,;
 
-<<<<<<< HEAD
-=======
+
   subcategory?: string;
   images: string[],;
   price: number,;
@@ -127,7 +34,7 @@ interface EquipmentDetails {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 
 // Sample data - in a real app this would come from an API
@@ -347,15 +254,17 @@ export default function EquipmentDetail() {;
                       </div>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                     ))}
                   </div>;
                 )}
@@ -423,15 +332,17 @@ export default function EquipmentDetail() {;
             </div>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
@@ -455,12 +366,13 @@ export default function EquipmentDetail() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 {/* Rating */}
                 {equipment && equipment.rating && (;
                   <div className="flex items-center gap-2 mb-4">;
@@ -549,17 +461,10 @@ export default function EquipmentDetail() {;
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
 
-<<<<<<< HEAD
-                  <Button
-                  <Button 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-                  <Button 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                     onClick={handleAddToCart}
                     disabled={isAdding |!equipment.inStock}
                     variant="outline"

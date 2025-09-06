@@ -1,34 +1,8 @@
 
 
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
-import { createFlag, readAllFlags } from '../../../../../utils/moderationDb';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = parseUserFromRequest(req)
-  try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode |403).json({ error: 'Forbidden' }) }
-  if (req.method === 'GET') {
-    const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>
-    const flags = await readAllFlags()
-    const filtered = flags.filter(f =>
-      (!status |f.status === status) &&
-      (!reason |f.reason.toLowerCase().includes(reason.toLowerCase())) &&
-      (!userEmail |f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
-      (!contentType |f.contentType === contentType)
-)
-    return res.status(200).json({ flags: filtered })
-=======
-    const filtered = flags.filter(f =>
 
-      (!status || f.status === status) &&
-      (!reason || f.reason.toLowerCase().includes(reason.toLowerCase())) &&
-      (!userEmail || f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
-      (!contentType || f.contentType === contentType)
-    );
-    return res.status(200).json({ flags: filtered });
-  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   }
@@ -42,27 +16,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ error: e.message || 'Invalid payload' });
     }
   }
-<<<<<<< HEAD
 
 
-import { readAllFlags } from '../../../../../utils/moderationDb';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const user = parseUserFromRequest(req);
-    try { 
-      ensureAdmin(user) 
-    } catch (e: any) { 
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) 
-
-    }
-
-  res.setHeader('AllowGET,POST'),
-  return res.status(405).end('Method Not Allowed');
-};
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     if (req.method === 'GET') {
       const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>;
       const flags = await readAllFlags();
@@ -83,19 +38,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   res.setHeader('Allow', 'GET,POST');
   return res.status(405).end('Method Not Allowed');
 
 
 
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

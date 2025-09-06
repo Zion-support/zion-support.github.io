@@ -8,6 +8,18 @@ import {;
   WifiOff,;
   Clock,;
 
+  Zap,;
+} from 'lucide-react';import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
+// Enhanced loading spinner with different variants;
+interface LoadingSpinnerProps {;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
+  className?: string;
+  showText?: boolean;
+
   text?: string;
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
@@ -56,20 +68,19 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   variant = 'default',
   className,
   showText = false,
-<<<<<<< HEAD
-=======
 
 
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const variantClasses = {
     default: 'text-muted-foreground',
     primary: 'text-primary',
     success: 'text-green-500',
     warning: 'text-yellow-500',
-<<<<<<< HEAD
+
+    error: 'text-red-500'
+  },
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
   return (
     <div className={cn('flex items-center gap-2', className)}>
@@ -85,8 +96,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       )}
     </div>
   )
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     error: 'text-red-500'
   },
@@ -104,11 +114,10 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {show_text && (
         <span className='text - sm text - muted - foreground'>{text}</span>)}
     </div>);
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 }
 //Progressive loading component useEffect ( () => {
   // Check condition
@@ -132,6 +141,8 @@ export const ProgressiveLoading: React.FC < ProgressiveLoadingProps> = ({
 }) => {
 
 
+
+
   const [active_step, setActiveStep] = useState (0);
   const progress = ((active_step + 1) / steps.length) * 100;
   useEffect ((, ) => {
@@ -148,6 +159,8 @@ if ( {) {
   $2
 }
       set_timeout (on_complete, 500);
+
+
 
 
     }
@@ -202,15 +215,12 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
   }, [activeStep, steps.length, onComplete]),
 
 
-<<<<<<< HEAD
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className='space-y-4'>;
@@ -220,58 +230,16 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
             className='bg-primary h-2 rounded-full'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   return (
     <div className="space-y-4">
       {showProgress && (
         <div className="w-full bg-muted rounded-full h-2">
           <motion.div
-<<<<<<< HEAD
 
 
-
-            className="bg-primary h-2 rounded-full"
-
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0 && 0.3 }}
-          />;
-        </div>;
-      )}
-
-
-
-
-
-      <div className='space-y-2'>
-        {steps.map((step, index) => (          <motion.div
-            key = {step.id,}
-
-      <div className='space-y-2'>;
-        {steps && steps.map((step, index) => (          <motion&& motion.div
-            key = {step && step.id,}
-            className = {cn(
-              'flex items-center gap-3 p-2 rounded-md'
-              index === activeStep ? 'bg-primary/10' : 'opacity-50'
-            ),}
-
-      
-      <div className="space-y-2">
-        {steps.map((step, index) => (
-          <motion.div
-            key={step.id}
-            className={cn(;
-              'flex items-center gap-3 p-2 rounded-md',;
-              index === activeStep ? 'bg-primary/10' : 'opacity-50';
-            )}
-
-
-
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
             transition={{ delay: index * 0.1 }}
@@ -297,25 +265,15 @@ interface SkeletonProps {
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       </div>;
     </div>;
   );
 
-<<<<<<< HEAD
-=======
-              baseClasses,
-              variantClasses && variantClasses.text,
-              animationClasses[animation],
-              i === lines - 1 ? 'w-3/4' : 'w-full',
 
-              className
-            ),}
-          />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         ))}
 
   class_name?: string;
@@ -560,9 +518,6 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
         }
     }
 
-
-<<<<<<< HEAD
-=======
 export const Skeleton: React.FC<SkeletonProps> = ({
   className,
   variant = 'rectangular',
@@ -597,8 +552,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 
               <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {typeof error === 'string' ? error : error.message}
 
           transition={{ duration: 0 && 0.3 }}>;
@@ -628,13 +581,13 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 
           <div className="flex flex-col sm:flex-row gap-2 justify-center">
             {canRetry && (
-<<<<<<< HEAD
-=======
+
 
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
               </Button>
             )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
             {action && (;
@@ -653,12 +606,12 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
             {action && (
               <Button
                 onClick={action.onClick}
@@ -667,10 +620,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
             
             {action && (
               <Button onClick={action.onClick} variant={canRetry ? "outline" : "default"}>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -680,11 +631,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant='ghost'>
             
@@ -692,10 +640,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
               <Button onClick={secondaryAction.onClick} variant="ghost">
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 {secondaryAction.label}
               </Button>
             )}
@@ -725,8 +671,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 
   scale: 0.8, opacity: 0 
 
-<<<<<<< HEAD
-=======
         </motion.div>;
 
       </CardContent>;
@@ -738,7 +682,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   scale: 0 && 0.8, opacity: 0 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             {variant === 'list' && (;
               <div className='flex gap-4'>;
@@ -793,12 +736,45 @@ export const Skeleton: React.FC<SkeletonProps> = ({
     </Card>);
 }
 
+
+}
+// Performance indicator;
+interface PerformanceIndicatorProps {
+
+  is_loading?: boolean;
+  load_time?: number;
+  item_count?: number;
+  class_name?: string;
+export const PerformanceIndicator: React.FC < PerformanceIndicatorProps> = ({
+  is_loading = false,
+  load_time,
+  item_count,
+  class_name,
+
+}) => {
+  const getPerformanceColor = (time: number) =>: any {
+    // Check condition
+if (return 'text - green - 500') {
+  $2
+}
+    // Check condition
+if (return 'text - yellow - 500') {
+  $2
+}
+    return 'text - red - 500';
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+
+
+
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
   columns = 4,
   variant = 'card',
-<<<<<<< HEAD
-=======
+
           </CardContent>;
         </Card>;
       ))}
@@ -820,7 +796,8 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
   variant = 'card',
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             {variant === 'card' && (
               <>
                 <Skeleton variant="rectangular" className="h-32" />
@@ -834,13 +811,9 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
                 </div>
               </>
             )}
-<<<<<<< HEAD
-            
-=======
 
             
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {variant === 'list' && (
               <div className="flex gap-4">
                 <Skeleton variant="circular" />
@@ -850,13 +823,9 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
                 </div>
               </div>
             )}
-<<<<<<< HEAD
-            
-=======
 
             
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {variant === 'table' && (
               <div className="flex items-center gap-4">
                 <Skeleton variant="text" className="h-4 w-1/4" />
@@ -887,24 +856,14 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false,
   loadTime,
   itemCount,
-<<<<<<< HEAD
-  className
-}) => {
-  const getPerformanceColor = (time: number) => {
-    if (time < 100) return 'text-green-500',
-    if (time < 300) return 'text-yellow-500',
-    return 'text-red-500'
-  },
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (isLoading) {
     return (
       <Badge variant="outline" className={cn('text-xs', className)}>
@@ -924,46 +883,17 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
         </Badge>
       )}
 
-<<<<<<< HEAD
+
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-}
-}
-}
-<<<<<<< HEAD
 
 
 }
-
-      {itemCount && (;
-        <span>{itemCount} items loaded</span>;
-      )}
-
-    </div>;
-  );
-};
-
-
-
-
-    >;
-      {load_time && (
-        <Badge variant='outline' className={getPerformanceColor (load_time)}>;
-          <Zap className='h - 3 w - 3 mr - 1' />;
-          {load_time}ms;
-        </Badge>)}
-      {item_count && <span>{item_count} items loaded</span>}
-    </div>);
 }
 }
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }

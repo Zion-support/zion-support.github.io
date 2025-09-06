@@ -12,7 +12,6 @@ dotenv.config();
 import rateLimit from '@fastify/rate-limit';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       cb(null, true);
       return;
     }
@@ -22,7 +21,10 @@ import rateLimit from '@fastify/rate-limit';
   });
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 });
 
 
@@ -116,16 +118,11 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
   });
   return { items }
 });
-<<<<<<< HEAD
 
-const port = Number(process.env.API_PORT |4000);
-app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   (process as any).exit(1);
 });  (process as any).exit(1)
 });
@@ -153,4 +150,6 @@ app.get('/notifications', async (req: any, reply: any) => {
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 
+
 });
+

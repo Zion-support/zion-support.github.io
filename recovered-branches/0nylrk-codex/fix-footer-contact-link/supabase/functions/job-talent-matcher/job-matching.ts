@@ -1,36 +1,19 @@
 
-<<<<<<< HEAD
 
 
 
-=======
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
-import {JobData, MatchResult} from "./types ;
-import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
-
-=======
-
-
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
-import {JobData, MatchResult} from "./types.ts";
-import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { JobData, MatchResult } from "./types.ts",
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 // Initialize the Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
 const supabase = createClient(supabaseUrl, supabaseAnonKey),
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 /**
@@ -123,42 +106,8 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
         _related_id: jobId
       })
 
-<<<<<<< HEAD
 
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
-import { JobData, MatchResult } from "./types.ts",;
-import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",;
-// Initialize the Supabase client;
-const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
-const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
-const supabase = createClient(supabaseUrl, supabaseAnonKey),;
-/**;
- * Main function to process job-talent matching;
- * @param job The job data to find matches for;
- * @param talents Array of talent profiles;
- * @returns Array of matches with talent IDs, scores, and reasons;
- */;
-export async function processJobMatching(job: JobData, talents: any[]): Promise<MatchResult[]> {;
-  try {;
-    // Normalize job skills and generate embeddings via OpenAI;
-    const jobSkillsNormalized = await normalizeSkillsWithAI(job.skills),;
-    // Prepare job details for matching prompt;
-    const jobDetails = {;
-      title: job.title,;
-      description: job.description,;
-      category: job.category,;
-      skills: jobSkillsNormalized,;
-      budget: job.budget;
-    },;
-    // Use OpenAI to find best matches;
-    const bestMatches = await findBestMatches(jobDetails, talents),;
-    return bestMatches;
-  } catch (error) {;
-    console.error("Error in processJobMatching:", error),;
-    throw error;
-  }
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 ;
 /**;
  * Stores match results in the database and creates notifications;
@@ -192,16 +141,17 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
   await Promise.all(matchInsertPromises);
 
 
+
 ;
   await Promise.all (matchInsertPromises);
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 ;
   await Promise.all (matchInsertPromises);
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 ;

@@ -2,23 +2,17 @@
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
 
 
-<<<<<<< HEAD
-import React from "react";
-import {BadgeDollarSign} from "lucide-react";
-import {useWallet} from "@/hooks/useWallet";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Skeleton} from "@/components/ui/skeleton";
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 export function TokenDisplay() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const { wallet, loading } = useWallet();
 import React from "react",
 import { BadgeDollarSign } from "lucide-react",
@@ -103,15 +97,6 @@ export function TokenDisplay() {;
     </Card>);
 
 }
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-}
-;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,73 +1,34 @@
 
 
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AppLayout } from "@/layout/AppLayout";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { AppLayout } from "@/layout/AppLayout",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default function Careers() {
   // Sample job listings
 
   const jobs = {
     engineering: [
       {
-<<<<<<< HEAD
 
-        title: "Senior Frontend Engineer"
-        location: "Remote"
-        type: "Full-time"
-        department: "Engineering"
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         title: "Senior Frontend Engineer",
         location: "Remote",
         type: "Full-time",
         department: "Engineering",
-<<<<<<< HEAD
-
-        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace.";
-      };
-
-        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
-      }
-      {
-        title: "AI Research Engineer"
-        location: "San Francisco, CA";
-        type: "Full-time"
-        department: "Engineering"
-        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
-      }
-      },
-      {
-        title: "AI Research Engineer",
-        location: "San Francisco, CA",
-        type: "Full-time",
-        department: "Engineering",
-        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
-      },
-
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {
         title: "Full Stack Developer"
         location: "Remote"
@@ -488,8 +449,8 @@ export default function Careers() {;
                     </Card>;
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   ))}
                 </TabsContent>;
@@ -513,12 +474,12 @@ export default function Careers() {;
 
 }
 
+
                   ))}
                 </TabsContent>;
               ))}
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
                   ))}
                 </TabsContent>;
               ))}
@@ -527,10 +488,7 @@ export default function Careers() {;
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             </Tabs>;
           </div>;
 
@@ -547,19 +505,16 @@ export default function Careers() {;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-
-    </AppLayout>;
-  );
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 ;

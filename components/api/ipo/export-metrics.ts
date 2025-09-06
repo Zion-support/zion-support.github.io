@@ -1,19 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
-import { requireSuperadminApi } from '../../../utils/api/auth';
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
 
 
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 

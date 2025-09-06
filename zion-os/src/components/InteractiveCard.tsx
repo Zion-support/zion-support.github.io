@@ -54,12 +54,13 @@ export default function InteractiveCard({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Animated background */}
         <div;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
@@ -79,14 +80,15 @@ export default function InteractiveCard({;
           <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {title}
           </h3>;
           <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
@@ -96,26 +98,26 @@ export default function InteractiveCard({;
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-            <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
-=======
+
+
+
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {children || (
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
@@ -171,6 +173,7 @@ export function FeatureCard({;
 >;
       {stats && (
 
+
         <div className=&quot;mt - 6 pt - 6 border - t border - white / 10 & quot;>;
           <div className=&quot;grid grid - cols - 2 gap - 4&quot;>;
             {stats.map ((stat, index) => (
@@ -178,6 +181,7 @@ export function FeatureCard({;
                 <div className=&quot;text - 2xl font - bold text - white & quot;>{stat.value}</div>;
                 <div className=&quot;text - sm text - gray - 400 & quot;>{stat.label}</div>;
               </div>))}
+
 
           </div>;
         </div>)}
@@ -219,21 +223,15 @@ export function TestimonialCard({;
     <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
       {/* Quote icon */}
 
-<<<<<<< HEAD
-      <div className="text-4xl mb-4">💬</div>
-      
 
-<div className=&quot;text-4xl mb-4&quot;>💬</div>
-      <div className="text-4xl mb-4">💬</div>
-      
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Rating */}
       <div className="flex mb-4">
         {Array.from({ length: rating }).map((_, i) => (
@@ -249,11 +247,15 @@ export function TestimonialCard({;
         "{quote}"
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </blockquote>
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+      </blockquote>
+
       </blockquote>
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">
@@ -263,5 +265,4 @@ export function TestimonialCard({;
       </div>
     </div>
   )
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }

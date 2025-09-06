@@ -19,13 +19,8 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
-<<<<<<< HEAD
-
-import {
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 } from 'lucide-react';
 interface Service {;
@@ -45,7 +40,9 @@ interface Service {;
   Filter,;
   ChevronDown,;
 
+
 } from 'lucide-react';
+
 
 
 
@@ -287,11 +284,8 @@ const EnhancedServicesShowcase: React.FC = () => {
     ...Array.from(new Set(services.map(s => s.category))),
 
 
-<<<<<<< HEAD
-  ];
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const filteredServices = services.filter(service => {
     const matchesCategory =
       selectedCategory === 'all' |service.category === selectedCategory;
@@ -316,8 +310,8 @@ const EnhancedServicesShowcase: React.FC = () => {
     return iconMap[category] |Brain;
   }
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   return (
     <section id='services' className='py-24 px-6 relative overflow-hidden'>;
       {/* Background */}
@@ -378,18 +372,14 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <option key={category} value={category} className="bg-slate-800 text-white">
 
 
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
@@ -420,54 +410,8 @@ const EnhancedServicesShowcase: React.FC = () => {
               type="text"
               placeholder="Search services..."
               value={searchTerm}
-<<<<<<< HEAD
-
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
-            />
-            <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
-          </div>
-        </div>
-        {/* Services Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {filteredServices.map((service, index) => (
-            <div
-              key={service.id}
-              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-            >
-              {/* Popular Badge */}
-              {service.popular && (
-                <div className='absolute top-4 right-4 z-20'>
-                  <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
-                    <Star className='w-3 h-3' />                    Popular          {filteredServices.map((service, index) => (
-            <div
-              key={service.id}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-            >
-              {/* Popular Badge */}
-              {service.popular && (
-                <div className="absolute top-4 right-4 z-20">
-                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
-                    <Star className="w-3 h-3" />
-                    Popular
-                  </div>
-                </div>
-              )}
 
 
-              {/* Service Content */}
-              <div className='p-8'>
-=======
-
-
-=======
-
-
-
-              {/* Service Content */}
-              <div className='p-8'>
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -501,12 +445,14 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
+
+
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 {/* Icon and Category */}
                 <div className='flex items-center justify-between mb-4'>;
                   <div
@@ -671,13 +617,8 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
-              {/* Service Content */}
-              <div className='p-8'>
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 
                 {/* Icon and Category */}
                 <div className='flex items - center justify - between mb - 4'>;
@@ -754,6 +695,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                   </div>
                 </div>
 
+
 <div className='mb-6'>;
                   <div className='flex items-baseline gap-2 mb-2'>;
                     <span className='text-3xl font-bold text-white'>;
@@ -776,9 +718,11 @@ const EnhancedServicesShowcase: React.FC = () => {
                 {/* Key Features */}
 
 
+
                     ))}
                   </div>
                 </div>
+
 
 
 
@@ -803,41 +747,34 @@ const EnhancedServicesShowcase: React.FC = () => {
                         <TrendingUp className="w-3 h-3 text-blue-400" />
                       </div>
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                    ))}
 
                   </div>;
                 </div>;
 
 
-=======
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Benefits */}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     ))}
                   </div>
                 </div>
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 {/* ROI and Market Info */}
 
                 <div className="mb-6 p-4 bg-white/5 rounded-lg">
@@ -993,10 +930,8 @@ const EnhancedServicesShowcase: React.FC = () => {
               </div>;
 
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           ))}
         </div>
 
@@ -1007,17 +942,16 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
+
         </div>;
 
 
         {/* CTA Section */}
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
@@ -1025,14 +959,14 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               Ready to Transform Your Business?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -1075,27 +1009,18 @@ const EnhancedServicesShowcase: React.FC = () => {
   );
 
 
-<<<<<<< HEAD
+
 export default EnhancedServicesShowcase;  )
 }
 export default EnhancedServicesShowcase;
 
 
-export default EnhancedServicesShowcase;
-
-
-}
-}
-export default EnhancedServicesShowcase;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

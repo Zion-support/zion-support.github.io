@@ -1,12 +1,10 @@
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -41,15 +39,17 @@ import { AdditionalClausesFields } from "./AdditionalClausesFields",
 import { DeploymentOptions } from "@/types/smart-contracts",
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required");
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
@@ -101,22 +101,8 @@ interface ContractFormProps {
   deployOptions?: DeploymentOptions,
   onDeployOptionsChange?: (options: DeploymentOptions) => void
 }
-<<<<<<< HEAD
 
 
-export function ContractForm({
-  talent,
-  clientName,
-  initialValues,
-  onFormValuesChange,
-  onContractGenerated,
-  deployOptions,
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   onDeployOptionsChange
 }: ContractFormProps) {
   const [isGenerating, setIsGenerating] = useState(false);
@@ -152,10 +138,7 @@ export function ContractForm({
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 import { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -234,7 +217,7 @@ export function ContractForm({;
     }
   }, [form, onFormValuesChange]),
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
@@ -349,10 +332,8 @@ export function ContractForm({;
       <DialogHeader>;
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
@@ -363,8 +344,8 @@ export function ContractForm({;
             form={form}
           />
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           Create a professional contract for your project with {talent && talent.full_name}
         </DialogDescription>;
       </DialogHeader>;
@@ -376,53 +357,18 @@ export function ContractForm({;
           />;
 
 
-<<<<<<< HEAD
-=======
-          <PaymentTermsFields
-            form={form}
-            talent={talent}
-            handleMilestonesGenerated={handleMilestonesGenerated}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
-=======
-          <AdditionalClausesFields
-            form={form}
-          />;
-
-          <Button
-            type="submit" 
-
-=======
-
-          
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <PaymentTermsFields 
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
-<<<<<<< HEAD
-
-          />;
-          <AdditionalClausesFields;
-            form={form}
-          />
-          <AdditionalClausesFields
-            form={form}
-          />
-          <Button
-            type="submit"
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;

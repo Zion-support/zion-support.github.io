@@ -18,19 +18,8 @@ export function SaveTalentButton({
       }    >
 import { Button } from "@/components/ui/button"
 interface SaveTalentButtonProps {
-<<<<<<< HEAD
 
 
-  talentId: string,
-  onSave: (talentId: string,) => void,
-  isSaved: boolean
-
-
-=======
-  talentId: string,
-  onSave: (talentId: string,) => void,
-  isSaved: boolean
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   talentId: string
   onSave: (talentId: string,) => void
@@ -62,7 +51,7 @@ export function SaveTalentButton(): any ({;
       }    >;
 import React from 'react';
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
+
 
   return (
     <Button
@@ -73,12 +62,8 @@ import { Button } from "@/components/ui/button";
       <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />
       {isSaved ? 'Saved' : 'Save'}
     </Button>
-import React from 'react',;
-import { Button } from "@/components/ui/button",;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { Star } from 'lucide-react';
 interface SaveTalentButtonProps {;
   talentId: string,;

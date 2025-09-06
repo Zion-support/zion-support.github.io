@@ -1,36 +1,19 @@
 import Link from "next/link";
 
 
-<<<<<<< HEAD
-import Link from "next/link";
-export default function ReportProblemButton({
-
-
-  projectId
-  entityType
-  entityId
-}: {
 
 
 
-=======
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   projectId,
   entityType,
   entityId,
 }: {;
 
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
@@ -84,18 +67,7 @@ export default function ReportProblemButton(): any ({;
 }
 
 
-<<<<<<< HEAD
-  );
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
   return (
     <Link href={`/disputes/new?${query.toString()}`}>
@@ -138,9 +110,6 @@ function ReportProblemButton() {
     </Link>);
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

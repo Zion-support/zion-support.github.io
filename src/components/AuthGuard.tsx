@@ -27,8 +27,7 @@ const redirectTo = options?.redirectTo |'/login'
     user;
     isLoading}
 }
-<<<<<<< HEAD
-=======
+
 
 
 
@@ -46,4 +45,5 @@ const redirectTo = options?.redirectTo |'/login'
     is_loading}
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

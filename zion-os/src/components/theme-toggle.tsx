@@ -38,18 +38,11 @@ function ThemeToggle() {
               ? "bg - zion - blue text - white";
               : "text - zinc - 400 hover:text - zinc - 100";
 =======
-<<<<<<< HEAD
-"use client";
-import { useTheme } from "@/components/theme-provider";
-import { Moon, Sun, Monitor } from "lucide-react";
-export function ThemeToggle() {const { theme, setTheme } = useTheme();
-=======
 "use client",;
 import { useTheme } from "@/components/theme-provider",;
 import { Moon, Sun, Monitor } from "lucide-react",;
 export function ThemeToggle() {;
   const { theme, setTheme } = useTheme();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="flex items-center gap-2">;
       <span className="sr-only">Theme</span>;
@@ -57,9 +50,11 @@ export function ThemeToggle() {;
         <button;
           onClick={() => setTheme("light")}
 
+          className={`rounded px-2 py-1 text-sm transition-colors ${;
+            theme === "light";
+
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           }`}
           aria - label="Switch to light theme";
           aria - pressed={theme === "light"}

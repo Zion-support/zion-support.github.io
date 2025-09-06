@@ -190,10 +190,6 @@ exports && exports.handler = async function() {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
-<<<<<<< HEAD
-},
-},
-=======
 
 =======
       statusCode: 200,

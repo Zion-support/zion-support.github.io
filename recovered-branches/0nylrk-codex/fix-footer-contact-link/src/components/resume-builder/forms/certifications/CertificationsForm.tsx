@@ -16,10 +16,10 @@ import {CertificationFormFields} from './CertificationFormFields';
 import {CertificationFormValues, certificationSchema} from './types';
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 interface CertificationsFormProps {
 
   resumeId: string
@@ -29,12 +29,8 @@ interface CertificationsFormProps {
   onBack: () => void
 }
 
-<<<<<<< HEAD
-export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import {useState} from 'react';
 import {use_form} from 'react - hook - form';
@@ -54,10 +50,10 @@ import {CertificationFormFields} from './CertificationFormFields';
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
 
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -120,39 +116,8 @@ function CertificationsForm() {
   const [error, set_error] = useState < string | null>(null);
 ;
   // Helper function to format dates as strings for form inputs;
-<<<<<<< HEAD
 
-  const formatDateValue = (dateValue: string | Date | undefined): string => {;
-    if (!dateValue) return '',;
-    if (typeof dateValue === 'string') return dateValue,;
-    return format(dateValue, 'yyyy-MM-dd');
-  },;
-  const form = useForm<CertificationFormValues>({;
-    resolver: zodResolver(certificationSchema),;
-    defaultValues: {;
-      name: '',;
-      issuing_organization: '',;
-      issue_date: '',;
-      expiration_date: '',;
-      credential_id: '',;
-      credential_url: ''}}),;
-  const handleAddOrUpdate = async (data: CertificationFormValues) => {;
-    try {;
-      setError(null),;
-      let success,;
-      const certData: Certification = {;
-        name: data.name,;
-        issuing_organization: data.issuing_organization,;
-        issue_date: data.issue_date || undefined,;
-        expiration_date: data.expiration_date || undefined,;
-        credential_id: data.credential_id,;
-        credential_url: data.credential_url},;
-      if (editingId) {;
-        success = await updateCertification(editingId, certData);
-      } else {;
-        success = await addCertification(resumeId, certData);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
       if (success) {
@@ -172,8 +137,8 @@ function CertificationsForm() {
   }
   };
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
       }
@@ -183,13 +148,12 @@ function CertificationsForm() {
 
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
@@ -203,22 +167,8 @@ function CertificationsForm() {
 
 
 
-    }
-<<<<<<< HEAD
-  }
-  };
 
 
-=======
-  };
-
-=======
-    }
-
-  };
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   },;
 
   const handleEdit = (cert: Certification) => {;
@@ -238,15 +188,13 @@ function CertificationsForm() {
   },
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <div className="space-y-6">;

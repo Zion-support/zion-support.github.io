@@ -1,14 +1,7 @@
 
-<<<<<<< HEAD
-
-import React, { useState } from 'react';
-
-=======
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -19,11 +12,8 @@ import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
 
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -42,14 +32,12 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export interface MessageTalentModalProps {
 
   talent: TalentProfile
@@ -58,19 +46,8 @@ export interface MessageTalentModalProps {
 
   jobTitle?: string
 }
-<<<<<<< HEAD
 
 
-export function MessageTalentModal({
-  talent,
-  isOpen,
-  onClose,
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   jobTitle
 }: MessageTalentModalProps) {
   const { createConversation } = useMessaging();
@@ -290,11 +267,11 @@ export function MessageTalentModal({;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>

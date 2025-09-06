@@ -1,49 +1,7 @@
 
-<<<<<<< HEAD
 
 
 
-  options: AIEnhancementOptions
-  onEnhanced: (enhancedContent: string) => void
-
-
-  buttonText?: string;
-  className?: string;
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
-  size?: "default" | "sm" | "lg" | "icon";
-=======
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import {useState} from 'react';
-import {Button} from '@/components/ui/button';
-import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
-import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
-import {toast} from '@/hooks/use-toast';
-
-
-<<<<<<< HEAD
-=======
-export function AIEnhancementButton(): any ({;
-
-  options;
-  onEnhanced;
-
-  buttonText = "Enhance with AI";
-  className;
-  variant = "ghost";
-  size = "sm";
-  contentLength = 10;
-}: AIEnhancementButtonProps) {;
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-  const [showActions, setShowActions] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null);
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
@@ -52,11 +10,11 @@ import { toast } from '@/hooks/use-toast',
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -64,46 +22,20 @@ interface AIEnhancementButtonProps {
   className?: string,
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   contentLength?: number
 }
 
 
-<<<<<<< HEAD
-export function AIEnhancementButton({
-  options;
-  onEnhanced;
 
-  buttonText = "Enhance with AI";
-  className;
-  variant = "ghost";
-  size = "sm";
-  contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-  const [showActions, setShowActions] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null);
-  options,
-  onEnhanced,
-  buttonText = "Enhance with AI",
-  className,
-  variant = "ghost",
-  size = "sm",
-  contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
-  const [showActions, setShowActions] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null),
-  
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -111,27 +43,9 @@ export function AIEnhancementButton({
         title: "Not enough content"
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
-<<<<<<< HEAD
-
-      });
-      return
-    }
-    const enhancedContent = await enhanceContent(options);
-    if (enhancedContent) {
-      setGeneratedContent(enhancedContent);
-      setShowActions(true)
-    }
 
 
-=======
 
-
-=======
-
-  };
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }),
       return
 import { useState } from 'react',;
@@ -187,11 +101,11 @@ export function AIEnhancementButton({;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   
   const handleAccept = () => {
     if (generatedContent) {
@@ -333,15 +247,17 @@ export function AIEnhancementButton({;
       type="button";
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       variant={variant}
       size={size}
       className={`gap-1 ${className}`}

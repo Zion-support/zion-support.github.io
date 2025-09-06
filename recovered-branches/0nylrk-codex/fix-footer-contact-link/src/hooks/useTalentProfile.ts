@@ -1,18 +1,6 @@
 
-<<<<<<< HEAD
 
 
-import { useState, useEffect } from "react",
-import { TalentProfile as TalentProfileType } from "@/types/talent",
-import { ProfileData } from "@/types/profile",
-import { MOCK_TALENTS } from "@/data/mockTalents",
-import { MOCK_PROFILES } from "@/data/mockProfiles",
-import { convertProfileToTalentProfile } from "@/utils/profileConverter";
-export function useTalentProfile(id: string | undefined) {
-  const [profile, setProfile] = useState<TalentProfileType | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const [error, setError] = useState<string | null>(null);
@@ -128,13 +116,15 @@ export function useTalentProfile(id: string | undefined) {;
   }, [id]);
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  return { profile, isLoading, error, mockProfileData }
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return { profile, isLoading, error, mockProfileData }
 

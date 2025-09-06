@@ -12,18 +12,14 @@ interface SlackRespond {
   (text: string): Promise < void>;
 }
 
+
 // Define console type to avoid TypeScript errors
 interface SafeConsole {
   log: (message: string) => void
 }
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Declare available globals
 declare const globalThis: {
   console?: SafeConsole;
@@ -52,17 +48,9 @@ class MockApp {
 
     if (safeConsole && safeConsole.log) {
 
-<<<<<<< HEAD
-      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port |3000}!`)
-      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
 
 
-=======
 
-      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 // Declare available globals;
 declare const globalThis: {;
@@ -90,11 +78,11 @@ class MockApp {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     }
     return Promise.resolve()
   }
@@ -102,11 +90,12 @@ class MockApp {;
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 // Create a mock app instance
 const app = new MockApp();
 async function askZionGPT(prompt: string): Promise<string> {
@@ -124,8 +113,6 @@ async function askZionGPT(prompt: string): Promise<string> {;
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
   if (safeConsole && safeConsole.log) {;
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -136,8 +123,8 @@ async function askZionGPT(prompt: string): Promise<string> {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
@@ -145,6 +132,8 @@ async function askZionGPT(prompt: string): Promise<string> {;
 }
 
 
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
   await ack();
   const [action, ...args] = command.text.split(/\s+/);
@@ -177,6 +166,7 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       break;
     }
 
+
     case 'track-project': {;
       const project = args.join(' '),;
       await respond(`Tracking project **${project}** - feature coming soon.`),;
@@ -184,28 +174,14 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
   await ack();
   const [action, ...args] = command.text.split(/\s+/);
-=======
 
-app && app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
-  await ack();
-  const [action, ...args] = command && command.text.split(/\s+/);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-// Declare available globals;
-declare const global_this: {
-  console?: SafeConsole;
-  process?: {
-    env: {
-      PORT?: string,
-      [key: string]: string | undefined;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
+
 
   }
 });
@@ -232,10 +208,9 @@ export default app;
 })(),;
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 export default app;

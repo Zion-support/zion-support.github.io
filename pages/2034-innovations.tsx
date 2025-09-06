@@ -1,28 +1,5 @@
-<<<<<<< HEAD
-
-import React from 'react',
-import React from 'react';
-
-import Head from 'next/head';
-import { motion  } from 'framer-motion';
-import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
-import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
 
 
-
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032',
-import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034',
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 class ErrorBoundary extends React.Component {
@@ -51,13 +28,14 @@ import React from 'react';
 
 
 
-<<<<<<< HEAD
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default function Innovations2034Page() {
 
   return (
@@ -94,9 +72,7 @@ export default function Innovations2034Page() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
 
-<<<<<<< HEAD
 
-=======
         <meta name="description" content="Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms. From AI consciousness to space mining automation, we're building tomorrow's technology today." />
         <meta name="keywords" content="2034 innovations, AI consciousness, quantum computing, space mining, metaverse, neural interfaces, fusion energy, nanotechnology, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -144,46 +120,25 @@ export default function Innovations2034Page() {
 }
             <div className="absolute inset-0">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               {[...Array(15)].map((_, i) => (
                 <motion.div
                   key={i} className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-60"
                   style={{
-<<<<<<< HEAD
 
 
-                  }}
-                  animate={{
-                    y: [0, -100, 0]
-                    opacity: [0.6, 1, 0.6]
-                    scale: [1, 1.5, 1]
-                    rotate: [0, 360]
-                  }}
-                  transition={{
-                    duration: 4 + Math.random() * 3
-                    repeat: Infinity
-                    delay: Math.random() * 2
-                  }}                />
-              ))}
-            </div>
-          </div>
-          <div className='relative z-10 container mx-auto px-4 text-center'>            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             >
               <motion.h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight"
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -244,10 +199,13 @@ export default function Innovations2034Page() {
                 transition={{ duration: 1, delay: 0.6 }} className="flex flex-col sm:flex-row items-center justify-center gap-6">
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -271,36 +229,15 @@ export default function Innovations2034Page() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
 
-<<<<<<< HEAD
-            transition={{ duration: 1, delay: 1 }}
-            className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
-          >
-          {/* Scroll Indicator */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <motion.div;
-            initial={{ opacity: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 1, delay: 1 }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }} className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
@@ -337,15 +274,17 @@ export default function Innovations2034Page() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 Innovation Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -353,22 +292,9 @@ export default function Innovations2034Page() {
                 each designed to revolutionize industries and accelerate human progress.
               </p>
             </motion.div>
-<<<<<<< HEAD
-
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              {[
 
 
-=======
 
-
-                  description:;
-                    'Revolutionary AI consciousness and emotional intelligence platforms',
-                  color: 'from - violet - 500 to - purple - 600',
-                  count: '5+ Services',
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
@@ -411,11 +337,7 @@ export default function Innovations2034Page() {
                   title: 'Biotech & Neural',
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
                   icon: '🤖',
                   title: 'Robotics & Automation',
 
@@ -498,64 +420,10 @@ export default function Innovations2034Page() {
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
 
-=======
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }} className="group">
-                  <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      {category.icon}
-=======
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                      {category.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm mb-4">
-                      {category.description}
-                    </p>
-                    <div className='text-cyan-400 font-semibold text-sm'>                      {category.count}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Services Showcase */}
-        {/* Why Choose Zion Tech Group */}
-        <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
-          <div className='container mx-auto px-4'>            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className='text-center mb-16'
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                    <div className="text-cyan-400 font-semibold text-sm">
-                      {category.count  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </div>;
-                  </div>;
-                </motion.div>;
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-            </div>;
-          </div>;
-        </section>;
 
         {/* Services Showcase */}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Why Choose Zion Tech Group */}
 
         <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
@@ -564,19 +432,14 @@ export default function Innovations2034Page() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
 
-<<<<<<< HEAD
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -585,18 +448,17 @@ export default function Innovations2034Page() {
               </p>
             </motion.div>
 
-<<<<<<< HEAD
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {[
 
-=======
-              ].map((feature, index) => (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
                 <motion.div
                   key={feature.title}
 
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
+
+
 
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }} className="group">
@@ -605,10 +467,8 @@ export default function Innovations2034Page() {
                       {feature.icon}
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -646,54 +506,16 @@ export default function Innovations2034Page() {
                   title: 'Premium Support',
 
 
-<<<<<<< HEAD
-                  description: '24/7 expert support from our team of technology pioneers and industry experts.',
-                  color: 'from-indigo-500 to-purple-600'
-                  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              ].map((feature, index) => (;
-                <motion.div;
-                  key={feature.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 50 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }} className="group">
-                  <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      {feature.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                       {feature.title}
@@ -776,13 +598,13 @@ export default function Innovations2034Page() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }} className="max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 Ready to Build the Future?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -795,22 +617,14 @@ export default function Innovations2034Page() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center justify-center space-x-3 text-gray-300">
                   <span className="text-cyan-400">📱</span>
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="flex items-center justify-center space-x-3 text-gray-300">
-                  <span className="text-cyan-400">📱</span>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   <span>{contactInfo.mobile}</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 text-gray-300">
@@ -836,76 +650,6 @@ export default function Innovations2034Page() {
       </div>
       <UltraFuturisticFooter2034 />
 
-    </>
-);
-
-<<<<<<< HEAD
-=======
-=======
-              className='max - w-4xl mx - auto';
-            >;
-              <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
-                Ready to Build the Future?;
-              </h2>;
-              <p className='text - xl text - gray - 300 mb - 8'>;
-                Join the ranks of forward - thinking organizations that are;
-                already leveraging our 2034 innovations to transform their;
-                industries and accelerate their growth.;
-              </p>;
-              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8'>;
-                <div className='flex items - center justify - center space - x-3 text - gray - 300'>;
-                  <span className='text - cyan - 400'>📱</span>;
-                  <span>{contact_info.mobile}</span>;
-                </div>;
-                <div className='flex items - center justify - center space - x-3 text - gray - 300'>;
-                  <span className='text - purple - 400'>✉️</span>;
-                  <span>{contact_info.email}</span>;
-                </div>;
-                <div className='flex items - center justify - center space - x-3 text - gray - 300'>;
-                  <span className='text - pink - 400'>📍</span>                  <span>{contact_info.address}</span>;
-                </div>;
-              </div>;
-              <motion.button;
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
-                className='bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold py - 4 px - 8 rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - lg hover:shadow - cyan - 500 / 25 text - lg';
-              >                Start Your Innovation Journey;
-=======
-      <UltraFuturisticFooter2034 />
-<<<<<<< HEAD
-    </>
-<<<<<<< HEAD
-);
-=======
-=======
-<<<<<<< HEAD
-    </>;
-);
-=======
-    </>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-  )
-        <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">;
-          <div className="container mx-auto px-4 text-center">;
-            <motion.div;
-              initial={{ opacity: 0, y: 50 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }} className="max-w-4xl mx-auto">;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
 
                 Ready to Build the Future?;
               </h2>;
@@ -940,25 +684,9 @@ export default function Innovations2034Page() {
       </div>;
 
       <UltraFuturisticFooter2034 />;
-<<<<<<< HEAD
-    </>;
-  );
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-<<<<<<< HEAD
-    </>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -3,11 +3,8 @@ interface HelpArticleViewProps {
 }
 
 
-<<<<<<< HEAD
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
 
 
@@ -27,14 +24,8 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type)
   return new Date(date).toLocaleDateString("en-US", {
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;

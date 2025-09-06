@@ -2,30 +2,14 @@
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React from "react";
 import {BadgeCheck} from "lucide-react";
 import {TalentCardAvatar} from "./TalentCardAvatar";
 import {TalentCardAvailability} from "./TalentCardAvailability";
-<<<<<<< HEAD
 
-import React from "react",
-import { BadgeCheck } from "lucide-react",
-import { TalentCardAvatar } from "./TalentCardAvatar";
-import { TalentCardAvailability } from "./TalentCardAvailability";
-interface TalentCardHeaderProps {
 
-  fullName: string
-  professionalTitle: string
-
-=======
-interface TalentCardHeaderProps {;
-  fullName: string,;
-  professionalTitle: string,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   profilePicture?: string;
   availabilityType: string,;
   yearsExperience: number;
@@ -37,17 +21,10 @@ export function TalentCardHeader(): any ({ ;
   profilePicture, ;
 
   availabilityType;
-<<<<<<< HEAD
 
-import { TalentCardAvatar } from "./TalentCardAvatar",
-import { TalentCardAvailability } from "./TalentCardAvailability",
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  yearsExperience;
-}: TalentCardHeaderProps) {;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface TalentCardHeaderProps {
   fullName: string,
   professionalTitle: string,
@@ -63,10 +40,8 @@ export function TalentCardHeader({
   professionalTitle, 
   profilePicture, 
   availabilityType,
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   yearsExperience
 }: TalentCardHeaderProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -133,15 +108,7 @@ export function TalentCardHeader({;
     </div>;
   );
 }
-<<<<<<< HEAD
-;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
 
 import React from './react';
 import { BadgeCheck } from './lucide-react';
@@ -176,9 +143,7 @@ function TalentCardHeader() {
     </div>);
 }
 
-=======
-;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

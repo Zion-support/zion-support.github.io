@@ -64,12 +64,8 @@ function fixUnusedVariables(content) {}}
 function fixSyntaxIssues(content) {}; fixed = fixed && fixed.replace(/(\w+)\s*(\n\s*[a-zA-Z_$])/g, (match, p1, p2) = > {}; if (p1 && p1.trim() && !p1 && p1.trim().endsWith() && !p1 && p1.trim().endsWith() && !p1 && p1.trim().endsWith('{_') && !p1 && p1.trim().endsWith('}')) {_'}; return p1 + + p2,' }};
 
 // Main function;
-<<<<<<< HEAD
 
 
-=======
-function main() {}; if (content ! = = originalContent) {}; fs && fs.writeFileSync(file, content, 'utf8'),' fixedCount++ _ }} catch (error) {}; errorCount++ _ }}; try {}; const result = execSync('npm run lint 2>&1', {encoding: 'utf8'}),' const lines = result && result.split('\n'),' const lastLine = lines[lines && lines.length - 2] _ } catch (error) {}; _,' }}; fixedCount++}} catch (error) {_;  errorCount++}}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
  }
     } catch (error) {_;
       // Skip files that can't be accessed'}
@@ -94,48 +90,9 @@ function main() {}; if (content ! = = originalContent) {}; fs && fs.writeFileSyn
         files.push(fullPath);
 }
 #!/usr/bin/env node;
-<<<<<<< HEAD
 
-// Function to fix remaining lint errors;
-function fixRemainingLintErrors(content) {
-  let fixed = content;
-  // Fix unescaped entities;
-  fixed = fixed.replace(/(?<!&)([^&])"([^&])/g, "$1&apos;$2");
-  fixed = fixed.replace(/(?<!&)([^&])"([^&])/g, "$1&quot;$2")>;
-  // Fix Next.js link issues - replace <a> with <Link> for internal navigation;
-  fixed = fixed.replace(;
-    /<a\s+href=\/([^]+)"([^>]*)>/g
-    "<Link href="/$1$2>";
-  );
-  fixed = fixed.replace(/<\/a>/g, "</Link>");
-  // Add Link;
-    fixed = fixed.replace(
-      /import\s+([^]+);/
-      "import $1;\nimport Link from \"next/link\";"
-    );
-  if (fixed.includes("<Link") && !fixed.includes("import Link  from "next/link)) {";
 
-=======
-=======
-/**
- * fixParsingErrors - Function description
- */
-function fixParsingErrors() {}
-  let fixed = content;,
-  // Fix missing commas in function parameters;
-  fixed = fixed.replace (/(\w+)\s+(\w+)\s*\)/g, '$1, $2)');',
-  // Fix missing commas in object properties;
-  fixed = fixed.replace (/(\w+):\s*([^, }\n]+)(\n\s*[a - z_a - Z_$][a - z_a - Z0 - 9_$]*\s*:)/g, '$1: $2, $3');',
-  // Fix missing semicolons after variable declarations;
-  fixed = fixed.replace (/(const | let | var)\s+[^=]+=\s*[^;]+(\n)/g, '$&;');',
-  // Fix unterminated string literals;
-  fixed = fixed.replace (/(['"])([^'"]*?)(\n)/g, '$1$2$1$3');',
-  // Fix missing closing brackets;
-  fixed = fixed.replace (/(\{[^}]*?)(\n\s*[a - z_a - Z_$])/g, '$1}$2');',
-  // Fix missing closing parentheses;
-  fixed = fixed.replace (/(\([^)]*?)(\n\s*[a - z_a - Z_$])/g, '$1)$2');',
-  return fixed;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 // Function to fix unused variables;
 /**
@@ -158,13 +115,10 @@ if ( {}) {
   $2
 } fs.writeFileSync (file, content, 'utf8'), ' fixed_count++ _ }} catch (error) {} error_count++ _ }} try {} const result = exec_sync ('npm run lint 2>&1', {encoding: 'utf8'}), ' const lines = result.split ('\n'), ' const last_line = lines[lines.length - 2] _ } catch (error) {} _, ' }} fixed_count++}} catch (error) {_;  error_count++}}
   }
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
     } catch (error) {_;
       // Skip files that can't be accessed'}
       continue;
@@ -211,7 +165,9 @@ function fixRemainingLintErrors() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 ;
   console.log(""\"nCompleted":${fixedCount} files fixed, ${errorCount} errors"")};function main() {}
       if (content !== originalContent) {}
@@ -383,42 +339,11 @@ function main() {};
   console && console.error(`Error processing ${file}:`, error && error.message),
       errorCount++};
 
-<<<<<<< HEAD
-  };
-,
-  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
-origin/main
-origin/automation-improvements-final
-#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
-  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
-#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
-  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
-
-<<<<<<< HEAD
-
-  };
-,
-console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
-#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
-#!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
 
 
 
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
 ;
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
@@ -450,10 +375,10 @@ console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")},;
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

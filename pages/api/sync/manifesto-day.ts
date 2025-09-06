@@ -1,18 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import {
-
-  readState,
-  writeState,
-  upsertEvent,;
-
-
-} from "../../../utils/sync/storage";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
@@ -23,55 +10,24 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
     return res && res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
-<<<<<<< HEAD
 
 
-
-  if (!state.config.optIn |state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" });
-
-=======
-  if (!state && state.config.optIn || state && state.config.paused) {
-    return res && res.status(403).json({ error: "Sync disabled for this instance" });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 
   const { milestoneId, title, timestamp } = req && req.body as {
     milestoneId: string;
     title: string;
     timestamp?: number;
-<<<<<<< HEAD
-
-  }
-  if (!milestoneId |!title)
-    return res.status(400).json({ error: "milestoneId, title required" });
-  const version = nextVersionFor(state, milestoneId);
 
 
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-  res.status(200).json({ message: 'Manifesto day processed' });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
-import { signPayload } from "../../../utils/sync/signature",
-import axios from "axios",
-import { v4 as uuidv4 } from "uuid",
-import { nextVersionFor } from "../../../utils/sync/versioning",
-export default async function handler(req, res) {
-  try {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
-  const state = readState(),
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
   };
   if (!milestoneId || !title)
     return res && res.status(400).json({ error: "milestoneId, title required" });
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
@@ -158,7 +114,7 @@ export default async function handler(req, res) {
       .filter((p) => !p.paused)
 
       .map(async (peer) => {
-<<<<<<< HEAD
+
         const url = new URL("/api/sync/publish", peer.baseUrl).toString();
         try {
           await axios.post(url, body, { headers, timeout: 5000 });
@@ -177,18 +133,8 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
 
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    originInstanceId: state.config.instance_id,
-    version,
-    timestamp: timestamp || Date.now (),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 ;
   upsert_event (state, event);
@@ -223,12 +169,13 @@ if (headers["x - zion - signature"] = sig) {
   }
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

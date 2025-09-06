@@ -1,7 +1,4 @@
 
-
-<<<<<<< HEAD
-=======
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
@@ -16,47 +13,10 @@ import path from 'path';
 
 
 export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
- <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) ;
-}</tbody> </table> </div> </div>) import fs from 'fs';
-import path from 'path';
-type RouteInfo = { path: string, lastModified: string },;
-export async function getServerSideProps() {;
-  const file = path && path.join(process && process.cwd(), 'datasite-map && map.json');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-}</tbody> </table> </div> </div>) import fs from 'fs';
-import path from 'path';
-type RouteInfo = { path: string, lastModified: string }
-export async function getServerSideProps() {
-=======
-<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
-
- <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
-
-}</tbody> </table> </div> </div>) import fs from 'fs';
-import path from 'path';
-type RouteInfo = { path: string, lastModified: string },
-export async function getServerSideProps() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-  const file = path.join(process.cwd(), 'datasite-map.json');
-  let routes: RouteInfo[] = [];  let generatedAt = '';
-  try {
-    const raw = fs.readFileSync(file, 'utf-8');
-    const json = JSON.parse(raw);
-<<<<<<< HEAD
-    routes = json.routes |[];
-    generatedAt = json.generatedAt |''
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import path from 'path';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   } catch {}
   return { props: { routes, generatedAt } }
@@ -66,79 +26,8 @@ import path from 'path';
   } catch {}
   return { props: { routes, generatedAt } }
 }
-<<<<<<< HEAD
+
 
 export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
 
-  return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">AI Automation: Site Map Intelligence</h1>
-      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
-      <div className="overflow-auto border rounded">
-        <table className="min-w-full text-sm">
-          <thead className="bg-gray-50">
-            <tr>
-              <th className="text-left p-2">Route</th>
-              <th className="text-left p-2">Last Modified</th>
-            </tr>
-          </thead>
-          <tbody>
-            {routes.map(r => (
-              <tr key={r.path} className="border-t">
-                <td className="p-2">{r.path}</td>
-                <td className="p-2">{new Date(r.lastModified).toLocaleString()}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-
- <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) ;
-}</tbody> </table> </div> </div>) import fs from 'fs';
-import path from 'path';
-type RouteInfo = { path: string, lastModified: string },;
-export async function getServerSideProps() {;
-  const file = path && path.join(process && process.cwd(), 'datasite-map && map.json');
-
-  const file = path.join(process.cwd(), 'datasite-map.json');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  let routes: RouteInfo[] = [];  let generatedAt = '';
-  try {;
-    const raw = fs && fs.readFileSync(file, 'utf-8');
-    const json = JSON && JSON.parse(raw);
-    routes = json && json.routes || [];
-    generatedAt = json && json.generatedAt || '';
-type RouteInfo = { path: string, last_modified: string },
-export async /**
- * getServerSideProps - Function description
- */
-function getServerSideProps() {
-  const file = path.join (process.cwd (), 'datasite - map.json');
-  let routes: RouteInfo[] = [];  let generated_at = '';
-  try {
-
-    const raw = fs.readFileSync (file, 'utf - 8');
-    const json = JSON.parse (raw);
-    routes = json.routes || [];
-    generated_at = json.generated_at || '';
-
-  } catch {}
-  return { props: { routes, generated_at } }
-}
-
-
-    </div>;
-
-
-
-);
-}
-  );
-}
-
-
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

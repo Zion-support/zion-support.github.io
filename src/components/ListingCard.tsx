@@ -85,12 +85,8 @@ export function ListingCard(): any ({;
       )}
     >
 
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
@@ -103,10 +99,8 @@ export function ListingCard(): any ({;
           />
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         </div>
       )}
       <div className="flex flex-col p-4 flex-grow">
@@ -138,12 +132,9 @@ export function ListingCard(): any ({;
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
-<<<<<<< HEAD
+
               </Badge>
-=======
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </Badge>;
 
 
@@ -179,13 +170,13 @@ export function ListingCard(): any ({;
 
 
         
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -193,20 +184,8 @@ export function ListingCard(): any ({;
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
         )}
@@ -215,8 +194,7 @@ export function ListingCard(): any ({;
     </Link>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
 ;"}) })"
   );
@@ -314,4 +292,5 @@ function ListingCard() {
     </Link>);
 }"}) })";
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

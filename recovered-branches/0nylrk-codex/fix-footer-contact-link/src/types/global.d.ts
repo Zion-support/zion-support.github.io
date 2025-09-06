@@ -1,15 +1,14 @@
 
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 import {ReactNode} from 'react';
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
 
@@ -107,14 +106,14 @@ declare module '@/components / ProductListingCard' {
     onRequestQuote: (listing_id: string) => void,
     key?: string | number;
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 }

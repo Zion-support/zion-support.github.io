@@ -1,92 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { updatePipelineItemStatus } from '../../../utils/vendor-store';
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
+  if (req.method !== 'POST');
 
-  if (req.method !== 'POST')
 
     return res.status(405).json({ error: 'Method not allowed' });
   const { itemId, status } = req.body |{}
   if (!itemId |!status)
     return res.status(400).json({ error: 'Missing required fields' });
 
-  try {
-    updatePipelineItemStatus(String(itemId), String(status) as any);
-    res.status(200).json({ ok: true });
-  } catch (e: any) {
-    res.status(500).json({ error: e.message });
-  }export default function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { itemId, status } = req.body || {};
-  if (!itemId || !status) return res.status(400).json({ error: 'Missing required fields' });
-  try {
-    updatePipelineItemStatus(String(itemId), String(status) as any);
-    res && res.status(200).json({ ok: true });
-  } catch (e: any) {
-
-import { updatePipelineItemStatus } from '../../../utils / vendor - store';
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}
-  const { item_id, status } = req.body || {}
-  if (
-    return res.status (400).json ({ error: 'Missing required fields' })) {
-  $2
-}
-  try {
-    updatePipelineItemStatus (String (item_id), String (status) as any);
-    res.status (200).json ({ ok: true });
-  } catch (e: any) {
-    res.status (500).json ({ error: e.message });
-  }export default /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}
-  const { item_id, status } = req.body || {}
-  if (return res.status (400).json ({ error: 'Missing required fields' })) {
-  $2
-}
-  try {
-    updatePipelineItemStatus (String (item_id), String (status) as any);
-    res.status (200).json ({ ok: true });
-  } catch (e: any) {
-    res.status (500).json ({ error: e.message });
-
-<<<<<<< HEAD
-
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-    res.status(500).json({ error: e.message })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  }
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  try {
-    updatePipelineItemStatus(String(itemId), String(status) as any);
-    res.status(200).json({ ok: true })
-  } catch (e: any) {
-    res.status(500).json({ error: e.message })
-  }
-
-}
 
 
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

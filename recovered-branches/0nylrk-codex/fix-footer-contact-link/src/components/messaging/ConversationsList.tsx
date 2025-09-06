@@ -7,18 +7,9 @@ interface ConversationsListProps {
 
 
 
-<<<<<<< HEAD
-  markAsRead: (conversationId: string) => Promise<void>
-}
 
 
-=======
 
-export function ConversationsList({ ;
-  conversations;
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -66,12 +57,13 @@ export function ConversationsList({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               }}
             />;
           ))}

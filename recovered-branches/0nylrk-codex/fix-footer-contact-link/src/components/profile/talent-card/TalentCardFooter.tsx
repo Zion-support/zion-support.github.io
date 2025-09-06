@@ -2,10 +2,8 @@
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React, { useState } from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -15,73 +13,8 @@ import {HireRequestModal} from "@/components/profile/hire-request";
 import {useAuthStatus} from "@/hooks/talent";
 import {UserProfile} from "@/types/auth";
 import {useNavigate} from "react-router-dom";
-<<<<<<< HEAD
-
-import React, { useState } from "react",
-import { Star } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { ExternalLink } from "lucide-react",
-import { TalentProfile } from "@/types/talent",
-import { HireRequestModal } from "@/components/profile/hire-request",
-import { useAuthStatus } from "@/hooks/talent",
 
 
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-
-  const navigate = useNavigate();
-  // Create a compatible UserProfile from UserDetails
-  const userProfile: UserProfile = {
-    id: userDetails?.id
-    displayName: userDetails?.name |''
-    email: userDetails?.email |''
-    userType: ''
-    profileComplete: false
-    createdAt: new Date().toISOString()
-    updatedAt: new Date().toISOString()
-  }
-  // Handle request to hire
-  const handleRequestHire = (e: React.MouseEvent) => {
-    e.stopPropagation()
-    if (onRequestHire) {
-      onRequestHire(profile)
-    } else {
-      // Open hire modal directly if no handler provided
-      setIsHireModalOpen(true)
-    }
-  }
-  // Handle view profile
-  const handleViewProfile = (e: React.MouseEvent) => {
-    e.stopPropagation()
-    // Navigate to the talent profile page
-    navigate(`/talent/${profile.id |''}`);
-    // Also call the onViewProfile callback if provided
-    if (onViewProfile) {
-      onViewProfile(profile.id |'')
-    }
-
-
-  }
-import { UserProfile } from "@/types/auth",
-import { useNavigate } from "react-router-dom",
-interface TalentCardFooterProps {
-  profile: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire?: (profile: TalentProfile) => void
-
-
-import React, { useState } from "react",;
-import { Star } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { ExternalLink } from "lucide-react",;
-import { TalentProfile } from "@/types/talent",;
-import { HireRequestModal } from "@/components/profile/hire-request",;
-import { useAuthStatus } from "@/hooks/talent",;
-import { UserProfile } from "@/types/auth",;
-import { useNavigate } from "react-router-dom",;
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface TalentCardFooterProps {;
   profile: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -177,19 +110,13 @@ if ( {) {
       onViewProfile(profile && profile.id || '');
 
     }
-<<<<<<< HEAD
 
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
   return (
     <>;
@@ -222,22 +149,16 @@ if ( {) {
             Hire
           </Button>
 
-<<<<<<< HEAD
-          <Button
-            variant="outline"
-            size="sm"
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           <Button 
             variant="outline" 
             size="sm" 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
             onClick={handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
@@ -250,12 +171,13 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Hire Request Modal */}
       <HireRequestModal
         talent={profile}

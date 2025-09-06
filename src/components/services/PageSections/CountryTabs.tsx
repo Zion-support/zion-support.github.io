@@ -27,21 +27,16 @@ export function CountryTabs(): any ({;
   const countriesPerPage = 50;
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function CountryTabs({
   popularCountries,
   filteredCountries,
   handleCountrySelect,
   onQuote,
   searchQuery,
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   popularCountries,
   filteredCountries,
   handleCountrySelect,
@@ -52,12 +47,12 @@ export function CountryTabs({
     currentPage * countriesPerPage
   )
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -73,46 +68,9 @@ export function CountryTabs({
   )
   ),
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-  return (
-    <Tabs defaultValue='featured' className='w-full'>;
-      <TabsList className='bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6'>;
-        <TabsTrigger
-          value="featured"
-          className="data-[state=active]:bg-zion-purple"
-        >
-          Featured Countries
-        </TabsTrigger>
-        <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple">
-          All Countries
-        </TabsTrigger>
-      </TabsList>
-      <TabsContent value='featured' className='mt-0'>
-        <div className='mb-6'>
-          <h2 className='text-2xl font-bold text-white text-center'>
-
-      <TabsContent value="featured" className="mt-0">
-        <div className="mb-6">
-          <h2 className="text-2xl font-bold text-white text-center">
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             Featured Service Locations
           </h2>
           <p className="text-zion-slate-light text-center mt-2">
@@ -239,29 +197,8 @@ export function CountryTabs({
             />;
 
 
-<<<<<<< HEAD
 
 
-
-          ))}
-
-        </div>;
-
-        {totalPages > 1 && (;
-          <div className='mt-8'>;
-            <Pagination className='justify-center'>;
-              <PaginationContent>;
-                <PaginationItem>;
-                  <PaginationPrevious
-                    href={`?page=${currentPage - 1}`}
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     onClick={e => {;
                       e && e.preventDefault();
                       setCurrentPage(Math && Math.max(1, currentPage - 1));
@@ -416,14 +353,8 @@ function CountryTabs() {
                       setCurrentPage(Math.max(1, currentPage - 1));
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     }}
                   />;
                 </PaginationItem>;
@@ -433,24 +364,8 @@ function CountryTabs() {
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
-<<<<<<< HEAD
 
 
-                        onClick={e => {
-                          e.preventDefault()
-                          setCurrentPage(page) }}
-                      />
-                    </PaginationItem>
-                  )
-                        onClick={(e) => {;
-                          e.preventDefault();
-                          setCurrentPage(page);
-                        }}
-                      />;
-                    </PaginationItem>;
-                  );
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                 )}

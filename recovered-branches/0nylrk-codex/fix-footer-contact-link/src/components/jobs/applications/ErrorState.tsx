@@ -1,26 +1,12 @@
 
-<<<<<<< HEAD
-
-import { Card, CardContent } from "@/components/ui/card";
-import { Card, CardContent } from "@/components/ui/card";
 
 
-
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface ErrorStateProps {
   error: string;
 }
@@ -43,13 +29,7 @@ export function ErrorState(): any ({ error }: ErrorStateProps) {;
     </Card>;
   );
 
-<<<<<<< HEAD
-}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
     </Card>
 
     </Card>;
@@ -58,4 +38,6 @@ export function ErrorState(): any ({ error }: ErrorStateProps) {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

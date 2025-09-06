@@ -5,12 +5,13 @@ import React, { createContext, useContext, useState } from "react",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 interface SidebarContextType {
   is_open: boolean;
   toggle: () => void;
@@ -36,16 +37,18 @@ interface SidebarProviderProps {
 
 
 
+
+
+
 export function SidebarProvider({ 
   children, 
   defaultOpen = true 
 }: SidebarProviderProps) {;
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
@@ -54,18 +57,9 @@ export function SidebarProvider({
   return (
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
 
-<<<<<<< HEAD
-      <div
-        className={`grid ${isOpen ? "grid-cols-[auto_1fr]" : "grid-cols-[auto_1fr]"} min-h-screen w-full`}
-      >
-      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
 
 
-=======
-      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { createContext, useContext, useState } from "react",;
 
 interface SidebarContextType {;
@@ -103,15 +97,17 @@ export function SidebarProvider(): any ({ ;
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         {children}
       </div>
     </SidebarContext.Provider>
@@ -119,9 +115,6 @@ export function SidebarProvider(): any ({ ;
 }
 }
 
-;
-<<<<<<< HEAD
-=======
   const toggle = () =>: any setIsOpen (!is_open);
   const open = () =>: any setIsOpen (true);
   const close = () =>: any setIsOpen (false);
@@ -135,15 +128,14 @@ export function SidebarProvider(): any ({ ;
       </div>;
     </SidebarContext.Provider>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

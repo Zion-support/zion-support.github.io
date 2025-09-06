@@ -1,42 +1,34 @@
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }</ul> </div> </div>) 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
   talentMd
 }</pre>)
 }</section> </div>) import { useEffect, useState } from 'react';
 
+
 import Head from 'next/head';
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-=======
-export default function AutomationInsightsPage() {;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 export default function AutomationInsightsPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [intel, setIntel] = useState<any>(null);
   const [talentMd, setTalentMd] = useState<string>('');
   useEffect(() => {
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
+
+
 
  return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) ;
 }</ul> </div> </div>) ;
@@ -98,37 +90,21 @@ export default function AutomationInsightsPage() {;
 }
 
 
-                {Object.entries(intel.insights.keywordCounts).map(([k, v]: any) => (
-                  <li key={k}>{k}: {v as any}</li>
-                ))}
-              </ul>
-            </div>
 
-            <div className=&quot;mt-4&quot;>
-              <h3 className=&quot;font-medium&quot;>Top Languages</h3>
-              <ul className=&quot;list-disc list-inside&quot;>
-
-                {intel.insights.topLanguages.map((l: any) => (
-                  <li key={l.lang}>{l.lang}: {l.count}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )}
-      </section>
-
-
-      <section id=&quot;talent&quot; className=&quot;mb-8&quot;>
-        <h2 className=&quot;font-medium&quot;>Talent Highlights</h2>
-        {!talentMd ? (
+  return (
+    <div>
+      <Head><title>Automation Insights — Zion</title></Head>
+      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>Automation Insights</h1>
+      <section className=&quot;mb-8&quot;>
+        <h2 className=&quot;font-medium&quot;>Market Intelligence</h2>
+        {!intel ? (
           <div className=&quot;text-sm text-gray-500&quot;>Loading…</div>
         ) : (
-          <pre className=&quot;mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800&quot;>{talentMd}</pre>
-        )}
-      </section>
-    </div>
-  )
+          <div className=&quot;mt-3 text-sm&quot;>
+            <div className=&quot;text-xs text-gray-500&quot;>Generated at {intel.generatedAt}</div>
+            <div className=&quot;mt-3&quot;>
+              <h3 className=&quot;font-medium&quot;>Top Keywords</h3>
+              <ul className=&quot;list-disc list-inside&quot;>
 
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 

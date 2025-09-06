@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-
-import { useState } from "react";
-import Head from "next/head";
-import { useState } from 'react';
-import Head from 'next/head';
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     name: ''
     entityType: ''
     pocName: ''
@@ -150,6 +140,7 @@ export default function Partners() {;
 
   }
   return (
+
 
     <div className="min-h-screen bg-gray-50 text-gray-900">;
       <Head>;
@@ -381,34 +372,20 @@ function submit() {
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result && result.apiKey}</pre>;
             <a href={result && result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>;
 
-<<<<<<< HEAD
 
-
-
-          </div>
-
-=======
-=======
-          <div className="mt-8 bg-white p-6 rounded-lg shadow">
-            <h3 className="text-lg font-medium mb-2">Registration Successful</h3>
-            <p className="text-sm">Your API Key:</p>
-            <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>
-            <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
         )}
 
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
+
 
 }
     <div className="min - h-screen bg - gray - 50 text - gray - 900">;
@@ -513,11 +490,12 @@ function submit() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

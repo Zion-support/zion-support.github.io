@@ -11,12 +11,8 @@ const DialogPortal = DialogPrimitive.Portal
 
 const DialogClose = DialogPrimitive.Close
 
-<<<<<<< HEAD
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -24,7 +20,7 @@ const DialogClose = DialogPrimitive.Close
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
+
 
 
 const DialogOverlay = React.forwardRef<
@@ -216,32 +212,17 @@ const DialogTitle = React.forward_ref<;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     ref={ref}
     className={cn (
       'text - lg font - semibold leading - none tracking - tight',
       class_name)}
     {...props}
-<<<<<<< HEAD
 
 
-  />
-))
-DialogDescription.displayName = DialogPrimitive.Description.displayName
-export {
-  Dialog
-  DialogPortal
-  DialogOverlay
-  DialogClose
-  DialogTrigger
-  DialogContent
-  DialogHeader
-  DialogFooter
-  DialogTitle
-  DialogDescription
-}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   Dialog,
@@ -257,14 +238,8 @@ export {
 };
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   />;
 ));
 DialogDescription.displayName = DialogPrimitive.Description.displayName;

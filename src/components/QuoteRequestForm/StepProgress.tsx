@@ -6,11 +6,8 @@ return (
           style={{
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps; label: string }[] = [
@@ -20,43 +17,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: 'budget', label: 'Budget' },
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-import { QuoteRequestSteps } from "../QuoteRequestForm",
-import { CheckIcon } from 'lucide-react'
-import { cn } from "@/lib/utils",
-interface StepProgressProps {
-  currentStep: QuoteRequestSteps
-}
-
-export function StepProgress({ currentStep }: StepProgressProps) {
-  const steps: { id: QuoteRequestSteps, label: string }[] = [
-    { id: "service", label: "Service" },
-    { id: "details", label: "Details" },
-    { id: "timeline", label: "Timeline" },
-    { id: "budget", label: "Budget" },
-    { id: "summary", label: "Summary" }
-  ],
-
-  const getStepStatus = (stepId: QuoteRequestSteps) => {
-<<<<<<< HEAD
-
-
-    const stepOrder = steps.findIndex(s => s.id === stepId)
-    const currentStepOrder = steps.findIndex(s => s.id === currentStep)
-    if (stepOrder < currentStepOrder) return 'complete'
-    if (stepOrder === currentStepOrder) return 'current'
-    return 'upcoming'
-  const getStepStatus = (stepId: QuoteRequestSteps,) => {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     const stepOrder = steps.findIndex(s => s.id === stepId),
@@ -106,21 +69,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
                   "bg-zion-blue-light text-zion-slate-light"
                 )}
-<<<<<<< HEAD
 
 
-              >
-                {status === "complete" ? (
-                  <CheckIcon className="h-4 w-4" />
-                ) : (
-                  <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
-                )}
-              </div>
-
-
-=======
-              </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <span
                 className={cn(
                   'text-xs mt-2 font-medium'
@@ -140,28 +90,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
                   "text-zion-slate-light"
-<<<<<<< HEAD
 
 
-                ),}
-              >
-                {step.label}
-              </span>
-            </div>
-          )
-        })}
-      </div>
-    </div>
-  )
-  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100
-}%`
-  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 
-}%` 
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }/> </div>
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
   steps.findIndex (s => s.id === step.id) + 1
@@ -178,22 +108,15 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     </div>
   )
 }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                 ),}>;
                 {step && step.label}
 
 ;
-<<<<<<< HEAD
-=======
+
 
               <span 
                 className={cn(
@@ -385,4 +308,5 @@ if (return "current", ) {
     </div>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

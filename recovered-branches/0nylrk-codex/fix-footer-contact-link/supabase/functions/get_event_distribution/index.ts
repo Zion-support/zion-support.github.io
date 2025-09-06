@@ -1,20 +1,14 @@
 
-<<<<<<< HEAD
-
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
-import {createClient} from "https: //esm ;
 
 
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
-import {createClient} from "https: //esm ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+
+
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
@@ -23,7 +17,9 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -40,10 +36,7 @@ serve(async (req) => {
     const { days_back = 7 } = await req && req.json();
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
     // Query analytics events
@@ -54,68 +47,10 @@ serve(async (req) => {
       .gte("created_at", startDate && startDate.toISOString());
 
 
-=======
-
-      .gte("created_at", startDate.toISOString()),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    if (error) {
-      console && console.error("Error fetching analytics data:", error);
-      throw error
-    }
-    // Group events by date and event type
-
-
-    const eventsByDate = {},
-    
-
-
-    data.forEach((event) => {
-      const date = new Date(event.created_at).toISOString().split("T")[0];
-      if (!eventsByDate[date]) {
-
-
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin": "*",;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
-serve(async (req) => {;
-  // Handle CORS preflight request;
-  if (req.method === "OPTIONS") {;
-    return new Response("ok", { headers: corsHeaders });
-  }
-;
-  try {;
-    const supabaseClient = createClient(;
-      Deno.env.get("SUPABASE_URL") ?? "",;
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
-    ),;
-    // Parse the request body;
-    const { days_back = 7 } = await req.json(),;
-    // Calculate the start date;
-    const startDate = new Date(),;
-    startDate.setDate(startDate.getDate() - days_back),;
-    // Query analytics events;
-    const { data, error } = await supabaseClient;
-      .from("analytics_events");
-      .select("event_type, created_at");
-      .gte("created_at", startDate.toISOString()),;
-    if (error) {;
-      console.error("Error fetching analytics data:", error),;
-      throw error;
-    }
-;
-    // Group events by date and event type;
-    const eventsByDate = {},;
-    data.forEach((event) => {;
-      const date = new Date(event.created_at).toISOString().split("T")[0],;
-      if (!eventsByDate[date]) {;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         eventsByDate[date] = { date }
       }
       if (!eventsByDate[date][event.event_type]) {
@@ -159,9 +94,9 @@ serve(async (req) => {;
       status: 500})
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   }
 });

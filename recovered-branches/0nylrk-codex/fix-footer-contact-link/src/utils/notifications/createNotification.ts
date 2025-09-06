@@ -1,12 +1,7 @@
 
-<<<<<<< HEAD
 
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
@@ -22,14 +17,8 @@ export async function createNotification({;
   sendEmail = false;
   actionUrl = null;
 
-=======
-import { supabase } from "@/integrations/supabase/client",
-import { CreateNotificationParams, CreateNotificationResult } from './types',
 
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
@@ -51,14 +40,15 @@ export async function createNotification({
   actionUrl = null,
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl;
@@ -120,14 +110,15 @@ export async function createNotification({;
       await supabase.functions.invoke('send-notification-email', {;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         body: { user_id: userId, notification_id: notificationId }
       })
     }
@@ -136,14 +127,15 @@ export async function createNotification({;
   } catch (error) {;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
     console.error('Error creating notification:', error);
 
 

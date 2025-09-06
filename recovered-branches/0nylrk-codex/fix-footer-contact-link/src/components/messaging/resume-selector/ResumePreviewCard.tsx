@@ -1,35 +1,8 @@
 
-<<<<<<< HEAD
-
-
-import React from 'react',
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button";
-import { Download  } from 'lucide-react';
-import { Resume } from "@/types/resume";
-interface ResumePreviewCardProps {
-  resume: Resume;
-  onDownload: () => void;
-  isLoading: boolean
-}
-export function ResumePreviewCard({
-  resume
-  onDownload
-  isLoading
-}: ResumePreviewCardProps) {
-import { Button } from "@/components/ui/button",
-import { Download } from 'lucide-react',
-import { Resume } from "@/types/resume",
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ResumePreviewCardProps {
   resume: Resume,
   onDownload: () => void,
@@ -121,10 +94,8 @@ function ResumePreviewCard() {
 
         {resume && resume.basic_info.summary && (;
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">;
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {resume.basic_info.summary}
           </p>
         )}
@@ -163,8 +134,8 @@ function ResumePreviewCard() {
       </CardContent>;
     </Card>;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             {resume && resume.basic_info.summary}
           </p>;
         )}
@@ -192,12 +163,7 @@ function ResumePreviewCard() {
 
 
 
-<<<<<<< HEAD
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 =======
 
       </CardContent>;
@@ -206,7 +172,7 @@ function ResumePreviewCard() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   );
 
 }

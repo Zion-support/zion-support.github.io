@@ -4,21 +4,8 @@ import { Button } from "@/components/ui/button",
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import { useState, useEffect } from 'react'
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { X } from 'lucide-react'
 
   const [isVisible, setIsVisible] = useState(false)
@@ -33,10 +20,8 @@ import { X } from 'lucide-react';
   // TODO: Add dependencies if needed;
   return () => {
     // Cleanup function;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 
 
@@ -48,12 +33,12 @@ import Link from "next/link",
 import { useState, useEffect } from "react",
 import { X } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
+
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
@@ -69,12 +54,11 @@ export function FloatingCTA() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       if (scrollPosition > threshold && !isClosed) {
@@ -182,6 +166,8 @@ export function FloatingCTA() {;
 
 
 
+
+
   }, [isClosed]),
 
   const handleClose = () => {
@@ -194,16 +180,17 @@ export function FloatingCTA() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">
@@ -231,42 +218,23 @@ export function FloatingCTA() {;
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
           >
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <X className="w-5 h-5" />
           </button>
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             aria-label='Close'           aria-label="Button">;
             <X className='w-5 h-5' />          </button>;
             <X className="w-5 h-5" />;
 
 ;
-<<<<<<< HEAD
-=======
+
 
 import { Button } from "@/components/ui/button",;
 import Link from "next/link",;
@@ -390,4 +358,5 @@ return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md
 }
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

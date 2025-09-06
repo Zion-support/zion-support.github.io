@@ -131,15 +131,3 @@ if ( {) {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-<<<<<<< HEAD
-}
-},
-},
-=======
-<<<<<<< HEAD
-
-},
-
-},
-
-},

@@ -34,10 +34,8 @@ import { ShieldAlert } from 'lucide-react'
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface EmptyFraudStateProps {
 
   hasFilters: boolean
@@ -58,21 +56,8 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       </p>
       {hasFilters && (
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
-<<<<<<< HEAD
 
 
-      )}
-    </div>
-  )
-}
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from 'lucide-react';
@@ -151,11 +136,8 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
 }) => {
     </div>;
   );
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
 '";
 
@@ -165,6 +147,8 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
 
     </div>;
   );
+
+
 
 
 

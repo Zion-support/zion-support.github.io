@@ -1,18 +1,10 @@
 
 
-<<<<<<< HEAD
 
-:src.disabled/components/AICodeGenerator.js.jsx
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-' \"export\": const AICodeGenerator = () => { const { trackEvent } = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'true\'}) const [activeTab,setActiveTab] = useState (\'generate\') const [showAdvanced,setShowAdvanced] = useState (false) const [customCode,setCustomCode] = useState (\') const [copied,setCopied] = useState (false) const { isGenerating,isAnalyzing,generatedCode,codeAnalysis,suggestions,history,generateCode,analyzeCode,applySuggestion,optimizeCode,generateTests,generateDocs,clearHistory,exportCode } = useAICodeGeneration () const [form,setForm] = useState ({ \"prompt\": \',\"language\": \'typescript,\',\"framework\": \'react,\',\"style\": \'functional,\',\"target\": \'web,\',\"quality\": \'development,\',\"includeTests\": \'fals\',e,\"includeDocs\": \'fals\',e,\"includeErrorHandling\": \'fals\',e,\"includeLogging\": \'fals\',e,\"includeMetrics\": \'false\'}) \'';\"";
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-' \"export\": const AICodeGenerator = () => { const { trackEvent } = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'true\'}) const [activeTab,setActiveTab] = useState (\'generate\') const [showAdvanced,setShowAdvanced] = useState (false) const [customCode,setCustomCode] = useState (\') const [copied,setCopied] = useState (false) const { isGenerating,isAnalyzing,generatedCode,codeAnalysis,suggestions,history,generateCode,analyzeCode,applySuggestion,optimizeCode,generateTests,generateDocs,clearHistory,exportCode } = useAICodeGeneration () const [form,setForm] = useState ({ \"prompt\": \',\"language\": \'typescript,\',\"framework\": \'react,\',\"style\": \'functional,\',\"target\": \'web,\',\"quality\": \'development,\',\"includeTests\": \'fals\',e,\"includeDocs\": \'fals\',e,\"includeErrorHandling\": \'fals\',e,\"includeLogging\": \'fals\',e,\"includeMetrics\": \'false\'}) \'';\"";
-:temp_exclude/src.disabled/components/AICodeGenerator.js.jsx
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 " export: const AICodeGenerator = () => { const { trackEvent } = useAnalytics ({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [activeTab,setActiveTab] = useState ("generate") const [showAdvanced,setShowAdvanced] = useState (false) const [customCode,setCustomCode] = useState (") const [copied,setCopied] = useState (false) const { isGenerating,isAnalyzing,generatedCode,codeAnalysis,suggestions,history,generateCode,analyzeCode,applySuggestion,optimizeCode,generateTests,generateDocs,clearHistory,exportCode } = useAICodeGeneration () const [form,setForm] = useState ({ prompt: ",language: "typescript,",framework: "react,",style: "functional,",target: "web,",quality: "development,",includeTests: "fals",e,includeDocs: "fals",e,includeErrorHandling: "fals",e,includeLogging: "fals",e,includeMetrics: "false"}) "";"";"""

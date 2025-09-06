@@ -5,6 +5,9 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
   return (
 
+    <Badge 
+      key={skill.id} 
+
       variant="secondary"
       className="flex items-center gap-1 py-1.5 px-3"
     >
@@ -23,6 +26,8 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
       </Button>
     </Badge>
   )
+
+},
 
 
 
@@ -58,8 +63,10 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {;
       >;
         <Trash2 className="h-3 w-3" />;
       </Button>;
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
     </Badge>;
   );
 };
@@ -112,6 +119,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {;
       </Button>
 
 
+
     </Badge>
   )
 }
@@ -146,13 +154,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 }
 
 },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     </Badge>;

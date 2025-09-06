@@ -5,8 +5,7 @@ import { motion  } from 'framer-motion';
 import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
 interface Service {
 
-<<<<<<< HEAD
-=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -54,8 +53,10 @@ interface UltraFuturisticServiceShowcase2029Props {
 
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   title?: string;
   subtitle?: string;
 
@@ -72,15 +73,9 @@ export default function UltraFuturisticServiceShowcase2029(): any ({;
 
 
   title?: string;
-<<<<<<< HEAD
 
-=======
-=======
-  services: Service[],;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   title?: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   subtitle?: string
 }
 export default function UltraFuturisticServiceShowcase2029({
@@ -111,7 +106,6 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {title}
           </h2>;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -125,28 +119,31 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             <motion.div
               key={service.id}
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
             >
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               <div className='flex items-center justify-between mb-4'>
                 <div className='flex items-center space-x-2'>
                   <div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse' />
@@ -159,9 +156,78 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
               </div>
               <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
 
+
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse" />
+                  <span className="text-sm text-cyan-400 font-medium">NEW</span>
+                </div>
+                <div className="flex items-center space-x-1">
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <span className="text-sm text-gray-300">5.0</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                {service.name}
+              </h3>
+              <p className="text-gray-400 text-sm mb-3">{service.tagline}</p>
+              <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
+              <div className="flex items-center justify-between mb-4">
+
+                <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                <div className="flex items-center space-x-2">
+                  <Zap className="w-4 h-4 text-yellow-400" />
+                  <Shield className="w-4 h-4 text-green-400" />
+                  <Brain className="w-4 h-4 text-purple-400" />
+
+              <div className='flex items-center justify-between mb-4'>;
+                <div className='flex items-center space-x-2'>;
+                  <div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse' />;
+                  <span className='text-sm text-cyan-400 font-medium'>NEW</span>;
+                </div>;
+                <div className='flex items-center space-x-1'>;
+                  <Star className='w-4 h-4 text-yellow-400 fill-current' />;
+                  <span className='text-sm text-gray-300'>5 && 5.0</span>;
+                </div>;
+              </div>;
+                </div>
+              </div>
+              <Link
+                href={service.link}
+                className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              >
+                Get Started
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+
+              <Link
+                href={service && service.link}
+                className='inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25'>;
+                Get Started;
+                <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />              </Link>                className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25";
+              >;
+                Get Started;
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
+            </motion && motion.div>;
+          ))}
+
+
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         <motion.div
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
         >
@@ -184,12 +250,7 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
   );
 }
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-
-=======
               <h3 className=&quot;text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors&quot;>
                 {service.name}
               </h3>
@@ -216,41 +277,21 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
           ))}
         </div>
 
-=======
-              </div>
-              <Link
-                href={service.link}
-                className='inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25'
-              >
-                Get Started
-                <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />              </Link>                className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-              >
-                Get Started
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </motion.div>
-          ))}
-        </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
 
+
           className=&quot;text-center mt-12&quot;
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >
           <Link
             href="/services"
@@ -315,7 +356,7 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
     </section>);
 }
 
-<<<<<<< HEAD
+
 
 }
 }
@@ -326,9 +367,8 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

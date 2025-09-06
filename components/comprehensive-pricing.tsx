@@ -1,31 +1,19 @@
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 
-<<<<<<< HEAD
 
 
-import {
-  revolutionaryMicroSaasServices
-  revolutionaryServiceCategories;
-  revolutionaryMicroSaasServices,;
-  revolutionaryServiceCategories,;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-import {;
-  revolutionaryMicroSaasServices,;
-  revolutionaryServiceCategories,;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 
 
@@ -178,85 +166,10 @@ export default function ComprehensivePricingPage() {;
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-<<<<<<< HEAD
 
 
-=======
-=======
-        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
-        return bRoi - aRoi;
-      default: return a.name.localeCompare(b.name)
-;
-  // Filter and sort services;
-  let filtered_services = all_services;
-;
-  // Category filter;
-  // Check condition
-if ( {) {
-  $2
-}
-    filtered_services = filtered_services.filter (
-      service => service.category === selected_category);  }
-  // Price range filter;
-  if ( {    filtered_services = filtered_services.filter (service => service.category === selected_category)) {
-  $2
-}
-  }
-  // Price range filter;
-  // Check condition
-if ( {) {
-  $2
-}
-    const [min, max] = price_range;
-      .split ('-');
-      .map (p => (p === '+' ? Infinity : parse_int (p)));
-    filtered_services = filtered_services.filter (service => {
-      const price = parse_float (service.price.replace ('$', '').replace (', ', ''));
-      return price >= min && (max === Infinity || price <= max);
-    });  }
-  // Search filter;
-  if ( {    const [min, max] = price_range.split ('-').map (p => p === '+' ? Infinity : parse_int (p))) {
-  $2
-}
-    filtered_services = filtered_services.filter (service => {
-      const price = parse_float (service.price.replace ('$', '').replace (, ''));
-      return price >= min && (max === Infinity || price <= max);
-    });
-  // Search filter;
-  // Check condition
-if ( {) {
-  $2
-}
-    filtered_services = filtered_services.filter (
-      service =>;
-        service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        service.category.toLowerCase ().includes (search_query.toLowerCase ())    );    filtered_services = filtered_services.filter (service =>;
-      service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      service.category.toLowerCase ().includes (search_query.toLowerCase ());
-  }
-  // Sort services;
-  filtered_services.sort ((a, b) => {
-    switch (sort_by) {
-      case 'price':;
-        return (
-          parse_float (a.price.replace ('$', '').replace (', ', '')) -;
-          parse_float (b.price.replace ('$', '').replace (', ', '')));      case 'popularity':        return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, ''));
-      case 'popularity':;
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-      case 'category':;
-        return a.category.locale_compare (b.category);
-      case 'roi':;
-        const a_roi = parse_float (a.roi.match (/\d+/)?.[0] || '0');
-        const b_roi = parse_float (b.roi.match (/\d+/)?.[0] || '0');
-        return b_roi - a_roi;
-      default:;
-        return a.name.locale_compare (b.name);    }      default: return a.name.locale_compare (b.name);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
     }
   });
 ;
@@ -264,164 +177,18 @@ if ( {) {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
 
 
 
-  // Pricing tiers
-  const pricingTiers = [
-    {
-      name: 'Starter'
-      price: '$49'
-      period: '/month'
-      description: 'Perfect for small businesses and startups'
-      features: [
-        'Basic service access'
-        'Email support'
-        'Standard features'
-        'Community forum access'
-        'Basic analytics'
-      ]
-      icon: <Star className="w-6 h-6" />
-      color: 'from-blue-500 to-cyan-600'
-      popular: false
-    },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
-      ];
-      icon: <Star className="w-6 h-6" />
-      color: 'from-blue-500 to-cyan-600'
-      popular: false
-    }
-      name: 'Professional'
-      price: '$199'
-      period: '/month'
-      description: 'Ideal for growing businesses and teams'
-      features: [
-        'Advanced service access'
-        'Priority support'
-        'Advanced features'
-        'API access'
-        'Advanced analytics'
-        'Custom integrations'
-      ]
-      icon: <Gem className="w-6 h-6" />
-      color: 'from-purple-500 to-pink-600'
-      popular: true
-    },    {        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations'
-      ];
-      icon: <Gem className="w-6 h-6" />
-      color: 'from-purple-500 to-pink-600'
-      popular: true
-    }
-      name: 'Enterprise'
-      price: '$499'
-      period: '/month'
-      description: 'For large organizations and enterprises'
-      features: [
-        'Full service access'
-        '24/7 dedicated support'
-        'All features'
-        'Custom development'
-        'Enterprise analytics'
-        'White-label options'
-        'SLA guarantees'
-      ]
-      icon: <Crown className="w-6 h-6" />
-      color: 'from-yellow-500 to-orange-600'
-      popular: false
-    },  ];        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
-      ];
-      icon: <Crown className="w-6 h-6" />
-      color: 'from-yellow-500 to-orange-600'
-      popular: false
-    }
-  // Market statistics
-  const marketStats = [
-    {
-      metric: '$15.2B'
-      label: 'Total Market Size'
-      description: 'Combined market value of all services'
-      icon: <ChartBar className='w-6 h-6' />
-    },    {
-      metric: '400+'
-      label: 'Services Available'
-      description: 'Comprehensive micro SaaS portfolio'
-      icon: <Database className='w-6 h-6' />
-    },    {
-      metric: '99.99%'
-      label: 'Uptime Guarantee'
-      description: 'Enterprise-grade reliability'
-      icon: <Shield className='w-6 h-6' />
-    },    {
-      metric: '2000%+'
-      label: 'Average ROI'
-      description: 'Proven business value'
-      icon: <TrendingUp className='w-6 h-6' />
-    },  ];      icon: <ChartBar className="w-6 h-6" />
-    }
-    {
-      metric: '400+'
-      label: 'Services Available'
-      description: 'Comprehensive micro SaaS portfolio'
-      icon: <Database className='w-6 h-6' />
-    },      icon: <Database className="w-6 h-6" />
-    }
-    {
-      metric: '99.99%'
-      label: 'Uptime Guarantee'
-      description: 'Enterprise-grade reliability'
-      icon: <Shield className='w-6 h-6' />
-    },      icon: <Shield className="w-6 h-6" />
-    }
-    {
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
 
 
 
-<<<<<<< HEAD
-=======
-=======
-        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
-      ];
-      icon: <Star className="w-6 h-6" />,
-      color: 'from-blue-500 to-cyan-600',
-      popular: false
-    };
-    {
-=======
-    website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
-  }
-;
-  // Pricing tiers;
-  const pricing_tiers = [;
-    {
-      name: 'Starter',
-      price: '$49',
-      period: '/month',
-      description: 'Perfect for small businesses and startups',
-      features: [;
-        'Basic service access',
-        'Email support',
-        'Standard features',
-        'Community forum access',
-        'Basic analytics',
-      ],
-      icon: <Star className="w - 6 h - 6" />,
-      color: 'from - blue - 500 to - cyan - 600',
-      popular: false,
-    },    {        'Basic service access_email support_standard features_community forum access_basic analytics';
-      ];
-      icon: <Star className="w - 6 h - 6" />,
-      color: 'from - blue - 500 to - cyan - 600',
-      popular: false;
-    }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
       name: 'Professional',
       price: '$199',
       period: '/month',
@@ -431,9 +198,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
       features: [;
         'Full service access',
         '24 / 7 dedicated support',
@@ -478,7 +243,8 @@ if ( {) {
       label: 'Average ROI',
       description: 'Proven business value',
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -507,18 +273,12 @@ if ( {) {
       },
     },
 
-<<<<<<< HEAD
-
-  };
 
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>;
       <div className='min - h-screen'>;
@@ -567,32 +327,24 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
 
-<<<<<<< HEAD
-                Transparent pricing for all our revolutionary micro SaaS
-                services. Choose the perfect plan for your business with
-                guaranteed ROI and enterprise-grade reliability.
-=======
-                Transparent pricing for all our revolutionary micro SaaS services. 
-                Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability.
-              </motion.p>
-              
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               </motion.p>
               {/* Market Stats */}
@@ -622,16 +374,15 @@ if ( {) {
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -659,63 +410,31 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>              <motion&& motion.div 
 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-<<<<<<< HEAD
-
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
-=======
-=======
-
-              >              <motion.div 
-
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-=======
-              >
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
-=======
-                transition={{ duration: 0.8, delay: 0.6 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              >              <motion.div
-=======
-              >              <motion.div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-
-              >
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Button
                   variant='primary'
                   size='lg'
@@ -752,8 +471,11 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -813,14 +535,12 @@ if ( {) {
             <motion.div 
               className="text-center mb-16"
 
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -885,30 +605,14 @@ if ( {) {
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing
-<<<<<<< HEAD
 
-                </span>
-                <br />
-                <span className="text-white">for Every Business</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.
-              </p>
-            </motion.div>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
-            <motion.div 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
@@ -964,8 +668,7 @@ if ( {) {
                 </motion && motion.div>;
 
 
-<<<<<<< HEAD
-=======
+
                     <div className="text-center">
                                              <Button 
                          variant={tier.popular ? 'futuristic' : 'primary'} 
@@ -980,8 +683,8 @@ if ( {) {
                   </UltraFuturisticCard>
                 </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               ))}
 
             </motion && motion.div>;
@@ -993,7 +696,9 @@ if ( {) {
         <section id='services-pricing' className='py-20'>;
           <div className='container mx-auto px-4'>;
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
         {/* Services Pricing Grid */}
         <section id="services-pricing" className="py-20">
@@ -1009,19 +714,17 @@ if ( {) {
               className="mb-8"
 
 
-<<<<<<< HEAD
 
 
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         {/* Services Pricing Grid */}
         <section id='services-pricing' className='py-20'>
           <div className='container mx-auto px-4'>
@@ -1039,12 +742,13 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -1119,26 +823,7 @@ if ( {) {
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-<<<<<<< HEAD
 
-                    >
-                      <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-            {/* Services Display */}
-            <motion.div
-              className={
-                viewMode === 'grid'
-                  ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-                  : 'space-y-6'
-              }
-              variants={containerVariants}
-              initial='hidden'
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     </button>;
                   </div>;
@@ -1148,19 +833,15 @@ if ( {) {
 
               className={viewMode === 'grid' 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-<<<<<<< HEAD
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
-              whileInView='visible'              viewport={{ once: true }}            <motion.div 
-              className={viewMode === 'grid' 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -1173,14 +854,15 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1188,33 +870,18 @@ if ( {) {
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
-<<<<<<< HEAD
 
 
-=======
 
-                    variant={service.variant as any || 'quantum-advanced'}
-
-=======
-
-                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
-
-
-=======
-                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
-=======
-                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
@@ -1461,18 +1128,11 @@ if ( {) {
                 className='text-center py-16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
 
-<<<<<<< HEAD
-                transition={{ duration: 0.6 }}
-              >              <motion.div
-                className="text-center py-16"
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-                className="text-center py-16"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -1500,7 +1160,6 @@ if ( {) {
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                                  <Button
                    variant="primary"
                    onClick={() => {;
@@ -1610,7 +1269,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -1622,12 +1280,13 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               </div>
             </motion.div>
           </div>
@@ -1709,13 +1368,13 @@ if ( {) {
 }
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
+
+
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

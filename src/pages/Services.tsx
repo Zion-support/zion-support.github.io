@@ -155,30 +155,117 @@ const Services = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto animate-slide-up">
-            Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
-            >
-              Get Free Consultation
-            </Link>
-            <Link
-              to="/pricing"
-              className="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
-            >
-              View Pricing
-            </Link>
+
+        </div>
+        {/* Main Services */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <ServiceCard
+            title="AI & Machine Learning"
+            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
+            icon="🤖"
+          />
+          <ServiceCard
+            title="Cybersecurity"
+            description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
+            icon="🔒"
+          />
+          <ServiceCard
+            title="Cloud Infrastructure"
+            description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
+            icon="☁️"
+          />
+          <ServiceCard
+            title="Digital Transformation"
+            description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
+            icon="🚀"
+          />
+          <ServiceCard
+            title="Data Analytics"
+            description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
+            icon="📊"
+          />
+          <ServiceCard
+            title="IoT Solutions"
+            description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
+            icon="🌐"
+          />
+        </div>
+
+        {/* Service Categories */}
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card
+              title="Consulting Services"
+              description="Strategic technology consulting to help you make informed decisions about your digital future."
+            />
+            <Card
+              title="Implementation"
+              description="End-to-end implementation of technology solutions tailored to your specific business needs."
+            />
+            <Card
+              title="Support & Maintenance"
+              description="Ongoing support and maintenance to ensure your systems run smoothly and efficiently."
+            />
+            <Card
+              title="Training & Education"
+              description="Comprehensive training programs to help your team master new technologies and processes."
+            />
+            <Card
+              title="Custom Development"
+              description="Bespoke software development solutions designed specifically for your unique requirements."
+            />
+            <Card
+              title="Integration Services"
+              description="Seamless integration of new technologies with your existing systems and workflows."
+            />
+          </div>
+        </div>
+
+        {/* Industry Solutions */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-600">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Discovery</h3>
+              <p className="text-gray-600">We analyze your business needs and challenges to understand your goals.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-purple-600">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Strategy</h3>
+              <p className="text-gray-600">We develop a comprehensive strategy tailored to your specific requirements.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-green-600">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Development</h3>
+              <p className="text-gray-600">Our expert team builds and implements your solution with precision.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-orange-600">4</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Support</h3>
+              <p className="text-gray-600">We provide ongoing support and optimization to ensure your success.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎓</span>
+              </div>
+              <h3 className="text-lg font-semibold">Education</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏛️</span>
+              </div>
+              <h3 className="text-lg font-semibold">Government</h3>
+            </div>
 
           </div>
 
@@ -279,64 +366,7 @@ const Services = () => {
             </a>
           </div>
 
-=======
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Product engineering and AI-first consulting to deliver measurable outcomes for your business.
-        </p>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <ServiceCard
-          href="/services/micro-saas"
-          title="Micro SaaS"
-          description="End-to-end product development with billing, auth, and analytics"
-          bullets={[
-            "Foundational architecture",
-            "Billing + subscriptions",
-            "Growth analytics",
-            "Multi-tenant systems",
-            "API development"
-          ]}
-          icon="🚀"
-        />
-        <ServiceCard
-          href="/services/ai-services"
-          title="AI Services"
-          description="LLM applications, RAG systems, and MLOps pipelines"
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines", "Custom AI models", "AI integration"]}
-          icon="🤖"
-        />
-        <ServiceCard
-          href="/services/it-services"
-          title="IT Services"
-          description="Cloud migration, DevOps, and security solutions"
-          bullets={["Cloud migration", "DevOps + SRE", "Security", "Infrastructure automation", "Cost optimization"]}
-          icon="⚙️"
-        />
-      </div>
-      
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Talk to our experts about your project. We'll help you choose the right service and create a custom solution for your business needs.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         </div>
       </div>
     </div>

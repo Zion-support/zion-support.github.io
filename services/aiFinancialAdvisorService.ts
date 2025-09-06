@@ -1,14 +1,5 @@
-<<<<<<< HEAD
 
 
-  id: string;
-  userId: string;
-  name: string;
-  totalValue: number;
-  currency: string;
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
   investment_horizon: number, // in years;
@@ -22,13 +13,10 @@
   updated_at: Date;
 
 }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-export interface PortfolioAsset {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   id: string;
   symbol: string;
   name: string;
@@ -49,17 +37,8 @@ export interface PortfolioAsset {
 
   }
 }
-<<<<<<< HEAD
 
 
-  totalReturn: number;
-  annualizedReturn: number;
-
-=======
-export interface PortfolioPerformance {
-  total_return: number;
-  annualized_return: number;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   volatility: number;
   sharpe_ratio: number;
   max_drawdown: number;
@@ -71,13 +50,10 @@ export interface PortfolioPerformance {
   sortino_ratio: number;
 
 }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-export interface InvestmentRecommendation {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   id: string;
   user_id: string;
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
@@ -98,13 +74,10 @@ export interface InvestmentRecommendation {
   expires_at: Date;
 
 }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-export interface FinancialGoal {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   id: string;
   user_id: string;
   name: string;
@@ -122,13 +95,10 @@ export interface FinancialGoal {
   updated_at: Date;
 
 }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-export interface MarketAnalysis {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   id: string;
   market: string;
 
@@ -145,13 +115,10 @@ export interface MarketAnalysis {
   next_update: Date;
 
 }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-export interface FinancialPlan {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   id: string;
   user_id: string;
   name: string;
@@ -193,35 +160,8 @@ export interface FinancialPlan {
   created_at: Date,
   updated_at: Date;
 }
-<<<<<<< HEAD
 
 
-  userId: string;
-
-
-  requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
-  parameters: Record<string, any>;
-
-  preferences?: Record<string, any>
-}
-
-export interface FinancialResponse {
-
-
-
-export interface FinancialResponse {;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-export interface FinancialRequest {
-  user_id: string;
-  request_type: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
-  parameters: Record < string, any>;
-  preferences?: Record < string, any>;
-
-}
-export interface FinancialResponse {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   success: boolean;
   data: {
     portfolio?: InvestmentPortfolio;
@@ -232,20 +172,8 @@ export interface FinancialResponse {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
-<<<<<<< HEAD
 
-  estimatedFees: number
-}
 
-  private apiKey: string;
-
-  private baseUrl: string
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
-    this.apiKey = apiKey
-    this.baseUrl = baseUrl
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
     try {
@@ -468,24 +396,8 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
 
 
 
-<<<<<<< HEAD
-=======
-=======
-    risks: string[],
-    deadlines: Record < string, Date>;
-  }> {
-    try {
-      const response = await fetch (`${this.base_url}/api / financial / tax - optimization`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.api_key}`;
-          'Content - Type': 'application / json'}
-        body: JSON.stringify ({ user_id, tax_year })});
-;
-      // Check condition
-if ( {) {
-  $2
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
@@ -528,18 +440,11 @@ if ( {) {
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.env.FINANCIAL_ADVISOR_API_KEY || 'demo - key');
 ;
-<<<<<<< HEAD
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-export interface InvestmentPortfolio {;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');

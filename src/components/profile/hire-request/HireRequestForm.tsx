@@ -64,18 +64,8 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     userDetails 
   }),
   
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -204,25 +194,13 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
             {isSubmitting ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 Submitting...
               </>
             ) : (
               'Submit Request'
-<<<<<<< HEAD
+
             )}
           </Button>
         </DialogFooter>
@@ -233,15 +211,6 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
 }
 
 
-<<<<<<< HEAD
-
-
-=======
-
-
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 
           </Button>;
         </DialogFooter>;
@@ -249,8 +218,7 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
     </Form>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
   );
 }
@@ -372,4 +340,5 @@ function HireRequestForm() {
     </Form>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

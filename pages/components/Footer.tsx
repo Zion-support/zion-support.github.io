@@ -2,19 +2,9 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-<<<<<<< HEAD
 
-  Mail
-  Phone
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Github
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 class ErrorBoundary extends React.Component {
@@ -48,7 +38,9 @@ import {;
   Instagram,;
   Github,;
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -284,11 +276,9 @@ const microSaasCategories = [
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-<<<<<<< HEAD
-origin/main
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+origin/main
+
 
   const socialLinks = [;
     { name: "Facebook", href: "#", icon: Facebook },;
@@ -425,6 +415,7 @@ origin/main
                   </li>;
                 ))}
 
+
               </ul>
               <h3 className="text-lg font-semibold mb-6">Legal</h3>
               <ul className="space-y-3">
@@ -447,41 +438,28 @@ origin/main
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
-              transition={{ duration: 0.8 }}
-              className="text-gray-400 text-sm mb-4 md:mb-0"
-            >
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </motion.div>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
             <motion.div
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             <motion.div
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;

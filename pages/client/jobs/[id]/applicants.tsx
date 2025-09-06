@@ -1,52 +1,15 @@
-<<<<<<< HEAD
 
 
-import useSWR from 'swr';
-import { TALENT_PROFILES  } from '../../../../data/talent';
-import Link from 'next/link';
-
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-
-
-export default function JobApplicantsPage() {
-  const router = useRouter()
-  const { id } = router.query;
-  const { data: appsData } = useSWR(
-    id ? `/api/applications?jobId=${id}` : null
-    fetcher
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
 
 
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
-<<<<<<< HEAD
 
 
-import { useRouter } from 'next/router'
-import useSWR from 'swr'
-import { TALENT_PROFILES } from '../../../../data/talent'
-import Link from 'next/link'
-const fetcher = (url: string) => fetch(url).then((r) => r.json())
-export default function JobApplicantsPage() {
-  const router = useRouter()
-  const { id } = router.query
-  const { data: appsData } = useSWR(id ? `/api/applications?jobId=${id}` : null, fetcher),
-  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher),
-  const job = jobData?.job
-  const applications = (appsData?.applications as any[]) || []
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -121,38 +84,14 @@ export default function JobApplicantsPage() {_const _router = useRouter();
             </div>
           );
         })}
-<<<<<<< HEAD
 
-      </div>
-    </div>
-);
 
-          )
-        })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      </div>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </div>;
     </div>;
   );
 
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

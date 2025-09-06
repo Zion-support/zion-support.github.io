@@ -4,29 +4,15 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   quotes
   isArchived = false
   isLoading
   updateStatus
   toggleArchive
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   quotes,
   isArchived = false,
   isLoading,
@@ -35,10 +21,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   deleteQuote,
   onViewDetails
 },) => {
@@ -194,18 +178,8 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                       <span className="sr-only">View Details</span>
                     </Button>
                     
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {isArchived ? (
                       <>
                         <Button
@@ -289,17 +263,8 @@ import {formatDate} from "@/utils/dateUtils";
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
 
-<<<<<<< HEAD
-
-                              }
-                            }}
-                              } }}
-                              }
-                            }}
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             className="text-red-500"
                           >
                             <Trash2 className="h-4 w-4 mr-2" />
@@ -483,31 +448,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-                    )}
-                  </div>
-                </TableCell>
-              </TableRow>
-            ))
-          )}
-        </TableBody>
-      </Table>
-    </div>
-  )
-}
-'"
-
-=======
-                    )}
-                  </div>;
-                </TableCell>;
-              </TableRow>;
-            ));
-          )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   );
@@ -520,14 +462,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
     </div>;
   );
 };
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 '"
 

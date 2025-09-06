@@ -5,6 +5,8 @@
 
 
 
+
+
       {/* Steps list */}
       <div className="space-y-3">;
         {steps && steps.map((step,) => (;
@@ -45,7 +47,7 @@ export interface OnboardingStep {
   label: string,
   completed: boolean,
   link: string,
-<<<<<<< HEAD
+
   action?: string
 }
 
@@ -74,8 +76,7 @@ export interface OnboardingStep {;
   label: string,;
   completed: boolean,;
   link: string,;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   action?: string;
 }
 ;
@@ -84,7 +85,7 @@ interface OnboardingTrackerProps {;
   title?: string,;
   className?: string;
 }
-<<<<<<< HEAD
+
 
 export function OnboardingTracker({ 
   steps,
@@ -95,19 +96,8 @@ export function OnboardingTracker({
   const progress = Math.round((completedSteps / steps.length) * 100),
 
   return (
-=======
-export /**
- * OnboardingTracker - Function description
- */
-function OnboardingTracker() {
-  const completed_steps = steps.filter (step => step.completed).length;
-  const progress = Math.round ((completed_steps / steps.length) * 100);
-  return (
-    <div className={cn ("rounded - lg border border - zion - blue - light bg - zion - blue - dark / 60 p - 4 md:p - 6", class_name)}>;
-      <div className="flex items - center justify - between mb - 4">;
-        <h3 className="text - lg font - medium text - white">{title}</h3>;
-        <div className="text - sm font - medium text - zion - cyan">{progress}% Complete</div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       </div>;
       {/* Progress bar */}
       <div className="w - full h - 2 bg - zion - blue rounded - full mb - 5">;
@@ -116,14 +106,14 @@ function OnboardingTracker() {
           style={{ width: `${progress}%` }}
         ></div>;
       </div>;
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
       {/* Steps list */}
       <div className="space - y-3">;
         {steps.map ((step, ) => (
@@ -157,21 +147,8 @@ function OnboardingTracker() {
   /* Steps list */ "
 }<div className="space-y-3" > {
   steps.map ( (step) => (<div key= {
-<<<<<<< HEAD
 
 
-  step.id "
-}className="flex items-center" > <div className="mr-3" > {"
-  step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>)
-}</div> </div> {"
-  !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {
-  step.link
-}> </Link> </Button>)
-}</div>) )
-}</div> </div>)
-}"}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   step.link 
@@ -181,14 +158,8 @@ function OnboardingTracker() {
 }"};
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </div>;
     </div>;
   );

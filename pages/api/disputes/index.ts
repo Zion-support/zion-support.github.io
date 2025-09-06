@@ -1,9 +1,9 @@
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
@@ -11,34 +11,20 @@ import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
 
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { createDispute, readAllDisputes } from '../../../utils/fsdb';
-import { parseUserFromRequest } from '../../../utils/auth';
-import { DisputeCase, DisputeReason } from '../../../types/disputes';
-import { generateCaseId } from '../../../utils/fsdb';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   const user = parseUserFromRequest(req);
 
 
@@ -78,71 +64,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res && res.status(400).json({ error: "Missing required fields" });
 
 
+
     }
     const id = generateCaseId();
-<<<<<<< HEAD
-    const dispute: DisputeCase = {
 
-      id
-      projectId: String(projectId)
-      entityType
-      entityId
-      clientUserId: String(clientUserId)
-      talentUserId: String(talentUserId)
-      createdAt: now
-      updatedAt: now
-      status: "Open"
-      reason: reason as DisputeReason
-      reasonDetails
-      description
-      attachments: []
-      messages: []
-    }
-=======
-
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { create_dispute, readAllDisputes  } from '../../../utils / fsdb';
-import { parseUserFromRequest  } from '../../../utils / auth';
-import { DisputeCase, DisputeReason  } from '../../../types / disputes';
-import { generateCaseId  } from '../../../utils / fsdb';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const user = parseUserFromRequest (req);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    const all = await readAllDisputes ();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import type { NextApiRequest, NextApiResponse } from "next";
-import { createDispute, readAllDisputes } from "../../../utils/fsdb";
-import { parseUserFromRequest } from "../../../utils/auth";
-import { DisputeCase, DisputeReason } from "../../../types/disputes";
-import { generateCaseId } from "../../../utils/fsdb";
-export default async function handler(
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-=======
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const user = parseUserFromRequest(req);
-  if (req.method === "GET") {
-    const all = await readAllDisputes();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     let filtered = all;
     // Check condition
 if ( {) {
@@ -154,7 +79,7 @@ if ( {) {
     }
     return res.status (200).json ({ disputes: filtered });
   }
-<<<<<<< HEAD
+
   // Check condition
 if ( {) {
   $2
@@ -206,44 +131,11 @@ if ( {) {
   }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
-<<<<<<< HEAD
 
 
-=======
-=======
-      project_id: String (project_id),
-      entity_type,
-      entity_id,
-      clientUserId: String (clientUserId),
-      talentUserId: String (talentUserId),
-      created_at: now,
-      updated_at: now,
-      status: "Open",
-      reason: reason as DisputeReason,
-      reason_details,
-      description,
-      attachments: [],
-      messages: [],
-    }
-;
-    await create_dispute (dispute);
-    return res.status (201).json ({ dispute });
-  }
-  res.set_header ("Allow", "GET, POST");
-  return res.status (405).end ("Method Not Allowed");
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-res.setHeader("Allow", "GET,POST");
-  return res.status(405).end("Method Not Allowed");
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET', 'POST']);
@@ -331,10 +223,8 @@ export default async function handler(req, res) {
       description,;
       attachments: [],;
       messages: []},;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     await createDispute(dispute);
     return res.status(201).json({ dispute });
     } catch (error) {
@@ -373,9 +263,10 @@ export default async function handler(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

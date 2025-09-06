@@ -38,14 +38,18 @@ export default function GovernanceTrustPage() {
                 <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               </div>
             ))}
           </div>
         </section>
+
 
         <section className='space-y-4'>
           <h2 className='text-2xl font-semibold'>Governance</h2>
@@ -56,6 +60,7 @@ export default function GovernanceTrustPage() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 risk registers, and post-mortems.
               </div>
         <section className="space-y-4">
@@ -66,10 +71,13 @@ export default function GovernanceTrustPage() {
               <div className="text-sm text-gray-600 dark:text-gray-400">Appointed via DAO ratification, accountable to publish roadmaps, risk registers, and post-mortems.</div>
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             </div>
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <div className='font-medium mb-1'>Delegated Voting</div>
@@ -203,13 +211,7 @@ export default function GovernanceTrustPage(req, res) {
 
 
 
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Governance</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
@@ -246,17 +248,7 @@ export default function GovernanceTrustPage(req, res) {
       </div>;
     </>);
 ;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-              desc: 'LLC/wrapper (e.g., Otoco) for on-chain governance with minimized off-chain overhead.'
-            }].map((opt) => (
-              <div key={opt.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-                <div className="font-medium">{opt.title}</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               </div>
             ))  } catch (error) {
     console.error("Error:", error);
@@ -265,31 +257,15 @@ export default function GovernanceTrustPage(req, res) {
 }
           </div>
         </section>
-<<<<<<< HEAD
+
         <section className='space-y-4'>
           <h2 className='text-2xl font-semibold'>Governance</h2>
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <div className='font-medium mb-1'>Core Stewards</div>
               <div className='text-sm text-gray-600 dark:text-gray-400'>
-<<<<<<< HEAD
-                Appointed via DAO ratification, accountable to publish roadmaps
-=======
-                Appointed via DAO ratification, accountable to publish roadmaps,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                risk registers, and post-mortems.
-              </div>
 
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">Governance</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
-            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-              <div className="font-medium mb-1">Core Stewards</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Appointed via DAO ratification, accountable to publish roadmaps, risk registers, and post-mortems.</div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
@@ -306,22 +282,7 @@ export default function GovernanceTrustPage(req, res) {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        <section className='space-y-2'>
-          <h2 className='text-2xl font-semibold'>Operator Prompt</h2>
-          <p className='text-sm text-gray-600 dark:text-gray-400'>
-            Write a legal-neutral foundation charter for a decentralized AI
-            protocol committed to sovereignty, open knowledge, and trust.
-            Include DAO integration and multiverse grant rights.
-          </p>
-          <Link href='/foundation#charter'>
-            <a className='underline text-sm'>Open Charter Generator</a>
-          </Link>
-        </section>
-      </div>
-    </>
-  );
-=======
+
         <section className="space-y-2">
           <h2 className="text-2xl font-semibold">Operator Prompt</h2>
           <p className="text-sm text-gray-600 dark:text-gray-400">Write a legal-neutral foundation charter for a decentralized AI protocol committed to sovereignty, open knowledge, and trust. Include DAO integration and multiverse grant rights.</p>
@@ -402,15 +363,8 @@ export default function GovernanceTrustPage(req, res) {
       </div>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

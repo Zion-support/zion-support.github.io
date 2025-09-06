@@ -1,33 +1,22 @@
 
-<<<<<<< HEAD
-=======
-=======
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 import {useState} from 'react';
 import {use_messaging} from '@/context / MessagingContext';
 import {MainNavigation} from './MainNavigation';
 import {Logo} from '@/components / header / Logo';
 import {ModeToggle} from '@/components / ModeToggle';
 import {Menu, X} from 'lucide-react';
-<<<<<<< HEAD
-
-import {MobileMenu} from '@/components/header/MobileMenu';
-import {useIsMobile} from '@/hooks/use-mobile';
-import {MobileBottomNav} from '@/components/header/MobileBottomNav';
-export function AppHeader() {;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
@@ -50,44 +39,13 @@ function AppHeader() {
 
   } catch (error) {
     console.warn ('Messaging context not available');
-<<<<<<< HEAD
-
-=======
-=======
-  } catch (error) {
-    console.warn('Messaging context not available')
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import { useState } from 'react',;
-import { useMessaging } from '@/context/MessagingContext',;
-import { MainNavigation } from './MainNavigation',;
-import { Logo } from '@/components/header/Logo',;
-import { ModeToggle } from '@/components/ModeToggle',;
-import { Menu, X } from 'lucide-react',;
-import { MobileMenu } from '@/components/header/MobileMenu',;
-import { useIsMobile } from '@/hooks/use-mobile',;
-import { MobileBottomNav } from '@/components/header/MobileBottomNav',;
-export function AppHeader() {;
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
-  const isMobile = useIsMobile(),;
-  // Try to access the messaging context, but provide a fallback value if it's not available;
-  let unreadCount = 0;
-  try {;
-    const { unreadCount: count } = useMessaging();
-    unreadCount = count;
-  } catch (error) {;
-    console.warn('Messaging context not available');
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   }
   
   return (

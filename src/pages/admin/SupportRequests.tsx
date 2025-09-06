@@ -81,6 +81,7 @@ const MOCK_SUPPORT_REQUESTS = [
   {
 
 
+
     id: "SR-1006",
     user: "alex.wong@datacompany.com",
     userId: "user-890",
@@ -90,6 +91,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-08T13:20:00Z",
     lastUpdated: "2023-12-15T08:30:00Z",
     category: "verification"
+
 
 
   },
@@ -103,6 +105,7 @@ class ErrorBoundary extends React.Component {
   }
 
 
+
 ],
 
 export default function SupportRequests() {
@@ -110,6 +113,7 @@ export default function SupportRequests() {
   const [statusFilter, setStatusFilter] = useState<string | null>(null),
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
+
 
 
   
@@ -262,14 +266,14 @@ export default function SupportRequests() {;
     setCategoryFilter(null);
   };
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   return (
     <>
       <SEO 
@@ -293,10 +297,8 @@ export default function SupportRequests() {;
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               New Support Case
             </Button>
           </div>
@@ -419,20 +421,14 @@ export default function SupportRequests() {;
 
           
           <TabsContent value="all" className="mt-6">
-<<<<<<< HEAD
-=======
+
 
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                <Input
 
 
-                value={statusFilter || ''}
-                onValueChange={value => setStatusFilter(value || null)}
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Status' />
@@ -457,14 +453,9 @@ export default function SupportRequests() {;
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
-=======
 
 
-                value={priorityFilter || ''}
-                onValueChange={value => setPriorityFilter(value || null)}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Priority' />
@@ -483,14 +474,9 @@ export default function SupportRequests() {;
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
-=======
 
 
-                value={categoryFilter || ''}
-                onValueChange={value => setCategoryFilter(value || null)}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Category' />
@@ -527,11 +513,11 @@ export default function SupportRequests() {;
               </Button>
             </div>
             
-<<<<<<< HEAD
-=======
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             {/* Support Requests Table */}
             <Card>
               <CardContent className="p-0">
@@ -766,10 +752,8 @@ export default function SupportRequests() {;
                           </Badge>;
                         </TableCell>;
                         <TableCell>;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                             {request.priority}
                           </Badge>;
                         </TableCell>;
@@ -893,7 +877,9 @@ export default function SupportRequests() {;
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>) ;
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 }'"}
 
 
@@ -955,8 +941,8 @@ export default function SupportRequests() {;
 }</TableCell> <TableCell> {
   new Date (request.last_updated) .toLocaleDateString () ";
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
-<<<<<<< HEAD
-=======
+
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Escalated Requests</h3> <p className=" text - zion - slate - light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai - flagged"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">AI Flagged Issues</h3> <p className=" text - zion - slate - light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need - response"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Awaiting Response</h3> <p className=" text - zion - slate - light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>);
 }'"}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

@@ -106,10 +106,8 @@ if ( {) {
         throw new Error(error.message)
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       name: user?.displayName || "",
       title: "",
       bio: "",
@@ -225,21 +223,18 @@ export function TalentRegistrationForm() {;
       }),;
       if (error) {;
         throw new Error(error.message);
-<<<<<<< HEAD
-=======
+
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       }
 
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       
     } catch (error: any) {
@@ -288,14 +283,9 @@ export function TalentRegistrationForm() {;
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
           categorySkills.forEach(skill => {
-<<<<<<< HEAD
-=======
 
 
-            if (true) {}
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ) {
               newSkills.push(skill)
 import {;
@@ -606,12 +596,12 @@ if ( {) {
 
   },
 
-<<<<<<< HEAD
-=======
+
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
@@ -632,48 +622,15 @@ if ( {) {
             </div>
           </div>
 
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {
     if (skillTags.length === 0) {
       toast({
-<<<<<<< HEAD
-=======
 
-          to: email,
-          subject: 'Your Zion Talent Profile Has Been Enhanced',
-          html: `;
-          <div style="font - family: Arial, sans - serif; max - width: 600px; margin: 0 auto;">;
-            <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>;
-            <p > Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
-            <p > We've added a professional summary and categorized your skills to help you stand out.</p>;
-            <p > You can review and edit these enhancements in your profile dashboard.</p>;
-            <div style="margin - top: 30px; padding - top: 20px; border - top: 1px solid #eee;">;
-              <p style="color: #666; font - size: 12px;">© ${new Date ().getFullYear ()} Zion Marketplace</p>;
-            </div>;
-          </div>;
-          `,
-        },
-      });
-    } catch (error) {
-      logErrorToProduction ('Failed to send notification email:', {
-        data: error,
-      });
-    }
-  }
-  // Handle form submission;
-  const on_submit = async (values: TalentFormValues, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         title: 'Skills required',
         description: 'Please add at least one skill to your profile.',
         variant: 'destructive',
@@ -683,11 +640,12 @@ if ( {) {
         description: 'Please add at least one skill to your profile.',
         variant: 'destructive',
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
       })
 
       return;
@@ -699,15 +657,13 @@ if ( {) {
       if (!user?.id) {
         throw new Error('User not authenticated')
 
-<<<<<<< HEAD
 
-=======
         title: "Skills required",
         description: "Please add at least one skill to your profile.",
         variant: "destructive"}),
       return
     }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     setIsSubmitting(true),
 
@@ -721,8 +677,7 @@ if ( {) {
 
       });
 
-<<<<<<< HEAD
-=======
+
     setIsSubmitting(true),
 
     try {
@@ -746,7 +701,8 @@ if ( {) {
                 skills: skillTags,
                 location: values.location
   },;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   // Handle form submission;
   const onSubmit = async (values: TalentFormValues) => {;
     if (skillTags.length === 0) {;
@@ -887,13 +843,9 @@ if ( {) {
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
         toast({
-<<<<<<< HEAD
-=======
 
 
-          title: 'Profile Created Successfully',
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           description:
             'Your talent profile has been published and is now visible in the directory.'
         })
@@ -908,12 +860,8 @@ if ( {) {
           sendEnhancementNotification(user.id, userEmail)
         }
 
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         setIsSubmitting(false)
       }, 1500)
         
@@ -1514,11 +1462,11 @@ if (throw error) {
                             className="w-full h-full object-cover"
                             loading="lazy"
                           />
-<<<<<<< HEAD
-=======
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                         </AspectRatio>
                       ) : (
                         <div className="flex items-center justify-center h-full">
@@ -1619,11 +1567,11 @@ if (throw error) {
                   render={({ field }: { field: any }) => (
                     <FormItem>
                       <FormLabel className="text-zion-slate-light">About Yourself</FormLabel>
-<<<<<<< HEAD
-=======
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                       <FormControl>
                         <Textarea
                           className='h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white'
@@ -1637,12 +1585,8 @@ if (throw error) {
                       </FormDescription>
                     </FormItem>
                   )}
-<<<<<<< HEAD
-=======
-                />;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* AI Enhancement Option */}
                 <FormField
                   control={form && form.control}
@@ -1662,15 +1606,15 @@ if (throw error) {
                 </h3>;
                 <FormField;
                   control={form.control}
-<<<<<<< HEAD
-=======
+
                   name='enhancedProfile'
                   render={({ field }: { field: any }) => (
                     <FormItem className='flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md'>
                       <div className='space-y-0.5'>
                         <FormLabel className='text-white flex items-center'>
                           <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 />;
                 {/* AI Enhancement Option */}
                 <FormField;
@@ -1706,14 +1650,16 @@ if (throw error) {
                         : 'Generate Enhanced Profile'}
                     </Button>;
                   </div>;
-<<<<<<< HEAD
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your profile for better visibility and engagement
@@ -1732,66 +1678,8 @@ if (throw error) {
                         />
 
 
-<<<<<<< HEAD
 
 
-
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
-
-
-                {form.watch('enhancedProfile') && (
-                  <div className='flex justify-end'>
-                    <Button
-                      type='button'
-                      variant='outline'
-                      className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-                      onClick={generateEnhancedProfile}
-                      disabled={isGenerating}                    >
-                      <Sparkles className='mr-2 h-4 w-4' />
-                      {isGenerating
-                        ? 'Generating...'
-                        : 'Generate Enhanced Profile'}
-                
-                {form.watch("enhancedProfile") && (
-                  <div className="flex justify-end">
-                    <Button
-                      type="button"
-                      variant="outline"
-                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-                      onClick={generateEnhancedProfile}
-                      disabled={isGenerating}
-                    >
-                      <Sparkles className="mr-2 h-4 w-4" />
-                      {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
-
-
-=======
-
-
-                        </FormLabel>
-                        <FormDescription className="text-zion-slate-light">
-                          Let AI help optimize your profile for better visibility and engagement
-                        </FormDescription>
-                      </div>
-                      <FormControl>
-                        <Switch
-
-                          aria-label="AI profile enhancement"
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                          className="data-[state=checked]:bg-zion-purple"
-                        />
-
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </Button>
                   </div>
                 )}
@@ -1838,11 +1726,8 @@ if (throw error) {
                                 <Badge;
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
                                 >
                                   {category}
@@ -1860,53 +1745,9 @@ if (throw error) {
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none";
                                     >;
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                                      {skill}
-                                    </Badge>
-                                  ))}
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                )}
-
-
-
-              </div>;
-
-              <Separator className='bg-zion-blue-light/50' />;
-
-              {/* Skills and Availability */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-                {/* Skills Section */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-white">Skills & Expertise</h3>
-                  <FormField
-
-                    control={form.control}
-                    name="skills"
-                    render={({ field }: { field: any }) => (
-                      <FormItem>
-                        <FormLabel className="text-zion-slate-light">Skills</FormLabel>
-                        <div className="flex gap-2">
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           <FormControl>
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
@@ -2019,226 +1860,9 @@ if (throw error) {
                     {skillTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No skills added yet</p>;
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                    )}
-
-                  </div>;
-                </div>;
-
-
-                {/* Availability Section */}
-                <div className='space-y-4'>
-                  <h3 className='text-lg font-medium text-white'>
-                    Availability
-                  </h3>
-                  <FormField
-                    control={form.control}
-                    name='availability'
-                    render={({ field }: { field: any }) => (
-                      <FormItem className='space-y-4'>
-                        <FormLabel className='text-zion-slate-light'>
-                          Current Status
-                        </FormLabel>                        <FormControl>
-                          <div className='space-y-2'>
-                            <div className='flex items-center space-x-2'>
-                              <input
-                                type='radio'
-                                id='available'
-                                value='available'
-                                checked={field.value === 'available'}
-                                onChange={() => field.onChange('available')}
-                                className='text-zion-purple focus:ring-zion-purple'                              />
-                              <label
-                                htmlFor='available'
-                                className='text-white flex items-center gap-2'
-                              >
-                                <div className='h-2 w-2 rounded-full bg-green-500'></div>
-                                Available Now
-                              </label>
-                            </div>
-                            <div className='flex items-center space-x-2'>
-                              <input
-                                type='radio'
-                                id='limited'
-                                value='limited'
-                                checked={field.value === 'limited'}
-                                onChange={() => field.onChange('limited')}
-                                className='text-zion-purple focus:ring-zion-purple'                              />
-                              <label
-                                htmlFor='limited'
-
-                                className='text-white flex items-center gap-2'>;
-                                <div className='h-2 w-2 rounded-full bg-yellow-500'></div>;
-                                Limited Availability;
-                              </label>;
-                            </div>;
-
-                            <div className='flex items-center space-x-2'>;
-
-                              <input
-                                type='radio'
-                                id='unavailable'
-                                value='unavailable'
-                                checked={field.value === 'unavailable'}
-                                onChange={() => field.onChange('unavailable')}
-                                className='text-zion-purple focus:ring-zion-purple'                              />
-                              <label
-                                htmlFor='unavailable'
-                                className='text-white flex items-center gap-2'>;
-                                <div className='h-2 w-2 rounded-full bg-red-500'></div>;
-                        <Switch;
-                          aria - label='AI profile enhancement';
-                          checked={field.value}
-                          onCheckedChange={field.on_change}
-                          className='data-[state = checked]:bg - zion - purple'                        />;
-                      </FormControl>;
-                    </FormItem>)}
-                />;
-                {form.watch ('enhanced_profile') && (
-                  <div className='flex justify - end'>;
-                    <Button;
-                      type='button';
-                      variant='outline';
-                      className='border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
-                      on_click={generateEnhancedProfile}
-                      disabled={is_generating}                    >;
-                      <Sparkles className='mr - 2 h - 4 w - 4' />;
-                      {is_generating;
-                        ? 'Generating...';
-                        : 'Generate Enhanced Profile'}
-                    </Button>;
-                  </div>)}
-                {/* Generated Content Display */}
-                {generated_content && (
-                  <div className='bg - zion - blue - light / 20 border border - zion - blue - light rounded - md p - 4'>;
-                    <div className='flex items - center justify - between mb - 3'>;
-                      <h4 className='text - white font - medium flex items - center'>;
-                        <Sparkles className='w - 4 h - 4 mr - 2 text - zion - purple' />;
-                        AI - Generated Content;
-                      </h4>;
-                      <Button;
-                        type='button';
-                        size='sm';
-                        className='bg - zion - purple hover:bg - zion - purple - dark text - white';
-                        on_click={applyGeneratedContent}                      >;
-                        <Check className='mr - 1 h - 3 w - 3' /> Apply;
-                      </Button>;
-                    </div>;
-                    <div className='space - y-4'>;
-                      <div>;
-                        <h5 className='text - zion - slate - light text - sm mb - 1'>;
-                          Professional Summary;
-                        </h5>;
-                        <p className='text - zion - slate italic'>;
-                          {generated_content.summary}
-                        </p>;
-                      </div>;
-                      {generated_content.categorized_skills && (
-                        <div>;
-                          <h5 className='text - zion - slate - light text - sm mb - 1'>;
-                            Categorized Skills;
-                          </h5>;
-                          <div className='flex flex - wrap gap - 2 mt - 1'>;
-                            {Object.entries (
-                              generated_content.categorized_skills).map (([category, skills]) => (
-                              <div;
-                                key={category}
-                                className='flex items - center gap - 2';
-                              >                                <Badge;
-                                  className={`w - fit ${getCategoryColor (category as CategoryType)}`}
-                                >;
-                                  {category}
-                                </Badge>;
-                                <div className='flex flex - wrap gap - 1'>;
-                                  {skills.map ((skill: string) => (
-                                    <Badge;
-                                      key={skill}
-                                      className='bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none'                                    >;
-                                      {skill}
-                                    </Badge>))}
-                                </div>;
-                              </div>))}
-                          </div>;
-                        </div>)}
-                    </div>;
-                  </div>)}
-              </div>;
-              <Separator className='bg - zion - blue - light / 50' />;
-              {/* Skills and Availability */}
-              <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
-                {/* Skills Section */}
-                <div className='space - y-4'>;
-                  <h3 className='text - lg font - medium text - white'>;
-                    Skills & Expertise;
-                  </h3>;
-                  <FormField;
-
-                <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-white">Availability</h3>
-                  <FormField
-                    control={form.control}
-                    name="availability"
-                    render={({ field }: { field: any }) => (
-
-                      <FormItem className="space-y-4">
-                        <FormLabel className="text-zion-slate-light">Current Status</FormLabel>
-                        <FormControl>
-                          <div className="space-y-2">
-                            <div className="flex items-center space-x-2">
-                              <input
-                                type="radio"
-                                id="available"
-                                value="available"
-                                checked={field.value === "available"}
-                                onChange={() => field.onChange("available")}
-                                className="text-zion-purple focus:ring-zion-purple"
-                              />
-                              <label htmlFor="available" className="text-white flex items-center gap-2">
-                                <div className="h-2 w-2 rounded-full bg-green-500"></div>
-                                Available Now
-                              </label>
-                            </div>
-
-                            <div className="flex items-center space-x-2">
-                              <input
-                                type="radio"
-                                id="limited"
-                                value="limited"
-                                checked={field.value === "limited"}
-                                onChange={() => field.onChange("limited")}
-                                className="text-zion-purple focus:ring-zion-purple"
-                              />
-                              <label htmlFor="limited" className="text-white flex items-center gap-2">
-                                <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
-                                Limited Availability
-                              </label>
-                            </div>
-
-                            <div className="flex items-center space-x-2">
-                              <input
-                                type="radio"
-                                id="unavailable"
-                                value="unavailable"
-                                checked={field.value === "unavailable"}
-                                onChange={() => field.onChange("unavailable")}
-                                className="text-zion-purple focus:ring-zion-purple"
-                              />
-                              <label htmlFor="unavailable" className="text-white flex items-center gap-2">
-                                <div className="h-2 w-2 rounded-full bg-red-500"></div>
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                                 Currently Unavailable
                               </label>
                             </div>
@@ -2262,11 +1886,8 @@ if (throw error) {
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <Button
                   type="button"
                   variant="outline"
@@ -2286,59 +1907,16 @@ if (throw error) {
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Profile"}
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                </Button>
-              </div>
-            </CardFooter>
-          </form>
-        </Form>
-      </Card>
-    </div>
-  )
-
-
-
-            <CardFooter className='border - t border - zion - blue - light pt - 6'>;
-              <div className='flex flex - col sm:flex - row gap - 4 w - full sm:justify - between'>;
-                <Button;
-                  type='button';
-                  variant='outline';
-                  className='border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white';
-                >;
-                  Save as Draft;
-                </Button>;
-                <Button;
-                  type='submit';
-                  className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white';
-                  disabled={is_submitting}                >;
-                  {is_submitting ? 'Creating Profile...' : 'Create Profile'}
-                </Button>;
-              </div>;
-            </CardFooter>;
-          </form>;
-        </Form>;
-      </Card>;
-    </div>);
-
-}
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 //Generate enhanced profile with AI return;
 }
 
 //Generate enhanced profile with AI return;
 
 }//Call the Supabase Edge Function const {
+
 
 
   data, error '
@@ -2376,17 +1954,7 @@ if (Array.isArray (categorySkills) ) {
   if (typeof skill === 'string' && skill && !skillTags.includes (skill) ) {
 })
 }
-<<<<<<< HEAD
-//Get category color //Send notification email const sendEnhancementNotification = async (userId: string, email: string) => {
-  try {'
-  await supabase.functions.invoke ('send-email', {
-  body: {'"
-  <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, ">© $ {
-  new Date () .getFullYear ()
-=======
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   new Date () .getFullYear () 
 
 
@@ -2415,6 +1983,7 @@ if () {) {
 if ( {) {
   $2
 }
+
 
 
 //Handle form submission const onSubmit = async (values: TalentFormValues) => {
@@ -2470,6 +2039,40 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
   uploadedAvatar ? (<AspectRatio ratio= {
   1/1
 
+
+
+
+//Here would be the actual code to save the profile to Supabase /* const {
+  error ';
+}= await supabase .from ('talent profiles') .insert ({
+
+  user id: user.id, name: values.name, title: values.title, bio: values.bio, summary: final_summary, location: values.location,  skills: final_skills.map (name => ({
+  name, level: 4;
+}) ), //Default skill level hourly rate: Number (values.hourly_rate);
+availability status: values.availability;
+//Other fields would be handled here;
+});
+// Check condition
+if (throw error) {
+  $2
+}
+*/ setIsSubmitting (false);
+}";
+return (<div className="max - w-4xl mx - auto p - 4 md:p - 6"> <Card className="bg - zion - blue - dark border - zion - blue - light"> <CardHeader> <CardTitle className="text - 2xl text - white">Create Your Talent Profile</CardTitle> <CardDescription className="text - zion - slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {
+  ...form;
+}> <form on_submit= {
+  form.handle_submit (on_submit) ";
+}> <CardContent className="space - y-8"> {
+  /* Basic Information */ ";
+}<div className="space - y-4"> <h3 className="text - lg font - medium text - white">Basic Information</h3> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6"> <div className="col - span - 1" > <FormField <FormItem> <FormLabel className="text - zion - slate - light">Full Name</FormLabel> <FormControl> <div className="relative"> <UserRound className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
+}/> </div> <div className="col - span - 1" > <FormField <FormItem> <FormLabel className="text - zion - slate - light">Professional Title</FormLabel> <FormControl> <div className="relative"> <Briefcase className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
+}/> </div> <div className="col - span - 1" > <FormField <FormItem> <FormLabel className="text - zion - slate - light">Location</FormLabel> <FormControl> <div className="relative"> <MapPin className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
+}/> </div> <div className="col - span - 1" > <FormField <FormItem> <FormLabel className="text - zion - slate - light">Hourly Rate (USD) </FormLabel> <FormControl> <div className="relative"> <span className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate">$</span> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>);
+}/> </div> </div> {
+  /* Upload Avatar */ ";
+}<div className="space - y-2"> <FormLabel className="text - zion - slate - light">Profile Picture</FormLabel> <div className="flex items - center gap - 6"> <div className="relative w - 24 h - 24 rounded - full overflow - hidden bg - zion - blue - light border border - zion - blue - light"> {
+  uploaded_avatar ? (<AspectRatio ratio= {
+  1 / 1;
 
 }> <img src= {
   uploaded_avatar ";

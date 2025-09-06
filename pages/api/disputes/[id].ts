@@ -1,39 +1,12 @@
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
-<<<<<<< HEAD
-
-  parseUserFromRequest
-  ensureInvolvedOrAdmin
-
-=======
-
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,;
-
-} from "../../../utils/auth";
-export default async function handler(
-
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-
-  const { id } = req.query;
-
-  if (typeof id !== "string")
-
-    return res && res.status(400).json({ error: "Invalid id" });
 
 
-  const user = parseUserFromRequest(req);
-  if (req && req.method === "GET") {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const dispute = await getDisputeById(id);
     if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
     try {
@@ -42,16 +15,8 @@ export default async function handler(
     }
     return res && res.status(200).json({ dispute });
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-  res && res.setHeader("Allow", "GET");
-  return res && res.status(405).end("Method Not Allowed");
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
@@ -74,7 +39,7 @@ export default async function handler(
 }
 
 
-<<<<<<< HEAD
+
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -117,16 +82,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getDisputeById  } from '../../../utils / fsdb';
-import {
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,
-} from '../../../utils / auth';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 ;
 export default async /**
  * handler - Function description
@@ -145,13 +102,15 @@ if ( {) {
 }
 
 
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

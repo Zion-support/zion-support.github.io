@@ -87,14 +87,8 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
     lg: 'h-5 w-5'
   },
   
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -147,14 +141,8 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
 
   );
 }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     </TooltipProvider>);
 }

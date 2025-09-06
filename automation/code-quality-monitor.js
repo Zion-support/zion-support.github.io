@@ -41,37 +41,16 @@ class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, ma
 ; this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString();
 ; this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {; this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null};
 ;
-<<<<<<< HEAD
-=======
-
-=======
 
 
-=======
-class CodeQualityMonitor {;
-  constructor() {;
-    this.metrics = {;
-      complexity: 0, maintainability: 0,
-      testCoverage: 0, performance: 0,
-      lastUpdated: new Date().toISOString(), ,
-    this.logFile = path.join(__dirname, "logs", "code-quality.log");
-};
-;
-  log(message) {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       this.log('"ESLint": PASS');
     } catch (error) {
       results.lint.status = 'fail';
@@ -169,59 +148,11 @@ if (require.main === module) {
 }
 
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-};
-;
-  async analyzeCodeQuality() {;
-    try {;
-      this.log("Starting code quality analysis...");
-;
-      this.metrics.complexity = this.calculateComplexity();
-      this.metrics.maintainability = this.calculateMaintainability();
-      this.metrics.testCoverage = this.calculateTestCoverage();
-      this.metrics.performance = this.calculatePerformance();
-      this.metrics.lastUpdated = new Date().toISOString();
-;
-      this.saveMetrics();
-      this.log("Code quality analysis completed successfully");
-      return this.metrics;
-    } catch (error) {;
-      this.log(`Code quality analysis failed: ${error.message}`, "ERROR");
-      return null;
-};
-=======
-#!/usr/bin/env node,
-const fs = require("fs"),
-const path = require("path"),
-const { execSync } = require("child_process"),
-,
-class CodeQualityMonitor {,
-  constructor() {,
-    this.metrics = {,
-      complexity: 0,
-      maintainability: 0,
-      testCoverage: 0,
-      performance: 0,
-      lastUpdated: new Date().toISOString(),
-    };
-    this.logFile = path.join(__dirname, "logs", "code-quality.log"),
-  };
-
-=======
-
-=======
-
-}
-}
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
@@ -259,6 +190,7 @@ class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, main
 origin/main
 origin/automation-improvements-final
 class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)}; async analyzeCodeQuality() {try {; this.log("Starting code quality analysis..."); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
+
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
@@ -269,72 +201,13 @@ class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, main
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-const fs = require ("fs");
-const path = require ("path");
-const { exec_sync } = require ("child_process");
-;
-class CodeQualityMonitor { constructor () { this.metrics = { complexity: 0, maintainability: 0, test_coverage: 0, performance: 0, last_updated: new Date ().toISOString ()} this.log_file = path.join (__dirname, "logs", "code - quality.log")}
-; log (message) { const timestamp = new Date ().toISOString (); const log_message = `[${timestamp}] ${message}\n`; console.log (message); fs.appendFileSync (this.log_file, log_message)}
-; async analyzeCodeQuality () { try { this.log ("Starting code quality analysis...");
-; this.metrics.complexity = this.calculate_complexity (); this.metrics.maintainability = this.calculate_maintainability (); this.metrics.test_coverage = this.calculateTestCoverage (); this.metrics.performance = this.calculate_performance (); this.metrics.last_updated = new Date ().toISOString ();
-; this.save_metrics (); this.log ("Code quality analysis completed successfully"); return this.metrics} catch (error) { this.log (`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
-;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-;
-#!/usr/bin/env node,;
-const fs = require("fs"),;
-const path = require("path"),;
-const { execSync } = require("child_process"),;
-,;
-class CodeQualityMonitor {,;
-  constructor() {,;
-    this.metrics = {,;
-      complexit: y: 0,;
-      maintainabilit: y: 0,;
-      testCoverag: e: 0,;
-      performanc: e: 0,;
-      lastUpdate: d: new Date().toISOString();
-    },;
-    this.logFile = path.join(__dirname, "logs", "code-quality.log");
-  },;
-,;
-  log(message) {,;
-    const timestamp = new Date().toISOString(),;
-    const logMessage = `[${timestamp}] ${message}\n`,;
-    console.log(message),;
-    fs.appendFileSync(this.logFile, logMessage);
-  },;
-,;
-  async analyzeCodeQuality() {,;
-    try {,;
-      this.log("Starting code quality analysis..."),;
-,;
-      this.metrics.complexity = this.calculateComplexity(),;
-      this.metrics.maintainability = this.calculateMaintainability(),;
-      this.metrics.testCoverage = this.calculateTestCoverage(),;
-      this.metrics.performance = this.calculatePerformance(),;
-      this.metrics.lastUpdated = new Date().toISOString(),;
-,;
-      this.saveMetrics(),;
-      this.log("Code quality analysis completed successfully"),;
-      return this.metrics;
-    } catch (error) {,;
-      this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),;
-      return null;
-    },;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

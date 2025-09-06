@@ -1,21 +1,6 @@
 
-<<<<<<< HEAD
 
 
-import React from "react",
-import { cn } from "@/lib/utils";
-import { CheckIcon } from "lucide-react";
-interface StepProps {
-
-  status: "incomplete" | "current" | "complete"
-  label: string
-
-  description?: string;
-import { cn } from "@/lib/utils",
-import { CheckIcon } from "lucide-react",
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -38,34 +23,17 @@ export function Step(): any ({;
   label;
   description;
   className}: StepProps) {;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
-<<<<<<< HEAD
-  className?: string
-}
-
-
-export function Step({
-  status,
-  label,
-  description,
-
-=======
 
   className?: string
 }
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   className}: StepProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -138,15 +106,17 @@ export function Step({;
           <span>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             {/* Step number would go here */}
           </span>;
         )}
@@ -159,31 +129,9 @@ export function Step({;
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
 
+
         >
-<<<<<<< HEAD
-          {label}
-        </h3>
-        {description && (
-          <p className="text-sm text-zion-slate-light">{description}</p>
-        )}
-      </div>
-    </li>
-  )
-}
-=======
-=======
-      </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-interface StepsProps {
-  currentStep: number
-  className?: string;
-  children: React.ReactNode
-}
-
-
-  const childrenArray = React.Children.toArray(children);
-;
 
           {label}
         </h3>;
@@ -201,10 +149,8 @@ interface StepsProps {
 
 interface StepsProps {
   currentStep: number
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 interface StepsProps {;
   currentStep: number,;
@@ -243,14 +189,8 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 
 
 
-<<<<<<< HEAD
-=======
-  return (
-=======
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
@@ -279,11 +219,11 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           />;

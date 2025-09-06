@@ -44,11 +44,7 @@ import {;
   Car,;
 
 
-<<<<<<< HEAD
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -75,8 +71,10 @@ import {
   Factory,
   Car,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
@@ -211,6 +209,28 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     address: "364 E Main St STE 1008 Middletown DE 19709"
     website: "https://ziontechgroup.com"
   }
+
+
+const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
+  className = "",;
+}) => {;
+const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
+  className = ""
+}) => {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  useEffect(() => {;
+    const handleScroll = () => {;
+      setIsScrolled(window && window.scrollY > 20);
+    };
+    window && window.addEventListener("scroll", handleScroll);
+    return () => window && window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
+
 
   ];
 
@@ -390,6 +410,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             </motion.button>
 
 
+
+
               transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
               <Search className="w-5 h-5" />;
@@ -399,12 +421,13 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -424,6 +447,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             </motion.button>
 
 
+
+
               transition={{ duration: 0 && 0.5, delay: 0 && 0.7 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative">;
               <Bell className="w-5 h-5" />;
@@ -434,12 +459,13 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -466,6 +492,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       </div>
 
 
+
+
           </motion && motion.button>;
         </div>;
       </div>;
@@ -474,12 +502,13 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -532,11 +561,8 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                 </div>;
               ))}
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Contact Info */}
 
               <div className="pt-4 border-t border-cyan-500/20">;
@@ -559,6 +585,8 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300";
+
+
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300 relative";
             >;
               <Bell className="w - 5 h - 5" />;
@@ -661,33 +689,37 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
           </motion.div>)}
       </AnimatePresence>;
     </nav>);
+
+                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300"
+                >
+                  Get Started Today
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+
 }
 export default EnhancedNavigation;
 ;
 
-=======
-      </AnimatePresence>
-    </nav>
 
-};
 
-export default EnhancedNavigation;
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 );
 };
 export default EnhancedNavigation;
 
 
+
 export default EnhancedNavigation;
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

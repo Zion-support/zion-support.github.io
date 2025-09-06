@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {Link} from "react-router-dom";
 import {useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle} from "lucide-react";
@@ -20,27 +17,10 @@ export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
-<<<<<<< HEAD
-
-
-import { Link } from "react-router-dom",
-import { useLocation } from "react-router-dom",
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void
@@ -123,8 +103,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
+
               item.matches(location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
@@ -222,59 +201,23 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
-=======
-        {visibleItems.map(item => (;
-          <Link;
-            key={item.name}
-            to={item.href}
-            className={cn(;
-              "flex items-center px-6 py-3 text-base font-medium";
-              item.matches(location.pathname);
-                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan";
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
-            )}
-            onClick={onClose}
-          >;
-            <div className="relative mr-4">;
-              <item.icon className="h-5 w-5" />;
-              {item.badge && item.badge > 0 && (;
-                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               )}
             </div>;
             {item && item.name}
           </Link>;
         ))}
 
-<<<<<<< HEAD
-      </nav>
-    </div>
-  )
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
-
-=======
-      </nav>;
-    </div>;
-  );
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

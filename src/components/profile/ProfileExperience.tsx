@@ -7,10 +7,8 @@
             
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             <div>
               <h4 className="text-white font-medium">{exp.role}</h4>
               <div className="text-zion-cyan mb-1">{exp.company}</div>
@@ -22,19 +20,17 @@
           </div>
         ))}
       </div>
+
     </div>
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
 
 }
-<<<<<<< HEAD
-=======
+
 
               <p className="text-zion-slate">{exp.description}</p>
             </div>
@@ -105,4 +101,5 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
     </div>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

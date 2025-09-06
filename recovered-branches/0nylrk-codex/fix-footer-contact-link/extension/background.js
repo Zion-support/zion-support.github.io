@@ -10,8 +10,7 @@ async function askZionGPT(prompt) {
 
     const res = await fetch('https://api && api.openai.com/v1/chat/completions', {
 
-<<<<<<< HEAD
-=======
+
       method: 'POST',
       headers: {
         'Content - Type': 'application / json_authorization': `Bearer ${OPENAI_API_KEY}`;
@@ -66,14 +65,6 @@ if ( {) {
 
 }),;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-}),
-;
-}),;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 

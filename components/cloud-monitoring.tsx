@@ -6,20 +6,21 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 export default function CloudMonitoringPage() {
   const features = [
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 export default function CloudMonitoringPage() {
   const features = [
     {
@@ -65,15 +66,8 @@ export default function CloudMonitoringPage() {
       icon: <Zap className='w-8 h-8 text-white' />
       title: 'Auto-scaling'
       description:
-<<<<<<< HEAD
 
-        'Intelligent auto-scaling based on real-time metrics and predictive analytics.'
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
-      gradient: 'from-teal-400 to-blue-500'
-    }
-  ];
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
@@ -82,66 +76,10 @@ export default function CloudMonitoringPage() {
     },;
   ];
 
-<<<<<<< HEAD
 
 
-  const monitoringCapabilities = [
-    {
-      category: 'Infrastructure'
-      icon: <Server className='w-6 h-6 text-blue-400' />
-      metrics: [
-        'CPU Usage'
-        'Memory Utilization'
-        'Disk I/O'
-        'Network Performance'
-        'Container Metrics'
-      ]
-    }
-    {
-      category: 'Applications'
-      icon: <Code className='w-6 h-6 text-green-400' />
-      metrics: [
-        'Response Time'
-        'Error Rates'
-        'Throughput'
-        'User Experience'
-        'API Performance'
-      ]
-    }
-    {
-      category: 'Databases'
-      icon: <Database className='w-6 h-6 text-purple-400' />
-      metrics: [
-        'Query Performance'
-        'Connection Pool'
-        'Index Usage'
-        'Replication Lag'
-        'Storage Growth'
-      ]
-    }
-    {
-      category: 'Security'
-      icon: <Shield className='w-6 h-6 text-red-400' />
-      metrics: [
-        'Threat Detection'
-        'Access Logs'
-        'Vulnerability Scans'
-        'Compliance Status'
-        'Audit Trails'
-      ]
-    },  ];      icon: <Shield className="w-6 h-6 text-red-400" />
-      metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
-    }
-
-      icon: <Activity className='w-8 h-8 text-white' />,
-  ];
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function CloudMonitoringPage() {
   const features = [
@@ -348,7 +286,7 @@ export default function CloudMonitoringPage() {;
   ];
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
     }
   ];
 ;
@@ -493,10 +431,31 @@ export default function CloudMonitoringPage() {;
               </Card>;
 
 
+
+                key={index}
+                className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - green - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";
+                style={{ animation_delay: `${(index * 0.1) + 0.2}s` }}
+              >;
+                <div className="relative">;
+                  <div className={`w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center transition - all duration - 300 group - hover:scale - 110 group - hover:shadow - lg bg - gradient - to - br ${feature.color} shadow - xl`}>;
+                    {feature.icon}
+                  </div>;
+                </div>;
+                <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - green - 400 transition - colors duration - 300">;
+                  {feature.title}
+                </h3>;
+                <p className="text - gray - 400 leading - relaxed">;
+                  {feature.description}
+
+                  {feature.description}
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 </p>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
@@ -504,7 +463,10 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Monitoring Capabilities */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -513,7 +475,10 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               Comprehensive Monitoring
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -525,7 +490,9 @@ export default function CloudMonitoringPage() {;
             {monitoringCapabilities.map((capability, index) => (
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 </p>
               </Card>
             ))}
@@ -535,7 +502,9 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       {/* Monitoring Capabilities */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -544,14 +513,13 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               Comprehensive Monitoring
 
             </h2>
@@ -588,19 +556,21 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Use Cases Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -609,19 +579,21 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               Use Cases
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -632,17 +604,14 @@ export default function CloudMonitoringPage() {;
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {/* Use Cases Section */}
-      <section className='py-24 bg-gray-900 relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
+      <section className="py-24 bg-gray-900 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
               Use Cases
 
             </h2>
@@ -664,24 +633,7 @@ export default function CloudMonitoringPage() {;
               <Card
                 key={index}
 
-<<<<<<< HEAD
-                className="group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{useCase.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-green-400 transition-colors duration-300">
-                      {useCase.title}
-                    </h3>
-                    <p className="text-gray-400 mb-4 leading-relaxed">
-                      {useCase.description}
-                    </p>
-                    <div className="grid grid-cols-2 gap-2">
-                      {useCase.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                           {benefit}
                         </div>
@@ -697,15 +649,16 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Pricing Section */}
 
       <section id="pricing" className="py-24 bg-black relative overflow-hidden">
@@ -852,11 +805,7 @@ export default function CloudMonitoringPage() {;
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
                     <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
@@ -874,50 +823,10 @@ export default function CloudMonitoringPage() {;
                   </div>;
                   <p className='text-gray-400'>{plan && plan.description}</p>;
                 </div>;
-                <ul className='space-y-4 mb-8'>;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'>;
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
-                  <p className="text-gray-400">{plan && plan.description}</p>;
-                </div>;
-                <ul className="space-y-4 mb-8">;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">;
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
-
-                      {feature}
-                    </li>;
-                  ))}
-
-                </ul>;
 
 
-                <Button
-                  href='/contact'
-                  className={`w-full ${plan && plan.buttonColor} text-white`}
-                  size='lg'>;
-                  Get Started;
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan && plan.buttonColor} text-white`}
-                  size="lg";
-                >;
-                  Get Started;
-                  <ArrowRight className="w-5 h-5 ml-2" />;
-                </Button>;
-              </Card>;
-
-=======
-                      {feature}
-=======
-
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                     </li>
                   ))}
                 </ul>
@@ -932,7 +841,6 @@ export default function CloudMonitoringPage() {;
                 </Button>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
@@ -940,19 +848,21 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Integrations Section */}
 
       <section className="py-24 bg-gray-900 relative overflow-hidden">
@@ -1012,23 +922,18 @@ export default function CloudMonitoringPage() {;
               </Card>;
 
 
-<<<<<<< HEAD
             ))}
           </div>
         </div>
       </section>
 
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-              </Card>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -1043,11 +948,11 @@ export default function CloudMonitoringPage() {;
       {/* CTA Section */}
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1056,14 +961,14 @@ export default function CloudMonitoringPage() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             Ready to Monitor Your Infrastructure?
           </h2>
           <p className='text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1094,40 +999,8 @@ export default function CloudMonitoringPage() {;
           <div className="flex flex-col sm:flex-row gap-6 justify-center">;
 
 
-          <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Join thousands of DevOps teams who trust us to monitor their critical infrastructure.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            <Button
-              href="/contact"
-              variant="secondary"
-              size="lg"
-              className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl">;
-              Start Free Trial;
-              <ArrowRight className="w-5 h-5 ml-2" />;
-            </Button>;
-            <Button
-              href="#demo"
-              variant="outline"
-              size="lg"
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-}
-    </>);
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
               className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
@@ -1137,13 +1010,8 @@ export default function CloudMonitoringPage() {;
         </div>
       </section>
     </>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

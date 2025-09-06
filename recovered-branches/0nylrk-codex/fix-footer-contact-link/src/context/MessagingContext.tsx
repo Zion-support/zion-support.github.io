@@ -1,33 +1,7 @@
 
-<<<<<<< HEAD
-
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { MessagingContextType  } from '@/types/messaging';
-import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
-// Default context used when React type definitions are missing
 
 
-=======
 
-
-const defaultContext: MessagingContextType = {
-  messages: [],
-  conversations: [],
-  unreadCount: 0,
-  activeConversation: null,
-  activeMessages: [],
-  isLoading: false,
-  sendMessage: async () => {},
-  createConversation: async () => {},
-  markAsRead: async () => {},
-  setActiveConversation: () => {},
-  fetchConversations: async () => {},
-  loadMessages: async () => {}
-};
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -50,12 +24,13 @@ const defaultContext: MessagingContextType = {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
 const defaultContext: MessagingContextType = {
   messages: []
@@ -91,12 +66,9 @@ export function useMessaging(): MessagingContextType {
   }
   return context;
 }
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 import React, { create_context, useContext, useEffect, ReactNode } from 'react';
 import {use_auth} from '@/hooks / use_auth';
@@ -145,15 +117,7 @@ function MessagingProvider() {
 ;
 
   const {
-=======
 
-// Provider component;
-export function MessagingProvider(): any ({ children }: { children: ReactNode }) {;
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -175,53 +139,8 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     create_conversation;
     markAsRead;
 
-<<<<<<< HEAD
-
-  return (
-    <MessagingContext.Provider value={contextValue}>
-
-;
-// Provider component;
-export function MessagingProvider({ children }: { children: ReactNode }) {;
-  const { user } = useAuth(),;
-  const {;
-    messages,;
-    activeMessages,;
-    setActiveMessages,;
-    conversations,;
-    setConversations,;
-    unreadCount,;
-    setUnreadCount,;
-    activeConversation,;
-    setActiveConversation,;
-    isLoading,;
-    sendMessage,;
-    createConversation,;
-    markAsRead,;
-    fetchConversations,;
-    loadMessages;
-  } = useMessagingOperations(user),;
-  // Setup real-time subscription;
-  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations),;
-  // Calculate unread count from conversations;
-  useEffect(() => {;
-    if (conversations.length > 0) {;
-      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;
-      setUnreadCount(count);
-    }
-  }, [conversations, setUnreadCount]),;
-  // Fetch conversations when user changes;
-  useEffect(() => {;
-    if (user) {;
-      fetchConversations();
-    } else {;
-      setConversations([]),;
-
-=======
 
 
-      setConversations([]);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       setUnreadCount(0);
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
@@ -245,17 +164,12 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     fetchConversations,;
     loadMessages;
   };
-<<<<<<< HEAD
-
-  return (;
-    <MessagingContext.Provider value={contextValue}>;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {children}
 
     </MessagingContext && MessagingContext.Provider>;

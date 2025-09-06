@@ -1,18 +1,14 @@
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;
 
-=======
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function AiHrAnalyticsPlatform() {
 	return (
 		<ServiceLanding
@@ -21,10 +17,10 @@ export default function AiHrAnalyticsPlatform() {
 			subtitle="People insights that drive outcomes"
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 			implementationWeeks="1-2 weeks"
 			roiNote="HR teams report measurable gains in retention and hiring yield"
 			features={[
@@ -36,23 +32,8 @@ export default function AiHrAnalyticsPlatform() {
 				"Integrations: Workday, BambooHR, Greenhouse, Lever",
 				"Compensation benchmarking and ranges",
 				"Engagement drivers and action suggestions"
-<<<<<<< HEAD
 
 
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["SaaS", "Retail", "Healthcare", "Manufacturing"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform"
 		/>
 	)
@@ -66,8 +47,7 @@ export default function AiHrAnalyticsPlatform() {
 }
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

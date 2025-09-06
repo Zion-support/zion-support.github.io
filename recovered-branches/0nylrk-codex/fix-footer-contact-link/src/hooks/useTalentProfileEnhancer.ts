@@ -1,23 +1,17 @@
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 
 export interface TalentProfileData {
-=======
 
-import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-export interface TalentProfileData {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   name: string;
   title: string;
   bio: string;
@@ -26,40 +20,22 @@ export interface TalentProfileData {;
   location?: string;
 
 }
-<<<<<<< HEAD
-=======
-export interface CategorizedSkills {
-=======
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 
 export interface CategorizedSkills {
 
-export interface CategorizedSkills {;
-
-<<<<<<< HEAD
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   programming: string[];
   devops: string[];
   platforms: string[];
 
 
-<<<<<<< HEAD
-
-  other: string[]
-}
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export interface EnhancedProfile {
   summary: string,
@@ -83,12 +59,10 @@ export function useTalentProfileEnhancer() {;
       });
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
       if (error) {
         throw new Error(error.message)
-=======
-
 
       if (error) {
         throw new Error(error.message)
@@ -132,15 +106,17 @@ export function useTalentProfileEnhancer() {;
         throw new Error(error.message);
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       }
       return data as EnhancedProfile
     } catch (err: any) {
@@ -154,11 +130,10 @@ export function useTalentProfileEnhancer() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   return {
     enhanceProfile;
     isGenerating;
@@ -171,15 +146,17 @@ export function useTalentProfileEnhancer() {;
     error;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 }

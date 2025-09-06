@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
@@ -36,23 +33,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const entityKey = `${personId}:${startDate}`
   const version = nextVersionFor(state, entityKey)
   const event = {
-<<<<<<< HEAD
 
-    eventId: uuidv4()
-    type: "talent_mobility" as const
-    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate }
-    originInstanceId: state.config.instanceId
-    version
-    timestamp: Date.now()}
-  upsertEvent(state, event)
-  writeState(state)
-  const body = { ...event, propagate: false }
-  const headers: Record<string, string> = {}
-  const sig = signPayload(body)
-  if (sig) headers["x-zion-signature"] = sig
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -79,12 +61,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ status: "created", version, eventId: event.eventId });
 };
 
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -268,13 +246,14 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

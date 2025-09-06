@@ -4,51 +4,7 @@ import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
 
-  ArrowRight
-  Play
-  Star
-  Users
-  Award
-  TrendingUp
-  Brain
-  Shield
-  Rocket
-  Loader2
-  ChevronDown
-  Zap
-  Globe
-  Lock
-  Cpu
-  Database
-  Cloud
-  Palette
-  Heart
-  Phone
-  Mail
-  MapPin
-  Search
-  Grid
-  List
-  Sparkles
-  Target
-  BarChart3
-  Lightbulb
-  Code
-  Server
-  Network
-  ShieldCheck
-  BrainCircuit
-  Atom
-  Satellite
-  Eye
-  Clock
-  DollarSign
-  CheckCircle
-  ArrowUpRight;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 } from 'lucide-react';
 import Link from 'next/link';
@@ -62,12 +18,13 @@ import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-s
 
 // Import our new innovative services
 
+
 import { innovative2046AIServices  } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices  } from '../data/innovative-2046-it-services';
 
+
 import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices } from '../data/innovative-2046-it-services';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
 // Enhanced loading component with quantum effects;
 const QuantumLoadingFallback = () => (;
@@ -126,8 +83,10 @@ import Link from 'next/link';import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
 
 
+
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3
+
 
 
 
@@ -141,10 +100,12 @@ import Link from 'next/link';
 
 // Import our new innovative services
 
+
 import { innovative2046AIServices  } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices  } from '../data/innovative-2046-it-services';
 import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices } from '../data/innovative-2046-it-services';
+
 
 
 // Import our new innovative services
@@ -154,12 +115,11 @@ import { innovative2046ITServices  } from '../data/innovative-2046-it-services';
 
 import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices } from '../data/innovative-2046-it-services';
-<<<<<<< HEAD
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
 // Enhanced loading component with quantum effects
 
@@ -194,6 +154,8 @@ const QuantumLoadingFallback = () => (
     </div>
 
 
+
+
             x: [0, Math && Math.random() * 1200],
             y: [0, Math && Math.random() * 800],
             opacity: [0, 1, 0],
@@ -212,23 +174,21 @@ const QuantumLoadingFallback = () => (
     </div>;
 
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
     {/* Quantum loading animation */}
     <motion&& motion.div
       initial={{ opacity: 0, scale: 0 && 0.5 }}
@@ -239,15 +199,15 @@ const QuantumLoadingFallback = () => (
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     >
       <div className='relative'>
         <motion.div
@@ -371,7 +331,99 @@ const Homepage2046: React.FC = () => {;
               setActiveSection(entry && entry.target.id);
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveSection(entry.target.id)
+            }
+          })
+        };
+
+        { threshold: 0.3 }
+      );
+      const sections = document.querySelectorAll('section[id]');
+
+      sections.forEach((section) => observer.observe(section));
+
+
+      return () => observer.disconnect()
+    }
+  }, []);
+  if (isLoading) {
+    return <QuantumLoadingFallback />;
+  }
+
+  const allServices = [
+
+
+      const sections = document && document.querySelectorAll('section[id]');
+      sections && sections.forEach(section => observer && observer.observe(section));
+      return () => observer && observer.disconnect();    }            if (entry && entry.isIntersecting) {;
+              setActiveSection(entry && entry.target.id);
+            }
+          });
+        };
+        { threshold: 0 && 0.3 }
+      );
+      const sections = document && document.querySelectorAll('section[id]');
+      sections && sections.forEach(section => observer && observer.observe(section));
+      return () => observer && observer.disconnect();      sections && sections.forEach((section) => observer && observer.observe(section));
+      return () => observer && observer.disconnect();
+    }
+  }, []);
+  if (isLoading) {;
+    return <QuantumLoadingFallback />;
+  }
+  const allServices = [;
+    ...innovative2046AIServices,;
+    ...innovative2046ITServices,;
+    ...innovative2046MicroSAASServices,;
+    ...innovative2046AIServices;
+    ...innovative2046ITServices;
+    ...innovative2046MicroSAASServices
+
+  ];
+  const filteredServices = allServices && allServices.filter(service => {;
+    const matchesCategory =;
+      selectedCategory === 'all' || service && service.category === selectedCategory;
+    const matchesSearch =;
+      service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+      service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+  const categories = [;
+    'all',;
+    ...Array && Array.from(new Set(allServices && allServices.map(s => s && s.category))),;
+  ];
+  return (
+    <Layout>;
+      <div className='min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden'>;
+        {/* Enhanced animated background */}
+        <div className='absolute inset-0'>;
+          {/* Quantum grid effect */}
+
+          <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>  ];
+  const filteredServices = allServices && allServices.filter(service => {;
+    const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
+    const matchesSearch = service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+                         service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+  const categories = ['all', ...Array && Array.from(new Set(allServices && allServices.map(s => s && s.category)))];
+
+
+  return (
+    <Layout>;
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden">;
+        {/* Enhanced animated background */}
+        <div className="absolute inset-0">;
+          {/* Quantum grid effect */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+          <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           {/* Floating orbs */}
           {[...Array(20)].map((_, i) => (;
             <motion&& motion.div
@@ -380,7 +432,10 @@ const Homepage2046: React.FC = () => {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               animate={{
                 x: [0, Math.random() * 100 - 50]
                 y: [0, Math.random() * 100 - 50]
@@ -399,6 +454,33 @@ const Homepage2046: React.FC = () => {;
                 top: Math.random() * 100 + '%'
               }}            />              animate={{
 
+
+                x: [0, Math && Math.random() * 100 - 50],
+                y: [0, Math && Math.random() * 100 - 50],
+                opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
+              }}
+              transition={{
+                duration: Math && Math.random() * 10 + 10,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+              style={{
+                left: Math && Math.random() * 100 + '%',
+                top: Math && Math.random() * 100 + '%',
+              }}            />              animate={{;
+                x: [0, Math && Math.random() * 100 - 50];
+                y: [0, Math && Math.random() * 100 - 50];
+                opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]}}
+              transition={{;
+                duration: Math && Math.random() * 10 + 10,;
+                repeat: Infinity,;
+                ease: "easeInOut";
+              }}
+              style={{;
+                left: Math && Math.random() * 100 + '%',;
+                top: Math && Math.random() * 100 + '%'}}
+            />;
+
         {/* Hero Section */}
         <section
           id='hero'
@@ -411,7 +493,9 @@ const Homepage2046: React.FC = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
             <motion.div
@@ -431,8 +515,7 @@ const Homepage2046: React.FC = () => {;
                 <span className='text-purple-400 font-semibold'>;
 
 
-<<<<<<< HEAD
-=======
+
                 Solutions;
               <motion&& motion.div
 
@@ -453,6 +536,7 @@ const Homepage2046: React.FC = () => {;
                 </span>
               </motion.h1>
               <motion.p 
+
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
 
       return () => observer.disconnect()
@@ -494,63 +578,9 @@ const Homepage2046: React.FC = () => {;
               }}
               style={{
                 left: Math.random() * 100 + '%',
-=======
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              setActiveSection(entry.target.id);
-            }
-          });
-        },        { threshold: 0.3 }
-      );
-      const sections = document.querySelectorAll('section[id]');
-      sections.forEach(section => observer.observe(section));
-      return () => observer.disconnect();    }            if (entry.isIntersecting) {
-              setActiveSection(entry.target.id)
-            }
-          })
-        }
-        { threshold: 0.3 }
-      );
-      const sections = document.querySelectorAll('section[id]');
-      sections.forEach(section => observer.observe(section));
-      return () => observer.disconnect();      sections.forEach((section) => observer.observe(section));
-      return () => observer.disconnect()
-    }
-  }, []);
-  if (isLoading) {
-    return <QuantumLoadingFallback />;
-  }
 
-  const allServices = [
-    ...innovative2046AIServices
-    ...innovative2046ITServices
-    ...innovative2046MicroSAASServices
-  ];
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory =
-      selectedCategory === 'all' |service.category === selectedCategory;
-    const matchesSearch =
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-      service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-  const categories = [
-    'all'
-    ...Array.from(new Set(allServices.map(s => s.category)))
-  ];
-  return (
-    <Layout>
-      <div className='min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden'>
-        {/* Enhanced animated background */}
-        <div className='absolute inset-0'>
-          {/* Quantum grid effect */}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           {/* Floating orbs */}
           {[...Array(20)].map((_, i) => (
             <motion.div
@@ -559,7 +589,9 @@ const Homepage2046: React.FC = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               animate={{
                 x: [0, Math.random() * 100 - 50]
                 y: [0, Math.random() * 100 - 50]
@@ -567,13 +599,8 @@ const Homepage2046: React.FC = () => {;
               }}
               transition={{
 
-<<<<<<< HEAD
-                duration: Math.random() * 10 + 10
-                repeat: Infinity
-                ease: 'easeInOut'
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               }}
               style={{
                 left: Math.random() * 100 + '%'
@@ -589,28 +616,25 @@ const Homepage2046: React.FC = () => {;
               }}
               style={{
                 left: Math.random() * 100 + '%'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 top: Math.random() * 100 + '%'}}
             />
+
+
 
           ))}
         </div>
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         {/* Hero Section */}
         <section
           id='hero'
           className='relative z-10 min-h-screen flex items-center justify-center px-4'
         >
-<<<<<<< HEAD
-
-          <div className='text-center max-w-6xl mx-auto'>            <motion.div        <section id="hero" className="relative z-10 min-h-screen flex items-center justify-center px-4">
-          <div className="text-center max-w-6xl mx-auto">
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -622,11 +646,11 @@ const Homepage2046: React.FC = () => {;
                 transition={{ duration: 1.5, delay: 0.5 }}
               >              <motion.h1
                 className="text-6xl md:text-8xl font-bold text-white mb-8"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.5, delay: 0.5 }}
               >
+
 
                 <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent&quot;>
                   Zion Tech Group
@@ -635,6 +659,7 @@ const Homepage2046: React.FC = () => {;
               
               <motion.p 
                 className=&quot;text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;
+
 
 
                 initial={{ opacity: 0, y: 30 }}
@@ -648,168 +673,17 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
               <motion.div
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 1.5 }}
-              >
-
-<Link href="/services">
-
-                  <motion.button
-
-                    whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                  >
-                    Explore Services <ArrowRight className="w-5 h-5" />
-                  </motion.button>
-                </Link>
-                <Link href="/contact">
-                  <motion.button
-                    whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0.5)" }}
-                    whileTap={{ scale: 0.95 }}
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                  >
-                    Get Started <Rocket className="w-5 h-5" />
-                  </motion.button>
-                </Link>
-              </motion.div>
-            </motion.div>
-
-                      scale: 1 && 1.05,
-                      boxShadow: '0 0 30px rgba(6, 182, 212, 0 && 0.5)',
-                    }}
-                    whileTap={{ scale: 0 && 0.95 }}
-                    className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'>;
-                    Explore Services <ArrowRight className='w-5 h-5' />;
-                  </motion && motion.button>;
-                </Link>;
-                <Link href='/contact'>;
-                  <motion&& motion.button
-                    whileHover={{
-                      scale: 1 && 1.05,
-                      boxShadow: '0 0 30px rgba(168, 85, 247, 0 && 0.5)',
-                    }}
-                    whileTap={{ scale: 0 && 0.95 }}
-                    className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300'>;
-                    Get Started <Rocket className='w-5 h-5' />                  </motion && motion.button>                  <motion&& motion.button
-                    whileHover={{ scale: 1 && 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0 && 0.5)" }}
-                    whileTap={{ scale: 0 && 0.95 }}
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">;
-                    Explore Services <ArrowRight className="w-5 h-5" />;
-                  </motion && motion.button>;
-                </Link>;
-                <Link href="/contact">;
-                  <motion&& motion.button
-                    whileHover={{ scale: 1 && 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0 && 0.5)" }}
-                    whileTap={{ scale: 0 && 0.95 }}
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300">;
-                    Get Started <Rocket className="w-5 h-5" />;
-                  </motion && motion.button>;
-                </Link>;
-              </motion && motion.div>;
-            </motion && motion.div>;
 
 
-            {/* Contact Information */}
-            <motion&& motion.div
-              className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border border-cyan-400/30'              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 2 }}>              className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border border-cyan-400/30";
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 2 }}
-
-
-            {/* Contact Information */}
-            <motion.div
-              className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border border-cyan-400/30"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 2 }}
-            >
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-center'>
-                <div className='flex flex-col items-center'>
-                  <Phone className='w-6 h-6 text-cyan-400 mb-2' />
-                  <p className='text-sm text-gray-300'>Phone</p>
-                  <p className='text-white font-semibold'>+1 302 464 0950</p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <Mail className="w-6 h-6 text-purple-400 mb-2" />
-                  <p className="text-sm text-gray-300">Email</p>
-                  <p className="text-white font-semibold">kleber@ziontechgroup.com</p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <MapPin className="w-6 h-6 text-cyan-400 mb-2" />
-                  <p className="text-sm text-gray-300">Address</p>
-                  <p className="text-white font-semibold text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-                </div>
-
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-            >;
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-center'>;
-                <div className='flex flex-col items-center'>;
-                  <Phone className='w-6 h-6 text-cyan-400 mb-2' />;
-                  <p className='text-sm text-gray-300'>Phone</p>;
-                  <p className='text-white font-semibold'>+1 302 464 0950</p>;
-                </div>;
-                <div className='flex flex-col items-center'>;
-                  <Mail className='w-6 h-6 text-purple-400 mb-2' />;
-                  <p className='text-sm text-gray-300'>Email</p>;
-                  <p className='text-white font-semibold'>;
-                    kleber@ziontechgroup && ziontechgroup.com;
-                  </p>;
-                </div>;
-                <div className='flex flex-col items-center'>;
-                  <MapPin className='w-6 h-6 text-cyan-400 mb-2' />;
-                  <p className='text-sm text-gray-300'>Address</p>;
-                  <p className='text-white font-semibold text-sm'>;
-                    364 E Main St STE 1008;
-                    <br />;
-                    Middletown DE 19709;
-                  </p>                </div>                <div className="flex flex-col items-center">;
-                  <MapPin className="w-6 h-6 text-cyan-400 mb-2" />;
-                  <p className="text-sm text-gray-300">Address</p>;
-                  <p className="text-white font-semibold text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
-        {/* Services Showcase Section */}
-        <section id='services' className='relative z-10 py-20 px-4'>;
-          <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section id="services" className="relative z-10 py-20 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <motion&& motion.div
-
-
-        {/* Services Showcase Section */}
-        <section id="services" className="relative z-10 py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-
-
-            <motion.div
-
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
@@ -819,15 +693,15 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             >
               <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -838,7 +712,6 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
                 Discover our cutting-edge quantum AI, neural interface, and
                 space technology solutions that are transforming industries
                 worldwide.              </p>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Revolutionary Services
@@ -850,43 +723,20 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
             </motion.div>
 
 
-<<<<<<< HEAD
-=======
-              className='text-center mb-16'>;
-              <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
-                <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
-                  Revolutionary Services;
-                </span>;
-              </h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Discover our cutting-edge quantum AI, neural interface, and;
-                space technology solutions that are transforming industries;
-                worldwide.              </p>            >;
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">;
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">;
-                  Revolutionary Services;
-                </span>;
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Discover our cutting-edge quantum AI, neural interface, and space technology solutions that are transforming industries worldwide.;
-              </p>;
-            </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
             {/* Search and Filter */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -898,15 +748,15 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             >
               <div className='flex flex-col md:flex-row gap-4 justify-center items-center'>
                 <div className='relative flex-1 max-w-md'>
@@ -936,14 +786,12 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <input
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <button
                   {categories.map(category => (                    <button
 
@@ -952,12 +800,13 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       key={category}
                       onClick={() => setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${;
@@ -974,6 +823,8 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
             </motion.div>
 
 
+
+
                 </div>;
               </div>;
             </motion && motion.div>;
@@ -982,12 +833,13 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Services Grid */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -1000,37 +852,34 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             >
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
 
-<<<<<<< HEAD
-=======
 
-=======
-                  className='group'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                 >
                   <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>
@@ -1061,12 +910,13 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -1087,14 +937,15 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                         </div>
                       </div>
                     </div>
@@ -1111,8 +962,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     </div>
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                         </div>
                       </div>
                     </div>
@@ -1179,6 +1032,17 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                           </li>;
 
 
+
+                    <div className="space-y-2 mb-6">
+                      <h4 className="text-sm font-semibold text-white">Key Features:</h4>
+                      <ul className="space-y-1">
+                        {service.features.slice(0, 3).map((feature, idx) => (
+                          <li key={idx} className="flex items-start gap-2 text-xs text-gray-300">
+                            <CheckCircle className="w-3 h-3 text-cyan-400 mt-0.5 flex-shrink-0" />
+                            <span>{feature}</span>
+                          </li>
+
+
                         ))}
 
 
@@ -1211,27 +1075,19 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               ))}
             </motion.div>
 
-<<<<<<< HEAD
 
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-                      </ul>;
-                    </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             {/* Call to Action */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -1243,15 +1099,15 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             >
               <div className='bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-12 border border-cyan-400/30'>
                 <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -1318,118 +1174,19 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
     </Layout>;
   );
 
+
 }
+
 
 };
 export default Homepage2046;  );
 };
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-export default Homepage2046;
 
-export default Homepage2046;
-
-export default Homepage2046;
-
-
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-export default Homepage2046;  )
-}
-export default Homepage2046;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-                </motion.div>))}
-            </motion.div>;
-            {/* Call to Action */}
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 50 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              viewport={{ once: true }}
-              className='text - center mt - 20';
-            >;
-              <div className='bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 backdrop - blur - lg rounded - 3xl p - 12 border border - cyan - 400 / 30'>;
-                <h3 className='text - 3xl md:text - 4xl font - bold text - white mb - 6'>;
-                  Ready to Transform Your Business?;
-                </h3>;
-                <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
-                  Join the future with our revolutionary quantum AI, neural;
-                  interface, and space technology solutions.;
-                </p>;
-                <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-                  <Link href='/contact'>;
-                    <motion.button;
-                      while_hover={{
-                        scale: 1.05,
-                        box_shadow: '0 0 30px rgba (6, 182, 212, 0.5)',
-                      }}
-                      while_tap={{ scale: 0.95 }}
-                      className='bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - full text - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                    >;
-                      Get Started Today;
-                    </motion.button>;
-                  </Link>;
-                  <Link href='/services'>            >;
-              <div className="bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 backdrop - blur - lg rounded - 3xl p - 12 border border - cyan - 400 / 30">;
-                <h3 className="text - 3xl md:text - 4xl font - bold text - white mb - 6">;
-                  Ready to Transform Your Business?;
-                </h3>;
-                <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
-                  Join the future with our revolutionary quantum AI, neural interface, and space technology solutions.;
-                </p>;
-                <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                  <Link href="/contact">;
-                    <motion.button;
-                      while_hover={{ scale: 1.05, box_shadow: "0 0 30px rgba (6, 182, 212, 0.5)" }}
-                      while_tap={{ scale: 0.95 }}
-                      className="bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - full text - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
-                    >;
-                      Get Started Today;
-                    </motion.button>;
-                  </Link>;
-                  <Link href='/services'>;
-                    <motion.button;
-                      while_hover={{
-                        scale: 1.05,
-                        box_shadow: '0 0 30px rgba (168, 85, 247, 0.5)',
-                      }}
-                      while_tap={{ scale: 0.95 }}
-                      className='border - 2 border - cyan - 400 text - cyan - 400 px - 8 py - 4 rounded - full text - lg font - semibold hover:bg - cyan - 400 hover:text - gray - 900 transition - all duration - 300'                    >                    <motion.button;
-                      while_hover={{ scale: 1.05, box_shadow: "0 0 30px rgba (168, 85, 247, 0.5)" }}
-                      while_tap={{ scale: 0.95 }}
-                      className="border - 2 border - cyan - 400 text - cyan - 400 px - 8 py - 4 rounded - full text - lg font - semibold hover: bg - cyan - 400 hover:text - gray - 900 transition - all duration - 300";
-                    >;
-                      View All Services;
-                    </motion.button>;
-                  </Link>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>);
-}
-;
-export default Homepage2046);
-}
-;
-export default Homepage2046;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  );
-
-};
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -21,63 +21,27 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return !superToken || token === superToken
 
 }
-<<<<<<< HEAD
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
     });  }
   const by_module: Record < string, number> = {}
   const by_type: Record < string, number> = {}    return res.status (200).json ({ entries: entries.filter ((e) => e.status === 'stuck' || e.status === 'laggy') });
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const by_module: Record < string, number> = {}
-  const by_type: Record < string, number> = {}
-;
-  return res.status (200).json ({
-    entries: entries.slice (-200),
-    by_module,
-    by_type,
-    total: entries.length,
-=======
-<<<<<<< HEAD
-  const byModule: Record<string, number> = {}
-  const byType: Record<string, number> = {}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 
 
   });  for (const e of entries) {
     by_module[e.module] = (by_module[e.module] || 0) + 1;
     by_type[String (e.type)] = (by_type[String (e.type)] || 0) + 1;
   }
-<<<<<<< HEAD
 
 
-
-}
-  const byType: Record<string, number> = {};
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-<<<<<<< HEAD
-return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length });
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
-  const byModule: Record<string, number> = {};
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -41,24 +41,14 @@ import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { logErrorToProduction } from '@/utils / production_logger';
-<<<<<<< HEAD
 
 
-
-
-import React, { useState } from 'react'
-import { useAuth } from '@/hooks/useAuth'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { logErrorToProduction } from '@/utils/productionLogger'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import {
   Zap,
   Download,
@@ -90,27 +80,9 @@ if ( {) {
 }
     return null;
   }
-<<<<<<< HEAD
 
 
-  const [isVisible, setIsVisible] = useState(false)
-  const [isProcessing, setIsProcessing] = useState<string | null>(null)
-  const executeAction = async (actionId: string, action: () => void) => {
-;
-  const [isVisible, setIsVisible] = useState(false);
-  const [isProcessing, setIsProcessing] = useState<string | null>(null);
-  const executeAction = async (actionId: string, action: () => void) => {;
-    setIsProcessing(actionId);    try {
-      await action()
 
-
-=======
-  const [is_visible, setIsVisible] = useState (false);
-  const [is_processing, setIsProcessing] = useState < string | null>(null);
-  const execute_action = async (action_id: string, action: () => void) => {
-    setIsProcessing (action_id);    try {
-      await action ();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     } catch (error) {
       logErrorToProduction (`Failed to execute action ${action_id}:`, {
         data: error,
@@ -119,14 +91,8 @@ if ( {) {
       setIsProcessing(null)
     }
   }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       id: 'enable - performance - monitor',
 
@@ -172,10 +138,8 @@ export function QuickActions() {;
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -185,27 +149,9 @@ export function QuickActions() {;
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
-<<<<<<< HEAD
-
-
-        localStorage.setItem('performance-monitoringtrue'),
-        window.location.reload()
-      }},
-        localStorage.setItem('performance-monitoring', 'true')
-        window.location.reload()
-      },
-    },
-        localStorage.setItem('performance-monitoringtrue'),
-        window.location.reload()
-      }},
-
-
-=======
 
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -213,27 +159,9 @@ export function QuickActions() {;
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
-<<<<<<< HEAD
-
-
-        localStorage.setItem('bundle-analyzertrue'),
-        window.location.reload()
-      }},
-        localStorage.setItem('bundle-analyzer', 'true')
-        window.location.reload()
-      },
-    },
-        localStorage.setItem('bundle-analyzertrue'),
-        window.location.reload()
-      }},
-
-
-=======
 
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: 'clear-cache',
       label: 'Clear Cache',
@@ -247,16 +175,8 @@ export function QuickActions() {;
             names.forEach(name => caches.delete(name))
           })
         }
-<<<<<<< HEAD
 
 
-        localStorage.clear()
-        sessionStorage.clear()
-        window.location.reload()
-      }
-    }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       },
@@ -267,14 +187,8 @@ export function QuickActions() {;
       }},
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: 'preload-critical-resources'
       label: 'Preload Critical Resources'
@@ -284,47 +198,6 @@ export function QuickActions() {;
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-  dangerous?: boolean;
-
-        // Preload critical images
-        const criticalImages = [
-          '/logos/zion-logo.png/images/hero-bg.webp'
-        ],
-        
-        criticalImages.forEach(img => {
-          const link = document.createElement('link'),
-          link.rel = 'preload',
-          link.as = 'image',
-          link.href = img,
-          document.head.appendChild(link)
-        })
-      }},
-    {
-      id: 'download-performance-report',
-      label: 'Download Performance Report',
-      description: 'Export current performance metrics',
-      icon: <Download className="w-4 h-4" />,
-      category: 'development',
-      action: () => {
-        const metrics = {
-          timestamp: new Date().toISOString(),
-          performance: window.window.window.performance.getEntriesByType('navigation')[0],
-          resources: window.window.window.performance.getEntriesByType('resource').slice(0, 20),
-          memory: (performance as any).memory || {},
-          userAgent: navigator.userAgent,
-          screen: {
-            width: screen.width,
-            height: screen.height,
-            colorDepth: screen.colorDepth
-          }
-        },
 
 
 
@@ -431,6 +304,7 @@ export function QuickActions() {;
 
 
 
+
         // Preload critical images
         const criticalImages = [
           '/logos/zion-logo.png/images/hero-bg.webp'
@@ -444,6 +318,7 @@ export function QuickActions() {;
           document.head.appendChild(link)
         })
       }},
+
 
 
     {
@@ -462,6 +337,7 @@ export function QuickActions() {;
           screen: {
             width: screen.width,
             height: screen.height,
+
 
 
             colorDepth: screen.colorDepth,
@@ -499,6 +375,7 @@ export function QuickActions() {;
       }},
 
 
+
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -507,6 +384,7 @@ export function QuickActions() {;
       category: 'development',
       dangerous: true,
       action: () => {
+
 
 
         throw new Error('Test error for Sentry integration - this is intentional!')
@@ -520,6 +398,7 @@ export function QuickActions() {;
       }},
 
 
+
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -528,6 +407,7 @@ export function QuickActions() {;
       category: 'maintenance',
       action: () => {
         window.location.reload()
+
 
 
       },
@@ -558,6 +438,7 @@ export function QuickActions() {;
 
 
 
+
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
@@ -573,18 +454,8 @@ export function QuickActions() {;
           className="bg-background/80 backdrop-blur-sm"
         >
           <Settings className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           Quick Actions
         </Button>
       </div>
@@ -615,25 +486,16 @@ export function QuickActions() {;
             >
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               ✕
             </Button>
           </div>
         </CardHeader>
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
@@ -678,14 +540,8 @@ export function QuickActions() {;
     </div>;
   );
 } ;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

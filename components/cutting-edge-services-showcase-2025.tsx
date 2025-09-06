@@ -23,7 +23,10 @@ import { motion } from 'framer-motion';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   Brain,
   Atom,
   Shield,
@@ -56,7 +59,8 @@ import { motion } from 'framer-motion';
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
   CheckCircle, ArrowRight, Zap, Target, Microscope;
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
@@ -64,7 +68,7 @@ import { motion } from 'framer-motion';
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
@@ -206,17 +210,10 @@ const serviceCategories = [
     count: cuttingEdgeMicroSaasServices2025.length,
   },];
 
-<<<<<<< HEAD
-
-];
-export default function CuttingEdgeServicesShowcase2025() {
-export default function CuttingEdgeServicesShowcase2025() {;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -394,29 +391,21 @@ export default function CuttingEdgeServicesShowcase2025() {;
     },  };        staggerChildren: 0 && 0.1;
 
 
-<<<<<<< HEAD
-=======
+
     visible: {
       coordinate_y: 0,
       opacity: 1,
       transition: {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
       }
     }
   }
-=======
-
-        duration: 0.5,
-      },
-    },  };
-
-  };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <>
       <Head>
@@ -480,9 +469,12 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
               <motion.p
@@ -495,17 +487,10 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 </span>
               </motion.h1>
 
-<<<<<<< HEAD
-              <motion.p
-              <motion.p 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-              <motion.p 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
 
                 initial={{ opacity: 0, y: 20 }}
@@ -525,12 +510,12 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <motion.div
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
@@ -540,48 +525,14 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
               {/* CTA Buttons */}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-<<<<<<< HEAD
-
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-=======
-=======
-                  <div key={index} className='text-center'>
-                    <div className='flex justify-center mb-2'>
-                      <div className='p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30'>
-                        {stat.icon}
-                      </div>
-                    </div>
-                    <div className='text-2xl md:text-3xl font-bold text-white mb-1'>
-                      {stat.value}
-                    </div>
-
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
-
                 className="flex flex-col sm:flex-row gap-4 justify-center"
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
-
-                  </div>
-
-                ))}
-              </motion.div>
-
-              {/* CTA Buttons */}
-              <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}>;
@@ -614,14 +565,12 @@ export default function CuttingEdgeServicesShowcase2025() {;
             <motion.div 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
 
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
@@ -631,16 +580,16 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 <input
                   type='text'
                   placeholder='Search services...'
@@ -667,6 +616,14 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <div className='flex flex-wrap gap-2'>              <div className="flex flex-wrap gap-2">;
 
 
+
+                />
+              </div>
+
+              {/* Category Filter */}
+              <div className="flex flex-wrap gap-2">
+
+
                 <button
               <div className='flex flex-wrap gap-2'>                <button
 
@@ -677,10 +634,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
                 <button
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   onClick={() => setSelectedCategory('all')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -694,8 +649,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 {serviceCategories.map(category => (                  <button                {serviceCategories.map((category) => (
                   <button
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onClick={() => setSelectedCategory('all')}
@@ -712,14 +667,14 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                     key={category.title}
                     onClick={() => setSelectedCategory(category.title)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -740,20 +695,25 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <div className='flex items-center gap-2'>                <button              <div className="flex items-center gap-2">;
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+                <button
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
                     viewMode === 'grid';
@@ -782,7 +742,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
               variants={containerVariants}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -802,16 +761,16 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                           {service.name}
                         </h3>;
                         <p className='text - white / 70 text - sm leading - relaxed'>;
@@ -870,11 +829,16 @@ export default function CuttingEdgeServicesShowcase2025() {;
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
 
 
+
+
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
                         >
 
 
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                           {tag}
                         </span>;
                       ))}
@@ -884,21 +848,19 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>                    </div>
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                           {tag}
                         </span>;
                       ))}
@@ -906,7 +868,9 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                     {/* Market Info */}
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <span>Market: {service.marketSize}</span>
@@ -1043,12 +1007,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       </div>
                     </div>
                     </div>;
@@ -1079,12 +1044,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -1095,15 +1059,15 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               >
                 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
@@ -1138,32 +1102,28 @@ export default function CuttingEdgeServicesShowcase2025() {;
         </section>
 
 
+
+
           </div>;
         </section>;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-<<<<<<< HEAD
-=======
-=======
-          </div>
-        </section>
+
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -1171,17 +1131,19 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1225,7 +1187,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;
@@ -1270,22 +1231,15 @@ export default function CuttingEdgeServicesShowcase2025() {;
         </section>
       </Layout>
     </>
-<<<<<<< HEAD
 
-);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
   );
-=======
-=======
-  );
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
   hidden: {
@@ -1361,36 +1315,17 @@ visible: {;
 };}
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  hidden: {
-  opacity: 0;
-}
-visible: {
-  opacity: 1, transition: {
-  stagger_children: 0.1;
-}
-const item_variants = {
-  hidden: {
-  coordinate_y: 20, opacity: 0;
-}
-visible: {
 
-  coordinate_y: 0, opacity: 1, transition: {
-  duration: 0.5;
-}}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
-<<<<<<< HEAD
-};}
-};
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

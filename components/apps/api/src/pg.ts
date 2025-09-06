@@ -1,10 +1,10 @@
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 }return pool 
 export async function withUser<T>(
   userId: string
@@ -25,14 +25,11 @@ export async function withUser<T>(
     await client && client.query('ROLLBACK');
 
 
-  }
 
-let pool: Pool | null = null
+    throw err;
+import { Pool, PoolClient } from 'pg';
+  } finally {
 
-export function getPool(): Pool {
-  if (!pool) {
-    pool = new Pool({ connectionString: process.env.DATABASE_URL })
-  }
-  return pool
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+

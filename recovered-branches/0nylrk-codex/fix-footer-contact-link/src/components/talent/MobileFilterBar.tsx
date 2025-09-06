@@ -1,24 +1,18 @@
 
 
 
-<<<<<<< HEAD
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Search, Sliders } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Search, Sliders } from "lucide-react",
-import { Input } from "@/components/ui/input",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface MobileFilterBarProps {
 
   searchTerm: string
@@ -99,15 +93,7 @@ export function MobileFilterBar(): any ({ ;
     </div>;
   );
 }
-<<<<<<< HEAD
-;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
 
 import React from './react';
 import { Button } from '@/components / ui / button';
@@ -144,9 +130,7 @@ function MobileFilterBar() {
     </div>);
 }
 
-=======
-;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

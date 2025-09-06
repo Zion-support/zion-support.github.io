@@ -49,21 +49,9 @@ if ( {) {
         setIsLoading(false)
       }
     }
-<<<<<<< HEAD
 
 
-    fetchSavedTalents()
-  }, [user])
-  const handleViewProfile = (talentId: string) => {
-    router.push(`/talent/${talentId}`)
 
-
-=======
-    fetchSavedTalents ();
-  }, [user]);
-  const handleViewProfile = (talent_id: string) =>: any {
-    router.push (`/talent/${talent_id}`);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 
   const handleRequestHire = (talent: TalentProfile) =>: any {
@@ -232,25 +220,13 @@ if ( {) {
           description: "Talent removed from saved list."})
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       } else {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
-<<<<<<< HEAD
 
-
-          .insert([{ user_id: user.id, talent_id: talentId }])
-        if (error) {
-          throw error
-        }
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
@@ -266,64 +242,18 @@ if ( {) {
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
-<<<<<<< HEAD
 
 
-          .single()
-        if (talentError) {
-          logErrorToProduction(
-            talentError instanceof Error
-              ? talentError.message
-              : String(talentError)
-            talentError instanceof Error ? talentError : undefined
-            { message: 'Error fetching talent profile' }
-          )
-          toast({
-            title: 'Error'
-            description:
-              'Failed to update saved talents. Please try again later.'
-            variant: 'destructive'
-          })
-          return
-        }
-        if (talentData) {
-          setSavedTalents(prevTalents => [
-            ...prevTalents
-            talentData as unknown as TalentProfile
-          ])
-          toast({
-            title: 'Talent Saved'
-            description: 'Talent saved to your list.'
-          })
-        }
-      }
-    } catch (error) {
-      logErrorToProduction(
-        error instanceof Error ? error.message : String(error)
-        error instanceof Error ? error : undefined
-        { message: 'Error toggling saved talent' }
-      )
-      toast({
-        title: 'Error'
-        description: 'Failed to update saved talents. Please try again later.'
-        variant: 'destructive'
-      })
-    }
-  }
-          return;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
-=======
+
   useEffect((,) => {;
     if (!user) {;
       router && router.push(`/auth/login?returnTo=${encodeURIComponent(router && router.asPath)}`);
     }
   }
           return;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           .single(),
   
         if (talentError) {
@@ -336,31 +266,8 @@ if ( {) {
         }
   
         if (talentData) {
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
-          toast({
-            title: "Talent Saved",
-            description: "Talent saved to your list."})
-        }
-      }
-    } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error toggling saved talent' }),
-      toast({
-        title: "Error",
-        description: "Failed to update saved talents. Please try again later.",
-        variant: "destructive"})
-    }
-  },
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <>
       <SEO
@@ -373,13 +280,8 @@ if ( {) {
           Here are the talents you've saved for future reference.
         </p>
         
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
@@ -388,13 +290,8 @@ if ( {) {
               icon={<Heart className="h-8 w-8" />}
               title="No Saved Talents"
               description="You haven't saved any talents yet."
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               action={{ text: 'Browse Talent', href: '/talent' }}
               className="border-none bg-transparent text-center"
             />
@@ -531,20 +428,8 @@ if ( {) {
                 onRequestHire={handleRequestHire}
                 isAuthenticated={!!user}
               />;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ))}
           </div>
         )}

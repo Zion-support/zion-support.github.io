@@ -11,25 +11,8 @@ import { motion } from "framer-motion";
 origin/main
 origin/automation-improvements-final
 import {
-<<<<<<< HEAD
 
-  Users
-  MapPin
-  Clock
-  DollarSign
-  ArrowRight
-  Heart
-  Star
-  Award
-  Coffee
-  Zap
-  Shield
-  Briefcase
-  GraduationCap
-  Globe
-  CheckCircle
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   Users,
   MapPin,
@@ -47,13 +30,14 @@ import {
   Globe,
   CheckCircle,;
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 } from "lucide-react";
 const jobOpenings = [
   {
@@ -333,8 +317,4 @@ origin/automation-improvements-final
   );
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-  );
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }

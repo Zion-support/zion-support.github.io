@@ -19,33 +19,20 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState, useEffect, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
+
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
 
-  innovativeRealMicroSaasServices2025
-} from '../data/2025-innovative-real-micro-saas-services';
-import {
-  innovativeAIServicesEnhanced2025
-} from '../data/2025-innovative-ai-services-enhanced';
-import {
-  innovativeITServicesEnhanced2025
-} from '../data/2025-innovative-it-services-enhanced';
-import {
-  emergingTechServicesEnhanced2025
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
 
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import { ;
-=======
-import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   innovativeRealMicroSaasServices2025 ;
 } from '../data/2025-innovative-real-micro-saas-services';
 import { ;
@@ -58,11 +45,10 @@ import { ;
   emergingTechServicesEnhanced2025 ;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 } from '../data/2025-emerging-tech-services-enhanced';
 
 
@@ -74,10 +60,6 @@ import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackgrou
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
 
-
-<<<<<<< HEAD
-
-=======
 import {;
   ArrowRight,;
   Star,;
@@ -93,7 +75,9 @@ import {;
   Lock,;
   BarChart3,;
   Cloud,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 } from 'lucide-react';
 interface Homepage2025Props {;
   showInternalNav?: boolean;
@@ -102,7 +86,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 }) => {  const [activeSection, setActiveSection] = useState('hero');} from 'lucide-react';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+interface Homepage2025Props { showInternalNav?: boolean }
+
+
+const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {;
+
+
   const [activeSection, setActiveSection] = useState('hero');
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -154,6 +145,111 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
     .slice(0, 12);
 
 
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
+import { innovativeRealMicroSaasServices2025 } from '../data / 2025 - innovative - real - micro - saas - services';
+import { innovativeAIServicesEnhanced2025 } from '../data / 2025 - innovative - ai - services - enhanced';
+import { innovativeITServicesEnhanced2025 } from '../data / 2025 - innovative - it - services - enhanced';
+import { emergingTechServicesEnhanced2025 } from '../data / 2025 - emerging - tech - services - enhanced';import { advancedAIAutomationServices } from '../data / 2026 - advanced - ai - automation - services';import {
+  innovativeRealMicroSaasServices2025;
+} from '../data / 2025 - innovative - real - micro - saas - services';
+import {
+  innovativeAIServicesEnhanced2025;
+} from '../data / 2025 - innovative - ai - services - enhanced';
+import {
+  innovativeITServicesEnhanced2025;
+} from '../data / 2025 - innovative - it - services - enhanced';
+import {
+  emergingTechServicesEnhanced2025;
+} from '../data / 2025 - emerging - tech - services - enhanced';
+import { quantumCybersecurityServices } from '../data / 2026 - quantum - cybersecurity - services';
+import { innovativeMicroSaasServices2026 } from '../data / 2026 - innovative - micro - saas - expansion';
+import { specializedITSolutions2026 } from '../data / 2026 - specialized - it - solutions';
+import { emergingTechServices2026 } from '../data / 2026 - emerging - tech - services';
+import UltraFuturisticBackground2026 from './backgrounds / UltraFuturisticBackground2026';
+import UltraFuturisticServiceCard2026 from './ui / UltraFuturisticServiceCard2026';
+import Link from 'next / link';
+import {
+  ArrowRight,
+  Star,
+  Brain,
+  Atom,
+  Shield,
+  Zap,
+  Users,
+  Globe,
+  TrendingUp,
+  Rocket,
+  Cpu,
+  Lock,
+  BarChart3,
+  Cloud,
+} from 'lucide-react';
+;
+interface Homepage2025Props {
+  showInternalNav?: boolean;
+;
+const Homepage2025: React.FC < Homepage2025Props> = ({
+  showInternalNav = true,
+}) => {  const [active_section, setActiveSection] = useState ('hero');} from 'lucide-react';
+;
+interface Homepage2025Props { showInternalNav?: boolean }
+const Homepage2025: React.FC < Homepage2025Props> = ({ showInternalNav = true }) => {
+  const [active_section, setActiveSection] = useState ('hero');
+  const [currentServiceIndex, setCurrentServiceIndex] = useState (0);
+  const [is_visible, setIsVisible] = useState (false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false);
+;
+  useEffect (() => {
+    setIsVisible (true);
+    const interval = set_interval (() => {
+      setCurrentServiceIndex (
+        prev => (prev + 1) % innovativeRealMicroSaasServices2025.length);
+    }, 5000);
+    return () => clear_interval (interval);  }, []);      setCurrentServiceIndex ((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length);
+
+    }, 5000);
+    return () => clear_interval (interval);
+  }, []);
+
+;
+  const scrollToSection = (section_id: string) =>: any {
+    const element = document.getElementById (section_id),
+    // Check condition
+if ( {) {
+  $2
+}
+      element.scrollIntoView ({ behavior: 'smooth' });
+      setActiveSection (section_id);
+      setIsMobileMenuOpen (false);    }
+  }
+;
+  const all_services = [      element.scrollIntoView ({ behavior: 'smooth' }),
+      setActiveSection (section_id);
+      setIsMobileMenuOpen (false);
+    }
+  }
+;
+  const all_services = [;
+    ...innovativeRealMicroSaasServices2025,
+    ...innovativeAIServicesEnhanced2025,
+    ...innovativeITServicesEnhanced2025,
+    ...emergingTechServicesEnhanced2025,
+    ...advancedAIAutomationServices,
+    ...quantumCybersecurityServices,
+    ...innovativeMicroSaasServices2026,
+    ...specializedITSolutions2026,
+    ...emergingTechServices2026,
+  ];
+;
+  const featured_services = all_services;
+    .filter (service => service.popular);
+    .slice (0, 12);
+
+
     ...innovativeRealMicroSaasServices2025;
     ...innovativeAIServicesEnhanced2025;
     ...innovativeITServicesEnhanced2025;
@@ -181,22 +277,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className="flex items-center space-x-2"
-                >
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
-                  <span className="text-white font-bold text-xl">ZionTech Group</span>
-                </motion.div>
-                {/* Desktop Navigation */}
-<<<<<<< HEAD
-                <div className="hidden lg:flex space-x-8">
-                  {navigationSections.map((section) => (
-                    <button
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
                 <div className='hidden lg:flex space-x-8'>;
                   {navigationSections && navigationSections.map(section => (                    <button}
   return (
@@ -307,13 +388,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
                 <div className="hidden lg:flex space - x-8">;
                   {navigation_sections.map ((section) => (
                     <button;
-=======
-
-                  {navigationSections.map(section => (                    <button  };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       key={section.id}
                       on_click={() => scrollToSection (section.id)}
                       className={`flex items - center space - x-2 text - sm font - medium transition - all duration - 300 ${
@@ -329,18 +406,21 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
                 </div>
 
 
+
+
                 </div>;
 
 
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 {/* Contact Info */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -360,6 +440,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
               </div>
 
 
+
+
                 >;
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />;
@@ -370,12 +452,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               {/* Mobile Navigation Menu */}
               <AnimatePresence>;
                 {isMobileMenuOpen && (;
@@ -396,14 +479,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                           key={section.id}
                           onClick={() => scrollToSection(section.id)}
                           className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -411,7 +495,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
                               ? 'bg-cyan-400/20 text-cyan-400'
                               : 'text-gray-300 hover:bg-white/10'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           }`}
                         >;
                           <span>{section && section.icon}</span>;
@@ -474,12 +557,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'              className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">;
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     >;
                       <span>{section.icon}</span>;
                       <span>{section.label}</span>;
@@ -588,10 +667,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
           </nav>;
         </>)}
 
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+
       {/* Hero Section */}
       <section;
         id='hero';
@@ -605,40 +683,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
             <motion.div;
               animate={{ coordinate_y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-<<<<<<< HEAD
-              className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'            >      <section id="hero" className="relative min - h-screen flex items - center justify - center px - 4 sm:px - 6 lg:px - 8 pt - 16">;
-        <div className="text - center z - 10 max - w-6xl mx - auto">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='text - center max - w-6xl mx - auto relative z - 10'            className="text - center max - w-6xl mx - auto relative z - 10";
-          >;
-            <motion.div;
-              animate={{ coordinate_y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'              className="w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center";
-            >;
-              <motion.div;
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
 
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-                className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'>;
-                <Star className='w-5 h-5' />;
-                <span>Innovation Leader 2025-2026</span>;
-              </motion && motion.div>;
-
-              <h1 className='text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>;
-                Zion Tech Group;
-              </h1>;
-              <p className='text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed'>;
-                Pioneering the future of technology with innovative solutions;
-                that drive business transformation;
-              </p>;
-
-
-=======
 
 
 
@@ -651,6 +696,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
       <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center z-10 max-w-6xl mx-auto">
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -681,8 +728,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               {/* Enhanced CTA Section */}
               <motion.div
@@ -708,8 +755,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
                 </Link>
               </motion.div>              >
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 <Star className="w-5 h-5" />
                 <span>Innovation Leader 2025-2026</span>
               </motion.div>
@@ -797,24 +844,23 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
               </motion && motion.div>;
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
-<<<<<<< HEAD
 
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -828,24 +874,22 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
           <motion&& motion.div
 
 
+
+
       {/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div
 
 
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -855,15 +899,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Comprehensive Technology Solutions
@@ -888,6 +932,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
+
+
 
             className='text-center mb-20'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -920,12 +966,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -951,17 +998,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
           <motion&& motion.div
             className="text-center mb-16"
 
-<<<<<<< HEAD
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
@@ -977,12 +1018,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             whileInView={{ opacity: 1, y: 0 }}
 
                 className='inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 400 / 30 rounded - full text - cyan - 400 text - lg font - medium backdrop - blur - sm';
@@ -1161,6 +1203,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
+
           >;
             <h2 className='text - 3xl md:text - 4xl font - bold text - white mb - 4'>;
               Our Revolutionary 2026 Services;
@@ -1323,13 +1366,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
                 onClick={() => (window.location.href = service.link)}
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -1371,19 +1414,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
@@ -1394,21 +1434,19 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
+
             initial={{ opacity: 0, y: 40 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             whileInView={{ opacity: 1, y: 0 }}
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
 
             </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Get in touch with our team to discuss how our innovative services can help you achieve your goals.
             </p>
@@ -1517,17 +1555,18 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
             className='text-center'            className="text-center"
 
 
+
+
             className="text-center"
 
 
-<<<<<<< HEAD
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -1552,6 +1591,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
         </div>
       </section>
 
+
 className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300">;
                 Call Us;
               </a>;
@@ -1567,21 +1607,20 @@ export default Homepage2025;
 
 
 
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-export default Homepage2025;  )
-}
-export default Homepage2025;
+
+
 
 
 export default Homepage2025;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

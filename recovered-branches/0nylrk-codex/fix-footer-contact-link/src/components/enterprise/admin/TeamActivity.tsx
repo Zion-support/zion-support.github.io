@@ -2,10 +2,8 @@
 import React from "react";
 import {
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   Table,
   TableBody,
   TableCell,
@@ -13,13 +11,14 @@ import {
   TableHeader,
 TableRow,;
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
@@ -27,52 +26,8 @@ import { CalendarIcon, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-<<<<<<< HEAD
 
-  const activities = [
-    {
-      id: 1
-      user: "Alex Johnson"
-      action: "Posted a job"
-      target: "Senior AI Engineer"
-      timestamp: new Date(Date.now() - 1000 * 60 * 30)
-      category: "jobs"
-    }
-    {
-      id: 2
-      user: "Jamie Smith"
-      action: "Contacted candidate"
-      target: "Michael Chen"
-      timestamp: new Date(Date.now() - 1000 * 60 * 120)
-      category: "candidates"
-    }
-    {
-      id: 3
-      user: "Sam Williams"
-      action: "Updated job"
-      target: "Frontend Developer"
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5)
-      category: "jobs"
-    }
-    {
-      id: 4
-      user: "Alex Johnson"
-      action: "Added team member"
-      target: "Chris Rodriguez"
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24)
-      category: "team"
-    }
-    {
-      id: 5
-      user: "Taylor Brown"
-      action: "Viewed candidate profile"
-      target: "Sarah Kim"
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2)
-      category: "candidates"
-    }
-    {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       id: 6,
       user: "Jamie Smith",
@@ -82,12 +37,9 @@ import { Input } from "@/components/ui/input";
       category: "billing",
     },;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-  ];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 
 
   ];
@@ -379,15 +331,9 @@ export function TeamActivity() {;
         <div className="text-sm text-muted-foreground">Page 1 of 10</div>;
 
 
-<<<<<<< HEAD
-=======
-}
-=======
-                <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
-                <TableCell className="text-muted-foreground">;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+}
+
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -397,14 +343,12 @@ export function TeamActivity() {;
       </div>
       
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -425,9 +369,10 @@ export function TeamActivity() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

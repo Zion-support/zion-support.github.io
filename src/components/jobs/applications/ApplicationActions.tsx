@@ -65,10 +65,8 @@ interface ApplicationActionsProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export function ApplicationActions({
   application;
   processingId;
@@ -127,17 +125,13 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       
 
       
       
 
-<<<<<<< HEAD
-=======
 
       <Button 
         variant="default" 
@@ -145,7 +139,6 @@ export function ApplicationActions({
         asChild
       >
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             onClick={() => onStatusChange(application && application.id, 'hired')}          >;
             Shortlist;
           </DropdownMenuItem>;
@@ -177,25 +170,12 @@ import {
   DropdownMenuTrigger,
 } from '@/components / ui / dropdown - menu';
 import { Button } from '@/components / ui / button';
-<<<<<<< HEAD
-          Contact
-        </Link>
-      </Button>
-    </div>
-  )
-import Link from "next/link",;
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger;
-} from "@/components/ui/dropdown-menu",;
-import { Button } from "@/components/ui/button",;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 interface ApplicationActionsProps {;

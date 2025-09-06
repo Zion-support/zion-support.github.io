@@ -21,45 +21,15 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
         />
         <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" aria-hidden="true" />
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-        <Input
-          id='talent-search'
-          type='text'
-          placeholder='Search talents...'
-          value={searchTerm}
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           Type a name or skill to filter results
         </p>
       </div>
     </div>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           onChange={e => setSearchTerm(e && e.target.value)}
           aria-describedby='talent-search-help';
@@ -67,8 +37,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 
 };
 ;
-<<<<<<< HEAD
-=======
+
 
 import { Input } from "@/components/ui/input",;
 import { SearchIcon } from 'lucide-react';
@@ -139,4 +108,5 @@ import { SearchFilterProps } from '@/types / filters';
     </div>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

@@ -26,85 +26,19 @@ export default function ScrollToTop() {
 import { ChevronUp } from 'lucide-react';
 
 
-<<<<<<< HEAD
-export default function ScrollToTop() {
-export default function ScrollToTop() {;
-  const [isVisible, setIsVisible] = useState(false);
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 const ScrollToTop: React.FC = () => {
 
 >>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
 
-=======
-=======
 
-=======
-export default function ScrollToTop() {;
-  const [isVisible, setIsVisible] = useState(false);
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-const ScrollToTop: React.FC = () => {
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-        setIsVisible(true)
-      } else {
-        setIsVisible(false)
-      }
-}
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
-    return () => window.removeEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility)
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-        setIsVisible(false);      }
-    }
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true)
-      } else {
-        setIsVisible(false)
-      }
-    }
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
-origin/main
-origin/automation-improvements-final
-  }, []);
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-ursor/integrate-build-improve-and-re-verify-8f7d
-      top: 0
-origin/main
-      behavior: 'smooth'
-    });
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
   if (!isVisible) {
     return null;
   }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -127,6 +61,8 @@ origin/automation-improvements-final
     });  };      behavior: 'smooth'})
   }
 
+
+
   return (
     <>
       {isVisible && (
@@ -136,17 +72,16 @@ origin/automation-improvements-final
           aria-label='Scroll to top'
 
 
+
         >
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           <svg
             className='w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300'
             fill='none'
@@ -183,16 +118,14 @@ export default ScrollToTop;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
+
+
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default ScrollToTop;  )
 }
 export default ScrollToTop;
@@ -205,17 +138,15 @@ export default ScrollToTop;
 export default ScrollToTop;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
-export default ScrollToTop;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

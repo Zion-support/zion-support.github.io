@@ -1,14 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
 
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-    const r = await fetch(
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     );
     const metrics = await r && r.json();
@@ -37,6 +30,8 @@ export default async function handler(
 
 
   } catch (e) {
+
+
 
 ;
 export default async /**
@@ -70,6 +65,8 @@ function handler() {
     res.status (200).json ({ summary, timestamp: new Date ().toISOString () });
   } catch (e) {
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
+
+
 
   }
 }

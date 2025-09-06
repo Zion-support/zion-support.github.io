@@ -19,26 +19,21 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useState } from 'react';
 
-<<<<<<< HEAD
-import { useRouter } from 'next/router';
 
-  const router = useRouter();
-  const { id } = router.query as { id?: string };
-  const [episode, setEpisode] = useState<any>(null);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 export default function EpisodePage() {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
-export default function EpisodePage() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const router = useRouter();
   const { id } = router.query as { id?: string }
   const [episode, setEpisode] = useState<any>(null);
   useEffect(() => {
+
+
 
 export default function EpisodePage() {;
   const router = useRouter();
@@ -66,8 +61,7 @@ export default function EpisodePage() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
+
   return (
     <div className=&quot;space-y-4&quot;>
       <h1 className=&quot;text-2xl font-bold&quot;>{episode.title}</h1>
@@ -85,29 +79,8 @@ export default function EpisodePage() {;
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-    <div className='space-y-4'>
-      <h1 className='text-2xl font-bold'>{episode.title}</h1>
-      <p className='text-sm text-gray-600'>
-        Guest: {episode.invitee?.name} ·{' '}
-        {new Date(episode.createdAt).toLocaleString()}
-      </p>
-      {episode.audio?.mp3Url && (
-        <audio controls className='w-full'>
-          <source src={episode.audio.mp3Url} type='audio/mpeg' />
-        </audio>
-      )}
-      <div>
-        <h2 className='text-xl font-semibold'>Transcript</h2>
-        <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'>
-          {episode.transcript}
-        </pre>
-      </div>
-    </div>
 
-  );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -1,52 +1,9 @@
 }
 
 
-<<<<<<< HEAD
-
-import { useState, useEffect } from 'react',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { Button } from '@/components/ui/button',;
-import { FilePlus, Loader2 } from 'lucide-react';
-import { ProjectCard } from './ProjectCard',;
-import { ProjectForm } from './ProjectForm',;
-import { PortfolioProject } from '@/types/resume',;
-import { usePortfolio } from '@/hooks/usePortfolio',;
-export function PortfolioBuilder() {;
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),;
-  const [showAddProject, setShowAddProject] = useState(false),;
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),;
-  useEffect(() => {;
-    fetchProjects();
-  }, [fetchProjects]),;
-  const handleAddSuccess = () => {;
-    setShowAddProject(false),;
-    fetchProjects();
-  },;
-  const handleEditSuccess = () => {;
-    setEditingProject(null),;
-    fetchProjects();
-  },;
-  const handleDeleteProject = async (projectId: string) => {;
-    const success = await deleteProject(projectId),;
-    if (success) {;
-      fetchProjects();
-    }
-  },
-  
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center h-64">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
-      </div>
-    )
-  }
-  
 
 
-=======
-  
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -54,22 +11,8 @@ export function PortfolioBuilder() {;
           <h1 className="text-2xl font-bold">Portfolio Projects</h1>
           <p className="text-muted-foreground">Showcase your best work and projects</p>
         </div>
-<<<<<<< HEAD
 
 
-        <Button
-          onClick={() => setShowAddProject(true)}
-          className='gap-2'
-          disabled={showAddProject |!!editingProject}        >
-          <FilePlus className='h-4 w-4' />
-          Add Project
-        </Button>
-      </div>
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -81,18 +24,16 @@ export function PortfolioBuilder() {;
       </div>
       
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           Add Project
         </Button>
       </div>
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
-<<<<<<< HEAD
-=======
+
 
 
           <CardContent className='pt-6'>
@@ -101,10 +42,6 @@ export function PortfolioBuilder() {;
             </h2>
 
 
-            <ProjectForm              project={editingProject || undefined}
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false)
@@ -209,11 +146,11 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           {projects.map((project) => (
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -230,10 +167,8 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
@@ -259,13 +194,9 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           {projects.map((project) => (
             <ProjectCard
 
-<<<<<<< HEAD
-=======
-              key={project.id}
-              project={project}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             <CardContent>
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
@@ -279,13 +210,13 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
 
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
                 <Button 
                   onClick={() => setShowAddProject(true)} 
                   className="mt-2"
@@ -297,6 +228,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           </Card>
         )
       )}
+
 
 
 
@@ -364,24 +296,16 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
     </div>);
 }
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 ;
 }
 }
 }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     </div>;
   );

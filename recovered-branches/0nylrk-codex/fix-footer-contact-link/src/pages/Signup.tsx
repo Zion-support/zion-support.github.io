@@ -11,13 +11,11 @@ import { useForm, type UseFormReturn } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
-<<<<<<< HEAD
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -30,7 +28,6 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import { useAuth } from "@/hooks/useAuth",
@@ -244,11 +241,7 @@ export default function Signup() {;
 
                 <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
                   Sign in;
                 </Link>;
               </p>;
@@ -256,8 +249,10 @@ export default function Signup() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                     )}
 
                   />;

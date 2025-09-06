@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 
 
-import React, { useEffect, useMemo, useState } from 'react';
 
-
-export type AdminNotesPanelProps = {
-
-  targetType: string; // e.g., 'user' | 'listing'
-  targetId: string; // unique identifier for the target
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 export type AdminNotesPanelProps = {;
@@ -19,7 +10,8 @@ export type AdminNotesPanelProps = {;
 type Note = {;
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 }
 ;
 type Note = {
@@ -28,26 +20,25 @@ type Note = {
   target_id: string;
   text: string;
 
+
 import React, { useEffect, useMemo, useState } from 'react';
 
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   targetType,
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 type Note = {
   id: string
   targetType: string
@@ -56,28 +47,20 @@ type Note = {
   authorId: string
   createdAt: number
 
-<<<<<<< HEAD
-}
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
-=======
-};
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -173,29 +156,8 @@ if ( {) {
       await fetchNotes();
 
 
-      if (!res.ok) {
 
 
-
-        alert('Failed to add note');
-        return;
-      }
-      setText('');
-
-
-<<<<<<< HEAD
-      await fetchNotes()
-    } finally {
-      setAdding(false)
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-    }
-  }
-
-  if (!isAdmin) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -253,6 +215,7 @@ if ( {) {
           placeholder='Write a private note (abuse, spam, special support)'
           value={text}
 
+
           onChange={e => setText(e && e.target.value)}
         />;
         <button
@@ -294,12 +257,21 @@ if ( {) {
 
   );
 
+
+
+}
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   useEffect (() => {
     if (fetch_notes ()) {
   $2
 }    if (fetch_notes ()) {
   $2
 }
+
+
 
   }, [is_admin, target_type, target_id]);
 ;
@@ -309,6 +281,8 @@ if ( {) {
 function add_note() {
     if () return) {
   $2
+
+
 
 }
     set_adding (true);
@@ -456,25 +430,9 @@ if ( {) {
                 <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
                 <div>{n.text}</div>
 
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </div>
-<<<<<<< HEAD
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-<<<<<<< HEAD
-  )
 
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

@@ -1,9 +1,9 @@
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -12,40 +12,17 @@ export default async function handler(
 ) {
   const usingPlaceholder =
 
-<<<<<<< HEAD
-    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-    (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
 
-=======
 
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       "placeholder-key";
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
         leaders: [
-<<<<<<< HEAD
-
-          { code: "aihub", profile_completions: 9 }
-          { code: "modelmasters", profile_completions: 7 }
-          { code: "promptpro", profile_completions: 5 }
-        ]
-      });
-    }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     }
@@ -72,70 +49,7 @@ export default async function handler(
 
 
 
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-    if (req.method === 'GET') {
-      return res.status(200).json({
-        leaders: []
-      });
-    } else {
-      res.status(405).end('Method Not Allowed');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase/server';
-export default async function handler(req, res) {
-  try {
-  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
-  try {
-    if (usingPlaceholder) {;
-      return res.status(200).json({;
-        leaders: [;
-          { code: 'aihub', profile_completions: 9 },;
-          { code: 'modelmasters', profile_completions: 7 },;
-          { code: 'promptpro', profile_completions: 5 }]});
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-
-
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
@@ -185,14 +99,12 @@ export default async function handler(req, res) {
     return res.status(200).json({ leaders });
   } catch (error) {
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     return res.status(500).json({ error: e?.message });
     } catch (error) {
     console.error("Error:", error);

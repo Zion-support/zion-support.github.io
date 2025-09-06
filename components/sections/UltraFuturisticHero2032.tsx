@@ -1,31 +1,8 @@
 
-<<<<<<< HEAD
 
 
 
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Rocket,
   Brain,
   Atom,
@@ -44,17 +21,16 @@ import React from 'react';
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   website: 'https://ziontechgroup.com'
 }
 const heroStats = [
@@ -281,34 +257,8 @@ function UltraFuturisticHero2032() {
     <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>    href: '/quantum - internet - security - gateway';
   }
 
-];
-;
-export default /**
- * UltraFuturisticHero2032 - Function description
- */
-function UltraFuturisticHero2032() {
-  return (
-    <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>;
-      {/* Animated Background Elements */}
-      <div className='absolute inset - 0'>;
-        {/* Floating Particles */}
-        <div className='absolute inset - 0'>;
-          {[...Array (50)].map ((_, i) => (
-            <motion.div;
-              key={i}
-              className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30';
-              style={{
-
-                duration: 3 + Math.random() * 2
-                repeat: Infinity
-                delay: Math.random() * 2
-              }}            />                delay: Math.random() * 2}}
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
           ))}
         </div>
@@ -316,7 +266,9 @@ function UltraFuturisticHero2032() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         {/* Gradient Orbs */}
 
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
@@ -331,7 +283,6 @@ function UltraFuturisticHero2032() {
                 opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
               }}
               transition={{
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 duration: 3 + Math && Math.random() * 2,
                 repeat: Infinity,
                 delay: Math && Math.random() * 2,
@@ -370,12 +321,13 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Main Heading */}
         <motion&& motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -386,22 +338,21 @@ function UltraFuturisticHero2032() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
             The Future of
           </span>
           <br />
           <span className='text-white'>Technology is Here</span>        </motion.h1>        >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             The Future of
           </span>
@@ -410,72 +361,44 @@ function UltraFuturisticHero2032() {
         </motion.h1>
 
 
-<<<<<<< HEAD
-=======
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-          className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'>;
-          <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-            The Future of;
-          </span>;
-          <br />;
-          <span className='text-white'>Technology is Here</span>        </motion && motion.h1>        >;
-          <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
-            The Future of;
-          </span>;
-          <br />;
-          <span className="text-white">Technology is Here</span>;
-        </motion && motion.h1>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
         {/* Subheading */}
         <motion&& motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         </motion.p>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 
-<<<<<<< HEAD
+
         </motion.p>
 
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-=======
-        </motion.p>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -486,15 +409,15 @@ function UltraFuturisticHero2032() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Link
@@ -524,18 +447,14 @@ function UltraFuturisticHero2032() {
         </motion.div>
 
 
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Stats Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -547,15 +466,15 @@ function UltraFuturisticHero2032() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >
           {heroStats.map((stat, index) => (
             <motion.div
@@ -679,19 +598,15 @@ function UltraFuturisticHero2032() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
 
-<<<<<<< HEAD
-=======
-        </motion && motion.div>;
 
 
-=======
-              className='text-center group'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
             >
               <div
@@ -723,12 +638,13 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Featured Services */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -739,15 +655,15 @@ function UltraFuturisticHero2032() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >
           <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>
             Featured Revolutionary Services
@@ -767,14 +683,14 @@ function UltraFuturisticHero2032() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
@@ -809,19 +725,16 @@ function UltraFuturisticHero2032() {
 
 
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
         {/* Contact Information */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -832,15 +745,15 @@ function UltraFuturisticHero2032() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>
             Ready to Transform Your Business?
@@ -848,6 +761,8 @@ function UltraFuturisticHero2032() {
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>
             <div className='flex items-center space-x-3 text-gray-300'>
               <Phone className='w-5 h-5 text-cyan-400' />
+
+
 
           transition={{ duration: 0 && 0.8, delay: 1 && 1.6 }}
           className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'>;
@@ -956,21 +871,20 @@ function UltraFuturisticHero2032() {
 
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
       {/* Floating Action Button */}
       <motion&& motion.div
                 className='group';
@@ -1084,44 +998,17 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-        className='fixed bottom - 8 right - 8 z - 50';
-      >;
-        <Link;
-          href={`tel:${contact_info.mobile}`}
-          className='group w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - full flex items - center justify - center shadow - 2xl shadow - purple - 500 / 25 transform transition - all duration - 300 hover:shadow - lg hover:shadow - cyan - 400 / 40 hover:shadow - 2xl hover:shadow - purple - 500 / 40';
-        >;
-          <Phone className='w - 7 h - 7 text - white group - hover:rotate - 12 transition - transform' />;
-        </Link>;
-      </motion.div>;
-    </section>);      >;
-        <Link;
-          href={`tel:${contact_info.mobile}`}
-          className="group w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - full flex items - center justify - center shadow - 2xl shadow - purple - 500 / 25 transform transition - all duration - 300 hover: shadow - lg hover:shadow - cyan - 400 / 40 hover:shadow - 2xl hover:shadow - purple - 500 / 40";
-        >;
-          <Phone className="w - 7 h - 7 text - white group - hover:rotate - 12 transition - transform" />;
-        </Link>;
-      </motion.div>;
-    </section>);
-        >
-          <Phone className=&quot;w-7 h-7 text-white group-hover:rotate-12 transition-transform&quot; />
-        </a>
-      </motion.div>
-    </section>
-  )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       >
         <Link
           href={`tel:${contactInfo.mobile}`}
@@ -1131,32 +1018,15 @@ function UltraFuturisticHero2032() {
         </Link>
       </motion.div>
 
-<<<<<<< HEAD
-    </section>
-    </section>;
 
-  );      >
-        <Link
-          href={`tel:${contactInfo.mobile}`}
-          className="group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover: shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40"
-        >
-          <Phone className="w-7 h-7 text-white group-hover:rotate-12 transition-transform" />
-        </Link>
-      </motion.div>
-    </section>
-  )
-}
 
-  );
-    </section>
-  );
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

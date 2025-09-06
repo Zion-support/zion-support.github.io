@@ -2,10 +2,8 @@
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";
@@ -14,68 +12,8 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Separator} from "@/components/ui/separator";
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {useState} from "react";
-<<<<<<< HEAD
-
-import { ContractTemplate } from "@/types/contracts",
-import { Button } from "@/components/ui/button",
-import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",
-import { useContractTemplates } from "@/hooks/useContractTemplates",
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import {
-  AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
-  AlertDialogTitle} from "@/components/ui/alert-dialog",
-import { useState } from "react";
-interface TemplateListProps {
-
-  templates: ContractTemplate[]
-  isLoading: boolean
-  onSelect: (template: ContractTemplate) => void
-
-  onEdit: (template: ContractTemplate) => void
-}
-export function TemplateList({
-  templates;
-  isLoading;
-  onSelect;
-  onEdit
-}: TemplateListProps) {
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
-
-  const handleDeleteClick = (templateId: string) => {
-    setTemplateToDelete(templateId)
-  }
-  const handleDeleteConfirm = async () => {
-    if (templateToDelete) {
-      await deleteTemplate.mutateAsync(templateToDelete);
-      setTemplateToDelete(null)
-    }
-  }
-  const handleSetDefault = async (templateId: string) => {
-    await setDefaultTemplate.mutateAsync(templateId)
-  }
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle} from "@/components/ui/alert-dialog",
-import { useState } from "react",
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface TemplateListProps {
   templates: ContractTemplate[],
@@ -125,8 +63,8 @@ import {;
   AlertDialogTitle} from "@/components/ui/alert-dialog",;
 import { useState } from "react",;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface TemplateListProps {;
   templates: ContractTemplate[],;
   isLoading: boolean,;
@@ -152,16 +90,8 @@ export function TemplateList(): any ({;
       await deleteTemplate && deleteTemplate.mutateAsync(templateToDelete);
       setTemplateToDelete(null);
     }
-<<<<<<< HEAD
-=======
-  };
-=======
-interface TemplateListProps {
-  templates: ContractTemplate[],
-  isLoading: boolean,
-  onSelect: (template: ContractTemplate) => void,
-  onEdit: (template: ContractTemplate) => void
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 
@@ -170,6 +100,7 @@ interface TemplateListProps {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   const handleSetDefault = async (templateId: string) => {
     await setDefaultTemplate.mutateAsync(templateId)
@@ -212,36 +143,9 @@ interface TemplateListProps {
                   {template && template.is_default && (;
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
-<<<<<<< HEAD
-
-                </div>
-                <p className="text-xs text-muted-foreground">
-                  Last updated: {new Date(template.updated_at).toLocaleDateString()}
-                </p>
-              </div>
-              <div className="flex items-center gap-2">
-                <Button variant="ghost" size="icon" onClick={() => onEdit(template)}>
-                  <Edit className="h-4 w-4" />
-                </Button>
-                {!template.is_default ? (
-                  <Button variant="ghost" size="icon" onClick={() => handleSetDefault(template.id)}>
-                    <Star className="h-4 w-4" />
-                  </Button>
-                ) : (
-                  <Button variant="ghost" size="icon" disabled>
-                    <StarOff className="h-4 w-4" />
-                  </Button>
-                )}
-                <Button variant="ghost" size="icon" onClick={() => handleDeleteClick(template.id)}>
-                  <Trash className="h-4 w-4 text-destructive" />
-                </Button>
-              </div>
-            </div>
-            <Separator className="my-3" />
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
             <Button 
@@ -249,7 +153,9 @@ interface TemplateListProps {
               variant="outline" 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               className="w-full"
             >
               Use This Template

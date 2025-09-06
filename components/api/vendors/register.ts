@@ -1,15 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
-import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-    return res.status(405).json({ error: 'Method not allowed' });
-
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const {
     slug
     name
@@ -21,6 +12,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } = req.body |{}
   if (!slug |!name)
     return res.status(400).json({ error: 'Missing required fields' });
+
+
 
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
@@ -67,6 +60,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+

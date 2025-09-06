@@ -19,12 +19,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 
+
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import {
+
 
 
 
@@ -88,11 +90,8 @@ export function MobileResumeBuilder() {
           onClick={() => setCurrentStep("basics")}
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
           Basics
         </Button>
@@ -104,10 +103,9 @@ export function MobileResumeBuilder() {
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         >
           Experience
         </Button>
@@ -176,10 +174,8 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >;
           Skills;
         </Button>;
@@ -233,13 +229,13 @@ function BasicsStep() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
           <Textarea 
@@ -256,22 +252,7 @@ function ExperienceStep() {
   }
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
-<<<<<<< HEAD
 
-
-  }
-  const removeEducation = (id: string,) => {
-    setEducations(educations.filter(edu => edu.id !== id))
-  }
-  const removeSkill = (id: string,) => {
-    setSkills(skills.filter(skill => skill.id !== id))
-  }
-}
-  )
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   };
@@ -447,9 +428,5 @@ function ExperienceStep() {;
 
   );
 }
-<<<<<<< HEAD
-=======
 
 
-;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

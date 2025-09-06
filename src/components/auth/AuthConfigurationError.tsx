@@ -29,22 +29,8 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import React from 'react'
 import Link from 'next/link'
 import {
-<<<<<<< HEAD
 
 
-  AlertTriangle
-  ExternalLink
-  RefreshCw
-  Settings
-  CheckCircle
-import React from 'react'
-import Link from 'next/link'
-import {
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   AlertTriangle,
   ExternalLink,
   RefreshCw,
@@ -52,11 +38,8 @@ import {
   CheckCircle;
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
@@ -132,6 +115,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
     } else {;
 
 
+
       window && window.location.reload();    }
       window.location.reload()
 import React from 'react';
@@ -199,14 +183,12 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <Alert variant="destructive" className="mb-6">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
@@ -224,10 +206,8 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• AUTH0_SECRET</li>
@@ -274,11 +254,11 @@ if ( {) {
             {showSetupButton && (
               <Button 
                 onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
-<<<<<<< HEAD
-=======
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
                 <Settings className="w-4 h-4 mr-2" />
@@ -431,12 +411,12 @@ if ( {) {
             <ol className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">1</span>
-<<<<<<< HEAD
-=======
+
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 <div>
                   <strong>Create Auth0 Account:</strong>
                   <br />
@@ -706,10 +686,8 @@ if ( {) {
               <span>Browse Marketplace</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>View Talent Pool</span>
@@ -867,31 +845,27 @@ if ( {) {
       </div>
     </div>
 
-              onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
-
-<<<<<<< HEAD
-
 
               onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 export default AuthConfigurationError };
 ;
 export default AuthConfigurationError;
 }
 }
 
+
+
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="mt-6 text-center text-sm text-gray-500">;
           <p>;
             For detailed instructions, see{' '}

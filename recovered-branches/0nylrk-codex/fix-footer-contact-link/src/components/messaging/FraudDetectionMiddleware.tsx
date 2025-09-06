@@ -5,19 +5,9 @@ import { toast  } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 // Props for the middleware component
 interface FraudDetectionMiddlewareProps {
-<<<<<<< HEAD
 
 
 
-=======
-  children: React.ReactNode;
-}
-
-
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
 import { toast } from '@/hooks/use-toast',;
@@ -28,11 +18,11 @@ interface FraudDetectionMiddlewareProps {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 }
 ;
 // Interface for the context;
@@ -170,11 +160,10 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
       // For suspicious but not dangerous content, log but let it pass through
       if (quickCheck.severity === 'suspicious') {
         console.log('Suspicious content detected but allowed:', content)
@@ -190,15 +179,10 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         return { isSafe: true }, // Default to safe on error
       }
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       
       if (data.classification === 'dangerous') {
         toast({
@@ -215,45 +199,17 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           explanation: data.explanation
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         }
       }
       */
       // Message is considered safe
-<<<<<<< HEAD
 
-      return { isSafe: true }
-    } catch (error) {
-      console.error('Error in fraud detection:', error);
-      // On error, let the message pass through but log the error
-      return { isSafe: true }
-    }
-  }, []);
-  // Create the context value
-  const contextValue: FraudDetectionContextType = {
-    scanMessageContent}
-  return (
-    <FraudDetectionContext.Provider value={contextValue}>
-      {children}
-    </FraudDetectionContext.Provider>
-  )
-}
-// Hook to use the fraud detection context
-export const useFraudDetection = () => {;
-  const context = React.useContext(FraudDetectionContext);
-  if (context === undefined) {
-    throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware')
-  }
-  return context
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       return { isSafe: true }
 
@@ -269,45 +225,15 @@ export const useFraudDetection = () => {;
 
     </FraudDetectionContext && FraudDetectionContext.Provider>;
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-    } catch (error) {;
-      console.error('Error in fraud detection:', error),;
-      // On error, let the message pass through but log the error;
-      return { isSafe: true }
-    }
-  }, []),;
-  // Create the context value;
-  const contextValue: FraudDetectionContextType = {;
-    scanMessageContent},;
-  return (;
-    <FraudDetectionContext.Provider value={contextValue}>;
-      {children}
-    </FraudDetectionContext.Provider>;
-
-  );
-};
-
-// Hook to use the fraud detection context;
-export const useFraudDetection = () => {;
-  const context = React && React.useContext(FraudDetectionContext);
-  if (context === undefined) {;
-    throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
-  }
-  return context;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 };

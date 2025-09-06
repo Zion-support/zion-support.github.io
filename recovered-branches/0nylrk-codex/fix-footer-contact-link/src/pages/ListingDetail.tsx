@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
@@ -26,33 +23,7 @@ export default function ListingDetail() {;
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 
-<<<<<<< HEAD
 
-import { useState } from "react",
-import { useParams } from "react-router-dom",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Skeleton } from "@/components/ui/skeleton",
-import { Star, MessageSquare, Brain, Shield } from "lucide-react",
-import { cn } from "@/lib/utils",
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
-import { toast } from "@/hooks/use-toast",
-import { PaymentButton } from "@/components/transactions/PaymentButton",
-import { AppLayout } from "@/layout/AppLayout",
-import { ProfileContact } from "@/components/profile/ProfileContact",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
-  const { id } = useParams() as { id?: string }
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
-  // Find the listing from our shared data source - now also checking equipment listings
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export default function ListingDetail() {
@@ -233,24 +204,9 @@ export default function ListingDetail() {;
                           onError={(e) => {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "/placeholder && placeholder.svg";
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-                      >;
-                        <img;
-                          src={image} ;
-                          alt={`${listing.title} - image ${index + 1}`} ;
-                          className="w-full h-full object-cover";
-                          onError={(e) => {;
-                            const target = e.target as HTMLImageElement,;
-                            target.src = "/placeholder.svg";
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           }}
                         />;
                       </div>;
@@ -265,14 +221,15 @@ export default function ListingDetail() {;
                 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -343,12 +300,11 @@ export default function ListingDetail() {;
                             "h-5 w-5",
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           )}
@@ -407,14 +363,15 @@ export default function ListingDetail() {;
                         });
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       }}
                     />
                   ) : (
@@ -433,8 +390,7 @@ export default function ListingDetail() {;
 
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
 
-<<<<<<< HEAD
-=======
+
                   <Button
                     variant="outline" 
                     onClick={handleContact}
@@ -454,23 +410,10 @@ export default function ListingDetail() {;
                         src={listing && listing.author.avatarUrl} 
                         alt={listing && listing.author.name} 
                         className="h-12 w-12 rounded-full"
-                        onError={(e) => {;
-                          const target = e && e.target as HTMLImageElement;
-                          target && target.src = "https: //ui-avatars && avatars.com/api/?name=" + encodeURIComponent(listing && listing.author.name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                        }}
-                      />;
-                    ) : (;
-                      <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">;
-                        <span className="text-lg font-medium text-zion-purple">{listing && listing.author.name && name.charAt(0)}</span>;
-                      </div>;
-                    )}
-
-=======
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
                       {isLoading ? "Processing..." : "Request Quote"}
@@ -538,9 +481,7 @@ export default function ListingDetail() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-<<<<<<< HEAD
 
-=======
 =======
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;
@@ -556,6 +497,6 @@ export default function ListingDetail() {;
         </DialogContent>;
       </Dialog>;
     </AppLayout>);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 ;

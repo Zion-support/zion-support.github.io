@@ -6,28 +6,8 @@ export default function ProfileDetail() {;
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
 
 
-import { useState, useEffect } from "react",
-import { useRouter } from "next/router",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import { SEO } from "@/components/SEO",
-import { Header } from "@/components/Header",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge";
-import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
-import { HireNowCTA } from "@/components/profile/HireNowCTA";
-export default function ProfileDetail() {
-  // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   useEffect(() => {
@@ -124,123 +104,11 @@ export default function ProfileDetail() {
 
 
 
+
   }, [profileId]);
 
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-  return (
-    <>
-      <SEO
-        title={`${profileData.full_name} | Zion AI Marketplace`}
-        description = {profileData.bio |"Check out this talent's profile on Zion!",}
 
-        description = {profileData.bio || "Check out this talent's profile on Zion!",}
-
-
-=======
-
-        description = {profileData.bio || "Check out this talent's profile on Zion!",}
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import { useState, useEffect } from "react",;
-import { useRouter } from "next/router",;
-import { supabase } from "@/integrations/supabase/client",;
-import { toast } from "@/hooks/use-toast",;
-import { SEO } from "@/components/SEO",;
-import { Header } from "@/components/Header",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react';
-import { HireNowCTA } from "@/components/profile/HireNowCTA",;
-export default function ProfileDetail() {;
-  // useParams is typed as `any` in this environment due to missing type;
-  // definitions, so avoid passing a type argument to prevent TS2347.;
-  const router = useRouter(),;
-  const profileId = router.query.profileId as string,;
-  const [profileData, setProfileData] = useState<any>(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [error, setError] = useState<string | null>(null),;
-  useEffect(() => {;
-    const fetchProfile = async () => {;
-      setIsLoading(true),;
-      setError(null),;
-      try {;
-        if (!profileId) {;
-          setError("Profile ID is missing."),;
-          return;
-        }
-;
-        const { data, error } = await supabase;
-          .from("talent_profiles");
-          .select("*");
-          .eq("id", profileId);
-          .single(),;
-        if (error) {;
-          throw new Error(error.message);
-        }
-;
-        if (!data) {;
-          setError("Profile not found."),;
-          return;
-        }
-;
-        setProfileData(data);
-      } catch (err: any) {;
-        setError(err.message || "Failed to fetch profile."),;
-        toast({;
-          title: "Error",;
-          description: err.message || "Failed to fetch profile.",;
-          variant: "destructive"});
-      } finally {;
-        setIsLoading(false);
-      }
-    },;
-    fetchProfile();
-  }, [profileId]),;
-
-  if (isLoading) {;
-    return (;
-      <div className="min-h-screen flex items-center justify-center">;
-        <p>Loading profile...</p>;
-      </div>;
-    );
-  }
-;
-  if (error) {;
-    return (;
-      <div className="min-h-screen flex items-center justify-center">;
-        <p>Error: {error}</p>;
-      </div>;
-    );
-  }
-;
-  if (!profileData) {;
-    return (;
-      <div className="min-h-screen flex items-center justify-center">;
-        <p>Profile not found.</p>;
-      </div>;
-    );
-  }
-;
-  return (;
-    <>;
-
-        description = {profileData.bio |"Check out this talent's profile on Zion!",}
-
-      <SEO;
-        title={`${profileData.full_name} | Zion AI Marketplace`}
-        description={profileData.bio || "Check out this talent's profile on Zion!"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       />
@@ -395,18 +263,8 @@ if ( {) {
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -565,14 +423,8 @@ if ( {) {
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
-<<<<<<< HEAD
 
 
-                hourly_rate: profileData?.hourly_rate || 0
-                hourly_rate: profileData?.hourly_rate || 0,
-                hourly_rate: profileData?.hourly_rate || 0
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               }}
@@ -605,20 +457,8 @@ if ( {) {
             </div>
               </div>;
             </div>;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
               <h3 className="text-xl font-bold mb-4">Social</h3>;
@@ -650,14 +490,13 @@ if ( {) {
                   <a;
                     href={profileData.twitter_url}
 
+
+
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -680,14 +519,13 @@ if ( {) {
                   <a;
                     href={profileData.linkedin_url}
 
+
+
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"

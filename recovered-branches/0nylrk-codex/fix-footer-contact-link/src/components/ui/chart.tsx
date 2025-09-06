@@ -1,23 +1,6 @@
-<<<<<<< HEAD
-
-import * as React from "react"
-import type { CSSProperties } from "react"
-import * as RechartsPrimitive from "recharts"
-import {useReactId} from "@/hooks/useReactId"
-import {cn} from "@/lib/utils"
 
 
-=======
 
-
-// Format: { THEME_NAME: CSS_SELECTOR }
-const THEMES = { light: "", dark: ".dark" } as const
-
-export type ChartConfig = Record<;
-  string;
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
@@ -25,10 +8,10 @@ import { cn } from "@/lib/utils"
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 // Format: { THEME_NAME: CSS_SELECTOR }
 
 const THEMES = { light: "", dark: ".dark" } as const
@@ -254,14 +237,15 @@ const ChartTooltipContent = React && React.forwardRef<;
                                 "--color-bg": indicatorColor,
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                                 "--color-border": indicatorColor} as CSSProperties
                             }
                         />;
@@ -283,28 +267,24 @@ const ChartTooltipContent = React && React.forwardRef<;
                           {item.value.toLocaleString()}
                         </span>
                         </span>;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                       </div>;
                       {item && item.value && (;
                         <span className="font-mono font-medium tabular-nums text-foreground">;
                           {item && item.value.toLocaleString()}
                         </span>;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       )}
                     </div>;
                   </>;
@@ -316,6 +296,8 @@ const ChartTooltipContent = React && React.forwardRef<;
       </div>;
     );
   }
+
+
 
 
 );
@@ -331,6 +313,8 @@ const ChartLegendContent = React && React.forwardRef<;
       "payload" | "verticalAlign"> & {;
       hideIcon?: boolean;
       nameKey?: string;
+
+
 
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
     ref
@@ -377,46 +361,12 @@ const ChartLegendContent = React && React.forwardRef<;
       </div>;
     );
   }
-<<<<<<< HEAD
-
-)
-ChartLegendContent.displayName = "ChartLegend"
-// Helper to extract item config from a payload.
-function getPayloadConfigFromPayload(
-  config: ChartConfig
-  payload: unknown
-  key: string
-) {
-  if (typeof payload !== "object" |payload === null) {
-    return undefined
-  }
-  const payloadPayload =
-    "payload" in payload &&
-    typeof payload.payload === "object" &&
-    payload.payload !== null
-      ? payload.payload
-      : undefined
-  let configLabelKey: string = key
-  if (
-    key in payload &&
-    typeof payload[key as keyof typeof payload] === "string"
-  ) {
-    configLabelKey = payload[key as keyof typeof payload] as string
-  } else if (
-    payloadPayload &&
-    key in payloadPayload &&
-    typeof payloadPayload[key as keyof typeof payloadPayload] === "string"
-  ) {
-    configLabelKey = payloadPayload[
-      key as keyof typeof payloadPayload
-    ] as string
-  }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
   return configLabelKey in config
@@ -424,76 +374,8 @@ function getPayloadConfigFromPayload(
     : config[key as keyof typeof config]
 
 }
-<<<<<<< HEAD
-=======
-      return null;
-    }
-    return (
-      <div;
-        ref={ref}
-        className={cn (
-          "flex items - center justify - center gap - 4";
-          vertical_align === "top" ? "pb - 3" : "pt - 3";
-          class_name)}
-      >;
-        {payload.map ((item) => {
-          const key = `${name_key || item.data_key || "value"}`;
-          const item_config = getPayloadConfigFromPayload (config, item, key);
-          return (
-            <div;
-              key={item.value}
-              className={cn (
-                "flex items - center gap - 1.5 [&>svg]:h - 3 [&>svg]:w - 3 [&>svg]:text - muted - foreground")}
-            >;
-              {item_config?.icon && !hide_icon ? (
-                <item_config.icon />) : (
-                <div;
-                  className="h - 2 w - 2 shrink - 0 rounded-[2px]";
-                  style={{
-                    background_color: item.color}}
-                />)}
-              {item_config?.label}
-            </div>);
-        })}
-      </div>);
-  }
-);
-ChartLegendContent.display_name = "ChartLegend";
-// Helper to extract item config from a payload.;
-/**
- * getPayloadConfigFromPayload - Function description
- */
-function getPayloadConfigFromPayload() {
-  // Check condition
-if ( {) {
-  $2
-}
-    return undefined;
-  }
-  const payload_payload =;
-    "payload" in payload &&;
-    typeof payload.payload === "object" &&;
-    payload.payload !== null;
-      ? payload.payload;
-      : undefined;
-  let configLabelKey: string = key;
-  // Check condition
-if ( {) {
-  $2
-}
-    configLabelKey = payload[key as keyof typeof payload] as string;
-  } else // Check condition
-if ( {) {
-  $2
-}
-    configLabelKey = payload_payload[;
-      key as keyof typeof payload_payload;
-    ] as string;
-  }
-  return configLabelKey in config;
-    ? config[configLabelKey];
-    : config[key as keyof typeof config];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -533,44 +415,16 @@ function getPayloadConfigFromPayload(): any (;
       key as keyof typeof payloadPayload;
     ] as string;
   }
-<<<<<<< HEAD
 
 
-=======
 
-=======
-
-
-export {;
-  ChartContainer;
-  ChartTooltip;
-  ChartTooltipContent;
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-;
-
-  return configLabelKey in config;
-    ? config[configLabelKey];
-    : config[key as keyof typeof config];
-}
-
-export {;
-
-  ChartContainer,;
-  ChartTooltip,;
-  ChartTooltipContent,;
-
-
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   ChartLegend;
   ChartLegendContent;
 

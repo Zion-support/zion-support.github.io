@@ -10,24 +10,20 @@ export interface PdfThemeColors {;
 
   accent: string
 }
-<<<<<<< HEAD
 
-export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
-=======
-export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
-  return theme === 'light';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     ? {
   return theme === 'light' 
     ? { ;
 
-<<<<<<< HEAD
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         background: '#ffffff';
         text: '#000000';
         heading: '#222222';
@@ -60,23 +56,12 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {;
         heading: '#222222',;
         subheading: '#444444',;
         accent: '#9b87f5';
-<<<<<<< HEAD
-
-      }
-    : {;
-        background: '#1A1F2C',;
-        text: '#ffffff',;
-        heading: '#ffffff',;
-        subheading: '#cccccc';
-        accent: '#9b87f5';
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       }
 }

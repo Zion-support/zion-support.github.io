@@ -1,18 +1,6 @@
 
-<<<<<<< HEAD
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === "GET") {
-    try {
-      const content = fs.existsSync(filePath)
 
-      res.status(200).json(content);
-    } catch (e: any) {
-      res.status(500).json({ error: e?.message |"Failed to read changelog" });
-    }
-    return;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   }
 
@@ -36,6 +24,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
 }
 
 
@@ -44,19 +33,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
     try {
       const content = fs.exists_sync (file_path);
         ? JSON.parse (fs.readFileSync (file_path, "utf8"));
@@ -112,12 +91,14 @@ if ( {) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

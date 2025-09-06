@@ -1,21 +1,12 @@
 
-<<<<<<< HEAD
-=======
-import React from './react';
-import { complete_sitemap, dynamic_paths  } from '@/config / sitemap';
-import { Link  } from './react-router-dom';
-import { ChevronRight  } from './lucide-react';
-import { SEO  } from './SEO';
-import { AppLayout  } from '@/layout / AppLayout';
 
-export const SitemapPage: React.FC = () => {
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 import React from 'react';
 import {completeSitemap, dynamicPaths} from '@/config/sitemap';
 import {Link} from 'react-router-dom';
@@ -24,11 +15,8 @@ import {SEO} from './SEO';
 import {AppLayout} from '@/layout/AppLayout';
 
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
 import { Link } from 'react-router-dom',
@@ -38,11 +26,11 @@ import { AppLayout } from '@/layout/AppLayout',
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 export const SitemapPage: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -321,43 +309,8 @@ export const SitemapPage: React.FC = () => {
                   </div>;
                 </li>;
               ))}
-<<<<<<< HEAD
-
-            </ul>
-          </div>
-        </div>
-      </div>
-    </AppLayout>
 
 
-
-=======
-=======
-
-
-
-=======
-                    </Link>;
-                  </li>))}
-            </ul>;
-          </div>;
-          {/* Dynamic Routes */}
-          <div className="bg - zion - blue - dark p - 6 rounded - lg">;
-            <h2 className="text - xl font - bold mb - 4 text - zion - cyan">;
-              Dynamic Pages;
-            </h2>;
-            <p className="text - sm text - zion - slate mb - 4">;
-              Pages with dynamic parameters;
-            </p>;
-            <ul className="space - y-2">;
-              {Object.entries (dynamic_paths).map (([key, path]) => (
-                <li key={key}>;
-                  <div className="flex items - center text - zion - slate">;
-                    <ChevronRight className="h - 4 w - 4 mr - 2" />;
-                    {path} <span className="ml - 2 text - xs italic">({key})</span>;
-                  </div>;
-                </li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </ul>;
           </div>;

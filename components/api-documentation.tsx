@@ -4,10 +4,8 @@ import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 class ErrorBoundary extends React.Component {
@@ -60,6 +58,9 @@ export default function APIDocumentation() {;
           <li>;
             <a className='text-cyan-400' href='/api-docs'>;
 
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   Code,
   Database,
   Shield,
@@ -90,11 +91,7 @@ import {
   Code, Database, Shield, Zap, Globe, Cpu, 
   BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
 
-} from 'lucide-react';
 
-export default function APIDocumentation() {
-	return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>API Documentation | Zion Tech Group</title>

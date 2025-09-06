@@ -19,47 +19,31 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useRef } from 'react';
 
-<<<<<<< HEAD
 
+import type {
+  RemoteParticipant,
+  LocalParticipant,
+  TrackPublication,;
+  Track,;
 
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import type {;
   RemoteParticipant,;
   LocalParticipant,;
   TrackPublication,;
   Track,;
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'livekit-client';
 
 type Props = {;
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
-<<<<<<< HEAD
 
-}
-export default function ParticipantTile({
 
-}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
-type Props = {
-  participant: RemoteParticipant | LocalParticipant
-  isLocal?: boolean;
-  displayName?: string
-
-}
-export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
-};
-
-export default function ParticipantTile({ participant, isLocal, displayName }: Props) {;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
@@ -74,7 +58,7 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
+
 };
 
 export default function ParticipantTile(): any ({;
@@ -85,20 +69,8 @@ export default function ParticipantTile(): any ({;
 type Props = {;
   participant: RemoteParticipant | LocalParticipant,;
 
-=======
-import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
-
-type Props = {
-  participant: RemoteParticipant | LocalParticipant,
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  isLocal?: boolean;
-  displayName?: string;
-};
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.attach(audioRef && audioRef.current);      }
@@ -108,7 +80,6 @@ type Props = {
         track && track.detach(videoRef && videoRef.current);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.detach(audioRef && audioRef.current);      }        track && track.attach(videoRef && videoRef.current);
@@ -155,42 +126,9 @@ type Props = {
   return (
     <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>;
 
-      <video
-        ref={videoRef}
-        autoPlay
-        playsInline
-        muted={Boolean(isLocal)}
-        className='w-full h-48 object-cover bg-black'
-
-      />;
-      <audio ref={audioRef} autoPlay className='hidden' />;
-      <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'>;
-        {displayName ||;
-          (participant as any).name ||;
-
-          (isLocal ? 'You' : 'Participant')}
-      </div>
-    </div>
-  );  }, [participant]);
-
-  return (
-
-    <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">;
-      <video ref={videoRef} autoPlay playsInline muted={Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />;
-      <audio ref={audioRef} autoPlay className="hidden" />;
-      <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">;
-        {displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
-      </div>;
-    </div>;
-  );
-}
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-<<<<<<< HEAD
-=======
   return (
     <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">
       <video ref={_videoRef} autoPlay playsInline muted={_Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />
@@ -203,13 +141,8 @@ type Props = {
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-      </div>
-    </div>
 
-  );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

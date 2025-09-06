@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-export type KycRole = 'client' | 'talent' | 'enterprise';
-export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
-export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
@@ -12,19 +7,18 @@ export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
   status: 'pending' | 'approved' | 'rejected';
 }
 
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export interface KycProfile {
 
 
 export interface KycProfile {;
 
+
 export interface KycProfile {
   user_id: string;
+
 
   userId: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -51,6 +45,16 @@ export interface KycProfile {
   }>;
 
 
+
+}
+
+export function getRequiredDocuments (role: KycRole): string[] {
+  // Check condition
+if ( {) {
+  $2
+}
+
+
     return ['government_id', 'proof_of_address'];
   } else {
     return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
@@ -64,9 +68,11 @@ export interface KycProfile {
   }
 }
 
+
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
 
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
+
 
   const missing: string[] = [];
   
@@ -83,6 +89,12 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   return { ok: missing && missing.length === 0, missing };  
   if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
     missing && missing.push('businessRegistrationNumber');
+
+
+  
+  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
+    missing && missing.push('name'),
+
 
   }
   
@@ -114,118 +126,13 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
 
 }
 
-}
-
-export interface KycProfile {
-
-  userId: string;
-  role: KycRole;
-  fullLegalName?: string;
-  businessName?: string;
-  businessRegistrationNumber?: string;
-  country?: string;
-  dateOfBirth?: string;
-  documents: KycDocumentMeta[];
-  status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
-  amlStatus: 'unknown' | 'clear' | 'match' | 'review';
-  flags?: string[];
-  riskScore?: number;
-  createdAt: string;
-  lastUpdatedAt: string;
-  auditTrail: Array<{
-    at: string;
-    by: string;
-    action: string;
-    details?: any
-  }>;
-}
-<<<<<<< HEAD
-
-export function getRequiredDocuments(role: KycRole): string[] {
-  if (role === 'client') {;
-    return ['government_id', 'proof_of_address'];
-  } else {
-    return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
-  }
-}
-export function getOptionalDocuments(role: KycRole): string[] {
-  if (role === 'client') {;
-    return ['bank_statement', 'utility_bill'];
-  } else {
-    return ['bank_statement', 'utility_bill', 'tax_certificate'];
-  }
-}
 
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-export function generateKycDocumentId(): string {
-  return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
-export function isKycProfileComplete(profile: KycProfile): boolean {
-  return profile.status === 'approved' && 
-         profile.documents.length > 0 && 
-         profile.fullLegalName.length > 0;
-}
-export function isKycProfileExpired(profile: KycProfile): boolean {
-  if (!profile.expiresAt) return false;
-  return new Date(profile.expiresAt) < new Date();
-}
-
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-  const missing: string[] = [];
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('name');
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('country');
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('dateOfBirth');
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('businessRegistrationNumber');
-  }
-  return {
-    ok: missing.length === 0,
-    missing;
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
 
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

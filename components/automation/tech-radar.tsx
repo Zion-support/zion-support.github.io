@@ -1,15 +1,15 @@
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
  
 
 
 
-<<<<<<< HEAD
-=======
+
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -41,24 +41,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
         crates: data && data.ecosystems.crates || [],;
         github: data && data.ecosystems.github || {}},;
 
-=======
-
-        pypi: data.ecosystems.pypi || [],
-        crates: data.ecosystems.crates || [],
-        github: data.ecosystems.github || {}},
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      revalidate: 7200}
-  } catch {;
-    return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
-  }
 
 
-};
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const langs = Object.keys(github);
 
   return (
@@ -181,7 +165,8 @@ export default function TechRadar({ pypi, crates, github }: Props) {
                 <div className=&quot;text-xs text-gray-500&quot;>Downloads: {it.downloads.toLocaleString()}</div>
 =======
 
-=======
+
+
     </div>
 );
 }

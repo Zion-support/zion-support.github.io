@@ -16,24 +16,12 @@ interface ScoreBadgeProps {
 }
 
 
-<<<<<<< HEAD
-export function ScoreBadge({ application }: ScoreBadgeProps) {
-  const score = application.match_score || 0,
-  
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-export function ScoreBadge(): any ({ application }: ScoreBadgeProps) {;
-  const score = application && application.match_score || 0;
-
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Determine color based on score
   let className = "text-gray-700 bg-gray-100",
   if (score >= 80) className = "text-green-700 bg-green-100",
@@ -104,15 +92,6 @@ if (class_name = "text - orange - 700 bg - orange - 100") {
     </span>);
 
 }
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-}
-;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

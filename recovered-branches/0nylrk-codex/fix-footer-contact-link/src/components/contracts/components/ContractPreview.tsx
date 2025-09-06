@@ -1,38 +1,13 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 import {SmartContractInfo} from "@/types/smart-contracts";
-<<<<<<< HEAD
 
 
-import React from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { TalentProfile } from "@/types/talent";
-import { SmartContractInfo } from "@/types/smart-contracts";
-import { TalentProfile } from "@/types/talent",
-import { SmartContractInfo } from "@/types/smart-contracts",
-=======
-interface ContractPreviewProps {;
-  contractContent?: string;
-  generatedContract?: string, // Added to support both naming conventions;
-=======
-import React from './react';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { TalentProfile } from '@/types / talent';
-import { SmartContractInfo } from '@/types / smart - contracts';
-interface ContractPreviewProps {
-  contract_content?: string;
-  generated_contract?: string, // Added to support both naming conventions;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -55,12 +30,12 @@ function ContractPreview() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface ContractPreviewProps {
   contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions
@@ -136,15 +111,17 @@ export function ContractPreview(): any ({ ;
           <Badge variant="outline">Draft</Badge>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         )}
 
       </div>;

@@ -1,27 +1,11 @@
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-import {Badge} from "@/components/ui/badge";
-import {ProfileSkill} from "@/types/profile";
-=======
-import { Badge } from "@/components/ui/badge",
-import { ProfileSkill } from "@/types/profile",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface ProfileSkillsProps {
   skills: ProfileSkill[];
 }
@@ -41,26 +25,8 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
               )}
             </div>
             <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">
-<<<<<<< HEAD
 
 
-                style={{ width: `${(skill.level / 5) * 100}%` }}
-              />
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-
-
-import { Badge } from "@/components/ui/badge",;
-import { ProfileSkill } from "@/types/profile";
-
-=======
-
-import {Badge} from "@/components/ui/badge";
-import {ProfileSkill} from "@/types/profile";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ProfileSkillsProps {;
   skills: ProfileSkill[];
 }
@@ -93,29 +59,14 @@ export function ProfileSkills(): any ({ skills }: ProfileSkillsProps) {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 }
 
-=======
-import { Badge  } from '@/components / ui / badge';
-import { ProfileSkill  } from '@/types / profile';
-interface ProfileSkillsProps {
-  skills: ProfileSkill[];
-=======
 
-              <div 
-                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
-
-  );
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export /**
  * ProfileSkills - Function description
@@ -145,4 +96,6 @@ function ProfileSkills() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

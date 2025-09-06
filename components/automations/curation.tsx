@@ -1,47 +1,23 @@
 
-<<<<<<< HEAD
-
-import React from 'react';
-import fs from 'fs';
-import path from 'path';
-import React from 'react';
-import fs from 'fs';
-import path from 'path';
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 type Experiment = {
 
 
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
   return (type Experiment = {
   title: string
-import React from "react";
-import fs from "fs";
-import path from "path";
-type Experiment = {
-  title: string,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
-  title: string,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   hypothesis?: string;
   metric?: string;
   effort?: number;
@@ -51,6 +27,8 @@ impact?: number ;
 type Props = {;
   updatedAt: string | null;
 items: Experiment[] };
+
+
 
 
 export default function CurationPage(): any ({ updatedAt, items }: Props) {;
@@ -66,6 +44,7 @@ type Props = {;
   updatedAt: string | null,;
   items: Experiment[];
 };
+
 
 export default function CurationPage(): any ({ updatedAt, items }: Props) {;
 
@@ -111,6 +90,7 @@ export default function CurationPage(): any ({ updatedAt, items }: Props) {;
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
+
 
 
 export default function CurationPage(): any ({ updatedAt, items }: Props) {;
@@ -175,6 +155,8 @@ function CurationPage() {
                   <div>;
 
 
+
+
                     <span className='font-medium'>Hypothesis:</span>{' '}
                     {exp && exp.hypothesis}
                   </div>;
@@ -204,15 +186,6 @@ function CurationPage() {
 
 
 
-  return (
-
-};
-
-export default function CurationPage({ updatedAt, items }: Props) {
-  return (
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
             )}
           </div>
@@ -220,52 +193,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
         {!items.length && (
           <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
             Nothing to show yet.
-<<<<<<< HEAD
-=======
-=======
 
-
-
-              </div>
-            )}
-          </div>
-        ))}
-        {!items.length && (
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
-
-            Nothing to show yet.
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-          </div>
-        )}
-      </div>
-    </main>
-  );
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-export async function getStaticProps() {
-
-  try {;
-
-    const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
-    const raw = fs.readFileSync(filePath, "utf8");
-
-    const parsed = JSON.parse(raw);
-
-    const filePath = path.join(
-
-
-    return {
-      props: {
 
             </div>;
             {(exp.hypothesis || exp.metric) && (
@@ -336,16 +264,58 @@ function getStaticProps() {
       props: {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+
+export async function getStaticProps() {;
+  try {;
+    const filePath = path && path.join(;
+      process && process.cwd(),;
+      'data',;
+      'ai-curation',;
+      'growth-experiments && experiments.json';
+    );
+    const raw = fs && fs.readFileSync(filePath, 'utf8');    const parsed = JSON && JSON.parse(raw);
+    return {;
+      props: {;
+        updatedAt: parsed && parsed.updatedAt || null,;
+        items: parsed && parsed.items || [],;
+      },;
+      revalidate: 300,;
+    };  } catch {;
+    return {;
+      props: {;
+        updatedAt: null,}
+export async function getStaticProps() {;
+  try {;
+    const filePath = path && path.join(process && process.cwd(), "data", "ai-curation", "growth-experiments && experiments.json");
+    const raw = fs && fs.readFileSync(filePath, "utf8");
+    return {;
+      props: {;
+        updatedAt: parsed && parsed.updatedAt || null,;
+        items: parsed && parsed.items || [],;
+      },;
+      revalidate: 300,;
+    };        items: parsed && parsed.items || []},;
+      revalidate: 300}
+  } catch {;
+    return {;
+      props: {;
+        updatedAt: null,;
+        items: [],;
+      },;
+      revalidate: 300,;
+    };
+  }        items: []},;
+
+
+
       revalidate: 300}
 }
 
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         updatedAt: null,
         items: [],
       },
@@ -355,6 +325,8 @@ function getStaticProps() {
 
       revalidate: 300}
 }
+
+
 
         updated_at: null,
         items: [],
@@ -370,13 +342,10 @@ function getStaticProps() {
     };
   }        items: []},
       revalidate: 300}
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

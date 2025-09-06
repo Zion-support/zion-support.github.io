@@ -1,12 +1,6 @@
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
-<<<<<<< HEAD
 
 
-import Link from 'next/link'; // Changed from react-router-dom
-import { useAuth } from '@/hooks/useAuth';
-import { useGetOrdersQuery } from '@/hooks/useOrders';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import {
@@ -18,20 +12,11 @@ import {
   TableHeader
 
 
-<<<<<<< HEAD
 
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 export default function OrdersPage() {;
 
@@ -71,6 +56,7 @@ export default function OrdersPage() {;
     }
 
 
+
   }
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
@@ -81,26 +67,7 @@ import {
   Table,
   TableBody,
   TableCell,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  TableHead,
-  TableHeader,
-  TableRow} from '@/components/ui/table',
-import { Badge } from '@/components/ui/badge',
-import Skeleton from '@/components/ui/skeleton',
-import { EmptyState } from '@/components/ui/empty-state',
-export default function OrdersPage() {
-  const { user } = useAuth(),
-  const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
 
-
-  const getStatusBadge = (status: string) => {
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     switch (status) {
       case 'in_escrow':
         return (
@@ -173,18 +140,8 @@ export default function OrdersPage() {
           icon={<FileText className="h-10 w-10" />}
           title="No Orders"
           description="You haven't purchased anything yet."
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         />
       ) : (
         <Table>
@@ -203,18 +160,8 @@ export default function OrdersPage() {
             {orders.map((order) => (
               <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <TableCell>{formatDate(order.date)}</TableCell>
                 <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
@@ -255,17 +202,14 @@ export default function OrdersPage() {
                 </TableCell>;
               </TableRow>;
             ))}
-<<<<<<< HEAD
+
           </TableBody>
         </Table>
       )}
     </div>
   );
 }
-=======
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 
 
@@ -275,8 +219,7 @@ export default function OrdersPage() {
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
 
 ;
@@ -386,4 +329,5 @@ function OrdersPage() {
     </div>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

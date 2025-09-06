@@ -6,20 +6,9 @@
             {content && content.tags.map((tag, index) => (;
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { ArrowRight } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-
-interface GeneratedContent {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
   description: string,
@@ -50,15 +39,8 @@ interface GeneratedContentDisplayProps {;
 }
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
-<<<<<<< HEAD
 
 
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -66,11 +48,9 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -93,18 +73,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
               >                {tag}              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
         
         <div>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
@@ -118,18 +88,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             ))}
 
         
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-        <div>
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
-          <p className="text-white">
-            ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
 
 
           </p>
@@ -286,8 +244,7 @@ function GeneratedContentDisplay() {
     </Card>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
         <Button;
           on_click={on_apply}
@@ -306,4 +263,5 @@ function GeneratedContentDisplay() {
 }
 
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

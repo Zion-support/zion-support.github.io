@@ -93,15 +93,9 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
 }
 
 
+
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <p className="mt-8 text-white font-semibold">
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -160,8 +154,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
     </>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
 import Link from 'next / link';
 import { use_router } from 'next / router';
@@ -231,4 +224,5 @@ if ( {) {
     </>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

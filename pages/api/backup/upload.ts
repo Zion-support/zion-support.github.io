@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 
-import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import { Web3Storage, File } from 'web3.storage';
 const TOKEN = process.env.WEB3_STORAGE_TOKEN |''
@@ -21,14 +17,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({ cid })
   } catch (e: any) {
-<<<<<<< HEAD
-=======
-    return res.status(500).json({ error: e?.message |'Backup failed' })
-  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
+
+
+
 const TOKEN = process.env.WEB3_STORAGE_TOKEN || '';
 export const config = { api: { bodyParser: { sizeLimit: '2mb' } } };
 export default async function handler(req, res) {
@@ -58,39 +51,7 @@ export default async function handler(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { Web3Storage, File } from 'web3.storage',
-;
-const TOKEN = process.env.WEB3_STORAGE_TOKEN || '',
-export const config = { api: { body_parser: { size_limit: '2mb' } } },
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).end (), ) {
-  $2
-}
-  if (return res.status (400).json ({ error: 'Missing WEB3_STORAGE_TOKEN' }), ) {
-  $2
-}
-  try {
-    const data = req.body,
-    const client = new Web3Storage ({ token: TOKEN }),
-    const files = [new File ([JSON.stringify (data, null, 2)], 'profile.json', { type: 'application / json' })],
-    const cid = await client.put (files, { wrapWithDirectory: false }),
-    return res.status (200).json ({ cid });
-  } catch (e: any) {
-    return res.status (500).json ({ error: e?.message || 'Backup failed' });
-  }
-}
-
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

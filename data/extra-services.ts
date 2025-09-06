@@ -15,10 +15,12 @@ export interface ExtraService {
     address: string;
   };
 
+
 }
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
     address: string;
   }
@@ -82,6 +84,8 @@ export const extra_services: ExtraService[] = [;
     mobile: string, email: string,
     address: string
 
+
+
   id: string;
   name: string;
   tagline: string;
@@ -95,8 +99,10 @@ export const extra_services: ExtraService[] = [;
     mobile: string;
     email: string;
 
+
     address: string;
   };
+
 
 
     address: string;
@@ -105,7 +111,6 @@ export const extraServices: ExtraService[] = [
   {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -157,6 +162,8 @@ export const extraServices: ExtraService[] = [
     realImplementation: true,
     contactInfo: {
 
+
+
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
@@ -170,5 +177,3 @@ export const extraServices: ExtraService[] = [
     }
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

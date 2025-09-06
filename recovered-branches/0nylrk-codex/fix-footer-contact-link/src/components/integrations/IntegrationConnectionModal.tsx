@@ -1,8 +1,8 @@
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
+
 import {;
   Dialog,;
   DialogContent,;
@@ -11,7 +11,9 @@ import {;
   DialogHeader,;
   DialogTitle,;
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -33,13 +35,11 @@ interface IntegrationConnectionModalProps {;
 
   isOpen: boolean;
   onClose: () => void;
-<<<<<<< HEAD
 
-
-=======
   integration: Integration
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 export function IntegrationConnectionModal(): any ({;
@@ -48,7 +48,7 @@ export function IntegrationConnectionModal(): any ({;
   integration,;
 }: IntegrationConnectionModalProps) {;
   const [isConnecting, setIsConnecting] = useState(false);
-<<<<<<< HEAD
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -63,13 +63,7 @@ export function IntegrationConnectionModal({
     pushNotes: false
     syncJobDetails: true
     syncApplicantData: true
-=======
-  const [syncSettings, setSyncSettings] = useState({;
-    autoCreateContacts: true,;
-    pushNotes: false,;
-    syncJobDetails: true,;
-    syncApplicantData: true,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   });
 
   const handleConnectOAuth = () => {;
@@ -201,8 +195,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
         integration.status === "warning" ? (
         
         {(integration.status === "connected" || integration.status === "warning") ? (
@@ -212,15 +206,14 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-        integration.status === "warning" ? (
 
-        {(integration.status === "connected" || integration.status === "warning") ? (
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           <>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
@@ -228,10 +221,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
@@ -248,10 +239,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
@@ -266,10 +255,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
@@ -284,10 +271,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
@@ -303,14 +288,15 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
               
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               <div className="space-y-2">
                 <h3 className="text-sm font-medium">API Details</h3>
                 <p className="text-xs text-muted-foreground">
@@ -325,14 +311,15 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             <DialogFooter className="flex items-center justify-between">
               <Button
                 variant="outline"
@@ -358,17 +345,15 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 You'll be redirected to {integration.name} to authorize this connection.
               </p>
 
-<<<<<<< HEAD
-              
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">What will be synced:</h3>
                 <ul className="list-disc pl-4 text-sm space-y-1">
@@ -382,14 +367,15 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             <DialogFooter>
               <Button onClick={handleConnectOAuth} disabled={isConnecting}>
                 {isConnecting
@@ -737,15 +723,6 @@ function IntegrationConnectionModal() {
     </Dialog>);
 
 }
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-}
-;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

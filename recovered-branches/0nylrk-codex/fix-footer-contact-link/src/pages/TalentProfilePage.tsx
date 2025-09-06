@@ -1,32 +1,7 @@
 
-<<<<<<< HEAD
 
 
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {TalentProfile} from "@/components/profile/TalentProfile";
@@ -54,27 +29,6 @@ export default function TalentProfilePage() {;
   const { userDetails } = useAuthStatus();
   const { isAuthenticated, user } = useAuth();
 
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react",
-import { useParams, useNavigate } from "react-router-dom",
-import { TalentProfile } from "@/components/profile/TalentProfile",
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
-import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
-import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",
-import { useTalentProfile } from "@/hooks/useTalentProfile",
-import { HireRequestModal } from "@/components/profile/hire-request",
-import { useAuthStatus } from "@/hooks/talent",
-import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",
-import { StickyAction } from "@/components/ui/sticky-action",
-import { Handshake, MessageSquare } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
-import { UserProfile } from "@/types/auth",
-import { toast } from "@/hooks/use-toast";
-export default function TalentProfilePage() {
-  // Cast to specify the expected route param type since useParams may be untyped
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const { id } = useParams() as { id?: string }
@@ -186,14 +140,15 @@ export default function TalentProfilePage() {;
     return <ProfileLoadingState />;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   }
   if (error |!profile) {
     return <ProfileErrorState error={error} />
@@ -236,12 +191,11 @@ export default function TalentProfilePage() {;
         profile={profile} 
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />
@@ -272,14 +226,15 @@ export default function TalentProfilePage() {;
       
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Request to Hire Modal */}
       <HireRequestModal
         talent={profile}

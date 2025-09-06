@@ -1,34 +1,15 @@
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 
 interface TalentCardAvatarProps {;
 
   profilePicture?: string;
   fullName: string;
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-=======
-=======
-
-
-import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
-
-=======
-import React from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface TalentCardAvatarProps {
   profilePicture?: string,
   fullName: string
@@ -44,42 +25,8 @@ interface TalentCardAvatarProps {
   }
 
 
-<<<<<<< HEAD
-  return (
-    <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
-      <AvatarImage src={profilePicture |undefined} alt={fullName} />
-      <AvatarFallback className="bg-zion-purple/20 text-zion-purple">
-        {getInitials(fullName)}
-      </AvatarFallback>
-    </Avatar>
-      .split(' ')
-      .map(part => part[0])
-      .join('')
-      .toUpperCase();
-  };
-      .toUpperCase()
-  },
 
-  return (
-    <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
-      <AvatarImage 
-        src={profilePicture || undefined} 
-        alt={fullName} 
-      />
-      <AvatarFallback className="bg-zion-purple/20 text-zion-purple">
 
-import React from "react",;
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
-interface TalentCardAvatarProps {;
-  profilePicture?: string,;
-  fullName: string;
-}
-;
-export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarProps) {;
-
-=======
-export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCardAvatarProps) {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Get initials for avatar fallback;
   const getInitials = (name: string) => {;
     return name;
@@ -100,11 +47,8 @@ export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCar
       </AvatarFallback>;
     </Avatar>;
   );
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 }
 export /**
@@ -123,9 +67,10 @@ function TalentCardAvatar() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

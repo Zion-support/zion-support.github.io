@@ -1,41 +1,7 @@
 
-<<<<<<< HEAD
 
 
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {Loader2} from "lucide-react";
-import {ContractFormValues} from "@/components/contracts/components/ContractForm";
-import {ContractTemplate} from "@/types/contracts";
-import {useContractTemplates} from "@/hooks/useContractTemplates";
-import {Button} from "@/components/ui/button";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Switch} from "@/components/ui/switch";
 
-
-const formSchema = z.object({
-  title: z.string().min(1, "Title is required");
-  isDefault: z.boolean().default(false)})
-type FormValues = z.infer<typeof formSchema>;
-interface TemplateSaveFormProps {
-  onCancel: () => void
-  onComplete: () => void
-
-=======
-const formSchema = z && z.object({;
-  title: z && z.string().min(1, "Title is required");
-  isDefault: z && z.boolean().default(false)}),;
-
-type FormValues = z && z.infer<typeof formSchema>;
-
-interface TemplateSaveFormProps {;
-  onCancel: () => void,;
-  onComplete: () => void,;
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues;
 }
@@ -50,43 +16,16 @@ export function TemplateSaveForm(): any ({;
 }: TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
-<<<<<<< HEAD
-
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-      title: editTemplate?.title |""
-      isDefault: editTemplate?.is_default |false}})
-  const onSubmit = async (values: FormValues) => {
-    if (!currentValues && !editTemplate) {
-      return
-    }
-    setSaving(true);
-    try {
-      if (editTemplate) {
-        await updateTemplate.mutateAsync({
-          templateId: editTemplate.id
-          title: values.title
-          templateData: editTemplate.template_data
-          isDefault: values.isDefault})
-      } else if (currentValues) {
-        await createTemplate.mutateAsync({
-          title: values.title
-          templateData: currentValues
-          isDefault: values.isDefault})
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
-=======
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -101,13 +40,12 @@ import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean().default(false)}),
@@ -121,107 +59,11 @@ interface TemplateSaveFormProps {
   currentValues?: ContractFormValues
 
 
-<<<<<<< HEAD
-
-}
-
-export function TemplateSaveForm({;
-  onCancel;
-  onComplete;
-  editTemplate;
-  currentValues
-}: TemplateSaveFormProps) {
-  const [saving, setSaving] = useState(false);
-  const { createTemplate, updateTemplate } = useContractTemplates();
-  
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      title: editTemplate?.title || "",
-      isDefault: editTemplate?.is_default || false}}),
-  
-  const onSubmit = async (values: FormValues) => {
-    if (!currentValues && !editTemplate) {
-      return
-    }
-    
-    setSaving(true);
-    
-    try {
-      if (editTemplate) {
-        await updateTemplate.mutateAsync({
-          templateId: editTemplate.id,
-          title: values.title,
-          templateData: editTemplate.template_data,
-          isDefault: values.isDefault})
-      } else if (currentValues) {
-        await createTemplate.mutateAsync({
-          title: values.title,
-          templateData: currentValues,
-          isDefault: values.isDefault})
-
-import { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { Loader2 } from "lucide-react",;
-import { ContractFormValues } from "@/components/contracts/components/ContractForm",;
-import { ContractTemplate } from "@/types/contracts",;
-import { useContractTemplates } from "@/hooks/useContractTemplates",;
-import { Button } from "@/components/ui/button",;
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Switch } from "@/components/ui/switch",;
-const formSchema = z.object({;
-  title: z.string().min(1, "Title is required"),;
-  isDefault: z.boolean().default(false)}),;
-type FormValues = z.infer<typeof formSchema>,;
-interface TemplateSaveFormProps {;
-  onCancel: () => void,;
-  onComplete: () => void,;
-  editTemplate?: ContractTemplate | null,;
-  currentValues?: ContractFormValues;
-}
-;
-export function TemplateSaveForm({;
-  onCancel,;
-  onComplete,;
-  editTemplate,;
-  currentValues;
-}: TemplateSaveFormProps) {;
-  const [saving, setSaving] = useState(false),;
-  const { createTemplate, updateTemplate } = useContractTemplates(),;
-  const form = useForm<FormValues>({;
-    resolver: zodResolver(formSchema),;
-    defaultValues: {;
-      title: editTemplate?.title || "",;
-      isDefault: editTemplate?.is_default || false}}),;
-  const onSubmit = async (values: FormValues) => {;
-    if (!currentValues && !editTemplate) {;
-      return;
-    }
-;
-    setSaving(true),;
-    try {;
-      if (editTemplate) {;
-        await updateTemplate.mutateAsync({;
-          templateId: editTemplate.id,;
-          title: values.title,;
-          templateData: editTemplate.template_data,;
-          isDefault: values.isDefault});
-      } else if (currentValues) {;
-        await createTemplate.mutateAsync({;
-          title: values.title,;
-          templateData: currentValues;
-          isDefault: values.isDefault});
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       }
       onComplete()
     } finally {
@@ -230,43 +72,14 @@ export function TemplateSaveForm({;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
-    setSaving(true);
-
-    try {;
-      if (editTemplate) {;
-        await updateTemplate && updateTemplate.mutateAsync({;
-          templateId: editTemplate && editTemplate.id,;
-          title: values && values.title,;
-          templateData: editTemplate && editTemplate.template_data,;
-          isDefault: values && values.isDefault});
-      } else if (currentValues) {;
-        await createTemplate && createTemplate.mutateAsync({;
-          title: values && values.title,;
-          templateData: currentValues,;
-          isDefault: values && values.isDefault});
-      }
-
-      onComplete();
-    } finally {;
-      setSaving(false);
-    }
-  };
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   },
-=======
-  };
-=======
-  },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   
   return (
     <Form {...form}>;

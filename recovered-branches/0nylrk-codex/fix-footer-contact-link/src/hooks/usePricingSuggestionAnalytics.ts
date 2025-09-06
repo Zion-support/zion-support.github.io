@@ -1,10 +1,8 @@
 
-<<<<<<< HEAD
 
-=======
 import {useState, useEffect} from 'react';
 import { supabase } from '@/integrations / supabase / client';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface PricingSuggestionAnalytics {
   total_suggestions: number;
   acceptance_rate: number;
@@ -20,27 +18,17 @@ interface PricingSuggestionAnalytics {
     accepted: boolean;
 
 
+
     createdAt: string
     type: 'client' | 'talent'
   }[];
   isLoading: boolean
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-import {useState, useEffect} from 'react';
-import {supabase} from "@/integrations/supabase/client";
-=======
-import { useState, useEffect } from 'react',
-import { supabase } from "@/integrations/supabase/client",
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -57,10 +45,8 @@ interface PricingSuggestionAnalytics {
     type: 'client' | 'talent'
   }[],
   isLoading: boolean,
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   error: string | null
 }
 export function usePricingSuggestionAnalytics(days = 30) {
@@ -178,13 +164,12 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
 
 
+
+
 };
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
@@ -288,18 +273,12 @@ if (throw error) {
 ;
   return analytics;
 
-<<<<<<< HEAD
-}
-}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -1,9 +1,7 @@
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
@@ -11,10 +9,10 @@ import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -57,10 +55,7 @@ export function useResumeList() {;
         };
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
         is_active: resume.is_active;
       }));
 ;
@@ -94,7 +89,9 @@ if ( {) {
     resumes;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 }

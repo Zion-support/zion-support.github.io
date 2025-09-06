@@ -25,10 +25,7 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   if (props.collapsible === "none") {
     return (
@@ -73,17 +70,11 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
     <div;
       ref={ref}
 
-<<<<<<< HEAD
-      className="group peer hidden md:block text-sidebar-foreground"
-
-className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
-      className="group peer hidden md:block text-sidebar-foreground"
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       data-state={state}
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
@@ -147,20 +138,15 @@ Sidebar.displayName = "Sidebar"
 
 export const SidebarRail = React.forwardRef<
 
-<<<<<<< HEAD
-  HTMLButtonElement,;
-  React.ComponentProps<&quot;button&quot;>
-  HTMLButtonElement,
-  React.ComponentProps<"button">
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
   return (
@@ -198,20 +184,15 @@ SidebarRail.displayName = "SidebarRail"
 
 export const SidebarInset = React.forwardRef<
 
-<<<<<<< HEAD
-  HTMLDivElement,;
-  React.ComponentProps<&quot;main">
-  HTMLDivElement,
-  React.ComponentProps<"main">
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 >((props, ref) => {
   return (
     <main

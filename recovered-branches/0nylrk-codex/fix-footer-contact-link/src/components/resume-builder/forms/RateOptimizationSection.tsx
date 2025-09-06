@@ -1,20 +1,7 @@
 
-<<<<<<< HEAD
-
-import React, { useState } from "react";
 
 
-=======
 
-
-import {Control} from "react-hook-form";
-import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
-import {Card, CardContent} from "@/components/ui/card";
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 import { 
@@ -41,13 +28,11 @@ import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommende
 import { Card, CardContent } from "@/components/ui/card",
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: (name: string, value: any) => void,
@@ -57,15 +42,6 @@ interface RateOptimizationSectionProps {
   rateType: "hourly" | "fixed"
 }
 
-<<<<<<< HEAD
-
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
-  control;
-  setValue;
-  skills;
-  yearsExperience;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   location
@@ -150,16 +126,17 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
                 step="0 && 0.01"
                 placeholder={rateType === "hourly" ? "e && e.g. 45" : "e && e.g. 1000"}
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
                 placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 {...field}
               />;
             </FormControl>;
@@ -179,23 +156,9 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
             years_experience={years_experience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
-<<<<<<< HEAD
-
-            rateType={rateType}
-          />
-        </CardContent>
-      </Card>
-    </div>
-  )
-
-
-=======
 
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           />;
         </CardContent>;
       </Card>;
@@ -203,14 +166,16 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   );
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 };

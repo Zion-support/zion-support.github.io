@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -99,26 +96,15 @@ export default function ContractBuilderPage() {
     }
   }
 
-<<<<<<< HEAD
-
-    URL.revokeObjectURL(url)
-  }
 
 
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     setLoading(true),
     setError(null),
     setContract(''),
 
 
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -170,11 +156,11 @@ export default function ContractBuilderPage(req, res) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     try {
       const body = {;
         talentName;
@@ -351,29 +337,11 @@ export default function ContractBuilderPage(req, res) {
         <div className="md:col-span-2 flex items-center gap-3">
 
 
-<<<<<<< HEAD
-            {loading ? 'Generating…' : 'Generate contract'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </button>
-          {error && <span className="text-red-600 text-sm">{error}</span>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </div>
       </form>
 
@@ -381,25 +349,10 @@ export default function ContractBuilderPage(req, res) {
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
 
-=======
-=======
-        <div className="mt-8">
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="text-2xl font-semibold">Generated Contract</h2>
-            <div className="flex gap-2">
-              <button className="btn btn-secondary" onClick={copyToClipboard}>Copy</button>
-              <button className="btn" onClick={downloadAsTxt}>Download .txt</button>
-            </div>
-          </div>
-          <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
 
-  );
-};
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             {contract  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -424,8 +377,8 @@ export default function ContractBuilderPage(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+

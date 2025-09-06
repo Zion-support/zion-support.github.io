@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 
-import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
 
-=======
 
-import Head from 'next / head',
-import React, { useMemo, useState } from 'react',
-;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 type RoadmapInputs = {
 
@@ -67,18 +59,11 @@ Goals:
 5) Output concise, skimmable, exec-ready text
 Format:
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-function defaultOperatorPrompt (): string {
-=======
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 type RoadmapInputs = {
   milestones: string;
   keywords: string;
@@ -163,7 +148,6 @@ Risks:;
 Validation:;
 - ...;
 `;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
     () => generateStages({ milestones, keywords, priorities });
@@ -226,12 +210,11 @@ Validation:;
 }
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
                 />
@@ -252,14 +235,12 @@ Validation:;
   }
 }
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
                 />
@@ -282,12 +263,13 @@ Validation:;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
                 />
@@ -308,14 +290,15 @@ Validation:;
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'}
@@ -365,17 +348,6 @@ Validation:;
                 </article>
 
 
-<<<<<<< HEAD
-=======
-=======
-                  on_change={(e) => set_priorities (e.target.value)}
-                  className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
-=======
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   };
   return (;
     <>;
@@ -402,6 +374,7 @@ Validation:;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 }
                   onChange={(e) => setMilestones(e.target.value)  } catch (error) {
@@ -508,29 +481,18 @@ Validation:;
           </section>;
         </div>;
       </main>;
-<<<<<<< HEAD
 
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-<<<<<<< HEAD
+
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

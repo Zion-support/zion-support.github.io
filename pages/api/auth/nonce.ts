@@ -1,18 +1,4 @@
-<<<<<<< HEAD
 
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-function randomString(length: number): string {
-  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  let res = '';
-  const cryptoObj = require('crypto');
-  const bytes: Buffer = cryptoObj.randomBytes(length);
-  for (let i = 0; i < length; i++) res += charset[bytes[i] % charset.length];
-  return res;
-}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 function randomString(length: number) {
@@ -28,31 +14,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
 
   res.status(200).json({ nonce })
-<<<<<<< HEAD
 
-  try {
-    const nonce = randomString(16);
-    res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`);
-    res.status(200).json({ nonce });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
+
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

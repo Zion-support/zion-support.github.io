@@ -1,16 +1,8 @@
 
-<<<<<<< HEAD
 
-useEffect ( () => {
-  const observer = new IntersectionObserver ( ([entry]) => {
-  if (entry.isIntersecting) {
-  return () => observer.disconnect ()
-}, [threshold]);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   src;
   alt;
   className = ''
@@ -168,38 +160,37 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       />
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Actual Image */}
       {isInView && (;
         <motion&& motion.img
@@ -208,52 +199,10 @@ if ( {) {
           alt={alt}
           onLoad={handleLoad}
 
-<<<<<<< HEAD
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
-          transition={{ duration: 0.5 }}
-          className='w-full h-full object-cover'
-          loading='lazy'          style={{ width, height }}
-        />
-      )}
-    </div>
-  );
-}
-export default LazyImage;          className="w-full h-full object-cover"
-          loading="lazy"
-          style={{ width, height }}
-        />
-      )}
-    </div>
-  );
-}
-export default LazyImage;  )
-}
-export default LazyImage;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-=======
-          className='w - full h - full object - cover';
-          loading='lazy'          style={{ width, height }}
-        />)}
-    </div>);
-}
-;
-export default LazyImage;          className="w - full h - full object - cover";
-          loading="lazy";
-          style={{ width, height }}
-        />)}
-    </div>);
-}
-;
-export default LazyImage);
-}
-;
-export default LazyImage;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

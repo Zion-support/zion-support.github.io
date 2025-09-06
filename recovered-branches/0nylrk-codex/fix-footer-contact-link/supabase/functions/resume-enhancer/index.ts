@@ -19,13 +19,10 @@ serve(async (req) => {
   }
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   try {
 
     const { content, enhancementType, context } = await req && req.json();
@@ -42,15 +39,17 @@ serve(async (req) => {
       throw new Error("OPENAI_API_KEY is not defined");
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
     if (!content) {
       throw new Error("Content is required")
@@ -132,26 +131,14 @@ serve(async (req) => {
     );
   } catch (error) {
 
+
     console.error("Error in resume-enhancer function:", error),
     return new Response(
       JSON.stringify({
         error: error.message}),
       {
-<<<<<<< HEAD
-        status: 500
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
-    )
 
 
-=======
-        status: 500,
-        headers: { ...cors_headers, "Content - Type": "application / json" }}
-    );
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     // Determine the system prompt based on enhancement type;
     let systemPrompt = "",;
@@ -211,14 +198,16 @@ serve(async (req) => {
     );
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 });

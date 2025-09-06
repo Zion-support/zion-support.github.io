@@ -1,17 +1,14 @@
 
 
-<<<<<<< HEAD
-//FCP recommendations if (metrics.fcp > 2000) {
- //FCP recommendations if (metrics.fcp > 2000) {
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   recs.push ({
 }return recs;
 }, []);
@@ -24,6 +21,8 @@ if (metrics.cls > 0.1) score -= 15;
 if (metrics.ttfb > 600) score -= 20;
 if (!performanceData) {
 }> <div className="animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>)
+
+
 
  //FCP recommendations if (metrics && metrics.fcp > 2000) {;
   recs && recs.push ({;
@@ -74,7 +73,18 @@ if (!performanceData) {;
 }</AnimatePresence> </>) ;
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+//FCP recommendations // Check condition
+if ( {) {
+  $2
+}
+=======
+ //FCP recommendations if (metrics.fcp > 2000) {
+=======
+//FCP recommendations if (metrics.fcp > 2000) {
+=======
+ //FCP recommendations if (metrics.fcp > 2000) {
+
   recs.push ({
 }return recs;
 }, []);

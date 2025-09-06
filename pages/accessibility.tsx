@@ -28,36 +28,13 @@ import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
-=======
+
   Eye,
   Ear,
   Hand,
   Brain,
   CheckCircle,
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-  Eye, 
-  Ear, 
-  Hand, 
-  Brain, 
-  CheckCircle, 
-
-  AlertTriangle,
-  Globe,
-  Users,
-  Shield,
-  Zap,
-  FileText,
-  Settings;
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'lucide-react';
 const accessibility_features = [;
   {
@@ -233,10 +210,8 @@ origin/main
 origin/automation-improvements-final
 
 export default function AccessibilityPage() {
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface AccessibilityProps {
   className?: string;
 }
@@ -263,12 +238,10 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Ensuring digital inclusion for everyone
               </p>
-<<<<<<< HEAD
+
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </motion.div>
           </div>
         </section>
@@ -464,11 +437,12 @@ origin/automation-improvements-final
         </section>
 
 
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
     </MainLayout>
-<<<<<<< HEAD
-=======
+
             </div>;
           </div>;
         </section>;
@@ -971,7 +945,7 @@ function AccessibilityPage() {
     </MainLayout>;
   );
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   );
 }

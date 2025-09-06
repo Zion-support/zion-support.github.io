@@ -7,28 +7,18 @@ import { CheckIcon } from "@/components/icons",
 import { cn } from "@/lib/utils",
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-<<<<<<< HEAD
 
-export function StepProgress({ currentStep }: StepProgressProps) {
-  const steps: { id: QuoteRequestSteps, label: string }[] = [
 
-=======
 
-    { id: "service", label: "Service" },
-    { id: "details", label: "Details" },
-    { id: "timeline", label: "Timeline" },
-    { id: "budget", label: "Budget" },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -70,36 +60,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "current" ? "text-white" :
 
 
-<<<<<<< HEAD
-                  "text-zion-slate-light"
-                )}
-              >
-                {step.label}
-              </span>
-            </div>
-          )
-        })}
-      </div>
-    </div>
-  )
 
-                  "text-xs mt-2 font-medium",
-                  status === "complete" ? "text-zion-cyan" : 
-                  status === "current" ? "text-white" : 
-                  "text-zion-slate-light"
-import { QuoteRequestSteps } from "../QuoteRequestForm",;
-import { CheckIcon } from "@/components/icons",;
-import { cn } from "@/lib/utils",;
-interface StepProgressProps {;
-  currentStep: QuoteRequestSteps;
-}
-;
-export function StepProgress({ currentStep }: StepProgressProps) {;
 
-=======
-
-export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const steps: { id: QuoteRequestSteps, label: string }[] = [;
     { id: "service", label: "Service" },;
     { id: "details", label: "Details" },;
@@ -165,13 +127,11 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
     </div>;
   );
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

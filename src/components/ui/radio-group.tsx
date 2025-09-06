@@ -33,20 +33,8 @@ const RadioGroup = React.forward_ref<;
     />;
   );
 });
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   React.ElementRef<typeof RadioGroupPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
 >(({ className, ...props }, ref) => {;
@@ -55,14 +43,8 @@ const RadioGroup = React.forward_ref<;
       ref={ref}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         className
       )}
       {...props}
@@ -74,11 +56,8 @@ const RadioGroup = React.forward_ref<;
   )
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 RadioGroup.display_name = RadioGroupPrimitive.Root.display_name;
 const RadioGroupItem = React.forward_ref<;
@@ -102,16 +81,18 @@ RadioGroupItem.display_name = RadioGroupPrimitive.Item.display_name;
 
 
 
+
+
 export { RadioGroup, RadioGroupItem }
 
 
 export { RadioGroup, RadioGroupItem }
 ;
-<<<<<<< HEAD
-=======
+
 
 export { RadioGroup, RadioGroupItem };
 
 export { RadioGroup, RadioGroupItem }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

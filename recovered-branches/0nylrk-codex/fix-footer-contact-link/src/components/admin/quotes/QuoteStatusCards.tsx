@@ -1,16 +1,12 @@
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-=======
-import React from './react';
-import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
-import { Badge  } from '@/components / ui / badge';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface QuoteStatusCardsProps {
   status_counts: {
 
@@ -20,20 +16,10 @@ interface QuoteStatusCardsProps {
     accepted: number;
 
 
-<<<<<<< HEAD
 
-  }
-}
-export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
-  statusCounts
-}) => {
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface QuoteStatusCardsProps {
   statusCounts: {
     new: number,
@@ -64,14 +50,15 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
       
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -88,14 +75,15 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
       
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -112,14 +100,15 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
       
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -136,14 +125,15 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
       
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -157,34 +147,9 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </p>
         </CardContent>
       </Card>
-<<<<<<< HEAD
 
 
-  )
-},
-import React from "react",;
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-interface QuoteStatusCardsProps {;
-  statusCounts: {;
-    new: number,;
-    in_review: number,;
-    responded: number,;
-    accepted: number,;
-    closed: number;
-  }
-}
-;
-export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {;
-  return (;
 
-=======
-
-export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
-  statusCounts,;
-}) => {;
-  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">;
       <Card className="bg-zion-blue-dark border border-zion-blue-light">;
         <CardHeader className="pb-2">;
@@ -198,11 +163,7 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
       <Card className="bg - zion - blue - dark border border - zion - blue - light">;
         <CardHeader className="pb - 2">;
           <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
@@ -267,17 +228,5 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
 }
 ;
 
-=======
-
-    </div>
-
-    </div>;
-);
-};
 
 
-export default QuoteStatusCards;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

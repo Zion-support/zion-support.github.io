@@ -1,37 +1,24 @@
 
 
 
-<<<<<<< HEAD
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button";
-import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
-import { Button } from "@/components/ui/button",
-import { FileText, Plus, Users, Search, Calendar } from "lucide-react",
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export function QuickActions() {
 
   const actions = [
     {
-<<<<<<< HEAD
 
-      id: "post-job"
-      label: "Post New Job"
-      icon: <FileText className="h-5 w-5 mr-2" />
-      description: "Create a new job posting"
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       id: "post-job",
@@ -39,24 +26,18 @@ export function QuickActions() {
       icon: <FileText className="h-5 w-5 mr-2" />,
       description: "Create a new job posting",
 
-<<<<<<< HEAD
-      color: "bg-blue-100 dark:bg-blue-900/20";
-    };
-
-      color: "bg-blue-100 dark:bg-blue-900/20"
-    }
-    },
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     {
       id: "add-member"
       label: "Add Team Member"
@@ -169,10 +150,7 @@ export function QuickActions() {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
                   <span>{action.label}</span>
                 </div>
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
@@ -180,7 +158,7 @@ export function QuickActions() {;
             </Button>
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           ))}
         </div>
       </CardContent>

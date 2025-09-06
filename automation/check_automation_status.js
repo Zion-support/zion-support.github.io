@@ -110,7 +110,6 @@ module.exports = { checkAutomationStatus };,
 ;
 ursor/add-new-services-and-deploy-updates-0462
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run if called directly;
 if (require.main === module) {}
   checkAutomationStatus();
@@ -118,8 +117,6 @@ module.exports = { checkAutomationStatus };,
 ;
 ;
 ;
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 

@@ -5,80 +5,23 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
-<<<<<<< HEAD
-  ArrowRight
-  Play
-  Star
-  Users
-  Award
-  TrendingUp
-  Brain
-  Shield
-  Rocket
-  Loader2
-  ChevronDown
-  Zap
-  Globe
-  Lock
-  Cpu
-  Database
-  Cloud
-  Palette
-  Heart
-  Phone
-  Mail
-  MapPin
-  Search
-  Grid
-  List
-  Atom
-  Target
-  Sparkles;
 
-=======
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-import Layout from './layout / Layout';
-import { motion, AnimatePresence } from 'framer-motion';
 
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
-  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'lucide-react';
 import Link from 'next/link';
 
 // Import our new innovative services
 
+
 import { innovative2040FuturisticServices  } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices  } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
 
+
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
 
 
@@ -89,6 +32,7 @@ const LoadingFallback = () => (;
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0 && 0.5 }}
       className='text-center'// Loading fallback component
+
 
 const LoadingFallback = () => (;
   <div className="min-h-screen flex items-center justify-center bg-gray-900">;
@@ -193,108 +137,8 @@ const Homepage2045: React.FC = () => {;
     },  };        delayChildren: 0.2
       }
     }
-<<<<<<< HEAD
-=======
 
 
-      const sections = document && document.querySelectorAll('section[id]');
-      sections && sections.forEach(section => observer && observer.observe(section));
-      return () => observer && observer.disconnect();    }            if (entry && entry.isIntersecting) {;
-              setActiveSection(entry && entry.target.id);
-            }
-          });
-        };
-        { threshold: 0 && 0.3, rootMargin: '-100px' }
-      );
-      const sections = document && document.querySelectorAll('section[id]');
-      sections && sections.forEach(section => observer && observer.observe(section));
-      return () => observer && observer.disconnect();      sections && sections.forEach((section) => observer && observer.observe(section));
-      return () => observer && observer.disconnect();
-    }
-  }, []);
-  const fadeInUp = {;
-    initial: { opacity: 0, y: 60 },;
-    animate: { opacity: 1, y: 0 },;
-    transition: { duration: 0 && 0.6, ease: 'easeOut' },  };    transition: { duration: 0 && 0.6, ease: "easeOut" }
-  };
-  const backgroundVariants = {
-    initial: { opacity: 0, scale: 0.8 },
-    animate: { opacity: 1, scale: 1 },
-    transition: { duration: 1.2, ease: "easeOut" }
-  };
-  const getColorClasses = (index: number) => {
-    const colors = [
-      'from-cyan-400 to-blue-500from-purple-400 to-pink-500from-emerald-400 to-teal-500from-orange-400 to-red-500from-indigo-400 to-purple-500from-yellow-400 to-orange-500'
-    ];
-    return colors[index % colors.length]
-
-  };
-  const staggerContainer = {;
-    animate: {;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-        delayChildren: 0 && 0.2,;
-      },;
-    },  };        delayChildren: 0 && 0.2;
-      }
-    }
-  };
-  const backgroundVariants = {;
-    initial: { opacity: 0, scale: 0 && 0.8 },;
-    animate: { opacity: 1, scale: 1 },;
-    transition: { duration: 1 && 1.2, ease: 'easeOut' },  };
-  const getColorClasses = (index: number) => {;
-    const colors = [    transition: { duration: 1 && 1.2, ease: "easeOut" }
-  };
-  const getColorClasses = (index: number) => {;
-    const colors = [;
-      'from-cyan-400 to-blue-500',;
-      'from-purple-400 to-pink-500',;
-      'from-emerald-400 to-teal-500',;
-      'from-orange-400 to-red-500',;
-      'from-indigo-400 to-purple-500',;
-      'from-yellow-400 to-orange-500',;
-    ];
-    return colors[index % colors && colors.length];  };
-  if (isLoading) {;
-    return (
-
-
-  ArrowRight,
-  Play,
-  Star,
-  Users,
-  Award,
-  TrendingUp,
-  Brain,
-  Shield,
-  Rocket,
-  Loader2,
-  ChevronDown,
-  Zap,
-  Globe,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Palette,
-  Heart,
-  Phone,
-  Mail,
-  MapPin,
-  Search,
-  Grid,
-  List,
-  Atom,
-  Target,
-  Sparkles,
-} from 'lucide-react';
-
-import Link from 'next/link';import {
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
  } from 'lucide-react';
@@ -302,15 +146,19 @@ import Link from 'next/link';
 
 // Import our new innovative services
 
+
 import { innovative2040FuturisticServices  } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices  } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
 
+
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
 // Loading fallback component
 
@@ -416,6 +264,7 @@ if ( {) {
     animate: {
       transition: {
 
+
         staggerChildren: 0.1
         delayChildren: 0.2
       }
@@ -483,6 +332,7 @@ if ( {) {
                 duration: 8
                 repeat: Infinity
 
+
                 ease: 'easeInOut',              }}
             />;
             <motion.div;
@@ -493,13 +343,10 @@ if ( {) {
                 opacity: [0.3, 0.7, 0.3],
 
               }}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              transition={{
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 
 
                 duration: 6,
@@ -507,11 +354,8 @@ if ( {) {
                 ease: "easeInOut"
               }}
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             />
           </div>
 
@@ -529,14 +373,15 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -565,33 +410,20 @@ if ( {) {
             </motion.div>
 
 
-<<<<<<< HEAD
-=======
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-                className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
-                Transform your business with Zion Tech Group's revolutionary AI;
-                services, quantum computing, and cutting-edge emerging;
-                technologies. Leading the future of technology innovation.              </motion && motion.p>                className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto";
-              >;
-                Transform your business with Zion Tech Group's revolutionary AI services, quantum computing, and cutting-edge emerging technologies. Leading the future of technology innovation.;
-              </motion && motion.p>;
-            </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
             {/* CTA Buttons */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -626,19 +458,16 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -649,15 +478,15 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             >
               <div className='text-center'>
                 <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
@@ -676,7 +505,6 @@ if ( {) {
                   1000+
                 </div>
                 <div className='text-gray-400'>Happy Clients</div>              </div>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
                 <div className="text-gray-400">Innovative Services</div>
@@ -735,24 +563,22 @@ if ( {) {
             <motion&& motion.div
 
 
+
+
         {/* Featured Services Section */}
         <section id="featured-services" className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
 
 
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -762,15 +588,15 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -784,7 +610,6 @@ if ( {) {
             </motion.div>
             {/* Service Categories Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Revolutionary Services
@@ -794,11 +619,8 @@ if ( {) {
                 Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology.
               </p>
             </motion.div>
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
             />;
@@ -916,19 +738,15 @@ if ( {) {
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
-<<<<<<< HEAD
 
 
-            <motion.div
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text - center mb - 16';
@@ -959,121 +777,8 @@ if ( {) {
             </motion && motion.div>;
             {/* Service Categories Grid */}
 
-<<<<<<< HEAD
-=======
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: <Brain className="w-12 h-12" />,
-                  title: "AI & Consciousness",
-                  description: "Revolutionary AI platforms with emotional intelligence and autonomous operations",
-                  color: "from-cyan-400 to-blue-500",
-                  href: "/ai-services"
-                };
-                {
-                  icon: <Atom className="w-12 h-12" />,
-                  title: "Quantum Technology",
-                  description: "Breakthrough quantum computing solutions for next-generation applications",
-                  color: "from-purple-400 to-pink-500",
-                  href: "/quantum-services"
-                };
-                {
-                  icon: <Rocket className="w-12 h-12" />,
-                  title: "Space Technology",
-                  description: "Advanced space exploration and resource management platforms",
-                  color: "from-emerald-400 to-teal-500",
-                  href: "/space-technology"
-                };
-                {
-                  icon: <Shield className="w-12 h-12" />,
-                  title: "Enterprise Solutions",
-                  description: "Advanced infrastructure and security solutions for modern enterprises",
-                  color: "from-orange-400 to-red-500",
-                  href: "/enterprise-solutions"
-                };
-                {
-                  icon: <Target className="w-12 h-12" />,
-                  title: "Micro SAAS",
-                  description: "Innovative business solutions that drive growth and efficiency",
-                  color: "from-indigo-400 to-purple-500",
-                  href: "/micro-saas"
-                };
-                {
-                  icon: <Sparkles className="w-12 h-12" />,
-                  icon: <Brain className='w - 12 h - 12' />,
-                  title: 'AI & Consciousness',
-                  description:;
-                    'Revolutionary AI platforms with emotional intelligence and autonomous operations',
-                  color: 'from - cyan - 400 to - blue - 500',
-                  href: '/ai - services',
-                },
-                {
-                  icon: <Atom className='w - 12 h - 12' />,
-                  title: 'Quantum Technology',
-                  description:;
-                    'Breakthrough quantum computing solutions for next - generation applications',
-                  color: 'from - purple - 400 to - pink - 500',
-                  href: '/quantum - services',
-                },
-                {
-                  icon: <Rocket className='w - 12 h - 12' />,
-                  title: 'Space Technology',
-                  description:;
-                    'Advanced space exploration and resource management platforms',
-                  color: 'from - emerald - 400 to - teal - 500',
-                  href: '/space - technology',
-                },
-                {
-                  icon: <Shield className='w - 12 h - 12' />,
-                  title: 'Enterprise Solutions',
-                  description:;
-                    'Advanced infrastructure and security solutions for modern enterprises',
-                  color: 'from - orange - 400 to - red - 500',
-                  href: '/enterprise - solutions',
-                },
-                {
-                  icon: <Target className='w - 12 h - 12' />,
-                  title: 'Micro SAAS',
-                  description:;
-                    'Innovative business solutions that drive growth and efficiency',
-                  color: 'from - indigo - 400 to - purple - 500',
-                  href: '/micro - saas',
-                },
-                {
-                  icon: <Sparkles className='w - 12 h - 12' />,
-                  title: 'Emerging Tech',
-                  description:;
-                    'Cutting - edge technologies that define the future of innovation',
-                  color: 'from - yellow - 400 to - orange - 500',
-                  href: '/emerging - tech',
-                },              ].map ((service, index) => (                  icon: <Sparkles className="w - 12 h - 12" />,
-
-                  title: "Emerging Tech",
-                  description: "Cutting - edge technologies that define the future of innovation",
-                  color: "from - yellow - 400 to - orange - 500",
-                  href: "/emerging - tech";
-                }
 
 
-              ))}
-
-            </div>;
-          </div>;
-        </section>;
-
-
-        {/* Latest Innovations Section */}
-
-
-=======
-
-
-            <motion.div
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1084,9 +789,12 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
             >
@@ -1100,7 +808,6 @@ if ( {) {
                 standards in technology innovation.              </p>
             </motion.div>
             {/* Featured New Services */}            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                   Latest Innovations
@@ -1110,6 +817,8 @@ if ( {) {
                 Explore our newest revolutionary services that are setting new standards in technology innovation.
               </p>
             </motion.div>
+
+
 
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
@@ -1206,6 +915,7 @@ if ( {) {
                 .map ((service, index) => (
                   <motion.div;
 
+
                     key={service.id}
                     initial={{ opacity: 0, coordinate_x: index % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, coordinate_x: 0 }}
@@ -1243,6 +953,7 @@ if ( {) {
                     </Link>;
 
 
+
             {/* View All Services CTA */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1263,7 +974,10 @@ if ( {) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             </motion.div>
           </div>
         </section>
@@ -1312,7 +1026,9 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             </motion.div>
           </div>
         </section>
@@ -1323,13 +1039,15 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1453,12 +1171,10 @@ export default Homepage2045;
   staggerChildren: 0.1, delayChildren: 0.2 
 
 
-<<<<<<< HEAD
-};
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 };
   /* CTA Buttons */ 
 }<motion.div > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {
@@ -1482,20 +1198,20 @@ export default Homepage2045;
   {
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
 };export default Homepage2045;
 
 export default Homepage2045;
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+};export default Homepage2045;
+
+export default Homepage2045;
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   once: true 
 
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
@@ -1503,12 +1219,13 @@ export default Homepage2045;
 };export default Homepage2045;
 
 
+
 export default Homepage2045;
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

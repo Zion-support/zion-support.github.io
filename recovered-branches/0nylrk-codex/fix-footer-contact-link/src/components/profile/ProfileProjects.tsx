@@ -1,25 +1,18 @@
 
 
 
-<<<<<<< HEAD
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { ProfileProject } from "@/types/profile",
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { FileText } from "lucide-react";
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { FileText } from "lucide-react",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface ProfileProjectsProps {
   projects: ProfileProject[];
 }
@@ -100,43 +93,13 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
                   {project && project.tags.map((tag, i) => (;
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
 
-<<<<<<< HEAD
-
-=======
-=======
-                  className="w-full h-full object-cover"
-                />
-              </AspectRatio>
-            ) : (
-              <div className="h-40 w-full flex items-center justify-center bg-zion-blue">
-                <FileText className="text-zion-purple h-12 w-12 opacity-50" />
-              </div>
-            )}
-            <CardContent className="p-4">
-              <h4 className="text-white font-medium mb-2">{project.title}</h4>
-
-              <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              {project.tags && project.tags.length > 0 && (
-                <div className="flex flex-wrap gap-1 mb-2">
-                  {project.tags.map((tag, i) => (
-                    <Badge
-                      key={i}
-                      variant="outline"
-                      className="text-xs border-zion-slate-dark text-zion-slate-light"
-                    >
-                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
-
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                       {tag}
                     </Badge>;
                   ))}
@@ -151,10 +114,8 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
         ))}
       </div>
     </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               <div className="text-xs text-zion-slate-light mt-2">;
@@ -169,14 +130,11 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
 }
 
 
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  )
-}
-;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -10,10 +10,10 @@ import {
 } from '@/utils/offworld/orbitdb';
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 
 import {
   connectOrbit
@@ -23,27 +23,18 @@ import {
 } from '@/utils/offworld/orbitdb';
 export default async function handler(
 
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   req: NextApiRequest,
   res: NextApiResponse;
+
+
 
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
-<<<<<<< HEAD
 
-=======
-=======
-  req: NextApiRequest,
-  res: NextApiResponse;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
   const { stores } = await connectOrbit();

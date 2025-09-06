@@ -6,10 +6,8 @@ import { Star } from 'lucide-react';
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import { Star } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -80,12 +78,12 @@ export const CommunityTrust: React.FC = () => {
 
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   ]
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
@@ -93,21 +91,16 @@ export const CommunityTrust: React.FC = () => {
     { value: "12M+", label: "Matches Made" }
   ],
 
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -178,10 +171,12 @@ export const CommunityTrust: React.FC = () => {;
         {/* Rating display */}
 
 
+
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
           <div className="flex justify-center mb-4">
             {[1, 2, 3, 4, 5].map((star) => (
               <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />
+
             ))}
 
 
@@ -198,7 +193,9 @@ export const CommunityTrust: React.FC = () => {;
     </section>
 
 
+
 <<<<<<< HEAD
+
 
 
 

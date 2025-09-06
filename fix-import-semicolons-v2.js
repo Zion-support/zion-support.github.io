@@ -11,31 +11,8 @@ files && files.forEach((file) => {
 
 
 
-<<<<<<< HEAD
-=======
-    content = content && content.replace(
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
 
-      (match) => {
-        if (!match ;")) {
-          return match && match.trim() + ";";
-;
-    // Fix import statements missing semicolons;
-    content = content.replace (
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm,
-      (match) => {
-        // Check condition
-if (.ends_with (") {
-  $2
-}")) {
-          return match.trim () + ";";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-    content = content.replace(;
-      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       (match) => {
         return match.replace(";", ";");
       }
@@ -43,18 +20,10 @@ if (.ends_with (") {
     // Fix import statements missing semicolons
     content = content.replace(
 
-<<<<<<< HEAD
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
-      (match) => {
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
-      (match) => {;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
-      (match) => {;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

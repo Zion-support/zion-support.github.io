@@ -1,9 +1,7 @@
 
-<<<<<<< HEAD
 
-=======
 import React from 'react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -12,22 +10,8 @@ import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles, Search} from "lucide-react";
-<<<<<<< HEAD
 
-import { useState } from "react",
-import { toast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { AIMatchingResults } from "@/components/AIMatchingResults",
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
-import { Textarea } from "@/components/ui/textarea";
-import { Sparkles, Search } from "lucide-react";
-interface AIMatchmakerProps {
 
-=======
-
-interface AIMatchmakerProps {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   serviceType?: string;
   onMatchSelect?: (match: any) => void,;
   className?: string;
@@ -48,7 +32,10 @@ import { Sparkles, Search } from "lucide-react",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
 interface AIMatchmakerProps {
@@ -57,22 +44,10 @@ interface AIMatchmakerProps {
   className?: string
 }
 
-<<<<<<< HEAD
-
-export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
-  const [query, setQuery] = useState("");
-  const [isMatchmaking, setIsMatchmaking] = useState(false);
-  const [matches, setMatches] = useState([] as MatchResult[]);
-  const [hasSearched, setHasSearched] = useState(false);
-  const [query, setQuery] = useState(""),
-  const [isMatchmaking, setIsMatchmaking] = useState(false),
-  const [matches, setMatches] = useState([] as MatchResult[]),
-  const [hasSearched, setHasSearched] = useState(false),
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -126,91 +101,16 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         variant: "destructive"})
       // Set empty matches to show no results found UI
       setMatches([])
-<<<<<<< HEAD
-    } finally {
-
-      setIsMatchmaking(false)
-    }
-  }
-  const handleItemSelect = (item: any) => {
-    if (onMatchSelect) {
-      // Find the original MatchResult that contains this item
-      const matchResult = matches.find(match => match.item.id === item.id)
-      if (matchResult) {
-        onMatchSelect(matchResult)
-      }
-    }
 
 
-=======
-=======
-import { useState } from './react';
-import { toast } from '@/hooks / use - toast';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { AIMatchingResults } from '@/components / AIMatchingResults';
-import { find_matches, MatchResult } from '@/lib / ai - matchmaking';
-import { Textarea } from '@/components / ui / textarea';
-import { Sparkles, Search } from './lucide-react';
-interface AIMatchmakerProps {
-  service_type?: string;
-  onMatchSelect?: (match: any) => void,
-  class_name?: string;
-}
-export /**
- * AIMatchmaker - Function description
- */
-function AIMatchmaker() {
-  const [query, set_query] = useState ("");
-  const [is_matchmaking, setIsMatchmaking] = useState (false);
-  const [matches, set_matches] = useState ([] as MatchResult[]);
-  const [has_searched, setHasSearched] = useState (false);
-;
-  const handle_search = async () => {
-    if () {) {
-  $2
-}
-      toast ({
-        title: "Please enter a description",
-        description: "Tell us what you're looking for so we can find matches.",
-        variant: "destructive"}),
-      return;
-    }
-    setIsMatchmaking (true);
-    setHasSearched (true);
-;
-    try {
-      console.log ("Starting AI matching with query:", query, "and service type:", service_type);
-;
-      // Get AI matches;
-      const results = await find_matches (
-        query;
-        service_type;
-        3);
-;
-      console.log ("AI matching results:", results);
-      set_matches (results);
-;
-      toast ({
-        title: "Matches Found",
-        description: `Found ${results.length} matches based on your description.`});
-    } catch (error) {
-      console.error ("Error during AI matching:", error);
-      toast ({
-        title: "Matching Error",
-        description: "We couldn't find matches for your request. Please try again.",
-        variant: "destructive"}),
-      // Set empty matches to show no results found UI;
-      set_matches ([]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
 
       setIsMatchmaking(false)
 
   };
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -278,11 +178,11 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),

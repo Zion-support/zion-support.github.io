@@ -1,28 +1,15 @@
-<<<<<<< HEAD
 
 
-
-import { useEffect, useState } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { EmptyMatchesCard } from "./EmptyMatchesCard";
-import { JobMatchCard } from "./JobMatchCard";
-interface SuggestedTalentsProps {
-  jobId: string;
-import { EmptyMatchesCard } from "./EmptyMatchesCard",
-import { JobMatchCard } from "./JobMatchCard",
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface SuggestedTalentsProps {
   jobId: string,
   jobTitle?: string
 }
 
-=======
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 
@@ -30,15 +17,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
   const [talents, setTalents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
-<<<<<<< HEAD
 
-
-export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
-  const [talents, setTalents] = useState([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [isProcessing, setIsProcessing] = useState(false),
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const fetchSuggestedTalents = async () => {
@@ -163,89 +142,9 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
       skills: talent && talent.talent_profile?.skills || [],;
     };
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-            category,
-            company_name);
-        `,
-        );
-        .eq ("job_id", job_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      set_talents (data || []);
-    } catch (error) {
-      console.error ("Error fetching suggested talents:", error);
-      toast ({
-        title: "Error",
-        description:;
-          "Failed to load suggested talents. Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading (false);
-    }
-  }
-;
-  const handleViewProfile = (talent_id: string) =>: any {
-    // Implement logic to view talent profile;
-    console.log ("View talent profile:", talent_id);
-    toast ({
-      title: "View Profile",
-      description: `Navigating to talent profile: ${talent_id}`,
-    });
-  }
-;
-  const handle_invite = (talent_id: string) =>: any {
-    // Implement logic to invite talent;
-    console.log ("Invite talent:", talent_id);
-    toast ({
-      title: "Invite Talent",
-      description: `Inviting talent: ${talent_id}`,
-    });
-  }
-;
-  const handle_refresh = () =>: any {
-    setIsProcessing (true);
-    fetchSuggestedTalents ().finally (() => {
-      setIsProcessing (false);
-    });
-  }
-;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      fetchSuggestedTalents ();
-    }
-  }, [job_id]);
-;
-  // Transform data to match JobMatchCard component props;
-  const transformed_talents = talents.map ((talent) => {
-    return {
-      id: talent.talent_profile?.id || "",
-      name: talent.talent_profile?.full_name || "Talent",
-      title: talent.talent_profile?.professional_title || "Talent",
-      company: talent.talent_profile?.company_name || "",
-      avatar: talent.talent_profile?.profile_picture_url || "",
-      location: talent.talent_profile?.location || "Remote",
-      category: talent.talent_profile?.category || "Technology",
-      match_percent: talent.match_score || 85,
-      skills: talent.talent_profile?.skills || [],
-    }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  });
-;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       title: "Invite Talent",
       description: `Inviting talent: ${talentId}`})
@@ -273,14 +172,15 @@ if ( {) {
       
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>
@@ -317,10 +217,7 @@ if ( {) {
   );
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
       </CardContent>;
     </Card>;
   );
@@ -328,5 +225,7 @@ if ( {) {
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

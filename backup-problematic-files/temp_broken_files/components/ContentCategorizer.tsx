@@ -1,19 +1,15 @@
-<<<<<<< HEAD
+
 :components/ContentCategorizer.tsx
 import React, { useState, useEffect, useMemo } from 'react';
 import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState, useEffect, useMemo } from 'react',;
 import {;
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
 } from 'lucide-react';
 interface ContentItem {id: string;
@@ -46,13 +42,10 @@ interface ContentItem {
   tags: string[],
   source: string,
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
-<<<<<<< HEAD
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 interface ContentCategory {id: string;
@@ -63,7 +56,7 @@ interface ContentCategory {id: string;
   count: number;
   subcategories?: string[];
 }
-<<<<<<< HEAD
+
 :components/ContentCategorizer.tsx
 const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -73,9 +66,7 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
   const [selectedRelevance, setSelectedRelevance] = useState('all');
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 const ContentCategorizer: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState(''),;
@@ -86,10 +77,8 @@ const ContentCategorizer: React.FC = () => {;
   const [selectedRelevance, setSelectedRelevance] = useState('all'),;
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),;
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   // Sample content data - in a real implementation, this would come from an API;
   const contentItems: ContentItem[] = [;
     {;
@@ -104,10 +93,8 @@ const ContentCategorizer: React.FC = () => {;
       tags: ['seojson-ldschemaaudit'];
       source: 'autonomous-auditor';
       type: 'report';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     },;
     {;
       id: '2',;
@@ -174,107 +161,8 @@ const ContentCategorizer: React.FC = () => {;
       source: 'behavior-analyzer',;
       type: 'insight';
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-const ContentCategorizer: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all'),
-  const [selectedType, setSelectedType] = useState('all'),
-  const [selectedDateRange, setSelectedDateRange] = useState('all'),
-  const [selectedRelevance, setSelectedRelevance] = useState('all'),
-  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
-  // Sample content data - in a real implementation, this would come from an API,
-const contentItems: ContentItem[] = [
-    {
-      id: '1',
-      title: 'Structured Data Audit Report',
-      href: '/reports/structured-data-audit.json',
-      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.',
-      category: 'seo',
-      subcategory: 'structured-data',
-      date: '2025-08-19',
-      relevance: 'high',
-      tags: ['seojson-ldschemaaudit'],
-      source: 'autonomous-auditor',
-      type: 'report'
-    },
-    {
-      id: '2',
-      title: 'Security Vulnerability Scan Results',
-      href: '/reports/security-scan-2025-08-19',
-      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',
-      category: 'security',
-      subcategory: 'vulnerability-scan',
-      date: '2025-08-19',
-      relevance: 'high',
-      tags: ['securityvulnerabilityscanremediation'],
-      source: 'security-scanner',
-      type: 'security'
-    },
-    {
-      id: '3',
-      title: 'AI Model Performance Update',
-      href: '/reports/ai-model-performance-2025-08-19',
-      desc: 'Latest performance metrics and optimization insights for deployed AI models.',
-      category: 'ai',
-      subcategory: 'performance',
-      date: '2025-08-19',
-      relevance: 'high',
-      tags: ['aiperformanceoptimizationmetrics'],
-      source: 'ai-monitor',
-      type: 'update'
-    },
-    {
-      id: '4',
-      title: 'Feature Deployment Summary',
-      href: '/reports/feature-deployment-2025-08-19',
-      desc: 'Overview of newly deployed features and their impact on user experience.',
-      category: 'features',
-      subcategory: 'deployment',
-      date: '2025-08-19',
-      relevance: 'medium',
-      tags: ['featuresdeploymentuximpact'],
-      source: 'deployment-tracker',
-      type: 'feature'
-    },
-    {
-      id: '5',
-      title: 'System Health Dashboard',
-      href: '/reports/system-health-2025-08-19',
-      desc: 'Real-time system performance metrics and infrastructure health status.',
-      category: 'monitoring',
-      subcategory: 'system-health',
-      date: '2025-08-19',
-      relevance: 'medium',
-      tags: ['monitoringperformanceinfrastructurehealth'],
-      source: 'health-monitor',
-      type: 'report'
-    },
-    {
-      id: '6',
-      title: 'User Behavior Insights',
-      href: '/reports/user-behavior-2025-08-19',
-      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',
-      category: 'analytics',
-      subcategory: 'user-behavior',
-      date: '2025-08-19',
-      relevance: 'high',
-      tags: ['analyticsuser-behaviorengagementoptimization'],
-      source: 'behavior-analyzer',
-      type: 'insight'
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     {id: '2';
       title: 'Security Vulnerability Scan Results';
@@ -415,7 +303,7 @@ const contentItems: ContentItem[] = [
     { id: 'high', name: 'High Priority', color: 'text-green-400' }
     { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
-<<<<<<< HEAD
+
 :components/ContentCategorizer.tsx
   ];
   const filteredItems = useMemo(() => {const filtered = contentItems.filter(item => {;
@@ -426,9 +314,7 @@ const contentItems: ContentItem[] = [
       const matchesSubcategory = selectedSubcategory === 'all' |item.subcategory === selectedSubcategory;
       const matchesType = selectedType === 'all' |item.type === selectedType;
       const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance;
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ],;
   const filteredItems = useMemo(() => {;
     const filtered = contentItems.filter(item => {;
@@ -439,10 +325,8 @@ const contentItems: ContentItem[] = [
       const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory,;
       const matchesType = selectedType === 'all' || item.type === selectedType,;
       const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
@@ -451,7 +335,7 @@ const contentItems: ContentItem[] = [
         case 'date':;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
           break;
-<<<<<<< HEAD
+
         case 'relevance':;
           const relevanceOrder = { high: 3, medium: 2, low: 1 }
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
@@ -459,11 +343,7 @@ const contentItems: ContentItem[] = [
         case 'title':;
           comparison = a.title.localeCompare(b.title);
           break;
-=======
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ],
 
   const filteredItems = useMemo(() => {
@@ -491,13 +371,10 @@ filtered.sort((a, b) => {
           break,        case 'title':
           comparison = a.title.localeCompare(b.title),
           break
-<<<<<<< HEAD
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       return sortOrder === 'asc' ? comparison : -comparison;
@@ -545,7 +422,7 @@ type=&quot;text&quot;
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
           {/* Category Filter */}          <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
-<<<<<<< HEAD
+
 :components/ContentCategorizer.tsx
             <select
               value={selectedCategory}
@@ -554,9 +431,7 @@ type=&quot;text&quot;
               }}
 className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
             >
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <select,
 value={selectedCategory}
               onChange={(e) => {
@@ -564,38 +439,32 @@ value={selectedCategory}
                 setSelectedSubcategory('all')
               }}
               className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;            >
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
                 </option>
               ))}
-<<<<<<< HEAD
+
 :components/ContentCategorizer.tsx
             </select>;
           </div>;
           {/* Subcategory Filter */}
 <div>
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </select>
           </div>
 
           {_/* Subcategory Filter */}
           <div>
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
@@ -606,7 +475,7 @@ value={selectedSubcategory}
               <option value=&quot;all&quot;>All Subcategories</option>
               {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
-<<<<<<< HEAD
+
 :components/ContentCategorizer.tsx
                   {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
                 </option>;
@@ -615,9 +484,7 @@ value={selectedSubcategory}
           </div>;
           {/* Content Type Filter */}
 <div>
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}                </option>
               ))}
             </select>
@@ -625,12 +492,10 @@ value={selectedSubcategory}
 
           {_/* Content Type Filter */}
           <div>
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
             <select,
@@ -642,26 +507,22 @@ value={selectedType}
                   {type.name}
                 </option>;
               ))}
-<<<<<<< HEAD
+
 :components/ContentCategorizer.tsx
             </select>;
           </div>;
           {/* Relevance Filter */}
 <div>
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </select>
           </div>
 
           {_/* Relevance Filter */}
           <div>
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
             <select,
@@ -676,16 +537,12 @@ value={selectedRelevance}
             </select>;
           </div>;
         </div>;
-<<<<<<< HEAD
+
 :components/ContentCategorizer.tsx
 ;
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Sort Controls and Clear Filters */}
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
@@ -704,7 +561,7 @@ value={sortBy}
 onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;              >
                 {sortOrder === 'asc' ? '↑' : '↓'}
-<<<<<<< HEAD
+
 :components/ContentCategorizer.tsx
               </button>;
             </div>;
@@ -713,9 +570,7 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
             onClick={clearAllFilters}
 className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
           >
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </button>
             </div>
           </div>
@@ -723,12 +578,10 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
           <button,
 onClick={clearAllFilters}
             className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;          >
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             Clear All Filters
           </button>
@@ -778,12 +631,10 @@ key={category.id}
         </div>;
       </div>;
 ;
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
@@ -793,16 +644,14 @@ key={category.id}
         {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
       </div>;
       {/* Content Grid */}
-<<<<<<< HEAD
+
 :components/ContentCategorizer.tsx
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   {item.type}
                 </div>;
               </div>;
@@ -845,13 +694,10 @@ key={category.id}
                 </div>;
               </div>;
 ;
-<<<<<<< HEAD
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Title and Description */}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
@@ -860,16 +706,12 @@ key={category.id}
               <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
                 {item.desc}
               </p>;
-<<<<<<< HEAD
+
 :components/ContentCategorizer.tsx
 ;
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Tags */}
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
@@ -878,7 +720,7 @@ key={category.id}
                     {tag}
                   </span>;
                 ))}
-<<<<<<< HEAD
+
 :components/ContentCategorizer.tsx
 {item.tags.length > 3 && (
                   <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
@@ -886,21 +728,17 @@ key={category.id}
                   </span>;
                 )}
               </div>;
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {item.tags.length > 3 && (
                   <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>                    +{item.tags.length - 3}
                   </span>
                 )}
               </div>;
 ;
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
@@ -918,20 +756,14 @@ key={category.id}
                 <span className=&quot;text-xs text-white/40&quot;>
                   Source: {item.source}
                 </span>
-<<<<<<< HEAD
+
 :components/ContentCategorizer.tsx
                 <a
                   href={item.href}
                 <a 
                   href={item.href} 
 
-=======
 
-                <a 
-                  href={item.href} 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         })}
       </div>;
                 <a,
@@ -952,13 +784,10 @@ href={item.href}
         })}
       </div>;
 ;
-<<<<<<< HEAD
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* No Results */}
 {filteredItems.length === 0 && (

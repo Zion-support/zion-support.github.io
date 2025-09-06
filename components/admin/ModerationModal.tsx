@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState } from 'react';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export type ModerationModalProps = {
@@ -12,29 +8,19 @@ export type ModerationModalProps = {
     action: 'approve' | 'remove' | 'warn' | 'ban',;
     adminNotes?: string;
   ) => Promise<void>;
-<<<<<<< HEAD
 
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 export default function ModerationModal(): any ({;
   flag,;
   onClose,;
   onAction,;
 }: ModerationModalProps) {;
 
-=======
 
-  flag,
-  onClose,
-  onAction,
-}: ModerationModalProps) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
   return (
@@ -320,12 +306,13 @@ if (return null) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
+
+
+
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
