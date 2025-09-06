@@ -173,6 +173,14 @@ body {
   animation: slideInRight 0.6s ease-out;
 }
 
+.animate-fade-in-up {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-fade-in-delay {
+  animation: fadeIn 0.8s ease-out 0.3s both;
+}
+
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

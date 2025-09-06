@@ -1,248 +1,126 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Header } from '../components/Header';
-import Footer from '../components/Footer';
-import { GradientHeading } from '../components/GradientHeading';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Badge } from '../components/ui/badge';
-import { Check, X, Star } from 'lucide-react';
+import React from 'react';
+import { Check, Star } from 'lucide-react';
 
-const Pricing: React.FC = () => {
-  const [isAnnual, setIsAnnual] = useState(false);
-
+const Pricing = () => {
   const plans = [
     {
       name: 'Starter',
+      price: '$99',
+      period: '/month',
       description: 'Perfect for small businesses getting started',
-      monthlyPrice: 99,
-      annualPrice: 79,
       features: [
-        'Up to 5 team members',
-        'Basic AI features',
+        'Basic AI consultation',
         'Email support',
-        '5GB storage',
-        'Basic analytics',
-        'Standard security',
+        'Monthly security scan',
+        'Basic cloud setup',
+        '5 hours of support'
       ],
-      color: 'from-gray-500 to-gray-600',
-      popular: false,
+      popular: false
     },
     {
       name: 'Professional',
+      price: '$299',
+      period: '/month',
       description: 'Ideal for growing businesses',
-      monthlyPrice: 199,
-      annualPrice: 159,
       features: [
-        'Up to 25 team members',
-        'Advanced AI features',
+        'Advanced AI solutions',
         'Priority support',
-        '50GB storage',
-        'Advanced analytics',
-        'Enhanced security',
-        'API access',
+        'Weekly security audits',
+        'Full cloud management',
+        '20 hours of support',
         'Custom integrations',
+        'Performance monitoring'
       ],
-      color: 'from-blue-500 to-blue-600',
-      popular: true,
+      popular: true
     },
     {
       name: 'Enterprise',
+      price: '$999',
+      period: '/month',
       description: 'For large organizations with complex needs',
-      monthlyPrice: 499,
-      annualPrice: 399,
       features: [
-        'Unlimited team members',
-        'Premium AI features',
-        '24/7 phone support',
-        'Unlimited storage',
-        'Custom analytics',
-        'Enterprise security',
-        'Full API access',
+        'Custom AI development',
+        '24/7 dedicated support',
+        'Daily security monitoring',
+        'Multi-cloud architecture',
+        'Unlimited support hours',
         'Custom integrations',
+        'Advanced analytics',
         'Dedicated account manager',
-        'SLA guarantee',
+        'SLA guarantees'
       ],
-      color: 'from-purple-500 to-purple-600',
-      popular: false,
-    },
-  ];
-
-  const faqs = [
-    {
-      question: 'Can I change plans anytime?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.',
-    },
-    {
-      question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans.',
-    },
-    {
-      question: 'Is there a free trial?',
-      answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required.',
-    },
-    {
-      question: 'What happens if I exceed my limits?',
-      answer: 'We\'ll notify you before you reach your limits and offer options to upgrade or purchase additional capacity.',
-    },
+      popular: false
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <Header onMenuClick={() => {}} />
-      
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <GradientHeading text="Simple, Transparent Pricing" />
-            <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
-              Choose the perfect plan for your business. All plans include our core features 
-              with no hidden fees or surprises.
-            </p>
-          </div>
-        </section>
+    <div className="min-h-screen bg-gray-50 py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Pricing Plans</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Choose the perfect plan for your business needs. All plans include our core services with different levels of support and features.
+          </p>
+        </div>
 
-        {/* Pricing Toggle */}
-        <section className="py-8 px-4">
-          <div className="container mx-auto text-center">
-            <div className="inline-flex items-center bg-gray-200 rounded-lg p-1">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className={`relative bg-white rounded-2xl shadow-lg p-8 ${
+                plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
+              }`}
+            >
+              {plan.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-blue-500 text-white px-4 py-2 rounded-full flex items-center space-x-1">
+                    <Star size={16} />
+                    <span className="text-sm font-semibold">Most Popular</span>
+                  </div>
+                </div>
+              )}
+              
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                <p className="text-gray-600 mb-4">{plan.description}</p>
+                <div className="flex items-baseline justify-center">
+                  <span className="text-5xl font-bold text-gray-900">{plan.price}</span>
+                  <span className="text-gray-600 ml-1">{plan.period}</span>
+                </div>
+              </div>
+
+              <ul className="space-y-4 mb-8">
+                {plan.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-start">
+                    <Check className="text-green-500 mr-3 mt-1 flex-shrink-0" size={20} />
+                    <span className="text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
               <button
-                onClick={() => setIsAnnual(false)}
-                className={`px-6 py-2 rounded-md transition-colors ${
-                  !isAnnual
-                    ? 'bg-white text-gray-900 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
+                className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                  plan.popular
+                    ? 'bg-blue-500 text-white hover:bg-blue-600'
+                    : 'bg-gray-900 text-white hover:bg-gray-800'
                 }`}
               >
-                Monthly
-              </button>
-              <button
-                onClick={() => setIsAnnual(true)}
-                className={`px-6 py-2 rounded-md transition-colors ${
-                  isAnnual
-                    ? 'bg-white text-gray-900 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                Annual
-                <Badge className="ml-2 bg-green-500 text-white">Save 20%</Badge>
+                Get Started
               </button>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
 
-        {/* Pricing Cards */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {plans.map((plan, index) => (
-                <Card
-                  key={index}
-                  className={`relative ${
-                    plan.popular
-                      ? 'ring-2 ring-blue-500 shadow-xl scale-105'
-                      : 'hover:shadow-lg'
-                  } transition-all duration-200`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <Badge className="bg-blue-500 text-white px-4 py-1">
-                        <Star className="h-3 w-3 mr-1" />
-                        Most Popular
-                      </Badge>
-                    </div>
-                  )}
-                  
-                  <CardHeader className="text-center pb-8">
-                    <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
-                    <p className="text-gray-600 mt-2">{plan.description}</p>
-                    <div className="mt-6">
-                      <span className="text-4xl font-bold text-gray-900">
-                        ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
-                      </span>
-                      <span className="text-gray-600 ml-2">
-                        /{isAnnual ? 'year' : 'month'}
-                      </span>
-                    </div>
-                    {isAnnual && (
-                      <p className="text-sm text-green-600 mt-2">
-                        Save ${(plan.monthlyPrice - plan.annualPrice) * 12} per year
-                      </p>
-                    )}
-                  </CardHeader>
-
-                  <CardContent className="pt-0">
-                    <ul className="space-y-3 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center">
-                          <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                          <span className="text-gray-700">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <Button
-                      className={`w-full ${
-                        plan.popular
-                          ? 'bg-blue-600 hover:bg-blue-700'
-                          : 'bg-gray-900 hover:bg-gray-800'
-                      }`}
-                    >
-                      {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-gray-600">
-                Everything you need to know about our pricing
-              </p>
-            </div>
-
-            <div className="max-w-3xl mx-auto space-y-6">
-              {faqs.map((faq, index) => (
-                <Card key={index} className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-600">{faq.answer}</p>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Join thousands of businesses already using our platform.
-            </p>
-            <div className="space-x-4">
-              <Button size="lg" variant="secondary">
-                Start Free Trial
-              </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
-                Contact Sales
-              </Button>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
+        <div className="mt-16 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Need a Custom Solution?</h2>
+          <p className="text-lg text-gray-600 mb-8">
+            We offer tailored solutions for unique business requirements. Contact us to discuss your specific needs.
+          </p>
+          <button className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+            Contact Sales
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
