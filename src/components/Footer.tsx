@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronUp } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -128,3 +129,8 @@ const Footer: React.FC = () => {
           <ChevronUp className="w-5 h-5" />
         </button>
       </div>
+    </motion.footer>
+  );
+};
+
+export default Footer;

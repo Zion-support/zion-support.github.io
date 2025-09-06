@@ -1,3 +1,0 @@
-
-        const dependencies = lockFile.dependencies || {};
-        //

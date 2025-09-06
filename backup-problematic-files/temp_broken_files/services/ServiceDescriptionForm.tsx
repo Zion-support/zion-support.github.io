@@ -1,4 +1,0 @@
- const formSchema = z.object ({;
-  title: z.string () .min (3, "Title must be at least 3 characters"
-  setIsLoading (false) ;">Service Title</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Key Features</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Target Audience</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" >{";"  isLoading ? (<> <Loader className="mr-2 h-4 w-4 animate-spin" /> Generating Description... 
-</Button> </form> </Form> </CardContent> 

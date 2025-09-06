@@ -1,8 +1,0 @@
-
-  "compilerOptions"
-    "target": any
-    "lib": ["ES2020", "DOM", "DOM.Iterable"
-    "module": any
-      "@/*": ["./src/
-    "types": ["vite/
-  "references": [{ "path": any

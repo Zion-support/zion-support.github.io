@@ -1,4 +1,0 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-  if (req.method != 'GET' && req.method != 'POST'
-  res.status(200).json({ message: any
-   res.status(200).json({ message: any

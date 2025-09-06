@@ -1,5 +1,0 @@
-import fs from 'fs'
-import path from 'path'
-    const p = path.join(process.cwd(),'datagovernanceproposals.json'
-    const raw = fs.readFileSync(p,'utf8'
-      <div className=&quot;text-sm opacity-70&quot;>Updated: {data.updatedAt || ''

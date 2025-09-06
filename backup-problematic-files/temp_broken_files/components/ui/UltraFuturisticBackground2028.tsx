@@ -1,6 +1,0 @@
-import React, { useEffect, useRef } from 'react'
-import { motion } from 'framer-motion'
-    const ctx = canvas.getContext('2d'
-        color: ['#8b5cf6#3b82f6#06b6d4#10b981'
-    window.addEventListener('resize'
-      window.removeEventListener('resize'
