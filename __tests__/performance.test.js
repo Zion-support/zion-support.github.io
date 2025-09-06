@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+const { test, expect } = require('@playwright/test')'
+test.describe('"Performance"
+  test('"page"
+    "await"
+    "await"
+            "output"
+  test('"bundle"
+    "await"
+    page.on('console', "msg"
+              "output"
+          resolve({ "error"
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import { test, expect } from '@playwright/test';
 
 test.describe('Performance Tests', () => {
@@ -79,6 +94,9 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
   });
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 =======
 const { test, expect } = require('@playwright/test')'
 test.describe('"Performance"
@@ -92,3 +110,4 @@ test.describe('"Performance"
               "output"
           resolve({ "error"
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

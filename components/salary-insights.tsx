@@ -1,9 +1,15 @@
 import React, { useEffect, useMemo, useState } from 'react';
 
 import {
+<<<<<<< HEAD
   LineChart
   BarChart
   DonutChart;
+=======
+  LineChart,
+  BarChart,;
+  DonutChart,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../components/salary/InsightCharts';
 type InsightResponse = {
   recommendedHourlyUsd: number;
@@ -25,7 +31,12 @@ type InsightResponse = {
   regionalComparison: { region: string, medianHourlyUsd: number }[]
   tags: string[]
   gptRecommendation?: string
+<<<<<<< HEAD
 export default function SalaryInsightsPage() {
+=======
+
+export default function SalaryInsightsPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -86,6 +97,7 @@ export default function SalaryInsightsPage() {
     } catch (e: any) {
       setError(e.message |'Unexpected error');
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
       const json = (await res.json()) as InsightResponse;
       setData(json)
@@ -93,8 +105,20 @@ export default function SalaryInsightsPage() {
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
+=======
+      setLoading(false);    }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -138,9 +162,23 @@ export default function SalaryInsightsPage() {
         history.unshift(payload);
         localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
         alert('Insight saved locally');
+<<<<<<< HEAD
+<<<<<<< HEAD
       } catch {}
     })();
   }
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      } catch {}
+    })();
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
     })()
@@ -366,6 +404,7 @@ export default function SalaryInsightsPage() {
               ) : (
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />
               )}
+<<<<<<< HEAD
               {data && (
                 <table className='w-full mt-3 text-sm'>
                   <thead>
@@ -423,6 +462,13 @@ export default function SalaryInsightsPage() {
               ) : (
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
               )}
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           </div>
           {data?.gptRecommendation && (
@@ -432,6 +478,11 @@ export default function SalaryInsightsPage() {
                 {data.gptRecommendation}
               </p>            </div>
           )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
@@ -464,3 +515,19 @@ export default function SalaryInsightsPage() {
     </div>
 );
 }
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {data && (
+
+            </div>
+          )}
+
+          {data && (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

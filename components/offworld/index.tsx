@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
+=======
+import {useState} from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
-export default function OffworldConsole() {
+export default function OffworldConsole() {;
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
   const [proposalId, setProposalId] = useState('prop-1');
@@ -47,6 +51,7 @@ export default function OffworldConsole() {
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
   }
   async function broadcast() {
+<<<<<<< HEAD
     setStatus('Broadcasting manifesto...');
     const res = await fetch('/api/offworld/ipfs?action=broadcast', {
       method: 'POST'
@@ -134,3 +139,14 @@ export default function OffworldConsole() {
     </div>
 );
 }
+<<<<<<< HEAD
+=======
+    setStatus('Broadcasting manifesto...');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+    setStatus('Broadcasting manifesto...');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

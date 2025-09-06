@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 type Props = {
   title: string;
@@ -15,6 +18,14 @@ export default function FuturisticCard({ title, description, cta }: Props) {
         <p className="text-sm text-gray-300 mt-1">{description}</p>
         {cta && <div className="mt-3">{cta}</div>}
       </div>
+<<<<<<< HEAD
+    </div>;
+=======
     </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

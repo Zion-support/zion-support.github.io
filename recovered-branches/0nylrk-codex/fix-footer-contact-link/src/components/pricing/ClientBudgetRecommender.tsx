@@ -1,6 +1,19 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
+=======
+import {Button} from "@/components/ui/button";
+import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
+import {PricingSuggestionBox} from "./PricingSuggestionBox";
+import {useAuth} from "@/hooks/useAuth";
+import {Sparkles} from "lucide-react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { 
   getClientBudgetSuggestion;
   PricingSuggestion;
@@ -8,6 +21,7 @@ import {
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from "lucide-react";
 interface ClientBudgetRecommenderProps {
@@ -46,11 +60,98 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       if (scope) params.scope = scope;
       if (experienceLevel) params.experienceLevel = experienceLevel;
       const result = await getClientBudgetSuggestion(params);
+=======
+import { useAuth } from "@/hooks/useAuth",
+import { Sparkles } from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface ClientBudgetRecommenderProps {
+  jobTitle: string,
+  category: string,
+  timeline?: string,
+  scope?: string,
+  experienceLevel?: string,
+  onSuggestionApplied: (minValue: number, maxValue: number) => void
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
+  jobTitle;
+  category;
+  timeline;
+  scope;
+  experienceLevel,
+  onSuggestionApplied}) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
+  const { user } = useAuth();
+
+  const generateSuggestion = async () => {
+    if (!jobTitle || !category) {
+      return
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import {;
+  getClientBudgetSuggestion,;
+  PricingSuggestion,;
+  ClientBudgetParams,;
+  trackPricingSuggestion;
+} from "@/services/pricingSuggestionService",;
+import { PricingSuggestionBox } from "./PricingSuggestionBox",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Sparkles } from "lucide-react",;
+interface ClientBudgetRecommenderProps {;
+  jobTitle: string,;
+  category: string,;
+  timeline?: string,;
+  scope?: string,;
+  experienceLevel?: string,;
+  onSuggestionApplied: (minValue: number, maxValue: number) => void;
+}
+;
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
+  jobTitle,;
+  category,;
+  timeline,;
+  scope,;
+  experienceLevel,;
+  onSuggestionApplied}) => {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
+  const { user } = useAuth(),;
+  const generateSuggestion = async () => {;
+    if (!jobTitle || !category) {;
+      return;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+
+    setIsLoading(true),
+    try {
+      const params: ClientBudgetParams = {
+        jobTitle,
+        category},
+
+      if (timeline) params.timeline = timeline,
+      if (scope) params.scope = scope,
+      if (experienceLevel) params.experienceLevel = experienceLevel,
+
+      const result = await getClientBudgetSuggestion(params),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       setSuggestion(result)
     } catch (error) {
       console.error("Error generating budget suggestion:", error)
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
     }
   }
   const handleApplySuggestion = () => {
@@ -67,7 +168,50 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
         })
       }
     }
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+    setIsLoading(true),;
+    try {;
+      const params: ClientBudgetParams = {;
+        jobTitle,;
+        category},;
+      if (timeline) params.timeline = timeline,;
+      if (scope) params.scope = scope,;
+      if (experienceLevel) params.experienceLevel = experienceLevel,;
+      const result = await getClientBudgetSuggestion(params),;
+      setSuggestion(result);
+    } catch (error) {;
+      console.error("Error generating budget suggestion:", error);
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  const handleApplySuggestion = () => {;
+    if (suggestion) {;
+      onSuggestionApplied(suggestion.minRate, suggestion.maxRate),;
+      // Track this suggestion application;
+      if (user) {;
+        trackPricingSuggestion({;
+          userId: user.id,;
+          suggestionType: 'client',;
+          suggestedMin: suggestion.minRate,;
+          suggestedMax: suggestion.maxRate,;
+          accepted: true;
+        });
+      }
+    }
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <div>
@@ -89,8 +233,22 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             rateType="hourly"
           />
         )}
+<<<<<<< HEAD
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      </div>;
+    </div>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 useEffect ( () => {
   const updateDimensions = () => {
   setDimensions ({
@@ -38,6 +41,7 @@ break;
 case 'energy': // Energy field
 }ctx.restore ()
 export default function UltraQuantumHolographicBackground({
+<<<<<<< HEAD
   children
   intensity = 'high'
   colorScheme = 'quantum'
@@ -45,9 +49,18 @@ export default function UltraQuantumHolographicBackground({
   animationSpeed = 1.5
   className = ''
 }: UltraQuantumHolographicBackgroundProps) {
+=======
+  children,
+  intensity = 'high',
+  colorScheme = 'quantum',
+  particleCount = 300,
+  animationSpeed = 1.5,
+  className = '',
+}: UltraQuantumHolographicBackgroundProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
-export default function UltraQuantumHolographicBackground({
+export default function UltraQuantumHolographicBackground({;
   children;
   intensity = 'high';
   colorScheme = 'quantum';
@@ -200,10 +213,23 @@ export default function UltraQuantumHolographicBackground({
           this.vy += 0.1;
           if (this.y > dimensions.height) {
             this.y = -10;
+<<<<<<< HEAD
             this.vy = Math.random() * 2 + 1;          }            this.vy = Math.random() * 2 + 1
+=======
+            this.vy = Math.random() * 2 + 1;          }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       draw() {
         if (this.life <= 0) return;
         const alpha = this.life / this.maxLife;
@@ -337,10 +363,23 @@ export default function UltraQuantumHolographicBackground({
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
+<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
+=======
+            ctx.stroke();          }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Draw holographic grid
       ctx.strokeStyle = colors.secondary;
       ctx.lineWidth = 0.3;
@@ -398,8 +437,39 @@ export default function UltraQuantumHolographicBackground({
           background: colors.background
           filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`;
       />
+<<<<<<< HEAD
       {/* Holographic Overlay Effects */}
       <div className='fixed inset-0 z-10 pointer-events-none'>
+<<<<<<< HEAD
+=======
+
+        }}
+      />
+
+      {/* Holographic Overlay Effects */}
+
+          }}
+        />
+
+        {/* Holographic Scan Lines */}
+
+          }}
+
+        />
+      </div>
+
+      {/* Content Layer */}
+      <div className='relative z-20'>{children}</div>
+
+      {/* Quantum Noise Effect */}
+      <div className='fixed inset-0 z-30 pointer-events-none opacity-5'>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+      {/* Holographic Overlay Effects */}
+      <div className='fixed inset-0 z-10 pointer-events-none'>
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           className='absolute inset-0'
           animate={{
@@ -494,6 +564,24 @@ export default function UltraQuantumHolographicBackground({
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+<<<<<<< HEAD
+=======
+=======
+
+        }}
+      />
+
+      {/* Holographic Overlay Effects */}
+
+          }}
+        />
+
+        {/* Holographic Scan Lines */}
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Content Layer */}
@@ -519,13 +607,38 @@ export default function UltraQuantumHolographicBackground({
             ]
           }}
           transition={{
+<<<<<<< HEAD
             duration: 4
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
-
+=======
+            duration: 4,
+            repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+            ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
       </div>
     </div>
 );  )
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+          }}
+        />
+      </div>
+<<<<<<< HEAD
+    </div>
+<<<<<<< HEAD
+);  )
+}
+=======
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

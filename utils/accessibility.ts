@@ -1,7 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 export const generateId = (prefix: string = 'id'): string => {
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
 export const announceToScreenReader = (message: string): void => {
+=======
+export const generateId = (prefix: string = 'id'): string => {;
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+};
+
+export const announceToScreenReader = (message: string): void => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (typeof window === 'undefined') return;
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
@@ -16,7 +25,7 @@ export const announceToScreenReader = (message: string): void => {
 }
 export const trapFocus = (element: HTMLElement): (() => void) => {
   const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
   const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -42,7 +51,7 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   }
 }
 export const getContrastRatio = (color1: string, color2: string): number => {
-  const getLuminance = (color: string): number => {
+  const getLuminance = (color: string): number => {;
     const rgb = color.match(/\d+/g);
     if (!rgb) return 0;
     const [r, g, b] = rgb.map(c => {
@@ -56,11 +65,21 @@ export const getContrastRatio = (color1: string, color2: string): number => {
   const brightest = Math.max(lum1, lum2);
   const darkest = Math.min(lum1, lum2);
   return (brightest + 0.05) / (darkest + 0.05);
+<<<<<<< HEAD
 }
 export const isHighContrast = (color1: string, color2: string): boolean => {
   return getContrastRatio(color1, color2) >= 4.5;
 }
 export const validateAriaLabel = (element: HTMLElement): boolean => {
+=======
+};
+
+export const isHighContrast = (color1: string, color2: string): boolean => {;
+  return getContrastRatio(color1, color2) >= 4.5;
+};
+
+export const validateAriaLabel = (element: HTMLElement): boolean => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const hasAriaLabel = element.hasAttribute('aria-label');
   const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
   const hasVisibleText = element.textContent?.trim().length > 0;
@@ -68,16 +87,31 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {
 }
 export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
   const focusableSelectors = [
+<<<<<<< HEAD
     'button:not([disabled])'
     'input:not([disabled])'
     'select:not([disabled])'
     'textarea:not([disabled])'
     'a[href]'
     '[tabindex]:not([tabindex="-1"])'
+=======
+    'button:not([disabled])',
+    'input:not([disabled])',
+    'select:not([disabled])',
+    'textarea:not([disabled])',
+    'a[href]',
+    '[tabindex]:not([tabindex="-1"])';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ].join(', ');
   return Array.from(container.querySelectorAll(focusableSelectors)) as HTMLElement[];
+<<<<<<< HEAD
 }
 export const isElementInViewport = (element: HTMLElement): boolean => {
+=======
+};
+
+export const isElementInViewport = (element: HTMLElement): boolean => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const rect = element.getBoundingClientRect();
   return (
     rect.top >= 0 &&
@@ -85,11 +119,21 @@ export const isElementInViewport = (element: HTMLElement): boolean => {
     rect.bottom <= (window.innerHeight |document.documentElement.clientHeight) &&
     rect.right <= (window.innerWidth |document.documentElement.clientWidth)
   );
+<<<<<<< HEAD
 }
 export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {
   element.scrollIntoView({ behavior, block: 'start' });
 }
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
+=======
+};
+
+export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {;
+  element.scrollIntoView({ behavior, block: 'start' });
+};
+
+export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
@@ -102,5 +146,17 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
       scrollToElement(target);
     }
   });
+<<<<<<< HEAD
+=======
+  
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return skipLink;
 }
+=======
+
+  return skipLink;
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

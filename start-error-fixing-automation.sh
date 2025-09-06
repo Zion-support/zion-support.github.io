@@ -4,7 +4,11 @@
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 # Error Fixing Automation Startup Script
 # This script starts all PM2 error fixing automations
 echo "Starting Error Fixing Automation System..."
@@ -21,10 +25,17 @@ pm2 start ecosystem.error-fixing.config.cjs
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+>>>>>>> origin/main
+=======
 >>>>>>> origin/automation-improvements-final
 =======
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 # Error Fixing Automation Startup Script
 # This script starts the comprehensive error fixing automation system
 # Error Fixing Automation PM2 Management Script
@@ -76,7 +87,11 @@ pm2 status
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 # Show logs
 echo "Recent logs:"
 pm2 logs --lines 20
@@ -89,10 +104,17 @@ echo "Stop with: pm2 stop all"
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+>>>>>>> origin/main
+=======
 >>>>>>> origin/automation-improvements-final
 =======
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 echo "📋 Available commands:"
 echo "  pm2 logs error-fixer-automation          # View main error fixer logs"
 echo "  pm2 logs typescript-error-fixer          # View TypeScript error fixer logs"
@@ -313,6 +335,12 @@ esac
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

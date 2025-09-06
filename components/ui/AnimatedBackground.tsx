@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AnimatedBackground() {
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>
@@ -11,7 +15,11 @@ export default function AnimatedBackground() {
       />
       <style jsx global>{`
         @keyframes bgflow {
+<<<<<<< HEAD
+          0% {;
+=======
           0% {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             transform: translateY(0px) rotate(0deg);
           }
           50% {
@@ -80,5 +88,11 @@ export default function AnimatedBackground() {
       />
     </div>;
   );
+<<<<<<< HEAD
 }
 export default AnimatedBackground;
+=======
+};
+
+export default AnimatedBackground;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

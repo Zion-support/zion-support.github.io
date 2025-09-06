@@ -1,6 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
 
 export type AdminNotesPanelProps = {
+=======
+export type AdminNotesPanelProps = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
 }
@@ -13,9 +17,16 @@ type Note = {
   createdAt: number;
 }
 export default function AdminNotesPanel({
+<<<<<<< HEAD
   targetType
   targetId
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
+=======
+  targetType,
+  targetId,;
+}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Note = {
   id: string
   targetType: string
@@ -23,8 +34,14 @@ type Note = {
   text: string
   authorId: string
   createdAt: number
+<<<<<<< HEAD
 }
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+=======
+};
+
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -83,17 +100,34 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setText('');
       await fetchNotes();
     } finally {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       setAdding(false);    }      if (!res.ok) {
         alert('Failed to add note');
         return
       }
       setText('');
 
+<<<<<<< HEAD
       await fetchNotes()
     } finally {
       setAdding(false)
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      setAdding(false);    }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!isAdmin) {
     return (
       <div className='rounded border p-3'>
@@ -170,5 +204,17 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         )}
       </div>
     </div>
+<<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

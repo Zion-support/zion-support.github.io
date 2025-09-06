@@ -1,5 +1,6 @@
+<<<<<<< HEAD
 // Messaging storage utilities
-export interface Message {
+export interface Message {;
   id: string;
   conversationId: string;  senderId: string;
   recipientId: string;
@@ -22,7 +23,12 @@ export interface Message {
     createdAt: string
   }>;
 }
+<<<<<<< HEAD
 export interface Conversation {
+=======
+
+export interface Conversation {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -39,7 +45,12 @@ export interface Conversation {
     tags?: string[]
   }
 }
+<<<<<<< HEAD
 export interface MessageThread {
+=======
+
+export interface MessageThread {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   conversationId: string;
   rootMessageId: string;
@@ -47,7 +58,12 @@ export interface MessageThread {
   createdAtIso: string;
   updatedAtIso: string
 }
+<<<<<<< HEAD
 export interface MessageSearchResult {
+=======
+
+export interface MessageSearchResult {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   message: Message;
   conversation: Conversation;
   highlights: string[];
@@ -407,13 +423,18 @@ class MessagingStorage {
 // Singleton instance
 export const messagingStorage = new MessagingStorage();
 // Main functions for external use
-export async function createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {
+export async function createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {;
   return messagingStorage.createMessage(message);
 }
 export async function getMessage(id: string): Promise<Message | null> {
   return messagingStorage.getMessage(id)
 }
+<<<<<<< HEAD
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
+=======
+
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return messagingStorage.updateMessage(id, updates);
 }
 export async function deleteMessage(id: string): Promise<boolean> {
@@ -422,12 +443,18 @@ export async function deleteMessage(id: string): Promise<boolean> {
 export async function markAsRead(id: string): Promise<boolean> {
   return messagingStorage.markAsRead(id)
 }
+<<<<<<< HEAD
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
+=======
+
+export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return messagingStorage.createConversation(conversation);
 }
 export async function getConversation(id: string): Promise<Conversation | null> {
   return messagingStorage.getConversation(id)
 }
+<<<<<<< HEAD
 export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
   return messagingStorage.updateConversation(id, updates);
 }
@@ -435,12 +462,29 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
   return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
 }
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {
+=======
+
+export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
+  return messagingStorage.updateConversation(id, updates);
+}
+
+export async function getMessagesByConversation(conversationId: string, limit?: number, offset?: number): Promise<Message[]> {;
+  return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
+}
+
+export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
 export async function getUnreadMessageCount(userId: string): Promise<number> {
   return messagingStorage.getUnreadMessageCount(userId)
 }
+<<<<<<< HEAD
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
+=======
+
+export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return messagingStorage.searchMessages(query, userId, limit);
 }
 // Utility functions
@@ -452,18 +496,28 @@ export function createMessageData(
   additionalData?: Partial<Message>
 ): Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'> {
   return {
+<<<<<<< HEAD
     conversationId
     senderId
     recipientId
     body
     ...additionalData
   }
+=======
+    conversationId,
+    senderId,
+    recipientId,
+    body,
+    ...additionalData;
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function createConversationData(
   participants: string[]
   additionalData?: Partial<Conversation>
 ): Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'> {
   return {
+<<<<<<< HEAD
     participants
     lastMessageAtIso: new Date().toISOString()
     isArchived: false
@@ -478,6 +532,25 @@ export function generateConversationId(): string {
   return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 export function formatMessageTime(isoString: string): string {
+=======
+    participants,
+    lastMessageAtIso: new Date().toISOString(),
+    isArchived: false,
+    isMuted: false,
+    ...additionalData;
+  };
+}
+
+export function generateMessageId(): string {;
+  return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
+
+export function generateConversationId(): string {;
+  return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
+
+export function formatMessageTime(isoString: string): string {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const date = new Date(isoString);
   const now = new Date();
   const diffInHours = (now.getTime() - date.getTime()) / (1000 * 60 * 60);
@@ -489,5 +562,12 @@ export function formatMessageTime(isoString: string): string {
     return `${Math.floor(diffInHours / 24)}d ago`;
   } else {
     return date.toLocaleDateString();
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }

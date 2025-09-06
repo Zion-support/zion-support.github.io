@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+=======
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
 <<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   ArrowRight,
   Award,
   BarChart3,
@@ -21,7 +29,11 @@ import {
   Calendar,
   ShoppingCart,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   BookOpen,
   Brain,
   Building,
@@ -57,10 +69,13 @@ import {
   Target,
   TrendingUp,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   Truck,
   Users,
   X,
-  Zap,
+  Zap,;
 } from "lucide-react";
 =======
 <<<<<<< HEAD
@@ -68,6 +83,8 @@ import {
   Users,
   X,
   Zap
+<<<<<<< HEAD
+=======
 =======
   Clock,
   DollarSign,
@@ -107,10 +124,18 @@ import {
   Clock as Time,
   DollarSign as Money;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
 
 =======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   ArrowRight
   Award
   BarChart3
@@ -153,7 +178,11 @@ import {
   X
   Zap
 } from "lucide-react";
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const navigationItems = [
   {
     title: "Services"
@@ -367,9 +396,19 @@ const quickLinks = [
   { title: "Quote", href: "/quote", icon: FileText }
   { title: "API Docs", href: "/api-docs", icon: Code }
 ];
+<<<<<<< HEAD
 export default function Navigation() {
+=======
+
+export default function Navigation() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}

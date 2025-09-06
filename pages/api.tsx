@@ -1,14 +1,29 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
 =======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+>>>>>>> origin/main
+=======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
+<<<<<<< HEAD
   Code
   Check
   Globe
@@ -18,6 +33,17 @@ import {
   Cpu
   Cloud
   XCircle
+=======
+  Code,
+  Check,
+  Globe,
+  Shield,
+  Zap,
+  Database,
+  Cpu,
+  Cloud,
+  XCircle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
@@ -69,10 +95,17 @@ export default function APIPage() {
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
+<<<<<<< HEAD
   }'`
         }
       ]
     }
+=======
+  }'`,
+        },
+      ],
+    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const responseExamples = {
     success: {
@@ -333,6 +366,10 @@ export default function APIPage() {
       </div>
     </Layout>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
 }

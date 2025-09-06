@@ -1,15 +1,22 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+<<<<<<< HEAD
+=======
 =======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
+<<<<<<< HEAD
   Search
   HelpCircle
   BookOpen
@@ -22,6 +29,20 @@ import {
   ExternalLink
   ChevronDown
   Cloud
+=======
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
+  Video,
+  Download,
+  ExternalLink,
+  ChevronDown,
+  Cloud,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 const helpArticles = [
   {
@@ -52,6 +73,8 @@ const helpArticles = [
       }
       {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: "AI Best Practices",
         description: "Tips and best practices for AI development",
@@ -80,6 +103,7 @@ const helpArticles = [
     icon: Cloud,
     color: "blue",
 =======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         title: "AI Best Practices"
         description: "Tips and best practices for AI development"
         readTime: "6 min read"
@@ -93,7 +117,10 @@ const helpArticles = [
     description: "Cloud infrastructure and deployment solutions."
     icon: Cloud
     color: "blue"
+<<<<<<< HEAD
+=======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     articles: [
       {
         title: "Cloud Migration Guide"
@@ -102,6 +129,8 @@ const helpArticles = [
         type: "Guide"
       }
       {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         title: "Cloud Security",
@@ -121,6 +150,7 @@ const helpArticles = [
   }
 >>>>>>> origin/automation-improvements-final
 =======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         title: "Cloud Security"
         description: "Best practices for securing your cloud infrastructure"
         readTime: "9 min read"
@@ -149,6 +179,7 @@ const helpCategories = [
   }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
+<<<<<<< HEAD
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState("");
 =======
@@ -156,6 +187,17 @@ export default function HelpPage() {
     articles: helpArticles
   }
 ];
+<<<<<<< HEAD
+export default function HelpPage() {
+=======
+
+export default function HelpPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [searchTerm, setSearchTerm] = useState("");
+  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+  const toggleCategory = (index: number) => {
+    setExpandedCategory(expandedCategory === index ? null : index);
+=======
 
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -168,6 +210,7 @@ export default function HelpPage() {
 
 <<<<<<< HEAD
 =======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   const filteredCategories = helpCategories
@@ -182,6 +225,8 @@ export default function HelpPage() {
     .filter((category) => category.articles.length > 0);
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
   const filteredCategories = helpCategories.map(category => ({
     ...category,
     articles: category.articles.filter(article =>
@@ -193,6 +238,7 @@ export default function HelpPage() {
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
     <>
       <Head>

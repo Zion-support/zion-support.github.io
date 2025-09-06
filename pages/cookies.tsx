@@ -1,15 +1,26 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   Shield
   Settings
   Info
@@ -18,13 +29,30 @@ import {
   CheckCircle
   XCircle
   AlertTriangle
+=======
+  Shield,
+  Settings,
+  Info,
+  ExternalLink,
+  ArrowRight,
+  CheckCircle,
+  XCircle,
+  AlertTriangle;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 export default function CookiePolicyPage() {
   const [cookiePreferences, setCookiePreferences] = useState({
+<<<<<<< HEAD
     necessary: true
     analytics: false
     marketing: false
     functional: false
+=======
+    necessary: true,
+    analytics: false,
+    marketing: false,
+    functional: false;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   });
   const cookieTypes = [
     {
@@ -343,21 +371,37 @@ export default function CookiePolicyPage() {
 <<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -386,6 +430,13 @@ export default function CookiesPage() {
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+=======
+=======
+import React from 'react',
+import SEO from '../components/SEO',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -422,15 +473,46 @@ export default function CookiesPage() {
             </a>
           </p>
         </div>
+<<<<<<< HEAD
       </Layout>
     </>
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
+=======
+<<<<<<< HEAD
+      </Layout>
+    </>;
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
       </div>
     </UltraAdvancedFuturisticBackground>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+=======
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

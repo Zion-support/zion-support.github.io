@@ -5,7 +5,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     return res.setHeader('Allow', 'POST').status(405).end('Method Not Allowed');
   }
   const { name, title, bio, experience, skills } = req.body as {
@@ -54,4 +54,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title |''}\nBio: ${bio |''}\nExperience: 
   } catch (e: any) {
     return res.status(500).json({ error: e.message |'OpenAI error' })
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -5,7 +5,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
+  try {;
     const supabase = createServerClient();
     // Replace with your actual tables/queries
     // Fallback to mock if querying fails
@@ -88,7 +88,13 @@ export default async function handler(
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
+<<<<<<< HEAD
     const geoCounts: Record<string, number> = {}
+=======
+
+<<<<<<< HEAD
+    const geoCounts: Record<string, number> = {};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     usersData.forEach(u => {
       geoCounts[u.country |'Unknown'] =
         (geoCounts[u.country |'Unknown'] |0) + 1;
@@ -104,6 +110,7 @@ export default async function handler(
       topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
       referralConversions: 2
 
+<<<<<<< HEAD
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
 res.status(200).json({
@@ -151,3 +158,14 @@ res.status(200).json({
       ]
     });
   }}
+<<<<<<< HEAD
+=======
+    const geoCounts: Record<string, number> = {};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+    const geoCounts: Record<string, number> = {};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

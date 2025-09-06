@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  ChevronRight,
+  Phone, 
+  Mail, 
+  MapPin, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+=======
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -13,6 +30,7 @@ import {
   Facebook,
   Twitter,
   Linkedin,
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   Instagram,
   Github,
   ArrowRight,
@@ -23,8 +41,11 @@ import {
   Zap,
   Globe,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   BarChart3,
-  Search,
+  Search,;
 } from "lucide-react";
 import SearchModal from "./SearchModal";
 =======
@@ -33,13 +54,26 @@ import SearchModal from "./SearchModal";
   Search
 } from 'lucide-react';
 import SearchModal from './SearchModal';
+<<<<<<< HEAD
+=======
 =======
   BarChart3
 } from 'lucide-react;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+<<<<<<< HEAD
+=======
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+=======
 >>>>>>> origin/automation-improvements-final
 
 =======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   Menu
   X
   ChevronDown
@@ -63,8 +97,15 @@ import SearchModal from './SearchModal';
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function Navigation() {
+=======
+export default function Navigation() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -221,6 +262,11 @@ export default function Navigation() {
     { name: "Support", href: "/support" }
     { name: "Status", href: "/status" }
   ];
+<<<<<<< HEAD
+=======
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       {/* Top Bar */}
@@ -489,12 +535,22 @@ export default function Navigation() {
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+=======
+>>>>>>> origin/main
+=======
 >>>>>>> origin/automation-improvements-final
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <button
@@ -516,7 +572,11 @@ export default function Navigation() {
                 href=/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               >
                 Get Started
               </Link>

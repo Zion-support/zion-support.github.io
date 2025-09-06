@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+<<<<<<< HEAD
   Menu
   X
   ChevronDown
@@ -23,11 +27,38 @@ import {
   Bot
   Factory
   Car
+=======
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  User,
+  Settings,
+  LogOut,
+  Bell,
+  Globe,
+  Zap,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,
+  Wifi,
+  Truck,
+  Gamepad2,
+  Bot,
+  Factory,
+  Car,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {
   className?: string;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""
 }) => {
@@ -110,6 +141,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       ]
       hasDropdown: true
       dropdownItems: [
+<<<<<<< HEAD
         { name: "AI & Machine Learning", href: "/services?category=ai-ml" }
         { name: "Quantum Computing", href: "/services?category=quantum" }
         { name: "Space Technology", href: "/services?category=space" }
@@ -121,6 +153,19 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         { name: "View All Services", href: "/services" }
       ]
     }
+=======
+        { name: "AI & Machine Learning", href: "/services?category=ai-ml" },
+        { name: "Quantum Computing", href: "/services?category=quantum" },
+        { name: "Space Technology", href: "/services?category=space" },
+        { name: "Biotech & Healthcare", href: "/services?category=biotech" },
+        { name: "Financial Services", href: "/services?category=finance" },
+        { name: "Cybersecurity", href: "/services?category=security" },
+        { name: "Edge Computing", href: "/services?category=edge" },
+        { name: "Blockchain", href: "/services?category=blockchain" },
+        { name: "View All Services", href: "/services" },
+      ],
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       name: "Solutions"
       href: "/solutions"
@@ -138,6 +183,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     { name: "Blog", href: "/blog" }
     { name: "Contact", href: "/contact" }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
     mobile: "+1 302 464 0950"
     email: "kleber@ziontechgroup.com"
@@ -249,6 +298,14 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             >
               <Search className="w-5 h-5" />
             </motion.button>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Notifications */}
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
@@ -259,6 +316,14 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
               <Bell className="w-5 h-5" />
               <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
             </motion.button>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -285,6 +350,14 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           </motion.button>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -331,6 +404,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   )}
                 </div>
               ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Contact Info */}
               <div className="pt-4 border-t border-cyan-500/20">
                 <div className="space-y-2 text-sm text-gray-400">
@@ -359,7 +436,24 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         )}
       </AnimatePresence>
     </nav>
+<<<<<<< HEAD
   );
+<<<<<<< HEAD
 }
 export default EnhancedNavigation;
 
+=======
+};
+
+export default EnhancedNavigation;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+);
+};
+<<<<<<< HEAD
+export default EnhancedNavigation;
+=======
+
+export default EnhancedNavigation;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

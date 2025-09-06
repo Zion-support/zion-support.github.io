@@ -1,6 +1,19 @@
+<<<<<<< HEAD
 
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Tx = {
   id: string;
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
@@ -20,7 +33,12 @@ function getUserId(): string {
   const generated = 'demo-user';
   window.localStorage.setItem('zion_user_id', generated);
   return generated;
+<<<<<<< HEAD
 export default function WalletPanel() {
+=======
+
+export default function WalletPanel() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -44,7 +62,12 @@ function getUserId(): string {
   window.localStorage.setItem("zion_user_id", generated);
   return generated
 }
+<<<<<<< HEAD
 export default function WalletPanel() {
+=======
+
+export default function WalletPanel() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
@@ -172,6 +195,7 @@ export default function WalletPanel() {
           <Badges balance={balance} />
         </div>
       </div>
+<<<<<<< HEAD
       <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
         <div className='flex gap-3 mb-4 text-sm'>
           <button
@@ -257,4 +281,22 @@ export default function WalletPanel() {
       </div>
     </div>
 );
+<<<<<<< HEAD
+=======
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+          </div>
+
+        )}
+      </div>
+    </div>
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

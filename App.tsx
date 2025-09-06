@@ -1,37 +1,41 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ErrorBoundary from './src/components/ErrorBoundary';
 import Header from './src/components/Header';
-import Sidebar from './src/components/layout/Sidebar';
 import Footer from './src/components/Footer';
-import HomePage from './src/pages/Home';
-import AboutPage from './src/pages/About';
-import ContactPage from './src/pages/Contact';
-import ServicesPage from './src/pages/Services';
-import PricingPage from './src/pages/Pricing';
-=======
-import React, { JSX } from 'react';
+import Loading from './src/components/Loading';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
+import ErrorBoundary from './src/components/ErrorBoundary';
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+// Lazy load pages for better performance
+const Home = lazy(() => import('./src/pages/Home'));
+const About = lazy(() => import('./src/pages/About'));
+const Services = lazy(() => import('./src/pages/Services'));
+const Pricing = lazy(() => import('./src/pages/Pricing'));
+const Contact = lazy(() => import('./src/pages/Contact'));
+const NotFound = lazy(() => import('./src/pages/NotFound'));
 
-<<<<<<< HEAD
 export default function App() {
-=======
-export default function App(): React.JSX.Element {
-=======
-import React, { JSX } from 'react',
-
-export default function App(): JSX.Element {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
   return (
-    <main>
-      <h1>Hello App</h1>
-    </main>
+    <ErrorBoundary>
+      <Router>
+        <PerformanceMonitor />
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-grow">
+            <Suspense fallback={<Loading fullScreen text="Loading page..." />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }

@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
+=======
+import React from "react";
+import Head from "next/head";
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function SitemapPage() {
 
   const links = [
     { name: "Home", href: "/" }
     { name: "Services", href: "/services" }
     {
+<<<<<<< HEAD
       name: "All Services Showcase"
       href: "/comprehensive-services-showcase-2025"
     }
@@ -15,6 +22,17 @@ export default function SitemapPage() {
     { name: "Resources", href: "/resources" }
     { name: "Support", href: "/support" }
     { name: "Contact", href: "/contact" }
+=======
+      name: "All Services Showcase",
+      href: "/comprehensive-services-showcase-2025",
+    },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Market Pricing", href: "/market-pricing" },
+    { name: "Services Advertising", href: "/services-advertising" },
+    { name: "Resources", href: "/resources" },
+    { name: "Support", href: "/support" },
+    { name: "Contact", href: "/contact" },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -89,4 +107,7 @@ export default function SitemapPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

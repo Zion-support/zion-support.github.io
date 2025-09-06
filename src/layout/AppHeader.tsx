@@ -1,3 +1,42 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  const showTagline = router.pathname === '/'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState } from 'react',
+import { useMessaging } from '@/context/MessagingContext',
+import Link from 'next/link',
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation',
+import { Logo } from '@/components/header/Logo',
+import { useTranslation } from 'react-i18next',
+import { Menu, X } from 'lucide-react'
+import { MobileMenu } from '@/components/header/MobileMenu',
+import { useIsMobile } from '@/hooks/use-mobile',
+import { MobileBottomNav } from '@/components/header/MobileBottomNav',
+import { PointsBadge } from '@/components/loyalty/PointsBadge',
+import { LoginModal } from '@/components/auth/LoginModal',
+import { useAuth } from '@/hooks/useAuth',
+import { UserMenu } from '@/components/header/UserMenu',
+import { useSelector } from 'react-redux',
+import type { RootState } from '@/store',
+import { cn } from '@/lib/utils', // Import cn utility
+import { useRouter } from 'next/router',
+export function AppHeader() {
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
+  const [loginOpen, setLoginOpen] = useState(false),
+  const isMobile = useIsMobile(),
+  const { t } = useTranslation(),
+  const { user } = useAuth(),
+  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn),
+  const router = useRouter(),
+  const showTagline = router.pathname === '/',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   const showTagline = router.pathname === '/'
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -21,9 +60,19 @@
     <>
       <header
         style={{ "--nav-height": "64px" } as React.CSSProperties}
+<<<<<<< HEAD
         className = {cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground"
           { "bg-red-500": mobileMenuOpen ,}
+=======
+        className={cn(
+          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
+          { "bg-red-500": mobileMenuOpen }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       >
         <div className="container flex h-16 items-center px-4 sm:px-6">
@@ -41,10 +90,21 @@
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
+<<<<<<< HEAD
               onClick = {() => setMobileMenuOpen(!mobileMenuOpen),}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded = {mobileMenuOpen,}
               aria-label = {t('general.toggle_mobile_menu'),}
+=======
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-expanded={mobileMenuOpen}
+              aria-label={t('general.toggle_mobile_menu')}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <span className="sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
@@ -60,11 +120,26 @@
               <Link
                 href="/auth/login"
                 className="text-sm font-medium text-foreground/70 hover:text-foreground"
+<<<<<<< HEAD
                 aria-label = {t('auth.login'),}
                 data-testid="login-link"
                 onClick={(e,) => {
+<<<<<<< HEAD
                   e.preventDefault()
                   // For the main login link, we might not have a specific returnTo beyond current page
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                aria-label={t('auth.login')}
+                data-testid="login-link"
+                onClick={(e) => {
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  e.preventDefault(),
+                  // For the main login link, we might not have a specific returnTo beyond current page,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
@@ -77,7 +152,15 @@
               <Link
                 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
+<<<<<<< HEAD
                 aria-label = {t('auth.signup'),}
+=======
+                aria-label={t('auth.signup')}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 data-testid="signup-nav-link"
               >
                 {t('auth.signup')}
@@ -95,22 +178,59 @@
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-60 pt-16">
+<<<<<<< HEAD
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+<<<<<<< HEAD
             onClick = {(,) => setMobileMenuOpen(false),}
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu
+=======
+<<<<<<< HEAD
+            onClick = {(,) => setMobileMenuOpen(false),}
+=======
+            onClick={() => setMobileMenuOpen(false)}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+            aria-hidden="true"
+          />
+          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               unreadCount = {unreadCount,}
               onClose = {() => setMobileMenuOpen(false),}
               openLoginModal = {openLoginModal,}
             />
           </div>
         </div>
+=======
+<<<<<<< HEAD
+          <div 
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              unreadCount={unreadCount} 
+              onClose={() => setMobileMenuOpen(false)}
+              openLoginModal={openLoginModal}
+            />;
+          </div>;
+        </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+<<<<<<< HEAD
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
       setActiveNav(null)
@@ -702,3 +822,20 @@
       </AnimatePresence>
     </header>  )
 }
+<<<<<<< HEAD
+=======
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+<<<<<<< HEAD
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

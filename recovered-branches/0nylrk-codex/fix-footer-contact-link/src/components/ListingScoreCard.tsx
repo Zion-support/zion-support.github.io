@@ -1,6 +1,16 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {cn} from "@/lib/utils";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {StarIcon} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { StarIcon } from "lucide-react";
 interface ListingScoreCardProps {
@@ -35,6 +45,49 @@ export function ListingScoreCard({
   return (
     <div className={cn(
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group"
+=======
+import { Button } from "@/components/ui/button",
+import { StarIcon } from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface ListingScoreCardProps {
+  title: string,
+  description: string,
+  image?: string,
+  category: string,
+  tags?: string[],
+  author?: string,
+  authorImage?: string,
+  aiScore?: number,
+  rating?: number,
+  reviewCount?: number,
+  className?: string
+}
+
+<<<<<<< HEAD
+export function ListingScoreCard({ ;
+  title;
+=======
+export function ListingScoreCard({ 
+  title,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  description, 
+  image, 
+  category, 
+  tags,
+  author, 
+  authorImage,
+  aiScore = 0,
+  rating = 0,
+  reviewCount = 0,
+  className 
+}: ListingScoreCardProps) {
+  return (
+    <div className={cn(
+      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       className
     )}>
       {image && (
@@ -68,11 +121,98 @@ export function ListingScoreCard({
                 <StarIcon
                   key={star}
                   className={cn(
+<<<<<<< HEAD
                     "h-4 w-4"
                     star <= Math.round(rating)
                       ? "text-zion-cyan fill-zion-cyan"
 
                       : "text-zion-slate-light"
+=======
+                    "h-4 w-4", 
+                    star <= Math.round(rating) 
+                      ? "text-zion-cyan fill-zion-cyan" 
+                      : "text-zion-slate-light"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { cn } from "@/lib/utils",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { StarIcon } from "lucide-react",;
+interface ListingScoreCardProps {;
+  title: string,;
+  description: string,;
+  image?: string,;
+  category: string,;
+  tags?: string[],;
+  author?: string,;
+  authorImage?: string,;
+  aiScore?: number,;
+  rating?: number,;
+  reviewCount?: number,;
+  className?: string;
+}
+;
+export function ListingScoreCard({;
+  title,;
+  description,;
+  image,;
+  category,;
+  tags,;
+  author,;
+  authorImage,;
+  aiScore = 0,;
+  rating = 0,;
+  reviewCount = 0,;
+  className;
+}: ListingScoreCardProps) {;
+  return (;
+    <div className={cn(;
+      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group";
+      className;
+    )}>;
+      {image && (;
+        <div className="h-48 w-full overflow-hidden">;
+          <img;
+            src={image} ;
+            alt={title} ;
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105";
+          />;
+        </div>;
+      )}
+      <div className="flex flex-col p-4 flex-grow">;
+        <div className="mb-2 flex items-center justify-between">;
+          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">;
+            {category}
+          </Badge>;
+          {aiScore > 0 && (;
+            <div className="flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs">;
+              <span className="font-medium mr-1">AI Match:</span>;
+              <span>{aiScore}%</span>;
+            </div>;
+          )}
+        </div>;
+        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
+        <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
+        {/* Rating */}
+        {rating > 0 && (;
+          <div className="flex items-center gap-1 mb-4">;
+            <div className="flex">;
+              {[1, 2, 3, 4, 5].map((star) => (;
+                <StarIcon;
+                  key={star}
+                  className={cn(;
+                    "h-4 w-4";
+                    star <= Math.round(rating);
+                      ? "text-zion-cyan fill-zion-cyan";
+                      : "text-zion-slate-light";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   )}
                 />
               ))}
@@ -87,10 +227,25 @@ export function ListingScoreCard({
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
+<<<<<<< HEAD
               </Badge>
             ))}
           </div>
+<<<<<<< HEAD
         )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+              </Badge>;
+            ))}
+          </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        )}
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
           Request Quote
         </Button>

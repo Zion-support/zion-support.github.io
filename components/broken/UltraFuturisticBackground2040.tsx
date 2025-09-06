@@ -93,10 +93,27 @@ const UltraFuturisticBackground2040: React.FC = () => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
+<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
           }
+<<<<<<< HEAD
         }
       }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            ctx.stroke();          }
+
+          }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        }
+      }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;
@@ -247,6 +264,14 @@ const UltraFuturisticBackground2040: React.FC = () => {
       {/* Overlay Gradients */}
       <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80' />
       <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Floating Elements */}
       <div className='absolute inset-0'>
         {/* Animated Grid Pattern */}
@@ -271,6 +296,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
             scale: [1, 1.1, 1]
             opacity: [0.2, 0.4, 0.2],          }}
           transition={{
+<<<<<<< HEAD
             duration: 8
             repeat: Infinity
             ease: 'linear',  }, []);
@@ -355,9 +381,16 @@ const UltraFuturisticBackground2040: React.FC = () => {
             opacity: [0.2, 0.3, 0.2]
           }}
           transition={{
+<<<<<<< HEAD
             duration: 12
             repeat: Infinity
             ease: 'linear'
+=======
+            duration: 12,
+            repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'linear',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
         />
         {/* Additional Floating Elements */}
@@ -379,12 +412,45 @@ const UltraFuturisticBackground2040: React.FC = () => {
             rotate: [12, 372];
             scale: [1, 1.1, 1];
             opacity: [0.15, 0.25, 0.15]
+=======
+<<<<<<< HEAD
+            duration: 8,
+            repeat: Infinity,
+            ease: 'linear',
+
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }}
           transition={{
             duration: 15
             repeat: Infinity
             ease: 'linear'
           }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: 'linear',
+          }}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
         <motion.div
           className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full'
@@ -405,9 +471,16 @@ const UltraFuturisticBackground2040: React.FC = () => {
             opacity: [0.15, 0.3, 0.15]
           }}
           transition={{
+<<<<<<< HEAD
             duration: 18
             repeat: Infinity
             ease: 'linear'
+=======
+            duration: 18,
+            repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'linear',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
         />
         {/* Particle Effects */}
@@ -427,6 +500,17 @@ const UltraFuturisticBackground2040: React.FC = () => {
           animate={{
             y: [0, -20, 0];
             opacity: [0.4, 0.8, 0.4]
+=======
+<<<<<<< HEAD
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
           transition={{
             duration: 3
@@ -474,18 +558,44 @@ const UltraFuturisticBackground2040: React.FC = () => {
             opacity: [0.4, 0.9, 0.4]
           }}
           transition={{
+<<<<<<< HEAD
+<<<<<<< HEAD
             duration: 5
             repeat: Infinity
             ease: 'easeInOut'
+=======
+            duration: 5,
+            repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'easeInOut',
+            delay: 2,
+          }}
+        />
+      </div>
+            ease: "easeInOut",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             delay: 2
           }}
         />
       </div>
+<<<<<<< HEAD
             ease: "easeInOut"
             delay: 2
           }}
         />
       </div>
+=======
+            duration: 5,
+            repeat: Infinity,
+
+      {/* CSS Animations */}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+
+      {/* CSS Animations */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <style jsx>{`
         @keyframes gridMove {
           0% {
@@ -524,3 +634,14 @@ const UltraFuturisticBackground2040: React.FC = () => {
 }
 export default UltraFuturisticBackground2040;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default UltraFuturisticBackground2040;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default UltraFuturisticBackground2040;
+=======
+export default UltraFuturisticBackground2040;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

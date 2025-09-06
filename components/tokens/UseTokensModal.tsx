@@ -1,16 +1,27 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useEffect, useState } from "react";
 import { connectMetaMask, getAccounts } from "../../utils/wallet";
 export type RedemptionType =
   | "boost_profile"
-  | "promote_listing"
+  | "promote_listing";
   | "premium_support";
 export default function UseTokensModal({
+<<<<<<< HEAD
   isOpen
   onClose
   serviceId
   defaultType
 }: {
+=======
+  isOpen,
+  onClose,
+  serviceId,
+  defaultType,
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
@@ -49,6 +60,10 @@ export default function UseTokensModal({
       setIsSubmitting(false);
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!isOpen) return null;
 
   return (
@@ -120,5 +135,17 @@ export default function UseTokensModal({
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+);
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

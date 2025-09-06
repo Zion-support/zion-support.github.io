@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import {
+<<<<<<< HEAD
   Brain
   Shield
   Rocket
@@ -14,6 +15,21 @@ import {
   Star
   Filter
   ChevronDown;
+=======
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Users,
+  CheckCircle,
+  TrendingUp,
+  Clock,
+  Star,
+  Filter,;
+  ChevronDown,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 interface Service {
@@ -247,8 +263,24 @@ const EnhancedServicesShowcase: React.FC = () => {
     }
   ];
   const categories = [
+<<<<<<< HEAD
     'all'
     ...Array.from(new Set(services.map(s => s.category)))
+=======
+    'all',
+    ...Array.from(new Set(services.map(s => s.category))),
+
+<<<<<<< HEAD
+  ];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+  ];
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const filteredServices = services.filter(service => {
     const matchesCategory =
       selectedCategory === 'all' |service.category === selectedCategory;
@@ -315,6 +347,7 @@ const EnhancedServicesShowcase: React.FC = () => {
           </p>
         </div>
         {/* Filters */}
+<<<<<<< HEAD
         <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>
           {/* Category Filter */}
           <div className='relative'>
@@ -341,12 +374,20 @@ const EnhancedServicesShowcase: React.FC = () => {
             >
               {categories.map((category) => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
             </select>
             <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />
           </div>
+<<<<<<< HEAD
           {/* Search */}
           <div className='relative'>
             <input
@@ -397,8 +438,31 @@ const EnhancedServicesShowcase: React.FC = () => {
                   </div>
                 </div>
               )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Service Content */}
               <div className='p-8'>
+=======
+        </div>
+
+        {/* Services Grid */}
+
+                    Popular
+
+                  </div>
+                </div>
+              )}
+
+              {/* Service Content */}
+              <div className='p-8'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Icon and Category */}
                 <div className='flex items-center justify-between mb-4'>
                   <div
@@ -474,6 +538,14 @@ const EnhancedServicesShowcase: React.FC = () => {
                     ))}
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Benefits */}
                 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-white mb-3'>
@@ -495,6 +567,14 @@ const EnhancedServicesShowcase: React.FC = () => {
                     ))}
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* ROI and Market Info */}
                 <div className='mb-6 p-4 bg-white/5 rounded-lg'>
                   <div className='text-xs text-white/60 mb-2'>
@@ -543,10 +623,26 @@ const EnhancedServicesShowcase: React.FC = () => {
             </div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Ready to Transform Your Business?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -586,8 +682,27 @@ const EnhancedServicesShowcase: React.FC = () => {
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default EnhancedServicesShowcase;  )
 }
 export default EnhancedServicesShowcase;
 
+<<<<<<< HEAD
+=======
+export default EnhancedServicesShowcase;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+}
+=======
+export default EnhancedServicesShowcase;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

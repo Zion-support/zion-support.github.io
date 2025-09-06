@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
   Search
   TrendingUp
   CheckCircle
@@ -15,8 +22,29 @@ import {
   Smartphone
   Zap;
 } from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
+=======
+  Search,
+  TrendingUp,
+  CheckCircle,
+  AlertTriangle,
+  ArrowRight,
+  Target,
+  BarChart3,
+  Globe,
+  Smartphone,;
+  Zap,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+} from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
+export default function SEOAnalyzerToolPage() {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from 'lucide-react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 export default function SEOAnalyzerToolPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
@@ -89,6 +117,7 @@ export default function SEOAnalyzerToolPage() {
       category: 'Local SEO'
       factors: [
         'Google My BusinessLocal citationsReview managementLocal keyword targetingLocation-based contentLocal link building'
+<<<<<<< HEAD
       ]
       icon: '📍'
       color: 'text-orange-400'
@@ -106,6 +135,13 @@ export default function SEOAnalyzerToolPage() {
       icon: '⚙️'
       color: 'text-blue-400'
     }
+=======
+      ],
+      icon: '📍',
+      color: 'text-orange-400',
+
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       category: 'Content SEO'
       factors: [
@@ -243,6 +279,7 @@ export default function SEOAnalyzerToolPage() {
         ]
       });
       setIsAnalyzing(false);
+<<<<<<< HEAD
     }, 4000);  };        recommendations: [
           'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
         ];
@@ -255,6 +292,12 @@ export default function SEOAnalyzerToolPage() {
       setIsAnalyzing(false)
     }, 4000)
   }
+=======
+    }, 4000);  };
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -383,6 +426,7 @@ export default function SEOAnalyzerToolPage() {
               View Pricing
             </Button>
             <Button
+<<<<<<< HEAD
               href='/contact'
               variant='outline'
               size='lg'
@@ -455,6 +499,15 @@ export default function SEOAnalyzerToolPage() {
                     </h3>
                     <p className="text-gray-400 leading-relaxed">
                       {feature.description}
+=======
+
+                      {feature.description}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                 </div>
@@ -463,11 +516,27 @@ export default function SEOAnalyzerToolPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* SEO Factors Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Comprehensive SEO Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -524,6 +593,14 @@ export default function SEOAnalyzerToolPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Demo Analysis Results */}
       {analysisResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -659,6 +736,7 @@ export default function SEOAnalyzerToolPage() {
                         <span className='text-gray-300'>{issue.message}</span>
                         <div className='text-xs text-gray-500 mt-1'>
                           Priority: {issue.priority}
+<<<<<<< HEAD
                         </div>                      </div>                  {analysisResults.issues.map((issue, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       {issue.type === 'error' ? (
@@ -672,11 +750,29 @@ export default function SEOAnalyzerToolPage() {
                         <span className="text-gray-300">{issue.message}</span>
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
                       </div>
+=======
+                        </div>                      </div>
+
+                      </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   ))}
                 </div>
               </Card>
             </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Recommendations and Keywords */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               <Card className='border-gradient-green'>
@@ -734,6 +830,16 @@ export default function SEOAnalyzerToolPage() {
                           keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
                           'bg-red-500/20 text-red-400'
                         }`}>
+<<<<<<< HEAD
+=======
+
+                          {keyword.difficulty}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </span>
                       </div>
                     </div>
@@ -744,11 +850,23 @@ export default function SEOAnalyzerToolPage() {
           </div>
         </section>
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Pricing Section */}
       <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -780,6 +898,11 @@ export default function SEOAnalyzerToolPage() {
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {plan.name}
@@ -806,6 +929,17 @@ export default function SEOAnalyzerToolPage() {
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
+=======
+<<<<<<< HEAD
+
+                      {feature}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                      {feature}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -815,22 +949,50 @@ export default function SEOAnalyzerToolPage() {
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
+<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+=======
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
+
+                </Button>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Card>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+<<<<<<< HEAD
+=======
+
+            Ready to Improve Your SEO Rankings?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our SEO analyzer to improve their
@@ -859,5 +1021,17 @@ export default function SEOAnalyzerToolPage() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

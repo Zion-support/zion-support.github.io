@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 import {
   FormField
   FormItem
@@ -10,6 +12,22 @@ import { Input } from "@/components/ui/input";
 
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
+=======
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Control} from "react-hook-form";
+import {BasicInfoFormData} from "./schema";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Control } from "react-hook-form",
+import { BasicInfoFormData } from "./schema",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
 }
@@ -27,6 +45,35 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
             </FormControl>
             <FormMessage />
           </FormItem>
+<<<<<<< HEAD
+=======
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Control } from "react-hook-form",;
+import { BasicInfoFormData } from "./schema";
+interface PersonalInfoFieldsProps {;
+  control: Control<BasicInfoFormData>;
+}
+;
+export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {;
+  return (;
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+      <FormField;
+        control={control}
+        name="fullName"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Full Name</FormLabel>
+            <FormControl>
+              <Input placeholder="John Doe" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       />
       <FormField
@@ -69,5 +116,11 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
         )}
       />
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+  )
+}
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

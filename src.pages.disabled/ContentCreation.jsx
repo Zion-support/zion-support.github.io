@@ -13,6 +13,7 @@ export default function ContentCreation({ }: ContentCreationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD:src.pages.disabled/ContentCreation.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -24,3 +25,11 @@ export default function ContentCreation({ }: ContentCreationProps) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+:src.pages.disabled/ContentCreation.jsx
+}
+}
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.pages.disabled/ContentCreation.jsx

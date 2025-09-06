@@ -5,7 +5,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST") {
+  if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method Not Allowed" });
     const { name, entityType, pointOfContact, useCaseType, brand } =
@@ -45,4 +45,8 @@ export default async function handler(
     return res.status(500).json({ error: "Failed to create partner" });
 
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

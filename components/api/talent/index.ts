@@ -20,7 +20,7 @@ export default async function handler(
       if (hasSupabase) {
         const { data, error } = await supabaseClient
           .from('talent_profiles')
-          .select('*')
+          .select('*');
           .order('created_at', { ascending: false });
         if (error) throw error;
         return res.status(200).json({ items: data as TalentProfile[] });
@@ -32,7 +32,7 @@ export default async function handler(
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     try {
-      if (hasSupabase) {
+      if (hasSupabase) {;
         const { data, error } = await supabaseClient.from('talent_profiles').select('*').order('created_at', { ascending: false });
         if (error) throw error;
         return res.status(200).json({ items: data as TalentProfile[] })
@@ -144,4 +144,8 @@ return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,10 +1,21 @@
+<<<<<<< HEAD
 export type UIKitKind = 'ios' | 'android' | 'web';
+<<<<<<< HEAD
 export interface TokenSet {
+=======
+
+export interface TokenSet {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   colors: Record<string, string>;
   typography: Record<string, any>;
   spacing: Record<string, number>;
 }
+<<<<<<< HEAD
 export interface UIKit {
+=======
+
+export interface UIKit {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   components: Record<string, any>;
   tokens: TokenSet;
 }
@@ -29,10 +40,18 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       md: 16
       lg: 24
       xl: 32
+<<<<<<< HEAD
     }
   }
 }
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
+=======
+    };
+  };
+}
+
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const tokens = await buildTokenSet(fileId);
   return {
     components: {
@@ -44,5 +63,15 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
       }
     }
     tokens
+<<<<<<< HEAD
   }
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  };
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

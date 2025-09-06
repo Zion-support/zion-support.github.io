@@ -1,8 +1,64 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
+=======
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import {
+  ExternalLink,
+  Check,
+  Star,
+  Zap,
+  Users,
+  Globe,
+  BarChart3,
+  Bot,
+  Cloud,
+  Lock,
+  Database,
+  Code,
+  Palette,
+  Search,
+  Mail,
+  Calendar,
+  CreditCard,
+  FileText,
+  Video,
+  Music,
+  Image,
+  Globe2,
+  Smartphone,
+  Monitor,
+  Server,
+  Cpu,
+  HardDrive,
+  Brain,
+  Target,
+  TrendingUp,
+  Shield,
+  Rocket,
+  Briefcase,
+  Cog,
+  Lightbulb,
+  ChartBar,
+  Clock,
+  CheckCircle,
+  AlertCircle,;
+  MessageSquare,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+} from 'lucide-react';import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from 'lucide-react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
 import {
   ExternalLink
   Check
@@ -45,6 +101,9 @@ import {
   AlertCircle
   MessageSquare;
 } from 'lucide-react';import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -98,6 +157,7 @@ export default function BusinessToolsPage() {
           icon: <Calendar className='w-6 h-6' />
           color: 'bg-gradient-to-br from-red-500 to-pink-600'
         }
+<<<<<<< HEAD
       ]
     },    {          icon: <Calendar className="w-6 h-6" />
           color: 'bg-gradient-to-br from-red-500 to-pink-600'
@@ -105,6 +165,11 @@ export default function BusinessToolsPage() {
       ]
     }
       category: 'Communication & Collaboration'
+=======
+      ];
+    };
+      category: 'Communication & Collaboration',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       tools: [
         {
           name: 'Slack'
@@ -378,11 +443,26 @@ export default function BusinessToolsPage() {
           color: 'bg-gradient-to-br from-purple-500 to-pink-600'
         }
       ]
+<<<<<<< HEAD
     },  ];          icon: <TrendingUp className="w-6 h-6" />
           color: 'bg-gradient-to-br from-purple-500 to-pink-600'
         }
       ]
     }
+<<<<<<< HEAD
+=======
+    }
+
+  ];
+=======
+<<<<<<< HEAD
+=======
+
+  ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const businessInsights = [
     {
       title: 'Remote Work Tools'
@@ -432,6 +512,10 @@ export default function BusinessToolsPage() {
     },      color: 'text-orange-400'
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const productivityTips = [
     {
       title: 'Start with Free Tiers'
@@ -563,6 +647,14 @@ export default function BusinessToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Business Tools */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -664,6 +756,14 @@ export default function BusinessToolsPage() {
                         ))}
                       </ul>
                     </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <Button
                       href={tool.website}
                       variant='primary'
@@ -686,11 +786,28 @@ export default function BusinessToolsPage() {
           ))}
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Productivity Tips */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-16'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+              Productivity Tips & Best Practices
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Maximize the value of your business tools with these proven
@@ -715,15 +832,42 @@ export default function BusinessToolsPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{tip.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{tip.description}</p>
+<<<<<<< HEAD
+=======
+
+              </Card>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8'>
+<<<<<<< HEAD
+=======
+
+            Ready to Transform Your Business Operations?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             These business tools can streamline your operations, improve team
@@ -748,6 +892,7 @@ export default function BusinessToolsPage() {
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
               Explore Micro SaaS
             </Button>
+<<<<<<< HEAD
             <Button
               href='/contact'
               variant='outline'
@@ -764,3 +909,10 @@ export default function BusinessToolsPage() {
     </>
 );
 }
+=======
+            <Button
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

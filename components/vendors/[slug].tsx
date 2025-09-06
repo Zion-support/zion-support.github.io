@@ -2,8 +2,22 @@ import type { GetServerSideProps } from 'next';
 import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+=======
+type Props = { vendor: Vendor | null };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
+export default function VendorProfilePage({ vendor }: Props) {;
+=======
+type Props = { vendor: Vendor | null };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function VendorProfilePage({ vendor }: Props) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   if (!vendor) return <div className='text-gray-500'>Vendor not found.</div>;  if (!vendor) return <div className="text-gray-500">Vendor not found.</div>;
@@ -40,8 +54,10 @@ export default function VendorProfilePage({ vendor }: Props) {
     }
   }
   return (
+<<<<<<< HEAD
     <div className='space-y-8'>
       <div className='flex items-center gap-4'>
+<<<<<<< HEAD
         {vendor.logoUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -146,11 +162,42 @@ export default function VendorProfilePage({ vendor }: Props) {
                   <div className="font-medium">{sp.title}</div>
                   <div className="text-sm text-gray-500">{sp.description}</div>
                 </div>
+=======
+
+<<<<<<< HEAD
+    }
+  }
+
+  return (
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+      {vendor.packages && vendor.packages.length > 0 && (
+        <div>
+
+                </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             ))}
           </div>
         </div>
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div>
         <h2 className='text-lg font-medium mb-2'>Request a Quote</h2>
         <form onSubmit={submitLead} className='space-y-3'>
@@ -172,11 +219,25 @@ export default function VendorProfilePage({ vendor }: Props) {
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
   const slug = String(ctx.params?.slug |'');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
+<<<<<<< HEAD
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
+=======
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
+  const slug = String(ctx.params?.slug || '');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } };
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };            {loading ? 'Submitting...' : 'Send'}
           </button>
           {message && <div className="text-sm">{message}</div>}
@@ -186,10 +247,27 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
     </div>
   );
 }
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const slug = String(ctx.params?.slug |'');
+=======
+
+export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
+  const slug = String(ctx.params?.slug || '');
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
 }
 
+=======
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } };
+};
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

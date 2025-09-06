@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
+=======
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function SecretsRotationAutomationPage() {
 
+<<<<<<< HEAD
   const features = [
     "Automated key and secret rotation"
     "JIT credentials with expirations"
@@ -10,7 +19,29 @@ export default function SecretsRotationAutomationPage() {
     "CI/CD integration (GitHub Actions, CircleCI)"
     "Cloud KMS and Vault support"
   ];
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export default function SecretsRotationAutomationPage() {
+  const features = [
+    "Automated key and secret rotation",
+    "JIT credentials with expirations",
+    "Policy approvals and audit trails",
+    "CI/CD integration (GitHub Actions, CircleCI)",
+    "Cloud KMS and Vault support",;
+  ];
+
+<<<<<<< HEAD
+return (
+=======
+  return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <>
       <SEO
         title="Secrets Rotation Automation"
@@ -131,4 +162,7 @@ export default function SecretsRotationAutomationPage() {
     </>
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

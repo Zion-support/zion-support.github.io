@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 import dynamic from 'next/dynamic',
+=======
+import dynamic from 'next/dynamic';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useEffect, useState } from 'react';
 
 import { useWallet } from '../../hooks/useWallet';
 import {
+<<<<<<< HEAD
   fetchDepinActivities
   calculateRewards
   DepinReward;
+=======
+  fetchDepinActivities,
+  calculateRewards,;
+  DepinReward,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
 const ClientOnlyBridge = dynamic(
@@ -13,8 +23,13 @@ const ClientOnlyBridge = dynamic(
   { ssr: false }
 );import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
+<<<<<<< HEAD
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false })
 export default function TokenIntegrationsPage() {
+=======
+const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
+export default function TokenIntegrationsPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
   const [stake, setStake] = useState('');
@@ -38,9 +53,23 @@ export default function TokenIntegrationsPage() {
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ region, stakeUsd: stake })
     });
+<<<<<<< HEAD
+<<<<<<< HEAD
     const data = await res.json();
     setSuggestion(data);
   }
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const data = await res.json();
+    setSuggestion(data);
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='space-y-8'>
       <section className='space-y-2'>
@@ -80,8 +109,14 @@ export default function TokenIntegrationsPage() {
                 </span>
                 <span className='font-medium'>+{r.points} ZION$</span>              </div>    const data = await res.json();
 
+<<<<<<< HEAD
     setSuggestion(data)
   }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-8">
       <section className="space-y-2">
@@ -105,6 +140,14 @@ export default function TokenIntegrationsPage() {
                 <span>{r.network} — {r.reason}</span>
                 <span className="font-medium">+{r.points} ZION$</span>
               </div>
+=======
+              </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         )}
@@ -192,5 +235,16 @@ export default function TokenIntegrationsPage() {
         </ul>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

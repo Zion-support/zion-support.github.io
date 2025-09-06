@@ -18,6 +18,7 @@ interface LazyImageProps {
   onError?: () => void;
 }
 export default function LazyImage({
+<<<<<<< HEAD
   src
   alt
   width
@@ -33,6 +34,23 @@ export default function LazyImage({
   onLoad
   onError
 }: LazyImageProps) {
+=======
+  src,
+  alt,
+  width,
+  height,
+  className = "",
+  priority = false,
+  placeholder = "empty",
+  blurDataURL,
+  sizes,
+  quality = 75,
+  fill = false,
+  style,
+  onLoad,
+  onError,
+}: LazyImageProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);

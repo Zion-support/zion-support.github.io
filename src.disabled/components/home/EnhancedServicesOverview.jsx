@@ -1,10 +1,12 @@
+<<<<<<< HEAD:src.disabled/components/home/EnhancedServicesOverview.jsx
 <<<<<<< HEAD
 import React from\';react\''\';\'';
 const React from";react""";"";''"
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import _React from';react''';'';
 =======
+import React from\';react\''\';\'';
+const React from";react""";"";''"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/home/EnhancedServicesOverview.jsx
 import _React from';react''';'';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

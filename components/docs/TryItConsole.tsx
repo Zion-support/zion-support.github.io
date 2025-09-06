@@ -5,19 +5,31 @@ interface TryItProps {
   path: string; // full URL or relative
   requiresAuth: boolean;
 export default function TryItConsole({
+<<<<<<< HEAD
   method
   path
   requiresAuth
 }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
 
+=======
+  method,
+  path,
+  requiresAuth,
+}: TryItProps) {;
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+<<<<<<< HEAD
 
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')
 
+=======
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
@@ -51,6 +63,10 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
   }
   return (
     <div className='space-y-2'>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
       const res = await fetch(url, {
         method;
@@ -63,11 +79,19 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
       setResponse(String(e?.message |e))
     } finally {
       setLoading(false)
+<<<<<<< HEAD
+=======
+=======
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   return (
     <div className='space-y-2'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+<<<<<<< HEAD
         <div>
           <label className='block text-sm mb-1'>Base URL</label>
           <input
@@ -107,7 +131,12 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
         </div>
       </div>
+<<<<<<< HEAD
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+=======
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div>
           <label className='block text-sm mb-1'>Request Body (JSON)</label>
           <textarea
@@ -133,3 +162,20 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
     </div>
 );
 }
+=======
+<<<<<<< HEAD
+
+    }
+  }
+
+  return (
+
+        </div>
+      </div>
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+        <div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+        <div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

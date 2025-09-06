@@ -1,9 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+<<<<<<< HEAD
   ArrowRight
   Phone
   Mail
@@ -16,6 +24,20 @@ import {
   Globe
   Code
   Shield
+=======
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Award,
+  Users,
+  Globe,
+  Code,
+  Shield,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 import Layout from "../components/Layout";
 const teamMembers = [
@@ -24,7 +46,11 @@ const teamMembers = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
@@ -34,6 +60,11 @@ const teamMembers = [
     linkedin: "https://linkedin.com/in/klebersantos",
     twitter: "https://twitter.com/klebersantos",
     github: "https://github.com/klebersantos",
+<<<<<<< HEAD
+    expertise: ["Strategic Leadership", "AI/ML", "Cloud Architecture", "Business Development"]
+  },
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
     id: 1
     name: "Kleber Santos"
@@ -52,6 +83,7 @@ const teamMembers = [
       "Business Development"
     ]
   }
+>>>>>>> origin/main
   {
     id: 2
     name: "Sarah Johnson"
@@ -162,6 +194,37 @@ const teamMembers = [
     twitter: "https://twitter.com/lisawang"
     github: "https://github.com/lisawang"
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
+<<<<<<< HEAD
+=======
+=======
+    name: 'Dr. Sarah Johnson',
+    role: 'Chief Technology Officer',
+    expertise: 'AI & Machine Learning',
+    icon: Brain,
+    description: 'Leading our AI initiatives with 15+ years of experience in machine learning and data science.'
+  },
+  {
+    name: 'Michael Chen',
+    role: 'Cloud Solutions Architect',
+    expertise: 'Cloud Infrastructure',
+    icon: Cloud,
+    description: 'Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications.'
+  },
+  {
+    name: 'Emily Rodriguez',
+    role: 'Security Specialist',
+    expertise: 'Cybersecurity',
+    icon: Shield,
+    description: 'Ensuring enterprise-grade security with expertise in threat detection and prevention.'
+  },
+  {
+    name: 'David Thompson',
+    role: 'Team Lead',
+    expertise: 'Project Management',
+    icon: Users,
+    description: 'Leading our development teams with agile methodologies and client-focused delivery.'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
@@ -227,7 +290,11 @@ export default function TeamPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -510,8 +577,11 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </Layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 =======
     <>
@@ -529,6 +599,10 @@ export default function TeamPage() {
     </>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    </Layout>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 import Head from "next/head";
@@ -570,6 +644,12 @@ const teamMembers = [
 ];
 export default function TeamPage() {
   return (
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     <>
       <SEO
         title="Our Team | Zion Tech Group"
@@ -582,7 +662,18 @@ export default function TeamPage() {
           Profiles coming soon. For inquiries, contact us.
         </p>
       </div>
+<<<<<<< HEAD
     </>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    </>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
   return (
     <>
@@ -599,4 +690,33 @@ export default function TeamPage() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import SEO from '../components/SEO';
+export default function TeamPage() {	return (
+=======
+import React from 'react',
+import SEO from '../components/SEO',
+export default function TeamPage() {
+	return (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+		<>
+			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
+			<div className="container mx-auto px-4 py-16">
+				<h1 className="text-4xl font-bold mb-4">Our Team</h1>
+				<p className="text-gray-300 mb-8">Profiles coming soon. For inquiries, contact us.</p>
+			</div>
+		</>
+	)
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

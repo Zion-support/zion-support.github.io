@@ -1,21 +1,40 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { motion } from 'framer-motion';
 =======
 import React from 'react';
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import Head from 'next/head';
 
 import Link from 'next/link';
+<<<<<<< HEAD
 import {
   ArrowRight
   Server
   Lock
   Brain
   Cloud
+=======
+import { 
+  ArrowRight,
+  Server,
+  Lock,
+  Brain,
+  Cloud;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 const apiEndpoints = [
   {
@@ -56,10 +75,17 @@ import Head from 'next/head';
 <<<<<<< HEAD
 import Layout from '../components/Layout';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+=======
+>>>>>>> origin/main
+=======
 >>>>>>> origin/automation-improvements-final
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function APIDocsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -70,12 +96,22 @@ export default function APIDocsPage() {
       </Head>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+=======
+>>>>>>> origin/main
+=======
 >>>>>>> origin/automation-improvements-final
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
@@ -115,7 +151,7 @@ export default function APIDocsPage() {
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-8">
-            {apiEndpoints.map((endpoint, index) => {
+            {apiEndpoints.map((endpoint, index) => {;
               const IconComponent = endpoint.icon;
               return (
                 <motion.div
@@ -180,6 +216,8 @@ export default function APIDocsPage() {
       </section>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 =======
       <div className='container mx-auto px-4 py-16 text-gray-200'>
@@ -195,25 +233,115 @@ export default function APIDocsPage() {
     </Layout>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
 }
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+import React from 'react',
+import Head from 'next/head',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ApiDocsPage() {
   return (
     <>
       <Head>
         <title>API Docs | Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name='description' content='API reference and guides.' />
 <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+=======
+<<<<<<< HEAD
+        <meta name='description' content='API reference and guides.' />
+<link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+=======
+        <meta name="description" content="API reference and guides." />
+        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      </Head>
+      <div className="container mx-auto px-4 py-16 text-gray-200">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
+        <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
+=======
+=======
+      <div className='container mx-auto px-4 py-16 text-gray-200'>
+        <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
+        <p className='text-gray-300'>
+          See{' '}
+          <a href='/api-docs' className='text-cyan-400 underline'>
+            API Documentation
+          </a>{' '}
+          for the full reference.
+        </p>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+      </div>
+<<<<<<< HEAD
+    </Layout>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+  );
+=======
+        <meta name="description" content="API reference and guides." />
+        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
       </Head>
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
       </div>
-    </Layout>
+=======
+);
+>>>>>>> origin/main
+    </>
+  )
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+    </Layout>;
 );
     </>
   )
 }
+
+}
+=======
+    </>
+  )
+import React from 'react';
+import Head from 'next/head';
+export default function ApiDocsPage(req, res) {
+  try {
+  return (;
+    <>;
+      <Head>;
+        <title>API Docs | Zion Tech Group</title>;
+        <meta name="description" content="API reference and guides." />;
+        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />;
+      </Head>;
+      <div className="container mx-auto px-4 py-16 text-gray-200">;
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>;
+        <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>;
+      </div>;
+    </>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
+=======
+import React from "react";
+import Head from "next/head";
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function LocationsPage() {
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -35,7 +41,7 @@ export default function LocationsPage() {
           .
         </p>
       </div>
-    </div>
+    </div>;
   );
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -73,4 +79,8 @@ export default function LocationsPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

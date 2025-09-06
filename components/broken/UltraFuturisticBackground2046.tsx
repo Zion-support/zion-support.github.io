@@ -58,9 +58,25 @@ const UltraFuturisticBackground2046: React.FC = () => {
             break;
           case 'energy':
             this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
+<<<<<<< HEAD
             break;        }            break
         }
+<<<<<<< HEAD
       }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            break;        }
+
+        }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       update() {
         this.x += this.vx;
         this.y += this.vy;
@@ -304,6 +320,10 @@ const UltraFuturisticBackground2046: React.FC = () => {
         cancelAnimationFrame(animationRef.current);
     }
   }, []);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='fixed inset-0 pointer-events-none z-0'>
       {/* Animated gradient background */}
@@ -317,11 +337,26 @@ const UltraFuturisticBackground2046: React.FC = () => {
           ]
         }}
         transition={{
+<<<<<<< HEAD
           duration: 10
           repeat: Infinity
           ease: 'easeInOut'
         }}
       />
+=======
+          duration: 10,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+      />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
@@ -335,8 +370,13 @@ const UltraFuturisticBackground2046: React.FC = () => {
             key={i}
             className='absolute w-32 h-32 border border-cyan-500/20 rounded-full'
             style={{
+<<<<<<< HEAD
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
+=======
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             }}
             animate={{
               rotate: [0, 360]
@@ -392,10 +432,17 @@ const UltraFuturisticBackground2046: React.FC = () => {
             height: ['24px', '40px', '24px']
           }}
           transition={{
+<<<<<<< HEAD
             duration: 3
             repeat: Infinity
             ease: 'easeInOut'
             delay: 1
+=======
+            duration: 3,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 1,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }}
         />
       </div>
@@ -406,7 +453,11 @@ const UltraFuturisticBackground2046: React.FC = () => {
             key={`interference-${i}`}
             className='absolute inset-0 opacity-5'
             style={{
+<<<<<<< HEAD
               background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`
+=======
+              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             }}
             animate={{
               scale: [1, 1.5, 1]
@@ -428,10 +479,20 @@ export default UltraFuturisticBackground2046;              ease: "easeInOut"
           />
         ))}
       </div>
+<<<<<<< HEAD
     </div>
   );
 }
 export default UltraFuturisticBackground2046;  )
 }
 export default UltraFuturisticBackground2046;
+<<<<<<< HEAD
 
+=======
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

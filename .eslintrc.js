@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 /* eslint-env node */
 module.exports = {
+<<<<<<< HEAD
+=======
   env: {
     node: true,
     es2021: true
@@ -8,6 +14,7 @@ module.exports = {
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,24 +144,30 @@ module.exports = {
   },
 <<<<<<< HEAD
 =======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   env: {
     node: true,
     es2021: true
   },
-  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
   rules: {
-    '@typescript-eslint/no-unused-vars': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    'react-hooks/exhaustive-deps': 'warn',
-    'react/react-in-jsx-scope': 'off',
-    'no-undef': 'off',
-    'react/no-unescaped-entities': 'off',
-    '@next/next/no-html-link-for-pages': 'off',
-    '@next/next/no-img-element': 'off'
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "@next/next/no-img-element": "off"
   },
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -331,6 +344,7 @@ module.exports = {
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
   },
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   ignorePatterns: [
     "node_modules/",
     ".next/",
@@ -487,17 +501,76 @@ module.exports = {
     "check-syntax.js",
     "clean-conflicts.js",
 <<<<<<< HEAD
+    "commit-and-push.js"
+  ]
+<<<<<<< HEAD
+<<<<<<< HEAD
+};
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
     "commit-and-push.js",
   ],
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+};
+>>>>>>> origin/main
+=======
 >>>>>>> origin/automation-improvements-final
 =======
     "commit-and-push.js"
   ]
 };
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+};
+;
+;
+/* eslint-env node */;
+/* eslint-disable no-undef */;
+module.exports = {;
+  env: {;
+    node: true,;
+    es2021: true;
+  },;
+  globals: {;
+    module: 'readonly',;
+    require: 'readonly',;
+    exports: 'readonly',;
+    __dirname: 'readonly',;
+    __filename: 'readonly',;
+    global: 'readonly',;
+    Buffer: 'readonly',;
+    console: 'readonly';
+  },;
+  extends: ['next/core-web-vitals'],;
+  rules: {;
+    'react-hooks/rules-of-hooks': 'errorreact-hooks/exhaustive-deps': 'warn@typescript-eslint/no-unused-vars': [;
+      'warn',;
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+    ],;
+    '@typescript-eslint/no-explicit-any': 'warn@typescript-eslint/no-empty-object-type': 'warn@next/next/no-html-link-for-pages': 'warn';
+  },;
+  ignorePatterns: [;
+    'node_modules/.next/out/build/',;
+    'dist/*.config.js*.config.tsscripts/',;
+    'automation/netlify/src/apps/';
+  ];
+},;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 import React from "react";
 import Layout from "../components/Layout";
+=======
+<<<<<<< HEAD
+import React from "react";
+import Layout from "../components/Layout";
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -9,6 +13,7 @@ import Layout from '../components/Layout';
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function Status() {
   return (
     <Layout
@@ -23,8 +28,14 @@ export default function Status() {
               System Status
             </h1>
 =======
+<<<<<<< HEAD
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              System Status
+            </h1>
+=======
             <h1 className="text-4xl font-bold text-gray-900 mb-4">System Status</h1>
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               All systems are operational.
             </p>
@@ -34,6 +45,6 @@ export default function Status() {
           </div>
         </div>
       </div>
-    </Layout>
+    </Layout>;
   );
 }

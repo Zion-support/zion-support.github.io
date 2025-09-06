@@ -1,10 +1,20 @@
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import {
   Dialog;
   DialogContent;
   DialogDescription;
   DialogHeader;
+=======
+import React, { useState } from 'react',
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   DialogTitle} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -13,6 +23,7 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { JobApplication } from "@/types/jobs";
 export interface HireConfirmationModalProps {
@@ -26,6 +37,28 @@ export interface HireConfirmationModalProps {
   isSubmitting?: boolean
 }
 export function HireConfirmationModal({
+=======
+import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Textarea} from "@/components/ui/textarea";
+import {toast} from "@/hooks/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {TalentProfile} from "@/types/talent";
+import {useAuth} from "@/hooks/useAuth";
+import {JobApplication} from "@/types/jobs";
+export interface HireConfirmationModalProps {
+  isOpen: boolean,
+  onClose: () => void,;
+  candidateData?: TalentProfile;
+  application?: JobApplication;
+  onConfirm: () => void,
+  isSubmitting?: boolean
+}
+
+export function HireConfirmationModal({ ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isOpen;
 
   onClose
@@ -48,6 +81,85 @@ export function HireConfirmationModal({
         description: 'Please fill in both project name and description.'
         variant: 'destructive'})
       return
+=======
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react',
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useAuth } from "@/hooks/useAuth",
+import { JobApplication } from "@/types/jobs",
+export interface HireConfirmationModalProps {
+  isOpen: boolean,
+  onClose: () => void,
+  candidateData?: TalentProfile,
+  application?: JobApplication,
+  onConfirm: () => void,
+  isSubmitting?: boolean
+import React, { useState } from 'react',;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogHeader,;
+  DialogTitle} from "@/components/ui/dialog",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
+import { Textarea } from "@/components/ui/textarea",;
+import { toast } from "@/hooks/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
+import { TalentProfile } from "@/types/talent",;
+import { useAuth } from "@/hooks/useAuth",;
+import { JobApplication } from "@/types/jobs",;
+export interface HireConfirmationModalProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  candidateData?: TalentProfile,;
+  application?: JobApplication,;
+  onConfirm: () => void,;
+  isSubmitting?: boolean;
+}
+;
+export function HireConfirmationModal({;
+  isOpen,;
+  onClose,;
+  candidateData,;
+  application,;
+  onConfirm,;
+  isSubmitting = false;
+}: HireConfirmationModalProps) {;
+  const [projectName, setProjectName] = useState(''),;
+  const [projectDescription, setProjectDescription] = useState(''),;
+  const [updateAvailability, setUpdateAvailability] = useState(true),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const { user } = useAuth(),;
+  // Get talent information from either candidateData or application;
+  const talentData = candidateData || (application?.talent_profile as TalentProfile),;
+  const handleHireCandidate = async () => {;
+    if (!projectName || !projectDescription) {;
+      toast({;
+        title: 'Required fields missing',;
+        description: 'Please fill in both project name and description.',;
+        variant: 'destructive'}),;
+      return;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     if (!user) {
       toast({
@@ -63,6 +175,11 @@ export function HireConfirmationModal({
         variant: 'destructive'})
       return
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setIsLoading(true);
     // Create a new project
     try {
@@ -144,7 +261,103 @@ export function HireConfirmationModal({
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+    setIsLoading(true),;
+    // Create a new project;
+    try {;
+      const { data: projectData, error: projectError } = await supabase;
+        .from('projects');
+        .insert([;
+          {;
+            client_id: user.id,;
+            talent_id: talentData.user_id,;
+            job_id: application?.job_id || null,;
+            title: projectName,;
+            description: projectDescription,;
+            status: 'active',;
+            payment_terms: 'hourly'}]);
+        .select();
+        .single(),;
+      if (projectError) {;
+        toast({;
+          title: 'Error creating project',;
+          description: projectError.message,;
+          variant: 'destructive'}),;
+        setIsLoading(false),;
+        return;
+      }
+;
+      // Create a new hiring record;
+      const { error: hiringError } = await supabase;
+        .from('hiring_records');
+        .insert([;
+          {;
+            client_id: user.id,;
+            talent_id: talentData.user_id,;
+            project_id: projectData.id,;
+            hire_date: new Date().toISOString(),;
+            status: 'active'}]),;
+      if (hiringError) {;
+        toast({;
+          title: 'Error creating hiring record',;
+          description: hiringError.message,;
+          variant: 'destructive'}),;
+        setIsLoading(false),;
+        return;
+      }
+;
+      // Update the availability status;
+      if (updateAvailability) {;
+        try {;
+          const { error: availabilityError } = await supabase;
+            .from('talent_profiles');
+            .update({ availability_type: 'unavailable' });
+            .eq('id', talentData.id),;
+          if (availabilityError) {;
+            toast({;
+              title: 'Error updating availability',;
+              description: availabilityError.message,;
+              variant: 'destructive'}),;
+            setIsLoading(false),;
+            return;
+          }
+        } catch (error) {;
+          console.error('Error updating availability:', error),;
+          toast({;
+            title: 'Error updating availability',;
+            description: 'Failed to update candidate availability status.',;
+            variant: 'destructive'}),;
+          setIsLoading(false),;
+          return;
+        }
+      }
+;
+      toast({;
+        title: 'Candidate hired successfully',;
+        description: `${talentData.full_name} has been hired for the project.`}),;
+      onConfirm(),;
+      onClose();
+    } catch (error) {;
+      console.error('Error hiring candidate:', error),;
+      toast({;
+        title: 'Error hiring candidate',;
+        description: 'Failed to hire candidate. Please try again.';
+        variant: 'destructive'});
+    } finally {;
+      setIsLoading(false);
+    }
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -205,4 +418,9 @@ export function HireConfirmationModal({
       </DialogContent>
     </Dialog>
   )
+<<<<<<< HEAD
 }
+=======
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

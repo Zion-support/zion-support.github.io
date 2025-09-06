@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
+<<<<<<< HEAD
 import { toast } from "sonner";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+=======
+<<<<<<< HEAD
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -28,10 +34,10 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
           metadata.longDescription
           metadata.version
           metadata.platform
-        ]
-        content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join()
-        // Add keywords as additional rows
-        content += '\n\nKeywords:\n' + metadata.keywords.join()
+        ];
+        content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
+        // Add keywords as additional rows;
+        content += '\n\nKeywords:\n' + metadata.keywords.join();
 };        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       // Create download link
@@ -89,6 +95,27 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
+=======
+=======
+  );
+};
+=======
 
+import React from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Download } from 'lucide-react'
+import { AppPlatform, AppMetadataValues } from "./MetadataManager",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { toast } from "sonner",
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

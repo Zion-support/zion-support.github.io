@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
+=======
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../components/ui/Button';
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
 export default function PricingComparisonPage() {
@@ -19,6 +25,7 @@ export default function PricingComparisonPage() {
           rating: '4.8/5'
           pros: ['Excellent templates', 'Good AI quality', 'Wide integrations']
           cons: [
+<<<<<<< HEAD
             'Higher pricing'
             'Limited customization'
             'No unlimited plan'
@@ -30,6 +37,35 @@ export default function PricingComparisonPage() {
           rating: '4.6/5'
           pros: ['Unlimited words', 'Good value', 'Simple interface']
           cons: ['Basic features', 'Limited templates', 'No advanced SEO']
+=======
+            'Higher pricing',
+            'Limited customization',
+            'No unlimited plan',
+          ],
+          savings: 'Save $20/month with Zion',
+        },        {
+          name: 'Copy.ai',
+          pricing: '$36/month',
+          rating: '4.6/5',
+          pros: ['Unlimited words', 'Good value', 'Simple interface'],
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO'],
+          savings: 'Save $17/month with Zion',
+        },        {
+          name: 'Writesonic',
+          pricing: '$19/month',
+          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations'],
+          cons: ['Higher pricingLimited customizationNo unlimited plan'],
+          savings: 'Save $20/month with Zion';
+        };
+          name: 'Copy.ai',
+          pricing: '$36/month',
+          rating: '4.6/5',
+          pros: ['Unlimited words', 'Good value', 'Simple interface'],
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO'],
+          savings: 'Save $17/month with Zion',
+        },          pros: ['Unlimited wordsGood valueSimple interface'],
+          cons: ['Basic featuresLimited templatesNo advanced SEO'],
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           savings: 'Save $17/month with Zion'
         },        {
           name: 'Writesonic'
@@ -188,6 +224,10 @@ export default function PricingComparisonPage() {
     },  ];      icon: '🚀'
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const marketInsights = [
     {
       insight: 'Zion services are 30-60% more affordable than market leaders'
@@ -282,6 +322,7 @@ export default function PricingComparisonPage() {
                 View Comparison
               </Button>
               <Button
+<<<<<<< HEAD
                 href='/pricing'
                 variant='outline'
                 size='lg'
@@ -327,6 +368,15 @@ export default function PricingComparisonPage() {
                 >
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mx-auto mb-6`}>
                     {insight.icon}
+=======
+
+                    {insight.icon}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
                     {insight.insight}
@@ -336,6 +386,14 @@ export default function PricingComparisonPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Detailed Comparison */}
         <section id='comparison' className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -457,6 +515,7 @@ export default function PricingComparisonPage() {
                           <div className='inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 text-gray-400 text-sm font-medium mb-4'>
                             {competitor.name}
                           </div>
+<<<<<<< HEAD
                           <div className='flex items-center justify-center mb-4'>                            {[...Array(5)].map((_, i) => (                    <div key={compIndex} className="lg:col-span-1">
                       <Card className="h-full border border-gray-700">
                         <div className="text-center p-6">
@@ -464,6 +523,16 @@ export default function PricingComparisonPage() {
                             {competitor.name}
                           </div>
                           <div className="flex items-center justify-center mb-4">
+=======
+                          <div className='flex items-center justify-center mb-4'>                            {[...Array(5)].map((_, i) => (
+
+                            {[...Array(5)].map((_, i) => (
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -476,6 +545,14 @@ export default function PricingComparisonPage() {
                             <span className='text-sm text-gray-400 ml-2'>
                               {competitor.rating}
                             </span>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </div>
                           <div className='mb-4'>
                             <p className='text-lg font-semibold text-white'>
@@ -544,10 +621,27 @@ export default function PricingComparisonPage() {
             ))}
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+<<<<<<< HEAD
+=======
+
+              Ready to Save Money and Get Better Features?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
               Start your free trial today and see why thousands of businesses
@@ -578,6 +672,7 @@ export default function PricingComparisonPage() {
                 className="bg-white text-indigo-600 hover:bg-gray-100"
                 Try AI Content Generator
               </Button>
+<<<<<<< HEAD
               <Button
                 href='/cloud-monitoring'
                 variant='secondary'
@@ -605,3 +700,10 @@ export default function PricingComparisonPage() {
     </>
 );
 }
+=======
+              <Button
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

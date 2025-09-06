@@ -1,15 +1,28 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from "react";
 import Layout from "../components/Layout";
 <<<<<<< HEAD
 =======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
 import Layout from '../components/Layout';
 >>>>>>> origin/automation-improvements-final
 
 =======
+<<<<<<< HEAD
+import React from "react";
+import Layout from "../components/Layout";
+>>>>>>> origin/main
+=======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function ITServices() {
   return (
     <Layout
@@ -41,9 +54,14 @@ export default function ITServices() {
           </div>
         </div>
       </div>
-    </Layout>
+    </Layout>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
 <<<<<<< HEAD
 =======
@@ -659,7 +677,11 @@ export default function ITServices() {
     </Layout>
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> origin/automation-improvements-final
 =======
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

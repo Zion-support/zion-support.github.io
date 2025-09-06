@@ -1,23 +1,49 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+=======
+ 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 }
 type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } }
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
+  try {;
     const file = path.join(process.cwd(), 'publicautomationtech-radar.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
     return {
       props: {
+<<<<<<< HEAD
         pypi: data.ecosystems.pypi |[]
         crates: data.ecosystems.crates |[]
         github: data.ecosystems.github |{}}
+=======
+        pypi: data.ecosystems.pypi || [],
+        crates: data.ecosystems.crates || [],
+        github: data.ecosystems.github || {}},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       revalidate: 7200}
   } catch {
     return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
   }
+<<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function TechRadar({ pypi, crates, github }: Props) {
+=======
+export default function TechRadar({ pypi, crates, github }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const langs = Object.keys(github);
 
   return (
@@ -64,5 +90,10 @@ export default function TechRadar({ pypi, crates, github }: Props) {
         </section>
       ))}
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

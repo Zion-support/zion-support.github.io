@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 // Particle system const particles: Array< {
@@ -172,8 +175,13 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+<<<<<<< HEAD
             `
             backgroundSize: '50px 50px'
+=======
+            `,
+            backgroundSize: '50px 50px',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }}
           animate={{
             backgroundPosition: ['0px 0px', '50px 50px']
@@ -213,12 +221,25 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             ease: 'linear'
           }}
         />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Floating Neon Shapes */}
         <motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
           animate={{
+<<<<<<< HEAD
             rotate: [0, 360]
             scale: [1, 1.1, 1]
+=======
+            rotate: [0, 360],
+            scale: [1, 1.1, 1],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             opacity: [0.3, 0.6, 0.3],          animate={{
             rotate: [0, 360];
             scale: [1, 1.1, 1];
@@ -289,12 +310,25 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             ease: 'easeInOut'
           }}
         />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Additional floating elements */}
         <motion.div
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
           animate={{
+<<<<<<< HEAD
             y: [0, -20, 0]
             opacity: [0.2, 0.5, 0.2]
+=======
+            y: [0, -20, 0],
+            opacity: [0.2, 0.5, 0.2],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           animate={{
             y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]}}
@@ -329,8 +363,13 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
+<<<<<<< HEAD
             duration: 4
             repeat: Infinity
+=======
+            duration: 4,
+            repeat: Infinity,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             ease: 'easeInOut'
           }}
         />
@@ -339,17 +378,37 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             rotate: [12, 372];
             scale: [1, 1.1, 1]}}
           transition={{
+<<<<<<< HEAD
             duration: 12
             repeat: Infinity
             ease: 'linear'
           }}
         />
+=======
+            duration: 12,
+            repeat: Infinity,
+            ease: 'linear'
+          }}
+        />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Energy Orbs */}
         <motion.div
           className='absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50'
           animate={{
+<<<<<<< HEAD
             scale: [1, 1.5, 1]
             opacity: [0.5, 1, 0.5]
+=======
+            scale: [1, 1.5, 1],
+            opacity: [0.5, 1, 0.5],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             y: [0, -10, 0],          animate={{
             scale: [1, 1.5, 1];
             opacity: [0.5, 1, 0.5];
@@ -395,6 +454,14 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           }}
         />
       </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />
@@ -431,3 +498,18 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
 }
 export default UltraFuturisticBackground2045;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default UltraFuturisticBackground2045;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default UltraFuturisticBackground2045;
+
+}
+}
+}
+=======
+export default UltraFuturisticBackground2045;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Star
   TrendingUp
   Zap
@@ -20,6 +25,24 @@ import {
   ExternalLink;} from 'lucide-react';import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield
 
+=======
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+  Shield,
+  DollarSign,
+  Users,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,;
+  ExternalLink,;} from 'lucide-react';import {
+  Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -28,6 +51,15 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
 export default function InnovativeServicesShowcase() {
+<<<<<<< HEAD
+=======
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -40,6 +72,7 @@ export default function InnovativeServicesShowcase() {
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.1
         delayChildren: 0.2
       }
@@ -60,6 +93,28 @@ export default function InnovativeServicesShowcase() {
       }
     }
   }
+=======
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },  };
+
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: 'easeOut',
+      },
+    },  };
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const featuredServices = [
     {
       title: '🔐 Quantum Internet Security Platform'
@@ -132,6 +187,11 @@ export default function InnovativeServicesShowcase() {
       link: 'https://ziontechgroup.com/neural-interface-development-platform'
       color: 'from-purple-600 to-indigo-700'
     },  ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>      color: 'from-indigo-600 to-purple-700'
@@ -170,10 +230,17 @@ export default function InnovativeServicesShowcase() {
       color: 'from-purple-600 to-indigo-700'
     }
   ];
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>
+<<<<<<< HEAD
           <title>
             Innovative Services Showcase - Zion Tech Group | Cutting-Edge
             Technology
@@ -255,6 +322,20 @@ export default function InnovativeServicesShowcase() {
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
+=======
+
+  ];
+
+  return (
+    <UltraAdvancedFuturisticBackground>
+
+              initial={{ opacity: 0, y: 30 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -286,6 +367,14 @@ export default function InnovativeServicesShowcase() {
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
                   className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='mb-6'>
                     <h3 className='text-2xl font-bold text-white mb-4'>
@@ -365,14 +454,33 @@ export default function InnovativeServicesShowcase() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Emerging Tech Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
+<<<<<<< HEAD
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
+=======
+              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}
+
+              initial={{ opacity: 0, y: 30 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -388,6 +496,14 @@ export default function InnovativeServicesShowcase() {
                 transforming industries
               </p>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {emergingTechServicesEnhanced2025
                 .slice(0, 6)
@@ -431,6 +547,7 @@ export default function InnovativeServicesShowcase() {
                 ))}
             </div>
             <motion.div
+<<<<<<< HEAD
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}                  Emerging
                 </span> Tech Services
               </h2>
@@ -469,6 +586,14 @@ export default function InnovativeServicesShowcase() {
             </div>
             <motion.div
               className="text-center mt-16"
+=======
+              className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -495,10 +620,21 @@ export default function InnovativeServicesShowcase() {
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
+<<<<<<< HEAD
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
+=======
+              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}
+
+              initial={{ opacity: 0, y: 30 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -571,7 +707,16 @@ export default function InnovativeServicesShowcase() {
               ))}
             </div>
             <motion.div
+<<<<<<< HEAD
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}              className="text-center mt-16"
+=======
+              className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -599,6 +744,14 @@ export default function InnovativeServicesShowcase() {
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -668,5 +821,17 @@ export default function InnovativeServicesShowcase() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

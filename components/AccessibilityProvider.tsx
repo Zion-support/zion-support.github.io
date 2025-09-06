@@ -1,4 +1,8 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface AccessibilityContextType {
   highContrast: boolean;
   largeText: boolean;
@@ -10,7 +14,12 @@ interface AccessibilityContextType {
 const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
 >(undefined);
+<<<<<<< HEAD
 export const useAccessibility = () => {
+=======
+
+export const useAccessibility = () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
     throw new Error(
@@ -23,8 +32,13 @@ interface AccessibilityProviderProps {
   children: React.ReactNode;
 }
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+<<<<<<< HEAD
   children
 }) => {
+=======
+  children,
+}) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -48,5 +62,11 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
       </div>
     </AccessibilityContext.Provider>
   );
+<<<<<<< HEAD
 }
 export default AccessibilityProvider;
+=======
+};
+
+export default AccessibilityProvider;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

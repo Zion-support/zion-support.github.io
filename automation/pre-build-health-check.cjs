@@ -9,9 +9,15 @@ try {
 	process.exit(0);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/chore/fix-build-nav-links
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 #!/usr/bin/env node
 // Minimal pre-build health check to unblock CI builds.
@@ -24,7 +30,15 @@ try {
 	process.exit(0);
 }
 >>>>>>> origin/chore/resolve-conflicts-1756215853
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 5d987fe43090d7728810c06da2fede859a7f3c62
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

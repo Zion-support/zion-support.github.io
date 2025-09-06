@@ -1,9 +1,28 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
  const response = await client.chat.completions.create ({
   model: 'gpt-4o-mini';
 messages: [ {
   role: 'system', content: 'You are a helpful assistant.'
 }
+=======
+ const response = await client.chat.completions.create ({
+  model: 'gpt-4o-mini';
+messages: [ {
+  role: 'system', content: 'You are a helpful assistant.' 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+// Create utility
+export const Create = () => {
+  // Implementation here
+  return null;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 {
   role: 'user', content: prompt
 }];
@@ -15,6 +34,10 @@ const typeMatch = content.match (/type\s*:\s* (.+) $/im);
   fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true });
   fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2))
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 async function summarizeWithOpenAI(description: string) {
   try {
     if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' }
@@ -23,10 +46,17 @@ async function summarizeWithOpenAI(description: string) {
     const response = await client.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
+<<<<<<< HEAD
         { role: 'system', content: 'You are a helpful assistant.' }
         { role: 'user', content: prompt }
       ]
       temperature: 0.3
+=======
+        { role: 'system', content: 'You are a helpful assistant.' },
+        { role: 'user', content: prompt },
+      ],
+      temperature: 0.3,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     });
     const content = response.choices[0]?.message?.content |'';
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
@@ -41,7 +71,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } =
     req.body |{}
@@ -53,7 +83,15 @@ export default async function handler(
     return { summary: description.slice(0, 280), type: 'unknown' }
   }
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } = req.body |{}
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });
@@ -91,5 +129,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await saveRequests(requests);
 
   // TODO: Integrate notifications (email/webhook) for admin and talent
+<<<<<<< HEAD
 return res.status(200).json({ id, status: 'ok' });
 }
+=======
+
+  return res.status(200).json({ id, status: 'ok' });
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

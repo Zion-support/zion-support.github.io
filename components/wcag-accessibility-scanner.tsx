@@ -4,12 +4,16 @@ import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function WCAGScannerPage() {
 
   const service = extraServices.find(s =>
-    s.link.endsWith('/wcag-accessibility-scanner')
+    s.link.endsWith('/wcag-accessibility-scanner');
   );  if (!service) return null;import { Star } from 'lucide-react';
-export default function WCAGScannerPage() {
+export default function WCAGScannerPage() {;
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
   if (!service) return null;
 
@@ -98,4 +102,17 @@ export default function WCAGScannerPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+<<<<<<< HEAD
 }
+=======
+}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+;
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

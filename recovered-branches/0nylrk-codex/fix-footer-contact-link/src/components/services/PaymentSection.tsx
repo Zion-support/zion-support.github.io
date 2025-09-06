@@ -1,8 +1,26 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {MapPin} from "lucide-react";
+import {PaymentButton} from "@/components/transactions/PaymentButton";
+import {CountryPricing} from "@/data/onsiteServicePricing";
+import {toast} from "@/hooks/use-toast";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { MapPin } from "lucide-react",
 import { PaymentButton } from "@/components/transactions/PaymentButton",
+<<<<<<< HEAD
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
+=======
+import { CountryPricing } from "@/data/onsiteServicePricing",
+import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PaymentSectionProps {
   selectedCountry: CountryPricing;
 }
@@ -11,12 +29,24 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
 
   const handlePaymentInitiated = () => {
     toast({
+<<<<<<< HEAD
       title: "Processing your request"
       description:
         "You'll be redirected to our secure payment portal momentarily."
     });
   }
 
+=======
+      title: "Processing your request",
+<<<<<<< HEAD
+      description: "You'll be redirected to our secure payment portal momentarily."});
+  };
+=======
+      description: "You'll be redirected to our secure payment portal momentarily."})
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -25,6 +55,36 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         {selectedCountry.country}
       </h4>
       <p className="text-2xl font-bold text-zion-cyan mb-6">
+<<<<<<< HEAD
+=======
+import { MapPin } from "lucide-react",;
+import { PaymentButton } from "@/components/transactions/PaymentButton",;
+import { CountryPricing } from "@/data/onsiteServicePricing",;
+import { toast } from "@/hooks/use-toast",;
+interface PaymentSectionProps {;
+  selectedCountry: CountryPricing;
+}
+;
+export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
+  // Handle successful payment;
+  const handlePaymentInitiated = () => {;
+    toast({;
+      title: "Processing your request";
+      description: "You'll be redirected to our secure payment portal momentarily."});
+  };
+  return (;
+    <div className="text-center">;
+      <p className="text-zion-slate-light mb-2">Selected Country</p>;
+      <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">;
+        <MapPin className="mr-2 h-5 w-5 text-zion-purple" />;
+        {selectedCountry.country}
+      </h4>;
+      <p className="text-2xl font-bold text-zion-cyan mb-6">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton
@@ -41,5 +101,11 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         billed separately.
       </p>
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+  )
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

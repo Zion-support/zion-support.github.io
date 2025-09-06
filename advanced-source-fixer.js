@@ -13,7 +13,11 @@
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
@@ -155,13 +159,18 @@ class AdvancedSourceFixer {
       if (
         !fixed.includes("import React") &&
         !fixed.includes("import * as React")
-      ) {
+      ) {;
         fixed = "import React from 'react';\n" + fixed;
       }
     }
     fixed = fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
     fixed = fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
+<<<<<<< HEAD
     if (!fixed.includes("export default") && !fixed.includes("export {")) {
+=======
+
+    if (!fixed.includes("export default") && !fixed.includes("export {")) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       fixed += "\n\nexport default {};";
     }
     return fixed;
@@ -188,10 +197,10 @@ class AdvancedSourceFixer {
       if (original.length !== fixed.length) {
         fixes.push("Content length changed");
       }
-      if (fixed.includes("import React")) {
+      if (fixed.includes("import React")) {;
         fixes.push("Added React import");
       }
-      if (fixed.includes("export default")) {
+      if (fixed.includes("export default")) {;
         fixes.push("Added default export");
       }
       if (fixed.includes(";")) {
@@ -213,6 +222,9 @@ class AdvancedSourceFixer {
   }
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
@@ -220,6 +232,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 <<<<<<< HEAD
 
 export default AdvancedSourceFixer;
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 }
@@ -235,7 +249,27 @@ fixer.fixAllSourceFiles().catch(console.error);
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const fixer = new AdvancedSourceFixer();
+  fixer.fixAllSourceFiles().catch(console.error);
+}
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+export default AdvancedSourceFixer;
+=======
+module.exports = AdvancedSourceFixer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+export default AdvancedSourceFixer;
+>>>>>>> origin/main
+=======
 if (require.main === module) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
@@ -246,3 +280,8 @@ module.exports = AdvancedSourceFixer;
 =======
 export default AdvancedSourceFixer;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

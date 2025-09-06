@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {MatchResultItem} from "@/lib/ai-matchmaking";
+import {Card, CardContent} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";
+import {Skeleton} from "@/components/ui/skeleton";
+import {cn} from "@/lib/utils";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -5,6 +19,7 @@ import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
+<<<<<<< HEAD
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
@@ -14,9 +29,34 @@ interface AIMatchingResultsProps {
 
   isLoading?: boolean;
   projectDescription?: string;
+=======
+import { Skeleton } from "@/components/ui/skeleton",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface AIMatchingResultsProps {
+  matches: MatchResultItem[],
+  onSelectMatch?: (match: MatchResultItem) => void,
+  isLoading?: boolean,
+  projectDescription?: string,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   serviceType?: string
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function AIMatchingResults({;
+  matches;
+  onSelectMatch;
+  isLoading = false;
+  projectDescription = "";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function AIMatchingResults({
+<<<<<<< HEAD
   matches;
   onSelectMatch;
 
@@ -25,12 +65,24 @@ export function AIMatchingResults({
   serviceType: _serviceType = ""
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState("all");
+=======
+  matches,
+  onSelectMatch,
+  isLoading = false,
+  projectDescription = "",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  serviceType: _serviceType = ""
+}: AIMatchingResultsProps) {
+  const [activeTab, setActiveTab] = useState("all"),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Group matches by category
   const categories = {
     all: matches
     talent: matches.filter(match => match.category.toLowerCase().includes("talent"))
     services: matches.filter(match => match.category.toLowerCase().includes("service"))
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
+<<<<<<< HEAD
   }
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
@@ -39,6 +91,18 @@ export function AIMatchingResults({
     if (lowerCategory.includes("equipment")) return Monitor
     return BriefcaseIcon
   }
+=======
+  },
+  
+  // Get the icon for a category
+  const getCategoryIcon = (category: string) => {
+    const lowerCategory = category.toLowerCase(),
+    if (lowerCategory.includes("talent")) return User,
+    if (lowerCategory.includes("equipment")) return Monitor,
+    return BriefcaseIcon
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -65,11 +129,88 @@ export function AIMatchingResults({
               <p className="text-xs text-zion-slate-light">Your search:</p>
               <p className="text-sm text-white">{projectDescription}</p>
             </div>
+<<<<<<< HEAD
+=======
+import { useState } from "react",;
+import { MatchResultItem } from "@/lib/ai-matchmaking",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { cn } from "@/lib/utils",;
+interface AIMatchingResultsProps {;
+  matches: MatchResultItem[],;
+  onSelectMatch?: (match: MatchResultItem) => void,;
+  isLoading?: boolean,;
+  projectDescription?: string,;
+  serviceType?: string;
+}
+;
+export function AIMatchingResults({;
+  matches,;
+  onSelectMatch,;
+  isLoading = false,;
+  projectDescription = "",;
+  serviceType: _serviceType = "";
+}: AIMatchingResultsProps) {;
+  const [activeTab, setActiveTab] = useState("all"),;
+  // Group matches by category;
+  const categories = {;
+    all: matches,;
+    talent: matches.filter(match => match.category.toLowerCase().includes("talent")),;
+    services: matches.filter(match => match.category.toLowerCase().includes("service")),;
+    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"));
+  },;
+  // Get the icon for a category;
+  const getCategoryIcon = (category: string) => {;
+    const lowerCategory = category.toLowerCase(),;
+    if (lowerCategory.includes("talent")) return User,;
+    if (lowerCategory.includes("equipment")) return Monitor,;
+    return BriefcaseIcon;
+  },;
+  if (isLoading) {;
+    return (;
+      <div className="space-y-4">;
+        <Skeleton className="h-10 w-full" />;
+        <div className="space-y-3">;
+          <Skeleton className="h-[120px] w-full" />;
+          <Skeleton className="h-[120px] w-full" />;
+          <Skeleton className="h-[120px] w-full" />;
+        </div>;
+      </div>;
+    );
+  }
+;
+  if (matches.length === 0) {;
+    return (;
+      <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">;
+        <CardContent className="pt-6">;
+          <BarChart3 className="h-12 w-12 mx-auto text-zion-slate-light mb-3" />;
+          <p className="text-white font-medium mb-2">No matches found</p>;
+          <p className="text-zion-slate-light text-sm mb-4">;
+            Try adjusting your search criteria or description for better results.;
+          </p>;
+          {projectDescription && (;
+            <div className="bg-zion-blue-light/20 p-3 rounded-md text-left">;
+              <p className="text-xs text-zion-slate-light">Your search:</p>;
+              <p className="text-sm text-white">{projectDescription}</p>;
+            </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </CardContent>
       </Card>
     )
   }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -91,7 +232,7 @@ export function AIMatchingResults({
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
             {items.length > 0 ? (
               items.map((match) => {
-                const CategoryIcon = getCategoryIcon(match.category);
+                const CategoryIcon = getCategoryIcon(match.category),
                 return (
                   <Card
                     key={match.id}

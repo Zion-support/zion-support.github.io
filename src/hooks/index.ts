@@ -14,7 +14,8 @@ export const useLocalStorage = (key: string, initialValue: unknown) => {
       window.localStorage.setItem(key, JSON.stringify(valueToStore))
     } catch (_error) {
       console.error('Error setting localStorage:', _error)
-    }
-  }
-  return [storedValue, setValue] as const
+    };
+  };
+  return [storedValue, setValue] as const;
+};
 }

@@ -1,10 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import {
+<<<<<<< HEAD
   appendLog
   evaluateReflexes
   readState
   writeState;
+=======
+  appendLog,
+  evaluateReflexes,
+  readState,;
+  writeState,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] |req.query.token;
@@ -15,12 +22,17 @@ function isAuthorized(req: NextApiRequest): boolean {
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken |token === superToken;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req))
+  if (!isAuthorized(req));
     return res.status(401).json({ error: 'Unauthorized' });
   if (req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
+<<<<<<< HEAD
     return res.status(200).json({ metrics: state.metrics |{} });  }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+    return res.status(200).json({ metrics: state.metrics || {} });  }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
   if (req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
@@ -61,5 +73,22 @@ return res.status(405).json({ error: 'Method not allowed' });
       appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message |'unknown' } });
       return res.status(500).json({ error: 'Reflex failure' })
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
   return res.status(405).json({ error: 'Method not allowed' });
 }
+=======
+
+  return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+<<<<<<< HEAD
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+
+}
+=======
+  return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

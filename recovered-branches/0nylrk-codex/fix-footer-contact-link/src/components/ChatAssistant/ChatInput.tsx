@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, {
   useState
@@ -5,6 +7,14 @@ import React, {
   useEffect
   FormEvent
   KeyboardEvent
+=======
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  FormEvent,
+  KeyboardEvent,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -14,7 +24,7 @@ interface ChatInputProps {
   disabled?: boolean
 }
 
-export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
   const [message, setMessage] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
   useEffect(() => {
@@ -34,7 +44,54 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         (onSend(message), setMessage(""));
       }
     }
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
+import { Button } from "@/components/ui/button",
+import { Send } from "lucide-react",
+interface ChatInputProps {
+  onSend: (message: string) => void,
+  disabled?: boolean
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Send } from "lucide-react",;
+interface ChatInputProps {;
+  onSend: (message: string) => void,;
+  disabled?: boolean;
+}
+;
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
+  const [message, setMessage] = useState(''),;
+  const inputRef = useRef<HTMLTextAreaElement>(null),;
+  useEffect(() => {;
+    // Focus input when component mounts;
+    inputRef.current?.focus();
+  }, []),;
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
+    e.preventDefault(),;
+    if (message.trim() && !disabled) {;
+      onSend(message),;
+      setMessage('');
+    }
+  },;
+  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {;
+    if (e.key === 'Enter' && !e.shiftKey) {;
+      e.preventDefault(),;
+      if (message.trim() && !disabled) {;
+        onSend(message);
+        setMessage('');
+      }
+    }
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
@@ -48,13 +105,25 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         rows={1}
         disabled={disabled}
       />
-      <Button
-        type="submit"
+      <Button 
+        type="submit" 
         className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
         disabled={!message.trim() |disabled}
       >
         <Send className="h-5 w-5" />
       </Button>
     </form>
+<<<<<<< HEAD
+<<<<<<< HEAD
   );
+=======
+);
+=======
+  )
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+=======
+  )
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

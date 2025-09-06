@@ -1,11 +1,27 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+>>>>>>> origin/main
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -1491,7 +1507,12 @@ const itServices: Service[] = [
     pricing: 'Typical: $75k–$500k project'
     link: 'https://ziontechgroup.com/it-services'}
 ];
+<<<<<<< HEAD
 export default function Services(): React.JSX.Element {
+=======
+
+export default function Services(): React.JSX.Element {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
     <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>
       <div style={{
@@ -1598,6 +1619,10 @@ export default function Services(): React.JSX.Element {
               <div style={{ fontSize: 24, fontWeight: 700, color: '#22c55e' }}>40+</div>
               <div style={{ fontSize: 14, opacity: 0.8 }}>IT Solutions</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -1605,6 +1630,55 @@ export default function Services(): React.JSX.Element {
     icon: Brain,
 
 export default function Services() {
+=======
+            </div>
+          </div>
+        </div>
+      </section>
+      <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
+      <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
+      <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
+      {/* CTA Section */}
+      <section style={{ 
+        maxWidth: 1400, margin: '0 auto', padding: '60px 20px',
+        textAlign: 'center', background: 'white', marginTop: 40,
+        borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
+      }}>
+        <h2 style={{ 
+          fontSize: 32, fontWeight: 700, marginBottom: 16,
+          color: '#1e293b'
+        }}>Ready to Get Started?</h2>
+        <p style={{ 
+          fontSize: 18, color: '#64748b', marginBottom: 32,
+          maxWidth: 600, margin: '0 auto 32px auto'
+        }}>
+          Contact our experts to discuss your project requirements and discover 
+          how our innovative solutions can drive your business forward.
+        </p>
+        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Link href="/contact" style={{
+            display: 'inline-block', 
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
+            color: 'white', padding: '16px 32px', borderRadius: 12, 
+            fontWeight: 700, textDecoration: 'none', fontSize: 16,
+            transition: 'all 0.3s ease'
+          }}>Request a Quote</Link>
+          <a href="tel:+13024640950" style={{
+            display: 'inline-block', 
+            background: 'rgba(34, 197, 94, 0.1)', 
+            color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
+            fontWeight: 700, textDecoration: 'none', fontSize: 16,
+            border: '2px solid #22c55e', transition: 'all 0.3s ease'
+          }}>Call +1 302 464 0950</a>
+        </div>
+      </section>
+    </main>
+  );
+}
+    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
+    icon: Brain,
+export default function Services() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -1637,7 +1711,6 @@ export default function Services() {
             </div>
           </div>
         </section>
-
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Our Services
               </h1>
@@ -1655,7 +1728,6 @@ export default function Services() {
             </motion.div>
           </div>
         </section>
-
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1670,7 +1742,6 @@ export default function Services() {
                 From micro SaaS development to enterprise IT solutions, we provide comprehensive technology services.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
@@ -1709,6 +1780,7 @@ export default function Services() {
               ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             </div>
           </div>
         </div>
@@ -1762,8 +1834,24 @@ export default function Services() {
 <<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
+    icon: Brain,
+
+=======
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics"
     icon: Brain
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -1778,6 +1866,7 @@ export default function Services() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Our Services
               </h1>
@@ -1845,16 +1934,74 @@ export default function Services() {
                   </button>
                 </motion.div>
               ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             </div>
           </div>
         </section>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
+      <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
+      <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
+      
+      {/* CTA Section */}
+      <section style={{ 
+        maxWidth: 1400, margin: '0 auto', padding: '60px 20px',
+        textAlign: 'center', background: 'white', marginTop: 40,
+        borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
+      }}>
+        <h2 style={{ 
+          fontSize: 32, fontWeight: 700, marginBottom: 16,
+          color: '#1e293b'
+        }}>Ready to Get Started?</h2>
+        <p style={{ 
+          fontSize: 18, color: '#64748b', marginBottom: 32,
+          maxWidth: 600, margin: '0 auto 32px auto'
+        }}>
+          Contact our experts to discuss your project requirements and discover 
+          how our innovative solutions can drive your business forward.
+        </p>
+        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Link href="/contact" style={{
+            display: 'inline-block', 
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
+            color: 'white', padding: '16px 32px', borderRadius: 12, 
+            fontWeight: 700, textDecoration: 'none', fontSize: 16,
+            transition: 'all 0.3s ease'
+          }}>Request a Quote</Link>
+          <a href="tel:+13024640950" style={{
+            display: 'inline-block', 
+            background: 'rgba(34, 197, 94, 0.1)', 
+            color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
+            fontWeight: 700, textDecoration: 'none', fontSize: 16,
+            border: '2px solid #22c55e', transition: 'all 0.3s ease'
+          }}>Call +1 302 464 0950</a>
+        </div>
+      </section>
+    </main>
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
 =======
 =======
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -1890,6 +2037,11 @@ export default function Services() {
                   </p>
                 </motion.div>
               ))}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/Header';
@@ -1897,6 +2049,7 @@ import Footer from '../components/Footer';
 export default function Services() {
   const serviceCategories = [
     {
+<<<<<<< HEAD
       title: 'Micro SaaS Products'
       description:
         'Innovative, focused software solutions for modern businesses'
@@ -1947,6 +2100,55 @@ export default function Services() {
         'Disaster Recovery Solutions'
       ]
       href: '/it-services'
+=======
+      id: 'ai-automation',
+      title: 'AI Automation Platform',
+      description: 'Intelligent automation solutions that streamline business processes and reduce manual work.',
+      category: 'AI Services',
+      features: ['Process Automation', 'Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Computer Vision', 'Robotic Process Automation'],
+      pricing: {
+        basic: 999,
+        pro: 2999,
+        enterprise: 9999
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    },
+    {
+      id: 'cloud-optimization',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions designed to optimize performance and reduce costs.',
+      category: 'IT Solutions',
+      features: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Cost Optimization', 'Disaster Recovery', 'Security Hardening'],
+      pricing: {
+        basic: 1999,
+        pro: 4999,
+        enterprise: 14999
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    },
+    {
+<<<<<<< HEAD
+      id: 'it-services',
+      name: 'IT & Cloud Services',
+      description: 'Comprehensive IT solutions for enterprise-grade operations',
+      services: [
+        'Quantum Computing Consulting',
+        'Blockchain & Web3 Solutions',
+        'DevSecOps & Security Automation',
+        'Enterprise Data Platform',
+        'High-Performance Computing',
+        'Cloud Migration Services',
+        'Infrastructure as Code',
+        'Disaster Recovery Solutions',
+      ],
+      href: '/it-services',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     },  ];
   const getColorClasses = (color: string) => {
     const colors = {
@@ -1963,6 +2165,7 @@ export default function Services() {
         border: 'border-purple-500/40'
         ring: 'focus:ring-purple-500'
       },      green: {
+<<<<<<< HEAD
         bg: 'bg-green-600'
         hover: 'hover:bg-green-700'
         text: 'text-green-400'
@@ -1972,12 +2175,98 @@ export default function Services() {
     }
     return colors[color as keyof typeof colors] |colors.blue;  }
 >>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
+=======
+        bg: 'bg-green-600',
+        hover: 'hover:bg-green-700',
+        text: 'text-green-400',
+        border: 'border-green-500/40',
+        ring: 'focus:ring-green-500',
+      },
+    };
+    return colors[color as keyof typeof colors] || colors.blue;  };
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+      id: 'micro-saas',
+      title: 'Micro SaaS Development',
+      description: 'Focused software solutions that address specific business needs with minimal complexity.',
+      category: 'Micro SaaS',
+      features: ['Rapid Development', 'User-friendly Design', 'API Integration', 'Scalable Architecture', 'Multi-tenant Support', 'Analytics Dashboard'],
+      pricing: {
+        basic: 2999,
+        pro: 7999,
+        enterprise: 19999
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    },
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity Solutions',
+      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
+      category: 'Security',
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Penetration Testing', 'Security Audits', 'Compliance Management', 'Incident Response'],
+      pricing: {
+        basic: 1499,
+        pro: 3999,
+        enterprise: 9999
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    },
+    {
+      id: 'data-analytics',
+      title: 'Data Analytics & BI',
+      description: 'Transform your data into actionable insights with advanced analytics and business intelligence.',
+      category: 'Analytics',
+      features: ['Data Visualization', 'Predictive Modeling', 'Real-time Dashboards', 'ETL Processes', 'Machine Learning', 'Custom Reports'],
+      pricing: {
+        basic: 2499,
+        pro: 5999,
+        enterprise: 12999
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    },
+    {
+      id: 'blockchain',
+      title: 'Blockchain Solutions',
+      description: 'Cutting-edge blockchain technology for secure, transparent, and decentralized applications.',
+      category: 'Blockchain',
+      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Token Development', 'DApp Development', 'Blockchain Consulting'],
+      pricing: {
+        basic: 4999,
+        pro: 12999,
+        enterprise: 29999
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+  const categories = ['All', 'AI Services', 'IT Solutions', 'Micro SaaS', 'Security', 'Analytics', 'Blockchain'];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
         <title>Our Services - Zion Tech Group</title>
         <meta name="description" content="Explore the advanced IT and AI services offered by Zion Tech Group." />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
         <main className="text-center max-w-4xl px-4">
@@ -1991,6 +2280,8 @@ export default function Services() {
               <p className="text-gray-400">
                 Harness the power of artificial intelligence for automation, data analysis, and intelligent decision-making.
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
           {/* Hero Section */}
@@ -1999,6 +2290,22 @@ export default function Services() {
               <h1
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
+<<<<<<< HEAD
+=======
+=======
+      <div className="min-h-screen bg-slate-950 text-white">
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-slate-900/20"></div>
+          <div className="relative container mx-auto px-4 py-20">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Our Services
               </h1>
               <p
@@ -2008,6 +2315,7 @@ export default function Services() {
 >>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
               </p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="card">
               <h3 className="text-2xl font-semibold mb-3">Cloud Solutions</h3>
@@ -2048,6 +2356,8 @@ export default function Services() {
     </>
   );
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </section>
           {/* Service Categories */}
           <section className='py-16 px-4' role='main'>
@@ -2235,6 +2545,101 @@ export default function Services() {
             <p className="text-lg text-slate-300 mb-8">
               Contact our experts to discuss your project requirements and discover
               how our solutions can drive your business forward.
+<<<<<<< HEAD
+=======
+=======
+          </div>
+        </section>
+        {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mb-4 flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">{index + 1}</span>
+                    </div>
+                    <h3 className="text-2xl font-semibold mb-3 text-white">{service.title}</h3>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
+                    <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">
+                      {service.category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </span>
+                  </div>
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-blue-400 mb-3 uppercase tracking-wide">Key Features</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-gray-300">
+                          <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                          {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </li>
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </ul>
+                  </div>
+                  {service.pricing && (
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-green-400 mb-3 uppercase tracking-wide">Pricing</h4>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-300">Basic:</span>
+                          <span className="text-white">${service.pricing.basic.toLocaleString()}</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-300">Pro:</span>
+                          <span className="text-white">${service.pricing.pro.toLocaleString()}</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-300">Enterprise:</span>
+                          <span className="text-white">${service.pricing.enterprise.toLocaleString()}</span>
+                        </div>
+                      </div>
+                    </div>
+                  )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                    Get Started
+                  </button>
+                </div>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 bg-slate-900/50">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+              Let's discuss your project and find the perfect solution for your business needs.
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact" className="btn-primary">
@@ -2251,9 +2656,39 @@ export default function Services() {
     </>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
+<<<<<<< HEAD
   )
 >>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
 }
+=======
+            </div>
+          </section>
+        </main>
+      </ErrorBoundary>
+    </>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+  )
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+
+  )
+}
+
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

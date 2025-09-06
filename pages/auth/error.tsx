@@ -4,34 +4,63 @@ import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
+<<<<<<< HEAD
+<<<<<<< HEAD
 const errorMessages: Record<string string> = {OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
 }
 export default function AuthErrorPage() {
   const { query } = useRouter()
   const message = errorMessages[query.error as string] |errorMessages.default
+=======
+const errorMessages: Record<string string> = {;
+  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+const errorMessages: Record<string, string> = {;
+  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export default function AuthErrorPage() {
+  const { query } = useRouter()
+  const message = errorMessages[query.error as string] || errorMessages.default
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
-        <title>Authentication Error - Zion Tech Marketplace</title>
+<<<<<<< HEAD
+        <title>Authentication Error - Zion Tech Marketplace</title>;
         <meta name=&quot;description&quot; content=&quot;Authentication error page&quot; />
+=======
+        <title>Authentication Error - Zion Tech Marketplace</title>
+        <meta name="description" content="Authentication error page" />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </Head>
-      <div className=&quot;min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4&quot;>
-        <Card className=&quot;w-full max-w-md&quot;>
-          <CardHeader className=&quot;space-y-1 text-center&quot;>
-            <div className=&quot;mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20&quot;>
-              <AlertTriangle className=&quot;h-6 w-6 text-red-600 dark:text-red-400&quot; />
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4">
+        <Card className="w-full max-w-md">
+          <CardHeader className="space-y-1 text-center">
+            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">
+              <AlertTriangle className="h-6 w-6 text-red-600 dark:text-red-400" />
             </div>
-            <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
-            <p className=&quot;text-sm text-muted-foreground&quot;>{message}</p>
+            <CardTitle className="text-2xl font-bold">Authentication Error</CardTitle>
+            <p className="text-sm text-muted-foreground">{message}</p>
           </CardHeader>
-          <CardContent className=&quot;space-y-4&quot;>
-            <div className=&quot;text-center space-y-2&quot;>
-              <Button asChild className=&quot;w-full&quot;>
-                <Link href=&quot;/auth/login&quot;>Try Again</Link>
+          <CardContent className="space-y-4">
+            <div className="text-center space-y-2">
+              <Button asChild className="w-full">
+                <Link href="/auth/login">Try Again</Link>
               </Button>
-              <Button asChild variant=&quot;outline&quot; className=&quot;w-full&quot;>
-                <Link href=&quot;/&quot;>Go to Homepage</Link>
+              <Button asChild variant="outline" className="w-full">
+                <Link href="/">Go to Homepage</Link>
               </Button>
             </div>
           </CardContent>
@@ -39,4 +68,13 @@ export default function AuthErrorPage() {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

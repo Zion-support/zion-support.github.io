@@ -1,11 +1,16 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
 export const useUpdateMilestone = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -14,19 +19,56 @@ export const useUpdateMilestone = () => {
     if (!user) return false;
     try {
       setIsSubmitting(true);
+=======
+export const useUpdateMilestone = () => {;
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { recordMilestoneActivity } = useRecordActivity();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState } from 'react',
+import { supabase } from '@/integrations/supabase/client',
+import { useAuth } from '@/hooks/useAuth',
+import { toast } from 'sonner',
+import { Milestone, MilestoneStatus } from './types',
+import { useRecordActivity } from './useRecordActivity',
+export const useUpdateMilestone = () => {
+  const { user } = useAuth(),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { recordMilestoneActivity } = useRecordActivity(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+  const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
+    if (!user) return false,
+    
+    try {
+      setIsSubmitting(true),
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Get the current status
       const { data: milestoneData, error: fetchError } = await supabase
         .from('project_milestones')
         .select('status')
         .eq('id', milestoneId)
+<<<<<<< HEAD
         .single();
       if (fetchError) throw fetchError;
       if (!milestoneData) throw new Error("Milestone not found");
       const previousStatus = milestoneData.status;
+=======
+        .single(),
+      
+      if (fetchError) throw fetchError,
+      if (!milestoneData) throw new Error("Milestone not found"),
+      
+      const previousStatus = milestoneData.status,
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Update the milestone status
       const { error } = await supabase
         .from('project_milestones')
         .update({ status: newStatus })
+<<<<<<< HEAD
         .eq('id', milestoneId);
       if (error) throw error;
       // Create activity record
@@ -36,18 +78,42 @@ export const useUpdateMilestone = () => {
     } catch (err: any) {
       console.error("Error updating milestone status:", err);
       toast.error("Failed to update status: " + err.message)
+=======
+        .eq('id', milestoneId),
+      
+      if (error) throw error,
+      
+      // Create activity record
+      await recordMilestoneActivity(milestoneId, 'status_changed', previousStatus, newStatus, comment),
+      
+      toast.success(`Milestone status changed to ${newStatus}`),
+      
+      return true
+    } catch (err: any) {
+      console.error("Error updating milestone status:", err),
+      toast.error("Failed to update status: " + err.message),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return false
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
   }
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
     if (!user) return false;
+=======
+  },
+  
+  const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
+    if (!user) return false,
+    
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       setIsSubmitting(true)
       const { error } = await supabase
         .from('project_milestones')
         .update(data)
+<<<<<<< HEAD
         .eq('id', milestoneId);
       if (error) throw error;
       // Create activity record
@@ -69,3 +135,105 @@ export const useUpdateMilestone = () => {
   }
 }
 
+=======
+        .eq('id', milestoneId),
+      
+      if (error) throw error,
+      
+      // Create activity record
+      await recordMilestoneActivity(milestoneId, 'updated', null, 'updatedMilestone details updated'),
+      
+      toast.success("Milestone updated successfully"),
+      
+      return true
+    } catch (err: any) {
+      console.error("Error updating milestone:", err),
+      toast.error("Failed to update milestone: " + err.message),
+      return false
+    } finally {
+      setIsSubmitting(false)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+  };
+  
+  return {
+    updateMilestoneStatus;
+    updateMilestone;
+    isSubmitting
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { useAuth } from '@/hooks/useAuth',;
+import { toast } from 'sonner',;
+import { Milestone, MilestoneStatus } from './types',;
+import { useRecordActivity } from './useRecordActivity',;
+export const useUpdateMilestone = () => {;
+  const { user } = useAuth(),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const { recordMilestoneActivity } = useRecordActivity(),;
+  const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {;
+    if (!user) return false,;
+    try {;
+      setIsSubmitting(true),;
+      // Get the current status;
+      const { data: milestoneData, error: fetchError } = await supabase;
+        .from('project_milestones');
+        .select('status');
+        .eq('id', milestoneId);
+        .single(),;
+      if (fetchError) throw fetchError,;
+      if (!milestoneData) throw new Error("Milestone not found"),;
+      const previousStatus = milestoneData.status,;
+      // Update the milestone status;
+      const { error } = await supabase;
+        .from('project_milestones');
+        .update({ status: newStatus });
+        .eq('id', milestoneId),;
+      if (error) throw error,;
+      // Create activity record;
+      await recordMilestoneActivity(milestoneId, 'status_changed', previousStatus, newStatus, comment),;
+      toast.success(`Milestone status changed to ${newStatus}`),;
+      return true;
+    } catch (err: any) {;
+      console.error("Error updating milestone status:", err),;
+      toast.error("Failed to update status: " + err.message),;
+      return false;
+    } finally {;
+      setIsSubmitting(false);
+    }
+  },;
+  const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {;
+    if (!user) return false,;
+    try {;
+      setIsSubmitting(true),;
+      const { error } = await supabase;
+        .from('project_milestones');
+        .update(data);
+        .eq('id', milestoneId),;
+      if (error) throw error,;
+      // Create activity record;
+      await recordMilestoneActivity(milestoneId, 'updated', null, 'updatedMilestone details updated'),;
+      toast.success("Milestone updated successfully"),;
+      return true;
+    } catch (err: any) {;
+      console.error("Error updating milestone:", err),;
+      toast.error("Failed to update milestone: " + err.message),;
+      return false;
+    } finally {;
+      setIsSubmitting(false);
+    }
+  },;
+  return {;
+    updateMilestoneStatus,;
+    updateMilestone;
+    isSubmitting;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

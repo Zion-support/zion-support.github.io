@@ -1,13 +1,26 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 import {
+<<<<<<< HEAD
   authenticateRequest
   enforceRateLimit
   recordRequest;
+=======
+  authenticateRequest,
+  enforceRateLimit,;
+  recordRequest,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
@@ -17,7 +30,7 @@ const TALENTS_FILE = path.join(
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
+) {;
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res.status(401).json({ error: 'Unauthorized' });
@@ -43,6 +56,7 @@ export default async function handler(
     : [];
   const now = new Date().toISOString();
   const record = {
+<<<<<<< HEAD
     id: uuidv4()
     name
     email
@@ -52,9 +66,31 @@ export default async function handler(
     partnerId: auth.partner.id
 createdAt: now
   }
+=======
+    id: uuidv4(),
+    name,
+    email,
+    skills: skills || [],
+    programTrack: programTrack || null,
+    certificationStatus: certificationStatus || 'pending',
+    partnerId: auth.partner.id,
+<<<<<<< HEAD
+    createdAt: now,
+=======
+<<<<<<< HEAD
+createdAt: now,
+=======
+    createdAt: now,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   records.push(record);
   await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
   return res.status(201).json({ id: record.id });  return res.status(201).json({ id: record.id })
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

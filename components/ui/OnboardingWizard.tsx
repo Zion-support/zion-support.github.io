@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
-export default function OnboardingWizard() {
+export default function OnboardingWizard() {;
   const { role, setRole } = useRole();
   const [open, setOpen] = useState(false);
   useEffect(() => {
@@ -24,10 +28,21 @@ export default function OnboardingWizard() {
         window.localStorage.setItem('zion_has_onboarded', '1');
       }
     } catch {}
+<<<<<<< HEAD
     setOpen(false);  }        window.localStorage.setItem('zion_has_onboarded1')
       }
     } catch {}
     setOpen(false)
+=======
+    setOpen(false);  }
+
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!open) return null;
 
   return (
@@ -143,5 +158,13 @@ export default function OnboardingWizard() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
