@@ -3,7 +3,6 @@ import Layout from '../components/layout/Layout';
 import Head from 'next/head';
 import { ErrorBoundary } from '../components/ErrorBoundary';
 import '../styles/globals.css';
-
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
@@ -15,5 +14,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </Layout>
     </ErrorBoundary>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

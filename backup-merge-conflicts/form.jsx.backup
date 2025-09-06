@@ -7,10 +7,3 @@ import _React from 'react'; import _React from "react"; export const Form = ({ c
 import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
 
 import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/src/components/ui/form.jsx
-=======
-
-import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

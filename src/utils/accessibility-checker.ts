@@ -6,3 +6,4 @@ export const checkAccessibility = () => {
 export const validateAriaLabels = () => {
   console.log('Validating ARIA labels...');
 };
+

@@ -6,7 +6,11 @@
       "severity": "none",
       "count": 0,
       "details": "No dependency vulnerabilities found"
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
   "securityIssues": [
     {
@@ -127,7 +131,11 @@
       "severity": "info",
       "message": "File is world-readable - consider restricting permissions",
       "details": "Current permissions: 100755"
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
   "recommendations": [
     {
@@ -153,7 +161,11 @@
       "category": "permissions",
       "message": "Review file permissions",
       "action": "Consider restricting file permissions for sensitive files"
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
   "summary": {
     "totalVulnerabilities": 0,
@@ -162,5 +174,13 @@
     "warnings": 13,
     "info": 4,
     "totalRecommendations": 4
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

@@ -1,88 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function handler(req, res) {
-  res.status(200).json({ message: "Checkout session created" })}
-=======
-export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
-  res.status(200).json({ message: 'Checkout session created' });
-}
-export default function handler(req, res) {
-  res.status(200).json({ "message": 'Checkout session created' });
-}
-<<<<<<< HEAD
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-=======
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-=======
-import Stripe from 'stripe';
-import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2023-10-16',
-});
-
-async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
-  }
-
-  try {
-    const { priceId, quantity = 1 } = req.body || {};
-    
-    if (!priceId) {
-      res.statusCode = 400;
-      res.json({ error: 'Price ID is required' });
-      return;
-    }
-
-    const session = await stripe.checkout.sessions.create({
-      mode: 'subscription',
-      payment_method_types: ['card'],
-      line_items: [
-        {
-=======
-export default function handler(req,res) { res.status(200).json({ message: "Checkout session created })};
-  res.status(200).json({ message: 'Checkout session created })
-};
-export default function handler(req, res) {,
-  res.status(200).json({ "message": 'Checkout session created' })
-};
-export default function handler(req,res) { res.status(200).json({ message: Checkout session created' })};
-import Stripe from 'stripe;
-import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
-;
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {,
-  apiVersion: 2023-10-16'
-}),
-,
-async function handler(req, res) {,
-  if (req.method !== 'POST) {,
-    res.statusCode = 405,
-    res.setHeader('AllowPOST'),
-    res.end(Method Not Allowed'),
-    return
-  };
-  try {,
-    const { priceId, quantity = 1 } = req.body || {};
-,
-    if (!priceId) {,
-      res.statusCode = 400,
-      res.json({ error: 'Price ID is required }),
-      return
-    };
-    const session = await stripe.checkout.sessions.create({,
-      mode: 'subscription',
-      payment_method_types: [card'],
-      line_items: [,
-        {,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-226f
-          price: priceId,
+  res.status(200).json({ message: "Checkout session created" })}          price: priceId,
           quantity: quantity,
         },
       ],
@@ -94,7 +11,6 @@ async function handler(req, res) {,
     res.json({ 
       success: true, 
       sessionId: session.id,
-<<<<<<< HEAD
       url: session.url 
     });
   } catch (err) {
@@ -104,12 +20,7 @@ async function handler(req, res) {,
   }
 }
 
-export default withErrorLogging(handler);
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-=======
-      url: session.url
+export default withErrorLogging(handler);      url: session.url
     })
   } catch (err) {,
     // console.error('Checkout session API error:, err),
@@ -119,4 +30,3 @@ export default withErrorLogging(handler);
 };
 export default withErrorLogging(handler),
 ,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-226f

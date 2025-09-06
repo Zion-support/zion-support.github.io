@@ -1,3 +1,1 @@
-export default function MessageThreadPage () {
-  return <div>Thread</div> 
-}
+export default function MessageThreadPage() {_return <div>Thread</div>}

@@ -2,12 +2,7 @@
 
 import React from 'react';
 interface DataSyncProps {;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/DataSync.tsx.backup
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+:backup-merge-conflicts/DataSync.tsx.backup
   "syncedData": "an y;
   "onNext": () => void;
   "onBack": () => void;
@@ -109,14 +104,7 @@ const DataSync: Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
       
       <div className="flex justify-between">
         <button
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 "}
 
 ;
@@ -171,7 +159,6 @@ const "DataSync": "React.FC<DataSyncProps> = ({ syncedData", onNext, onBack }) =
           </div>;
           <div className="text-center">;
             <div className="text-2xl font-bold text-green-600">;
-=======
   "syncedData": an y;
   onNext: () => void;
   onBack: () => void;
@@ -269,7 +256,6 @@ const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
 
           onClick={onBack}
           className="px-6 py-3 border border-gray-300 rounded-lg "hover": "b g-gray-50 transition-colors";
-=======
             </div>
             <div className="text-sm text-gray-600">Transactions</div>
           </div>
@@ -330,12 +316,6 @@ export default DataSync;';
 ;
 export default DataSync;
 </DataSyncProps>;
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 };
 export default DataSync;';
 </DataSyncProps>;';';

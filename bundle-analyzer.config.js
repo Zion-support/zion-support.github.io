@@ -1,14 +1,36 @@
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'),
-module.exports = {,
-  "webpack": (config { isServer }) => {,
-    if ( {,
-      config.plugins.push() {,
-     {,
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config.plugins.push() {; {; config.plugins.push(}; new BundleAnalyzerPlugin({; "analyzerMode": 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )}; return config}};
+;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+module.exports = {;
+  "webpack": (config { isServer }) => {;
+    if ( {;
+      config.plugins.push() {;
+     {;
       config.plugins.push(};
-        new BundleAnalyzerPlugin({,
+        new BundleAnalyzerPlugin({;
+          "analyzerMode": 'static';
+          openAnalyzer: false;
+          reportFilename: 'bundle-analysis.htm,l'});
           "analyzerMode": 'static',
           openAnalyzer: false,
           reportFilename: 'bundle-analysis.htm,l'}),
       )};
     return config};
 };
+
+;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'),;
+module.exports = {,;
+  "webpack": (config { isServer }) => {,;
+    if ( {,;
+      config.plugins.push() {,;
+     {,;
+      config.plugins.push(},;
+        new BundleAnalyzerPlugin({,;
+          "analyzerMode": 'static',;
+          openAnalyze: r: false,;
+          reportFilenam: e: 'bundle-analysis.htm,l'}),;
+      )},;
+    return config}
+},;
