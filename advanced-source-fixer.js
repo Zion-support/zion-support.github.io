@@ -1,23 +1,23 @@
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 class AdvancedSourceFixer {
   constructor() {
     this.fixes = [];
     this.errors = [];
-    this.reportFile = path.join(__dirname, 'advanced-source-fix-report.json');
+    this.reportFile = path.join(__dirname, "advanced-source-fix-report.json");
   }
 
-  log(message, level = 'INFO') {
+  log(message, level = "INFO") {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${level}] ${message}`);
   }
 
   async fixAllSourceFiles() {
-    this.log('🔧 Starting advanced source file fixing...');
-    await this.fixDirectory(path.join(__dirname, 'src'));
-    await this.fixDirectory(path.join(__dirname, 'pages'));
+    this.log("🔧 Starting advanced source file fixing...");
+    await this.fixDirectory(path.join(__dirname, "src"));
+    await this.fixDirectory(path.join(__dirname, "pages"));
     this.log(`✅ Fixed ${this.fixes.length} files`);
     if (this.errors.length > 0) {
       this.log(`❌ ${this.errors.length} errors encountered`);
@@ -27,15 +27,24 @@ class AdvancedSourceFixer {
 
   async fixDirectory(dir) {
     if (!fs.existsSync(dir)) return;
-    
+
     const items = fs.readdirSync(dir);
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+
+      if (
+        stat.isDirectory() &&
+        !item.startsWith(".") &&
+        item !== "node_modules"
+      ) {
         await this.fixDirectory(fullPath);
-      } else if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) {
+      } else if (
+        item.endsWith(".ts") ||
+        item.endsWith(".tsx") ||
+        item.endsWith(".js") ||
+        item.endsWith(".jsx")
+      ) {
         await this.fixFile(fullPath);
       }
     }
@@ -43,7 +52,7 @@ class AdvancedSourceFixer {
 
   async fixFile(filePath) {
     try {
-      const content = fs.readFileSync(filePath, 'utf8');
+      const content = fs.readFileSync(filePath, "utf8");
       let fixedContent = content;
       let wasFixed = false;
 
@@ -67,7 +76,7 @@ class AdvancedSourceFixer {
         this.fixes.push({
           file: filePath,
           timestamp: new Date().toISOString(),
-          fixes: this.getAppliedFixes(content, fixedContent)
+          fixes: this.getAppliedFixes(content, fixedContent),
         });
         this.log(`Fixed: ${filePath}`);
       }
@@ -75,9 +84,9 @@ class AdvancedSourceFixer {
       this.errors.push({
         file: filePath,
         error: error.message,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       });
-      this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
+      this.log(`Error fixing ${filePath}: ${error.message}`, "ERROR");
     }
   }
 
@@ -94,13 +103,17 @@ class AdvancedSourceFixer {
       /',' expected/,
       /';' expected/,
       /'\)' expected/,
-      /'\}' expected/
+      /'\}' expected/,
     ];
-    return errorPatterns.some(pattern => pattern.test(content));
+    return errorPatterns.some((pattern) => pattern.test(content));
   }
 
   hasImportExportIssues(content) {
-    return content.includes('from') && !content.includes('import') && !content.includes('export');
+    return (
+      content.includes("from") &&
+      !content.includes("import") &&
+      !content.includes("export")
+    );
   }
 
   hasSyntaxIssues(content) {
@@ -109,71 +122,74 @@ class AdvancedSourceFixer {
       /export.*from.*from/,
       /function.*function/,
       /const.*const.*const/,
-      /let.*let.*let/
+      /let.*let.*let/,
     ];
-    return syntaxIssues.some(pattern => pattern.test(content));
+    return syntaxIssues.some((pattern) => pattern.test(content));
   }
 
   fixParsingErrors(content, filePath) {
     let fixed = content;
-    
+
     // Fix unterminated strings
     fixed = fixed.replace(/"[^"]*$/gm, '"');
     fixed = fixed.replace(/'[^']*$/gm, "'");
-    
+
     // Fix duplicate keywords
-    fixed = fixed.replace(/import\s+from\s+from/g, 'import React from');
-    fixed = fixed.replace(/export\s+from\s+from/g, 'export default');
-    fixed = fixed.replace(/function\s+function/g, 'function');
-    fixed = fixed.replace(/const\s+const/g, 'const');
-    fixed = fixed.replace(/let\s+let/g, 'let');
-    
+    fixed = fixed.replace(/import\s+from\s+from/g, "import React from");
+    fixed = fixed.replace(/export\s+from\s+from/g, "export default");
+    fixed = fixed.replace(/function\s+function/g, "function");
+    fixed = fixed.replace(/const\s+const/g, "const");
+    fixed = fixed.replace(/let\s+let/g, "let");
+
     // Add missing semicolons
-    fixed = fixed.replace(/([^}])\n/g, '$1;\n');
-    
+    fixed = fixed.replace(/([^}])\n/g, "$1;\n");
+
     // Fix JSX tags
-    fixed = fixed.replace(/<([^>]*)\s*>/g, '<$1>');
-    fixed = fixed.replace(/<\/([^>]*)\s*>/g, '</$1>');
-    
+    fixed = fixed.replace(/<([^>]*)\s*>/g, "<$1>");
+    fixed = fixed.replace(/<\/([^>]*)\s*>/g, "</$1>");
+
     return fixed;
   }
 
   fixImportExportIssues(content, filePath) {
     let fixed = content;
-    
-    if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
-      if (!fixed.includes('import React') && !fixed.includes('import * as React')) {
+
+    if (filePath.endsWith(".tsx") || filePath.endsWith(".jsx")) {
+      if (
+        !fixed.includes("import React") &&
+        !fixed.includes("import * as React")
+      ) {
         fixed = "import React from 'react';\n" + fixed;
       }
     }
-    
-    fixed = fixed.replace(/import\s+{\s*}\s*from/g, 'import React from');
+
+    fixed = fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
     fixed = fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
-    
-    if (!fixed.includes('export default') && !fixed.includes('export {')) {
-      fixed += '\n\nexport default {};';
+
+    if (!fixed.includes("export default") && !fixed.includes("export {")) {
+      fixed += "\n\nexport default {};";
     }
-    
+
     return fixed;
   }
 
   fixSyntaxIssues(content, filePath) {
     let fixed = content;
-    
+
     // Fix duplicate keywords
-    fixed = fixed.replace(/\bconst\s+const\b/g, 'const');
-    fixed = fixed.replace(/\blet\s+let\b/g, 'let');
-    fixed = fixed.replace(/\bvar\s+var\b/g, 'var');
-    fixed = fixed.replace(/\bfunction\s+function\b/g, 'function');
-    
+    fixed = fixed.replace(/\bconst\s+const\b/g, "const");
+    fixed = fixed.replace(/\blet\s+let\b/g, "let");
+    fixed = fixed.replace(/\bvar\s+var\b/g, "var");
+    fixed = fixed.replace(/\bfunction\s+function\b/g, "function");
+
     // Fix trailing commas
-    fixed = fixed.replace(/\{\s*,\s*\}/g, '{}');
-    fixed = fixed.replace(/\{\s*,\s*/g, '{');
-    fixed = fixed.replace(/\[\s*,\s*\]/g, '[]');
-    fixed = fixed.replace(/\[\s*,\s*/g, '[');
-    fixed = fixed.replace(/\(\s*,\s*\)/g, '()');
-    fixed = fixed.replace(/\(\s*,\s*/g, '(');
-    
+    fixed = fixed.replace(/\{\s*,\s*\}/g, "{}");
+    fixed = fixed.replace(/\{\s*,\s*/g, "{");
+    fixed = fixed.replace(/\[\s*,\s*\]/g, "[]");
+    fixed = fixed.replace(/\[\s*,\s*/g, "[");
+    fixed = fixed.replace(/\(\s*,\s*\)/g, "()");
+    fixed = fixed.replace(/\(\s*,\s*/g, "(");
+
     return fixed;
   }
 
@@ -181,16 +197,16 @@ class AdvancedSourceFixer {
     const fixes = [];
     if (original !== fixed) {
       if (original.length !== fixed.length) {
-        fixes.push('Content length changed');
+        fixes.push("Content length changed");
       }
-      if (fixed.includes('import React')) {
-        fixes.push('Added React import');
+      if (fixed.includes("import React")) {
+        fixes.push("Added React import");
       }
-      if (fixed.includes('export default')) {
-        fixes.push('Added default export');
+      if (fixed.includes("export default")) {
+        fixes.push("Added default export");
       }
-      if (fixed.includes(';')) {
-        fixes.push('Added semicolons');
+      if (fixed.includes(";")) {
+        fixes.push("Added semicolons");
       }
     }
     return fixes;
@@ -202,9 +218,9 @@ class AdvancedSourceFixer {
       totalFilesFixed: this.fixes.length,
       totalErrors: this.errors.length,
       fixes: this.fixes,
-      errors: this.errors
+      errors: this.errors,
     };
-    
+
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
   }
