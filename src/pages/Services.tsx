@@ -1,273 +1,224 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Header } from '../components/Header';
-import Footer from '../components/Footer';
-import { GradientHeading } from '../components/GradientHeading';
-import { Card, CardContent } from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Badge } from '../components/ui/badge';
-import { 
-  Code, 
-  Cloud, 
-  Database, 
-  Shield, 
-  Smartphone, 
-  Globe,
-  Zap,
-  Users,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import ServiceCard from '../components/ServiceCard';
+import Card from '../components/Card';
+import Button from '../components/Button';
 
 const Services: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const serviceCategories = [
+    { id: 'all', name: 'All Services', icon: '🌟' },
+    { id: 'ai', name: 'AI & ML', icon: '🤖' },
+    { id: 'cloud', name: 'Cloud', icon: '☁️' },
+    { id: 'security', name: 'Security', icon: '🔒' },
+    { id: 'development', name: 'Development', icon: '💻' }
+  ];
+
   const services = [
     {
-      icon: <Code className="h-12 w-12 text-blue-500" />,
-      title: 'Custom Software Development',
-      description: 'Tailored software solutions built to meet your specific business requirements.',
-      features: [
-        'Web Applications',
-        'Mobile Apps (iOS/Android)',
-        'Desktop Applications',
-        'API Development',
-        'Microservices Architecture',
-        'Legacy System Modernization'
-      ],
-      color: 'from-blue-500 to-blue-600',
+      id: 'ai',
+      title: 'AI & Machine Learning',
+      description: 'Cutting-edge AI solutions to automate processes, gain insights, and drive intelligent decision-making.',
+      features: ['Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'Chatbots & Virtual Assistants'],
+      price: 'From $5,000/month'
     },
     {
-      icon: <Cloud className="h-12 w-12 text-green-500" />,
-      title: 'Cloud Solutions & Migration',
-      description: 'Seamless cloud migration and infrastructure management for optimal performance.',
-      features: [
-        'AWS/Azure/GCP Migration',
-        'Cloud Architecture Design',
-        'DevOps & CI/CD',
-        'Containerization (Docker/Kubernetes)',
-        'Serverless Solutions',
-        'Cloud Security & Compliance'
-      ],
-      color: 'from-green-500 to-green-600',
+      id: 'cloud',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions that grow with your business and ensure maximum uptime and security.',
+      features: ['AWS/Azure/GCP Migration', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'],
+      price: 'From $3,000/month'
     },
     {
-      icon: <Database className="h-12 w-12 text-purple-500" />,
-      title: 'Data Analytics & AI',
-      description: 'Transform your data into actionable insights with advanced analytics and AI.',
-      features: [
-        'Business Intelligence',
-        'Machine Learning Models',
-        'Predictive Analytics',
-        'Data Visualization',
-        'Real-time Dashboards',
-        'Data Pipeline Development'
-      ],
-      color: 'from-purple-500 to-purple-600',
+      id: 'security',
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your data, systems, and digital assets from threats.',
+      features: ['Penetration Testing', 'Security Audits', 'Threat Monitoring', 'Compliance Management'],
+      price: 'From $2,500/month'
     },
     {
-      icon: <Shield className="h-12 w-12 text-red-500" />,
-      title: 'Cybersecurity Solutions',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      features: [
-        'Security Audits',
-        'Penetration Testing',
-        'Security Architecture',
-        'Compliance Management',
-        'Incident Response',
-        'Security Training'
-      ],
-      color: 'from-red-500 to-red-600',
+      id: 'development',
+      title: 'Custom Development',
+      description: 'Bespoke software development solutions designed specifically for your unique requirements.',
+      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
+      price: 'From $4,000/month'
     },
     {
-      icon: <Smartphone className="h-12 w-12 text-orange-500" />,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.',
-      features: [
-        'Native iOS/Android Apps',
-        'React Native Development',
-        'Flutter Applications',
-        'Progressive Web Apps',
-        'App Store Optimization',
-        'Mobile UI/UX Design'
-      ],
-      color: 'from-orange-500 to-orange-600',
+      id: 'ai',
+      title: 'Data Analytics',
+      description: 'Advanced analytics and business intelligence solutions to unlock insights from your data.',
+      features: ['Data Visualization', 'Real-time Dashboards', 'Machine Learning Models', 'Data Warehousing'],
+      price: 'From $3,500/month'
     },
     {
-      icon: <Globe className="h-12 w-12 text-cyan-500" />,
-      title: 'Web Development',
-      description: 'Modern, responsive web applications with cutting-edge technologies.',
-      features: [
-        'React/Vue/Angular Development',
-        'Node.js Backend',
-        'E-commerce Solutions',
-        'CMS Development',
-        'SEO Optimization',
-        'Performance Optimization'
-      ],
-      color: 'from-cyan-500 to-cyan-600',
-    },
+      id: 'cloud',
+      title: 'Digital Transformation',
+      description: 'End-to-end digital transformation services to modernize your business processes and operations.',
+      features: ['Process Automation', 'Legacy System Migration', 'Change Management', 'Training & Support'],
+      price: 'From $6,000/month'
+    }
   ];
 
-  const processSteps = [
-    {
-      step: '01',
-      title: 'Discovery & Planning',
-      description: 'We analyze your requirements and create a detailed project plan.',
-      icon: <Users className="h-8 w-8 text-blue-500" />,
-    },
-    {
-      step: '02',
-      title: 'Design & Architecture',
-      description: 'Our team designs the solution architecture and user experience.',
-      icon: <Code className="h-8 w-8 text-green-500" />,
-    },
-    {
-      step: '03',
-      title: 'Development & Testing',
-      description: 'We build and thoroughly test your solution using agile methodologies.',
-      icon: <Zap className="h-8 w-8 text-purple-500" />,
-    },
-    {
-      step: '04',
-      title: 'Deployment & Support',
-      description: 'We deploy your solution and provide ongoing maintenance and support.',
-      icon: <Cloud className="h-8 w-8 text-orange-500" />,
-    },
-  ];
-
-  const technologies = [
-    'React', 'Vue.js', 'Angular', 'Node.js', 'Python', 'Java', 'C#', 'PHP',
-    'AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'MongoDB', 'PostgreSQL',
-    'Redis', 'Elasticsearch', 'TensorFlow', 'PyTorch', 'Machine Learning', 'AI'
-  ];
+  const filteredServices = selectedCategory === 'all' 
+    ? services 
+    : services.filter(service => service.id === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <Header onMenuClick={() => {}} />
-      
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <GradientHeading text="Our Services" />
-            <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to drive your business forward. 
-              From custom software development to cloud migration, we've got you covered.
-            </p>
-          </div>
-        </section>
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-5xl font-extrabold mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to transform your business 
+            and drive innovation across all sectors.
+          </p>
+        </motion.div>
 
-        {/* Services Grid */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <Card key={index} className="p-8 hover:shadow-xl transition-all duration-300 group">
-                  <div className="flex justify-center mb-6">
-                    <div className="p-4 rounded-full bg-gray-100 group-hover:bg-gray-200 transition-colors">
-                      {service.icon}
-                    </div>
+        {/* Category Filter */}
+        <motion.div
+          className="flex flex-wrap justify-center gap-4 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {serviceCategories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`px-6 py-3 rounded-full transition-all duration-300 ${
+                selectedCategory === category.id
+                  ? 'bg-blue-500 text-white shadow-lg'
+                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+              }`}
+            >
+              <span className="mr-2">{category.icon}</span>
+              {category.name}
+            </button>
+          ))}
+        </motion.div>
+
+        {/* Main Services */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          layout
+        >
+          {filteredServices.map((service, index) => (
+            <motion.div
+              key={service.title}
+              layout
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card className="h-full hover:shadow-2xl transition-all duration-300">
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  
+                  <div className="mb-4">
+                    <h4 className="font-semibold mb-2 text-blue-400">Key Features:</h4>
+                    <ul className="text-sm text-gray-300 space-y-1">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6 text-center">
-                    {service.description}
-                  </p>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Button className="w-full" variant="outline">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Process Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Process</h2>
-              <p className="text-xl text-gray-600">
-                A proven methodology that ensures successful project delivery
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="relative mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto">
-                      {step.step}
-                    </div>
-                    <div className="absolute -top-2 -right-2">
-                      {step.icon}
-                    </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-lg font-bold text-green-400">{service.price}</span>
+                    <Button variant="outline" size="sm">
+                      Learn More
+                    </Button>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {step.description}
-                  </p>
                 </div>
-              ))}
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Industry Focus */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold mb-8">Industries We Serve</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏥</span>
+              </div>
+              <h3 className="text-lg font-semibold">Healthcare</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏦</span>
+              </div>
+              <h3 className="text-lg font-semibold">Finance</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏭</span>
+              </div>
+              <h3 className="text-lg font-semibold">Manufacturing</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🛒</span>
+              </div>
+              <h3 className="text-lg font-semibold">Retail</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎓</span>
+              </div>
+              <h3 className="text-lg font-semibold">Education</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏛️</span>
+              </div>
+              <h3 className="text-lg font-semibold">Government</h3>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Technologies Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Technologies We Use</h2>
-              <p className="text-xl text-gray-600">
-                We work with the latest and most reliable technologies
-              </p>
+        {/* Why Choose Us */}
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-8">Why Choose Zion Tech Group?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">⚡</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Fast Delivery</h3>
+              <p className="text-gray-300">Rapid development and deployment of solutions to meet your timeline.</p>
             </div>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              {technologies.map((tech, index) => (
-                <Badge key={index} variant="secondary" className="px-4 py-2 text-sm">
-                  {tech}
-                </Badge>
-              ))}
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Secure & Reliable</h3>
+              <p className="text-gray-300">Enterprise-grade security and reliability in all our solutions.</p>
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Let's discuss your requirements and create a solution that exceeds your expectations.
-            </p>
-            <div className="space-x-4">
-              <Button size="lg" variant="secondary" asChild>
-                <Link to="/contact">Get Started</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600" asChild>
-                <Link to="/pricing">View Pricing</Link>
-              </Button>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
+              <p className="text-gray-300">Experienced professionals with deep expertise in cutting-edge technologies.</p>
             </div>
           </div>
-        </section>
-      </main>
-
-      <Footer />
+        </div>
+      </div>
     </div>
   );
 };

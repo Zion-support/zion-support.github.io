@@ -1,19 +1,10 @@
-
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
-#!/usr/bin/env node;
-/**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
-
 =======
-
-
 =======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 /**;
  * Git Workflow Automator Script;
@@ -192,21 +183,10 @@ async function main() {const automator = new GitWorkflowAutomator();
     process.exit(0);
   } catch (error) {automator.log(`Git workflow automation:failed:${error.message}`, 'ERROR');
     process.exit(1);
-
-
-
-  }
-}
-if (require.main === module) {main();
-}
-module.exports = GitWorkflowAutomator;#!/usr/bin/env node;
-
-
 =======
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 #!/usr/bin/env node;
 /**;
  * Git Workflow Automator Script;
@@ -218,298 +198,7 @@ const fs = require('fs');
 const path = require('path');const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-
-=======
-
-;
-
-
-class GitWorkflowAutomator {; constructor() {; this && this.logFile = './logs/pm2/git-workflow && workflow.log'; this && this.errorFile = './logs/pm2/git-workflow-error && error.log'; this && this.workflowReport = './logs/git-workflow-report && report.json'; this && this.ensureLogDirectory()};
-; ensureLogDirectory() {; const logDir = path && path.dirname(this && this.logFile); if (!fs && fs.existsSync(logDir)) {; fs && fs.mkdirSync(logDir, { recursive: true })}};
-; log(message, level = 'INFO') {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-; try {; fs && fs.appendFileSync(this && this.logFile, logMessage); if (level = = = 'ERROR') {; fs && fs.appendFileSync(this && this.errorFile, logMessage)}} catch (err) {; console && console.error('Failed to write to log file: ', err && err.message)}};
-; async automateGitWorkflow() {; try {; this && this.log('Starting git workflow automation...');
-; // Check git status; const gitStatus = await this && this.checkGitStatus();
-; // Clean up old branches; const branchCleanup = await this && this.cleanupOldBranches();
-; // Check for merge conflicts; const conflictCheck = await this && this.checkForConflicts();
-; // Optimize repository; const repoOptimization = await this && this.optimizeRepository();
-; // Generate workflow report; const workflowReport = {; timestamp: new Date().toISOString(), gitStatus, branchCleanup; conflictCheck; repoOptimization; recommendations: this && this.generateWorkflowRecommendations(gitStatus, branchCleanup, conflictCheck)};
-; // Save workflow report; fs && fs.writeFileSync(this && this.workflowReport, JSON && JSON.stringify(workflowReport, null, 2));
-; this && this.log('Git workflow automation completed');
-; return workflowReport;
-} catch (error) {; this && this.log(`Git workflow automation failed: ${error && error.message}`, 'ERROR'); throw error}};
-; async checkGitStatus() {; try {; this && this.log('Checking git status...');
-; const status = execSync('git status --porcelain', {; encoding: 'utf8',
-    cwd: process && process.cwd()});
-; const branch = execSync('git branch --show-current', {; encoding: 'utf8',
-    cwd: process && process.cwd()}).trim();
-; const lastCommit = execSync('git log -1 --oneline', {; encoding: 'utf8',
-    cwd: process && process.cwd()}).trim();
-; return {; workingDirectoryClean: status && status.trim() = = = '', currentBranch: branch, lastCommit; uncommittedFiles: status && status.trim().split('\n').filter(line = > line && line.trim())}} catch (error) {; this && this.log(`Git status check failed: ${error && error.message}`, 'ERROR'); return { error: error && error.message }}};
-; async cleanupOldBranches() {; try {; this && this.log('Cleaning up old branches...');
-; // Get all branches; const allBranches = execSync('git branch -r', {; encoding: 'utf8',
-    cwd: process && process.cwd()}).trim().split('\n');
-; // Get merged branches; const mergedBranches = execSync('git branch -r --merged main', {; encoding: 'utf8',
-    cwd: process && process.cwd()}).trim().split('\n');
-; // Find branches that can be safely deleted; const branchesToDelete = allBranches; .filter(branch = >; branch && branch.includes('origin/cursor/') &&; !branch && branch.includes('main') &&; !branch && branch.includes('HEAD') &&; mergedBranches && mergedBranches.includes(branch); );
-; let deletedCount = 0; for (const branch of branchesToDelete) {; try {; const branchName = branch && branch.replace('origin/', ''); execSync(`git push origin --delete ${branchName}`, {; stdio: 'pipe',
-    cwd: process && process.cwd()}); deletedCount++; this && this.log(`Deleted branch: ${branchName}`)} catch (err) {; this && this.log(`Failed to delete branch ${branch}: ${err && err.message}`, 'WARN')}};
-; return {; totalBranches: allBranches && allBranches.length, mergedBranches: mergedBranches && mergedBranches.length, deletedBranches: deletedCount,
-    branchesToDelete: branchesToDelete && branchesToDelete.length}} catch (error) {; this && this.log(`Branch cleanup failed: ${error && error.message}`, 'ERROR'); return { error: error && error.message }}};
-; async checkForConflicts() {; try {; this && this.log('Checking for merge conflicts...');
-; // Check if there are any merge conflicts; const status = execSync('git status --porcelain', {; encoding: 'utf8',
-    cwd: process && process.cwd()});
-; const hasConflicts = status && status.includes('UU') || status && status.includes('AA') || status && status.includes('DD');
-; return {; hasConflicts; conflictFiles: hasConflicts ? status && status.split('\n').filter(line = >, line && line.includes('UU') || line && line.includes('AA') || line && line.includes('DD'), ): []}} catch (error) {; this && this.log(`Conflict check failed: ${error && error.message}`, 'ERROR'); return { error: error && error.message }}};
-; async optimizeRepository() {; try {; this && this.log('Optimizing repository...');
-; // Run git gc to optimize repository; execSync('git gc --prune = now', {; stdio: 'pipe',
-    cwd: process && process.cwd()});
-; // Check repository size; const repoSize = this && this.getRepositorySize();
-; return {; message: 'Repository optimization completed',
-    repositorySize: repoSize}} catch (error) {; this && this.log(`Repository optimization failed: ${error && error.message}`, 'ERROR'); return { error: error && error.message }}};
-; getRepositorySize() {; try {; const result = execSync('du -sh .git', {; encoding: 'utf8',
-    cwd: process && process.cwd()});
-; return result && result.trim().split('\t')[0]} catch (error) {; this && this.log(`Failed to get repository size: ${error && error.message}`, 'ERROR'); return 'Unknown'}};
-; generateWorkflowRecommendations(gitStatus, branchCleanup, conflictCheck) {; const recommendations = [];
-; if (!gitStatus && gitStatus.workingDirectoryClean) {; recommendations && recommendations.push('Working directory has uncommitted changes - consider committing or stashing')};
-; if (conflictCheck && conflictCheck.hasConflicts) {; recommendations && recommendations.push('Merge conflicts detected - resolve before proceeding')};
-; if (branchCleanup && branchCleanup.branchesToDelete > 10) {; recommendations && recommendations.push('Many old branches detected - consider regular cleanup')};
-; if (recommendations && recommendations.length = = = 0) {; recommendations && recommendations.push('Git workflow is in good state')};
-; return recommendations}};
-
-
-class GitWorkflowAutomator {;
-  constructor() {;
-    this.logFile = './logs/pm2/git-workflow.log';
-    this.errorFile = './logs/pm2/git-workflow-error.log';
-    this.workflowReport = './logs/git-workflow-report.json';
-    this.ensureLogDirectory();
-};
-;
-  ensureLogDirectory() {;
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {;
-      fs.mkdirSync(logDir, { recursive: true });
-};
-};
-;
-  log(message, level = 'INFO') {;
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-;
-    try {;
-      fs.appendFileSync(this.logFile, logMessage);
-      if (level === 'ERROR') {;
-        fs.appendFileSync(this.errorFile, logMessage);
-      };
-    } catch (err) {;
-      console.error('Failed to write to log file:', err.message);
-};
-};
-;
-  async automateGitWorkflow() {;
-    try {;
-      this.log('Starting git workflow automation...');
-;
-      // Check git status;
-      const gitStatus = await this.checkGitStatus();
-;
-      // Clean up old branches;
-      const branchCleanup = await this.cleanupOldBranches();
-;
-      // Check for merge conflicts;
-      const conflictCheck = await this.checkForConflicts();
-;
-      // Optimize repository;
-      const repoOptimization = await this.optimizeRepository();
-;
-      // Generate workflow report;
-      const workflowReport = {;
-        timestamp: new Date().toISOString(), gitStatus,
-        branchCleanup;
-        conflictCheck;
-        repoOptimization;
-        recommendations: this.generateWorkflowRecommendations(gitStatus, branchCleanup, conflictCheck);
-      };
-;
-      // Save workflow report;
-      fs.writeFileSync(this.workflowReport, JSON.stringify(workflowReport, null, 2));
-;
-      this.log('Git workflow automation completed');
-;
-      return workflowReport;
-;
-    } catch (error) {;
-      this.log(`Git workflow automation failed: ${error.message}`, 'ERROR');
-      throw error;
-};
-};
-;
-  async checkGitStatus() {;
-    try {;
-      this.log('Checking git status...');
-;
-      const status = execSync('git status --porcelain', {;
-        encoding: 'utf8', cwd: process.cwd(),
-      });
-;
-      const branch = execSync('git branch --show-current', {;
-        encoding: 'utf8', cwd: process.cwd(),
-      }).trim();
-;
-      const lastCommit = execSync('git log -1 --oneline', {;
-        encoding: 'utf8', cwd: process.cwd(),
-      }).trim();
-;
-      return {;
-        workingDirectoryClean: status.trim() === '', currentBranch: branch,
-        lastCommit;
-        uncommittedFiles: status.trim().split('\n').filter(line => line.trim()), ,
-    } catch (error) {;
-      this.log(`Git status check failed: ${error.message}`, 'ERROR');
-      return { error: error.message ,
-};
-};
-;
-  async cleanupOldBranches() {;
-    try {;
-      this.log('Cleaning up old branches...');
-;
-      // Get all branches;
-      const allBranches = execSync('git branch -r', {;
-        encoding: 'utf8', cwd: process.cwd(),
-      }).trim().split('\n');
-;
-      // Get merged branches;
-      const mergedBranches = execSync('git branch -r --merged main', {;
-        encoding: 'utf8', cwd: process.cwd(),
-      }).trim().split('\n');
-;
-      // Find branches that can be safely deleted;
-      const branchesToDelete = allBranches;
-        .filter(branch =>;
-          branch.includes('origin/cursor/') &&;
-          !branch.includes('main') &&;
-          !branch.includes('HEAD') &&;
-          mergedBranches.includes(branch);
-        );
-;
-      let deletedCount = 0;
-      for (const branch of branchesToDelete) {;
-        try {;
-          const branchName = branch.replace('origin/', '');
-          execSync(`git push origin --delete ${branchName}`, {;
-            stdio: 'pipe', cwd: process.cwd(),
-          });
-          deletedCount++;
-          this.log(`Deleted branch: ${branchName}`);
-        } catch (err) {;
-          this.log(`Failed to delete branch ${branch}: ${err.message}`, 'WARN');
-        };
-      };
-;
-      return {;
-        totalBranches: allBranches.length, mergedBranches: mergedBranches.length,
-        deletedBranches: deletedCount, branchesToDelete: branchesToDelete.length,
-      ;
-    } catch (error) {;
-      this.log(`Branch cleanup failed: ${error.message}`, 'ERROR');
-      return { error: error.message ,
-};
-};
-;
-  async checkForConflicts() {;
-    try {;
-      this.log('Checking for merge conflicts...');
-;
-      // Check if there are any merge conflicts;
-      const status = execSync('git status --porcelain', {;
-        encoding: 'utf8', cwd: process.cwd(),
-      });
-;
-      const hasConflicts = status.includes('UU') || status.includes('AA') || status.includes('DD');
-;
-      return {;
-        hasConflicts;
-        conflictFiles: hasConflicts ? status.split('\n').filter(line =>, line.includes('UU') || line.includes('AA') || line.includes('DD'),
-        ) : [];
-      ;
-    } catch (error) {;
-      this.log(`Conflict check failed: ${error.message}`, 'ERROR');
-      return { error: error.message ,
-};
-};
-;
-  async optimizeRepository() {;
-    try {;
-      this.log('Optimizing repository...');
-;
-      // Run git gc to optimize repository;
-      execSync('git gc --prune=now', {;
-        stdio: 'pipe', cwd: process.cwd(),
-      });
-;
-      // Check repository size;
-      const repoSize = this.getRepositorySize();
-;
-      return {;
-        message: 'Repository optimization completed', repositorySize: repoSize,
-      ;
-    } catch (error) {;
-      this.log(`Repository optimization failed: ${error.message}`, 'ERROR');
-      return { error: error.message ,
-};
-};
-;
-  getRepositorySize() {;
-    try {;
-      const result = execSync('du -sh .git', {;
-        encoding: 'utf8', cwd: process.cwd(),
-      });
-;
-      return result.trim().split('\t')[0];
-    } catch (error) {;
-      this.log(`Failed to get repository size: ${error.message}`, 'ERROR');
-      return 'Unknown';
-};
-};
-;
-  generateWorkflowRecommendations(gitStatus, branchCleanup, conflictCheck) {;
-    const recommendations = [];
-;
-    if (!gitStatus.workingDirectoryClean) {;
-      recommendations.push('Working directory has uncommitted changes - consider committing or stashing');
-};
-;
-    if (conflictCheck.hasConflicts) {;
-      recommendations.push('Merge conflicts detected - resolve before proceeding');
-};
-;
-    if (branchCleanup.branchesToDelete > 10) {;
-      recommendations.push('Many old branches detected - consider regular cleanup');
-};
-;
-    if (recommendations.length === 0) {;
-      recommendations.push('Git workflow is in good state');
-};
-;
-    return recommendations;
-};
-};
-;
 // Run git workflow automation;
-async function main() {;
-  const automator = new GitWorkflowAutomator();
-;
-  try {;
-    await automator.automateGitWorkflow();
-    process.exit(0);
-  } catch (error) {;
-    automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR');
-    process.exit(1);
-
-
-
 };
 };
 ;
@@ -518,6 +207,7 @@ if (require.main === module) {;
 };
 ;
 module.exports = GitWorkflowAutomator;
+=======
 #!/usr/bin/env node,
 /**,
  * Git Workflow Automator Script,
@@ -780,20 +470,18 @@ if (require.main === module) {,
 };
 ,
 module.exports = GitWorkflowAutomator,
-
-
-
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
-
-
+=======
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
+=======
   }
 }
 if (require.main === module) {main();
@@ -827,30 +515,25 @@ class GitWorkflowAutomator {constructor() {; this.logFile = './logs/pm2/git-work
 async function main() {const automator = new GitWorkflowAutomator(); try {; await automator.automateGitWorkflow(); process.exit(0)} catch (error) {automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR'); process.exit(1)}}
 if (require.main = = = module) {main()}
 module.exports = GitWorkflowAutomator;
-
+>>>>>>> origin/main
 =======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/automation-improvements-final
 =======
 async function main() {const automator = new GitWorkflowAutomator(); try {; await automator.automateGitWorkflow(); process.exit(0)} catch (error) {automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR'); process.exit(1)}}
 if (require.main = = = module) {main()}
 module.exports = GitWorkflowAutomator;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-; try {; await automator && automator.automateGitWorkflow(); process && process.exit(0)} catch (error) {; automator && automator.log(`Git workflow automation failed: ${error && error.message}`, 'ERROR'); process && process.exit(1)}};
-
-if (require && require.main = = = module) {; main()};
-
-module && module.exports = GitWorkflowAutomator;
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 ;
-
 module.exports = GitWorkflowAutomator;
-
-
-
+},;
+,;
+if (require.main === module) {,;
+  main();
+},;
+,;
+module.exports = GitWorkflowAutomator,;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

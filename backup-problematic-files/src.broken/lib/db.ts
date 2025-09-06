@@ -1,0 +1,7 @@
+const DB_NAME = 'zion-store'
+const CART_STORE = 'cart'
+const WISHLIST_STORE = 'wishlist'
+    const tx = db.transaction(storeName, 'readonly'
+    const req = store.get('items'
+    const tx = db.transaction(storeName, 'readwrite'
+    tx.objectStore(storeName).put(items, 'items'

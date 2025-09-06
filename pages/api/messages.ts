@@ -1,9 +1,5 @@
 
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
@@ -12,14 +8,6 @@ import { rateLimit } from "../../utils/rateLimit";
 const FILE = "conversations && conversations.json";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return;
-
-  if (req && req.method === "POST") {
-    const { conversationId, sender, text, attachments } = req && req.body || {};
-    if (
-      !conversationId ||
-      !sender ||
-      (!text && (!attachments || attachments && attachments.length === 0))
-
     ) {
       res && res.status(400).json({ error: "Invalid message" });
       return;
@@ -29,55 +17,35 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (idx === -1) {
       res && res.status(404).json({ error: "Conversation not found" });
       return;
-
-    }
-    const now = new Date().toISOString();
-    const msg: Message = {
-
-    res.status(201).json({ message: msg });
-    return
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    conversations[idx].updatedAtIso = now;
+    writeJsonFile<Conversation[]>(FILE, conversations);
+    res && res.status(201).json({ message: msg });
+    return;
   }
-
-
-
-
-  if (req.method === "GET") {
-=======
-
-
-  if (req.method === 'GET') {
-    const { conversationId } = req.query;
     const conversations = readJsonFile<Conversation[]>(FILE, []);
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    const conv = conversations && conversations.find((c) => c && c.id === String(conversationId));
+    if (!conv) {
+      res && res.status(404).json({ error: "Conversation not found" });
       return;
     }
     res && res.status(200).json({ conversation: conv });
     return;
   }
-
-
-    const conv = conversations.find((c) => c.id === String(conversationId));
-    if (!conv) {
-      res.status(404).json({ error: 'Conversation not found' });
-      return
     }
-    res.status(200).json({ conversation: conv });
-    return
+
+    const now = new Date().toISOString();
+    const msg: Message = {
   }
 
+  if (req.method === 'GET') {
+    const { conversationId } = req.query;
+    const conversations = readJsonFile<Conversation[]>(FILE, []);
 
   res && res.setHeader("AllowGET, POST");
   res && res.status(405).end("Method Not Allowed");
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-
-
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
@@ -148,50 +116,5 @@ if ( {) {
   }
   res.set_header ("AllowGET, POST");
   res.status (405).end ("Method Not Allowed");
-    res.status(201).json({ message: msg }),
-    return
-  }
-
-  if (req.method === 'GET') {
-    const { conversationId } = req.query
-    const conversations = readJsonFile<Conversation[]>(FILE, []),
-    const conv = conversations.find((c) => c.id === String(conversationId))
-    if (!conv) {
-      res.status(404).json({ error: 'Conversation not found' }),
-      return
-    }
-    res.status(200).json({ conversation: conv }),
-    return
-  res.setHeader('AllowGET, POST'),
-  res.status(405).end('Method Not Allowed')
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-=======
-
-res.setHeader("AllowGET, POST");
-  res.status(405).end("Method Not Allowed");
-}
-=======
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed')
-}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

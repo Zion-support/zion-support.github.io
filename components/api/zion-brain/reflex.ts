@@ -1,12 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
+
   if (req && req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
-
-
   }
 
   if (req && req.method === 'POST') {
@@ -18,10 +15,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       state && state.metrics = metrics;
       state && state.lastTriggers = triggers;
       writeState(state);
-
-      const latencyMs = Date && Date.now() - started;
-
-
       appendLog({
         module: 'reflex'
         type: 'metrics'
@@ -37,22 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         status: 'error'
         payload: { error: e?.message |'unknown' }
       });
-
-      return res && res.status(500).json({ error: 'Reflex failure' });    }
-  }
-  return res && res.status(405).json({ error: 'Method not allowed' });
-
-}      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
-      return res && res.status(200).json({ triggers })
-    } catch (e: any) {
-
-      appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } });
-      return res && res.status(500).json({ error: 'Reflex failure' })
-  }
-  return res && res.status(405).json({ error: 'Method not allowed' });
-
 }
-<<<<<<< HEAD
   append_log,
   evaluate_reflexes,
   read_state,
@@ -135,18 +113,3 @@ return res.status (405).json ({ error: 'Method not allowed' });
       return res.status (500).json ({ error: 'Reflex failure' });
   }
   return res.status (405).json ({ error: 'Method not allowed' });
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
-  return res.status(405).json({ error: 'Method not allowed' });
-
-=======
-
-
-  return res.status(405).json({ error: 'Method not allowed' });
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,11 +1,8 @@
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { q } = req.body |{}
     if (typeof q === 'string' && q.trim()) {
       memoryStore.push({ q: q.trim(), ts: Date.now() })
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 const memory_store: { q: string, ts: number }[] = [],
@@ -22,27 +19,8 @@ if ( {) {
   $2
 }
       memory_store.push ({ q: q.trim (), ts: Date.now () });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
-
-    return res.status (204).end ();
-
   }
-
-    const counts = new Map<string, number>();
-    for (const { q } of memoryStore) counts.set(q, (counts.get(q) || 0) + 1);
-    const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n }));
-    return res.status(200).json({ ok: true, top, total: memoryStore.length })
-=======
-
-
-
-  }
-  return res.status(405).end()
-}
-
-
-=======
   // Check condition
 if ( {) {
   $2
@@ -55,28 +33,3 @@ if ( {) {
   return res.status (405).end ();
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return res.status(405).end();
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

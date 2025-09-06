@@ -1,29 +1,15 @@
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req && req.method !== "GET")
-    return res && res.status(405).json({ error: "Method not allowed" });
-  const { since } = req && req.query as { since?: string };
-
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const state = readState();
   const sinceTs = since ? Number(since) : 0;
   const events = state && state.events.filter(
     (e) => e && e.type === "zion && zion.job.posted" && e && e.timestamp > sinceTs,
-
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
   res && res.status(200).json({ events });
 }
-
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state  } from '../../../../lib / integrations / file_store';
@@ -44,8 +30,4 @@ function handler() {
   );
   res.status (200).json ({ events });
 }
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

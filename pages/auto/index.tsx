@@ -1,11 +1,12 @@
-
-
+import type { NextPage } from 'next';
           </li>
         </ul>
       </main>
     </div>
-
-
+  )
+}
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           </li>;
         </ul>;
       </main>;
@@ -14,13 +15,7 @@
 };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default AutoIndex;
-
-
 =======
 import Head from 'next / head';
 import Link from 'next / link';

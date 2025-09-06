@@ -1,5 +1,4 @@
-
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'

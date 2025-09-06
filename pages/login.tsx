@@ -1,617 +1,33 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
-
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Layout from './components/Layout';
-
-=======
 import React, { useState } from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
 import {
-
-import {;
-  Mail,;
-  Lock,;
-  Eye,;
-  EyeOff,;
-  ArrowRight,;
-  CheckCircle,;
-  AlertCircle,;
-  User,;
-  Shield,;
-  Globe,;
-  Smartphone,;
-  Monitor,;
-  Server,;
-  Database,;
-  Cloud,;
-  Brain,;
-  Code,;
-  Settings,;
-  Wrench,;
-  Cog,;
-  Activity,;
-  PieChart,;
-  BarChart,;
-  TrendingUp,;
-  DollarSign,;
-  ShoppingCart,;
-  Home,;
-  Trash2,;
-  Camera,;
-  Heart,;
-  ClipboardList,;
-  TreePine,;
-  Droplets,;
-  Building,;
-  Rocket,;
-  Lightbulb,;
-  Target,;
-  MessageSquare,;
-  HelpCircle,;
-  Info,;
-  XCircle,;
-  Plus,;
-  Minus,;
-  ChevronUp,;
-  ChevronRight,;
-  ChevronLeft,;
-  ChevronDown,;
-  ArrowUp,;
-  ArrowDown,;
-  ArrowLeft,;
-  Pause,;
-  Stop,;
-  SkipForward,;
-  SkipBack,;
-  Volume2,;
-  VolumeX,;
-  Maximize,;
-  Minimize,;
-  RotateCcw,;
-  RotateCw,;
-  RefreshCw,;
-  Upload,;
-  Share,;
-  Copy,;
-  Edit,;
-  Trash,;
-  Save,;
-  Unlock,;
-  Bell,;
-  BellOff,;
-  Star as StarIcon,;
-  Heart as HeartIcon,;
-  ThumbsUp,;
-  ThumbsDown,;
-  MessageCircle,;
-  Send,;
-  Paperclip,;
-  Smile,;
-  Frown,;
-  Meh,;
-  Laugh,;
-  Angry,;
-  Sad,;
-  Surprised,;
-  Wink,;
-  Kiss,;
-  Tongue,;
-  Wink2,;
-  KissWinkHeart,;
-  KissClosedEyes,;
-  StuckOutTongue,;
-  StuckOutTongueWinkingEye,;
-  StuckOutTongueClosedEyes,;
-  Disappointed,;
-  Worried,;
-  Angry2,;
-  Rage,;
-  Cry,;
-  Scream,;
-  Confounded,;
-  Hugging,;
-  Smirk,;
-  NoMouth,;
-  NeutralFace,;
-  Expressionless,;
-  Unamused,;
-  RollingEyes,;
-  Thinking,;
-  LyingFace,;
-  HandOverMouth,;
-  ShushingFace,;
-  ExplodingHead,;
-  CowboyHatFace,;
-  DisguisedFace,;
-  Sunglasses,;
-  NerdFace,;
-  MonocleFace,;
-  Confused,;
-  WorriedFace,;
-  SlightlyFrowningFace,;
-  OpenMouth,;
-  Hushed,;
-  Astonished,;
-  Flushed,;
-  PleadingFace,;
-  FrowningFace,;
-  AnguishedFace,;
-  FearfulFace,;
-  ColdSweat,;
-  DisappointedRelieved,;
-  CryFace,;
-  LoudlyCryingFace,;
-  ScreamFace,;
-  StuckOutTongueFace,;
-  DroolingFace,;
-  UnamusedFace,;
-  SweatSmile,;
-  Sweat,;
-  WearyFace,;
-  TiredFace,;
-  SleepyFace,;
-  YawningFace,;
-  DizzyFace,;
-  ExplodingHeadFace,;
-  CowboyHatFace2,;
-  DisguisedFace2,;
-  SunglassesFace,;
-  NerdFace2,;
-  MonocleFace2,;
-  ConfusedFace,;
-  WorriedFace2,;
-  SlightlyFrowningFace2,;
-  OpenMouthFace,;
-  HushedFace,;
-  AstonishedFace,;
-  FlushedFace,;
-  PleadingFace2,;
-  FrowningFace2,;
-  AnguishedFace2,;
-  FearfulFace2,;
-  ColdSweatFace,;
-  DisappointedRelievedFace,;
-  CryFace2,;
-  LoudlyCryingFace2,;
-  ScreamFace2,;
-  StuckOutTongueFace2,;
-  DroolingFace2,;
-  UnamusedFace2,;
-  SweatSmileFace,;
-  SweatFace,;
-  WearyFace2,;
-  TiredFace2,;
-  SleepyFace2,;
-  YawningFace2,;
-  DizzyFace2,;
-
-} from "lucide-react";
-=======
-<<<<<<< HEAD
-  Mail,
-  Lock,
-  Eye,
-  EyeOff,
-  ArrowRight,
-  CheckCircle,
-  AlertCircle,
-  User,
-  Shield,
-  Globe,
-  Smartphone,
-  Monitor,
-  Server,
-  Database,
-  Cloud,
-  Brain,
-  Code,
-  Settings,
-  Wrench,
-  Cog,
-  Activity,
-  PieChart,
-  BarChart,
-  TrendingUp,
-  DollarSign,
-  ShoppingCart,
-  Home,
-  Trash2,
-  Camera,
-  Heart,
-  ClipboardList,
-  TreePine,
-  Droplets,
-  Building,
-  Rocket,
-  Lightbulb,
-  Target,
-  MessageSquare,
-  HelpCircle,
-  Info,
-  XCircle,
-  Plus,
-  Minus,
-  ChevronUp,
-  ChevronRight,
-  ChevronLeft,
-  ChevronDown,
-  ArrowUp,
-  ArrowDown,
-  ArrowLeft,
-  Pause,
-  Stop,
-  SkipForward,
-  SkipBack,
-  Volume2,
-  VolumeX,
-  Maximize,
-  Minimize,
-  RotateCcw,
-  RotateCw,
-  RefreshCw,
-  Upload,
-  Share,
-  Copy,
-  Edit,
-  Trash,
-  Save,
-  Unlock,
-  Bell,
-  BellOff,
-  Star as StarIcon,
-  Heart as HeartIcon,
-  ThumbsUp,
-  ThumbsDown,
-  MessageCircle,
-  Send,
-  Paperclip,
-  Smile,
-  Frown,
-  Meh,
-  Laugh,
-  Angry,
-  Sad,
-  Surprised,
-  Wink,
-  Kiss,
-  Tongue,
-  Wink2,
-  KissWinkHeart,
-  KissClosedEyes,
-  StuckOutTongue,
-  StuckOutTongueWinkingEye,
-  StuckOutTongueClosedEyes,
-  Disappointed,
-  Worried,
-  Angry2,
-  Rage,
-  Cry,
-  Scream,
-  Confounded,
-  Hugging,
-  Smirk,
-  NoMouth,
-  NeutralFace,
-  Expressionless,
-  Unamused,
-  RollingEyes,
-  Thinking,
-  LyingFace,
-  HandOverMouth,
-  ShushingFace,
-  ExplodingHead,
-  CowboyHatFace,
-  DisguisedFace,
-  Sunglasses,
-  NerdFace,
-  MonocleFace,
-  Confused,
-  WorriedFace,
-  SlightlyFrowningFace,
-  OpenMouth,
-  Hushed,
-  Astonished,
-  Flushed,
-  PleadingFace,
-  FrowningFace,
-  AnguishedFace,
-  FearfulFace,
-  ColdSweat,
-  DisappointedRelieved,
-  CryFace,
-  LoudlyCryingFace,
-  ScreamFace,
-  StuckOutTongueFace,
-  DroolingFace,
-  UnamusedFace,
-  SweatSmile,
-  Sweat,
-  WearyFace,
-  TiredFace,
-  SleepyFace,
-  YawningFace,
-  DizzyFace,
-  ExplodingHeadFace,
-  CowboyHatFace2,
-  DisguisedFace2,
-  SunglassesFace,
-  NerdFace2,
-  MonocleFace2,
-  ConfusedFace,
-  WorriedFace2,
-  SlightlyFrowningFace2,
-  OpenMouthFace,
-  HushedFace,
-  AstonishedFace,
-  FlushedFace,
-  PleadingFace2,
-  FrowningFace2,
-  AnguishedFace2,
-  FearfulFace2,
-  ColdSweatFace,
-  DisappointedRelievedFace,
-  CryFace2,
-  LoudlyCryingFace2,
-  ScreamFace2,
-  StuckOutTongueFace2,
-  DroolingFace2,
-  UnamusedFace2,
-  SweatSmileFace,
-  SweatFace,
-  WearyFace2,
-  TiredFace2,
-  SleepyFace2,
-  YawningFace2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  DizzyFace2,
-=======
-  DizzyFace2,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from "lucide-react";
   DizzyFace2
 } from 'lucide-react';
->>>>>>> origin/automation-improvements-final
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-  Mail
-  Lock
-  Eye
-  EyeOff
-  ArrowRight
-  CheckCircle
-  AlertCircle
-  User
-  Shield
-  Globe
-  Smartphone
-  Monitor
-  Server
-  Database
-  Cloud
-  Brain
-  Code
-  Settings
-  Wrench
-  Cog
-  Activity
-  PieChart
-  BarChart
-  TrendingUp
-  DollarSign
-  ShoppingCart
-  Home
-  Trash2
-  Camera
-  Heart
-  ClipboardList
-  TreePine
-  Droplets
-  Building
-  Rocket
-  Lightbulb
-  Target
-  MessageSquare
-  HelpCircle
-  Info
-  XCircle
-  Plus
-  Minus
-  ChevronUp
-  ChevronRight
-  ChevronLeft
-  ChevronDown
-  ArrowUp
-  ArrowDown
-  ArrowLeft
-  Pause
-  Stop
-  SkipForward
-  SkipBack
-  Volume2
-  VolumeX
-  Maximize
-  Minimize
-  RotateCcw
-  RotateCw
-  RefreshCw
-  Upload
-  Share
-  Copy
-  Edit
-  Trash
-  Save
-  Unlock
-  Bell
-  BellOff
-  Star as StarIcon
-  Heart as HeartIcon
-  ThumbsUp
-  ThumbsDown
-  MessageCircle
-  Send
-  Paperclip
-  Smile
-  Frown
-  Meh
-  Laugh
-  Angry
-  Sad
-  Surprised
-  Wink
-  Kiss
-  Tongue
-  Wink2
-  KissWinkHeart
-  KissClosedEyes
-  StuckOutTongue
-  StuckOutTongueWinkingEye
-  StuckOutTongueClosedEyes
-  Disappointed
-  Worried
-  Angry2
-  Rage
-  Cry
-  Scream
-  Confounded
-  Hugging
-  Smirk
-  NoMouth
-  NeutralFace
-  Expressionless
-  Unamused
-  RollingEyes
-  Thinking
-  LyingFace
-  HandOverMouth
-  ShushingFace
-  ExplodingHead
-  CowboyHatFace
-  DisguisedFace
-  Sunglasses
-  NerdFace
-  MonocleFace
-  Confused
-  WorriedFace
-  SlightlyFrowningFace
-  OpenMouth
-  Hushed
-  Astonished
-  Flushed
-  PleadingFace
-  FrowningFace
-  AnguishedFace
-  FearfulFace
-  ColdSweat
-  DisappointedRelieved
-  CryFace
-  LoudlyCryingFace
-  ScreamFace
-  StuckOutTongueFace
-  DroolingFace
-  UnamusedFace
-  SweatSmile
-  Sweat
-  WearyFace
-  TiredFace
-  SleepyFace
-  YawningFace
-  DizzyFace
-  ExplodingHeadFace
-  CowboyHatFace2
-  DisguisedFace2
-  SunglassesFace
-  NerdFace2
-  MonocleFace2
-  ConfusedFace
-  WorriedFace2
-  SlightlyFrowningFace2
-  OpenMouthFace
-  HushedFace
-  AstonishedFace
-  FlushedFace
-  PleadingFace2
-  FrowningFace2
-  AnguishedFace2
-  FearfulFace2
-  ColdSweatFace
-  DisappointedRelievedFace
-  CryFace2
-  LoudlyCryingFace2
-  ScreamFace2
-  StuckOutTongueFace2
-  DroolingFace2
-  UnamusedFace2
-  SweatSmileFace
-  SweatFace
-  WearyFace2
-  TiredFace2
-  SleepyFace2
-  YawningFace2
-  DizzyFace2
-} from "lucide-react";
-
+export default function LoginPage() {
+  const [formData, setFormData] = useState({
+    email: ""
+    password: ""
+export default function LoginPage() {;
+  const [formData, setFormData] = useState({;
+    email: "",;
+    password: "",;
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-} from './lucide-react';
-;
-export default /**
- * LoginPage - Function description
- */
-function LoginPage() {
-  const [form_data, setFormData] = useState ({
-    email: "",
-    password: "",
-  });
-  const [show_password, setShowPassword] = useState (false);
-  const [is_loading, setIsLoading] = useState (false);
-  const [error, set_error] = useState ("");
-;
-  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-    const { name, value } = e.target;
-    setFormData ((prev) => ({
-
       ...prev,
       [name]: value,
   const [error, setError] = useState('');
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -619,99 +35,24 @@ function LoginPage() {
       [name]: value
       ...prev
       [name]: value
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-export default function LoginPage() {
-  const [formData, setFormData] = useState({
-
-    email: "",
-    password: "",;
-
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-<<<<<<< HEAD
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value } = e && e.target;
     setFormData((prev) => ({;
       ...prev,;
       [name]: value,;
     }));
-
-
-    try {;
-      // Simulate API call;
-=======
-    setIsLoading(true);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-    setError("");
-    try {
-      // Simulate API call
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      // For demo purposes, accept any email/password;
-      if (formData && formData.email && formData && formData.password) {;
-        // Redirect to dashboard or home page;
-        window && window.location.href = "/";
-      } else {;
-
         setError("Please fill in all fields");
       }
     } catch (err) {;
       setError("Login failed. Please try again.");
-
-    setError('');
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      // For demo purposes, accept any email/password
-      if (formData.email && formData.password) {
-        // Redirect to dashboard or home page
-        window.location.href = '/';
-      } else {
-        setError('Please fill in all fields');
-      }
-    } catch (err) {
-      setError('Login failed. Please try again.');
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    } finally {
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    } finally {
-    } finally {;
       setIsLoading(false);
     }
   }
   return (
-
-        <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </Head>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -728,48 +69,8 @@ export default function LoginPage() {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-
-    <Layout>;
-      <Head>;
-        <title>Login - Zion Tech Group</title>;
-        <meta
-          name="description"
-          content="Sign in to your Zion Tech Group account to access your dashboard and services."
-        />;
-      </Head>;
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-md w-full space-y-8">;
-          <motion&& motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}>;
-            <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">;
-              <Shield className="h-6 w-6 text-white" />;
-            </div>;
-            <h2 className="mt-6 text-3xl font-bold text-gray-900">;
-              Sign in to your account;
-            </h2>;
-            <p className="mt-2 text-sm text-gray-600">;
-
-              Or{" "}
-=======
-              Or{' '}
->>>>>>> origin/automation-improvements-final
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href="/contact"
-
-                className="font-medium text-blue-600 hover:text-blue-500">;
-                contact us for access;
-              </Link>;
-            </p>;
-          </motion && motion.div>;
-          <motion&& motion.div
-
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -785,16 +86,6 @@ export default function LoginPage() {
                   {error}
                 </motion && motion.div>;
               )}
-
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-
-=======
-
-=======
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Email address
                 </label>
                 <div className="relative">
@@ -821,22 +112,12 @@ export default function LoginPage() {
                     onChange={handleInputChange}
                     className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Enter your email"
-
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Password
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
-                  />;
-                </div>;
-              </div>;
               <div>;
                 <label
                   htmlFor="password"
@@ -868,25 +149,11 @@ export default function LoginPage() {
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
                     )}
-
-                  </button>;
-                </div>;
-              </div>;
-              <div className="flex items-center justify-between">;
-                <div className="flex items-center">;
-
                   <input
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-
-                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     Remember me
                   </label>
                 </div>
@@ -900,7 +167,6 @@ export default function LoginPage() {
                 </div>
               </div>
               <div>
-<<<<<<< HEAD
                   />;
                   <label
                     htmlFor="remember-me"
@@ -1071,13 +337,6 @@ if ( {) {
                   </Link>;
                 </div>;
               </div>;
-
-                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -1099,48 +358,6 @@ if ( {) {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
-
-                </button>;
-              </div>;
-            </form>;
-            <div className="mt-6">;
-              <div className="relative">;
-                <div className="absolute inset-0 flex items-center">;
-                  <div className="w-full border-t border-gray-300" />;
-                </div>;
-                <div className="relative flex justify-center text-sm">;
-                  <span className="px-2 bg-white text-gray-500">;
-                    Or continue with;
-                  </span>;
-                </div>;
-              </div>;
-              <div className="mt-6 grid grid-cols-2 gap-3">;
-                <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">;
-                  <Globe className="h-5 w-5" />;
-                  <span className="ml-2">Google</span>;
-                </button>;
-                <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">;
-                  <User className="h-5 w-5" />;
-                  <span className="ml-2">Microsoft</span>;
-                </button>;
-              </div>;
-            </div>;
-          </motion && motion.div>;
-          <motion&& motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
-            <p className="text-sm text-gray-600">;
-
-              Don't have an account?{" "}
-=======
-              Don't have an account?{' '}
->>>>>>> origin/automation-improvements-final
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;

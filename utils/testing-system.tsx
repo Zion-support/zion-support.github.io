@@ -1,9 +1,26 @@
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import "@testing-library/jest-dom";
+export class TestingSystem {
+  static async testUserInteraction(
+    element: HTMLElement,
+    action: "click" | "type" | "hover"
+  ) {
+    switch (action) {
+      case "click":
+        element.click();
+        break;
+      case "type":
+        // Handle type action
+        break;
+      case "hover":
+        // Handle hover action
+        break;
+      default:
+        throw new Error(`Unknown action: ${action}`);
+    }
+  }
+}
+import &quot;@testing-library/jest-dom&quot;; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: &apos;click&apos; | &apos;type&apos; | &apos;hover&apos; ) { switch (action) { case &apos;click&apos;: element.click(); break; case &apos;type&apos;: break; case &apos;hover&apos;: break; default: break} } }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import "@testing-library/jest-dom";
 // Type definition for HTMLElement
 interface HTMLElement {
@@ -29,13 +46,7 @@ export class TestingSystem {
     }
   }
 }
-
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 import "@testing-library/jest-dom;
 import &quot,@testing-library/jest-dom&quot, interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction(element: HTMLElement,action: &apos,click&apos, | &apos,type&apos, | &apos,hover&apos) { switch (action) { case &apos,click&apos,: element.click(), break, case &apos,type&apos,: break, case &apos,hover&apos,: break, default: break} } };
@@ -82,28 +93,14 @@ export class TestingSystem {,
     };
   };
 };
-
-
-
-// Testing system utilities
-export const testingSystem = {
-  // Add testing utilities here
-}
-
-=======
-
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 =======
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
-}};
-},;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-// Testing system utilities
-export const testingSystem = {
+// Testing system utilities;
+export const testing_system = {
   // Add testing utilities here;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

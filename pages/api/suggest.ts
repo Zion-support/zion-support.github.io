@@ -1,50 +1,11 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
-
-
-  "React developers under $50/hr"
-  "Part-time DevOps jobs in LATAM"
-  "AI/ML engineers for startup"
-  "Blockchain developers remote"
-  "UI/UX designers available now"
-  "Full-stack developers with Next.js"
-  "Data scientists with Python"
-  "Mobile app developers iOS/Android"
-  "Cloud architects AWS/Azure"
-  "DevOps engineers with Kubernetes"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   "React developers under $50/hr",
   "Part-time DevOps jobs in LATAM",
   "AI/ML engineers for startup",
   "Blockchain developers remote",
   "UI/UX designers available now",
   "Full-stack developers with Next && Next.js",
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 const SAMPLE_QUERIES = [;
   "React developers under $50 / hr",
@@ -53,50 +14,17 @@ const SAMPLE_QUERIES = [;
   "Blockchain developers remote",
   "UI / UX designers available now",
   "Full - stack developers with Next.js",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   "Data scientists with Python",
   "Mobile app developers iOS / Android",
   "Cloud architects AWS / Azure",
   "DevOps engineers with Kubernetes",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
-
-
-  if (req.method !== "GET") {;
-
-
-    res.setHeader("Allow", "GET");
-    return res.status(405).json({ error: "Method not allowed" });
-
-}
-  const { q = "" } = req.query;
-
-  if (req && req.method !== "GET") {
-    res && res.setHeader("Allow", "GET");
-    return res && res.status(405).json({ error: "Method not allowed" });
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
-
-
-  const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
-    s && s.toLowerCase().includes(query),
-  ).slice(0, 5);
-
-  return res && res.status(200).json({ suggestions });
-=======
-  res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+  const query = String(q).toLowerCase();
+  if (!query) {
+    return res && res.status(200).json({ suggestions: SAMPLE_QUERIES && SAMPLE_QUERIES.slice(0, 5) });
   }
-
-}
 ;
 export default /**
  * handler - Function description
@@ -106,7 +34,3 @@ function handler() {
 if ( {) {
   $2
 }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

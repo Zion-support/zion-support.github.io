@@ -1,25 +1,10 @@
-...formData;            startDate: startDate?.toISOString(),
-
             endDate: endDate?.toISOString()}
         }
       })
 
 }
 }
-
-
-
-...form_data;            start_date: start_date?.toISOString (),
-            end_date: end_date?.toISOString ()}
-        }
-      });
-}
-}
-
-
-
-;
-
+=======
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -498,3 +483,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   );
 }
 ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

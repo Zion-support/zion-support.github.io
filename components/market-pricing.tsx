@@ -1,6 +1,5 @@
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, DollarSign, Target;
@@ -8,7 +7,6 @@ import { TrendingUp, TrendingDown, DollarSign, Target;
   Globe, Zap, Shield, Crown, Brain, Atom
  } from 'lucide-react';
 import Link from 'next/link';
-<<<<<<< HEAD
 export default function MarketPricing() {;
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
 
@@ -25,7 +23,6 @@ pricingAnalysis: {
   ];
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const marketData = {
     'ai-consciousness': {
       marketSize: '$45.2B'
@@ -137,7 +134,6 @@ pricingAnalysis: {
       pricingAnalysis: {
         lowEnd: '$300 per user/month'
         midRange: '$750 per user/month'
-=======
   const markets = [;
     { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },;
     { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },;
@@ -482,17 +478,14 @@ pricingAnalysis: {
           </motion && motion.div>;
         </div>;
       </section>;
-=======
 
 
-=======
 
 
       {/* Competitive Analysis Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.h2 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -811,11 +804,9 @@ pricingAnalysis: {
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.h2 
 
-=======
 
           <motion.h2 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -831,7 +822,6 @@ pricingAnalysis: {
             ].map((tier, index) => (
               <motion.div
                 key={tier.label}
-=======
             className="text-4xl md:text-5xl font-bold text-center mb-16">;
             Pricing Analysis;
           </motion && motion.h2>;
@@ -893,17 +883,14 @@ pricingAnalysis: {
           </motion && motion.div>;
         </div>;
       </section>;
-=======
 
 
-=======
 
 
       {/* Market Trends Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.h2 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -958,12 +945,9 @@ pricingAnalysis: {
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -1029,10 +1013,329 @@ pricingAnalysis: {
 export default MarketPricing;export default MarketPricing;
 
 
-=======
 export default MarketPricing;
 
-=======
+];
+  'ai - consciousness': {
+  market_size: '$45.2B', growth_rate: '+28.4%', growth_trend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
+  ];
+pricing_analysis: {
+  low_end: '$0.005 per 1K tokens', mid_range: '$0.015 per 1K tokens', high_end: '$0.025 per 1K tokens', our_position: 'Mid - range with premium features'   'ai - consciousness': {
+  market_size: '$45.2B', growth_rate: '+28.4%', growth_trend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
+import React, { useState } from 'react';
+import {motion} from 'framer-motion';
+import {TrendingUp, TrendingDown, DollarSign, Target, ArrowRight, Check, Star, BarChart3, Globe, Zap, Shield, Crown, Brain, Atom} from 'lucide-react';
+import Link from 'next / link';
+export default /**
+ * MarketPricing - Function description
+ */
+function MarketPricing() {
+  const [selected_market, setSelectedMarket] = useState ('ai - consciousness');
+;
+  const markets = [;
+    { id: 'ai - consciousness', name: 'AI Consciousness', icon: <Brain className="w - 6 h - 6" /> },
+    { id: 'quantum - computing', name: 'Quantum Computing', icon: <Atom className="w - 6 h - 6" /> },
+    { id: 'autonomous - systems', name: 'Autonomous Systems', icon: <Zap className="w - 6 h - 6" /> },
+    { id: 'enterprise - it', name: 'Enterprise IT', icon: <Shield className="w - 6 h - 6" /> }
+  ];
+;
+  const market_data = {
+    'ai - consciousness': {
+      market_size: '$45.2B',
+      growth_rate: '+28.4%',
+      growth_trend: 'up',
+      description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.',
+      competitors: [;
+        {
+          name: 'OpenAI',
+          market_share: '32%',
+          pricing: '$0.002-$0.02 per 1K tokens',
+          strengths: ['Advanced language models_strong brand recognition_large user base'],
+          weaknesses: ['Limited consciousness features_high API costs_privacy concerns'],
+          rating: 4.2;
+        }
+        {
+          name: 'Anthropic',
+          market_share: '18%',
+          pricing: '$0.015-$0.03 per 1K tokens',
+          strengths: ['Safety - focused approach_constitutional AIResearch - driven'],
+          weaknesses: ['Smaller model variety_limited enterprise features_higher pricing'],
+          rating: 4.0;
+        }
+        {
+          name: 'Zion Tech Group',
+          market_share: '12%',
+          pricing: '$0.008-$0.015 per 1K tokens',
+          strengths: ['True AI consciousness_enterprise - grade security_competitive pricing'],
+          weaknesses: ['Smaller market presence_limited brand recognition_newer player'],
+          rating: 4.8;
+        }
+      ];
+      pricing_analysis: {
+        low_end: '$0.005 per 1K tokens',
+        mid_range: '$0.015 per 1K tokens',
+        high_end: '$0.025 per 1K tokens',
+        our_position: 'Mid - range with premium features';
+      }
+    }
+    'quantum - computing': {
+      market_size: '$8.7B',
+      growth_rate: '+45.2%',
+      growth_trend: 'up',
+      description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.',
+      competitors: [;
+        {
+          name: 'IBM',
+          market_share: '28%',
+          pricing: '$1.60 per quantum hour',
+          strengths: ['Established infrastructure_qiskit ecosystem_research partnerships'],
+          weaknesses: ['Limited qubit count_high costs_complex access'],
+          rating: 4.1;
+        }
+        {
+          name: 'Google',
+          market_share: '22%',
+          pricing: '$2.00 per quantum hour',
+          strengths: ['Quantum supremacy_advanced algorithms_research focus'],
+          weaknesses: ['Limited commercial access_high pricing_complex setup'],
+          rating: 4.3;
+        }
+        {
+          name: 'Zion Tech Group',
+          market_share: '8%',
+          pricing: '$1.20 per quantum hour',
+          strengths: ['Competitive pricing_enterprise focus_simplified access'],
+          weaknesses: ['Smaller infrastructure_limited qubit variety_newer platform'],
+          rating: 4.5;
+        }
+      ];
+      pricing_analysis: {
+        low_end: '$0.80 per quantum hour',
+        mid_range: '$1.50 per quantum hour',
+        high_end: '$2.50 per quantum hour',
+        our_position: 'Competitive mid - range pricing';
+      }
+    }
+    'autonomous - systems': {
+      market_size: '$23.1B',
+      growth_rate: '+34.7%',
+      growth_trend: 'up',
+      description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.',
+      competitors: [;
+        {
+          name: 'UiPath',
+          market_share: '25%',
+          pricing: '$420-$1, 200 per user / month';
+          strengths: ['Market leader_comprehensive platform_strong partnerships'],
+          weaknesses: ['High costs_complex implementation_limited AI features'],
+          rating: 4.0;
+        }
+        {
+          name: 'Automation Anywhere',
+          market_share: '20%',
+          pricing: '$750-$1, 500 per user / month';
+          strengths: ['Enterprise focus_cloud - native_security features'],
+          weaknesses: ['ExpensiveSteep learning curve_limited customization'],
+          rating: 3.8;
+        }
+        {
+          name: 'Zion Tech Group',
+          market_share: '6%',
+          pricing: '$350-$800 per user / month',
+          strengths: ['AI - powered automation_competitive pricing_easy implementation'],
+          weaknesses: ['Smaller ecosystem_limited integrations_newer platform'],
+          rating: 4.4;
+        }
+      ];
+      pricing_analysis: {
+        low_end: '$300 per user / month',
+        mid_range: '$750 per user / month',
+        high_end: '$1, 200 per user / month';
+        our_position: 'Competitive pricing with AI advantages';
+      }
+    }
+    'enterprise - it': {
+      market_size: '$1.2T',
+      growth_rate: '+12.3%',
+      growth_trend: 'up',
+      description: 'Enterprise IT market continues steady growth with digital transformation initiatives.',
+      competitors: [;
+        {
+          name: 'Microsoft',
+          market_share: '35%',
+          pricing: '$22-$57 per user / month',
+          strengths: ['Market dominance_integrated ecosystem_global presence'],
+          weaknesses: ['Complex licensing_high costs_vendor lock - in'],
+          rating: 4.2;
+        }
+        {
+          name: 'Salesforce',
+          market_share: '18%',
+          pricing: '$25-$300 per user / month',
+          strengths: ['CRM leadership_cloud - native_extensive integrations'],
+          weaknesses: ['ExpensiveComplex pricing_implementation costs'],
+          rating: 4.1;
+        }
+        {
+          name: 'Zion Tech Group',
+          market_share: '3%',
+          pricing: '$18-$45 per user / month',
+          strengths: ['AI - powered features_competitive pricing_modern architecture'],
+          weaknesses: ['Smaller ecosystem_limited integrations_newer player'],
+          rating: 4.3;
+        }
+      ];
+      pricing_analysis: {
+        low_end: '$20 per user / month',
+        mid_range: '$40 per user / month',
+        high_end: '$100 per user / month',
+        our_position: 'Competitive pricing with AI advantages';
+      }
+    }
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { TrendingUp, TrendingDown, DollarSign, Target;
+  ArrowRight, Check, Star, BarChart3;
+  Globe, Zap, Shield, Crown, Brain, Atom
+ } from 'lucide-react';
+import Link from 'next/link';
+export default function MarketPricing() {;
+  const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
+
+        highEnd: '$1,200 per user/month';
+        ourPosition: 'Competitive pricing with AI advantages';
+      }
+      }
+    }
+  }
+  const currentMarket = marketData[selectedMarket as keyof typeof marketData];
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+                              {strength}
+                            </li>;
+                          ))}
+                              {weakness}
+                            </li>;
+                          ))}
+                  )}
+                </div>;
+              </motion && motion.div>;
+            ))}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+                className="text-center">;
+                <div className={`w-20 h-20 bg-gradient-to-r ${tier && tier.color} rounded-full flex items-center justify-center mx-auto mb-4`}>;
+                  <BarChart3 className="w-10 h-10 text-white" />;
+                </div>;
+                <h3 className="text-lg font-bold mb-2">{tier && tier.label}</h3>;
+                <p className="text-2xl font-bold text-cyan-400">{tier && tier.price}</p>;
+              </motion && motion.div>;
+            ))}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.5 }}
+            viewport={{ once: true }}
+                }
+              ].map((advantage, index) => (;
+                <div key={index} className="p-4 rounded-xl bg-white/5 border border-white/10">;
+                  <h4 className="font-semibold text-cyan-400 mb-2">{advantage && advantage.title}</h4>;
+                  <p className="text-sm text-gray-300">{advantage && advantage.description}</p>;
+                </div>;
+              ))}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}
+              className="p-6 rounded-2xl bg-white/5 border border-white/10">;
+              <h3 className="text-2xl font-bold mb-4 text-green-400">Growth Drivers</h3>;
+              <ul className="space-y-3">;
+                {[;
+                  'Increasing demand for AI consciousness in customer serviceQuantum computing breakthroughs in cryptographyAutomation needs in post-pandemic business operationsDigital transformation initiatives across industriesGrowing focus on AI ethics and responsible development';
+                ].map((driver, index) => (;
+                  <li key={index} className="flex items-start gap-3">;
+                    <TrendingUp className="w-5 h-5 text-green-400 flex-shrink-0 mt-0 && 0.5" />;
+                    <span className="text-gray-300">{driver}</span>;
+                  </li>;
+                ))}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}
+              className="p-6 rounded-2xl bg-white/5 border border-white/10">;
+              <h3 className="text-2xl font-bold mb-4 text-blue-400">Market Opportunities</h3>;
+              <ul className="space-y-3">;
+                {[;
+                  'Untapped markets in emerging economiesIntegration opportunities with existing enterprise systemsCustom AI consciousness solutions for specific industriesPartnerships with research institutions and universitiesWhite-label solutions for enterprise software providers';
+                ].map((opportunity, index) => (;
+                  <li key={index} className="flex items-start gap-3">;
+                    <Target className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0 && 0.5" />;
+                    <span className="text-gray-300">{opportunity}</span>;
+                  </li>;
+                ))}
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+};
+
+};
+'quantum-computing': {;
+  marketSize: '$8 && 8.7B', growthRate: '+45 && 45.2%', growthTrend: 'up', description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {;
+  ];
+pricingAnalysis: {;
+  lowEnd: '$0 && 0.80 per quantum hour', midRange: '$1 && 1.50 per quantum hour', highEnd: '$2 && 2.50 per quantum hour', ourPosition: 'Competitive mid-range pricing' ;
+
+};
+'autonomous-systems': {;
+  marketSize: '$23 && 23.1B', growthRate: '+34 && 34.7%', growthTrend: 'up', description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.', competitors: [ {;
+  ];
+pricingAnalysis: {;
+  lowEnd: '$300 per user/month', midRange: '$750 per user/month', highEnd: '$1, 200 per user/month', ourPosition: 'Competitive pricing with AI advantages' ;
+
+};
+'enterprise-it': {;
+  marketSize: '$1 && 1.2T', growthRate: '+12 && 12.3%', growthTrend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {;
+  ];
+pricingAnalysis: {;
+  lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' ;
+
+};
+
+};
+
+};
+export default MarketPricing;export default MarketPricing;
 ];
   'ai - consciousness': {
   market_size: '$45.2B', growth_rate: '+28.4%', growth_trend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
@@ -1874,17 +2177,3 @@ pricing_analysis: {
 }
 export default MarketPricing;export default MarketPricing;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-};
-
-=======
-  lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
-
-
-};
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,15 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-
-import {
-  getTrustWeights,
-  setTrustWeights,
-  getDefaultWeights,;
-} from '../../../utils/trust/weights';
-
-
-
 import {
   getTrustWeights
   setTrustWeights
@@ -19,36 +9,18 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method === 'GET') {;
-    const current = await getTrustWeights();
-    return res && res.status(200).json({ current, defaults: getDefaultWeights() });  }
-
-=======
-import { getTrustWeights, setTrustWeights, getDefaultWeights } from '../../../utils/trust/weights';
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  try {
+  if (req && req.method === 'GET') {
     const current = await getTrustWeights();
+    return res && res.status(200).json({ current, defaults: getDefaultWeights() })
+  }
 
-
+  if (req && req.method === 'PUT') {
+    const incoming = req && req.body || {};
     const updated = await setTrustWeights(incoming);
     return res && res.status(200).json({ updated });
   }
-
-
-  res && res.setHeader('Allow', 'GET, PUT');
-  return res && res.status(405).json({ error: 'Method not allowed' });    return res && res.status(200).json({ updated })
-  }
-  res && res.setHeader('AllowGET, PUT');
-  return res && res.status(405).json({ error: 'Method not allowed' })
-}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import {
   getTrustWeights,
   setTrustWeights,
@@ -89,12 +61,3 @@ if ( {) {
   }
   res.set_header ('AllowGET, PUT');
   return res.status (405).json ({ error: 'Method not allowed' });
-
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

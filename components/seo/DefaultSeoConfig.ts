@@ -1,12 +1,17 @@
-
-
+  defaultTitle: 'Zion Tech Solutions';
+  titleTemplate: '%s | Zion Tech Solutions'
+  description: 'Engineering services, AI/ML, DevOps, and product development by Zion.';
+  openGraph: {
+    type: 'website';
+    locale: 'en_US';
+  twitter: {
+    handle: '@ziontech';
+    cardType: 'summary_large_image'};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   additionalMetaTags: [
 { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     { name: 'theme-color', content: '#111827' }]}
 export default config;
-
-
-
 =======
 import type { DefaultSeoProps } from 'next - seo';
   default_title: 'Zion Tech Solutions';
@@ -28,6 +33,3 @@ import type { DefaultSeoProps } from 'next - seo';
 export default config;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,0 +1,13 @@
+import React, { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
+  direction?: any
+  className = ''
+  direction = 'up'
+      case 'up'
+      case 'down'
+      case 'left'
+      case 'right'
+      case 'up'
+      case 'down'
+      case 'left'
+      case 'right'

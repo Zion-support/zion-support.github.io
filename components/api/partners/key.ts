@@ -1,5 +1,11 @@
-
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import {
+  await saveApiKeys(keys);
+  return res && res.status(201).json({ apiKey: newKey && newKey.key });    id: uuidv4();
+    partnerId: auth && auth.partner.id;
+    key: uuidv4();
+    active: true;
+    createdAt: now;
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
@@ -113,24 +119,5 @@ if (existing.active = false) {
   keys.push (new_key as any);
   await saveApiKeys (keys);
   return res.status (201).json ({ api_key: new_key.key });
-  }
-  const { apiKey } = auth
-  const keys = await listApiKeys()
-  // Deactivate old key
-  const existing = keys.find((k) => k.id === apiKey.id)
-  if (existing) existing.active = false,
-  // Create new key
-  const now = new Date().toISOString()
-  const newKey = {
-    id: uuidv4(),
-    partnerId: auth.partner.id,
-    key: uuidv4(),
-    active: true,
-    createdAt: now,
-    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60},
-  keys.push(newKey as any),
-  await saveApiKeys(keys),
-  return res.status(201).json({ apiKey: newKey.key })
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
