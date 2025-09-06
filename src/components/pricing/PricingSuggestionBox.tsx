@@ -28,7 +28,6 @@ interface PricingSuggestionBoxProps {
   rateType: "hourly" | "fixed"
 }
 
-
       <Card className='border border-dashed border-muted'>
         <CardContent className='flex items-center justify-center p-6'>
           <div className='text-center'>
@@ -40,7 +39,6 @@ import { Button } from "@/components/ui/button";
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, Info, ThumbsUp } from 'lucide-react'
 import { PricingSuggestion } from "@/services/pricingSuggestionService";
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null,
@@ -49,24 +47,15 @@ interface PricingSuggestionBoxProps {
   rateType: "hourly" | "fixed"
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion;
   isLoading;
   onApplySuggestion;
   rateType}) => {
   if (isLoading) {
-
-
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 
@@ -78,10 +67,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion,
   isLoading,
   onApplySuggestion,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     return (
       <Card className="border border-dashed border-muted">
@@ -90,12 +75,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />
             <p className="text-sm text-muted-foreground">
               Generating optimal pricing suggestion...
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
             </p>
           </div>
@@ -108,14 +87,12 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   }
   const confidenceColor = {
 
-
     )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
-import { Loader2, Info, ThumbsUp } from 'lucide-react';
 import { PricingSuggestion } from "@/services/pricingSuggestionService",;
 interface PricingSuggestionBoxProps {;
   suggestion: PricingSuggestion | null,;
@@ -156,12 +133,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
       <CardContent className="p-5 space-y-4">
         <div className="flex items-center justify-between">
@@ -245,29 +216,13 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           </Badge>
         </div>
 
-
         <div className="bg-muted/50 rounded-md p-3 text-center">
           <span className="text-2xl font-bold">
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
           <span className="text-sm text-muted-foreground ml-1">
             {rateType === "hourly" ? "/hour" : " total"}
-<<<<<<< HEAD
-          </span>
-        </div>
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
-
 
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
@@ -292,11 +247,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
                 </Button>
 
         <div className="flex items-center justify-between">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
               </TooltipTrigger>
               <TooltipContent>
@@ -309,42 +259,24 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
         </p>
       </CardContent>
     </Card>
   )
-
-        
 
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
         </p>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  )
 
+  )
 
   );
 };
 "  );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 },
 ;
@@ -399,16 +331,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     </Card>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
 };
 
-import React from 'react';
 import { Button } from '@/components / ui / button';
 import {
   TooltipProvider,
@@ -418,7 +343,6 @@ import {
 } from '@/components / ui / tooltip';
 import { Card, CardContent } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
-import { Loader2, Info, ThumbsUp } from 'lucide-react';
 import { PricingSuggestion } from '@/services / pricingSuggestionService';
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null;

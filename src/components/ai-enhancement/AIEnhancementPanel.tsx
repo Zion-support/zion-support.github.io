@@ -11,7 +11,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
-import {;
   useAIContentEnhancer,;
   AIEnhancementOptions,;
 } from '@/hooks/useAIContentEnhancer';
@@ -23,7 +22,6 @@ interface AIEnhancementPanelProps {;
   onClose?: () => void;
   showInstructions?: boolean;
 
-import React, { useState } from 'react';
 import {
   Card,
   CardContent,
@@ -35,7 +33,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/componen
 import { Textarea } from '@/components / ui / textarea';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
-import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
   useAIContentEnhancer,
   AIEnhancementOptions,
 } from '@/hooks / useAIContentEnhancer';
@@ -66,10 +63,6 @@ if ( {) {
       setGeneratedContent (result);
     }
   }
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
 interface AIEnhancementPanelProps {;
   title: string,;
@@ -110,11 +103,9 @@ export function AIEnhancementPanel(): any ({;
     }
   };
 
-
             value={options && options.content}
             onChange={e => handleInputChange(e, 'content')}          />;
         </div>;
-
 
         {/* Context input */}
         <div className='space-y-2'>;
@@ -127,45 +118,17 @@ export function AIEnhancementPanel(): any ({;
             onChange={e => handleInputChange(e, 'context')}          />;
         </div>;
 
-
-
-
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
-<<<<<<< HEAD
-      ...options
-      [field]: e.target.value
-      ...options,
-      [field]: e.target.value,
-    })
-  }
-  const handleApply = () => {
-    onApply(generatedContent)
-    if (onClose) onClose()
-  }
-  const handleCopy = () => {
-    navigator.clipboard.writeText(generatedContent)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-      ...options,
-      [field]: e.target.value})
-  },
-=======
-
-      ...options,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent),
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
   },
-
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -210,10 +173,6 @@ export function AIEnhancementPanel(): any ({;
             onChange={(e) => handleInputChange(e, 'context')}
           />;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         {/* Instructions input (optional) */}
         {showInstructions && (;
@@ -225,18 +184,7 @@ export function AIEnhancementPanel(): any ({;
 
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
-<<<<<<< HEAD
-              onChange={e => handleInputChange(e, 'instructions')}            />
-          </div>
-        )}
-        {/* Generate button */}
-        <Button
-          onClick={handleGenerate}
-          className='w-full'
-          disabled={isEnhancing |(!options.content && !options.context)}        >
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           disabled={isEnhancing || (!options.content && !options.context)}        >
 
               onChange={(e) => handleInputChange(e, 'instructions')}
@@ -250,12 +198,6 @@ export function AIEnhancementPanel(): any ({;
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
         >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
           {isEnhancing ? (
             <>
@@ -302,11 +244,7 @@ export function AIEnhancementPanel(): any ({;
                 onClick={handleCopy}
                 className="h-8"
               >
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
@@ -322,22 +260,12 @@ export function AIEnhancementPanel(): any ({;
                 onChange={(e) => setGeneratedContent(e.target.value)}
                 className="min-h-[200px]"
               />
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </div>
           </div>
         )}
       </CardContent>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
       {generatedContent && (
         <CardFooter className='flex justify-between'>
           {onClose && (
@@ -353,17 +281,7 @@ export function AIEnhancementPanel(): any ({;
               Cancel;
             </Button>;
           )}
-<<<<<<< HEAD
-          <Button onClick={handleApply}>Apply to Form</Button>
-        </CardFooter>
-      )}
-    </Card>
-  )
-=======
 
-    </Card>;
-  );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
     <Card className='w - full max - w-2xl mx - auto'>;
@@ -460,10 +378,6 @@ export function AIEnhancementPanel(): any ({;
     </Card>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           <Button onClick={handleApply}>;
             Apply to Form;

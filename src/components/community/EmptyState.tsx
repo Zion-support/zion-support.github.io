@@ -1,10 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -50,14 +46,10 @@ import {;
   TooltipProvider,;
   TooltipTrigger,;
 } from '@/components/ui/tooltip';
-import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 interface EmptyStateProps {;
-import React from 'react';
 import Link from 'next / link';
-import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components / ui / button';
-import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
@@ -83,11 +75,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({
       </div>
       <h2 className='text-xl font-medium mb-2'>{title}</h2>
       <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
-import React from 'react';
-import Link from 'next/link';
-import { MessageSquare } from 'lucide-react'
-import { Button } from '@/components/ui/button';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface EmptyStateProps {
   title: string,
@@ -96,7 +83,6 @@ interface EmptyStateProps {
   href: string,
 
   hasSession: boolean
-
 
 const EmptyState: React.FC<EmptyStateProps> = ({;
   title,;
@@ -130,10 +116,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
         <MessageSquare className="h-10 w-10 text-zion-purple" />
       </div>
       <h2 className="text-xl font-medium mb-2">{title}</h2>
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <p className="text-muted-foreground mb-6">{subtitle}</p>
       <TooltipProvider>
         <Tooltip>
@@ -147,23 +130,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
             )}
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
-<<<<<<< HEAD
-        </Tooltip>
-      </TooltipProvider>
-    </div>
-  )
-};
-export default EmptyState;
-}
-export default EmptyState
-
-
-
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         </Tooltip>;
       </TooltipProvider>;
@@ -173,7 +139,6 @@ export default EmptyState
 export default EmptyState;
 
 };
-
 
 export default EmptyState;
 

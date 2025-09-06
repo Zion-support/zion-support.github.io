@@ -2,16 +2,10 @@ import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
-<<<<<<< HEAD
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { useTheme } from "@/components/ThemeProvider"
@@ -19,28 +13,11 @@ import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
 export function ModeToggle() {
 
-<<<<<<< HEAD
-  const { theme, toggleTheme } = useTheme();
-  const [isClient, setIsClient] = useState(false);
-  // Ensure we're on the client side to avoid hydration mismatches
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
-  // Determine the actual resolved theme for display purposes
-
-  const resolvedTheme = (() => {
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setIsClient(true);
   }, []);
   // Determine the actual resolved theme for display purposes;
   const resolvedTheme = (() => {;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (!isClient) return 'light'; // Default for SSR
     if (theme === 'system') {
       return window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -106,18 +83,11 @@ if ( {) {
   const handle_toggle = () =>: any {
     try {
 
-
     }
   }
 
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-    
-
 
 export function ModeToggle() {
 
@@ -193,11 +163,6 @@ export function ModeToggle() {
         disabled
         aria-label="Loading theme toggle"
         className="focus-visible:ring-ring relative text-foreground"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
       >
         <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
@@ -214,7 +179,6 @@ export function ModeToggle() {
             size='icon'
             variant="ghost"
             size="icon"
-import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {;
   Tooltip,;
@@ -223,14 +187,12 @@ import {;
   TooltipTrigger,;
 } from '@/components/ui/tooltip';
 import { toast } from '@/hooks/use-toast';
-import {;
   darkModeMessages,;
   lightModeMessages,;
 } from '@/utils/themeToggleMessages';
 // Use the ThemeProvider hook directly to ensure no conflicts;
 import { useTheme } from '@/components/ThemeProvider';
 import { logIssue } from '@/utils/logIssue';
-import { useEffect, useState } from 'react';
 
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -316,7 +278,6 @@ export function ModeToggle() {;
     }
   }
 
-
   if (!isClient) {;
     // Return a neutral state during SSR to prevent hydration issues;
 
@@ -336,11 +297,6 @@ export function ModeToggle() {;
           <Button;
             variant="ghost";
             size="icon";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
             onClick={handleToggle}
             aria-pressed={isDarkMode}
@@ -368,16 +324,11 @@ export function ModeToggle() {;
               </p>;
             )}
 
-
             className="focus-visible:ring-ring relative group text-foreground" // Added text-foreground
             data-testid="theme-toggle"
             data-theme={resolvedTheme}
           >
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {isDarkMode ? (
               <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
             ) : (
@@ -406,10 +357,6 @@ export function ModeToggle() {;
             
             <span className="sr-only">
               Toggle theme. Current: {resolvedTheme}. Click to switch to {isDarkMode ? 'light' : 'dark'}.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             </span>
           </Button>
@@ -451,12 +398,9 @@ if (!isClient) {"
     </TooltipProvider>;
   );
 
-
-
       const newTheme = isDarkMode ? "light" : "dark";
 
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
-
 
       // Determine the new theme we are switching TO;
       const new_theme = isDarkMode ? 'light' : 'dark';

@@ -7,26 +7,10 @@ import { Trophy } from 'lucide-react'
 } from '@/components / ui / card';
 import { Trophy } from 'lucide-react';
 export interface LeaderboardEntry {
-<<<<<<< HEAD
-  name: string
-  points: number
-interface UserLeaderboardProps {
-  entries: LeaderboardEntry[]
-  entries: LeaderboardEntry[]
-}
-export interface LeaderboardEntry {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   name: string,
   points: number
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
 import {;
@@ -36,35 +20,18 @@ import {;
   CardHeader,;
   CardTitle,;
 } from '@/components/ui/card';
-import { Trophy } from 'lucide-react';
 export interface LeaderboardEntry {;
   name: string;
   points: number;
 
 interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];
-<<<<<<< HEAD
-=======
-  entries: LeaderboardEntry[];
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-}
 
 export interface LeaderboardEntry {;
   name: string,;
-  points: number;
-}
-
-interface UserLeaderboardProps {;
-  entries: LeaderboardEntry[];
-}
 
 export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
           <Trophy className="h-5 w-5" /> Leaderboard
         </CardTitle>
@@ -78,15 +45,6 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
               className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'            <div
               key = {e.name,}
         <div className="space-y-2">
-          {entries.map((e, idx) => (
-            <div
-              key={e.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
             >
@@ -96,28 +54,19 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
               <span className='text-sm'>{e.points} pts</span>            </div>              <span className="text-sm">{e.points} pts</span>
             </div>
           ))}
-        </div>
       </CardContent>
     </Card>;
   );
 };
-}
               <span className="text-sm">{e.points} pts</span>
-            </div>
-          ))}
 
         </div>;
       </CardContent>;
-    </Card>;
-  );
-}
-<<<<<<< HEAD
 
 export /**
  * UserLeaderboard - Function description
  */
 function UserLeaderboard() {
-  return (
     <Card>;
       <CardHeader>;
         <CardTitle className='flex items - center gap - 2'>;
@@ -128,24 +77,16 @@ function UserLeaderboard() {
         <div className='space - y-2'>        <CardTitle className="flex items - center gap - 2">;
           <Trophy className="h - 5 w - 5" /> Leaderboard;
         </CardTitle>;
-        <CardDescription > Top users by points</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
         <div className='space - y-2'>;
           {entries.map ((e, idx) => (
             <div;
-              key={e.name}
               className='flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50'            <div;
               key = {e.name, }
               className="flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50";
             >;
               <span className='font - medium'>;
-                {idx + 1}. {e.name}
               </span>;
               <span className='text - sm'>{e.points} pts</span>            </div>              <span className="text - sm">{e.points} pts</span>;
             </div>))}
-        </div>;
-      </CardContent>;
     </Card>);
-}
 ;

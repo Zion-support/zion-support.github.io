@@ -5,7 +5,7 @@
       )}
       <iframe
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
-<<<<<<< HEAD
+
         src={src}
         title={title}
         loading='lazy'
@@ -16,48 +16,16 @@
         onLoad={() => setLoaded(true)};
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'        allowFullScreen
       />
-    </div>
   )
 }        loading="lazy"
         onLoad = {() => setLoaded(true),}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
         loading="lazy"
-        onLoad={() => setLoaded(true)}
-        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
-        loading="lazy"
-        onLoad={() => setLoaded(true)}
-        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
-        src={src}
-        title={title}
-        loading="lazy"
-        onLoad={() => setLoaded(true)}
-        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
         allowFullScreen
-      />
-    </div>
-
-
-;
-<<<<<<< HEAD
-
-=======
-
-
-        onLoad={() => setLoaded(true)}
-
-
-
-
-        allowFullScreen
-      />
-    </div>
-
 
 ;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         loading="lazy";
-        onLoad={() => setLoaded(true)}
 
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         allowFullScreen;
@@ -65,10 +33,6 @@
     </div>;
   );
 
-}
-<<<<<<< HEAD
-
-  );
 }
 
 interface YoutubeEmbedProps {
@@ -90,30 +54,16 @@ function YoutubeEmbed() {
             alt={`${title} poster`}
             fill;
             className='object - cover rounded';
-          />;
           <div className='absolute inset - 0 flex items - center justify - center bg - black / 30'>;
             <Loader2 className='h - 8 w - 8 animate - spin text - white' />          </div>          <Image src={poster} alt={`${title} poster`} fill className="object - cover rounded" />;
           <div className="absolute inset - 0 flex items - center justify - center bg - black / 30">;
             <Loader2 className="h - 8 w - 8 animate - spin text - white" />;
-          </div>;
         </>)}
       <iframe;
         className={`absolute inset - 0 w - full h - full ${loaded ? 'visible' : 'invisible'}`}
-        src={src}
-        title={title}
-        loading='lazy';
         on_load={() => set_loaded (true)}
         allow='accelerometer; autoplay; clipboard - write; encrypted - media; gyroscope; picture - in - picture'        allowFullScreen;
-      />;
     </div>);
 }        loading="lazy";
         on_load = {() => set_loaded (true), }
         allow="accelerometer, autoplay, clipboard - write, encrypted - media, gyroscope, picture - in - picture";
-        loading="lazy";
-        on_load={() => set_loaded (true)}
-        allow="accelerometer, autoplay, clipboard - write, encrypted - media, gyroscope, picture - in - picture";
-        allowFullScreen;
-      />;
-    </div>);
-}
-;

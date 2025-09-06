@@ -146,8 +146,6 @@ function EnterpriseFeatures() {
           </p>;
         </div>;
 
-
-
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {features && features.map(feature => (;
             <div
@@ -160,17 +158,10 @@ function EnterpriseFeatures() {
               </div>
               <h3 className='font-bold text-xl mb-3'>{feature.title}</h3>
               <p className='text-muted-foreground'>{feature.description}</p>            </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
             </div>
 
 import React from "react",
-import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
 const features = [
   {
@@ -226,7 +217,6 @@ export function EnterpriseFeatures() {
             </div>
 
 import React from "react",;
-import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
 const features = [;
   {;
     title: "Private Hiring Portal",;

@@ -25,11 +25,6 @@ import { Zap } from 'lucide-react'
 export function FeaturesGuideSection() {
   const features = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
         'Navigate to the AI Matcher page from the homepage or marketplace',
         'Fill in your project requirements and specifications',
@@ -295,15 +290,11 @@ import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Button } from "./ui/button",
 import { fireEvent } from '@/lib/analytics',
-import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
 
 export function FeaturesGuideSection() {
   const features = [
     {
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -812,10 +803,7 @@ export function FeaturesGuideSection() {;
 import { GradientHeading } from "./GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "./ui/button";
-import { fireEvent } from '@/lib/analytics';
-import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';
-import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
 export function FeaturesGuideSection() {;
   const features = [;
     {;
@@ -1059,11 +1047,9 @@ export function FeaturesGuideSection() {;
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,;
 import Link from 'next / link';
-import { GradientHeading } from './GradientHeading';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
 import { Button } from './ui / button';
 import { fire_event } from '@/lib / analytics';
-import {
   Users,
   Zap,
   Settings,
@@ -1083,8 +1069,6 @@ function FeaturesGuideSection() {
 import { GradientHeading  } from './GradientHeading';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
 import { Button  } from './ui / button';
-import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
 export /**
  * FeaturesGuideSection - Function description
  */
@@ -1335,14 +1319,8 @@ function FeaturesGuideSection() {
         "Contact our support team for personalized assistance";
       ];
 
-
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
               >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
                 {feature.title}
               </TabsTrigger>
@@ -1364,10 +1342,6 @@ function FeaturesGuideSection() {
               <TabsTrigger 
                 key={feature.id} 
                 value={feature.id}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
@@ -1441,7 +1415,6 @@ function FeaturesGuideSection() {
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
                   <Button 
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-
 
                     asChild
                   >
@@ -1539,28 +1512,7 @@ function FeaturesGuideSection() {
                       <li key={idx} className="text-zion-slate-light">;
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>;
                       </li>;
-<<<<<<< HEAD
-=======
 
-                    ))}
-                  </ol>;
-                </div>;
-              </div>;
-            </TabsContent>;
-          ))}
-
-
-          <Button
-            variant='outline'
-            className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'
-            asChild>;
-            <Link
-              href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
-              href="/marketplace";
-              onClick = {() => fireEvent('explore_marketplace_click'),}
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     ))}
                   </ol>
                 </div>
@@ -1571,11 +1523,6 @@ function FeaturesGuideSection() {
         <div className='mt-12 text-center'>
         
         <div className="mt-12 text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
           <Button
             variant="outline"
@@ -1594,12 +1541,6 @@ function FeaturesGuideSection() {
             >
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
             </Link>
           </Button>
@@ -1608,7 +1549,6 @@ function FeaturesGuideSection() {
     </section>
   );
 };
-
 
   );
 }

@@ -1,6 +1,5 @@
 size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
 
-
 import React from "react",
 import { cn } from "@/lib/utils",
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
@@ -10,11 +9,6 @@ interface SeverityIndicatorProps {
   showIcon?: boolean,
   showText?: boolean,
   size?: "sm" | "md" | "lg",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
   className?: string
 }
@@ -23,11 +17,6 @@ export function SeverityIndicator({
   severity, 
   showIcon = true, 
   showText = true, 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
           "text-green-500"
         )} />;
@@ -54,11 +43,6 @@ export function SeverityIndicator ({
   return (
 
     <div className={cn("flex items-center gap-1", className)}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}

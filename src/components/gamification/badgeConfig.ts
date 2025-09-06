@@ -8,63 +8,22 @@ import {
   BadgeDollarSign,;
 } from 'lucide-react';
 
-
-
-
 export type BadgeKey =
   | 'first_listing'
   | 'top_contributor'
   | 'profile_complete'
   | 'featured_creator'
   | 'first_action'
-<<<<<<< HEAD
-  | 'monetized'
-export interface BadgeMeta {
-  key: BadgeKey
-  name: string
-  description: string
-  icon: LucideIcon
-  color: string
-  bg: string
-export const badgeList: BadgeMeta[] = [
-=======
 
-  LucideIcon,
-  BadgeCheck,
-  Award,
-  Star,
-  Trophy,
-  BadgePlus,
-  BadgeDollarSign,
-} from 'lucide-react';
-export type BadgeKey =;
-  | 'first_listing';
-  | 'top_contributor';
-  | 'profile_complete';
-  | 'featured_creator';
-  | 'first_action';
-  | 'monetized';
-
-export interface BadgeMeta {
-  key: BadgeKey;
-  name: string;
-  description: string;
-  icon: LucideIcon;
-  color: string;
-  bg: string;
-export const badge_list: BadgeMeta[] = [;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   {
 
   badgeList && badgeList.find(b => b && b.key === key);
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList && badgeList.find((b) => b && b.key === key);
 
-
     key: 'first_listing',
     name: 'First Listing',
     description: 'Published your first product, service, or listing.',
-
 
   | 'monetized';
 
@@ -86,12 +45,6 @@ export interface BadgeMeta {
   color: string,
   bg: string
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
 export const badgeList: BadgeMeta[] = [
   {
@@ -139,21 +92,6 @@ export const badgeList: BadgeMeta[] = [
     name: 'Monetized',
     description: 'Earned your first AI dollar in the marketplace.',
     icon: BadgeDollarSign,
-<<<<<<< HEAD
-    color: '#22C55E', // Soft Green
-    bg: '#F2FCE2', // Soft Green
-  },
-]
-export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList.find(b => b.key === key);
-export const getBadgeMeta = (key: BadgeKey) =>;
-  badgeList.find((b) => b.key === key);
-}
-    color: "#22C55E", // Soft Green
-    bg: "#F2FCE2",    // Soft Green
-  }],
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export const getBadgeMeta = (key: BadgeKey) =>: any;
   badge_list.find (boolean => b.key === key);

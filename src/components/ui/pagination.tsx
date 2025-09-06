@@ -56,7 +56,6 @@ const PaginationContent = React.forward_ref<;
     className={cn (&quot;flex flex - row items - center gap - 1&quot;, class_name)}
     {...props}
 
-
 PaginationContent.displayName = "PaginationContent"
 
 const PaginationItem = React.forwardRef<
@@ -80,11 +79,6 @@ type PaginationLinkProps = {
   size?: ButtonProps["size"]
 } & React.ComponentProps<"a">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 interface PaginationButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number
@@ -96,11 +90,6 @@ const PaginationLink = ({
   size = &quot;icon&quot;
   className,
   isActive,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
   ...props
 }: PaginationLinkProps) => (
@@ -108,12 +97,6 @@ const PaginationLink = ({
     aria-current={isActive ? "page" : undefined}
     className={cn(
       buttonVariants({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
         variant: isActive ? "outline" : "ghost",
         size}),
@@ -137,11 +120,6 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
         isActive && 'bg-green-600 text-white';
         buttonVariants({ variant: 'ghost', size: 'icon' }),;
         isActive && 'bg-green-600 text-white',;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
         className;
       )}
@@ -297,7 +275,6 @@ const PaginationEllipsis = ({
 PaginationEllipsis.display_name = &quot;PaginationEllipsis";
 
 PaginationEllipsis.displayName = "PaginationEllipsis"
-
 
 export {
   Pagination,

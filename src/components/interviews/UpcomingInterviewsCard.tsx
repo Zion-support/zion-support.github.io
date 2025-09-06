@@ -5,24 +5,12 @@
               interview.status === 'confirmed' &&
               !isPast(parseISO(interview.scheduled_date))
           )
-<<<<<<< HEAD
-          .sort(
-            (a, b) =>
-              parseISO(a.scheduled_date).getTime() -
-              parseISO(b.scheduled_date).getTime()          )
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           .sort(;
             (a, b) =>;
               parseISO(a.scheduled_date).getTime() -;
               parseISO(b.scheduled_date).getTime()          );
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           .slice(0, 3); // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
       } catch (error) {
@@ -46,12 +34,6 @@
     loadInterviews()
   }, []),
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (isLoading) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -71,11 +53,6 @@
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -119,7 +96,6 @@ function UpcomingInterviewsCard() {
       }
     }
 
-
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -127,7 +103,6 @@ import { useInterviews } from '@/hooks/useInterviews';
 import { Interview } from '@/types/interview';
 import { format, isPast, parseISO } from 'date-fns';
 import Link from 'next/link';
-import { Calendar, Clock, Video } from 'lucide-react';
 import { Avatar } from '@/components/ui/avatar';
 import { logErrorToProduction } from '@/utils/productionLogger';
 export function UpcomingInterviewsCard() {;
@@ -192,19 +167,10 @@ if ( {) {
         </CardContent>;
       </Card>;
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
   }
 
@@ -260,28 +226,6 @@ if ( {) {
     );
   }
   return (
-<<<<<<< HEAD
-    <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
-      <CardHeader>
-        <CardTitle className="text-lg flex items-center">
-          <Video className="h-5 w-5 mr-2 text-zion-purple" />
-          Upcoming Interviews
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
-          {upcomingInterviews.map(interview => {
-            const interviewDate = parseISO(interview.scheduled_date)
-            const formattedDate = format(interviewDate, 'EEE, MMM d')
-            const formattedTime = format(interviewDate, 'h:mm a')
-            // Determine if interview is happening soon (within 30 minutes)            const now = new Date()
-            const isStartingSoon = null;
-              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
-              interviewDate.getTime() > now.getTime()
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
@@ -293,12 +237,6 @@ if ( {) {
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime(),
             
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -306,36 +244,7 @@ if ( {) {
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
-<<<<<<< HEAD
-                      loading="lazy"
-                    />
-                  ) : (
-                      loading='lazy'                    />
-                  ) : (
-                    <div className='flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium'>
-                      {(
-                        interview.client_name ||
-                        interview.talent_name ||
-                        'U'
-                      ).charAt(0)}
-                    </div>
-            return (<div key={interview.id} className="flex items-center gap-3">
-                <Avatar className="h-10 w-10 bg-zion-purple/10">
-                  {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
-                  {/* For now, conditional rendering based on available image */}
-                  {interview.client_avatar || interview.talent_avatar ? (
-                    <img 
-                      src={interview.client_avatar || interview.talent_avatar || undefined} // Ensure src is string | undefined
-                      alt={interview.client_name || interview.talent_name || "User"} // Ensure alt is string
-                    />
-                  ) : (
-                      loading="lazy"
-                    />
-                  ) : (
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
                     </div>
@@ -438,11 +347,6 @@ if ( {) {
             <Link href="/interviews">
               View All Interviews
             </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
           </Button>
         </div>
@@ -567,8 +471,6 @@ if ( {) {
       </CardContent>;
 
 }
-
-
 
     </Card>);
 }

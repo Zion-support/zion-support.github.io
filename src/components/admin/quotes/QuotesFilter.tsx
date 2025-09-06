@@ -1,6 +1,5 @@
 interface QuotesFilterProps {;
 
-
 import React from "react",
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card",
@@ -12,11 +11,6 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
 interface QuotesFilterProps {
   searchQuery: string;
@@ -157,7 +151,6 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
           </div>;
 
 import React from "react";
-import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -271,9 +264,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   onSelect = {setDateRange,}
                   numberOfMonths = {2,}
 
-
   onReset: () => void
-
 
 }
 
@@ -327,13 +318,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             <RefreshCw className='mr - 2 h - 4 w - 4' /> Reset Filters          </Button>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-    </Card>;
-  );
-};  )
-=======
-    </Card>);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 }
             <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
             on_click={on_reset}

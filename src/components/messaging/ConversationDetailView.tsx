@@ -9,21 +9,8 @@ import { useAuth } from '@/hooks/useAuth';
 import { MessageBubble } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     src = {activeConversation && activeConversation.context_data.image_url,}
                     alt = {activeConversation && activeConversation.context_data.title || "Context",}
-=======
-export function ConversationDetailView() {
-  const { user } = useAuth();
-  const { currentConversation, sendMessage, messages, loading } = useMessaging();
-  const [newMessage, setNewMessage] = useState('');
-  const [isSending, setIsSending] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
->>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -106,67 +93,6 @@ export function ConversationDetailView() {
             </div>
           </div>
         ) : (
-<<<<<<< HEAD
-          groupedMessages.map((group, groupIndex,) => (
-            <div key={group.date}>
-              <DateDivider date={new Date(group.date)} />
-              <div className="space-y-3">
-                {group.messages.map((message,) => (
-                  <MessageBubble
-                    key = {message.id,}
-                    message = {message,}
-                    isUserMessage = {message.sender_id === user?.id,}
-                  />                ))}
-              </div>
-            </div>
-          ))
-                {group.messages.map((message) => (
-                  <MessageBubble
-                    key={message.id}
-                    message={message}
-                    isUserMessage={message.sender_id === user?.id}
-                  />;
-                </AspectRatio>;
-              </div>            )}
-            <div>;
-
-
-
-      {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {groupedMessages.length === 0 ? (
-          <div className="text-center text-zion-slate py-12">
-            <p>No messages yet. Start the conversation!</p>
-          </div>
-        ) : (
-          groupedMessages.map((group, groupIndex,) => (
-            <div key={group.date}>
-              <DateDivider date={new Date(group.date)} />
-              <div className="space-y-3">
-                {group.messages.map((message) => (
-                  <MessageBubble
-                    key={message.id}
-                    message={message}
-                    isUserMessage={message.sender_id === user?.id}
-                  />;
-                ))}
-              </div>;
-            </div>;
-          ));
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-=======
-          messages.map((message, index) => {
-            const isUserMessage = message.senderId === user?.id;
-            const prevMessage = messages[index - 1];
-            const showDateDivider = !prevMessage || 
-              format(new Date(message.timestamp), 'yyyy-MM-dd') !== 
-              format(new Date(prevMessage.timestamp), 'yyyy-MM-dd');
->>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 
             return (
               <div key={message.id}>
@@ -184,101 +110,17 @@ export function ConversationDetailView() {
         <div ref={messagesEndRef} />
       </div>
 
-<<<<<<< HEAD
-        <div ref={messagesEndRef} />;
-      </div>;
-
-
-      {/* Input */}
-      <div className="p-3 border-t border-zion-purple/20">
-        <form onSubmit={handleSendMessage} className="flex items-start gap-2">
-          <textarea
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref={inputRef}
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-      {/* Message Input */}
-      <div className="p-4 border-t border-gray-200">
-        <form onSubmit={handleSendMessage} className="flex space-x-2">
-          <input
-            type="text"
-            value={newMessage}
-            onChange={(e) => setNewMessage(e.target.value)}
-            placeholder="Type a message..."
-            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            disabled={isSending}
->>>>>>> cursor/expand-services-advertise-and-build-project-5c86
           />
           <Button
             type="submit"
-<<<<<<< HEAD
-            className="bg-zion-purple hover: bg-zion-purple-dark text-white">;
-              <div className="font - medium text - white mb - 1">;
-                {active_conversation.context_type === 'job' ? 'Regarding Job:' :;
-                active_conversation.context_type === 'talent' ? 'Regarding Talent:' :;
-                'Regarding:'}
-              </div>;
-              <div className="text - zion - cyan font - medium">;
-                {active_conversation.context_data && active_conversation.context_data.title}
-              </div>;
-              {active_conversation.context_data && active_conversation.context_data.description && (
-                <div className="text - xs text - zion - slate mt - 1 line - clamp - 2">;
-                  {active_conversation.context_data.description}
-                </div>)}
-            </div>;
-          </div>;
-        </div>)}
-      {/* Messages */}
-      <div className="flex - 1 overflow - y-auto p - 4 space - y-4">;
-        {grouped_messages.length === 0 ? (
-          <div className="text - center text - zion - slate py - 12">;
-            <p > No messages yet. Start the conversation!</p>;
-          </div>) : (
-          grouped_messages.map ((group, group_index, ) => (
-            <div key={group.date}>;
-              <DateDivider date={new Date (group.date)} />;
-              <div className="space - y-3">;
-                {group.messages.map ((message, ) => (
-                  <MessageBubble;
-                    key = {message.id, }
-                    message = {message, }
-                    isUserMessage = {message.sender_id === user?.id, }
-                  />                ))}
-              </div>;
-            </div>)))}
-        <div ref={messagesEndRef} />;
-      </div>;
-<<<<<<< HEAD
-    </div>;
-  );
-};
-      </div>
-    </div>
-  )
-}
-      <div className="p-3 border-t border-zion-purple/20">;
-        <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
-=======
-      {/* Input */}
-      <div className="p - 3 border - t border - zion - purple / 20">;
-        <form on_submit={handleSendMessage} className="flex items - start gap - 2">;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
           <textarea;
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
@@ -296,19 +138,7 @@ export function ConversationDetailView() {
           </Button>;
         </form>;
       </div>;
-<<<<<<< HEAD
 
-
-    </div>);
-}
-
-=======
-            disabled={!newMessage.trim() || isSending}
-          >
-            {isSending ? 'Sending...' : 'Send'}
-          </Button>
-        </form>
->>>>>>> cursor/expand-services-advertise-and-build-project-5c86
       </div>
     </div>
   );

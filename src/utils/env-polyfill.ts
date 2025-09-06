@@ -19,7 +19,6 @@ export const safeEnv = {
     '',
 } as const;
 
-
 // Safe environment getter function
 export function getEnv(key: string, defaultValue = ''): string {
   if (
@@ -134,22 +133,6 @@ export const process_env =;
         NEXT_PUBLIC_SUPABASE_URL: ''
         NEXT_PUBLIC_SUPABASE_ANON_KEY: ''
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-console && console.log('✅ Environment polyfill loaded successfully');
-=======
-console.log('✅ Environment polyfill loaded successfully')
-export default safeEnv
-<<<<<<< HEAD
-export default safeEnv
-export default safeEnv
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-console && console.log('✅ Environment polyfill loaded successfully');
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
 export default safeEnv;
 export default safeEnv;
@@ -157,10 +140,6 @@ export default safeEnv;
 }
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     (globalThis as any).process.env = { ...defaultEnv }
   }
@@ -207,12 +186,6 @@ export function isProduction(): boolean {
 }
 
 export default safeEnv;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
 console.log ('✅ Environment polyfill loaded successfully');
 export default safe_env;

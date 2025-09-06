@@ -3,31 +3,6 @@ totalSize: number;
   chunkCount: number;
   loadTime: number;
 
-<<<<<<< HEAD
-  const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
-  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
-  if (!isAllowed) {
-    return null
-  }
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
-  const [chunks, setChunks] = useState<ChunkInfo[]>([])
-  const [isVisible, setIsVisible] = useState(false)
-  const [isCollecting, setIsCollecting] = useState(false)
-  const [shouldShow, setShouldShow] = useState(false)
-  useEffect((,) => {
-    // Only show in development or when explicitly enabled
-    const show =
-      process.env.NODE_ENV === 'development' |
-    const show = null;
-      process.env.NODE_ENV === 'development' ||
-=======
-
-    const show = null;
-      process.env.NODE_ENV === 'development' ||
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
     if (!show) return;
@@ -88,59 +63,14 @@ if (return) {
     if (typeof window === 'undefined') return;
     setIsCollecting(true)
     try {
-<<<<<<< HEAD
-      // Get performance entries for script resources
-      const resourceEntries = performance.getEntriesByType(
-        'resource'
-      ) as PerformanceResourceTiming[]
-      const scriptEntries = resourceEntries.filter(
-        entry =>
-          entry.name.includes('/_next/static/') &&
-          (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
-      )
-      // Calculate bundle information
-      let totalSize = 0
-      let totalLoadTime = 0
-      const chunkData: ChunkInfo[] = []
-      const chunkData: ChunkInfo[] = []
-      scriptEntries.forEach(entry => {
-        const size = entry.transferSize |entry.encodedBodySize |0
-        const loadTime = entry.responseEnd - entry.requestStart
-        const cached = entry.transferSize === 0
-        totalLoadTime += loadTime
-        chunkData.push({
-          name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
-          size
-          loadTime
-          cached
-        })
-      })
-      // Estimate gzipped size (roughly 70% of original)
-      const gzippedSize = totalSize * 0.7
-      const cacheHitRate = null;
-        chunkData.filter(chunk => chunk.cached).length / chunkData.length
-      setBundleInfo({
-        totalSize
-        gzippedSize
-        chunkCount: chunkData.length
-        loadTime: totalLoadTime / chunkData.length
-        cacheHitRate: cacheHitRate * 100
-      })
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
       // Get performance entries for script resources;
@@ -205,16 +135,12 @@ if (return) {
     }
   }
 
-
-
-
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
 import { Button } from '@/components/ui/button',;
 import { Progress } from '@/components/ui/progress',;
-import { AlertTriangle, Package, Zap } from 'lucide-react';
 import {logErrorToProduction} from '@/utils/productionLogger',;
 interface BundleInfo {;
   totalSize: number,;
@@ -321,13 +247,6 @@ export function BundleAnalyzer() {;
     return null;
   }
 
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
@@ -343,11 +262,6 @@ export function BundleAnalyzer() {;
           className="bg-background/80 backdrop-blur-sm"
         >
           <Package className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
           Bundle Analyzer
         </Button>
@@ -397,11 +311,6 @@ export function BundleAnalyzer() {;
                 onClick={toggleAnalyzer}
                 className="h-6 w-6 p-0"
               >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
                 ✕
               </Button>
@@ -497,7 +406,6 @@ if ( {) {
           </div>;
         </CardHeader>;
 
-
                 <div className="text-xs font-medium mb-2">Largest Chunks:</div>
                 <div className="space-y-1">
                   {chunks.map((chunk, index) => (
@@ -506,11 +414,7 @@ if ( {) {
                         <span className="w-4 text-muted-foreground">{index + 1}.</span>
                         <span className="truncate" title={chunk.name}>
                           {chunk.name}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -523,10 +427,6 @@ if ( {) {
                         variant='outline'
                       >
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                         {formatSize(chunk.size)}
                       </Badge>
@@ -546,43 +446,13 @@ if ( {) {
 
             </>
           ) : (
-<<<<<<< HEAD
-            <div className='text-xs text-muted-foreground'>
-              {isCollecting
-                ? 'Analyzing bundle...'
-                : 'Click refresh to analyze'}
-            </div>
-          )}
-        </CardContent>
-      </Card>
-    </div>
-  )
-} 
 
-}
-=======
-
-} 
-
-}
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
-        
-
 
         <CardContent className='pt - 0 space - y-3'>;
           {bundle_info ? (

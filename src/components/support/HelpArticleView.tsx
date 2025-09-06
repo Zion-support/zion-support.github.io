@@ -1,17 +1,7 @@
 interface HelpArticleViewProps {
   articleId: string
 }
-<<<<<<< HEAD
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
-=======
 
-
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {
@@ -28,15 +18,9 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type)
   return new Date(date).toLocaleDateString("en-US", {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
 export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-
 
     year: "numeric",;
     month: "long",;
@@ -89,8 +73,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
     day: "numeric", });
 }
 
-
-
 import React, { useState } from './react';
 import { Button  } from '@/components / ui / button';
 import { Card  } from '@/components / ui / card';
@@ -111,12 +93,6 @@ function HelpArticleView() {
     if (found) {
       article = found,
       break
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card } from "@/components/ui/card",;
-import { ThumbsUp, ThumbsDown } from 'lucide-react';
-import { toast } from "@/components/ui/use-toast",;
-import { HELP_CATEGORIES } from "./help-content",;
 interface HelpArticleViewProps {;
   articleId: string;
 }

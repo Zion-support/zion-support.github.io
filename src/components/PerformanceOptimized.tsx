@@ -1,13 +1,6 @@
 }
 }
-<<<<<<< HEAD
-=======
-}
-}
-}
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 }
 }
@@ -38,10 +31,6 @@ export const usePerformanceMetrics = () => {
 }
   return { metrics, recordRender }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from 'react';
 
@@ -224,7 +213,6 @@ export const useDebouncedSearch = (value: string, delay: number = 300) =>: any {
   return debouncedValue
 }
 
-
 import React, { memo, useMemo, useCallback } from 'react';
 
 // Higher-order component for performance optimization;
@@ -267,7 +255,6 @@ export const usePerformanceMetrics = () = > {; const [metrics, setMetrics] = Rea
 ; return { metrics, recordRender }};};
 };
 };
-
 
 import React, { memo, useMemo, useCallback } from 'react',
 ,

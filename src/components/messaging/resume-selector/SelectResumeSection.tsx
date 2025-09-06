@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-export function SelectResumeSection({
-<<<<<<< HEAD
-  resumeOptions,
-  selectedResume,
-  handleResumeSelect,
-  handleDownloadResume,
-=======
-  resumeOptions;
-  selectedResume;
-  handleResumeSelect;
-  handleDownloadResume;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -36,12 +23,6 @@ export function SelectResumeSection({
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
               onClick={() => handleResumeSelect(option.id)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
             >
               <div className="flex items-center">
@@ -50,22 +31,9 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
-<<<<<<< HEAD
-          
 
-          
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-          
-
-          
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {resumeOptions.map((option) => (
             <button
               key={option.id}
@@ -95,13 +63,7 @@ export function SelectResumeSection({
               resume={selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
               isLoading={isLoading}
-<<<<<<< HEAD
 
-
-}
-=======
-import React from 'react';
->>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 import { FileText } from 'lucide-react';
 
 interface ResumeOption {
@@ -122,52 +84,6 @@ interface Resume {
   url: string;
 }
 
-<<<<<<< HEAD
-          )}
-        </>
-      )}
-<<<<<<< HEAD
-    </div>
-  )
-}}
-}
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-interface ResumePreviewCardProps {
-  resume: Resume;
-  isSelected: boolean;
-  onSelect: (resume: Resume) => void;
-}
-
-const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
-  resume,
-  isSelected,
-  onSelect,
-}) => {
-  return (
-    <div
-      className={`p-4 border rounded-lg cursor-pointer transition-colors ${
-        isSelected
-          ? 'border-blue-500 bg-blue-50'
-          : 'border-gray-200 hover:border-gray-300'
-      }`}
-      onClick={() => onSelect(resume)}
-    >
-      <div className="flex items-start space-x-3">
-        <FileText className="h-8 w-8 text-gray-400" />
-        <div className="flex-1">
-          <h3 className="font-medium text-gray-900">{resume.title}</h3>
-          <p className="text-sm text-gray-500 mt-1">{resume.description}</p>
-          <div className="flex items-center space-x-4 mt-2 text-xs text-gray-400">
-            <span>Modified: {resume.lastModified}</span>
-            <span>{resume.fileSize}</span>
-          </div>
-        </div>
-      </div>
-    </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-5c86
   );
 };
 

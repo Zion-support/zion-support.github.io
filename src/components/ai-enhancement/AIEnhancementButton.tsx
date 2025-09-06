@@ -74,14 +74,8 @@ if ( {) {
     setGeneratedContent (null);
   }
 
-
-  import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
 
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {;
@@ -131,27 +125,11 @@ export function AIEnhancementButton(): any ({;
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       toast({
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
-<<<<<<< HEAD
-  }
-  const handleRegenerate = async () => {
-    await handleEnhance()
-  }
-  const handleCancel = () => {
-    setShowActions(false)
-    setGeneratedContent(null)
-  }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
   },
   
@@ -164,88 +142,9 @@ export function AIEnhancementButton(): any ({;
     setGeneratedContent(null)
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
   if (showActions) {
     return (
-<<<<<<< HEAD
-      <div className="flex gap-2 items-center">
-        <Button
-          type="button"
-          variant="ghost"
-          size="sm"
-          onClick={handleAccept}
-          className="text-green-500 hover:text-green-700 hover:bg-green-100/20"
-        >
-          <Check className="h-4 w-4 mr-1" />
-          Apply
-        </Button>
-        <Button
-          type="button"
-          variant="ghost"
-          size="sm"
-          onClick={handleRegenerate}
-          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
-          disabled={isEnhancing}
-        >
-          {isEnhancing ? (
-            <Loader2 className="h-4 w-4 mr-1 animate-spin" />
-          ) : (
-            <RefreshCw className="h-4 w-4 mr-1" />
-          )}
-          Regenerate
-        </Button>
-        <Button
-          type="button"
-          variant="ghost"
-          size="sm"
-          onClick={handleCancel}
-          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20"
-        >
-          <X className="h-4 w-4 mr-1" />
-          Cancel
-        </Button>
-      </div>
-    )
-  }
-  return (
-    <Button
-      type="button"
-      variant = {variant,}
-      size = {size,}
-      className={`gap-1 ${className}`}
-      onClick = {handleEnhance,}
-      disabled = {isEnhancing,}
-  
-  return (
-    <Button
-      type="button"
-  },;
-  const handleAccept = () => {;
-    if (generatedContent) {;
-      onEnhanced(generatedContent),;
-      setShowActions(false),;
-      setGeneratedContent(null),;
-      toast({;
-        title: "Content applied",;
-        description: "AI-enhanced content has been applied."});
-    }
-  },;
-  const handleRegenerate = async () => {;
-    await handleEnhance();
-  },;
-  const handleCancel = () => {;
-    setShowActions(false);
-    setGeneratedContent(null);
-  };
-  if (showActions) {;
-    return (;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       <div className="flex gap-2 items-center">;
         <Button
           type="button"
@@ -283,7 +182,6 @@ export function AIEnhancementButton(): any ({;
       </div>;
     ),;
   }
-
 
   return (
     <Button
@@ -356,10 +254,7 @@ if ( {) {
   return (
     <Button;
       type="button";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       variant = {variant, }
       size = {size, }
       className={`gap - 1 ${class_name}`}
@@ -380,22 +275,9 @@ if ( {) {
 }</Button>);
 }"}
 
-
-<<<<<<< HEAD
-=======
-      variant={variant}
-      size={size}
-      className={`gap-1 ${className}`}
-      onClick={handleEnhance}
-      disabled={isEnhancing}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />

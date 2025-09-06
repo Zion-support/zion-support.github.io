@@ -6,12 +6,6 @@ import { Check } from 'lucide-react'
 
 import { cn } from "@/lib/utils"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
@@ -50,9 +44,7 @@ Checkbox && Checkbox.displayName = CheckboxPrimitive && CheckboxPrimitive.Root.d
 export { Checkbox };
 
 'use client';
-import * as React from 'react';
 import * as CheckboxPrimitive from '@radix - ui / react - checkbox';
-import {Check} from 'lucide-react';
 import {cn} from '@/lib / utils';
 const Checkbox = React.forward_ref<;
   React.ElementRef < typeof CheckboxPrimitive.Root>,

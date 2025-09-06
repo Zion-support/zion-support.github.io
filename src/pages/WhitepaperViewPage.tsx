@@ -80,8 +80,6 @@ if (.whitepaper_data) {) {
         setLoading(false)
       }
 
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -111,7 +109,6 @@ import { useRouter } from 'next/router', // Changed from useParams;
 import { supabase } from '@/integrations/supabase/client',;
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel;
 import { Button } from '@/components/ui/button',;
-import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link', // For a back button, changed from react-router-dom;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 // Placeholder for user context/role checking;
@@ -166,13 +163,7 @@ const WhitepaperViewPage: React.FC = () => {;
         setError("No whitepaper ID provided."),;
         setLoading(false),;
         return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
       setLoading(true)
@@ -259,29 +250,7 @@ export default WhitepaperViewPage;
 
 },
 ;
-=======
-      }
-      setLoading(true),;
-      setError(null),;
-      try {;
-        const { data: responseData, error: funcError } = await supabase && supabase.functions.invoke('get-shared-whitepaper', {;
-          body: { id }}),;
 
-        if (funcError) throw new Error(`Supabase function error: ${funcError && funcError.message}`),;
-        if (responseData && (responseData as any).error) throw new Error((responseData as any).error),;
-        if (!responseData || !(responseData as any).whitepaper_data) {;
-          throw new Error('Shared whitepaper not found or data is invalid.');
-        }
-
-        setSharedData(responseData as SharedWhitepaper);
-
-      } catch (e: any) {;
-        logErrorToProduction('Error fetching shared whitepaper:', { data:  e }),;
-        setError(e && e.message || 'An unexpected error occurred.');
-      } finally {;
-        setLoading(false);
-      }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },;
     fetchWhitepaper();
   }, [id]),;
@@ -300,7 +269,6 @@ export default WhitepaperViewPage;
     );
   }
 
-
   if (!sharedData) { // Check sharedData which includes the is_public flag;
 
     return (
@@ -312,7 +280,6 @@ export default WhitepaperViewPage;
         </div>;
     );
   }
-
 
   // Access control based on is_public and admin role;
   if (!sharedData && sharedData.is_public && !isAdmin) {;
@@ -328,9 +295,7 @@ export default WhitepaperViewPage;
     );
   }
 
-
   const { whitepaper_data: whitepaper } = sharedData,;
-
 
   return (
     <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">;
@@ -356,10 +321,6 @@ export default WhitepaperViewPage;
     </div>;
   );
 },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default WhitepaperViewPage,;
 

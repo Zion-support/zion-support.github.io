@@ -4,25 +4,17 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useAuth } from "@/context/auth/AuthProvider";
 import { AlertCircle } from 'lucide-react'import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { useAuth } from "@/context/auth/AuthProvider";
 import { AlertCircle } from 'lucide-react';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 ;
 import { use_router } from 'next / router';
 import Link from 'next / link';
 import { use_auth  } from '@/context / auth / AuthProvider';
 import { AlertCircle } from 'lucide-react'import { use_router } from 'next / router';
-import { AlertCircle } from 'lucide-react';
 import { Alert, AlertDescription  } from '@/components / ui / alert';
 import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
 import {logErrorToProduction} from '@/utils / production_logger';
@@ -36,7 +28,8 @@ function SignUpForm() {
     email: "",
     password: "",
     name: ""}),
-<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     if (!formData.email.trim()) {
       errors.email = 'Email is required'
@@ -49,129 +42,8 @@ function SignUpForm() {
       errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
     }
 
-=======
-    if (signupMode && !formData.name.trim()) {
-      errors.name = 'Full name is required'
-import React, { useState } from "react",;
-import { Label } from "@/components/ui/label",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { LoadingSpinner } from "@/components/ui/enhanced-loading-states",;
-import { useRouter } from 'next/router',;
-import Link from 'next/link',;
-import { useAuth } from "@/context/auth/AuthProvider",;
-import { AlertCircle } from 'lucide-react';
-import { Alert, AlertDescription } from "@/components/ui/alert",;
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-export function SignUpForm() {;
-  const router = useRouter(),;
-  const { signUp, login, loginWithGoogle } = useAuth(),;
-  const [formData, setFormData] = useState({;
-    email: "",;
-    password: "",;
-    name: ""}),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [signupMode, setSignupMode] = useState(true),;
-  const [error, setError] = useState(""),;
-  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({}),;
-  const [showVerificationMessage, setShowVerificationMessage] = useState(false),;
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
-    const { name, value } = e.target,;
-    setFormData(prev => ({ ...prev, [name]: value })),;
-    setError(""),;
-    setFieldErrors(prev => ({ ...prev, [name]: "" }));
-  },;
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    setError(""),;
-    setFieldErrors({}),;
-    setIsLoading(true),;
-    const errors: { email?: string, password?: string, name?: string } = {},;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;
-    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,;
-    if (signupMode && !formData.name.trim()) {;
-      errors.name = 'Full name is required';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    }
-    if (!formData.email.trim()) {
-      errors.email = 'Email is required'
-    } else if (!emailRegex.test(formData.email)) {
-      errors.email = 'Invalid email address'
-    }
-    if (!formData.password) {
-      errors.password = 'Password is required'
-    } else if (!strongPasswordRegex.test(formData.password)) {
-      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-  const [is_loading, setIsLoading] = useState (false);
-  const [signup_mode, setSignupMode] = useState (true);
-  const [error, set_error] = useState ("");
-  const [field_errors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({});
-  const [showVerificationMessage, setShowVerificationMessage] = useState (false);
-  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-    const { name, value } = e.target;
-    setFormData (prev => ({ ...prev, [name]: value }));
-    set_error ("");    setFieldErrors (prev => ({ ...prev, [name]: "" }));
-  }
-  const handle_submit = async (e: React.FormEvent) => {
-    e.prevent_default ();
-    set_error (""),
-    setFieldErrors ({});
-    setIsLoading (true);
 
-    const errors: { email?: string, password?: string, name?: string } = {}
-    const email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const strongPasswordRegex = /^(?=.*[a - z])(?=.*[A - Z])(?=.*\d).{8}$/;
-    if () {) {
-  $2
-}
-      errors.name = 'Full name is required';
-
-
-import React, { useState } from "react",
-import { Label } from "@/components/ui/label",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { LoadingSpinner } from "@/components/ui/enhanced-loading-states",
-import { useRouter } from 'next/router',
-import Link from 'next/link',
-import { useAuth } from "@/context/auth/AuthProvider",
-import { AlertCircle } from 'lucide-react'
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",
-import {logErrorToProduction} from '@/utils/productionLogger',
-export function SignUpForm() {
-
-  const router = useRouter(),
-  const { signUp, login, loginWithGoogle } = useAuth(),
-  
-
-
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-    name: ""}),
-
-
-    }
-
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
       setIsLoading(false)
@@ -184,12 +56,7 @@ export function SignUpForm() {
           name: formData.name})
         if (result?.error) {
           throw new Error(result.error as any), // Cast to any if type is AuthError
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     if (Object.keys(errors).length > 0) {;
       setFieldErrors(errors),;
@@ -204,12 +71,7 @@ export function SignUpForm() {
           name: formData.name}),;
         if (result?.error) {;
           throw new Error(result.error as any), // Cast to any if type is AuthError;
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
 
         if (result?.emailVerificationRequired) {
@@ -233,50 +95,12 @@ export function SignUpForm() {
         router.push("/mobile")
 ;
         router.push("/mobile");
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     } catch (err: any) {
       logErrorToProduction('Signup/Login error:', { data: err })
       setError(err.message |'An unexpected error occurred. Please try again.')
-<<<<<<< HEAD
-    } finally {
-      setIsLoading(false)
-    }
-=======
-        router.push ("/mobile");
-      }
-    } catch (err: any) {
-      logErrorToProduction ('Signup / Login error:', { data: err }),
-      set_error (err.message || 'An unexpected error occurred. Please try again.');
-    } finally {
-      setIsLoading (false);
-    }
 
-  const router = useRouter();
-  const { signUp, login, loginWithGoogle } = useAuth();
-
-  const [formData, setFormData] = useState({;
-    email: "",;
-    password: "",;
-    name: ""}),;
-  const [isLoading, setIsLoading] = useState(false);
-  const [signupMode, setSignupMode] = useState(true);
-  const [error, setError] = useState("");
-  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({});
-  const [showVerificationMessage, setShowVerificationMessage] = useState(false);
-
-  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const { name, value } = e && e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }));
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
   const handleGoogleLogin = async () => {;
     try {;
@@ -287,25 +111,12 @@ export function SignUpForm() {
 
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
       <div className="space-y-2">
         <Button
           variant="outline"
@@ -320,19 +131,7 @@ export function SignUpForm() {
           </svg>
           Continue with Google
         </Button>
-<<<<<<< HEAD
-        <Button
-          variant="outline"
-        <Button 
-          variant="outline" 
-=======
 
-
-        <Button 
-          variant="outline" 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -398,13 +197,6 @@ export function SignUpForm() {
         </Button>;
       </div>;
 
-
-      
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -412,33 +204,9 @@ export function SignUpForm() {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-      {/* Verification Message */}
-      {showVerificationMessage && (
-        <Alert className="mb-4 border-blue-500 bg-blue-50">
-          <AlertCircle className="h-4 w-4" />
-          <AlertDescription>
-            Please check your email and click the verification link before signing in.
-          </AlertDescription>
-        </Alert>
-;
-      {/* Verification Message */}
-      {showVerificationMessage && (;
-        <Alert className="mb-4 border-blue-500 bg-blue-50">;
-          <AlertCircle className="h-4 w-4" />;
-          <AlertDescription>;
-            Please check your email and click the verification link before signing in.;
-          </AlertDescription>;
-        </Alert>;
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
       
-
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
           <div className="space-y-2">
@@ -459,13 +227,7 @@ export function SignUpForm() {
               onChange={handleInputChange}
               required;
               aria-invalid={!!fieldErrors.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               placeholder="Enter your full name"
             />
@@ -474,12 +236,6 @@ export function SignUpForm() {
             )}
           </div>
         )}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
               placeholder="Enter your full name"
             />
@@ -506,11 +262,6 @@ export function SignUpForm() {
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.email}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
             placeholder="Enter your email"
           />;
@@ -535,11 +286,6 @@ export function SignUpForm() {
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.password}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
             placeholder="Create a password"
           />;
@@ -549,14 +295,6 @@ export function SignUpForm() {
           )}
 
         </div>;
-
-
-
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <Button
           type="submit"
@@ -573,12 +311,6 @@ export function SignUpForm() {
         </Button>
       </form>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "
@@ -690,8 +422,6 @@ export function SignUpForm() {
       </p>;
     </div>;
   );
-
-
 
   error;
 }= await login (form_data.email, form_data.password);

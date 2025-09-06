@@ -3,12 +3,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
 
   const handlePaymentInitiated = () => {
     toast({
-<<<<<<< HEAD
-      title: 'Processing your request'
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       title: 'Processing your request',
       description:
         "You'll be redirected to our secure payment portal momentarily."
@@ -32,8 +27,6 @@ function PaymentSection() {
     });
   }
 
-
-import { MapPin } from 'lucide-react';
 import { PaymentButton } from '@/components/transactions/PaymentButton';
 import { CountryPricing } from '@/data/onsiteServicePricing';
 import { toast } from '@/hooks/use-toast';
@@ -61,7 +54,6 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
   );
 
 }"}
-
 
     <div className='text - center'>;
       <p className='text - zion - slate - light mb - 2'>Selected Country</p>;

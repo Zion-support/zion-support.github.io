@@ -2,7 +2,6 @@
 
 } from "@/components/ui/sidebar";
 
-
 export function AppSidebar() {
   return (
     <Sidebar>
@@ -37,11 +36,6 @@ export function AppSidebar() {
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
 import {;
   Bell,;
@@ -63,7 +57,6 @@ import {;
 } from '@/components/ui/sidebar';
   // SidebarGroupContent, // Not needed;
 } from "@/components/ui/sidebar";
-import {;
   Sidebar;
   SidebarContent;
   SidebarGroup;
@@ -136,14 +129,7 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
 
     </Sidebar>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    </Sidebar>
-  )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 }
   );
 }

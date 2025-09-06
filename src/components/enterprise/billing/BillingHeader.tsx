@@ -12,13 +12,6 @@ export function BillingHeader() {
             <Mail className="h-4 w-4" />
             Contact Billing Support
           </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
 
           <Button variant="outline" size="sm" className="gap-1" asChild>
             <Link href="/dashboard/client/analytics">
@@ -86,7 +79,6 @@ export function BillingHeader() {;
               <BarChart3 className="h-4 w-4" />;
 import React from 'react';
 import { Button } from '@/components / ui / button';
-import { Download, Mail, BarChart3 } from 'lucide-react';
 import Link from 'next / link';
 export /**
  * BillingHeader - Function description
@@ -141,7 +133,6 @@ function BillingHeader() {
           </Button>;
         </div>;
       </div>;
-
 
       <p className='text - muted - foreground'>;
         Manage your subscription, view invoice history, and update payment;

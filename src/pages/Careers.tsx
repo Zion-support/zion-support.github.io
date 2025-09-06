@@ -62,7 +62,6 @@ export default function Careers() {;
             strokeWidth={2}
             d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
 
-
     },
     {
       title: "Health & Wellness",
@@ -87,7 +86,6 @@ export default function Careers() {;
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth={2}
-
 
     },
     {
@@ -115,7 +113,6 @@ export default function Careers() {;
             strokeLinejoin='round'
             strokeWidth={2}
 
-
     },
     {
       title: "Competitive Compensation",
@@ -142,16 +139,11 @@ export default function Careers() {;
             strokeLinejoin='round'
             strokeWidth={2}
 
-
     },
     {
       title: "Impactful Projects",
       description: "Contribute to innovations that make advanced technology accessible worldwide.",
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       icon: (
             d='M12 8c-1 && 1.657 0-3 .895-3 2s1 && 2s1.343 2 3 2 3 .895 3 2-1 && 1.343 2-3 2m0-8c1 && 8c1.11 0 2 && 2.08.402 2 && 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1 && 1.11 0-2 && 2.08-.402-2 && 2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
           />;
@@ -181,9 +173,6 @@ export default function Careers() {;
     },;
   ];
 
-
-
-
   return (
     <>;
       <SEO
@@ -203,11 +192,6 @@ export default function Careers() {;
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24'>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
             <div>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -259,7 +243,6 @@ export default function Careers() {;
                   <p className='text-zion-slate-light'>{benefit && benefit.description}</p>;
                 </div>;
 
-          
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -267,10 +250,6 @@ export default function Careers() {;
                 <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                   <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                     {benefit.icon}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
@@ -385,7 +364,6 @@ function Careers() {
   const why_work =;
     'At Zion, we’re building more than a marketplace—we’re cultivating a community where forward - thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote - first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real - world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open - source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.';
 
-          
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
             
@@ -409,10 +387,6 @@ function Careers() {
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.location}</span>
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.type}</span>
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.department}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                             </div>
                             <p className="text-zion-slate-light mb-4">{job.description}</p>
@@ -567,11 +541,6 @@ export default function Careers() {;
                       </CardContent>;
 
                     </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
                   ))}
                 </TabsContent>;
@@ -589,18 +558,12 @@ export default function Careers() {;
               about AI and technology. Send us your resume and let's start a;
               conversation. You can also apply directly by emailing us at;
 
-
-          
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               We're always looking for talented individuals who are passionate about AI and technology.
               Send us your resume and let's start a conversation. You can also
               apply directly by emailing us at
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               <a
                 href={`mailto:${applyEmail}`}
@@ -612,70 +575,14 @@ export default function Careers() {;
             </p>
             <Button
               asChild
-<<<<<<< HEAD
-              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-            >
-              <a href={`mailto:${applyEmail}`}>Send General Application</Link>
-            </Button>
-          </div>
-        </div>
-      </main>
-    </>
-  )
-import React from 'react'
-import { SEO } from '../components/SEO'
-const Careers: React.FC = () => {
-  return(<>
-      <SEO title="Careers - Zion Tech Group" />
-      <div className="min-h-screen bg-white py-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Careers</h1>
-          <p className="text-lg text-gray-600">Content coming soon...</p>
-        </div>
-      </div>
-    </>
-  )
-=======
 
-              className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>;
-              <a href={`mailto:${applyEmail}`}>Send General Application</a>;
-            </Button>;
-          </div>;
-        </div>;
-      </main>;
-    </>;
-  );
-import React from 'react';
-import { SEO } from '../components/SEO';
-const Careers: React.FC = () => {;
-  return (<>;
-      <SEO title="Careers - Zion Tech Group" />;
-      <div className="min-h-screen bg-white py-20">;
-        <div className="max-w-4xl mx-auto px-4">;
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Careers</h1>;
-          <p className="text-lg text-gray-600">Content coming soon...</p>;
-        </div>;
-      </div>;
-    </>;
-  );
-};
-export default Careers;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 export default Careers
 }
 
-
-
-
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     </Card>))}
                 </TabsContent>))}

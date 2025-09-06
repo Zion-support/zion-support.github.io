@@ -3,10 +3,7 @@ Table;
   TableCell;
   TableHead;
   TableHeader;
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Table
   TableBody
   TableCell
@@ -17,16 +14,11 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Download, FileText, Search } from 'lucide-react'import { Input } from "@/components/ui/input"
 import { toast } from "@/hooks/use-toast"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from "react";
 import {
 
 import React from "react",
-import {
   Table,
   TableBody,
   TableCell,
@@ -41,37 +33,13 @@ import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
 export function InvoiceHistory() {
   // Mock invoice data
 
   const invoices = [
     {
-<<<<<<< HEAD
-      id: "INV-1234"
-      date: "May 1, 2025"
-      amount: "$1,999.00"
-      status: "paid"
-      period: "May 2025"}
-=======
 
-  TableRow } from '@/components / ui / table';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
-import { Download, FileText, Search } from 'lucide-react'import { Input  } from '@/components / ui / input';
-import { toast  } from '@/hooks / use - toast';
-export /**
- * InvoiceHistory - Function description
- */
-function InvoiceHistory() {
-  // Mock invoice data;
-  const invoices = [;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       id: "INV - 1234",
       date: "May 1, 2025";
@@ -117,110 +85,41 @@ function InvoiceHistory() {
   const getBadgeForStatus = (status: string, ) =>: any {
     switch (status) {
 
-
       id: "INV-1234",
       date: "May 1, 2025",
       amount: "$1,999.00",
       id: "INV-1234",
-<<<<<<< HEAD
-      date: "May 1, 2025"
-      amount: "$1,999.00"
-      date: "May 1, 2025",
-      amount: "$1,999.00",
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       status: "paid",
       period: "May 2025"},
     {
       id: "INV-1233",
-<<<<<<< HEAD
-      date: "Apr 1, 2025",
-      amount: "$1,999.00",
-      date: "Apr 1, 2025"
-      amount: "$1,999.00"
-      date: "Apr 1, 2025",
-      amount: "$1,999.00",
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       status: "paid",
       period: "Apr 2025"},
     {
       id: "INV-1232",
-<<<<<<< HEAD
-      date: "Mar 1, 2025",
-      amount: "$1,999.00",
-      date: "Mar 1, 2025"
-      amount: "$1,999.00"
-      date: "Mar 1, 2025",
-      amount: "$1,999.00",
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       status: "paid",
       period: "Mar 2025"},
     {
       id: "INV-1231",
-<<<<<<< HEAD
-      date: "Feb 1, 2025",
-      amount: "$1,999.00",
-      date: "Feb 1, 2025"
-      amount: "$1,999.00"
-      date: "Feb 1, 2025",
-      amount: "$1,999.00",
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       status: "paid",
       period: "Feb 2025"},
     {
       id: "INV-1230",
-<<<<<<< HEAD
-      date: "Jan 1, 2025",
-      amount: "$1,999.00",
-      date: "Jan 1, 2025"
-      amount: "$1,999.00"
-      date: "Jan 1, 2025",
-      amount: "$1,999.00",
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       status: "paid",
       period: "Jan 2025"},
     {
       id: "INV-1229",
-<<<<<<< HEAD
-      date: "Dec 1, 2024",
-      amount: "$1,999.00",
-      date: "Dec 1, 2024"
-      amount: "$1,999.00"
-      status: "paid",
-      period: "Dec 2024"}],
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleDownloadInvoice = (invoiceId: string) => {
     // In a real app, this would trigger a download of the invoice PDF
     toast({
       title: "Downloading invoice"
       description: `Downloading invoice ${invoiceId} as PDF.`})
-<<<<<<< HEAD
-  }
-  const getBadgeForStatus = (status: string,) => {
-    switch (status) {
-      case "paid": return <Badge className="bg-green-500">Paid</Badge>
-        return <Badge variant="destructive">Overdue</Badge>
-      default:
-        return <Badge variant="outline">{status}</Badge>
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       date: "Dec 1, 2024",
       amount: "$1,999.00",
@@ -232,10 +131,7 @@ function InvoiceHistory() {
     toast({
       title: "Downloading invoice",
       description: `Downloading invoice ${invoiceId} as PDF.`})
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
 
   const getBadgeForStatus = (status: string) => {
@@ -399,8 +295,6 @@ export function InvoiceHistory() {;
         return <Badge variant="outline">{status}</Badge>;
 }
   );
-
-
 
 }
 ;

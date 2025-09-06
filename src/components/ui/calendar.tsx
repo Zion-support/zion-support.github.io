@@ -4,8 +4,6 @@ class_name, class_names,  showOutsideDays = true, ...props;
 }";
 
 }/>) ;
-}";
-<<<<<<< HEAD
 
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from 'lucide-react'

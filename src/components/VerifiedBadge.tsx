@@ -23,7 +23,6 @@ export function VerifiedBadge({
     lg: 'h-5 w-5'
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
-import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
@@ -53,7 +52,6 @@ interface VerifiedBadgeProps {
   verified: boolean,
   }
 
-
 interface VerifiedBadgeProps {
   verified: boolean;
 
@@ -75,9 +73,6 @@ if (return null) {
     lg: 'h - 5 w - 5';
   }
 
-
-
-
 export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {
   if (!verified) return null,
   
@@ -87,15 +82,7 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
     lg: 'h-5 w-5'
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
   return (
-
-
 
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
           </span>
@@ -143,10 +130,6 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
 
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     </TooltipProvider>);
 }

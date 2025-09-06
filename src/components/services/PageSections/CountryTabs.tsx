@@ -13,7 +13,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CountryServiceCard } from '@/components/services/CountryServiceCard';
 import { CountryPricing } from '@/data/onsiteServicePricing';
 
-
   setSearchQuery: (query: string) => void;
 export function CountryTabs(): any ({;
   popularCountries,;
@@ -26,54 +25,13 @@ export function CountryTabs(): any ({;
   const [currentPage, setCurrentPage] = useState(1);
   const countriesPerPage = 50;
 
-<<<<<<< HEAD
-  useEffect(() => {;
-    setCurrentPage(1);
-  }, [searchQuery]);
-  const totalPages = Math && Math.ceil(filteredCountries && filteredCountries.length / countriesPerPage);
-  const paginatedCountries = filteredCountries && filteredCountries.slice(;
-    (currentPage - 1) * countriesPerPage,;
-    currentPage * countriesPerPage;
-  );
-
-
-<<<<<<< HEAD
-interface CountryTabsProps {
-  popularCountries: string[];
-  filteredCountries: CountryPricing[];
-  handleCountrySelect: (country: CountryPricing) => void;
-  onQuote?: (country: CountryPricing) => void;
-  searchQuery: string;
-  setSearchQuery: (query: string) => void
-export function CountryTabs({
-
-  popularCountries
-  filteredCountries
-  handleCountrySelect
-  onQuote
-  searchQuery
-  setSearchQuery
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function CountryTabs({
   popularCountries,
   filteredCountries,
   handleCountrySelect,
   onQuote,
   searchQuery,
-<<<<<<< HEAD
-  setSearchQuery,
-}: CountryTabsProps) {
-  const [currentPage, setCurrentPage] = useState(1)
-  const countriesPerPage = 50
-  useEffect(() => {
-    setCurrentPage(1)
-  }, [searchQuery])
-  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage)
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   popularCountries,
   filteredCountries,
   handleCountrySelect,
@@ -84,12 +42,8 @@ export function CountryTabs({
     currentPage * countriesPerPage
   )
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -104,10 +58,6 @@ export function CountryTabs({
     currentPage * countriesPerPage
   )
   ),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <Tabs defaultValue='featured' className='w-full'>;
@@ -129,11 +79,6 @@ export function CountryTabs({
       <TabsContent value="featured" className="mt-0">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
             Featured Service Locations
           </h2>
@@ -220,7 +165,6 @@ export function CountryTabs({
               isPopular={popularCountries.includes(country.country)}
             />;
 
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries
             .filter((country) => popularCountries.includes(country.country))
@@ -259,10 +203,6 @@ export function CountryTabs({
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
             />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           ))}
 
@@ -275,10 +215,7 @@ export function CountryTabs({
                 <PaginationItem>;
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                     onClick={e => {;
                       e && e.preventDefault();
                       setCurrentPage(Math && Math.max(1, currentPage - 1));
@@ -297,7 +234,6 @@ export function CountryTabs({
 }
 
 import { useState, useEffect } from 'react';
-import { Search } from 'lucide-react';
 import { Input } from '@/components / ui / input';
 import { Button } from '@/components / ui / button';
 import {
@@ -427,15 +363,9 @@ function CountryTabs() {
   );
 }
 
-
                     onClick={(e) => {;
                       e.preventDefault(),;
                       setCurrentPage(Math.max(1, currentPage - 1));
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
                     }}
                   />;
@@ -446,24 +376,7 @@ function CountryTabs() {
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
-<<<<<<< HEAD
-                        onClick={e => {
-                          e.preventDefault()
-                          setCurrentPage(page) }}
-                      />
-                    </PaginationItem>
-                  )
-                        onClick={(e) => {;
-                          e.preventDefault();
-                          setCurrentPage(page);
-                        }}
-                      />;
-                    </PaginationItem>;
-                  );
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 )}
                 <PaginationItem>;
                   <PaginationNext;

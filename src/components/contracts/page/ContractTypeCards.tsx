@@ -29,7 +29,6 @@
         <CardFooter>
           <Button variant="outline" onClick={onStandardClick}>
 
-
           <Button variant="outline" onClick={onStandardClick}>
 
             Create Standard Contract
@@ -38,12 +37,6 @@
       </Card>
       
       <Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -89,12 +82,8 @@
           </Button>
         </CardFooter>
       </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-    </div>
 
+    </div>
 
 import { Button } from '@/components/ui/button';
 import {;
@@ -105,7 +94,6 @@ import {;
   CardHeader,;
   CardTitle,;
 } from '@/components/ui/card';
-
 
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
@@ -150,7 +138,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components / ui / card';
-import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {
   onStandardClick: () => void;
   onSmartClick: () => void;

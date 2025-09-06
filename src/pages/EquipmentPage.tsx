@@ -32,14 +32,10 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
     id: "nvidia-a100-server",
     title: "NVIDIA A100 GPU Training Server",
-    description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
     category: "AI Hardware",
     price: 85000,
     currency: "$",
     brand: "NVIDIA",
-    specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
-    tags: ["AI", "Machine Learning", "GPU"],
-    author: { name: "NVIDIA", id: "nvidia" },
     images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:30:00.000Z",
     rating: 4.9,
@@ -47,13 +43,11 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     location: "Santa Clara, CA",
     availability: "In Stock"
   },
-  {
     id: "dell-poweredge-r750",
     title: "Dell PowerEdge R750 Server",
     description: "2U rack server with dual Intel Xeon processors, enterprise-grade performance for virtualization workloads.",
     category: "Servers & Compute",
     price: 12500,
-    currency: "$",
     brand: "Dell",
     specifications: ["2U Rack", "Dual Xeon", "128GB RAM", "2TB SSD"],
     tags: ["Server", "Enterprise", "Virtualization"],
@@ -63,15 +57,11 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.7,
     reviewCount: 34,
     location: "Austin, TX",
-    availability: "In Stock"
-  },
-  {
     id: "cisco-nexus-9k",
     title: "Cisco Nexus 9000 Switch",
     description: "High-performance datacenter switch with 100GbE ports for modern cloud infrastructure.",
     category: "Networking",
     price: 18500,
-    currency: "$",
     brand: "Cisco",
     specifications: ["48x 100GbE", "QSFP28", "Line Rate"],
     tags: ["Switch", "100GbE", "Datacenter"],
@@ -81,15 +71,10 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.8,
     reviewCount: 19,
     location: "San Jose, CA",
-    availability: "In Stock"
-  },
-  {
     id: "hpe-proliant-dl380",
     title: "HPE ProLiant DL380 Gen10",
     description: "Versatile 2U server optimized for compute-intensive workloads.",
-    category: "Servers & Compute",
     price: 14500,
-    currency: "$",
     brand: "HPE",
     specifications: ["2U Rack", "Dual Xeon", "256GB RAM", "4TB SSD"],
     tags: ["Server", "Enterprise", "Compute"],
@@ -99,33 +84,24 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.6,
     reviewCount: 21,
     location: "Houston, TX",
-    availability: "In Stock"
-  },
-  {
     id: "netapp-aff-a250",
     title: "NetApp AFF A250 All-Flash Array",
     description: "Enterprise all-flash storage system for demanding workloads.",
     category: "Storage Systems",
     price: 42000,
-    currency: "$",
     brand: "NetApp",
     specifications: ["24TB Flash", "NVMe", "Active-Active"],
     tags: ["Storage", "Flash", "NVMe"],
     author: { name: "NetApp", id: "netapp" },
     images: ["https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-18T09:45:00.000Z",
-    rating: 4.7,
     reviewCount: 18,
     location: "Chicago, IL",
     availability: "2-3 Weeks"
-  },
-  {
     id: "arista-7050x",
     title: "Arista 7050X Series Switch",
     description: "High-density 10/40GbE switch for modern datacenter networks.",
-    category: "Networking",
     price: 23000,
-    currency: "$",
     brand: "Arista",
     specifications: ["48x10GbE", "6x40GbE", "Wire Speed"],
     tags: ["Switch", "10GbE", "Datacenter"],
@@ -135,8 +111,6 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.5,
     reviewCount: 16,
     location: "Sunnyvale, CA",
-    availability: "In Stock"
-  }
 ],
 
 // Market insights component
@@ -151,20 +125,12 @@ const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
         <div className="text-center">
           <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice / 1000)}k</div>
           <div className="text-sm text-muted-foreground">Avg Price</div>
-        </div>
-        <div className="text-center">
           <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
           <div className="text-sm text-muted-foreground">Avg Rating</div>
-        </div>
-        <div className="text-center">
           <div className="text-2xl font-bold text-purple-400">{stats.totalEquipment}</div>
           <div className="text-sm text-muted-foreground">Total Items</div>
-        </div>
-        <div className="text-center">
           <div className="text-2xl font-bold text-orange-400">{stats.inStockCount}</div>
           <div className="text-sm text-muted-foreground">In Stock</div>
-        </div>
-      </div>
     </CardContent>
   </Card>
 ),
@@ -181,80 +147,21 @@ const EquipmentFilterControls = ({
         <option value="">All Categories</option>
         {categories.map((cat: string) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
-    </div>
-    <div className="flex items-center gap-2">
       <SortAsc className="h-4 w-4 text-muted-foreground" />
       <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
         <option value="newest">Newest First</option>
         <option value="price-low">Price: Low to High</option>
         <option value="price-high">Price: High to Low</option>
         <option value="rating">Highest Rated</option>
-      </select>
-    </div>
     <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
       <Star className="h-4 w-4 mr-1" />
       {showRecommended ? "All Equipment" : "Recommended"}
     </Button>
-  </div>
-),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
-<<<<<<< HEAD
-    <EquipmentErrorBoundary>
-      <EquipmentPageContent />
-    </EquipmentErrorBoundary>
-  );
-};
-    <Card className="h-full hover:shadow-lg transition-shadow">
-      <CardHeader className="pb-3">
-        <div className="flex items-start justify-between">
-          <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-lg truncate">{equipment.title}</h3>
-            <p className="text-sm text-muted-foreground">{equipment.category}</p>
-            <div className="flex items-center gap-2 mt-2">
-              <Badge variant="secondary" className="text-xs">{equipment.brand}</Badge>
-            </div>
-          </div>
-          <div className="text-right">
-            <div className="text-xl font-bold text-blue-600">{formatPrice(equipment.price ?? 0)}</div>
-            <Badge variant={equipment.availability === "In Stock" ? "default" : "outline"} className="text-xs">
-              {equipment.availability}
-            </Badge>
-          </div>
-        </div>
-      </CardHeader>
-      <CardContent className="pt-0">
-        <div className="flex items-center gap-4 mb-3">
-          <div className="flex items-center gap-1">
-            <Star className="h-4 w-4 text-yellow-500 fill-current" />
-            <span className="text-sm font-medium">{equipment.rating?.toFixed(1)}</span>
-            <span className="text-xs text-muted-foreground">({equipment.reviewCount} reviews)</span>
-          </div>
-        </div>
-        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{equipment.description}</p>
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-medium">{equipment.category}</span>
-          <Button size="sm" onClick={onViewDetails}>
-            <ShoppingCart className="h-4 w-4 mr-1" />
-            View Details
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  )
-},
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
   const {
     items: equipment,
@@ -289,15 +196,12 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
   }, []),
 
   const [showScrollTop, setShowScrollTop] = useState(false),
-  useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800),
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
 
   // Loading state
   if (loading && equipment.length === 0) {
-    return (
       <div className="container py-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -306,18 +210,10 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
           <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure</p>
         </motion.div>
         <EquipmentLoadingGrid />
-      </div>
     )
-  }
-
-<<<<<<< HEAD
-
-
 
   // Error state
   if (error && equipment.length === 0) {
-    return (
-      <div className="container py-8">
         <div className="text-center space-y-4">
           <AlertTriangle className="mx-auto h-12 w-12 text-red-500" />
           <h2 className="text-2xl font-bold">Unable to load equipment</h2>
@@ -326,14 +222,8 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
             <Button onClick={refresh} variant="outline">
               <RefreshCw className="h-4 w-4 mr-2" />
               Try Again
-            </Button>
             <Button onClick={() => window.location.reload()}>
               Refresh Page
-            </Button>
-          </div>
-        </div>
-      </div>
-    )
   }, [sortBy, filterCategory, showRecommended, dataSeed]),;
   const {;
     items: equipment,;
@@ -363,7 +253,6 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
     return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"];
   }, []),;
   const [showScrollTop, setShowScrollTop] = useState(false),;
-  useEffect(() => {;
     const handleScroll = () => setShowScrollTop(window.scrollY > 800),;
     window.addEventListener('scroll', handleScroll),;
     return () => window.removeEventListener('scroll', handleScroll);
@@ -381,12 +270,9 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
         <EquipmentLoadingGrid />;
       </div>;
     );
-  }
 ;
   // Error state;
   if (error && equipment.length === 0) {;
-    return (;
-      <div className="container py-8">;
         <div className="text-center space-y-4">;
           <AlertTriangle className="mx-auto h-12 w-12 text-red-500" />;
           <h2 className="text-2xl font-bold">Unable to load equipment</h2>;
@@ -398,27 +284,13 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
             </Button>;
             <Button onClick={() => window.location.reload()}>;
               Refresh Page;
-            </Button>;
-          </div>;
-        </div>;
-      </div>;
-    );
-  }
-;
-  return (;
-    <div className="container py-8">;
       <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>;
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
-          Datacenter Equipment;
-        </h1>;
         <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure and AI workloads</p>;
-      </motion.div>;
       {marketStats && (;
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>;
           <EquipmentMarketInsights stats={marketStats} />;
-        </motion.div>;
       )}
-;
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>;
         <EquipmentFilterControls;
           sortBy={sortBy}
@@ -430,8 +302,6 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
           setShowRecommended={setShowRecommended}
           loading={isFetching}
         />
-      </motion.div>
-
 
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
@@ -453,20 +323,14 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
                       sessionStorage.setItem(`equipment:${item.id}`, JSON.stringify(item));
                     } catch {;
                       // ignore storage errors;
-                    }
-                  }
                   router.push(`/equipment/${item.id}`);
                 }}
               />;
-            </motion.div>;
           ))}
         </AnimatePresence>;
-      </motion.div>;
       {(isFetching || loading) && equipment.length > 0 && (;
         <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
           <EquipmentLoadingGrid count={4} />;
-        </motion.div>;
-      )}
 
       {hasMore && !loading && (
         <div className="text-center mt-8">
@@ -475,64 +339,33 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
           ) : (
             <Button onClick={loadMore} variant="outline" size="lg">
               Load More Equipment
-            </Button>
-          )}
           {total !== undefined && (;
             <p className="mt-2 text-sm text-muted-foreground">;
               Showing {equipment.length} of {total} items;
             </p>;
-          )}
-        </div>;
-      )}
-;
       {!hasMore && equipment.length > 0 && (;
         <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
           <div className="text-muted-foreground text-lg mb-2">🏭 You've explored all available equipment!</div>;
           <div className="text-sm text-muted-foreground">Showing {equipment.length} datacenter equipment items</div>;
-        </motion.div>;
-      )}
-;
       <AnimatePresence>;
         {showScrollTop && (;
           <motion.button;
             onClick={scrollToTop} ;
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
             initial={{ opacity: 0, scale: 0 }} ;
-            animate={{ opacity: 1, scale: 1 }} ;
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }} ;
             whileTap={{ scale: 0.9 }}
-          >;
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
           </motion.button>;
-        )}
-      </AnimatePresence>;
-    </div>;
-  );
-}
-;
 // Main export with error boundary;
 export default function EquipmentPage() {;
-  return (;
     <EquipmentErrorBoundary>;
       <EquipmentPageContent />;
     </EquipmentErrorBoundary>;
-  );
-}
-<<<<<<< HEAD
 
-
-
-;
-}
-// Main export with error boundary;
 export default /**
  * EquipmentPage - Function description
  */
 function EquipmentPage() {
-  return (
-    <EquipmentErrorBoundary>;
-      <EquipmentPageContent />;
     </EquipmentErrorBoundary>);
-}
-;

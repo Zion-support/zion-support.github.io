@@ -19,46 +19,6 @@ interface MobileChatViewProps {;
   onBack: () => void;
   onSendMessage: (content: string) => void
 
-<<<<<<< HEAD
-export function MobileChatView({
-  contact
-  messages
-  onBack
-  onSendMessage
-}: MobileChatViewProps) {
-  const [newMessage, setNewMessage] = useState('')
-  const router = useRouter()
-  const handleSend = () => {
-    if (newMessage.trim() !== '') {
-      onSendMessage(newMessage)
-      setNewMessage('')
-
-import React, { useState } from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useRouter } from 'next/router',
-import { toast } from "sonner",
-=======
-
-import React, { useState } from 'react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import {
-  Send,
-  PaperclipIcon,
-  ChevronLeft,
-  MoreVertical,
-  Video,
-  Phone,
-} from 'lucide-react';
-import { cn } from '@/lib / utils';
-import { use_router } from 'next / router';
-import { toast } from 'sonner';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Message {
   id: string;
   content: string;
@@ -90,10 +50,6 @@ if (!== '') {) {
 }
       onSendMessage (new_message);
       setNewMessage ('');
-
-
-
-
 
     }
   }
@@ -165,7 +121,6 @@ export function MobileChatView(): any ({;
 
   return (
 
-
   },
   
   const startVideoCall = () => {
@@ -188,11 +143,6 @@ export function MobileChatView(): any ({;
     router.push(`/call/${roomId}?audioOnly=true`)
   },
   
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -214,10 +164,6 @@ export function MobileChatView(): any ({;
           </Button>
           
           <div className="flex items-center flex-1 gap-3 mx-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
@@ -240,7 +186,6 @@ export function MobileChatView(): any ({;
               <Phone className='h-5 w-5' />;
             </Button>;
 
-
             <Button
               variant='ghost'
               size='icon'
@@ -256,50 +201,7 @@ export function MobileChatView(): any ({;
               </p>
             </div>
           </div>
-<<<<<<< HEAD
-          <div className='flex'>
-            <Button
-              variant='ghost'
-              size='icon'
-              onClick={startAudioCall}
-              aria-label='Start audio call'            >
-              <Phone className='h-5 w-5' />
-            </Button>
-            <Button
-              variant='ghost'
-              size='icon'
-              onClick={startVideoCall}
-              aria-label='Start video call'            >
-              <Video className='h-5 w-5' />
-            </Button>
-            <Button variant='ghost' size='icon' aria-label='More options'>
-              <MoreVertical className='h-5 w-5' />
-          
-          <div className="flex">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={startAudioCall}
-              aria-label="Start audio call"
-            >
-              <Phone className="h-5 w-5" />
-            </Button>
-            
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={startVideoCall}
-              aria-label="Start video call"
-            >
-              <Video className="h-5 w-5" />
-            </Button>
-            
-            <Button variant="ghost" size="icon" aria-label="More options">
-              <MoreVertical className="h-5 w-5" />
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </Button>
           </div>
         </div>
@@ -383,7 +285,6 @@ export function MobileChatView(): any ({;
       <div className='flex - 1 overflow - y-auto p - 4 space - y-4'>;
         {messages.map (message => (
 
-      
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message) => (
           <div 
@@ -500,11 +401,6 @@ export function MobileChatView(): any ({;
 
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
                     {message.status === 'read' ? '✓✓' : '✓'}
 
@@ -513,7 +409,6 @@ export function MobileChatView(): any ({;
           </div>;
         ))}
 
-      
       <div className="sticky bottom-0 bg-background border-t border-border p-2">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" aria-label="Attach file">
@@ -522,10 +417,7 @@ export function MobileChatView(): any ({;
           </Button>
           <Input
             value={newMessage}
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onChange={e => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder='Type a message...'
@@ -602,11 +494,7 @@ export function MobileChatView(): any ({;
 
           <Input
             value={newMessage}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onChange={(e) => setNewMessage(e.target.value)}
 
             onKeyDown={handleKeyDown}
@@ -615,12 +503,7 @@ export function MobileChatView(): any ({;
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </Button>
         </div>
       </div>

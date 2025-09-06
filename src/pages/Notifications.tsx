@@ -2,7 +2,6 @@ interface NotificationProps {
   type: 'message' | 'order' | 'default';
 }
 
-
 export function NotificationBadge({ type }: NotificationProps) {
   switch (type) {
     case 'message':
@@ -30,17 +29,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
-
-
-
-
 interface Notification {
   id: string;
   type: 'message' | 'order' | 'system' | 'promotion';
@@ -50,13 +38,6 @@ interface Notification {
   read: boolean;
   actionUrl?: string;
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
 import React, { useState } from 'react',;
 import { useNotifications } from '@/context/notifications/NotificationContext',;
@@ -98,8 +79,6 @@ const getNotificationIcon = (;
       return <Bell className={cn(className, 'text-gray-500')} />;
   }
 },
-
-
 
 ;
 const getNotificationIcon = (type: string) =>: any {

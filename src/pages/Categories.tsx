@@ -10,40 +10,6 @@ interface CategoryType {
   name: string;
   slug: string;
   icon: string
-<<<<<<< HEAD
-}
-=======
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-      logErrorToProduction('Categories API error:', { data: response && response.statusText }),;
-      return CATEGORIES as CategoryType[];
-    fallbackData: initialCategories}),;
-  const categories = data || [];
-  const isLoading = !data && !error;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
       logErrorToProduction ('Categories API error:', { data: response.status_text }),
       return CATEGORIES as CategoryType[];
@@ -97,7 +63,6 @@ const Categories: React.FC = () => {",;
 const Categories: React.FC = () => {}
   const;const categories = [
     { name: &apos,AI Services&apos, icon: Brain, count: 25 } { name: &apos,Cloud Solutions&apos, icon: Cloud, count: 15 } { name: &apos,Cybersecurity&apos, icon: Shield, count: 12 } { name: &apos,Development&apos, icon: Code, count: 18 } { name: &apos,Data Analytics&apos, icon: Database, count: 10 } { name: &apos,Infrastructure&apos, icon: Network, count: 8 }
-
 
   return (&apos;";
     <divclassName="&aposmin-h-screen" bg-gradient-to-br from-slate-50 to-blue-50&apos>&apos,";
@@ -173,67 +138,6 @@ const Categories: React.FC = () => {}
 export default Categories"";
 ";
   )}
-<<<<<<< HEAD
-export: default Categories
-export default Categories," ]
-export default Categories"")))))))))
-}
-export default Categories"")))))))));
-};
-import useSWR from 'swr',
-import { CategoryCard } from "@/components/CategoryCard",
-import { GradientHeading } from "@/components/GradientHeading",
-import { SkeletonCard } from '@/components/ui',
-import ErrorBoundary from "@/components/GlobalErrorBoundary",
-import { Folder } from 'lucide-react'
-import { CATEGORIES } from '@/data/categories',
-import { NextSeo } from '@/components/NextSeo',
-import {logErrorToProduction} from '@/utils/productionLogger',
-interface CategoryType {
-  id: string,
-  name: string,
-  slug: string,
-  icon: string
-import useSWR from 'swr',;
-import { CategoryCard } from "@/components/CategoryCard",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { SkeletonCard } from '@/components/ui',;
-import ErrorBoundary from "@/components/GlobalErrorBoundary",;
-import { Folder } from 'lucide-react';
-import { CATEGORIES } from '@/data/categories',;
-import { NextSeo } from '@/components/NextSeo',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-interface CategoryType {;
-  id: string,;
-  name: string,;
-  slug: string,;
-  icon: string;
-}
-;
-const fetcher = async (url: string): Promise<CategoryType[]> => {;
-  try {;
-    const response = await fetch(url),;
-    if (!response.ok) {;
-      logErrorToProduction('Categories API error:', { data: response.statusText }),;
-      return CATEGORIES as CategoryType[];
-    }
-    const data = await response.json(),;
-    return Array.isArray(data) && data.length > 0 ? data : CATEGORIES as CategoryType[];
-  } catch (err) {;
-    logErrorToProduction('Categories API fetch failed:', { data: err }),;
-    return CATEGORIES as CategoryType[];
-  }
-},;
-export interface CategoriesProps {;
-  categories?: CategoryType[];
-}
-=======
-
-export: default Categories,;
-export default Categories," ];
-export default Categories"")))))))));
-}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const Categories: React.FC: = () => {, ";
   const categories = [];

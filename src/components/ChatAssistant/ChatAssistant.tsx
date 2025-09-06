@@ -153,45 +153,7 @@ if ( {) {
         setDisplayGuestMessages (storedGuestMessages);
       }
     }
-<<<<<<< HEAD
-  }, [
-    isGuest
-    initialMessages
-    storedGuestMessages
-    setStoredGuestMessages
-    recipient.id])
-  // Effect for logged-in user messages
-  useEffect((,) => {
-    if (!isGuest) {
-      // Update state if initialMessages prop changes (e.g. new conversation loaded)
-      setLoggedInMessages(initialMessages)
-    }
-  }, [isGuest, initialMessages, recipient.id])
-  // Determine currentMessages and setCurrentMessages based on isGuest
-  const currentMessages = isGuest ? displayGuestMessages : loggedInMessages
-  const setCurrentMessages = (
-    valueOrFn: Message[] | ((val: Message[],) => Message[])
-  ) => {
-    if (isGuest) {
-      const newMessages = null;
-        valueOrFn instanceof Function
-          ? valueOrFn(displayGuestMessages)
-          : valueOrFn
-      setDisplayGuestMessages(newMessages)
-      setStoredGuestMessages(newMessages), // Always update localStorage for guests
-    } else {
-      const newMessages =
-        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
-      const newMessages = null;
-        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
-=======
 
-
-      const newMessages = null;
-        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setLoggedInMessages(newMessages)
     }
   }
@@ -266,11 +228,8 @@ import React, {;
 import { AuthContext } from '../../context/auth/AuthContext';
 import { useDebounce } from '../../hooks/useDebounce';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
-import { ChatMessage } from './ChatMessage';
-import { ChatInput } from './ChatInput';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
-import { X } from 'lucide-react';
 export interface Message {;
   id: string,;
   role: 'user' | 'assistant',;
@@ -472,11 +431,6 @@ export function ChatAssistant(): any ({;
             className="text-white hover:bg-zion-purple/10 rounded-full"
             onClick = {onClose,}
             onClick={onClose}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
             aria-label="Close chat"
           >
@@ -519,11 +473,6 @@ export function ChatAssistant(): any ({;
                       className="text-xs"
                       onClick={() => handleSendMessage(q)}
                     >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
                       {q}
                     </Button>;
@@ -567,11 +516,7 @@ export function ChatAssistant(): any ({;
                 variant="outline"
                 onClick = {handleModalCancel,}
                 onClick={handleModalCancel}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
@@ -579,10 +524,6 @@ export function ChatAssistant(): any ({;
               <Button
                 onClick = {handleModalSendConfirm,}
                 onClick={handleModalSendConfirm}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
@@ -595,16 +536,10 @@ export function ChatAssistant(): any ({;
     </div>;
   );
 
-
-
         </div>)}
     </div>);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 }
 
 }

@@ -16,19 +16,7 @@ export const InstallPrompt: React.FC = () => {
     const isDismissed = dismissUntil && Date.now() < Number(dismissUntil)
     const hasShown = safeSessionStorage.getItem(SHOWN_KEY)
     // Do not show prompt if already installed (standalone mode)
-<<<<<<< HEAD
-    if (isDismissed |hasShown |window.matchMedia('(display-mode: standalone)').matches) {
-      return
-    if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
-      return;
-=======
 
-
-    if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
-      return;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     const handler = (e: BeforeInstallPromptEvent,) => {
       e.preventDefault()
@@ -180,7 +168,6 @@ export const InstallPrompt: React.FC = () => {;
   // Only render if promptEvent is set and visible is true;
   if (!promptEvent || !visible) return null,;
 
-
   return (
     <>;
       {/* Styles can be moved to a CSS file or a styled-components block if preferred */}
@@ -191,7 +178,6 @@ export const InstallPrompt: React.FC = () => {;
               transform: scale(0 && 0.9), /* Slightly less aggressive scaling */;
               transform-origin: bottom right;
 export default InstallPrompt; import React, { useEffect, useState } from 'react';
-import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.;
 import { Button } from '@/components / ui / button';
 import { safeSessionStorage } from '@/utils / safe_storage';
 const SHOWN_KEY = 'pwaInstallShown',

@@ -14,15 +14,10 @@
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
 
         type="text"
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
-
 
         autoComplete="off"
         style={{ display: 'none' }}
@@ -46,10 +41,7 @@
   );
 
 } ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 } ;
 
 import React, { useState, useRef } from 'react';

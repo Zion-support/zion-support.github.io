@@ -3,29 +3,11 @@
         alt={author.name}
         className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
         onError={(e) => {
-<<<<<<< HEAD
-          const target = e.currentTarget as HTMLImageElement
-=======
 
-          const target = e.currentTarget as HTMLImageElement,
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           target.src = '/images/blog-placeholder.svg'
         }}
       />
       <div>
-<<<<<<< HEAD
-import React from 'react',;
-import type { BlogAuthor } from '@/types/blog',;
-interface AuthorBioProps {;
-  author: BlogAuthor;
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
 
         <p className="font-medium text-lg">{author.name}</p>
         {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
@@ -33,12 +15,6 @@ interface AuthorBioProps {;
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
 interface AuthorBioProps {;
   author: BlogAuthor;
@@ -70,10 +46,6 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
   author.bio ;
 }</p>;
 }'"};
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 ;
 export function AuthorBio({ author }: AuthorBioProps) {;
@@ -115,7 +87,6 @@ export function AuthorBio({ author }: AuthorBioProps) {;
       </div>;
     </div>;
   );
-
 
 }
   return (

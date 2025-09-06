@@ -16,31 +16,19 @@ export { SidebarMenuItem, SidebarMenuGroup };
 export { SidebarMenuItem, SidebarMenuGroup };
 };
 export { SidebarMenuItem, SidebarMenuGroup };
-<<<<<<< HEAD
-}
-export { SidebarMenuItem, SidebarMenuGroup }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
-
 
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { SafeRef } from "@/types/ref-types",
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode,
   active?: boolean,
   href?: string,
   target?: string,
   badge?: React.ReactNode
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { forwardRef } from "react",;
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;

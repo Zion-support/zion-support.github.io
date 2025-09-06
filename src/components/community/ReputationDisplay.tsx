@@ -1,15 +1,6 @@
 reputation: number;
   size?: 'sm' | 'md' | 'lg'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
-
-
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
 interface ReputationDisplayProps {
@@ -19,13 +10,6 @@ interface ReputationDisplayProps {
 
 export const ReputationDisplay = ({ 
   reputation,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
 
   size = 'md' 
 }: ReputationDisplayProps) => {
@@ -37,19 +21,7 @@ export const ReputationDisplay = ({
   // Styling based on size
   const sizeClasses = {
     sm: {
-<<<<<<< HEAD
-      container: 'text-xs'
-      icon: 'w-3 h-3'
-      container: 'text-xs',
-      icon: 'w-3 h-3',
-=======
 
-
-      container: 'text-xs',
-      icon: 'w-3 h-3',
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       progress: 'h-1',  // Styling based on size
   const sizeClasses = {
     sm: {
@@ -70,12 +42,6 @@ export const ReputationDisplay = ({
       container: "text-base",
       icon: "w-5 h-5",
       progress: "h-3"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
     }
     md: {
@@ -143,16 +109,10 @@ export const ReputationDisplay = ({
 },
 
 export default ReputationDisplay,
-import { Trophy } from 'lucide-react';
 import { Progress } from "@/components/ui/progress",;
 interface ReputationDisplayProps {;
   reputation: number,;
   size?: 'sm' | 'md' | 'lg';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
 }
 export default ReputationDisplay
@@ -171,55 +131,6 @@ export default ReputationDisplay
 
   }
   return (
-<<<<<<< HEAD
-    <div className='space-y-1'>
-      <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>
-        <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />
-        <span className='font-semibold'>{reputation}</span>
-        <span className='text-muted-foreground'>rep</span>
-      </div>
-      <Progress value={progress} className={sizeClasses[size].progress} />
-      <div className='text-xs text-muted-foreground'>
-        Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level
-        up
-      </div>
-    </div>
-  )
-}
-=======
-    <div className='space-y-1'>
-      <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>
-        <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />
-        <span className='font-semibold'>{reputation}</span>
-        <span className='text-muted-foreground'>rep</span>
-      </div>
-      <Progress value={progress} className={sizeClasses[size].progress} />
-      <div className='text-xs text-muted-foreground'>
-        Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level
-        up
-      </div>
-    </div>
-  )
-<<<<<<< HEAD
-}
-export default ReputationDisplay
-'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-    <div className='space - y-1'>;
-      <div className={`flex items - center gap - 1 ${size_classes[size].container}`}>;
-        <Trophy className={`text - amber - 500 ${size_classes[size].icon}`} />;
-        <span className='font - semibold'>{reputation}</span>;
-        <span className='text - muted - foreground'>rep</span>;
-      </div>;
-      <Progress value={progress} className={size_classes[size].progress} />;
-      <div className='text - xs text - muted - foreground'>;
-        Level {current_level} • {Math.round (next_milestone - reputation)} to level;
-        up;
-      </div>;
-    </div>);
-}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export const ReputationDisplay = ({;
   reputation,;
@@ -277,10 +188,7 @@ export const ReputationDisplay = ({ ;
 };
 
 export default ReputationDisplay;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 ';
     },;
     md: {;
@@ -294,7 +202,6 @@ export default ReputationDisplay;
       progress: 'h-3',;
     },;
   };
-
 
 '
 

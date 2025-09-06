@@ -61,17 +61,9 @@ export function EnterpriseCTA() {
 
 import { Calendar } from 'lucide-react';
 
-
-
-
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from 'lucide-react'
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function EnterpriseCTA() {
   return (
@@ -131,26 +123,7 @@ export function EnterpriseCTA() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </section>;
-  );
-};
-}
-    </section>
-  )
-}
-import React from "react",;
-import { Button } from "@/components/ui/button";
-=======
 
-
-
-    </section>
-
-
-import React from 'react';
-import { Button } from '@/components/ui/button';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Calendar, ArrowRight } from 'lucide-react';
 export function EnterpriseCTA() {;
   return (
@@ -269,7 +242,6 @@ export function EnterpriseCTA() {;
                     <p>Free consultation on implementation</p>;
 import React from 'react';
 import { Button } from '@/components / ui / button';
-import { Calendar, ArrowRight } from 'lucide-react';
 export /**
  * EnterpriseCTA - Function description
  */
@@ -400,10 +372,6 @@ function EnterpriseCTA() {
 
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     </section>);
 }

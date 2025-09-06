@@ -602,10 +602,6 @@ export type IconProps = SVGProps<SVGSVGElement> & {
   size?: number | string
   className?: string
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React, { SVGProps } from 'react',
 import { logWarn } from '@/utils/productionLogger',
@@ -913,10 +909,6 @@ export const Zap = LucideZap,
 export const ZoomIn = LucideZoomIn,
 export const ZoomOut = LucideZoomOut,
 
-
-import React, { SVGProps } from 'react'
-import { logWarn } from '@/utils/productionLogger'
-import {
   Home as LucideHome
   Bot as LucideBot
   Sparkles as LucideSparkles
@@ -1523,12 +1515,6 @@ export type IconProps = SVGProps<SVGSVGElement> & {
   className?: string
 },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 // Create a map of icon names to component references
 const iconMap = {
   home: LucideHome
@@ -2115,59 +2101,17 @@ const iconMap = {
   'zap-off': LucideZapOff,
   zap: LucideZap,
   'zoom-in': LucideZoomIn,
-<<<<<<< HEAD
-  'zoom-out': LucideZoomOut},
 
-  'zoom-out': LucideZoomOut,
-}
-  'zoom-out': LucideZoomOut},
-
-=======
-<<<<<<< HEAD
-  'zoom-out': LucideZoomOut},
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-  'zoom-out': LucideZoomOut,
-}
-=======
-  'zoom-out': LucideZoomOut},
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const Icon: React.FC<IconProps> = ({
   name
   size = 24, // Default size
   className
   ...props
 }) => {
-<<<<<<< HEAD
-  const LucideIconComponent = iconMap[name]
-  if (!LucideIconComponent) {
-    logWarn(`Icon "${name}" not found.`)
-    return null
-  }
-  // Render the dynamically selected Lucide icon component
-  return <LucideIconComponent size={size} className={className} {...props} />
-}
-export default Icon; // Default export the Icon component
-export const Icons = iconMap; // Export the map if you need to refer to available icons
 
-
-
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const LucideIconComponent = iconMap[name],
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -3110,13 +3054,7 @@ export const Icon: React.FC<IconProps> = ({;
   return <LucideIconComponent size={size} className={className} {...props} />;
 };
 
-
-
-
-
-import React, { SVGProps } from 'react';
 import { log_warn } from '@/utils / production_logger';
-import {
   Home as LucideHome,
   Bot as LucideBot,
   Sparkles as LucideSparkles,

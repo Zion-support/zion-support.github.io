@@ -64,191 +64,6 @@ import {;
   ResolutionType,;
 } from '@/types/disputes';
 
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { useDisputes } from "@/hooks/useDisputes",
-import {logErrorToProduction} from '@/utils/productionLogger',
-import {
- Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType
-} from "@/types/disputes",
-
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Separator } from "@/components/ui/separator",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { format, formatDistanceToNow } from "date-fns",
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
-import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react'
-import { useAuth } from "@/hooks/useAuth",
-import { toast } from "sonner",
-export function DisputeDetail() {
-  const router = useRouter(),
-  const { disputeId } = router.query as { disputeId?: string },
-  const { user } = useAuth(),
-  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),
-
-  const [dispute, setDispute] = useState<Dispute | null>(null),
-  const [messages, setMessages] = useState<DisputeMessage[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [message, setMessage] = useState(""),
-  const [adminNote, setAdminNote] = useState(""),
-  const [isSending, setIsSending] = useState(false),
-  const [resolution, setResolution] = useState<{ summary: string, resolution_type: ResolutionType }>({
-  summary: "",
-  resolution_type: "compromise"}),
-   
-  const [activeTab, setActiveTab] = useState("overview"),
-
-  // Check if user is admin (placeholder - implement proper admin check)
-  const isAdmin = user?.userType === "admin",
-  
-  useEffect(() => {
-    if (!disputeId) return,
-
-    const loadDisputeData = async () => {
-      setIsLoading(true),
-      try {
-        const disputeData = await getDisputeById(disputeId),
-        if (!disputeData) {
-          toast.error("Dispute not found"),
-          router.push("/dashboard/disputes"),
-          return
-        }
-        setDispute(disputeData),
-        
-        const messagesData = await getDisputeMessages(disputeId),
-        setMessages(messagesData)
-      } catch (error) {
-        logErrorToProduction('Error loading dispute data:', { data: error }),
-        toast.error("Failed to load dispute")
-      } finally {
-        setIsLoading(false)
-      }
-    },
-    
-    loadDisputeData()
-  }, [disputeId, getDisputeById, getDisputeMessages, router]),
-
-  const handleStatusChange = async (status: DisputeStatus) => {
-    if (!disputeId) return,
-
-    const success = await updateDisputeStatus(disputeId, status),
-    if (success) {
-      // Update the dispute object with the new status
-      setDispute({ ...dispute!, status: status })
-    } else {
-      toast.error('Failed to update dispute status')
-    }
-  }
-  const handleResolveDispute = async () => {
-    if (!disputeId) return;
-    if (!resolution.summary) {
-      toast.error('Please provide a resolution summary')
-      return;
-      toast.error("Failed to update dispute status")
-    }
-  },
-
-  const handleResolveDispute = async () => {
-    if (!disputeId) return,
-    
-    if (!resolution.summary) {
-      toast.error("Please provide a resolution summary"),
-      return
-    }
-    const success = await resolveDispute(disputeId, {
-      summary: resolution.summary
-      summary: resolution.summary,
-      resolution_type:
-        (resolution.resolution_type as ResolutionType) |'compromise'
-    })
-    if (success && dispute) {
-      setDispute({
-        ...dispute
-        resolution_summary: resolution.summary
-        resolution_type: resolution.resolution_type
-        resolved_at: new Date().toISOString()
-      resolution_type: (resolution.resolution_type as ResolutionType) || "compromise"}),
-    if (success && dispute) {
-      setDispute({
-        ...dispute,
-        resolution_summary: resolution.summary,
-        resolution_type: resolution.resolution_type,
-        resolved_at: new Date().toISOString(),
-      })
-    } else {
-      toast.error('Failed to resolve dispute')
-    }
-  }
-  const handleSendMessage = async () => {
-    if (!disputeId |!message.trim()) return
-    if (!disputeId || !message.trim()) return;
-    setIsSending(true)
-    try {
-      const success = await addDisputeMessage(disputeId, message, isAdmin)
-      if (success) {
-        // Refresh messages
-        const updatedMessages = await getDisputeMessages(disputeId)
-        setMessages(updatedMessages)
-        setMessage('')
-      }
-    } catch (error) {
-      logErrorToProduction('Error sending message:', { data: error })
-    } finally {
-      setIsSending(false)
-    }
-  }
-      toast.error("Failed to update dispute status")
-    }
-  },
-
-  const handleResolveDispute = async () => {
-    if (!disputeId) return,
-    
-    if (!resolution.summary) {
-      toast.error("Please provide a resolution summary"),
-      return
-    }
-    
-    const success = await resolveDispute(disputeId, {
-      summary: resolution.summary,
-      resolution_type: (resolution.resolution_type as ResolutionType) || "compromise"}),
-    if (success && dispute) {
-      setDispute({
-        ...dispute,
-        resolution_summary: resolution.summary,
-        resolution_type: resolution.resolution_type,
-        resolved_at: new Date().toISOString()})
-    } else {
-      toast.error("Failed to resolve dispute")
-    }
-  },
-
-  const handleSendMessage = async () => {
-    if (!disputeId || !message.trim()) return,
-    
-    setIsSending(true),
-    try {
-      const success = await addDisputeMessage(disputeId, message, isAdmin),
-      if (success) {
-        // Refresh messages
-        const updatedMessages = await getDisputeMessages(disputeId),
-        setMessages(updatedMessages),
-        setMessage("")
-import React, { useState, useEffect } from "react",;
-import { useRouter } from 'next/router',;
-import { useDisputes } from "@/hooks/useDisputes",;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-=======
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-import {;
   Card,;
   CardContent,;
   CardDescription,;
@@ -377,21 +192,9 @@ export function DisputeDetail() {;
     }
   };
 
-<<<<<<< HEAD
-  if (isLoading) {;
-
-      summary: resolution.summary,
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   if (isLoading) {
 
     return (
@@ -413,50 +216,12 @@ export function DisputeDetail() {;
         >          Back to Disputes
         <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
           Back to Disputes
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
         </Button>
       </div>
     )
   }
-<<<<<<< HEAD
 
-          onClick={() => router && router.push('/dashboard/disputes')}
-          className='mt-4';
-        >          Back to Disputes;
-        </Button>;
-      </div>;
-    );
-  }
-
-  const getStatusBadgeVariant = (status: DisputeStatus,) => {;
-    switch (status) {;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className='p - 8 text - center'>;
-        <p > Dispute not found</p>;
-        <Button;
-          on_click={() => router.push ('/dashboard / disputes')}
-          className='mt - 4';
-        >          Back to Disputes;
-        </Button>;
-      </div>);
-  }
-  const getStatusBadgeVariant = (status: DisputeStatus, ) =>: any {
-    switch (status) {
-<<<<<<< HEAD
-      case 'open':
-=======
-
-      case 'open':;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         return 'default';
       case 'under_review':;
         return 'secondary';
@@ -494,23 +259,6 @@ if ( {) {
             <Button onClick={() => handleStatusChange('under_review')}>              Start Review;
             </Button>;
 
-
-<<<<<<< HEAD
-=======
-        return 'outline'; // Changed from "success" to "outline"
-      case 'closed':
-        return 'outline'
-      default:
-        return 'default'
-    }
-  }
-=======
-<<<<<<< HEAD
-
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
-    switch (status) {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       case "open": return "default",
       case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from "success" to "outline"
@@ -519,14 +267,9 @@ if ( {) {
     }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -544,42 +287,7 @@ if ( {) {
             })}
           </p>
         </div>
-<<<<<<< HEAD
-        <div className='flex gap-2'>
-          <Button
-            variant='outline'
-            onClick={() => router.push('/dashboard/disputes')}
-          >
-            Back to List
-          </Button>
-          {isAdmin && dispute?.status === 'open' && (
-            <Button onClick={() => handleStatusChange('under_review')}>              Start Review
-          <p className="text-muted-foreground">
-            Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true })}
-          </p>
-        </div>
-<<<<<<< HEAD
 
-            </Button>
-          )}
-        </div>
-      </div>
-      {dispute.status === 'resolved' && dispute.resolution_summary && (
-        <Alert className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900'>
-          <Check className='h-4 w-4' />
-=======
-
-            </Button>
-          )}
-
-
-
-      {dispute.status === "resolved" && dispute.resolution_summary && (
-        <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
-          <Check className="h-4 w-4" />
-          <AlertTitle>This dispute has been resolved</AlertTitle>
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <AlertTitle>This dispute has been resolved</AlertTitle>
           <AlertDescription>{dispute.resolution_summary}</AlertDescription>
         </Alert>
@@ -591,15 +299,11 @@ if ( {) {
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <AlertTitle>This dispute has been resolved</AlertTitle>
           <AlertDescription>{dispute.resolution_summary}</AlertDescription>
         </Alert>
       )}
-
 
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
         <div className='lg:col-span-2'>
@@ -608,9 +312,7 @@ if ( {) {
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <AlertDescription>
   },;
   if (isLoading) {;
@@ -679,12 +381,6 @@ if ( {) {
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className='mb-6'>
@@ -696,11 +392,6 @@ if ( {) {
             <TabsContent value='overview' className='space-y-6'>
             
             <TabsContent value="overview" className="space-y-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
               <Card>
                 <CardHeader>
@@ -711,38 +402,6 @@ if ( {) {
                 </CardHeader>
                 <CardContent className='space-y-4'>
                   <div>
-<<<<<<< HEAD
-                    <h3 className="font-medium">Reason</h3>
-                    <p>{
-                      disputeReasonLabels[
-                        dispute.reason_code
-                      ] ?? dispute.reason_code
-                    }</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="font-medium">Description</h3>
-                    <p className="whitespace-pre-wrap">{dispute.description}</p>
-                  </div>
-                  <div>
-                    <h3 className='font-medium'>Project</h3>
-                    <p>{dispute.project?.title |'Unknown Project'}</p>
-                    <p className='text-sm text-muted-foreground'>
-                      {dispute.project?.scope_summary}
-                    </p>
-                  </div>
-=======
-                    <h3 className='font-medium'>Reason</h3>
-                    <p>
-                      {disputeReasonLabels[dispute.reason_code] ??
-                        dispute.reason_code}
-                    </p>
-                  </div>
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                  
-
 
                   <div>
                     <h3 className='font-medium'>Description</h3>
@@ -823,20 +482,12 @@ if ( {) {
                     </p>;
                   </div>;
 
-
-
-                  
                   <div>
                     <h3 className="font-medium">Project</h3>
                     <p>{dispute.project?.title || "Unknown Project"}</p>
                     <p className="text-sm text-muted-foreground">{dispute.project?.scope_summary}</p>
                   </div>
                   
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
                   {dispute.milestone_id && (
                     <div>;
                       <h3 className='font - medium'>Related Milestone</h3>;
@@ -943,7 +594,6 @@ if ( {) {
                         </li>;
                       )}
 
-
                       {dispute && dispute.resolved_at && (;
                         <li className='flex gap-2 items-center'>;
 
@@ -963,7 +613,6 @@ if ( {) {
                           </span>;
                         </li>;
 
-                  
                   <div>
                     <h3 className="font-medium">Timeline</h3>
                     <ul className="space-y-2 mt-2">
@@ -1009,11 +658,7 @@ if ( {) {
               {dispute.status === 'resolved' && (
               
               {dispute.status === "resolved" && (
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Card>
                   <CardHeader>
                     <CardTitle>Resolution</CardTitle>
@@ -1024,11 +669,6 @@ if ( {) {
                     </p>
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
                     
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
                     {dispute.resolution_type && (
                       <div className='mt-4'>
                         <Badge>
@@ -1040,10 +680,6 @@ if ( {) {
                           Resolution: {dispute.resolution_type.replace('_ ')}
                         </Badge>;
                       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     )}
                   </CardContent>;
@@ -1053,11 +689,6 @@ if ( {) {
             <TabsContent value='messages' className='space-y-6'>
             
             <TabsContent value="messages" className="space-y-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
               <Card>
                 <CardHeader>
@@ -1137,12 +768,6 @@ if ( {) {
                             </div>;
                           );
                         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
                     )}
                   </div>;
@@ -1170,11 +795,6 @@ if ( {) {
                     <div className="flex justify-end">
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>
                         {isSending ? "Sending..." : "Send Message"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
                       </Button>
                     </div>
@@ -1185,11 +805,6 @@ if ( {) {
             <TabsContent value='attachments'>
             
             <TabsContent value="attachments">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
               <Card>
                 <CardHeader>
@@ -1209,12 +824,6 @@ if ( {) {
               </Card>
             </TabsContent>
             
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
             {isAdmin && (
               <TabsContent value='admin' className='space-y-6'>
                 <Card>
@@ -1354,7 +963,6 @@ if ( {) {
                     </CardDescription>;
                   </CardHeader>;
 
-
                       <h3 className="font-medium mb-2">Change Status</h3>
                       <div className="flex gap-2">
                         <Button 
@@ -1375,11 +983,7 @@ if ( {) {
                           variant="outline" 
                           onClick={() => handleStatusChange("closed")}
                           disabled={dispute.status === "closed"}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         >
                           Mark as Open
                         </Button>
@@ -1401,11 +1005,7 @@ if ( {) {
                     {dispute.status !== 'resolved' && (
                     
                     {dispute.status !== "resolved" && (
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <div>
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>
                         <div className="space-y-4">
@@ -1427,22 +1027,12 @@ if ( {) {
                           />
                           
                           <div className="grid grid-cols-2 gap-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                             <div>
                               <label className='text-sm font-medium mb-1 block'>
                                 Resolution Type
                               </label>
                               <select
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 
                                 className="w-full p-2 border rounded"
                                 value={resolution.resolution_type || ""}
@@ -1536,7 +1126,6 @@ if ( {) {
                             </div>;
                           </div>;
 
-
                           .map((msg) => (
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
                             <div className="flex items-center justify-between mb-2">
@@ -1550,11 +1139,6 @@ if ( {) {
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name || 'Admin'}
                                 </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
                               </div>
                               <p className='whitespace-pre-wrap text-sm'>
@@ -1579,7 +1163,6 @@ if ( {) {
                           value={adminNote}
                           onChange={e => setAdminNote(e && e.target.value)}                        />;
 
-                      
                       <Separator className="my-4" />
                       
                       <div className="space-y-4">
@@ -1588,96 +1171,7 @@ if ( {) {
                           value={adminNote}
                           onChange={(e) => setAdminNote(e.target.value)}
                         />
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-                        <Button
-                          variant="outline"
-                          onClick={() => {
-                            if (adminNote.trim()) {
-                              addDisputeMessage(
-                                disputeId!
-                                adminNote
-                                true
-                              ).then(() => {
-                                getDisputeMessages(disputeId!).then(
-                                  setMessages
-                                )
-                                setAdminNote('')
-=======
-
-                        <Button
-                          variant='outline'
-
-                          <Button on_click={handleResolveDispute}>;
-                            Resolve Dispute;
-                          </Button>;
-                        </div>;
-                      </div>)}
-                    <div>;
-                      <h3 className='font - medium mb - 2'>Admin Notes</h3>;
-                      <div className='space - y-4 max - h-[300px] overflow - y-auto p - 2'>;
-                        {messages;
-                          .filter (msg => msg.is_admin_note);
-                          .map (msg => (
-                            <div;
-                              key={msg.id}
-                              className='bg - yellow - 50 border - l-4 border - yellow - 200 p - 4 dark:bg - yellow - 900 / 20 dark:border - yellow - 900';
-                            >;
-                              <div className='flex items - center justify - between mb - 2'>;
-                                <div className='flex items - center gap - 2'>;
-                                  <Avatar className='h - 6 w - 6'>;
-                                    <AvatarImage;
-                                      src={msg.user_profile?.avatar_url}
-                                      alt={
-                                        msg.user_profile?.display_name ||;
-                                        'Admin avatar';
-                                      }
-                                    />;
-                                    <AvatarFallback>;
-                                      {msg.user_profile?.display_name?.[0] ||;
-                                        'A'}
-                                    </AvatarFallback>;
-                                  </Avatar>;
-                                  <span className='text - sm font - medium'>;
-                                    {msg.user_profile?.display_name || 'Admin'}
-                                  </span>;
-                                </div>;
-                                <span className='text - xs opacity - 70'>;
-                                  {format (
-                                    new Date (msg.created_at),
-                                    'MMM d, h:mm a')}                                </span>;
-                              </div>;
-                              <p className='whitespace - pre - wrap text - sm'>;
-                                {msg.message}
-                              </p>;
-                            </div>))}
-                        {!messages.some (msg => msg.is_admin_note) && (
-                          <p className='text - sm text - muted - foreground italic'>;
-                            No admin notes yet;
-                          </p>)}
-                      </div>;
-                      <Separator className='my - 4' />;
-                      <div className='space - y-4'>;
-                        <Textarea;
-                          placeholder='Add an admin note (only visible to administrators)...';
-                          value={admin_note}
-                          on_change={e => setAdminNote (e.target.value)}                        />;
-                        <Button;
-                          variant='outline';
-                          on_click={() => {
-                            if () {) {
-  $2
-}
-                              addDisputeMessage (
-                                dispute_id!,
-                                admin_note,
-                                true).then (() => {
-                                getDisputeMessages (dispute_id!).then (
-                                  set_messages);
-                                setAdminNote ('');
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                               }) }
 
                           onClick={() => {;
@@ -1693,17 +1187,11 @@ if ( {) {
                                 setAdminNote('');
                               });                            }
 
-
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setAdminNote("")
                               })
                             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
                           }}
                         >
@@ -1720,11 +1208,6 @@ if ( {) {
         <div className='space-y-6'>
         
         <div className="space-y-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
           <Card>
             <CardHeader>
@@ -1813,12 +1296,6 @@ if ( {) {
             </CardContent>
           </Card>
           
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
           <Card>
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
@@ -1999,10 +1476,6 @@ if ( {) {
 }, [disputeId, getDisputeById, getDisputeMessages, router])
 }
 const handleResolveDispute = async () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 ;
 
