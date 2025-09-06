@@ -5,7 +5,7 @@ function randomString(length: number) {
   let res = '';
   const cryptoObj = require('crypto');
   const bytes: Buffer = cryptoObj.randomBytes(length);
-  for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length];
+  for (let i = 0; i < length; i++) res += charset[bytes[i] % charset.length];
   return res
 }
 

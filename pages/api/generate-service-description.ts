@@ -15,7 +15,7 @@ export type GenerateServiceDescriptionResponse = {
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
 ) {
   if (req.method !== 'POST') {
@@ -53,9 +53,10 @@ Requirements:
 
     // Using Responses API for modern SDK
     const response = await openai.responses.create({
-      model: 'gpt-4o-mini';
-      input: prompt;
-      temperature: 0.7});
+      model: 'gpt-4o-mini',
+      input: prompt,
+      temperature: 0.7
+    });
 
     let description = '';
     const output = response.output?.[0];

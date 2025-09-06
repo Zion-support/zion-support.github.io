@@ -2,8 +2,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {
   const active = [
-    ...Object.entries(modules).filter(([, v]) => v).map(([k]) => `/${k}`);
-    ...Object.entries(bonus).filter(([, v]) => v).map(([k]) => `/${k}`)];
+    ...Object.entries(modules).filter(([, v]) => v).map(([k]) => `/${k}`),
+    ...Object.entries(bonus).filter(([, v]) => v).map(([k]) => `/${k}`)
+  ];
   return active.length ? active.sort().join() : 'None'
 }
 
@@ -20,13 +21,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const body = req.body || {};
     const {
-      instanceName;
-      defaultLanguage;
-      deploymentRegion;
-      tokenActivation;
-      governanceMode;
-      branding;
-      modules = {};
+      instanceName,
+      defaultLanguage,
+      deploymentRegion,
+      tokenActivation,
+      governanceMode,
+      branding,
+      modules = {},
       bonusModules = {}} = body;
 
     if (!instanceName || !deploymentRegion) {
@@ -39,47 +40,57 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const outputActions = {
       zionGPT: {
-        initialized: true;
-        routes: ['/gpt/gpt/router'];
-        agents: ['proposal-writerresume-generator']};
+        initialized: true,
+        routes: ['/gpt/gpt/router'],
+        agents: ['proposal-writer', 'resume-generator']
+      },
       daoAndToken: {
-        token: tokenActivation ? 'ZION$' : 'disabled';
-        treasury: tokenActivation ? `${provisionId}-treasury` : null;
-        governanceMode;
-        votingDashboard: '/dao'};
+        token: tokenActivation ? 'ZION$' : 'disabled',
+        treasury: tokenActivation ? `${provisionId}-treasury` : null,
+        governanceMode,
+        votingDashboard: '/dao'
+      },
       assets: {
-        whitepaper: '/whitepaper';
-        roadmap: '/roadmap';
+        whitepaper: '/whitepaper',
+        roadmap: '/roadmap',
         book: {
-          pdf: '/book/manifesto.pdf';
-          trailerScript: '/trailer/script'};
-        summit: '/summit'};
+          pdf: '/book/manifesto.pdf',
+          trailerScript: '/trailer/script'
+        },
+        summit: '/summit'
+      },
       publicPages: [
-        '/about/manifesto/constitution/partners/academy/marketplace/dao';
-        `/nation/${defaultLanguage || 'en'}`]};
+        '/about/manifesto/constitution/partners/academy/marketplace/dao',
+        `/nation/${defaultLanguage || 'en'}`
+      ]
+    };
 
     const deployLog = {
-      provisionId;
-      instanceName;
-      region: deploymentRegion;
-      language: defaultLanguage || 'en';
-      governanceMode;
-      tokenActivation;
-      branding;
-      modules;
-      bonusModules;
-      createdAt: now;
-      version: 'Zion OS v1.0.0'};
+      provisionId,
+      instanceName,
+      region: deploymentRegion,
+      language: defaultLanguage || 'en',
+      governanceMode,
+      tokenActivation,
+      branding,
+      modules,
+      bonusModules,
+      createdAt: now,
+      version: 'Zion OS v1.0.0'
+    };
 
     const operator = {
-      activeModulesSummary: summarizeModules(modules, bonusModules);
-      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
+      activeModulesSummary: summarizeModules(modules, bonusModules),
+      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)
+    };
 
     const access = {
-      roles: ['FounderSuperadminDAO Multisig'];
+      roles: ['Founder', 'Superadmin', 'DAO Multisig'],
       export: {
-        type: 'application/json';
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+        type: 'application/json',
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`
+      }
+    };
 
     return res.status(200).json({ outputActions, deployLog, access, operator })
   } catch (err: any) {
