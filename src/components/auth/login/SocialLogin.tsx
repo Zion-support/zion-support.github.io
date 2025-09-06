@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 import { Facebook, Twitter, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Web3Login } from "./Web3Login";
@@ -12,29 +17,38 @@ export function SocialLogin() {
     window.location.href = "/auth/google";
   };
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="mt-6">
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <div className="w-full border-t border-zion-blue-light" />
+<<<<<<< HEAD
+=======
         </div>
         <div className="relative flex justify-center text-sm">
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">
+<<<<<<< HEAD
+=======
 =======
 return (
     <div className='mt-6'>
       <div className='relative'>
         <div className='absolute inset-0 flex items-center'>
           <div className='w-full border-t border-zion-blue-light' />
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>
         <div className='relative flex justify-center text-sm'>
           <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
             Or continue with
           </span>
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -86,9 +100,12 @@ function SocialLogin() {
         </div>;
       </div>;
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
       <div className="mt-6 grid grid-cols-4 gap-3">
         <Button
           type="button"
@@ -99,6 +116,9 @@ function SocialLogin() {
         >
           <span className="sr-only">Sign in with Google</span>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -124,9 +144,12 @@ function SocialLogin() {
                 d="M12.0004 24C15.2404 24 17.9654 22.935 19.9454 21.095L16.0804 18.095C15.0054 18.82 13.6204 19.245 12.0004 19.245C8.8704 19.245 6.21537 17.135 5.2654 14.29L1.27539 17.385C3.25539 21.31 7.3104 24 12.0004 24Z"
                 fill="#34A853"
               />
+<<<<<<< HEAD
+=======
 =======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -136,18 +159,27 @@ function SocialLogin() {
               <path d="M5.26498 14.2949C5.02498 13.5699 4.88501 12.7999 4.88501 11.9999C4.88501 11.1999 5.01998 10.4299 5.26498 9.7049L1.275 6.60986C0.46 8.22986 0 10.0599 0 11.9999 C0 13.9399 0.46 15.7699 1.28 17.3899L5.26498 14.2949Z" fill="#FBBC05" />
               <path d="M12.0004 24C15.2404 24 17.9654 22.935 19.9454 21.095L16.0804 18.095C15.0054 18.82 13.6204 19.245 12.0004 19.245C8.8704 19.245 6.21537 17.135 5.2654 14.29L1.27539 17.385C3.25539 21.31 7.3104 24 12.0004 24Z" fill="#34A853" />
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
             </svg>
           )}
+<<<<<<< HEAD
+=======
         </Button>;
         <Button
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => openAuthPopup("facebook")}
+<<<<<<< HEAD
+=======
 =======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
         <Web3Login />
       </div>
@@ -155,15 +187,19 @@ function SocialLogin() {
   );
 };
 
+<<<<<<< HEAD
+=======
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => openAuthPopup('facebook')}
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Facebook</span>
           <Facebook className="h-5 w-5" />
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
         <Button
           type="button"
@@ -172,18 +208,28 @@ function SocialLogin() {
 <<<<<<< HEAD
           onClick={() => openAuthPopup("twitter")}
 =======
+<<<<<<< HEAD
+          onClick={() => openAuthPopup("twitter")}
+=======
           onClick={() => openAuthPopup('twitter')}
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Twitter</span>
           <Twitter className="h-5 w-5" />
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
         <Web3Login />
       </div>
@@ -255,7 +301,10 @@ export function SocialLogin() {;
         >;
           <span className="sr-only">Sign in with Twitter</span>;
           <Twitter className="h-5 w-5" />;
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>;
         <Web3Login />;
       </div>;
@@ -263,8 +312,13 @@ export function SocialLogin() {;
   );
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 }
 
 
@@ -326,3 +380,4 @@ export function SocialLogin() {;
     </div>);
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -40,6 +42,7 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Card,
   CardContent,
   CardDescription,
@@ -48,11 +51,19 @@ import {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { FileText, ShieldCheck } from "lucide-react",
+=======
 interface ContractTypeCardsProps {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   onStandardClick: () => void;
   onSmartClick: () => void
 }
+<<<<<<< HEAD
+=======
 
   CardTitle,;
 
@@ -80,19 +91,25 @@ import { FileText, ShieldCheck } from "lucide-react",
   onStandardClick: () => void;
   onSmartClick: () => void
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function ContractTypeCards({
   onStandardClick
   onSmartClick
 }: ContractTypeCardsProps) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onStandardClick: () => void,
   onSmartClick: () => void
 }
 
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -101,6 +118,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
@@ -128,6 +146,8 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardFooter>
       </Card>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -144,6 +164,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -192,6 +213,8 @@ export function ContractTypeCards(): any ({;
 }: ContractTypeCardsProps) {;
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -213,6 +236,7 @@ export function ContractTypeCards(): any ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
@@ -225,6 +249,8 @@ interface ContractTypeCardsProps {;
 ;
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {;
   return (;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -243,11 +269,14 @@ export function ContractTypeCards({ onStandardClick, onSmartClick } ContractType
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -265,6 +294,7 @@ function ContractTypeCards() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/card";
 
 interface ContractTypeCardsProps {
@@ -272,7 +302,10 @@ interface ContractTypeCardsProps {;
   onStandardClick: () => void;
   onSmartClick: () => void
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Standard Contracts;
           </CardTitle>;
           <CardDescription>;
@@ -280,6 +313,8 @@ interface ContractTypeCardsProps {;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -306,10 +341,13 @@ interface ContractTypeCardsProps {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Create Standard Contract;
           </Button>;
         </CardFooter>;
       </Card>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -335,6 +373,7 @@ interface ContractTypeCardsProps {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               Blockchain Powered;
             </span>;
           </div>;
@@ -343,6 +382,8 @@ interface ContractTypeCardsProps {;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -362,10 +403,14 @@ interface ContractTypeCardsProps {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </ul>;
         </CardContent>;
         <CardFooter>;
           <Button;
+<<<<<<< HEAD
+          >;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             className="w - full bg - gradient - to - r from - blue - 600 to - indigo - 600";
@@ -380,10 +425,14 @@ interface ContractTypeCardsProps {;
 =======
           >;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -424,3 +473,4 @@ onSmartClick: () => void
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -107,10 +107,13 @@ function ZapierIntegration() {
               </div>
             </div>
           </CardContent>
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
               <ExternalLink className="h-4 w-4" />
@@ -130,6 +133,8 @@ function ZapierIntegration() {
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-green-500" />
+<<<<<<< HEAD
+=======
                 <span>Add new Zion contacts to Mailchimp</span>
               </li>
               <li className="flex items-center gap-2">
@@ -145,6 +150,7 @@ function ZapierIntegration() {
 
 
                 <Check className="h-4 w-4 text-green-500" />
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <span>Create calendar events for interviews</span>
               </li>
             </ul>
@@ -154,7 +160,10 @@ function ZapierIntegration() {
             <Button variant="outline" className="w-full gap-1">
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <ExternalLink className="h-4 w-4" />
               <span>Explore Zion Zaps</span>
             </Button>
@@ -270,6 +279,8 @@ export function ZapierIntegration() {;
           <CardContent>;
             <p className="text-sm text-muted-foreground mb-4">;
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;
+<<<<<<< HEAD
+=======
 
             </p>;
             <div className='space - y-4'>;
@@ -289,6 +300,7 @@ export function ZapierIntegration() {;
                       <Check className='h - 4 w - 4' />) : (
                       <Copy className='h - 4 w - 4' />)}                  </Button>                  <Button size="sm" variant="outline" on_click={handleCopyApiKey}>;
                     {copied ? <Check className="h - 4 w - 4" /> : <Copy className="h - 4 w - 4" />}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   </Button>;
                 </div>;
               </div>;
@@ -309,6 +321,8 @@ export function ZapierIntegration() {;
             </Button>;
           </CardFooter>;
         </Card>;
+<<<<<<< HEAD
+=======
 
         <Card>;
           <CardHeader>;
@@ -332,6 +346,7 @@ export function ZapierIntegration() {;
                 <Check className="h - 4 w - 4 text - green - 500" />;
                 <span > Create calendar events for interviews</span>;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </li>;
             </ul>;
           </CardContent>;
@@ -368,6 +383,9 @@ export function ZapierIntegration() {;
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+=======
 
 
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

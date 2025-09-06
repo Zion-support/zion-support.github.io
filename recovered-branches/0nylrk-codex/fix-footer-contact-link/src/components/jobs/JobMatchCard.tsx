@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -11,6 +13,7 @@ import {formatDistanceToNow} from "date-fns";
 import {JobMatch} from "@/types/jobs";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -350,6 +353,8 @@ if ( {) {
   }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const handleViewDetails = () =>: any {
     // Check condition
 if ( {) {
@@ -646,3 +651,4 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

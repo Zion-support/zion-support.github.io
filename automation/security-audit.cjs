@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+}},
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -14,6 +17,7 @@
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -57,11 +61,16 @@ const securityChecks = [{
 
       
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       
 
       
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
       
@@ -74,6 +83,7 @@ const securityChecks = [{
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }},
   {
     "name": 'API Security Check',
@@ -91,6 +101,8 @@ const securityChecks = [{
           if (
             content.includes('process.env') &&
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -114,11 +126,14 @@ const securityChecks = [{
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             !content.includes('// "Security": ')
           ) {
             securityIssues++;
           }
         });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -134,6 +149,7 @@ const securityChecks = [{
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         console.log(
           `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`
         );
@@ -148,6 +164,8 @@ const securityChecks = [{
         
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -158,6 +176,7 @@ const securityChecks = [{
 
         
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }},
   {
@@ -181,6 +200,8 @@ const securityChecks = [{
           }
         });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -195,6 +216,7 @@ const securityChecks = [{
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
       }
     },
@@ -207,6 +229,8 @@ const securityChecks = [{
         
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -217,6 +241,7 @@ const securityChecks = [{
 
         
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }},
   {
@@ -235,6 +260,8 @@ const securityChecks = [{
         
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -261,6 +288,7 @@ const securityChecks = [{
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }},
 ];
 
@@ -288,6 +316,8 @@ const report = {
   "checks": securityChecks.map(check => ({
     name: check.name,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -298,6 +328,7 @@ const report = {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     status: 'completed',
   })),
   summary: {
@@ -306,6 +337,8 @@ const report = {
     failed: totalCount - successCount,
   },
 };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -321,11 +354,18 @@ const report = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
+<<<<<<< HEAD
+
+
+
+
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -357,6 +397,7 @@ const report = {
 
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -365,6 +406,8 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -398,6 +441,7 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -411,6 +455,11 @@ console.log('� Security Audit Starting...\n')
     "name"
     "name"
     "status"
+<<<<<<< HEAD
+    "status"
+    "status"
+    "status"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -440,3 +489,4 @@ console.log('� Security Audit Starting...\n')
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

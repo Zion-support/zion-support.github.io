@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -11,6 +13,7 @@ import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Search } from "lucide-react",
@@ -18,15 +21,20 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
 
+<<<<<<< HEAD
+=======
 
 
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
@@ -45,6 +53,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
   const location = useLocation();
@@ -53,15 +62,20 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const currentPath = location.pathname,
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const navigationItems = [
     { title: "Getting Started", path: "/developers/docs/getting-started" }
     { title: "API Reference", path: "/developers/docs/reference" }
     { title: "Webhooks", path: "/developers/docs/webhooks" }
     { title: "Sample Code", path: "/developers/docs/samples" }
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }]
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -111,10 +125,13 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="flex min-h-screen bg-zinc-950">;
       {/* Sidebar */}
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -169,6 +186,7 @@ export function ApiDocsLayout({ children } ApiDocsLayoutProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Link
                   to={item.path}
                   className={cn(
@@ -342,6 +360,11 @@ const navigationItems = [ return (<div className="flex min-h-screen bg-zinc-950"
   );
 }
 <<<<<<< HEAD
+
+
+export default ApiDocsLayout;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -426,3 +449,4 @@ export default ApiDocsLayout;
 
 export default ApiDocsLayout;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

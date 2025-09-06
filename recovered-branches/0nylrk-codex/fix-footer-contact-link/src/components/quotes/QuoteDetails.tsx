@@ -12,7 +12,25 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
+<<<<<<< HEAD
+import React from "react",
+import { 
+  Dialog,
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogDescription 
+} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
+import { QuoteStatusBadge } from "./QuoteStatusBadge",
+import type { QuoteRequest } from "@/types/quotes",
+import { format } from "date-fns",
+=======
 import { format } from "date-fns";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;

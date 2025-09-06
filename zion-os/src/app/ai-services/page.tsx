@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 import Link from "next/link",;
 export const metadata = {;
@@ -9,6 +11,7 @@ export default function AIServicesPage() {;
 
     <div className="min-h-screen">;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Link from './next / link';,
 export const metadata = {
   title: "AI Services - Zion Tech Group | Artificial Intelligence & Machine Learning Solutions",
@@ -44,11 +47,14 @@ export default function AIServicesPage() {;
           <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
             AI & <span className="gradient - text">Machine Learning</span>;
           </h1>;
+<<<<<<< HEAD
+=======
 
           <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
             Harness the power of artificial intelligence to automate operations,
             enhance decision - making, and create intelligent business processes.;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </p>;
         </div>;
       </section>;

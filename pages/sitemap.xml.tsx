@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { GetServerSideProps } from 'next';
 
 interface SitemapUrl {
@@ -201,6 +203,7 @@ ${staticPages
 
 export default Sitemap;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
      `;
        });
        .join("")}

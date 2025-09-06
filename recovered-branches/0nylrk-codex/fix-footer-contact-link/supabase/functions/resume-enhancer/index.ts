@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -24,6 +26,7 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -51,6 +54,8 @@ serve(async (req) => {
 
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
+<<<<<<< HEAD
+=======
 
   try {
     const { content, enhancementType, context } = await req && req.json();
@@ -100,6 +105,7 @@ serve(async (req) => {
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   try {;
     const { content, enhancementType, context } = await req.json(),;
@@ -108,6 +114,8 @@ serve(async (req) => {
 <<<<<<< HEAD
     if (!openAiKey) {;
       throw new Error("OPENAI_API_KEY is not defined");
+<<<<<<< HEAD
+=======
 
 
 
@@ -119,10 +127,13 @@ serve(async (req) => {
     if (!openAiKey) {;
       throw new Error("OPENAI_API_KEY is not defined"),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     if (!content) {
       throw new Error("Content is required")
     }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
@@ -185,6 +196,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         break;
       case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
         user_prompt = `Enhance this work description with 3 - 5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
@@ -192,6 +204,8 @@ if ( {) {
       case "skill - categorization": system_prompt = "You are an expert at categorizing technical and professional skills. Organize skills into logical categories.";
         user_prompt = `Categorize these skills into logical groups: ${content}. Return a JSON object with skill categories as keys and arrays of skills as values. Common categories might include: Programming, DevOps, Cloud, Soft Skills, etc. ${context ? `Professional context: ${context}` : ''}`;
         break;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -248,6 +262,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         model: "gpt-4o-mini";
         messages: [
           {
@@ -261,11 +276,14 @@ if ( {) {
         temperature: 0.7})}),
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
@@ -361,6 +379,8 @@ if ( {) {
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -395,6 +415,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     // Determine the system prompt based on enhancement type;
     let systemPrompt = "",;
@@ -454,6 +475,8 @@ if ( {) {
     );
   }
 });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -570,3 +593,4 @@ return new Response (JSON.stringify ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

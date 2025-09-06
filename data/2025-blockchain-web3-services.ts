@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface BlockchainWeb3Service {
 export interface BlockchainWeb3Service {;
   id: string;
@@ -12,8 +15,11 @@ export interface BlockchainWeb3Service {;
     currency: string;
     trialDays: number;
     setupTime: string;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   {
@@ -39,6 +45,8 @@ export interface BlockchainWeb3Service {;
     support:
       '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.'
     compliance: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -118,6 +126,7 @@ export interface BlockchainWeb3Service {;
 
     icon: '🌾',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2024 - 01 - 15',
@@ -126,6 +135,8 @@ export interface BlockchainWeb3Service {;
     reviews: 6200,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -137,6 +148,7 @@ export interface BlockchainWeb3Service {;
     realImplementation: true,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.'
     roi: 'NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.'
@@ -154,6 +166,8 @@ export interface BlockchainWeb3Service {;
     support:
       '24/7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.'
     compliance: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -231,6 +245,7 @@ export interface BlockchainWeb3Service {;
 
     icon: '🎨',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - pink - 500 to - rose - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -241,14 +256,19 @@ export interface BlockchainWeb3Service {;
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0 && 0.01-0 && 0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our advantage: Multi-industry focus and IoT integration.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     competitors: [
       'IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain'
     ]
     techStack: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -257,6 +277,7 @@ export interface BlockchainWeb3Service {;
     realImplementation: true,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.'
     roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.'
@@ -272,6 +293,8 @@ export interface BlockchainWeb3Service {;
       'SAP, Oracle, Microsoft Dynamics, Salesforce, Custom ERP systems, IoT platforms'
     ]
     support:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -349,6 +372,7 @@ export interface BlockchainWeb3Service {;
 
     icon: '🔗',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,
     launch_date: '2024 - 02 - 10',
@@ -359,6 +383,8 @@ export interface BlockchainWeb3Service {;
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'Innovative Web3 social platform. Competes with traditional platforms like Facebook (free), Twitter (free), and Instagram (free). Our advantage: True decentralization and content ownership.',
     competitors: ['Facebook, Twitter, Instagram, TikTok, LinkedIn, YouTube'],
@@ -366,6 +392,7 @@ export interface BlockchainWeb3Service {;
     realImplementation: true,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.'
     roi: 'Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.'
@@ -383,8 +410,11 @@ export interface BlockchainWeb3Service {;
     support:
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup.com/web3-social-media-platform',
@@ -400,6 +430,9 @@ export interface BlockchainWeb3Service {;
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       'Community support, developer documentation, custom development services, and enterprise solutions.',
 =======
@@ -476,8 +509,11 @@ export interface BlockchainWeb3Service {;
     link: 'https://ziontechgroup.com / web3 - social - media - platform',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     icon: '🌐',
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
@@ -486,6 +522,8 @@ export interface BlockchainWeb3Service {;
     rating: 4 && 4.6,
     reviews: 18000,
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -525,10 +563,16 @@ export interface BlockchainWeb3Service {;
 
     icon: '🌐';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - purple - 500 to - indigo - 600';
     popular: true;
     launch_date: '2024 - 01 - 01';
     customers: 25000;
+<<<<<<< HEAD
+    rating: 4.6,
+    reviews: 18000;
+  }
+=======
 <<<<<<< HEAD
     rating: 4.6,
     reviews: 18000;
@@ -553,6 +597,7 @@ export interface BlockchainWeb3Service {;
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
 <<<<<<< HEAD

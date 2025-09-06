@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {
   const prompt = `Create a concise, compelling job post for a ${role}.
@@ -10,6 +13,8 @@ Add responsibilities, requirements, and benefits in bullet points.`;
     model: 'gpt-4o-mini'
     input: prompt
 });
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -19,19 +24,25 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import OpenAI from 'openai',;
 type OpenAIClient = OpenAI,;
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
   return new OpenAI({ apiKey });
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;
   const prompt = `Create a concise, compelling job post for a ${role}.;
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -60,6 +71,7 @@ Location: ${opts.location || 'Remote'}
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 Key skills: ${(opts.tags || []).join() || 'N/A'};
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai.responses.create({

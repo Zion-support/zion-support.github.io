@@ -4,7 +4,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 
 # Script to automatically resolve merge conflicts by choosing the main branch version
 # This script removes everything from <<<<<<< HEAD to ======= and keeps everything after =======
@@ -53,7 +57,11 @@ files_with_conflicts=$(find pages/ -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {}
 
 for file in $files_with_conflicts; do
     echo "Fixing merge conflicts in: $file"
+<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
     
     # Create a backup
     cp "$file" "$file.backup"
@@ -123,4 +131,8 @@ echo "Merge conflicts fixed!"
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

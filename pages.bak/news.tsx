@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,10 +32,13 @@ const React from "react"; const NewsPage = () => { return ( <> <SEOHead title="N
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from \'react\'; const NewsPage = () => { return ( <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News</h1> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
 const React from "react"; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;'"'"
 import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
 import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,3 +99,4 @@ import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title=
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

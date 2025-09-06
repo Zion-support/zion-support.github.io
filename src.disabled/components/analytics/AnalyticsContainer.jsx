@@ -17,6 +17,8 @@
 :src && src.disabled/components/analytics/AnalyticsContainer && AnalyticsContainer.js.jsx
 
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
+<<<<<<< HEAD
+=======
 :src.disabled/components/analytics/AnalyticsContainer.js.jsx
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
 <<<<<<< HEAD
@@ -43,6 +45,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 :src.disabled/components/analytics/AnalyticsContainer.js.jsx
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""

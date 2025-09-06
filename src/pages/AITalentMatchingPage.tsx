@@ -17,12 +17,22 @@ export default function AITalentMatchingPage() {;
     }
   ];
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Bot, Users, TrendingUp } from 'lucide-react'
 
 export default function AITalentMatchingPage() {
+<<<<<<< HEAD
+
+  const benefits = [
+    {
+      title: "Precise Candidate Matching",
+      description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
+=======
   const benefits = [
     {
 
@@ -31,6 +41,10 @@ export default function AITalentMatchingPage() {
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
 <<<<<<< HEAD
       icon: <Bot className="h-8 w-8" />},
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
@@ -40,6 +54,11 @@ export default function AITalentMatchingPage() {
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className="h-8 w-8" />}],
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 =======
       icon: <Bot className = "h-8 w-8" />},
     {
@@ -50,7 +69,12 @@ export default function AITalentMatchingPage() {
       title: "Scalable Talent Pools",
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className = "h-8 w-8" />}],
+<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
   const testimonials = [
     {
       name: "Emily Stone",
@@ -58,13 +82,26 @@ export default function AITalentMatchingPage() {
 <<<<<<< HEAD
       text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
 =======
+<<<<<<< HEAD
       text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+<<<<<<< HEAD
+      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
+=======
+      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
       avatar: "/placeholder.svg"},
     {
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
+<<<<<<< HEAD
+      avatar: "/placeholder.svg"}],
+
+=======
 
   const features = [;
     "Machine learning-based candidate matching",;
@@ -98,7 +135,11 @@ function AITalentMatchingPage() {
       title: "AI-Powered Matching",
       description:
         "Advanced algorithms match the right talent with the right opportunities",
+<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
     },
     {
       icon: Users,
@@ -107,7 +148,11 @@ function AITalentMatchingPage() {
       description: "All candidates are pre - screened and verified for quality";
 =======
       description: "All candidates are pre-screened and verified for quality",
+<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
     },
     {
       icon: TrendingUp,
@@ -118,7 +163,11 @@ function AITalentMatchingPage() {
 =======
       description: "Monitor performance and success rates of placements",
     },
+<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
   ];
   const features = [;
     "Machine learning - based candidate matching",
@@ -130,7 +179,11 @@ function AITalentMatchingPage() {
     "Custom matching criteria";
 =======
     "Custom matching criteria",
+<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
   ];
   const stats = [;
     { label: "Successful Placements", value: "95%" },
@@ -138,6 +191,10 @@ function AITalentMatchingPage() {
 <<<<<<< HEAD
     { label: "Time to Hire", value: "50% faster" }
   ];
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -184,6 +241,11 @@ export default function AITalentMatchingPage() {;
       subtitle="Find the perfect experts for your projects with intelligent matching.";
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=AI+Talent+Matching";
       description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 =======
     { label: "Time to Hire", value: "50% faster" },
   ];
@@ -192,13 +254,20 @@ export default function AITalentMatchingPage() {;
       title="AI Talent Matching";
       subtitle="Find the perfect talent with our AI - powered matching system";
       description="Our advanced AI technology analyzes skills, experience, and cultural fit to match the right candidates with the right opportunities, ensuring successful placements and satisfied clients.";
+<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
       benefits={benefits}
       features={features}
       stats={stats}
 
     />;
   );
+<<<<<<< HEAD
+=======
 
       cta_text="Start Matching Talent";
       cta_link="/contact";
@@ -207,3 +276,4 @@ export default function AITalentMatchingPage() {;
 
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

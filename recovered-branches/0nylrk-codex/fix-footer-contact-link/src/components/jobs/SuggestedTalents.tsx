@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useEffect, useState } from "react";
@@ -9,6 +11,7 @@ import { EmptyMatchesCard } from "./EmptyMatchesCard";
 import { JobMatchCard } from "./JobMatchCard";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import { useEffect, useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
@@ -91,6 +94,8 @@ function SuggestedTalents() {
           *;
           talent_profile: talent_id (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -107,6 +112,7 @@ function SuggestedTalents() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             id;
             user_id;
             full_name;
@@ -118,6 +124,8 @@ function SuggestedTalents() {
             key_projects;
             skills;
             location;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -252,10 +260,13 @@ interface SuggestedTalentsProps {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
     // // // console.log("View talent profile:", talentId),
     toast({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       title: "View Profile"
       description: `Navigating to talent profile: ${talentId}`
@@ -277,12 +288,15 @@ interface SuggestedTalentsProps {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleInvite = (talentId: string) => {
     // Implement logic to invite talent
     // // // console.log("Invite talent:", talentId),
     toast({
       setIsProcessing(false);
     });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   }
   useEffect(() => {
@@ -481,6 +495,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             category,
             company_name);
         `,
@@ -606,6 +621,8 @@ interface SuggestedTalentsProps {;
 
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -624,10 +641,14 @@ interface SuggestedTalentsProps {;
       
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>
         ) : talents.length === 0 ? (
+<<<<<<< HEAD
+  return (
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -644,6 +665,7 @@ interface SuggestedTalentsProps {;
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <EmptyMatchesCard
             onRefresh={handleRefresh}
             isProcessing={isProcessing}
@@ -832,6 +854,8 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
 <<<<<<< HEAD
                 match_percent={talent.match_percent}
                 skills={talent.skills}
+<<<<<<< HEAD
+=======
 
 =======
                 matchPercent={talent.matchPercent}
@@ -855,11 +879,17 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
 =======
                 match_percent={talent.match_percent}
                 skills={talent.skills}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 on_apply={() => handleViewProfile (talent.id)}
                 onViewDetails={() => handleViewProfile (talent.id)}
                 on_invite={() => handle_invite (talent.id)}
               />))}
           </div>)}
+<<<<<<< HEAD
+      </CardContent>;
+    </Card>);
+}
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </CardContent>;
     </Card>);
@@ -951,3 +981,4 @@ const handleViewProfile = (talentId: string) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

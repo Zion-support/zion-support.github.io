@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type ProjectParticipants = {
 
 export type ProjectParticipants = {;
@@ -12,6 +15,10 @@ export type ProjectParticipants = {;
   talentUserId: string;
 }
 export type Project = {  id: string;
+<<<<<<< HEAD
+  title: string;
+  description?: string;
+=======
 <<<<<<< HEAD
   title: string;
   description?: string;
@@ -35,6 +42,7 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     value === 'Pending' ||
     value === 'In Progress' ||
     value === 'Submitted' ||
@@ -43,14 +51,19 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
   );export interface MilestoneAttachment {;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   url: string;
   type: string;
   size: number;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -63,6 +76,7 @@ export interface CreateMilestoneRequest {
   uploadedAt: string
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 export interface CreateMilestoneRequest {;
@@ -80,14 +94,20 @@ export interface UpdateMilestoneRequest {;
 <<<<<<< HEAD
 export interface UpdateMilestoneRequest {
 =======
+<<<<<<< HEAD
+export interface UpdateMilestoneRequest {
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   title?: string;
   description?: string;
   due_date?: string;
   amount_usd?: number;
   status?: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -104,6 +124,7 @@ export function isOverdue(milestone: Milestone): boolean {
   }
   return new Date(milestone.dueDate) < new Date();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 
@@ -116,6 +137,9 @@ export function getDaysUntilDue(milestone: Milestone): number | null {
 }
 
 }
+<<<<<<< HEAD
+}
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 }
@@ -124,3 +148,4 @@ export function getDaysUntilDue(milestone: Milestone): number | null {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

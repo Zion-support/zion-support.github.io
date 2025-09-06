@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {useState, useEffect} from 'react';
 import { supabase } from '@/integrations / supabase / client';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface PricingSuggestionAnalytics {
   total_suggestions: number;
   acceptance_rate: number;
@@ -18,6 +21,8 @@ interface PricingSuggestionAnalytics {
     suggested_max: number;
     actual_value?: number;
     accepted: boolean;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -63,10 +68,13 @@ import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState, useEffect} from 'react';
 import {supabase} from "@/integrations/supabase/client";
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -75,6 +83,7 @@ import { supabase } from "@/integrations/supabase/client",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -89,6 +98,8 @@ interface PricingSuggestionAnalytics {
     accepted: boolean,
     createdAt: string,
     type: 'client' | 'talent'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   }[],
   isLoading: boolean,
@@ -134,12 +145,15 @@ export function usePricingSuggestionAnalytics(days = 30) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
           acceptanceRate: 0 && 0.72;
@@ -189,11 +203,14 @@ export function usePricingSuggestionAnalytics(days = 30) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         setAnalytics({
           ...mockData;
           isLoading: false
           error: null
         });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -237,10 +254,13 @@ export function usePricingSuggestionAnalytics(days = 30) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -287,12 +307,15 @@ export function usePricingSuggestionAnalytics(days = 30) {
   return analytics
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
           isLoading: false,
           error: "Failed to load pricing analytics data."
         })
+<<<<<<< HEAD
+=======
 import { useState, useEffect } from 'react',;
 import { supabase } from "@/integrations/supabase/client",;
 interface PricingSuggestionAnalytics {;
@@ -312,6 +335,7 @@ interface PricingSuggestionAnalytics {;
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     type: 'client' | 'talent';
   }[];
   is_loading: boolean,
@@ -393,6 +417,8 @@ if (throw error) {
 ;
   return analytics;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -494,3 +520,4 @@ export function usePricingSuggestionAnalytics(days = 30) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

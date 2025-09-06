@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -24,6 +26,7 @@ export default function CategoryDetail() {
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useParams, Link } from "react-router-dom",
 import { Header } from "@/components/header/Header",
 import { Footer } from "@/components/Footer",
@@ -49,13 +52,18 @@ export default function CategoryDetail() {
   const [isLoading, setIsLoading] = useState(true),
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
     icon: <Bot className="w-6 h-6" />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -64,6 +72,7 @@ export default function CategoryDetail() {
   });
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Map of category slugs to their display data
   const categoryData = {
     'services': {
@@ -80,6 +89,8 @@ export default function CategoryDetail() {
       title: "Equipment"
       description: "Rent or buy specialized hardware, servers, and devices";
       icon: <Code className="w-6 h-6" />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -109,11 +120,14 @@ export default function CategoryDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -129,11 +143,14 @@ export default function CategoryDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
       icon: <Brain className="w-6 h-6" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -149,11 +166,14 @@ export default function CategoryDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
       icon: <PenLine className="w-6 h-6" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -169,11 +189,14 @@ export default function CategoryDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     'data-analysis': {
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
       icon: <BarChart className="w-6 h-6" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -189,11 +212,14 @@ export default function CategoryDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     'computer-vision': {
       title: "Computer Vision"
       description: "Image and video processing solutions"
       icon: <Eye className="w-6 h-6" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -209,11 +235,14 @@ export default function CategoryDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     'virtual-assistants': {
       title: "Virtual Assistants"
       description: "Intelligent automation for your workflow"
       icon: <Bot className="w-6 h-6" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -229,11 +258,14 @@ export default function CategoryDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -249,11 +281,14 @@ export default function CategoryDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     'developer-tools': {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -270,11 +305,14 @@ export default function CategoryDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     'business-solutions': {
       title: "Business Solutions"
       description: "Enterprise AI integrations and services"
       icon: <Briefcase className="w-6 h-6" />
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -299,11 +337,14 @@ export default function CategoryDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Find the category data based on slug
     const currentCategory = categoryData[slug as keyof typeof categoryData] |{
       title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') |"Category"
       description: "Explore our collection in this category"
       icon: <Bot className="w-6 h-6" />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -313,10 +354,13 @@ export default function CategoryDetail() {
     setCategory(currentCategory);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Filter listings by category
     const categoryTitle = currentCategory.title;
     const filteredListings = MARKETPLACE_LISTINGS.filter(listing =>
       listing.category.toLowerCase() === categoryTitle.toLowerCase()
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -362,10 +406,13 @@ export default function CategoryDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         author: {
           name: `Provider ${index + 1}`
           id: `author-${index + 1}`
           avatarUrl: undefined
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -497,10 +544,13 @@ export default function CategoryDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }));
     setListings(listingsToShow);
     setIsLoading(false);
   }, [slug]);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -534,6 +584,7 @@ export default function CategoryDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId)
@@ -541,6 +592,8 @@ export default function CategoryDetail() {;
       toast({
         title: "Quote Requested"
         description: `Your quote request for ${listing.title} has been sent.`
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -559,6 +612,7 @@ export default function CategoryDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
@@ -568,6 +622,8 @@ export default function CategoryDetail() {;
             title: listing.title
             category: listing.category
             image: listing.images?.[0]
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -726,6 +782,7 @@ export default function CategoryDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { use_params, Link } from './react-router-dom';
 import { Header } from '@/components / header / Header';
 import { Footer } from '@/components / Footer';
@@ -879,6 +936,8 @@ if ( {) {
             category: listing.category,
             image: listing.images?.[0];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -909,10 +968,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
         }
       });
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -925,6 +987,7 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   };
   },
 
@@ -1276,6 +1339,8 @@ export default function CategoryDetail() {;
             </div>;
           )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
                 <ProductListingCard
@@ -1310,6 +1375,7 @@ export default function CategoryDetail() {;
             </div>;
           )}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </p>;
           </div>;
           {is_loading ? (
@@ -1413,6 +1479,8 @@ description: "Enterprise AI integrations and services";
 icon: <Briefcase className="w-6 h-6" /> 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 
 };
@@ -1468,3 +1536,4 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue" > <div classNam
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

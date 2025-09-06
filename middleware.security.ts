@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -22,6 +24,7 @@ export function securityMiddleware("request": NextRequest) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Apply Content Security Policy;
   const cspString = Object && Object.entries(contentSecurityPolicy && contentSecurityPolicy.directives);
     .map(([key, values]) => `${key} ${values && values.join(" ")}`);
@@ -32,6 +35,8 @@ export function securityMiddleware("request": NextRequest) {;
   response && response.headers.set("X-RateLimit-Remaining", "99");
   response && response.headers.set("X-RateLimit-Reset", new Date(Date && Date.now() + 3600000).toISOString());
   return response}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -127,3 +132,4 @@ export function securityMiddleware(request: NextRequest) {; const response = Nex
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+' \' \' \' \' \' \''\''\";\";
+" " " " " " """"";";'"'"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React,{ useEffect } from 'react''';' import { supabase,getFromProfiles } from '../../integrations/supabase/client''';' import { useAuthOperations } from '../../hooks/useAuthOperations''';' import { AuthContext } from './AuthContext''';' import { cleanupAuthState } from '../../utils/authUtils'''; import { useNavigate,useLocation } from';';react-router-dom''';' import { useAuthState } from './useAuthState''';' import { useAuthEventHandlers } from './useAuthEventHandlers''';' import { mapProfileToUser } from './profileMapper''';' import { loginUser,registerUser } from '@/services/authService''';' import { safeStorage } from '@/utils/safeStorage''';' import { toast } from '@/hooks/use-toast''';';''
@@ -32,6 +36,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ' \' \' \' \' \' \''\''\";\";
 " " " " " " """"";";'"'"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React,{ useEffect } from 'react''';' import { supabase,getFromProfiles } from '../../integrations/supabase/client''';' import { useAuthOperations } from '../../hooks/useAuthOperations''';' import { AuthContext } from './AuthContext''';' import { cleanupAuthState } from '../../utils/authUtils'''; import { useNavigate,useLocation } from';';react-router-dom''';' import { useAuthState } from './useAuthState''';' import { useAuthEventHandlers } from './useAuthEventHandlers''';' import { mapProfileToUser } from './profileMapper''';' import { loginUser,registerUser } from '@/services/authService''';' import { safeStorage } from '@/utils/safeStorage''';' import { toast } from '@/hooks/use-toast''';';''
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

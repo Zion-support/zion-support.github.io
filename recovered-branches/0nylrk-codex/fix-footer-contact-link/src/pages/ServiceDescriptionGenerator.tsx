@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -28,6 +30,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -37,6 +40,8 @@ import {SEO} from "@/components/SEO";
 import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function ServiceDescriptionGenerator() {;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -55,6 +60,7 @@ export default function ServiceDescriptionGenerator() {;
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -74,9 +80,12 @@ export default function ServiceDescriptionGenerator() {
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Show loading while checking authentication
   if (isLoading) {
     return (
@@ -94,6 +103,8 @@ export default function ServiceDescriptionGenerator() {
   const handleDescriptionSave = (editedDescription: string) => {
     setGeneratedDescription(editedDescription)
     // Here you could also save to database if needed
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -105,6 +116,7 @@ export default function ServiceDescriptionGenerator() {
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -126,6 +138,8 @@ export default function ServiceDescriptionGenerator() {
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
             {generatedDescription && (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -133,6 +147,7 @@ export default function ServiceDescriptionGenerator() {
               <GeneratedDescriptionDisplay 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -145,8 +160,11 @@ export default function ServiceDescriptionGenerator() {;
   const { isAuthenticated, isLoading } = useAuth(),;
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Show loading while checking authentication;
   if (isLoading) {;
     return (
@@ -186,6 +204,8 @@ export default function ServiceDescriptionGenerator() {;
     );
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -193,10 +213,13 @@ export default function ServiceDescriptionGenerator() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Redirect to login if not authenticated;
   if (!isAuthenticated) {;
     return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -245,6 +268,7 @@ export default function ServiceDescriptionGenerator() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       />;
       <Header />;
       <main className="flex-1 p-6 md:p-10">;
@@ -291,6 +315,8 @@ export default function ServiceDescriptionGenerator() {;
                 onSave={handleDescriptionSave}
               />;
             )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -409,3 +435,4 @@ min-h-screen flex flex-col bg-zion-blue"> <SEO title=" Service Description Gener
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

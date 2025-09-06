@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+import {Header} from "@/components/header";
+import {Footer} from "@/components/Footer";
+import {JobPostingForm} from "@/components/jobs";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {SEO} from "@/components/SEO";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+import {useIsMobile} from "@/hooks/use-mobile";
+export default function PostJob() {;
+import { Header } from "@/components/header",
+import { Footer } from "@/components/Footer",
+import { JobPostingForm } from "@/components/jobs",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",
+=======
 import { Header } from "@/components/header";
 import { Footer } from "@/components/Footer";
 import { JobPostingForm } from "@/components/jobs";
@@ -10,20 +27,27 @@ import {
 } from "@/components/ui/card";
 import { SEO } from "@/components/SEO";
 import { useAuth } from "@/hooks/useAuth";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Navigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
   const { isAuthenticated, isLoading } = useAuth();
   const isMobile = useIsMobile();
+<<<<<<< HEAD
+
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   if (isLoading) {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
       </div>
     );
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   return (
@@ -79,6 +103,7 @@ export default function PostJob() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -101,6 +126,8 @@ export default function PostJob() {;
   }
   ;
   return (;
+<<<<<<< HEAD
+=======
     <>;
       <SEO ;
         title="Post a Job | Zion AI Marketplace" ;
@@ -118,6 +145,7 @@ export default function PostJob() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <CardDescription>;
               Fill out the form below to post your job and find the perfect talent.;
             </CardDescription>;
@@ -137,6 +165,8 @@ export default function PostJob() {;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
       {is_mobile && <div className="h - 16"></div>}
@@ -175,8 +205,12 @@ if (isLoading) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
       {is_mobile && <div className="h - 16"></div>}
     </>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

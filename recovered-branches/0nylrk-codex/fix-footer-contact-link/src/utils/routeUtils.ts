@@ -3,6 +3,8 @@ import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -12,11 +14,14 @@ import { completeSitemap, SitemapItem } from "@/config/sitemap",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path);
 };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
@@ -28,6 +33,7 @@ import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
@@ -82,6 +88,8 @@ export const isProtectedRoute = (path: string): boolean => {
   if (!route) return true, // Default to accessible
   // If route requires authentication and user is not authenticated
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (route && route.requiredAuth && !isAuthenticated) return false;
@@ -104,21 +112,29 @@ export const isProtectedRoute = (path: string): boolean => {
   
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // If route requires specific roles and user doesn't have one
   if (route.requiredRoles && route.requiredRoles.length > 0) {
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   return true
 }
 // Get breadcrumb items for a path
 <<<<<<< HEAD
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const breadcrumbs = [{label: 'Home', path: '/'}];
   if (path === '/') return breadcrumbs;
   // Split the path into segments
@@ -142,6 +158,8 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     const route = findRouteByPath(currentPath);
     if (route) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       breadcrumbs && breadcrumbs.push({
@@ -155,10 +173,13 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         path: currentPath
       })
     } else {
       // For dynamic routes that might not be in the static sitemap
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       breadcrumbs && breadcrumbs.push({
@@ -170,6 +191,7 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
   return breadcrumbs
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 }
@@ -362,6 +384,8 @@ if ( {) {
 };
 }
 ;
+<<<<<<< HEAD
+=======
 }return breadcrumbs;
 };
       breadcrumbs.push({
@@ -387,3 +411,4 @@ if ( {) {
 }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

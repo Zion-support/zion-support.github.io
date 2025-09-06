@@ -1,4 +1,83 @@
 <<<<<<< HEAD
+export interface CompanyRecord {
+  id: string;
+  name: string;
+  slug: string;
+  logoUrl?: string;
+  brandColor?: string;
+  plan: {
+    tier: 'starter' | 'business' | 'enterprise';
+    seatsPurchased: number;
+    seatsUsed: number;
+    usageLimits: {
+      monthlyJobPosts: number;
+      budgetCapUsd: number;
+    };
+  };
+  members: Array<{
+    id: string;
+    email: string;
+    name: string;
+    role: 'admin' | 'manager' | 'recruiter';
+  }>;
+  activity: Array<{
+    id: string;
+    timestampIso: string;
+    actorEmail: string;
+    action: string;
+    meta?: Record<string, any>;
+  }>;
+  invoices: Array<{
+    id: string;
+    amount: number;
+    status: 'pending' | 'paid' | 'overdue';
+    dueDate: string;
+  }>;
+}
+
+function generateId(): string {
+  return Math.random().toString(36).substr(2, 9);
+}
+
+const companiesById: Record<string, CompanyRecord> = {};
+const companiesBySlug: Record<string, CompanyRecord> = {};
+
+export function createCompany(record: Omit<CompanyRecord, 'members' | 'activity' | 'invoices'>): CompanyRecord {
+  const { id, slug } = record;
+  
+  const fullRecord: CompanyRecord = {
+    ...record,
+    members: [],
+    activity: [],
+    invoices: []
+  };
+  
+  companiesById[id] = fullRecord;
+  companiesBySlug[slug] = fullRecord;
+  
+  return fullRecord;
+}
+
+export function getCompanyById(id: string): CompanyRecord | undefined {
+  return companiesById[id];
+}
+
+export function getCompanyBySlug(slug: string): CompanyRecord | undefined {
+  return companiesBySlug[slug];
+}
+
+export function updateCompany(id: string, updates: Partial<CompanyRecord>): CompanyRecord | null {
+  const company = companiesById[id];
+  if (!company) return null;
+  
+  const updated = { ...company, ...updates };
+  companiesById[id] = updated;
+  companiesBySlug[updated.slug] = updated;
+  
+  return updated;
+}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -222,6 +301,8 @@ const seedCompany: CompanyRecord = {;
     { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'admin@acme.com', action: 'created_company' },;
     { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'maria@acme.com', action: 'posted_job', meta: { jobId: 'job_123' } }],;
   invoices: [;
+<<<<<<< HEAD
+=======
     { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },;
     { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},;
 const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany },;
@@ -243,6 +324,7 @@ export const store = {;
       logoUrl: input.logoUrl,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
 const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany };
 export const store = {;
@@ -317,6 +399,8 @@ export const store = {;
     const company = companiesById[company_id];
     return company ? company.invoices : [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -324,3 +408,5 @@ export const store = {;
 =======
   }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

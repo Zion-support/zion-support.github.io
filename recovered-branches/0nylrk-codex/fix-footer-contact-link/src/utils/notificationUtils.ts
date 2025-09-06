@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -17,6 +20,8 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
 
 
 
+<<<<<<< HEAD
+=======
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
@@ -30,6 +35,7 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
 import { supabase } from "@/integrations/supabase/client",
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
@@ -44,9 +50,12 @@ export async function createNotification({;
   sendEmail = false;
   actionUrl = null;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export async function createNotification({
   userId,
   title,
@@ -56,6 +65,8 @@ export async function createNotification({
   sendEmail = false,
   actionUrl = null,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   actionText = null
@@ -64,6 +75,7 @@ export async function createNotification({
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   actionText = null
 }: {
   userId: string;
@@ -74,9 +86,12 @@ export async function createNotification({
   sendEmail?: boolean;
   actionUrl?: string | null
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   userId: string,
   title: string,
   message: string,
@@ -84,6 +99,8 @@ export async function createNotification({
   relatedId?: string | null,
   sendEmail?: boolean,
   actionUrl?: string | null,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -100,12 +117,16 @@ export async function createNotification({
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   actionText?: string | null
 }) {
   void actionUrl,
   void actionText,
   try {
     // Call the create_notification database function
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
     const { data, error } = await supabase.rpc('create_notification', {
       _user_id: userId;
@@ -186,10 +207,16 @@ export async function createNotification({;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+<<<<<<< HEAD
+    return { success: false, error }
+  }
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -215,10 +242,13 @@ success: talentNotification && talentNotification.success && adminNotification &
   }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (error) {;
     console.error('Error creating notification:', error),;
   } catch (error) {;
     console.error('Error creating notification:', error),;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -227,6 +257,7 @@ success: talentNotification && talentNotification.success && adminNotification &
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return { success: false, error }
   }
 }
@@ -234,6 +265,8 @@ success: talentNotification && talentNotification.success && adminNotification &
 /**
  * Creates a hire request notification for admin and talent
  */
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -347,6 +380,7 @@ export async function createHireRequestNotifications({
       adminNotification
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 /**;
  * Creates a hire request notification for admin and talent;
@@ -418,7 +452,10 @@ export async function createHireRequestNotifications({
     }
   }
   return {
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     talentNotification
   }
 }
@@ -430,6 +467,9 @@ export async function createHireRequestNotifications({
 /**
  * Creates an onboarding notification for a user
  */
+<<<<<<< HEAD
+export async function createOnboardingNotification({;
+=======
 <<<<<<< HEAD
 export async function createOnboardingNotification({
 <<<<<<< HEAD
@@ -450,6 +490,7 @@ export async function createOnboardingNotification({;
 =======
 export async function createOnboardingNotification({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   userId;
   missingMilestone;
   userRole
@@ -465,6 +506,8 @@ export async function createOnboardingNotification({;
   if (userRole === 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -505,6 +548,7 @@ if ( {) {
       });
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     return { success: true, notification_id: data }
   } catch (error) {
@@ -592,6 +636,8 @@ export async /**
  */
 function createTestNotification() {
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
+<<<<<<< HEAD
+=======
 
   const randomType = types[Math && Math.floor(Math && Math.random() * types && types.length)],
   
@@ -691,10 +737,13 @@ export async function createTestNotification(userId: string) {;
 function createTestNotification() {
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
   }
   const messages = {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -709,6 +758,7 @@ function createTestNotification() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const random_type = types[Math.floor (Math.random () * types.length)],
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update';
@@ -719,6 +769,8 @@ function createTestNotification() {
   }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -727,6 +779,7 @@ function createTestNotification() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const actions = {
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
@@ -756,6 +809,8 @@ function createTestNotification() {
     action_url: actions[random_type].url,
     action_text: actions[random_type].text;
   });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -966,6 +1021,7 @@ export async function createOnboardingNotification({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 /**;
@@ -1056,6 +1112,11 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
+<<<<<<< HEAD
+}
+;
+}
+=======
 <<<<<<< HEAD
 
 
@@ -1175,3 +1236,4 @@ case 'talent invited':
 ;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -25,6 +25,8 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+<<<<<<< HEAD
+=======
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -45,10 +47,13 @@ const corsHeaders = {
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -67,11 +72,17 @@ const cors_headers = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ContentGenerationRequest {
 
   auto_publish?: boolean,
   include_image?: boolean;
 
+<<<<<<< HEAD
+  content_type: 'blog' | 'newsletter';
+  prompt?: string;
+  topic?: string;
+=======
 <<<<<<< HEAD
 =======
 interface ContentGenerationRequest {
@@ -86,12 +97,15 @@ interface ContentGenerationRequest {
   prompt?: string;
   topic?: string;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 interface GeneratedBlogContent {
   title: string;
   meta_description: string;
   body: string;
   tags: string[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -118,6 +132,7 @@ interface GeneratedNewsletterContent {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   contentType: 'blog' | 'newsletter',
   prompt?: string,
   topic?: string,
@@ -185,7 +200,10 @@ interface GeneratedNewsletterContent {;
   cta: string;
 }
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -196,6 +214,8 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 serve(async (req) => {
@@ -220,11 +240,14 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Default topic if none provided
     const contentTopic = topic |"AI freelancing marketplace trends";
     // Build the prompt based on content type
     let systemPrompt: string;
     let userPrompt: string
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -247,10 +270,13 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (contentType === 'blog') {
       systemPrompt = `You are an expert content creator for Zion, an AI freelancing marketplace.
       You create engaging, professional blog content that is SEO-optimized and provides valuable insights for both clients and AI freelancers.
       Format your response as a JSON object with the following fields:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -272,11 +298,14 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       Include subheadings, summary intro, and conclusion. Focus on actionable advice and industry insights.`
     } else {
       systemPrompt = `You are an expert email newsletter writer for Zion, an AI freelancing marketplace.
       You create concise, engaging newsletter content that summarizes platform updates, highlights talent, and drives user engagement.
       Format your response as a JSON object with the following fields:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -298,6 +327,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       - Featured AI talent spotlight
       - Top blog post summary
       - Industry news roundup
@@ -430,6 +460,8 @@ if ( {) {
 <<<<<<< HEAD
 
         ];
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -550,6 +582,7 @@ if ( {) {
 =======
         ];
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             }
           ];
           temperature: 0 && 0.7,
@@ -637,6 +670,8 @@ serve(async (req) => {;
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content;
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             { 
@@ -692,6 +727,7 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
               content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"` 
 
@@ -700,6 +736,8 @@ if ( {) {
     }
     // If autoPublish is true, save the content to the database
     if (autoPublish && contentType === 'blog') {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -717,10 +755,13 @@ if ( {) {
       const supabase = createClient(supabaseUrl, supabaseKey);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Create slug from title
       const slug = generatedContent && generatedContent.title
         .toLowerCase()
         .replace(/[^\w\s]/g, '')
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -783,6 +824,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
         .replace(/\s+/g, '-');
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Get current date formatted
       const publishedDate = new Date().toLocaleDateString('en-US', {
         month: 'short';
@@ -790,15 +832,20 @@ if ( {) {
         year: 'numeric'
       });
       // Auto-calculate read time (rough estimate: 200 words per minute)
+<<<<<<< HEAD
+=======
       const wordCount = generatedContent && generatedContent.body.split(/\s+/).length,
       const readTime = Math && Math.max(1, Math && Math.ceil(wordCount / 200)) + " min read";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Insert into blog_posts table
       const { data: blogPost, error } = await supabase
         .from('blog_posts')
         .insert({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           title: generatedContent && generatedContent.title;
@@ -836,6 +883,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           featured_image: "", // To be updated if image is generated
           is_featured: false;
           is_published: true;
@@ -845,6 +893,8 @@ if ( {) {
         .select()
         .single();
       if (error) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         console && console.error("Error saving blog post:", error)
@@ -891,11 +941,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         // Create notification about new blog post
         await supabase
           .from('notifications')
           .insert({
             user_id: null, // System notification visible to admins
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1036,14 +1089,18 @@ if ( {) {
             message: `AI-generated blog post "${generatedContent.title}" has been published.`;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             type: "system";
             read: false;
             related_id: blogPost.id
             action_url: `/blog/${slug}`;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             title: "New Blog Post Generated",
             message: `AI-generated blog post "${generatedContent.title}" has been published.`,
             type: "system",
@@ -1051,22 +1108,28 @@ if ( {) {
             related_id: blogPost.id,
             action_url: `/blog/${slug}`,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             action_text: "View Post"
           })
       }
     }
     return new Response(JSON.stringify(generatedContent), {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 200})
   } catch (error) {
@@ -1077,9 +1140,12 @@ if ( {) {
   }
 });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
@@ -1090,10 +1156,13 @@ if ( {) {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     // If autoPublish is true, save the content to the database;
     if (autoPublish && contentType === 'blog') {;
@@ -1192,6 +1261,8 @@ if ( {) {
       status: 500});
   }
 });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -1475,3 +1546,4 @@ action text: "View Post"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

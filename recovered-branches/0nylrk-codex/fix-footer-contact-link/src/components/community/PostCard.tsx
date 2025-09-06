@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -18,6 +20,7 @@ import {ForumPost} from "@/types/community";
 import {ProfileBadge} from "@/components/profile/ProfileBadge";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",
@@ -31,9 +34,12 @@ import { ProfileBadge } from "@/components/profile/ProfileBadge";
 import { ForumPost } from "@/types/community",
 import { ProfileBadge } from "@/components/profile/ProfileBadge",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface PostCardProps {
 
   post: ForumPost
@@ -42,6 +48,8 @@ interface PostCardProps {
 export const PostCard = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -63,6 +71,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       post.isFeatured && "bg-zion-purple/5"
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -77,6 +86,8 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             </Link>
             {post.isAnswered && (
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -174,6 +185,7 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
             )}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             )}
             {post.isPinned && (
               <Pin className="h-4 w-4 text-amber-500 ml-2" />
@@ -181,6 +193,8 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
             {post.isLocked && (
               <Lock className="h-4 w-4 text-red-500 ml-2" />
             )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           </div>
           <div className="text-sm text-muted-foreground">
@@ -192,6 +206,7 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;
@@ -242,6 +257,8 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             {post.tags?.map(tag => (;
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -250,6 +267,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {tag}
               </Badge>
             ))}
@@ -283,6 +301,8 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             <Badge className="bg-zion-purple">Featured</Badge>
           </div>
         )}
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
           </div>;
@@ -370,12 +390,15 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
 <<<<<<< HEAD
   );
 };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default PostCard;
+<<<<<<< HEAD
+=======
 
 =======
 import { formatDistanceToNow } from './date - fns';
@@ -529,3 +552,4 @@ export default PostCard;
 
 export default PostCard;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

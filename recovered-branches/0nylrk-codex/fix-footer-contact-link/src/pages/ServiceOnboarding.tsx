@@ -1,25 +1,56 @@
 import React from "react";
+<<<<<<< HEAD
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+export default function ServiceOnboarding() {;
+  const { user, isLoading } = useAuth();
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+=======
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function ServiceOnboarding() {
   const { user, isLoading } = useAuth();
 <<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+export default function ServiceOnboarding() {
+  const { user, isLoading } = useAuth(),
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 <<<<<<< HEAD
   // If not authenticated, redirect to login;
   if (!isLoading && !user) {;
     return <Navigate to="/login" replace />;
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
+<<<<<<< HEAD
+    return <Navigate to="/login" replace />
+  }
+  return (
+  }
+  return (
+=======
     return <Navigate to="/login" replace />;
   }
   return (
@@ -61,10 +92,13 @@ export default function ServiceOnboarding() {
   }
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               Showcase your services to potential clients. Create a professional profile;
               to get discovered on the Zion Marketplace.;
             </p>;
           </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -74,10 +108,13 @@ export default function ServiceOnboarding() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <ServiceProviderRegistrationForm />;
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -108,3 +145,4 @@ export default function ServiceOnboarding() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

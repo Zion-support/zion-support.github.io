@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -13,6 +16,8 @@ import {Textarea} from "@/components/ui/textarea";
 import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {toast} from "@/hooks/use-toast";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -42,6 +47,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
         `;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useEffect, useState } from "react",
 import { QuoteFormData } from "@/types/quotes",
 import { Card, CardContent } from "@/components/ui/card",
@@ -65,6 +71,8 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
     const runMatching = async () => {
       if (!formData.projectDescription) return;
       setIsMatching(true);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       try {
         // Create a query string from the form data
@@ -91,6 +99,7 @@ import { toast } from "@/hooks/use-toast",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface SummaryStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
@@ -186,6 +195,14 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           formData.serviceType,
           3
 <<<<<<< HEAD
+  const [isMatching, setIsMatching] = useState(false);
+
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+          queryString;
+          formData && formData.serviceType;
+          3;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         );
@@ -267,6 +284,7 @@ if (return) {
 
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         );
         setMatches(results)
       } catch (error) {
@@ -286,7 +304,10 @@ if (return) {
       } finally {
         setIsMatching (false);
       }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     runMatching()
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
@@ -298,6 +319,8 @@ if (return) {
     toast({
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -319,6 +342,7 @@ if (return) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -326,6 +350,10 @@ if (return) {
     if (matchResult) {
       handleSelectMatch(matchResult)
     }
+<<<<<<< HEAD
+  }
+
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -396,6 +424,7 @@ if (return) {
   }
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -461,6 +490,8 @@ if (return) {
                 </div>
               )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -476,6 +507,7 @@ if (return) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               {formData.endDate && (
                 <div>
                   <Label className="text-zion-slate-light">End Date</Label>
@@ -874,6 +906,8 @@ serviceType={formData.serviceType}
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
       handleSelectMatch (match_result);
     }
   }
@@ -1143,3 +1177,4 @@ if ( {) {
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

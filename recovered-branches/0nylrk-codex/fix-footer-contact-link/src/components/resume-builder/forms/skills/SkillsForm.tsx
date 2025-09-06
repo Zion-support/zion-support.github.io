@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -18,6 +20,7 @@ import {use_resume} from '@/hooks / use_resume';
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState  } from 'react';
 import { Skill  } from '@/types/resume';
 import { Button  } from '@/components/ui/button';
@@ -46,6 +49,8 @@ import {SkillsList} from './SkillsList';
 import {AddSkillForm} from './AddSkillForm';
 import {BulkAddSkills} from './BulkAddSkills';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {;
@@ -56,10 +61,13 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { addSkill, deleteSkill, fetchResume } = useResume();
 
   const [error, setError] = useState<string | null>(null);
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -96,10 +104,13 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
     try {;
       setError(null),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       const success = await addSkill(resumeId, data);
       if (success) {;
         // Refresh the skills list;
         await refreshSkills();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
   const handleAddSkill = async (data: Skill) => {;
@@ -112,12 +123,19 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       if (success) {;
         // Refresh the skills list;
         await refreshSkills();
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
       return success
     } catch (err: any) {
       setError(err.message |'An error occurred')
       return false
     }
+<<<<<<< HEAD
+
+
+
+
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -126,6 +144,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
 
 
@@ -153,6 +172,9 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
   }
   const refreshSkills = async () => {
     try {
+<<<<<<< HEAD
+      const resumeData = await fetchResume(resumeId);
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -198,6 +220,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 =======
       const resumeData = await fetchResume(resumeId);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {;
         setLocalSkills(resumeData.skills);
@@ -217,9 +240,16 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
   },
 
 <<<<<<< HEAD
+  }
+
+  },
+
+=======
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   };
   },
 
@@ -228,6 +258,8 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
+<<<<<<< HEAD
+=======
 
 =======
 
@@ -335,6 +367,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export /**
  * SkillsForm - Function description
  */
@@ -343,6 +376,8 @@ function SkillsForm() {
   const [error, set_error] = useState < string | null>(null);
   const [local_skills, setLocalSkills] = useState < Skill[]>(skills);
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const handleAddSkill = async (data: Skill) => {
     try {
@@ -530,3 +565,4 @@ return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

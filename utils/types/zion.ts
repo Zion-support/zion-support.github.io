@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -17,6 +19,7 @@ export interface Branding {;
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface Branding {logoUrl?: string;
   primaryColor?: string;
   secondaryColor?: string;
@@ -29,6 +32,8 @@ export interface Branding {;
   secondaryColor?: string;
   subdomain?: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -38,10 +43,13 @@ export interface Branding {;
 export interface Branding {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   logoUrl?: string,;
   primaryColor?: string,;
   secondaryColor?: string,;
   subdomain?: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
@@ -71,6 +79,7 @@ export interface DeployModules {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -82,6 +91,8 @@ export interface DeployModules {;
   apiDocsWiki: boolean;
   zionBrain: boolean;
   // Bonus;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -119,6 +130,7 @@ export interface DeployModules {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export interface DeployInput {instanceName: string;
   defaultLanguage: string;
@@ -222,6 +234,8 @@ export interface GeneratedAsset {;
 export interface DeployResult {;
   success: boolean;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -236,6 +250,7 @@ export interface DeployResult {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
@@ -328,6 +343,8 @@ export interface AccessControlConfig {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   adminKeyConfigured: boolean;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -353,6 +370,7 @@ export interface AccessControlConfig {;
   adminKeyConfigured: boolean;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -360,8 +378,11 @@ export interface AccessControlConfig {;
 }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -369,6 +390,9 @@ export interface AccessControlConfig {;
 
   adminKeyConfigured: boolean;
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

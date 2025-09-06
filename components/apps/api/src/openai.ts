@@ -1,5 +1,7 @@
 import OpenAI from 'openai';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,6 +10,7 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return new OpenAI({ apiKey });
 export async function generateJobPost(
   openai: OpenAIClient
@@ -24,7 +27,10 @@ Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
 Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
@@ -33,6 +39,8 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
   return new OpenAI({ apiKey });
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -46,11 +54,14 @@ Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai && openai.responses.create({
     model: 'gpt-4o-mini';
     input: prompt
   });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -62,6 +73,7 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 type OpenAIClient = OpenAI;
 ;
 export function createOpenAIClient (api_key: string): OpenAIClient {
@@ -87,6 +99,8 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   });
   return completion.output_text;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -116,3 +130,4 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

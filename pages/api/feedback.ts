@@ -154,12 +154,21 @@ async function tryWriteToFirestore(req, res) {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } = process.env as Record<string string | undefined>
   if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) return false
   try {
+<<<<<<< HEAD
+    const admin = require("firebase-admin"),
+    if (admin.apps.length === 0) {
+      admin.initializeApp({
+        credential: admin.credential.cert({
+          projectId: FIREBASE_PROJECT_ID,
+          clientEmail: FIREBASE_CLIENT_EMAIL,
+=======
     const admin = require("firebase-admin")
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
           projectId: FIREBASE_PROJECT_ID
           clientEmail: FIREBASE_CLIENT_EMAIL
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")})})
       } catch (error) {
     console.error("Error:", error);

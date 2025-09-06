@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Phone
   Mail
   MapPin
@@ -469,6 +472,8 @@ export default function Footer() {
             </ul>
           </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
@@ -495,6 +500,7 @@ export default function Footer() {
                 <Mail className="h-4 w-4 mr-2" />
                 <span>kleber@ziontechgroup.com</span>
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
                     href={link && link.href}
                     className="text-gray-300 hover:text-white transition-colors">;
@@ -685,6 +691,8 @@ export default function Footer() {
               </Link>;
               <Link
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
@@ -698,3 +706,4 @@ export default function Footer() {
 }
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

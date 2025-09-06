@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+
+
+
+
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Label} from "@/components/ui/label";
+import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
+=======
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -24,6 +38,7 @@ export function MobileResumeBuilder() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -38,10 +53,13 @@ import {
 import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
@@ -108,9 +126,12 @@ export function MobileResumeBuilder() {
         return <BasicsStep />;
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   };
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
@@ -192,6 +213,8 @@ export function MobileResumeBuilder() {;
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
+<<<<<<< HEAD
+=======
         >
           Skills
         </Button>
@@ -248,6 +271,7 @@ function BasicsStep() {;
           <Textarea
             id="summary"
             placeholder="Write a brief summary about yourself"
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             rows={4}
           />
         </div>
@@ -267,6 +291,9 @@ function ExperienceStep() {
 
   const addExperience = () => {
     const newId = (experiences.length + 1).toString();
+<<<<<<< HEAD
+    setExperiences([...experiences, { id: newId }])
+=======
     setExperiences([...experiences, { id: newId }]);
   };
 
@@ -370,6 +397,7 @@ function ExperienceStep() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space - y-4">;
       {experiences.map ((exp, index) => (
@@ -419,6 +447,11 @@ function ExperienceStep() {
                 id={`description-${exp.id}`}
                 placeholder="Describe your responsibilities and achievements"
                 rows={3}
+<<<<<<< HEAD
+              />;
+            </div>;
+          </CardContent>;
+=======
               />
             </div>
           </CardContent>
@@ -448,6 +481,7 @@ function EducationStep() {
     setEducations(educations.filter((edu) => edu.id !== id));
   };
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space - y-4">;
       {educations.map ((edu, index) => (
@@ -513,6 +547,20 @@ function EducationStep() {
 }
 
 function SkillsStep() {
+<<<<<<< HEAD
+  const [skills, set_skills] = useState ([;
+    { id: '1', name: "", proficiency: "beginner" }
+  },
+  
+  const removeSkill = (id: string) => {
+    setSkills(skills.filter(skill => skill.id !== id))
+  },
+  
+  const updateSkill = (id: string, field: string, value: string) => {
+    setSkills(skills.map(skill =>
+      skill.id === id ? { ...skill, [field]: value } : skill
+    ))
+=======
   const [skills, setSkills] = useState([
     { id: "1", name: "", proficiency: "beginner" },
   ]);
@@ -700,6 +748,7 @@ function SkillsStep() {;
     { id: '1', name: "", proficiency: "beginner" }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ]);
 
   return (
@@ -786,10 +835,20 @@ function SkillsStep() {;
               </div>;
             ))}
 <<<<<<< HEAD
+            <Button
+              variant="outline"
+              className="w-full gap-2"
+            
+            <Button 
+              variant="outline" 
+              className="w-full gap-2" 
+=======
+<<<<<<< HEAD
 
             <Button
               variant="outline"
               className="w-full gap-2"
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               onClick={addSkill}
             >
               <Plus className="h-4 w-4" /> Add Another Skill
@@ -826,6 +885,19 @@ function SkillsStep() {;
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
+  )
+            </Button>;
+          </div>;
+        </CardContent>;
+      </Card>;
+            </div>;
+          </div>;
+        </CardContent>;
+      </Card>;
+    </div>);
+}
+=======
   );
 }
 
@@ -889,3 +961,4 @@ return (<div className="space-y-6 px-4 pb-24" > <div className="flex justify-bet
     </div>);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

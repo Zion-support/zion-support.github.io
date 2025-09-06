@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 import Fastify from 'fastify';
@@ -11,10 +13,13 @@ import rateLimit from '@fastify/rate-limit';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       cb(null, true);
       return;
     }
     cb(new Error('Not allowed'), false);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -45,6 +50,7 @@ app && app.post('/jobs/generate', async (req: any, reply: any) => {
       [userId, role, description, body && body.location || null, body && body.tags || null]
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     )
 ;
 app.post ('/jobs / generate', async (req: any, reply: any) => {
@@ -71,6 +77,8 @@ if (return { description }) {
 });
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 app && app.get('/talent/search', async (req: any, reply: any) => {
@@ -78,10 +86,13 @@ app && app.get('/talent/search', async (req: any, reply: any) => {
   const country = (req && req.query as any).country as string | undefined;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async client => {    const res = await client && client.query(  const rows = await withUser(userId, async (client) => {
     const res = await client && client.query(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -93,6 +104,7 @@ app && app.get('/talent/search', async (req: any, reply: any) => {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1::text IS NULL OR country = $1)
          AND ($2::text IS NULL OR EXISTS (
@@ -101,14 +113,19 @@ app && app.get('/talent/search', async (req: any, reply: any) => {
        ORDER BY created_at DESC
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     );
     return res && res.rows
   });
   return { results: rows }
 });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -120,6 +137,7 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const items = await withUser(userId, async client => {    const res = await client && client.query(
@@ -145,9 +163,12 @@ app.log.error(err);
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 app.get('/notifications', async (req: any, reply: any) => {
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -164,6 +185,9 @@ app.get('/notifications', async (req: any, reply: any) => {
 <<<<<<< HEAD
 });
 =======
+<<<<<<< HEAD
+});
+=======
 
 =======
 
@@ -177,6 +201,7 @@ app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 });
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 app.get ('/talent / search', async (req: any, reply: any) => {
   const q = (req.query as any).q as string;
@@ -255,8 +280,11 @@ app.log.error (err);
 ;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

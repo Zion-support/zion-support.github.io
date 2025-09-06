@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
+} from "@/components/ui/table",
+import { ApplicationActions } from "./ApplicationActions",
+import { StatusBadge } from "./StatusBadge",
+import { Briefcase, User } from 'lucide-react'
+import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
+import React, { useState } from "react", // Import React and useState
+import { toast } from "@/hooks/use-toast",
+import Image from 'next/image', // Import next/image
+
+interface ApplicationsTableProps {
+  applications: JobApplication[],
+  processingId: string | null,
+  onViewApplication: (applicationId: string) => Promise<void>,
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,
+  onViewScore: (application: JobApplication) => void
+}
+
+// Sub-component for avatar to handle its own error state
+const ApplicationAvatar = ({ application }: { application: JobApplication }) => {
+  const [avatarError, setAvatarError] = useState(false),
+  const talentName = application.talent_profile?.full_name || "Candidate",
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { format } from 'date-fns'
 import { JobApplication } from '@/types/jobs'
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -16,6 +46,9 @@ import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmat
 import React, { useState } from 'react'; // Import React and useState
 import { toast } from '@/hooks/use-toast'
 import Image from 'next/image'; // Import next/image
+<<<<<<< HEAD
+
+=======
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed;
@@ -36,12 +69,15 @@ import { toast } from '@/hooks/use-toast';
 import Image from 'next/image'; // Import next/image;
 
 interface ApplicationsTableProps {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   applications: JobApplication[];
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
   onViewScore: (application: JobApplication) => void
 
+<<<<<<< HEAD
+=======
 
 import { format } from 'date - fns';
 import { JobApplication } from '@/types / jobs';
@@ -94,11 +130,14 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
   const [avatarError, setAvatarError] = useState(false),;
   const talentName = application && application.talent_profile?.full_name || "Candidate",;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
   const [avatarError, setAvatarError] = useState(false)
   const talentName = application.talent_profile?.full_name |"Candidate"
   return (
+<<<<<<< HEAD
+=======
     <AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
       {application.talent_profile?.profile_picture_url && !avatarError ? (
         <Image
@@ -114,6 +153,7 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
         />
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       ) : (
         <User className="h-4 w-4" />
       )}
@@ -166,6 +206,18 @@ function ApplicationsTable() {
       description: 'Offer has been sent to the talent.',
     });
 
+<<<<<<< HEAD
+      ) : (
+        <User className="h-4 w-4" />
+      )}
+    </AvatarPrimitive>
+  )
+
+  onStatusChange,
+  onViewScore
+}: ApplicationsTableProps) {
+
+=======
   }
     </AvatarPrimitive>;
   );
@@ -200,6 +252,7 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
@@ -214,7 +267,11 @@ export function ApplicationsTable({
       description: "Offer has been sent to the talent."
     })
   },
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>;
 
@@ -255,6 +312,8 @@ export function ApplicationsTable({
                     </div>;
                   </div>;
                 </TableCell>;
+<<<<<<< HEAD
+=======
 
           </TableBody>;
         </Table>;
@@ -268,6 +327,7 @@ export function ApplicationsTable({
         onConfirm = {handleHireConfirmed,}
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   applications,
   processingId,
   onViewApplication,
@@ -325,9 +385,12 @@ export function ApplicationsTable({
           </TableHeader>
           <TableBody>
 
+<<<<<<< HEAD
+=======
             {applications.map((application) => (
               <TableRow key={application.id}>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
@@ -396,6 +459,8 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed
 }/> </>)
 }'"}
+<<<<<<< HEAD
+=======
       />;
     </>;
   );
@@ -500,3 +565,4 @@ return (<> <div className=" rounded - md border"> hidden md:table - cell" >Appli
   );
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

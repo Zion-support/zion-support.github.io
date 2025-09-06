@@ -8,6 +8,8 @@ import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
 import {Switch} from "@/components/ui/switch";
 import {Review} from "@/types/reviews";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ReviewFormValues {;
 
@@ -45,6 +47,7 @@ interface ReviewFormValues {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { useForm } from "react-hook-form",
@@ -73,8 +76,11 @@ import { Review } from "@/types/reviews";
 import { Switch } from "@/components/ui/switch",
 import { Review } from "@/types/reviews",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from './react';
 import { Star } from './lucide-react';
 import { use_form } from './react - hook - form';
@@ -93,7 +99,10 @@ interface ReviewFormValues {
   would_work_again?: boolean;
   is_anonymous?: boolean;
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -157,6 +166,8 @@ export function ReviewForm({;
   onSubmit;
   defaultValues;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -165,6 +176,7 @@ export function ReviewForm({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
@@ -213,6 +225,8 @@ export function ReviewForm({
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   isSubmitting}: ReviewFormProps) {
+<<<<<<< HEAD
+=======
 
   const [hoveredStar, setHoveredStar] = useState<number>(0),
   
@@ -229,6 +243,7 @@ export function ReviewForm({
 =======
   isSubmitting}: ReviewFormProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
       rating: defaultValues.rating
@@ -238,6 +253,15 @@ export function ReviewForm({
       timeliness_rating: defaultValues.timeliness_rating
       would_work_again: defaultValues.would_work_again
       is_anonymous: defaultValues.is_anonymous} : {
+<<<<<<< HEAD
+  });
+  const handleSubmit = async (values: ReviewFormValues) => {
+    const formattedData = {
+      ...values
+      project_id: projectId
+      reviewee_id: revieweeId}
+    const success = await onSubmit(formattedData);
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -293,6 +317,7 @@ export function ReviewForm({
   }),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   });
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1219,6 +1244,8 @@ if ( {) {
             </FormItem>;
           )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -1631,3 +1658,4 @@ defaultValues: defaultValues ? {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

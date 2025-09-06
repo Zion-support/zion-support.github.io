@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -10,6 +14,11 @@
 import {GradientHeading} from "./GradientHeading";
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
+<<<<<<< HEAD
+import { GradientHeading } from "./GradientHeading",
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
+import { Button } from "./ui/button",
+=======
 
 <<<<<<< HEAD
 =======
@@ -37,6 +46,7 @@ import { Button } from "./ui/button",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const services = [
   {
     title: "Servers"
@@ -46,6 +56,9 @@ const services = [
     title: "Storage"
     description: "Scalable storage solutions from SSDs to large-scale enterprise storage systems"
     icon: <HardDrive className="h-10 w-10" />}
+<<<<<<< HEAD
+  {
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -85,6 +98,7 @@ const services = [;
 =======
   {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     title: "24x7x365 Support"
     description: "Around-the-clock technical support with rapid response times guaranteed"
@@ -97,6 +111,8 @@ const services = [;
     title: "Equipment Rentals"
     description: "Flexible rental options for temporary projects and scaling requirements"
     icon: <Truck className="h-10 w-10" />}]
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -177,13 +193,17 @@ export function GlobalServiceSection() {;
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     title: "Networking"
     description: "Connectivity solutions including switches, routers, and network security devices";
 
 export function GlobalServiceSection() {;
   return (
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
 import { Button } from "./ui/button",;
@@ -262,6 +282,8 @@ export function GlobalServiceSection() {;
           </p>;
         </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -282,6 +304,7 @@ export function GlobalServiceSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     icon: <Network className="h - 10 w - 10" />},
   {
     title: "24x7x365 Support",
@@ -330,6 +353,9 @@ function GlobalServiceSection() {
         </div>;
       </div>;
     </section>);
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 =======
 ;
@@ -385,3 +411,4 @@ icon: <Recycle className="h-10 w-10" />
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

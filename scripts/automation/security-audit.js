@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -23,6 +25,7 @@
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node,"}),"})
 import { execSync } from,"}),"})
   'child_process',"}),"})
@@ -32,6 +35,8 @@ import path from,"}),"})
   'path',"}),"})
 import { fileURLToPath } from,"}),"})
   'url',"}),"})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -49,6 +54,7 @@ const __dirname = path.dirname(__filename),"}),"})
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Get automation interval from environment variable ("default": 4 hours),"}),"})
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours,"}),"})
 async function runSecurityAudit() {,"}),"})
@@ -353,6 +359,8 @@ async: function runContinuous() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<<< HEAD:scripts/automation/security-audit.js
 ========
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -379,3 +387,4 @@ async: function runContinuous() {
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

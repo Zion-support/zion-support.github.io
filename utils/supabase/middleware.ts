@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -9,6 +11,7 @@ export function middleware(request: NextRequest) {const { pathname } = request.n
   if (pathname === '/dashboard' |pathname === '/dashboard/') {const role = request.cookies.get('userRole')?.value |'talent';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { NextResponse } from 'next/server',;
 import type { NextRequest } from 'next/server',;
 export function middleware(request: NextRequest) {;
@@ -69,6 +72,8 @@ export function middleware(request: NextRequest) {;
   }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   }
@@ -78,6 +83,7 @@ export const config = {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import { NextResponse } from 'next / server',
 import type { NextRequest } from 'next / server',
@@ -104,6 +110,8 @@ export const config = {
 export const config = {;
   matcher: ['/dashboard/dashboard/']};
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -122,3 +130,4 @@ export const config = {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

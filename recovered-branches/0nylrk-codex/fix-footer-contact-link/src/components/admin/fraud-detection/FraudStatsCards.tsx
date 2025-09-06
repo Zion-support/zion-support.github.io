@@ -79,6 +79,8 @@ interface FraudStatsCardsProps {
         </CardHeader>
       </Card>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       
@@ -133,6 +135,7 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
@@ -156,6 +159,8 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
         </CardHeader>
       </Card>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -166,6 +171,7 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -173,24 +179,32 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
               {stats.dangerous_count}
             </CardTitle>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
             <CardTitle className="text-2xl font-bold text-red-500">{stats.dangerous_count}</CardTitle>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <CardDescription>Dangerous</CardDescription>
           </div>
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -202,16 +216,20 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">
             {stats.actioned_count}
           </CardTitle>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       
       <Card>
         <CardHeader className="pb-2">
@@ -221,6 +239,8 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -234,11 +254,14 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
         </CardHeader>
       </Card>
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">
             {stats.false_positives}
           </CardTitle>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           <CardDescription>False Positives</CardDescription>
@@ -249,6 +272,7 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       
       <Card>
         <CardHeader className="pb-2">
@@ -267,9 +291,12 @@ interface FraudStatsCardsProps {;
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
@@ -300,6 +327,9 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
             <CardTitle className="text-2xl font-bold text-amber-500">;
               {stats && stats.suspicious_count}
             </CardTitle>;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -360,11 +390,14 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <CardDescription>Dangerous</CardDescription>;
           </div>;
           <AlertCircle className="h-5 w-5 text-red-500" />;
         </CardHeader>;
       </Card>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -392,12 +425,16 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
 
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               {stats.pending_flags}
             </CardTitle>;
             <CardDescription > Pending Review</CardDescription>;
           </div>;
           {stats.pending_flags > 0 && (
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <ShieldAlert className="h - 5 w - 5 text - amber - 500" />)}
         </CardHeader>;
       </Card>;
@@ -458,6 +495,8 @@ export default FraudStatsCards;
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -515,3 +554,4 @@ export default FraudStatsCards;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

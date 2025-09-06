@@ -5,6 +5,8 @@ import Layout from "../components/Layout";
 
 import React from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -194,6 +196,7 @@ export default function AboutPage() {
       </div>
     </MainLayout>
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 import Head from 'next/head';

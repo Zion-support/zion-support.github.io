@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -19,6 +21,7 @@ import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -67,13 +70,18 @@ export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth();
   const [submitted, setSubmitted] = useState(false);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   email: z.string().email("Please enter a valid email")}),
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -81,6 +89,7 @@ type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function ForgotPassword() {;
   const { resetPassword, isLoading } = useAuth();
   const [submitted, setSubmitted] = useState(false);
@@ -89,9 +98,12 @@ export default function ForgotPassword() {
   const [submitted, setSubmitted] = useState(false),
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Initialize react-hook-form
   const form = useForm({
     resolver: zodResolver(forgotPasswordSchema)
@@ -101,6 +113,8 @@ export default function ForgotPassword() {
   const onSubmit = async (data: ForgotPasswordFormValues) => {
     await resetPassword(data.email)
     setSubmitted(true)
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -112,6 +126,7 @@ export default function ForgotPassword() {
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -140,6 +155,8 @@ export default function ForgotPassword() {
                     We've sent a password reset link to your email address.
                   </p>
                   <div className="mt-6">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -226,6 +243,7 @@ export default function ForgotPassword() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <>;
       <Header />;
       <div className="flex min-h-screen bg-zion-blue">;
@@ -526,6 +544,8 @@ function ForgotPassword() {
       </div>;
       <Footer />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </>);
@@ -577,6 +597,7 @@ function ForgotPassword() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
                       >
                         Back to login
@@ -589,6 +610,8 @@ function ForgotPassword() {
 
 ;
 
+<<<<<<< HEAD
+=======
 =======
 =======
 ;
@@ -621,6 +644,7 @@ function ForgotPassword() {
 ;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { useForm, type UseFormReturn } from "react-hook-form",;
@@ -694,6 +718,8 @@ export default function ForgotPassword() {;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -721,3 +747,4 @@ return (<> <Header /> <div className="flex min-h-screen bg-zion-blue"> <div clas
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

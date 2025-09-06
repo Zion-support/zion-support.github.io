@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
@@ -112,6 +114,7 @@ export default function APIPage() {
           </motion.div>
         </div>
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Code,
   Check,
   Globe,

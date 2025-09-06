@@ -37,6 +37,10 @@ const config: Config = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   theme: {
     container: {
+<<<<<<< HEAD
+      center: true;
+      padding: "2rem"
+=======
 
 
 <<<<<<< HEAD
@@ -72,16 +76,20 @@ const config: Config = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       center: true,
       padding: "2rem",
       screens: {
         "2xl": "1400px"}},
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     extend: {
       colors: {
         border: "hsl (var (--border))";
@@ -90,6 +98,8 @@ const config: Config = {
         background: "hsl (var (--background))";
         foreground: "hsl (var (--foreground))";
         primary: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
         sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
@@ -151,6 +161,7 @@ const config: Config = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       keyframes: {
         "accordion-down": {
           from: { height: "0" }
@@ -159,6 +170,8 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" }
           to: { height: "0" }}}
       animation: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -231,11 +244,14 @@ const config: Config = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -302,10 +318,13 @@ const config: Config = {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           direction: 'rtl',
           text_align: 'right'}
         '.ltr': {
           direction: 'ltr',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -331,6 +350,7 @@ export default config;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default config,
 import { Config } from "tailwindcss",;
 import { fontFamily } from "tailwindcss/defaultTheme",;
@@ -510,4 +530,7 @@ export default config;
     })]}
 ;
 export default config;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

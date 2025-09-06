@@ -1,3 +1,108 @@
+<<<<<<< HEAD
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate, useParams } from "react-router-dom",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+import { useWhitelabel } from "@/context/WhitelabelContext";
+export default function CompanyWorkspace() {
+  const { companySlug } = useParams() as { companySlug?: string }
+  const { user } = useAuth();
+  const { company, isLoading, error } = useCompanyWorkspace(companySlug);
+  const { isWhitelabel, tenant, brandName } = useWhitelabel();
+import { useWhitelabel } from "@/context/WhitelabelContext",
+export default function CompanyWorkspace() {
+  const { companySlug } = useParams() as { companySlug?: string },
+  const { user } = useAuth(),
+  const { company, isLoading, error } = useCompanyWorkspace(companySlug),
+  const { isWhitelabel, tenant, brandName } = useWhitelabel(),
+  
+
+
+
+  if (isLoading) {
+    return (
+
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
+      </div>
+    )
+  }
+  if (error |!company) {
+    return <Navigate to="/not-found" />
+  }
+  // In white-label mode, use the tenant's theme instead of the company's theme
+  const effectiveTheme = isWhitelabel ? {
+    primaryColor: tenant?.primary_color |company.theme?.primaryColor
+    backgroundColor: company.theme?.backgroundColor |'var(--background)'
+    textColor: company.theme?.textColor |'var(--foreground)'
+  } : company.theme;
+
+  // Check if user has access to this company workspace
+  const hasAccess = true, // For demo purposes, always grant access
+  if (!hasAccess) {
+    return <Navigate to="/unauthorized" />
+      <SEO
+      <SEO 
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CompanyDashboard} from "@/components/enterprise/workspace/CompanyDashboard";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate, useParams} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
+import {useWhitelabel} from "@/context/WhitelabelContext";
+
+      <SEO 
+
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate, useParams } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;
+import { useWhitelabel } from "@/context/WhitelabelContext",;
+      <div className="flex items-center justify-center min-h-screen">;
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;
+      </div>;
+    );
+  }
+  }
+
+;
+  return (;
+    <ProtectedRoute>;
+      <SEO;
+        title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
+        description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
+=======
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -50,6 +155,7 @@ export default function CompanyWorkspace() {
       <SEO
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : "Zion AI Marketplace"}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : "on Zion AI Marketplace"}. Collaborate with your team to find top talent.`}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       />
       <Header
         customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
@@ -66,6 +172,9 @@ export default function CompanyWorkspace() {
       </main>
       <Footer />
     </ProtectedRoute>
+<<<<<<< HEAD
+  )
+=======
   );
 }
 <<<<<<< HEAD
@@ -93,6 +202,7 @@ function CompanyWorkspace() {
   const { is_whitelabel, tenant, brand_name } = use_whitelabel ();
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   // Check condition
 if ( {) {
@@ -139,6 +249,9 @@ if ( {) {
       </main>;
       <Footer />;
     </ProtectedRoute>);
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -279,3 +392,4 @@ export default function CompanyWorkspace() {_const { companySlug} = useParams() 
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -15,6 +17,7 @@ import { GradientHeading } from "@/components/GradientHeading";
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -34,6 +37,11 @@ export function EnterpriseHero() {
               Enterprise <GradientHeading className="inline">Talent Solutions</GradientHeading>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
+<<<<<<< HEAD
+              Scale your talent acquisition with a custom-branded hiring portal
+              dedicated talent pool, and powerful admin controls.
+              Scale your talent acquisition with a custom-branded hiring portal, dedicated talent pool, and powerful admin controls.
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80">;
@@ -58,6 +66,7 @@ export function EnterpriseHero() {
               dedicated talent pool, and powerful admin controls.
               Scale your talent acquisition with a custom-branded hiring portal, dedicated talent pool, and powerful admin controls.
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </p>
             <div className="flex flex-col sm: flex-row gap-4">
               <Button size="lg" className="w-full sm:w-auto">
@@ -68,6 +77,8 @@ export function EnterpriseHero() {
               </Button>
             </div>
             <div className="mt-10 flex items-center gap-4">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               <p className="text-sm text-muted-foreground">
@@ -98,6 +109,7 @@ function EnterpriseHero() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <GradientHeading className="inline">;
                 Talent Solutions;
               </GradientHeading>;
@@ -226,6 +238,8 @@ export function EnterpriseHero() {;
         </div>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
     </section>);
 
@@ -238,6 +252,7 @@ export function EnterpriseHero() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 1" className="h-8" />
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 2" className="h-8" />
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 3" className="h-8" />
@@ -261,6 +276,8 @@ export function EnterpriseHero() {;
         </div>
       </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -272,6 +289,7 @@ export function EnterpriseHero() {;
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </section>;
   );
 }
@@ -333,6 +351,8 @@ export function EnterpriseHero() {;
 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </section>;
   );
 } export function EnterpriseHero () {
@@ -340,3 +360,4 @@ export function EnterpriseHero() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

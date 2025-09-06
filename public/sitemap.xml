@@ -3,6 +3,7 @@
   <url>
     <loc>https://ziontechgroup.com/</loc>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <lastmod>2025-01-27</lastmod>
 =======
     <lastmod>2025-09-03</lastmod>
@@ -18,10 +19,21 @@
     <loc>https://ziontechgroup.com/about</loc>
     <lastmod>2025-09-03</lastmod>
     <changefreq>monthly</changefreq>
+=======
+    <lastmod>2025-09-06T18:01:32.328Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/about</loc>
+    <lastmod>2025-09-06T18:01:32.328Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/services</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-03</lastmod>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-347d
     <changefreq>weekly</changefreq>
@@ -60,10 +72,14 @@
   <url>
     <loc>https://ziontechgroup.com/services-catalog</loc>
     <lastmod>2025-01-27</lastmod>
+=======
+    <lastmod>2025-09-06T18:01:32.328Z</lastmod>
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/about</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -287,4 +303,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+=======
+    <loc>https://ziontechgroup.com/contact</loc>
+    <lastmod>2025-09-06T18:01:32.328Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 </urlset>

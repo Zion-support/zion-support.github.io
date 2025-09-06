@@ -13,6 +13,16 @@ function toOpenApi() {
             "200": {
               description: "OK"
               content: {
+<<<<<<< HEAD
+                },
+              },
+            },
+          },
+          security:;
+            ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
+              ? [{ bearer_auth: [] }];
+              : [],
+=======
                 }
               }
             }
@@ -21,6 +31,7 @@ function toOpenApi() {
             ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
               ? [{ bearer_auth: [] }];
               : []
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   });
 
 ;

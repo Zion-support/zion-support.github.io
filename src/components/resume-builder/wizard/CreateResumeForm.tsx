@@ -10,7 +10,7 @@ export const CreateResumeForm = ({
 }: CreateResumeFormProps) => {
   const [newResumeTitle, setNewResumeTitle] = useState('')
   const handleSubmit = async () => {
-    if (!newResumeTitle.trim()) return;
+    if (!newResumeTitle.trim()) return
     await onCreateResume(newResumeTitle)
   }
   return (
@@ -52,7 +52,7 @@ export const CreateResumeForm = ({
 
 
   const handleSubmit = async () => {
-    if (!newResumeTitle.trim()) return;
+    if (!newResumeTitle.trim()) return
     await onCreateResume(newResumeTitle)
   }
   return (
@@ -94,7 +94,7 @@ export const CreateResumeForm = ({
 
           <Button
             variant="ghost"
-            onClick={onCancel}
+            onClick = {onCancel,}
             className="mt-4"
           >
 

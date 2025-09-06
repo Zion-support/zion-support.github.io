@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -17,8 +20,11 @@
   contact: {
     phone: string;
     email: string;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 ];      phone: '+1 302 464 0950';
@@ -35,10 +41,13 @@
     customers: 950;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.9,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 520
   }
 ];
@@ -325,7 +334,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 =======
 <<<<<<< HEAD
@@ -339,6 +351,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     launchDate: '2024-01-10', customers: 950,
     rating: 4.9,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1695,5 +1710,8 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
 ;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

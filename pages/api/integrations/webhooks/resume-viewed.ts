@@ -1,6 +1,9 @@
 =======
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -8,6 +11,8 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+=======
 
   const state = readState();
   const crms = state && state.connections.filter(
@@ -18,6 +23,7 @@ export default async function handler(
       c && c.providerId === "pipedrive"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -45,6 +51,8 @@ function handler() {
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
+<<<<<<< HEAD
+=======
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`
       providerId: conn && conn.providerId
       level: "info"
@@ -60,6 +68,7 @@ function handler() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -96,6 +105,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status (200).json ({ ok: true, results });
   res.status(200).json({ ok: true, results });
 }
+<<<<<<< HEAD
+}
+
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -110,3 +124,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

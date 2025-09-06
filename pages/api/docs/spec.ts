@@ -4,6 +4,11 @@
 
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(v1)
+<<<<<<< HEAD
+}
+
+
+=======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -48,3 +53,4 @@ export default function handler(req, res) {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

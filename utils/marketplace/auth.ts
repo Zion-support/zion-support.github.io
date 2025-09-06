@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       name: 'Test User'
     }
   }
@@ -22,21 +25,31 @@ export function assertTalentOrClientForOffer(
   if (
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     u && u.role === 'talent' &&
     (u && u.talentSlug || talentSlugHeader) === offer && offer.talentSlug
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   )
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
+
 
 <<<<<<< HEAD
 
-
-
-
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Marketplace authentication utilities
 export interface MarketplaceUser {
   id: string;
@@ -148,6 +161,9 @@ if ( {) {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

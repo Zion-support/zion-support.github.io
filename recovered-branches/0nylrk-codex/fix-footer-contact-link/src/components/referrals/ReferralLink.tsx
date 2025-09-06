@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -7,6 +9,7 @@
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -27,6 +30,8 @@ import { Input } from "@/components/ui/input",
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -38,6 +43,7 @@ import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -51,16 +57,36 @@ import {
 import { Input } from "@/components/ui/input";
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
   onShare: (platform: "twitter" | "facebook" | "linkedin") => void;
 }
 
+<<<<<<< HEAD
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false);
+
+
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false);
+
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
+  const [copied, setCopied] = useState(false),
+  
+  const handleCopy = () => {
+    onCopy(),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000)
+  },
+=======
 export function ReferralLink({
   referralLink,
   onCopy,
@@ -73,6 +99,7 @@ export function ReferralLink({
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <Card className="mt-6">
@@ -89,6 +116,8 @@ export function ReferralLink({
       <CardContent>
         <div className="flex flex-col space-y-3">
           <div className="flex space-x-2">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -135,6 +164,7 @@ export function ReferralLink(): any ({ referralLink, onCopy, onShare }: Referral
             </Button>
           </div>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {copied && (
             <p className="text-sm text-green-600 dark:text-green-500">
               Copied to clipboard!
@@ -181,6 +211,41 @@ export function ReferralLink(): any ({ referralLink, onCopy, onShare }: Referral
     </Card>
   );
 }
+<<<<<<< HEAD
+interface ReferralLinkProps {;
+  referralLink: string,;
+  onCopy: () => void,;
+  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
+}
+
+export function ReferralLink(): any ({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {;
+    onCopy();
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <Card className="mt-6">;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          <Link className="h-5 w-5" />;
+          Your Referral Link;
+        </CardTitle>;
+        <CardDescription>;
+          Share this link with others to earn rewards when they join and complete onboarding;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="flex flex-col space-y-3">;
+          <div className="flex space-x-2">;
+            <Input
+              value={referralLink}
+              readOnly
+              className="font-mono text-sm"
+=======
 export /**
  * ReferralLink - Function description
  */
@@ -267,12 +332,18 @@ function ReferralLink() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               LinkedIn;
             </Button>;
           </div>;
         </div>;
       </CardFooter>;
 
+<<<<<<< HEAD
+  )
+  )
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     </Card>);
@@ -319,3 +390,4 @@ mt-6"> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Link class
   )
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

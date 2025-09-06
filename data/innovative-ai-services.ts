@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface InnovativeAIService {
   id: string;
   name: string;
@@ -30,9 +33,12 @@ export interface InnovativeAIService {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   {
@@ -74,6 +80,8 @@ export interface InnovativeAIService {
     ],
     popular: true,
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -120,6 +128,7 @@ export interface InnovativeAIService {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -136,6 +145,8 @@ export interface InnovativeAIService {
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'biotech - ai - platform',
@@ -148,6 +159,7 @@ export interface InnovativeAIService {
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'AI drug discovery algorithms',
       'Genetic sequence analysis',
       'Protein folding prediction',
@@ -160,6 +172,8 @@ export interface InnovativeAIService {
       'Multi - omics data analysis',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🧬',
@@ -207,6 +221,7 @@ export interface InnovativeAIService {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -223,6 +238,8 @@ export interface InnovativeAIService {
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'quantum - financial - trading - platform',
@@ -235,6 +252,7 @@ export interface InnovativeAIService {
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum AI trading algorithms',
       'Nanosecond execution speed',
       'Real - time market analysis',
@@ -247,6 +265,8 @@ export interface InnovativeAIService {
       'API for integration',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '💰',
@@ -294,6 +314,7 @@ export interface InnovativeAIService {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -310,6 +331,8 @@ export interface InnovativeAIService {
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'space - technology - platform',
@@ -322,6 +345,7 @@ export interface InnovativeAIService {
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Satellite mission planning',
       'Orbital mechanics calculations',
       'Real - time satellite tracking',
@@ -334,6 +358,8 @@ export interface InnovativeAIService {
       'Multi - satellite operations',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🚀',
@@ -381,6 +407,7 @@ export interface InnovativeAIService {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -397,6 +424,8 @@ export interface InnovativeAIService {
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'AI-powered world generation',
     id: 'metaverse - ai - development - platform',
@@ -410,6 +439,7 @@ export interface InnovativeAIService {
       'AI - powered world generation',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Intelligent NPCs and avatars',
       '3D environment creation',
       'Virtual economy systems',
@@ -421,6 +451,8 @@ export interface InnovativeAIService {
       'Cross - platform support',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🌐',
@@ -468,6 +500,7 @@ export interface InnovativeAIService {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -484,6 +517,8 @@ export interface InnovativeAIService {
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'quantum - robotics - platform',
@@ -496,6 +531,7 @@ export interface InnovativeAIService {
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum AI decision making',
       'Precision robotics control',
       'Industrial automation',
@@ -508,6 +544,8 @@ export interface InnovativeAIService {
       'Integration APIs',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🤖',
@@ -551,6 +589,7 @@ export interface InnovativeAIService {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -567,6 +606,8 @@ export interface InnovativeAIService {
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'Quantum-resistant encryption',
     id: 'quantum - cybersecurity - platform',
@@ -580,6 +621,7 @@ export interface InnovativeAIService {
       'Quantum - resistant encryption',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'AI threat detection',
       'Real - time monitoring',
       'Incident response',
@@ -591,6 +633,8 @@ export interface InnovativeAIService {
       'Integration APIs',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🔒',
@@ -638,6 +682,7 @@ export interface InnovativeAIService {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -654,6 +699,8 @@ export interface InnovativeAIService {
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'quantum - internet - security',
@@ -666,6 +713,7 @@ export interface InnovativeAIService {
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum key distribution',
       'Quantum networks',
       'Ultra - secure communications',
@@ -678,6 +726,8 @@ export interface InnovativeAIService {
       '24 / 7 support',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🌍',
@@ -725,6 +775,7 @@ export interface InnovativeAIService {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -740,6 +791,9 @@ export interface InnovativeAIService {
   },
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.'
     launchDate: '2024-08-01'
     customers: 67
@@ -753,10 +807,13 @@ export interface InnovativeAIService {
     reviews: 34,
   },;
 
+<<<<<<< HEAD
+=======
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'quantum - logistics - platform',
     name: 'Quantum Logistics Platform',
     tagline: 'Quantum AI - powered supply chain optimization',
@@ -782,8 +839,11 @@ export interface InnovativeAIService {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - logistics',
@@ -843,8 +903,11 @@ export interface InnovativeAIService {
       address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -1137,6 +1200,8 @@ export const innovativeAIServices: InnovativeAIService[] = [
 <<<<<<< HEAD
   }
 ];
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
     },
@@ -1156,3 +1221,4 @@ export interface InnovativeAIService {;
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

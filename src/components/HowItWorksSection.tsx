@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -51,7 +53,11 @@ const HowItWorksSection = () => {
       </div>
     </section>
 =======
+<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 import { GradientHeading } from "./GradientHeading";
 
 import { Check, Handshake, Search, Send } from 'lucide-react'
@@ -146,6 +152,7 @@ const stats = [ "
   hidden: { opacity: 0
   scale: 0.8
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react';
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from 'lucide-react';
@@ -282,6 +289,16 @@ const getSteps = (t: any) => [
     description: t('how_it_works.done_desc'),
 
   return (
+<<<<<<< HEAD
+    <section className="py-16 px-4 bg-white">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">How We Work</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Our proven process ensures successful project delivery and maximum value for your investment.
+          </p>
+        </div>
+=======
     <section className={cn('py-20 bg-zion-blue', className)} style={style}>
       <div className='container mx-auto px-4'>
         <div className='text-center mb-16'>
@@ -560,6 +577,7 @@ function HowItWorksSection() {
                         {step && step.description}
                       </p>                    </div>                    </div>;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
         <div className="relative">
           {/* Timeline line */}
@@ -567,6 +585,59 @@ function HowItWorksSection() {
           
           <div className="space-y-12 md:space-y-0">
             {steps.map((step, index) => (
+<<<<<<< HEAD
+              <div key={index} className="relative">
+                <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                  <div className="relative mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white font-bold text-xl">{step.number}</span>
+                    </div>
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto shadow-md">
+                      {step.icon}
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16 text-center">
+          <div className="bg-gray-50 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">Timeline</h3>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">1-2 Weeks</div>
+                <div className="text-gray-600">Discovery & Analysis</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-600 mb-2">2-4 Weeks</div>
+                <div className="text-gray-600">Strategy & Planning</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-600 mb-2">4-12 Weeks</div>
+                <div className="text-gray-600">Implementation</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-orange-600 mb-2">Ongoing</div>
+                <div className="text-gray-600">Support & Optimization</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HowItWorksSection;
+=======
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
@@ -607,7 +678,11 @@ export default HowItWorksSection;
 <<<<<<< HEAD
 export default HowItWorksSection;
 =======
+<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 export default Component;
 
 }
@@ -646,4 +721,9 @@ export default Component;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

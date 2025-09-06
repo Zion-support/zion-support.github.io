@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 import { execSync } from "child_process";
 
@@ -6,6 +11,8 @@ console.log("🔧 Performing selective merge of main source files...");
 
 // List of main source directories to merge
 const mainSourceDirs = [
+=======
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -16,6 +23,7 @@ console && console.log('🔧 Performing selective merge of main source files...'
 // List of main source directories to merge
 const mainSourceDirs = [
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 #!/usr / bin / env node;
 import {exec_sync} from 'child_process';
 ;
@@ -26,8 +34,12 @@ const mainSourceDirs = [;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   'pages/',
   'components/',
   'utils/',
@@ -42,6 +54,8 @@ const mainSourceDirs = [;
   'layout/',
   'legal/',
   'integrations/',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -63,6 +77,7 @@ const mainSourceDirs = [;
     
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Try to merge only specific files
     for (const file of mainFiles && mainFiles.slice(0, 10)) { // Limit to first 10 files to avoid conflicts
       try {
@@ -126,6 +141,11 @@ const mergeSpecificFiles = () =>: any {
     return true;
   } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    console.error("Error in selective merge:", error.message);
+=======
+<<<<<<< HEAD
     console.error("Error in selective merge:", error.message);
 =======
 <<<<<<< HEAD
@@ -143,6 +163,7 @@ const mergeSpecificFiles = () =>: any {
       
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       console && console.error('Error committing changes:', error && error.message);
     }
@@ -153,6 +174,7 @@ const mergeSpecificFiles = () =>: any {
 main();
     console.error ('Error in selective merge:', error.message);
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     return false;
   }
 };

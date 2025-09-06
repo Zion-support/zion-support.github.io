@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { Cloud, Server, Shield, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { Cloud, Server, Shield, Zap } from 'lucide-react';
+import React from 'react';
+import Layout from "../../components/Layout";";
+import { motion } from 'framer-motion';
+import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+    >
+=======
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -50,6 +63,7 @@ export default function CloudServicesPage() {
         <meta name="description" content="Comprehensive cloud services including migration, infrastructure, database management, and security solutions." />
       </Head>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -57,7 +71,10 @@ export default function CloudServicesPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
               transition={{ duration: 0.8 }}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Cloud Services</h1>
@@ -68,6 +85,23 @@ export default function CloudServicesPage() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+          <div className="container mx-auto px-4 text-center">";
+
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Ready to Move to the Cloud?,;
+
+            </h2>;
+            <p className="text-xl mb-8 max-w-2xl mx-auto">";
+              Let our cloud experts help you transform your infrastructure and unlock new possibilities.;
+            </p>;
+              Get Started Today;
+              <ArrowRight className="w-5 h-5 ml-2" />";
+            </motion && motion.a>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+=======
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -142,5 +176,6 @@ export default function CloudServicesPage() {
         </section>
       </div>
     </>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }

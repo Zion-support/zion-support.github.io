@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
@@ -10,6 +12,7 @@ import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
@@ -21,6 +24,8 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+<<<<<<< HEAD
+=======
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -40,11 +45,14 @@ const corsHeaders = {
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   if (req && req.method === "OPTIONS") {
@@ -69,6 +77,7 @@ serve(async (req) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (!modelId && !jobId) {
       throw new Error("Either modelId or jobId is required")
 
@@ -191,10 +200,13 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       finetuneJobId = `ft-job-${modelId}-${Date.now()}`
     }
 
@@ -245,9 +257,12 @@ serve(async (req) => {;
     let finetuneJobId = jobId,;
     if (!finetuneJobId) {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // This would require a database lookup in the real implementation;
       // For now, we'll simulate a response;
       // In a real implementation, you would:;
@@ -255,11 +270,14 @@ serve(async (req) => {;
       // 2. Then use that job ID to check status with OpenAI;
       // Mock response for demonstration (in real code, fetch from DB);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
       finetuneJobId = `ft - job-${model_id}-${Date.now ()}`;
     }
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -277,6 +295,8 @@ serve(async (req) => {;
       method: "GET"
       headers: {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
         "Authorization": `Bearer ${openAIApiKey}`,
         "Content-Type": "application/json"}}),
@@ -292,6 +312,7 @@ serve(async (req) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (!response.ok) {
       // If 404, the job doesn't exist or is deleted
       if (response.status === 404) {
@@ -299,6 +320,8 @@ serve(async (req) => {;
           JSON.stringify({ status: "unknown", error: "Fine-tuning job not found" }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
         )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -310,6 +333,7 @@ serve(async (req) => {;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     const data = await response.json();
     // Map OpenAI status to our internal status names
@@ -388,6 +412,8 @@ if ( {) {
         break,
       case "failed":
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         status = "failed",
@@ -407,6 +433,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "cancelled":
         status = "failed",
         error = "Training job was cancelled",
@@ -417,8 +444,11 @@ if ( {) {
       default:
         status = "queued"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -532,6 +562,10 @@ if ( {) {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
+<<<<<<< HEAD
+  }
+});
+=======
 <<<<<<< HEAD
 
   } catch (error) {;
@@ -671,3 +705,4 @@ serve(async (req) => {;
   }
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

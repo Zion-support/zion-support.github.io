@@ -10,6 +10,16 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
+<<<<<<< HEAD
+>(({ className, ...props }, ref) => (
+  <CommandPrimitive
+    ref={ref}
+    className={cn(
+  />
+))
+Command.displayName = CommandPrimitive.displayName
+interface CommandDialogProps
+=======
 ></typeof>(({ className, ...props }, ref) => (
 import React from 'react';
 import * as React from 'react';
@@ -27,11 +37,28 @@ const Command = React && React.forwardRef<;
     ref={ref}
     className={cn(
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   />;
 ));
 Command && Command.displayName = CommandPrimitive && CommandPrimitive.displayName;
 
 
+<<<<<<< HEAD
+  />
+))
+Command.displayName = CommandPrimitive.displayName
+interface CommandDialogProps
+
+  />;
+));
+Command.displayName = CommandPrimitive.displayName;
+interface CommandDialogProps;
+  />;
+));
+Command.displayName = CommandPrimitive.displayName;
+interface CommandDialogProps;
+  extends React.ComponentPropsWithoutRef<typeof Dialog> {}
+=======
   extends React.ComponentPropsWithoutRef<typeof Dialog> {}
 
 
@@ -40,6 +67,7 @@ interface CommandDialogProps;
 
 const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {;
   return (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     <Dialog {...props}>
       <DialogContent className="overflow-hidden p-0 shadow-lg">
@@ -50,13 +78,18 @@ const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {
 
         <Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
           {children}
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Command>;
       </DialogContent>;
     </Dialog>;
   );
 }
 
+<<<<<<< HEAD
+=======
 
 import * as React from 'react';
 import {Command, as, CommandPrimitive} from 'cmdk';
@@ -104,6 +137,7 @@ const CommandInput = React.forward_ref<;
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
@@ -113,6 +147,8 @@ const CommandInput = React.forwardRef<
     <CommandPrimitive.Input
       ref={ref}
 
+<<<<<<< HEAD
+=======
       className={cn(;
         "flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",;
         className;
@@ -128,11 +164,20 @@ const CommandList = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.List;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
     ref={ref}
     className={cn("max-h-[300px] overflow-y-auto overflow-x-hidden", className)}
     {...props}
+<<<<<<< HEAD
+  />
+))
+CommandList.displayName = CommandPrimitive.List.displayName
+const CommandEmpty = React.forwardRef<
+  React.ElementRef<typeof CommandPrimitive.Empty>
+  React.ComponentPropsWithout</typeof>Ref<typeof CommandPrimitive.Empty>
+=======
 
   />));
 CommandList.display_name = CommandPrimitive.List.display_name;
@@ -140,6 +185,7 @@ const CommandEmpty = React.forward_ref<;
   React.ElementRef < typeof CommandPrimitive.Empty>,
   React.ComponentPropsWithout</typeof > Ref < typeof CommandPrimitive.Empty>;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >((props, ref) => (
   <CommandPrimitive.Empty
   />;
@@ -252,6 +298,86 @@ const CommandItem = React.forwardRef<;
 
     ref={ref}
     className={cn(
+<<<<<<< HEAD
+      'overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground'
+      className
+    )}
+    {...props}
+  />
+))
+CommandGroup.displayName = CommandPrimitive.Group.displayName
+const CommandSeparator = React.forwardRef<
+  React.ElementRef<typeof CommandPrimitive.Separator>
+  React.Compone</typeof>ntPropsWithoutRef<typeof CommandPrimitive.Separator>
+>(({ className, ...props }, ref) => (
+  <CommandPrimitive.Separator
+    ref={ref}
+    className={cn('-mx-1 h-px bg-border', className)}
+    {...props}
+  />
+))
+CommandSeparator.displayName = CommandPrimitive.Separator.displayName
+const CommandItem = React.forwardRef<
+  React.ElementRef<typeof CommandPrimitive.Item>
+ </typeof> React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item>
+>(({ className, ...props }, ref) => (
+  <CommandPrimitive.Item
+  />;
+));
+CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
+const CommandItem = React.forwardRef<;
+  React.ElementRef<typeof CommandPrimitive.Item>,;
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item>;
+>(({ className, ...props }, ref) => (;
+  <CommandPrimitive.Item;
+
+    ref={ref}
+    className={cn("max-h-[300px] overflow-y-auto overflow-x-hidden", className)}
+    {...props}
+    ref={ref}
+    className={cn("-mx-1 h-px bg-border", className)}
+    {...props}
+    ref={ref}
+    className="py-6 text-center text-sm";
+    {...props}
+  />;
+));
+CommandEmpty.displayName = CommandPrimitive.Empty.displayName;
+const CommandGroup = React.forwardRef<;
+  React.ElementRef<typeof CommandPrimitive.Group>,;
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Group>;
+>(({ className, ...props }, ref) => (;
+  <CommandPrimitive.Group;
+    ref={ref}
+    className={cn(;
+      "overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground",;
+      className;
+    )}
+    {...props}
+  />;
+));
+CommandGroup.displayName = CommandPrimitive.Group.displayName;
+const CommandSeparator = React.forwardRef<;
+  React.ElementRef<typeof CommandPrimitive.Separator>,;
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator>;
+>(({ className, ...props }, ref) => (;
+  <CommandPrimitive.Separator;
+    ref={ref}
+    className={cn("-mx-1 h-px bg-border", className)}
+    {...props}
+  />;
+));
+CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
+const CommandItem = React.forwardRef<;
+  React.ElementRef<typeof CommandPrimitive.Item>,;
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item>;
+>(({ className, ...props }, ref) => (;
+  <CommandPrimitive.Item;
+    ref={ref}
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected='true']:bg-accent data-[selected=true]:text-accent-foreground data-[disabled=true]:opacity-50"
+      className
+    )}
+=======
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected='true']:bg-accent data-[selected=true]:text-accent-foreground data-[disabled=true]:opacity-50"
       className
     )}
@@ -282,10 +408,13 @@ export {
 ));
   />
 ))
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
+<<<<<<< HEAD
+=======
 CommandItem.displayName = CommandPrimitive.Item.displayName
 
 const CommandShortcut = ({
@@ -299,15 +428,19 @@ const CommandShortcut = ({
         className
       )}
       {...props}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     />;
   );
 }
 CommandShortcut.displayName = "CommandShortcut"
 
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export {
   Command,
   CommandDialog,
@@ -315,9 +448,12 @@ export {
   CommandList,
   CommandEmpty,
   CommandGroup,
+<<<<<<< HEAD
+=======
 
 
   CommandItem,
   CommandShortcut,
   CommandSeparator}
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -28,6 +30,7 @@ export interface SpaceColonization2029Service {
       'Real - time interplanetary communication',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum communication protocols',
       'AI - powered routing optimization',
       'Multi - planet network management',
@@ -39,6 +42,8 @@ export interface SpaceColonization2029Service {
       'Emergency communication channels',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🌐',
@@ -91,6 +96,7 @@ export interface SpaceColonization2029Service {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -98,6 +104,8 @@ export interface SpaceColonization2029Service {
     },
     real_implementation: true,
     implementation_details:;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       'Advanced interplanetary communication network with quantum protocols, AI routing, satellite management, and real - time monitoring. Includes security protocols and emergency communication systems.',
@@ -284,6 +292,7 @@ export interface SpaceColonization2029Service {
       'Multi-source energy harvesting',
       'AI-powered energy optimization',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'space - energy - harvesting - platform',
     name: 'Space Energy Harvesting Platform',
     tagline: 'Harvest energy from space sources and celestial bodies',
@@ -314,6 +323,8 @@ export interface SpaceColonization2029Service {
     rating: 4.8,
     reviews: 52,
   },;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -397,6 +408,7 @@ export interface SpaceColonization2029Service {
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -451,6 +463,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     real_implementation: true,
     implementation_details: 'Advanced space energy harvesting platform with multi - source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';
     launch_date: '2029 - 03 - 01';
@@ -462,6 +476,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
     realImplementation: true

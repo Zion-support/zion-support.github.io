@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -12,6 +14,7 @@ import {slugify} from "@/lib/slugify";
 import {Link} from "react-router-dom";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { ReactNode } from "react",
 import { cn } from "@/lib/utils",
 import { slugify } from "@/lib/slugify";
@@ -19,13 +22,19 @@ import { Link } from "react-router-dom";
 import { slugify } from "@/lib/slugify",
 import { Link } from "react-router-dom",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface CategoryCardProps {
 
   title: string
@@ -37,6 +46,8 @@ interface CategoryCardProps {
    * accent colour is used. Previously this prop was ignored which meant
    * callers could not customise the icon colour as intended.
    */
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -65,12 +76,15 @@ export function CategoryCard({ title, description, icon, color, count, className
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const slug = slugify(title);
   return (
     <Link
       to={`/category/${slug}`}
       className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -106,6 +120,7 @@ import { Link } from "react-router-dom",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface CategoryCardProps {;
   title: string,;
   description: string,;
@@ -131,10 +146,13 @@ interface CategoryCardProps {;
    * callers could not customise the icon colour as intended.;
    */;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   color?: string;
   count?: number;
   className?: string;
@@ -165,6 +183,8 @@ export function CategoryCard(): any ({ title, description, icon, color, count, c
       <div
         className={cn(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           "mb-4 p-3 bg-zion-blue-dark rounded-full"
@@ -172,6 +192,7 @@ export function CategoryCard(): any ({ title, description, icon, color, count, c
           !color && "text-zion-cyan"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         )}
         className={cn (
           "mb - 4 p - 3 bg - zion - blue - dark rounded - full";
@@ -185,6 +206,8 @@ export function CategoryCard(): any ({ title, description, icon, color, count, c
       {count !== undefined && (
         <div className="mt - 3 text - sm text - zion - cyan">{count} listings</div>)}
     </Link>);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -257,4 +280,5 @@ icon: ReactNode | string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -20,6 +22,7 @@ const Page = () => {
 
 export default Page;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 origin/automation-improvements-final
 
 
@@ -1109,4 +1112,7 @@ origin/main
   )
 }
 ursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

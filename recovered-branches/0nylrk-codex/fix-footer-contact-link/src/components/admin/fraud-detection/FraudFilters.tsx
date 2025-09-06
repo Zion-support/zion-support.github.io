@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -13,6 +15,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {Search, Filter} from "lucide-react";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -22,9 +25,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Search, Filter } from "lucide-react",
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface FraudFiltersProps {
 
   searchQuery: string
@@ -263,6 +269,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
           onChange={(e) => setSearchQuery(e && e.target.value)}
 
@@ -274,6 +282,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 },
 import React from "react",;
 import { Input } from "@/components/ui/input",;
@@ -291,6 +300,8 @@ interface FraudFiltersProps {;
   setContentTypeFilter: (value: string | null) => void,;
   resetFilters: () => void;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
@@ -383,6 +394,7 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
         </SelectTrigger>;
@@ -395,6 +407,8 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
         </SelectContent>;
       </Select>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <Select value={severity_filter || ""} onValueChange={value => setSeverityFilter (value || null)}>;
@@ -406,6 +420,7 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Severity" />;
         </SelectTrigger>;
@@ -416,6 +431,8 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
           <SelectItem value="dangerous">Dangerous</SelectItem>;
         </SelectContent>;
       </Select>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -428,6 +445,7 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Content Type" />;
         </SelectTrigger>;
@@ -440,6 +458,8 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
           <SelectItem value="review">Reviews</SelectItem>;
         </SelectContent>;
       </Select>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -474,3 +494,4 @@ export default FraudFilters;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

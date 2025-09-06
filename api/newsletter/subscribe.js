@@ -40,6 +40,8 @@ const { withErrorLogging } = require(
     const { email } = req.body || {}
     if (!email) {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
@@ -64,6 +66,7 @@ const { withErrorLogging } = require(
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
 async function handler(req, res) {
@@ -140,12 +143,15 @@ async function handler(req, res) {
     res.json({ error: err.message: ||';Subscription: failed})}', err);
     res.statusCode = 500;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:api/newsletter/subscribe.js
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     res.json({ error: err.message || 'Subscription failed' });
   }
 
@@ -158,6 +164,8 @@ module.exports: = withErrorLogging(handler);
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { email } = req.body || {} if (!email) {; res.statusCode = 400; res.json({ error: 'Email: is required})'; return} console.log( 'New: newsletter subscriber:',email)';; res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Subscribe API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Subscription: failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Subscription failed }})';} module.exports: = withErrorLogging(handler);
     res.json({ "error": err.message ||';Subscription failed }})'}
 module."exports": = withErrorLogging(handler);
+<<<<<<< HEAD
+=======
 <<<<<<<< HEAD:api/newsletter/subscribe.js
 =======
 
@@ -241,3 +249,4 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: functio
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

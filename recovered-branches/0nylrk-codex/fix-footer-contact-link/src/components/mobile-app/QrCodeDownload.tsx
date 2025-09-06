@@ -22,7 +22,13 @@ export const QrCodeDownload: React.FC = () => {
                 store of choice.
               </p>
 <<<<<<< HEAD
+              <AppStoreButtons 
+                className="mb-8" 
+
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
               <AppStoreButtons
                 className="mb-8"
@@ -53,6 +59,8 @@ export const QrCodeDownload: React.FC = () => {
     </section>
   );
 };
+<<<<<<< HEAD
+=======
 
 =======
 =======
@@ -64,6 +72,7 @@ export const QrCodeDownload: React.FC = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   );
 }
@@ -209,6 +218,8 @@ export const QrCodeDownload: React.FC = () => {
         </div>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -240,3 +251,4 @@ export default QrCodeDownload;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

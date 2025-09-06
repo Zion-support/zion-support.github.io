@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -6,6 +9,7 @@
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -20,6 +24,8 @@ import { useTranslation } from "react-i18next";
   AlertDialogFooter,
   AlertDialogHeader,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 AlertDialogTitle,;
 =======
@@ -31,15 +37,19 @@ AlertDialogTitle,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "../components/ui/alert-dialog";
 import {
   useLanguage,
   SupportedLanguage,
   LanguageContextType,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {
 =======
@@ -148,6 +158,8 @@ export function LanguageDetectionPopup() {;
   }, []);
   if (!detectedLanguage) return null;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -156,6 +168,7 @@ export function LanguageDetectionPopup() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     await changeLanguage(detectedLanguage);
     setOpen(false);
   }
@@ -201,6 +214,11 @@ export function LanguageDetectionPopup() {;
     await changeLanguage(detectedLanguage),
     setOpen(false)
   },
+<<<<<<< HEAD
+
+
+            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
+=======
 
 
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
@@ -301,10 +319,14 @@ export function LanguageDetectionPopup() {;
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
+<<<<<<< HEAD
+);
+=======
 
 =======
       setOpen(true),;
@@ -343,11 +365,14 @@ export function LanguageDetectionPopup() {;
 =======
 );
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             className="bg-zion-purple text-white hover:bg-zion-purple-dark">;
             {t("general && general.yes")}
 
 );
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -365,6 +390,7 @@ export function LanguageDetectionPopup() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {t('general.no')}
           </AlertDialogCancel>;
           <AlertDialogAction;
@@ -372,6 +398,8 @@ export function LanguageDetectionPopup() {;
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
           >
             {t('general.yes')}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -393,11 +421,14 @@ export function LanguageDetectionPopup() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </AlertDialogAction>;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>;
   );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -448,6 +479,7 @@ if (return) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
     // Mark as visited;
     local_storage.set_item ("zion_has_visitedtrue");
@@ -506,6 +538,9 @@ if (return null) {
       </AlertDialogContent>;
     </AlertDialog>);
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
@@ -525,3 +560,4 @@ if (return null) {
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

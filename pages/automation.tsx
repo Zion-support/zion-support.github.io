@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -346,6 +348,7 @@ export default function AutomationPage() {
   );
 }
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react';
 import Head from 'next / head';
 import {
@@ -784,4 +787,7 @@ export default function AutomationPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

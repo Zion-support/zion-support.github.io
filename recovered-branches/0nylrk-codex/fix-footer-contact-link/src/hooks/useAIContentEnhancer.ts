@@ -12,11 +12,14 @@ type EnhancementType =
   | 'proposal'
   | 'general';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   enhancementType: EnhancementType;
   content?: string;
   context?: string
@@ -41,6 +44,8 @@ type EnhancementType =;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export interface AIEnhancementOptions {
   enhancement_type: EnhancementType;
+<<<<<<< HEAD
+=======
 
 
 export interface AIEnhancementOptions {;
@@ -72,6 +77,7 @@ export function useAIContentEnhancer() {;
 export interface AIEnhancementOptions {
   enhancement_type: EnhancementType;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async ({
@@ -83,6 +89,8 @@ export interface AIEnhancementOptions {
     setIsEnhancing(true);
     setError(null);
     try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -97,6 +105,7 @@ export interface AIEnhancementOptions {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           content;
           enhancementType;
           context
@@ -131,6 +140,8 @@ export interface AIEnhancementOptions {
         title: "AI Enhancement Failed";
         description: errorMessage
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         throw new Error(error.message)
@@ -141,6 +152,7 @@ export interface AIEnhancementOptions {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
@@ -180,6 +192,8 @@ export function useAIContentEnhancer() {;
       if (error) {;
         throw new Error(error.message);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -188,6 +202,7 @@ export function useAIContentEnhancer() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
       
       return data.enhancedContent
@@ -198,6 +213,8 @@ export function useAIContentEnhancer() {;
         title: "AI Enhancement Failed",
         description: errorMessage,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -205,6 +222,7 @@ export function useAIContentEnhancer() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         variant: "destructive"
       });
       console && console.error('Enhancement error:', err);
@@ -292,6 +310,8 @@ if ( {) {
     }
   }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   return {
     enhance_content;
@@ -408,3 +428,4 @@ error
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

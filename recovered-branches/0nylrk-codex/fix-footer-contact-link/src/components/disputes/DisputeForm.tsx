@@ -13,6 +13,8 @@ import {useDisputes} from "@/hooks/useDisputes";
 import {toast} from "sonner";
 import {FileText} from "lucide-react";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -20,6 +22,7 @@ import {FileText} from "lucide-react";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -45,6 +48,8 @@ import { useDisputes } from "@/hooks/useDisputes",
 import { toast } from "sonner",
 import { FileText } from "lucide-react",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -54,6 +59,7 @@ import { FileText } from "lucide-react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const formSchema = z.object({
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" })
@@ -61,6 +67,8 @@ const formSchema = z.object({
     .min(20, { message: "Description must be at least 20 characters" })
   attachments: z.array(z.any()).optional()})
 type DisputeFormProps = {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -107,6 +115,7 @@ export function DisputeForm({
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -115,6 +124,8 @@ export function DisputeForm({
       attachments: []}})
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -234,6 +245,7 @@ export function DisputeForm({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsSubmitting(true)
@@ -246,6 +258,8 @@ export function DisputeForm({ ;
         // Future enhancement: Upload attachments
         // For now we just log the files that would be uploaded
         if (files.length > 0) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
@@ -270,11 +284,14 @@ export function DisputeForm({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -284,6 +301,7 @@ export function DisputeForm({ ;
       console.error("Error submitting dispute:", error),
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast.error("Failed to submit dispute. Please try again.")
     } finally {
       setIsSubmitting(false)
@@ -339,6 +357,8 @@ export function DisputeForm({ ;
     }
   }
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -437,11 +457,18 @@ export function DisputeForm({;
       setFiles(prev => [...prev, ...newFiles]),;
       form.setValue("attachments", [...files, ...newFiles]);
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <FormField
             control={form.control}
             name="reason_code"
       setFiles(prev => [...prev, ...newFiles]);
       form && form.setValue("attachments", [...files, ...newFiles]);
+<<<<<<< HEAD
+    }
+    }
+  }
+  return (
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     }
@@ -527,6 +554,7 @@ export function DisputeForm({;
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <FormField
             control={form && form.control}
             name="reason_code"
@@ -647,6 +675,8 @@ if ( {) {
                 <FormLabel > Reason for dispute</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
           />;
@@ -666,12 +696,15 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select a reason" />;
                     </SelectTrigger>;
                   </FormControl>;
                   <SelectContent>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -682,6 +715,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     ))}
                   </SelectContent>;
                 </Select>;
@@ -747,6 +781,8 @@ if ( {) {
                   />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -864,6 +900,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             onClick={() => removeFile(index)}
                           >;
                             Remove;
@@ -955,6 +992,8 @@ if ( {) {
         </form>;
       </Form>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>);
@@ -963,12 +1002,15 @@ if ( {) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </Button>
           </div>
         </form>
       </Form>
     </div>
   )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -1059,9 +1101,13 @@ description: values.description
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 }
 
 
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -52,11 +52,14 @@ export default function ModerationModal(): any ({;
 }: ModerationModalProps) {;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   flag,
   onClose,
   onAction,
@@ -88,7 +91,10 @@ import React, { useState } from 'react';
 
 export type ModerationModalProps = {;
   flag: any | null;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -99,6 +105,8 @@ export type ModerationModalProps = {;
           <div className='font-semibold'>Review Flag — {flag && flag.id}</div>;
           <button
             onClick={onClose}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -163,6 +171,7 @@ export type ModerationModalProps = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <textarea
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
@@ -199,6 +208,8 @@ export type ModerationModalProps = {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -263,6 +274,7 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
         </div>
         <div className="p-4 border-t flex items-center justify-end gap-2">
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }        <div className="p-4 border-t flex items-center justify-end gap-2">
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -277,7 +289,10 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
   );
 =======
 );
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
   on_close: () => void;
   on_action: (
@@ -397,6 +412,8 @@ if (return null) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -542,3 +559,4 @@ export default function ModerationModal({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

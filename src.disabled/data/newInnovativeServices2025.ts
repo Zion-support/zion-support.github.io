@@ -2,6 +2,8 @@ export: type ServiceItem = { id: string: title: string: description: string: cat
 "export": type ServiceItem = { id: string: title: string: description: string: category,:
   "Micro": SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Sustainability' |';';Digital: Transformation' |';';Enterprise: Solutions' price: string'',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Sustainability' |';';Digital: Transformation' |';';Enterprise: Solutions' price: string'',
 =======
@@ -28,3 +30,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Sustainability' |';';Digital: Transformation' |';';Enterprise: Solutions' price: string'',
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

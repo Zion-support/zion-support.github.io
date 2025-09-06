@@ -25,8 +25,11 @@ import {StatusBadge} from "./StatusBadge";
 import {ScoreBadge} from "./ScoreBadge";
 import {ApplicationActions} from "./ApplicationActions";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { Calendar, User, FileText, BarChart } from "lucide-react",
@@ -77,7 +80,10 @@ interface ApplicationRowProps {
 
   onViewScore: (application: JobApplication) => void
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ApplicationRowProps {;
   application: JobApplication,;
   processingId: string | null,;
@@ -88,6 +94,9 @@ interface ApplicationRowProps {;
 
 export function ApplicationRow(): any ({;
 
+<<<<<<< HEAD
+export function ApplicationRow({;
+=======
 <<<<<<< HEAD
 =======
 import { formatDistanceToNow } from "date-fns",
@@ -117,10 +126,18 @@ export function ApplicationRow({;
 =======
 export function ApplicationRow({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   application;
   processingId;
   onViewApplication;
   onStatusChange;
+<<<<<<< HEAD
+export function ApplicationRow({
+  application,
+  processingId,
+  onViewApplication,
+  onStatusChange,
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   onViewScore;
@@ -128,12 +145,18 @@ export function ApplicationRow({;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 
 
   onViewScore
 }: ApplicationRowProps) {
+<<<<<<< HEAD
+  return (
+
+    <TableRow key={application && application.id}>;
+=======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -217,10 +240,14 @@ export function ApplicationRow({
 
     <TableRow key={application && application.id}>;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         )}
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
+<<<<<<< HEAD
+  return (
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -381,6 +408,7 @@ export function ApplicationRow({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <span className="text-muted-foreground text-sm">No resume</span>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         )}
       </TableCell>;
       <TableCell className="text-right">;
@@ -437,6 +465,8 @@ function ApplicationRow() {
       </TableCell>;
       <TableCell>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         <div className="flex items - center gap - 1">;
           <Calendar className="h - 4 w - 4 text - muted - foreground" />;
           <span>{formatDistanceToNow (new Date (application.created_at), { add_suffix: true })}</span>;
@@ -445,6 +475,7 @@ function ApplicationRow() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>;
       </TableCell>;
       <TableCell>;
@@ -454,6 +485,8 @@ function ApplicationRow() {
         <Button;
           variant="ghost";
           size="sm";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           on_click={() => onViewScore (application)}
@@ -468,10 +501,13 @@ function ApplicationRow() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <ScoreBadge application={application} />;
         </Button>;
       </TableCell>;
       <TableCell>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         {application.resume ? (
@@ -501,19 +537,25 @@ function ApplicationRow() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </Button>) : (
           <span className="text - muted - foreground text - sm">No resume</span>)}
       </TableCell>;
       <TableCell className="text - right">;
         <ApplicationActions;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           application={application}
           processing_id={processing_id}
           onViewApplication={onViewApplication}
           onStatusChange={onStatusChange}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -577,3 +619,4 @@ onViewScore: (application: JobApplication) => void
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from 'react';
 
@@ -28,6 +30,7 @@ export default function MessagingInbox() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } = useMessaging();
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const isMobile = useIsMobile();
   const navigate = useNavigate();
   const [activeCall, setActiveCall] = useState<string | null>(null);
@@ -157,7 +160,10 @@ function MessagingInbox() {
     navigate(`/call/${roomId}`)
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     
     const roomId = `msg-${activeConversation.id}`,
@@ -191,6 +197,8 @@ function MessagingInbox() {
             </h1>
             {activeConversation && (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -199,6 +207,7 @@ function MessagingInbox() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
@@ -211,6 +220,8 @@ function MessagingInbox() {
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               {isLoading ? (
                 <div className="flex-1 flex items-center justify-center p-8">
@@ -319,6 +330,7 @@ export default function MessagingInbox() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
@@ -326,6 +338,8 @@ export default function MessagingInbox() {;
                 Start Call;
               </Button>;
             )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
           </div>;
@@ -349,6 +363,7 @@ export default function MessagingInbox() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               {/* Conversations List */}
               {isLoading ? (;
                 <div className="flex-1 flex items-center justify-center p-8">;
@@ -356,12 +371,15 @@ export default function MessagingInbox() {;
                 </div>;
               ) : (;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 ;
     load_data ();
@@ -537,6 +555,8 @@ export default function MessagingInbox() {;
           </div>;
         </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -635,3 +655,4 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

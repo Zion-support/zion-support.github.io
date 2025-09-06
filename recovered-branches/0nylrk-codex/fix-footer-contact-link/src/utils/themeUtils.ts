@@ -1,7 +1,10 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface ThemeColors {;
 
 
@@ -30,6 +33,9 @@ export interface ThemeColors {;
 }
 // Define theme presets
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
+<<<<<<< HEAD
+  switch (preset) {
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -90,6 +96,7 @@ export interface ThemeColors {
   button_color: string,
   card_background: string;
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Define theme presets;
 export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
 <<<<<<< HEAD
@@ -149,6 +156,8 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -156,6 +165,7 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
   primaryColor: string,;
@@ -164,6 +174,11 @@ export interface ThemeColors {;
   accentColor: string,;
   buttonColor: string,;
   cardBackground: string;
+<<<<<<< HEAD
+  switch (preset) {
+    case 'dark':;
+      return {
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -175,6 +190,7 @@ export interface ThemeColors {;
     case 'dark':;
       return {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         primary_color;
         background_color: '#0f172a';
         text_color: '#e2e8f0';
@@ -284,6 +300,8 @@ export function applyThemeColors(colors: ThemeColors) {;
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -292,6 +310,7 @@ export function applyThemeColors(colors: ThemeColors) {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export /**
  * applyThemeColors - Function description
@@ -305,6 +324,8 @@ function applyThemeColors() {
   root.style.set_property ('--button - color', colors.button_color);
   root.style.set_property ('--card - background', colors.card_background);
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   // Set background and text colors on body;
   document.body.style.background_color = colors.background_color;
@@ -394,3 +415,4 @@ export function applyThemeColors(colors:ThemeColors) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

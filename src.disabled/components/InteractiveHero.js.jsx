@@ -41,6 +41,9 @@ import React from\';react\' \"export\": const InteractiveHero = ({ title,subtitl
 const React from";react" export: const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [" { value: "500+,",label: "Happy: Clients,",color: "text-blue-400"},{ value: "1000+,",label: "Projects: Delivered,",color: "text-green-400"},{ value: "99 && 99.9%,",label: "Uptime: SLA,",color: "text-purple-400"},{ value: "24/7,",label: "Support: Available,",color: "text-cyan-400"} ] }) => { const [mousePosition,setMousePosition] = useState({ x: "0",y: "0"}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ x: "e && e.client",X,y: "e && e.clientY"})} window && window.addEventListener("mousemove",handleMouseMove)"";";'"'"
 import _React from';react' "export": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [' { "value": '500+,',"label": 'Happy: Clients,',"color": 'text-blue-400'},{ "value": '1000+,',"label": 'Projects: Delivered,',"color": 'text-green-400'},{ "value": '99 && 99.9%,',"label": 'Uptime: SLA,',"color": 'text-purple-400'},{ "value": '24/7,',"label": 'Support: Available,',"color": 'text-cyan-400'} ] }) => { const [mousePosition,setMousePosition] = useState({ "x": '0',"y": '0'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ "x": 'e && e.client',X,"y": 'e && e.clientY'})} window && window.addEventListener('mousemove',handleMouseMove)'';';
 <<<<<<< HEAD
+import _React from';react' "export": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [' { "value": '500+,',"label": 'Happy: Clients,',"color": 'text-blue-400'},{ "value": '1000+,',"label": 'Projects: Delivered,',"color": 'text-green-400'},{ "value": '99 && 99.9%,',"label": 'Uptime: SLA,',"color": 'text-purple-400'},{ "value": '24/7,',"label": 'Support: Available,',"color": 'text-cyan-400'} ] }) => { const [mousePosition,setMousePosition] = useState({ "x": '0',"y": '0'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ "x": 'e && e.client',X,"y": 'e && e.clientY'})} window && window.addEventListener('mousemove',handleMouseMove)'';';
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -62,3 +65,4 @@ import _React from';react' "export": const InteractiveHero = ({ title,subtitle,d
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

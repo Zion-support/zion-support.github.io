@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 '"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
@@ -38,3 +40,4 @@
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

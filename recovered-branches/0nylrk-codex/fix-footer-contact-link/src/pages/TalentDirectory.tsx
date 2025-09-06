@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -28,6 +30,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -42,8 +45,11 @@ import {TalentProfile} from "@/types/talent";
 export default function TalentDirectory() {;
   const navigate = useNavigate();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -53,15 +59,21 @@ import { TalentResults } from "@/components/talent/TalentResults",
 import { useTalentDirectory } from "@/hooks/useTalentDirectory",
 import { SORT_OPTIONS } from "@/data/sortOptions",
 import { X } from "lucide-react",
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   // Use our custom hook to manage state;
   const {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const navigate = useNavigate();
   // Use our custom hook to manage state
   const {
@@ -147,6 +159,8 @@ export default function TalentDirectory() {
 <<<<<<< HEAD
     selected_talent;
     setSelectedTalent;
+<<<<<<< HEAD
+=======
 
 
 
@@ -230,6 +244,7 @@ export default function TalentDirectory() {
     selected_talent;
     setSelectedTalent;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -241,6 +256,8 @@ export default function TalentDirectory() {
             </p>
           </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -249,11 +266,14 @@ export default function TalentDirectory() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">;
             {/* Sidebar - Desktop */}
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
               <FilterSidebar
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -280,6 +300,7 @@ export default function TalentDirectory() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -424,6 +445,8 @@ export default function TalentDirectory() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -438,6 +461,7 @@ export default function TalentDirectory() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     expanded_sections;
     is_authenticated;
     saved_talents;
@@ -589,6 +613,8 @@ export default function TalentDirectory() {;
               handleRequestHire={handleRequestHire}
               saved_talents={saved_talents}
               handleToggleSave={handleToggleSave}
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -632,6 +658,7 @@ export default function TalentDirectory() {;
                 priceRange;
                 setPriceRange;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               activeFiltersProps={{;
                 selectedSkills,;
                 toggleSkill,;
@@ -642,8 +669,11 @@ export default function TalentDirectory() {;
                 priceRange,;
                 setPriceRange,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 experienceRange;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 setExperienceRange;
@@ -652,6 +682,8 @@ export default function TalentDirectory() {;
                 setPriceRange;
                 experience_range;
                 setExperienceRange;
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 selectedSkills
                 toggleSkill
@@ -705,6 +737,7 @@ export default function TalentDirectory() {;
                 experience_range;
                 setExperienceRange;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (;
               <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;
@@ -843,6 +876,8 @@ export default function TalentDirectory() {;
 }
 
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1006,3 +1041,4 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

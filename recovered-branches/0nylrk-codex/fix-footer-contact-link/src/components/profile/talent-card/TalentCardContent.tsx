@@ -1,10 +1,19 @@
+<<<<<<< HEAD
+import React, { useState } from './react';
+import { MapPin  } from './lucide-react';
+import { TalentCardSkills  } from './TalentCardSkills';
+
+=======
 import React, { useState } from "react";
 import { MapPin } from "lucide-react";
 import { TalentCardSkills } from "./TalentCardSkills";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
+<<<<<<< HEAD
+=======
   skills: string[] | undefined;
 }
 
@@ -14,6 +23,7 @@ export function TalentCardContent({
   timezone,
   skills,
 }: TalentCardContentProps) {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [isHovering, setIsHovering] = useState(false);
 
 
@@ -95,6 +105,10 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
 
 
 <<<<<<< HEAD
+}
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -103,6 +117,7 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
 }
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Location */}
       {timezone && (;
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;
@@ -110,6 +125,8 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
           <span>{timezone}</span>;
         </div>;
       )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
       {/* Short bio or summary - longer on hover for desktop */}
@@ -132,11 +149,14 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Skills */}
       <TalentCardSkills skills={skills} />
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -193,6 +213,7 @@ skills: string[] | undefined
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export /**
  * TalentCardContent - Function description
  */

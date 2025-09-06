@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -20,6 +22,7 @@
 ; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ; async walkDirectory(dir) {; const analyses = [];
 ; try {; const items = fs && fs.readdirSync(dir);
 ; for (const item of items) {; const fullPath = path && path.join(dir, item); const stat = fs && fs.statSync(fullPath);
@@ -27,6 +30,8 @@
 ; return analyses};
 ; generateReport(analyses) {; const totalFiles = analyses && analyses.length; const totalIssues = analyses && analyses.reduce((sum, analysis) = > sum + analysis && analysis.issues.length, 0);
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ; analyses && analyses.forEach(analysis = > {; analysis && analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue && issue.type] = (issuesByType[issue && issue.type] || 0) + 1;
 ; // Count by severity; issuesBySeverity[issue && issue.severity]++})});
@@ -141,6 +146,7 @@ const monitor = new CodeQualityMonitor();
 monitor.run().catch(error = > {; process.exit(1)});
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 };
 ;
@@ -171,12 +177,15 @@ monitor.run().catch(error = > {; process.exit(1)});
             severity: 'low';
           });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 }};
 monitor && monitor.run().catch(error = > {; process && process.exit(1)});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     };
   };
 ,
@@ -508,6 +517,8 @@ monitor.run().catch(error = > {_; process.exit(1)})
           };
         };
       };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     } catch (error) {,
@@ -1021,6 +1032,7 @@ monitor.run().catch(error => {,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }),
 ,
     const report = {,
@@ -1029,6 +1041,8 @@ monitor.run().catch(error => {,;
         totalFiles,
         totalIssues,
         issuesByType,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         issuesBySeverity,
@@ -1049,6 +1063,7 @@ monitor.run().catch(error => {,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   };
 ,
   generateRecommendations(issuesByType, totalIssues) {,
@@ -1060,6 +1075,8 @@ monitor.run().catch(error => {,;
         priority: 'low',
         message: 'Remove trailing spaces from files',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
         action: 'Run the lint-fixer to automatically remove trailing spaces',
       }),
@@ -1069,6 +1086,7 @@ monitor.run().catch(error => {,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     };
 ,
     if (issuesByType['console-statement'] > 0) {,
@@ -1076,6 +1094,8 @@ monitor.run().catch(error => {,;
         type: 'console-statement',
         priority: 'medium',
         message: 'Remove console statements from production code',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         action: 'Replace console statements with proper logging or remove them',
@@ -1086,6 +1106,7 @@ monitor.run().catch(error => {,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     };
 ,
     if (issuesByType['unused-import'] > 0) {,
@@ -1093,6 +1114,8 @@ monitor.run().catch(error => {,;
         type: 'unused-import',
         priority: 'medium',
         message: 'Remove unused imports',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         action: 'Clean up unused imports to reduce bundle size',
@@ -1103,6 +1126,7 @@ monitor.run().catch(error => {,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     };
 ,
     if (totalIssues > 100) {,
@@ -1110,6 +1134,8 @@ monitor.run().catch(error => {,;
         type: 'general',
         priority: 'high',
         message: 'High number of code quality issues detected',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         action: 'Run comprehensive code cleanup and establish coding standards',
@@ -1126,12 +1152,15 @@ monitor.run().catch(error => {,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   };
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         fs.mkdirSync(reportDir, { recursive: true }),
@@ -1152,6 +1181,7 @@ monitor.run().catch(error => {,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     };
   };
 ,
@@ -1159,6 +1189,8 @@ monitor.run().catch(error => {,;
     try {,
       const status = execSync('git status --porcelain', {,
         cwd: this.projectRoot,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         encoding: 'utf8',
@@ -1188,6 +1220,7 @@ monitor.run().catch(error => {,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     };
   };
 ,
@@ -1199,6 +1232,8 @@ monitor.run().catch(error => {,;
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
         fs.mkdirSync(logsDir, { recursive: true }),
 =======
@@ -1206,6 +1241,7 @@ monitor.run().catch(error => {,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       };
 ,
       // Check git status,
@@ -1226,6 +1262,8 @@ monitor.run().catch(error => {,;
 ,
       if (report.summary.totalIssues > 0) {,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         this.log('\n🚨 Issues by type: '),
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
 <<<<<<< HEAD
@@ -1245,10 +1283,13 @@ monitor.run().catch(error => {,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }),
 ,
         // If there are many issues and git is clean, suggest running the lint fixer,
         if (report.summary.totalIssues > 50 && isClean) {,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues'),
@@ -1273,6 +1314,7 @@ monitor.run().catch(error => {,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     };
   };
 };
@@ -1281,6 +1323,8 @@ monitor.run().catch(error => {,;
 const monitor = new CodeQualityMonitor(),
 monitor.run().catch(error => {,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   process.exit(1),
 }),
@@ -1288,6 +1332,7 @@ monitor.run().catch(error => {,
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }}
 ; async analyze_file (file_path) { try { const content = fs.readFileSync (file_path, 'utf8'); const stats = fs.stat_sync (file_path);
 ; const analysis = { file: file_path, size: stats.size, lines: content.split ('\n').length,
@@ -1404,6 +1449,8 @@ if ( {) {
 const monitor = new CodeQualityMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1699,6 +1746,7 @@ monitor.run().catch(error = > {; process.exit(1)});
 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {,;
       this.log(`❌ Error running code quality: monitor: ${error.message}`),;
       process.exit(1);
@@ -1714,8 +1762,11 @@ monitor.run().catch(error => {,;
 monitor.run().catch(error = > {; process.exit(1)});
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   process.exit(1)
 }),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

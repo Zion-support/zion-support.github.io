@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <span>{contactInfo.phone}</span>,
             </div>,
             <div className="flex items-center space-x-2">,
@@ -318,3 +320,4 @@
     </header>,;
   );
 },;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

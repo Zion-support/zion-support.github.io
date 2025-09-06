@@ -1,9 +1,16 @@
 export function ClientDashboard() {
   return (
+<<<<<<< HEAD
+    <div className='space-y-6 px-4 pb-24'>
+      <section className='mt-4'>
+        <Button className='w-full py-6' size='lg'>
+          <Plus className='mr-2 h-5 w-5' /> Post a New Job
+=======
     <div className="space-y-6 px-4 pb-24">
       <section className="mt-4">
         <Button className="w-full py-6" size="lg">
           <Plus className="mr-2 h-5 w-5" /> Post a New Job
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
       </section>
 
@@ -149,6 +156,11 @@ export function ClientDashboard() {
                 <Button size="sm">View Profile</Button>
                 <Button size="sm" variant="outline">Message</Button>
               </div>
+              <div className='flex gap-2 mt-3'>
+                <Button size='sm'>View Profile</Button>
+                <Button size='sm' variant='outline'>
+                  Message
+                </Button>              </div>
             </CardContent>
           </Card>
         </div>
@@ -190,10 +202,18 @@ export function ClientDashboard() {
 
               </div>
               <div>
+<<<<<<< HEAD
+                <p className='text-sm'>
+                  <strong>Mobile App Development:</strong> 3 new applicants for
+                  your job post
+                </p>
+                <p className='text-xs text-muted-foreground'>1 day ago</p>
+=======
                 <p className="text-sm">
                   <strong>Mobile App Development:</strong> 3 new applicants for your job post
                 </p>
                 <p className="text-xs text-muted-foreground">1 day ago</p>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </div>
             </div>
 

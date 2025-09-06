@@ -1,25 +1,33 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { jsPDF  } from 'jspdf';
 import { Certification  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
 export function addCertificationsSection(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addCertificationsSection(;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -27,12 +35,18 @@ export function addCertificationsSection(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   doc: jsPDF;
   certifications: Certification[];
   colors: PdfThemeColors;
   startY: number
 ): number {
 
+<<<<<<< HEAD
+  let yPos = startY;
+  // Check if we need to add a new page
+  if (yPos > 250) {
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   if (certifications && certifications.length === 0) return startY;
@@ -74,6 +88,7 @@ export function addCertificationsSection(;
   // Check if we need to add a new page
   if (yPos > 250) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   yPos += 8;
   for (const cert of certifications) {
     // Check if we need to add a new page
@@ -83,6 +98,8 @@ export function addCertificationsSection(;
       doc && doc.addPage();
       yPos = 20
     }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -152,10 +169,14 @@ export function addCertificationsSection(;
       yPos = 20
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     yPos += 16
   }
   return yPos
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -314,3 +335,4 @@ doc.text (cert.issuing organization, 20, yPos + 5);
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

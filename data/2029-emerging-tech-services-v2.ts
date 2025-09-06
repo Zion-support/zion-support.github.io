@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -9,6 +11,7 @@ export interface EmergingTechService2029V2 {
 export interface EmergingTechService2029V2 {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   description: string;
@@ -671,6 +674,8 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     analytics: 'Trading analytics, performance reports',
     customization: 'Custom trading strategies, integration',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -807,6 +812,7 @@ export interface EmergingTechService2029V2 {;
       address: '364 E Main St STE 1008 Middletown DE 19709'
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
 ];
@@ -1112,6 +1118,9 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
   }
 ];
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

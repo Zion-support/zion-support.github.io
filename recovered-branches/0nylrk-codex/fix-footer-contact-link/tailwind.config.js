@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 module && module.exports = {
@@ -11,6 +13,7 @@ module.exports = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   content: [
     "./pages/**/*.{ts,tsx}./components/**/*.{ts,tsx}./app/**/*.{ts,tsx}./src/**/*.{ts,tsx}",
   ],
@@ -52,6 +55,9 @@ module.exports = {
         },
       },
       borderRadius: {
+<<<<<<< HEAD
+  plugins: []}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -107,3 +113,4 @@ module.exports = {
   },
   plugins: [],
 };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

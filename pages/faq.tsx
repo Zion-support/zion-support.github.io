@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -20,6 +22,7 @@ const Page = () => {
 
 export default Page;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function FAQ() {
   const contact = {
     phone: "+1 302 464 0950"
@@ -204,4 +207,7 @@ export default function FAQPage() {
   );
 }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

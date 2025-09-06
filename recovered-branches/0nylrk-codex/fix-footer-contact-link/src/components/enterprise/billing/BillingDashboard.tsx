@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -51,6 +53,7 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Tabs defaultValue="subscription" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="subscription">Subscription</TabsTrigger>
@@ -59,12 +62,15 @@ import {
           <TabsTrigger value="usage">Usage Overview</TabsTrigger>
         </TabsList>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <TabsContent value="subscription" className="space-y-8">
           <CurrentSubscription />
         </TabsContent>
@@ -74,6 +80,8 @@ import {
         <TabsContent value="invoices" className="space-y-8">
           <InvoiceHistory />
         </TabsContent>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         
@@ -97,10 +105,13 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <TabsContent value="usage" className="space-y-8">
           <UsageOverview />
         </TabsContent>
       </Tabs>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -134,6 +145,7 @@ function BillingDashboard() {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </div>;
   );
 }
@@ -155,17 +167,23 @@ export function BillingDashboard() {;
 
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <BillingHeader />;
       <Tabs defaultValue="subscription" className="mt-8">;
         <TabsList className="grid w-full grid-cols-4 mb-8">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <TabsTrigger value="subscription">Subscription</TabsTrigger>;
           <TabsTrigger value="payment">Payment Methods</TabsTrigger>;
           <TabsTrigger value="invoices">Invoice History</TabsTrigger>;
           <TabsTrigger value="usage">Usage Overview</TabsTrigger>;
         </TabsList>;
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -227,3 +245,4 @@ export function BillingDashboard() {;
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

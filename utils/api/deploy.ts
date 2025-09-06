@@ -1,4 +1,55 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export interface DeployConfig {
+  instanceName: string;
+  governanceMode: string;
+  tokenActivation: boolean;
+  modules: {
+    token: boolean;
+    [key: string]: boolean;
+  };
+}
+
+export interface DeployResult {
+  success: boolean;
+  instanceId: string;
+  configPath: string;
+  message?: string;
+}
+
+export function toSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+export async function deployInstance(config: DeployConfig): Promise<DeployResult> {
+  try {
+    const instanceSlug = toSlug(config.instanceName);
+    const instanceId = `${instanceSlug}-${Date.now()}`;
+    
+    // Mock deployment logic
+    const result: DeployResult = {
+      success: true,
+      instanceId,
+      configPath: `/configs/${instanceId}.json`,
+      message: 'Instance deployed successfully'
+    };
+    
+    return result;
+  } catch (error) {
+    return {
+      success: false,
+      instanceId: '',
+      configPath: '',
+      message: error instanceof Error ? error.message : 'Deployment failed'
+    };
+  }
+}
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +73,7 @@ import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../ty
 function toSlug(name: string): string {return name;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import fs from "fs",;
 import path from "path",;
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion",;
@@ -34,15 +86,20 @@ import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../ty
 function toSlug(name: string): string {;
   return name;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,6 +110,7 @@ function toSlug(name: string): string {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   // Schedule launch stream (/summit);
   ensureDir(eventsDir),;
@@ -260,6 +318,8 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     writeTextFile(;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 import fs from './fs';,
 import path from './path';,
@@ -462,12 +522,16 @@ if ( {) {
     config_path,
     assets,
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     logs;
     summary;
     version}
 }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       changelogPath,;
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
     ),;
@@ -1125,6 +1189,8 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1132,3 +1198,5 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

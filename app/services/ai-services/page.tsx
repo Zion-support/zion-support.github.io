@@ -1,111 +1,133 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 export const metadata = { 
   title: 'AI Services | Zion Tech Group',
   description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.',
   keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'
 };
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-134f
+import React from 'react';
+import Link from 'next/link';
+<<<<<<< HEAD
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 
-interface AIServiceProps {
-  title: string;
-  description: string;
-  price: string;
-  features: string[];
-  useCases: string[];
-  icon: string;
-  href: string;
-}
+export const metadata = {
+  title: 'AI Services | Zion Tech Group - Comprehensive AI Solutions',
+  description: 'Complete AI services including machine learning, natural language processing, computer vision, and AI automation. Transform your business with cutting-edge artificial intelligence.',
+};
 
-function AIService({ title, description, price, features, useCases, icon, href }: AIServiceProps) {
+export default function AIServicesPage() {
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
     <div className="animate-fade-in">
       <section className="text-center py-12">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           AI Services & Solutions
+=======
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg mb-16">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          AI Services
+>>>>>>> cursor/expand-services-advertise-and-build-project-134f
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-          Ship AI features with confidence: RAG, agents, fine-tuning, evals and MLOps. 
-          We help you build production-ready AI systems that drive real business value.
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Comprehensive artificial intelligence solutions to transform your business. From machine learning 
+          to natural language processing, we deliver cutting-edge AI that drives real results.
         </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get AI Consultation - Free
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Schedule Demo
+          </a>
+        </div>
       </section>
 
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our AI Solutions</h2>
+      {/* AI Service Categories */}
+      <section className="py-16">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our AI Service Categories</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AIServiceCard
-            title="Custom LLM Applications"
-            description="Build intelligent applications powered by large language models"
-            features={["Custom model fine-tuning", "Prompt engineering", "Context-aware responses", "Multi-modal capabilities", "Real-time inference"]}
-            price="$15k–$50k"
-            icon="🧠"
-          />
-          <AIServiceCard
-            title="RAG (Retrieval-Augmented Generation)"
-            description="Intelligent document search and question-answering systems"
-            features={["Vector database setup", "Document processing", "Semantic search", "Context retrieval", "Answer generation"]}
-            price="$10k–$30k"
-            icon="🔍"
-          />
-          <AIServiceCard
-            title="AI Agents & Automation"
-            description="Autonomous AI agents that can perform complex tasks and workflows"
-            features={["Task automation", "Workflow orchestration", "API integrations", "Decision making", "Self-healing systems"]}
-            price="$20k–$60k"
+            title="AI Code Assistant"
+            description="Intelligent code generation, debugging, and optimization powered by advanced AI."
+            href="/services/ai-code-assistant"
             icon="🤖"
+            pricing="From $99/month"
+            features={["Code generation", "Bug detection", "Performance optimization", "Learning assistance"]
           />
           <AIServiceCard
-            title="Computer Vision Solutions"
-            description="Image and video analysis with state-of-the-art computer vision models"
-            features={["Object detection", "Image classification", "OCR & text extraction", "Video analytics", "Real-time processing"]}
-            price="$12k–$40k"
-            icon="👁️"
+            title="AI Social Media Scheduler"
+            description="Intelligent social media scheduling with AI-powered content generation and optimal timing."
+            href="/services/ai-social-scheduler"
+            icon="📱"
+            pricing="From $49/month"
+            features={["Content generation", "Optimal timing", "Performance analytics", "Cross-platform management"]
           />
           <AIServiceCard
-            title="Natural Language Processing"
-            description="Advanced text analysis, sentiment analysis, and language understanding"
-            features={["Sentiment analysis", "Text classification", "Named entity recognition", "Language translation", "Text summarization"]}
-            price="$8k–$25k"
-            icon="📝"
+            title="AI Project Manager"
+            description="Intelligent project management with AI-powered task automation and predictive analytics."
+            href="/services/ai-project-manager"
+            icon="📊"
+            pricing="From $199/month"
+            features={["Task automation", "Predictive analytics", "Team optimization", "Smart scheduling"]
           />
           <AIServiceCard
-            title="Predictive Analytics & ML"
-            description="Machine learning models for forecasting and predictive insights"
-            features={["Time series forecasting", "Anomaly detection", "Recommendation systems", "Risk assessment", "Performance optimization"]}
-            price="$18k–$45k"
+            title="AI Customer Support"
+            description="Intelligent customer support automation with AI chatbots and sentiment analysis."
+            href="/services/ai-customer-support"
+            icon="💬"
+            pricing="From $299/month"
+            features={["AI chatbots", "Sentiment analysis", "Multilingual support", "Smart routing"]
+          />
+          <AIServiceCard
+            title="AI Data Analytics"
+            description="Advanced AI-powered data analytics with predictive modeling and real-time insights."
+            href="/services/ai-data-analytics"
             icon="📈"
+            pricing="From $399/month"
+            features={["Predictive analytics", "Real-time dashboards", "Automated insights", "Natural language queries"]
           />
           <AIServiceCard
-            title="AI Voice & Speech Processing"
-            description="Advanced speech recognition, synthesis, and voice AI applications"
-            features={["Speech-to-text", "Text-to-speech", "Voice cloning", "Emotion detection", "Multi-language support", "Real-time processing"]}
-            price="$25k–$65k"
-            icon="🎤"
-          />
-          <AIServiceCard
-            title="AI-Powered Search & Discovery"
-            description="Intelligent search engines with semantic understanding and personalization"
-            features={["Semantic search", "Personalization", "Auto-tagging", "Content recommendation", "Search analytics", "Multi-modal search"]}
-            price="$18k–$45k"
-            icon="🔎"
-          />
-          <AIServiceCard
-            title="AI Fraud Detection & Security"
-            description="Advanced fraud detection and cybersecurity using machine learning"
-            features={["Real-time fraud detection", "Anomaly detection", "Risk scoring", "Behavioral analysis", "Threat intelligence", "Compliance monitoring"]}
-            price="$30k–$80k"
-            icon="🛡️"
-          />
-          <AIServiceCard
-            title="AI Content Generation & Moderation"
-            description="Automated content creation and intelligent content moderation systems"
-            features={["Content generation", "Auto-moderation", "Brand safety", "Content optimization", "Multi-format support", "Quality scoring"]}
-            price="$15k–$40k"
+            title="AI Content Generator"
+            description="AI-powered content creation for blogs, marketing materials, and social media posts."
+            href="/services/ai-content-generator"
             icon="✍️"
+            pricing="From $149/month"
+            features={["Blog writing", "Marketing copy", "Social media posts", "SEO optimization"]
           />
+<<<<<<< HEAD
           <AIServiceCard
             title="AI Supply Chain Optimization"
             description="Intelligent supply chain management with demand forecasting and logistics optimization"
@@ -215,16 +237,182 @@ function AIService({ title, description, price, features, useCases, icon, href }
       </div>
       <p className="text-gray-600 mb-4">{description}</p>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+<<<<<<< HEAD
+=======
+=======
+        </div>
+      </section>
+
+      {/* AI Technologies */}
+      <section className="py-16 bg-gray-50 rounded-lg">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">AI Technologies We Use</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          <TechCard name="Machine Learning" icon="🧠" />
+          <TechCard name="Natural Language Processing" icon="💬" />
+          <TechCard name="Computer Vision" icon="👁️" />
+          <TechCard name="Deep Learning" icon="🔬" />
+          <TechCard name="Neural Networks" icon="🕸️" />
+          <TechCard name="Reinforcement Learning" icon="🎯" />
+        </div>
+      </section>
+
+      {/* AI Solutions by Industry */}
+      <section className="py-16">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">AI Solutions by Industry</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <IndustryCard
+            icon="🏦"
+            title="Financial Services"
+            description="AI solutions for fraud detection, risk assessment, and algorithmic trading."
+            solutions={["Fraud detection", "Risk modeling", "Algorithmic trading", "Credit scoring"]
+          />
+          <IndustryCard
+            icon="🛒"
+            title="E-commerce"
+            description="AI-powered recommendation engines, inventory optimization, and customer analytics."
+            solutions={["Recommendation engines", "Inventory optimization", "Customer analytics", "Price optimization"]
+          />
+          <IndustryCard
+            icon="🏥"
+            title="Healthcare"
+            description="AI solutions for medical diagnosis, drug discovery, and patient care optimization."
+            solutions={["Medical diagnosis", "Drug discovery", "Patient monitoring", "Treatment optimization"]
+          />
+          <IndustryCard
+            icon="🏭"
+            title="Manufacturing"
+            description="AI for predictive maintenance, quality control, and supply chain optimization."
+            solutions={["Predictive maintenance", "Quality control", "Supply chain optimization", "Process automation"]
+          />
+          <IndustryCard
+            icon="🎓"
+            title="Education"
+            description="AI-powered personalized learning, student assessment, and educational content generation."
+            solutions={["Personalized learning", "Student assessment", "Content generation", "Learning analytics"]
+          />
+          <IndustryCard
+            icon="🏠"
+            title="Real Estate"
+            description="AI solutions for property valuation, market analysis, and investment optimization."
+            solutions={["Property valuation", "Market analysis", "Investment optimization", "Property matching"]
+          />
+        </div>
+      </section>
+
+      {/* AI Development Process */}
+      <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our AI Development Process</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <ProcessStep
+            step="1"
+            title="Discovery & Analysis"
+            description="Understand your business needs and data requirements for optimal AI solution design."
+          />
+          <ProcessStep
+            step="2"
+            title="Data Preparation"
+            description="Clean, process, and prepare your data for AI model training and optimization."
+          />
+          <ProcessStep
+            step="3"
+            title="Model Development"
+            description="Develop and train custom AI models tailored to your specific use case and requirements."
+          />
+          <ProcessStep
+            step="4"
+            title="Deployment & Monitoring"
+            description="Deploy your AI solution and provide ongoing monitoring, maintenance, and optimization."
+          />
+        </div>
+      </section>
+
+      {/* Success Metrics */}
+      <section className="py-16">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Proven AI Results</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <MetricCard
+            number="500+"
+            label="AI Projects Delivered"
+            description="Successfully completed AI implementations"
+          />
+          <MetricCard
+            number="95%"
+            label="Accuracy Rate"
+            description="Average accuracy of our AI models"
+          />
+          <MetricCard
+            number="300%"
+            label="ROI Improvement"
+            description="Average return on investment for clients"
+          />
+          <MetricCard
+            number="24/7"
+            label="Support Available"
+            description="Round-the-clock AI model monitoring"
+          />
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-blue-600 rounded-lg text-white text-center">
+        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
+        <p className="text-xl mb-8 max-w-2xl mx-auto">
+          Join 1,000+ businesses that have revolutionized their operations with our AI solutions.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+          >
+            Email Us
+          </a>
+        </div>
+        <div className="mt-6 text-sm text-blue-100">
+          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function AIServiceCard({ title, description, href, icon, pricing, features }: {
+  title: string;
+  description: string;
+  href: string;
+  icon: string;
+  pricing: string;
+  features: string[];
+}) {
+  return (
+    <Link
+      href={href}
+      className="group bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200"
+    >
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+        {title}
+      </h3>
+>>>>>>> cursor/expand-services-advertise-and-build-project-134f
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
       <p className="text-gray-600 mb-4">{description}</p>
-      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
-      <ul className="space-y-2">
+      <ul className="space-y-2 mb-4">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-sm text-gray-600">
-            <span className="text-green-500 mr-2">✓</span>
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
             {feature}
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
     </div>
   );
 }
@@ -330,13 +518,25 @@ function CTASection() {
             </span>
           ))}
         </div>
+=======
+      <div className="text-lg font-semibold text-blue-600">
+        {pricing}
+>>>>>>> cursor/expand-services-advertise-and-build-project-134f
       </div>
     </Link>
   );
 }
 
+<<<<<<< HEAD
 export default function AIServicesPage() {
+<<<<<<< HEAD
+=======
+=======
+function TechCard({ name, icon }: { name: string; icon: string }) {
+>>>>>>> cursor/expand-services-advertise-and-build-project-134f
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
   return (
+<<<<<<< HEAD
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-blue-100 rounded-lg">
@@ -491,6 +691,20 @@ export default function AIServicesPage() {
       </section>
     </div>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+=======
+    <div className="text-center bg-white p-4 rounded-lg shadow-md border border-gray-200">
+      <div className="text-3xl mb-2">{icon}</div>
+      <div className="text-sm font-semibold text-gray-900">{name}</div>
+    </div>
+  );
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 export const metadata = { title: 'AI Services | Zion Tech Group' } export default /**
  * AIPage - Function description
  */
@@ -504,5 +718,70 @@ function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap:
  * Plan - Function description
  */
 function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
+<<<<<<< HEAD
 }
 }
+=======
+}
+}
+=======
+}
+<<<<<<< HEAD
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
+
+function IndustryCard({ icon, title, description, solutions }: {
+  icon: string;
+  title: string;
+  description: string;
+  solutions: string[];
+}) {
+  return (
+    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-2">
+        {solutions.map((solution, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+            {solution}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function ProcessStep({ step, title, description }: {
+  step: string;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="text-center">
+      <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+        {step}
+      </div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function MetricCard({ number, label, description }: {
+  number: string;
+  label: string;
+  description: string;
+}) {
+  return (
+    <div className="text-center bg-white p-6 rounded-lg shadow-md border border-gray-200">
+      <div className="text-4xl font-bold text-blue-600 mb-2">{number}</div>
+      <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
+      <div className="text-sm text-gray-600">{description}</div>
+    </div>
+  );
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-134f
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

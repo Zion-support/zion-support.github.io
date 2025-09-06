@@ -15,6 +15,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     return res.status(400).json({ error: "Missing responseId or rating" });
   }
   const entry = {
+<<<<<<< HEAD
+    id: responseId,
+    rating,
+    comment: String(comment || "").slice(0, 2000),
+    pagePath: String(pagePath || ""),
+    aiModel: String(aiModel || ""),
+    userAgent: req && req.headers["user-agent"] || "",
+    ts: Date && Date.now(),
+=======
     id: responseId
     rating
     comment: String(comment || "").slice(0, 2000)
@@ -22,6 +31,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     aiModel: String(aiModel || "")
     userAgent: req && req.headers["user-agent"] || ""
     ts: Date && Date.now()
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   };
 
 

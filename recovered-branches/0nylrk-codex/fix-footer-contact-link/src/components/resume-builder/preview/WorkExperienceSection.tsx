@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {WorkExperience} from '@/types / resume';
@@ -31,6 +33,7 @@ interface WorkExperienceSectionProps {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { WorkExperience  } from '@/types/resume';
 import { format } from 'date-fns';
 import {WorkExperience} from '@/types/resume';
@@ -62,6 +65,8 @@ interface WorkExperienceSectionProps {
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -76,6 +81,7 @@ interface WorkExperienceSectionProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface WorkExperienceSectionProps {;
@@ -96,6 +102,8 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -104,11 +112,14 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     return format(date, 'MMM yyyy')
   }
   if (sortedWorkExperience.length === 0) return null;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   if (sortedWorkExperience.length === 0) return null,
   
@@ -120,6 +131,7 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>
@@ -137,6 +149,10 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
               {work.location && (
                 <span className="text-sm">{work.location}</span>
 <<<<<<< HEAD
+interface WorkExperienceSectionProps {
+  work_experience: WorkExperience[];
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {WorkExperience} from '@/types/resume';
@@ -147,6 +163,7 @@ interface WorkExperienceSectionProps {;
 interface WorkExperienceSectionProps {
   work_experience: WorkExperience[];
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
               )}
             </div>;
@@ -282,6 +299,8 @@ if (return null) {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -305,3 +324,4 @@ if (return null) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

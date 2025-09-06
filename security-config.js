@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -26,10 +28,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const securityHeaders = [{ key: "X-DNS-Prefetch-Control",value: "on" },{ key: "Strict-Transport-Security",value: "max-age=630720;0;0; includeSubDomains; preload" },{ key: "X-XSS-Protection",value: "1; mode=block" },{ key: "X-Frame-Options",value: "SAMEORIGIN" },{ key: "X-Content-Type-Options",value: "nosniff" },{ key: "Referrer-Policy",value: "origin-when-cross-origin" }]; module.exports = { securityHeaders };'"'"
 const securityHeaders = [{ "key": 'X-DNS-Prefetch-Control',"value": 'on' },{ "key": 'Strict-Transport-Security',"value": 'max-age=630720;0;0; includeSubDomains; preload' },{ "key": 'X-XSS-Protection',"value": '1; mode=block' },{ "key": 'X-Frame-Options',"value": 'SAMEORIGIN' },{ "key": 'X-Content-Type-Options',"value": 'nosniff' },{ "key": 'Referrer-Policy',"value": 'origin-when-cross-origin' }]; module.exports = { securityHeaders };''
 const securityHeaders = [{ key: "X-DNS-Prefetch-Control",value: "on" },{ key: "Strict-Transport-Security",value: "max-age=630720;0;0; includeSubDomains; preload" },{ key: "X-XSS-Protection",value: "1; mode=block" },{ key: "X-Frame-Options",value: "SAMEORIGIN" },{ key: "X-Content-Type-Options",value: "nosniff" },{ key: "Referrer-Policy",value: "origin-when-cross-origin" }]; module.exports = { securityHeaders };'"'"
 const securityHeaders = [{ "key": 'X-DNS-Prefetch-Control',"value": 'on' },{ "key": 'Strict-Transport-Security',"value": 'max-age=630720;0;0; includeSubDomains; preload' },{ "key": 'X-XSS-Protection',"value": '1; mode=block' },{ "key": 'X-Frame-Options',"value": 'SAMEORIGIN' },{ "key": 'X-Content-Type-Options',"value": 'nosniff' },{ "key": 'Referrer-Policy',"value": 'origin-when-cross-origin' }]; module.exports = { securityHeaders };''
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,6 +54,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const securityHeaders = [
   { key: "X-DNS-Prefetch-Control", value: "on" },
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
@@ -58,6 +64,8 @@ const securityHeaders = [
   { key: "Referrer-Policy", value: "origin-when-cross-origin" }
 ];
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,3 +93,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

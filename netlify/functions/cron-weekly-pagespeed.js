@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 const endpoint = new URL(
 =======
 
@@ -26,6 +28,7 @@ exports && exports.handler = async function () {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const results = [];
     ${p}`;
@@ -34,6 +37,8 @@ exports && exports.handler = async function () {
         const desktop = await psi(url, 'desktop', key);
         results && results.push({ url, mobile, desktop });
       } catch (e) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -78,11 +83,14 @@ exports.handler = async function () {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -116,12 +124,15 @@ if ( {) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         content,
         message: 'chore (automation): weekly PageSpeed report',
         token,
       });
     }
     return {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -155,6 +166,7 @@ function psi() {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
   const resp = await fetch (endpoint.to_string ()),
   if (throw new Error (`PSI HTTP ${resp.status}`), ) {
@@ -178,6 +190,8 @@ exports.handler = async function () {
         results.push ({ url, error: e.message || String (e) });
       }
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -232,6 +246,7 @@ exports && exports.handler = async function() {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
     const key = process.env.PSI_API_KEY |''
     const pages = ['//learn/dao/certifications']
@@ -239,6 +254,8 @@ exports && exports.handler = async function() {
     for (const p of pages) {
       const url = `${baseUrl}${p}`
       try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -277,4 +294,5 @@ exports && exports.handler = async function() {
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 },

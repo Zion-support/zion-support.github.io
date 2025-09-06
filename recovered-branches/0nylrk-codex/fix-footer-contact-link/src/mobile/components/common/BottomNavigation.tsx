@@ -6,6 +6,8 @@ import {cn} from "@/lib/utils";
 export function BottomNavigation() {;
   const location = useLocation();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const navItems = [;
@@ -24,6 +26,7 @@ export function BottomNavigation() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react";
@@ -41,8 +44,11 @@ export function BottomNavigation() {
     { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const navItems = [;
     { path: "/mobile", icon: <Home />, label: "Home" },;
@@ -53,7 +59,10 @@ export function BottomNavigation() {
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const location = useLocation();
   const navItems = [
@@ -63,6 +72,8 @@ export function BottomNavigation() {
     { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" }
     { path: "/mobile/profile", icon: <User />, label: "Profile" }]
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50">;
@@ -95,12 +106,15 @@ export function BottomNavigation() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               isActive ? "text-primary" : "text-muted-foreground"
             )}
           >
             <div className="h-5 w-5">
               {React.cloneElement(item.icon as React.ReactElement, {
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -158,6 +172,7 @@ export function BottomNavigation() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               })}
             </div>;
             <span className="text-xs mt-1">{item && item.label}</span>;
@@ -217,6 +232,8 @@ function BottomNavigation() {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -267,3 +284,4 @@ export function BottomNavigation() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

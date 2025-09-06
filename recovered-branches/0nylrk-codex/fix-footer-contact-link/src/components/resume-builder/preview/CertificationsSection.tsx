@@ -11,7 +11,10 @@ import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {
   certifications: Certification[]
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Certification} from '@/types / resume';
 import {format} from 'date - fns';
 
@@ -19,6 +22,8 @@ interface CertificationsSectionProps {
   certifications: Certification[];
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -53,10 +58,13 @@ interface CertificationsSectionProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Certification } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface CertificationsSectionProps {;
   certifications: Certification[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -66,6 +74,7 @@ interface CertificationsSectionProps {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
@@ -74,6 +83,8 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     return format(date, 'MMM yyyy')
@@ -96,6 +107,7 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>
@@ -110,11 +122,16 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
                   {cert.expiration_date && ` - ${formatDate(cert.expiration_date)}`}
                 </span>
 <<<<<<< HEAD
+                </span>;
+interface CertificationsSectionProps {
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   certifications: Certification[];
 }
 
@@ -266,6 +283,8 @@ if (return null) {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -301,3 +320,4 @@ if (return null) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+const [isOpen, setIsOpen] = useState(false)
+  const { theme } = useTheme()
+  const router = useRouter()
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
@@ -11,6 +19,7 @@ export function SupportWidget() {
   const { theme } = useTheme();
   const router = useRouter();
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>;
       {/* Fixed button in the bottom right */}
@@ -42,6 +51,8 @@ export function SupportWidget() {
                 className={cn(
                   "font-semibold",
                   theme === "dark" ? "text-white" : "text-gray-800",
+<<<<<<< HEAD
+=======
 =======
 const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
@@ -77,6 +88,7 @@ const [isOpen, setIsOpen] = useState(false)
                   'font-semibold'
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
                 )}
               >
 
@@ -140,6 +152,12 @@ export function SupportWidget() {;
             <div className="flex items-center gap-2">
 <<<<<<< HEAD
               <Button
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+              <Button
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
@@ -166,7 +184,12 @@ export function SupportWidget() {;
     </>
   );
 }
+<<<<<<< HEAD
+;
+=======
 ;
 =======
               <Button
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -2,10 +2,13 @@
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
@@ -28,6 +31,8 @@ interface ListingCardProps {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   tags?: string[];
   author?: string;
+<<<<<<< HEAD
+=======
 
 
 export function ListingCard(): any ({ ;
@@ -117,12 +122,15 @@ export function ListingCard({
   tags?: string[];
   author?: string;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Link
       to={`/profile/${profileId}`}
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer"
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -132,6 +140,7 @@ import { Link } from "react-router-dom",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ListingCardProps {
   id?: string,
   title: string,
@@ -143,6 +152,8 @@ interface ListingCardProps {
   authorImage?: string,
   className?: string,
   profileType?: 'service' | 'talent'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -169,6 +180,7 @@ export function ListingCard({ ;
     <Link 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Link } from "react-router-dom",;
@@ -267,6 +279,8 @@ export function ListingCard({;
 <<<<<<< HEAD
 <<<<<<< HEAD
             {category}
+<<<<<<< HEAD
+=======
 
           </Badge>;
         </div>;
@@ -283,11 +297,14 @@ export function ListingCard({;
 =======
             {category}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {tag}
               </Badge>;
             ))}
           </div>;
         )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -335,6 +352,7 @@ export function ListingCard({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {authorImage ? (
@@ -342,12 +360,15 @@ export function ListingCard({;
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
         {author && (;
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">;
@@ -428,6 +449,8 @@ function ListingCard() {
     </Link>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -503,3 +526,4 @@ profileType = 'service'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

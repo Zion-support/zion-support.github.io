@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 interface FeatureCTAsProps {;
   className?: string;
   style?: React && React.CSSProperties;
@@ -167,6 +169,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
 
   const features = [
     {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       key: 'ai_talent_matching',
       descriptionKey: 'ai_talent_matching_desc',
       detailsKey: 'ai_talent_matching_details',
@@ -248,6 +251,8 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
       badge: 'premium'
     }
 
+<<<<<<< HEAD
+=======
   ];
 
       >;
@@ -278,6 +283,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                   )}
                 </div>;
                     <Badge variant="secondary" className="bg-primary/20 text-primary">;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <section
       className={cn(
@@ -285,6 +291,23 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
 
         className
       )}
+<<<<<<< HEAD
+      style={style}
+    >
+      <div className="container mx-auto px-4">
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl font-bold tracking-tight mb-3">
+            {t('home.features_heading')}
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            {t('home.features_subheading')}
+          </p>
+        </div>
+                      {t(`badges.${feature.badge}`)}
+                    </Badge>
+                  )}
+                </div>
+=======
       style={style}>;
       <div className="container mx-auto px-4">;
         <div className="mb-12 text-center">;
@@ -313,6 +336,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                   </CardDescription>;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 )}
               </CardHeader>
               <CardContent>
@@ -333,8 +357,20 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                   <Link
                     href={feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
+<<<<<<< HEAD
+                    <span>
+                      {t('general.explore')} {t(`features.${feature.key}`)}
+                    </span>
+                    <ArrowRight className='h-4 w-4' />                  </Link>                  <Link
+                    href={feature.link}
+                    aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
+                    className="cursor-pointer"
+                    {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}
+                  >
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
                     <ArrowRight className="h-4 w-4" />
                   </Link>
@@ -342,6 +378,8 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
               </CardFooter>
             </Card>
           ))}
+<<<<<<< HEAD
+=======
 
 
 ;
@@ -371,6 +409,7 @@ import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import Link from 'next / link';
 import { use_translation } from 'react - i18next';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ArrowRight,
   Users,
   Zap,
@@ -637,4 +676,7 @@ function FeatureCTAs() {
       </div>;
     </section>));
 }
+<<<<<<< HEAD
+=======
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

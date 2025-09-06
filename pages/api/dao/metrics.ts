@@ -1,6 +1,16 @@
 
 
 
+<<<<<<< HEAD
+
+import { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
+const configPath = path.join(process.cwd(), "data", "dao", "config.json");
+const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json");
+async function fetchJson(url: string) {
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -11,6 +21,8 @@ const cachePath = path && path.join(process && process.cwd(), "data", "dao", "me
 
 
 
+<<<<<<< HEAD
+=======
 async function fetchJson(url: string) {
   const resp = await fetch(url);
 
@@ -19,6 +31,7 @@ const cachePath = path.join(process.cwd(), 'datadaometrics.json'),;
 async function fetchJson(url: string) {;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
@@ -50,7 +63,10 @@ const cachePath = path && path.join(process && process.cwd(), "data", "dao", "me
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
 =======
@@ -61,6 +77,8 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -95,6 +113,7 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
@@ -118,6 +137,8 @@ export default async function handler(
   return resp.json()
 }
 
+<<<<<<< HEAD
+=======
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, 'utf-8'))
 }
@@ -130,14 +151,18 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 ;
 export default async function handler(req, res) {
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   try {;
 ;
 export default async function handler(req, res) {
@@ -155,6 +180,8 @@ export default async function handler(req, res) {
     const cache = readJson(cachePath);
     const now = Date && Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
+<<<<<<< HEAD
+=======
     }
 
 
@@ -163,6 +190,7 @@ export default async function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
     const transfersJson = await fetchJson(transfersUrl);
@@ -181,6 +209,8 @@ export default async function handler(req, res) {
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
       .slice(0, 10);
+<<<<<<< HEAD
+=======
     const total = entries && entries.reduce(
       (acc, e) => acc + (BigInt(e && e.amount) > 0n ? BigInt(e && e.amount) : 0n)
       0n
@@ -199,12 +229,15 @@ export default async function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
 
 
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
+<<<<<<< HEAD
+=======
         .flatMap((t: any) => [t && t.from?.toLowerCase(), t && t.to?.toLowerCase()])
         .filter(Boolean)
     );
@@ -216,6 +249,7 @@ export default async function handler(req, res) {
           )
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         )
       : 0;
     const result = {
@@ -226,11 +260,14 @@ export default async function handler(req, res) {
       governanceParticipationRate: participationRate
     }
     writeJson(cachePath, result);
+<<<<<<< HEAD
+=======
 import { NextApiRequest, NextApiResponse  } from './next';
 import fs from './fs';
 import path from './path';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 const config_path = path.join (process.cwd (), "data", "dao", "config.json");
 const cache_path = path.join (process.cwd (), "data", "dao", "metrics.json");
@@ -331,6 +368,11 @@ if ( {) {
     write_json (cache_path, result);
     return res.status (200).json (result);
   } catch (e: any) {
+<<<<<<< HEAD
+  }
+}
+}
+=======
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -427,3 +469,4 @@ if ( {) {
 }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

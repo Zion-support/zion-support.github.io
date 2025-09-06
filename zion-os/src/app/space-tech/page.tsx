@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+    <div className="min-h-screen">;
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -43,6 +46,7 @@ export default function SpaceTechPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div className="min-h-screen">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -125,6 +129,8 @@ export default function SpaceTechPage() {;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">Satellite Communications</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -136,6 +142,7 @@ export default function SpaceTechPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and communication infrastructure for remote regions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;

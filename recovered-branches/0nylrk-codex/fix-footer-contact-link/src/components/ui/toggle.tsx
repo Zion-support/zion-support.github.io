@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import * as React from "react"
@@ -13,10 +15,13 @@ import {cn} from "@/lib/utils"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -26,11 +31,14 @@ import { cn } from "@/lib/utils"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const toggleVariants = cva(
   "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover: bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground"
   {
     variants: {
       variant: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -46,6 +54,7 @@ const toggleVariants = cva(
         default: "bg-transparent"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         default: "bg-transparent",
         outline:;
           "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground"};
@@ -60,7 +69,10 @@ const toggleVariants = cva(
         default: "bg-transparent",
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       size: {
         default: "h-10 px-3"
         sm: "h-9 px-2.5"
@@ -73,6 +85,8 @@ const toggleVariants = cva(
 type ToggleRef = React.ElementRef<typeof TogglePrimitive.Root>
 type ToggleProps = React.ComponentPropsWithoutRef<typeof TogglePrimitive.Root> &
   VariantProps<typeof toggleVariants>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -108,6 +122,7 @@ const Toggle = React.forward_ref < ToggleRef, ToggleProps>(
       {...props}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import {cn} from "@/lib/utils";
 
@@ -138,6 +153,8 @@ Toggle.displayName = TogglePrimitive.Root.displayName
 export { Toggle, toggleVariants };
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -145,6 +162,7 @@ export { Toggle, toggleVariants };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 const Toggle = React.forwardRef<ToggleRef ToggleProps>(
   ({ className, variant, size, ...props }, ref) => (
@@ -153,6 +171,8 @@ import * as React from "react";
 import * as TogglePrimitive from "@radix-ui/react-toggle";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -164,6 +184,7 @@ import {cn} from "@/lib/utils";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const toggleVariants = cva(;
   "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover: bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground",;
   {;
@@ -171,6 +192,8 @@ const toggleVariants = cva(;
       variant: {;
         default: "bg-transparent",;
         outline:;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground"};
@@ -239,24 +262,30 @@ const Toggle = React.forwardRef<ToggleRef ToggleProps>(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       ref={ref}
       className={cn(toggleVariants({ variant, size, className }))}
       {...props}
     />;
   );
 );
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 Toggle && Toggle.displayName = TogglePrimitive && TogglePrimitive.Root.displayName;
 
 export { Toggle, toggleVariants }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     />));
 Toggle.display_name = TogglePrimitive.Root.display_name;
 export { Toggle, toggle_variants }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -313,3 +342,4 @@ export { Toggle, toggleVariants }
 Toggle.display_name = TogglePrimitive.Root.display_name;
 export { Toggle, toggle_variants }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

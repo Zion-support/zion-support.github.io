@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -9,16 +11,20 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react";
 import {CheckCircle, Circle, ArrowRight} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from "lucide-react",
 import { cn } from "@/lib/utils",
@@ -124,12 +130,15 @@ export function OnboardingTracker({
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length,
   const progress = Math.round((completedSteps / steps.length) * 100),
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length,
   const progress = Math.round((completedSteps / steps.length) * 100),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
@@ -139,6 +148,8 @@ export function OnboardingTracker({
       </div>
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -150,6 +161,7 @@ export function OnboardingTracker({
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export function OnboardingTracker({;
   steps,;
@@ -220,6 +232,8 @@ export function OnboardingTracker({ ;
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {/* Progress bar */}
@@ -228,6 +242,7 @@ export function OnboardingTracker({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
           style={{ width: `${progress}%` }}></div>;
@@ -301,6 +316,8 @@ function OnboardingTracker() {
   const completed_steps = steps.filter (step => step.completed).length;
   const progress = Math.round ((completed_steps / steps.length) * 100);
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -474,3 +491,4 @@ return (<div className= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

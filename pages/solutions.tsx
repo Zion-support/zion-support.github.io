@@ -15,6 +15,8 @@ import {
   ArrowRight 
 } from 'lucide-react';
 
+<<<<<<< HEAD
+=======
 const solutions = [
   {
     title: 'Enterprise Solutions',
@@ -128,6 +130,7 @@ export default function SolutionsPage() {
                   View All Services
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -628,4 +631,7 @@ export default Solutions,
 
 },
 
+<<<<<<< HEAD
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

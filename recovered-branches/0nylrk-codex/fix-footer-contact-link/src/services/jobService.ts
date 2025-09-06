@@ -1,21 +1,48 @@
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+<<<<<<< HEAD
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "sonner";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "sonner";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export async function createJob(jobData: any) {
   try {
     const { data, error } = await supabase
       .from("jobs")
       .insert([jobData])
 <<<<<<< HEAD
+  }
+}
+export async function updateJob(jobId: string, jobData: any) {
+  try {
+    const { data, error } = await supabase
+      .from('jobs')
+      .update(jobData)
+      .eq('id', jobId)
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
       .select();
       .single();
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       .select()
       .single();
     if (error) throw error;
     return data
   } catch (error: any) {
+<<<<<<< HEAD
+=======
     console.error("Error creating job:", error);
     throw new Error(error.message |"Failed to create job")
       .single(),
@@ -54,17 +81,38 @@ export async function updateJob(jobId: string, jobData: any) {
   } catch (error: any) {
     console.error("Error updating job:", error);
     throw new Error(error.message || "Failed to update job");
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 export async function getJobById(jobId: string) {
   try {
     const { data, error } = await supabase
+<<<<<<< HEAD
+      .from('jobs')
+      .select('*')
+    return data
+  } catch (error: any) {
+    console && console.error("Error fetching job:", error);
+    toast && toast.error("Failed to load job details");
+    return null
+    const { data, error } = await supabase;
+      .from ('jobs');
+      .insert ([job_data]);
+      .select ();
+      .single ();
+;
+    // Check condition
+if (throw error) {
+  $2
+}
+=======
       .from("jobs")
       .select("*")
       .eq("id", jobId)
       .single();
 
     if (error) throw error;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return data;
   } catch (error: any) {
     console.error("Error fetching job:", error);
@@ -115,6 +163,10 @@ if (throw error) {
     toast.error ("Failed to load job details");
     return null;
 <<<<<<< HEAD
+  }
+}
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 <<<<<<< HEAD
@@ -156,3 +208,4 @@ if (throw error) {
   }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

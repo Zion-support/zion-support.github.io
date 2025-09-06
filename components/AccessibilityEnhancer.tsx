@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
@@ -86,6 +89,9 @@ export default AccessibilityEnhancer;
   );
 }
 export default AccessibilityEnhancer;
+<<<<<<< HEAD
+export default AccessibilityEnhancer;
+=======
 export default AccessibilityEnhancer;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -344,6 +350,7 @@ export default AccessibilityEnhancer;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 =======
 import { useEffect } from 'react';
 
@@ -437,3 +444,6 @@ const AccessibilityEnhancer: React.FC = () => {
 
 export default AccessibilityEnhancer;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-347d
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

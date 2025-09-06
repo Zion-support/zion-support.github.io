@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -20,6 +22,7 @@ const Page = () => {
 
 export default Page;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Brain,
   Network,
   Cloud,

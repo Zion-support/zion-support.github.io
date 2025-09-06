@@ -1,3 +1,69 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Check, Star } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+
+const Pricing = () => {
+  const plans = [
+    {
+      name: 'Starter',
+      price: '$99',
+      period: '/month',
+      description: 'Perfect for small businesses getting started',
+      features: [
+        'Basic AI consultation',
+        'Email support',
+        'Monthly security scan',
+        'Basic cloud setup',
+        '5 hours of support'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$299',
+      period: '/month',
+      description: 'Ideal for growing businesses',
+      features: [
+        'Advanced AI solutions',
+        'Priority support',
+        'Weekly security audits',
+        'Full cloud management',
+        '20 hours of support',
+        'Custom integrations',
+        'Performance monitoring'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$999',
+      period: '/month',
+      description: 'For large organizations with complex needs',
+      features: [
+        'Custom AI development',
+        '24/7 dedicated support',
+        'Daily security monitoring',
+        'Multi-cloud architecture',
+        'Unlimited support hours',
+        'Custom integrations',
+        'Advanced analytics',
+        'Dedicated account manager',
+        'SLA guarantees'
+      ],
+      popular: false
+    }
+  ];
+
+  return (
+    <>
+      <SEOHead 
+        title="Pricing Plans - Affordable Technology Solutions | Zion Tech Group"
+        description="Choose the perfect plan for your business needs. Flexible pricing for AI services, cybersecurity, cloud infrastructure, and custom software development."
+        keywords="pricing, technology solutions, AI services pricing, cybersecurity pricing, cloud services pricing, software development cost"
+      />
+      <div className="min-h-screen bg-gray-50 py-16">
+=======
 import React from "react";
 
 // PricingCard component
@@ -55,6 +121,7 @@ const PricingCard = ({
 const Pricing: React.FC = () => {
   return (
     <div className="min-h-screen bg-white py-20">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -134,6 +201,10 @@ const Pricing: React.FC = () => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+    </>
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 };
 

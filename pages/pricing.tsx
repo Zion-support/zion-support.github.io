@@ -2,6 +2,8 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
+<<<<<<< HEAD
+=======
 const Page = () => {
   return (
     <MainLayout
@@ -160,6 +162,7 @@ import {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const PricingPage: React.FC = () => {
   return (
     <>
@@ -350,6 +353,8 @@ import {
   enhancedRealMicroSaasServices,
   getServicesByCategory,;
   getPopularServices,;
+<<<<<<< HEAD
+=======
 } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
@@ -565,10 +570,22 @@ import {;
   getServicesByCategory,;
   getPopularServices,;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+<<<<<<< HEAD
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+export default function PricingPage() {
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
+    'monthly';
+  );  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+
+  const contactInfo = {
+=======
 
 
 =======
@@ -638,10 +655,13 @@ function PricingPage() {
   const [selected_plan, setSelectedPlan] = useState < string | null>(null);
 ;
   const contact_info = {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
+<<<<<<< HEAD
+=======
   }
 ;
   const popular_services = getPopularServices ();
@@ -683,10 +703,37 @@ export default function PricingPage() {;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   };
 
   const popularServices = getPopularServices();
 
+<<<<<<< HEAD
+  // Combine all services for comprehensive pricing
+  const allServices = [
+    ...enhancedRealMicroSaasServices,
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services,  ];
+
+  // Enhanced service categories with pricing
+  const serviceCategories = [
+    {
+      name: 'Next-Generation AI',
+      description: 'Revolutionary AI platforms',
+      services: [
+        'AI Multimodal Fusion',
+        'AI Autonomous Decision Engine',
+        'AI Emotional Intelligence',
+      ],
+      avgPrice: '$3,199/month',
+      savings: 'Save 60-80% vs. competitors',
+    },
+    {
+      name: 'Cutting-Edge IT Infrastructure',
+      description: 'Advanced infrastructure solutions',
+      services: [
+=======
   // Combine all services for comprehensive pricing;
   const allServices = [;
     ...enhancedRealMicroSaasServices,;
@@ -937,6 +984,7 @@ export default function PricingPage() {;
 =======
       services: [
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         'Zero Trust Architecture',
         'Edge Computing Orchestration',
         '5G Private Networks',
@@ -1197,6 +1245,8 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
       icon: <Shield className='w - 8 h - 8' />,
       metric: '99.99%',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       detail: 'Uptime SLA'
       } catch (error) {
     console.error("Error:", error);
@@ -1395,6 +1445,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <Head>
@@ -1411,6 +1462,8 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
           content='pricing, micro SaaS pricing, AI services pricing, quantum computing pricing, enterprise pricing'
         />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta name='author' content='Zion Tech Group' />
         <meta name='robots' content='index, follow' />
@@ -1422,6 +1475,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -1435,6 +1489,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
         <meta property='og:url' content='https://ziontechgroup.com/pricing' />
         <meta
           property='og:image'
+<<<<<<< HEAD
+          content='https://ziontechgroup.com/og-image.jpg'
+        />
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1450,6 +1508,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
           content='https://ziontechgroup.com/og-image.jpg'
         />
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -1537,6 +1596,8 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
             computing services.
           </p>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
@@ -1560,6 +1621,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <meta;
           name='description';
           content='Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49 / month), Professional ($149 / month), or Enterprise ($499 / month) plans with generous free trials.';
@@ -1629,6 +1691,11 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 
             <Button
 <<<<<<< HEAD
+              </span>
+            </Button>
+          </div>
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
               href='/comprehensive-pricing-2026'
               variant='primary'
@@ -1682,6 +1749,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
             </Button>
           </div>
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
               Monthly
@@ -1706,9 +1774,14 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                 )
               }
 <<<<<<< HEAD
+              className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+            >
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'            >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
 =======
@@ -1725,6 +1798,8 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                   billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
                 }`}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -1740,6 +1815,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                   billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
                 }`}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </span>
           </div>
         </div>
@@ -1845,6 +1921,8 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
                 className={`relative h - full ${tier.popular ? 'scale - 105' : ''}`}
               >;
                 {tier.popular && (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
                     <span className='bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black px - 4 py - 2 rounded - full text - sm font - bold flex items - center'>;
@@ -1971,6 +2049,7 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
                   </h3>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <p className="text-gray-300 mb-6">{tier.description}</p>
                   <div className="mb-6">
                     <div className="flex items-baseline justify-center">
@@ -2126,6 +2205,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
                   <Button
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2140,6 +2221,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2204,6 +2286,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {valuePropositions && valuePropositions.map((proposition, index) => (;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2212,6 +2296,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   >
                     {tier.cta}
                     <ArrowRight className='ml-2 w-5 h-5' />                  </Button>
@@ -2304,10 +2389,13 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
             {serviceCategoryPricing.map((category, index) => (
               <UltraFuturisticCard
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       </div>)}
                   </div>;
                   <ul className='text - left space - y-3 mb - 8'>;
@@ -2433,6 +2521,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
             {serviceCategoryPricing.map((category, index) => (
               <UltraFuturisticCard
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
                 key={index}
                 variant={index % 3 === 0 ? 'quantum' : index % 3 === 1 ? 'holographic' : 'neural'}
@@ -2470,6 +2560,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 className="p-6"
               >
                 <div className="flex items-center mb-4">
@@ -2605,6 +2696,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
           </div>;
         </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <ChevronRight className='ml-2 w-4 h-4' />                </Button>
@@ -2613,12 +2706,15 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Popular Services Pricing */}
         <div className='mb-20'>;
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
             Popular Services Pricing;
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices && popularServices.slice(0, 6).map((service, index) => (;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2658,6 +2754,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 =======
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <UltraFuturisticCard
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={service.id  } catch (error) {
@@ -2683,10 +2780,13 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 variant={service.variant as any}
                 interactive={true}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 className="p-6"
               >
                 <div className="text-center mb-4">
@@ -2702,6 +2802,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                   <div className="text-sm text-gray-400">{service.category}</div>
                 </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                 
@@ -2726,6 +2828,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     Key Features:
                   </div>
                   <ul className="text-xs text-gray-300 space-y-1">
@@ -2740,6 +2843,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 <Button
                   href={service.link}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
                   variant='primary'
                   size='sm'
@@ -2748,6 +2853,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <div className="mb-4">
                   <div className="text-xs text-gray-400 mb-2">Key Features:</div>
                   <ul className="text-xs text-gray-300 space-y-1">
@@ -2768,6 +2874,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
                     ))}
@@ -2776,6 +2884,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Button
                   href={service && service.link}
                   variant='primary'
@@ -2784,6 +2893,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                   Learn More;
                   <ExternalLink className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2825,6 +2936,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                   Learn More
                   <ExternalLink className="ml-2 w-4 h-4" />{" "}
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </Button>
               </UltraFuturisticCard>
 <<<<<<< HEAD
@@ -2842,6 +2954,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
               </p>
             </UltraFuturisticCard>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
             <UltraFuturisticCard variant='holographic' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
@@ -2853,6 +2967,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 Can I change my plan later?
               </h3>
               <p className='text-gray-300'>
@@ -2861,6 +2976,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 adjustments.
               </p>
             </UltraFuturisticCard>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             <UltraFuturisticCard variant='neural' className='p-6'>
@@ -2877,6 +2994,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 What support is included?
               </h3>
               <p className='text-gray-300'>
@@ -2884,6 +3002,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 plans include priority support with dedicated account managers.
               </p>
             </UltraFuturisticCard>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             <UltraFuturisticCard variant='quantum' className='p-6'>
@@ -2900,11 +3020,14 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 Is there a setup fee?
               </h3>
               <p className='text-gray-300'>
                 No setup fees for any plan. All services are designed for
                 instant deployment with our AI-powered setup wizards.
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               </p>            </UltraFuturisticCard>
@@ -2956,6 +3079,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {contactInfo.address}
               </p>
               <p className="text-gray-400 text-sm mt-2">
@@ -2992,6 +3116,10 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
               <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>
               <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>
             </UltraFuturisticCard>
+<<<<<<< HEAD
+          </div>
+        </div>
+=======
           </div>
         </div>
 <<<<<<< HEAD
@@ -3090,6 +3218,7 @@ variant='primary'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>;
         </div>;
 
@@ -3180,6 +3309,8 @@ variant='primary'
           </div>;
         </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -3197,6 +3328,7 @@ variant='primary'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3218,6 +3350,8 @@ variant='primary'
               Ready to Get Started?;
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -3351,6 +3485,7 @@ variant='primary'
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Ready to Get Started?
             </h2>
@@ -3376,6 +3511,8 @@ variant='primary'
               </Button>;
               <Button
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 href="/contact"
                 variant="secondary"
                 size="lg"
@@ -3397,6 +3534,7 @@ variant='primary'
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <p>
                 ✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant
                 Setup
@@ -3408,14 +3546,19 @@ variant='primary'
               </p>{" "}
             </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </UltraFuturisticCard>
         </div>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3447,6 +3590,7 @@ variant='primary'
   )
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   )
         <div className="mb-20">;
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>;
@@ -3548,16 +3692,28 @@ variant='primary'
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </p>            </div>;
           </UltraFuturisticCard>;
         </div>;
       </div>;
+<<<<<<< HEAD
+  );
+}
+
+
+
+    </UltraFuturisticBackground>
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3577,6 +3733,7 @@ variant='primary'
 =======
   );
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 
@@ -3592,6 +3749,8 @@ variant='primary'
   )
 
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/main
 =======
@@ -3627,6 +3786,7 @@ variant='primary'
     </UltraFuturisticBackground>
   )
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ursor/integrate-build-improve-and-re-verify-b76c
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/cursor/integrate-build-improve-and-re-verify-242d
@@ -3639,8 +3799,11 @@ origin/automation-improvements-final
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

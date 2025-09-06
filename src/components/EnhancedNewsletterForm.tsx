@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+
+    setIsSubmitting(true),
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Button } from '@/components/ui/button'
@@ -9,6 +16,8 @@ import { useToast } from "@/hooks/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState("");
+<<<<<<< HEAD
+=======
 =======
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -20,6 +29,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState('');
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
@@ -27,7 +37,11 @@ export function EnhancedNewsletterForm() {
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   const lastSubmit = useRef(0);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -35,6 +49,11 @@ export function EnhancedNewsletterForm() {
     const now = Date.now();
     if (now - lastSubmit.current < 1000) return;
     lastSubmit.current = now;
+<<<<<<< HEAD
+    const trimmed = email.trim();
+    if (!EMAIL_REGEX.test(trimmed)) {
+      toast.error("Invalid email");
+=======
 <<<<<<< HEAD
     const trimmed = email.trim();
     if (!EMAIL_REGEX.test(trimmed)) {
@@ -49,12 +68,17 @@ export function EnhancedNewsletterForm() {
         variant: 'destructive'
       });
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
       return;
     }
 
     setIsSubmitting(true);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -376,6 +400,8 @@ export function EnhancedNewsletterForm() {
 
 }
 >>>>>>> main
+<<<<<<< HEAD
+=======
 =======
       const res = await fetch('/api/newsletter', {
         method: 'POST',
@@ -492,4 +518,8 @@ export function EnhancedNewsletterForm() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

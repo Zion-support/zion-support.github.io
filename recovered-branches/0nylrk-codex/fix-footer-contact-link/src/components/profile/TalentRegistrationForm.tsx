@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -27,6 +29,7 @@ type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'oth
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface CategorizedSkills {
   programming: string[]
   devops: string[]
@@ -52,12 +55,15 @@ import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -108,9 +114,12 @@ interface CategorizedSkills {
   softSkills: string[]
   other: string[]
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -135,6 +144,8 @@ import { toast } from "@/components/ui/use-toast",;
 import { supabase } from "@/integrations/supabase/client",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { useAuth } from "@/hooks/useAuth",;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 // Define form schema;
 const talentProfileSchema = z.object({;
@@ -161,6 +172,7 @@ type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'oth
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface CategorizedSkills {;
   programming: string[],;
   devops: string[],;
@@ -173,6 +185,8 @@ interface EnhancedProfile {
   categorizedSkills: CategorizedSkills
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 export function TalentRegistrationForm() {
@@ -184,12 +198,15 @@ export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [skillTags, setSkillTags] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 export function TalentRegistrationForm() {
@@ -211,6 +228,7 @@ export function TalentRegistrationForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentProfileSchema)
@@ -281,6 +299,8 @@ export function TalentRegistrationForm() {;
       availability: "available",;
       enhancedProfile: true}}),;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   // Handle adding skill tags;
   const handleAddSkill = () => {;
@@ -290,6 +310,7 @@ export function TalentRegistrationForm() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setSkillTags([...skillTags, skillInput]);
       form && form.setValue("skills", "");
     }
@@ -338,6 +359,8 @@ export function TalentRegistrationForm() {;
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -357,6 +380,7 @@ export function TalentRegistrationForm() {;
     }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   };
 
   // Handle avatar upload;
@@ -844,7 +868,10 @@ export function TalentRegistrationForm() {;
           });
         }
       });
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
       case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
@@ -859,6 +886,8 @@ export function TalentRegistrationForm() {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
       case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500'
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
@@ -868,6 +897,7 @@ export function TalentRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }),;
       if (newSkills.length > 0) {;
         setSkillTags([...skillTags, ...newSkills]);
@@ -886,12 +916,17 @@ export function TalentRegistrationForm() {;
     }
   },
 <<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   // Send notification email
@@ -1116,6 +1151,8 @@ if ( {) {
         throw new Error ("User not authenticated");
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1193,6 +1230,7 @@ if ( {) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               talent_data: {
                 name: values.name,
                 title: values.title,
@@ -1212,6 +1250,8 @@ if ( {) {
             const categorized_skills = (ai_data as EnhancedProfile).categorized_skills;
             const ai_skills: string[] = [],
             // Extract skills from each category and ensure they're strings;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
             Object.values(categorizedSkills).forEach(categorySkills => {;
@@ -1294,6 +1334,7 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Object.values (categorized_skills).for_each (category_skills => {
               if () {) {
   $2
@@ -1308,6 +1349,8 @@ if ( {) {
                 });
               }
             });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
@@ -1329,11 +1372,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
           finalSummary = ""
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1342,6 +1388,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
@@ -1350,6 +1397,8 @@ if ( {) {
       } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -1379,6 +1428,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
@@ -1390,6 +1440,8 @@ if ( {) {
           sendEnhancementNotification(user.id, userEmail)
         }
         setIsSubmitting(false)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -1405,6 +1457,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Here would be the actual code to save the profile to Supabase
       /*
       const { error } = await supabase
@@ -1420,6 +1473,8 @@ if ( {) {
           hourly_rate: Number(values.hourlyRate)
           availability_status: values.availability
           // Other fields would be handled here
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -1604,11 +1659,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Error Creating Profile"
         description: error.message |"There was an error creating your profile. Please try again."
         variant: "destructive"})
       setIsSubmitting(false)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1624,10 +1682,15 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
 
   return (
+<<<<<<< HEAD
+  };
+  return (;
+=======
 <<<<<<< HEAD
 
 =======
@@ -1743,6 +1806,7 @@ if ( {) {
   };
   return (;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="max-w-4xl mx-auto p-4 md:p-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
@@ -1751,6 +1815,8 @@ if ( {) {
             Showcase your skills and experience to potential clients and employers.;
           </CardDescription>;
         </CardHeader>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1769,6 +1835,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
@@ -2276,6 +2343,8 @@ if (throw error) {
                             alt="Avatar preview"
                             className="w-full h-full object-cover"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
                           />;
                         </AspectRatio>;
@@ -2317,10 +2386,13 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <input
                         type="file"
                         accept="image/*"
                         className="hidden"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                         onChange={handleAvatarUpload}
@@ -2381,6 +2453,7 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
                   </p>;
                 </div>;
@@ -2504,6 +2577,8 @@ if (throw error) {
                       </div>;
                       <FormControl>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 />;
@@ -2575,11 +2650,14 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Button
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                       onClick={generateEnhancedProfile}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                       disabled={isGenerating}>;
@@ -2621,6 +2699,7 @@ if (throw error) {
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>;
                   </div>;
@@ -2661,6 +2740,8 @@ if (throw error) {
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2694,6 +2775,7 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                                 <Badge
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}>;
                                   {category}
@@ -3108,6 +3190,8 @@ if (throw error) {
                                 id="available"
                                 value="available"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                                 checked={field && field.value === "available"}
@@ -3147,10 +3231,13 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                               <input
                                 type="radio"
                                 id="limited"
                                 value="limited"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3193,10 +3280,13 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                               <input
                                 type="radio"
                                 id="unavailable"
                                 value="unavailable"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                                 checked={field && field.value === "unavailable"}
@@ -3286,6 +3376,7 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                               <input;
                                 type="radio";
                                 id="unavailable";
@@ -3324,6 +3415,8 @@ if (throw error) {
                     <FormLabel className="text-zion-slate-light">Availability Message</FormLabel>;
                     <Textarea
                       placeholder="Describe your availability, working hours, or when you'll be available next..."
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
                                 checked={field.value === "unavailable"}
@@ -3676,3 +3769,4 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

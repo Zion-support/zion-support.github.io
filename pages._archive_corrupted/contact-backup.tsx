@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -25,6 +27,7 @@ import type { NextPage } from 'next'
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const "Contact": NextPage = () => {
   return (
     <div>Contact Backup</div>
@@ -33,6 +36,8 @@ const "Contact": NextPage = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export default Contact
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
@@ -44,6 +49,7 @@ import React from "react" import type { NextPage } from 'next' const Contact: Ne
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default Contact
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact

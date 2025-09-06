@@ -35,9 +35,12 @@ export default async function handler(
       text: body.text |""
       createdAt: new Date().toISOString()
     }
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -66,6 +69,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
     const data = await fs.readJson(FILE_PATH);
     const comment = {
+<<<<<<< HEAD
+      id: Date.now().toString(),
+      proposalId: body.proposalId,
+      region: body.region || 'Global',
+      author: body.author || 'anon',
+      text: body.text || '',
+=======
       id: Date.now().toString(), proposalId: body.proposalId
       region: body.region || 'Global', author: body.author || 'anon'
 =======
@@ -75,6 +85,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       author: body.author || 'anon'
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       text: body.text || ''
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       createdAt: new Date().toISOString()
     };
     data.comments.push(comment);
@@ -150,6 +161,8 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
+<<<<<<< HEAD
+=======
 =======
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
@@ -259,3 +272,4 @@ export default async function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

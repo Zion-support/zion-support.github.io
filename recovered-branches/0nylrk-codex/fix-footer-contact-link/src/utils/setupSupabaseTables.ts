@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+import {supabase} from "@/integrations/supabase/client";
+import { supabase } from "@/integrations/supabase/client",
+=======
 import { supabase } from "@/integrations/supabase/client";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
@@ -7,6 +12,8 @@ import { supabase } from "@/integrations/supabase/client";
 export const ensureProfilesTableExists = async () => {
   try {
     // Try to execute a simple query to check if the table exists
+<<<<<<< HEAD
+=======
     const { error } = await supabase.rpc("exec", {
       sql: `SELECT EXISTS (
         SELECT FROM information_schema && information_schema.tables 
@@ -18,6 +25,7 @@ export const ensureProfilesTableExists = async () => {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // If there's an error, log it and proceed with table creation
     if (error) {
       console.warn(
@@ -55,6 +63,8 @@ if ( {) {
     // Attempt to create the table and related objects;
     const createTableQuery = `;
       CREATE TABLE IF NOT EXISTS public.profiles (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -110,6 +120,7 @@ if ( {) {
         id UUID PRIMARY KEY REFERENCES auth.users (id) ON DELETE CASCADE;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         display_name TEXT;
         user_type TEXT;
         profile_complete BOOLEAN DEFAULT FALSE;
@@ -118,14 +129,22 @@ if ( {) {
         bio TEXT;
         avatar_url TEXT;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       ALTER TABLE public && public.profiles ENABLE ROW LEVEL SECURITY;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       -- Create policies
       DO $$
       BEGIN
         IF NOT EXISTS (
+<<<<<<< HEAD
+        END IF;
+      END
+      $$;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -179,6 +198,7 @@ if ( {) {
       END
       $$;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           CREATE POLICY "Users can view their own profile" 
             ON public.profiles FOR SELECT 
             USING (auth.uid() = id),
@@ -232,6 +252,11 @@ if ( {) {
             ON public.profiles FOR UPDATE;
             USING (auth.uid () = id);
 <<<<<<< HEAD
+        END IF;
+      END
+      $$;
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         END IF;
       END;
@@ -252,6 +277,7 @@ if ( {) {
       END
       $$;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           CREATE POLICY "Users can update their own profile" 
             ON public.profiles FOR UPDATE 
             USING (auth.uid() = id),
@@ -260,15 +286,20 @@ if ( {) {
       $$,
         
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       -- Set up trigger for new users
       CREATE OR REPLACE FUNCTION public && public.handle_new_user()
       RETURNS TRIGGER AS $$
       BEGIN
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -287,6 +318,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 new.raw_user_meta_data->>'bio';
                 new.raw_user_meta_data->>'headline');
         INSERT INTO public && public.profiles (id, display_name, bio, headline)
@@ -297,6 +329,8 @@ if ( {) {
         RETURN new;
       END;
       $$ LANGUAGE plpgsql SECURITY DEFINER;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -331,11 +365,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       -- Check if trigger exists before creating it
       DO $$
       BEGIN
         IF NOT EXISTS (SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created') THEN
           CREATE TRIGGER on_auth_user_created
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -347,6 +384,7 @@ if ( {) {
       END
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       $$;
     `;
     if (createError) {
@@ -506,4 +544,7 @@ export const initializeDatabase = async () => {;
 
   await ensureProfilesTableExists();
 };
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface SpaceMetaverseService {
 export interface SpaceMetaverseService {;
   id: string;
@@ -12,8 +15,11 @@ export interface SpaceMetaverseService {;
     currency: string;
     trialDays: number;
     setupTime: string;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   {
@@ -37,6 +43,8 @@ export interface SpaceMetaverseService {;
       'VR headsets, AR devices, Blockchain wallets, Payment processors'
     ]
     support:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -114,6 +122,7 @@ export interface SpaceMetaverseService {;
 
     icon: '🌐',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
     launch_date: '2024 - 01 - 15',
@@ -122,6 +131,8 @@ export interface SpaceMetaverseService {;
     reviews: 2400,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -201,6 +212,7 @@ export interface SpaceMetaverseService {;
 
     icon: '🛰️',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - indigo - 500 to - purple - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -209,6 +221,8 @@ export interface SpaceMetaverseService {;
     reviews: 65,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -243,11 +257,14 @@ export interface SpaceMetaverseService {;
       'Prevent 99.9% of space collisions',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Optimize orbital efficiency',
       'Reduce space debris',
       'Improve mission safety',
       'Ensure regulatory compliance',
     ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -257,6 +274,7 @@ export interface SpaceMetaverseService {;
     realImplementation: true,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.'
     roi: 'Space organizations achieve 400% ROI through improved safety and reduced collision risks.'
@@ -274,6 +292,8 @@ export interface SpaceMetaverseService {;
     support:
       '24/7 technical support, space safety consulting, custom development, and dedicated success manager.'
     compliance: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -316,6 +336,7 @@ export interface SpaceMetaverseService {;
 
     icon: '🛸',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2024 - 02 - 15',
@@ -326,6 +347,8 @@ export interface SpaceMetaverseService {;
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'Leading enterprise VR platform. Competes with Pico ($299-599), Meta Quest Pro ($999), and HTC Vive ($699-1399). Our advantage: Enterprise-focused features and comprehensive solutions.',
     competitors: ['Pico, Meta Quest Pro, HTC Vive, Varjo, Magic Leap'],
@@ -333,6 +356,7 @@ export interface SpaceMetaverseService {;
     realImplementation: true,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.'
     roi: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.'
@@ -432,6 +456,8 @@ export interface SpaceMetaverseService {;
   },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
   id: string, name: string,
@@ -467,10 +493,16 @@ export interface SpaceMetaverseService {;
 
     icon: '🥽';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - orange - 500 to - red - 600';
     popular: true;
     launch_date: '2024 - 01 - 20';
     customers: 1800;
+<<<<<<< HEAD
+    rating: 4.7,
+    reviews: 1400;
+  }
+=======
 <<<<<<< HEAD
     rating: 4.7,
     reviews: 1400;
@@ -495,6 +527,7 @@ export interface SpaceMetaverseService {;
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
 <<<<<<< HEAD

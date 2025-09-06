@@ -1,4 +1,39 @@
+<<<<<<< HEAD
+  // Mock team members data
+  const teamMembers = [
+    {
+      id: 1,
+      name: "Alex Johnson",
+      email: "alex@example.com",
+      role: "Admin",
+      status: "active",
+      lastActive: "2 hours ago"},
+    {
+      id: 2,
+      name: "Jamie Smith",
+      email: "jamie@example.com",
+      role: "Recruiter",
+      status: "active",
+      lastActive: "Yesterday"},
+    {
+      id: 3,
+      name: "Sam Williams",
+      email: "sam@example.com",
+      role: "Manager",
+      status: "pending",
+      lastActive: "Never"},
+    {
+      id: 4,
+      name: "Taylor Brown",
+      email: "taylor@example.com",
+      role: "Viewer",
+      status: "active",
+      lastActive: "3 days ago"}],
+
+  const handleAddMember = () => {
+=======
 const handleAddMember = () => {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
@@ -35,6 +70,8 @@ const handleAddMember = () => {
       title: 'Invitation resent'
       description: `A new invitation has been sent to ${memberEmail}`
     })
+<<<<<<< HEAD
+=======
   Table,
   TableBody,
   TableCell,
@@ -140,6 +177,7 @@ if ( {) {
   }
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
@@ -546,6 +584,8 @@ export function TeamManagement() {;
                 </TableCell>;
               </TableRow>;
             ))}
+<<<<<<< HEAD
+=======
 
 
 
@@ -614,3 +654,4 @@ export function TeamManagement() {;
 }'"}
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

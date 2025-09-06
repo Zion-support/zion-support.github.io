@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+export function EmptyState({ 
+  text = "No items available",
+  description,
+  onRetry,
+  showRetry = false,
+=======
 import { Button } from './button';
 interface EmptyStateProps {;
 
@@ -11,6 +18,7 @@ interface EmptyStateProps {
   showRetry?: boolean;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   icon
 }: EmptyStateProps) {
   return (
@@ -19,6 +27,8 @@ interface EmptyStateProps {
         {icon |<Package className="h-16 w-16" />}
       </div>
       <h3 className="text-xl font-semibold text-white mb-2">
+<<<<<<< HEAD
+=======
 import { Package, RefreshCw } from 'lucide-react';
 import { Button } from './button';
 interface EmptyStateProps {
@@ -42,15 +52,19 @@ function EmptyState() {
       {description && (
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   icon?: React && React.ReactNode;
 
 export function EmptyState(): any ({;
   text = 'No items available',;
+<<<<<<< HEAD
+=======
 
         <p className="text-gray-400 mb-6 max-w-md">
 ;
 export function EmptyState({;
   text = "No items available",;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   description,;
   onRetry;
   showRetry = false;
@@ -92,9 +106,12 @@ export function EmptyState({;
           {description}
         </p>;
 
+<<<<<<< HEAD
+=======
       )}
       {showRetry && onRetry && (;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           onClick={onRetry}
           variant="outline"
           className="flex items-center gap-2"
@@ -149,4 +166,7 @@ export function EmptyState({;
           <RefreshCw className="h - 4 w - 4" />;
         </Button>)}
     </div>);
+<<<<<<< HEAD
+=======
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

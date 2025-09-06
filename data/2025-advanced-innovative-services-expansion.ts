@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -35,6 +38,8 @@
     address: string;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     website: string;
   }
 
@@ -43,11 +48,14 @@
   launch_date: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -60,6 +68,7 @@ const contact = {
   website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -72,6 +81,9 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'ai-autonomous-devops-orchestrator'
     name: 'AI Autonomous DevOps Orchestrator'
     tagline:
@@ -1110,6 +1122,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 
 
 
+<<<<<<< HEAD
+
+    ];
+    market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
+=======
 =======
 
 =======
@@ -1151,6 +1168,7 @@ const contact = {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
@@ -1158,6 +1176,8 @@ const contact = {
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -1684,6 +1704,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -1799,6 +1820,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
   }
 ];
 ;
+<<<<<<< HEAD
+=======
 =======
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
 <<<<<<< HEAD
@@ -1810,3 +1833,4 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

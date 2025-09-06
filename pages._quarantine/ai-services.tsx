@@ -714,6 +714,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 import {;
   Brain,;
@@ -753,6 +755,7 @@ import {;
   Building,;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Sprout;
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
@@ -1377,6 +1380,8 @@ export default function AIServices() {;
               <a
                 href="tel:+13024640950"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1386,6 +1391,7 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 className="text-sm font-semibold leading-6 text-white hover: tex t-blue-100">;
                 Call +1 302 464 0950 <span aria-hidden="true">→</span>;
               </a>;

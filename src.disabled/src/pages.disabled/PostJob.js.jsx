@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const { JobPostingForm } from "@/components/jobs"; import {} Card,; CardContent,"; CardDescription,""; CardHeader,"""; CardTitle} from "@/components/ui/card";"""; import { SEO } from "@/components/SEO";"""; import { useAuth } from "@/hooks/useAuth";"""; import { useIsMobile } from "@/hooks/use-mobile"; export {}; return null} const { isAuthenticated,isLoading } = useAuth(); const isMobile = useIsMobile(); if (isLoading) {} return(); <div className="flex items-center justify-center min-h-screen"> <div className="animate-pulse">Loading.></div> ></div> );} return(); <>"; <div>Broken JSX</div> /> "; <div>Broken JSX</div> className={`container mx-auto px-${isMobile ? "2" : "4"} py-${isMobile ? "6" : "12"} max-w-4xl`}"> <Card className="border shadow-md">""; <CardHeader>""""; <CardTitle className={"text-${isMobile ? "2xl" : "3xl"} font-bold`}> Post a Job; ></div> <CardDescription> Fill out the form below to post your job and find the perfect; talent.; ></div> ></div> <CardContent> <JobPostingForm /> ></div> ></div> ></div> "; {}; {isMobile && <div className="h-16"></div>} </>)} ; export { PostJob }; export { PostJob }; export { PostJob }; export { PostJob }; export { PostJob };""`"`
@@ -31,3 +33,4 @@ const { JobPostingForm } from "@/components/jobs"; import {} Card,; CardContent,
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

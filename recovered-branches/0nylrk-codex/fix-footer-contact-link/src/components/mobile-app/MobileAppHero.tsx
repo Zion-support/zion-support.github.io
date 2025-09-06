@@ -47,6 +47,8 @@ export const MobileAppHero: React.FC = () => {
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react";
@@ -70,6 +72,7 @@ import {AppStoreButtons} from "./AppStoreButtons";
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, Phone } from "lucide-react",;
@@ -156,10 +159,17 @@ export const MobileAppHero:React.FC = () => {;
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>;
               <Phone className="w-full h-auto text-white" />;
               {/* This would be replaced with an actual phone mockup image in production */}
+<<<<<<< HEAD
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+=======
             </div>
           </div>
         </div>
       </div>
     </section>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 };

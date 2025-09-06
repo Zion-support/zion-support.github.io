@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const execAsync = promisify(exec); class CursorChatAutomation { constructor(config = {}) { this.config = { interval: config.interval || 30000,maxSessions: config.maxSessions || 5,logFile: config.logFile || 'cursor-chat-automation.log',enableLogging: config.enableLogging !== false,autoRestart: config.autoRestart !== false,...config,}; this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,}; this.log('Cursor Chat Automation initialized')} log(message,level = 'INFO') { if (!this.config.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`;  try { fs.appendFileSync(this.config.logFile,logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.interval,autoProceed: options.autoProceed !== false,...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),process: null,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.sendProceedCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async sendProceedCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = 'proceed'; this.log(`Sending "${command}" to session ${sessionId}`); session.lastCommand = new Date(); session.commandCount++; this.stats.totalCommands++; await this.executeCursorCommand(sessionId,command); this.stats.successfulCommands++; this.log(`Command sent successfully to session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.log( `Failed to send command to session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async executeCursorCommand(sessionId,command) { return new Promise((resolve,reject) => { const delay = Math.random() * 1000 + 500; setTimeout(() => { if (Math.random() < 0.05) { reject(new Error('Simulated command failure'))} else { resolve({ success: true,sessionId,command })} },delay)})} start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Chat Automation system started'); for (const [sessionId,session] of this.sessions) { if (session.status === 'active' && session.config.autoProceed) { this.startSessionAutomation(sessionId)} } this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Chat Automation system stopped')} startHealthMonitoring() { const healthCheck = () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout(healthCheck,60000)}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} terminateSession(sessionId) { const session = this.sessions.get(sessionId); if (!session) { this.log(`Session ${sessionId} not found for termination`,'WARN'); return false} session.status = 'terminated'; this.stats.sessionsTerminated++; this.log(`Session ${sessionId} terminated`); return true} getSessionInfo(sessionId) { return this.sessions.get(sessionId)} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,}))} } if (require.main === module) { const automation = new CursorChatAutomation({ interval: 30000,maxSessions: 3,enableLogging: true,autoRestart: true,}); automation.createSession('main-chat',{ name: 'Main Development Chat',interval: 25000,}); automation.createSession('code-review',{ name: 'Code Review Assistant',interval: 35000,}); automation.createSession('bug-fixes',{ name: 'Bug Fixes Helper',interval: 40000,}); automation.start(); process.on('SIGINT',() => {  automation.stop(); const stats = automation.getStats();  ); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); .toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} module.exports = CursorChatAutomation;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,6 +83,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 /**
  * Cursor Chat Automation System
@@ -108,6 +112,8 @@ class CursorChatAutomation {
     this.sessions = new Map();
     this.isRunning = false;
     this.stats = {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -150,6 +156,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       totalCommands: 0,
       successfulCommands: 0,
       failedCommands: 0,
@@ -159,6 +166,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     };
     this.log('Cursor Chat Automation initialized');
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
@@ -215,6 +224,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "totalCommands": 0,
       "successfulCommands": 0,
       "failedCommands": 0,
@@ -234,6 +244,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     try {
       fs.appendFileSync(this.config.logFile, logEntry + '\n');
     } catch (error) {
+<<<<<<< HEAD
+      console.error('Failed to write to log file:', error.message);
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -313,6 +326,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       console.error('Failed to write to log "file": ', error.message);
     }
   }
@@ -342,6 +356,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         this.startSessionAutomation(sessionId);
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -405,6 +421,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return session;
     } catch (error) {
       this.log(
@@ -420,6 +437,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   startSessionAutomation(sessionId) {
     const session = this.sessions.get(sessionId);
     if (!session || session.status !== 'active') {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -508,6 +527,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       this.log(
         `Cannot start automation for session ${sessionId}: session not found or inactive`,
         'WARN'
@@ -523,6 +543,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         // Schedule next command
         setTimeout(() => runSession(), session.config.interval);
       } catch (error) {
+<<<<<<< HEAD
+        this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -602,6 +625,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         this.log(
           `Session ${sessionId} automation "error": ${error.message}`,
           'ERROR'
@@ -637,6 +661,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       await this.executeCursorCommand(sessionId, command);
       this.stats.successfulCommands++;
       this.log(`Command sent successfully to session ${sessionId}`);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -695,6 +721,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       this.stats.failedCommands++;
       session.errors++;
@@ -719,6 +746,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       const delay = Math.random() * 1000 + 500;
       setTimeout(() => {
         // Simulate occasional failures
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -761,10 +790,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         if (Math.random() < 0.05) { // 5% failure rate
           reject(new Error('Simulated command failure'));
         } else {
           resolve({ success: true, sessionId, command });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
@@ -825,6 +857,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         if (Math.random() < 0.05) {
           // 5% failure rate
           reject(new Error('Simulated command failure'));
@@ -875,6 +908,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             Date.now() - (session.lastCommand?.getTime() || 0);
           const maxDelay = session.config.interval * 3;
           if (timeSinceLastCommand > maxDelay) {
+<<<<<<< HEAD
+            this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -954,6 +990,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             this.log(
               `Session ${sessionId} appears stuck, restarting automation`,
               'WARN'
@@ -967,6 +1004,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     };
     healthCheck();
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1045,6 +1084,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   /**
    * Get system statistics
    */
@@ -1055,6 +1095,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     return {
       ...this.stats,
       uptime,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1097,11 +1139,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       uptimeFormatted: this.formatUptime(uptime),
       activeSessions: Array.from(this.sessions.values()).filter(s => s.status === 'active').length,
       totalSessions: this.sessions.size
     };
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
@@ -1158,6 +1203,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "uptimeFormatted": this.formatUptime(uptime),
       "activeSessions": Array.from(this.sessions.values()).filter(
         s => s.status === 'active'
@@ -1192,6 +1238,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     return true;
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1233,11 +1281,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     session.status = 'terminated';
     this.stats.sessionsTerminated++;
     this.log(`Session ${sessionId} terminated`);
     return true;
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
@@ -1294,6 +1345,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   /**
    * Get session information
    */
@@ -1307,6 +1359,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     return Array.from(this.sessions.entries()).map(([id, session]) => ({
       id,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1348,6 +1402,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       name: session.config.name,
       status: session.status,
       commandCount: session.commandCount,
@@ -1355,6 +1410,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       createdAt: session.createdAt,
       lastCommand: session.lastCommand
     }));
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
@@ -1411,6 +1468,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "name": session.config.name,
       "status": session.status,
       "commandCount": session.commandCount,
@@ -1445,6 +1503,8 @@ if (require.main === module) {
     const stats = automation.getStats();
     console.log('\nFinal "Statistics": ');
     console.log(JSON.stringify(stats, null, 2));
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1505,6 +1565,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     process.exit(0);
   });
   // Keep the process alive
@@ -1516,6 +1577,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   }, 60000); // Status update every minute
 }
 module.exports = CursorChatAutomation;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1609,3 +1672,4 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

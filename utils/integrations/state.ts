@@ -5,14 +5,33 @@ interface IntegrationState {
 }
 let state: IntegrationState = {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   connections: [],
   logs: [],
   overrides: [],
 =======
+<<<<<<< HEAD
+  connections: [],
+  logs: [],
+  overrides: [],
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 <<<<<<< HEAD
 export function getState(): IntegrationState {
+<<<<<<< HEAD
+  return { ...state }
+}
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
+};
+
+export function getState(): IntegrationState {;
+  return { ...state };
+}
 =======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
 
@@ -20,6 +39,8 @@ export function writeState(updater: (state: IntegrationState) => void): Integrat
   updater(state);
   return { ...state }
 }
+<<<<<<< HEAD
+=======
 export function resetState(): void {
   state = {
 
@@ -45,6 +66,7 @@ export function write_state (updater: (state: IntegrationState) => void): Integr
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 };
 
 export function getState(): IntegrationState {;
@@ -56,13 +78,20 @@ export function writeState(
   updater: (state: IntegrationState) => void,
 ): IntegrationState {
 =======
+<<<<<<< HEAD
+export function writeState(
+  updater: (state: IntegrationState) => void,
+): IntegrationState {
+=======
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   updater(state);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return { ...state }
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function resetState(): void {
   state = {
 
@@ -79,6 +108,12 @@ export function get_state (): IntegrationState {
 }
 export function reset_state (): void {
   state = {
+<<<<<<< HEAD
+  }
+
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -101,10 +136,17 @@ export function reset_state (): void {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     connections: [],
     logs: [],
     overrides: [],
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 }
 =======
@@ -115,3 +157,5 @@ export function reset_state (): void {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

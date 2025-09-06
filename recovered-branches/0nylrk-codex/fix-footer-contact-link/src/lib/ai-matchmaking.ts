@@ -18,6 +18,9 @@ export interface MatchResultItem {
 
 export interface MatchResultItem {;
 <<<<<<< HEAD
+export interface MatchResultItem {
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -30,11 +33,14 @@ export interface MatchResultItem {;
 =======
 export interface MatchResultItem {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   title: string;
   description: string;
   category: string;
   price?: number;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -78,6 +84,7 @@ const sample_data: MatchResultItem[] = [;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface MatchResult {
 
 export interface MatchResult {;
@@ -93,6 +100,8 @@ export interface MatchResult {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
     price: 120,
     skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
 
@@ -106,6 +115,7 @@ export interface MatchResult {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   {
     id: "service - 1";
@@ -113,6 +123,8 @@ export interface MatchResult {
     description: "Custom AI model training service with data preparation and deployment";
     category: "Services - AI Development";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     price: 5000,
@@ -124,12 +136,15 @@ export interface MatchResult {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   {
     id: "equipment - 1";
     title: "NVIDIA A100 GPU Server";
     description: "High - performance GPU server for AI model training and inference";
     category: "Equipment - Hardware";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -193,6 +208,7 @@ export async function findMatches(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // AI Matchmaking utility functions;
 export interface MatchResultItem {;
   id: string,;
@@ -212,6 +228,8 @@ export interface MatchResult {;
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -220,6 +238,7 @@ export interface MatchResult {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
@@ -249,6 +268,8 @@ const sampleData: MatchResultItem[] = [
 ];
 // Function to find matches based on query and type
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -269,12 +290,15 @@ export async function findMatches(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   limit: number = 5
 ): Promise<MatchResult[]> {
   try {
     // In production, we would call an API endpoint here
     // For now, we'll simulate a response with sample data
     // Simulate API call delay
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -323,10 +347,13 @@ export async function findMatches(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }));
     // Sort by score
     return matches && matches.sort((a, b) => b && b.score - a && a.score).slice(0, limit)
   } catch (error) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -366,6 +393,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       matchedSkills: item.skills?.slice(0, 2) || [],
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
     })),
@@ -376,10 +404,13 @@ if ( {) {
     console.error("Error in matchmaking:", error),
     return []
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 // Sample data for testing when API is not available;
 const sampleData: MatchResultItem[] = [;
@@ -459,6 +490,8 @@ export async function find_matches (
 if ( {) {
   $2
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
       matchedSkills: item.skills?.slice(0, 2) || [],
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
@@ -474,6 +507,7 @@ if ( {) {
   }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
       filtered_items = sample_data.filter (item =>;
         item.category.toLowerCase ().includes (type.toLowerCase ()));
@@ -486,6 +520,8 @@ if ( {) {
       reason: `This ${item.category.split (' - ')[0].toLowerCase ()} matches your needs based on the provided description.`;
     }));
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     // Sort by score;
     return matches.sort ((a, b) => b.score - a.score).slice (0, limit);
@@ -591,3 +627,4 @@ export async function findMatches(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -9,11 +11,16 @@ import { Control } from "react-hook-form";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Control} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
 import {Card, CardContent} from "@/components/ui/card";
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Control } from "react-hook-form",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -35,6 +42,7 @@ import { Control } from "react-hook-form",
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { 
   FormField;
   FormItem;
@@ -47,6 +55,8 @@ import { Input } from "@/components/ui/input",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 import {Control} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -82,12 +92,15 @@ import { Card, CardContent } from "@/components/ui/card",
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: (name: string, value: any) => void,
   skills: string[],
   yearsExperience: number,
   location?: string,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -100,6 +113,7 @@ interface RateOptimizationSectionProps {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   rateType: "hourly" | "fixed"
 }
 
@@ -123,13 +137,18 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   yearsExperience,
   location,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   rateType
 }) => {
   const handleSuggestionApplied = (rate: number) => {
     setValue("hourlyRate", rate)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   },
@@ -143,6 +162,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space-y-4">
       <FormField
@@ -158,12 +178,15 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
                 step="0.01"
                 placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",;
 import { Control } from "react-hook-form",;
 import {;
@@ -178,20 +201,26 @@ import { Input } from "@/components/ui/input",;
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",;
 import { Card, CardContent } from "@/components/ui/card",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface RateOptimizationSectionProps {;
   control: Control<any>,;
   setValue: (name: string, value: any) => void,;
   skills: string[],;
   yearsExperience: number,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   location?: string;
   rateType: "hourly" | "fixed";
 }
@@ -227,6 +256,8 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
   set_value;
   skills;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -244,11 +275,15 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space-y-4">;
       <FormField
         control={control}
         name="hourlyRate"
+<<<<<<< HEAD
+            <FormControl>;
+=======
 <<<<<<< HEAD
         render={({ field }) => (;
           <FormItem>;
@@ -330,10 +365,14 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <FormControl>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Input;
                 type="number";
                 min="1";
                 step="0.01";
+<<<<<<< HEAD
+                placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -347,6 +386,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 =======
                 placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {...field}
               />;
             </FormControl>;
@@ -355,6 +395,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
             </FormDescription>;
             <FormMessage />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -362,6 +404,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       <Card>;
         <CardContent className="pt-4">;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <TalentRateRecommender
 =======
 =======
@@ -390,6 +433,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -434,16 +479,20 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           />;
         </CardContent>;
       </Card>;
     </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -457,6 +506,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -503,3 +554,4 @@ return (<div className="space-y-4" > <FormField control= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -12,6 +12,8 @@ import {AppLayout} from "@/layout/AppLayout";
 import {ProfileContact} from "@/components/profile/ProfileContact";
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function ListingDetail() {;
@@ -22,11 +24,14 @@ export default function ListingDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { id } = useParams() as { id?: string };
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -37,6 +42,7 @@ export default function ListingDetail() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
@@ -72,9 +78,12 @@ export default function ListingDetail() {
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
@@ -97,6 +106,8 @@ export default function ListingDetail() {
   const handleContact = () => {
     setIsContactDialogOpen(true)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   },
 
@@ -109,6 +120,7 @@ export default function ListingDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <AppLayout>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -151,6 +163,8 @@ export default function ListingDetail() {
                           className="w-full h-full object-cover"
                           onError={(e) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -159,6 +173,7 @@ export default function ListingDetail() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             const target = e.target as HTMLImageElement,
                             target.src = "/placeholder.svg"
 import { useState } from "react",;
@@ -226,6 +241,8 @@ export default function ListingDetail() {;
         </div>;
       </AppLayout>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     );
   }
@@ -243,6 +260,7 @@ export default function ListingDetail() {;
   };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     ),;
   }
@@ -255,6 +273,8 @@ export default function ListingDetail() {;
     );
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
   const handleContact = () => {;
     setIsContactDialogOpen(true);
@@ -263,11 +283,14 @@ export default function ListingDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <AppLayout>;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Column - Images */}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -286,6 +309,7 @@ export default function ListingDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       className="w-full h-full object-cover"
                       onError={(e) => {;
                         const target = e && e.target as HTMLImageElement;
@@ -323,6 +347,8 @@ export default function ListingDetail() {;
                     </div>;
                   )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 </div>;
@@ -336,6 +362,7 @@ export default function ListingDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
@@ -363,6 +390,8 @@ export default function ListingDetail() {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "/placeholder && placeholder.svg";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -380,6 +409,7 @@ export default function ListingDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       >;
                         <img;
                           src={image} ;
@@ -389,18 +419,23 @@ export default function ListingDetail() {;
                             const target = e.target as HTMLImageElement,;
                             target.src = "/placeholder.svg";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           }}
                         />;
                       </div>;
                     ))}
                   </div>;
                 )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
                           }}
@@ -428,6 +463,7 @@ export default function ListingDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -453,8 +489,11 @@ export default function ListingDetail() {;
                   </div>
                 </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </div>;
 
 =======
@@ -715,6 +754,8 @@ export default function ListingDetail() {;
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 {/* Tags */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
@@ -792,6 +833,7 @@ export default function ListingDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <div className="space-y-3 mb-8">;
                   {listing.price !== null ? (;
                     <PaymentButton;
@@ -805,6 +847,11 @@ export default function ListingDetail() {;
                           title: "Payment Processing";
                           description: "Redirecting to secure checkout...";
                         });
+<<<<<<< HEAD
+                      }}
+                    />
+                  ) : (
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -821,6 +868,7 @@ export default function ListingDetail() {;
                     />
                   ) : (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       onPaymentInitiated={() => {;
                         toast({;
                           title: "Payment Processing",;
@@ -1058,7 +1106,10 @@ export default function ListingDetail() {;
                         <span className="text-lg font-medium text-zion-purple">{listing && listing.author.name && name.charAt(0)}</span>;
                       </div>;
                     )}
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
                       {isLoading ? "Processing..." : "Request Quote"}
@@ -1095,6 +1146,8 @@ export default function ListingDetail() {;
                       </div>;
                     )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     <div>;
@@ -1123,10 +1176,13 @@ export default function ListingDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>;
                     </div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1392,6 +1448,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   </div>;
                 </div>;
               </div>;
@@ -1399,6 +1456,11 @@ if ( {) {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+    </AppLayout>);
+}
+;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1474,3 +1536,4 @@ if ( {) {
 }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

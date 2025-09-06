@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React from 'react';'''; import { cn } from '@/lib/utils'; const Avatar = _React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));'; Avatar.displayName = 'Avatar';'; const AvatarImage = _React.forwardRef(''; ({ className,src,alt = ',...props },ref) => (; <div>Broken JSX</div> />'; )''; );'''; AvatarImage.displayName = 'AvatarImage'; const AvatarFallback = _React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));'; AvatarFallback.displayName = 'AvatarFallback'; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback };
@@ -38,3 +40,4 @@ import _React from 'react';'''; import { cn } from '@/lib/utils'; const Avatar =
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

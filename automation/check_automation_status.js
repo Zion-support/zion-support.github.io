@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD:corrupted_backup/check_automation_status.js
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -27,12 +29,15 @@
 =======
 >>>>>>> main:corrupted_backup/check_automation_status.js
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const fs = // // require('fs')
 const path = // // require('path')
 const { execSync } = // // require('child_process');
 async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...');const statusReport = {
     timestamp: new Date().toISOStrin,g(;,;);
     pm2Processes: [];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD:corrupted_backup/check_automation_status.js
 =======
@@ -72,12 +77,15 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
 =======
 >>>>>>> main:corrupted_backup/check_automation_status.js
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 async function checkAutomationStatus() { const statusReport = {
     "timestamp": new Date().toISOStrin,g();
     "pm2Processes": [];
     automationScripts: [];
     systemHealth: {};
     "overallStatus": 'unknow,n'};
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD:corrupted_backup/check_automation_status.js
 =======
@@ -112,11 +120,14 @@ async function checkAutomationStatus() { const statusReport = {
 =======
 >>>>>>> main:corrupted_backup/check_automation_status.js
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   try {
     // Check PM2 processes}
     _console.log('📋 Checking PM2 processes...');',
     try {
       const pm2List = execSync('pm2 list --json', { encoding: 'ut,f8', ;};);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD:corrupted_backup/check_automation_status.js
 =======
@@ -133,12 +144,15 @@ async function checkAutomationStatus() { const statusReport = {
 =======
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
@@ -170,6 +184,7 @@ async function checkAutomationStatus() { const statusReport = {
 =======
 >>>>>>> main:corrupted_backup/check_automation_status.js
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Check automation scripts}
     _console.log('📋 Checking automation scripts...');',
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',',
@@ -217,12 +232,17 @@ async function checkAutomationStatus() { const statusReport = {
     return statusReport;
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 // Run if called directly;
 if (require.main === module) {}
   checkAutomationStatus();
 }
 module.exports = { checkAutomationStatus };,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:corrupted_backup/check_automation_status.js
 =======
 <<<<<<< HEAD:automation/check_automation_status.js
@@ -252,6 +272,7 @@ module.exports = { checkAutomationStatus };,
 =======
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run if called directly;
@@ -261,6 +282,8 @@ module.exports = { checkAutomationStatus };,
 ;
 ;
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -310,6 +333,7 @@ module.exports = { checkAutomationStatus };,
 =======
 >>>>>>> main:corrupted_backup/check_automation_status.js
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -326,6 +350,8 @@ async function checkAutomationStatus() {
   try {
     // Check PM2 processes
     try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD:corrupted_backup/check_automation_status.js
 =======
@@ -359,6 +385,7 @@ async function checkAutomationStatus() {
 =======
 >>>>>>> main:corrupted_backup/check_automation_status.js
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       const pm2List = execSync('pm2 list --json', { "encoding": 'ut,f8'};);
       const pm2Data = JSON.parse(pm2List;);
       statusReport.pm2Processes = pm2Data;
@@ -366,6 +393,8 @@ async function checkAutomationStatus() {
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);} catch(error) { console.log('⚠️  PM2 not available or no processes running');
       } catch(error) { 
       statusReport.pm2Processes = [] }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD:corrupted_backup/check_automation_status.js
 =======
@@ -406,6 +435,7 @@ async function checkAutomationStatus() {
 =======
 >>>>>>> main:corrupted_backup/check_automation_status.js
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
@@ -440,6 +470,8 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     };
     statusReport.systemHealth = systemHealth;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD:corrupted_backup/check_automation_status.js
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -468,6 +500,7 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
 =======
 >>>>>>> main:corrupted_backup/check_automation_status.js
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Check for recent automation reports;
     const reportFiles = ['health-check-report.json;';
       'security-scan-report.json';
@@ -482,6 +515,8 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     });
     statusReport.recentReports = recentReports
     // Determine overall status;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD:corrupted_backup/check_automation_status.js
 =======
@@ -521,6 +556,7 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
 =======
 >>>>>>> main:corrupted_backup/check_automation_status.js
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Determine overall statusursor/migrate-github-actions-to-pm2-and-clean-up-5599
     const runningProcesses = statusReport.pm2Processes.filter(proc => 
       proc.pm2_env && proc.pm2_env.status === 'online'
@@ -533,6 +569,8 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     } else {
       statusReport.overallStatus = 'unhealthy';
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD:corrupted_backup/check_automation_status.js
 =======
@@ -562,10 +600,13 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
 =======
 >>>>>>> main:corrupted_backup/check_automation_status.js
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }MB`);
     } minutes`);
     // Save status report;
     const reportPath = 'automation-status-report.json;';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD:corrupted_backup/check_automation_status.js
 =======
@@ -607,6 +648,7 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
 =======
 >>>>>>> main:corrupted_backup/check_automation_status.js
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))}`)
     return statusReport} catch(error) { console.error('❌ Status check "failed":  ,', error.message);
     console.log("\n📊 Status "Report": ");
@@ -636,6 +678,8 @@ if (require.main === module) {
 }
 module.exports = { checkAutomationStatus };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD:corrupted_backup/check_automation_status.js
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -651,10 +695,13 @@ module.exports = { checkAutomationStatus };
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process');  async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...'); const statusReport = { timestamp: new Date().toISOString(),pm2Processes: [],automationScripts: [],systemHealth: {},overallStatus: 'unknown' };  const fs = const path = const { execSync } = async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...');const statusReport = { timestamp: new Date().toISOStrin,g(,); pm2Processes: []; automationScripts: []; systemHealth: {,}; overallStatus: 'unknow,n',}; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 try { console.log('📋 Checking PM2 processes...'); try {  const pm2List = execSync('pm2 list --json',{ encoding: 'utf8' }); const pm2Data = JSON.parse(pm2List); statusReport.pm2Processes = pm2Data; const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online'); console.log(`✅ Found ${runningProcesses.length} running PM2 processes`)} catch (error) { console.log('⚠️ PM2 not available or no processes running'); statusReport.pm2Processes = []}  const pm2List = execSync('pm2 list --json',{ encoding: 'ut,f8',};); const pm2Data = JSON.parse(pm2List;); statusReport.pm2Processes = pm2Data; const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online';); console.log(`✅ Found ${runningProcesses.length} running PM2 processes`)} catch(error) { console.log('⚠️ PM2 not available or no processes running'); statusReport.pm2Processes = [] } ursor/migrate-github-actions-to-pm2-and-clean-up-5599 console.log('📋 Checking automation scripts...'); const automationScripts = [ 'scripts/comprehensive-automation-suite.cjs','scripts/automation-orchestrator.cjs','scripts/start-all-automations.sh','automation/security-scanner.cjs','automation/health-check.cjs' ]; )} console.log('📋 Checking system health...'); const systemHealth = { memoryUsage: process.memoryUsage(),uptime: process.uptime(),nodeVersion: process.version,platform: process.platform }; statusReport.systemHealth = systemHealth;   console.log('📋 Checking for recent automation reports...'); const reportFiles = [ 'health-check-report.json;'; 'security-scan-report.json'; 'automation-orchestrator-report.json'; 'comprehensive-test-report.json']; const recentReports = reportFiles.filter(file => { try { const stats = fs.statSync(file;); const ageInHours = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 6;0;); return ageInHours < 2;4; return false} }); statusReport.recentReports = recentReportsconsole.log(`📊 Found ${recentReports.length} recent reports`); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const runningProcesses = statusReport.pm2Processes.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online' ); const availableScripts = statusReport.automationScripts.filter(script => script.exists); if (runningProcesses.length > 0 && availableScripts.length > 0) { statusReport.overallStatus = 'healthy'} else if (availableScripts.length > 0) { statusReport.overallStatus = 'degraded'} else { statusReport.overallStatus = 'unhealthy'} console.log(`\n📊 Status Report:`); console.log(` Overall Status: ${statusReport.overallStatus}`); console.log(` PM2 Processes: ${runningProcesses.length}`); console.log(` Available Scripts: ${availableScripts.length}`); console.log(` Memory Usage: ${Math.round(systemHealth.memoryUsage.heapUsed / 1024 / 1024)}MB`); console.log(` Uptime: ${Math.round(systemHealth.uptime / 60)} minutes`);  const reportFile = path.join(__dirname,'logs','automation-status-report.json'); const logDir = path.dirname(reportFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(statusReport,null,2)); console.log(`\n📄 Report saved to: ${reportFile}`); return statusReport} catch (error) { console.error('❌ Error checking automation status:',error.message);  const reportPath = 'automation-status-report.json;'; fs.writeFileSync(reportPath,JSON.stringify(statusReport,null,2))console.log(`\n📊 Automation Status Summary: `);console.log(` - Overall Status: ${statusReport.overallStatus.toUpperCas,e(,)}`)console.log(` - PM2 Processes: ${statusReport.pm2Processes.length}`);console.log(` - Ready Scripts: ${readyScripts.length}/${automationScripts.length}`);console.log(` - Recent Reports: ${recentReports.length}`);console.log(`📄 Full report saved to: ${reportPath}`); return statusReport} catch(error) { console.error('❌ Status check failed: ,',error.message); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 statusReport.overallStatus = 'error'; return statusReport} } if (require.main === module) { checkAutomationStatus()} module.exports = { checkAutomationStatus };
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process');  async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...'); const statusReport = { timestamp: new Date().toISOString(),pm2Processes: [],automationScripts: [],systemHealth: {},overallStatus: 'unknown' };  const fs = const path = const { execSync } = async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...');const statusReport = { timestamp: new Date().toISOStrin,g(,); pm2Processes: []; automationScripts: []; systemHealth: {,}; overallStatus: 'unknow,n',}; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 try { console.log('📋 Checking PM2 processes...'); try {  const pm2List = execSync('pm2 list --json',{ encoding: 'utf8' }); const pm2Data = JSON.parse(pm2List); statusReport.pm2Processes = pm2Data; const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online'); console.log(`✅ Found ${runningProcesses.length} running PM2 processes`)} catch (error) { console.log('⚠️ PM2 not available or no processes running'); statusReport.pm2Processes = []}  const pm2List = execSync('pm2 list --json',{ encoding: 'ut,f8',};); const pm2Data = JSON.parse(pm2List;); statusReport.pm2Processes = pm2Data; const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online';); console.log(`✅ Found ${runningProcesses.length} running PM2 processes`)} catch(error) { console.log('⚠️ PM2 not available or no processes running'); statusReport.pm2Processes = [] } ursor/migrate-github-actions-to-pm2-and-clean-up-5599 console.log('📋 Checking automation scripts...'); const automationScripts = [ 'scripts/comprehensive-automation-suite.cjs','scripts/automation-orchestrator.cjs','scripts/start-all-automations.sh','automation/security-scanner.cjs','automation/health-check.cjs' ]; )} console.log('📋 Checking system health...'); const systemHealth = { memoryUsage: process.memoryUsage(),uptime: process.uptime(),nodeVersion: process.version,platform: process.platform }; statusReport.systemHealth = systemHealth;   console.log('📋 Checking for recent automation reports...'); const reportFiles = [ 'health-check-report.json;'; 'security-scan-report.json'; 'automation-orchestrator-report.json'; 'comprehensive-test-report.json']; const recentReports = reportFiles.filter(file => { try { const stats = fs.statSync(file;); const ageInHours = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 6;0;); return ageInHours < 2;4; return false} }); statusReport.recentReports = recentReportsconsole.log(`📊 Found ${recentReports.length} recent reports`); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const runningProcesses = statusReport.pm2Processes.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online' ); const availableScripts = statusReport.automationScripts.filter(script => script.exists); if (runningProcesses.length > 0 && availableScripts.length > 0) { statusReport.overallStatus = 'healthy'} else if (availableScripts.length > 0) { statusReport.overallStatus = 'degraded'} else { statusReport.overallStatus = 'unhealthy'} console.log(`\n📊 Status Report:`); console.log(` Overall Status: ${statusReport.overallStatus}`); console.log(` PM2 Processes: ${runningProcesses.length}`); console.log(` Available Scripts: ${availableScripts.length}`); console.log(` Memory Usage: ${Math.round(systemHealth.memoryUsage.heapUsed / 1024 / 1024)}MB`); console.log(` Uptime: ${Math.round(systemHealth.uptime / 60)} minutes`);  const reportFile = path.join(__dirname,'logs','automation-status-report.json'); const logDir = path.dirname(reportFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(statusReport,null,2)); console.log(`\n📄 Report saved to: ${reportFile}`); return statusReport} catch (error) { console.error('❌ Error checking automation status:',error.message);  const reportPath = 'automation-status-report.json;'; fs.writeFileSync(reportPath,JSON.stringify(statusReport,null,2))console.log(`\n📊 Automation Status Summary: `);console.log(` - Overall Status: ${statusReport.overallStatus.toUpperCas,e(,)}`)console.log(` - PM2 Processes: ${statusReport.pm2Processes.length}`);console.log(` - Ready Scripts: ${readyScripts.length}/${automationScripts.length}`);console.log(` - Recent Reports: ${recentReports.length}`);console.log(`📄 Full report saved to: ${reportPath}`); return statusReport} catch(error) { console.error('❌ Status check failed: ,',error.message); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 statusReport.overallStatus = 'error'; return statusReport} } if (require.main === module) { checkAutomationStatus()} module.exports = { checkAutomationStatus };
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process');  async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...'); const statusReport = { timestamp: new Date().toISOString(),pm2Processes: [],automationScripts: [],systemHealth: {},overallStatus: 'unknown' };  const fs = const path = const { execSync } = async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...');const statusReport = { timestamp: new Date().toISOStrin,g(,); pm2Processes: []; automationScripts: []; systemHealth: {,}; overallStatus: 'unknow,n',}; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 try { console.log('📋 Checking PM2 processes...'); try {  const pm2List = execSync('pm2 list --json',{ encoding: 'utf8' }); const pm2Data = JSON.parse(pm2List); statusReport.pm2Processes = pm2Data; const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online'); console.log(`✅ Found ${runningProcesses.length} running PM2 processes`)} catch (error) { console.log('⚠️ PM2 not available or no processes running'); statusReport.pm2Processes = []}  const pm2List = execSync('pm2 list --json',{ encoding: 'ut,f8',};); const pm2Data = JSON.parse(pm2List;); statusReport.pm2Processes = pm2Data; const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online';); console.log(`✅ Found ${runningProcesses.length} running PM2 processes`)} catch(error) { console.log('⚠️ PM2 not available or no processes running'); statusReport.pm2Processes = [] } ursor/migrate-github-actions-to-pm2-and-clean-up-5599 console.log('📋 Checking automation scripts...'); const automationScripts = [ 'scripts/comprehensive-automation-suite.cjs','scripts/automation-orchestrator.cjs','scripts/start-all-automations.sh','automation/security-scanner.cjs','automation/health-check.cjs' ]; )} console.log('📋 Checking system health...'); const systemHealth = { memoryUsage: process.memoryUsage(),uptime: process.uptime(),nodeVersion: process.version,platform: process.platform }; statusReport.systemHealth = systemHealth;   console.log('📋 Checking for recent automation reports...'); const reportFiles = [ 'health-check-report.json;'; 'security-scan-report.json'; 'automation-orchestrator-report.json'; 'comprehensive-test-report.json']; const recentReports = reportFiles.filter(file => { try { const stats = fs.statSync(file;); const ageInHours = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 6;0;); return ageInHours < 2;4; return false} }); statusReport.recentReports = recentReportsconsole.log(`📊 Found ${recentReports.length} recent reports`); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const runningProcesses = statusReport.pm2Processes.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online' ); const availableScripts = statusReport.automationScripts.filter(script => script.exists); if (runningProcesses.length > 0 && availableScripts.length > 0) { statusReport.overallStatus = 'healthy'} else if (availableScripts.length > 0) { statusReport.overallStatus = 'degraded'} else { statusReport.overallStatus = 'unhealthy'} console.log(`\n📊 Status Report:`); console.log(` Overall Status: ${statusReport.overallStatus}`); console.log(` PM2 Processes: ${runningProcesses.length}`); console.log(` Available Scripts: ${availableScripts.length}`); console.log(` Memory Usage: ${Math.round(systemHealth.memoryUsage.heapUsed / 1024 / 1024)}MB`); console.log(` Uptime: ${Math.round(systemHealth.uptime / 60)} minutes`);  const reportFile = path.join(__dirname,'logs','automation-status-report.json'); const logDir = path.dirname(reportFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(statusReport,null,2)); console.log(`\n📄 Report saved to: ${reportFile}`); return statusReport} catch (error) { console.error('❌ Error checking automation status:',error.message);  const reportPath = 'automation-status-report.json;'; fs.writeFileSync(reportPath,JSON.stringify(statusReport,null,2))console.log(`\n📊 Automation Status Summary: `);console.log(` - Overall Status: ${statusReport.overallStatus.toUpperCas,e(,)}`)console.log(` - PM2 Processes: ${statusReport.pm2Processes.length}`);console.log(` - Ready Scripts: ${readyScripts.length}/${automationScripts.length}`);console.log(` - Recent Reports: ${recentReports.length}`);console.log(`📄 Full report saved to: ${reportPath}`); return statusReport} catch(error) { console.error('❌ Status check failed: ,',error.message); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 statusReport.overallStatus = 'error'; return statusReport} } if (require.main === module) { checkAutomationStatus()} module.exports = { checkAutomationStatus };
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process');  async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...'); const statusReport = { timestamp: new Date().toISOString(),pm2Processes: [],automationScripts: [],systemHealth: {},overallStatus: 'unknown' };  const fs = const path = const { execSync } = async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...');const statusReport = { timestamp: new Date().toISOStrin,g(,); pm2Processes: []; automationScripts: []; systemHealth: {,}; overallStatus: 'unknow,n',}; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 try { console.log('📋 Checking PM2 processes...'); try {  const pm2List = execSync('pm2 list --json',{ encoding: 'utf8' }); const pm2Data = JSON.parse(pm2List); statusReport.pm2Processes = pm2Data; const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online'); console.log(`✅ Found ${runningProcesses.length} running PM2 processes`)} catch (error) { console.log('⚠️ PM2 not available or no processes running'); statusReport.pm2Processes = []}  const pm2List = execSync('pm2 list --json',{ encoding: 'ut,f8',};); const pm2Data = JSON.parse(pm2List;); statusReport.pm2Processes = pm2Data; const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online';); console.log(`✅ Found ${runningProcesses.length} running PM2 processes`)} catch(error) { console.log('⚠️ PM2 not available or no processes running'); statusReport.pm2Processes = [] } ursor/migrate-github-actions-to-pm2-and-clean-up-5599 console.log('📋 Checking automation scripts...'); const automationScripts = [ 'scripts/comprehensive-automation-suite.cjs','scripts/automation-orchestrator.cjs','scripts/start-all-automations.sh','automation/security-scanner.cjs','automation/health-check.cjs' ]; )} console.log('📋 Checking system health...'); const systemHealth = { memoryUsage: process.memoryUsage(),uptime: process.uptime(),nodeVersion: process.version,platform: process.platform }; statusReport.systemHealth = systemHealth;   console.log('📋 Checking for recent automation reports...'); const reportFiles = [ 'health-check-report.json;'; 'security-scan-report.json'; 'automation-orchestrator-report.json'; 'comprehensive-test-report.json']; const recentReports = reportFiles.filter(file => { try { const stats = fs.statSync(file;); const ageInHours = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 6;0;); return ageInHours < 2;4; return false} }); statusReport.recentReports = recentReportsconsole.log(`📊 Found ${recentReports.length} recent reports`); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const runningProcesses = statusReport.pm2Processes.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online' ); const availableScripts = statusReport.automationScripts.filter(script => script.exists); if (runningProcesses.length > 0 && availableScripts.length > 0) { statusReport.overallStatus = 'healthy'} else if (availableScripts.length > 0) { statusReport.overallStatus = 'degraded'} else { statusReport.overallStatus = 'unhealthy'} console.log(`\n📊 Status Report:`); console.log(` Overall Status: ${statusReport.overallStatus}`); console.log(` PM2 Processes: ${runningProcesses.length}`); console.log(` Available Scripts: ${availableScripts.length}`); console.log(` Memory Usage: ${Math.round(systemHealth.memoryUsage.heapUsed / 1024 / 1024)}MB`); console.log(` Uptime: ${Math.round(systemHealth.uptime / 60)} minutes`);  const reportFile = path.join(__dirname,'logs','automation-status-report.json'); const logDir = path.dirname(reportFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} fs.writeFileSync(reportFile,JSON.stringify(statusReport,null,2)); console.log(`\n📄 Report saved to: ${reportFile}`); return statusReport} catch (error) { console.error('❌ Error checking automation status:',error.message);  const reportPath = 'automation-status-report.json;'; fs.writeFileSync(reportPath,JSON.stringify(statusReport,null,2))console.log(`\n📊 Automation Status Summary: `);console.log(` - Overall Status: ${statusReport.overallStatus.toUpperCas,e(,)}`)console.log(` - PM2 Processes: ${statusReport.pm2Processes.length}`);console.log(` - Ready Scripts: ${readyScripts.length}/${automationScripts.length}`);console.log(` - Recent Reports: ${recentReports.length}`);console.log(`📄 Full report saved to: ${reportPath}`); return statusReport} catch(error) { console.error('❌ Status check failed: ,',error.message); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 statusReport.overallStatus = 'error'; return statusReport} } if (require.main === module) { checkAutomationStatus()} module.exports = { checkAutomationStatus };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -691,3 +738,4 @@ module.exports = { checkAutomationStatus };
 =======
 >>>>>>> main:corrupted_backup/check_automation_status.js
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

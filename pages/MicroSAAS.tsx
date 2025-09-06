@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -228,6 +230,7 @@ export default function MicroSAASPage() {
   );
 }
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     >
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
@@ -243,4 +246,7 @@ export default function MicroSAASPage() {
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

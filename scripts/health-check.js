@@ -63,6 +63,8 @@ const { execSync } = require('child_process');
 class HealthChecker {
   constructor() {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     this && this.checks = [],
@@ -74,6 +76,7 @@ class HealthChecker {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 
   async checkBuildFiles() {
@@ -128,6 +131,8 @@ class HealthChecker {
     const warnings = this && this.results.filter(r => r && r.status === 'WARN').length;
     
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     console && console.log('\n📊 Health Check Results: '),
@@ -143,6 +148,7 @@ class HealthChecker {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
     
     console && console.log(`\n📈 Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);
@@ -155,6 +161,8 @@ class HealthChecker {
     };
   }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -199,3 +207,4 @@ const express = const app = express() app.get("/health",(req,res) => { res.statu
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

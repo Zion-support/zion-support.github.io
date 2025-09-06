@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -42,6 +44,7 @@ describe('Analytics', () => {'}
 
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import _React from 'react';,
 ';
 import '@testing-library/jest-dom';';
@@ -60,6 +63,8 @@ describe('Analytics', () => {'}
   test('applies correct styling', () => {'}
     render(<Analytics />);,
   });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 });
 =======
@@ -127,6 +132,7 @@ describe('Analytics', () => {'}
   test('applies correct styling', () => {'}
     render(<Analytics />);,
   });
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import _React from 'react'
 '
 import '@testing-library/jest-dom';

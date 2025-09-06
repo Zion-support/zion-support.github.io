@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -12,12 +14,15 @@ export function useTalentDirectory() {
     isAuthenticated;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
 import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
   // Fetch auth status and saved talents
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const {
     isAuthenticated;
@@ -49,6 +54,7 @@ export function useTalentDirectory() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useAuthStatus } from './talent / useAuthStatus';
 import { useTalentData } from './talent / useTalentData';
 import { useFilterTalents } from './talent / useFilterTalents';
@@ -76,6 +82,8 @@ function useTalentDirectory() {
     expanded_sections;
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -219,6 +227,7 @@ function useTalentDirectory() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
@@ -303,6 +312,11 @@ export function useTalentDirectory() {;
     toggleSection;
     handleToggleSave;
 <<<<<<< HEAD
+  }
+}
+;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -341,3 +355,4 @@ export function useTalentDirectory() {;
 }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

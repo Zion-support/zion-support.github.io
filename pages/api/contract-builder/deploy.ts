@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Interface } from 'ethers',;
 // Simple ABI for demonstration (release/refund)
 const abi = [
@@ -10,8 +14,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { bytecode, constructorArgs } = req.body |{}
   if (!bytecode |!constructorArgs) {
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
   }
   try {
@@ -46,11 +53,14 @@ import { Interface } from 'ethers';
 
 }
 
+<<<<<<< HEAD
+=======
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { Interface } from 'ethers'
 // Simple ABI for demonstration (release / refund);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const abi = [;
   'constructor (address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release () externalfunction refund () externalfunction client () view returns (address)function talent () view returns (address)function total_amount () view returns (uint256)';
 ]
@@ -98,6 +108,8 @@ if ( {) {
 
 }
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
@@ -134,3 +146,4 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

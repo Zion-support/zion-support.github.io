@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -7,6 +9,7 @@
 import React, { useState } from 'react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
 import { useAuth  } from '@/hooks/useAuth';
 import { MilestoneCard  } from './MilestoneCard';
@@ -18,9 +21,12 @@ import { Plus  } from '@/components/icons';
 import { EmptyState } from '@/components/ui/empty-state';
 interface MilestonesListProps {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {useAuth} from '@/hooks/useAuth';
 import {MilestoneCard} from './MilestoneCard';
@@ -55,6 +61,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
   onUploadDeliverable;
   isSubmitting;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -62,6 +70,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -85,12 +94,15 @@ interface MilestonesListProps {;
   onApprove?: (id: string) => Promise<void>,;
   onReject?: (id: string) => Promise<void>;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -108,6 +120,8 @@ interface MilestonesListProps {;
   onReject?: (id: string) => Promise<void>
 }
 export const MilestonesList: React.FC<MilestonesListProps> = ({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -165,6 +179,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   milestones;
   activities;
   is_loading;
@@ -183,6 +198,8 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   onUpdateStatus;
   onDeleteMilestone;
   onUploadDeliverable;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -269,6 +286,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   if (isLoading) {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
 =======
     return (;
@@ -291,6 +309,8 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 <<<<<<< HEAD
     );
   }
+<<<<<<< HEAD
+=======
 
 
   
@@ -304,6 +324,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
     );
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
@@ -317,6 +338,8 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
             text: "Create First Milestone"
             onClick: () => setShowAddForm(true)
           } : undefined
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -342,10 +365,13 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       />;
     );
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -360,6 +386,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
 =======
   return (
@@ -398,6 +425,8 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
           </Button>;
         </div>;
       )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -441,6 +470,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
@@ -480,6 +510,8 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
       ;
@@ -513,6 +545,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </div>;
     </div>;
   );
@@ -521,9 +554,12 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
   is_submitting;
   on_approve,
@@ -610,6 +646,8 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -670,3 +708,4 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

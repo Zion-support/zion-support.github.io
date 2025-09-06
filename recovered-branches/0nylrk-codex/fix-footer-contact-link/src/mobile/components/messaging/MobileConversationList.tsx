@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -9,6 +11,7 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -17,10 +20,24 @@ import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
 <<<<<<< HEAD
+import React from "react",
+import { Card } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Search } from "lucide-react",
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+interface Conversation {
+
+  id: string
+  name: string
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface Conversation {;
   id: string,;
   name: string,;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   avatar?: string;
   lastMessage: string,;
   timestamp: string,;
@@ -32,6 +49,8 @@ interface MobileConversationListProps {;
   conversations: Conversation[],;
 
   activeConversation?: string;
+<<<<<<< HEAD
+=======
   onSelectConversation: (id: string) => void;
 }
 
@@ -68,6 +87,7 @@ import { cn } from "@/lib/utils",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface Conversation {
   id: string,
   name: string,
@@ -156,6 +176,8 @@ export function MobileConversationList({
             key={conversation && conversation.id}
             className={cn(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import React from "react",;
 import { Card } from "@/components/ui/card",;
@@ -236,6 +258,7 @@ export function MobileConversationList({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}
@@ -283,6 +306,8 @@ export function MobileConversationList({;
                       {conversation.unreadCount}
                     </Badge>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -292,6 +317,7 @@ export function MobileConversationList({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               "px-4"
               activeConversation === conversation && conversation.id && "bg-primary/5"
             )}
@@ -473,6 +499,8 @@ function MobileConversationList() {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -525,3 +553,4 @@ onSelectConversation
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -330,6 +333,8 @@ export default function MicroSAAS() {
         <meta name="keywords" content="micro saas, business automation, productivity tools, AI solutions, small business software" />
       </Head>
       {/* Header */}
+<<<<<<< HEAD
+=======
       <section className="py-20 px-4 "sm": px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -445,6 +450,7 @@ export default function MicroSAAS() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Link
               href="/contact"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
@@ -453,6 +459,8 @@ export default function MicroSAAS() {
             </Link>
             <Link
               href="/request-quote"
+<<<<<<< HEAD
+=======
               className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Get Free Consultation
@@ -467,3 +475,4 @@ import React from 'react'; import Link from 'next/link'; import Head from 'next/
 =======
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

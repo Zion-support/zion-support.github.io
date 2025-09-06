@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 export default function AIServicesPage() {;
@@ -7,12 +9,15 @@ export default function AIServicesPage() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">;
         <div className="container mx-auto px-6 text-center">;
           <h1 className="text-5xl font-bold mb-6">🤖 AI Services & Solutions</h1>;
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -43,6 +48,7 @@ export default function AIServicesPage() {;
   return (;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">;
@@ -85,6 +91,8 @@ export default function AIServicesPage() {;
             {/* ZionGPT Core */}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🧠</div>;
@@ -98,6 +106,7 @@ export default function AIServicesPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and seamless integration with your existing systems.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -137,6 +146,9 @@ export default function AIServicesPage() {;
             </div>;
             {/* AI Content Generation */}
 <<<<<<< HEAD
+                SEO-optimized content for blogs, social media, and marketing materials.;
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -164,6 +176,7 @@ export default function AIServicesPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 SEO-optimized content for blogs, social media, and marketing materials.;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
@@ -202,6 +215,8 @@ export default function AIServicesPage() {;
             </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
             {/* AI - Powered Analytics */}
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
@@ -216,6 +231,7 @@ export default function AIServicesPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 predictive modeling, and intelligent business intelligence solutions.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -256,6 +272,8 @@ export default function AIServicesPage() {;
             {/* AI Customer Support */}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">💬</div>;
@@ -269,6 +287,7 @@ export default function AIServicesPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and automated customer service solutions that never sleep.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -308,6 +327,9 @@ export default function AIServicesPage() {;
             </div>;
             {/* AI Process Automation */}
 <<<<<<< HEAD
+                document processing, and AI-powered business process optimization.;
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -335,6 +357,7 @@ export default function AIServicesPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 document processing, and AI-powered business process optimization.;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
@@ -374,6 +397,8 @@ export default function AIServicesPage() {;
             {/* AI Security & Compliance */}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🔒</div>;
@@ -387,6 +412,7 @@ export default function AIServicesPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and automated security solutions that adapt to evolving threats.;
               </p>;
               <div className="space - y-4 mb - 8">;

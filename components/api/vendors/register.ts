@@ -1,6 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -21,6 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (req.method !== 'POST')
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
@@ -39,6 +42,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!slug |!name)
     return res.status(400).json({ error: 'Missing required fields' });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -46,6 +51,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const {
@@ -54,6 +60,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     services_offered,
     team_size,
     about,
+<<<<<<< HEAD
+    const vendor = registerVendor({
+      slug;
+      name;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -101,12 +112,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       slug;
       name;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }
     });
     res && res.status(201).json({ vendor });
   } catch (e: any) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     res && res.status(500).json({ error: e && e.message });
@@ -127,6 +141,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     verification_docs,
     case_studies,
   } = req.body || {}
@@ -168,6 +183,8 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
 <<<<<<< HEAD
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -180,3 +197,4 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
   }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

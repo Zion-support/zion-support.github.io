@@ -1,18 +1,31 @@
 <<<<<<< HEAD
+import fs from 'fs';
+import path from 'path';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 import fs from "fs";
 import path from "path";
 
 ;
 
+<<<<<<< HEAD
+=======
 =======
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface TokenTransaction {
 
 
 export interface TokenTransaction {;
+<<<<<<< HEAD
+=======
 =======
 
 ;
@@ -25,6 +38,7 @@ export interface TokenTransaction {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   userId: string;
   type: "earn" | "spend" | "transfer";
@@ -48,11 +62,18 @@ export interface TokenConfig {;
   stakingRewardRate: number; // APY percentage;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 const DATA_DIR = path.join(process.cwd(), "data");
 const TRANSACTIONS_FILE = path.join(DATA_DIR, "token-transactions.json");
 const CONFIG_FILE = path.join(DATA_DIR, "token-config.json");
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -65,6 +86,8 @@ const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -84,7 +107,12 @@ function loadTransactions(): TokenTransaction[] {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
 function save_transactions (transactions: TokenTransaction[]): void {
   ensureDataDir ();
@@ -102,11 +130,17 @@ function load_config (): TokenConfig {
     const raw = fs.readFileSync(CONFIG_FILE, "utf8");
     return JSON.parse(raw);
 =======
+<<<<<<< HEAD
+    const raw = fs.readFileSync(CONFIG_FILE, "utf8");
+    return JSON.parse(raw);
+=======
     const raw = fs.readFileSync (CONFIG_FILE, 'utf8');
     return JSON.parse (raw);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch {
     return getDefaultConfig ();
   }
@@ -115,6 +149,18 @@ function load_config (): TokenConfig {
 export function getAllTransactions(): TokenTransaction[] {
   return loadTransactions();
 }
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+
+    name: 'ZION Token',
+    symbol: 'ZION$',
+=======
+<<<<<<< HEAD
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}
+<<<<<<< HEAD
+function getDefaultConfig (): TokenConfig {
+=======
 <<<<<<< HEAD
 function getDefaultConfig (): TokenConfig {
 =======
@@ -130,6 +176,7 @@ function getDefaultConfig (): TokenConfig {
   return {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
   return {
     name: "ZION Token",
@@ -145,6 +192,7 @@ function getDefaultConfig (): TokenConfig {
 export function getAllTransactions(): TokenTransaction[] {
   return loadTransactions();
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function addTransaction(
   transaction: Omit<TokenTransaction, "id" | "timestamp">,
@@ -184,6 +232,10 @@ export function getUserBalance(userId: string): number {;
     if (tx.userId === userId) {
       if (tx.type === "earn") {
 =======
+<<<<<<< HEAD
+    if (tx.userId === userId) {
+      if (tx.type === "earn") {
+=======
     if (tx && tx.userId === userId) {
       if (tx && tx.type === 'earn') {
         balance += tx && tx.amount;
@@ -194,6 +246,8 @@ export function getUserBalance(userId: string): number {;
   }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
   
   return Math && Math.max(0, balance);
@@ -201,6 +255,7 @@ export function getUserBalance(userId: string): number {;
 }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     total_supply: 1000000000,
     circulating_supply: 250000000,
     exchange_rate: 0.05,
@@ -208,6 +263,8 @@ export function getUserBalance(userId: string): number {;
     stakingRewardRate: 12.5;
   }
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -241,12 +298,15 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
     timestamp: new Date().toISOString()
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 ;
   transactions.push (new_transaction);
   save_transactions (transactions);
   return new_transaction;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -258,10 +318,13 @@ export function getConfig(): TokenConfig {
   return loadConfig();
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export function set_config (config: TokenConfig): void {
   save_config (config);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -284,6 +347,7 @@ export function getUserBalance(userId: string): number {;
   const transactions = loadTransactions();
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   let balance = 0;
 ;
   for (const tx of transactions) {
@@ -296,6 +360,7 @@ if ( {) {
   $2
 }
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
         balance += tx.amount;
       } else if (tx.type === "spend") {
         balance -= tx.amount;

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -28,12 +30,16 @@ import { SearchSuggestion, SearchHighlight } from "@/types/search",
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
 
 import React from "react",
 import { SearchSuggestion, SearchHighlight } from "@/types/search",
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface AutocompleteSuggestionsProps {
 
   suggestions: SearchSuggestion[]
@@ -41,6 +47,8 @@ interface AutocompleteSuggestionsProps {
   onSelectSuggestion: (suggestion: string) => void
 
   visible: boolean
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -62,6 +70,7 @@ interface AutocompleteSuggestionsProps {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 // Helper function to highlight matching text
 
@@ -94,6 +103,10 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   const index = lowerText.indexOf(lowerSearchTerm);
   if (index === -1) {
 <<<<<<< HEAD
+    return { before: '', match: text, after: '' }
+  }
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from './react';
@@ -125,11 +138,14 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return { before: '', match: text, after: '' }
   }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return {
     before: text.substring (0, index);
     match: text.substring (index, index + search_term.length);
     after: text.substring (index + search_term.length);
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -154,12 +170,15 @@ export function AutocompleteSuggestions({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 
 export function AutocompleteSuggestions({ 
   suggestions, 
   searchTerm, ;
   onSelectSuggestion;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -167,6 +186,7 @@ export function AutocompleteSuggestions({
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 };
@@ -176,7 +196,10 @@ export function AutocompleteSuggestions({
   searchTerm, ;
   onSelectSuggestion;
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   const lowerText = text.toLowerCase(),;
   const lowerSearchTerm = searchTerm.toLowerCase(),;
@@ -197,6 +220,8 @@ export function AutocompleteSuggestions({
   searchTerm, 
   onSelectSuggestion,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -213,10 +238,13 @@ export function AutocompleteSuggestions({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">
       <ul className="py-2 max-h-60 overflow-y-auto">
         {suggestions.map((suggestion, index) => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -229,6 +257,7 @@ export function AutocompleteSuggestions({
             <li key={`${suggestion.type}-${index}`}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 className="px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer"
                 onClick={() => onSelectSuggestion(suggestion.text)}>
               <div className="flex items-center justify-between">
@@ -243,6 +272,8 @@ export function AutocompleteSuggestions({
               </div>
             </li>
           )
+<<<<<<< HEAD
+=======
         })}
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -318,6 +349,7 @@ export function AutocompleteSuggestions(): any ({ ;
               </div>;
             </li>;
           );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         })}
 <<<<<<< HEAD
 
@@ -381,6 +413,8 @@ if (return null) {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }return {
   before: text.substring (0, index);
 match: text.substring (index, index + searchTerm.length);
@@ -421,3 +455,4 @@ return (<li key= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,6 +1,9 @@
+<<<<<<< HEAD
+=======
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
@@ -48,6 +51,9 @@ export default async function handler(
 
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
+<<<<<<< HEAD
+      { recursive: true },
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import path from './path';
 import {
@@ -92,6 +98,7 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { recursive: true }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       (err: any) => {
         if (return reject (err)) {
   $2
@@ -102,6 +109,8 @@ if ( {) {
       }
     );
   });
+<<<<<<< HEAD
+=======
 =======
 }
 
@@ -123,6 +132,7 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -247,7 +257,10 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+import { useState, useEffect } from "react",
+import { Link, useNavigate, useSearchParams } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import PostForm from "@/components/community/PostForm",
+import { useToast } from "@/hooks/use-toast";
+import { ForumCategory } from "@/types/community";
+import { useToast } from "@/hooks/use-toast",
+import { ForumCategory } from "@/types/community",
+interface PostFormValues {
+
+  title: string
+  content: string
+  categoryId: ForumCategory
+
+  tags: string
+=======
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
@@ -11,6 +30,7 @@ interface PostFormValues {
   content: string;
   categoryId: ForumCategory;
   tags: string;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 export default function CreatePostPage() {;
@@ -18,8 +38,19 @@ export default function CreatePostPage() {;
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
 <<<<<<< HEAD
+export default function CreatePostPage() {
+
+
+
+
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchParams] = useSearchParams();
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Get category from URL query params if available
   const initialCategory = searchParams.get("category") as ForumCategory | null;
 
@@ -61,11 +92,16 @@ export default function CreatePostPage() {;
 
 
   return (
+<<<<<<< HEAD
+=======
     <AppLayout>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <SEO
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
+<<<<<<< HEAD
+=======
       />
 
       <div className="container py-8">
@@ -217,6 +253,7 @@ export default function CreatePostPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from './react';
 import { Link, use_navigate, useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -239,6 +276,8 @@ function CreatePostPage() {
   const { toast } = use_toast ();
   const [search_params] = useSearchParams ();
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   // Get category from URL query params if available;
   const initial_category = search_params.get ("category") as ForumCategory | null;
@@ -336,3 +375,4 @@ return (<AppLayout> <SEO title="Create New Post | Community Forum | Zion AI Mark
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

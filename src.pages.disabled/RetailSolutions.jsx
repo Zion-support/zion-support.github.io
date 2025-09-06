@@ -43,6 +43,8 @@ export default function RetailSolutions({ }: RetailSolutionsProps) {
     </div>
   );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -65,6 +67,7 @@ ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 :src.pages.disabled/RetailSolutions.jsx
 }
 }
@@ -88,4 +91,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

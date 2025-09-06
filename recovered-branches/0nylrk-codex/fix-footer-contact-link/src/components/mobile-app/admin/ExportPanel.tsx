@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -14,6 +16,7 @@ import {AppPlatform, AppMetadataValues} from "./MetadataManager";
 import {toast} from "sonner";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -23,9 +26,12 @@ import { toast } from "sonner";
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -37,8 +43,11 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
   const handleExport = (format: 'json' | 'csv') => {
     try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       let content: string,
       let fileName: string,
       
@@ -46,7 +55,10 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         content = JSON.stringify(metadata, null, 2);
       if (format === 'json') {
         content = JSON.stringify(metadata, null, 2),
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
@@ -85,6 +97,8 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata && metadata.platform;
         ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -105,6 +119,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
         // Convert object to CSV format
@@ -116,6 +131,8 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata.version,
           metadata.platform
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -126,11 +143,14 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         ],
         
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(),
         
         // Add keywords as additional rows
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         content += '\n\nKeywords:\n' + metadata.keywords.join(),
         
@@ -173,6 +193,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -225,6 +246,8 @@ if ( {) {
       toast.success (`Exported ${format.toUpperCase ()} file successfully`);
     } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     }
 
 
@@ -258,6 +281,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -308,6 +332,8 @@ if ( {) {
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -316,6 +342,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 },
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -327,6 +354,9 @@ interface ExportPanelProps {;
   platform: AppPlatform,;
   metadata: AppMetadataValues;
 }
+<<<<<<< HEAD
+  }
+=======
 <<<<<<< HEAD
 ;
 export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {;
@@ -511,10 +541,13 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
 =======
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 CSV;
               </Button>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -536,6 +569,7 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               Enable Analytics;
             </Button>;
           </div>;
@@ -549,6 +583,11 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
+<<<<<<< HEAD
+    </Card>);
+}
+;
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </Card>);
@@ -589,3 +628,4 @@ return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export &
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

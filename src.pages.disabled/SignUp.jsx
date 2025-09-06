@@ -1,5 +1,7 @@
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} \"from\": \'@/components / ui / form\'';\";\";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -25,6 +27,7 @@ Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
 ursor/add-new-services-and-deploy-updates-0462
 :src.pages.disabled/SignUp.jsx
@@ -43,7 +46,10 @@ Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components
 
 :src.pages.disabled/SignUp.jsx
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""

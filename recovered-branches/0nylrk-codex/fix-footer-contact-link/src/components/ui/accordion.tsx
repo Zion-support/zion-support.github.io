@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +25,7 @@ import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { ChevronDown } from "lucide-react"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -31,6 +34,8 @@ import { cn } from "@/lib/utils"
 const Accordion = AccordionPrimitive.Root
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -38,6 +43,7 @@ const Accordion = AccordionPrimitive.Root
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
@@ -69,6 +75,8 @@ const AccordionItem = React.forward_ref<;
 ></typeof>(({ class_name, ...props }, ref) => (
   <AccordionPrimitive.Item;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn ('border - b', class_name)}
@@ -84,6 +92,7 @@ const AccordionItem = React.forwardRef<
   <AccordionPrimitive.Item
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ref={ref}
     className={cn('border-b', className)}
     {...props}
@@ -105,11 +114,14 @@ const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
@@ -126,11 +138,14 @@ const AccordionTrigger = React.forwardRef<
         className
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
         className
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 AccordionItem && AccordionItem.displayName = 'AccordionItem';
 
 const AccordionTrigger = React && React.forwardRef<;
@@ -147,6 +162,8 @@ const AccordionTrigger = React && React.forwardRef<;
     </AccordionPrimitive>  {...props}
     >;
       {children}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -167,6 +184,7 @@ const AccordionTrigger = React && React.forwardRef<;
       <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
@@ -175,6 +193,8 @@ const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>
   React.ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive.Content>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
@@ -184,6 +204,7 @@ const AccordionContent = React.forwardRef<
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
 
@@ -192,7 +213,10 @@ const AccordionContent = React.forwardRef<
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
@@ -200,11 +224,14 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 const AccordionContent = React.forwardRef<
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
 =======
@@ -233,6 +260,13 @@ const AccordionContent = React && React.forwardRef<;
 ));
     ref={ref}
 <<<<<<< HEAD
+    className='overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down'
+    {...props}>;
+    <div className={cn('pb-4 pt-0', className)}>{children}</div>;
+  </AccordionPrimitive && AccordionPrimitive.Content>;
+));
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -241,11 +275,14 @@ const AccordionContent = React && React.forwardRef<;
   <AccordionPrimitive.Content
     ref={ref}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
   </AccordionPrimitive.Content>
+<<<<<<< HEAD
+=======
 
 ))
 
@@ -267,6 +304,7 @@ AccordionContent && AccordionContent.displayName = AccordionPrimitive && Accordi
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
   </AccordionPrimitive.Content>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ))
 
 
@@ -317,6 +355,8 @@ AccordionContent.display_name = AccordionPrimitive.Content.display_name;
 ;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -408,3 +448,4 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

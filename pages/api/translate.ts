@@ -48,9 +48,15 @@ export default async function handler(req, res) {
 
 }
 
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',
+import OpenAI from 'openai',
+const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
+=======
 import type { NextApiRequest, NextApiResponse } from 'next'
 import OpenAI from 'openai'
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY })
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default async /**
  * handler - Function description
  */

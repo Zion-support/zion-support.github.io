@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React from 'react'; const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services",description = "Discover innovative AI,quantum computing,and technology solutions.Expert consulting,enterprise services,and cutting-edge platforms for modern businesses.",keywords = "AI services,quantum computing,technology consulting,enterprise solutions,cybersecurity,cloud services,digital transformation",image = "/images/zion-tech-group-og.jpg",url = ""https": ';' })
@@ -38,3 +40,4 @@ import _React from 'react'; const SEOHead = ({ title = "Zion Tech Group - AI-Pow
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

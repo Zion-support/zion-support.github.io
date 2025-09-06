@@ -41,6 +41,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState (false) const toggleMenu = () => setIsOpen (!isOpen) const actionItems = [ { icon: "MessageCircl",e,label: "Live: Chat,"," action: () => window && window.open: ("https:""""",;'"'"
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
 <<<<<<< HEAD
+"import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -62,3 +65,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

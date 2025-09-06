@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -18,6 +20,7 @@ import {Badge} from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -121,6 +124,8 @@ function ApiDocumentation() {
             <TabsTrigger value="errors">Errors</TabsTrigger>;
           </TabsList>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <TabsContent value="jobs" className="space - y-6">;
@@ -215,6 +220,7 @@ response = requests.get(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     headers=headers
 )
 data = response.json()
@@ -359,6 +365,8 @@ response = requests.get (
 data = response.json ();
 print (data)`;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -387,6 +395,7 @@ print (data)`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }),;
 const data = await response.json(),;
 // // // console.log(data),`,;
@@ -403,6 +412,8 @@ response = requests.get(;
 data = response.json();
 print(data)`;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -412,11 +423,14 @@ print(data)`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               }}
               response_examples={{
                 success: `{
   "data": [;
     {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -483,6 +497,7 @@ print(data)`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       },
       "status": "active",
       "client_id": "user_xyz789",
@@ -490,11 +505,16 @@ print(data)`;
     },
     // More jobs...
 <<<<<<< HEAD
+  ];
+  ],
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   ];
   ],
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       "budget": {
       "created_at": "2025-05-15T10:30:00Z"
@@ -523,6 +543,8 @@ print(data)`;
 }`;
               }}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
             />;
 
@@ -543,6 +565,7 @@ print(data)`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <EndpointSection
               method="GET"
               endpoint="/api/jobs/:id"
@@ -556,6 +579,8 @@ print(data)`;
 <<<<<<< HEAD
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
+<<<<<<< HEAD
+=======
 
 =======
 =======
@@ -653,6 +678,7 @@ console && console.log(data),`
 =======
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
@@ -685,6 +711,8 @@ response = requests.get (
 data = response.json ();
 print (data)`;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -702,6 +730,7 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }),;
 const data = await response.json(),;
 // // // console.log(data),`,;
@@ -718,6 +747,8 @@ response = requests.get(;
 data = response.json();
 print(data)`;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -726,10 +757,13 @@ print(data)`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               }}
               response_examples={{
                 success: `{
   "data": {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -800,6 +834,7 @@ print(data)`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "application_count": 12
       "min": 5000;
       "max": 10000;
@@ -816,6 +851,8 @@ print(data)`;
   }
 }`;
               }}
+<<<<<<< HEAD
+=======
 
             />;
 
@@ -1290,12 +1327,15 @@ print(data)`;
 }`;
               }}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <EndpointSection
               method="POST"
               endpoint="/api/jobs"
               description="Create a new job listing."
               note="Requires jobs:write scope"
               params={[
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1315,6 +1355,7 @@ print(data)`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 { name: "title", type: "string", description: "Job title", required: true },
                 { name: "description", type: "string", description: "Detailed job description", required: true },
                 { name: "category", type: "string", description: "Job category", required: true },
@@ -1327,6 +1368,8 @@ print(data)`;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
               ]}
+<<<<<<< HEAD
+=======
 
 =======
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
@@ -1414,11 +1457,14 @@ print(data)`;
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
               ]}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   body: JSON.stringify({
     title: 'Senior React Developer'
     description: 'We need an experienced React developer...'
     category: 'development'
     skills: ['reacttypescriptnode.js']
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1452,6 +1498,7 @@ print(data)`;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     title: 'Senior React Developer',
     description: 'We need an experienced React developer...',
     category: 'development',
@@ -1479,6 +1526,8 @@ import json
   });
 });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 const data = await response.json ();
 console.log (data), `;
@@ -1504,6 +1553,7 @@ console.log(data),`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     },
     deadline: '2025-06-30T23:59:59Z'
   })
@@ -1512,12 +1562,15 @@ console.log(data),`;
 const data = await response.json(),
 // // // console.log(data),`,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 python: `import requests
 import json
 headers = {
@@ -1527,6 +1580,8 @@ headers = {
 payload = {;
 
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1551,6 +1606,7 @@ data = response && response.json()
 =======
 data = response && response.json()
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 const data = await response.json ();
 console.log (data), `;
@@ -1628,6 +1684,8 @@ payload = {;
         'min': 5000,;
         'max': 10000,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 print(data)`
 =======
@@ -1635,10 +1693,13 @@ print(data)`
         'max': 10000;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         'currency': 'USD';
     }
     'deadline': '2025 - 06 - 30T23:59:59Z';
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1664,6 +1725,7 @@ print(data)`;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 response = requests.post (
     'https: //api.ziontechgroup.com / v1 / jobs';
     headers = headers,
@@ -1671,13 +1733,18 @@ response = requests.post (
 data = response.json ();
 print (data)`;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               }}
               response_examples={{
                 success: `{
   "data": {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1745,6 +1812,7 @@ print (data)`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "deadline": "2025-06-30T23:59:59Z"
       "min": 5000;
       "max": 10000;
@@ -1757,6 +1825,8 @@ print (data)`;
   }
 }`;
               }}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1779,6 +1849,7 @@ print (data)`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <EndpointSection
               method="GET"
               endpoint="/api/talent"
@@ -1822,11 +1893,16 @@ console.log(data),`;
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }),
 
 const data = await response.json(),
 // // // console.log(data),`,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1840,6 +1916,7 @@ headers = {
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     'https: //api.ziontechgroup.com/v1/talent',;
     params={'skills': 'react,typescript'};
@@ -1860,6 +1937,8 @@ response = requests.get(
 data = response.json()
 print(data)`
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1867,6 +1946,7 @@ print(data)`
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             />;
           </TabsContent>;
           <TabsContent value="talent" className="space - y-6">;
@@ -1949,6 +2029,8 @@ response = requests.get (
 data = response.json ();
 print (data)`;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1979,6 +2061,7 @@ print (data)`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }),;
 const data = await response.json(),;
 // // // console.log(data),`,;
@@ -1995,6 +2078,8 @@ response = requests.get(;
 data = response.json();
 print(data)`;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -2004,11 +2089,14 @@ print(data)`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               }}
               response_examples={{
                 success: `{
   "data": [;
     {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2051,6 +2139,7 @@ print(data)`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "id": "talent_abc123",
       "display_name": "Jane Smith",
       "headline": "Senior Frontend Developer",
@@ -2061,11 +2150,16 @@ print(data)`;
     },
     // More talent profiles...
 <<<<<<< HEAD
+  ];
+  ],
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   ];
   ],
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       "rating_count": 15
     }
@@ -2087,6 +2181,8 @@ print(data)`;
 }`;
               }}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
             />;
 
@@ -2107,6 +2203,7 @@ print(data)`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <EndpointSection
               method="GET"
               endpoint="/api/talent/:id"
@@ -2120,6 +2217,8 @@ print(data)`;
 <<<<<<< HEAD
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
+<<<<<<< HEAD
+=======
 
 =======
 =======
@@ -2217,6 +2316,7 @@ console && console.log(data),`
 =======
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
@@ -2249,6 +2349,8 @@ response = requests.get (
 data = response.json ();
 print (data)`;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -2266,6 +2368,7 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }),;
 const data = await response.json(),;
 // // // console.log(data),`,;
@@ -2282,6 +2385,8 @@ response = requests.get(;
 data = response.json();
 print(data)`;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -2290,6 +2395,7 @@ print(data)`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               }}
               response_examples={{
                 success: `{
@@ -2326,6 +2432,8 @@ print(data)`;
       {
         "name": "AWS Certified Developer"
         "issuing_organization": "Amazon Web Services"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2371,6 +2479,7 @@ print(data)`;
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         "issue_date": "2024-01-15"
 =======
 =======
@@ -4509,16 +4618,21 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
     "code": "invalid_request";
     "message": "The request was invalid";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     "details": [;
       {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     ];
   }
 }`}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -4569,10 +4683,20 @@ function EndpointSection({
   endpoint
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   description;
   note;
   params = [];
   codeExamples;
+<<<<<<< HEAD
+  description;
+  note;
+  params = [];
+  codeExamples;
+  responseExamples;
+}) {;
+  const [activeTab, setActiveTab] = useState("curl");
+=======
 <<<<<<< HEAD
   responseExamples
 }) {
@@ -4591,6 +4715,7 @@ function EndpointSection({
   const [activeTab, setActiveTab] = useState("curl"),
   
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -4608,6 +4733,9 @@ function EndpointSection({
                 : method === 'PUT'
                 ? "border-yellow-500 text-yellow-400 font-mono"
                 : "border-red-500 text-red-400 font-mono"
+<<<<<<< HEAD
+            }>;
+=======
 <<<<<<< HEAD
 
                 language="json";
@@ -4954,6 +5082,7 @@ function EndpointSection({;
           >
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {method}
           </Badge>;
           <span className="ml-2 font-mono text-sm text-white">{endpoint}</span>;
@@ -5075,6 +5204,8 @@ function EndpointSection() {
             </thead>;
             <tbody>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               {params.map ((param, index) => (
                 <tr key={index} className={index < params.length - 1 ? "border - b border - zinc - 800" : ""}>;
                   <td className="py - 2 font - mono text - sm">;
@@ -5111,6 +5242,7 @@ function EndpointSection() {
                 </tr>;
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               ))}
 =======
               ))}
@@ -5151,6 +5283,8 @@ function EndpointSection() {
           </table>;
         </div>;
       )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -5212,12 +5346,15 @@ function EndpointSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {codeExamples && (
         <div className="border-t border-zinc-800 p-4">
           <div className="flex items-center mb-2">
             <h4 className="font-medium">Request Example</h4>
             <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">
               {Object.keys(codeExamples).map((lang) => (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -5227,11 +5364,14 @@ function EndpointSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {codeExamples && (;
         <div className="border-t border-zinc-800 p-4">;
           <div className="flex items-center mb-2">;
             <h4 className="font-medium">Request Example</h4>;
             <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               {Object && Object.keys(codeExamples).map((lang) => (;
@@ -5258,6 +5398,7 @@ function EndpointSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <button
                   key={lang}
                   className={`px-3 py-1 text-xs font-medium ${
@@ -5411,6 +5552,8 @@ function EndpointSection() {
   );
 }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -5589,3 +5732,4 @@ data=json.dumps (payload) ) data = response.json () print (data) `
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

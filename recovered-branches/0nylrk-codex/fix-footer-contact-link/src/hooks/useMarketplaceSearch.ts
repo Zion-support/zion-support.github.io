@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -11,6 +13,7 @@ export function useMarketplaceSearch() {
   const [searchQuery, setSearchQuery] = useState("");
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useMemo } from "react",
 import { ProductListing } from "@/types/listings",
 import { SearchSuggestion, FilterOptions } from "@/types/search";
@@ -33,6 +36,8 @@ export function useMarketplaceSearch() {
     () => generateFilterOptions();
     [];
   );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { SearchSuggestion, FilterOptions } from "@/types/search",
 import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
@@ -60,10 +65,13 @@ export function useMarketplaceSearch() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Filter listings based on current search query and filters
   const filteredListings = useMemo(() => {
     return MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {
       // Search query filter
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -80,6 +88,7 @@ export function useMarketplaceSearch() {
         listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Product type filter
       const matchesProductType = selectedProductTypes.length === 0 |
         selectedProductTypes.includes(listing.category);
@@ -87,6 +96,8 @@ export function useMarketplaceSearch() {
       const matchesLocation = selectedLocations.length === 0 |
         (listing.location && selectedLocations.includes(listing.location));
       // Availability filter
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       const matchesAvailability = selectedAvailability.length === 0 |
         (listing.availability && selectedAvailability.includes(listing.availability));
@@ -115,6 +126,7 @@ export function useMarketplaceSearch() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Rating filter
       const matchesRating = selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
@@ -123,10 +135,13 @@ export function useMarketplaceSearch() {
         matchesLocation &&
         matchesAvailability &&
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       const matchesSearch = !searchQuery || 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       const matchesSearch = !searchQuery || 
 const matchesSearch = !searchQuery || 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -153,6 +168,8 @@ const matchesSearch = !searchQuery ||
         matchesRating
     })
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
@@ -169,11 +186,14 @@ const matchesSearch = !searchQuery ||
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
       case 'productTypes':
         setSelectedProductTypes((prev: string[]) =>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           prev && prev.includes(value) ? prev && prev.filter(t => t !== value) : [...prev, value]
@@ -193,6 +213,7 @@ const matchesSearch = !searchQuery ||
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useMemo } from './react';
 import { ProductListing } from '@/types / listings';
 import { SearchSuggestion, FilterOptions } from '@/types / search';
@@ -276,6 +297,8 @@ function useMarketplaceSearch() {
     }
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -296,6 +319,7 @@ function useMarketplaceSearch() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return {
     search_query;
     setSearchQuery;
@@ -308,6 +332,8 @@ function useMarketplaceSearch() {
     filtered_listings;
     handleFilterChange;
     clearAllFilters;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -395,6 +421,7 @@ function useMarketplaceSearch() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -487,9 +514,12 @@ export function useMarketplaceSearch() {;
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

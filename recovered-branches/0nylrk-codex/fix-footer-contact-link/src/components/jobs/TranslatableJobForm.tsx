@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -7,6 +9,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface TranslatableJobFormProps {
 
   onSubmit: (formData: any) => void
@@ -39,6 +42,8 @@ import {useTranslationService} from "@/hooks/useTranslationService";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {toast} from "@/components/ui/use-toast";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -47,6 +52,7 @@ import {toast} from "@/components/ui/use-toast";
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -151,9 +157,12 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       }
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -378,6 +387,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       const { translations, error } = await translateContent(content, 'job', sourceLanguage),
       
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -388,12 +399,15 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (error) {
         toast({
           title: t('translation.translation_failed')
           description: error
           variant: "destructive"})
         return
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -425,6 +439,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
       if (field === 'title') {
         setTitle(translations)
@@ -434,6 +449,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         setRequirements(translations)
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -449,10 +466,14 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: t('translation.translation_success')
         description: t('translation.content_translated')})
     } catch (error) {
+<<<<<<< HEAD
+      console.error(`Error translating ${field}:`, error),
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       console.error(`Error translating ${field}:`, error);
@@ -462,10 +483,13 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 =======
       console.error(`Error translating ${field}:`, error),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: t('translation.translation_failed')
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -473,6 +497,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   // Ensure all translations are available
@@ -480,6 +505,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     const promises = [];
     if (!title.en && !title.es && !title.pt && !title.ar) return;
     if (!description.en && !description.es && !description.pt && !description.ar) return;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     // Title translations
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {
@@ -513,6 +540,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
@@ -538,6 +566,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   };
   },
 <<<<<<< HEAD
+  
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -551,6 +582,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 =======
   
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -566,12 +598,15 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               {t('jobs.job_title')}
             </label>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     if (!content) {;
       toast({;
@@ -819,6 +854,10 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
           <div className="flex justify-between items-center">;
             <label htmlFor="title" className="text-lg font-medium">;
 <<<<<<< HEAD
+      }
+    }
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
               {t('jobs && jobs.job_title')}
             </label>;
@@ -829,11 +868,14 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
       }
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Button
               type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('title')}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1057,12 +1099,15 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
               {t('jobs.skills_required')}
             </label>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Button
               type="button"
               size="sm"
               variant="outline"
 <<<<<<< HEAD
               onClick={() => autoTranslate('description')}
+<<<<<<< HEAD
+=======
 
               disabled={isTranslating || (!description && description.en && !description && description.es && !description && description.pt && !description && description.ar)}
 =======
@@ -1152,6 +1197,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Button
               type="button"
               size="sm"
@@ -1250,6 +1296,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
               id="deadline"
               type="date"
               value={deadline}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1659,14 +1707,18 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>;
       </div>;
     </form>;
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="pt - 4">;
         <Button;
           type="submit";
@@ -1735,6 +1787,8 @@ onSubmit ({
 }return;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 
 }
@@ -1767,3 +1821,4 @@ if (!description.en && !description.es && !description.pt && !description.ar) re
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

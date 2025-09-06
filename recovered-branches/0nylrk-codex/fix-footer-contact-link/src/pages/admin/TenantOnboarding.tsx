@@ -62,6 +62,38 @@ export default function TenantOnboarding() {;
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
 <<<<<<< HEAD
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { toast } from "sonner",
+import { supabase } from "@/integrations/supabase/client";
+import { Switch } from "@/components/ui/switch";
+export default function TenantOnboarding() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("company");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+
+    brand_name: ""
+    subdomain: ""
+    logo_url: ""
+    primary_color: "#9b87f5"
+    theme_preset: "light"
+    company_size: ""
+    industry: ""
+    custom_domain: ""
+    is_co_branded: true
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [formData, setFormData] = useState({;
     brand_name: "",;
@@ -73,10 +105,13 @@ export default function TenantOnboarding() {;
     industry: "",;
     custom_domain: "",;
     is_co_branded: true;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   });
 
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";
+<<<<<<< HEAD
+=======
 
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" />;
@@ -274,11 +309,14 @@ export default function TenantOnboarding() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }),
   
   // Check if user has admin role
   const isAdmin = user?.role === "admin",
   
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -286,10 +324,13 @@ export default function TenantOnboarding() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
@@ -334,11 +375,14 @@ export default function TenantOnboarding() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Create landing page copy
       const landingPageCopy = {
         headline: "AI Hiring Assistant"
         subtitle: `Find the best talent for your ${formData.industry |"company"}`
         cta: "Get Started"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -355,6 +399,7 @@ export default function TenantOnboarding() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -372,6 +417,8 @@ export default function TenantOnboarding() {
           email_template_override: null
         })
         .select('id, brand_name, subdomain')
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -396,6 +443,7 @@ export default function TenantOnboarding() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Reset form
       setFormData({
         brand_name: ""
@@ -409,6 +457,8 @@ export default function TenantOnboarding() {
         is_co_branded: true
       })
     } catch (error: any) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -429,10 +479,13 @@ export default function TenantOnboarding() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       })
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   },
@@ -683,6 +736,7 @@ if (throw error) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
 
@@ -694,6 +748,11 @@ if (throw error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+                        placeholder="hire && hire.yourcompany.com"
+
+
+=======
                       />;
                     </div>;
 
@@ -1297,6 +1356,7 @@ if (throw error) {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -1534,6 +1594,8 @@ export default function TenantOnboarding() {;
                         value={formData && formData.logo_url}
                         onChange={handleInputChange}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                         placeholder="https://example.com/logo.png";
 <<<<<<< HEAD
 
@@ -1675,11 +1737,14 @@ export default function TenantOnboarding() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         If you want to use your own domain, enter it here. You'll need to configure DNS records.;
                       </p>;
                     </div>;
                   </TabsContent>;
                 </Tabs>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1701,6 +1766,7 @@ export default function TenantOnboarding() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   </Button>;
                 </div>;
               </form>;
@@ -1713,6 +1779,8 @@ export default function TenantOnboarding() {;
 
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1783,8 +1851,12 @@ Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label 
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
     </>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

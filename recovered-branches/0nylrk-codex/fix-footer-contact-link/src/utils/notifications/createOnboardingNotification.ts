@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
 
@@ -16,10 +19,13 @@ import {OnboardingNotificationParams} from './types';
  */
 export async function createOnboardingNotification({
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import { createNotification  } from './createNotification';
 import { OnboardingNotificationParams } from './types';
@@ -30,14 +36,19 @@ import {OnboardingNotificationParams} from './types';
  */
 export async function createOnboardingNotification({;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   userId;
   missingMilestone;
   userRole
 }: OnboardingNotificationParams) {
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   try {
@@ -46,6 +57,7 @@ export async function createOnboardingNotification({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   let title = '';
   let message = '';
   let actionUrl = '';
@@ -53,6 +65,8 @@ export async function createOnboardingNotification({;
   if (userRole === 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -79,6 +93,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         title = 'Complete your profile';
         message = 'Complete your profile to get discovered by clients';
         action_url = '/profile';
@@ -119,6 +134,8 @@ if ( {) {
         break;
     }
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -204,6 +221,7 @@ import { OnboardingNotificationParams } from './types',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
 /**;
@@ -309,6 +327,11 @@ export async function createOnboardingNotification({;
     actionText;
   });
 <<<<<<< HEAD
+}
+;
+}
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -357,3 +380,4 @@ case 'talent invited':
 ;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

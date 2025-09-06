@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {Link} from 'react-router-dom';
@@ -25,6 +27,7 @@ import React from 'react';
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Link  } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
@@ -32,8 +35,11 @@ import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
 import {NavLink} from "react-router-dom";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Link} from 'react-router-dom';
 import { cn } from '@/lib / utils';
 import { NavLink } from './react-router-dom';
@@ -43,16 +49,22 @@ import { NavLink } from './react-router-dom';
 import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
 import {NavLink} from "react-router-dom";
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { cn } from "@/lib/utils",
 import { NavLink } from "react-router-dom",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface MainNavigationProps {
   className?: string
 }
@@ -69,6 +81,8 @@ interface MainNavigationProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
@@ -84,6 +98,7 @@ export function MainNavigation(): any ({ className }: MainNavigationProps) {;
         to="/"
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         className={({ isActive }) =>;
           cn(;
             "text-sm font-medium transition-colors hover: text-primary",;
@@ -91,6 +106,8 @@ export function MainNavigation(): any ({ className }: MainNavigationProps) {;
           );
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -240,6 +257,7 @@ export function MainNavigation({ className } MainNavigationProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             "text-sm font-medium transition-colors hover:text-primary",
 
 =======
@@ -285,6 +303,8 @@ export function MainNavigation({ className } MainNavigationProps) {;
         className={({ isActive }) =>
           cn(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             "text-sm font-medium transition-colors hover:text-primary",
@@ -297,6 +317,7 @@ export function MainNavigation({ className } MainNavigationProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
@@ -306,6 +327,8 @@ export function MainNavigation({ className } MainNavigationProps) {;
       <NavLink
         to="/signup"
         className={({ isActive }) =>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -318,6 +341,7 @@ export function MainNavigation({ className } MainNavigationProps) {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           cn(;
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground",
@@ -388,6 +412,8 @@ function MainNavigation() {
     </nav>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 
   ),;}
@@ -413,3 +439,4 @@ isActive ? " text-zion-cyan": " text-muted-foreground";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

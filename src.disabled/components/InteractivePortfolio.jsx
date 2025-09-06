@@ -41,6 +41,9 @@ export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,Chev
 module && module.exports = function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { id: "1",title: "AI-Powered E-commerce Platform",description: "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.",category: "AI & ML",technologies["React",Node && Node.js",TensorFlow",MongoDB",AWS"],; image: "https:""
 export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { "id": "1","title": "AI-Powered E-commerce Platform","description": "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.","category": "AI & ML",technologies["_React",Node && Node.js",TensorFlow",MongoDB",AWS"],; "image": "https:
 <<<<<<< HEAD
+export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { "id": "1","title": "AI-Powered E-commerce Platform","description": "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.","category": "AI & ML",technologies["_React",Node && Node.js",TensorFlow",MongoDB",AWS"],; "image": "https:
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -62,3 +65,4 @@ export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,Chev
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

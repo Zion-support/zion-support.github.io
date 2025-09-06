@@ -2,6 +2,13 @@
 describe('Simple Test', () => {
   it('should pass', () => {
     expect(1 + 1).toBe(2);
+  });
+});
+=======
+<<<<<<< HEAD
+describe('Simple Test', () => {
+  it('should pass', () => {
+    expect(1 + 1).toBe(2);
 =======
 import React from 'react';
 
@@ -20,3 +27,4 @@ describe ('Simple Test', () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   });
 });
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

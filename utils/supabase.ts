@@ -6,7 +6,12 @@ export const supabase = {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
@@ -16,12 +21,19 @@ export const supabase = {
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 // Mock Supabase client for development
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return {
     from: (table: string) => ({
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
       select: (columns: string = "*") => ({
         eq: (column: string, value: any) => ({
           single: () => Promise.resolve({ data: null, error: null }),
@@ -65,6 +77,8 @@ const supabaseConfig: SupabaseConfig = {
 };
 
 export const supabase = createSupabaseClient(supabaseConfig);
+<<<<<<< HEAD
+=======
 =======
       select: (columns: string = '*') => ({
         eq: (column: string, value: any) => ({
@@ -106,6 +120,7 @@ export const supabase = createSupabaseClient(supabaseConfig);
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -129,6 +144,11 @@ export const supabase = createSupabaseClient(supabaseConfig);
 };
 }
 =======
+<<<<<<< HEAD
+  });
+};
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -138,3 +158,5 @@ export const supabase = createSupabaseClient(supabaseConfig);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

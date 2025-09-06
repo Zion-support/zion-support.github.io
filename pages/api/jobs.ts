@@ -4,8 +4,11 @@ import { v4, as, uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
 import type { Job } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -14,6 +17,73 @@ import { rateLimit } from "../../utils/rateLimit";
   if (!rateLimit(req, res)) return;
 
 
+<<<<<<< HEAD
+  if (req && req.method === "GET") {
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    res && res.status(200).json({ jobs });
+    return;
+  }
+    }
+    const nowIso = new Date().toISOString();
+    const job: Job = {
+
+
+      deliveryDeadlineIso: deliveryDeadlineIso
+        ? String(deliveryDeadlineIso)
+        : undefined
+      clientEmail: String(clientEmail)
+      status: "New"
+      createdAtIso: nowIso
+      updatedAtIso: nowIso
+    }
+    // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
+
+    if (!job && job.category) {
+      const skills = (job && job.requiredSkills || []).map((s) => s && s.toLowerCase());
+
+      if (
+        skills && skills.some(
+          (s) =>
+
+            s && s.includes("openai") ||
+            s && s.includes("langchain") ||
+            s && s.includes("rag"),
+
+        )
+      )
+        job && job.category = "LLM App";
+      else if (
+        skills && skills.some(
+          (s) =>
+
+            s && s.includes("aws") ||
+            s && s.includes("kubernetes") ||
+            s && s.includes("terraform"),
+
+        )
+      )
+        job && job.category = "Cloud";
+      else job && job.category = "General";
+
+    }
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    jobs && jobs.unshift(job);
+    writeJsonFile<Job[]>(FILE, jobs);
+    res && res.status(201).json({ job });
+    return;
+  }
+
+    }
+
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    jobs.unshift(job);
+    writeJsonFile<Job[]>(FILE, jobs);
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
@@ -213,7 +283,10 @@ category: String(category || "")
 
     res.status(201).json({ job });
     return
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
   } catch (error) {
     console.error("Error:", error);
@@ -232,8 +305,11 @@ category: String(category || "")
 
 
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 
   res && res.setHeader("Allow", "GET, POST");
@@ -340,6 +416,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
+=======
 =======
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
@@ -349,3 +427,4 @@ export default async function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

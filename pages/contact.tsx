@@ -144,7 +144,10 @@ import Link from 'next/link';
 
 import React from "react";
 import Layout from "../components/Layout";
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function Contact() {
   return (
     <>
@@ -637,6 +640,9 @@ const ContactPage: React.FC = () => {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

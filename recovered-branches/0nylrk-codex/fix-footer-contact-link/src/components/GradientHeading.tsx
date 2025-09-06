@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 interface GradientHeadingProps {;
   children: React && React.ReactNode,;
@@ -26,6 +28,7 @@ export function GradientHeading(): any ({ children, className, level = "h2" }: G
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { cn } from "@/lib/utils";
 import React from "react";
 interface GradientHeadingProps {
@@ -35,16 +38,21 @@ interface GradientHeadingProps {
 =======
   children: React.ReactNode
   className?: string;
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   className?: string;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { cn } from "@/lib/utils",
 import React from "react",
 import {cn} from "@/lib/utils";
 import React from "react";
 import { cn } from "@/lib/utils",
 import React from "react",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -67,12 +75,16 @@ interface GradientHeadingProps {
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   className?: string;
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
         className
       )}>;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface GradientHeadingProps {
   children: React.ReactNode,
   className?: string,
@@ -159,6 +171,8 @@ function GradientHeading() {
     </Tag>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -203,3 +217,4 @@ return (<Tag className= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

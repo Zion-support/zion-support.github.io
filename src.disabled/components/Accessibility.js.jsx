@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+import React from\';react\' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(\' \'useAccessibility must be used within an AccessibilityProvider\' ) } return context }\'';\';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const React from";react" const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" ) } return context }"";";''"
@@ -32,5 +35,6 @@ import React from\';react\' const AccessibilityContext = createContext(null) exp
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const React from";react" const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" ) } return context }"";";''"
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

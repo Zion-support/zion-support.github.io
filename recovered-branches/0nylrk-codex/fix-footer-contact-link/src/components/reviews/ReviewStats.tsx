@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Star } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
@@ -13,9 +16,12 @@ interface ReviewStatsProps {
 
   ratingDistribution?: Record<number, number>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 import {Star} from "lucide-react";
@@ -23,12 +29,15 @@ import {Progress} from "@/components/ui/progress";
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Star} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
 import { Star } from "lucide-react",
@@ -42,6 +51,8 @@ interface ReviewStatsProps {
   ratingDistribution?: Record<number number>
 }
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -59,10 +70,13 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Calculate percentages for distribution if available
   const getPercentage = (count: number) => {
     if (totalReviews === 0) return 0
     return (count / totalReviews) * 100
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -116,6 +130,7 @@ export function ReviewStats(): any ({ averageRating, totalReviews, ratingDistrib
     return (count / totalReviews) * 100;
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
 =======
@@ -317,6 +332,8 @@ if (return 0, ) {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 ;
@@ -377,3 +394,4 @@ return (<div className="bg-card border rounded-lg p-4" > <div className="flex it
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

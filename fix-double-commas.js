@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Fix double commas in import statements
 
     // Fix double commas in import statements;
     const doubleCommaRegex = /,\s*,/g;
     const fixedContent = content.replace(doubleCommaRegex, ",");
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     const fixedContent = content && content.replace(doubleCommaRegex, ",");
 
@@ -39,6 +45,8 @@ if ( {) {
   } catch (error) {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     const items = fs && fs.readdirSync(currentDir);
     for (const item of items) {
@@ -61,6 +69,7 @@ if ( {) {
             "temp_exclude",
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           ].includes(item)
         ) {
           continue;
@@ -116,12 +125,15 @@ if (
   }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 console && console.log(`Found ${files && files.length} files to check for double commas...`);
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 for (const file of files) {
   if (fixDoubleCommas(file)) {
     fixedCount++;
@@ -130,12 +142,15 @@ for (const file of files) {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 console && console.log(`\nFixed double commas in ${fixedCount} files.`);
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   traverse (dir);
   return files;
 }

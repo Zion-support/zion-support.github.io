@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface Application {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Application {;
@@ -16,7 +19,10 @@ export interface Application {;
   createdAt: string;
   updatedAt?: string;
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 export interface Application {;
@@ -31,6 +37,9 @@ export interface Application {;
 }
 export type UserRole = 'admin' | 'user' | 'guest';
 
+<<<<<<< HEAD
+export type UserRole = "admin" | "user" | "guest";
+=======
 <<<<<<< HEAD
 export type UserRole = "admin" | "user" | "guest";
 =======
@@ -65,6 +74,12 @@ export type UserRole = 'admin' | 'user' | 'guest';
 }
 export type UserRole = 'admin' | 'user' | 'guest';
 
+<<<<<<< HEAD
+
+
+export interface Application {
+  id: string;
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -84,3 +99,5 @@ export type UserRole = 'admin' | 'user' | 'guest';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

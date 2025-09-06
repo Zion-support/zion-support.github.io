@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';
 ;
@@ -31,6 +33,7 @@ function handler() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -67,9 +70,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+<<<<<<< HEAD
+    instanceId: state.config.instanceId,
+    lastSyncedAt: state.lastSyncedAt,
+    events,
+=======
     instanceId: state.config.instanceId
     lastSyncedAt: state.lastSyncedAt
     events
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     scope: requestedScope})
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
@@ -129,4 +138,7 @@ function handler() {
     lastSyncedAt: state.lastSyncedAt
     events
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

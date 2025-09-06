@@ -8,6 +8,10 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   // Define the progress value based on status
 
   const getProgressValue = () => {
+<<<<<<< HEAD
+
+
+=======
 import { ApplicationStatus  } from '@/types / jobs';
 import { Progress  } from '@/components / ui / progress';
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn  } from '@/lib / utils';
@@ -42,6 +46,7 @@ function ApplicationProgress() {
       
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -69,6 +74,8 @@ function ApplicationProgress() {
 }
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
+<<<<<<< HEAD
+=======
 
 
   const statusRank: Record<ApplicationStatus number> = {
@@ -80,12 +87,16 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     rejected: 5},
 
   const currentRank = statusRank[current],
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
 
+<<<<<<< HEAD
+=======
   const currentRank = statusRank[current],
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const statusRank_ = statusRank[status],
 
   if (currentRank < statusRank_) {
@@ -95,12 +106,21 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     // This is the current step
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
+<<<<<<< HEAD
+import { ApplicationStatus } from "@/types/jobs",;
+import { Progress } from "@/components/ui/progress",;
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
+import { cn } from "@/lib/utils",;
+=======
 
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ApplicationProgressProps {;
   status: ApplicationStatus,;
   className?: string;
 }
+<<<<<<< HEAD
+=======
 ;
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {;
   // Define the progress value based on status;
@@ -230,3 +250,4 @@ if ( {) {
 
     // This step is upcoming
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

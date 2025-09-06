@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> main
 import { getServerSupabase } from '../../../../utils/supabase/server',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = (req.query.code as string)?.toLowerCase()
@@ -17,19 +21,43 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .from('referral_events')
       .select('ip_address, created_at')
       .eq('partner_code', code)
+<<<<<<< HEAD
+    }
+=======
+<<<<<<< HEAD
+      .gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()),
+    if (error) return res.status(500).json({ error: error.message }),
+
+
+    const flags: any[] = [],
+=======
       .gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString())
     if (error) return res.status(500).json({ error: error.message })
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const flags: any[] = []
+>>>>>>> main
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
         flags.push({ type: 'suspicious_ip', severity: 'medium', ip, count, note: 'High number of events from a single IP in 7 days' })
       }
     })
 
+<<<<<<< HEAD
+    return res.status(500).json({ error: e?.message })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+
+  }
+}
+=======
     return res.status(200).json({ flags })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
   }
 };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

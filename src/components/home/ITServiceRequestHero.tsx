@@ -280,6 +280,8 @@ if ( {) {
                 {t(
                   'onsite_form.email_helper'
                   "We'll confirm your request here."
+<<<<<<< HEAD
+=======
                 onChange={e => setEmail(e && e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required;
               />;
@@ -287,6 +289,7 @@ if ( {) {
                 {t(;
                   'onsite_form && onsite_form.email_helper',;
                   "We'll confirm your request here.";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 )}
               </p>;
               <Input
@@ -505,9 +508,12 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 
 }
 }
+<<<<<<< HEAD
+=======
 
 ;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",;
 import Image from "next/image",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -692,6 +698,8 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }Request Service </Button> </form> </div> ;
 }'";
 }
+<<<<<<< HEAD
+=======
 }
 
 
@@ -729,3 +737,4 @@ py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient 
 }
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

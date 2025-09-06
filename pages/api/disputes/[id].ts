@@ -1,6 +1,9 @@
+<<<<<<< HEAD
+=======
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
@@ -44,10 +47,13 @@ export default async function handler(
     const dispute = await getDisputeById(id);
     if (!dispute) return res.status(404).json({ error: "Dispute not found" });
     try {
+<<<<<<< HEAD
+=======
 =======
   res.setHeader("Allow", "GET");
   return res.status(405).end("Method Not Allowed");
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 
@@ -179,4 +185,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

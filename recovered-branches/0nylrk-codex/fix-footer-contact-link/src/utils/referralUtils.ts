@@ -26,6 +26,8 @@ export function formatDate(date: Date | string | undefined): string {
 
   if (!date) return '-'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -47,6 +49,7 @@ if (return '-', ) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   try {
     // Check condition
 if ( {) {
@@ -145,11 +148,16 @@ export function checkUrlForReferralCode (): string | null {
   // Check condition
 if (return null) {
   $2
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
   const url = new URL (window.location.href);
   const ref_code = url.search_params.get ('ref');
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 /**;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -170,6 +178,7 @@ export function checkUrlForReferralCode(): string | null {;
 
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Check condition
 if ( {) {
   $2
@@ -179,6 +188,11 @@ if ( {) {
     url.search_params.delete ('ref');
     window.history.replace_state ({}, document.title, url.to_string ());
     return ref_code;
+<<<<<<< HEAD
+  }
+  return local_storage.get_item ('referral_code');
+}
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   return local_storage.get_item ('referral_code');
@@ -207,6 +221,7 @@ function track_referral() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**;
 * Track referral when a user signs up;
 */;
@@ -215,6 +230,8 @@ export async /**
  */
 function track_referral() {
   try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     const refCode = localStorage && localStorage.getItem('referral_code');
     if (!refCode) return,
@@ -242,10 +259,13 @@ export async function trackReferral(userId: string, email: string) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Call API to record the referral
     const response = await fetch('/api/track-referral', {
       method: 'POST'
       headers: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -260,11 +280,14 @@ export async function trackReferral(userId: string, email: string) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         refCode;
         userId;
         email
         ipAddress: '', // This will be captured by the server
       })});
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -286,6 +309,7 @@ export async function trackReferral(userId: string, email: string) {
       localStorage.removeItem('referral_code')
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 /**;
  * Track referral when a user signs up;
@@ -339,6 +363,8 @@ if ( {) {
   } catch (error) {
     console.error ('Error tracking referral:', error);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
@@ -363,6 +389,7 @@ export function formatDate(date:Date | string | undefined):string {;
     return '-',;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 ;

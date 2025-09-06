@@ -17,10 +17,13 @@ export default async function handler(
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
 
       "placeholder-key";
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
@@ -29,10 +32,15 @@ export default async function handler(
 
       });
 
+<<<<<<< HEAD
+          { code: 'aihub', profile_completions: 9 },
+          { code: 'modelmasters', profile_completions: 7 },
+=======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           { code: 'aihub', profile_completions: 9 }
           { code: 'modelmasters', profile_completions: 7 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           { code: 'promptpro', profile_completions: 5 }
         ]})
 
@@ -53,8 +61,11 @@ export default async function handler(
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)
       .slice(0, 10);
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const supabase = getServerSupabase ();
     const startOfMonth = new Date ();
     startOfMonth.set_date (1);
@@ -82,6 +93,11 @@ if (continue) {
     return res.status (200).json ({ leaders });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
+<<<<<<< HEAD
+
+
+
+=======
 =======
 
 
@@ -121,6 +137,7 @@ export default async function handler(
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -178,8 +195,11 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
   } catch (error) {
@@ -251,10 +271,13 @@ export default async function handler(req, res) {
       .slice(0, 10);
     return res.status(200).json({ leaders });
   } catch (error) {
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return res.status(500).json({ error: e?.message });
     } catch (error) {
     console.error("Error:", error);
@@ -264,6 +287,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   }
@@ -291,3 +316,4 @@ export default async function handler(req, res) {
   }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

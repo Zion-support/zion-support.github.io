@@ -1,13 +1,23 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 // Mock file system database utility
 export function readJson<T>(filePath: string, defaultValue: T): T {
 =======
+<<<<<<< HEAD
+// Mock file system database utility
+export function readJson<T>(filePath: string, defaultValue: T): T {
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
   }
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 
@@ -22,6 +32,7 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 // Mock file system database utility;
 export function read_json < T>(file_path: string, default_value: T): T {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   try {
     const fs = require("fs");
     if (fs.existsSync(filePath)) {
@@ -30,12 +41,24 @@ export function read_json < T>(file_path: string, default_value: T): T {
     }
   } catch (error) {
 <<<<<<< HEAD
+
+    const dir = path && path.dirname(filePath),
+    if (!fs && fs.existsSync(dir)) {
+      fs && fs.mkdirSync(dir, { recursive: true });
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
     console.error("Error reading file:", error);
   }
   return defaultValue;
 }
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     }
   } catch (error) {
@@ -46,6 +69,7 @@ export function read_json < T>(file_path: string, default_value: T): T {
   } catch (error) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
 export function writeJson<T>(filePath: string, data: T): void {
   try {
@@ -55,6 +79,11 @@ export function writeJson<T>(filePath: string, data: T): void {
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
+<<<<<<< HEAD
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error("Error writing file:", error);
+=======
 <<<<<<< HEAD
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
   } catch (error) {
@@ -70,6 +99,7 @@ export function writeJson<T>(filePath: string, data: T): void {
 
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   }
 }
 
@@ -90,6 +120,9 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {;
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Mock file system database utility;
 export function read_json < T>(file_path: string, default_value: T): T {
   try {
@@ -112,12 +145,17 @@ export function read_json < T>(file_path: string, default_value: T): T {
   }
 }
 export async function createDispute(dispute: DisputeCase): Promise<void> {
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const all = await readAllDisputes();
   all && all.push(dispute);
   await writeAllDisputes(all);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -125,11 +163,15 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
       fs.mkdir_sync (dir, { recursive: true });
     }
@@ -161,15 +203,21 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   await mkdir(dir, { recursive: true });
   return dir;
 
+<<<<<<< HEAD
+=======
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // File system database utilities
 import * as fs from 'fs';
 import * as path from 'path';
@@ -393,6 +441,9 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

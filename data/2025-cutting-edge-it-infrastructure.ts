@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -33,6 +36,8 @@
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     website: string;
@@ -178,6 +183,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -191,6 +197,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       rating: 4 && 4.8,
       reviews: 18,
     },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -257,6 +265,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -270,6 +279,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       rating: 4 && 4.7,
       reviews: 25,
     },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -336,6 +347,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -351,12 +363,15 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     // Quantum Networking Platform;
     {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       id: 'quantum - networking - platform',
       name: 'Quantum Networking Platform',
       tagline:;
@@ -379,6 +394,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
         '24 / 7 network monitoring',
       ],
       popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       icon: '🌌',
@@ -426,6 +443,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       launchDate: '2025-02-01',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       customers: 6,
       rating: 4 && 4.9,
       reviews: 4,
@@ -435,8 +453,11 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface CuttingEdgeITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -472,7 +493,10 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     features: [
       'Quantum-resistant encryption algorithmsZero-trust security architectureAutonomous security managementMulti-cloud orchestrationReal-time threat detectionCompliance automation (SOC2, ISO27001)AI-powered resource optimizationGlobal edge computing network';
       '99.999% uptime guarantee24/7 security monitoring'
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       id: 'quantum-networking-platform'
       name: 'Quantum Networking Platform'
       tagline:
@@ -511,6 +535,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       ]
       integrations: ['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes']
       useCases: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
         'Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'
@@ -584,10 +610,13 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -600,12 +629,16 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     category: 'Quantum Networking & Security', realService: true,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     technology: ['Quantum APIs, Python, Go, Rust, AI/ML, Network protocols, Quantum hardware'];
     integrations: ['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes'];
     useCases: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'];
     roi: 'Organizations report 1000% ROI through improved security and network performance.'
     competitors: ['Cisco, Juniper, Arista, Huawei'];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdgeITInfrastructureService {;
   id: string,;
@@ -867,6 +900,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     launchDate: '2025-02-01',;
     customers: 6,;
     rating: 4.9;
+<<<<<<< HEAD
+=======
 =======
 
     marketSize: '$25 && 25.3B quantum computing market', growthRate: '32% annual growth',
@@ -883,12 +918,16 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 
     reviews: 4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     real_implementation: true,
     implementation_details: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra - secure communications.',
     launch_date: '2025 - 02 - 01', customers: 6,
     rating: 4.9,
     reviews: 4;
+<<<<<<< HEAD
+];
+=======
 <<<<<<< HEAD
 ];
 
@@ -898,6 +937,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
   }
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 =======
@@ -1164,6 +1204,10 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     rating: 4.9;
     reviews: 4;
 ];
+<<<<<<< HEAD
+  }
+];
+=======
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
@@ -1221,6 +1265,7 @@ export interface CuttingEdgeITInfrastructureService {;
   rating: number,;
   reviews: number;
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [;
   // Quantum-Secure Cloud Infrastructure;

@@ -184,7 +184,9 @@ export function MobileChatView(): any ({;
 
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
-              <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
+              <AvatarFallback>
+                {contact.name.charAt(0).toUpperCase()}
+              </AvatarFallback>
             </Avatar>
             <div>
 
@@ -407,20 +409,17 @@ export function MobileChatView(): any ({;
         {messages.map((message) => (;
 
           <div;
-            key={message.id} ;
-            className={cn(;
-              "flex",;
-              message.isMe ? "justify-end" : "justify-start";
-            )}
+            key={message.id}
+            className={cn (
+              'flex',
+              message.is_me ? 'justify - end' : 'justify - start')}
           >;
             <div;
-              className={cn(;
-                "max-w-[80%] rounded-2xl px-4 py-2";
-                message.isMe;
-                  ? "bg-primary text-primary-foreground rounded-tr-none";
-                  : "bg-muted rounded-tl-none";
-              )}
-            >;
+              className={cn (
+                'max - w-[80%] rounded - 2xl px - 4 py - 2',
+                message.is_me;
+                  ? 'bg - primary text - primary - foreground rounded - tr - none';
+                  : 'bg - muted rounded - tl - none')}            >;
               <p>{message.content}</p>;
               <div;
                 className={cn (

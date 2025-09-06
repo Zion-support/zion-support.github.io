@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +13,7 @@
 
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env nodeursor/migrate-github-actions-to-pm2-and-clean-up-5599
  #!/usr/bin/env node  #!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync } from';child_process'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; import { globSync } from';glob'';; const import.meta.url = dirname(__filename); class: LintErrorFixer { constructor() { this.logFile = path.join(import.meta.url; 'logs','';lint-error-fixer.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: fixUnusedImports(filePath) { try { const content = fs.readFileSync(filePath; ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 #!/usr/bin/env nodeursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -128,6 +131,8 @@ const import.meta.url = dirname(__filename);
 ;
 #!/usr/bin/env nodeursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -167,3 +172,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

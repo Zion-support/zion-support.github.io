@@ -87,6 +87,8 @@ const icon_map = {
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
@@ -112,6 +114,7 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
@@ -135,6 +138,8 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
             </Tooltip>
           </TooltipProvider>
         )
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -249,10 +254,13 @@ export const UserBadges = ({ badges } UserBadgesProps) => {;
   );
 };
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 export default UserBadges;
+<<<<<<< HEAD
+=======
 
 =======
 =======
@@ -339,3 +347,4 @@ export default UserBadges;
 
 export default UserBadges;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

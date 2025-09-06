@@ -1,19 +1,27 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ProductListingCard } from "@/components/ProductListingCard",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ProductListingCard } from '@/components / ProductListingCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
 import { Link } from './react-router-dom';
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -25,6 +33,7 @@ import { Link } from './react-router-dom';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface FeaturedListingsSectionProps {
   show_title?: boolean;
 }
@@ -34,6 +43,8 @@ export /**
 function FeaturedListingsSection() {
   const featured_listings = [;
     {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -88,11 +99,14 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       author: {
         name: "TechAI Labs"
         id: "tech-ai-labs"
         avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -132,10 +146,13 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       author: {
         name: "VisualAI"
         id: "visual-ai"
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -152,11 +169,14 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: "fullstack-ai-dev"
       title: "Full-Stack AI Development"
       description: "End-to-end development for AI-powered applications"
       price: null, // Custom pricing
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -184,10 +204,13 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       author: {
         name: "DataMinds Consulting"
         id: "dataminds-consulting"
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -212,11 +235,14 @@ import {Link} from "react-router-dom";
       category: "APIs"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       tags: ["API", "Sentiment", "Analytics"];
       images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"]
       createdAt: "2024-01-05T11:15:00.000Z"
       rating: 4.6
       reviewCount: 72
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     },
@@ -391,6 +417,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       id: "advanced - nlp - model",
       title: "Advanced NLP Model for Text Analysis",
       description: "State - of - the - art natural language processing with 98% accuracy",
@@ -495,6 +522,8 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
               key={listing.id}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               listing={listing}
+<<<<<<< HEAD
+=======
               view="grid";
 =======
 =======
@@ -626,6 +655,7 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
               key={listing.id}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               listing={listing}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               view="grid"
               onRequestQuote={() => {}}
             />
@@ -655,12 +685,15 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>;
 
         <div className="mt-10 text-center">;
@@ -707,6 +740,11 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<< HEAD
+;
+    </section>);
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </section>);
@@ -740,3 +778,4 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
     </section>);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

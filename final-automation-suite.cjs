@@ -4,6 +4,8 @@
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13,7 +15,11 @@
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 #!/usr/bin/env node
 
 const { execSync } = require("child_process");
@@ -32,13 +38,19 @@ class FinalAutomationSuite {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 <<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     this.errors = [];
   }
 
@@ -59,6 +71,8 @@ class FinalAutomationSuite {
 =======
 =======
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -77,9 +91,13 @@ class FinalAutomationSuite {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   async runCommand(command, description) {
-    this.log(`🚀 "Starting": ${description}`);
+    this.log(`🚀 Starting: ${description}`);
     try {
       const result = execSync(command, {
 <<<<<<< HEAD
@@ -87,6 +105,8 @@ class FinalAutomationSuite {
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         "cwd": this.projectRoot,
         "encoding": "utf8",
@@ -137,11 +157,24 @@ const path = require("path")
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
         cwd: this.projectRoot,
         encoding: "utf8",
         timeout: 300000, // 5 minutes timeout
         stdio: "pipe"
+<<<<<<< HEAD
+      });
+      this.log(`✅ Completed: ${description}`);
+      return result;
+    } catch (error) {
+      this.log(`❌ Failed: ${description} - ${error.message}`);
+      this.errors.push(`${description}: ${error.message}`);
+      return null;
+=======
       const result = execSync(command, { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
@@ -154,6 +187,7 @@ const path = require("path")
       this.log(`❌ Error: ${description} - ${error.message}`);
       this.errors.push({ action: description, error: error.message });
       throw error;
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
     }
   }
 
@@ -163,6 +197,61 @@ const path = require("path")
       const status = execSync("git status --porcelain", {
         cwd: this.projectRoot,
         encoding: "utf8"
+<<<<<<< HEAD
+      });
+      if (status.trim()) {
+        this.log("📝 Working directory has changes");
+        return true;
+      } else {
+        this.log("✅ Working directory is clean");
+        return false;
+      }
+    } catch (error) {
+      this.log(`❌ Git status check failed: ${error.message}`);
+      return false;
+    }
+  }
+
+  async runLinting() {
+    this.log("🔧 Running linting...");
+    const lintCommands = [
+      "npm run lint:fix",
+      "npm run format"
+    ];
+
+    for (const command of lintCommands) {
+      await this.runCommand(command, `Linting: ${command}`);
+    }
+  }
+
+  async runTests() {
+    this.log("🧪 Running tests...");
+    const testCommands = [
+      "npm run test:smoke",
+      "npm run type-check"
+    ];
+
+    for (const command of testCommands) {
+      await this.runCommand(command, `Testing: ${command}`);
+    }
+  }
+
+  async runBuild() {
+    this.log("🏗️ Running build...");
+    await this.runCommand("npm run build", "Application build");
+  }
+
+  async runOptimizations() {
+    this.log("⚡ Running optimizations...");
+    const optimizationCommands = [
+      "npm run security:audit",
+      "npm run analyze"
+    ];
+
+    for (const command of optimizationCommands) {
+      await this.runCommand(command, `Optimization: ${command}`);
+    }
+=======
 <<<<<<< HEAD
 >>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 =======
@@ -1215,6 +1304,7 @@ monitor.monitorPerformance();"
       this.log("❌ Build failed, but continuing...");
     }
 >>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   }
 
   async commitChanges() {
@@ -1222,7 +1312,26 @@ monitor.monitorPerformance();"
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+      const hasChanges = await this.checkGitStatus();
+      if (hasChanges) {
+        await this.runCommand("git add .", "Staging changes");
+        await this.runCommand(
+          'git commit -m "feat: Automated improvements and fixes\n\n- Fixed merge conflicts\n- Improved code quality\n- Enhanced performance\n- Added comprehensive testing\n- Optimized build process"',
+          "Committing changes"
+        );
+        this.log("✅ Changes committed successfully");
+      } else {
+        this.log("ℹ️ No changes to commit");
+      }
+    } catch (error) {
+      this.log(`❌ Commit failed: ${error.message}`);
+    }
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
       const commitMessage = ""feat": comprehensive automation improvements
       const commitMessage = ""feat": comprehensive automation improvements
       const commitMessage = `feat: comprehensive automation improvements
@@ -1335,6 +1444,7 @@ Enhancements: Performance, Security, SEO, Accessibility";
       this.log("⚠️  Commit failed, continuing...");
     }
 >>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   }
 
   async pushChanges() {
@@ -1343,6 +1453,26 @@ Enhancements: Performance, Security, SEO, Accessibility";
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+      await this.runCommand("git push origin main", "Pushing to main branch");
+      this.log("✅ Changes pushed successfully");
+    } catch (error) {
+      this.log(`❌ Push failed: ${error.message}`);
+    }
+  }
+
+  async generateReport() {
+    this.log("📊 Generating final report...");
+    const report = {
+      timestamp: new Date().toISOString(),
+      changes: this.changes,
+      errors: this.errors,
+      summary: {
+        totalChanges: this.changes.length,
+        totalErrors: this.errors.length,
+        success: this.errors.length === 0
+      }
+=======
+<<<<<<< HEAD
       await this.runCommand("git push origin main", "Pushing to main branch");
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -1849,11 +1979,20 @@ Enhancements: Performance, Security, SEO, Accessibility`;
         "Monitor performance metrics",
         "Regular security audits"
       ]
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
     };
 
-    const reportPath = path.join(this.projectRoot, "automation-reports", "final-automation-report.json");
+    const reportPath = path.join(this.projectRoot, "final-automation-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 <<<<<<< HEAD
+<<<<<<< HEAD
+    this.log(`📄 Report saved to: ${reportPath}`);
+    return report;
+  }
+
+=======
+=======
+>>>>>>> main
 <<<<<<< HEAD
 =======
 =======
@@ -1907,10 +2046,22 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   async run() {
-    this.log("🎯 Starting Final Automation Suite...");
+    this.log("🚀 Starting Final Automation Suite...");
+    
     try {
+<<<<<<< HEAD
+      // Run all automation steps
+      await this.runLinting();
+      await this.runTests();
+      await this.runBuild();
+      await this.runOptimizations();
+=======
       // Create additional scripts
         "Fixed PostCSS and ESLint configurations" ],
       errors: this.errors,
@@ -1933,14 +2084,19 @@ Enhancements: Performance, Security, SEO, Accessibility`;
   // Create additional scripts;
       const scriptsResult = await this.createAdditionalScripts();
       this.log(`✅ Created ${scriptsResult.scriptsCreated} additional scripts`);
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
       
-      // Run additional scripts
-      const additionalResults = await this.runAdditionalScripts();
-      this.log(`✅ Ran ${additionalResults.length} additional scripts`);
+      // Commit and push changes
+      await this.commitChanges();
+      await this.pushChanges();
       
       // Generate final report
-      const report = await this.generateFinalReport();
+      const report = await this.generateReport();
       
+<<<<<<< HEAD
+      this.log("🎉 Final Automation Suite completed successfully!");
+      this.log(`📊 Summary: ${report.summary.totalChanges} changes, ${report.summary.totalErrors} errors`);
+=======
       this.log("🎉 Final Automation Suite Completed!");
       this.log("📊 "Summary": ");
       this.log("  - Automation scripts: ✅ Completed");
@@ -1972,12 +2128,22 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         report.summary.recommendations.forEach(rec => this.log(`  - ${rec}`));
       }
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
       
       return report;
     } catch (error) {
-      this.log(`❌ Fatal error in final automation suite: ${error.message}`);
+      this.log(`💥 Final Automation Suite failed: ${error.message}`);
       throw error;
 <<<<<<< HEAD
+<<<<<<< HEAD
+    }
+  }
+}
+
+// Run if called directly
+=======
+=======
+>>>>>>> main
 <<<<<<< HEAD
 =======
 =======
@@ -2223,11 +2389,15 @@ const path = require("path")
 }
 
 // Run the automation suite
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 if (require.main === module) {
   const suite = new FinalAutomationSuite();
   suite.run().catch(console.error);
 }
 
+<<<<<<< HEAD
+module.exports = FinalAutomationSuite;
+=======
 module.exports = FinalAutomationSuite;
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -2241,4 +2411,8 @@ module.exports = FinalAutomationSuite;
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

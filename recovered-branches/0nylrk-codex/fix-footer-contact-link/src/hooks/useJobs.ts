@@ -32,6 +32,8 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -42,6 +44,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { Job, JobStatus } from "@/types/jobs",
@@ -54,6 +57,8 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -86,6 +91,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const fetchJobs = async () => {
     if (!clientId) {
       setIsLoading(false),
@@ -93,16 +99,21 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
     }
     try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       setIsLoading(true);
       setIsLoading(true),
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       let query = supabase
         .from("jobs")
         .select("*")
         .eq("client_id", clientId)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -213,6 +224,7 @@ if (throw fetch_error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
     try {
       const { error: updateError } = await supabase
@@ -220,6 +232,8 @@ if (throw fetch_error) {
         .update({ status: newStatus })
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only update their own jobs
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -233,6 +247,7 @@ if (throw fetch_error) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Update local state
       setJobs(jobs && jobs.map(job => job && job.id === jobId ? {...job, status: newStatus} : job));
       toast && toast.success("Job status updated successfully");
@@ -242,6 +257,8 @@ if (throw fetch_error) {
       toast && toast.error("Failed to update job status");
       return false
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -270,6 +287,7 @@ if (throw fetch_error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const deleteJob = async (jobId: string) => {
     try {
       const { error: deleteError } = await supabase
@@ -277,6 +295,8 @@ if (throw fetch_error) {
         .delete()
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only delete their own jobs
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -290,6 +310,7 @@ if (throw fetch_error) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Update local state
       setJobs(jobs && jobs.filter(job => job && job.id !== jobId));
       toast && toast.success("Job deleted successfully");
@@ -313,6 +334,8 @@ if (throw fetch_error) {
     getJobById;
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -351,6 +374,7 @@ if (throw fetch_error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Job, JobStatus } from "@/types/jobs",;
@@ -443,6 +467,10 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     updateJob;
     getJobById;
 <<<<<<< HEAD
+  }
+};
+=======
+<<<<<<< HEAD
 
 
   }
@@ -460,3 +488,4 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
   }
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -78,7 +78,7 @@ if (typeof webpackChunk_N_E === 'undefined') {
 // TypeScript helper polyfills for runtime
 const tsHelpers = {
   __extends: function (d: any, b: any) {
-    if (true) {}
+    if (typeof b !== 'function' && b !== null)
       throw new TypeError(
         'Class extends value ' + String(b) + ' is not a constructor or null'
       )

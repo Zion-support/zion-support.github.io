@@ -17,8 +17,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ chapters: drafted })
 }
 
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',
+import OpenAI from 'openai',
+=======
 import type { NextApiRequest, NextApiResponse } from 'next'
 import OpenAI from 'openai'
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default async /**
  * handler - Function description
  */
@@ -64,8 +69,11 @@ if ( {) {
   }
   res.status (200).json ({ chapters: drafted });
 }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   res.status(200).json({ chapters: drafted });
   } catch (error) {
@@ -73,7 +81,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   res.status(200).json({ chapters: drafted });
 };
 }

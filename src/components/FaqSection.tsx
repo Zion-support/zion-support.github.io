@@ -1,13 +1,56 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+
+const FaqSection: React.FC = () => {
+=======
+<<<<<<< HEAD
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 =======
 <<<<<<< HEAD
 import React, { useState } from 'react';
 
 const FaqSection = () => {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
     {
+<<<<<<< HEAD
+      question: "What services does Zion Tech offer?",
+      answer: "We offer comprehensive AI solutions, IT services, cloud infrastructure, cybersecurity, data analytics, and digital transformation services. Our team specializes in machine learning, cloud migration, system administration, and business process optimization."
+    },
+    {
+      question: "How long does a typical project take?",
+      answer: "Project timelines vary based on complexity and scope. Simple implementations can take 2-4 weeks, while comprehensive digital transformations may take 3-6 months. We provide detailed timelines during the discovery phase and keep you updated throughout the project."
+    },
+    {
+      question: "Do you provide ongoing support?",
+      answer: "Yes, we offer 24/7 support for all our clients. Our support includes monitoring, maintenance, troubleshooting, and continuous optimization. We also provide dedicated account managers for enterprise clients."
+    },
+    {
+      question: "What industries do you serve?",
+      answer: "We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, and government. Our solutions are tailored to meet the specific compliance and security requirements of each industry."
+    },
+    {
+      question: "How do you ensure data security?",
+      answer: "We implement enterprise-grade security measures including SOC 2 compliance, end-to-end encryption, regular security audits, and advanced threat detection. All our team members are security-certified and we follow industry best practices."
+    },
+    {
+      question: "Can you work with our existing systems?",
+      answer: "Absolutely! We specialize in integrating with existing systems and can work with virtually any technology stack. Our team will assess your current infrastructure and create a seamless integration plan."
+    },
+    {
+      question: "What is your pricing model?",
+      answer: "We offer flexible pricing models including project-based, retainer, and subscription options. Pricing depends on the scope of work, timeline, and specific requirements. We provide detailed quotes after understanding your needs."
+    },
+    {
+      question: "Do you offer training for our team?",
+      answer: "Yes, we provide comprehensive training programs for your team to ensure they can effectively use and maintain the solutions we implement. Training includes documentation, hands-on sessions, and ongoing support."
+    }
+=======
       question: 'What services does Zion Tech offer?',
       answer: 'We offer comprehensive AI solutions, IT services, cloud migration, cybersecurity, data analytics, and digital transformation services to help businesses modernize and grow.',
     },
@@ -31,12 +74,24 @@ const FaqSection = () => {
       question: 'How do you ensure data security?',
       answer: 'We implement enterprise-grade security measures including encryption, access controls, regular security audits, compliance with industry standards, and continuous monitoring to protect your data.',
     },
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ];
 
   const toggleFaq = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+<<<<<<< HEAD
+  return (
+    <section className="py-16 px-4 bg-gray-50">
+      <div className="container mx-auto max-w-4xl">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+          <p className="text-xl text-gray-600">
+            Find answers to common questions about our services and processes.
+          </p>
+        </div>
+=======
   return (
     <section className="py-16 px-4 bg-gray-50">
       <div className="container mx-auto max-w-4xl">
@@ -80,7 +135,11 @@ export default FaqSection;
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 import { FileText } from 'lucide-react'
 const faqs = [
   {
@@ -345,6 +404,7 @@ const faqs = [
 export function FaqSection() {
   return (
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -354,6 +414,11 @@ export function FaqSection() {
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />
             <h3 className="text-xl font-bold text-white">Common Questions</h3>
           </div>
+<<<<<<< HEAD
+        </div>
+      </div>
+    </section>
+=======
 
 
           
@@ -484,9 +549,13 @@ export function FaqSection() {;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
 
+<<<<<<< HEAD
+export default FaqSection;
+=======
                 </AccordionContent>;
               </AccordionItem>))}
           </Accordion>;
@@ -498,4 +567,9 @@ export function FaqSection() {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

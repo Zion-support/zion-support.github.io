@@ -1,25 +1,33 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
 export function useResumeList() {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -27,6 +35,7 @@ export function useResumeList() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -53,6 +62,8 @@ export function useResumeList() {;
         .order('created_at', { ascending: false });
       if (resumeError) throw resumeError;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
       
       if (!resumeData || resumeData && resumeData.length === 0) {
@@ -66,10 +77,13 @@ export function useResumeList() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         setResumes([]);
         return []
       }
       // Transform data to match Resume type
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({
@@ -92,6 +106,7 @@ function useResumeList() {
   const fetch_resumes = async () => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Check condition
 if ( {) {
   $2
@@ -124,6 +139,12 @@ if ( {) {
         skills: [];
         certifications: [],
 <<<<<<< HEAD
+      }));
+      setResumes(transformedResumes);
+      return transformedResumes
+    } catch (e: any) {
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -141,10 +162,13 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -164,14 +188,18 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return {
     is_loading;
     error;
     resumes;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 =======

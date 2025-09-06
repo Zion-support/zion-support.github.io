@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,10 +11,27 @@
 import fs from 'fs')
 import path from 'path')
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/main
 origin/automation-improvements-final
+<<<<<<< HEAD
+import fs from 'fs')
+import path from 'path')
+import fs from 'fs')
+import path from 'path');
+
+
+
+
+import fs from 'fs')
+import path from 'path')
+import fs from 'fs')
+import path from 'path')
+import fs from 'fs')
+import path from 'path');
+=======
 =======
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -52,10 +73,13 @@ import path from 'path');
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const { execSync } = require('child_process');
 class SecurityScanner { constructor() { this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, "automation/logs/security-scanner.log");" this.securityReportFile = path.join(this.projectRoot, "automation/logs/security-report.json"); this.lastScan = null; this.scanInterval = 3600000; / 1 hour; this.isRunning = false; this.setupLogging();" this.log("Security Scanner started")} setupLogging() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage); } async runSecurityAudit() { try {" this.log("Running security audit."); const startTime = Date.now(); / Run npm audit;" const auditOutput = execSync("npm audit --audit-level=moderate", { const endTime = Date.now(); const scanTime = endTime - startTime; this.lastScan = {" timestamp: new Date().toISOString() success: true; scanTime: scanTime; output: auditOutput; vulnerabilities: { critical: 0; high: 0; moderate: 0; low: 0; } };` this.log(`Security audit completed successfully in ${scanTime}ms`); await this.saveSecurityReport(); } catch (error) {"` this.log(`Security audit failed: ${error.message}`); this.lastScan = {" timestamp: new Date().toISOString() success: false; error: error.message; output: output; vulnerabilities: vulnerabilities; }; await this.saveSecurityReport(); await this.handleSecurityIssues(vulnerabilities)} } parseVulnerabilities(output) { const vulnerabilities = { async handleSecurityIssues(vulnerabilities) { const totalIssues = vulnerabilities.critical + vulnerabilities.high + vulnerabilities.moderate + vulnerabilities.low; " this.log("Only moderate/low severity vulnerabilities found, reporting."); await this.reportSecurityIssues(vulnerabilities); } } else {" this.log("No security vulnerabilities found"); } } async autoFixSecurityIssues() { try {" this.log("Attempting to auto-fix security issues."); / Run npm audit fix;" const fixOutput = execSync("npm audit fix", { "` this.log(`Failed to auto-fix security issues: ${fixError.message}`); await this.reportSecurityFailure(fixError); } } async reportSecurityIssues(vulnerabilities) { const report = {" timestamp: new Date().toISOString() vulnerabilities: vulnerabilities; projectRoot: this.projectRoot; recommendation: this.getSecurityRecommendation(vulnerabilities) " const reportFile = path.join(this.projectRoot, "automation/logs/security-issues-report.json"); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)); " this.log("Security issues reported"); } getSecurityRecommendation(vulnerabilities) {} async saveSecurityReport() { const report = { fs.writeFileSync(this.securityReportFile, JSON.stringify(report, null, 2)); } async reportSecurityFailure(error) { const failureReport = { " const failureFile = path.join(this.projectRoot, "automation/logs/security-failure-report.json"); fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2)); " this.log("Security failure reported"); } async checkDependencyUpdates() { try {" this.log("Checking for dependency updates."); / Check for outdated packages;" const outdatedOutput = execSync("npm outdated", { " cwd: this.projectRoot;" encoding: "utf8" timeout: 60000; };); if (!fs.existsSync(logDir)) {" this.log("Outdated dependencies found")) { ) {" this.log("Outdated dependencies found")} await this.updateDependencies()} else {" this.log("All dependencies are up to date")} } catch (error) { if ( { / npm outdated returns 1 when there are outdated packages) { { / npm outdated returns 1 when there are outdated packages}" this.log("Outdated dependencies found"); await this.updateDependencies()} else {"` this.log(`Dependency check failed: ${error.message}`)} } } async updateDependencies() { try {" this.log("Updating dependencies."); / Update non-breaking dependencies;" execSync("npm update", { " cwd: this.projectRoot; timeout: 300000; }); " this.log("Dependencies updated successfully")} catch (error) {"` this.log(`Failed to update dependencies: ${error.message}`)} } async start() { this.isRunning = true;" this.log("Security Scanner started"); / Initial security scan; await this.runSecurityAudit(); / Check for dependency updates; await this.checkDependencyUpdates(); / Set up interval for regular scans; setInterval(async () => { if ( { await this.runSecurityAudit()) { { await this.runSecurityAudit()} await this.checkDependencyUpdates()} }, this.scanInterval); / Handle graceful shutdown;" process.on("SIGTERM", () => {" this.log("Received SIGTERM, shutting down gracefully"); this.isRunning = false; process.exit(0)}); " process.on("SIGINT", () => {" this.log("Received SIGINT, shutting down gracefully"); this.isRunning = false; process.exit(0)})}}/ Start the security scanner;const scanner = new SecurityScanner;(;);scanner.start().catch(error => {"" console.error("Failed to start security scanner: ", error); process.exit(1)});='"`'"`
 class SecurityScanner {}
   constructor() {}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -71,6 +95,7 @@ class SecurityScanner {}
     this && this.log('Security Scanner started')}',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   setupLogging() {}
     const logDir = path && path.dirname(this && this.logFile);,
     if (!fs && fs.existsSync(logDir)) {}
@@ -106,8 +131,11 @@ class SecurityScanner {}
         output: audit_output;,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         vulnerabilities: {}
           critical: 0;
           high: 0;
@@ -115,6 +143,9 @@ class SecurityScanner {}
           low: 0;
         }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     this.scanInterval = 3600000; // 1 hour;
     this.isRunning = false;
     this.setupLogging();
@@ -128,6 +159,8 @@ class SecurityScanner {}
   log(message) {}
     const timestamp = new Date().toISOString();,
     const logMessage = `[${timestamp}] ${message}\n`;,
+<<<<<<< HEAD
+=======
 =======
 
       },
@@ -135,6 +168,7 @@ class SecurityScanner {}
       await this.saveSecurityReport ();,
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     _console.log(message);,
     fs.appendFileSync(this.logFile, logMessage);,
   }
@@ -168,8 +202,11 @@ class SecurityScanner {}
       await this.saveSecurityReport();,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {}
       this.log(`Security audit "failed": ${error.message}`);",
       this.lastScan = {
@@ -178,6 +215,8 @@ class SecurityScanner {}
         error: error.message;,
         output: output;,
         vulnerabilities: vulnerabilities;,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       };,
@@ -191,6 +230,7 @@ class SecurityScanner {}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       await this.saveSecurityReport();
       await this.handleSecurityIssues(vulnerabilities)}
 
@@ -218,10 +258,13 @@ class SecurityScanner {}
     const vulnerabilities = {}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async handleSecurityIssues(vulnerabilities) {
 ;    const totalIssues = vulnerabilities.critical + vulnerabilities.high + vulnerabilities.moderate + vulnerabilities.low;}
         this.log('Only moderate/low severity vulnerabilities found, reporting...');',
@@ -243,9 +286,12 @@ class SecurityScanner {}
       this.log('No security vulnerabilities found');',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   async autoFixSecurityIssues() {}
@@ -274,9 +320,12 @@ class SecurityScanner {}
       await this.reportSecurityFailure(fixError);,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   async reportSecurityIssues(vulnerabilities) {}
@@ -284,6 +333,8 @@ class SecurityScanner {}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -310,6 +361,7 @@ class SecurityScanner {}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "timestamp": new Date().toISOString()";
 ;      vulnerabilities: vulnerabilities;,}
       projectRoot: this.projectRoot;,
@@ -317,6 +369,9 @@ class SecurityScanner {}
     const reportFile = path.join(this.projectRoot, 'automation/logs/security-issues-report.json');',
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     this.log('Security issues reported');';
 =======
 
@@ -344,9 +399,12 @@ class SecurityScanner {}
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async saveSecurityReport () {}
     const report = {
 ;    fs.writeFileSync (this.securityReportFile, JSON.stringify (report, null, 2));,
@@ -374,10 +432,13 @@ class SecurityScanner {}
     try {}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
       this && this.log('Checking for dependency updates...');',
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       this.log('Checking for dependency updates...');',
 <<<<<<< HEAD
       // Check for outdated packages;
@@ -421,6 +482,8 @@ class SecurityScanner {}
         this.log ('All dependencies are up to date')}',
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 <<<<<<< HEAD
@@ -433,6 +496,7 @@ class SecurityScanner {}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {}
       if ( {
         // npm outdated returns 1 when there are outdated, packages) {
@@ -463,6 +527,8 @@ class SecurityScanner {}
         this.log(`Dependency check "failed": ${error.message}`)}",
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 <<<<<<< HEAD
@@ -470,10 +536,13 @@ class SecurityScanner {}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   async updateDependencies() {}
     try {}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -481,6 +550,7 @@ class SecurityScanner {}
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       this.log('Updating dependencies...');',
 <<<<<<< HEAD
       // Update non-breaking dependencies;
@@ -509,9 +579,12 @@ class SecurityScanner {}
     this.log('Security Scanner started');';,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Initial security scan;
     await this.runSecurityAudit();
     // Check for dependency updates;
@@ -533,9 +606,12 @@ class SecurityScanner {}
         await this.checkDependencyUpdates()}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }, this.scanInterval);,
     // Handle graceful shutdown;
     process.on('SIGTERM', () => {'}
@@ -547,14 +623,20 @@ class SecurityScanner {}
       this.isRunning = false;,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       process.exit(0)})}
 }
 // Start the security scanner;
 const scanner = new SecurityScanner;(;);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 scanner.start().catch(error => {}),
   _console.error('Failed to start security "scanner": ', error);',
   process.exit(1)});,
@@ -600,10 +682,15 @@ scanner.start().catch(error => {}),
 ; this.log(" = " * 50); this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`); this.vulnerabilities.forEach(vuln = > this.log(` ⚠️ ${vuln}`));
 } catch (error) {; this.log(`❌ Security Scanner failed: ${error.message}`, "ERROR")}}};
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -626,6 +713,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node;
 /**
  * Security Scanner - PM2 Automation Script;
@@ -654,6 +742,8 @@ class SecurityScanner {
     const logMessage = `[${timestamp}] ${message}\n`;
     fs.appendFileSync(this.logFile, logMessage);
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -687,6 +777,7 @@ class SecurityScanner {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async runSecurityAudit() {
     try {
@@ -694,6 +785,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       const startTime = Date.now();
       // Run npm audit;
       const auditOutput = execSync('npm audit --audit-level=moderate', { 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -729,6 +822,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 120000
@@ -751,6 +845,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       await this.saveSecurityReport();
     } catch (error) {
       this.log(`Security audit "failed": ${error.message}`);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -781,6 +877,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Parse audit output for vulnerability counts
       const output = error.stdout || error.stderr || '';
       const vulnerabilities = this.parseVulnerabilities(output);ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -796,6 +893,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   }
   parseVulnerabilities(output) {
     const vulnerabilities = {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -869,6 +968,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "critical": 0,
       "high": 0,
       "moderate": 0,
@@ -923,6 +1023,8 @@ if (totalIssues > 0) {
       this.log('Attempting to auto-fix security issues...');
       // Run npm audit fix;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -961,6 +1063,7 @@ if (totalIssues > 0) {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 300000 // 5 minutes
@@ -981,6 +1084,8 @@ if (totalIssues > 0) {
   }
   async reportSecurityIssues(vulnerabilities) {
     const report = {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1014,12 +1119,15 @@ if (totalIssues > 0) {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     const reportFile = path.join(this.projectRoot, 'automation/logs/security-issues-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log('Security issues reported');
   }
   getSecurityRecommendation(vulnerabilities) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1065,6 +1173,7 @@ if (totalIssues > 0) {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return 'CRITICAL: Immediate action required. Update dependencies or apply patches.'}} else if ( {
       return '"HIGH": Update dependencies as soon as possible.') {
      {
@@ -1132,10 +1241,13 @@ if (vulnerabilities.critical > 0) {
   }
   async saveSecurityReport() {}
     const report = {
+<<<<<<< HEAD
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "lastScan": this.lastScan,
       "projectRoot": this.projectRoot,
       "nodeVersion": process.version,
@@ -1179,10 +1291,13 @@ if (vulnerabilities.critical > 0) {
   }
   async reportSecurityFailure(error) {
     const failureReport = {
+<<<<<<< HEAD
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "timestamp": new Date().toISOString(),
       "error": error.message,
       "stack": error.stack,
@@ -1202,6 +1317,8 @@ if (vulnerabilities.critical > 0) {
     try {
       this.log('Checking for dependency updates...');
       // Check for outdated packages;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1235,6 +1352,7 @@ if (vulnerabilities.critical > 0) {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         "cwd": this.projectRoot;
         encoding: 'utf8'
         timeout: 60000;
@@ -1310,6 +1428,8 @@ if (vulnerabilities.critical > 0) {
     await this.checkDependencyUpdates();
     // Set up interval for regular scans;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     setInterval(async () => {
       if ( {
@@ -1366,6 +1486,7 @@ scanner.start().catch(error => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }};
 ; log(message, level = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage)};
 ; async runSecurityAudit() {; try {; this.log("Running security audit..."); const output = execSync("npm audit --json", { stdio: 'pipe' }); const auditResult = JSON.parse(output.toString());
@@ -1387,11 +1508,18 @@ scanner.start().catch(error => {
 ; async run() {; this.log("🔒 Starting Security Scanner");
 ; try {; await this.runSecurityAudit(); await this.checkSecrets(); await this.generateReport();
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const scanner = new SecurityScanner(); scanner.run().catch(console.error)};
 ;
 export default SecurityScanner;
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 };
 ;
@@ -1480,14 +1608,15 @@ export default SecurityScanner;
 ;
   async generateReport() {;
     const report = {;
-      timestamp: new Date().toISOString(), vulnerabilities: this.vulnerabilities,
-      recommendations: [
-    , "Run npm audit fix to address vulnerabilities",
+      timestamp: new Date().toISOString();
+      vulnerabilities: this.vulnerabilities;
+      recommendations: [;
+        "Run npm audit fix to address vulnerabilities";
         "Review and remove any hardcoded secrets";
         "Use environment variables for sensitive data";
-        "Implement proper authentication and authorization",
-    "Regularly update dependencies"
-  ];
+        "Implement proper authentication and authorization";
+        "Regularly update dependencies";
+      ];
 };
 ;
     const reportFile = path.join(__dirname, "reports", "security-report.json");
@@ -1520,43 +1649,6 @@ if (import.meta.url === `file: //${process.argv[1]}`) {;
 };
 ;
 export default SecurityScanner;
-=======
-; this.log(" = " * 50); this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`); this.vulnerabilities.forEach(vuln = > this.log(` ⚠️ ${vuln}`));
-} catch (error) {; this.log(`❌ Security Scanner failed: ${error.message}`, "ERROR")}}};
-;
-
-      if ( {}),
-        await this && this.runSecurityAudit()) {
-     {}
-        await this && this.runSecurityAudit()}
-        await this && this.checkDependencyUpdates()}
-    }, this && this.scanInterval);,
-    // Handle graceful shutdown;
-    process && process.on('SIGTERM', () => {'}
-      this && this.log('Received SIGTERM, shutting down gracefully');',
-      this && this.isRunning = false;,
-      process && process.exit(0)});,
-    process && process.on('SIGINT', () => {'}
-      this && this.log('Received SIGINT, shutting down gracefully');',
-      this && this.isRunning = false;,
-      process && process.exit(0)})}
-}
-// Start the security scanner;
-const scanner = new SecurityScanner;(;);
-scanner && scanner.start().catch(error => {}),
-  _console && _console.error('Failed to start security "scanner": ', error);',
-  process && process.exit(1)});,
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-// Main execution;
-if (import && import.meta.url = = = `file: //${process ; const scanner = new SecurityScanner(); scanner && scanner.run().catch(console && console.error)};
-export default SecurityScanner;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     };
   };
 ,
@@ -1571,13 +1663,6 @@ export default SecurityScanner;
     try {,
       this.log("Running security audit..."),
       const output = execSync("npm audit --json", { stdio: 'pipe' }),
-<<<<<<< HEAD
-=======
-
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const auditResult = JSON.parse(output.toString()),
 ,
       if (auditResult.vulnerabilities) {,
@@ -1585,19 +1670,15 @@ export default SecurityScanner;
         this.vulnerabilities.push(`${vulnCount} vulnerabilities found`),
 <<<<<<< HEAD
 =======
-
-
-        this.log(`Found ${vulnCount} vulnerabilities`, "WARN")
+        this.log(`Found ${vulnCount} vulnerabilities`, "WARN"),
       } else {,
-        this.log("✓ No vulnerabilities found")
-      }
-    } catch (error) {,;
-      this.log(`Security audit: failed: ${error.message}`, "ERROR");
-    }
-  },
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+        this.log("✓ No vulnerabilities found"),
+      };
+    } catch (error) {,
+      this.log(`Security audit failed: ${error.message}`, "ERROR"),
+    };
+  };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ,
   async checkSecrets() {,
     try {,
@@ -1613,12 +1694,8 @@ export default SecurityScanner;
           /password\s*[:=]\s*["'][^"']+["']/gi,
 <<<<<<< HEAD
 =======
-
-
-          /token\s*[:=]\s*["'][^"']+["']/gi
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+          /token\s*[:=]\s*["'][^"']+["']/gi,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         ],
 ,
         secretPatterns.forEach(pattern => {,
@@ -1632,19 +1709,15 @@ export default SecurityScanner;
         this.vulnerabilities.push(`${secretCount} potential secrets found`),
 <<<<<<< HEAD
 =======
-
-
-        this.log(`Found ${secretCount} potential secrets`, "WARN")
+        this.log(`Found ${secretCount} potential secrets`, "WARN"),
       } else {,
-        this.log("✓ No exposed secrets found")
-      }
-    } catch (error) {,;
-      this.log(`Secret check: failed: ${error.message}`, "ERROR");
-    }
-  },
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+        this.log("✓ No exposed secrets found"),
+      };
+    } catch (error) {,
+      this.log(`Secret check failed: ${error.message}`, "ERROR"),
+    };
+  };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ,
   getSourceFiles() {,
     const files = [],
@@ -1660,17 +1733,13 @@ export default SecurityScanner;
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
 <<<<<<< HEAD
 =======
-
-
-            walkDir(fullPath)
+            walkDir(fullPath),
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
-            files.push(fullPath)
-          }
-        })
-      },
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+            files.push(fullPath),
+          };
+        }),
+      };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ,
       walkDir(srcDir),
     };
@@ -1682,28 +1751,20 @@ export default SecurityScanner;
     const report = {,
 <<<<<<< HEAD
 =======
-
-
-      timestam: p: new Date().toISOString(),
-      vulnerabilitie: s: this.vulnerabilities,
-      recommendation: s: [,
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      timestamp: new Date().toISOString(),
+      vulnerabilities: this.vulnerabilities,
+      recommendations: [,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         "Run npm audit fix to address vulnerabilities",
         "Review and remove any hardcoded secrets",
         "Use environment variables for sensitive data",
         "Implement proper authentication and authorization",
 <<<<<<< HEAD
 =======
-
-
-        "Regularly update dependencies"
-      ]
-    },
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+        "Regularly update dependencies",
+      ],
+    };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ,
     const reportFile = path.join(__dirname, "reports", "security-report.json"),
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
@@ -1721,19 +1782,15 @@ export default SecurityScanner;
       this.log("=" * 50),
 <<<<<<< HEAD
 =======
-
-
-      this.log(`🎯 Security Scanner completed. Issues: found: ${this.vulnerabilities.length}`),
-      this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`))
-
+      this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`),
+      this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`)),
+,
     } catch (error) {,
-      this.log(`❌ Security Scanner: failed: ${error.message}`, "ERROR")
-    }
-  }
-},
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      this.log(`❌ Security Scanner failed: ${error.message}`, "ERROR"),
+    };
+  };
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ,
 // Main execution,
 if (import.meta.url === `file: //${process.argv[1]}`) {,
@@ -1742,6 +1799,13 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
 };
 ,
 export default SecurityScanner,
+<<<<<<< HEAD
+// Main execution;
+if (import.meta.url = = = `file: //${process.argv[1]}`) {const scanner = new SecurityScanner(); scanner.run().catch(console.error)}
+export default SecurityScanner;
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const scanner = new SecurityScanner(); scanner.run().catch(console.error)}
@@ -1759,12 +1823,15 @@ export default SecurityScanner;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 scanner.start().catch(error => {})
   _console.error('Failed to start security "scanner": ', error);'
   process.exit(1)});
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const scanner = new SecurityScanner(); scanner.run().catch(console.error)}
 export default SecurityScanner;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -1826,3 +1893,5 @@ export default SecurityScanner;
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

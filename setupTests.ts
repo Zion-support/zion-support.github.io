@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+const "@testing-library/jest-dom/vitest";''"
+import '@testing-library/jest-dom/vitest';''
+=======
+<<<<<<< HEAD
+import '@testing-library/jest-dom/vitest';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -121,4 +128,9 @@ import '@testing-library/jest-dom/vitest';''
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

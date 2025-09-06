@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
@@ -676,4 +677,9 @@
   "/_document": "pages/_document.js",
   "/404": "pages/404.html"
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js"
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 }

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
@@ -32,6 +34,7 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -48,11 +51,16 @@ import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 =======
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -61,11 +69,14 @@ const corsHeaders = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -128,10 +139,13 @@ serve(async (req) => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         });
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -169,6 +183,7 @@ if ( {) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const { title, category, keyFeatures, targetAudience } = await req.json(),
 
     if (!title || !category) {
@@ -179,17 +194,43 @@ if ( {) {
         { 
           status: 400, 
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+serve(async (req) => {;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers: corsHeaders });
+  }
+;
+  try {;
+    const { title, category, keyFeatures, targetAudience } = await req.json(),;
+    if (!title || !category) {;
+      return new Response(;
+        JSON.stringify({;
+          error: "Missing required fields: title and category are required";
+        }),;
+        {;
+          status: 400,;
+          headers: { ...corsHeaders, "Content-Type": "application/json" } ;
+=======
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       )
     }
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       );
     }
@@ -206,6 +247,8 @@ if ( {) {
 
     
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -226,11 +269,14 @@ Target Audience: ${targetAudience |"General users"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
     const prompt = `Generate an optimized marketplace listing for the following product:;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -240,11 +286,14 @@ Target Audience: ${targetAudience |"General users"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 Title: ${title}
 Category: ${category}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -253,11 +302,14 @@ Target Audience: ${targetAudience || "General users"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 Please create:
 1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases
 2. A list of 5-7 relevant tags for the listing
 3. A suggested price range based on the category and features
 4. A bulleted list of 3-5 key selling points
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -365,6 +417,7 @@ Format the response as a JSON object with the following structure:
     const responseText = completion.choices[0].message.content,
     
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       );
     }
@@ -381,16 +434,21 @@ Format the response as a JSON object with the following structure: {
       parsedResponse = JSON && JSON.parse(jsonString)
     } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       console.error("Failed to parse AI response as JSON:", error);
       console.log("Raw response:", responseText);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Provide a fallback structured response
       parsedResponse = {
         description: "An error occurred while generating the optimized description. Please try again.";
         tags: []
         suggestedPrice: { min: 0, max: 0 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -419,10 +477,13 @@ Format the response as a JSON object with the following structure: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         keyPoints: []
       }
     }
     return new Response(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -435,6 +496,7 @@ Format the response as a JSON object with the following structure: {
       JSON.stringify({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         generated: parsedResponse
       });
       {
@@ -517,6 +579,8 @@ Format the response as a JSON object with the following structure:;
       {;
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
+<<<<<<< HEAD
+=======
       }
     );
 <<<<<<< HEAD
@@ -601,10 +665,13 @@ Format the response as a JSON object with the following structure:;
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     );
   }
 });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 ;
@@ -789,3 +856,4 @@ headers: {
   }
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

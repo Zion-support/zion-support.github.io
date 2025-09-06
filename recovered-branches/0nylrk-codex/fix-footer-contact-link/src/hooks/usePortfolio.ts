@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useCallback  } from 'react';
 import { PortfolioProject  } from '@/types/resume';
 import { supabase  } from '@/integrations/supabase/client';
@@ -12,9 +15,12 @@ import { useAuth  } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 export function usePortfolio() {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState, useCallback} from 'react';
 import {PortfolioProject} from '@/types/resume';
 import {supabase} from '@/integrations/supabase/client';
@@ -22,6 +28,8 @@ import {useAuth} from '@/hooks/useAuth';
 import {toast} from '@/hooks/use-toast';
 export function usePortfolio() {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -29,6 +37,7 @@ export function usePortfolio() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -93,6 +102,8 @@ if (throw error) {
     }
   }, [user]);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 =======
@@ -129,6 +140,7 @@ export function usePortfolio() {;
     }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     setIsLoading(true),;
     setError(null),;
@@ -158,6 +170,9 @@ export function usePortfolio() {;
     setIsLoading(true),
     setError(null),
 <<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -175,10 +190,13 @@ export function usePortfolio() {;
 =======
     
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       const { data, error } = await supabase
         .from('portfolio_projects')
         .insert({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -206,12 +224,15 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           user_id: user.id;
           title: project.title;
           description: project.description;
           technologies: project.technologies;
           image_url: project.image_url;
           github_url: project.github_url;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -233,6 +254,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         })
         .select('id')
         .single();
@@ -247,6 +269,8 @@ if ( {) {
       });
       await fetchProjects();
       return data && data.id
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -280,10 +304,13 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (e: any) {
       console && console.error('Error adding portfolio project:', e);
       setError(e && e.message);
       toast({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -309,11 +336,14 @@ if ( {) {
         description: `Could not add project: ${e.message}`,
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         variant: "destructive"
       }),
       return null
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         title: "Error",
@@ -374,12 +404,16 @@ if (throw error) {
     setError(null);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     setIsLoading(true);
     setError(null);
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     setIsLoading(true),;
     setError(null),;
@@ -423,6 +457,8 @@ if (throw error) {
       setError('You must be logged in to update a portfolio project'),;
       return false;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -431,11 +467,14 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -445,10 +484,13 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       const { error } = await supabase
         .from('portfolio_projects')
         .update({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -477,11 +519,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           title: project.title;
           description: project.description;
           technologies: project.technologies;
           image_url: project.image_url;
           github_url: project.github_url;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -549,6 +594,7 @@ if ( {) {
       
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Project updated"
         description: "Your portfolio project has been updated"
@@ -561,6 +607,8 @@ if ( {) {
       toast({
         variant: "destructive"
       }),
+<<<<<<< HEAD
+=======
       return false
     } finally {
       setIsLoading(false)
@@ -618,6 +666,7 @@ if (throw error) {
   const deleteProject = async (projectId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete a portfolio project')
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return false
     }
     setIsLoading(true);
@@ -629,7 +678,10 @@ if (throw error) {
     setError(null);
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     setIsLoading(true),;
     setError(null),;
@@ -672,6 +724,8 @@ if (throw error) {
       setError('You must be logged in to delete a portfolio project'),;
       return false;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -680,11 +734,14 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -694,11 +751,14 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       const { error } = await supabase
         .from('portfolio_projects')
         .delete()
         .eq('id', projectId)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -715,10 +775,13 @@ if (throw error) {
       if (error) throw error;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Project deleted"
         description: "Your portfolio project has been deleted"
       });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -759,6 +822,7 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return true
     } catch (e: any) {
       console && console.error('Error deleting portfolio project:', e);
@@ -861,6 +925,8 @@ if (throw error) {
     error;
     projects;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -943,6 +1009,7 @@ import { useAuth } from '@/hooks/useAuth',;
 import { toast } from '@/hooks/use-toast',;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export function usePortfolio() {;
   const { user } = useAuth(),;

@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+import React from 'react';
+interface BlogProps {
+  // Add props here as needed
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,6 +77,7 @@ interface BlogProps {
 }
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function Blog({ }: BlogProps) {
   return (
     <div>
@@ -80,6 +86,8 @@ export default function Blog({ }: BlogProps) {
     </div>
   );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -129,3 +137,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

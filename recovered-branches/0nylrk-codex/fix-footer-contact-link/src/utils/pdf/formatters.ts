@@ -1,7 +1,10 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {format} from 'date-fns';
 
 
@@ -29,11 +32,15 @@ export function formatDate(date: Date | string | undefined): string {
   if (typeof date === 'string') {
     return format(new Date(date), 'MMM yyyy')
 <<<<<<< HEAD
+import { format } from 'date-fns',;
+=======
+<<<<<<< HEAD
   }
   return format(date, 'MMM yyyy')
 <<<<<<< HEAD
 =======
 import {format} from 'date - fns';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**;
 
 =======
@@ -57,11 +64,14 @@ export function formatDate(date: Date | string | undefined): string {;
   if (typeof date === 'string') {;
     return format(new Date(date), 'MMM yyyy');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   return format(date, 'MMM yyyy')
 
@@ -89,4 +99,7 @@ export function formatDate(date: Date | string | undefined): string {;
 =======
 }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

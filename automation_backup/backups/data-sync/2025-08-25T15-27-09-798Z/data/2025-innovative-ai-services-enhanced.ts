@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1236,6 +1238,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "export": interface InnovativeAIService {
    id: string;
    name: string;
@@ -2458,6 +2461,8 @@ const contact = {
     "rating": 4.,7
     "reviews": 58]}}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2480,3 +2485,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

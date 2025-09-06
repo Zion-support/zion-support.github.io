@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -29,6 +31,7 @@ import {toast} from 'sonner';
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -57,10 +60,13 @@ import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export default function AccountSettings() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
@@ -85,6 +91,9 @@ export default function AccountSettings() {;
         setEnableBackup(!!parsed && parsed.enableBackup);
 
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -103,6 +112,7 @@ export default function AccountSettings() {;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -133,6 +143,8 @@ export default function AccountSettings() {
         setDidHandle(parsed.didHandle |'');
         setEnableBackup(!!parsed.enableBackup)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -140,6 +152,7 @@ export default function AccountSettings() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -168,14 +181,23 @@ export default function AccountSettings() {;
         setDidHandle(parsed.didHandle || ''),;
         setEnableBackup(!!parsed.enableBackup);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     } catch (e) {;
       console && console.error('Error loading account settings', e);
     }
+<<<<<<< HEAD
+  const handleSave = () => {
+    setIsSubmitting(true);
+  }, []),
+  }, []),
+=======
 <<<<<<< HEAD
 
 
@@ -202,10 +224,13 @@ export default function AccountSettings() {;
   }, []),
   }, []),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const handleSave = () => {
     setIsSubmitting(true),
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -214,10 +239,13 @@ export default function AccountSettings() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Simulate API call
     setTimeout(() => {
       try {
         localStorage.setItem(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -238,6 +266,7 @@ export default function AccountSettings() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           'account_settings';
           JSON && JSON.stringify({ displayWeb3, didHandle, enableBackup });
         );
@@ -271,6 +300,8 @@ export default function AccountSettings() {;
         toast && toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
         return;
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -364,6 +395,7 @@ export default function AccountSettings() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Auto-set DID handle if ENS is available;
       try {;
         const provider = new (window as any).ethers && ethers.providers.Web3Provider(ethereum);
@@ -401,6 +433,8 @@ export default function AccountSettings() {;
 
 
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -598,11 +632,14 @@ export default function AccountSettings() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Input
                   id="email"
                   value={user?.email |''}
                   disabled
                   className="bg-gray-100"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -671,10 +708,13 @@ export default function AccountSettings() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Switch
                   id="displayWeb3"
                   checked={displayWeb3}
                   onCheckedChange={setDisplayWeb3}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
                 />;
@@ -717,10 +757,13 @@ export default function AccountSettings() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Switch
                   id="backup"
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
                 />;
@@ -745,12 +788,15 @@ export default function AccountSettings() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
                 className="w-full">;
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
               </Button>;
@@ -1378,6 +1424,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </p>;
               </div>;
             </CardContent>;
@@ -1385,6 +1432,8 @@ if ( {) {
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1447,3 +1496,4 @@ try {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

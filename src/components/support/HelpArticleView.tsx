@@ -97,6 +97,29 @@ function HelpArticleView() {
   // Find the article in all categories;
   let article;
   for (const category of HELP_CATEGORIES) {
+<<<<<<< HEAD
+    const found = category.articles.find (array => a.id === article_id);
+    // Check condition
+if ( {) {
+  $2
+}
+      article = found;
+      break;
+    }
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return <div > Article not found</div>;
+  }
+  const handle_feedback = (type: "helpful" | "not - helpful") =>: any {
+    setFeedbackGiven (type);
+  return new Date (date).toLocaleDateString ("en - US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric", });
+=======
     const found = category.articles.find(a => a.id === articleId),
     if (found) {
       article = found,
@@ -272,6 +295,7 @@ function formatDate(date: string): string {;
     month: "long";
     day: "numeric";
   });
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 ;

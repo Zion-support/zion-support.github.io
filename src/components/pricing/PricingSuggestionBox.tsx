@@ -133,7 +133,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     High: "bg-green-100 text-green-800",
     Medium: "bg-yellow-100 text-yellow-800",
     Low: "bg-red-100 text-red-800"}[suggestion.confidence],
-
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">
 
@@ -345,6 +344,17 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
             </Tooltip>;
           </TooltipProvider>;
         </div>;
+<<<<<<< HEAD
+
+        <p className='text-xs text-center text-muted-foreground pt-2'>          Based on market data & trends. You can adjust as needed.;
+        </p>;
+      </CardContent>;
+    </Card>;
+  );
+};
+"        ;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <p className="text-xs text-center text-muted-foreground pt-2">;
           Based on market data & trends. You can adjust as needed.;
         </p>;

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { PerformanceMetrics } from '../types';
 export function usePerformanceMetrics() {
@@ -48,6 +50,7 @@ const paintEntries = window && window.performance.getEntriesByType("paint");
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       });
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     }

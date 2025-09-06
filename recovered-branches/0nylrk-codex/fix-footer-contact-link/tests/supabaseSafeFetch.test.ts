@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+// Test that checkOnline returns false when navigator is offline
+it('checkOnline returns false when navigator is offline', async () => {
+  Object.defineProperty(window, 'navigator', {
+    value: { onLine: false };
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { check_online, safe_fetch } from '@/integrations / supabase / client';
@@ -7,10 +13,13 @@ import { vi } from 'vitest';
 it ('check_online returns false when navigator is offline', async () => {
   Object.define_property (window, 'navigator', {
     value: { on_line: false }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     writable: true});
   const result = await check_online ();
   expect (result).to_be (false);
 });
+<<<<<<< HEAD
+=======
 // Test that safe_fetch throws custom error when fetch fails;
 it ('safe_fetch throws when fetch rejects', async () => {
     value: { on_line: true }
@@ -43,12 +52,15 @@ it('checkOnline returns false when navigator is offline', async () => {
   const result = await check_online ();
   expect (result).to_be (false);
 });
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Test that safeFetch throws custom error when fetch fails
 it('safeFetch throws when fetch rejects', async () => {
     value: { onLine: true };
   vi.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error'));
   await expect(safeFetch('https: //example.com')).rejects.toThrow('Failed to connect to Supabase')
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 // Test that checkOnline returns false when navigator is offline;
@@ -74,3 +86,4 @@ it('safeFetch throws when fetch rejects', async () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import puppeteer from 'puppeteer',;
 export const config = {
   api: {

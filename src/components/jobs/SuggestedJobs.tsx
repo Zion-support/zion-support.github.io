@@ -145,6 +145,10 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
+      
+;
+=======
 
 
 ;
@@ -152,6 +156,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
       
 ;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
         <div className="space-y-4">
@@ -191,6 +196,10 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
+      
+;
+=======
 
 
 ;
@@ -198,6 +207,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
       
 ;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
@@ -210,6 +220,8 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
 
                 key = {match.id,}
+<<<<<<< HEAD
+=======
 
       {/* Applied Jobs Section */}
       {appliedMatches && appliedMatches.length > 0 && (;
@@ -222,6 +234,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
             {appliedMatches && appliedMatches.map(match => (;
               <JobMatchesCard
                 key = {match && match.id,}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
@@ -361,4 +374,7 @@ if ( {) {
 }</div>);
 }'"}
 }
+<<<<<<< HEAD
+=======
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

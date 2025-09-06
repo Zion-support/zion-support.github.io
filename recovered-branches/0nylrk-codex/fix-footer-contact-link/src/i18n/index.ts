@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import {initReactI18next} from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -19,6 +21,7 @@ import arTranslation from './locales/ar/translation.json',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Initialize i18next
 i18n
   .use(LanguageDetector) // Detect user language
@@ -40,6 +43,8 @@ i18n
     }
     fallbackLng: 'en', // Default language
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     debug: process && process.env.NODE_ENV === 'development',
@@ -51,6 +56,7 @@ i18n
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     interpolation: {
       escapeValue: false, // React already escapes by default
     }
@@ -60,6 +66,8 @@ i18n
       caches: ['localStorage']
     }});
 // For RTL language support
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -86,14 +94,18 @@ i18n.on('languageChanged', (lng) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // If user is authenticated, save language preference to profile
   // This will be implemented in the LanguageContext
 });
 export default i18n;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import i18n from 'i18next';
 import {initReactI18next} from 'react - i18next';
@@ -102,6 +114,8 @@ import en_translation from './locales / en / translation.json';
 import es_translation from './locales / es / translation.json';
 import pt_translation from './locales / pt / translation.json';
 import ar_translation from './locales / ar / translation.json';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -122,6 +136,7 @@ import arTranslation from './locales/ar/translation.json',;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Initialize i18next;
 i18n;
   .use (LanguageDetector) // Detect user language;
@@ -167,6 +182,8 @@ i18n.on ('language_changed', (lng) => {
 });
 ;
 export default i18n;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -224,3 +241,4 @@ export default i18n;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

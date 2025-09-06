@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> main
 import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth',;
 import { updateFlagStatus } from '../../../../../../utils/moderationDb',;
 import type { ModerationStatus } from '../../../../../../types/moderation',;
@@ -52,6 +58,7 @@ ban: 'banned'}
 };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth';
 import { updateFlagStatus } from '../../../../../../utils/moderationDb';
@@ -59,6 +66,8 @@ import type { ModerationStatus } from '../../../../../../types/moderation';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+<<<<<<< HEAD
+=======
 
   if (req.method === 'POST') {
     const { action, adminNotes } = req.body || {} as { action: string, adminNotes?: string }
@@ -74,6 +83,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ flag })
   }
 
+<<<<<<< HEAD
+  res.setHeader('AllowPOST'),
+=======
   res.setHeader('AllowPOST')
+>>>>>>> main
   return res.status(405).end('Method Not Allowed');
 };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

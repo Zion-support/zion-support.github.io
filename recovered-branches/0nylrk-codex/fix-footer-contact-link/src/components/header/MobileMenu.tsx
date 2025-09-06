@@ -6,10 +6,13 @@ import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 export interface MobileMenuProps {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   unreadCount?: number;
   onClose: () => void;
 }
@@ -18,6 +21,8 @@ export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -40,6 +45,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const isAuthenticated = !!user;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Link } from "react-router-dom",
 import { useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",
@@ -49,8 +55,11 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -61,6 +70,8 @@ export interface MobileMenuProps {
 }
 
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -74,10 +85,13 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const location = useLocation(),
   const { user } = useAuth(),
   const isAuthenticated = !!user,
   
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const location = useLocation();
   const { user } = useAuth();
@@ -89,12 +103,15 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const navItems = [
     {
       name: "Home"
       href: "/"
       icon: Home
       matches: (path: string) => path === "/"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -103,6 +120,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
     }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       name: "Browse"
       href: "/talent"
@@ -110,6 +128,8 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
     }
     {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       name: "Community"
       href: "/community"
@@ -137,12 +157,15 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       name: "Post Job"
       href: "/post-job"
       icon: BriefcaseIcon
       matches: (path: string) => path.startsWith("/post-job")
       authRequired: true
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -159,6 +182,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       name: "Messages"
       href: "/messages"
@@ -167,6 +191,8 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       badge: unreadCount
       authRequired: true
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -182,6 +208,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       name: "Dashboard"
       href: "/dashboard"
@@ -189,6 +216,8 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/dashboard")
       authRequired: true
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -275,10 +304,13 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Link
             key={item.name}
             to={item.href}
             className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -293,10 +325,13 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               item.matches(location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
             )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             onClick={onClose}
           >
@@ -459,6 +494,7 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
 =======
         {visibleItems && visibleItems.map(item => (;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -467,11 +503,14 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
             to={item && item.href}
             className={cn(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               "flex items-center px-6 py-3 text-base font-medium"
               item && item.matches(location && location.pathname)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
             )}
@@ -483,6 +522,8 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -490,6 +531,7 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {visibleItems.map(item => (;
           <Link;
             key={item.name}
@@ -508,6 +550,8 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -557,6 +601,7 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
     </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               )}
             </div>;
             {item && item.name}
@@ -597,6 +642,8 @@ function MobileMenu() {
   const { user } = use_auth ();
   const is_authenticated = !!user;
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const nav_items = [;
     {
@@ -760,3 +807,4 @@ return ()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

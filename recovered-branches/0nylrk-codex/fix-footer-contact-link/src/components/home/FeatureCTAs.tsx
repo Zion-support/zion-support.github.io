@@ -9,6 +9,8 @@ import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock} from "lucide-react";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -27,6 +29,7 @@ function FeatureCTAs() {
   const features = [;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "AI Talent Matching",
       description: "Our AI - powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
@@ -56,6 +59,8 @@ export function FeatureCTAs() {
       title: "Talent Directory"
       description: "Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       icon: <Users className="h - 10 w - 10 p - 2 rounded - md bg - purple - 100 text - purple - 700" />,
@@ -72,10 +77,13 @@ export function FeatureCTAs() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     {
       title: "Services Marketplace"
       description: "Discover professional tech and AI services for your business needs, from development to consulting.";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -91,6 +99,7 @@ export function FeatureCTAs() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -111,6 +120,8 @@ import {
   Clock
 } from "lucide-react",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -119,10 +130,13 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function FeatureCTAs() {
   const features = [
     {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -140,6 +154,7 @@ export function FeatureCTAs() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: "/marketplace",
       badge: "Popular",
@@ -160,6 +175,8 @@ export function FeatureCTAs() {
       badge: "New",
       details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     },
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -168,12 +185,15 @@ export function FeatureCTAs() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Equipment Catalog"
       description: "Find specialized hardware and tech equipment for AI development and research."
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />
       link: "/equipment"
       details: "Access cutting-edge technology with flexible options to buy, rent, or lease specialized equipment for your tech projects."
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -182,12 +202,15 @@ export function FeatureCTAs() {
     }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Community Hub"
       description: "Connect with like-minded professionals, share insights, and stay updated with industry trends.";
       icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />
       link: "/community"
       details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -206,6 +229,7 @@ export function FeatureCTAs() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Mobile Experience"
       description: "Take Zion with you on the go with our mobile app for iOS and Android devices."
@@ -213,6 +237,8 @@ export function FeatureCTAs() {
       link: "/mobile-launch"
       badge: "Featured"
       details: "Manage your projects, communicate with clients or talents, and receive real-time updates wherever you are."
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -264,10 +290,13 @@ export function FeatureCTAs() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     {
       title: "Developer Tools"
       description: "Access our API documentation, SDKs, and integration guides to build on top of the Zion platform.";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -285,10 +314,13 @@ export function FeatureCTAs() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     {
       title: "Learning Resources"
       description: "Access tutorials, courses, and documentation to enhance your skills in AI and tech.";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -306,10 +338,13 @@ export function FeatureCTAs() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     {
       title: "Project Management"
       description: "Streamlined tools to manage projects, track milestones, and ensure successful delivery.";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -356,6 +391,7 @@ export function FeatureCTAs() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Zion Hire AI"
       description: "AI-powered recruiting assistant to streamline your hiring process and find better matches."
@@ -363,6 +399,8 @@ export function FeatureCTAs() {
       link: "/zion-hire-ai"
       badge: "Premium"
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -455,6 +493,7 @@ export function FeatureCTAs() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       icon: <Calendar className="h - 10 w - 10 p - 2 rounded - md bg - red - 100 text - red - 700" />,
       link: "/dashboard / projects",
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion.";
@@ -470,6 +509,8 @@ export function FeatureCTAs() {;
   ];
 ;
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -518,6 +559,7 @@ export function FeatureCTAs() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -624,6 +666,8 @@ export function FeatureCTAs() {;
   ];
   return (;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -634,6 +678,7 @@ export function FeatureCTAs() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <section className="py-16 bg-gradient-to-b from-background to-background/90">;
       <div className="container mx-auto px-4">;
         <div className="mb-12 text-center">;
@@ -642,6 +687,8 @@ export function FeatureCTAs() {;
             Explore our comprehensive suite of tools designed to transform how you connect, collaborate, and create in the tech ecosystem.;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -653,6 +700,7 @@ export function FeatureCTAs() {;
 
                   {feature.icon}
                   {feature.badge && (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -851,6 +899,8 @@ export function FeatureCTAs() {;
     </section>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -904,3 +954,4 @@ Clock const features = [ {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

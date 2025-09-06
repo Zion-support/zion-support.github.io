@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
@@ -19,12 +21,15 @@ const corsHeaders = {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface Milestone {
   title: string;
   description: string;
   dueDate: string
   estimatedHours: number
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -33,11 +38,14 @@ interface Milestone {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -45,6 +53,7 @@ const corsHeaders = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
@@ -56,6 +65,8 @@ interface Milestone {
   dueDate: string,
   estimatedHours: number
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -63,6 +74,7 @@ interface Milestone {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -73,10 +85,13 @@ interface Milestone {;
   dueDate: string,;
   estimatedHours: number;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -295,6 +310,8 @@ if (req.method === 'OPTIONS') {
       additionalClauses;
       milestones
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
     } = await req && req.json();
 
@@ -365,6 +382,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   try {;
     // Get the OpenAI API key from environment variables;
@@ -390,6 +408,8 @@ serve(async (req) => {
     let prompt = `;
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -399,6 +419,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -436,6 +457,8 @@ serve(async (req) => {
     // Add milestone information if available
     if (milestones && milestones.length > 0) {
       prompt += `
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -492,6 +515,7 @@ if (milestones && milestones.length > 0) {prompt += `
         - Estimated Work: ${milestone.estimatedHours} hours
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         `
       });
       prompt += `
@@ -503,6 +527,8 @@ if (milestones && milestones.length > 0) {prompt += `
     `;
     // Call OpenAI API
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
       headers: {
@@ -511,10 +537,13 @@ if (milestones && milestones.length > 0) {prompt += `
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         model: 'gpt-4o';
         messages: [
           {
             role: 'system'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -608,12 +637,18 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         Milestone ${index + 1}: ${milestone.title}
         - Description: ${milestone.description}
         - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
 
       { 
         status: 500, 
+<<<<<<< HEAD
+        - Estimated Work: ${milestone.estimatedHours} hours;
+        `;
+      }),;
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -632,10 +667,13 @@ if ( {) {
         `;
       }),;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       prompt += `;
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.;
       `;
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -657,6 +695,7 @@ if ( {) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     prompt += `;
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.;
     `;
@@ -676,9 +715,12 @@ if ( {) {
             role: 'user'
             content: prompt}];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     const data = await response.json ();
 ;
@@ -704,6 +746,8 @@ if ( {) {
       });
       {
         status: 500
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -771,6 +815,7 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     prompt += `;
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.;
@@ -811,6 +856,8 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
       {;
         status: 500,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -820,11 +867,14 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     console.error ('Error generating contract:', error);
@@ -862,3 +912,4 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

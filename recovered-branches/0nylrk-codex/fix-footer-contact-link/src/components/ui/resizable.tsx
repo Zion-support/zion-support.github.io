@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -22,12 +24,15 @@ import { cn } from "@/lib/utils"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const ResizablePanelGroup = ({
   className
   ...props
 }: React.ComponentProps<typeof ResizablePrimitive.PanelGroup>) => (
   <ResizablePrimitive.PanelGroup
     className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -44,6 +49,7 @@ const ResizablePanelGroup = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
     )}
     {...props}
@@ -60,6 +66,8 @@ const ResizableHandle = ({
   <ResizablePrimitive.PanelResizeHandle
     className={cn(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -75,11 +83,16 @@ const ResizableHandle = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
     )}
     {...props}
   >
     {withHandle && (
+<<<<<<< HEAD
+      <div className="z-10 flex h-4 w-3 items-center justify-center rounded-sm border bg-border">
+        <GripVertical className="h-2.5 w-2.5" />
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       <div className=&quot;z-10 flex h-4 w-3 items-center justify-center rounded-sm border bg-border&quot;>
@@ -92,16 +105,20 @@ const ResizableHandle = ({
       <div className="z-10 flex h-4 w-3 items-center justify-center rounded-sm border bg-border">
         <GripVertical className="h-2.5 w-2.5" />
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </div>
     )}
   </ResizablePrimitive.PanelResizeHandle>;
 );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 ;
@@ -119,6 +136,8 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 ;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -126,6 +145,7 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 <<<<<<< HEAD
@@ -164,9 +184,12 @@ const ResizableHandle = ({
         <GripVertical className=&quot;h - 2.5 w - 2.5 & quot; />;
       </div>)}
   </ResizablePrimitive.PanelResizeHandle>);
+<<<<<<< HEAD
+=======
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 import { GripVertical } from "lucide-react";
 import * as ResizablePrimitive from "react-resizable-panels";
@@ -231,4 +254,7 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle } const ResizableP
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

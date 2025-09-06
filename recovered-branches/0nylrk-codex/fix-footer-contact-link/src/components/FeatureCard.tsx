@@ -28,6 +28,8 @@ export function FeatureCard(): any ({;
     <div
       className={cn(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -68,6 +70,7 @@ import React from "react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface FeatureCardProps {
   title: string,
   description: string,
@@ -86,6 +89,8 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         {icon}
       </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -93,10 +98,13 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div>
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
         <p className="text-zion-slate-light">{description}</p>
       </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -104,6 +112,7 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
     </div>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
   )
@@ -127,11 +136,14 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         {icon}
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return (
     <div
       className={cn(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         "flex items-start p-6 rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300",
@@ -142,6 +154,8 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>;
         <p className="text-zion-slate-light">{description}</p>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     </div>
@@ -156,6 +170,7 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { cn  } from '@/lib / utils';
 import React from './react';
 interface FeatureCardProps {
@@ -186,6 +201,8 @@ function FeatureCard() {
 <<<<<<< HEAD
 
 }
+<<<<<<< HEAD
+=======
 =======
 }
 
@@ -242,3 +259,4 @@ key?: string | number, //Added key prop
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

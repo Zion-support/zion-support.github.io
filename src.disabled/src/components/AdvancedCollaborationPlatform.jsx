@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React,{ useState,useRef } from 'react'; export function AdvancedCollaborationPlatform () {}; return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from 'lucide-react'; : p))}; const toggleVideo = () => {}}; setIsVideoOff(!isVideoOff); setParticipants(prev => prev.map(p => p.id === '1' ? { ...p,"isVideoOff": '!isVideoOff' } : p))}; const toggleScreenShare = () => {}}; setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev.map(p => p.id === '1' ? { ...p,"isScreenSharing": '!isScreenSharing' } : p))}; const toggleRecording = () => {}}; setIsRecording(!isRecording) }; const sendChatMessage = () => {}}; if(chatMessage.trim()) {}}}}
@@ -38,3 +40,4 @@ import _React,{ useState,useRef } from 'react'; export function AdvancedCollabor
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

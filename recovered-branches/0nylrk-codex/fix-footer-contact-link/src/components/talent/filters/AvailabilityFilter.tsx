@@ -1,4 +1,14 @@
+<<<<<<< HEAD
+const AVAILABILITY_OPTIONS = [
+  { id: "full_time", label: "Full-time" }
+  { id: "part_time", label: "Part-time" }
+import {ChevronDown, ChevronUp} from "lucide-react";
+import {Checkbox} from "@/components/ui/checkbox";
+import {AvailabilityFilterProps} from "@/types/filters";
+import { ChevronDown, ChevronUp } from "lucide-react",
+=======
 import { ChevronDown, ChevronUp } from "lucide-react";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters";
 const AVAILABILITY_OPTIONS = [
@@ -43,12 +53,15 @@ export function AvailabilityFilter({
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { AvailabilityFilterProps } from "@/types/filters",;
@@ -97,9 +110,12 @@ const AVAILABILITY_OPTIONS = [;
         </div>;
       )}
   );
+<<<<<<< HEAD
+=======
 =======
     </div>
   );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Checkbox  } from '@/components / ui / checkbox';
@@ -110,6 +126,8 @@ const AVAILABILITY_OPTIONS = [;
   { id: "project", label: "Project - based" },
 ];
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -206,3 +224,4 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -8,6 +8,8 @@ import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ActiveProjectsCard() {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const { projects, isLoading } = useProjects();
@@ -24,6 +26,7 @@ export function ActiveProjectsCard() {;
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useEffect, useState } from "react",
 import { Link } from "react-router-dom",
 import { BriefcaseIcon, Clock } from "lucide-react",
@@ -43,9 +46,12 @@ export function ActiveProjectsCard() {
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     if (projects && !isLoading) {
       const active = projects.filter(p =>
@@ -55,6 +61,9 @@ export function ActiveProjectsCard() {
     }
   const { projects, isLoading } = useProjects();
 
+<<<<<<< HEAD
+  const [activeProjects, setActiveProjects] = useState<Project[]>([]);
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -124,6 +133,7 @@ export function ActiveProjectsCard() {;
 
   if (isLoading) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
 =======
   if (isLoading) {;
@@ -171,6 +181,8 @@ export function ActiveProjectsCard() {;
             {[1, 2].map(idx => (;
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -178,6 +190,7 @@ export function ActiveProjectsCard() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             ))}
           </div>;
         </CardContent>;
@@ -304,6 +317,8 @@ function ActiveProjectsCard() {
   const [active_projects, setActiveProjects] = useState < Project[]>([]);
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -416,3 +431,4 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

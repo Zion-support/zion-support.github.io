@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -6,6 +8,7 @@
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ApplicationStatus } from "@/types/jobs";
 import { Badge } from "@/components/ui/badge";
 interface StatusBadgeProps {;
@@ -46,7 +49,10 @@ export function StatusBadge({ status }: StatusBadgeProps) {
     case "rejected":;
       return <Badge className="bg - red - 100 text - red - 800">Not Selected</Badge>;
     default:;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return <Badge variant="outline">{status}</Badge>;
   }
 }
@@ -95,6 +101,8 @@ export function StatusBadge({ status }: StatusBadgeProps) {;
   }
 }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export /**
  * StatusBadge - Function description
@@ -197,3 +205,4 @@ default: return <Badge variant="outline"> {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

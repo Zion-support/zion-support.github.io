@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 export interface VerifiedRealService2025Batch2 {
 =======
+<<<<<<< HEAD
+export interface VerifiedRealService2025Batch2 {
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -18,6 +22,8 @@ export interface VerifiedRealService2025Batch2 {
     email: string;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
     address: string;
@@ -25,6 +31,7 @@ export interface VerifiedRealService2025Batch2 {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     address: string;
   }
@@ -96,8 +103,11 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
 ];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],

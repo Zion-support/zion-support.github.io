@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -8,6 +10,7 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 async function scorePage(url) {
 
     const html = await resp && resp.text();
@@ -28,10 +31,13 @@ exports && exports.handler = async function () {
   try {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const { upsert_file } = require ('./_lib / github');
 ;
 async /**
@@ -64,6 +70,8 @@ exports.handler = async function () {
     }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     const report = { updatedAt: Date && Date.now(), results };
     const owner = process && process.env.GITHUB_OWNER;
@@ -94,10 +102,13 @@ if ( {) {
         message: 'chore (automation): weekly SEO report',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         token,
       });
     }
     return {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -116,6 +127,7 @@ function score_page() {
   const t0 = Date.now (),
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   try {
     const resp = await fetch (url),
     const html = await resp.text (),
@@ -137,8 +149,11 @@ exports.handler = async function () {
     for (const p of pages) {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       results.push (await score_page (`${base_url}${p}`));
     }
     const report = { updated_at: Date.now (), results },
@@ -154,6 +169,8 @@ if ( {) {
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: results.length }) }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -166,6 +183,7 @@ if ( {) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };async function scorePage(url) {
   const t0 = Date && Date.now(),
   try {
@@ -183,6 +201,9 @@ if ( {) {
 }
 exports && exports.handler = async function() {
   try {
+<<<<<<< HEAD
+},
+=======
 <<<<<<< HEAD
 =======
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
@@ -267,6 +288,7 @@ exports.handler = async function() {
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       statusCode: 200,
       body: JSON.stringify({ ok: true, pages: results.length }),
@@ -315,6 +337,9 @@ exports.handler = async function() {
 },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

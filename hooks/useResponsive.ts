@@ -1,4 +1,27 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useState, useEffect } from 'react';
+
+interface ResponsiveState {
+  isMobile: boolean;
+  isTablet: boolean;
+  isDesktop: boolean;
+  width: number;
+  height: number;
+}
+
+export const useResponsive = (): ResponsiveState => {
+  const [state, setState] = useState<ResponsiveState>({
+    isMobile: false,
+    isTablet: false,
+    isDesktop: false,
+    width: 0,
+    height: 0,
+  });
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -36,6 +59,7 @@ export default useResponsive;import { useState, useEffect } from 'react';
 export default use_responsive,import { useState, useEffect } from 'react';
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface Breakpoints {
   sm: number;
   md: number;
@@ -43,6 +67,8 @@ interface Breakpoints {
   xl: number;
   '2xl': number;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -67,10 +93,33 @@ const useResponsive = (): ResponsiveState => {
     "isMobile": false,
     "isTablet": false,
     "isDesktop": true});
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   useEffect(() => {
     const updateDimensions = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
+<<<<<<< HEAD
+      
+      setState({
+        width,
+        height,
+        isMobile: width < 768,
+        isTablet: width >= 768 && width < 1024,
+        isDesktop: width >= 1024,
+      });
+    };
+
+    updateDimensions();
+    window.addEventListener('resize', updateDimensions);
+    
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, []);
+
+  return state;
+};
+
+export default useResponsive;
+=======
       setState({
         "screenWidth": width,
         "screenHeight": height,
@@ -100,6 +149,7 @@ export default useResponsive;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 
   return state}
@@ -114,6 +164,8 @@ const defaultBreakpoints: Breakpoints = {
   lg: 1024,
   xl: 1280,
   '2xl': 1536,
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} } const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: '1920',screenHeight: '1080',orientation: "landscape",isMobile: 'false',isTablet: 'false',isDesktop: 'true',}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: 'width',screenHeight: 'height',orientation: width > height ? "landscape" : "portrait",isMobile: 'width < 768',isTablet: 'width >= 768 && width < 1024',isDesktop: 'width >= 1024',})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
@@ -155,4 +207,9 @@ const defaultBreakpoints: Breakpoints = {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

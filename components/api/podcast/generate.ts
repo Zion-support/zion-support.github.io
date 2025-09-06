@@ -4,6 +4,8 @@ import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -39,6 +41,7 @@ export default async function handler(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 function readEpisodes(): any[] {
   ensureStorage();
   return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
@@ -49,6 +52,11 @@ function writeEpisodes(episodes: any[]) {
 }
 
 
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -69,6 +77,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -78,8 +87,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         questions: [
           'What is the vision behind Zion as a global decentralized talent protocol?'
           'How does Zion practically onboard talent and organizations?'
@@ -130,6 +142,10 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
   };
 }
 
+<<<<<<< HEAD
+}
+}
+=======
 <<<<<<< HEAD
 
 =======
@@ -434,3 +450,4 @@ time_markers: generated.time_markers || {
 }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

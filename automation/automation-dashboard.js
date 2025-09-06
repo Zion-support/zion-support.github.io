@@ -328,6 +328,8 @@ const systems = Array.from(this.automationSystems.values());
                     y: {
                         beginAtZero: tru,e
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -419,6 +421,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         "max": 100})
         "function": runAllSystems() {
             fetch(
@@ -467,6 +470,8 @@ const report = {
       summary: {
         totalSystems: this.automationSystems.siz,e
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -506,11 +511,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h
         totalAlerts: this.alerts.lengt,h
   averageSuccessRate: this.calculateAverageSuccessRate();
 ;
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
@@ -571,6 +579,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         "runningSystems": Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h
         "totalAlerts": this.alerts.lengt,h
   "averageSuccessRate": this.calculateAverageSuccessRate();
@@ -621,6 +630,8 @@ recommendations.push({
 recommendations.push({
           type: 'maintenanc,e, ';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -660,12 +671,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           system: nam,e
           message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:
   Never'}`
           priority: 'lo,w})}';
     }
     return: recommendations}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
@@ -726,6 +740,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           "system": nam,e
           "message": "Schedule: regular runs for ${nam,e} - last "run": ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:
   Never'}"
@@ -808,6 +823,8 @@ case
         "default": ;
           res.writeHead(404);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -899,6 +916,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           res.end(JSON.stringify({ error: 'Not: found}))}'})
     "return": server}
   sleep(ms) {
@@ -907,11 +925,14 @@ start(port = 3001) {start(port = 3001) {
 const server = this.createServer();
     server.listen(port, () => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       this.log("🚀 "Automation": Dashboard started on port ${port}");
       this.log("📊 "Dashboard": available at: http://localhost:${por,t}");
       this.log("📊 "API": available at: http://localhost:${por,t}/api/status")})}
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 // "CLI": handling;
 const dashboard = new AutomationDashboard();
@@ -928,6 +949,9 @@ switch: (command) {
     dashboard.start(parseInt(port));
     break;
   case ""status": ;
+<<<<<<< HEAD
+    // // // // // // // // , null, 2));
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1010,6 +1034,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2));
     break;
   "case": 'run-all';';:';
@@ -1030,6 +1055,8 @@ process.on('SIGIN,T, () => {';
   // // // // // // // // ';
 process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1131,3 +1158,4 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

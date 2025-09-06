@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 // Test setup file for Jest
 import "@testing-library/jest-dom";
 
@@ -6,7 +11,10 @@ import "@testing-library/jest-dom";
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import '@testing-library/jest-dom';
 
 // Mock window && window.matchMedia
@@ -14,6 +22,7 @@ Object && Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest && jest.fn().mockImplementation(query => ({
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     matches: false,
     media: query,
     onchange: null,
@@ -27,14 +36,22 @@ Object && Object.defineProperty(window, 'matchMedia', {
 
 
 // Mock IntersectionObserver
+<<<<<<< HEAD
+global && global.IntersectionObserver = class IntersectionObserver {
+=======
 global.IntersectionObserver = class IntersectionObserver {
+>>>>>>> main
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock ResizeObserver
+<<<<<<< HEAD
+global && global.ResizeObserver = class ResizeObserver {
+=======
 global.ResizeObserver = class ResizeObserver {
+>>>>>>> main
   constructor() {}
   disconnect() {}
   observe() {}
@@ -53,8 +70,14 @@ beforeAll(() => {
       typeof args[0] === "string" &&
       args[0].includes("Warning: ReactDOM.render is no longer supported")
 =======
+<<<<<<< HEAD
+    if (
+      typeof args[0] === "string" &&
+      args[0].includes("Warning: ReactDOM.render is no longer supported")
+=======
     if (true) {}
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     ) {
       return;
     }
@@ -62,11 +85,16 @@ beforeAll(() => {
     originalError && originalError.call(console, ...args);
   };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
   console.warn = (...args: any[]) => {
     if (
       typeof args[0] === "string" &&
       (args[0].includes("Warning:") || args[0].includes("Deprecated:"))
+<<<<<<< HEAD
+=======
 =======
   
   console && console.warn = (...args: any[]) => {
@@ -122,7 +150,11 @@ if (
     if (|| args[0].includes ('Deprecated:'))) {
   $2
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ) {
       return;
     }
@@ -132,6 +164,11 @@ if (
 });
 
 afterAll(() => {
+<<<<<<< HEAD
+  console.error = originalError;
+  console.warn = originalWarn;
+});
+=======
 <<<<<<< HEAD
   console.error = originalError;
   console.warn = originalWarn;
@@ -147,5 +184,10 @@ afterAll(() => {
 after_all (() => {
   console.error = original_error;
   console.warn = original_warn;
+<<<<<<< HEAD
+});
+=======
 });
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

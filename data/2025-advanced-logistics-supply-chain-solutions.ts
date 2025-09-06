@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -35,6 +38,8 @@
     address: string;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     website: string;
   }
 
@@ -59,6 +64,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         'Demand forecasting',
         'Inventory optimization',
         'Route optimization',
@@ -73,10 +79,13 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       popular: true,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
       icon: '📦',
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization',
@@ -105,8 +114,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       contact_info: {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -123,6 +135,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
       id: 'quantum - logistics - optimization - platform',
@@ -135,6 +149,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         'Quantum algorithms',
         'Route optimization',
         'Scheduling optimization',
@@ -147,6 +162,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Performance analytics',
       ],
       popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       icon: '⚛️',
@@ -182,6 +199,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -198,6 +216,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
         'Real-time tracking',
       id: 'iot - fleet - management - platform',
@@ -211,6 +231,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Real - time tracking',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         'Predictive maintenance',
         'Fuel monitoring',
         'Driver behavior analysis',
@@ -222,6 +243,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Compliance tools',
       ],
       popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       icon: '🚛',
@@ -257,6 +280,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -273,6 +297,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
         'End-to-end traceability',
       id: 'blockchain - supply - chain - transparency',
@@ -286,6 +312,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'End - to - end traceability',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         'Smart contracts',
         'Compliance tracking',
         'Quality assurance',
@@ -297,6 +324,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Performance monitoring',
       ],
       popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       icon: '⛓️',
@@ -332,6 +361,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -348,6 +378,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
       id: 'ai - powered - warehouse - automation',
@@ -360,6 +392,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         'Automated picking',
         'Smart routing',
         'Inventory optimization',
@@ -372,6 +405,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Compliance tools',
       ],
       popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       icon: '🏭',
@@ -407,6 +442,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -435,8 +471,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface AdvancedLogisticsSupplyChainSolution2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -452,6 +491,11 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+<<<<<<< HEAD
+      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
+      'Custom algorithmsCompliance tools'
+    ];
+=======
 <<<<<<< HEAD
 =======
     mobile: string, email: string,
@@ -478,6 +522,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       'Custom algorithmsCompliance tools'
     ];
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     technology: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];
     integrations: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'];
     useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];
@@ -486,6 +531,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     marketSize: '$45B supply chain management market', growthRate: '28% annual growth'
     variant: 'logistics'
     contactInfo: {
+<<<<<<< HEAD
+=======
 =======
 
     popular: true, icon: '📦',
@@ -512,6 +559,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     marketSize: '$28B warehouse automation market', growthRate: '38% annual growth'
     variant: 'ai-supply-chain-enterprise'
     contactInfo: {
@@ -789,6 +837,9 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
   }
 ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -8,6 +10,7 @@ export interface EmergingTechBreakthrough2025 {
   {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -15,6 +18,8 @@ export interface EmergingTechBreakthrough2025 {
     },
     real_implementation: true,
     implementation_details:;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       'Complete metaverse AI development platform with AI - powered tools, dynamic generation, and intelligent environments.',
@@ -77,10 +82,13 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     variant: 'neural-revolutionary',
     contactInfo: {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       website: 'https://ziontechgroup.com';
@@ -446,6 +454,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthrough2025 {;
   id: string,;
@@ -716,11 +725,15 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 4.7,
     reviews: 18;
 <<<<<<< HEAD
+  }
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
 ];

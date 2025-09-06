@@ -1,6 +1,31 @@
+<<<<<<< HEAD
+export default function MainLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <div className="main-layout">{children}</div>;
+}
+                isOpen={sidebarOpen},;
+                onClose={() => setSidebarOpen(false)},;
+              />,;
+              <div className="flex-1 ml-80">,;
+                {children},;
+              </div>,;
+            </div>,;
+          )},;
+          {!showSidebar && children},;
+        </main>,;
+        <Footer />,;
+      </div>,;
+    </>,;
+  );
+},;
+=======
 
 import React from 'react';
 
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

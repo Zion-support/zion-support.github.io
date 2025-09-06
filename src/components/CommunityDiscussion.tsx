@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+  id: number,
+  author: string,
+  avatar?: string,
+  time: string,
+=======
 body: string
 import React, { useState } from 'react';
 import { MessageCircle } from 'lucide-react';
@@ -17,10 +23,20 @@ interface DiscussionPost {
 const initial_posts: DiscussionPost[] = [;
   {
     id: 1,  time: string,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   title: string,
   body: string;
 }
+<<<<<<< HEAD
+const initialPosts: DiscussionPost[] = [
+  {
+    author: "Anna Zhou",
+    time: "2h ago",
+    title: "What AI trends are you most excited for in 2025?",
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
+=======
 const initial_posts: DiscussionPost[] = [;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
 
     id: 1,
@@ -30,6 +46,9 @@ const initial_posts: DiscussionPost[] = [;
     body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?",
   },
     id: 2,
+<<<<<<< HEAD
+export const CommunityDiscussion: React.FC = () => {
+=======
     author: 'David Kim',
     time: '50m ago',
     title: 'Quick tip: How to rank your Zion listing higher',
@@ -99,10 +118,20 @@ const initialPosts: DiscussionPost[] = [;
   },;
 ];
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const CommunityDiscussion: React.FC = () => {;
   const [posts, setPosts] = useState(initialPosts);
   const [showNew, setShowNew] = useState(false);
   const [newTitle, setNewTitle] = useState('');
+<<<<<<< HEAD
+
+export const CommunityDiscussion: React.FC = () => {
+  const [posts, setPosts] = useState(initialPosts),
+  const [showNew, setShowNew] = useState(false),
+  const [newTitle, setNewTitle] = useState(""),
+  const [newBody, setNewBody] = useState(""),
+  const handleAddPost = () => {
+=======
   const [newBody, setNewBody] = useState('');  const [newTitle, setNewTitle] = useState("");
   const [newBody, setNewBody] = useState("");
 
@@ -131,6 +160,7 @@ export const CommunityDiscussion: React.FC = () => {;
       ...posts])
     setNewTitle("")
     setNewBody("")
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     setShowNew(false)
     <div className='w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in'>;
       <div className='flex items - center gap - 3 mb - 4'>;
@@ -184,12 +214,15 @@ export const CommunityDiscussion: React.FC = () => {;
 
 
   const handleAddPost = () => {
+<<<<<<< HEAD
+=======
 
     if (!newTitle.trim() || !newBody.trim()) return,
     setPosts([
       {
         id: Date.now(),
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
@@ -205,24 +238,41 @@ export const CommunityDiscussion: React.FC = () => {;
       <div className="mb-4 flex justify-end">
         <Button
 
+<<<<<<< HEAD
+=======
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
           size="sm"
           onClick={() => setShowNew((v) => !v)}
         >
           {showNew ? "Cancel" : "New Post"}
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
       </div>
       {showNew && (
         <Card className="mb-6 animate-scale-in">
           <CardContent className="py-5">
             <Input
+<<<<<<< HEAD
+          onClick={() => setShowNew((v) => !v)}
+        >
+          {showNew ? "Cancel" : "New Post"}
+        </Button>
+      </div>
+      {showNew && (
+        <Card className="mb-6 animate-scale-in">
+          <CardContent className="py-5">
+            <Input
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               placeholder="Title (e.g., Share an AI tool, Ask for help...)"
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
               maxLength={80}
+<<<<<<< HEAD
+=======
             />
             <Textarea
               placeholder="What's on your mind?"
@@ -293,6 +343,7 @@ export const CommunityDiscussion: React.FC = () => {;
         <Button;
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";
           size="sm";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
           onClick={() => setShowNew((v) => !v)}
@@ -307,6 +358,8 @@ export const CommunityDiscussion: React.FC = () => {;
               placeholder="Title (e && e.g., Share an AI tool, Ask for help...)"
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
               value={newTitle}
+<<<<<<< HEAD
+=======
 
 
               maxLength={80}
@@ -315,13 +368,17 @@ export const CommunityDiscussion: React.FC = () => {;
               placeholder="What's on your mind?"
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               >
                 Cancel
               </Button>
               <Button
+<<<<<<< HEAD
+=======
 
 
                 size="sm"
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
@@ -329,6 +386,20 @@ export const CommunityDiscussion: React.FC = () => {;
 
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}
                 onClick = {handleAddPost,}
+<<<<<<< HEAD
+      <div className="flex flex-col gap-6">
+        {posts.map((post) => (
+          <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">
+            <CardContent className="py-4 flex gap-4">
+              <Avatar>
+                <AvatarFallback>
+                  {post.author
+                    .split(" ")
+                    .map((s) => s[0])
+                    .join("")
+                    .toUpperCase()
+                    .slice(0, 2)}
+=======
                 disabled = {!newTitle && newTitle.trim() || !newBody && newBody.trim(),}>;
     <div className="w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in">;
       <div className="flex items - center gap - 3 mb - 4">;
@@ -402,6 +473,7 @@ export const CommunityDiscussion: React.FC = () => {;
     </div>
   )
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </div>;
       <div className='mt-8 text-xs text-zion-slate-dark text-center'>;
         🚀 Stay engaged! Top contributors are regularly featured on the;
@@ -462,6 +534,19 @@ export const CommunityDiscussion: React.FC = () => {;
                 </AvatarFallback>;
               </Avatar>;
               <div>;
+<<<<<<< HEAD
+                <div className="flex gap-2 items-center">;
+                  <span className="font-semibold text-white">{post.author}</span>;
+                  <span className="text-xs text-zion-slate-light">{post.time}</span>;
+                </div>;
+                <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}</h3>;
+                <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>;
+              </div>;
+            </CardContent>;
+          </Card>;
+        ))}
+      </div>;
+=======
                 <div className='flex gap - 2 items - center'>;
                   <span className='font - semibold text - white'>;
                     {post.author}
@@ -513,3 +598,4 @@ export const CommunityDiscussion: React.FC = () => {;
       </div>;
     </div>);
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

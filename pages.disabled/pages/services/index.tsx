@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,12 +33,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const categories = [\'AI Services\', \'IT Services\', \'Development\', \'Security\'];
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
 const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -61,6 +66,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function ServicesIndex() {
   const services = [
     {
@@ -129,6 +135,8 @@ export default function ServicesIndex() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -167,6 +175,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {services.map((service, index) => (
               <div key={index} className=\"bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6\">
                 <div className=\"flex items-center mb-4\">
@@ -175,6 +184,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
                   <h3 className=\"text-xl font-semibold text-gray-900\">{service.name}</h3>
                 </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center text-sm text-gray-600\">
@@ -215,6 +226,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center text-sm text-gray-600\">
                       <Check className=\"w-4 h-4 text-green-500 mr-2\" />
@@ -329,6 +341,8 @@ export default function ServicesIndex() {;
               </div>;
             ))}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -391,6 +405,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 href=\"/contact\"
                 className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors\">;
                 Get Free Consultation;
@@ -406,6 +421,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       </div>;
     </>;
   );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -433,3 +450,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

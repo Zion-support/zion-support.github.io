@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 
 const AvatarMenu = () => {
@@ -9,3 +11,4 @@ const AvatarMenu = () => {
 };
 
 export default AvatarMenu;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

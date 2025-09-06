@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
@@ -86,6 +88,7 @@ if ( {) {
   }
   return (
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <ThemeProviderContext.Provider {...props} value={value}>;
       {children}
     </ThemeProviderContext.Provider>);
@@ -96,6 +99,8 @@ export const use_theme = () =>: any {
     throw new Error ("use_theme must be used within a ThemeProvider")) {
   $2
 }
+<<<<<<< HEAD
+=======
 
 
   return context;
@@ -104,6 +109,7 @@ export const use_theme = () =>: any {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
@@ -179,4 +185,7 @@ export const useTheme = () => {;
     throw new Error("useTheme must be used within a ThemeProvider");
   return context;
 };
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

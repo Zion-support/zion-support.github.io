@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -14,6 +16,7 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {AppLayout} from "@/layout/AppLayout";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -23,19 +26,27 @@ import { AppLayout } from "@/layout/AppLayout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AppLayout } from "@/layout/AppLayout",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function Careers() {
   // Sample job listings
 
   const jobs = {
     engineering: [
       {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -48,10 +59,13 @@ export default function Careers() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         title: "Senior Frontend Engineer",
         location: "Remote",
         type: "Full-time",
         department: "Engineering",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -59,6 +73,7 @@ export default function Careers() {
       };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
       }
       {
@@ -95,6 +110,10 @@ export default function Careers() {
         description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
       }
 <<<<<<< HEAD
+    product: [
+      {
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     ];
     product: [
@@ -128,6 +147,7 @@ export default function Careers() {
     product: [
       {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {
         title: "UX/UI Designer"
         location: "Remote"
@@ -152,6 +172,8 @@ export default function Careers() {
         department: "Marketing"
         description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -172,6 +194,7 @@ export default function Careers() {
 <<<<<<< HEAD
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
       }
     ];
@@ -193,6 +216,8 @@ export default function Careers() {
         department: "Operations"
         description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -208,6 +233,7 @@ export default function Careers() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {
         title: "Talent Acquisition Specialist"
         location: "Remote"
@@ -216,6 +242,8 @@ export default function Careers() {
         description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
       }
     ]
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -231,6 +259,7 @@ export default function Careers() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Benefits list
   const benefits = [
     {
@@ -242,6 +271,8 @@ export default function Careers() {
         </svg>
       )
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -257,6 +288,7 @@ export default function Careers() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Health & Wellness"
       description: "Comprehensive health insurance and wellness programs to keep you at your best."
@@ -266,6 +298,8 @@ export default function Careers() {
         </svg>
       )
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -281,6 +315,7 @@ export default function Careers() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Continuous Learning"
       description: "Education stipends and dedicated learning time to help you grow professionally."
@@ -289,6 +324,8 @@ export default function Careers() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -614,6 +651,7 @@ export default function Careers() {;
     ],;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     marketing: [;
       {;
         title: "Growth Marketing Manager",;
@@ -640,6 +678,8 @@ export default function Careers() {;
         description: "Help connect the right talent with the right opportunities on our platform through personalized matching.";
       }
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   },;
   // Benefits list;
@@ -821,6 +861,7 @@ export default function Careers() {;
       title: "Competitive Compensation",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       description: "Salary packages that recognize your value, plus equity options to share in our success.";
       icon: (;
         <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www && www.w3.org/2000/svg">;
@@ -830,6 +871,8 @@ export default function Careers() {;
     }
   ];
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <AppLayout>;
       <SEO;
@@ -1118,10 +1161,13 @@ export default function Careers() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             Apply Now;
                           </Button>;
                         </div>;
                       </CardContent>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1138,6 +1184,7 @@ export default function Careers() {;
                 </TabsContent>
               ))}
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   ))}
                 </TabsContent>;
               ))}
@@ -1159,11 +1206,22 @@ export default function Careers() {;
     </AppLayout>
   )
 <<<<<<< HEAD
+}
+
+
+                  ))}
+                </TabsContent>;
+              ))}
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
             </Tabs>;
@@ -1184,20 +1242,26 @@ export default function Careers() {;
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </Tabs>;
           </div>;
           ;
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>;
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;
               We're always looking for talented individuals who are passionate about AI and technology. ;
               Send us your resume and let's start a conversation.;
             </p>;
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1208,6 +1272,7 @@ export default function Careers() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </Tabs>;
           </div>;
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md: p-12 text-center">;
@@ -1227,7 +1292,10 @@ export default function Careers() {;
                   ))}
                 </TabsContent>;
               ))}
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               Send General Application;
             </Button>;
           </div>;
@@ -1237,6 +1305,8 @@ export default function Careers() {;
 
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1329,8 +1399,12 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
     </AppLayout>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

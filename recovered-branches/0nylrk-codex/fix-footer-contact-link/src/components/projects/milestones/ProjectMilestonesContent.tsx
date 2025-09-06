@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 =======
@@ -42,6 +45,10 @@ export function ProjectMilestonesContent() {;
     isLoading: milestonesLoading
 
 <<<<<<< HEAD
+
+import React, { useState, useEffect } from 'react';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -61,6 +68,7 @@ export function ProjectMilestonesContent() {;
 
 import React, { useState, useEffect } from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     createMilestone;
     updateMilestoneStatus;
     deleteMilestone;
@@ -80,14 +88,19 @@ import React, { useState, useEffect } from 'react';
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('milestones');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
 
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
 
   useEffect(() => {;
     async function loadProject() {;
+<<<<<<< HEAD
+=======
       if (!projectId) return;
 
       setIsLoading(true);
@@ -177,6 +190,7 @@ export function ProjectMilestonesContent() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {;
     async function loadProject() {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (!projectId) return,;
       ;
       setIsLoading(true),;
@@ -216,6 +230,8 @@ export function ProjectMilestonesContent() {;
     refetch();
   }, [projectId, getProjectById, refetch]),;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -237,6 +253,7 @@ export function ProjectMilestonesContent() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleMilestoneCreated = async () => {;
     await refetch();
   };
@@ -257,6 +274,8 @@ export function ProjectMilestonesContent() {;
       </div>;
     );
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -401,6 +420,7 @@ export function ProjectMilestonesContent() {;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <ProjectActions
 
     },
@@ -423,6 +443,8 @@ export function ProjectMilestonesContent() {;
 
 
           projectId={projectId || ''}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -476,10 +498,13 @@ export function ProjectMilestonesContent() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
           isTalent={isTalent}
           onAddMilestone={() => setActiveTab('create')}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -538,11 +563,14 @@ export function ProjectMilestonesContent() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             milestones={milestones}
             activities={activities}
             isLoading={milestonesLoading}
             isClient={isClient}
             isTalent={isTalent}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             paymentTerms={project && project.payment_terms}
@@ -551,6 +579,7 @@ export function ProjectMilestonesContent() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             isSubmitting={isSubmitting}
             onCreateMilestone={createMilestone}
 import {use_params} from 'react-router-dom';
@@ -692,6 +721,8 @@ if (return, ) {
             onUploadDeliverable={upload_deliverable}
             refetch={refetch}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           />;
@@ -729,12 +760,15 @@ if (return, ) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               onSubmit={handleMilestoneSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setActiveTab('milestones')}
               projectScope={project && project.scope_summary}
               projectStartDate={project && project.start_date}
               projectEndDate={project && project.end_date}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               projectType={projectType}
@@ -770,6 +804,7 @@ if (return, ) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           />;
         </TabsContent>;
         <TabsContent value="activity">;
@@ -806,6 +841,8 @@ try {
 }finally {
   setIsLoading (false) 
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 
@@ -908,3 +945,4 @@ await handleMilestoneCreated ()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

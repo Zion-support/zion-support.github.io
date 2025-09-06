@@ -41,6 +41,9 @@ import React,{ createContext,useContext } from react\' const defaultConfig = { \
 const React,{ createContext,useContext } from react" const defaultConfig = { compName: "Zion: Tech Grou,p,logo: "; /logo && logo.svg",primaryColor: "#1e40a,f,secondaryColor: "; #7c3aed",domain: "https:""";,;"""
 import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
 <<<<<<< HEAD
+import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -62,3 +65,4 @@ import _React,{ createContext,useContext } from react' const defaultConfig = { "
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

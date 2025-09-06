@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const real2026Q2Additions = [
   {
 
@@ -22,6 +25,9 @@ export const real2026Q2Additions = [
     period: '/month',
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const real2026Q2Additions = [
   {
     id: 'ai-governance-compliance-hub'
@@ -63,6 +69,8 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'
   }
   {
+<<<<<<< HEAD
+=======
 =======
     trial_days: 14,
     setup_time: 'Fast',
@@ -83,6 +91,7 @@ export const real2026Q2Additions = [
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
@@ -127,6 +136,8 @@ export const real2026Q2Additions = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'ecommerce - returns - orchestrator',
@@ -146,6 +157,7 @@ export const real2026Q2Additions = [
     use_cases: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'DTC brands returns automation',
       'Marketplace return SLAs',
       'Reduce WISMO support',
@@ -158,6 +170,8 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Ideal for mid - market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -190,6 +204,7 @@ export const real2026Q2Additions = [
     integrations: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'OpenAI',
       'Azure OpenAI',
       'Vertex AI',
@@ -204,6 +219,8 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Hot category with fast adoption in AI apps',
     roi: 'Cut token spend by 25% and improve response quality by 12%',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -230,6 +247,7 @@ export const real2026Q2Additions = [
     use_cases: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'FinOps guardrails',
       'Cost regression prevention',
       'Unit economics tracking',
@@ -242,6 +260,8 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Proven ROI for cloud - native teams',
     roi: 'Reduce cloud waste by 30% within 60 days',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -267,6 +287,7 @@ export const real2026Q2Additions = [
     use_cases: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Contract workflows',
       'Internal approvals',
       'Customer onboarding',
@@ -275,6 +296,8 @@ export const real2026Q2Additions = [
     competitors: ['DocuSign API', 'HelloSign API'],
     price: '$149',
     period: '/month',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -305,6 +328,7 @@ export const real2026Q2Additions = [
     use_cases: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Public trust for SaaS',
       'B2B vendor requirements',
       'Platform reliability communications',
@@ -317,6 +341,8 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Great value with SLO - first approach',
     roi: 'Improve uptime communications and reduce churn risk',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -344,6 +370,7 @@ export const real2026Q2Additions = [
       'Third - party risk programs',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Sales security reviews',
       'Procurement diligence',
     ],
@@ -355,6 +382,8 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Sales - assisted and security - led adoption',
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -380,6 +409,7 @@ export const real2026Q2Additions = [
     use_cases: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Developer portals',
       'Internal knowledge bases',
       'Customer docs',
@@ -388,6 +418,8 @@ export const real2026Q2Additions = [
     competitors: ['Algolia Answers', 'Vectara'],
     price: '$249',
     period: '/month',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -421,6 +453,7 @@ export const real2026Q2Additions = [
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'MSPs and IT providers',
       'Internal IT for SMBs',
       'BYOD governance',
@@ -458,14 +491,28 @@ export const real2026Q2Additions = [
 ];      'Windows / macOS / Linux agent and lightweight mode_patch automation and health policies_remote scripts and secure sessions_inventory, software metering, and alerts_ticketing and customer portals';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ];
     use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];
     competitors: ['AteraNinjaOne'];
     price: '$4';
+<<<<<<< HEAD
+    period: '/device/month';
+    trialDays: 14;
+    setupTime: 'Fast';
+    marketPosition: 'Cost-effective RMM for partners and IT teams';
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
+  }
+];
+
+=======
 <<<<<<< HEAD
 =======
 
@@ -487,6 +534,7 @@ export const real2026Q2Additions = [
 
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const real2026Q2Additions = [;
   {;
     id: 'ai-governance-compliance-hub',;
@@ -689,10 +737,13 @@ export const real2026Q2Additions = [;
     marketPosition: 'Cost-effective RMM for partners and IT teams',;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 ];
 ;

@@ -18,10 +18,13 @@ const Page = () => {
   );
 };
 
+<<<<<<< HEAD
+=======
 export default Page;
 =======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
   ArrowRight
@@ -583,4 +586,7 @@ import Layout from '../components / Layout';
 ;
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

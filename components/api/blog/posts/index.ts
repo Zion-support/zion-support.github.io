@@ -9,6 +9,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts = readPosts();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -109,6 +111,7 @@ return res.status(405).end();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils / types / blog';
 import { read_posts, write_posts } from '@/utils / data / blog_store';
@@ -204,6 +207,8 @@ if ( {) {
     return res.status (201).json (post);
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -211,6 +216,7 @@ if ( {) {
 
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 return res.status(405).end();
 }
 
@@ -220,6 +226,8 @@ return res.status(405).end();
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 return res.status (405).end ();
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { v4 as uuidv4  } from 'uuid';
 import { BlogPost  } from '@/utils/types/blog';
@@ -312,3 +320,4 @@ return res.status(405).end();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

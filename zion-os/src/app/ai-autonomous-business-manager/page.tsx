@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -46,6 +50,7 @@ export default function AIBusinessManagerPage() {;
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Hero Section */}
         <div className="text - center mb - 16">;
           <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
@@ -69,6 +74,8 @@ export default function AIBusinessManagerPage() {;
               </p>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <p className="text - lg text - gray - 300 leading - relaxed">;
                 From strategic planning to daily operations, the system continuously learns,
@@ -80,6 +87,7 @@ export default function AIBusinessManagerPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 adapts, and optimizes every aspect of your business, ensuring maximum;
                 performance and growth potential.;
               </p>;
@@ -132,6 +140,8 @@ export default function AIBusinessManagerPage() {;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 2">Strategic Planning</h3>;
               <p className="text - gray - 400">;
@@ -143,6 +153,7 @@ export default function AIBusinessManagerPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 competitive landscape, and internal capabilities to develop optimal strategies.;
               </p>;
             </div>;
@@ -202,6 +213,8 @@ export default function AIBusinessManagerPage() {;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 2">Growth Optimization</h3>;
               <p className="text - gray - 400">;
@@ -213,6 +226,7 @@ export default function AIBusinessManagerPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 customer acquisition optimization, and revenue maximization.;
               </p>;
             </div>;
@@ -233,6 +247,8 @@ export default function AIBusinessManagerPage() {;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - lg font - semibold mb - 2">Data Collection</h3>;
               <p className="text - gray - 400 text - sm">;
@@ -244,6 +260,7 @@ export default function AIBusinessManagerPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 market sources, and external factors.;
               </p>;
             </div>;
@@ -251,6 +268,8 @@ export default function AIBusinessManagerPage() {;
               <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - purple - 400">2</span>;
               </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -264,6 +283,7 @@ export default function AIBusinessManagerPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and identify optimization opportunities.;
               </p>;
             </div>;
@@ -271,6 +291,8 @@ export default function AIBusinessManagerPage() {;
               <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - green - 400">3</span>;
               </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -284,6 +306,7 @@ export default function AIBusinessManagerPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 business rules, and predictive models.;
               </p>;
             </div>;
@@ -311,6 +334,8 @@ export default function AIBusinessManagerPage() {;
             <div className="card">;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - lg font - semibold mb - 2">E - commerce & Retail</h3>;
               <p className="text - gray - 400 text - sm">;
@@ -322,10 +347,13 @@ export default function AIBusinessManagerPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and supply chain optimization.;
               </p>;
             </div>;
             <div className="card">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -339,10 +367,13 @@ export default function AIBusinessManagerPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and regulatory compliance automation.;
               </p>;
             </div>;
             <div className="card">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -356,10 +387,13 @@ export default function AIBusinessManagerPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and supply chain management.;
               </p>;
             </div>;
             <div className="card">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -373,6 +407,7 @@ export default function AIBusinessManagerPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and administrative efficiency.;
               </p>;
             </div>;

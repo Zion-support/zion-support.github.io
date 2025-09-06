@@ -28,9 +28,12 @@ import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
+<<<<<<< HEAD
+=======
     return res && res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 
   const { milestoneId, title, timestamp } = req && req.body as {
@@ -68,6 +71,8 @@ export default async function handler(req, res) {
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+<<<<<<< HEAD
+=======
 
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
@@ -106,6 +111,7 @@ function handler() {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
   } catch (error) {
     console.error("Error:", error);
@@ -131,6 +137,24 @@ function handler() {
     event_id: uuidv4 ()
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category;
     payload: {
+<<<<<<< HEAD
+      id: milestone_id,
+      subject_id: milestone_id,
+
+      score: 0,
+      category: `milestone:${title}`,
+      period: undefined,
+      rank: undefined,
+    },
+
+    eventId: uuidv4(),
+    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
+    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: timestamp || Date.now()
+
+=======
       id: milestone_id
       subject_id: milestone_id
 =======
@@ -150,6 +174,7 @@ function handler() {
     originInstanceId: state.config.instanceId
     version
     timestamp: timestamp || Date.now()
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   };
 =======
   };
@@ -204,18 +229,23 @@ export default async function handler(req, res) {
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
   };
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   upsertEvent(state, event);
   writeState(state);
   const body = { ...event, propagate: false }
   const headers: Record<string, string> = {}
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
+<<<<<<< HEAD
+=======
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined }
     originInstanceId: state.config.instanceId
     version
@@ -228,11 +258,15 @@ export default async function handler(req, res) {
   if (sig) headers["x-zion-signature"] = sig
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
 
   await Promise && Promise.all(
+<<<<<<< HEAD
+      .map(async (peer) => {
+=======
     state && state.config.peers
       .filter((p) => !p && p.paused)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -271,6 +305,7 @@ const url = new URL("/api/sync/publish", peer.baseUrl).toString();
 =======
       .map(async (peer) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 ;
   upsert_event (state, event);
@@ -297,13 +332,18 @@ if (headers["x - zion - signature"] = sig) {
   return res;
     .status (200);
     .json ({ status: "created", version, event_id: event.event_id });
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
@@ -366,3 +406,4 @@ if (headers["x - zion - signature"] = sig) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

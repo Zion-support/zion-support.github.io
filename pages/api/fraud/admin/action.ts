@@ -13,6 +13,8 @@ export default async function handler(
     return res && res.status(405).json({ error: "Method not allowed" });
 
   }
+<<<<<<< HEAD
+=======
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
@@ -57,6 +59,7 @@ export default async function handler(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   const store = getFraudStore();
   const fraud = store && store.getById(fraudId);
@@ -102,6 +105,8 @@ function ensureAdmin(req: NextApiRequest): boolean {;
 
 
 
+<<<<<<< HEAD
+=======
 =======
 =======
   store.addAdminAction(adminAction);
@@ -110,6 +115,7 @@ function ensureAdmin(req: NextApiRequest): boolean {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 import { AdminActionType  } from '../../../../utils / fraud / types';
@@ -179,7 +185,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

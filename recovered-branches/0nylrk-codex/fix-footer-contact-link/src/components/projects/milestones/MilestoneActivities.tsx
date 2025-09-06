@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {supabase} from '@/integrations / supabase / client';
@@ -11,6 +13,7 @@ import {Skeleton} from '@/components / ui / skeleton';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface MilestoneActivitiesProps {
   project_id: string;
 }
@@ -44,11 +47,14 @@ interface Activity {
 
   milestone: {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
@@ -92,6 +98,8 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         if (error) throw error;
         setActivities(data |[])
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -267,6 +275,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
       } finally {;
         setIsLoading(false);
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       } catch (err) {
         console.error('Error fetching milestone activities:', err)
       } finally {
@@ -303,6 +312,8 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
       case 'deliverable_added':;
         return 'added a deliverable';
       default:;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -344,6 +355,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         return activity.action.replace(/_/g, ' ');
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
 
@@ -520,6 +532,8 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
         </CardContent>;
       </Card>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     );
   }
@@ -563,6 +577,7 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       {getActivityDescription(activity)}
                     </span>;
                     <span className="text-muted-foreground text-xs">;
@@ -595,6 +610,8 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
                 </div>;
               </div>;
             ))}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -661,6 +678,7 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Check condition
 if ( {) {
   $2
@@ -669,6 +687,8 @@ if ( {) {
     }
   }, [project_id]);
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -789,3 +809,4 @@ default: return activity.action.replace (/ /g, ' ')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

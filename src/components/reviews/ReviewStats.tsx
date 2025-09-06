@@ -5,6 +5,8 @@
                 <Star
                   key={i}
                   className={`h-4 w-4 ${
+<<<<<<< HEAD
+=======
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
 import { Star } from 'lucide-react';
 import { Progress } from "@/components/ui/progress",;
@@ -33,6 +35,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                 <Star;
                   key={i}
                   className={`h-4 w-4 ${;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
 
 

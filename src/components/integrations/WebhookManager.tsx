@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+export function WebhookManager() {
+  const { 
+    webhooks,
+    loading, 
+=======
 webhooks,
     loading,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     error,
 
 
@@ -347,8 +354,19 @@ export function WebhookManager() {;
                   {eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>;
               ))}
+<<<<<<< HEAD
+            </div>;
+            <div className="flex space-x-2">;
+              <Select;
+                value={newWebhook.selectedEvent}
+                onValueChange={(value) => setNewWebhook({...newWebhook, selectedEvent: value as WebhookEventType})}
+              >
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select event" />
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </SelectTrigger>
                 <SelectContent>
                   {eventOptions.map(option => (
@@ -818,6 +836,8 @@ export function WebhookManager() {;
               <div className='space-y-2'>
                 <div className='flex justify-between'>
                   <span className='font-medium'>Status:</span>
+<<<<<<< HEAD
+=======
 
         {testResult && (;
           <Card className='mt-4 border-blue-200'>;
@@ -828,6 +848,7 @@ export function WebhookManager() {;
               <div className='space-y-2'>;
                 <div className='flex justify-between'>;
                   <span className='font-medium'>Status:</span>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <span
                     className={
                       testResult && testResult.status>= 200 && testResult && testResult.status < 300;
@@ -837,6 +858,15 @@ export function WebhookManager() {;
 
 
 
+<<<<<<< HEAD
+                  >                    {testResult.status} {testResult.statusText}
+                  </span>
+                </div>
+                <div>
+                  <span className='font-medium'>Response:</span>
+                  <pre className='mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto'>
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
         {testResult && (;
           <Card className="mt-4 border-blue-200">;
@@ -955,6 +985,9 @@ newWebhook && newWebhook.secret || undefined);";
 }'"}
 
 }
+<<<<<<< HEAD
+;
+=======
 
 }newWebhook.url
 newWebhook.eventTypes
@@ -1074,3 +1107,4 @@ event_types: [...new_webhook.event_types, new_webhook.selected_event];
 }
 
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

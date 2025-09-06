@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+import {cn} from '@/lib/utils';
+
+"use client"
+"use client"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 'use client';
@@ -38,6 +44,7 @@ import {cn} from '@/lib/utils';
 "use client"
 "use client"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import * as React from "react"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
@@ -46,6 +53,8 @@ import { Check } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -53,6 +62,7 @@ import { cn } from "@/lib/utils"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
@@ -166,6 +176,8 @@ Checkbox.display_name = CheckboxPrimitive.Root.display_name;
 export { Checkbox }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -238,3 +250,4 @@ export { Checkbox }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

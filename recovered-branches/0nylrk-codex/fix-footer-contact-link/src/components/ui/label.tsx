@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva, type, VariantProps } from "class-variance-authority";
@@ -19,20 +21,27 @@ import {cva, type, VariantProps} from "class-variance-authority"
 import {cn} from "@/lib/utils"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
 import { cn } from "@/lib/utils";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const labelVariants = cva(
   "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70",
 );
@@ -45,6 +54,8 @@ const Label = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <LabelPrimitive.Root
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import * as React from './react';
 import * as LabelPrimitive from "@radix - ui / react - label";
@@ -54,9 +65,12 @@ import { cn  } from '@/lib / utils';
 const label_variants = cva (
   "text - sm font - medium leading - none peer - disabled: cursor - not - allowed peer - disabled:opacity - 70",
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ref={ref}
     className={cn(labelVariants(), className)}
     {...props}
+<<<<<<< HEAD
+=======
   />
 ));
 Label.displayName = LabelPrimitive.Root.displayName;
@@ -68,12 +82,15 @@ export { Label };
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 const labelVariants = cva(;
   "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 );
@@ -146,6 +163,7 @@ export { Label }
 =======
   "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ref={ref}
     className={cn(labelVariants(), className)}
     {...props}
@@ -165,6 +183,8 @@ Label.display_name = LabelPrimitive.Root.display_name;
 ;
 export { Label }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -188,3 +208,4 @@ export { Label }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

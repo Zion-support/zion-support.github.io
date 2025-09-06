@@ -17,6 +17,8 @@
 :src && src.disabled/components/ChatAssistantTrigger && ChatAssistantTrigger.js.jsx
 
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
+<<<<<<< HEAD
+=======
 :src.disabled/components/ChatAssistantTrigger.js.jsx
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
 <<<<<<< HEAD
@@ -43,6 +45,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 :src.disabled/components/ChatAssistantTrigger.js.jsx
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}

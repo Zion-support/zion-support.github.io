@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    res.status(405).end('Method Not Allowed');
+    return;
+  }
+
+=======
 
 
 function summarizeModules(
@@ -192,8 +203,13 @@ if ( {) {
     const access = {
       roles: ["Founder", "Superadmin", "DAO Multisig"]
       export: {
+<<<<<<< HEAD
+      operator,
+      access,
+=======
       operator
       access
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -230,9 +246,27 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: err.message || 'Internal error' })
   }
 }
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   try {
     const body = req.body || {};
     const {
+<<<<<<< HEAD
+      instanceName,
+<<<<<<< HEAD
+      tokenActivation
+    } = body;
+
+    const now = new Date().toISOString();
+    const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
+    
+=======
+      defaultLanguage,
+      deploymentRegion,
+      tokenActivation,
+      governanceMode,
+      branding,
+      modules = {},
+=======
       instanceName
       defaultLanguage
       deploymentRegion
@@ -240,6 +274,7 @@ export default async function handler(req, res) {
       governanceMode
       branding
       modules = {}
+>>>>>>> main
       bonusModules = {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -274,6 +309,7 @@ export default async function handler(req, res) {
     // Simulated provisioning operations – replace with real infra hooks later
     const now = new Date().toISOString();
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
     const outputActions = {
       zionGPT: {
         initialized: true
@@ -296,6 +332,21 @@ export default async function handler(req, res) {
       }
       publicPages: []
     };
+<<<<<<< HEAD
+
+    res.status(200).json({
+      success: true,
+      provisionId,
+      outputActions,
+      timestamp: now
+    });
+    return;
+  } catch (_error) {
+    res.status(500).json({ error: 'Failed to process genesis request' });
+    return;
+  }
+}
+=======
     res.status(200).json({
       success: true
       provisionId
@@ -448,3 +499,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

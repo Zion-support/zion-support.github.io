@@ -1,18 +1,26 @@
 
+<<<<<<< HEAD
+=======
   res.status(200).json({ success: true })
 
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { clearUserCookie } from '../../../utils/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   clearUserCookie(res)
 
   res.status(200).json({ success: true })
+<<<<<<< HEAD
+import { NextApiRequest, NextApiResponse } from 'next',
+import { clearUserCookie } from '../../../utils / auth',
+=======
 import { NextApiRequest, NextApiResponse } from 'next'
 import { clearUserCookie } from '../../../utils / auth'
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default /**
  * handler - Function description
  */
@@ -25,6 +33,8 @@ function handler() {
 }
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import { clearUserCookie } from '../../../utils/auth';
@@ -40,3 +50,4 @@ export default function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

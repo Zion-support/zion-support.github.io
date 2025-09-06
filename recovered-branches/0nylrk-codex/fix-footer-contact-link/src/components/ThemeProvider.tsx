@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -20,10 +22,13 @@ type Theme = "dark" | "light" | "system"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 type ThemeProviderProps = {
   children: React.ReactNode
   defaultTheme?: Theme
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -69,6 +74,7 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 export function ThemeProvider({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   children
   defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
@@ -82,20 +88,26 @@ export function ThemeProvider({
   children,
   defaultTheme = "system"}: ThemeProviderProps) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem("theme") as Theme) || defaultTheme
   )
   useEffect(() => {
     const root = window.document.documentElement
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     root.classList.remove(&quot;light&quot;, &quot;dark&quot;)
     if (theme === &quot;system&quot;) {
       const systemTheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;)
@@ -103,9 +115,12 @@ export function ThemeProvider({
         ? &quot;dark&quot;
         : &quot;light&quot;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     root.classList.remove("light", "dark")
 
     if (theme === "system") {
@@ -115,6 +130,8 @@ export function ThemeProvider({
         : "light"
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -122,6 +139,7 @@ export function ThemeProvider({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       root.classList.add(systemTheme)
       return
     }
@@ -130,6 +148,8 @@ export function ThemeProvider({
   const value = {
     theme
     setTheme: (theme: Theme) => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       localStorage.setItem(&quot;theme&quot;, theme)
@@ -148,6 +168,7 @@ export function ThemeProvider({
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (;
 import { create_context, useContext, useEffect, useState } from &quot;react & quot;
 ;
@@ -357,7 +378,10 @@ export const useTheme = () => {;
 =======
   if (context === undefined)
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext)
@@ -372,9 +396,12 @@ export const useTheme = () => {
   return context
 }
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   return context
 }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

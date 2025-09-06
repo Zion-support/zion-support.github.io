@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -18,6 +20,7 @@ import {Loader2, ShieldCheck, Download} from "lucide-react";
 import {toast} from "sonner";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -31,9 +34,12 @@ import { toast } from "sonner";
 import { Loader2, ShieldCheck, Download } from "lucide-react",
 import { toast } from "sonner",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface SmartContractDeploymentProps {
 
   solidityCode: string
@@ -45,6 +51,8 @@ interface SmartContractDeploymentProps {
 
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -63,6 +71,7 @@ export function SmartContractDeployment({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   isDeploying
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
@@ -71,6 +80,8 @@ export function SmartContractDeployment({
     useEscrow: true
     deployToChain: false
     walletAddress: ''
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -109,6 +120,7 @@ function SmartContractDeployment() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleDeployContract = async () => {
     // Check condition
 if ( {) {
@@ -122,6 +134,8 @@ if ( {) {
     } catch (error) {
       console.error ("Deployment error:", error);
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -204,6 +218,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card className="w-full">
       <CardHeader>
@@ -219,6 +234,8 @@ if ( {) {
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -226,6 +243,7 @@ if ( {) {
               id="deploy-blockchain"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               checked={deploymentOptions.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions({
                 ...deploymentOptions;
@@ -243,9 +261,12 @@ import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",;
 import { Loader2, ShieldCheck, Download } from "lucide-react",;
 import { toast } from "sonner",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
@@ -264,6 +285,8 @@ interface SmartContractDeploymentProps {;
   isDeploying: boolean;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function SmartContractDeployment(): any ({ ;
@@ -277,6 +300,7 @@ export function SmartContractDeployment({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   isDeploying;
 }: SmartContractDeploymentProps) {;
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;
@@ -284,6 +308,8 @@ export function SmartContractDeployment({;
     useEscrow: true,;
     deployToChain: false,;
     walletAddress: '';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   });
@@ -402,10 +428,14 @@ export function SmartContractDeployment({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
+<<<<<<< HEAD
+  }
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -440,6 +470,7 @@ export function SmartContractDeployment({ ;
 =======
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
@@ -610,6 +641,8 @@ export function SmartContractDeployment({ ;
 
                     ...deploymentOptions;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                     walletAddress: e && e.target.value;
 =======
 
@@ -624,10 +657,13 @@ export function SmartContractDeployment({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Input 
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -641,6 +677,7 @@ export function SmartContractDeployment({ ;
 
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   onChange={(e) => setDeploymentOptions({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ...deploymentOptions;
@@ -897,6 +934,10 @@ export function SmartContractDeployment({ ;
         </div>;
       </CardContent>;
 <<<<<<< HEAD
+}
+;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -997,3 +1038,4 @@ flex items-center gap-2"> <ShieldCheck className=" h-5 w-5 text-primary"/> Smart
 }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
